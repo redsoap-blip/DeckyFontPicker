@@ -1,1 +1,153 @@
-IyBEZWNreSDlrZfkvZPpgInmi6nlmagKCuS4gOS4qiBbRGVja3kgTG9hZGVyXShodHRwczovL2dpdGh1Yi5jb20vU3RlYW1EZWNrSG9tZWJyZXcvZGVja3ktbG9hZGVyKSDmj5Lku7bvvJrmioogU3RlYW0gRGVjayDkuIrlt7Llronoo4XnmoTku7vmhI/lrZfkvZPlupTnlKjliLAgU3RlYW0g5aSn5bGP55WM6Z2i77yI5Li755WM6Z2i44CBTWFpbk1lbnXjgIHlv6vmjbforr/pl67oj5zljZXvvInvvIzkuI3lhpkgYH4vaG9tZWJyZXcvdGhlbWVzYO+8jOS4jeS+nei1liBDU1MgTG9hZGVy77yM5Lmf5LiN6L+eIENFRiDosIPor5Xlj6PjgIIKCuS7k+W6k+aPkOS+myoq5ZCM5LiA5Liq5o+S5Lu255qE5Zub5Liq5YyFKirvvJrkuKTnp43nlYzpnaLor63oqIAgw5cg5Lik56eN5L6d6LWW5b2i5oCB44CC5Zub5Lu96YO95pivICoqMS4wLjIqKu+8jOihjOS4uuWujOWFqOS4gOiHtO+8iOWtl+S9k+WPkeeOsOOAgeWIhuWMuuinhOWImeOAgeaOkuW6j+OAgeaTjeS9nOaWueW8j+mDveebuOWQjO+8ie+8jOWPquacieeVjOmdouivreiogOWSjOaYr+WQpuiHquW4piBgZm9udFRvb2xzYCDkuI3lkIzjgIIKCnwg54mI5pysIHwgUmVsZWFzZSDotYTkuqcgfCDmj5Lku7bnm67lvZUgfCDnlYzpnaLor63oqIAgfCBmb250VG9vbHMgfAp8IC0tLSB8IC0tLSB8IC0tLSB8IC0tLSB8IC0tLSB8Cnwg5Lit5paH77yM5peg5L6d6LWWIHwgYERlY2t5Rm9udFBpY2tlci0xLjAuMi56aXBgIHwgYERlY2t5Rm9udFBpY2tlci9gIHwg566A5L2T5Lit5paHIHwg5LiN5bimIHwKfCDkuK3mlofvvIzoh6rluKbkvp3otZYgfCBgRGVja3lGb250UGlja2VyLTEuMC4yLXdpdGgtZm9udHRvb2xzLnppcGAgfCBgRGVja3lGb250UGlja2VyL2AgfCDnroDkvZPkuK3mlocgfCDmlL7lnKggYHZlbmRvci9gIHwKfCDoi7HmlofvvIzml6Dkvp3otZYgfCBgRm9udFBpY2tlckVOLTEuMC4yLnppcGAgfCBgRm9udFBpY2tlckVOL2AgfCBFbmdsaXNoIHwg5LiN5bimIHwKfCDoi7HmlofvvIzoh6rluKbkvp3otZYgfCBgRm9udFBpY2tlckVOLTEuMC4yLXdpdGgtZm9udHRvb2xzLnppcGAgfCBgRm9udFBpY2tlckVOL2AgfCBFbmdsaXNoIHwg5pS+5ZyoIGB2ZW5kb3IvYCB8CgrlkIzor63oqIDnmoTkuKTnp43lvaLmgIEqKuebruW9leWQjeWSjOaPkuS7tuWQjeWujOWFqOebuOWQjCoq77yM5piv5LqS5Li65pu/5Luj55qE5Lik5Liq54mI5pys77ya6KOF56ys5LqM5Liq5Lya55u05o6l6KaG55uW56ys5LiA5Liq77yM5Zug5q2kKirlkIzkuIDml7bpl7Tlj6rog73oo4XlhbbkuK3kuIDkuKoqKuOAggoKIyMg5Yqf6IO9CgotIOWIl+WHuiBgZmMtbGlzdGAg5oql5ZGK55qE5omA5pyJ5a2X5L2T5peP77yM5Yeh5piv6KKrIGZvbnRjb25maWcg5pS25b2V55qE5a2X5L2T6YO95Lya5Ye6546w77yI57O757uf5YyF44CBYH4vLmxvY2FsL3NoYXJlL2ZvbnRzYOOAgWB+Ly5mb250c2Ag562J77yJ44CCCi0gMTEg5Liq5YiG5Yy677yaYOaUtuiXj2DjgIFg5Lit5paH5a2X5L2T6KaG55uWYOOAgWDooaznur9g44CBYOihrOe6vyAoemgpYOOAgWDml6Dooaznur9g44CBYOaXoOihrOe6vyAoemgpYOOAgWDnrYnlrr1g44CBYOetieWuvSAoemgpYOOAgWDlhbblroNg44CBYOWFtuWugyAoemgpYOOAgWDlhajpg6jlrZfkvZNg44CCCiAgLSDln7rnoYDliIbljLrkvJrmjpLpmaQgYGxhbmdgIOWQqyBgemhgIOeahOWtl+S9k++8jGAoemgpYCDliIbljLrmraPlpb3lj6rmlL7ov5nkupvkuK3mloflrZfkvZPvvJvkuKTljYoqKuS6kuaWpSoq77yM5ZCM5LiA5Liq5a2X5L2T5peP5LiN5Lya6YeN5aSN5Ye6546w77yI5pS26JeP6Zmk5aSW77yJ44CC56m65YiG5Yy66Ieq5Yqo6ZqQ6JeP44CCCiAgLSDoi7HmlofniYjkuK3ov5nmibnliIbljLrmoIfpopjkuLogYEZhdm9yaXRlc2AgLyBgQ2hpbmVzZSBDb3ZlcmFnZWAgLyBgU2VyaWZgIC8gYFNlcmlmICh6aClgIC8gYFNhbnNgIC8gYFNhbnMgKHpoKWAgLyBgTW9ub2AgLyBgTW9ubyAoemgpYCAvIGBPdGhlcnNgIC8gYE90aGVycyAoemgpYCAvIGBBbGwgRm9udHNg44CCCi0g5YWI5oyJ5Lit5paH6KaG55uW5bqm5o6S5bqP77yM5YaN5oyJ5a2X5L2T5peP5ZCN5bCP5YaZ5o6S5bqP44CCCi0g5Lya5qOA5rWL5omA6YCJ5a2X5L2T5peP5piv5ZCm55yf55qE5ZCr5Lit5paH5a2X5b2i77yM5LiN5ZCr5pe26Ieq5Yqo5Zue6YCA5Yiw5LiA5qy+5pSv5oyB5Lit5paH55qE5a2X5L2T77yM6YG/5YWN6I+c5Y2V5paH5a2X5Y+Y5oiQ5pa55Z2X44CCCi0g6YCa6L+H5LuF55uR5ZCs5Zue546v5Zyw5Z2A55qEIEhUVFAg5pyN5Yqh5L6b57uZ5a2X5L2T77yM5bm255SoIERlY2t5IOiHqui6q+eahCBgaW5qZWN0X2Nzc19pbnRvX3RhYmAg5rOo5YWl5LiA5q61IGA8c3R5bGU+YO+8jOmaj+WQjuWcqCBTdGVhbSDph43muLLmn5Pml7boh6rliqjph43mlL7jgIIKLSDms6jlhaXkuInkuKrnm67moIfvvJrkuLvpobXjgIFgTWFpbk1lbnVfdWlkKmDjgIFgUXVpY2tBY2Nlc3NfdWlkKmDjgIIKLSDliIbljLrmipjlj6DnirbmgIHorrDlv4bjgIHni6znq4vnmoTjgIzlvZPliY3lrZfkvZPjgI3mipjlj6DlnZfjgIHmr4/kuKrnm67moIfnmoTlrp7ml7bms6jlhaXnirbmgIHjgIHmlLbol4/vvIgqKlgqKu+8ieOAgeavj+asoeWKoOi9vSA2MCDmnaHnmoTjgIzliqDovb3mm7TlpJrjgI3jgIIKCiMjIOWuieijhQoKMS4g5LuOIFtSZWxlYXNlc10oLi4vLi4vcmVsZWFzZXMpIOmhtemdouS4i+i9veWFtuS4reS4gOS4qiBaSVDjgIIKMi4g5ZyoIERlY2t5IExvYWRlciDph4zmiZPlvIAgKirorr7nva4g4oaSIOW8gOWPkeiAhSDihpIg5LuOIFpJUCDlronoo4Xmj5Lku7YqKu+8jOaIluaKiuWOi+e8qeWMheino+WOi+WIsCBgfi9ob21lYnJldy9wbHVnaW5zL2DjgIIKMy4g6YeN6L29IERlY2t577yI5oiW6YeN5ZCvIGBwbHVnaW5fbG9hZGVyLnNlcnZpY2Vg77yJ77yM5omT5byA5b+r5o236K6/6Zeu6I+c5Y2V44CCCjQuIOWcqCBTdGVhbU9TIOS4iu+8jOmZpOmdnumCo+WPsOacuuWZqOezu+e7n+mHjOW3sue7j+aciSBgZm9udFRvb2xzYO+8jOWQpuWImeivt+mAiSoq6Ieq5bimIGZvbnRUb29scyoqIOeahOWMheKAlOKAlOWOn+WboOingeS4i+S4gOiKguOAggoK5q+P5LiqIFpJUCDnmoTlhoXlrrnlsLHmmK/vvJoKCmBgYAojIOaXoOS+nei1lueJiAo855uu5b2VPi9wbHVnaW4uanNvbgo855uu5b2VPi9tYWluLnB5Cjznm67lvZU+L2ZhY2VfZXh0cmFjdC5weQo855uu5b2VPi9kaXN0L2luZGV4LmpzCgojIOiHquW4piBmb250VG9vbHMg54mI77yI5aSa5Ye65LiA5LiqIHZlbmRvciDnm67lvZXvvIw0LDg5OCw4NTEg5a2X6IqCIC8gMzU0IOS4quaWh+S7tu+8iQo855uu5b2VPi9wbHVnaW4uanNvbgo855uu5b2VPi9tYWluLnB5Cjznm67lvZU+L2ZhY2VfZXh0cmFjdC5weQo855uu5b2VPi9kaXN0L2luZGV4LmpzCjznm67lvZU+L3ZlbmRvci9mb250VG9vbHMvLi4uCjznm67lvZU+L3ZlbmRvci9MSUNFTlNFLWZvbnRUb29scwpgYGAKCueOr+Wig+imgeaxgu+8mkRlY2t5IExvYWRlciAzLnjvvIjov5DooYzml7bkvb/nlKggYGRlY2t5LWZyb250ZW5kLWxpYmAgMy4yNe+8ieWSjCBQeXRob24gM+OAguaXoOS+nei1lueJiOi/mOimgeaxguezu+e7nyBgcHl0aG9uM2Ag6IO9IGBpbXBvcnQgZm9udFRvb2xzYO+8m+iHquW4pueJiOS4jemcgOimgeS7u+S9lemineWkluS+nei1luOAggoKIyMgU3RlYW1PUyDkuIrnmoTkuK3mloflrZfkvZPpnIDopoEgZm9udFRvb2xzCgpTdGVhbU9TIOmHjOWHoOS5juaJgOacieS4reaWh+Wtl+S9k+mDveaYryoq6ZuG5ZCI5a2X5L2TKirvvIhgLnR0Y2AgLyBgLm90Y2DvvInvvIzkuIDkuKrmlofku7bph4zmiZPljIXkuoblpJrkuKogZmFjZeOAguS+i+WmgiBgTm90b1NlcmlmQ0pLLVJlZ3VsYXIudHRjYCDlhoXlkKsgNSDkuKogZmFjZe+8iEpQ44CBS1LjgIFTQ+OAgVRD44CBSEvvvInvvIzjgIxOb3RvIFNlcmlmIENKSyBTQ+OAjeaYr+i/meS4quaWh+S7tueahCAqKmluZGV4IDIqKuOAgua1j+iniOWZqOS4jeiDveaKiuaVtOS4qumbhuWQiOebtOaOpeW9k+S9nCBgQGZvbnQtZmFjZWAg55qE5a2X5L2T5rqQ77yM5omA5Lul5o+S5Lu25Lya55SoIGBmb250VG9vbHNg77yIYFRUQ29sbGVjdGlvbmDvvInmiorkvaDpgInkuK3nmoTpgqPkuIDkuKogZmFjZSDmir3lh7rmnaXvvIznvJPlrZjliLAgYH4vaG9tZWJyZXcvZGF0YS8855uu5b2VPi9mb250cy9g44CCCgrnvLogYGZvbnRUb29sc2Ag5pe25oq95Y+W5peg5rOV6L+b6KGM77yM6ICM5o+S5Lu25Y+I5pivKirlhYjnp7vpmaTml6fmoLflvI/jgIHlho3lh4blpIfmlrDlrZfkvZMqKu+8jOaJgOS7peaVtOasoeW6lOeUqOmDveS8muWksei0peOAguihqOeOsOaYr++8mgoKLSDliIfliLDku7vkvZXkuK3mloflrZfkvZPpg73lpLHotKXvvJtgLnR0ZmAgLyBgLm90ZmAg5a2X5L2T5LiN5Y+X5b2x5ZON77yM5Zug5Li65a6D5Lus5LiN6ZyA6KaB5oq95Y+W44CB55u05o6l5L6b57uZ44CCCi0g5LiJ5Liq5rOo5YWl55uu5qCH77yI5Li76aG1IC8gTWFpbk1lbnUgLyBRdWlja0FjY2Vzc++8ieWFqOmDqOWPmOaIkCoq5pyq5rOo5YWlKirjgIIKLSBgfi9ob21lYnJldy9sb2dzLzznm67lvZU+L2Ag5LiL55qE5pel5b+X5pyA5ZCO5Lya5Ye6546w57G75Ly86L+Z5qC35LiA6KGM77yaCgogIGBgYAogIOWHhuWkh+Wtl+S9kyAnTm90byBTZXJpZiBDSksgU0MnIOWksei0pTog5oq95Y+WIE5vdG9TZXJpZkNKSy1SZWd1bGFyLnR0YyMyIOWksei0pTogZm9udFRvb2xzIOS4jeWPr+eUqDogTm8gbW9kdWxlIG5hbWVkICdmb250VG9vbHMnCiAgYGBgCgojIyMg6Kej5rOV5LiAIOKAlOKAlCDnlKjoh6rluKYgZm9udFRvb2xzIOeahOWMhe+8iOaOqOiNkO+8jOmbtuS+nei1lu+8iQoK6KOFIGBEZWNreUZvbnRQaWNrZXItMS4wLjItd2l0aC1mb250dG9vbHMuemlwYCDmiJYgYEZvbnRQaWNrZXJFTi0xLjAuMi13aXRoLWZvbnR0b29scy56aXBg44CCYGZvbnRUb29sc2AgNC42OC4w77yI57qvIFB5dGhvbu+8jE1JVO+8ieW3sue7j+aUvui/myBgdmVuZG9yL2DvvJtgbWFpbi5weWAg5Zyo5Lu75L2V5Lq6IGltcG9ydCBgZm9udFRvb2xzYCDkuYvliY3vvIzmioogYDzmj5Lku7bnm67lvZU+L3ZlbmRvcmAg5o+S5YiwIGBzeXMucGF0aGAg5pyA5YmN77yI5ZCM5pe25rOo5YWl5Yiw6L6F5Yqp5a2Q6L+b56iL55qEIGBQWVRIT05QQVRIYO+8ieOAgui/meS4qui3r+W+hOadpeiHquaPkuS7tuiHqui6q+eahOWunumZheS9jee9ru+8jOaJgOS7peaPkuS7tuebruW9leaUueWQjeaIluenu+WKqOWQjuS7jeeEtuacieaViO+8jOS5n+WujOWFqOS4jeS+nei1liB1c2VyIHNpdGUg5oiW57O757uf5YyF44CCCgrku6Pku7fvvJrkuIvovb0gMSwyNDgsMzU3IOWtl+iKgu+8iHdoZWVsIOacrOS9k++8ie+8jOino+WMheWQjiA0LDg5OCw4NTEg5a2X6IqC77yI566X5LiK5paH5Lu257O757uf5Z2X5byA6ZSA57qmIDUuNyBNQu+8ieOAgioq5LiN5ZCrKiogYGJyb3RsaWDvvIzljp/lm6Dop4HkuIvjgIIKCiMjIyDop6Pms5Xkuowg4oCU4oCUIOaJi+WKqOijheWIsCB1c2VyIHNpdGUKCuS4jemcgOimgSBgcGlwYO+8jOS4jemcgOimgSBgc3Vkb2DvvIzkuI3pnIDopoHlvIDlj5HogIXmqKHlvI/vvIzkuZ/kuI3oo4Xku7vkvZXns7vnu5/ljIXjgILnm7TmjqXnhafmioTvvJoKCmBgYGJhc2gKIyAxKSDkuIvovb0gd2hlZWzvvIhQeVBJIOWumOaWueaWh+S7tu+8jDEsMjQ4LDM1NyDlrZfoioLvvIkKY3VybCAtTCAtTyBodHRwczovL2ZpbGVzLnB5dGhvbmhvc3RlZC5vcmcvcGFja2FnZXMvMzUvNzQvNGVhMzMxZWNjNjViYTA1YTU4YjFlNGU4Y2NkNjA0YzhhMTU1NjVmODc2ZGZiZjkzZmMyYTJlYTJlMjJiL2ZvbnR0b29scy00LjY4LjAtcHkzLW5vbmUtYW55LndobAoKIyAyKSDlu7rlpb0gdXNlciBzaXRlIOebruW9lSDigJTigJQg55uu5b2V5LiN5a2Y5Zyo5pe2IENQeXRob24g5qC55pys5LiN5Lya5oyC6L295a6DCnB5dGhvbjMgLWMgImltcG9ydCBzaXRlOyBwcmludChzaXRlLmdldHVzZXJzaXRlcGFja2FnZXMoKSkiCm1rZGlyIC1wICIkKHB5dGhvbjMgLWMgJ2ltcG9ydCBzaXRlOyBwcmludChzaXRlLmdldHVzZXJzaXRlcGFja2FnZXMoKSknKSIKCiMgMykg5oqKIHdoZWVsIOino+WMhei/m+WOuwp1bnppcCAtbyAtcSBmb250dG9vbHMtNC42OC4wLXB5My1ub25lLWFueS53aGwgLWQgIiQocHl0aG9uMyAtYyAnaW1wb3J0IHNpdGU7IHByaW50KHNpdGUuZ2V0dXNlcnNpdGVwYWNrYWdlcygpKScpIgoKIyA0KSDpqozor4EKcHl0aG9uMyAtYyAiaW1wb3J0IGZvbnRUb29sczsgcHJpbnQoZm9udFRvb2xzLnZlcnNpb24pIgpgYGAKCuesrCA0IOatpeW6lOi+k+WHuiBgNC42OC4wYOOAguesrCAyIOatpeS4jeiDveecge+8mmB+Ly5sb2NhbC9saWIvcHl0aG9uMy4xNC9zaXRlLXBhY2thZ2VzYO+8iOaMieS9oOeahCBQeXRob24g54mI5pys77yJ5LiN5Lya55SxIFB5dGhvbiDoh6rliqjliJvlu7rvvIzogIwgYHNpdGUuYWRkdXNlcnNpdGVwYWNrYWdlcygpYCDlj6rlnKjnm67lvZUqKuW3suWtmOWcqCoq5pe25omN5oqK5a6D5Yqg5YWlIGBzeXMucGF0aGDvvJvlsJHkuoYgYG1rZGlyIC1wYO+8jOino+WMheWHuuadpeeahOS4nOilv+awuOi/nOS4jeS8muiiq+aQnOWIsOOAggoK5rOo5oSP77yaCgotICoq5LiN6KaBKirmiafooYwgYHN0ZWFtb3MtcmVhZG9ubHkgZGlzYWJsZWDvvIwqKuS4jeimgSoq55SoIGBwYWNtYW4gLVMgcHl0aG9uLWZvbnR0b29sc2DvvIwqKuS4jeimgSoq5byA5byA5Y+R6ICF5qih5byP44CC6L+Z5Lqb6YO95Lya5Yqo5Y+q6K+75qC55YiG5Yy644CB5Lya6KKrIFN0ZWFtT1Mg5pu05paw5riF5o6J77yM6ICM57qvIFB5dGhvbiDnmoQgd2hlZWwg5qC55pys55So5LiN5LiK44CCCi0g6L+Z5LiqIHdoZWVsIOaYryBgcHkzLW5vbmUtYW55YO+8jOezu+e7n+iHquW4pueahOS7u+aEjyBQeXRob24gMyDpg73og73nlKjjgIIKLSBTdGVhbU9TIOeahOezu+e7nyBQeXRob24g5rKh5pyJIGBwaXBg77yM6L+Z5piv5q2j5bi455qE77yM5LiN5b2x5ZON5LiK6Z2i55qE5YGa5rOV44CCCi0g6KOF5a6M5Y+q6ZyA5Zyo5o+S5Lu26Z2i5p2/6YeMKirph43mlrDpgInkuIDmrKHlrZfkvZMqKu+8iOaIluWIh+WIsOWIq+eahOWtl+S9k+WGjeWIh+Wbnuadpe+8ie+8jOS4jeeUqOmHjeWQryBTdGVhbSDmiJYgRGVja3njgIIKCiMjIyBicm90bGkg5piv5Y+v6YCJ6aG5CgpgYnJvdGxpYCDlj6rnlKjkuo7miormir3lh7rmnaXnmoTljZUgZmFjZSDljovmiJAgYHdvZmYyYO+8jOiAjOS4lOWPquacieWcqOWNlSBmYWNlICoq4omkIDMgTWlCKirvvIhgV09GRjJfTUFYX0JZVEVTYO+8ieaXtuaJjeS8muWwneivle+8m+ayoeaciSBgYnJvdGxpYCDmiJbljovnvKnlpLHotKXvvIzmj5Lku7bkvJrpnZnpu5jkv53nlZkgYC50dGZg77yM5LiN5b2x5ZON5a2X5L2T55Sf5pWI44CC5a6M5pW0IENKSyBmYWNlIOi/nOWkp+S6jiAzIE1pQu+8iE5vdG8gU2VyaWYgQ0pLIFNDIOWNlSBmYWNlIOe6piAyNC41IE1C77yJ77yM5pys5p2l5bCx5LiN5Lya6LWwIHdvZmYy77yM5omA5Lul5LiN6KOFIGBicm90bGlgIOWvueS4reaWh+Wtl+S9k+ayoeacieS7u+S9leW9seWTjeOAggoK56Gu5a6e6ZyA6KaB55qE6K+d77yaYGJyb3RsaS0xLjIuMS1jcDMxNC1jcDMxNC1tYW55bGludXgyMDE0X3g4Nl82NC5tYW55bGludXhfMl8xN194ODZfNjQud2hsYCDmmK8gMSw0MjAsNTU3IOWtl+iKgu+8jOino+WMhSA1LDE2MSwzMDcg5a2X6IqC77yI5LiA5LiqIDUuMSBNQiDnmoQgYF9icm90bGnigKZzb2Ag5Yqg5LiA5Liq5b6I5bCP55qEIGBicm90bGkucHlg77yJ44CC5a6D5piv57yW6K+R5omp5bGV77yM5L2G6L+Z5LiqIG1hbnlsaW51eDIwMTQgd2hlZWwg5LiOIFN0ZWFtT1Mg5Yy56YWN77yIQ1B5dGhvbiAzLjE0IEFCSeOAgWdsaWJjIOKJpSAyLjE377yJ77yM5ZCM5qC35Y+v5Lul5LiN6Kej5YyF57yW6K+R44CB55u05o6l6Kej5Yiw5LiK6Z2i6YKj5LiqIHVzZXIgc2l0ZSDnm67lvZXph4znlKjjgIIKCiMjIOWQjOS4gOaXtumXtOWPquijheS4gOS4qgoK5omA5pyJ54mI5pys6YO95b6A5ZCM5LiA5om5IFN0ZWFtIOagh+etvumhteazqOWFpSBDU1PvvIwqKuWQjOaXtuWQr+eUqOS4pOS4quS8muS6kuebuOaKouWQjOS4gOS4qiBzdHlsZSDlnZcqKu+8jOemgeeUqOWFtuS4reS4gOS4quWPr+iDveaKiuWPpuS4gOS4quazqOWFpeeahOagt+W8j+S4gOi1t+WIoOaOieOAgui3qOivreiogOOAgei3qOS+nei1luW9ouaAgemDveS4gOagt+OAggoKLSDnm67lvZXlkI3kuI3lkIzvvIhgRGVja3lGb250UGlja2VyL2Ag5LiOIGBGb250UGlja2VyRU4vYO+8ie+8jOaJgOS7peS4reiLseaWh+eJiOWPr+S7peW5tuWtmOOAgeS6kuS4jeimhuebluOAggotICoq5ZCM6K+t6KiAKirnmoTkuKTnp43lvaLmgIHlhbHnlKjkuIDkuKrnm67lvZXlkozkuIDkuKrmj5Lku7blkI3vvIzlkI7oo4XnmoTkvJrmm7/mjaLlhYjoo4XnmoTjgIIKLSDmr4/kuKrniYjmnKzlkIToh6rkvb/nlKggYH4vaG9tZWJyZXcvc2V0dGluZ3MvPOebruW9lT4vYCDkuI4gYH4vaG9tZWJyZXcvZGF0YS8855uu5b2VPi9gIOS/neWtmOiuvue9ruWSjOWtl+S9k+e8k+WtmOOAggotIOWcqCBEZWNreSDmj5Lku7bliJfooajph4zlj6rkv53nlZkqKuS4gOS4qioq5ZCv55So77yM5YW25L2Z56aB55So5oiW5Yig6Zmk44CCCgojIyDlrZfkvZPmnaXmupDkuI7pmZDliLYKCi0g5a2X5L2T5p2l6IeqIGBmYy1saXN0YCDnmoTovpPlh7rvvJvpmaTkuoYgYGZvbnRUb29sc2DvvIzku5PlupPkuI3lho3miZPljIXku7vkvZXlrZfkvZPjgILoo4XlrozlrZfkvZPlkI7miafooYwgYGZjLWNhY2hlIC1mYO+8jOWGjemHjeaWsOaJk+W8gOmdouadv+OAggotIOaUr+aMgSBgLnR0ZmDjgIFgLm90ZmDjgIFgLnR0Y2DjgIFgLm90Y2DjgILpm4blkIjlrZfkvZPlj6rmir3lj5bnlKjliLDnmoTpgqPkuIDkuKogZmFjZe+8iOeUqCBgZm9udFRvb2xzYO+8ie+8jOe8k+WtmOWIsOaPkuS7tuiHquW3seeahOi/kOihjOebruW9leOAggotIOWIhuWMuuW9kue9ruaYr+WQr+WPkeW8j+eahO+8mmDnrYnlrr1gIOeciyBmb250Y29uZmlnIOeahCBgc3BhY2luZ2DvvIgxMDAgLyAxMTDvvInmiJYgbW9ub3NwYWNlIOWFs+mUruWtl++8jGDooaznur9gIC8gYOaXoOihrOe6v2Ag55yL5a2X5L2T5peP5ZCN5YWz6ZSu6K+N77yM5YW25L2Z5b2S5YiwIGDlhbblroNg44CC5Zug5q2k5p+Q5qy+5a2X5L2T55qE5b2S57G75Y+v6IO95ZKM55u06KeJ5LiN5ZCM4oCU4oCU6Z2i5p2/6YeM55qE5YiG5Yy66K+05piO5Lya5qCH5Ye65omA55So6KeE5YiZ44CCCi0g5o+S5Lu25LiN5L+u5pS557O757uf5a2X5L2T5oiWIGZvbnRjb25maWfvvIzlj6rlr7nlvZPliY0gU3RlYW0g5Lya6K+d5rOo5YWl5LiA5q61IENTUyBgQGZvbnQtZmFjZWAg6KaG55uW44CCCgojIyDmk43kvZwKCnwg6L6T5YWlIHwg5Yqo5L2cIHwKfCAtLS0gfCAtLS0gfAp8IEEgLyDngrnlh7sgfCDlupTnlKjlvZPliY3ogZrnhKbnmoTlrZfkvZMgfAp8IFggfCDmt7vliqAgLyDlj5bmtojmlLbol48gfAp8IFkgfCDmipjlj6DlvZPliY3liIbljLogfAp8IEIgfCDov5Tlm54gfAoKIyMg5LuT5bqT57uT5p6ECgpgYGAKRGVja3lGb250UGlja2VyLyAgICAg5Lit5paH54mI5rqQ56CB77yIcGx1Z2luLmpzb27jgIFtYWluLnB544CBZmFjZV9leHRyYWN0LnB544CBZGlzdC9pbmRleC5qc++8iQpGb250UGlja2VyRU4vICAgICAgICDoi7HmlofniYjmupDnoIHvvIjnu5PmnoTnm7jlkIzvvIkKUkVBRE1FLm1kICAgICAgICAgICAg6Iux5paH6K+05piOClJFQURNRS56aC1DTi5tZCAgICAgIOacrOaWh+S7tu+8iOS4reaWh+ivtOaYju+8iQpMSUNFTlNFICAgICAgICAgICAgICBNSVQKLmdpdGlnbm9yZQpgYGAKCuS7k+W6k+a6kOeggeWvueW6lOeahOaYryBgLXdpdGgtZm9udHRvb2xzYCDlvaLmgIHvvIzljbPljIXlkKsgYHZlbmRvci9mb250VG9vbHMvYOOAguaXoOS+nei1lueJiOeahCBaSVAg5bCx5piv5ZCM5LiA5Lu95rqQ56CB5Y675o6JIGB2ZW5kb3IvYO+8mmBtYWluLnB5YCDlj6rlnKggYHZlbmRvci9gIOebruW9leWtmOWcqOaXtuaJjeWKqCBgc3lzLnBhdGhg77yM5omA5Lul5Y675o6J5ZCO6KGM5Li65LiN5Y+Y44CCCgojIyDorrjlj68KCk1JVCDigJTigJQg6KeBIFtMSUNFTlNFXShMSUNFTlNFKeOAgkNvcHlyaWdodCAoYykgMjAyNiBIb25jaGFuZeOAggoKYC13aXRoLWZvbnR0b29sc2Ag54mI5pys5Y+m5aSW5omT5YyF5LqGIFtmb250VG9vbHNdKGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzKSA0LjY4LjDvvIzlkIzmoLfmmK8gTUlUIOiuuOWPryDigJTigJQg6KeBIGB2ZW5kb3IvTElDRU5TRS1mb250VG9vbHNg44CCCg==
+[English](README.md) | **简体中文**
+
+# Decky 字体选择器
+
+一个 [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) 插件：把 Steam Deck 上已安装的任意字体应用到 Steam 大屏界面（主界面、MainMenu、快捷访问菜单），不写 `~/homebrew/themes`，不依赖 CSS Loader，也不连 CEF 调试口。
+
+仓库提供**同一个插件的四个包**：两种界面语言 × 两种依赖形态。四份都是 **1.0.2**，行为完全一致（字体发现、分区规则、排序、操作方式都相同），只有界面语言和是否自带 `fontTools` 不同。
+
+| 版本 | Release 资产 | 插件目录 | 界面语言 | fontTools |
+| --- | --- | --- | --- | --- |
+| 中文，无依赖 | `DeckyFontPicker-1.0.2.zip` | `DeckyFontPicker/` | 简体中文 | 不带 |
+| 中文，自带依赖 | `DeckyFontPicker-1.0.2-with-fonttools.zip` | `DeckyFontPicker/` | 简体中文 | 放在 `vendor/` |
+| 英文，无依赖 | `FontPickerEN-1.0.2.zip` | `FontPickerEN/` | English | 不带 |
+| 英文，自带依赖 | `FontPickerEN-1.0.2-with-fonttools.zip` | `FontPickerEN/` | English | 放在 `vendor/` |
+
+同语言的两种形态**目录名和插件名完全相同**，是互为替代的两个版本：装第二个会直接覆盖第一个，因此**同一时间只能装其中一个**。
+
+## 功能
+
+- 列出 `fc-list` 报告的所有字体族，凡是被 fontconfig 收录的字体都会出现（系统包、`~/.local/share/fonts`、`~/.fonts` 等）。
+- 11 个分区：`收藏`、`中文字体覆盖`、`衬线`、`衬线 (zh)`、`无衬线`、`无衬线 (zh)`、`等宽`、`等宽 (zh)`、`其它`、`其它 (zh)`、`全部字体`。
+  - 基础分区会排除 `lang` 含 `zh` 的字体，`(zh)` 分区正好只放这些中文字体；两半**互斥**，同一个字体族不会重复出现（收藏除外）。空分区自动隐藏。
+  - 英文版中这批分区标题为 `Favorites` / `Chinese Coverage` / `Serif` / `Serif (zh)` / `Sans` / `Sans (zh)` / `Mono` / `Mono (zh)` / `Others` / `Others (zh)` / `All Fonts`。
+- 先按中文覆盖度排序，再按字体族名小写排序。
+- 会检测所选字体族是否真的含中文字形，不含时自动回退到一款支持中文的字体，避免菜单文字变成方块。
+- 通过仅监听回环地址的 HTTP 服务供给字体，并用 Decky 自身的 `inject_css_into_tab` 注入一段 `<style>`，随后在 Steam 重渲染时自动重放。
+- 注入三个目标：主页、`MainMenu_uid*`、`QuickAccess_uid*`。
+- 分区折叠状态记忆、独立的「当前字体」折叠块、每个目标的实时注入状态、收藏（**X**）、每次加载 60 条的「加载更多」。
+
+## 安装
+
+1. 从 [Releases](../../releases) 页面下载其中一个 ZIP。
+2. 在 Decky Loader 里打开 **设置 → 开发者 → 从 ZIP 安装插件**，或把压缩包解压到 `~/homebrew/plugins/`。
+3. 重载 Decky（或重启 `plugin_loader.service`），打开快捷访问菜单。
+4. 在 SteamOS 上，除非那台机器系统里已经有 `fontTools`，否则请选**自带 fontTools** 的包——原因见下一节。
+
+每个 ZIP 的内容就是：
+
+```
+# 无依赖版
+<目录>/plugin.json
+<目录>/main.py
+<目录>/face_extract.py
+<目录>/dist/index.js
+
+# 自带 fontTools 版（多出一个 vendor 目录，4,898,851 字节 / 354 个文件）
+<目录>/plugin.json
+<目录>/main.py
+<目录>/face_extract.py
+<目录>/dist/index.js
+<目录>/vendor/fontTools/...
+<目录>/vendor/LICENSE-fontTools
+```
+
+环境要求：Decky Loader 3.x（运行时使用 `decky-frontend-lib` 3.25）和 Python 3。无依赖版还要求系统 `python3` 能 `import fontTools`；自带版不需要任何额外依赖。
+
+## SteamOS 上的中文字体需要 fontTools
+
+SteamOS 里几乎所有中文字体都是**集合字体**（`.ttc` / `.otc`），一个文件里打包了多个 face。例如 `NotoSerifCJK-Regular.ttc` 内含 5 个 face（JP、KR、SC、TC、HK），「Noto Serif CJK SC」是这个文件的 **index 2**。浏览器不能把整个集合直接当作 `@font-face` 的字体源，所以插件会用 `fontTools`（`TTCollection`）把你选中的那一个 face 抽出来，缓存到 `~/homebrew/data/<目录>/fonts/`。
+
+缺 `fontTools` 时抽取无法进行，而插件又是**先移除旧样式、再准备新字体**，所以整次应用都会失败。表现是：
+
+- 切到任何中文字体都失败；`.ttf` / `.otf` 字体不受影响，因为它们不需要抽取、直接供给。
+- 三个注入目标（主页 / MainMenu / QuickAccess）全部变成**未注入**。
+- `~/homebrew/logs/<目录>/` 下的日志最后会出现类似这样一行：
+
+  ```
+  准备字体 'Noto Serif CJK SC' 失败: 抽取 NotoSerifCJK-Regular.ttc#2 失败: fontTools 不可用: No module named 'fontTools'
+  ```
+
+### 解法一 —— 用自带 fontTools 的包（推荐，零依赖）
+
+装 `DeckyFontPicker-1.0.2-with-fonttools.zip` 或 `FontPickerEN-1.0.2-with-fonttools.zip`。`fontTools` 4.68.0（纯 Python，MIT）已经放进 `vendor/`；`main.py` 在任何人 import `fontTools` 之前，把 `<插件目录>/vendor` 插到 `sys.path` 最前（同时注入到辅助子进程的 `PYTHONPATH`）。这个路径来自插件自身的实际位置，所以插件目录改名或移动后仍然有效，也完全不依赖 user site 或系统包。
+
+代价：下载 1,248,357 字节（wheel 本体），解包后 4,898,851 字节（算上文件系统块开销约 5.7 MB）。**不含** `brotli`，原因见下。
+
+### 解法二 —— 手动装到 user site
+
+不需要 `pip`，不需要 `sudo`，不需要开发者模式，也不装任何系统包。直接照抄：
+
+```bash
+# 1) 下载 wheel（PyPI 官方文件，1,248,357 字节）
+curl -L -O https://files.pythonhosted.org/packages/35/74/4ea331ecc65ba05a58b1e4e8ccd604c8a15565f876dfbf93fc2a2ea2e22b/fonttools-4.68.0-py3-none-any.whl
+
+# 2) 建好 user site 目录 —— 目录不存在时 CPython 根本不会挂载它
+python3 -c "import site; print(site.getusersitepackages())"
+mkdir -p "$(python3 -c 'import site; print(site.getusersitepackages())')"
+
+# 3) 把 wheel 解包进去
+unzip -o -q fonttools-4.68.0-py3-none-any.whl -d "$(python3 -c 'import site; print(site.getusersitepackages())')"
+
+# 4) 验证
+python3 -c "import fontTools; print(fontTools.version)"
+```
+
+第 4 步应输出 `4.68.0`。第 2 步不能省：`~/.local/lib/python3.14/site-packages`（按你的 Python 版本）不会由 Python 自动创建，而 `site.addusersitepackages()` 只在目录**已存在**时才把它加入 `sys.path`；少了 `mkdir -p`，解包出来的东西永远不会被搜到。
+
+注意：
+
+- **不要**执行 `steamos-readonly disable`，**不要**用 `pacman -S python-fonttools`，**不要**开开发者模式。这些都会动只读根分区、会被 SteamOS 更新清掉，而纯 Python 的 wheel 根本用不上。
+- 这个 wheel 是 `py3-none-any`，系统自带的任意 Python 3 都能用。
+- SteamOS 的系统 Python 没有 `pip`，这是正常的，不影响上面的做法。
+- 装完只需在插件面板里**重新选一次字体**（或切到别的字体再切回来），不用重启 Steam 或 Decky。
+
+### brotli 是可选项
+
+`brotli` 只用于把抽出来的单 face 压成 `woff2`，而且只有在单 face **≤ 3 MiB**（`WOFF2_MAX_BYTES`）时才会尝试；没有 `brotli` 或压缩失败，插件会静默保留 `.ttf`，不影响字体生效。完整 CJK face 远大于 3 MiB（Noto Serif CJK SC 单 face 约 24.5 MB），本来就不会走 woff2，所以不装 `brotli` 对中文字体没有任何影响。
+
+确实需要的话：`brotli-1.2.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl` 是 1,420,557 字节，解包 5,161,307 字节（一个 5.1 MB 的 `_brotli…so` 加一个很小的 `brotli.py`）。它是编译扩展，但这个 manylinux2014 wheel 与 SteamOS 匹配（CPython 3.14 ABI、glibc ≥ 2.17），同样可以不解包编译、直接解到上面那个 user site 目录里用。
+
+## 同一时间只装一个
+
+所有版本都往同一批 Steam 标签页注入 CSS，**同时启用两个会互相抢同一个 style 块**，禁用其中一个可能把另一个注入的样式一起删掉。跨语言、跨依赖形态都一样。
+
+- 目录名不同（`DeckyFontPicker/` 与 `FontPickerEN/`），所以中英文版可以并存、互不覆盖。
+- **同语言**的两种形态共用一个目录和一个插件名，后装的会替换先装的。
+- 每个版本各自使用 `~/homebrew/settings/<目录>/` 与 `~/homebrew/data/<目录>/` 保存设置和字体缓存。
+- 在 Decky 插件列表里只保留**一个**启用，其余禁用或删除。
+
+## 字体来源与限制
+
+- 字体来自 `fc-list` 的输出；除了 `fontTools`，仓库不再打包任何字体。装完字体后执行 `fc-cache -f`，再重新打开面板。
+- 支持 `.ttf`、`.otf`、`.ttc`、`.otc`。集合字体只抽取用到的那一个 face（用 `fontTools`），缓存到插件自己的运行目录。
+- 分区归置是启发式的：`等宽` 看 fontconfig 的 `spacing`（100 / 110）或 monospace 关键字，`衬线` / `无衬线` 看字体族名关键词，其余归到 `其它`。因此某款字体的归类可能和直觉不同——面板里的分区说明会标出所用规则。
+- 插件不修改系统字体或 fontconfig，只对当前 Steam 会话注入一段 CSS `@font-face` 覆盖。
+
+## 操作
+
+| 输入 | 动作 |
+| --- | --- |
+| A / 点击 | 应用当前聚焦的字体 |
+| X | 添加 / 取消收藏 |
+| Y | 折叠当前分区 |
+| B | 返回 |
+
+## 仓库结构
+
+```
+DeckyFontPicker/     中文版源码（plugin.json、main.py、face_extract.py、dist/index.js）
+FontPickerEN/        英文版源码（结构相同）
+README.md            英文说明
+README.zh-CN.md      本文件（中文说明）
+LICENSE              MIT
+.gitignore
+```
+
+仓库源码对应的是 `-with-fonttools` 形态，即包含 `vendor/fontTools/`。无依赖版的 ZIP 就是同一份源码去掉 `vendor/`：`main.py` 只在 `vendor/` 目录存在时才动 `sys.path`，所以去掉后行为不变。
+
+## 许可
+
+MIT —— 见 [LICENSE](LICENSE)。Copyright (c) 2026 Honchane。
+
+`-with-fonttools` 版本另外打包了 [fontTools](https://github.com/fonttools/fonttools) 4.68.0，同样是 MIT 许可 —— 见 `vendor/LICENSE-fontTools`。
