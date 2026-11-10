@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Plugin runtime state (selected family, favourites)
+state.json
+
+# Extracted face cache
+fonts/
+*.ttf
+*.otf
+*.ttc
+*.otc
+
+# Logs
+*.log
+
+# Release artefacts
+*.zip
+
+# Editor / OS noise
+.DS_Store
+.vscode/
+.idea/

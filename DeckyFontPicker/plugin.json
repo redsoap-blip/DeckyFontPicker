@@ -1,0 +1,10 @@
+{
+  "name": "字体选择器",
+  "author": "Honchane",
+  "version": "1.0.0",
+  "flags": [],
+  "publish": {
+    "tags": ["style", "font"],
+    "description": "读取系统已安装字体，用 Decky 自身注入把所选字体应用到主界面 / MainMenu / QuickAccess；缺字时自动回退到系统中文字体。"
+  }
+}
