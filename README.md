@@ -6,18 +6,18 @@ The repository ships **two builds of the same plugin**, which differ only in UI 
 
 | Build | Release asset | Plugin folder | UI language |
 | --- | --- | --- | --- |
-| Chinese | `DeckyFontPicker-1.0.0.zip` | `DeckyFontPicker/` | 简体中文 |
-| English | `FontPickerEN-1.0.0.zip` | `FontPickerEN/` | English |
+| Chinese | `DeckyFontPicker-1.0.1.zip` | `DeckyFontPicker/` | 简体中文 |
+| English | `FontPickerEN-1.0.1.zip` | `FontPickerEN/` | English |
 
-Both are version **1.0.0** and share identical behaviour: same font discovery, same section rules, same sorting, same controls.
+Both are version **1.0.1** and share identical behaviour: same font discovery, same section rules, same sorting, same controls.
 
 ## Features
 
 - Lists every font family reported by `fc-list`, so anything registered with fontconfig appears automatically (SteamOS packages, `~/.local/share/fonts`, `~/.fonts`, …).
-- 11 sections: `Favorites`, `CJK Coverage`, `Serif`, `Serif (CJK)`, `Sans`, `Sans (CJK)`, `Mono`, `Mono (CJK)`, `Others`, `Others (CJK)`, `All Fonts`.
-  - Base sections exclude fonts whose `lang` includes `zh`; the `(CJK)` sections contain exactly those Chinese fonts. The two halves are **mutually exclusive**, so no family is listed twice (favourites excepted). Empty sections are hidden.
-- Sorted by CJK capability first, then by lower-cased family name.
-- Detects whether the selected family actually contains CJK glyphs and falls back to a Chinese-capable family when it does not, so menu text never turns into tofu.
+- 11 sections: `Favorites`, `Chinese Coverage`, `Serif`, `Serif (zh)`, `Sans`, `Sans (zh)`, `Mono`, `Mono (zh)`, `Others`, `Others (zh)`, `All Fonts`.
+  - Base sections exclude fonts whose `lang` includes `zh`; the `(zh)` sections contain exactly those Chinese fonts. The two halves are **mutually exclusive**, so no family is listed twice (favourites excepted). Empty sections are hidden.
+- Sorted by Chinese coverage first, then by lower-cased family name.
+- Detects whether the selected family actually contains Chinese glyphs and falls back to a Chinese-capable family when it does not, so menu text never turns into tofu.
 - Serves the font from a loopback-only HTTP server and injects one `<style>` block through Decky's own `inject_css_into_tab`, then re-applies it across Steam re-renders.
 - Injects into three targets: Home, `MainMenu_uid*` and `QuickAccess_uid*`.
 - Per-section collapse state, a separate collapsible "Current font" block, live injection status per target, favourites (**X**), and "load more" paging in steps of 60.

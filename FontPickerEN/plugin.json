@@ -1,10 +1,10 @@
 {
   "name": "Font Picker",
   "author": "Honchane",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "flags": [],
   "publish": {
     "tags": ["style", "font"],
-    "description": "Lists installed system fonts and injects the selected font into Home / MainMenu / QuickAccess through Decky's own CSS injection; falls back automatically when CJK glyphs are missing."
+    "description": "Lists installed system fonts and injects the selected font into Home / MainMenu / QuickAccess through Decky's own CSS injection; falls back automatically when Chinese glyphs are missing."
   }
 }

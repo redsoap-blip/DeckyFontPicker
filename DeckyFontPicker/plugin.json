@@ -1,7 +1,7 @@
 {
   "name": "字体选择器",
   "author": "Honchane",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "flags": [],
   "publish": {
     "tags": ["style", "font"],

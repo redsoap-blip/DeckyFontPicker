@@ -361,40 +361,40 @@
                     note: "Focus a font and press X (gamepad) to add or remove it from favorites",
                 },
                 {
-                    id: "zh-extra", name: "CJK Coverage", items: zhExtra, kind: "zh-extra",
-                    note: "Detected by charset coverage: not primarily a CJK font, but its charset covers at least 500 code points in the CJK Unified Ideographs ranges (U+3400–U+4DBF, U+4E00–U+9FFF). Fonts that cannot be measured are skipped; currently " + zhExtra.length + " fonts.",
+                    id: "zh-extra", name: "Chinese Coverage", items: zhExtra, kind: "zh-extra",
+                    note: "Detected by charset coverage: not primarily a Chinese font, but its charset covers at least 500 code points in the CJK Unified Ideographs ranges (U+3400–U+4DBF, U+4E00–U+9FFF). Fonts that cannot be measured are skipped; currently " + zhExtra.length + " fonts.",
                 },
                 {
                     id: "serif", name: "Serif", items: serif, kind: "serif",
-                    note: "No CJK fonts here; see 'Serif (CJK)'. Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
+                    note: "No Chinese fonts here; see 'Serif (zh)'. Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
                 },
                 {
-                    id: "serif-zh", name: "Serif (CJK)", items: serifZh, kind: "serif",
-                    note: "CJK only (lang contains zh). Mutually exclusive with 'Serif'; together they cover every serif font.",
+                    id: "serif-zh", name: "Serif (zh)", items: serifZh, kind: "serif",
+                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Serif'; together they cover every serif font.",
                 },
                 {
                     id: "sans", name: "Sans", items: sans, kind: "sans",
-                    note: "No CJK fonts here; see 'Sans (CJK)'. Family name contains an explicit sans keyword (sans / grotesk / gothic / hei, etc.).",
+                    note: "No Chinese fonts here; see 'Sans (zh)'. Family name contains an explicit sans keyword (sans / grotesk / gothic / hei, etc.).",
                 },
                 {
-                    id: "sans-zh", name: "Sans (CJK)", items: sansZh, kind: "sans",
-                    note: "CJK only (lang contains zh). Mutually exclusive with 'Sans'; together they cover every sans-serif font.",
+                    id: "sans-zh", name: "Sans (zh)", items: sansZh, kind: "sans",
+                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Sans'; together they cover every sans-serif font.",
                 },
                 {
                     id: "mono", name: "Mono", items: mono, kind: "mono",
-                    note: "No CJK fonts here; see 'Mono (CJK)'. Determined by fontconfig's spacing field (100 / 110) or by a family name containing a monospace keyword (mono / monospace / the localised word for 'monospace').",
+                    note: "No Chinese fonts here; see 'Mono (zh)'. Determined by fontconfig's spacing field (100 / 110) or by a family name containing a monospace keyword (mono / monospace / the localised word for 'monospace').",
                 },
                 {
-                    id: "mono-zh", name: "Mono (CJK)", items: monoZh, kind: "mono",
-                    note: "CJK only (lang contains zh). Mutually exclusive with 'Mono'; together they cover every monospace font.",
+                    id: "mono-zh", name: "Mono (zh)", items: monoZh, kind: "mono",
+                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Mono'; together they cover every monospace font.",
                 },
                 {
                     id: "other", name: "Others", items: other, kind: "other",
-                    note: "No CJK fonts here; see 'Others (CJK)'. Neither monospace nor matched by a serif / sans keyword.",
+                    note: "No Chinese fonts here; see 'Others (zh)'. Neither monospace nor matched by a serif / sans keyword.",
                 },
                 {
-                    id: "other-zh", name: "Others (CJK)", items: otherZh, kind: "other",
-                    note: "CJK only (lang contains zh). Mutually exclusive with 'Others'; together they cover every remaining font.",
+                    id: "other-zh", name: "Others (zh)", items: otherZh, kind: "other",
+                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Others'; together they cover every remaining font.",
                 },
                 { id: "all", name: "All Fonts", items: full, kind: "all", note: null },
             ];
@@ -516,8 +516,8 @@
                         current
                             ? h("div", { style: { opacity: 0.72 } },
                                 (currentFont && currentFont.zh)
-                                    ? "CJK glyphs included; safe for UI text"
-                                    : "No CJK glyphs in this font; CJK text falls back to " + ((state && state.fallback && state.fallback[0]) || "the system default"))
+                                    ? "Chinese glyphs included; safe for UI text"
+                                    : "No Chinese glyphs in this font; Chinese text falls back to " + ((state && state.fallback && state.fallback[0]) || "the system default"))
                             : h("div", { style: { opacity: 0.72 } }, "UI font not overridden")
                     ))
                 : null,
@@ -548,7 +548,7 @@
                 h(deckyFrontendLib.ButtonItem, {
                     layout: "below",
                     disabled: busy,
-                    description: (font.zh ? "CJK" : "No CJK, auto fallback") +
+                    description: (font.zh ? "Chinese" : "No Chinese, auto fallback") +
                         (font.has_bold ? " · Bold" : " · No bold (synthetic)") +
                         (font.mono ? " · Monospace" : "") +
                         (isFav ? " · Favorite" : "") +

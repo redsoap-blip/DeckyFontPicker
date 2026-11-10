@@ -70,10 +70,10 @@ _FC_WEIGHTS = [
     (100, 500), (180, 600), (200, 700), (205, 800), (210, 900), (215, 950),
 ]
 # 抽出来的单 face 小于这个体积才再压成 woff2，否则直接用 ttf
-# （CJK 全字集 ttc 单 face 转 woff2 实测约 54s，得不偿失）
+# （中文全字集 ttc 单 face 转 woff2 实测约 54s，得不偿失）
 WOFF2_MAX_BYTES = 3 * 1024 * 1024
 
-PREFERRED_CJK = [
+PREFERRED_ZH = [
     "Noto Sans CJK SC",
     "Noto Sans SC",
     "Source Han Sans SC",
@@ -126,7 +126,7 @@ def _has_zh(lang):
     return False
 
 
-# 「含中文」判定：不是中文主字体（lang 不含 zh），但 charset 与 CJK 统一表意文字
+# 「含中文」判定：不是中文主字体（lang 不含 zh），但 charset 与 CJK Unified Ideographs
 # 的交集达到这个码位数，才算「字符集里确实带汉字」，避免只带几个汉字就误入。
 ZH_EXTRA_MIN_CHARS = 500
 ZH_RANGES = ((0x3400, 0x4DBF), (0x4E00, 0x9FFF))  # 扩展 A + 基本区
@@ -148,7 +148,7 @@ def _parse_charset(spec):
 
 
 def _cjk_coverage(ranges):
-    """charset 区间与 CJK 统一表意文字区间的交集码位数（同一码位只算一次）。"""
+    """charset 区间与 CJK Unified Ideographs 区间的交集码位数（同一码位只算一次）。"""
     if not ranges:
         return 0
     merged = []
@@ -305,7 +305,7 @@ def _pick_faces(entry):
 def _fallback_families(families, family, has_zh):
     chain = []
     if not has_zh:
-        for name in PREFERRED_CJK:
+        for name in PREFERRED_ZH:
             if name in families and name != family:
                 chain.append(name)
                 break
