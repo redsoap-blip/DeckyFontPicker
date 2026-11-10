@@ -1,10 +1,1 @@
-{
-  "name": "Font Picker",
-  "author": "Honchane",
-  "version": "1.0.1",
-  "flags": [],
-  "publish": {
-    "tags": ["style", "font"],
-    "description": "Lists installed system fonts and injects the selected font into Home / MainMenu / QuickAccess through Decky's own CSS injection; falls back automatically when Chinese glyphs are missing."
-  }
-}
+ewogICJuYW1lIjogIkZvbnQgUGlja2VyIiwKICAiYXV0aG9yIjogIkhvbmNoYW5lIiwKICAidmVyc2lvbiI6ICIxLjAuMiIsCiAgImZsYWdzIjogW10sCiAgInB1Ymxpc2giOiB7CiAgICAidGFncyI6IFsic3R5bGUiLCAiZm9udCJdLAogICAgImRlc2NyaXB0aW9uIjogIkxpc3RzIGluc3RhbGxlZCBzeXN0ZW0gZm9udHMgYW5kIGluamVjdHMgdGhlIHNlbGVjdGVkIGZvbnQgaW50byBIb21lIC8gTWFpbk1lbnUgLyBRdWlja0FjY2VzcyB0aHJvdWdoIERlY2t5J3Mgb3duIENTUyBpbmplY3Rpb247IGZhbGxzIGJhY2sgYXV0b21hdGljYWxseSB3aGVuIENoaW5lc2UgZ2x5cGhzIGFyZSBtaXNzaW5nLiIKICB9Cn0K
