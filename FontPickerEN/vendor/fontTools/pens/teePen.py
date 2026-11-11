@@ -1,1 +1,54 @@
-IiIiUGVuIG11bHRpcGxleGluZyBkcmF3aW5nIHRvIG9uZSBvciBtb3JlIHBlbnMuIiIiCgpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IEFic3RyYWN0UGVuCgpfX2FsbF9fID0gWyJUZWVQZW4iXQoKCmNsYXNzIFRlZVBlbihBYnN0cmFjdFBlbik6CiAgICAiIiJQZW4gbXVsdGlwbGV4aW5nIGRyYXdpbmcgdG8gb25lIG9yIG1vcmUgcGVucy4KCiAgICBVc2UgZWl0aGVyIGFzIFRlZVBlbihwZW4xLCBwZW4yLCAuLi4pIG9yIFRlZVBlbihpdGVyYWJsZU9mUGVucykuIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsICpwZW5zKToKICAgICAgICBpZiBsZW4ocGVucykgPT0gMToKICAgICAgICAgICAgcGVucyA9IHBlbnNbMF0KICAgICAgICBzZWxmLnBlbnMgPSBwZW5zCgogICAgZGVmIG1vdmVUbyhzZWxmLCBwMCk6CiAgICAgICAgZm9yIHBlbiBpbiBzZWxmLnBlbnM6CiAgICAgICAgICAgIHBlbi5tb3ZlVG8ocDApCgogICAgZGVmIGxpbmVUbyhzZWxmLCBwMSk6CiAgICAgICAgZm9yIHBlbiBpbiBzZWxmLnBlbnM6CiAgICAgICAgICAgIHBlbi5saW5lVG8ocDEpCgogICAgZGVmIHFDdXJ2ZVRvKHNlbGYsICpwb2ludHMpOgogICAgICAgIGZvciBwZW4gaW4gc2VsZi5wZW5zOgogICAgICAgICAgICBwZW4ucUN1cnZlVG8oKnBvaW50cykKCiAgICBkZWYgY3VydmVUbyhzZWxmLCAqcG9pbnRzKToKICAgICAgICBmb3IgcGVuIGluIHNlbGYucGVuczoKICAgICAgICAgICAgcGVuLmN1cnZlVG8oKnBvaW50cykKCiAgICBkZWYgY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIGZvciBwZW4gaW4gc2VsZi5wZW5zOgogICAgICAgICAgICBwZW4uY2xvc2VQYXRoKCkKCiAgICBkZWYgZW5kUGF0aChzZWxmKToKICAgICAgICBmb3IgcGVuIGluIHNlbGYucGVuczoKICAgICAgICAgICAgcGVuLmVuZFBhdGgoKQoKICAgIGRlZiBhZGRDb21wb25lbnQoc2VsZiwgZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbik6CiAgICAgICAgZm9yIHBlbiBpbiBzZWxmLnBlbnM6CiAgICAgICAgICAgIHBlbi5hZGRDb21wb25lbnQoZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbikKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBfVGVzdFBlbgoKICAgIHBlbiA9IFRlZVBlbihfVGVzdFBlbigpLCBfVGVzdFBlbigpKQogICAgcGVuLm1vdmVUbygoMCwgMCkpCiAgICBwZW4ubGluZVRvKCgwLCAxMDApKQogICAgcGVuLmN1cnZlVG8oKDUwLCA3NSksICg2MCwgNTApLCAoNTAsIDI1KSkKICAgIHBlbi5jbG9zZVBhdGgoKQo=
+"""Pen multiplexing drawing to one or more pens."""
+
+from fontTools.pens.basePen import AbstractPen
+
+__all__ = ["TeePen"]
+
+
+class TeePen(AbstractPen):
+    """Pen multiplexing drawing to one or more pens.
+
+    Use either as TeePen(pen1, pen2, ...) or TeePen(iterableOfPens)."""
+
+    def __init__(self, *pens):
+        if len(pens) == 1:
+            pens = pens[0]
+        self.pens = pens
+
+    def moveTo(self, p0):
+        for pen in self.pens:
+            pen.moveTo(p0)
+
+    def lineTo(self, p1):
+        for pen in self.pens:
+            pen.lineTo(p1)
+
+    def qCurveTo(self, *points):
+        for pen in self.pens:
+            pen.qCurveTo(*points)
+
+    def curveTo(self, *points):
+        for pen in self.pens:
+            pen.curveTo(*points)
+
+    def closePath(self):
+        for pen in self.pens:
+            pen.closePath()
+
+    def endPath(self):
+        for pen in self.pens:
+            pen.endPath()
+
+    def addComponent(self, glyphName, transformation):
+        for pen in self.pens:
+            pen.addComponent(glyphName, transformation)
+
+
+if __name__ == "__main__":
+    from fontTools.pens.basePen import _TestPen
+
+    pen = TeePen(_TestPen(), _TestPen())
+    pen.moveTo((0, 0))
+    pen.lineTo((0, 100))
+    pen.curveTo((50, 75), (60, 50), (50, 25))
+    pen.closePath()

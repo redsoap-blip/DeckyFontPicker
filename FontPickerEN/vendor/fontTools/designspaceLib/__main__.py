@@ -1,1 +1,5 @@
-aW1wb3J0IHN5cwpmcm9tIGZvbnRUb29scy5kZXNpZ25zcGFjZUxpYiBpbXBvcnQgbWFpbgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHN5cy5leGl0KG1haW4oKSkK
+import sys
+from fontTools.designspaceLib import main
+
+if __name__ == "__main__":
+    sys.exit(main())

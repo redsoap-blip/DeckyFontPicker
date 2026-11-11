@@ -1,1 +1,424 @@
-IiIiUm91dGluZXMgZm9yIGNhbGN1bGF0aW5nIGJvdW5kaW5nIGJveGVzLCBwb2ludCBpbiByZWN0YW5nbGUgY2FsY3VsYXRpb25zIGFuZApzbyBvbi4KIiIiCgpmcm9tIGZvbnRUb29scy5taXNjLnJvdW5kVG9vbHMgaW1wb3J0IG90Um91bmQKZnJvbSBmb250VG9vbHMubWlzYy52ZWN0b3IgaW1wb3J0IFZlY3RvciBhcyBfVmVjdG9yCmltcG9ydCBtYXRoCmltcG9ydCB3YXJuaW5ncwoKCmRlZiBjYWxjQm91bmRzKGFycmF5KToKICAgICIiIkNhbGN1bGF0ZSB0aGUgYm91bmRpbmcgcmVjdGFuZ2xlIG9mIGEgMkQgcG9pbnRzIGFycmF5LgoKICAgIEFyZ3M6CiAgICAgICAgYXJyYXk6IEEgc2VxdWVuY2Ugb2YgMkQgdHVwbGVzLgoKICAgIFJldHVybnM6CiAgICAgICAgQSBmb3VyLWl0ZW0gdHVwbGUgcmVwcmVzZW50aW5nIHRoZSBib3VuZGluZyByZWN0YW5nbGUgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KICAgICIiIgogICAgaWYgbm90IGFycmF5OgogICAgICAgIHJldHVybiAwLCAwLCAwLCAwCiAgICB4cyA9IFt4IGZvciB4LCB5IGluIGFycmF5XQogICAgeXMgPSBbeSBmb3IgeCwgeSBpbiBhcnJheV0KICAgIHJldHVybiBtaW4oeHMpLCBtaW4oeXMpLCBtYXgoeHMpLCBtYXgoeXMpCgoKZGVmIGNhbGNJbnRCb3VuZHMoYXJyYXksIHJvdW5kPW90Um91bmQpOgogICAgIiIiQ2FsY3VsYXRlIHRoZSBpbnRlZ2VyIGJvdW5kaW5nIHJlY3RhbmdsZSBvZiBhIDJEIHBvaW50cyBhcnJheS4KCiAgICBWYWx1ZXMgYXJlIHJvdW5kZWQgdG8gY2xvc2VzdCBpbnRlZ2VyIHRvd2FyZHMgYGArSW5maW5pdHlgYCB1c2luZyB0aGUKICAgIDpmdW5jOmBmb250VG9vbHMubWlzYy5maXhlZFRvb2xzLm90Um91bmRgIGZ1bmN0aW9uIGJ5IGRlZmF1bHQsIHVubGVzcwogICAgYW4gb3B0aW9uYWwgYGByb3VuZGBgIGZ1bmN0aW9uIGlzIHBhc3NlZC4KCiAgICBBcmdzOgogICAgICAgIGFycmF5OiBBIHNlcXVlbmNlIG9mIDJEIHR1cGxlcy4KICAgICAgICByb3VuZDogQSByb3VuZGluZyBmdW5jdGlvbiBvZiB0eXBlIGBgZih4OiBmbG9hdCkgLT4gaW50YGAuCgogICAgUmV0dXJuczoKICAgICAgICBBIGZvdXItaXRlbSB0dXBsZSBvZiBpbnRlZ2VycyByZXByZXNlbnRpbmcgdGhlIGJvdW5kaW5nIHJlY3RhbmdsZToKICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgogICAgIiIiCiAgICByZXR1cm4gdHVwbGUocm91bmQodikgZm9yIHYgaW4gY2FsY0JvdW5kcyhhcnJheSkpCgoKZGVmIHVwZGF0ZUJvdW5kcyhib3VuZHMsIHAsIG1pbj1taW4sIG1heD1tYXgpOgogICAgIiIiQWRkIGEgcG9pbnQgdG8gYSBib3VuZGluZyByZWN0YW5nbGUuCgogICAgQXJnczoKICAgICAgICBib3VuZHM6IEEgYm91bmRpbmcgcmVjdGFuZ2xlIGV4cHJlc3NlZCBhcyBhIHR1cGxlCiAgICAgICAgICAgIGBgKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpLCBvciBOb25lYGAuCiAgICAgICAgcDogQSAyRCB0dXBsZSByZXByZXNlbnRpbmcgYSBwb2ludC4KICAgICAgICBtaW4sbWF4OiBmdW5jdGlvbnMgdG8gY29tcHV0ZSB0aGUgbWluaW11bSBhbmQgbWF4aW11bS4KCiAgICBSZXR1cm5zOgogICAgICAgIFRoZSB1cGRhdGVkIGJvdW5kaW5nIHJlY3RhbmdsZSBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgogICAgIiIiCiAgICB4LCB5ID0gcAogICAgaWYgYm91bmRzIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIHgsIHksIHgsIHkKICAgIHhNaW4sIHlNaW4sIHhNYXgsIHlNYXggPSBib3VuZHMKICAgIHJldHVybiBtaW4oeE1pbiwgeCksIG1pbih5TWluLCB5KSwgbWF4KHhNYXgsIHgpLCBtYXgoeU1heCwgeSkKCgpkZWYgcG9pbnRJblJlY3QocCwgcmVjdCk6CiAgICAiIiJUZXN0IGlmIGEgcG9pbnQgaXMgaW5zaWRlIGEgYm91bmRpbmcgcmVjdGFuZ2xlLgoKICAgIEFyZ3M6CiAgICAgICAgcDogQSAyRCB0dXBsZSByZXByZXNlbnRpbmcgYSBwb2ludC4KICAgICAgICByZWN0OiBBIGJvdW5kaW5nIHJlY3RhbmdsZSBleHByZXNzZWQgYXMgYSB0dXBsZQogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgoKICAgIFJldHVybnM6CiAgICAgICAgYGBUcnVlYGAgaWYgdGhlIHBvaW50IGlzIGluc2lkZSB0aGUgcmVjdGFuZ2xlLCBgYEZhbHNlYGAgb3RoZXJ3aXNlLgogICAgIiIiCiAgICB4LCB5ID0gcAogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiAoeE1pbiA8PSB4IDw9IHhNYXgpIGFuZCAoeU1pbiA8PSB5IDw9IHlNYXgpCgoKZGVmIHBvaW50c0luUmVjdChhcnJheSwgcmVjdCk6CiAgICAiIiJEZXRlcm1pbmUgd2hpY2ggcG9pbnRzIGFyZSBpbnNpZGUgYSBib3VuZGluZyByZWN0YW5nbGUuCgogICAgQXJnczoKICAgICAgICBhcnJheTogQSBzZXF1ZW5jZSBvZiAyRCB0dXBsZXMuCiAgICAgICAgcmVjdDogQSBib3VuZGluZyByZWN0YW5nbGUgZXhwcmVzc2VkIGFzIGEgdHVwbGUKICAgICAgICAgICAgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KCiAgICBSZXR1cm5zOgogICAgICAgIEEgbGlzdCBjb250YWluaW5nIHRoZSBwb2ludHMgaW5zaWRlIHRoZSByZWN0YW5nbGUuCiAgICAiIiIKICAgIGlmIGxlbihhcnJheSkgPCAxOgogICAgICAgIHJldHVybiBbXQogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiBbKHhNaW4gPD0geCA8PSB4TWF4KSBhbmQgKHlNaW4gPD0geSA8PSB5TWF4KSBmb3IgeCwgeSBpbiBhcnJheV0KCgpkZWYgdmVjdG9yTGVuZ3RoKHZlY3Rvcik6CiAgICAiIiJDYWxjdWxhdGUgdGhlIGxlbmd0aCBvZiB0aGUgZ2l2ZW4gdmVjdG9yLgoKICAgIEFyZ3M6CiAgICAgICAgdmVjdG9yOiBBIDJEIHR1cGxlLgoKICAgIFJldHVybnM6CiAgICAgICAgVGhlIEV1Y2xpZGVhbiBsZW5ndGggb2YgdGhlIHZlY3Rvci4KICAgICIiIgogICAgeCwgeSA9IHZlY3RvcgogICAgcmV0dXJuIG1hdGguc3FydCh4KioyICsgeSoqMikKCgpkZWYgYXNJbnQxNihhcnJheSk6CiAgICAiIiJSb3VuZCBhIGxpc3Qgb2YgZmxvYXRzIHRvIDE2LWJpdCBzaWduZWQgaW50ZWdlcnMuCgogICAgQXJnczoKICAgICAgICBhcnJheTogTGlzdCBvZiBmbG9hdCB2YWx1ZXMuCgogICAgUmV0dXJuczoKICAgICAgICBBIGxpc3Qgb2Ygcm91bmRlZCBpbnRlZ2Vycy4KICAgICIiIgogICAgcmV0dXJuIFtpbnQobWF0aC5mbG9vcihpICsgMC41KSkgZm9yIGkgaW4gYXJyYXldCgoKZGVmIG5vcm1SZWN0KHJlY3QpOgogICAgIiIiTm9ybWFsaXplIGEgYm91bmRpbmcgYm94IHJlY3RhbmdsZS4KCiAgICBUaGlzIGZ1bmN0aW9uICJ0dXJucyB0aGUgcmVjdGFuZ2xlIHRoZSByaWdodCB3YXkgdXAiLCBzbyB0aGF0IHRoZSBmb2xsb3dpbmcKICAgIGhvbGRzOjoKCiAgICAgICAgeE1pbiA8PSB4TWF4IGFuZCB5TWluIDw9IHlNYXgKCiAgICBBcmdzOgogICAgICAgIHJlY3Q6IEEgYm91bmRpbmcgcmVjdGFuZ2xlIGV4cHJlc3NlZCBhcyBhIHR1cGxlCiAgICAgICAgICAgIGBgKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpYGAuCgogICAgUmV0dXJuczoKICAgICAgICBBIG5vcm1hbGl6ZWQgYm91bmRpbmcgcmVjdGFuZ2xlLgogICAgIiIiCiAgICB4TWluLCB5TWluLCB4TWF4LCB5TWF4ID0gcmVjdAogICAgcmV0dXJuIG1pbih4TWluLCB4TWF4KSwgbWluKHlNaW4sIHlNYXgpLCBtYXgoeE1pbiwgeE1heCksIG1heCh5TWluLCB5TWF4KQoKCmRlZiBzY2FsZVJlY3QocmVjdCwgeCwgeSk6CiAgICAiIiJTY2FsZSBhIGJvdW5kaW5nIGJveCByZWN0YW5nbGUuCgogICAgQXJnczoKICAgICAgICByZWN0OiBBIGJvdW5kaW5nIHJlY3RhbmdsZSBleHByZXNzZWQgYXMgYSB0dXBsZQogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgogICAgICAgIHg6IEZhY3RvciB0byBzY2FsZSB0aGUgcmVjdGFuZ2xlIGFsb25nIHRoZSBYIGF4aXMuCiAgICAgICAgWTogRmFjdG9yIHRvIHNjYWxlIHRoZSByZWN0YW5nbGUgYWxvbmcgdGhlIFkgYXhpcy4KCiAgICBSZXR1cm5zOgogICAgICAgIEEgc2NhbGVkIGJvdW5kaW5nIHJlY3RhbmdsZS4KICAgICIiIgogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiB4TWluICogeCwgeU1pbiAqIHksIHhNYXggKiB4LCB5TWF4ICogeQoKCmRlZiBvZmZzZXRSZWN0KHJlY3QsIGR4LCBkeSk6CiAgICAiIiJPZmZzZXQgYSBib3VuZGluZyBib3ggcmVjdGFuZ2xlLgoKICAgIEFyZ3M6CiAgICAgICAgcmVjdDogQSBib3VuZGluZyByZWN0YW5nbGUgZXhwcmVzc2VkIGFzIGEgdHVwbGUKICAgICAgICAgICAgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KICAgICAgICBkeDogQW1vdW50IHRvIG9mZnNldCB0aGUgcmVjdGFuZ2xlIGFsb25nIHRoZSBYIGF4aXMuCiAgICAgICAgZFk6IEFtb3VudCB0byBvZmZzZXQgdGhlIHJlY3RhbmdsZSBhbG9uZyB0aGUgWSBheGlzLgoKICAgIFJldHVybnM6CiAgICAgICAgQW4gb2Zmc2V0IGJvdW5kaW5nIHJlY3RhbmdsZS4KICAgICIiIgogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiB4TWluICsgZHgsIHlNaW4gKyBkeSwgeE1heCArIGR4LCB5TWF4ICsgZHkKCgpkZWYgaW5zZXRSZWN0KHJlY3QsIGR4LCBkeSk6CiAgICAiIiJJbnNldCBhIGJvdW5kaW5nIGJveCByZWN0YW5nbGUgb24gYWxsIHNpZGVzLgoKICAgIEFyZ3M6CiAgICAgICAgcmVjdDogQSBib3VuZGluZyByZWN0YW5nbGUgZXhwcmVzc2VkIGFzIGEgdHVwbGUKICAgICAgICAgICAgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KICAgICAgICBkeDogQW1vdW50IHRvIGluc2V0IHRoZSByZWN0YW5nbGUgYWxvbmcgdGhlIFggYXhpcy4KICAgICAgICBkWTogQW1vdW50IHRvIGluc2V0IHRoZSByZWN0YW5nbGUgYWxvbmcgdGhlIFkgYXhpcy4KCiAgICBSZXR1cm5zOgogICAgICAgIEFuIGluc2V0IGJvdW5kaW5nIHJlY3RhbmdsZS4KICAgICIiIgogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiB4TWluICsgZHgsIHlNaW4gKyBkeSwgeE1heCAtIGR4LCB5TWF4IC0gZHkKCgpkZWYgc2VjdFJlY3QocmVjdDEsIHJlY3QyKToKICAgICIiIlRlc3QgZm9yIHJlY3RhbmdsZS1yZWN0YW5nbGUgaW50ZXJzZWN0aW9uLgoKICAgIEFyZ3M6CiAgICAgICAgcmVjdDE6IEZpcnN0IGJvdW5kaW5nIHJlY3RhbmdsZSwgZXhwcmVzc2VkIGFzIHR1cGxlcwogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgogICAgICAgIHJlY3QyOiBTZWNvbmQgYm91bmRpbmcgcmVjdGFuZ2xlLgoKICAgIFJldHVybnM6CiAgICAgICAgQSBib29sZWFuIGFuZCBhIHJlY3RhbmdsZS4KICAgICAgICBJZiB0aGUgaW5wdXQgcmVjdGFuZ2xlcyBpbnRlcnNlY3QsIHJldHVybnMgYGBUcnVlYGAgYW5kIHRoZSBpbnRlcnNlY3RpbmcKICAgICAgICByZWN0YW5nbGUuIFJldHVybnMgYGBGYWxzZWBgIGFuZCBgYCgwLCAwLCAwLCAwKWBgIGlmIHRoZSBpbnB1dAogICAgICAgIHJlY3RhbmdsZXMgZG9uJ3QgaW50ZXJzZWN0LgogICAgIiIiCiAgICB4TWluMSwgeU1pbjEsIHhNYXgxLCB5TWF4MSA9IHJlY3QxCiAgICB4TWluMiwgeU1pbjIsIHhNYXgyLCB5TWF4MiA9IHJlY3QyCiAgICB4TWluLCB5TWluLCB4TWF4LCB5TWF4ID0gKAogICAgICAgIG1heCh4TWluMSwgeE1pbjIpLAogICAgICAgIG1heCh5TWluMSwgeU1pbjIpLAogICAgICAgIG1pbih4TWF4MSwgeE1heDIpLAogICAgICAgIG1pbih5TWF4MSwgeU1heDIpLAogICAgKQogICAgaWYgeE1pbiA+PSB4TWF4IG9yIHlNaW4gPj0geU1heDoKICAgICAgICByZXR1cm4gRmFsc2UsICgwLCAwLCAwLCAwKQogICAgcmV0dXJuIFRydWUsICh4TWluLCB5TWluLCB4TWF4LCB5TWF4KQoKCmRlZiB1bmlvblJlY3QocmVjdDEsIHJlY3QyKToKICAgICIiIkRldGVybWluZSB1bmlvbiBvZiBib3VuZGluZyByZWN0YW5nbGVzLgoKICAgIEFyZ3M6CiAgICAgICAgcmVjdDE6IEZpcnN0IGJvdW5kaW5nIHJlY3RhbmdsZSwgZXhwcmVzc2VkIGFzIHR1cGxlcwogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgogICAgICAgIHJlY3QyOiBTZWNvbmQgYm91bmRpbmcgcmVjdGFuZ2xlLgoKICAgIFJldHVybnM6CiAgICAgICAgVGhlIHNtYWxsZXN0IHJlY3RhbmdsZSBpbiB3aGljaCBib3RoIGlucHV0IHJlY3RhbmdsZXMgYXJlIGZ1bGx5CiAgICAgICAgZW5jbG9zZWQuCiAgICAiIiIKICAgIHhNaW4xLCB5TWluMSwgeE1heDEsIHlNYXgxID0gcmVjdDEKICAgIHhNaW4yLCB5TWluMiwgeE1heDIsIHlNYXgyID0gcmVjdDIKICAgIHhNaW4sIHlNaW4sIHhNYXgsIHlNYXggPSAoCiAgICAgICAgbWluKHhNaW4xLCB4TWluMiksCiAgICAgICAgbWluKHlNaW4xLCB5TWluMiksCiAgICAgICAgbWF4KHhNYXgxLCB4TWF4MiksCiAgICAgICAgbWF4KHlNYXgxLCB5TWF4MiksCiAgICApCiAgICByZXR1cm4gKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpCgoKZGVmIHJlY3RDZW50ZXIocmVjdCk6CiAgICAiIiJEZXRlcm1pbmUgcmVjdGFuZ2xlIGNlbnRlci4KCiAgICBBcmdzOgogICAgICAgIHJlY3Q6IEJvdW5kaW5nIHJlY3RhbmdsZSwgZXhwcmVzc2VkIGFzIHR1cGxlcwogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgoKICAgIFJldHVybnM6CiAgICAgICAgQSAyRCB0dXBsZSByZXByZXNlbnRpbmcgdGhlIHBvaW50IGF0IHRoZSBjZW50ZXIgb2YgdGhlIHJlY3RhbmdsZS4KICAgICIiIgogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHJldHVybiAoeE1pbiArIHhNYXgpIC8gMiwgKHlNaW4gKyB5TWF4KSAvIDIKCgpkZWYgcmVjdEFyZWEocmVjdCk6CiAgICAiIiJEZXRlcm1pbmUgcmVjdGFuZ2xlIGFyZWEuCgogICAgQXJnczoKICAgICAgICByZWN0OiBCb3VuZGluZyByZWN0YW5nbGUsIGV4cHJlc3NlZCBhcyB0dXBsZXMKICAgICAgICAgICAgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KCiAgICBSZXR1cm5zOgogICAgICAgIFRoZSBhcmVhIG9mIHRoZSByZWN0YW5nbGUuCiAgICAiIiIKICAgIHhNaW4sIHlNaW4sIHhNYXgsIHlNYXggPSByZWN0CiAgICByZXR1cm4gKHlNYXggLSB5TWluKSAqICh4TWF4IC0geE1pbikKCgpkZWYgaW50UmVjdChyZWN0KToKICAgICIiIlJvdW5kIGEgcmVjdGFuZ2xlIHRvIGludGVnZXIgdmFsdWVzLgoKICAgIEd1YXJhbnRlZXMgdGhhdCB0aGUgcmVzdWx0aW5nIHJlY3RhbmdsZSBpcyBOT1Qgc21hbGxlciB0aGFuIHRoZSBvcmlnaW5hbC4KCiAgICBBcmdzOgogICAgICAgIHJlY3Q6IEJvdW5kaW5nIHJlY3RhbmdsZSwgZXhwcmVzc2VkIGFzIHR1cGxlcwogICAgICAgICAgICBgYCh4TWluLCB5TWluLCB4TWF4LCB5TWF4KWBgLgoKICAgIFJldHVybnM6CiAgICAgICAgQSByb3VuZGVkIGJvdW5kaW5nIHJlY3RhbmdsZS4KICAgICIiIgogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IHJlY3QKICAgIHhNaW4gPSBpbnQobWF0aC5mbG9vcih4TWluKSkKICAgIHlNaW4gPSBpbnQobWF0aC5mbG9vcih5TWluKSkKICAgIHhNYXggPSBpbnQobWF0aC5jZWlsKHhNYXgpKQogICAgeU1heCA9IGludChtYXRoLmNlaWwoeU1heCkpCiAgICByZXR1cm4gKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpCgoKZGVmIHF1YW50aXplUmVjdChyZWN0LCBmYWN0b3I9MSk6CiAgICAiIiIKICAgID4+PiBib3VuZHMgPSAoNzIuMywgLTIxOC40LCAxMjAxLjMsIDkxOS4xKQogICAgPj4+IHF1YW50aXplUmVjdChib3VuZHMpCiAgICAoNzIsIC0yMTksIDEyMDIsIDkyMCkKICAgID4+PiBxdWFudGl6ZVJlY3QoYm91bmRzLCBmYWN0b3I9MTApCiAgICAoNzAsIC0yMjAsIDEyMTAsIDkyMCkKICAgID4+PiBxdWFudGl6ZVJlY3QoYm91bmRzLCBmYWN0b3I9MTAwKQogICAgKDAsIC0zMDAsIDEzMDAsIDEwMDApCiAgICAiIiIKICAgIGlmIGZhY3RvciA8IDE6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIkV4cGVjdGVkIHF1YW50aXphdGlvbiBmYWN0b3IgPj0gMSwgZm91bmQ6IHtmYWN0b3Ihcn0iKQogICAgeE1pbiwgeU1pbiwgeE1heCwgeU1heCA9IG5vcm1SZWN0KHJlY3QpCiAgICByZXR1cm4gKAogICAgICAgIGludChtYXRoLmZsb29yKHhNaW4gLyBmYWN0b3IpICogZmFjdG9yKSwKICAgICAgICBpbnQobWF0aC5mbG9vcih5TWluIC8gZmFjdG9yKSAqIGZhY3RvciksCiAgICAgICAgaW50KG1hdGguY2VpbCh4TWF4IC8gZmFjdG9yKSAqIGZhY3RvciksCiAgICAgICAgaW50KG1hdGguY2VpbCh5TWF4IC8gZmFjdG9yKSAqIGZhY3RvciksCiAgICApCgoKY2xhc3MgVmVjdG9yKF9WZWN0b3IpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsICphcmdzLCAqKmt3YXJncyk6CiAgICAgICAgd2FybmluZ3Mud2FybigKICAgICAgICAgICAgImZvbnRUb29scy5taXNjLmFycmF5VG9vbHMuVmVjdG9yIGhhcyBiZWVuIGRlcHJlY2F0ZWQsIHBsZWFzZSB1c2UgIgogICAgICAgICAgICAiZm9udFRvb2xzLm1pc2MudmVjdG9yLlZlY3RvciBpbnN0ZWFkLiIsCiAgICAgICAgICAgIERlcHJlY2F0aW9uV2FybmluZywKICAgICAgICApCgoKZGVmIHBhaXJ3aXNlKGl0ZXJhYmxlLCByZXZlcnNlPUZhbHNlKToKICAgICIiIkl0ZXJhdGUgb3ZlciBjdXJyZW50IGFuZCBuZXh0IGl0ZW1zIGluIGl0ZXJhYmxlLgoKICAgIEFyZ3M6CiAgICAgICAgaXRlcmFibGU6IEFuIGl0ZXJhYmxlCiAgICAgICAgcmV2ZXJzZTogSWYgdHJ1ZSwgaXRlcmF0ZSBpbiByZXZlcnNlIG9yZGVyLgoKICAgIFJldHVybnM6CiAgICAgICAgQSBpdGVyYWJsZSB5aWVsZGluZyB0d28gZWxlbWVudHMgcGVyIGl0ZXJhdGlvbi4KCiAgICBFeGFtcGxlOgoKICAgICAgICA+Pj4gdHVwbGUocGFpcndpc2UoW10pKQogICAgICAgICgpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFtdLCByZXZlcnNlPVRydWUpKQogICAgICAgICgpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFswXSkpCiAgICAgICAgKCgwLCAwKSwpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFswXSwgcmV2ZXJzZT1UcnVlKSkKICAgICAgICAoKDAsIDApLCkKICAgICAgICA+Pj4gdHVwbGUocGFpcndpc2UoWzAsIDFdKSkKICAgICAgICAoKDAsIDEpLCAoMSwgMCkpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFswLCAxXSwgcmV2ZXJzZT1UcnVlKSkKICAgICAgICAoKDEsIDApLCAoMCwgMSkpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFswLCAxLCAyXSkpCiAgICAgICAgKCgwLCAxKSwgKDEsIDIpLCAoMiwgMCkpCiAgICAgICAgPj4+IHR1cGxlKHBhaXJ3aXNlKFswLCAxLCAyXSwgcmV2ZXJzZT1UcnVlKSkKICAgICAgICAoKDIsIDEpLCAoMSwgMCksICgwLCAyKSkKICAgICAgICA+Pj4gdHVwbGUocGFpcndpc2UoWydhJywgJ2InLCAnYycsICdkJ10pKQogICAgICAgICgoJ2EnLCAnYicpLCAoJ2InLCAnYycpLCAoJ2MnLCAnZCcpLCAoJ2QnLCAnYScpKQogICAgICAgID4+PiB0dXBsZShwYWlyd2lzZShbJ2EnLCAnYicsICdjJywgJ2QnXSwgcmV2ZXJzZT1UcnVlKSkKICAgICAgICAoKCdkJywgJ2MnKSwgKCdjJywgJ2InKSwgKCdiJywgJ2EnKSwgKCdhJywgJ2QnKSkKICAgICIiIgogICAgaWYgbm90IGl0ZXJhYmxlOgogICAgICAgIHJldHVybgogICAgaWYgcmV2ZXJzZToKICAgICAgICBpdCA9IHJldmVyc2VkKGl0ZXJhYmxlKQogICAgZWxzZToKICAgICAgICBpdCA9IGl0ZXIoaXRlcmFibGUpCiAgICBmaXJzdCA9IG5leHQoaXQsIE5vbmUpCiAgICBhID0gZmlyc3QKICAgIGZvciBiIGluIGl0OgogICAgICAgIHlpZWxkIChhLCBiKQogICAgICAgIGEgPSBiCiAgICB5aWVsZCAoYSwgZmlyc3QpCgoKZGVmIF90ZXN0KCk6CiAgICAiIiIKICAgID4+PiBpbXBvcnQgbWF0aAogICAgPj4+IGNhbGNCb3VuZHMoW10pCiAgICAoMCwgMCwgMCwgMCkKICAgID4+PiBjYWxjQm91bmRzKFsoMCwgNDApLCAoMCwgMTAwKSwgKDUwLCA1MCksICg4MCwgMTApXSkKICAgICgwLCAxMCwgODAsIDEwMCkKICAgID4+PiB1cGRhdGVCb3VuZHMoKDAsIDAsIDAsIDApLCAoMTAwLCAxMDApKQogICAgKDAsIDAsIDEwMCwgMTAwKQogICAgPj4+IHBvaW50SW5SZWN0KCg1MCwgNTApLCAoMCwgMCwgMTAwLCAxMDApKQogICAgVHJ1ZQogICAgPj4+IHBvaW50SW5SZWN0KCgwLCAwKSwgKDAsIDAsIDEwMCwgMTAwKSkKICAgIFRydWUKICAgID4+PiBwb2ludEluUmVjdCgoMTAwLCAxMDApLCAoMCwgMCwgMTAwLCAxMDApKQogICAgVHJ1ZQogICAgPj4+IG5vdCBwb2ludEluUmVjdCgoMTAxLCAxMDApLCAoMCwgMCwgMTAwLCAxMDApKQogICAgVHJ1ZQogICAgPj4+IGxpc3QocG9pbnRzSW5SZWN0KFsoNTAsIDUwKSwgKDAsIDApLCAoMTAwLCAxMDApLCAoMTAxLCAxMDApXSwgKDAsIDAsIDEwMCwgMTAwKSkpCiAgICBbVHJ1ZSwgVHJ1ZSwgVHJ1ZSwgRmFsc2VdCiAgICA+Pj4gdmVjdG9yTGVuZ3RoKCgzLCA0KSkKICAgIDUuMAogICAgPj4+IHZlY3Rvckxlbmd0aCgoMSwgMSkpID09IG1hdGguc3FydCgyKQogICAgVHJ1ZQogICAgPj4+IGxpc3QoYXNJbnQxNihbMCwgMC4xLCAwLjUsIDAuOV0pKQogICAgWzAsIDAsIDEsIDFdCiAgICA+Pj4gbm9ybVJlY3QoKDAsIDEwLCAxMDAsIDIwMCkpCiAgICAoMCwgMTAsIDEwMCwgMjAwKQogICAgPj4+IG5vcm1SZWN0KCgxMDAsIDIwMCwgMCwgMTApKQogICAgKDAsIDEwLCAxMDAsIDIwMCkKICAgID4+PiBzY2FsZVJlY3QoKDEwLCAyMCwgNTAsIDE1MCksIDEuNSwgMikKICAgICgxNS4wLCA0MCwgNzUuMCwgMzAwKQogICAgPj4+IG9mZnNldFJlY3QoKDEwLCAyMCwgMzAsIDQwKSwgNSwgNikKICAgICgxNSwgMjYsIDM1LCA0NikKICAgID4+PiBpbnNldFJlY3QoKDEwLCAyMCwgNTAsIDYwKSwgNSwgMTApCiAgICAoMTUsIDMwLCA0NSwgNTApCiAgICA+Pj4gaW5zZXRSZWN0KCgxMCwgMjAsIDUwLCA2MCksIC01LCAtMTApCiAgICAoNSwgMTAsIDU1LCA3MCkKICAgID4+PiBpbnRlcnNlY3RzLCByZWN0ID0gc2VjdFJlY3QoKDAsIDEwLCAyMCwgMzApLCAoMCwgNDAsIDIwLCA1MCkpCiAgICA+Pj4gbm90IGludGVyc2VjdHMKICAgIFRydWUKICAgID4+PiBpbnRlcnNlY3RzLCByZWN0ID0gc2VjdFJlY3QoKDAsIDEwLCAyMCwgMzApLCAoNSwgMjAsIDM1LCA1MCkpCiAgICA+Pj4gaW50ZXJzZWN0cwogICAgMQogICAgPj4+IHJlY3QKICAgICg1LCAyMCwgMjAsIDMwKQogICAgPj4+IHVuaW9uUmVjdCgoMCwgMTAsIDIwLCAzMCksICgwLCA0MCwgMjAsIDUwKSkKICAgICgwLCAxMCwgMjAsIDUwKQogICAgPj4+IHJlY3RDZW50ZXIoKDAsIDAsIDEwMCwgMjAwKSkKICAgICg1MC4wLCAxMDAuMCkKICAgID4+PiByZWN0Q2VudGVyKCgwLCAwLCAxMDAsIDE5OS4wKSkKICAgICg1MC4wLCA5OS41KQogICAgPj4+IGludFJlY3QoKDAuOSwgMi45LCAzLjEsIDQuMSkpCiAgICAoMCwgMiwgNCwgNSkKICAgICIiIgoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCiAgICBpbXBvcnQgZG9jdGVzdAoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkK
+"""Routines for calculating bounding boxes, point in rectangle calculations and
+so on.
+"""
+
+from fontTools.misc.roundTools import otRound
+from fontTools.misc.vector import Vector as _Vector
+import math
+import warnings
+
+
+def calcBounds(array):
+    """Calculate the bounding rectangle of a 2D points array.
+
+    Args:
+        array: A sequence of 2D tuples.
+
+    Returns:
+        A four-item tuple representing the bounding rectangle ``(xMin, yMin, xMax, yMax)``.
+    """
+    if not array:
+        return 0, 0, 0, 0
+    xs = [x for x, y in array]
+    ys = [y for x, y in array]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def calcIntBounds(array, round=otRound):
+    """Calculate the integer bounding rectangle of a 2D points array.
+
+    Values are rounded to closest integer towards ``+Infinity`` using the
+    :func:`fontTools.misc.fixedTools.otRound` function by default, unless
+    an optional ``round`` function is passed.
+
+    Args:
+        array: A sequence of 2D tuples.
+        round: A rounding function of type ``f(x: float) -> int``.
+
+    Returns:
+        A four-item tuple of integers representing the bounding rectangle:
+        ``(xMin, yMin, xMax, yMax)``.
+    """
+    return tuple(round(v) for v in calcBounds(array))
+
+
+def updateBounds(bounds, p, min=min, max=max):
+    """Add a point to a bounding rectangle.
+
+    Args:
+        bounds: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax), or None``.
+        p: A 2D tuple representing a point.
+        min,max: functions to compute the minimum and maximum.
+
+    Returns:
+        The updated bounding rectangle ``(xMin, yMin, xMax, yMax)``.
+    """
+    x, y = p
+    if bounds is None:
+        return x, y, x, y
+    xMin, yMin, xMax, yMax = bounds
+    return min(xMin, x), min(yMin, y), max(xMax, x), max(yMax, y)
+
+
+def pointInRect(p, rect):
+    """Test if a point is inside a bounding rectangle.
+
+    Args:
+        p: A 2D tuple representing a point.
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        ``True`` if the point is inside the rectangle, ``False`` otherwise.
+    """
+    x, y = p
+    xMin, yMin, xMax, yMax = rect
+    return (xMin <= x <= xMax) and (yMin <= y <= yMax)
+
+
+def pointsInRect(array, rect):
+    """Determine which points are inside a bounding rectangle.
+
+    Args:
+        array: A sequence of 2D tuples.
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        A list containing the points inside the rectangle.
+    """
+    if len(array) < 1:
+        return []
+    xMin, yMin, xMax, yMax = rect
+    return [(xMin <= x <= xMax) and (yMin <= y <= yMax) for x, y in array]
+
+
+def vectorLength(vector):
+    """Calculate the length of the given vector.
+
+    Args:
+        vector: A 2D tuple.
+
+    Returns:
+        The Euclidean length of the vector.
+    """
+    x, y = vector
+    return math.sqrt(x**2 + y**2)
+
+
+def asInt16(array):
+    """Round a list of floats to 16-bit signed integers.
+
+    Args:
+        array: List of float values.
+
+    Returns:
+        A list of rounded integers.
+    """
+    return [int(math.floor(i + 0.5)) for i in array]
+
+
+def normRect(rect):
+    """Normalize a bounding box rectangle.
+
+    This function "turns the rectangle the right way up", so that the following
+    holds::
+
+        xMin <= xMax and yMin <= yMax
+
+    Args:
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        A normalized bounding rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return min(xMin, xMax), min(yMin, yMax), max(xMin, xMax), max(yMin, yMax)
+
+
+def scaleRect(rect, x, y):
+    """Scale a bounding box rectangle.
+
+    Args:
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+        x: Factor to scale the rectangle along the X axis.
+        Y: Factor to scale the rectangle along the Y axis.
+
+    Returns:
+        A scaled bounding rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return xMin * x, yMin * y, xMax * x, yMax * y
+
+
+def offsetRect(rect, dx, dy):
+    """Offset a bounding box rectangle.
+
+    Args:
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+        dx: Amount to offset the rectangle along the X axis.
+        dY: Amount to offset the rectangle along the Y axis.
+
+    Returns:
+        An offset bounding rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return xMin + dx, yMin + dy, xMax + dx, yMax + dy
+
+
+def insetRect(rect, dx, dy):
+    """Inset a bounding box rectangle on all sides.
+
+    Args:
+        rect: A bounding rectangle expressed as a tuple
+            ``(xMin, yMin, xMax, yMax)``.
+        dx: Amount to inset the rectangle along the X axis.
+        dY: Amount to inset the rectangle along the Y axis.
+
+    Returns:
+        An inset bounding rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return xMin + dx, yMin + dy, xMax - dx, yMax - dy
+
+
+def sectRect(rect1, rect2):
+    """Test for rectangle-rectangle intersection.
+
+    Args:
+        rect1: First bounding rectangle, expressed as tuples
+            ``(xMin, yMin, xMax, yMax)``.
+        rect2: Second bounding rectangle.
+
+    Returns:
+        A boolean and a rectangle.
+        If the input rectangles intersect, returns ``True`` and the intersecting
+        rectangle. Returns ``False`` and ``(0, 0, 0, 0)`` if the input
+        rectangles don't intersect.
+    """
+    xMin1, yMin1, xMax1, yMax1 = rect1
+    xMin2, yMin2, xMax2, yMax2 = rect2
+    xMin, yMin, xMax, yMax = (
+        max(xMin1, xMin2),
+        max(yMin1, yMin2),
+        min(xMax1, xMax2),
+        min(yMax1, yMax2),
+    )
+    if xMin >= xMax or yMin >= yMax:
+        return False, (0, 0, 0, 0)
+    return True, (xMin, yMin, xMax, yMax)
+
+
+def unionRect(rect1, rect2):
+    """Determine union of bounding rectangles.
+
+    Args:
+        rect1: First bounding rectangle, expressed as tuples
+            ``(xMin, yMin, xMax, yMax)``.
+        rect2: Second bounding rectangle.
+
+    Returns:
+        The smallest rectangle in which both input rectangles are fully
+        enclosed.
+    """
+    xMin1, yMin1, xMax1, yMax1 = rect1
+    xMin2, yMin2, xMax2, yMax2 = rect2
+    xMin, yMin, xMax, yMax = (
+        min(xMin1, xMin2),
+        min(yMin1, yMin2),
+        max(xMax1, xMax2),
+        max(yMax1, yMax2),
+    )
+    return (xMin, yMin, xMax, yMax)
+
+
+def rectCenter(rect):
+    """Determine rectangle center.
+
+    Args:
+        rect: Bounding rectangle, expressed as tuples
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        A 2D tuple representing the point at the center of the rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return (xMin + xMax) / 2, (yMin + yMax) / 2
+
+
+def rectArea(rect):
+    """Determine rectangle area.
+
+    Args:
+        rect: Bounding rectangle, expressed as tuples
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        The area of the rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    return (yMax - yMin) * (xMax - xMin)
+
+
+def intRect(rect):
+    """Round a rectangle to integer values.
+
+    Guarantees that the resulting rectangle is NOT smaller than the original.
+
+    Args:
+        rect: Bounding rectangle, expressed as tuples
+            ``(xMin, yMin, xMax, yMax)``.
+
+    Returns:
+        A rounded bounding rectangle.
+    """
+    xMin, yMin, xMax, yMax = rect
+    xMin = int(math.floor(xMin))
+    yMin = int(math.floor(yMin))
+    xMax = int(math.ceil(xMax))
+    yMax = int(math.ceil(yMax))
+    return (xMin, yMin, xMax, yMax)
+
+
+def quantizeRect(rect, factor=1):
+    """
+    >>> bounds = (72.3, -218.4, 1201.3, 919.1)
+    >>> quantizeRect(bounds)
+    (72, -219, 1202, 920)
+    >>> quantizeRect(bounds, factor=10)
+    (70, -220, 1210, 920)
+    >>> quantizeRect(bounds, factor=100)
+    (0, -300, 1300, 1000)
+    """
+    if factor < 1:
+        raise ValueError(f"Expected quantization factor >= 1, found: {factor!r}")
+    xMin, yMin, xMax, yMax = normRect(rect)
+    return (
+        int(math.floor(xMin / factor) * factor),
+        int(math.floor(yMin / factor) * factor),
+        int(math.ceil(xMax / factor) * factor),
+        int(math.ceil(yMax / factor) * factor),
+    )
+
+
+class Vector(_Vector):
+    def __init__(self, *args, **kwargs):
+        warnings.warn(
+            "fontTools.misc.arrayTools.Vector has been deprecated, please use "
+            "fontTools.misc.vector.Vector instead.",
+            DeprecationWarning,
+        )
+
+
+def pairwise(iterable, reverse=False):
+    """Iterate over current and next items in iterable.
+
+    Args:
+        iterable: An iterable
+        reverse: If true, iterate in reverse order.
+
+    Returns:
+        A iterable yielding two elements per iteration.
+
+    Example:
+
+        >>> tuple(pairwise([]))
+        ()
+        >>> tuple(pairwise([], reverse=True))
+        ()
+        >>> tuple(pairwise([0]))
+        ((0, 0),)
+        >>> tuple(pairwise([0], reverse=True))
+        ((0, 0),)
+        >>> tuple(pairwise([0, 1]))
+        ((0, 1), (1, 0))
+        >>> tuple(pairwise([0, 1], reverse=True))
+        ((1, 0), (0, 1))
+        >>> tuple(pairwise([0, 1, 2]))
+        ((0, 1), (1, 2), (2, 0))
+        >>> tuple(pairwise([0, 1, 2], reverse=True))
+        ((2, 1), (1, 0), (0, 2))
+        >>> tuple(pairwise(['a', 'b', 'c', 'd']))
+        (('a', 'b'), ('b', 'c'), ('c', 'd'), ('d', 'a'))
+        >>> tuple(pairwise(['a', 'b', 'c', 'd'], reverse=True))
+        (('d', 'c'), ('c', 'b'), ('b', 'a'), ('a', 'd'))
+    """
+    if not iterable:
+        return
+    if reverse:
+        it = reversed(iterable)
+    else:
+        it = iter(iterable)
+    first = next(it, None)
+    a = first
+    for b in it:
+        yield (a, b)
+        a = b
+    yield (a, first)
+
+
+def _test():
+    """
+    >>> import math
+    >>> calcBounds([])
+    (0, 0, 0, 0)
+    >>> calcBounds([(0, 40), (0, 100), (50, 50), (80, 10)])
+    (0, 10, 80, 100)
+    >>> updateBounds((0, 0, 0, 0), (100, 100))
+    (0, 0, 100, 100)
+    >>> pointInRect((50, 50), (0, 0, 100, 100))
+    True
+    >>> pointInRect((0, 0), (0, 0, 100, 100))
+    True
+    >>> pointInRect((100, 100), (0, 0, 100, 100))
+    True
+    >>> not pointInRect((101, 100), (0, 0, 100, 100))
+    True
+    >>> list(pointsInRect([(50, 50), (0, 0), (100, 100), (101, 100)], (0, 0, 100, 100)))
+    [True, True, True, False]
+    >>> vectorLength((3, 4))
+    5.0
+    >>> vectorLength((1, 1)) == math.sqrt(2)
+    True
+    >>> list(asInt16([0, 0.1, 0.5, 0.9]))
+    [0, 0, 1, 1]
+    >>> normRect((0, 10, 100, 200))
+    (0, 10, 100, 200)
+    >>> normRect((100, 200, 0, 10))
+    (0, 10, 100, 200)
+    >>> scaleRect((10, 20, 50, 150), 1.5, 2)
+    (15.0, 40, 75.0, 300)
+    >>> offsetRect((10, 20, 30, 40), 5, 6)
+    (15, 26, 35, 46)
+    >>> insetRect((10, 20, 50, 60), 5, 10)
+    (15, 30, 45, 50)
+    >>> insetRect((10, 20, 50, 60), -5, -10)
+    (5, 10, 55, 70)
+    >>> intersects, rect = sectRect((0, 10, 20, 30), (0, 40, 20, 50))
+    >>> not intersects
+    True
+    >>> intersects, rect = sectRect((0, 10, 20, 30), (5, 20, 35, 50))
+    >>> intersects
+    1
+    >>> rect
+    (5, 20, 20, 30)
+    >>> unionRect((0, 10, 20, 30), (0, 40, 20, 50))
+    (0, 10, 20, 50)
+    >>> rectCenter((0, 0, 100, 200))
+    (50.0, 100.0)
+    >>> rectCenter((0, 0, 100, 199.0))
+    (50.0, 99.5)
+    >>> intRect((0.9, 2.9, 3.1, 4.1))
+    (0, 2, 4, 5)
+    """
+
+
+if __name__ == "__main__":
+    import sys
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

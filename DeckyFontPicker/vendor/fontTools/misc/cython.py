@@ -1,1 +1,27 @@
-IiIiRXhwb3J0cyBhIG5vLW9wICdjeXRob24nIG5hbWVzcGFjZSBzaW1pbGFyIHRvCmh0dHBzOi8vZ2l0aHViLmNvbS9jeXRob24vY3l0aG9uL2Jsb2IvbWFzdGVyL0N5dGhvbi9TaGFkb3cucHkKClRoaXMgYWxsb3dzIHRvIG9wdGlvbmFsbHkgY29tcGlsZSBAY3l0aG9uIGRlY29yYXRlZCBmdW5jdGlvbnMKKHdoZW4gY3l0aG9uIGlzIGF2YWlsYWJsZSBhdCBidWlsdCB0aW1lKSwgb3IgcnVuIHRoZSBzYW1lIGNvZGUKYXMgcHVyZS1weXRob24sIHdpdGhvdXQgcnVudGltZSBkZXBlbmRlbmN5IG9uIGN5dGhvbiBtb2R1bGUuCgpXZSBvbmx5IGRlZmluZSB0aGUgc3ltYm9scyB0aGF0IHdlIHVzZS4gRS5nLiBzZWUgZm9udFRvb2xzLmN1MnF1CiIiIgoKZnJvbSB0eXBlcyBpbXBvcnQgU2ltcGxlTmFtZXNwYWNlCgoKZGVmIF9lbXB0eV9kZWNvcmF0b3IoeCk6CiAgICByZXR1cm4geAoKCmNvbXBpbGVkID0gRmFsc2UKCmZvciBuYW1lIGluICgiZG91YmxlIiwgImNvbXBsZXgiLCAiaW50Iik6CiAgICBnbG9iYWxzKClbbmFtZV0gPSBOb25lCgpmb3IgbmFtZSBpbiAoImNmdW5jIiwgImlubGluZSIpOgogICAgZ2xvYmFscygpW25hbWVdID0gX2VtcHR5X2RlY29yYXRvcgoKbG9jYWxzID0gbGFtYmRhICoqXzogX2VtcHR5X2RlY29yYXRvcgpyZXR1cm5zID0gbGFtYmRhIF86IF9lbXB0eV9kZWNvcmF0b3IK
+"""Exports a no-op 'cython' namespace similar to
+https://github.com/cython/cython/blob/master/Cython/Shadow.py
+
+This allows to optionally compile @cython decorated functions
+(when cython is available at built time), or run the same code
+as pure-python, without runtime dependency on cython module.
+
+We only define the symbols that we use. E.g. see fontTools.cu2qu
+"""
+
+from types import SimpleNamespace
+
+
+def _empty_decorator(x):
+    return x
+
+
+compiled = False
+
+for name in ("double", "complex", "int"):
+    globals()[name] = None
+
+for name in ("cfunc", "inline"):
+    globals()[name] = _empty_decorator
+
+locals = lambda **_: _empty_decorator
+returns = lambda _: _empty_decorator

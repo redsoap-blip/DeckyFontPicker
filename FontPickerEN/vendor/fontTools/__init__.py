@@ -1,1 +1,8 @@
-aW1wb3J0IGxvZ2dpbmcKZnJvbSBmb250VG9vbHMubWlzYy5sb2dnaW5nVG9vbHMgaW1wb3J0IGNvbmZpZ0xvZ2dlcgoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgp2ZXJzaW9uID0gX192ZXJzaW9uX18gPSAiNC42OC4wIgoKX19hbGxfXyA9IFsidmVyc2lvbiIsICJsb2ciLCAiY29uZmlnTG9nZ2VyIl0K
+import logging
+from fontTools.misc.loggingTools import configLogger
+
+log = logging.getLogger(__name__)
+
+version = __version__ = "4.68.0"
+
+__all__ = ["version", "log", "configLogger"]

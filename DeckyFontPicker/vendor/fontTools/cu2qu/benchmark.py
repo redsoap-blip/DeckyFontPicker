@@ -1,1 +1,54 @@
-IiIiQmVuY2htYXJrIHRoZSBjdTJxdSBhbGdvcml0aG0gcGVyZm9ybWFuY2UuIiIiCgpmcm9tIC5jdTJxdSBpbXBvcnQgKgppbXBvcnQgcmFuZG9tCmltcG9ydCB0aW1laXQKCk1BWF9FUlIgPSAwLjA1CgoKZGVmIGdlbmVyYXRlX2N1cnZlKCk6CiAgICByZXR1cm4gWwogICAgICAgIHR1cGxlKGZsb2F0KHJhbmRvbS5yYW5kaW50KDAsIDIwNDgpKSBmb3IgY29vcmQgaW4gcmFuZ2UoMikpCiAgICAgICAgZm9yIHBvaW50IGluIHJhbmdlKDQpCiAgICBdCgoKZGVmIHNldHVwX2N1cnZlX3RvX3F1YWRyYXRpYygpOgogICAgcmV0dXJuIGdlbmVyYXRlX2N1cnZlKCksIE1BWF9FUlIKCgpkZWYgc2V0dXBfY3VydmVzX3RvX3F1YWRyYXRpYygpOgogICAgbnVtX2N1cnZlcyA9IDMKICAgIHJldHVybiAoW2dlbmVyYXRlX2N1cnZlKCkgZm9yIGN1cnZlIGluIHJhbmdlKG51bV9jdXJ2ZXMpXSwgW01BWF9FUlJdICogbnVtX2N1cnZlcykKCgpkZWYgcnVuX2JlbmNobWFyayhtb2R1bGUsIGZ1bmN0aW9uLCBzZXR1cF9zdWZmaXg9IiIsIHJlcGVhdD01LCBudW1iZXI9MTAwMCk6CiAgICBzZXR1cF9mdW5jID0gInNldHVwXyIgKyBmdW5jdGlvbgogICAgaWYgc2V0dXBfc3VmZml4OgogICAgICAgIHByaW50KCIlcyB3aXRoICVzOiIgJSAoZnVuY3Rpb24sIHNldHVwX3N1ZmZpeCksIGVuZD0iIikKICAgICAgICBzZXR1cF9mdW5jICs9ICJfIiArIHNldHVwX3N1ZmZpeAogICAgZWxzZToKICAgICAgICBwcmludCgiJXM6IiAlIGZ1bmN0aW9uLCBlbmQ9IiIpCgogICAgZGVmIHdyYXBwZXIoZnVuY3Rpb24sIHNldHVwX2Z1bmMpOgogICAgICAgIGZ1bmN0aW9uID0gZ2xvYmFscygpW2Z1bmN0aW9uXQogICAgICAgIHNldHVwX2Z1bmMgPSBnbG9iYWxzKClbc2V0dXBfZnVuY10KCiAgICAgICAgZGVmIHdyYXBwZWQoKToKICAgICAgICAgICAgcmV0dXJuIGZ1bmN0aW9uKCpzZXR1cF9mdW5jKCkpCgogICAgICAgIHJldHVybiB3cmFwcGVkCgogICAgcmVzdWx0cyA9IHRpbWVpdC5yZXBlYXQod3JhcHBlcihmdW5jdGlvbiwgc2V0dXBfZnVuYyksIHJlcGVhdD1yZXBlYXQsIG51bWJlcj1udW1iZXIpCiAgICBwcmludCgiXHQlNS4xZnVzIiAlIChtaW4ocmVzdWx0cykgKiAxMDAwMDAwLjAgLyBudW1iZXIpKQoKCmRlZiBtYWluKCk6CiAgICBydW5fYmVuY2htYXJrKCJjdTJxdSIsICJjdXJ2ZV90b19xdWFkcmF0aWMiKQogICAgcnVuX2JlbmNobWFyaygiY3UycXUiLCAiY3VydmVzX3RvX3F1YWRyYXRpYyIpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHJhbmRvbS5zZWVkKDEpCiAgICBtYWluKCkK
+"""Benchmark the cu2qu algorithm performance."""
+
+from .cu2qu import *
+import random
+import timeit
+
+MAX_ERR = 0.05
+
+
+def generate_curve():
+    return [
+        tuple(float(random.randint(0, 2048)) for coord in range(2))
+        for point in range(4)
+    ]
+
+
+def setup_curve_to_quadratic():
+    return generate_curve(), MAX_ERR
+
+
+def setup_curves_to_quadratic():
+    num_curves = 3
+    return ([generate_curve() for curve in range(num_curves)], [MAX_ERR] * num_curves)
+
+
+def run_benchmark(module, function, setup_suffix="", repeat=5, number=1000):
+    setup_func = "setup_" + function
+    if setup_suffix:
+        print("%s with %s:" % (function, setup_suffix), end="")
+        setup_func += "_" + setup_suffix
+    else:
+        print("%s:" % function, end="")
+
+    def wrapper(function, setup_func):
+        function = globals()[function]
+        setup_func = globals()[setup_func]
+
+        def wrapped():
+            return function(*setup_func())
+
+        return wrapped
+
+    results = timeit.repeat(wrapper(function, setup_func), repeat=repeat, number=number)
+    print("\t%5.1fus" % (min(results) * 1000000.0 / number))
+
+
+def main():
+    run_benchmark("cu2qu", "curve_to_quadratic")
+    run_benchmark("cu2qu", "curves_to_quadratic")
+
+
+if __name__ == "__main__":
+    random.seed(1)
+    main()

@@ -1,1 +1,15 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfU19UX0FfVF8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJTdHlsZSBBdHRyaWJ1dGVzIHRhYmxlCgogICAgVGhlIGBgU1RBVGBgIHRhYmxlIHJlY29yZHMgc3R5bGlzdGljIG9yIHR5cGVmYWNlLWRlc2lnbiBhdHRyaWJ1dGVzIHRoYXQKICAgIGRpZmZlcmVudGlhdGUgdGhlIGluZGl2aWR1YWwgZm9udHMgd2l0aGluIGEgZm9udCBmYW1pbHkgZnJvbSBvbmUgYW5vdGhlci4KICAgIFRob3NlIGF0dHJpYnV0ZXMgY2FuIGJlIHVzZWQgdG8gYXNzaXN0IHVzZXJzIHdoZW4gbmF2aWdhdGluZyB0aGUgc3R5bGUKICAgIHZhcmlhdGlvbnMgb2YgYSB2YXJpYWJsZSBmb250IG9yIGEgZmFtaWx5IG9mIHN0YXRpYyBmb250cy4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL3N0YXQKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table_S_T_A_T_(BaseTTXConverter):
+    """Style Attributes table
+
+    The ``STAT`` table records stylistic or typeface-design attributes that
+    differentiate the individual fonts within a font family from one another.
+    Those attributes can be used to assist users when navigating the style
+    variations of a variable font or a family of static fonts.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/stat
+    """
+
+    pass

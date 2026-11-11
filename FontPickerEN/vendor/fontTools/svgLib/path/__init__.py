@@ -1,1 +1,64 @@
-ZnJvbSBmb250VG9vbHMucGVucy50cmFuc2Zvcm1QZW4gaW1wb3J0IFRyYW5zZm9ybVBlbgpmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBldHJlZQpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgdG9zdHIKZnJvbSAucGFyc2VyIGltcG9ydCBwYXJzZV9wYXRoCmZyb20gLnNoYXBlcyBpbXBvcnQgUGF0aEJ1aWxkZXIKCl9fYWxsX18gPSBbdG9zdHIocykgZm9yIHMgaW4gKCJTVkdQYXRoIiwgInBhcnNlX3BhdGgiKV0KCgpjbGFzcyBTVkdQYXRoKG9iamVjdCk6CiAgICAiIiJQYXJzZSBTVkcgYGBwYXRoYGAgZWxlbWVudHMgZnJvbSBhIGZpbGUgb3Igc3RyaW5nLCBhbmQgZHJhdyB0aGVtCiAgICBvbnRvIGEgZ2x5cGggb2JqZWN0IHRoYXQgc3VwcG9ydHMgdGhlIEZvbnRUb29scyBQZW4gcHJvdG9jb2wuCgogICAgRm9yIGV4YW1wbGUsIHJlYWRpbmcgZnJvbSBhbiBTVkcgZmlsZSBhbmQgZHJhd2luZyB0byBhIERlZmNvbiBHbHlwaDoKCiAgICAuLiBjb2RlLWJsb2NrOjoKCiAgICAgICAgaW1wb3J0IGRlZmNvbgogICAgICAgIGdseXBoID0gZGVmY29uLkdseXBoKCkKICAgICAgICBwZW4gPSBnbHlwaC5nZXRQZW4oKQogICAgICAgIHN2ZyA9IFNWR1BhdGgoInBhdGgvdG8vYS5zdmciKQogICAgICAgIHN2Zy5kcmF3KHBlbikKCiAgICBPciByZWFkaW5nIGZyb20gYSBzdHJpbmcgY29udGFpbmluZyBTVkcgZGF0YSwgdXNpbmcgdGhlIGFsdGVybmF0aXZlCiAgICAnZnJvbXN0cmluZycgKGEgY2xhc3MgbWV0aG9kKToKCiAgICAuLiBjb2RlLWJsb2NrOjoKCiAgICAgICAgZGF0YSA9ICc8P3htbCB2ZXJzaW9uPSIxLjAiIC4uLicKICAgICAgICBzdmcgPSBTVkdQYXRoLmZyb21zdHJpbmcoZGF0YSkKICAgICAgICBzdmcuZHJhdyhwZW4pCgogICAgQm90aCBjb25zdHJ1Y3RvcnMgY2FuIG9wdGlvbmFsbHkgdGFrZSBhICd0cmFuc2Zvcm0nIG1hdHJpeCAoNi1mbG9hdAogICAgdHVwbGUsIG9yIGEgRm9udFRvb2xzIFRyYW5zZm9ybSBvYmplY3QpIHRvIG1vZGlmeSB0aGUgZHJhdyBvdXRwdXQuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZmlsZW5hbWU9Tm9uZSwgdHJhbnNmb3JtPU5vbmUpOgogICAgICAgIGlmIGZpbGVuYW1lIGlzIE5vbmU6CiAgICAgICAgICAgIHNlbGYucm9vdCA9IGV0cmVlLkVsZW1lbnRUcmVlKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICB0cmVlID0gZXRyZWUucGFyc2UoZmlsZW5hbWUsIHBhcnNlcj1ldHJlZS5YTUxQYXJzZXIoKSkKICAgICAgICAgICAgc2VsZi5yb290ID0gdHJlZS5nZXRyb290KCkKICAgICAgICBzZWxmLnRyYW5zZm9ybSA9IHRyYW5zZm9ybQoKICAgIEBjbGFzc21ldGhvZAogICAgZGVmIGZyb21zdHJpbmcoY2xzLCBkYXRhLCB0cmFuc2Zvcm09Tm9uZSk6CiAgICAgICAgc2VsZiA9IGNscyh0cmFuc2Zvcm09dHJhbnNmb3JtKQogICAgICAgIHNlbGYucm9vdCA9IGV0cmVlLmZyb21zdHJpbmcoZGF0YSwgcGFyc2VyPWV0cmVlLlhNTFBhcnNlcigpKQogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICBpZiBzZWxmLnRyYW5zZm9ybToKICAgICAgICAgICAgcGVuID0gVHJhbnNmb3JtUGVuKHBlbiwgc2VsZi50cmFuc2Zvcm0pCiAgICAgICAgcGIgPSBQYXRoQnVpbGRlcigpCiAgICAgICAgIyB4cGF0aCB8IGRvZXNuJ3Qgc2VlbSB0byByZWxpYWJsZSB3b3JrIHNvIGp1c3Qgd2FsayBpdAogICAgICAgIGZvciBlbCBpbiBzZWxmLnJvb3QuaXRlcigpOgogICAgICAgICAgICBwYi5hZGRfcGF0aF9mcm9tX2VsZW1lbnQoZWwpCiAgICAgICAgb3JpZ2luYWxfcGVuID0gcGVuCiAgICAgICAgZm9yIHBhdGgsIHRyYW5zZm9ybSBpbiB6aXAocGIucGF0aHMsIHBiLnRyYW5zZm9ybXMpOgogICAgICAgICAgICBpZiB0cmFuc2Zvcm06CiAgICAgICAgICAgICAgICBwZW4gPSBUcmFuc2Zvcm1QZW4ob3JpZ2luYWxfcGVuLCB0cmFuc2Zvcm0pCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwZW4gPSBvcmlnaW5hbF9wZW4KICAgICAgICAgICAgcGFyc2VfcGF0aChwYXRoLCBwZW4pCg==
+from fontTools.pens.transformPen import TransformPen
+from fontTools.misc import etree
+from fontTools.misc.textTools import tostr
+from .parser import parse_path
+from .shapes import PathBuilder
+
+__all__ = [tostr(s) for s in ("SVGPath", "parse_path")]
+
+
+class SVGPath(object):
+    """Parse SVG ``path`` elements from a file or string, and draw them
+    onto a glyph object that supports the FontTools Pen protocol.
+
+    For example, reading from an SVG file and drawing to a Defcon Glyph:
+
+    .. code-block::
+
+        import defcon
+        glyph = defcon.Glyph()
+        pen = glyph.getPen()
+        svg = SVGPath("path/to/a.svg")
+        svg.draw(pen)
+
+    Or reading from a string containing SVG data, using the alternative
+    'fromstring' (a class method):
+
+    .. code-block::
+
+        data = '<?xml version="1.0" ...'
+        svg = SVGPath.fromstring(data)
+        svg.draw(pen)
+
+    Both constructors can optionally take a 'transform' matrix (6-float
+    tuple, or a FontTools Transform object) to modify the draw output.
+    """
+
+    def __init__(self, filename=None, transform=None):
+        if filename is None:
+            self.root = etree.ElementTree()
+        else:
+            tree = etree.parse(filename, parser=etree.XMLParser())
+            self.root = tree.getroot()
+        self.transform = transform
+
+    @classmethod
+    def fromstring(cls, data, transform=None):
+        self = cls(transform=transform)
+        self.root = etree.fromstring(data, parser=etree.XMLParser())
+        return self
+
+    def draw(self, pen):
+        if self.transform:
+            pen = TransformPen(pen, self.transform)
+        pb = PathBuilder()
+        # xpath | doesn't seem to reliable work so just walk it
+        for el in self.root.iter():
+            pb.add_path_from_element(el)
+        original_pen = pen
+        for path, transform in zip(pb.paths, pb.transforms):
+            if transform:
+                pen = TransformPen(original_pen, transform)
+            else:
+                pen = original_pen
+            parse_path(path, pen)

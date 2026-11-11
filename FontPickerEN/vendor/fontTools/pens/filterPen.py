@@ -1,1 +1,433 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBBYnN0cmFjdFBlbiwgRGVjb21wb3NpbmdQZW4KZnJvbSBmb250VG9vbHMucGVucy5wb2ludFBlbiBpbXBvcnQgKAogICAgQWJzdHJhY3RQb2ludFBlbiwKICAgIERlY29tcG9zaW5nUG9pbnRQZW4sCiAgICBSZXZlcnNlRmxpcHBlZCwKKQpmcm9tIGZvbnRUb29scy5wZW5zLnJlY29yZGluZ1BlbiBpbXBvcnQgUmVjb3JkaW5nUGVuCgoKY2xhc3MgX1Bhc3NUaHJ1Q29tcG9uZW50c01peGluKG9iamVjdCk6CiAgICBkZWYgYWRkQ29tcG9uZW50KHNlbGYsIGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24sICoqa3dhcmdzKToKICAgICAgICBzZWxmLl9vdXRQZW4uYWRkQ29tcG9uZW50KGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24sICoqa3dhcmdzKQoKCmNsYXNzIEZpbHRlclBlbihfUGFzc1RocnVDb21wb25lbnRzTWl4aW4sIEFic3RyYWN0UGVuKToKICAgICIiIkJhc2UgY2xhc3MgZm9yIHBlbnMgdGhhdCBhcHBseSBzb21lIHRyYW5zZm9ybWF0aW9uIHRvIHRoZSBjb29yZGluYXRlcwogICAgdGhleSByZWNlaXZlIGFuZCBwYXNzIHRoZW0gdG8gYW5vdGhlciBwZW4uCgogICAgWW91IGNhbiBvdmVycmlkZSBhbnkgb2YgaXRzIG1ldGhvZHMuIFRoZSBkZWZhdWx0IGltcGxlbWVudGF0aW9uIGRvZXMKICAgIG5vdGhpbmcsIGJ1dCBwYXNzZXMgdGhlIGNvbW1hbmRzIHVubW9kaWZpZWQgdG8gdGhlIG90aGVyIHBlbi4KCiAgICA+Pj4gZnJvbSBmb250VG9vbHMucGVucy5yZWNvcmRpbmdQZW4gaW1wb3J0IFJlY29yZGluZ1BlbgogICAgPj4+IHJlYyA9IFJlY29yZGluZ1BlbigpCiAgICA+Pj4gcGVuID0gRmlsdGVyUGVuKHJlYykKICAgID4+PiB2ID0gaXRlcihyZWMudmFsdWUpCgogICAgPj4+IHBlbi5tb3ZlVG8oKDAsIDApKQogICAgPj4+IG5leHQodikKICAgICgnbW92ZVRvJywgKCgwLCAwKSwpKQoKICAgID4+PiBwZW4ubGluZVRvKCgxLCAxKSkKICAgID4+PiBuZXh0KHYpCiAgICAoJ2xpbmVUbycsICgoMSwgMSksKSkKCiAgICA+Pj4gcGVuLmN1cnZlVG8oKDIsIDIpLCAoMywgMyksICg0LCA0KSkKICAgID4+PiBuZXh0KHYpCiAgICAoJ2N1cnZlVG8nLCAoKDIsIDIpLCAoMywgMyksICg0LCA0KSkpCgogICAgPj4+IHBlbi5xQ3VydmVUbygoNSwgNSksICg2LCA2KSwgKDcsIDcpLCAoOCwgOCkpCiAgICA+Pj4gbmV4dCh2KQogICAgKCdxQ3VydmVUbycsICgoNSwgNSksICg2LCA2KSwgKDcsIDcpLCAoOCwgOCkpKQoKICAgID4+PiBwZW4uY2xvc2VQYXRoKCkKICAgID4+PiBuZXh0KHYpCiAgICAoJ2Nsb3NlUGF0aCcsICgpKQoKICAgID4+PiBwZW4ubW92ZVRvKCg5LCA5KSkKICAgID4+PiBuZXh0KHYpCiAgICAoJ21vdmVUbycsICgoOSwgOSksKSkKCiAgICA+Pj4gcGVuLmVuZFBhdGgoKQogICAgPj4+IG5leHQodikKICAgICgnZW5kUGF0aCcsICgpKQoKICAgID4+PiBwZW4uYWRkQ29tcG9uZW50KCdmb28nLCAoMSwgMCwgMCwgMSwgMCwgMCkpCiAgICA+Pj4gbmV4dCh2KQogICAgKCdhZGRDb21wb25lbnQnLCAoJ2ZvbycsICgxLCAwLCAwLCAxLCAwLCAwKSkpCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgb3V0UGVuKToKICAgICAgICBzZWxmLl9vdXRQZW4gPSBvdXRQZW4KICAgICAgICBzZWxmLmN1cnJlbnRfcHQgPSBOb25lCgogICAgZGVmIG1vdmVUbyhzZWxmLCBwdCk6CiAgICAgICAgc2VsZi5fb3V0UGVuLm1vdmVUbyhwdCkKICAgICAgICBzZWxmLmN1cnJlbnRfcHQgPSBwdAoKICAgIGRlZiBsaW5lVG8oc2VsZiwgcHQpOgogICAgICAgIHNlbGYuX291dFBlbi5saW5lVG8ocHQpCiAgICAgICAgc2VsZi5jdXJyZW50X3B0ID0gcHQKCiAgICBkZWYgY3VydmVUbyhzZWxmLCAqcG9pbnRzKToKICAgICAgICBzZWxmLl9vdXRQZW4uY3VydmVUbygqcG9pbnRzKQogICAgICAgIHNlbGYuY3VycmVudF9wdCA9IHBvaW50c1stMV0KCiAgICBkZWYgcUN1cnZlVG8oc2VsZiwgKnBvaW50cyk6CiAgICAgICAgc2VsZi5fb3V0UGVuLnFDdXJ2ZVRvKCpwb2ludHMpCiAgICAgICAgc2VsZi5jdXJyZW50X3B0ID0gcG9pbnRzWy0xXQoKICAgIGRlZiBjbG9zZVBhdGgoc2VsZik6CiAgICAgICAgc2VsZi5fb3V0UGVuLmNsb3NlUGF0aCgpCiAgICAgICAgc2VsZi5jdXJyZW50X3B0ID0gTm9uZQoKICAgIGRlZiBlbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYuX291dFBlbi5lbmRQYXRoKCkKICAgICAgICBzZWxmLmN1cnJlbnRfcHQgPSBOb25lCgoKY2xhc3MgQ29udG91ckZpbHRlclBlbihfUGFzc1RocnVDb21wb25lbnRzTWl4aW4sIFJlY29yZGluZ1Blbik6CiAgICAiIiJBICJidWZmZXJlZCIgZmlsdGVyIHBlbiB0aGF0IGFjY3VtdWxhdGVzIGNvbnRvdXIgZGF0YSwgcGFzc2VzCiAgICBpdCB0aHJvdWdoIGEgYGBmaWx0ZXJDb250b3VyYGAgbWV0aG9kIHdoZW4gdGhlIGNvbnRvdXIgaXMgY2xvc2VkIG9yIGVuZGVkLAogICAgYW5kIGZpbmFsbHkgZHJhd3MgdGhlIHJlc3VsdCB3aXRoIHRoZSBvdXRwdXQgcGVuLgoKICAgIENvbXBvbmVudHMgYXJlIHBhc3NlZCB0aHJvdWdoIHVuY2hhbmdlZC4KICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBvdXRQZW4pOgogICAgICAgIHN1cGVyKENvbnRvdXJGaWx0ZXJQZW4sIHNlbGYpLl9faW5pdF9fKCkKICAgICAgICBzZWxmLl9vdXRQZW4gPSBvdXRQZW4KCiAgICBkZWYgY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIHN1cGVyKENvbnRvdXJGaWx0ZXJQZW4sIHNlbGYpLmNsb3NlUGF0aCgpCiAgICAgICAgc2VsZi5fZmx1c2hDb250b3VyKCkKCiAgICBkZWYgZW5kUGF0aChzZWxmKToKICAgICAgICBzdXBlcihDb250b3VyRmlsdGVyUGVuLCBzZWxmKS5lbmRQYXRoKCkKICAgICAgICBzZWxmLl9mbHVzaENvbnRvdXIoKQoKICAgIGRlZiBfZmx1c2hDb250b3VyKHNlbGYpOgogICAgICAgIHJlc3VsdCA9IHNlbGYuZmlsdGVyQ29udG91cihzZWxmLnZhbHVlKQogICAgICAgIGlmIHJlc3VsdCBpcyBub3QgTm9uZToKICAgICAgICAgICAgc2VsZi52YWx1ZSA9IHJlc3VsdAogICAgICAgIHNlbGYucmVwbGF5KHNlbGYuX291dFBlbikKICAgICAgICBzZWxmLnZhbHVlID0gW10KCiAgICBkZWYgZmlsdGVyQ29udG91cihzZWxmLCBjb250b3VyKToKICAgICAgICAiIiJTdWJjbGFzc2VzIG11c3Qgb3ZlcnJpZGUgdGhpcyB0byBwZXJmb3JtIHRoZSBmaWx0ZXJpbmcuCgogICAgICAgIFRoZSBjb250b3VyIGlzIGEgbGlzdCBvZiBwZW4gKG9wZXJhdG9yLCBvcGVyYW5kcykgdHVwbGVzLgogICAgICAgIE9wZXJhdG9ycyBhcmUgc3RyaW5ncyBjb3JyZXNwb25kaW5nIHRvIHRoZSBBYnN0cmFjdFBlbiBtZXRob2RzOgogICAgICAgICJtb3ZlVG8iLCAibGluZVRvIiwgImN1cnZlVG8iLCAicUN1cnZlVG8iLCAiY2xvc2VQYXRoIiBhbmQKICAgICAgICAiZW5kUGF0aCIuIFRoZSBvcGVyYW5kcyBhcmUgdGhlIHBvc2l0aW9uYWwgYXJndW1lbnRzIHRoYXQgYXJlCiAgICAgICAgcGFzc2VkIHRvIGVhY2ggbWV0aG9kLgoKICAgICAgICBJZiB0aGUgbWV0aG9kIGRvZXNuJ3QgcmV0dXJuIGEgdmFsdWUgKGkuZS4gcmV0dXJucyBOb25lKSwgaXQncwogICAgICAgIGFzc3VtZWQgdGhhdCB0aGUgYXJndW1lbnQgd2FzIG1vZGlmaWVkIGluLXBsYWNlLgogICAgICAgIE90aGVyd2lzZSwgdGhlIHJldHVybiB2YWx1ZSBpcyBkcmF3biB3aXRoIHRoZSBvdXRwdXQgcGVuLgogICAgICAgICIiIgogICAgICAgIHJldHVybiAgIyBvciByZXR1cm4gY29udG91cgoKCmNsYXNzIEZpbHRlclBvaW50UGVuKF9QYXNzVGhydUNvbXBvbmVudHNNaXhpbiwgQWJzdHJhY3RQb2ludFBlbik6CiAgICAiIiJCYXNlY2xhc3MgZm9yIHBvaW50IHBlbnMgdGhhdCBhcHBseSBzb21lIHRyYW5zZm9ybWF0aW9uIHRvIHRoZQogICAgY29vcmRpbmF0ZXMgdGhleSByZWNlaXZlIGFuZCBwYXNzIHRoZW0gdG8gYW5vdGhlciBwb2ludCBwZW4uCgogICAgWW91IGNhbiBvdmVycmlkZSBhbnkgb2YgaXRzIG1ldGhvZHMuIFRoZSBkZWZhdWx0IGltcGxlbWVudGF0aW9uIGRvZXMKICAgIG5vdGhpbmcsIGJ1dCBwYXNzZXMgdGhlIGNvbW1hbmRzIHVubW9kaWZpZWQgdG8gdGhlIG90aGVyIHBlbi4KCiAgICA+Pj4gZnJvbSBmb250VG9vbHMucGVucy5yZWNvcmRpbmdQZW4gaW1wb3J0IFJlY29yZGluZ1BvaW50UGVuCiAgICA+Pj4gcmVjID0gUmVjb3JkaW5nUG9pbnRQZW4oKQogICAgPj4+IHBlbiA9IEZpbHRlclBvaW50UGVuKHJlYykKICAgID4+PiB2ID0gaXRlcihyZWMudmFsdWUpCiAgICA+Pj4gcGVuLmJlZ2luUGF0aChpZGVudGlmaWVyPSJhYmMiKQogICAgPj4+IG5leHQodikKICAgICgnYmVnaW5QYXRoJywgKCksIHsnaWRlbnRpZmllcic6ICdhYmMnfSkKICAgID4+PiBwZW4uYWRkUG9pbnQoKDEsIDIpLCAibGluZSIsIEZhbHNlKQogICAgPj4+IG5leHQodikKICAgICgnYWRkUG9pbnQnLCAoKDEsIDIpLCAnbGluZScsIEZhbHNlLCBOb25lKSwge30pCiAgICA+Pj4gcGVuLmFkZENvbXBvbmVudCgiYSIsICgyLCAwLCAwLCAyLCAxMCwgLTEwKSwgaWRlbnRpZmllcj0iMDAwMSIpCiAgICA+Pj4gbmV4dCh2KQogICAgKCdhZGRDb21wb25lbnQnLCAoJ2EnLCAoMiwgMCwgMCwgMiwgMTAsIC0xMCkpLCB7J2lkZW50aWZpZXInOiAnMDAwMSd9KQogICAgPj4+IHBlbi5lbmRQYXRoKCkKICAgID4+PiBuZXh0KHYpCiAgICAoJ2VuZFBhdGgnLCAoKSwge30pCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgb3V0UGVuKToKICAgICAgICBzZWxmLl9vdXRQZW4gPSBvdXRQZW4KCiAgICBkZWYgYmVnaW5QYXRoKHNlbGYsIGlkZW50aWZpZXI9Tm9uZSwgKiprd2FyZ3MpOgogICAgICAgIGt3YXJncyA9IGRpY3Qoa3dhcmdzKQogICAgICAgIGlmIGlkZW50aWZpZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGt3YXJnc1siaWRlbnRpZmllciJdID0gaWRlbnRpZmllcgogICAgICAgIHNlbGYuX291dFBlbi5iZWdpblBhdGgoKiprd2FyZ3MpCgogICAgZGVmIGVuZFBhdGgoc2VsZik6CiAgICAgICAgc2VsZi5fb3V0UGVuLmVuZFBhdGgoKQoKICAgIGRlZiBhZGRQb2ludCgKICAgICAgICBzZWxmLAogICAgICAgIHB0LAogICAgICAgIHNlZ21lbnRUeXBlPU5vbmUsCiAgICAgICAgc21vb3RoPUZhbHNlLAogICAgICAgIG5hbWU9Tm9uZSwKICAgICAgICBpZGVudGlmaWVyPU5vbmUsCiAgICAgICAgKiprd2FyZ3MsCiAgICApOgogICAgICAgIGt3YXJncyA9IGRpY3Qoa3dhcmdzKQogICAgICAgIGlmIGlkZW50aWZpZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGt3YXJnc1siaWRlbnRpZmllciJdID0gaWRlbnRpZmllcgogICAgICAgIHNlbGYuX291dFBlbi5hZGRQb2ludChwdCwgc2VnbWVudFR5cGUsIHNtb290aCwgbmFtZSwgKiprd2FyZ3MpCgoKY2xhc3MgX0RlY29tcG9zaW5nRmlsdGVyTWl4aW5CYXNlOgogICAgIiIiQmFzZSBtaXhpbiBjbGFzcyB3aXRoIGNvbW1vbiBgYWRkQ29tcG9uZW50YCBsb2dpYyBmb3IgZGVjb21wb3NpbmcgZmlsdGVyIHBlbnMuIiIiCgogICAgZGVmIGFkZENvbXBvbmVudChzZWxmLCBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgKiprd2FyZ3MpOgogICAgICAgICMgb25seSBkZWNvbXBvc2UgdGhlIGNvbXBvbmVudCBpZiBpdCdzIGluY2x1ZGVkIGluIHRoZSBzZXQKICAgICAgICBpZiBzZWxmLmluY2x1ZGUgaXMgTm9uZSBvciBiYXNlR2x5cGhOYW1lIGluIHNlbGYuaW5jbHVkZToKICAgICAgICAgICAgIyBpZiB3ZSdyZSBkZWNvbXBvc2luZyBuZXN0ZWQgY29tcG9uZW50cywgdGVtcG9yYXJpbHkgc2V0IGluY2x1ZGUgdG8gTm9uZQogICAgICAgICAgICBpbmNsdWRlX2JhayA9IHNlbGYuaW5jbHVkZQogICAgICAgICAgICBpZiBzZWxmLmRlY29tcG9zZU5lc3RlZCBhbmQgc2VsZi5pbmNsdWRlOgogICAgICAgICAgICAgICAgc2VsZi5pbmNsdWRlID0gTm9uZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBzdXBlcigpLmFkZENvbXBvbmVudChiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgKiprd2FyZ3MpCiAgICAgICAgICAgIGZpbmFsbHk6CiAgICAgICAgICAgICAgICBpZiBzZWxmLmluY2x1ZGUgIT0gaW5jbHVkZV9iYWs6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5pbmNsdWRlID0gaW5jbHVkZV9iYWsKICAgICAgICBlbHNlOgogICAgICAgICAgICBfUGFzc1RocnVDb21wb25lbnRzTWl4aW4uYWRkQ29tcG9uZW50KAogICAgICAgICAgICAgICAgc2VsZiwgYmFzZUdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24sICoqa3dhcmdzCiAgICAgICAgICAgICkKCgpjbGFzcyBfRGVjb21wb3NpbmdGaWx0ZXJQZW5NaXhpbihfRGVjb21wb3NpbmdGaWx0ZXJNaXhpbkJhc2UpOgogICAgIiIiTWl4aW4gY2xhc3MgdGhhdCBkZWNvbXBvc2VzIGNvbXBvbmVudHMgYXMgcmVndWxhciBjb250b3VycyBmb3Igc2VnbWVudCBwZW5zLgoKICAgIFVzZWQgYnkgRGVjb21wb3NpbmdGaWx0ZXJQZW4uCgogICAgVGFrZXMgdHdvIHJlcXVpcmVkIHBhcmFtZXRlcnMsIGFub3RoZXIgc2VnbWVudCBwZW4gJ291dFBlbicgdG8gZHJhdwogICAgd2l0aCwgYW5kIGEgJ2dseXBoU2V0JyBkaWN0IG9mIGRyYXdhYmxlIGdseXBoIG9iamVjdHMgdG8gZHJhdyBjb21wb25lbnRzIGZyb20uCgogICAgVGhlICdza2lwTWlzc2luZ0NvbXBvbmVudHMnIGFuZCAncmV2ZXJzZUZsaXBwZWQnIG9wdGlvbmFsIGFyZ3VtZW50cyB3b3JrIHRoZQogICAgc2FtZSBhcyBpbiB0aGUgRGVjb21wb3NpbmdQZW4uIHJldmVyc2VGbGlwcGVkIGlzIGJvb2wgb25seSAoVHJ1ZS9GYWxzZSkuCgogICAgSW4gYWRkaXRpb24sIHRoZSBkZWNvbXBvc2luZyBmaWx0ZXIgcGVucyBhbHNvIHRha2UgdGhlIGZvbGxvd2luZyB0d28gb3B0aW9uczoKCiAgICAnaW5jbHVkZScgaXMgYW4gb3B0aW9uYWwgc2V0IG9mIGNvbXBvbmVudCBiYXNlIGdseXBoIG5hbWVzIHRvIGNvbnNpZGVyIGZvcgogICAgZGVjb21wb3NpdGlvbjsgdGhlIGRlZmF1bHQgaW5jbHVkZT1Ob25lIG1lYW5zIGRlY29tcG9zZSBhbGwgY29tcG9uZW50cyBubyBtYXR0ZXIKICAgIHRoZSBiYXNlIGdseXBoIG5hbWUpLgoKICAgICdkZWNvbXBvc2VOZXN0ZWQnIChib29sKSBjb250cm9scyB3aGV0aGVyIHRvIHJlY3Vyc2UgZGVjb21wb3NpdGlvbiBpbnRvIG5lc3RlZAogICAgY29tcG9uZW50cyBvZiBjb21wb25lbnRzICh0aGlzIG9ubHkgbWF0dGVycyB3aGVuICdpbmNsdWRlJyB3YXMgYWxzbyBwcm92aWRlZCk7CiAgICBpZiBGYWxzZSwgb25seSBkZWNvbXBvc2UgdG9wLWxldmVsIGNvbXBvbmVudHMgaW5jbHVkZWQgaW4gdGhlIHNldCwgYnV0IG5vdAogICAgYWxzbyB0aGVpciBjaGlsZHJlbi4KICAgICIiIgoKICAgICMgcmFpc2VzIE1pc3NpbmdDb21wb25lbnRFcnJvciBpZiBiYXNlIGdseXBoIGlzIG5vdCBmb3VuZCBpbiBnbHlwaFNldAogICAgc2tpcE1pc3NpbmdDb21wb25lbnRzID0gRmFsc2UKCiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwKICAgICAgICBvdXRQZW4sCiAgICAgICAgZ2x5cGhTZXQsCiAgICAgICAgc2tpcE1pc3NpbmdDb21wb25lbnRzPU5vbmUsCiAgICAgICAgcmV2ZXJzZUZsaXBwZWQ6IGJvb2wgPSBGYWxzZSwKICAgICAgICBpbmNsdWRlOiBzZXRbc3RyXSB8IE5vbmUgPSBOb25lLAogICAgICAgIGRlY29tcG9zZU5lc3RlZDogYm9vbCA9IFRydWUsCiAgICAgICAgKiprd2FyZ3MsCiAgICApOgogICAgICAgIGFzc2VydCBpc2luc3RhbmNlKAogICAgICAgICAgICByZXZlcnNlRmxpcHBlZCwgYm9vbAogICAgICAgICksIGYiRXhwZWN0ZWQgYm9vbCwgZ290IHt0eXBlKHJldmVyc2VGbGlwcGVkKS5fX25hbWVfX30iCiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygKICAgICAgICAgICAgb3V0UGVuPW91dFBlbiwKICAgICAgICAgICAgZ2x5cGhTZXQ9Z2x5cGhTZXQsCiAgICAgICAgICAgIHNraXBNaXNzaW5nQ29tcG9uZW50cz1za2lwTWlzc2luZ0NvbXBvbmVudHMsCiAgICAgICAgICAgIHJldmVyc2VGbGlwcGVkPXJldmVyc2VGbGlwcGVkLAogICAgICAgICAgICAqKmt3YXJncywKICAgICAgICApCiAgICAgICAgc2VsZi5pbmNsdWRlID0gaW5jbHVkZQogICAgICAgIHNlbGYuZGVjb21wb3NlTmVzdGVkID0gZGVjb21wb3NlTmVzdGVkCgoKY2xhc3MgX0RlY29tcG9zaW5nRmlsdGVyUG9pbnRQZW5NaXhpbihfRGVjb21wb3NpbmdGaWx0ZXJNaXhpbkJhc2UpOgogICAgIiIiTWl4aW4gY2xhc3MgdGhhdCBkZWNvbXBvc2VzIGNvbXBvbmVudHMgYXMgcmVndWxhciBjb250b3VycyBmb3IgcG9pbnQgcGVucy4KCiAgICBUYWtlcyB0d28gcmVxdWlyZWQgcGFyYW1ldGVycywgYW5vdGhlciBwb2ludCBwZW4gJ291dFBlbicgdG8gZHJhdwogICAgd2l0aCwgYW5kIGEgJ2dseXBoU2V0JyBkaWN0IG9mIGRyYXdhYmxlIGdseXBoIG9iamVjdHMgdG8gZHJhdyBjb21wb25lbnRzIGZyb20uCgogICAgVGhlICdza2lwTWlzc2luZ0NvbXBvbmVudHMnIGFuZCAncmV2ZXJzZUZsaXBwZWQnIG9wdGlvbmFsIGFyZ3VtZW50cyB3b3JrIHRoZQogICAgc2FtZSBhcyBpbiB0aGUgRGVjb21wb3NpbmdQb2ludFBlbi4gcmV2ZXJzZUZsaXBwZWQgYWNjZXB0cyBib29sIHwgUmV2ZXJzZUZsaXBwZWQKICAgIChzZWUgRGVjb21wb3NpbmdQb2ludFBlbikuCgogICAgSW4gYWRkaXRpb24sIHRoZSBkZWNvbXBvc2luZyBmaWx0ZXIgcGVucyBhbHNvIHRha2UgdGhlIGZvbGxvd2luZyB0d28gb3B0aW9uczoKCiAgICAnaW5jbHVkZScgaXMgYW4gb3B0aW9uYWwgc2V0IG9mIGNvbXBvbmVudCBiYXNlIGdseXBoIG5hbWVzIHRvIGNvbnNpZGVyIGZvcgogICAgZGVjb21wb3NpdGlvbjsgdGhlIGRlZmF1bHQgaW5jbHVkZT1Ob25lIG1lYW5zIGRlY29tcG9zZSBhbGwgY29tcG9uZW50cyBubyBtYXR0ZXIKICAgIHRoZSBiYXNlIGdseXBoIG5hbWUpLgoKICAgICdkZWNvbXBvc2VOZXN0ZWQnIChib29sKSBjb250cm9scyB3aGV0aGVyIHRvIHJlY3Vyc2UgZGVjb21wb3NpdGlvbiBpbnRvIG5lc3RlZAogICAgY29tcG9uZW50cyBvZiBjb21wb25lbnRzICh0aGlzIG9ubHkgbWF0dGVycyB3aGVuICdpbmNsdWRlJyB3YXMgYWxzbyBwcm92aWRlZCk7CiAgICBpZiBGYWxzZSwgb25seSBkZWNvbXBvc2UgdG9wLWxldmVsIGNvbXBvbmVudHMgaW5jbHVkZWQgaW4gdGhlIHNldCwgYnV0IG5vdAogICAgYWxzbyB0aGVpciBjaGlsZHJlbi4KICAgICIiIgoKICAgICMgcmFpc2VzIE1pc3NpbmdDb21wb25lbnRFcnJvciBpZiBiYXNlIGdseXBoIGlzIG5vdCBmb3VuZCBpbiBnbHlwaFNldAogICAgc2tpcE1pc3NpbmdDb21wb25lbnRzID0gRmFsc2UKCiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwKICAgICAgICBvdXRQZW4sCiAgICAgICAgZ2x5cGhTZXQsCiAgICAgICAgc2tpcE1pc3NpbmdDb21wb25lbnRzPU5vbmUsCiAgICAgICAgcmV2ZXJzZUZsaXBwZWQ6IGJvb2wgfCBSZXZlcnNlRmxpcHBlZCA9IEZhbHNlLAogICAgICAgIGluY2x1ZGU6IHNldFtzdHJdIHwgTm9uZSA9IE5vbmUsCiAgICAgICAgZGVjb21wb3NlTmVzdGVkOiBib29sID0gVHJ1ZSwKICAgICAgICAqKmt3YXJncywKICAgICk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygKICAgICAgICAgICAgb3V0UGVuPW91dFBlbiwKICAgICAgICAgICAgZ2x5cGhTZXQ9Z2x5cGhTZXQsCiAgICAgICAgICAgIHNraXBNaXNzaW5nQ29tcG9uZW50cz1za2lwTWlzc2luZ0NvbXBvbmVudHMsCiAgICAgICAgICAgIHJldmVyc2VGbGlwcGVkPXJldmVyc2VGbGlwcGVkLAogICAgICAgICAgICAqKmt3YXJncywKICAgICAgICApCiAgICAgICAgc2VsZi5pbmNsdWRlID0gaW5jbHVkZQogICAgICAgIHNlbGYuZGVjb21wb3NlTmVzdGVkID0gZGVjb21wb3NlTmVzdGVkCgoKY2xhc3MgRGVjb21wb3NpbmdGaWx0ZXJQZW4oX0RlY29tcG9zaW5nRmlsdGVyUGVuTWl4aW4sIERlY29tcG9zaW5nUGVuLCBGaWx0ZXJQZW4pOgogICAgIiIiRmlsdGVyIHBlbiB0aGF0IGRyYXdzIGNvbXBvbmVudHMgYXMgcmVndWxhciBjb250b3Vycy4iIiIKCiAgICBwYXNzCgoKY2xhc3MgRGVjb21wb3NpbmdGaWx0ZXJQb2ludFBlbigKICAgIF9EZWNvbXBvc2luZ0ZpbHRlclBvaW50UGVuTWl4aW4sIERlY29tcG9zaW5nUG9pbnRQZW4sIEZpbHRlclBvaW50UGVuCik6CiAgICAiIiJGaWx0ZXIgcG9pbnQgcGVuIHRoYXQgZHJhd3MgY29tcG9uZW50cyBhcyByZWd1bGFyIGNvbnRvdXJzLiIiIgoKICAgIHBhc3MKCgpjbGFzcyBDb250b3VyRmlsdGVyUG9pbnRQZW4oX1Bhc3NUaHJ1Q29tcG9uZW50c01peGluLCBBYnN0cmFjdFBvaW50UGVuKToKICAgICIiIkEgImJ1ZmZlcmVkIiBmaWx0ZXIgcG9pbnQgcGVuIHRoYXQgYWNjdW11bGF0ZXMgY29udG91ciBkYXRhLCBwYXNzZXMKICAgIGl0IHRocm91Z2ggYSBgYGZpbHRlckNvbnRvdXJgYCBtZXRob2Qgd2hlbiB0aGUgY29udG91ciBpcyBjbG9zZWQgb3IgZW5kZWQsCiAgICBhbmQgZmluYWxseSBkcmF3cyB0aGUgcmVzdWx0IHdpdGggdGhlIG91dHB1dCBwb2ludCBwZW4uCgogICAgQ29tcG9uZW50cyBhcmUgcGFzc2VkIHRocm91Z2ggdW5jaGFuZ2VkLgoKICAgIFRoZSBgYGZpbHRlckNvbnRvdXJgYCBtZXRob2QgY2FuIG1vZGlmeSB0aGUgY29udG91ciBpbi1wbGFjZSAocmV0dXJuIE5vbmUpCiAgICBvciByZXR1cm4gYSBuZXcgY29udG91ciB0byByZXBsYWNlIGl0LgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG91dFBlbik6CiAgICAgICAgc2VsZi5fb3V0UGVuID0gb3V0UGVuCiAgICAgICAgc2VsZi5jdXJyZW50Q29udG91ciA9IE5vbmUKICAgICAgICBzZWxmLmN1cnJlbnRDb250b3VyS3dhcmdzID0gTm9uZQoKICAgIGRlZiBiZWdpblBhdGgoc2VsZiwgaWRlbnRpZmllcj1Ob25lLCAqKmt3YXJncyk6CiAgICAgICAgaWYgc2VsZi5jdXJyZW50Q29udG91ciBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiUGF0aCBhbHJlYWR5IGJlZ3VuIikKICAgICAgICBrd2FyZ3MgPSBkaWN0KGt3YXJncykKICAgICAgICBpZiBpZGVudGlmaWVyIGlzIG5vdCBOb25lOgogICAgICAgICAgICBrd2FyZ3NbImlkZW50aWZpZXIiXSA9IGlkZW50aWZpZXIKICAgICAgICBzZWxmLmN1cnJlbnRDb250b3VyID0gW10KICAgICAgICBzZWxmLmN1cnJlbnRDb250b3VyS3dhcmdzID0ga3dhcmdzCgogICAgZGVmIGVuZFBhdGgoc2VsZik6CiAgICAgICAgaWYgc2VsZi5jdXJyZW50Q29udG91ciBpcyBOb25lOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJQYXRoIG5vdCBiZWd1biIpCiAgICAgICAgc2VsZi5fZmx1c2hDb250b3VyKCkKICAgICAgICBzZWxmLmN1cnJlbnRDb250b3VyID0gTm9uZQogICAgICAgIHNlbGYuY3VycmVudENvbnRvdXJLd2FyZ3MgPSBOb25lCgogICAgZGVmIF9mbHVzaENvbnRvdXIoc2VsZik6CiAgICAgICAgIiIiRmx1c2ggdGhlIGN1cnJlbnQgY29udG91ciB0byB0aGUgb3V0cHV0IHBlbi4iIiIKICAgICAgICByZXN1bHQgPSBzZWxmLmZpbHRlckNvbnRvdXIoc2VsZi5jdXJyZW50Q29udG91cikKICAgICAgICBpZiByZXN1bHQgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHNlbGYuY3VycmVudENvbnRvdXIgPSByZXN1bHQKCiAgICAgICAgIyBEcmF3IHRoZSBmaWx0ZXJlZCBjb250b3VyCiAgICAgICAgc2VsZi5fb3V0UGVuLmJlZ2luUGF0aCgqKnNlbGYuY3VycmVudENvbnRvdXJLd2FyZ3MpCiAgICAgICAgZm9yIHB0LCBzZWdtZW50VHlwZSwgc21vb3RoLCBuYW1lLCBrd2FyZ3MgaW4gc2VsZi5jdXJyZW50Q29udG91cjoKICAgICAgICAgICAgc2VsZi5fb3V0UGVuLmFkZFBvaW50KHB0LCBzZWdtZW50VHlwZSwgc21vb3RoLCBuYW1lLCAqKmt3YXJncykKICAgICAgICBzZWxmLl9vdXRQZW4uZW5kUGF0aCgpCgogICAgZGVmIGZpbHRlckNvbnRvdXIoc2VsZiwgY29udG91cik6CiAgICAgICAgIiIiU3ViY2xhc3NlcyBtdXN0IG92ZXJyaWRlIHRoaXMgdG8gcGVyZm9ybSB0aGUgZmlsdGVyaW5nLgoKICAgICAgICBUaGUgY29udG91ciBpcyBhIGxpc3Qgb2YgKHB0LCBzZWdtZW50VHlwZSwgc21vb3RoLCBuYW1lLCBrd2FyZ3MpIHR1cGxlcy4KICAgICAgICBJZiB0aGUgbWV0aG9kIGRvZXNuJ3QgcmV0dXJuIGEgdmFsdWUgKGkuZS4gcmV0dXJucyBOb25lKSwgaXQncwogICAgICAgIGFzc3VtZWQgdGhhdCB0aGUgY29udG91ciB3YXMgbW9kaWZpZWQgaW4tcGxhY2UuCiAgICAgICAgT3RoZXJ3aXNlLCB0aGUgcmV0dXJuIHZhbHVlIHJlcGxhY2VzIHRoZSBvcmlnaW5hbCBjb250b3VyLgogICAgICAgICIiIgogICAgICAgIHJldHVybiAgIyBvciByZXR1cm4gY29udG91cgoKICAgIGRlZiBhZGRQb2ludCgKICAgICAgICBzZWxmLAogICAgICAgIHB0LAogICAgICAgIHNlZ21lbnRUeXBlPU5vbmUsCiAgICAgICAgc21vb3RoPUZhbHNlLAogICAgICAgIG5hbWU9Tm9uZSwKICAgICAgICBpZGVudGlmaWVyPU5vbmUsCiAgICAgICAgKiprd2FyZ3MsCiAgICApOgogICAgICAgIGlmIHNlbGYuY3VycmVudENvbnRvdXIgaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiUGF0aCBub3QgYmVndW4iKQogICAgICAgIGt3YXJncyA9IGRpY3Qoa3dhcmdzKQogICAgICAgIGlmIGlkZW50aWZpZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGt3YXJnc1siaWRlbnRpZmllciJdID0gaWRlbnRpZmllcgogICAgICAgIHNlbGYuY3VycmVudENvbnRvdXIuYXBwZW5kKChwdCwgc2VnbWVudFR5cGUsIHNtb290aCwgbmFtZSwga3dhcmdzKSkKCgpjbGFzcyBPbkN1cnZlRmlyc3RQb2ludFBlbihDb250b3VyRmlsdGVyUG9pbnRQZW4pOgogICAgIiIiRmlsdGVyIHBvaW50IHBlbiB0aGF0IGVuc3VyZXMgY2xvc2VkIGNvbnRvdXJzIHN0YXJ0IHdpdGggYW4gb24tY3VydmUgcG9pbnQuCgogICAgSWYgYSBjbG9zZWQgY29udG91ciBzdGFydHMgd2l0aCBhbiBvZmYtY3VydmUgcG9pbnQgKHNlZ21lbnRUeXBlPU5vbmUpLCBpdCByb3RhdGVzCiAgICB0aGUgcG9pbnRzIGxpc3Qgc28gdGhhdCB0aGUgZmlyc3Qgb24tY3VydmUgcG9pbnQgKHNlZ21lbnRUeXBlICE9IE5vbmUpIGJlY29tZXMKICAgIHRoZSBzdGFydCBwb2ludC4gT3BlbiBjb250b3VycyBhbmQgY29udG91cnMgYWxyZWFkeSBzdGFydGluZyB3aXRoIG9uLWN1cnZlIHBvaW50cwogICAgYXJlIHBhc3NlZCB0aHJvdWdoIHVuY2hhbmdlZC4KCiAgICA+Pj4gZnJvbSBmb250VG9vbHMucGVucy5yZWNvcmRpbmdQZW4gaW1wb3J0IFJlY29yZGluZ1BvaW50UGVuCiAgICA+Pj4gcmVjID0gUmVjb3JkaW5nUG9pbnRQZW4oKQogICAgPj4+IHBlbiA9IE9uQ3VydmVGaXJzdFBvaW50UGVuKHJlYykKICAgID4+PiAjIENsb3NlZCBjb250b3VyIHN0YXJ0aW5nIHdpdGggb2ZmLWN1cnZlIC0gd2lsbCBiZSByb3RhdGVkCiAgICA+Pj4gcGVuLmJlZ2luUGF0aCgpCiAgICA+Pj4gcGVuLmFkZFBvaW50KCgwLCAwKSwgTm9uZSkgICMgb2ZmLWN1cnZlCiAgICA+Pj4gcGVuLmFkZFBvaW50KCgxMDAsIDEwMCksICJsaW5lIikgICMgb24tY3VydmUgLSB3aWxsIGJlY29tZSBzdGFydAogICAgPj4+IHBlbi5hZGRQb2ludCgoMjAwLCAwKSwgTm9uZSkgICMgb2ZmLWN1cnZlCiAgICA+Pj4gcGVuLmFkZFBvaW50KCgzMDAsIDEwMCksICJjdXJ2ZSIpICAjIG9uLWN1cnZlCiAgICA+Pj4gcGVuLmVuZFBhdGgoKQogICAgPj4+ICMgVGhlIGNvbnRvdXIgc2hvdWxkIG5vdyBzdGFydCB3aXRoICgxMDAsIDEwMCkgImxpbmUiCiAgICA+Pj4gcmVjLnZhbHVlWzBdCiAgICAoJ2JlZ2luUGF0aCcsICgpLCB7fSkKICAgID4+PiByZWMudmFsdWVbMV0KICAgICgnYWRkUG9pbnQnLCAoKDEwMCwgMTAwKSwgJ2xpbmUnLCBGYWxzZSwgTm9uZSksIHt9KQogICAgPj4+IHJlYy52YWx1ZVsyXQogICAgKCdhZGRQb2ludCcsICgoMjAwLCAwKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSkKICAgID4+PiByZWMudmFsdWVbM10KICAgICgnYWRkUG9pbnQnLCAoKDMwMCwgMTAwKSwgJ2N1cnZlJywgRmFsc2UsIE5vbmUpLCB7fSkKICAgID4+PiByZWMudmFsdWVbNF0KICAgICgnYWRkUG9pbnQnLCAoKDAsIDApLCBOb25lLCBGYWxzZSwgTm9uZSksIHt9KQogICAgIiIiCgogICAgZGVmIGZpbHRlckNvbnRvdXIoc2VsZiwgY29udG91cik6CiAgICAgICAgIiIiUm90YXRlIGNsb3NlZCBjb250b3VyIHRvIHN0YXJ0IHdpdGggZmlyc3Qgb24tY3VydmUgcG9pbnQgaWYgbmVlZGVkLiIiIgogICAgICAgIGlmIG5vdCBjb250b3VyOgogICAgICAgICAgICByZXR1cm4KCiAgICAgICAgIyBDaGVjayBpZiBpdCdzIGEgY2xvc2VkIGNvbnRvdXIgKG5vICJtb3ZlIiBzZWdtZW50VHlwZSkKICAgICAgICBpc19jbG9zZWQgPSBjb250b3VyWzBdWzFdICE9ICJtb3ZlIgoKICAgICAgICBpZiBpc19jbG9zZWQgYW5kIGNvbnRvdXJbMF1bMV0gaXMgTm9uZToKICAgICAgICAgICAgIyBDbG9zZWQgY29udG91ciBzdGFydGluZyB3aXRoIG9mZi1jdXJ2ZSAtIG5lZWQgdG8gcm90YXRlCiAgICAgICAgICAgICMgRmluZCB0aGUgZmlyc3Qgb24tY3VydmUgcG9pbnQKICAgICAgICAgICAgZm9yIGksIChwdCwgc2VnbWVudFR5cGUsIHNtb290aCwgbmFtZSwga3dhcmdzKSBpbiBlbnVtZXJhdGUoY29udG91cik6CiAgICAgICAgICAgICAgICBpZiBzZWdtZW50VHlwZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICAjIFJvdGF0ZSB0aGUgcG9pbnRzIGxpc3Qgc28gaXQgc3RhcnRzIHdpdGggdGhlIGZpcnN0IG9uLWN1cnZlIHBvaW50CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGNvbnRvdXJbaTpdICsgY29udG91cls6aV0K
+from __future__ import annotations
+
+from fontTools.pens.basePen import AbstractPen, DecomposingPen
+from fontTools.pens.pointPen import (
+    AbstractPointPen,
+    DecomposingPointPen,
+    ReverseFlipped,
+)
+from fontTools.pens.recordingPen import RecordingPen
+
+
+class _PassThruComponentsMixin(object):
+    def addComponent(self, glyphName, transformation, **kwargs):
+        self._outPen.addComponent(glyphName, transformation, **kwargs)
+
+
+class FilterPen(_PassThruComponentsMixin, AbstractPen):
+    """Base class for pens that apply some transformation to the coordinates
+    they receive and pass them to another pen.
+
+    You can override any of its methods. The default implementation does
+    nothing, but passes the commands unmodified to the other pen.
+
+    >>> from fontTools.pens.recordingPen import RecordingPen
+    >>> rec = RecordingPen()
+    >>> pen = FilterPen(rec)
+    >>> v = iter(rec.value)
+
+    >>> pen.moveTo((0, 0))
+    >>> next(v)
+    ('moveTo', ((0, 0),))
+
+    >>> pen.lineTo((1, 1))
+    >>> next(v)
+    ('lineTo', ((1, 1),))
+
+    >>> pen.curveTo((2, 2), (3, 3), (4, 4))
+    >>> next(v)
+    ('curveTo', ((2, 2), (3, 3), (4, 4)))
+
+    >>> pen.qCurveTo((5, 5), (6, 6), (7, 7), (8, 8))
+    >>> next(v)
+    ('qCurveTo', ((5, 5), (6, 6), (7, 7), (8, 8)))
+
+    >>> pen.closePath()
+    >>> next(v)
+    ('closePath', ())
+
+    >>> pen.moveTo((9, 9))
+    >>> next(v)
+    ('moveTo', ((9, 9),))
+
+    >>> pen.endPath()
+    >>> next(v)
+    ('endPath', ())
+
+    >>> pen.addComponent('foo', (1, 0, 0, 1, 0, 0))
+    >>> next(v)
+    ('addComponent', ('foo', (1, 0, 0, 1, 0, 0)))
+    """
+
+    def __init__(self, outPen):
+        self._outPen = outPen
+        self.current_pt = None
+
+    def moveTo(self, pt):
+        self._outPen.moveTo(pt)
+        self.current_pt = pt
+
+    def lineTo(self, pt):
+        self._outPen.lineTo(pt)
+        self.current_pt = pt
+
+    def curveTo(self, *points):
+        self._outPen.curveTo(*points)
+        self.current_pt = points[-1]
+
+    def qCurveTo(self, *points):
+        self._outPen.qCurveTo(*points)
+        self.current_pt = points[-1]
+
+    def closePath(self):
+        self._outPen.closePath()
+        self.current_pt = None
+
+    def endPath(self):
+        self._outPen.endPath()
+        self.current_pt = None
+
+
+class ContourFilterPen(_PassThruComponentsMixin, RecordingPen):
+    """A "buffered" filter pen that accumulates contour data, passes
+    it through a ``filterContour`` method when the contour is closed or ended,
+    and finally draws the result with the output pen.
+
+    Components are passed through unchanged.
+    """
+
+    def __init__(self, outPen):
+        super(ContourFilterPen, self).__init__()
+        self._outPen = outPen
+
+    def closePath(self):
+        super(ContourFilterPen, self).closePath()
+        self._flushContour()
+
+    def endPath(self):
+        super(ContourFilterPen, self).endPath()
+        self._flushContour()
+
+    def _flushContour(self):
+        result = self.filterContour(self.value)
+        if result is not None:
+            self.value = result
+        self.replay(self._outPen)
+        self.value = []
+
+    def filterContour(self, contour):
+        """Subclasses must override this to perform the filtering.
+
+        The contour is a list of pen (operator, operands) tuples.
+        Operators are strings corresponding to the AbstractPen methods:
+        "moveTo", "lineTo", "curveTo", "qCurveTo", "closePath" and
+        "endPath". The operands are the positional arguments that are
+        passed to each method.
+
+        If the method doesn't return a value (i.e. returns None), it's
+        assumed that the argument was modified in-place.
+        Otherwise, the return value is drawn with the output pen.
+        """
+        return  # or return contour
+
+
+class FilterPointPen(_PassThruComponentsMixin, AbstractPointPen):
+    """Baseclass for point pens that apply some transformation to the
+    coordinates they receive and pass them to another point pen.
+
+    You can override any of its methods. The default implementation does
+    nothing, but passes the commands unmodified to the other pen.
+
+    >>> from fontTools.pens.recordingPen import RecordingPointPen
+    >>> rec = RecordingPointPen()
+    >>> pen = FilterPointPen(rec)
+    >>> v = iter(rec.value)
+    >>> pen.beginPath(identifier="abc")
+    >>> next(v)
+    ('beginPath', (), {'identifier': 'abc'})
+    >>> pen.addPoint((1, 2), "line", False)
+    >>> next(v)
+    ('addPoint', ((1, 2), 'line', False, None), {})
+    >>> pen.addComponent("a", (2, 0, 0, 2, 10, -10), identifier="0001")
+    >>> next(v)
+    ('addComponent', ('a', (2, 0, 0, 2, 10, -10)), {'identifier': '0001'})
+    >>> pen.endPath()
+    >>> next(v)
+    ('endPath', (), {})
+    """
+
+    def __init__(self, outPen):
+        self._outPen = outPen
+
+    def beginPath(self, identifier=None, **kwargs):
+        kwargs = dict(kwargs)
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self._outPen.beginPath(**kwargs)
+
+    def endPath(self):
+        self._outPen.endPath()
+
+    def addPoint(
+        self,
+        pt,
+        segmentType=None,
+        smooth=False,
+        name=None,
+        identifier=None,
+        **kwargs,
+    ):
+        kwargs = dict(kwargs)
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self._outPen.addPoint(pt, segmentType, smooth, name, **kwargs)
+
+
+class _DecomposingFilterMixinBase:
+    """Base mixin class with common `addComponent` logic for decomposing filter pens."""
+
+    def addComponent(self, baseGlyphName, transformation, **kwargs):
+        # only decompose the component if it's included in the set
+        if self.include is None or baseGlyphName in self.include:
+            # if we're decomposing nested components, temporarily set include to None
+            include_bak = self.include
+            if self.decomposeNested and self.include:
+                self.include = None
+            try:
+                super().addComponent(baseGlyphName, transformation, **kwargs)
+            finally:
+                if self.include != include_bak:
+                    self.include = include_bak
+        else:
+            _PassThruComponentsMixin.addComponent(
+                self, baseGlyphName, transformation, **kwargs
+            )
+
+
+class _DecomposingFilterPenMixin(_DecomposingFilterMixinBase):
+    """Mixin class that decomposes components as regular contours for segment pens.
+
+    Used by DecomposingFilterPen.
+
+    Takes two required parameters, another segment pen 'outPen' to draw
+    with, and a 'glyphSet' dict of drawable glyph objects to draw components from.
+
+    The 'skipMissingComponents' and 'reverseFlipped' optional arguments work the
+    same as in the DecomposingPen. reverseFlipped is bool only (True/False).
+
+    In addition, the decomposing filter pens also take the following two options:
+
+    'include' is an optional set of component base glyph names to consider for
+    decomposition; the default include=None means decompose all components no matter
+    the base glyph name).
+
+    'decomposeNested' (bool) controls whether to recurse decomposition into nested
+    components of components (this only matters when 'include' was also provided);
+    if False, only decompose top-level components included in the set, but not
+    also their children.
+    """
+
+    # raises MissingComponentError if base glyph is not found in glyphSet
+    skipMissingComponents = False
+
+    def __init__(
+        self,
+        outPen,
+        glyphSet,
+        skipMissingComponents=None,
+        reverseFlipped: bool = False,
+        include: set[str] | None = None,
+        decomposeNested: bool = True,
+        **kwargs,
+    ):
+        assert isinstance(
+            reverseFlipped, bool
+        ), f"Expected bool, got {type(reverseFlipped).__name__}"
+        super().__init__(
+            outPen=outPen,
+            glyphSet=glyphSet,
+            skipMissingComponents=skipMissingComponents,
+            reverseFlipped=reverseFlipped,
+            **kwargs,
+        )
+        self.include = include
+        self.decomposeNested = decomposeNested
+
+
+class _DecomposingFilterPointPenMixin(_DecomposingFilterMixinBase):
+    """Mixin class that decomposes components as regular contours for point pens.
+
+    Takes two required parameters, another point pen 'outPen' to draw
+    with, and a 'glyphSet' dict of drawable glyph objects to draw components from.
+
+    The 'skipMissingComponents' and 'reverseFlipped' optional arguments work the
+    same as in the DecomposingPointPen. reverseFlipped accepts bool | ReverseFlipped
+    (see DecomposingPointPen).
+
+    In addition, the decomposing filter pens also take the following two options:
+
+    'include' is an optional set of component base glyph names to consider for
+    decomposition; the default include=None means decompose all components no matter
+    the base glyph name).
+
+    'decomposeNested' (bool) controls whether to recurse decomposition into nested
+    components of components (this only matters when 'include' was also provided);
+    if False, only decompose top-level components included in the set, but not
+    also their children.
+    """
+
+    # raises MissingComponentError if base glyph is not found in glyphSet
+    skipMissingComponents = False
+
+    def __init__(
+        self,
+        outPen,
+        glyphSet,
+        skipMissingComponents=None,
+        reverseFlipped: bool | ReverseFlipped = False,
+        include: set[str] | None = None,
+        decomposeNested: bool = True,
+        **kwargs,
+    ):
+        super().__init__(
+            outPen=outPen,
+            glyphSet=glyphSet,
+            skipMissingComponents=skipMissingComponents,
+            reverseFlipped=reverseFlipped,
+            **kwargs,
+        )
+        self.include = include
+        self.decomposeNested = decomposeNested
+
+
+class DecomposingFilterPen(_DecomposingFilterPenMixin, DecomposingPen, FilterPen):
+    """Filter pen that draws components as regular contours."""
+
+    pass
+
+
+class DecomposingFilterPointPen(
+    _DecomposingFilterPointPenMixin, DecomposingPointPen, FilterPointPen
+):
+    """Filter point pen that draws components as regular contours."""
+
+    pass
+
+
+class ContourFilterPointPen(_PassThruComponentsMixin, AbstractPointPen):
+    """A "buffered" filter point pen that accumulates contour data, passes
+    it through a ``filterContour`` method when the contour is closed or ended,
+    and finally draws the result with the output point pen.
+
+    Components are passed through unchanged.
+
+    The ``filterContour`` method can modify the contour in-place (return None)
+    or return a new contour to replace it.
+    """
+
+    def __init__(self, outPen):
+        self._outPen = outPen
+        self.currentContour = None
+        self.currentContourKwargs = None
+
+    def beginPath(self, identifier=None, **kwargs):
+        if self.currentContour is not None:
+            raise ValueError("Path already begun")
+        kwargs = dict(kwargs)
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.currentContour = []
+        self.currentContourKwargs = kwargs
+
+    def endPath(self):
+        if self.currentContour is None:
+            raise ValueError("Path not begun")
+        self._flushContour()
+        self.currentContour = None
+        self.currentContourKwargs = None
+
+    def _flushContour(self):
+        """Flush the current contour to the output pen."""
+        result = self.filterContour(self.currentContour)
+        if result is not None:
+            self.currentContour = result
+
+        # Draw the filtered contour
+        self._outPen.beginPath(**self.currentContourKwargs)
+        for pt, segmentType, smooth, name, kwargs in self.currentContour:
+            self._outPen.addPoint(pt, segmentType, smooth, name, **kwargs)
+        self._outPen.endPath()
+
+    def filterContour(self, contour):
+        """Subclasses must override this to perform the filtering.
+
+        The contour is a list of (pt, segmentType, smooth, name, kwargs) tuples.
+        If the method doesn't return a value (i.e. returns None), it's
+        assumed that the contour was modified in-place.
+        Otherwise, the return value replaces the original contour.
+        """
+        return  # or return contour
+
+    def addPoint(
+        self,
+        pt,
+        segmentType=None,
+        smooth=False,
+        name=None,
+        identifier=None,
+        **kwargs,
+    ):
+        if self.currentContour is None:
+            raise ValueError("Path not begun")
+        kwargs = dict(kwargs)
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.currentContour.append((pt, segmentType, smooth, name, kwargs))
+
+
+class OnCurveFirstPointPen(ContourFilterPointPen):
+    """Filter point pen that ensures closed contours start with an on-curve point.
+
+    If a closed contour starts with an off-curve point (segmentType=None), it rotates
+    the points list so that the first on-curve point (segmentType != None) becomes
+    the start point. Open contours and contours already starting with on-curve points
+    are passed through unchanged.
+
+    >>> from fontTools.pens.recordingPen import RecordingPointPen
+    >>> rec = RecordingPointPen()
+    >>> pen = OnCurveFirstPointPen(rec)
+    >>> # Closed contour starting with off-curve - will be rotated
+    >>> pen.beginPath()
+    >>> pen.addPoint((0, 0), None)  # off-curve
+    >>> pen.addPoint((100, 100), "line")  # on-curve - will become start
+    >>> pen.addPoint((200, 0), None)  # off-curve
+    >>> pen.addPoint((300, 100), "curve")  # on-curve
+    >>> pen.endPath()
+    >>> # The contour should now start with (100, 100) "line"
+    >>> rec.value[0]
+    ('beginPath', (), {})
+    >>> rec.value[1]
+    ('addPoint', ((100, 100), 'line', False, None), {})
+    >>> rec.value[2]
+    ('addPoint', ((200, 0), None, False, None), {})
+    >>> rec.value[3]
+    ('addPoint', ((300, 100), 'curve', False, None), {})
+    >>> rec.value[4]
+    ('addPoint', ((0, 0), None, False, None), {})
+    """
+
+    def filterContour(self, contour):
+        """Rotate closed contour to start with first on-curve point if needed."""
+        if not contour:
+            return
+
+        # Check if it's a closed contour (no "move" segmentType)
+        is_closed = contour[0][1] != "move"
+
+        if is_closed and contour[0][1] is None:
+            # Closed contour starting with off-curve - need to rotate
+            # Find the first on-curve point
+            for i, (pt, segmentType, smooth, name, kwargs) in enumerate(contour):
+                if segmentType is not None:
+                    # Rotate the points list so it starts with the first on-curve point
+                    return contour[i:] + contour[:i]

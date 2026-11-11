@@ -1,1 +1,26 @@
-IiIiVFNJe0IsQyxELEosUCxTLFZ9IGFyZSBwcml2YXRlIHRhYmxlcyB1c2VkIGJ5IE1pY3Jvc29mdCBWaXN1YWwgVHJ1ZVR5cGUgKFZUVCkKdG9vbCB0byBzdG9yZSBpdHMgdGFibGUgc291cmNlIGRhdGEuCgpTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS90b29scy92dHQvdHNpLXRhYmxlcwoiIiIKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzdHJqb2luLCB0b2J5dGVzLCB0b3N0cgpmcm9tIC4gaW1wb3J0IGFzY2lpVGFibGUKCgpjbGFzcyB0YWJsZV9UX1NfSV9WXyhhc2NpaVRhYmxlLmFzY2lpVGFibGUpOgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBkYXRhID0gdG9zdHIoc2VsZi5kYXRhKQogICAgICAgICMgcmVtb3ZpbmcgbnVsbCBieXRlcy4gWFhYIG5lZWRlZD8/CiAgICAgICAgZGF0YSA9IGRhdGEuc3BsaXQoIlwwIikKICAgICAgICBkYXRhID0gc3Ryam9pbihkYXRhKQogICAgICAgIHdyaXRlci5iZWdpbnRhZygic291cmNlIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLndyaXRlX25vaW5kZW50KGRhdGEucmVwbGFjZSgiXHIiLCAiXG4iKSkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLmVuZHRhZygic291cmNlIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgbGluZXMgPSBzdHJqb2luKGNvbnRlbnQpLnNwbGl0KCJcbiIpCiAgICAgICAgc2VsZi5kYXRhID0gdG9ieXRlcygiXHIiLmpvaW4obGluZXNbMTotMV0pKQo=
+"""TSI{B,C,D,J,P,S,V} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its table source data.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from fontTools.misc.textTools import strjoin, tobytes, tostr
+from . import asciiTable
+
+
+class table_T_S_I_V_(asciiTable.asciiTable):
+    def toXML(self, writer, ttFont):
+        data = tostr(self.data)
+        # removing null bytes. XXX needed??
+        data = data.split("\0")
+        data = strjoin(data)
+        writer.begintag("source")
+        writer.newline()
+        writer.write_noindent(data.replace("\r", "\n"))
+        writer.newline()
+        writer.endtag("source")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        lines = strjoin(content).split("\n")
+        self.data = tobytes("\r".join(lines[1:-1]))

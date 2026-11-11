@@ -1,1 +1,64 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IFRZUEVfQ0hFQ0tJTkcKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBUYWcKZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IGdldENsYXNzVGFnCgppZiBUWVBFX0NIRUNLSU5HOgogICAgZnJvbSB0eXBpbmcgaW1wb3J0IEFueQoKICAgIGZyb20gZm9udFRvb2xzLm1pc2MueG1sV3JpdGVyIGltcG9ydCBYTUxXcml0ZXIKICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKClhNTEF0dHJzID0gZGljdFtzdHIsIHN0cl0KWE1MQ29udGVudCA9IGxpc3Rbc3RyIHwgdHVwbGVbc3RyLCBYTUxBdHRycywgIlhNTENvbnRlbnQiXV0KCgpjbGFzcyBEZWZhdWx0VGFibGU6CiAgICBkZXBlbmRlbmNpZXM6IGxpc3Rbc3RyXSA9IFtdCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHRhZzogc3RyIHwgYnl0ZXMgfCBOb25lID0gTm9uZSkgLT4gTm9uZToKICAgICAgICBpZiB0YWcgaXMgTm9uZToKICAgICAgICAgICAgdGFnID0gZ2V0Q2xhc3NUYWcoc2VsZi5fX2NsYXNzX18pCiAgICAgICAgc2VsZi50YWJsZVRhZyA9IFRhZyh0YWcpCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhOiBieXRlcywgdHRGb250OiBUVEZvbnQpIC0+IE5vbmU6CiAgICAgICAgc2VsZi5kYXRhID0gZGF0YQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udDogVFRGb250KSAtPiBieXRlczoKICAgICAgICByZXR1cm4gc2VsZi5kYXRhCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlcjogWE1MV3JpdGVyLCB0dEZvbnQ6IFRURm9udCwgKiprd2FyZ3M6IEFueSkgLT4gTm9uZToKICAgICAgICBpZiBoYXNhdHRyKHNlbGYsICJFUlJPUiIpOgogICAgICAgICAgICB3cml0ZXIuY29tbWVudCgiQW4gZXJyb3Igb2NjdXJyZWQgZHVyaW5nIHRoZSBkZWNvbXBpbGF0aW9uIG9mIHRoaXMgdGFibGUiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5jb21tZW50KHNlbGYuRVJST1IpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuYmVnaW50YWcoImhleGRhdGEiKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuZHVtcGhleChzZWxmLmNvbXBpbGUodHRGb250KSkKICAgICAgICB3cml0ZXIuZW5kdGFnKCJoZXhkYXRhIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoCiAgICAgICAgc2VsZiwgbmFtZTogc3RyLCBhdHRyczogWE1MQXR0cnMsIGNvbnRlbnQ6IFhNTENvbnRlbnQsIHR0Rm9udDogVFRGb250CiAgICApIC0+IE5vbmU6CiAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCiAgICAgICAgZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHJlYWRIZXgKCiAgICAgICAgaWYgbmFtZSAhPSAiaGV4ZGF0YSI6CiAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoImNhbid0IGhhbmRsZSAnJXMnIGVsZW1lbnQiICUgbmFtZSkKICAgICAgICBzZWxmLmRlY29tcGlsZShyZWFkSGV4KGNvbnRlbnQpLCB0dEZvbnQpCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpIC0+IHN0cjoKICAgICAgICByZXR1cm4gIjwnJXMnIHRhYmxlIGF0ICV4PiIgJSAoc2VsZi50YWJsZVRhZywgaWQoc2VsZikpCgogICAgZGVmIF9fZXFfXyhzZWxmLCBvdGhlcjogb2JqZWN0KSAtPiBib29sOgogICAgICAgIGlmIHR5cGUoc2VsZikgaXMgbm90IHR5cGUob3RoZXIpOgogICAgICAgICAgICByZXR1cm4gTm90SW1wbGVtZW50ZWQKICAgICAgICByZXR1cm4gc2VsZi5fX2RpY3RfXyA9PSBvdGhlci5fX2RpY3RfXwoKICAgIGRlZiBfX25lX18oc2VsZiwgb3RoZXI6IG9iamVjdCkgLT4gYm9vbDoKICAgICAgICByZXN1bHQgPSBzZWxmLl9fZXFfXyhvdGhlcikKICAgICAgICByZXR1cm4gcmVzdWx0IGlmIHJlc3VsdCBpcyBOb3RJbXBsZW1lbnRlZCBlbHNlIG5vdCByZXN1bHQK
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from fontTools.misc.textTools import Tag
+from fontTools.ttLib import getClassTag
+
+if TYPE_CHECKING:
+    from typing import Any
+
+    from fontTools.misc.xmlWriter import XMLWriter
+    from fontTools.ttLib import TTFont
+
+XMLAttrs = dict[str, str]
+XMLContent = list[str | tuple[str, XMLAttrs, "XMLContent"]]
+
+
+class DefaultTable:
+    dependencies: list[str] = []
+
+    def __init__(self, tag: str | bytes | None = None) -> None:
+        if tag is None:
+            tag = getClassTag(self.__class__)
+        self.tableTag = Tag(tag)
+
+    def decompile(self, data: bytes, ttFont: TTFont) -> None:
+        self.data = data
+
+    def compile(self, ttFont: TTFont) -> bytes:
+        return self.data
+
+    def toXML(self, writer: XMLWriter, ttFont: TTFont, **kwargs: Any) -> None:
+        if hasattr(self, "ERROR"):
+            writer.comment("An error occurred during the decompilation of this table")
+            writer.newline()
+            writer.comment(self.ERROR)
+            writer.newline()
+        writer.begintag("hexdata")
+        writer.newline()
+        writer.dumphex(self.compile(ttFont))
+        writer.endtag("hexdata")
+        writer.newline()
+
+    def fromXML(
+        self, name: str, attrs: XMLAttrs, content: XMLContent, ttFont: TTFont
+    ) -> None:
+        from fontTools import ttLib
+        from fontTools.misc.textTools import readHex
+
+        if name != "hexdata":
+            raise ttLib.TTLibError("can't handle '%s' element" % name)
+        self.decompile(readHex(content), ttFont)
+
+    def __repr__(self) -> str:
+        return "<'%s' table at %x>" % (self.tableTag, id(self))
+
+    def __eq__(self, other: object) -> bool:
+        if type(self) is not type(other):
+            return NotImplemented
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other: object) -> bool:
+        result = self.__eq__(other)
+        return result if result is NotImplemented else not result

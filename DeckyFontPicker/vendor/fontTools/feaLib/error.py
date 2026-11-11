@@ -1,1 +1,22 @@
-Y2xhc3MgRmVhdHVyZUxpYkVycm9yKEV4Y2VwdGlvbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbWVzc2FnZSwgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgRXhjZXB0aW9uLl9faW5pdF9fKHNlbGYsIG1lc3NhZ2UpCiAgICAgICAgc2VsZi5sb2NhdGlvbiA9IGxvY2F0aW9uCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgbWVzc2FnZSA9IEV4Y2VwdGlvbi5fX3N0cl9fKHNlbGYpCiAgICAgICAgaWYgc2VsZi5sb2NhdGlvbjoKICAgICAgICAgICAgcmV0dXJuIGYie3NlbGYubG9jYXRpb259OiB7bWVzc2FnZX0iCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuIG1lc3NhZ2UKCgpjbGFzcyBJbmNsdWRlZEZlYU5vdEZvdW5kKEZlYXR1cmVMaWJFcnJvcik6CiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICBhc3NlcnQgc2VsZi5sb2NhdGlvbiBpcyBub3QgTm9uZQoKICAgICAgICBtZXNzYWdlID0gKAogICAgICAgICAgICAiVGhlIGZvbGxvd2luZyBmZWF0dXJlIGZpbGUgc2hvdWxkIGJlIGluY2x1ZGVkIGJ1dCBjYW5ub3QgYmUgZm91bmQ6ICIKICAgICAgICAgICAgZiJ7RXhjZXB0aW9uLl9fc3RyX18oc2VsZil9IgogICAgICAgICkKICAgICAgICByZXR1cm4gZiJ7c2VsZi5sb2NhdGlvbn06IHttZXNzYWdlfSIK
+class FeatureLibError(Exception):
+    def __init__(self, message, location=None):
+        Exception.__init__(self, message)
+        self.location = location
+
+    def __str__(self):
+        message = Exception.__str__(self)
+        if self.location:
+            return f"{self.location}: {message}"
+        else:
+            return message
+
+
+class IncludedFeaNotFound(FeatureLibError):
+    def __str__(self):
+        assert self.location is not None
+
+        message = (
+            "The following feature file should be included but cannot be found: "
+            f"{Exception.__str__(self)}"
+        )
+        return f"{self.location}: {message}"

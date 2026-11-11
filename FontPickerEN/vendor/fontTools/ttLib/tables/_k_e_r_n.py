@@ -1,1 +1,288 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IGdldFNlYXJjaFJhbmdlCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbCwgcmVhZEhleApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZpeGVkVG9GbG9hdCBhcyBmaTJmbCwgZmxvYXRUb0ZpeGVkIGFzIGZsMmZpCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmltcG9ydCBzdHJ1Y3QKaW1wb3J0IHN5cwppbXBvcnQgYXJyYXkKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKCmNsYXNzIHRhYmxlX19rX2Vfcl9uKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiS2VybmluZyB0YWJsZQoKICAgIFRoZSBgYGtlcm5gYCB0YWJsZSBjb250YWlucyB2YWx1ZXMgdGhhdCBjb250ZXh0dWFsbHkgYWRqdXN0IHRoZSBpbnRlci1nbHlwaAogICAgc3BhY2luZyBmb3IgdGhlIGdseXBocyBpbiBhIGBgZ2x5ZmBgIHRhYmxlLgoKICAgIE5vdGUgdGhhdCBzaW1pbGFyIGNvbnRleHR1YWwgc3BhY2luZyBhZGp1c3RtZW50cyBjYW4gYWxzbyBiZSBzdG9yZWQKICAgIGluIHRoZSAia2VybiIgZmVhdHVyZSBvZiBhIGBgR1BPU2BgIHRhYmxlLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMva2VybgogICAgIiIiCgogICAgZGVmIGdldGtlcm4oc2VsZiwgZm9ybWF0KToKICAgICAgICBmb3Igc3VidGFibGUgaW4gc2VsZi5rZXJuVGFibGVzOgogICAgICAgICAgICBpZiBzdWJ0YWJsZS5mb3JtYXQgPT0gZm9ybWF0OgogICAgICAgICAgICAgICAgcmV0dXJuIHN1YnRhYmxlCiAgICAgICAgcmV0dXJuIE5vbmUgICMgbm90IGZvdW5kCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIHZlcnNpb24sIG5UYWJsZXMgPSBzdHJ1Y3QudW5wYWNrKCI+SEgiLCBkYXRhWzo0XSkKICAgICAgICBhcHBsZSA9IEZhbHNlCiAgICAgICAgaWYgKGxlbihkYXRhKSA+PSA4KSBhbmQgKHZlcnNpb24gPT0gMSk6CiAgICAgICAgICAgICMgQUFUIEFwcGxlJ3MgIm5ldyIgZm9ybWF0LiBIbS4KICAgICAgICAgICAgdmVyc2lvbiwgblRhYmxlcyA9IHN0cnVjdC51bnBhY2soIj5MTCIsIGRhdGFbOjhdKQogICAgICAgICAgICBzZWxmLnZlcnNpb24gPSBmaTJmbCh2ZXJzaW9uLCAxNikKICAgICAgICAgICAgZGF0YSA9IGRhdGFbODpdCiAgICAgICAgICAgIGFwcGxlID0gVHJ1ZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYudmVyc2lvbiA9IHZlcnNpb24KICAgICAgICAgICAgZGF0YSA9IGRhdGFbNDpdCiAgICAgICAgc2VsZi5rZXJuVGFibGVzID0gW10KICAgICAgICBmb3IgaSBpbiByYW5nZShuVGFibGVzKToKICAgICAgICAgICAgaWYgc2VsZi52ZXJzaW9uID09IDEuMDoKICAgICAgICAgICAgICAgICMgQXBwbGUKICAgICAgICAgICAgICAgIGxlbmd0aCwgY292ZXJhZ2UsIHN1YnRhYmxlRm9ybWF0ID0gc3RydWN0LnVucGFjaygiPkxCQiIsIGRhdGFbOjZdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBpbiBPcGVuVHlwZSBzcGVjIHRoZSAidmVyc2lvbiIgZmllbGQgcmVmZXJzIHRvIHRoZSBjb21tb24KICAgICAgICAgICAgICAgICMgc3VidGFibGUgaGVhZGVyOyB0aGUgYWN0dWFsIHN1YnRhYmxlIGZvcm1hdCBpcyBzdG9yZWQgaW4KICAgICAgICAgICAgICAgICMgdGhlIDgtMTUgbWFzayBiaXRzIG9mICJjb3ZlcmFnZSIgZmllbGQuCiAgICAgICAgICAgICAgICAjIFRoaXMgInZlcnNpb24iIGlzIGFsd2F5cyAwIHNvIHdlIGlnbm9yZSBpdCBoZXJlCiAgICAgICAgICAgICAgICBfLCBsZW5ndGgsIHN1YnRhYmxlRm9ybWF0LCBjb3ZlcmFnZSA9IHN0cnVjdC51bnBhY2soIj5ISEJCIiwgZGF0YVs6Nl0pCiAgICAgICAgICAgICAgICBpZiBuVGFibGVzID09IDEgYW5kIHN1YnRhYmxlRm9ybWF0ID09IDA6CiAgICAgICAgICAgICAgICAgICAgIyBUaGUgImxlbmd0aCIgdmFsdWUgaXMgaWdub3JlZCBzaW5jZSBzb21lIGZvbnRzCiAgICAgICAgICAgICAgICAgICAgIyAobGlrZSBPcGVuU2FucyBhbmQgQ2FsaWJyaSkgaGF2ZSBhIHN1YnRhYmxlIGxhcmdlciB0aGFuCiAgICAgICAgICAgICAgICAgICAgIyBpdHMgdmFsdWUuCiAgICAgICAgICAgICAgICAgICAgKG5QYWlycywpID0gc3RydWN0LnVucGFjaygiPkgiLCBkYXRhWzY6OF0pCiAgICAgICAgICAgICAgICAgICAgY2FsY3VsYXRlZF9sZW5ndGggPSAoblBhaXJzICogNikgKyAxNAogICAgICAgICAgICAgICAgICAgIGlmIGxlbmd0aCAhPSBjYWxjdWxhdGVkX2xlbmd0aDoKICAgICAgICAgICAgICAgICAgICAgICAgbG9nLndhcm5pbmcoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiJ2tlcm4nIHN1YnRhYmxlIGxvbmdlciB0aGFuIGRlZmluZWQ6ICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICIlZCBieXRlcyBpbnN0ZWFkIG9mICVkIGJ5dGVzIiAlIChjYWxjdWxhdGVkX2xlbmd0aCwgbGVuZ3RoKQogICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgbGVuZ3RoID0gY2FsY3VsYXRlZF9sZW5ndGgKICAgICAgICAgICAgaWYgc3VidGFibGVGb3JtYXQgbm90IGluIGtlcm5fY2xhc3NlczoKICAgICAgICAgICAgICAgIHN1YnRhYmxlID0gS2VyblRhYmxlX2Zvcm1hdF91bmtvd24oc3VidGFibGVGb3JtYXQpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBzdWJ0YWJsZSA9IGtlcm5fY2xhc3Nlc1tzdWJ0YWJsZUZvcm1hdF0oYXBwbGUpCiAgICAgICAgICAgIHN1YnRhYmxlLmRlY29tcGlsZShkYXRhWzpsZW5ndGhdLCB0dEZvbnQpCiAgICAgICAgICAgIHNlbGYua2VyblRhYmxlcy5hcHBlbmQoc3VidGFibGUpCiAgICAgICAgICAgIGRhdGEgPSBkYXRhW2xlbmd0aDpdCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBpZiBoYXNhdHRyKHNlbGYsICJrZXJuVGFibGVzIik6CiAgICAgICAgICAgIG5UYWJsZXMgPSBsZW4oc2VsZi5rZXJuVGFibGVzKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG5UYWJsZXMgPSAwCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uID09IDEuMDoKICAgICAgICAgICAgIyBBQVQgQXBwbGUncyAibmV3IiBmb3JtYXQuCiAgICAgICAgICAgIGRhdGEgPSBzdHJ1Y3QucGFjaygiPkxMIiwgZmwyZmkoc2VsZi52ZXJzaW9uLCAxNiksIG5UYWJsZXMpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZGF0YSA9IHN0cnVjdC5wYWNrKCI+SEgiLCBzZWxmLnZlcnNpb24sIG5UYWJsZXMpCiAgICAgICAgaWYgaGFzYXR0cihzZWxmLCAia2VyblRhYmxlcyIpOgogICAgICAgICAgICBmb3Igc3VidGFibGUgaW4gc2VsZi5rZXJuVGFibGVzOgogICAgICAgICAgICAgICAgZGF0YSA9IGRhdGEgKyBzdWJ0YWJsZS5jb21waWxlKHR0Rm9udCkKICAgICAgICByZXR1cm4gZGF0YQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygidmVyc2lvbiIsIHZhbHVlPXNlbGYudmVyc2lvbikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgZm9yIHN1YnRhYmxlIGluIHNlbGYua2VyblRhYmxlczoKICAgICAgICAgICAgc3VidGFibGUudG9YTUwod3JpdGVyLCB0dEZvbnQpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAidmVyc2lvbiI6CiAgICAgICAgICAgIHNlbGYudmVyc2lvbiA9IHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKQogICAgICAgICAgICByZXR1cm4KICAgICAgICBpZiBuYW1lICE9ICJrZXJuc3VidGFibGUiOgogICAgICAgICAgICByZXR1cm4KICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAia2VyblRhYmxlcyIpOgogICAgICAgICAgICBzZWxmLmtlcm5UYWJsZXMgPSBbXQogICAgICAgIGZvcm1hdCA9IHNhZmVFdmFsKGF0dHJzWyJmb3JtYXQiXSkKICAgICAgICBpZiBmb3JtYXQgbm90IGluIGtlcm5fY2xhc3NlczoKICAgICAgICAgICAgc3VidGFibGUgPSBLZXJuVGFibGVfZm9ybWF0X3Vua293bihmb3JtYXQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgYXBwbGUgPSBzZWxmLnZlcnNpb24gPT0gMS4wCiAgICAgICAgICAgIHN1YnRhYmxlID0ga2Vybl9jbGFzc2VzW2Zvcm1hdF0oYXBwbGUpCiAgICAgICAgc2VsZi5rZXJuVGFibGVzLmFwcGVuZChzdWJ0YWJsZSkKICAgICAgICBzdWJ0YWJsZS5mcm9tWE1MKG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpCgoKY2xhc3MgS2VyblRhYmxlX2Zvcm1hdF8wKG9iamVjdCk6CiAgICAjICd2ZXJzaW9uJyBpcyBrZXB0IGZvciBiYWNrd2FyZCBjb21wYXRpYmlsaXR5CiAgICB2ZXJzaW9uID0gZm9ybWF0ID0gMAoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBhcHBsZT1GYWxzZSk6CiAgICAgICAgc2VsZi5hcHBsZSA9IGFwcGxlCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIGlmIG5vdCBzZWxmLmFwcGxlOgogICAgICAgICAgICB2ZXJzaW9uLCBsZW5ndGgsIHN1YnRhYmxlRm9ybWF0LCBjb3ZlcmFnZSA9IHN0cnVjdC51bnBhY2soIj5ISEJCIiwgZGF0YVs6Nl0pCiAgICAgICAgICAgIGlmIHZlcnNpb24gIT0gMDoKICAgICAgICAgICAgICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVExpYkVycm9yCgogICAgICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigidW5zdXBwb3J0ZWQga2VybiBzdWJ0YWJsZSB2ZXJzaW9uOiAlZCIgJSB2ZXJzaW9uKQogICAgICAgICAgICB0dXBsZUluZGV4ID0gTm9uZQogICAgICAgICAgICAjIFNob3VsZCB3ZSBhbHNvIGFzc2VydCBsZW5ndGggPT0gbGVuKGRhdGEpPwogICAgICAgICAgICBkYXRhID0gZGF0YVs2Ol0KICAgICAgICBlbHNlOgogICAgICAgICAgICBsZW5ndGgsIGNvdmVyYWdlLCBzdWJ0YWJsZUZvcm1hdCwgdHVwbGVJbmRleCA9IHN0cnVjdC51bnBhY2soCiAgICAgICAgICAgICAgICAiPkxCQkgiLCBkYXRhWzo4XQogICAgICAgICAgICApCiAgICAgICAgICAgIGRhdGEgPSBkYXRhWzg6XQogICAgICAgIGFzc2VydCBzZWxmLmZvcm1hdCA9PSBzdWJ0YWJsZUZvcm1hdCwgInVuc3VwcG9ydGVkIGZvcm1hdCIKICAgICAgICBzZWxmLmNvdmVyYWdlID0gY292ZXJhZ2UKICAgICAgICBzZWxmLnR1cGxlSW5kZXggPSB0dXBsZUluZGV4CgogICAgICAgIHNlbGYua2VyblRhYmxlID0ga2VyblRhYmxlID0ge30KCiAgICAgICAgblBhaXJzLCBzZWFyY2hSYW5nZSwgZW50cnlTZWxlY3RvciwgcmFuZ2VTaGlmdCA9IHN0cnVjdC51bnBhY2soCiAgICAgICAgICAgICI+SEhISCIsIGRhdGFbOjhdCiAgICAgICAgKQogICAgICAgIGRhdGEgPSBkYXRhWzg6XQoKICAgICAgICBkYXRhcyA9IGFycmF5LmFycmF5KCJIIiwgZGF0YVs6IDYgKiBuUGFpcnNdKQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIGRhdGFzLmJ5dGVzd2FwKCkKICAgICAgICBpdCA9IGl0ZXIoZGF0YXMpCiAgICAgICAgZ2x5cGhPcmRlciA9IHR0Rm9udC5nZXRHbHlwaE9yZGVyKCkKICAgICAgICBmb3IgayBpbiByYW5nZShuUGFpcnMpOgogICAgICAgICAgICBsZWZ0LCByaWdodCwgdmFsdWUgPSBuZXh0KGl0KSwgbmV4dChpdCksIG5leHQoaXQpCiAgICAgICAgICAgIGlmIHZhbHVlID49IDMyNzY4OgogICAgICAgICAgICAgICAgdmFsdWUgLT0gNjU1MzYKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAga2VyblRhYmxlWyhnbHlwaE9yZGVyW2xlZnRdLCBnbHlwaE9yZGVyW3JpZ2h0XSldID0gdmFsdWUKICAgICAgICAgICAgZXhjZXB0IEluZGV4RXJyb3I6CiAgICAgICAgICAgICAgICAjIFNsb3dlciwgYnV0IHdpbGwgbm90IHRocm93IGFuIEluZGV4RXJyb3Igb24gYW4gaW52YWxpZAogICAgICAgICAgICAgICAgIyBnbHlwaCBpZC4KICAgICAgICAgICAgICAgIGtlcm5UYWJsZVsodHRGb250LmdldEdseXBoTmFtZShsZWZ0KSwgdHRGb250LmdldEdseXBoTmFtZShyaWdodCkpXSA9ICgKICAgICAgICAgICAgICAgICAgICB2YWx1ZQogICAgICAgICAgICAgICAgKQogICAgICAgIGlmIGxlbihkYXRhKSA+IDYgKiBuUGFpcnMgKyA0OiAgIyBJZ25vcmUgdXAgdG8gNCBieXRlcyBleGNlc3MKICAgICAgICAgICAgbG9nLndhcm5pbmcoCiAgICAgICAgICAgICAgICAiZXhjZXNzIGRhdGEgaW4gJ2tlcm4nIHN1YnRhYmxlOiAlZCBieXRlcyIsIGxlbihkYXRhKSAtIDYgKiBuUGFpcnMKICAgICAgICAgICAgKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgblBhaXJzID0gbWluKGxlbihzZWxmLmtlcm5UYWJsZSksIDB4RkZGRikKICAgICAgICBzZWFyY2hSYW5nZSwgZW50cnlTZWxlY3RvciwgcmFuZ2VTaGlmdCA9IGdldFNlYXJjaFJhbmdlKG5QYWlycywgNikKICAgICAgICBzZWFyY2hSYW5nZSAmPSAweEZGRkYKICAgICAgICBlbnRyeVNlbGVjdG9yID0gbWluKGVudHJ5U2VsZWN0b3IsIDB4RkZGRikKICAgICAgICByYW5nZVNoaWZ0ID0gbWluKHJhbmdlU2hpZnQsIDB4RkZGRikKICAgICAgICBkYXRhID0gc3RydWN0LnBhY2soIj5ISEhIIiwgblBhaXJzLCBzZWFyY2hSYW5nZSwgZW50cnlTZWxlY3RvciwgcmFuZ2VTaGlmdCkKCiAgICAgICAgIyB5ZWVoZWUhIChJIG1lYW4sIHR1cm4gbmFtZXMgaW50byBpbmRpY2VzKQogICAgICAgIHRyeToKICAgICAgICAgICAgcmV2ZXJzZU9yZGVyID0gdHRGb250LmdldFJldmVyc2VHbHlwaE1hcCgpCiAgICAgICAgICAgIGtlcm5UYWJsZSA9IHNvcnRlZCgKICAgICAgICAgICAgICAgIChyZXZlcnNlT3JkZXJbbGVmdF0sIHJldmVyc2VPcmRlcltyaWdodF0sIHZhbHVlKQogICAgICAgICAgICAgICAgZm9yICgobGVmdCwgcmlnaHQpLCB2YWx1ZSkgaW4gc2VsZi5rZXJuVGFibGUuaXRlbXMoKQogICAgICAgICAgICApCiAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICAjIFNsb3dlciwgYnV0IHdpbGwgbm90IHRocm93IEtleUVycm9yIG9uIGludmFsaWQgZ2x5cGggaWQuCiAgICAgICAgICAgIGdldEdseXBoSUQgPSB0dEZvbnQuZ2V0R2x5cGhJRAogICAgICAgICAgICBrZXJuVGFibGUgPSBzb3J0ZWQoCiAgICAgICAgICAgICAgICAoZ2V0R2x5cGhJRChsZWZ0KSwgZ2V0R2x5cGhJRChyaWdodCksIHZhbHVlKQogICAgICAgICAgICAgICAgZm9yICgobGVmdCwgcmlnaHQpLCB2YWx1ZSkgaW4gc2VsZi5rZXJuVGFibGUuaXRlbXMoKQogICAgICAgICAgICApCgogICAgICAgIGZvciBsZWZ0LCByaWdodCwgdmFsdWUgaW4ga2VyblRhYmxlOgogICAgICAgICAgICBkYXRhID0gZGF0YSArIHN0cnVjdC5wYWNrKCI+SEhoIiwgbGVmdCwgcmlnaHQsIHZhbHVlKQoKICAgICAgICBpZiBub3Qgc2VsZi5hcHBsZToKICAgICAgICAgICAgdmVyc2lvbiA9IDAKICAgICAgICAgICAgbGVuZ3RoID0gbGVuKGRhdGEpICsgNgogICAgICAgICAgICBpZiBsZW5ndGggPj0gMHgxMDAwMDoKICAgICAgICAgICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgICAgICcia2VybiIgc3VidGFibGUgb3ZlcmZsb3csICcKICAgICAgICAgICAgICAgICAgICAidHJ1bmNhdGluZyBsZW5ndGggdmFsdWUgd2hpbGUgcHJlc2VydmluZyBwYWlycy4iCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBsZW5ndGggJj0gMHhGRkZGCiAgICAgICAgICAgIGhlYWRlciA9IHN0cnVjdC5wYWNrKCI+SEhCQiIsIHZlcnNpb24sIGxlbmd0aCwgc2VsZi5mb3JtYXQsIHNlbGYuY292ZXJhZ2UpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgc2VsZi50dXBsZUluZGV4IGlzIE5vbmU6CiAgICAgICAgICAgICAgICAjIHNlbnNpYmxlIGRlZmF1bHQgd2hlbiBjb21waWxpbmcgYSBUVFggZnJvbSBhbiBvbGQgZm9udHRvb2xzCiAgICAgICAgICAgICAgICAjIG9yIHdoZW4gaW5zZXJ0aW5nIGEgV2luZG93cy1zdHlsZSBmb3JtYXQgMCBzdWJ0YWJsZSBpbnRvIGFuCiAgICAgICAgICAgICAgICAjIEFwcGxlIHZlcnNpb249MS4wIGtlcm4gdGFibGUKICAgICAgICAgICAgICAgIGxvZy53YXJuaW5nKCIndHVwbGVJbmRleCcgaXMgTm9uZTsgZGVmYXVsdCB0byAwIikKICAgICAgICAgICAgICAgIHNlbGYudHVwbGVJbmRleCA9IDAKICAgICAgICAgICAgbGVuZ3RoID0gbGVuKGRhdGEpICsgOAogICAgICAgICAgICBoZWFkZXIgPSBzdHJ1Y3QucGFjaygKICAgICAgICAgICAgICAgICI+TEJCSCIsIGxlbmd0aCwgc2VsZi5jb3ZlcmFnZSwgc2VsZi5mb3JtYXQsIHNlbGYudHVwbGVJbmRleAogICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIGhlYWRlciArIGRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIGF0dHJzID0gZGljdChjb3ZlcmFnZT1zZWxmLmNvdmVyYWdlLCBmb3JtYXQ9c2VsZi5mb3JtYXQpCiAgICAgICAgaWYgc2VsZi5hcHBsZToKICAgICAgICAgICAgaWYgc2VsZi50dXBsZUluZGV4IGlzIE5vbmU6CiAgICAgICAgICAgICAgICBsb2cud2FybmluZygiJ3R1cGxlSW5kZXgnIGlzIE5vbmU7IGRlZmF1bHQgdG8gMCIpCiAgICAgICAgICAgICAgICBhdHRyc1sidHVwbGVJbmRleCJdID0gMAogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgYXR0cnNbInR1cGxlSW5kZXgiXSA9IHNlbGYudHVwbGVJbmRleAogICAgICAgIHdyaXRlci5iZWdpbnRhZygia2VybnN1YnRhYmxlIiwgKiphdHRycykKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgaXRlbXMgPSBzb3J0ZWQoc2VsZi5rZXJuVGFibGUuaXRlbXMoKSkKICAgICAgICBmb3IgKGxlZnQsIHJpZ2h0KSwgdmFsdWUgaW4gaXRlbXM6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInBhaXIiLCBbKCJsIiwgbGVmdCksICgiciIsIHJpZ2h0KSwgKCJ2IiwgdmFsdWUpXSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5lbmR0YWcoImtlcm5zdWJ0YWJsZSIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIHNlbGYuY292ZXJhZ2UgPSBzYWZlRXZhbChhdHRyc1siY292ZXJhZ2UiXSkKICAgICAgICBzdWJ0YWJsZUZvcm1hdCA9IHNhZmVFdmFsKGF0dHJzWyJmb3JtYXQiXSkKICAgICAgICBpZiBzZWxmLmFwcGxlOgogICAgICAgICAgICBpZiAidHVwbGVJbmRleCIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICBzZWxmLnR1cGxlSW5kZXggPSBzYWZlRXZhbChhdHRyc1sidHVwbGVJbmRleCJdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBwcmV2aW91cyBmb250VG9vbHMgdmVyc2lvbnMgZGlkbid0IGV4cG9ydCB0dXBsZUluZGV4CiAgICAgICAgICAgICAgICBsb2cud2FybmluZygiQXBwbGUga2VybiBzdWJ0YWJsZSBpcyBtaXNzaW5nICd0dXBsZUluZGV4JyBhdHRyaWJ1dGUiKQogICAgICAgICAgICAgICAgc2VsZi50dXBsZUluZGV4ID0gTm9uZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYudHVwbGVJbmRleCA9IE5vbmUKICAgICAgICBhc3NlcnQgc3VidGFibGVGb3JtYXQgPT0gc2VsZi5mb3JtYXQsICJ1bnN1cHBvcnRlZCBmb3JtYXQiCiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgImtlcm5UYWJsZSIpOgogICAgICAgICAgICBzZWxmLmtlcm5UYWJsZSA9IHt9CiAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgIHNlbGYua2VyblRhYmxlWyhhdHRyc1sibCJdLCBhdHRyc1siciJdKV0gPSBzYWZlRXZhbChhdHRyc1sidiJdKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBwYWlyKToKICAgICAgICByZXR1cm4gc2VsZi5rZXJuVGFibGVbcGFpcl0KCiAgICBkZWYgX19zZXRpdGVtX18oc2VsZiwgcGFpciwgdmFsdWUpOgogICAgICAgIHNlbGYua2VyblRhYmxlW3BhaXJdID0gdmFsdWUKCiAgICBkZWYgX19kZWxpdGVtX18oc2VsZiwgcGFpcik6CiAgICAgICAgZGVsIHNlbGYua2VyblRhYmxlW3BhaXJdCgoKY2xhc3MgS2VyblRhYmxlX2Zvcm1hdF91bmtvd24ob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmb3JtYXQpOgogICAgICAgIHNlbGYuZm9ybWF0ID0gZm9ybWF0CgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIHNlbGYuZGF0YSA9IGRhdGEKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIHJldHVybiBzZWxmLmRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIHdyaXRlci5iZWdpbnRhZygia2VybnN1YnRhYmxlIiwgZm9ybWF0PXNlbGYuZm9ybWF0KQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuY29tbWVudCgidW5rbm93biAna2Vybicgc3VidGFibGUgZm9ybWF0IikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLmR1bXBoZXgoc2VsZi5kYXRhKQogICAgICAgIHdyaXRlci5lbmR0YWcoImtlcm5zdWJ0YWJsZSIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIHNlbGYuZGVjb21waWxlKHJlYWRIZXgoY29udGVudCksIHR0Rm9udCkKCgprZXJuX2NsYXNzZXMgPSB7MDogS2VyblRhYmxlX2Zvcm1hdF8wfQo=
+from fontTools.ttLib import getSearchRange
+from fontTools.misc.textTools import safeEval, readHex
+from fontTools.misc.fixedTools import fixedToFloat as fi2fl, floatToFixed as fl2fi
+from . import DefaultTable
+import struct
+import sys
+import array
+import logging
+
+log = logging.getLogger(__name__)
+
+
+class table__k_e_r_n(DefaultTable.DefaultTable):
+    """Kerning table
+
+    The ``kern`` table contains values that contextually adjust the inter-glyph
+    spacing for the glyphs in a ``glyf`` table.
+
+    Note that similar contextual spacing adjustments can also be stored
+    in the "kern" feature of a ``GPOS`` table.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/kern
+    """
+
+    def getkern(self, format):
+        for subtable in self.kernTables:
+            if subtable.format == format:
+                return subtable
+        return None  # not found
+
+    def decompile(self, data, ttFont):
+        version, nTables = struct.unpack(">HH", data[:4])
+        apple = False
+        if (len(data) >= 8) and (version == 1):
+            # AAT Apple's "new" format. Hm.
+            version, nTables = struct.unpack(">LL", data[:8])
+            self.version = fi2fl(version, 16)
+            data = data[8:]
+            apple = True
+        else:
+            self.version = version
+            data = data[4:]
+        self.kernTables = []
+        for i in range(nTables):
+            if self.version == 1.0:
+                # Apple
+                length, coverage, subtableFormat = struct.unpack(">LBB", data[:6])
+            else:
+                # in OpenType spec the "version" field refers to the common
+                # subtable header; the actual subtable format is stored in
+                # the 8-15 mask bits of "coverage" field.
+                # This "version" is always 0 so we ignore it here
+                _, length, subtableFormat, coverage = struct.unpack(">HHBB", data[:6])
+                if nTables == 1 and subtableFormat == 0:
+                    # The "length" value is ignored since some fonts
+                    # (like OpenSans and Calibri) have a subtable larger than
+                    # its value.
+                    (nPairs,) = struct.unpack(">H", data[6:8])
+                    calculated_length = (nPairs * 6) + 14
+                    if length != calculated_length:
+                        log.warning(
+                            "'kern' subtable longer than defined: "
+                            "%d bytes instead of %d bytes" % (calculated_length, length)
+                        )
+                    length = calculated_length
+            if subtableFormat not in kern_classes:
+                subtable = KernTable_format_unkown(subtableFormat)
+            else:
+                subtable = kern_classes[subtableFormat](apple)
+            subtable.decompile(data[:length], ttFont)
+            self.kernTables.append(subtable)
+            data = data[length:]
+
+    def compile(self, ttFont):
+        if hasattr(self, "kernTables"):
+            nTables = len(self.kernTables)
+        else:
+            nTables = 0
+        if self.version == 1.0:
+            # AAT Apple's "new" format.
+            data = struct.pack(">LL", fl2fi(self.version, 16), nTables)
+        else:
+            data = struct.pack(">HH", self.version, nTables)
+        if hasattr(self, "kernTables"):
+            for subtable in self.kernTables:
+                data = data + subtable.compile(ttFont)
+        return data
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", value=self.version)
+        writer.newline()
+        for subtable in self.kernTables:
+            subtable.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = safeEval(attrs["value"])
+            return
+        if name != "kernsubtable":
+            return
+        if not hasattr(self, "kernTables"):
+            self.kernTables = []
+        format = safeEval(attrs["format"])
+        if format not in kern_classes:
+            subtable = KernTable_format_unkown(format)
+        else:
+            apple = self.version == 1.0
+            subtable = kern_classes[format](apple)
+        self.kernTables.append(subtable)
+        subtable.fromXML(name, attrs, content, ttFont)
+
+
+class KernTable_format_0(object):
+    # 'version' is kept for backward compatibility
+    version = format = 0
+
+    def __init__(self, apple=False):
+        self.apple = apple
+
+    def decompile(self, data, ttFont):
+        if not self.apple:
+            version, length, subtableFormat, coverage = struct.unpack(">HHBB", data[:6])
+            if version != 0:
+                from fontTools.ttLib import TTLibError
+
+                raise TTLibError("unsupported kern subtable version: %d" % version)
+            tupleIndex = None
+            # Should we also assert length == len(data)?
+            data = data[6:]
+        else:
+            length, coverage, subtableFormat, tupleIndex = struct.unpack(
+                ">LBBH", data[:8]
+            )
+            data = data[8:]
+        assert self.format == subtableFormat, "unsupported format"
+        self.coverage = coverage
+        self.tupleIndex = tupleIndex
+
+        self.kernTable = kernTable = {}
+
+        nPairs, searchRange, entrySelector, rangeShift = struct.unpack(
+            ">HHHH", data[:8]
+        )
+        data = data[8:]
+
+        datas = array.array("H", data[: 6 * nPairs])
+        if sys.byteorder != "big":
+            datas.byteswap()
+        it = iter(datas)
+        glyphOrder = ttFont.getGlyphOrder()
+        for k in range(nPairs):
+            left, right, value = next(it), next(it), next(it)
+            if value >= 32768:
+                value -= 65536
+            try:
+                kernTable[(glyphOrder[left], glyphOrder[right])] = value
+            except IndexError:
+                # Slower, but will not throw an IndexError on an invalid
+                # glyph id.
+                kernTable[(ttFont.getGlyphName(left), ttFont.getGlyphName(right))] = (
+                    value
+                )
+        if len(data) > 6 * nPairs + 4:  # Ignore up to 4 bytes excess
+            log.warning(
+                "excess data in 'kern' subtable: %d bytes", len(data) - 6 * nPairs
+            )
+
+    def compile(self, ttFont):
+        nPairs = min(len(self.kernTable), 0xFFFF)
+        searchRange, entrySelector, rangeShift = getSearchRange(nPairs, 6)
+        searchRange &= 0xFFFF
+        entrySelector = min(entrySelector, 0xFFFF)
+        rangeShift = min(rangeShift, 0xFFFF)
+        data = struct.pack(">HHHH", nPairs, searchRange, entrySelector, rangeShift)
+
+        # yeehee! (I mean, turn names into indices)
+        try:
+            reverseOrder = ttFont.getReverseGlyphMap()
+            kernTable = sorted(
+                (reverseOrder[left], reverseOrder[right], value)
+                for ((left, right), value) in self.kernTable.items()
+            )
+        except KeyError:
+            # Slower, but will not throw KeyError on invalid glyph id.
+            getGlyphID = ttFont.getGlyphID
+            kernTable = sorted(
+                (getGlyphID(left), getGlyphID(right), value)
+                for ((left, right), value) in self.kernTable.items()
+            )
+
+        for left, right, value in kernTable:
+            data = data + struct.pack(">HHh", left, right, value)
+
+        if not self.apple:
+            version = 0
+            length = len(data) + 6
+            if length >= 0x10000:
+                log.warning(
+                    '"kern" subtable overflow, '
+                    "truncating length value while preserving pairs."
+                )
+                length &= 0xFFFF
+            header = struct.pack(">HHBB", version, length, self.format, self.coverage)
+        else:
+            if self.tupleIndex is None:
+                # sensible default when compiling a TTX from an old fonttools
+                # or when inserting a Windows-style format 0 subtable into an
+                # Apple version=1.0 kern table
+                log.warning("'tupleIndex' is None; default to 0")
+                self.tupleIndex = 0
+            length = len(data) + 8
+            header = struct.pack(
+                ">LBBH", length, self.coverage, self.format, self.tupleIndex
+            )
+        return header + data
+
+    def toXML(self, writer, ttFont):
+        attrs = dict(coverage=self.coverage, format=self.format)
+        if self.apple:
+            if self.tupleIndex is None:
+                log.warning("'tupleIndex' is None; default to 0")
+                attrs["tupleIndex"] = 0
+            else:
+                attrs["tupleIndex"] = self.tupleIndex
+        writer.begintag("kernsubtable", **attrs)
+        writer.newline()
+        items = sorted(self.kernTable.items())
+        for (left, right), value in items:
+            writer.simpletag("pair", [("l", left), ("r", right), ("v", value)])
+            writer.newline()
+        writer.endtag("kernsubtable")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        self.coverage = safeEval(attrs["coverage"])
+        subtableFormat = safeEval(attrs["format"])
+        if self.apple:
+            if "tupleIndex" in attrs:
+                self.tupleIndex = safeEval(attrs["tupleIndex"])
+            else:
+                # previous fontTools versions didn't export tupleIndex
+                log.warning("Apple kern subtable is missing 'tupleIndex' attribute")
+                self.tupleIndex = None
+        else:
+            self.tupleIndex = None
+        assert subtableFormat == self.format, "unsupported format"
+        if not hasattr(self, "kernTable"):
+            self.kernTable = {}
+        for element in content:
+            if not isinstance(element, tuple):
+                continue
+            name, attrs, content = element
+            self.kernTable[(attrs["l"], attrs["r"])] = safeEval(attrs["v"])
+
+    def __getitem__(self, pair):
+        return self.kernTable[pair]
+
+    def __setitem__(self, pair, value):
+        self.kernTable[pair] = value
+
+    def __delitem__(self, pair):
+        del self.kernTable[pair]
+
+
+class KernTable_format_unkown(object):
+    def __init__(self, format):
+        self.format = format
+
+    def decompile(self, data, ttFont):
+        self.data = data
+
+    def compile(self, ttFont):
+        return self.data
+
+    def toXML(self, writer, ttFont):
+        writer.begintag("kernsubtable", format=self.format)
+        writer.newline()
+        writer.comment("unknown 'kern' subtable format")
+        writer.newline()
+        writer.dumphex(self.data)
+        writer.endtag("kernsubtable")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        self.decompile(readHex(content), ttFont)
+
+
+kern_classes = {0: KernTable_format_0}

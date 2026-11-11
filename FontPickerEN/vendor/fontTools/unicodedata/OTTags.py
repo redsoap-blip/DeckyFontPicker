@@ -1,1 +1,50 @@
-IyBEYXRhIHVwZGF0ZWQgdG8gT3BlblR5cGUgMS44LjIgYXMgb2YgSmFudWFyeSAyMDE4LgoKIyBDb21wbGV0ZSBsaXN0IG9mIE9wZW5UeXBlIHNjcmlwdCB0YWdzIGF0OgojIGh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vdHlwb2dyYXBoeS9vdHNwZWMvc2NyaXB0dGFncy5odG0KCiMgTW9zdCBvZiB0aGUgc2NyaXB0IHRhZ3MgYXJlIHRoZSBzYW1lIGFzIHRoZSBJU08gMTU5MjQgdGFnIGJ1dCBsb3dlcmNhc2VkLAojIHNvIHdlIG9ubHkgaGF2ZSB0byBoYW5kbGUgdGhlIGV4Y2VwdGlvbmFsIGNhc2VzOgojIC0gS0FUQUtBTkEgYW5kIEhJUkFHQU5BIGJvdGggbWFwIHRvICdrYW5hJzsKIyAtIHNwYWNlcyBhdCB0aGUgZW5kIGFyZSBwcmVzZXJ2ZWQsIHVubGlrZSBJU08gMTU5MjQ7CiMgLSB3ZSBtYXAgc3BlY2lhbCBzY3JpcHQgY29kZXMgZm9yIEluaGVyaXRlZCwgQ29tbW9uIGFuZCBVbmtub3duIHRvIERGTFQuCgpERUZBVUxUX1NDUklQVCA9ICJERkxUIgoKU0NSSVBUX0FMSUFTRVMgPSB7CiAgICAiamFtbyI6ICJoYW5nIiwKfQoKU0NSSVBUX0VYQ0VQVElPTlMgPSB7CiAgICAiSGlyYSI6ICJrYW5hIiwKICAgICJIcmt0IjogImthbmEiLAogICAgIkxhb28iOiAibGFvICIsCiAgICAiWWlpaSI6ICJ5aSAgIiwKICAgICJOa29vIjogIm5rbyAiLAogICAgIlZhaWkiOiAidmFpICIsCiAgICAiWm10aCI6ICJtYXRoIiwKICAgICJaaW5oIjogREVGQVVMVF9TQ1JJUFQsCiAgICAiWnl5eSI6IERFRkFVTFRfU0NSSVBULAogICAgIlp6enoiOiBERUZBVUxUX1NDUklQVCwKfQoKU0NSSVBUX0VYQ0VQVElPTlNfUkVWRVJTRUQgPSB7CiAgICAibWF0aCI6ICJabXRoIiwKfQoKTkVXX1NDUklQVF9UQUdTID0gewogICAgIkJlbmciOiAoImJuZzIiLCksCiAgICAiRGV2YSI6ICgiZGV2MiIsKSwKICAgICJHdWpyIjogKCJnanIyIiwpLAogICAgIkd1cnUiOiAoImd1cjIiLCksCiAgICAiS25kYSI6ICgia25kMiIsKSwKICAgICJNbHltIjogKCJtbG0yIiwpLAogICAgIk9yeWEiOiAoIm9yeTIiLCksCiAgICAiVGFtbCI6ICgidG1sMiIsKSwKICAgICJUZWx1IjogKCJ0ZWwyIiwpLAogICAgIk15bXIiOiAoIm15bTIiLCksCn0KCk5FV19TQ1JJUFRfVEFHU19SRVZFUlNFRCA9IHsKICAgIHZhbHVlOiBrZXkgZm9yIGtleSwgdmFsdWVzIGluIE5FV19TQ1JJUFRfVEFHUy5pdGVtcygpIGZvciB2YWx1ZSBpbiB2YWx1ZXMKfQo=
+# Data updated to OpenType 1.8.2 as of January 2018.
+
+# Complete list of OpenType script tags at:
+# https://www.microsoft.com/typography/otspec/scripttags.htm
+
+# Most of the script tags are the same as the ISO 15924 tag but lowercased,
+# so we only have to handle the exceptional cases:
+# - KATAKANA and HIRAGANA both map to 'kana';
+# - spaces at the end are preserved, unlike ISO 15924;
+# - we map special script codes for Inherited, Common and Unknown to DFLT.
+
+DEFAULT_SCRIPT = "DFLT"
+
+SCRIPT_ALIASES = {
+    "jamo": "hang",
+}
+
+SCRIPT_EXCEPTIONS = {
+    "Hira": "kana",
+    "Hrkt": "kana",
+    "Laoo": "lao ",
+    "Yiii": "yi  ",
+    "Nkoo": "nko ",
+    "Vaii": "vai ",
+    "Zmth": "math",
+    "Zinh": DEFAULT_SCRIPT,
+    "Zyyy": DEFAULT_SCRIPT,
+    "Zzzz": DEFAULT_SCRIPT,
+}
+
+SCRIPT_EXCEPTIONS_REVERSED = {
+    "math": "Zmth",
+}
+
+NEW_SCRIPT_TAGS = {
+    "Beng": ("bng2",),
+    "Deva": ("dev2",),
+    "Gujr": ("gjr2",),
+    "Guru": ("gur2",),
+    "Knda": ("knd2",),
+    "Mlym": ("mlm2",),
+    "Orya": ("ory2",),
+    "Taml": ("tml2",),
+    "Telu": ("tel2",),
+    "Mymr": ("mym2",),
+}
+
+NEW_SCRIPT_TAGS_REVERSED = {
+    value: key for key, values in NEW_SCRIPT_TAGS.items() for value in values
+}

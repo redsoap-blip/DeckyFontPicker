@@ -1,1 +1,8 @@
-ZnJvbSAuSF9NX1RfWF8gaW1wb3J0IHRhYmxlX0hfTV9UX1hfCgoKY2xhc3MgdGFibGVfVl9NX1RfWF8odGFibGVfSF9NX1RfWF8pOgogICAgaGVhZGVyVGFnID0gIlZIRUEiCiAgICBhZHZhbmNlTmFtZSA9ICJoZWlnaHQiCiAgICBzaWRlQmVhcmluZ05hbWUgPSAidHNiIgogICAgbnVtYmVyT2ZNZXRyaWNzTmFtZSA9ICJudW1iZXJPZlZNZXRyaWNzIgo=
+from .H_M_T_X_ import table_H_M_T_X_
+
+
+class table_V_M_T_X_(table_H_M_T_X_):
+    headerTag = "VHEA"
+    advanceName = "height"
+    sideBearingName = "tsb"
+    numberOfMetricsName = "numberOfVMetrics"

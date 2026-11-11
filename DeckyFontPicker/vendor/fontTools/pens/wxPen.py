@@ -1,1 +1,28 @@
-ZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCgpfX2FsbF9fID0gWyJXeFBlbiJdCgoKY2xhc3MgV3hQZW4oQmFzZVBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhTZXQsIHBhdGg9Tm9uZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBpZiBwYXRoIGlzIE5vbmU6CiAgICAgICAgICAgIGltcG9ydCB3eAoKICAgICAgICAgICAgcGF0aCA9IHd4LkdyYXBoaWNzUmVuZGVyZXIuR2V0RGVmYXVsdFJlbmRlcmVyKCkuQ3JlYXRlUGF0aCgpCiAgICAgICAgc2VsZi5wYXRoID0gcGF0aAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHApOgogICAgICAgIHNlbGYucGF0aC5Nb3ZlVG9Qb2ludCgqcCkKCiAgICBkZWYgX2xpbmVUbyhzZWxmLCBwKToKICAgICAgICBzZWxmLnBhdGguQWRkTGluZVRvUG9pbnQoKnApCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIHNlbGYucGF0aC5BZGRDdXJ2ZVRvUG9pbnQoKnAxICsgcDIgKyBwMykKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMik6CiAgICAgICAgc2VsZi5wYXRoLkFkZFF1YWRDdXJ2ZVRvUG9pbnQoKnAxICsgcDIpCgogICAgZGVmIF9jbG9zZVBhdGgoc2VsZik6CiAgICAgICAgc2VsZi5wYXRoLkNsb3NlU3VicGF0aCgpCg==
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["WxPen"]
+
+
+class WxPen(BasePen):
+    def __init__(self, glyphSet, path=None):
+        BasePen.__init__(self, glyphSet)
+        if path is None:
+            import wx
+
+            path = wx.GraphicsRenderer.GetDefaultRenderer().CreatePath()
+        self.path = path
+
+    def _moveTo(self, p):
+        self.path.MoveToPoint(*p)
+
+    def _lineTo(self, p):
+        self.path.AddLineToPoint(*p)
+
+    def _curveToOne(self, p1, p2, p3):
+        self.path.AddCurveToPoint(*p1 + p2 + p3)
+
+    def _qCurveToOne(self, p1, p2):
+        self.path.AddQuadCurveToPoint(*p1 + p2)
+
+    def _closePath(self):
+        self.path.CloseSubpath()

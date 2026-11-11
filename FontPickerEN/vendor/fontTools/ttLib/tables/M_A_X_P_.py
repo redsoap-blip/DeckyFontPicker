@@ -1,1 +1,8 @@
-ZnJvbSAuX21fYV94X3AgaW1wb3J0IHRhYmxlX19tX2FfeF9wCgoKY2xhc3MgdGFibGVfTV9BX1hfUF8odGFibGVfX21fYV94X3ApOgogICAgZGVwZW5kZW5jaWVzID0gWyJHTFlGIl0KICAgIGdseXBoVGFibGVUYWcgPSAiR0xZRiIKICAgIG1ldHJpY3NUYWJsZVRhZyA9ICJITVRYIgogICAgbnVtR2x5cGhzU2l6ZSA9IDMK
+from ._m_a_x_p import table__m_a_x_p
+
+
+class table_M_A_X_P_(table__m_a_x_p):
+    dependencies = ["GLYF"]
+    glyphTableTag = "GLYF"
+    metricsTableTag = "HMTX"
+    numGlyphsSize = 3

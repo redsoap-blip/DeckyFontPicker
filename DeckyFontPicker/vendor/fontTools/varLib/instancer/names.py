@@ -1,1 +1,393 @@
-IiIiSGVscGVycyBmb3IgaW5zdGFudGlhdGluZyBuYW1lIHRhYmxlIHJlY29yZHMuIiIiCgpmcm9tIGNvbnRleHRsaWIgaW1wb3J0IGNvbnRleHRtYW5hZ2VyCmZyb20gY29weSBpbXBvcnQgZGVlcGNvcHkKZnJvbSBlbnVtIGltcG9ydCBJbnRFbnVtCmltcG9ydCByZQoKCmNsYXNzIE5hbWVJRChJbnRFbnVtKToKICAgIEZBTUlMWV9OQU1FID0gMQogICAgU1VCRkFNSUxZX05BTUUgPSAyCiAgICBVTklRVUVfRk9OVF9JREVOVElGSUVSID0gMwogICAgRlVMTF9GT05UX05BTUUgPSA0CiAgICBWRVJTSU9OX1NUUklORyA9IDUKICAgIFBPU1RTQ1JJUFRfTkFNRSA9IDYKICAgIFRZUE9HUkFQSElDX0ZBTUlMWV9OQU1FID0gMTYKICAgIFRZUE9HUkFQSElDX1NVQkZBTUlMWV9OQU1FID0gMTcKICAgIFZBUklBVElPTlNfUE9TVFNDUklQVF9OQU1FX1BSRUZJWCA9IDI1CgoKRUxJREFCTEVfQVhJU19WQUxVRV9OQU1FID0gMgoKCmRlZiBnZXRWYXJpYXRpb25OYW1lSURzKHZhcmZvbnQpOgogICAgdXNlZCA9IFtdCiAgICBpZiAiZnZhciIgaW4gdmFyZm9udDoKICAgICAgICBmdmFyID0gdmFyZm9udFsiZnZhciJdCiAgICAgICAgZm9yIGF4aXMgaW4gZnZhci5heGVzOgogICAgICAgICAgICB1c2VkLmFwcGVuZChheGlzLmF4aXNOYW1lSUQpCiAgICAgICAgZm9yIGluc3RhbmNlIGluIGZ2YXIuaW5zdGFuY2VzOgogICAgICAgICAgICB1c2VkLmFwcGVuZChpbnN0YW5jZS5zdWJmYW1pbHlOYW1lSUQpCiAgICAgICAgICAgIGlmIGluc3RhbmNlLnBvc3RzY3JpcHROYW1lSUQgIT0gMHhGRkZGOgogICAgICAgICAgICAgICAgdXNlZC5hcHBlbmQoaW5zdGFuY2UucG9zdHNjcmlwdE5hbWVJRCkKICAgIGlmICJTVEFUIiBpbiB2YXJmb250OgogICAgICAgIHN0YXQgPSB2YXJmb250WyJTVEFUIl0udGFibGUKICAgICAgICBmb3IgYXhpcyBpbiBzdGF0LkRlc2lnbkF4aXNSZWNvcmQuQXhpcyBpZiBzdGF0LkRlc2lnbkF4aXNSZWNvcmQgZWxzZSAoKToKICAgICAgICAgICAgdXNlZC5hcHBlbmQoYXhpcy5BeGlzTmFtZUlEKQogICAgICAgIGZvciB2YWx1ZSBpbiBzdGF0LkF4aXNWYWx1ZUFycmF5LkF4aXNWYWx1ZSBpZiBzdGF0LkF4aXNWYWx1ZUFycmF5IGVsc2UgKCk6CiAgICAgICAgICAgIHVzZWQuYXBwZW5kKHZhbHVlLlZhbHVlTmFtZUlEKQogICAgICAgIGVsaWRlZEZhbGxiYWNrTmFtZUlEID0gZ2V0YXR0cihzdGF0LCAiRWxpZGVkRmFsbGJhY2tOYW1lSUQiLCBOb25lKQogICAgICAgIGlmIGVsaWRlZEZhbGxiYWNrTmFtZUlEIGlzIG5vdCBOb25lOgogICAgICAgICAgICB1c2VkLmFwcGVuZChlbGlkZWRGYWxsYmFja05hbWVJRCkKICAgICMgbmFtZUlEcyA8PSAyNTUgYXJlIHJlc2VydmVkIGJ5IE9UIHNwZWMgc28gd2UgZG9uJ3QgdG91Y2ggdGhlbQogICAgcmV0dXJuIHtuYW1lSUQgZm9yIG5hbWVJRCBpbiB1c2VkIGlmIG5hbWVJRCA+IDI1NX0KCgpAY29udGV4dG1hbmFnZXIKZGVmIHBydW5pbmdVbnVzZWROYW1lcyh2YXJmb250KToKICAgIGZyb20gLiBpbXBvcnQgbG9nCgogICAgb3JpZ05hbWVJRHMgPSBnZXRWYXJpYXRpb25OYW1lSURzKHZhcmZvbnQpCgogICAgeWllbGQKCiAgICBsb2cuaW5mbygiUHJ1bmluZyBuYW1lIHRhYmxlIikKICAgIGV4Y2x1ZGUgPSBvcmlnTmFtZUlEcyAtIGdldFZhcmlhdGlvbk5hbWVJRHModmFyZm9udCkKICAgIHZhcmZvbnRbIm5hbWUiXS5uYW1lc1s6XSA9IFsKICAgICAgICByZWNvcmQgZm9yIHJlY29yZCBpbiB2YXJmb250WyJuYW1lIl0ubmFtZXMgaWYgcmVjb3JkLm5hbWVJRCBub3QgaW4gZXhjbHVkZQogICAgXQogICAgaWYgImx0YWciIGluIHZhcmZvbnQ6CiAgICAgICAgIyBEcm9wIHRoZSB3aG9sZSAnbHRhZycgdGFibGUgaWYgYWxsIHRoZSBsYW5ndWFnZS1kZXBlbmRlbnQgVW5pY29kZSBuYW1lCiAgICAgICAgIyByZWNvcmRzIHRoYXQgcmVmZXJlbmNlIGl0IGhhdmUgYmVlbiBkcm9wcGVkLgogICAgICAgICMgVE9ETzogT25seSBwcnVuZSB1bnVzZWQgbHRhZyB0YWdzLCByZW51bWVyYXRpbmcgbGFuZ0lEcyBhY2NvcmRpbmdseS4KICAgICAgICAjIE5vdGUgbHRhZyBjYW4gYWxzbyBiZSB1c2VkIGJ5IGZlYXQgb3IgbW9yeCB0YWJsZXMsIHNvIGNoZWNrIHRob3NlIHRvby4KICAgICAgICBpZiBub3QgYW55KAogICAgICAgICAgICByZWNvcmQKICAgICAgICAgICAgZm9yIHJlY29yZCBpbiB2YXJmb250WyJuYW1lIl0ubmFtZXMKICAgICAgICAgICAgaWYgcmVjb3JkLnBsYXRmb3JtSUQgPT0gMCBhbmQgcmVjb3JkLmxhbmdJRCAhPSAweEZGRkYKICAgICAgICApOgogICAgICAgICAgICBkZWwgdmFyZm9udFsibHRhZyJdCgoKZGVmIHVwZGF0ZU5hbWVUYWJsZSh2YXJmb250LCBheGlzTGltaXRzKToKICAgICIiIlVwZGF0ZSBpbnN0YXRpYXRlZCB2YXJpYWJsZSBmb250J3MgbmFtZSB0YWJsZSB1c2luZyBTVEFUIEF4aXNWYWx1ZXMuCgogICAgUmFpc2VzIFZhbHVlRXJyb3IgaWYgdGhlIFNUQVQgdGFibGUgaXMgbWlzc2luZyBvciBhbiBBeGlzIFZhbHVlIHRhYmxlIGlzCiAgICBtaXNzaW5nIGZvciByZXF1ZXN0ZWQgYXhpcyBsb2NhdGlvbnMuCgogICAgRmlyc3QsIGNvbGxlY3QgYWxsIFNUQVQgQXhpc1ZhbHVlcyB0aGF0IG1hdGNoIHRoZSBuZXcgZGVmYXVsdCBheGlzIGxvY2F0aW9ucwogICAgKGV4Y2x1ZGluZyAiZWxpZGVkIiBvbmVzKTsgY29uY2F0ZW5hdGUgdGhlIHN0cmluZ3MgaW4gZGVzaWduIGF4aXMgb3JkZXIsCiAgICB3aGlsZSBnaXZpbmcgcHJpb3JpdHkgdG8gInN5bnRoZXRpYyIgdmFsdWVzIChGb3JtYXQgNCksIHRvIGZvcm0gdGhlCiAgICB0eXBvZ3JhcGhpYyBzdWJmYW1pbHkgbmFtZSBhc3NvY2lhdGVkIHdpdGggdGhlIG5ldyBkZWZhdWx0IGluc3RhbmNlLgogICAgRmluYWxseSwgdXBkYXRlIGFsbCByZWxhdGVkIHJlY29yZHMgaW4gdGhlIG5hbWUgdGFibGUsIG1ha2luZyBzdXJlIHRoYXQKICAgIGxlZ2FjeSBmYW1pbHkvc3ViLWZhbWlseSBuYW1lcyBjb25mb3JtIHRvIHRoZSB0aGUgUi9JL0IvQkkgKFJlZ3VsYXIsIEl0YWxpYywKICAgIEJvbGQsIEJvbGQgSXRhbGljKSBuYW1pbmcgbW9kZWwuCgogICAgRXhhbXBsZTogVXBkYXRpbmcgYSBwYXJ0aWFsIHZhcmlhYmxlIGZvbnQ6CiAgICB8ID4+PiB0dEZvbnQgPSBUVEZvbnQoIk9wZW5TYW5zW3dkdGgsd2dodF0udHRmIikKICAgIHwgPj4+IHVwZGF0ZU5hbWVUYWJsZSh0dEZvbnQsIHsid2dodCI6ICg0MDAsIDkwMCksICJ3ZHRoIjogNzV9KQoKICAgIFRoZSBuYW1lIHRhYmxlIHJlY29yZHMgd2lsbCBiZSB1cGRhdGVkIGluIHRoZSBmb2xsb3dpbmcgbWFubmVyOgogICAgTmFtZUlEIDEgZmFtaWx5TmFtZTogIk9wZW4gU2FucyIgLS0+ICJPcGVuIFNhbnMgQ29uZGVuc2VkIgogICAgTmFtZUlEIDIgc3ViRmFtaWx5TmFtZTogIlJlZ3VsYXIiIC0tPiAiUmVndWxhciIKICAgIE5hbWVJRCAzIFVuaXF1ZSBmb250IGlkZW50aWZpZXI6ICIzLjAwMDtHT09HO09wZW5TYW5zLVJlZ3VsYXIiIC0tPiBcCiAgICAgICAgIjMuMDAwO0dPT0c7T3BlblNhbnMtQ29uZGVuc2VkIgogICAgTmFtZUlEIDQgRnVsbCBmb250IG5hbWU6ICJPcGVuIFNhbnMgUmVndWxhciIgLS0+ICJPcGVuIFNhbnMgQ29uZGVuc2VkIgogICAgTmFtZUlEIDYgUG9zdFNjcmlwdCBuYW1lOiAiT3BlblNhbnMtUmVndWxhciIgLS0+ICJPcGVuU2Fucy1Db25kZW5zZWQiCiAgICBOYW1lSUQgMTYgVHlwb2dyYXBoaWMgRmFtaWx5IG5hbWU6IE5vbmUgLS0+ICJPcGVuIFNhbnMiCiAgICBOYW1lSUQgMTcgVHlwb2dyYXBoaWMgU3ViZmFtaWx5IG5hbWU6IE5vbmUgLS0+ICJDb25kZW5zZWQiCgogICAgUmVmZXJlbmNlczoKICAgIGh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9zdGF0CiAgICBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvbmFtZSNuYW1lLWlkcwogICAgIiIiCiAgICBmcm9tIC4gaW1wb3J0IEF4aXNMaW1pdHMsIGF4aXNWYWx1ZXNGcm9tQXhpc0xpbWl0cwoKICAgIGlmICJTVEFUIiBub3QgaW4gdmFyZm9udDoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJDYW5ub3QgdXBkYXRlIG5hbWUgdGFibGUgc2luY2UgdGhlcmUgaXMgbm8gU1RBVCB0YWJsZS4iKQogICAgc3RhdCA9IHZhcmZvbnRbIlNUQVQiXS50YWJsZQogICAgaWYgbm90IHN0YXQuQXhpc1ZhbHVlQXJyYXk6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiQ2Fubm90IHVwZGF0ZSBuYW1lIHRhYmxlIHNpbmNlIHRoZXJlIGFyZSBubyBTVEFUIEF4aXMgVmFsdWVzIikKICAgIGZ2YXIgPSB2YXJmb250WyJmdmFyIl0KCiAgICAjIFRoZSB1cGRhdGVkIG5hbWUgdGFibGUgd2lsbCByZWZsZWN0IHRoZSBuZXcgJ3plcm8gb3JpZ2luJyBvZiB0aGUgZm9udC4KICAgICMgSWYgd2UncmUgaW5zdGFudGlhdGluZyBhIHBhcnRpYWwgZm9udCwgd2Ugd2lsbCBwb3B1bGF0ZSB0aGUgdW5waW5uZWQKICAgICMgYXhlcyB3aXRoIHRoZWlyIGRlZmF1bHQgYXhpcyB2YWx1ZXMgZnJvbSBmdmFyLgogICAgYXhpc0xpbWl0cyA9IEF4aXNMaW1pdHMoYXhpc0xpbWl0cykubGltaXRBeGVzQW5kUG9wdWxhdGVEZWZhdWx0cyh2YXJmb250KQogICAgcGFydGlhbERlZmF1bHRzID0gYXhpc0xpbWl0cy5kZWZhdWx0TG9jYXRpb24oKQogICAgZnZhckRlZmF1bHRzID0ge2EuYXhpc1RhZzogYS5kZWZhdWx0VmFsdWUgZm9yIGEgaW4gZnZhci5heGVzfQogICAgZGVmYXVsdEF4aXNDb29yZHMgPSBBeGlzTGltaXRzKHsqKmZ2YXJEZWZhdWx0cywgKipwYXJ0aWFsRGVmYXVsdHN9KQogICAgYXNzZXJ0IGFsbCh2Lm1pbmltdW0gPT0gdi5tYXhpbXVtIGZvciB2IGluIGRlZmF1bHRBeGlzQ29vcmRzLnZhbHVlcygpKQoKICAgIGF4aXNWYWx1ZVRhYmxlcyA9IGF4aXNWYWx1ZXNGcm9tQXhpc0xpbWl0cyhzdGF0LCBkZWZhdWx0QXhpc0Nvb3JkcykKICAgIGNoZWNrQXhpc1ZhbHVlc0V4aXN0KHN0YXQsIGF4aXNWYWx1ZVRhYmxlcywgZGVmYXVsdEF4aXNDb29yZHMucGlubmVkTG9jYXRpb24oKSkKCiAgICAjIGlnbm9yZSAiZWxpZGFibGUiIGF4aXMgdmFsdWVzLCBzaG91bGQgYmUgb21pdHRlZCBpbiBhcHBsaWNhdGlvbiBmb250IG1lbnVzLgogICAgYXhpc1ZhbHVlVGFibGVzID0gWwogICAgICAgIHYgZm9yIHYgaW4gYXhpc1ZhbHVlVGFibGVzIGlmIG5vdCB2LkZsYWdzICYgRUxJREFCTEVfQVhJU19WQUxVRV9OQU1FCiAgICBdCiAgICBheGlzVmFsdWVUYWJsZXMgPSBfc29ydEF4aXNWYWx1ZXMoYXhpc1ZhbHVlVGFibGVzKQogICAgX3VwZGF0ZU5hbWVSZWNvcmRzKHZhcmZvbnQsIGF4aXNWYWx1ZVRhYmxlcykKCgpkZWYgY2hlY2tBeGlzVmFsdWVzRXhpc3Qoc3RhdCwgYXhpc1ZhbHVlcywgYXhpc0Nvb3Jkcyk6CiAgICBzZWVuID0gc2V0KCkKICAgIGRlc2lnbkF4ZXMgPSBzdGF0LkRlc2lnbkF4aXNSZWNvcmQuQXhpcwogICAgaGFzVmFsdWVzID0gc2V0KCkKICAgIGZvciB2YWx1ZSBpbiBzdGF0LkF4aXNWYWx1ZUFycmF5LkF4aXNWYWx1ZToKICAgICAgICBpZiB2YWx1ZS5Gb3JtYXQgaW4gKDEsIDIsIDMpOgogICAgICAgICAgICBoYXNWYWx1ZXMuYWRkKGRlc2lnbkF4ZXNbdmFsdWUuQXhpc0luZGV4XS5BeGlzVGFnKQogICAgICAgIGVsaWYgdmFsdWUuRm9ybWF0ID09IDQ6CiAgICAgICAgICAgIGZvciByZWMgaW4gdmFsdWUuQXhpc1ZhbHVlUmVjb3JkOgogICAgICAgICAgICAgICAgaGFzVmFsdWVzLmFkZChkZXNpZ25BeGVzW3JlYy5BeGlzSW5kZXhdLkF4aXNUYWcpCgogICAgZm9yIGF4aXNWYWx1ZVRhYmxlIGluIGF4aXNWYWx1ZXM6CiAgICAgICAgYXhpc1ZhbHVlRm9ybWF0ID0gYXhpc1ZhbHVlVGFibGUuRm9ybWF0CiAgICAgICAgaWYgYXhpc1ZhbHVlVGFibGUuRm9ybWF0IGluICgxLCAyLCAzKToKICAgICAgICAgICAgYXhpc1RhZyA9IGRlc2lnbkF4ZXNbYXhpc1ZhbHVlVGFibGUuQXhpc0luZGV4XS5BeGlzVGFnCiAgICAgICAgICAgIGlmIGF4aXNWYWx1ZUZvcm1hdCA9PSAyOgogICAgICAgICAgICAgICAgYXhpc1ZhbHVlID0gYXhpc1ZhbHVlVGFibGUuTm9taW5hbFZhbHVlCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBheGlzVmFsdWUgPSBheGlzVmFsdWVUYWJsZS5WYWx1ZQogICAgICAgICAgICBpZiBheGlzVGFnIGluIGF4aXNDb29yZHMgYW5kIGF4aXNWYWx1ZSA9PSBheGlzQ29vcmRzW2F4aXNUYWddOgogICAgICAgICAgICAgICAgc2Vlbi5hZGQoYXhpc1RhZykKICAgICAgICBlbGlmIGF4aXNWYWx1ZVRhYmxlLkZvcm1hdCA9PSA0OgogICAgICAgICAgICBmb3IgcmVjIGluIGF4aXNWYWx1ZVRhYmxlLkF4aXNWYWx1ZVJlY29yZDoKICAgICAgICAgICAgICAgIGF4aXNUYWcgPSBkZXNpZ25BeGVzW3JlYy5BeGlzSW5kZXhdLkF4aXNUYWcKICAgICAgICAgICAgICAgIGlmIGF4aXNUYWcgaW4gYXhpc0Nvb3JkcyBhbmQgcmVjLlZhbHVlID09IGF4aXNDb29yZHNbYXhpc1RhZ106CiAgICAgICAgICAgICAgICAgICAgc2Vlbi5hZGQoYXhpc1RhZykKCiAgICBtaXNzaW5nQXhlcyA9IChzZXQoYXhpc0Nvb3JkcykgLSBzZWVuKSAmIGhhc1ZhbHVlcwogICAgaWYgbWlzc2luZ0F4ZXM6CiAgICAgICAgbWlzc2luZyA9ICIsICIuam9pbihmIid7aX0nOiB7YXhpc0Nvb3Jkc1tpXX0iIGZvciBpIGluIG1pc3NpbmdBeGVzKQogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJDYW5ub3QgZmluZCBBeGlzIFZhbHVlcyB7e3ttaXNzaW5nfX19IikKCgpkZWYgX3NvcnRBeGlzVmFsdWVzKGF4aXNWYWx1ZXMpOgogICAgIyBTb3J0IGJ5IGF4aXMgaW5kZXgsIHJlbW92ZSBkdXBsaWNhdGVzIGFuZCBlbnN1cmUgdGhhdCBmb3JtYXQgNCBBeGlzVmFsdWVzCiAgICAjIGFyZSBkb21pbmFudC4KICAgICMgVGhlIE1TIFNwZWMgc3RhdGVzOiAiaWYgYSBmb3JtYXQgMSwgZm9ybWF0IDIgb3IgZm9ybWF0IDMgdGFibGUgaGFzIGEKICAgICMgKG5vbWluYWwpIHZhbHVlIHVzZWQgaW4gYSBmb3JtYXQgNCB0YWJsZSB0aGF0IGFsc28gaGFzIHZhbHVlcyBmb3IKICAgICMgb3RoZXIgYXhlcywgdGhlIGZvcm1hdCA0IHRhYmxlLCBiZWluZyB0aGUgbW9yZSBzcGVjaWZpYyBtYXRjaCwgaXMgdXNlZCIsCiAgICAjIGh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9zdGF0I2F4aXMtdmFsdWUtdGFibGUtZm9ybWF0LTQKICAgIHJlc3VsdHMgPSBbXQogICAgc2VlbkF4ZXMgPSBzZXQoKQogICAgIyBTb3J0IGZvcm1hdCA0IGF4ZXMgc28gdGhlIHRhYmxlcyB3aXRoIHRoZSBtb3N0IEF4aXNWYWx1ZVJlY29yZHMgYXJlIGZpcnN0CiAgICBmb3JtYXQ0ID0gc29ydGVkKAogICAgICAgIFt2IGZvciB2IGluIGF4aXNWYWx1ZXMgaWYgdi5Gb3JtYXQgPT0gNF0sCiAgICAgICAga2V5PWxhbWJkYSB2OiBsZW4odi5BeGlzVmFsdWVSZWNvcmQpLAogICAgICAgIHJldmVyc2U9VHJ1ZSwKICAgICkKCiAgICBmb3IgdmFsIGluIGZvcm1hdDQ6CiAgICAgICAgYXhpc0luZGV4ZXMgPSBzZXQoci5BeGlzSW5kZXggZm9yIHIgaW4gdmFsLkF4aXNWYWx1ZVJlY29yZCkKICAgICAgICBtaW5JbmRleCA9IG1pbihheGlzSW5kZXhlcykKICAgICAgICBpZiBub3Qgc2VlbkF4ZXMgJiBheGlzSW5kZXhlczoKICAgICAgICAgICAgc2VlbkF4ZXMgfD0gYXhpc0luZGV4ZXMKICAgICAgICAgICAgcmVzdWx0cy5hcHBlbmQoKG1pbkluZGV4LCB2YWwpKQoKICAgIGZvciB2YWwgaW4gYXhpc1ZhbHVlczoKICAgICAgICBpZiB2YWwgaW4gZm9ybWF0NDoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBheGlzSW5kZXggPSB2YWwuQXhpc0luZGV4CiAgICAgICAgaWYgYXhpc0luZGV4IG5vdCBpbiBzZWVuQXhlczoKICAgICAgICAgICAgc2VlbkF4ZXMuYWRkKGF4aXNJbmRleCkKICAgICAgICAgICAgcmVzdWx0cy5hcHBlbmQoKGF4aXNJbmRleCwgdmFsKSkKCiAgICByZXR1cm4gW2F4aXNWYWx1ZSBmb3IgXywgYXhpc1ZhbHVlIGluIHNvcnRlZChyZXN1bHRzKV0KCgpkZWYgX3VwZGF0ZU5hbWVSZWNvcmRzKHZhcmZvbnQsIGF4aXNWYWx1ZXMpOgogICAgIyBVcGRhdGUgbmFtZXRhYmxlIGJhc2VkIG9uIHRoZSBheGlzVmFsdWVzIHVzaW5nIHRoZSBSL0kvQi9CSSBtb2RlbC4KICAgIG5hbWV0YWJsZSA9IHZhcmZvbnRbIm5hbWUiXQogICAgc3RhdCA9IHZhcmZvbnRbIlNUQVQiXS50YWJsZQoKICAgIGF4aXNWYWx1ZU5hbWVJRHMgPSBbYS5WYWx1ZU5hbWVJRCBmb3IgYSBpbiBheGlzVmFsdWVzXQogICAgcmliYmlOYW1lSURzID0gW24gZm9yIG4gaW4gYXhpc1ZhbHVlTmFtZUlEcyBpZiBfaXNSaWJiaShuYW1ldGFibGUsIG4pXQogICAgbm9uUmliYmlOYW1lSURzID0gW24gZm9yIG4gaW4gYXhpc1ZhbHVlTmFtZUlEcyBpZiBuIG5vdCBpbiByaWJiaU5hbWVJRHNdCiAgICAjIFNUQVQgMS4wIGhhcyBubyBlbGlkZWQgZmFsbGJhY2sgbmFtZTsgdXNlIHRoZSBleGlzdGluZyBzdWJmYW1pbHkgbmFtZS4KICAgIGVsaWRlZE5hbWVJRCA9ICgKICAgICAgICBzdGF0LkVsaWRlZEZhbGxiYWNrTmFtZUlECiAgICAgICAgaWYgc3RhdC5WZXJzaW9uID49IDB4MDAwMTAwMDEKICAgICAgICBlbHNlIE5hbWVJRC5TVUJGQU1JTFlfTkFNRQogICAgKQogICAgZWxpZGVkTmFtZUlzUmliYmkgPSBfaXNSaWJiaShuYW1ldGFibGUsIGVsaWRlZE5hbWVJRCkKCiAgICBnZXROYW1lID0gbmFtZXRhYmxlLmdldE5hbWUKICAgIHBsYXRmb3JtcyA9IHNldCgoci5wbGF0Zm9ybUlELCByLnBsYXRFbmNJRCwgci5sYW5nSUQpIGZvciByIGluIG5hbWV0YWJsZS5uYW1lcykKICAgIGZvciBwbGF0Zm9ybSBpbiBwbGF0Zm9ybXM6CiAgICAgICAgaWYgbm90IGFsbChnZXROYW1lKGksICpwbGF0Zm9ybSkgZm9yIGkgaW4gKDEsIDIsIGVsaWRlZE5hbWVJRCkpOgogICAgICAgICAgICAjIFNpbmNlIG5vIGZhbWlseSBuYW1lIGFuZCBzdWJmYW1pbHkgbmFtZSByZWNvcmRzIHdlcmUgZm91bmQsCiAgICAgICAgICAgICMgd2UgY2Fubm90IHVwZGF0ZSB0aGlzIHNldCBvZiBuYW1lIFJlY29yZHMuCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIHN1YkZhbWlseU5hbWUgPSAiICIuam9pbigKICAgICAgICAgICAgZ2V0TmFtZShuLCAqcGxhdGZvcm0pLnRvVW5pY29kZSgpIGZvciBuIGluIHJpYmJpTmFtZUlEcwogICAgICAgICkKICAgICAgICBpZiBub25SaWJiaU5hbWVJRHM6CiAgICAgICAgICAgIHR5cG9TdWJGYW1pbHlOYW1lID0gIiAiLmpvaW4oCiAgICAgICAgICAgICAgICBnZXROYW1lKG4sICpwbGF0Zm9ybSkudG9Vbmljb2RlKCkgZm9yIG4gaW4gYXhpc1ZhbHVlTmFtZUlEcwogICAgICAgICAgICApCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdHlwb1N1YkZhbWlseU5hbWUgPSBOb25lCgogICAgICAgICMgSWYgbmVpdGhlciBzdWJGYW1pbHlOYW1lIGFuZCB0eXBvZ3JhcGhpYyBTdWJGYW1pbHlOYW1lIGV4aXN0LAogICAgICAgICMgd2Ugd2lsbCB1c2UgdGhlIFNUQVQncyBlbGlkZWRGYWxsYmFja05hbWUKICAgICAgICBpZiBub3QgdHlwb1N1YkZhbWlseU5hbWUgYW5kIG5vdCBzdWJGYW1pbHlOYW1lOgogICAgICAgICAgICBpZiBlbGlkZWROYW1lSXNSaWJiaToKICAgICAgICAgICAgICAgIHN1YkZhbWlseU5hbWUgPSBnZXROYW1lKGVsaWRlZE5hbWVJRCwgKnBsYXRmb3JtKS50b1VuaWNvZGUoKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgdHlwb1N1YkZhbWlseU5hbWUgPSBnZXROYW1lKGVsaWRlZE5hbWVJRCwgKnBsYXRmb3JtKS50b1VuaWNvZGUoKQoKICAgICAgICBmYW1pbHlOYW1lU3VmZml4ID0gIiAiLmpvaW4oCiAgICAgICAgICAgIGdldE5hbWUobiwgKnBsYXRmb3JtKS50b1VuaWNvZGUoKSBmb3IgbiBpbiBub25SaWJiaU5hbWVJRHMKICAgICAgICApCgogICAgICAgIF91cGRhdGVOYW1lVGFibGVTdHlsZVJlY29yZHMoCiAgICAgICAgICAgIHZhcmZvbnQsCiAgICAgICAgICAgIGZhbWlseU5hbWVTdWZmaXgsCiAgICAgICAgICAgIHN1YkZhbWlseU5hbWUsCiAgICAgICAgICAgIHR5cG9TdWJGYW1pbHlOYW1lLAogICAgICAgICAgICAqcGxhdGZvcm0sCiAgICAgICAgKQoKCmRlZiBfaXNSaWJiaShuYW1ldGFibGUsIG5hbWVJRCk6CiAgICBlbmdsaXNoUmVjb3JkID0gbmFtZXRhYmxlLmdldE5hbWUobmFtZUlELCAzLCAxLCAweDQwOSkKICAgIHJldHVybiAoCiAgICAgICAgVHJ1ZQogICAgICAgIGlmIGVuZ2xpc2hSZWNvcmQgaXMgbm90IE5vbmUKICAgICAgICBhbmQgZW5nbGlzaFJlY29yZC50b1VuaWNvZGUoKSBpbiAoIlJlZ3VsYXIiLCAiSXRhbGljIiwgIkJvbGQiLCAiQm9sZCBJdGFsaWMiKQogICAgICAgIGVsc2UgRmFsc2UKICAgICkKCgpkZWYgX3VwZGF0ZU5hbWVUYWJsZVN0eWxlUmVjb3JkcygKICAgIHZhcmZvbnQsCiAgICBmYW1pbHlOYW1lU3VmZml4LAogICAgc3ViRmFtaWx5TmFtZSwKICAgIHR5cG9TdWJGYW1pbHlOYW1lLAogICAgcGxhdGZvcm1JRD0zLAogICAgcGxhdEVuY0lEPTEsCiAgICBsYW5nSUQ9MHg0MDksCik6CiAgICAjIFRPRE8gKE1hcmMgRikgSXQgbWF5IGJlIG5pY2UgdG8gbWFrZSB0aGlzIHBhcnQgYSBzdGFuZGFsb25lCiAgICAjIGZvbnQgcmVuYW1lciBpbiB0aGUgZnV0dXJlLgogICAgbmFtZXRhYmxlID0gdmFyZm9udFsibmFtZSJdCiAgICBwbGF0Zm9ybSA9IChwbGF0Zm9ybUlELCBwbGF0RW5jSUQsIGxhbmdJRCkKCiAgICBjdXJyZW50RmFtaWx5TmFtZSA9IG5hbWV0YWJsZS5nZXROYW1lKAogICAgICAgIE5hbWVJRC5UWVBPR1JBUEhJQ19GQU1JTFlfTkFNRSwgKnBsYXRmb3JtCiAgICApIG9yIG5hbWV0YWJsZS5nZXROYW1lKE5hbWVJRC5GQU1JTFlfTkFNRSwgKnBsYXRmb3JtKQoKICAgIGN1cnJlbnRTdHlsZU5hbWUgPSBuYW1ldGFibGUuZ2V0TmFtZSgKICAgICAgICBOYW1lSUQuVFlQT0dSQVBISUNfU1VCRkFNSUxZX05BTUUsICpwbGF0Zm9ybQogICAgKSBvciBuYW1ldGFibGUuZ2V0TmFtZShOYW1lSUQuU1VCRkFNSUxZX05BTUUsICpwbGF0Zm9ybSkKCiAgICBpZiBub3QgYWxsKFtjdXJyZW50RmFtaWx5TmFtZSwgY3VycmVudFN0eWxlTmFtZV0pOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJNaXNzaW5nIHJlcXVpcmVkIE5hbWVJRHMgMSBhbmQgMiBmb3IgcGxhdGZvcm0ge3BsYXRmb3JtfSIpCgogICAgY3VycmVudEZhbWlseU5hbWUgPSBjdXJyZW50RmFtaWx5TmFtZS50b1VuaWNvZGUoKQogICAgY3VycmVudFN0eWxlTmFtZSA9IGN1cnJlbnRTdHlsZU5hbWUudG9Vbmljb2RlKCkKCiAgICBuYW1lSURzID0gewogICAgICAgIE5hbWVJRC5GQU1JTFlfTkFNRTogY3VycmVudEZhbWlseU5hbWUsCiAgICAgICAgTmFtZUlELlNVQkZBTUlMWV9OQU1FOiBzdWJGYW1pbHlOYW1lIG9yICJSZWd1bGFyIiwKICAgIH0KICAgIGlmIHR5cG9TdWJGYW1pbHlOYW1lOgogICAgICAgIG5hbWVJRHNbTmFtZUlELkZBTUlMWV9OQU1FXSA9IGYie2N1cnJlbnRGYW1pbHlOYW1lfSB7ZmFtaWx5TmFtZVN1ZmZpeH0iLnN0cmlwKCkKICAgICAgICBuYW1lSURzW05hbWVJRC5UWVBPR1JBUEhJQ19GQU1JTFlfTkFNRV0gPSBjdXJyZW50RmFtaWx5TmFtZQogICAgICAgIG5hbWVJRHNbTmFtZUlELlRZUE9HUkFQSElDX1NVQkZBTUlMWV9OQU1FXSA9IHR5cG9TdWJGYW1pbHlOYW1lCiAgICBlbHNlOgogICAgICAgICMgUmVtb3ZlIHByZXZpb3VzIFR5cG9ncmFwaGljIEZhbWlseSBhbmQgU3ViRmFtaWx5IG5hbWVzIHNpbmNlIHRoZXkncmUKICAgICAgICAjIG5vIGxvbmdlciByZXF1aXJlZAogICAgICAgIGZvciBuYW1lSUQgaW4gKAogICAgICAgICAgICBOYW1lSUQuVFlQT0dSQVBISUNfRkFNSUxZX05BTUUsCiAgICAgICAgICAgIE5hbWVJRC5UWVBPR1JBUEhJQ19TVUJGQU1JTFlfTkFNRSwKICAgICAgICApOgogICAgICAgICAgICBuYW1ldGFibGUucmVtb3ZlTmFtZXMobmFtZUlEPW5hbWVJRCkKCiAgICBuZXdGYW1pbHlOYW1lID0gKAogICAgICAgIG5hbWVJRHMuZ2V0KE5hbWVJRC5UWVBPR1JBUEhJQ19GQU1JTFlfTkFNRSkgb3IgbmFtZUlEc1tOYW1lSUQuRkFNSUxZX05BTUVdCiAgICApCiAgICBuZXdTdHlsZU5hbWUgPSAoCiAgICAgICAgbmFtZUlEcy5nZXQoTmFtZUlELlRZUE9HUkFQSElDX1NVQkZBTUlMWV9OQU1FKSBvciBuYW1lSURzW05hbWVJRC5TVUJGQU1JTFlfTkFNRV0KICAgICkKCiAgICBuYW1lSURzW05hbWVJRC5GVUxMX0ZPTlRfTkFNRV0gPSBmIntuZXdGYW1pbHlOYW1lfSB7bmV3U3R5bGVOYW1lfSIKICAgIG5hbWVJRHNbTmFtZUlELlBPU1RTQ1JJUFRfTkFNRV0gPSBfdXBkYXRlUFNOYW1lUmVjb3JkKAogICAgICAgIHZhcmZvbnQsIG5ld0ZhbWlseU5hbWUsIG5ld1N0eWxlTmFtZSwgcGxhdGZvcm0KICAgICkKCiAgICB1bmlxdWVJRCA9IF91cGRhdGVVbmlxdWVJZE5hbWVSZWNvcmQodmFyZm9udCwgbmFtZUlEcywgcGxhdGZvcm0pCiAgICBpZiB1bmlxdWVJRDoKICAgICAgICBuYW1lSURzW05hbWVJRC5VTklRVUVfRk9OVF9JREVOVElGSUVSXSA9IHVuaXF1ZUlECgogICAgZm9yIG5hbWVJRCwgc3RyaW5nIGluIG5hbWVJRHMuaXRlbXMoKToKICAgICAgICBhc3NlcnQgc3RyaW5nLCBuYW1lSUQKICAgICAgICBuYW1ldGFibGUuc2V0TmFtZShzdHJpbmcsIG5hbWVJRCwgKnBsYXRmb3JtKQoKICAgIGlmICJmdmFyIiBub3QgaW4gdmFyZm9udDoKICAgICAgICBuYW1ldGFibGUucmVtb3ZlTmFtZXMoTmFtZUlELlZBUklBVElPTlNfUE9TVFNDUklQVF9OQU1FX1BSRUZJWCkKCgpkZWYgX3VwZGF0ZVBTTmFtZVJlY29yZCh2YXJmb250LCBmYW1pbHlOYW1lLCBzdHlsZU5hbWUsIHBsYXRmb3JtKToKICAgICMgSW1wbGVtZW50YXRpb24gYmFzZWQgb24gQWRvYmUgVGVjaG5pY2FsIE5vdGUgIzU5MDIgOgogICAgIyBodHRwczovL3d3d2ltYWdlczIuYWRvYmUuY29tL2NvbnRlbnQvZGFtL2Fjb20vZW4vZGV2bmV0L2ZvbnQvcGRmcy81OTAyLkFkb2JlUFNOYW1lR2VuZXJhdGlvbi5wZGYKICAgIG5hbWV0YWJsZSA9IHZhcmZvbnRbIm5hbWUiXQoKICAgIGZhbWlseV9wcmVmaXggPSBuYW1ldGFibGUuZ2V0TmFtZSgKICAgICAgICBOYW1lSUQuVkFSSUFUSU9OU19QT1NUU0NSSVBUX05BTUVfUFJFRklYLCAqcGxhdGZvcm0KICAgICkKICAgIGlmIGZhbWlseV9wcmVmaXg6CiAgICAgICAgZmFtaWx5X3ByZWZpeCA9IGZhbWlseV9wcmVmaXgudG9Vbmljb2RlKCkKICAgIGVsc2U6CiAgICAgICAgZmFtaWx5X3ByZWZpeCA9IGZhbWlseU5hbWUKCiAgICBwc05hbWUgPSBmIntmYW1pbHlfcHJlZml4fS17c3R5bGVOYW1lfSIKICAgICMgUmVtb3ZlIGFueSBjaGFyYWN0ZXJzIG90aGVyIHRoYW4gdXBwZXJjYXNlIExhdGluIGxldHRlcnMsIGxvd2VyY2FzZQogICAgIyBMYXRpbiBsZXR0ZXJzLCBkaWdpdHMgYW5kIGh5cGhlbnMuCiAgICBwc05hbWUgPSByZS5zdWIociJbXkEtWmEtejAtOS1dIiwgciIiLCBwc05hbWUpCgogICAgaWYgbGVuKHBzTmFtZSkgPiAxMjc6CiAgICAgICAgIyBBYmJyZXZpYXRpbmcgdGhlIHN0eWxlbmFtZSBzbyBpdCBmaXRzIHdpdGhpbiAxMjcgY2hhcmFjdGVycyB3aGlsc3QKICAgICAgICAjIGNvbmZvcm1pbmcgdG8gZXZlcnkgdmVuZG9yJ3Mgc3BlY2lmaWNhdGlvbiBpcyB0b28gY29tcGxleC4gSW5zdGVhZAogICAgICAgICMgd2Ugc2ltcGx5IHRydW5jYXRlIHRoZSBwc25hbWUgYW5kIGFkZCB0aGUgcmVxdWlyZWQgIi4uLiIKICAgICAgICByZXR1cm4gZiJ7cHNOYW1lWzoxMjRdfS4uLiIKICAgIHJldHVybiBwc05hbWUKCgpkZWYgX3VwZGF0ZVVuaXF1ZUlkTmFtZVJlY29yZCh2YXJmb250LCBuYW1lSURzLCBwbGF0Zm9ybSk6CiAgICBuYW1ldGFibGUgPSB2YXJmb250WyJuYW1lIl0KICAgIGN1cnJlbnRSZWNvcmQgPSBuYW1ldGFibGUuZ2V0TmFtZShOYW1lSUQuVU5JUVVFX0ZPTlRfSURFTlRJRklFUiwgKnBsYXRmb3JtKQogICAgaWYgbm90IGN1cnJlbnRSZWNvcmQ6CiAgICAgICAgcmV0dXJuIE5vbmUKCiAgICAjIENoZWNrIGlmIGZ1bGwgbmFtZSBhbmQgcG9zdHNjcmlwdCBuYW1lIGFyZSBhIHN1YnN0cmluZyBvZiBjdXJyZW50UmVjb3JkCiAgICBmb3IgbmFtZUlEIGluIChOYW1lSUQuRlVMTF9GT05UX05BTUUsIE5hbWVJRC5QT1NUU0NSSVBUX05BTUUpOgogICAgICAgIG5hbWVSZWNvcmQgPSBuYW1ldGFibGUuZ2V0TmFtZShuYW1lSUQsICpwbGF0Zm9ybSkKICAgICAgICBpZiBub3QgbmFtZVJlY29yZDoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBpZiBuYW1lUmVjb3JkLnRvVW5pY29kZSgpIGluIGN1cnJlbnRSZWNvcmQudG9Vbmljb2RlKCk6CiAgICAgICAgICAgIHJldHVybiBjdXJyZW50UmVjb3JkLnRvVW5pY29kZSgpLnJlcGxhY2UoCiAgICAgICAgICAgICAgICBuYW1lUmVjb3JkLnRvVW5pY29kZSgpLCBuYW1lSURzW25hbWVSZWNvcmQubmFtZUlEXQogICAgICAgICAgICApCgogICAgIyBDcmVhdGUgYSBuZXcgc3RyaW5nIHNpbmNlIHdlIGNvdWxkbid0IGZpbmQgYW55IHN1YnN0cmluZ3MuCiAgICBmb250VmVyc2lvbiA9IF9mb250VmVyc2lvbih2YXJmb250LCBwbGF0Zm9ybSkKICAgIGFjaFZlbmRJRCA9IHZhcmZvbnRbIk9TLzIiXS5hY2hWZW5kSUQKICAgICMgUmVtb3ZlIG5vbi1BU0NJSSBjaGFyYWNlcnMgYW5kIHRyYWlsaW5nIHNwYWNlcwogICAgdmVuZG9yID0gcmUuc3ViKHIiW15ceDAwLVx4N0ZdIiwgIiIsIGFjaFZlbmRJRCkuc3RyaXAoKQogICAgcHNOYW1lID0gbmFtZUlEc1tOYW1lSUQuUE9TVFNDUklQVF9OQU1FXQogICAgcmV0dXJuIGYie2ZvbnRWZXJzaW9ufTt7dmVuZG9yfTt7cHNOYW1lfSIKCgpkZWYgX2ZvbnRWZXJzaW9uKGZvbnQsIHBsYXRmb3JtPSgzLCAxLCAweDQwOSkpOgogICAgbmFtZVJlY29yZCA9IGZvbnRbIm5hbWUiXS5nZXROYW1lKE5hbWVJRC5WRVJTSU9OX1NUUklORywgKnBsYXRmb3JtKQogICAgaWYgbmFtZVJlY29yZCBpcyBOb25lOgogICAgICAgIHJldHVybiBmJ3tmb250WyJoZWFkIl0uZm9udFJldmlzaW9uOi4zZn0nCiAgICAjICJWZXJzaW9uIDEuMTAxOyB0dGZhdXRvaGludCAodjEuOC4xLjQzLWIwYzkpIiAtLT4gIjEuMTAxIgogICAgIyBBbHNvIHdvcmtzIGZpbmUgd2l0aCBpbnB1dHMgIlZlcnNpb24gMS4xMDEiIG9yICIxLjEwMSIgZXRjCiAgICB2ZXJzaW9uTnVtYmVyID0gbmFtZVJlY29yZC50b1VuaWNvZGUoKS5zcGxpdCgiOyIpWzBdCiAgICByZXR1cm4gdmVyc2lvbk51bWJlci5sc3RyaXAoIlZlcnNpb24gIikuc3RyaXAoKQo=
+"""Helpers for instantiating name table records."""
+
+from contextlib import contextmanager
+from copy import deepcopy
+from enum import IntEnum
+import re
+
+
+class NameID(IntEnum):
+    FAMILY_NAME = 1
+    SUBFAMILY_NAME = 2
+    UNIQUE_FONT_IDENTIFIER = 3
+    FULL_FONT_NAME = 4
+    VERSION_STRING = 5
+    POSTSCRIPT_NAME = 6
+    TYPOGRAPHIC_FAMILY_NAME = 16
+    TYPOGRAPHIC_SUBFAMILY_NAME = 17
+    VARIATIONS_POSTSCRIPT_NAME_PREFIX = 25
+
+
+ELIDABLE_AXIS_VALUE_NAME = 2
+
+
+def getVariationNameIDs(varfont):
+    used = []
+    if "fvar" in varfont:
+        fvar = varfont["fvar"]
+        for axis in fvar.axes:
+            used.append(axis.axisNameID)
+        for instance in fvar.instances:
+            used.append(instance.subfamilyNameID)
+            if instance.postscriptNameID != 0xFFFF:
+                used.append(instance.postscriptNameID)
+    if "STAT" in varfont:
+        stat = varfont["STAT"].table
+        for axis in stat.DesignAxisRecord.Axis if stat.DesignAxisRecord else ():
+            used.append(axis.AxisNameID)
+        for value in stat.AxisValueArray.AxisValue if stat.AxisValueArray else ():
+            used.append(value.ValueNameID)
+        elidedFallbackNameID = getattr(stat, "ElidedFallbackNameID", None)
+        if elidedFallbackNameID is not None:
+            used.append(elidedFallbackNameID)
+    # nameIDs <= 255 are reserved by OT spec so we don't touch them
+    return {nameID for nameID in used if nameID > 255}
+
+
+@contextmanager
+def pruningUnusedNames(varfont):
+    from . import log
+
+    origNameIDs = getVariationNameIDs(varfont)
+
+    yield
+
+    log.info("Pruning name table")
+    exclude = origNameIDs - getVariationNameIDs(varfont)
+    varfont["name"].names[:] = [
+        record for record in varfont["name"].names if record.nameID not in exclude
+    ]
+    if "ltag" in varfont:
+        # Drop the whole 'ltag' table if all the language-dependent Unicode name
+        # records that reference it have been dropped.
+        # TODO: Only prune unused ltag tags, renumerating langIDs accordingly.
+        # Note ltag can also be used by feat or morx tables, so check those too.
+        if not any(
+            record
+            for record in varfont["name"].names
+            if record.platformID == 0 and record.langID != 0xFFFF
+        ):
+            del varfont["ltag"]
+
+
+def updateNameTable(varfont, axisLimits):
+    """Update instatiated variable font's name table using STAT AxisValues.
+
+    Raises ValueError if the STAT table is missing or an Axis Value table is
+    missing for requested axis locations.
+
+    First, collect all STAT AxisValues that match the new default axis locations
+    (excluding "elided" ones); concatenate the strings in design axis order,
+    while giving priority to "synthetic" values (Format 4), to form the
+    typographic subfamily name associated with the new default instance.
+    Finally, update all related records in the name table, making sure that
+    legacy family/sub-family names conform to the the R/I/B/BI (Regular, Italic,
+    Bold, Bold Italic) naming model.
+
+    Example: Updating a partial variable font:
+    | >>> ttFont = TTFont("OpenSans[wdth,wght].ttf")
+    | >>> updateNameTable(ttFont, {"wght": (400, 900), "wdth": 75})
+
+    The name table records will be updated in the following manner:
+    NameID 1 familyName: "Open Sans" --> "Open Sans Condensed"
+    NameID 2 subFamilyName: "Regular" --> "Regular"
+    NameID 3 Unique font identifier: "3.000;GOOG;OpenSans-Regular" --> \
+        "3.000;GOOG;OpenSans-Condensed"
+    NameID 4 Full font name: "Open Sans Regular" --> "Open Sans Condensed"
+    NameID 6 PostScript name: "OpenSans-Regular" --> "OpenSans-Condensed"
+    NameID 16 Typographic Family name: None --> "Open Sans"
+    NameID 17 Typographic Subfamily name: None --> "Condensed"
+
+    References:
+    https://docs.microsoft.com/en-us/typography/opentype/spec/stat
+    https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
+    """
+    from . import AxisLimits, axisValuesFromAxisLimits
+
+    if "STAT" not in varfont:
+        raise ValueError("Cannot update name table since there is no STAT table.")
+    stat = varfont["STAT"].table
+    if not stat.AxisValueArray:
+        raise ValueError("Cannot update name table since there are no STAT Axis Values")
+    fvar = varfont["fvar"]
+
+    # The updated name table will reflect the new 'zero origin' of the font.
+    # If we're instantiating a partial font, we will populate the unpinned
+    # axes with their default axis values from fvar.
+    axisLimits = AxisLimits(axisLimits).limitAxesAndPopulateDefaults(varfont)
+    partialDefaults = axisLimits.defaultLocation()
+    fvarDefaults = {a.axisTag: a.defaultValue for a in fvar.axes}
+    defaultAxisCoords = AxisLimits({**fvarDefaults, **partialDefaults})
+    assert all(v.minimum == v.maximum for v in defaultAxisCoords.values())
+
+    axisValueTables = axisValuesFromAxisLimits(stat, defaultAxisCoords)
+    checkAxisValuesExist(stat, axisValueTables, defaultAxisCoords.pinnedLocation())
+
+    # ignore "elidable" axis values, should be omitted in application font menus.
+    axisValueTables = [
+        v for v in axisValueTables if not v.Flags & ELIDABLE_AXIS_VALUE_NAME
+    ]
+    axisValueTables = _sortAxisValues(axisValueTables)
+    _updateNameRecords(varfont, axisValueTables)
+
+
+def checkAxisValuesExist(stat, axisValues, axisCoords):
+    seen = set()
+    designAxes = stat.DesignAxisRecord.Axis
+    hasValues = set()
+    for value in stat.AxisValueArray.AxisValue:
+        if value.Format in (1, 2, 3):
+            hasValues.add(designAxes[value.AxisIndex].AxisTag)
+        elif value.Format == 4:
+            for rec in value.AxisValueRecord:
+                hasValues.add(designAxes[rec.AxisIndex].AxisTag)
+
+    for axisValueTable in axisValues:
+        axisValueFormat = axisValueTable.Format
+        if axisValueTable.Format in (1, 2, 3):
+            axisTag = designAxes[axisValueTable.AxisIndex].AxisTag
+            if axisValueFormat == 2:
+                axisValue = axisValueTable.NominalValue
+            else:
+                axisValue = axisValueTable.Value
+            if axisTag in axisCoords and axisValue == axisCoords[axisTag]:
+                seen.add(axisTag)
+        elif axisValueTable.Format == 4:
+            for rec in axisValueTable.AxisValueRecord:
+                axisTag = designAxes[rec.AxisIndex].AxisTag
+                if axisTag in axisCoords and rec.Value == axisCoords[axisTag]:
+                    seen.add(axisTag)
+
+    missingAxes = (set(axisCoords) - seen) & hasValues
+    if missingAxes:
+        missing = ", ".join(f"'{i}': {axisCoords[i]}" for i in missingAxes)
+        raise ValueError(f"Cannot find Axis Values {{{missing}}}")
+
+
+def _sortAxisValues(axisValues):
+    # Sort by axis index, remove duplicates and ensure that format 4 AxisValues
+    # are dominant.
+    # The MS Spec states: "if a format 1, format 2 or format 3 table has a
+    # (nominal) value used in a format 4 table that also has values for
+    # other axes, the format 4 table, being the more specific match, is used",
+    # https://docs.microsoft.com/en-us/typography/opentype/spec/stat#axis-value-table-format-4
+    results = []
+    seenAxes = set()
+    # Sort format 4 axes so the tables with the most AxisValueRecords are first
+    format4 = sorted(
+        [v for v in axisValues if v.Format == 4],
+        key=lambda v: len(v.AxisValueRecord),
+        reverse=True,
+    )
+
+    for val in format4:
+        axisIndexes = set(r.AxisIndex for r in val.AxisValueRecord)
+        minIndex = min(axisIndexes)
+        if not seenAxes & axisIndexes:
+            seenAxes |= axisIndexes
+            results.append((minIndex, val))
+
+    for val in axisValues:
+        if val in format4:
+            continue
+        axisIndex = val.AxisIndex
+        if axisIndex not in seenAxes:
+            seenAxes.add(axisIndex)
+            results.append((axisIndex, val))
+
+    return [axisValue for _, axisValue in sorted(results)]
+
+
+def _updateNameRecords(varfont, axisValues):
+    # Update nametable based on the axisValues using the R/I/B/BI model.
+    nametable = varfont["name"]
+    stat = varfont["STAT"].table
+
+    axisValueNameIDs = [a.ValueNameID for a in axisValues]
+    ribbiNameIDs = [n for n in axisValueNameIDs if _isRibbi(nametable, n)]
+    nonRibbiNameIDs = [n for n in axisValueNameIDs if n not in ribbiNameIDs]
+    # STAT 1.0 has no elided fallback name; use the existing subfamily name.
+    elidedNameID = (
+        stat.ElidedFallbackNameID
+        if stat.Version >= 0x00010001
+        else NameID.SUBFAMILY_NAME
+    )
+    elidedNameIsRibbi = _isRibbi(nametable, elidedNameID)
+
+    getName = nametable.getName
+    platforms = set((r.platformID, r.platEncID, r.langID) for r in nametable.names)
+    for platform in platforms:
+        if not all(getName(i, *platform) for i in (1, 2, elidedNameID)):
+            # Since no family name and subfamily name records were found,
+            # we cannot update this set of name Records.
+            continue
+
+        subFamilyName = " ".join(
+            getName(n, *platform).toUnicode() for n in ribbiNameIDs
+        )
+        if nonRibbiNameIDs:
+            typoSubFamilyName = " ".join(
+                getName(n, *platform).toUnicode() for n in axisValueNameIDs
+            )
+        else:
+            typoSubFamilyName = None
+
+        # If neither subFamilyName and typographic SubFamilyName exist,
+        # we will use the STAT's elidedFallbackName
+        if not typoSubFamilyName and not subFamilyName:
+            if elidedNameIsRibbi:
+                subFamilyName = getName(elidedNameID, *platform).toUnicode()
+            else:
+                typoSubFamilyName = getName(elidedNameID, *platform).toUnicode()
+
+        familyNameSuffix = " ".join(
+            getName(n, *platform).toUnicode() for n in nonRibbiNameIDs
+        )
+
+        _updateNameTableStyleRecords(
+            varfont,
+            familyNameSuffix,
+            subFamilyName,
+            typoSubFamilyName,
+            *platform,
+        )
+
+
+def _isRibbi(nametable, nameID):
+    englishRecord = nametable.getName(nameID, 3, 1, 0x409)
+    return (
+        True
+        if englishRecord is not None
+        and englishRecord.toUnicode() in ("Regular", "Italic", "Bold", "Bold Italic")
+        else False
+    )
+
+
+def _updateNameTableStyleRecords(
+    varfont,
+    familyNameSuffix,
+    subFamilyName,
+    typoSubFamilyName,
+    platformID=3,
+    platEncID=1,
+    langID=0x409,
+):
+    # TODO (Marc F) It may be nice to make this part a standalone
+    # font renamer in the future.
+    nametable = varfont["name"]
+    platform = (platformID, platEncID, langID)
+
+    currentFamilyName = nametable.getName(
+        NameID.TYPOGRAPHIC_FAMILY_NAME, *platform
+    ) or nametable.getName(NameID.FAMILY_NAME, *platform)
+
+    currentStyleName = nametable.getName(
+        NameID.TYPOGRAPHIC_SUBFAMILY_NAME, *platform
+    ) or nametable.getName(NameID.SUBFAMILY_NAME, *platform)
+
+    if not all([currentFamilyName, currentStyleName]):
+        raise ValueError(f"Missing required NameIDs 1 and 2 for platform {platform}")
+
+    currentFamilyName = currentFamilyName.toUnicode()
+    currentStyleName = currentStyleName.toUnicode()
+
+    nameIDs = {
+        NameID.FAMILY_NAME: currentFamilyName,
+        NameID.SUBFAMILY_NAME: subFamilyName or "Regular",
+    }
+    if typoSubFamilyName:
+        nameIDs[NameID.FAMILY_NAME] = f"{currentFamilyName} {familyNameSuffix}".strip()
+        nameIDs[NameID.TYPOGRAPHIC_FAMILY_NAME] = currentFamilyName
+        nameIDs[NameID.TYPOGRAPHIC_SUBFAMILY_NAME] = typoSubFamilyName
+    else:
+        # Remove previous Typographic Family and SubFamily names since they're
+        # no longer required
+        for nameID in (
+            NameID.TYPOGRAPHIC_FAMILY_NAME,
+            NameID.TYPOGRAPHIC_SUBFAMILY_NAME,
+        ):
+            nametable.removeNames(nameID=nameID)
+
+    newFamilyName = (
+        nameIDs.get(NameID.TYPOGRAPHIC_FAMILY_NAME) or nameIDs[NameID.FAMILY_NAME]
+    )
+    newStyleName = (
+        nameIDs.get(NameID.TYPOGRAPHIC_SUBFAMILY_NAME) or nameIDs[NameID.SUBFAMILY_NAME]
+    )
+
+    nameIDs[NameID.FULL_FONT_NAME] = f"{newFamilyName} {newStyleName}"
+    nameIDs[NameID.POSTSCRIPT_NAME] = _updatePSNameRecord(
+        varfont, newFamilyName, newStyleName, platform
+    )
+
+    uniqueID = _updateUniqueIdNameRecord(varfont, nameIDs, platform)
+    if uniqueID:
+        nameIDs[NameID.UNIQUE_FONT_IDENTIFIER] = uniqueID
+
+    for nameID, string in nameIDs.items():
+        assert string, nameID
+        nametable.setName(string, nameID, *platform)
+
+    if "fvar" not in varfont:
+        nametable.removeNames(NameID.VARIATIONS_POSTSCRIPT_NAME_PREFIX)
+
+
+def _updatePSNameRecord(varfont, familyName, styleName, platform):
+    # Implementation based on Adobe Technical Note #5902 :
+    # https://wwwimages2.adobe.com/content/dam/acom/en/devnet/font/pdfs/5902.AdobePSNameGeneration.pdf
+    nametable = varfont["name"]
+
+    family_prefix = nametable.getName(
+        NameID.VARIATIONS_POSTSCRIPT_NAME_PREFIX, *platform
+    )
+    if family_prefix:
+        family_prefix = family_prefix.toUnicode()
+    else:
+        family_prefix = familyName
+
+    psName = f"{family_prefix}-{styleName}"
+    # Remove any characters other than uppercase Latin letters, lowercase
+    # Latin letters, digits and hyphens.
+    psName = re.sub(r"[^A-Za-z0-9-]", r"", psName)
+
+    if len(psName) > 127:
+        # Abbreviating the stylename so it fits within 127 characters whilst
+        # conforming to every vendor's specification is too complex. Instead
+        # we simply truncate the psname and add the required "..."
+        return f"{psName[:124]}..."
+    return psName
+
+
+def _updateUniqueIdNameRecord(varfont, nameIDs, platform):
+    nametable = varfont["name"]
+    currentRecord = nametable.getName(NameID.UNIQUE_FONT_IDENTIFIER, *platform)
+    if not currentRecord:
+        return None
+
+    # Check if full name and postscript name are a substring of currentRecord
+    for nameID in (NameID.FULL_FONT_NAME, NameID.POSTSCRIPT_NAME):
+        nameRecord = nametable.getName(nameID, *platform)
+        if not nameRecord:
+            continue
+        if nameRecord.toUnicode() in currentRecord.toUnicode():
+            return currentRecord.toUnicode().replace(
+                nameRecord.toUnicode(), nameIDs[nameRecord.nameID]
+            )
+
+    # Create a new string since we couldn't find any substrings.
+    fontVersion = _fontVersion(varfont, platform)
+    achVendID = varfont["OS/2"].achVendID
+    # Remove non-ASCII characers and trailing spaces
+    vendor = re.sub(r"[^\x00-\x7F]", "", achVendID).strip()
+    psName = nameIDs[NameID.POSTSCRIPT_NAME]
+    return f"{fontVersion};{vendor};{psName}"
+
+
+def _fontVersion(font, platform=(3, 1, 0x409)):
+    nameRecord = font["name"].getName(NameID.VERSION_STRING, *platform)
+    if nameRecord is None:
+        return f'{font["head"].fontRevision:.3f}'
+    # "Version 1.101; ttfautohint (v1.8.1.43-b0c9)" --> "1.101"
+    # Also works fine with inputs "Version 1.101" or "1.101" etc
+    versionNumber = nameRecord.toUnicode().split(";")[0]
+    return versionNumber.lstrip("Version ").strip()

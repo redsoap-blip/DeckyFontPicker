@@ -1,1 +1,478 @@
-IiIiXAp1c2FnZTogdHR4IFtvcHRpb25zXSBpbnB1dGZpbGUxIFsuLi4gaW5wdXRmaWxlTl0KClRUWCAtLSBGcm9tIE9wZW5UeXBlIFRvIFhNTCBBbmQgQmFjawoKSWYgYW4gaW5wdXQgZmlsZSBpcyBhIFRydWVUeXBlIG9yIE9wZW5UeXBlIGZvbnQgZmlsZSwgaXQgd2lsbCBiZQpkZWNvbXBpbGVkIHRvIGEgVFRYIGZpbGUgKGFuIFhNTC1iYXNlZCB0ZXh0IGZvcm1hdCkuCklmIGFuIGlucHV0IGZpbGUgaXMgYSBUVFggZmlsZSwgaXQgd2lsbCBiZSBjb21waWxlZCB0byB3aGF0ZXZlcgpmb3JtYXQgdGhlIGRhdGEgaXMgaW4sIGEgVHJ1ZVR5cGUgb3IgT3BlblR5cGUvQ0ZGIGZvbnQgZmlsZS4KQSBzcGVjaWFsIGlucHV0IHZhbHVlIG9mIC0gbWVhbnMgcmVhZCBmcm9tIHRoZSBzdGFuZGFyZCBpbnB1dC4KCk91dHB1dCBmaWxlcyBhcmUgY3JlYXRlZCBzbyB0aGV5IGFyZSB1bmlxdWU6IGFuIGV4aXN0aW5nIGZpbGUgaXMKbmV2ZXIgb3ZlcndyaXR0ZW4uCgpHZW5lcmFsIG9wdGlvbnMKPT09PT09PT09PT09PT09CgotaCBIZWxwICAgICAgICAgICAgcHJpbnQgdGhpcyBtZXNzYWdlLgotLXZlcnNpb24gICAgICAgICAgc2hvdyB2ZXJzaW9uIGFuZCBleGl0LgotZCA8b3V0cHV0Zm9sZGVyPiAgU3BlY2lmeSBhIGRpcmVjdG9yeSB3aGVyZSB0aGUgb3V0cHV0IGZpbGVzIGFyZQogICAgICAgICAgICAgICAgICAgdG8gYmUgY3JlYXRlZC4KLW8gPG91dHB1dGZpbGU+ICAgIFNwZWNpZnkgYSBmaWxlIHRvIHdyaXRlIHRoZSBvdXRwdXQgdG8uIEEgc3BlY2lhbAogICAgICAgICAgICAgICAgICAgdmFsdWUgb2YgLSB3b3VsZCB1c2UgdGhlIHN0YW5kYXJkIG91dHB1dC4KLWYgICAgICAgICAgICAgICAgIE92ZXJ3cml0ZSBleGlzdGluZyBvdXRwdXQgZmlsZShzKSwgaWUuIGRvbid0IGFwcGVuZAogICAgICAgICAgICAgICAgICAgbnVtYmVycy4KLXYgICAgICAgICAgICAgICAgIFZlcmJvc2U6IG1vcmUgbWVzc2FnZXMgd2lsbCBiZSB3cml0dGVuIHRvIHN0ZG91dAogICAgICAgICAgICAgICAgICAgYWJvdXQgd2hhdCBpcyBiZWluZyBkb25lLgotcSAgICAgICAgICAgICAgICAgUXVpZXQ6IE5vIG1lc3NhZ2VzIHdpbGwgYmUgd3JpdHRlbiB0byBzdGRvdXQgYWJvdXQKICAgICAgICAgICAgICAgICAgIHdoYXQgaXMgYmVpbmcgZG9uZS4KLWEgICAgICAgICAgICAgICAgIGFsbG93IHZpcnR1YWwgZ2x5cGhzIElEJ3Mgb24gY29tcGlsZSBvciBkZWNvbXBpbGUuCgpEdW1wIG9wdGlvbnMKPT09PT09PT09PT09CgotbCAgICAgICAgICAgTGlzdCB0YWJsZSBpbmZvOiBpbnN0ZWFkIG9mIGR1bXBpbmcgdG8gYSBUVFggZmlsZSwgbGlzdAogICAgICAgICAgICAgc29tZSBtaW5pbWFsIGluZm8gYWJvdXQgZWFjaCB0YWJsZS4KLXQgPHRhYmxlPiAgIFNwZWNpZnkgYSB0YWJsZSB0byBkdW1wLiBNdWx0aXBsZSAtdCBvcHRpb25zCiAgICAgICAgICAgICBhcmUgYWxsb3dlZC4gV2hlbiBubyAtdCBvcHRpb24gaXMgc3BlY2lmaWVkLCBhbGwgdGFibGVzCiAgICAgICAgICAgICB3aWxsIGJlIGR1bXBlZC4KLXggPHRhYmxlPiAgIFNwZWNpZnkgYSB0YWJsZSB0byBleGNsdWRlIGZyb20gdGhlIGR1bXAuIE11bHRpcGxlCiAgICAgICAgICAgICAteCBvcHRpb25zIGFyZSBhbGxvd2VkLiAtdCBhbmQgLXggYXJlIG11dHVhbGx5IGV4Y2x1c2l2ZS4KLXMgICAgICAgICAgIFNwbGl0IHRhYmxlczogc2F2ZSB0aGUgVFRYIGRhdGEgaW50byBzZXBhcmF0ZSBUVFggZmlsZXMgcGVyCiAgICAgICAgICAgICB0YWJsZSBhbmQgd3JpdGUgb25lIHNtYWxsIFRUWCBmaWxlIHRoYXQgY29udGFpbnMgcmVmZXJlbmNlcwogICAgICAgICAgICAgdG8gdGhlIGluZGl2aWR1YWwgdGFibGUgZHVtcHMuIFRoaXMgZmlsZSBjYW4gYmUgdXNlZCBhcwogICAgICAgICAgICAgaW5wdXQgdG8gdHR4LCBhcyBsb25nIGFzIHRoZSB0YWJsZSBmaWxlcyBhcmUgaW4gdGhlCiAgICAgICAgICAgICBzYW1lIGRpcmVjdG9yeS4KLWcgICAgICAgICAgIFNwbGl0IGdseWYgdGFibGU6IFNhdmUgdGhlIGdseWYgZGF0YSBpbnRvIHNlcGFyYXRlIFRUWCBmaWxlcwogICAgICAgICAgICAgcGVyIGdseXBoIGFuZCB3cml0ZSBhIHNtYWxsIFRUWCBmb3IgdGhlIGdseWYgdGFibGUgd2hpY2gKICAgICAgICAgICAgIGNvbnRhaW5zIHJlZmVyZW5jZXMgdG8gdGhlIGluZGl2aWR1YWwgVFRHbHlwaCBlbGVtZW50cy4KICAgICAgICAgICAgIE5PVEU6IHNwZWNpZnlpbmcgLWcgaW1wbGllcyAtcyAobm8gbmVlZCBmb3IgLXMgdG9nZXRoZXIKICAgICAgICAgICAgIHdpdGggLWcpCi1pICAgICAgICAgICBEbyBOT1QgZGlzYXNzZW1ibGUgVFQgaW5zdHJ1Y3Rpb25zOiB3aGVuIHRoaXMgb3B0aW9uIGlzCiAgICAgICAgICAgICBnaXZlbiwgYWxsIFRydWVUeXBlIHByb2dyYW1zIChnbHlwaCBwcm9ncmFtcywgdGhlIGZvbnQKICAgICAgICAgICAgIHByb2dyYW0gYW5kIHRoZSBwcmUtcHJvZ3JhbSkgd2lsbCBiZSB3cml0dGVuIHRvIHRoZSBUVFgKICAgICAgICAgICAgIGZpbGUgYXMgaGV4IGRhdGEgaW5zdGVhZCBvZiBhc3NlbWJseS4gVGhpcyBzYXZlcyBzb21lIHRpbWUKICAgICAgICAgICAgIGFuZCBtYWtlcyB0aGUgVFRYIGZpbGUgc21hbGxlci4KLXogPGZvcm1hdD4gIFNwZWNpZnkgYSBiaXRtYXAgZGF0YSBleHBvcnQgb3B0aW9uIGZvciBFQkRUOgogICAgICAgICAgICAgeydyYXcnLCAncm93JywgJ2JpdHdpc2UnLCAnZXh0ZmlsZSd9IG9yIGZvciB0aGUgQ0JEVDoKICAgICAgICAgICAgIHsncmF3JywgJ2V4dGZpbGUnfSBFYWNoIG9wdGlvbiBkb2VzIG9uZSBvZiB0aGUgZm9sbG93aW5nOgoKICAgICAgICAgICAgIC16IHJhdwogICAgICAgICAgICAgICBleHBvcnQgdGhlIGJpdG1hcCBkYXRhIGFzIGEgaGV4IGR1bXAKICAgICAgICAgICAgIC16IHJvdwogICAgICAgICAgICAgICBleHBvcnQgZWFjaCByb3cgYXMgaGV4IGRhdGEKICAgICAgICAgICAgIC16IGJpdHdpc2UKICAgICAgICAgICAgICAgZXhwb3J0IGVhY2ggcm93IGFzIGJpbmFyeSBpbiBhbiBBU0NJSSBhcnQgc3R5bGUKICAgICAgICAgICAgIC16IGV4dGZpbGUKICAgICAgICAgICAgICAgZXhwb3J0IHRoZSBkYXRhIGFzIGV4dGVybmFsIGZpbGVzIHdpdGggWE1MIHJlZmVyZW5jZXMKCiAgICAgICAgICAgICBJZiBubyBleHBvcnQgZm9ybWF0IGlzIHNwZWNpZmllZCAncmF3JyBmb3JtYXQgaXMgdXNlZC4KLWUgICAgICAgICAgIERvbid0IGlnbm9yZSBkZWNvbXBpbGF0aW9uIGVycm9ycywgYnV0IHNob3cgYSBmdWxsIHRyYWNlYmFjawogICAgICAgICAgICAgYW5kIGFib3J0LgoteSA8bnVtYmVyPiAgU2VsZWN0IGZvbnQgbnVtYmVyIGZvciBUcnVlVHlwZSBDb2xsZWN0aW9uICgudHRjLy5vdGMpLAogICAgICAgICAgICAgc3RhcnRpbmcgZnJvbSAwLgotLXVuaWNvZGVkYXRhIDxVbmljb2RlRGF0YS50eHQ+CiAgICAgICAgICAgICBVc2UgY3VzdG9tIGRhdGFiYXNlIGZpbGUgdG8gd3JpdGUgY2hhcmFjdGVyIG5hbWVzIGluIHRoZQogICAgICAgICAgICAgY29tbWVudHMgb2YgdGhlIGNtYXAgVFRYIG91dHB1dC4KLS1uZXdsaW5lIDx2YWx1ZT4KICAgICAgICAgICAgIENvbnRyb2wgaG93IGxpbmUgZW5kaW5ncyBhcmUgd3JpdHRlbiBpbiB0aGUgWE1MIGZpbGUuIEl0CiAgICAgICAgICAgICBjYW4gYmUgJ0xGJywgJ0NSJywgb3IgJ0NSTEYnLiBJZiBub3Qgc3BlY2lmaWVkLCB0aGUKICAgICAgICAgICAgIGRlZmF1bHQgcGxhdGZvcm0tc3BlY2lmaWMgbGluZSBlbmRpbmdzIGFyZSB1c2VkLgoKQ29tcGlsZSBvcHRpb25zCj09PT09PT09PT09PT09PQoKLW0gICAgICAgICAgIE1lcmdlIHdpdGggVHJ1ZVR5cGUtaW5wdXQtZmlsZTogc3BlY2lmeSBhIFRydWVUeXBlIG9yCiAgICAgICAgICAgICBPcGVuVHlwZSBmb250IGZpbGUgdG8gYmUgbWVyZ2VkIHdpdGggdGhlIFRUWCBmaWxlLiBUaGlzCiAgICAgICAgICAgICBvcHRpb24gaXMgb25seSB2YWxpZCB3aGVuIGF0IG1vc3Qgb25lIFRUWCBmaWxlIGlzIHNwZWNpZmllZC4KLWIgICAgICAgICAgIERvbid0IHJlY2FsYyBnbHlwaCBib3VuZGluZyBib3hlczogdXNlIHRoZSB2YWx1ZXMgaW4gdGhlCiAgICAgICAgICAgICBUVFggZmlsZSBhcy1pcy4KLS1yZWNhbGMtdGltZXN0YW1wCiAgICAgICAgICAgICBTZXQgZm9udCAnbW9kaWZpZWQnIHRpbWVzdGFtcCB0byBjdXJyZW50IHRpbWUuCiAgICAgICAgICAgICBCeSBkZWZhdWx0LCB0aGUgbW9kaWZpY2F0aW9uIHRpbWUgb2YgdGhlIFRUWCBmaWxlIHdpbGwgYmUKICAgICAgICAgICAgIHVzZWQuCi0tbm8tcmVjYWxjLXRpbWVzdGFtcAogICAgICAgICAgICAgS2VlcCB0aGUgb3JpZ2luYWwgZm9udCAnbW9kaWZpZWQnIHRpbWVzdGFtcC4KLS1mbGF2b3IgPHR5cGU+CiAgICAgICAgICAgICBTcGVjaWZ5IGZsYXZvciBvZiBvdXRwdXQgZm9udCBmaWxlLiBNYXkgYmUgJ3dvZmYnIG9yICd3b2ZmMicuCiAgICAgICAgICAgICBOb3RlIHRoYXQgV09GRjIgcmVxdWlyZXMgdGhlIEJyb3RsaSBQeXRob24gZXh0ZW5zaW9uLAogICAgICAgICAgICAgYXZhaWxhYmxlIGF0IGh0dHBzOi8vZ2l0aHViLmNvbS9nb29nbGUvYnJvdGxpCi0td2l0aC16b3BmbGkKICAgICAgICAgICAgIFVzZSBab3BmbGkgaW5zdGVhZCBvZiBabGliIHRvIGNvbXByZXNzIFdPRkYuIFRoZSBQeXRob24KICAgICAgICAgICAgIGV4dGVuc2lvbiBpcyBhdmFpbGFibGUgYXQgaHR0cHM6Ly9weXBpLnB5dGhvbi5vcmcvcHlwaS96b3BmbGkKLS1vcHRpbWl6ZS1mb250LXNwZWVkCiAgICAgICAgICAgICBFbmFibGUgb3B0aW1pemF0aW9ucyB0aGF0IHByaW9yaXRpemUgc3BlZWQgb3ZlciBmaWxlIHNpemUuCiAgICAgICAgICAgICBUaGlzIG1haW5seSBhZmZlY3RzIGhvdyBnbHlmIHQgYWJsZSBhbmQgZ3ZhciAvIFZBUkMgdGFibGVzIGFyZQogICAgICAgICAgICAgY29tcGlsZWQuIFRoZSBwcm9kdWNlZCBmb250cyB3aWxsIGJlIGxhcmdlciwgYnV0IHJlbmRlcmluZwogICAgICAgICAgICAgcGVyZm9ybWFuY2Ugd2lsbCBiZSBpbXByb3ZlZCB3aXRoIEhhcmZCdXp6IGFuZCBvdGhlciB0ZXh0CiAgICAgICAgICAgICBsYXlvdXQgZW5naW5lcy4KIiIiCgpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgT1BUSU1JWkVfRk9OVF9TUEVFRCwgVFRGb250LCBUVExpYkVycm9yCmZyb20gZm9udFRvb2xzLm1pc2MubWFjQ3JlYXRvclR5cGUgaW1wb3J0IGdldE1hY0NyZWF0b3JBbmRUeXBlCmZyb20gZm9udFRvb2xzLnVuaWNvZGUgaW1wb3J0IHNldFVuaWNvZGVEYXRhCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBUYWcsIHRvc3RyCmZyb20gZm9udFRvb2xzLm1pc2MudGltZVRvb2xzIGltcG9ydCB0aW1lc3RhbXBTaW5jZUVwb2NoCmZyb20gZm9udFRvb2xzLm1pc2MubG9nZ2luZ1Rvb2xzIGltcG9ydCBUaW1lcgpmcm9tIGZvbnRUb29scy5taXNjLmNsaVRvb2xzIGltcG9ydCBtYWtlT3V0cHV0RmlsZU5hbWUKaW1wb3J0IG9zCmltcG9ydCBzeXMKaW1wb3J0IGdldG9wdAppbXBvcnQgcmUKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJmb250VG9vbHMudHR4IikKCm9wZW50eXBlaGVhZGVyUkUgPSByZS5jb21waWxlKCIiInNmbnRWZXJzaW9uPVsnIl1PVFRPWyInXSIiIikKCgpjbGFzcyBPcHRpb25zKG9iamVjdCk6CiAgICBsaXN0VGFibGVzID0gRmFsc2UKICAgIG91dHB1dERpciA9IE5vbmUKICAgIG91dHB1dEZpbGUgPSBOb25lCiAgICBvdmVyV3JpdGUgPSBGYWxzZQogICAgdmVyYm9zZSA9IEZhbHNlCiAgICBxdWlldCA9IEZhbHNlCiAgICBzcGxpdFRhYmxlcyA9IEZhbHNlCiAgICBzcGxpdEdseXBocyA9IEZhbHNlCiAgICBkaXNhc3NlbWJsZUluc3RydWN0aW9ucyA9IFRydWUKICAgIG1lcmdlRmlsZSA9IE5vbmUKICAgIHJlY2FsY0JCb3hlcyA9IFRydWUKICAgIGlnbm9yZURlY29tcGlsZUVycm9ycyA9IFRydWUKICAgIGJpdG1hcEdseXBoRGF0YUZvcm1hdCA9ICJyYXciCiAgICB1bmljb2RlZGF0YSA9IE5vbmUKICAgIG5ld2xpbmVzdHIgPSAiXG4iCiAgICByZWNhbGNUaW1lc3RhbXAgPSBOb25lCiAgICBmbGF2b3IgPSBOb25lCiAgICB1c2Vab3BmbGkgPSBGYWxzZQogICAgb3B0aW1pemVGb250U3BlZWQgPSBGYWxzZQoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCByYXdPcHRpb25zLCBudW1GaWxlcyk6CiAgICAgICAgc2VsZi5vbmx5VGFibGVzID0gW10KICAgICAgICBzZWxmLnNraXBUYWJsZXMgPSBbXQogICAgICAgIHNlbGYuZm9udE51bWJlciA9IC0xCiAgICAgICAgZm9yIG9wdGlvbiwgdmFsdWUgaW4gcmF3T3B0aW9uczoKICAgICAgICAgICAgIyBnZW5lcmFsIG9wdGlvbnMKICAgICAgICAgICAgaWYgb3B0aW9uID09ICItaCI6CiAgICAgICAgICAgICAgICBwcmludChfX2RvY19fKQogICAgICAgICAgICAgICAgc3lzLmV4aXQoMCkKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi0tdmVyc2lvbiI6CiAgICAgICAgICAgICAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgdmVyc2lvbgoKICAgICAgICAgICAgICAgIHByaW50KHZlcnNpb24pCiAgICAgICAgICAgICAgICBzeXMuZXhpdCgwKQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLWQiOgogICAgICAgICAgICAgICAgaWYgbm90IG9zLnBhdGguaXNkaXIodmFsdWUpOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIGdldG9wdC5HZXRvcHRFcnJvcigKICAgICAgICAgICAgICAgICAgICAgICAgIlRoZSAtZCBvcHRpb24gdmFsdWUgbXVzdCBiZSBhbiBleGlzdGluZyBkaXJlY3RvcnkiCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgc2VsZi5vdXRwdXREaXIgPSB2YWx1ZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLW8iOgogICAgICAgICAgICAgICAgc2VsZi5vdXRwdXRGaWxlID0gdmFsdWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1mIjoKICAgICAgICAgICAgICAgIHNlbGYub3ZlcldyaXRlID0gVHJ1ZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLXYiOgogICAgICAgICAgICAgICAgc2VsZi52ZXJib3NlID0gVHJ1ZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLXEiOgogICAgICAgICAgICAgICAgc2VsZi5xdWlldCA9IFRydWUKICAgICAgICAgICAgIyBkdW1wIG9wdGlvbnMKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1sIjoKICAgICAgICAgICAgICAgIHNlbGYubGlzdFRhYmxlcyA9IFRydWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi10IjoKICAgICAgICAgICAgICAgICMgcGFkIHdpdGggc3BhY2UgaWYgdGFibGUgdGFnIGxlbmd0aCBpcyBsZXNzIHRoYW4gNAogICAgICAgICAgICAgICAgdmFsdWUgPSB2YWx1ZS5sanVzdCg0KQogICAgICAgICAgICAgICAgc2VsZi5vbmx5VGFibGVzLmFwcGVuZCh2YWx1ZSkKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi14IjoKICAgICAgICAgICAgICAgICMgcGFkIHdpdGggc3BhY2UgaWYgdGFibGUgdGFnIGxlbmd0aCBpcyBsZXNzIHRoYW4gNAogICAgICAgICAgICAgICAgdmFsdWUgPSB2YWx1ZS5sanVzdCg0KQogICAgICAgICAgICAgICAgc2VsZi5za2lwVGFibGVzLmFwcGVuZCh2YWx1ZSkKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1zIjoKICAgICAgICAgICAgICAgIHNlbGYuc3BsaXRUYWJsZXMgPSBUcnVlCiAgICAgICAgICAgIGVsaWYgb3B0aW9uID09ICItZyI6CiAgICAgICAgICAgICAgICAjIC1nIGltcGxpZXMgKGFuZCBmb3JjZXMpIHNwbGl0VGFibGVzCiAgICAgICAgICAgICAgICBzZWxmLnNwbGl0R2x5cGhzID0gVHJ1ZQogICAgICAgICAgICAgICAgc2VsZi5zcGxpdFRhYmxlcyA9IFRydWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1pIjoKICAgICAgICAgICAgICAgIHNlbGYuZGlzYXNzZW1ibGVJbnN0cnVjdGlvbnMgPSBGYWxzZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLXoiOgogICAgICAgICAgICAgICAgdmFsaWRPcHRpb25zID0gKCJyYXciLCAicm93IiwgImJpdHdpc2UiLCAiZXh0ZmlsZSIpCiAgICAgICAgICAgICAgICBpZiB2YWx1ZSBub3QgaW4gdmFsaWRPcHRpb25zOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIGdldG9wdC5HZXRvcHRFcnJvcigKICAgICAgICAgICAgICAgICAgICAgICAgIi16IGRvZXMgbm90IGFsbG93ICVzIGFzIGEgZm9ybWF0LiBVc2UgJXMiCiAgICAgICAgICAgICAgICAgICAgICAgICUgKG9wdGlvbiwgdmFsaWRPcHRpb25zKQogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIHNlbGYuYml0bWFwR2x5cGhEYXRhRm9ybWF0ID0gdmFsdWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi15IjoKICAgICAgICAgICAgICAgIHNlbGYuZm9udE51bWJlciA9IGludCh2YWx1ZSkKICAgICAgICAgICAgIyBjb21waWxlIG9wdGlvbnMKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1tIjoKICAgICAgICAgICAgICAgIHNlbGYubWVyZ2VGaWxlID0gdmFsdWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1iIjoKICAgICAgICAgICAgICAgIHNlbGYucmVjYWxjQkJveGVzID0gRmFsc2UKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi1lIjoKICAgICAgICAgICAgICAgIHNlbGYuaWdub3JlRGVjb21waWxlRXJyb3JzID0gRmFsc2UKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi0tdW5pY29kZWRhdGEiOgogICAgICAgICAgICAgICAgc2VsZi51bmljb2RlZGF0YSA9IHZhbHVlCiAgICAgICAgICAgIGVsaWYgb3B0aW9uID09ICItLW5ld2xpbmUiOgogICAgICAgICAgICAgICAgdmFsaWRPcHRpb25zID0gKCJMRiIsICJDUiIsICJDUkxGIikKICAgICAgICAgICAgICAgIGlmIHZhbHVlID09ICJMRiI6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5uZXdsaW5lc3RyID0gIlxuIgogICAgICAgICAgICAgICAgZWxpZiB2YWx1ZSA9PSAiQ1IiOgogICAgICAgICAgICAgICAgICAgIHNlbGYubmV3bGluZXN0ciA9ICJcciIKICAgICAgICAgICAgICAgIGVsaWYgdmFsdWUgPT0gIkNSTEYiOgogICAgICAgICAgICAgICAgICAgIHNlbGYubmV3bGluZXN0ciA9ICJcclxuIgogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICByYWlzZSBnZXRvcHQuR2V0b3B0RXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgICJJbnZhbGlkIGNob2ljZSBmb3IgLS1uZXdsaW5lOiAlciAoY2hvb3NlIGZyb20gJXMpIgogICAgICAgICAgICAgICAgICAgICAgICAlICh2YWx1ZSwgIiwgIi5qb2luKG1hcChyZXByLCB2YWxpZE9wdGlvbnMpKSkKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIGVsaWYgb3B0aW9uID09ICItLXJlY2FsYy10aW1lc3RhbXAiOgogICAgICAgICAgICAgICAgc2VsZi5yZWNhbGNUaW1lc3RhbXAgPSBUcnVlCiAgICAgICAgICAgIGVsaWYgb3B0aW9uID09ICItLW5vLXJlY2FsYy10aW1lc3RhbXAiOgogICAgICAgICAgICAgICAgc2VsZi5yZWNhbGNUaW1lc3RhbXAgPSBGYWxzZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLS1mbGF2b3IiOgogICAgICAgICAgICAgICAgc2VsZi5mbGF2b3IgPSB2YWx1ZQogICAgICAgICAgICBlbGlmIG9wdGlvbiA9PSAiLS13aXRoLXpvcGZsaSI6CiAgICAgICAgICAgICAgICBzZWxmLnVzZVpvcGZsaSA9IFRydWUKICAgICAgICAgICAgZWxpZiBvcHRpb24gPT0gIi0tb3B0aW1pemUtZm9udC1zcGVlZCI6CiAgICAgICAgICAgICAgICBzZWxmLm9wdGltaXplRm9udFNwZWVkID0gVHJ1ZQogICAgICAgIGlmIHNlbGYudmVyYm9zZSBhbmQgc2VsZi5xdWlldDoKICAgICAgICAgICAgcmFpc2UgZ2V0b3B0LkdldG9wdEVycm9yKCItcSBhbmQgLXYgb3B0aW9ucyBhcmUgbXV0dWFsbHkgZXhjbHVzaXZlIikKICAgICAgICBpZiBzZWxmLnZlcmJvc2U6CiAgICAgICAgICAgIHNlbGYubG9nTGV2ZWwgPSBsb2dnaW5nLkRFQlVHCiAgICAgICAgZWxpZiBzZWxmLnF1aWV0OgogICAgICAgICAgICBzZWxmLmxvZ0xldmVsID0gbG9nZ2luZy5XQVJOSU5HCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5sb2dMZXZlbCA9IGxvZ2dpbmcuSU5GTwogICAgICAgIGlmIHNlbGYubWVyZ2VGaWxlIGFuZCBzZWxmLmZsYXZvcjoKICAgICAgICAgICAgcmFpc2UgZ2V0b3B0LkdldG9wdEVycm9yKCItbSBhbmQgLS1mbGF2b3Igb3B0aW9ucyBhcmUgbXV0dWFsbHkgZXhjbHVzaXZlIikKICAgICAgICBpZiBzZWxmLm9ubHlUYWJsZXMgYW5kIHNlbGYuc2tpcFRhYmxlczoKICAgICAgICAgICAgcmFpc2UgZ2V0b3B0LkdldG9wdEVycm9yKCItdCBhbmQgLXggb3B0aW9ucyBhcmUgbXV0dWFsbHkgZXhjbHVzaXZlIikKICAgICAgICBpZiBzZWxmLm1lcmdlRmlsZSBhbmQgbnVtRmlsZXMgPiAxOgogICAgICAgICAgICByYWlzZSBnZXRvcHQuR2V0b3B0RXJyb3IoCiAgICAgICAgICAgICAgICAiTXVzdCBzcGVjaWZ5IGV4YWN0bHkgb25lIFRUWCBzb3VyY2UgZmlsZSB3aGVuIHVzaW5nIC1tIgogICAgICAgICAgICApCiAgICAgICAgaWYgc2VsZi5mbGF2b3IgIT0gIndvZmYiIGFuZCBzZWxmLnVzZVpvcGZsaToKICAgICAgICAgICAgcmFpc2UgZ2V0b3B0LkdldG9wdEVycm9yKCItLXdpdGgtem9wZmxpIG9wdGlvbiByZXF1aXJlcyAtLWZsYXZvciAnd29mZiciKQoKCmRlZiB0dExpc3QoaW5wdXQsIG91dHB1dCwgb3B0aW9ucyk6CiAgICB0dGYgPSBUVEZvbnQoaW5wdXQsIGZvbnROdW1iZXI9b3B0aW9ucy5mb250TnVtYmVyLCBsYXp5PVRydWUpCiAgICByZWFkZXIgPSB0dGYucmVhZGVyCiAgICB0YWdzID0gc29ydGVkKHJlYWRlci5rZXlzKCkpCiAgICBwcmludCgnTGlzdGluZyB0YWJsZSBpbmZvIGZvciAiJXMiOicgJSBpbnB1dCkKICAgIGZvcm1hdCA9ICIgICAgJTRzICAlMTBzICAlOHMgICU4cyIKICAgIHByaW50KGZvcm1hdCAlICgidGFnICIsICIgIGNoZWNrc3VtIiwgIiAgbGVuZ3RoIiwgIiAgb2Zmc2V0IikpCiAgICBwcmludChmb3JtYXQgJSAoIi0tLS0iLCAiLS0tLS0tLS0tLSIsICItLS0tLS0tLSIsICItLS0tLS0tLSIpKQogICAgZm9yIHRhZyBpbiB0YWdzOgogICAgICAgIGVudHJ5ID0gcmVhZGVyLnRhYmxlc1t0YWddCiAgICAgICAgaWYgdHRmLmZsYXZvciA9PSAid29mZjIiOgogICAgICAgICAgICAjIFdPRkYyIGRvZXNuJ3Qgc3RvcmUgdGFibGUgY2hlY2tzdW1zLCBzbyB0aGV5IG11c3QgYmUgY2FsY3VsYXRlZAogICAgICAgICAgICBmcm9tIGZvbnRUb29scy50dExpYi5zZm50IGltcG9ydCBjYWxjQ2hlY2tzdW0KCiAgICAgICAgICAgIGRhdGEgPSBlbnRyeS5sb2FkRGF0YShyZWFkZXIudHJhbnNmb3JtQnVmZmVyKQogICAgICAgICAgICBjaGVja1N1bSA9IGNhbGNDaGVja3N1bShkYXRhKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGNoZWNrU3VtID0gaW50KGVudHJ5LmNoZWNrU3VtKQogICAgICAgIGlmIGNoZWNrU3VtIDwgMDoKICAgICAgICAgICAgY2hlY2tTdW0gPSBjaGVja1N1bSArIDB4MTAwMDAwMDAwCiAgICAgICAgY2hlY2tzdW0gPSAiMHglMDhYIiAlIGNoZWNrU3VtCiAgICAgICAgcHJpbnQoZm9ybWF0ICUgKHRhZywgY2hlY2tzdW0sIGVudHJ5Lmxlbmd0aCwgZW50cnkub2Zmc2V0KSkKICAgIHByaW50KCkKICAgIHR0Zi5jbG9zZSgpCgoKQFRpbWVyKGxvZywgIkRvbmUgZHVtcGluZyBUVFggaW4gJSh0aW1lKS4zZiBzZWNvbmRzIikKZGVmIHR0RHVtcChpbnB1dCwgb3V0cHV0LCBvcHRpb25zKToKICAgIGlucHV0X25hbWUgPSBpbnB1dAogICAgaWYgaW5wdXQgPT0gIi0iOgogICAgICAgIGlucHV0LCBpbnB1dF9uYW1lID0gc3lzLnN0ZGluLmJ1ZmZlciwgc3lzLnN0ZGluLm5hbWUKICAgIG91dHB1dF9uYW1lID0gb3V0cHV0CiAgICBpZiBvdXRwdXQgPT0gIi0iOgogICAgICAgIG91dHB1dCwgb3V0cHV0X25hbWUgPSBzeXMuc3Rkb3V0LCBzeXMuc3Rkb3V0Lm5hbWUKICAgIGxvZy5pbmZvKCdEdW1waW5nICIlcyIgdG8gIiVzIi4uLicsIGlucHV0X25hbWUsIG91dHB1dF9uYW1lKQogICAgaWYgb3B0aW9ucy51bmljb2RlZGF0YToKICAgICAgICBzZXRVbmljb2RlRGF0YShvcHRpb25zLnVuaWNvZGVkYXRhKQogICAgdHRmID0gVFRGb250KAogICAgICAgIGlucHV0LAogICAgICAgIDAsCiAgICAgICAgaWdub3JlRGVjb21waWxlRXJyb3JzPW9wdGlvbnMuaWdub3JlRGVjb21waWxlRXJyb3JzLAogICAgICAgIGZvbnROdW1iZXI9b3B0aW9ucy5mb250TnVtYmVyLAogICAgKQogICAgdHRmLnNhdmVYTUwoCiAgICAgICAgb3V0cHV0LAogICAgICAgIHRhYmxlcz1vcHRpb25zLm9ubHlUYWJsZXMsCiAgICAgICAgc2tpcFRhYmxlcz1vcHRpb25zLnNraXBUYWJsZXMsCiAgICAgICAgc3BsaXRUYWJsZXM9b3B0aW9ucy5zcGxpdFRhYmxlcywKICAgICAgICBzcGxpdEdseXBocz1vcHRpb25zLnNwbGl0R2x5cGhzLAogICAgICAgIGRpc2Fzc2VtYmxlSW5zdHJ1Y3Rpb25zPW9wdGlvbnMuZGlzYXNzZW1ibGVJbnN0cnVjdGlvbnMsCiAgICAgICAgYml0bWFwR2x5cGhEYXRhRm9ybWF0PW9wdGlvbnMuYml0bWFwR2x5cGhEYXRhRm9ybWF0LAogICAgICAgIG5ld2xpbmVzdHI9b3B0aW9ucy5uZXdsaW5lc3RyLAogICAgKQogICAgdHRmLmNsb3NlKCkKCgpAVGltZXIobG9nLCAiRG9uZSBjb21waWxpbmcgVFRYIGluICUodGltZSkuM2Ygc2Vjb25kcyIpCmRlZiB0dENvbXBpbGUoaW5wdXQsIG91dHB1dCwgb3B0aW9ucyk6CiAgICBpbnB1dF9uYW1lID0gaW5wdXQKICAgIGlmIGlucHV0ID09ICItIjoKICAgICAgICBpbnB1dCwgaW5wdXRfbmFtZSA9IHN5cy5zdGRpbiwgc3lzLnN0ZGluLm5hbWUKICAgIG91dHB1dF9uYW1lID0gb3V0cHV0CiAgICBpZiBvdXRwdXQgPT0gIi0iOgogICAgICAgIG91dHB1dCwgb3V0cHV0X25hbWUgPSBzeXMuc3Rkb3V0LmJ1ZmZlciwgc3lzLnN0ZG91dC5uYW1lCiAgICBsb2cuaW5mbygnQ29tcGlsaW5nICIlcyIgdG8gIiVzIi4uLicgJSAoaW5wdXRfbmFtZSwgb3V0cHV0KSkKICAgIGlmIG9wdGlvbnMudXNlWm9wZmxpOgogICAgICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBzZm50CgogICAgICAgIHNmbnQuVVNFX1pPUEZMSSA9IFRydWUKICAgIHR0ZiA9IFRURm9udCgKICAgICAgICBvcHRpb25zLm1lcmdlRmlsZSwKICAgICAgICBmbGF2b3I9b3B0aW9ucy5mbGF2b3IsCiAgICAgICAgcmVjYWxjQkJveGVzPW9wdGlvbnMucmVjYWxjQkJveGVzLAogICAgICAgIHJlY2FsY1RpbWVzdGFtcD1vcHRpb25zLnJlY2FsY1RpbWVzdGFtcCwKICAgICkKICAgIGlmIG9wdGlvbnMub3B0aW1pemVGb250U3BlZWQ6CiAgICAgICAgdHRmLmNmZ1tPUFRJTUlaRV9GT05UX1NQRUVEXSA9IG9wdGlvbnMub3B0aW1pemVGb250U3BlZWQKICAgIHR0Zi5pbXBvcnRYTUwoaW5wdXQpCgogICAgaWYgb3B0aW9ucy5yZWNhbGNUaW1lc3RhbXAgaXMgTm9uZSBhbmQgImhlYWQiIGluIHR0ZiBhbmQgaW5wdXQgaXMgbm90IHN5cy5zdGRpbjoKICAgICAgICAjIHVzZSBUVFggZmlsZSBtb2RpZmljYXRpb24gdGltZSBmb3IgaGVhZCAibW9kaWZpZWQiIHRpbWVzdGFtcAogICAgICAgIG10aW1lID0gb3MucGF0aC5nZXRtdGltZShpbnB1dCkKICAgICAgICB0dGZbImhlYWQiXS5tb2RpZmllZCA9IHRpbWVzdGFtcFNpbmNlRXBvY2gobXRpbWUpCgogICAgdHRmLnNhdmUob3V0cHV0KQoKCmRlZiBndWVzc0ZpbGVUeXBlKGZpbGVOYW1lKToKICAgIGlmIGZpbGVOYW1lID09ICItIjoKICAgICAgICBoZWFkZXIgPSBzeXMuc3RkaW4uYnVmZmVyLnBlZWsoMjU2KQogICAgICAgIGV4dCA9ICIiCiAgICBlbHNlOgogICAgICAgIGJhc2UsIGV4dCA9IG9zLnBhdGguc3BsaXRleHQoZmlsZU5hbWUpCiAgICAgICAgdHJ5OgogICAgICAgICAgICB3aXRoIG9wZW4oZmlsZU5hbWUsICJyYiIpIGFzIGY6CiAgICAgICAgICAgICAgICBoZWFkZXIgPSBmLnJlYWQoMjU2KQogICAgICAgIGV4Y2VwdCBJT0Vycm9yOgogICAgICAgICAgICByZXR1cm4gTm9uZQoKICAgIGlmIGhlYWRlci5zdGFydHN3aXRoKGIiXHhlZlx4YmJceGJmPD94bWwiKToKICAgICAgICBoZWFkZXIgPSBoZWFkZXIubHN0cmlwKGIiXHhlZlx4YmJceGJmIikKICAgIGNyLCB0cCA9IGdldE1hY0NyZWF0b3JBbmRUeXBlKGZpbGVOYW1lKQogICAgaWYgdHAgaW4gKCJzZm50IiwgIkZGSUwiKToKICAgICAgICByZXR1cm4gIlRURiIKICAgIGlmIGV4dCA9PSAiLmRmb250IjoKICAgICAgICByZXR1cm4gIlRURiIKICAgIGhlYWQgPSBUYWcoaGVhZGVyWzo0XSkKICAgIGlmIGhlYWQgPT0gIk9UVE8iOgogICAgICAgIHJldHVybiAiT1RGIgogICAgZWxpZiBoZWFkID09ICJ0dGNmIjoKICAgICAgICByZXR1cm4gIlRUQyIKICAgIGVsaWYgaGVhZCBpbiAoIlwwXDFcMFwwIiwgInRydWUiKToKICAgICAgICByZXR1cm4gIlRURiIKICAgIGVsaWYgaGVhZCA9PSAid09GRiI6CiAgICAgICAgcmV0dXJuICJXT0ZGIgogICAgZWxpZiBoZWFkID09ICJ3T0YyIjoKICAgICAgICByZXR1cm4gIldPRkYyIgogICAgZWxpZiBoZWFkID09ICI8P3htIjoKICAgICAgICAjIFVzZSAnbGF0aW4xJyBiZWNhdXNlIHRoYXQgY2FuJ3QgZmFpbC4KICAgICAgICBoZWFkZXIgPSB0b3N0cihoZWFkZXIsICJsYXRpbjEiKQogICAgICAgIGlmIG9wZW50eXBlaGVhZGVyUkUuc2VhcmNoKGhlYWRlcik6CiAgICAgICAgICAgIHJldHVybiAiT1RYIgogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiAiVFRYIgogICAgcmV0dXJuIE5vbmUKCgpkZWYgcGFyc2VPcHRpb25zKGFyZ3MpOgogICAgcmF3T3B0aW9ucywgZmlsZXMgPSBnZXRvcHQuZ251X2dldG9wdCgKICAgICAgICBhcmdzLAogICAgICAgICJsZDpvOmZ2cWh0Ong6c2dpbTp6OmJhZXk6IiwKICAgICAgICBbCiAgICAgICAgICAgICJ1bmljb2RlZGF0YT0iLAogICAgICAgICAgICAicmVjYWxjLXRpbWVzdGFtcCIsCiAgICAgICAgICAgICJuby1yZWNhbGMtdGltZXN0YW1wIiwKICAgICAgICAgICAgImZsYXZvcj0iLAogICAgICAgICAgICAidmVyc2lvbiIsCiAgICAgICAgICAgICJ3aXRoLXpvcGZsaSIsCiAgICAgICAgICAgICJuZXdsaW5lPSIsCiAgICAgICAgICAgICJvcHRpbWl6ZS1mb250LXNwZWVkIiwKICAgICAgICBdLAogICAgKQoKICAgIG9wdGlvbnMgPSBPcHRpb25zKHJhd09wdGlvbnMsIGxlbihmaWxlcykpCiAgICBqb2JzID0gW10KCiAgICBpZiBub3QgZmlsZXM6CiAgICAgICAgcmFpc2UgZ2V0b3B0LkdldG9wdEVycm9yKCJNdXN0IHNwZWNpZnkgYXQgbGVhc3Qgb25lIGlucHV0IGZpbGUiKQoKICAgIGZvciBpbnB1dCBpbiBmaWxlczoKICAgICAgICBpZiBpbnB1dCAhPSAiLSIgYW5kIG5vdCBvcy5wYXRoLmlzZmlsZShpbnB1dCk6CiAgICAgICAgICAgIHJhaXNlIGdldG9wdC5HZXRvcHRFcnJvcignRmlsZSBub3QgZm91bmQ6ICIlcyInICUgaW5wdXQpCiAgICAgICAgdHAgPSBndWVzc0ZpbGVUeXBlKGlucHV0KQogICAgICAgIGlmIHRwIGluICgiT1RGIiwgIlRURiIsICJUVEMiLCAiV09GRiIsICJXT0ZGMiIpOgogICAgICAgICAgICBleHRlbnNpb24gPSAiLnR0eCIKICAgICAgICAgICAgaWYgb3B0aW9ucy5saXN0VGFibGVzOgogICAgICAgICAgICAgICAgYWN0aW9uID0gdHRMaXN0CiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBhY3Rpb24gPSB0dER1bXAKICAgICAgICBlbGlmIHRwID09ICJUVFgiOgogICAgICAgICAgICBleHRlbnNpb24gPSAiLiIgKyBvcHRpb25zLmZsYXZvciBpZiBvcHRpb25zLmZsYXZvciBlbHNlICIudHRmIgogICAgICAgICAgICBhY3Rpb24gPSB0dENvbXBpbGUKICAgICAgICBlbGlmIHRwID09ICJPVFgiOgogICAgICAgICAgICBleHRlbnNpb24gPSAiLiIgKyBvcHRpb25zLmZsYXZvciBpZiBvcHRpb25zLmZsYXZvciBlbHNlICIub3RmIgogICAgICAgICAgICBhY3Rpb24gPSB0dENvbXBpbGUKICAgICAgICBlbHNlOgogICAgICAgICAgICByYWlzZSBnZXRvcHQuR2V0b3B0RXJyb3IoJ1Vua25vd24gZmlsZSB0eXBlOiAiJXMiJyAlIGlucHV0KQoKICAgICAgICBpZiBvcHRpb25zLm91dHB1dEZpbGU6CiAgICAgICAgICAgIG91dHB1dCA9IG9wdGlvbnMub3V0cHV0RmlsZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGlmIGlucHV0ID09ICItIjoKICAgICAgICAgICAgICAgIHJhaXNlIGdldG9wdC5HZXRvcHRFcnJvcigiTXVzdCBwcm92aWRlIC1vIHdoZW4gcmVhZGluZyBmcm9tIHN0ZGluIikKICAgICAgICAgICAgb3V0cHV0ID0gbWFrZU91dHB1dEZpbGVOYW1lKAogICAgICAgICAgICAgICAgaW5wdXQsIG9wdGlvbnMub3V0cHV0RGlyLCBleHRlbnNpb24sIG9wdGlvbnMub3ZlcldyaXRlCiAgICAgICAgICAgICkKICAgICAgICAgICAgIyAndG91Y2gnIG91dHB1dCBmaWxlIHRvIGF2b2lkIHJhY2UgY29uZGl0aW9uIGluIGNob29zaW5nIGZpbGUgbmFtZXMKICAgICAgICAgICAgaWYgYWN0aW9uICE9IHR0TGlzdDoKICAgICAgICAgICAgICAgIG9wZW4ob3V0cHV0LCAiYSIpLmNsb3NlKCkKICAgICAgICBqb2JzLmFwcGVuZCgoYWN0aW9uLCBpbnB1dCwgb3V0cHV0KSkKICAgIHJldHVybiBqb2JzLCBvcHRpb25zCgoKZGVmIHByb2Nlc3Moam9icywgb3B0aW9ucyk6CiAgICBmb3IgYWN0aW9uLCBpbnB1dCwgb3V0cHV0IGluIGpvYnM6CiAgICAgICAgYWN0aW9uKGlucHV0LCBvdXRwdXQsIG9wdGlvbnMpCgoKZGVmIG1haW4oYXJncz1Ob25lKToKICAgICIiIkNvbnZlcnQgT3BlblR5cGUgZm9udHMgdG8gWE1MIGFuZCBiYWNrIiIiCiAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGFyZ3MgPSBzeXMuYXJndlsxOl0KICAgIHRyeToKICAgICAgICBqb2JzLCBvcHRpb25zID0gcGFyc2VPcHRpb25zKGFyZ3MpCiAgICBleGNlcHQgZ2V0b3B0LkdldG9wdEVycm9yIGFzIGU6CiAgICAgICAgcHJpbnQoIiVzXG5FUlJPUjogJXMiICUgKF9fZG9jX18sIGUpLCBmaWxlPXN5cy5zdGRlcnIpCiAgICAgICAgc3lzLmV4aXQoMikKCiAgICBjb25maWdMb2dnZXIobGV2ZWw9b3B0aW9ucy5sb2dMZXZlbCkKCiAgICB0cnk6CiAgICAgICAgcHJvY2Vzcyhqb2JzLCBvcHRpb25zKQogICAgZXhjZXB0IEtleWJvYXJkSW50ZXJydXB0OgogICAgICAgIGxvZy5lcnJvcigiKENhbmNlbGxlZC4pIikKICAgICAgICBzeXMuZXhpdCgxKQogICAgZXhjZXB0IFN5c3RlbUV4aXQ6CiAgICAgICAgcmFpc2UKICAgIGV4Y2VwdCBUVExpYkVycm9yIGFzIGU6CiAgICAgICAgbG9nLmVycm9yKGUpCiAgICAgICAgc3lzLmV4aXQoMSkKICAgIGV4Y2VwdDoKICAgICAgICBsb2cuZXhjZXB0aW9uKCJVbmhhbmRsZWQgZXhjZXB0aW9uIGhhcyBvY2N1cnJlZCIpCiAgICAgICAgc3lzLmV4aXQoMSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgc3lzLmV4aXQobWFpbigpKQo=
+"""\
+usage: ttx [options] inputfile1 [... inputfileN]
+
+TTX -- From OpenType To XML And Back
+
+If an input file is a TrueType or OpenType font file, it will be
+decompiled to a TTX file (an XML-based text format).
+If an input file is a TTX file, it will be compiled to whatever
+format the data is in, a TrueType or OpenType/CFF font file.
+A special input value of - means read from the standard input.
+
+Output files are created so they are unique: an existing file is
+never overwritten.
+
+General options
+===============
+
+-h Help            print this message.
+--version          show version and exit.
+-d <outputfolder>  Specify a directory where the output files are
+                   to be created.
+-o <outputfile>    Specify a file to write the output to. A special
+                   value of - would use the standard output.
+-f                 Overwrite existing output file(s), ie. don't append
+                   numbers.
+-v                 Verbose: more messages will be written to stdout
+                   about what is being done.
+-q                 Quiet: No messages will be written to stdout about
+                   what is being done.
+-a                 allow virtual glyphs ID's on compile or decompile.
+
+Dump options
+============
+
+-l           List table info: instead of dumping to a TTX file, list
+             some minimal info about each table.
+-t <table>   Specify a table to dump. Multiple -t options
+             are allowed. When no -t option is specified, all tables
+             will be dumped.
+-x <table>   Specify a table to exclude from the dump. Multiple
+             -x options are allowed. -t and -x are mutually exclusive.
+-s           Split tables: save the TTX data into separate TTX files per
+             table and write one small TTX file that contains references
+             to the individual table dumps. This file can be used as
+             input to ttx, as long as the table files are in the
+             same directory.
+-g           Split glyf table: Save the glyf data into separate TTX files
+             per glyph and write a small TTX for the glyf table which
+             contains references to the individual TTGlyph elements.
+             NOTE: specifying -g implies -s (no need for -s together
+             with -g)
+-i           Do NOT disassemble TT instructions: when this option is
+             given, all TrueType programs (glyph programs, the font
+             program and the pre-program) will be written to the TTX
+             file as hex data instead of assembly. This saves some time
+             and makes the TTX file smaller.
+-z <format>  Specify a bitmap data export option for EBDT:
+             {'raw', 'row', 'bitwise', 'extfile'} or for the CBDT:
+             {'raw', 'extfile'} Each option does one of the following:
+
+             -z raw
+               export the bitmap data as a hex dump
+             -z row
+               export each row as hex data
+             -z bitwise
+               export each row as binary in an ASCII art style
+             -z extfile
+               export the data as external files with XML references
+
+             If no export format is specified 'raw' format is used.
+-e           Don't ignore decompilation errors, but show a full traceback
+             and abort.
+-y <number>  Select font number for TrueType Collection (.ttc/.otc),
+             starting from 0.
+--unicodedata <UnicodeData.txt>
+             Use custom database file to write character names in the
+             comments of the cmap TTX output.
+--newline <value>
+             Control how line endings are written in the XML file. It
+             can be 'LF', 'CR', or 'CRLF'. If not specified, the
+             default platform-specific line endings are used.
+
+Compile options
+===============
+
+-m           Merge with TrueType-input-file: specify a TrueType or
+             OpenType font file to be merged with the TTX file. This
+             option is only valid when at most one TTX file is specified.
+-b           Don't recalc glyph bounding boxes: use the values in the
+             TTX file as-is.
+--recalc-timestamp
+             Set font 'modified' timestamp to current time.
+             By default, the modification time of the TTX file will be
+             used.
+--no-recalc-timestamp
+             Keep the original font 'modified' timestamp.
+--flavor <type>
+             Specify flavor of output font file. May be 'woff' or 'woff2'.
+             Note that WOFF2 requires the Brotli Python extension,
+             available at https://github.com/google/brotli
+--with-zopfli
+             Use Zopfli instead of Zlib to compress WOFF. The Python
+             extension is available at https://pypi.python.org/pypi/zopfli
+--optimize-font-speed
+             Enable optimizations that prioritize speed over file size.
+             This mainly affects how glyf t able and gvar / VARC tables are
+             compiled. The produced fonts will be larger, but rendering
+             performance will be improved with HarfBuzz and other text
+             layout engines.
+"""
+
+from fontTools.ttLib import OPTIMIZE_FONT_SPEED, TTFont, TTLibError
+from fontTools.misc.macCreatorType import getMacCreatorAndType
+from fontTools.unicode import setUnicodeData
+from fontTools.misc.textTools import Tag, tostr
+from fontTools.misc.timeTools import timestampSinceEpoch
+from fontTools.misc.loggingTools import Timer
+from fontTools.misc.cliTools import makeOutputFileName
+import os
+import sys
+import getopt
+import re
+import logging
+
+log = logging.getLogger("fontTools.ttx")
+
+opentypeheaderRE = re.compile("""sfntVersion=['"]OTTO["']""")
+
+
+class Options(object):
+    listTables = False
+    outputDir = None
+    outputFile = None
+    overWrite = False
+    verbose = False
+    quiet = False
+    splitTables = False
+    splitGlyphs = False
+    disassembleInstructions = True
+    mergeFile = None
+    recalcBBoxes = True
+    ignoreDecompileErrors = True
+    bitmapGlyphDataFormat = "raw"
+    unicodedata = None
+    newlinestr = "\n"
+    recalcTimestamp = None
+    flavor = None
+    useZopfli = False
+    optimizeFontSpeed = False
+
+    def __init__(self, rawOptions, numFiles):
+        self.onlyTables = []
+        self.skipTables = []
+        self.fontNumber = -1
+        for option, value in rawOptions:
+            # general options
+            if option == "-h":
+                print(__doc__)
+                sys.exit(0)
+            elif option == "--version":
+                from fontTools import version
+
+                print(version)
+                sys.exit(0)
+            elif option == "-d":
+                if not os.path.isdir(value):
+                    raise getopt.GetoptError(
+                        "The -d option value must be an existing directory"
+                    )
+                self.outputDir = value
+            elif option == "-o":
+                self.outputFile = value
+            elif option == "-f":
+                self.overWrite = True
+            elif option == "-v":
+                self.verbose = True
+            elif option == "-q":
+                self.quiet = True
+            # dump options
+            elif option == "-l":
+                self.listTables = True
+            elif option == "-t":
+                # pad with space if table tag length is less than 4
+                value = value.ljust(4)
+                self.onlyTables.append(value)
+            elif option == "-x":
+                # pad with space if table tag length is less than 4
+                value = value.ljust(4)
+                self.skipTables.append(value)
+            elif option == "-s":
+                self.splitTables = True
+            elif option == "-g":
+                # -g implies (and forces) splitTables
+                self.splitGlyphs = True
+                self.splitTables = True
+            elif option == "-i":
+                self.disassembleInstructions = False
+            elif option == "-z":
+                validOptions = ("raw", "row", "bitwise", "extfile")
+                if value not in validOptions:
+                    raise getopt.GetoptError(
+                        "-z does not allow %s as a format. Use %s"
+                        % (option, validOptions)
+                    )
+                self.bitmapGlyphDataFormat = value
+            elif option == "-y":
+                self.fontNumber = int(value)
+            # compile options
+            elif option == "-m":
+                self.mergeFile = value
+            elif option == "-b":
+                self.recalcBBoxes = False
+            elif option == "-e":
+                self.ignoreDecompileErrors = False
+            elif option == "--unicodedata":
+                self.unicodedata = value
+            elif option == "--newline":
+                validOptions = ("LF", "CR", "CRLF")
+                if value == "LF":
+                    self.newlinestr = "\n"
+                elif value == "CR":
+                    self.newlinestr = "\r"
+                elif value == "CRLF":
+                    self.newlinestr = "\r\n"
+                else:
+                    raise getopt.GetoptError(
+                        "Invalid choice for --newline: %r (choose from %s)"
+                        % (value, ", ".join(map(repr, validOptions)))
+                    )
+            elif option == "--recalc-timestamp":
+                self.recalcTimestamp = True
+            elif option == "--no-recalc-timestamp":
+                self.recalcTimestamp = False
+            elif option == "--flavor":
+                self.flavor = value
+            elif option == "--with-zopfli":
+                self.useZopfli = True
+            elif option == "--optimize-font-speed":
+                self.optimizeFontSpeed = True
+        if self.verbose and self.quiet:
+            raise getopt.GetoptError("-q and -v options are mutually exclusive")
+        if self.verbose:
+            self.logLevel = logging.DEBUG
+        elif self.quiet:
+            self.logLevel = logging.WARNING
+        else:
+            self.logLevel = logging.INFO
+        if self.mergeFile and self.flavor:
+            raise getopt.GetoptError("-m and --flavor options are mutually exclusive")
+        if self.onlyTables and self.skipTables:
+            raise getopt.GetoptError("-t and -x options are mutually exclusive")
+        if self.mergeFile and numFiles > 1:
+            raise getopt.GetoptError(
+                "Must specify exactly one TTX source file when using -m"
+            )
+        if self.flavor != "woff" and self.useZopfli:
+            raise getopt.GetoptError("--with-zopfli option requires --flavor 'woff'")
+
+
+def ttList(input, output, options):
+    ttf = TTFont(input, fontNumber=options.fontNumber, lazy=True)
+    reader = ttf.reader
+    tags = sorted(reader.keys())
+    print('Listing table info for "%s":' % input)
+    format = "    %4s  %10s  %8s  %8s"
+    print(format % ("tag ", "  checksum", "  length", "  offset"))
+    print(format % ("----", "----------", "--------", "--------"))
+    for tag in tags:
+        entry = reader.tables[tag]
+        if ttf.flavor == "woff2":
+            # WOFF2 doesn't store table checksums, so they must be calculated
+            from fontTools.ttLib.sfnt import calcChecksum
+
+            data = entry.loadData(reader.transformBuffer)
+            checkSum = calcChecksum(data)
+        else:
+            checkSum = int(entry.checkSum)
+        if checkSum < 0:
+            checkSum = checkSum + 0x100000000
+        checksum = "0x%08X" % checkSum
+        print(format % (tag, checksum, entry.length, entry.offset))
+    print()
+    ttf.close()
+
+
+@Timer(log, "Done dumping TTX in %(time).3f seconds")
+def ttDump(input, output, options):
+    input_name = input
+    if input == "-":
+        input, input_name = sys.stdin.buffer, sys.stdin.name
+    output_name = output
+    if output == "-":
+        output, output_name = sys.stdout, sys.stdout.name
+    log.info('Dumping "%s" to "%s"...', input_name, output_name)
+    if options.unicodedata:
+        setUnicodeData(options.unicodedata)
+    ttf = TTFont(
+        input,
+        0,
+        ignoreDecompileErrors=options.ignoreDecompileErrors,
+        fontNumber=options.fontNumber,
+    )
+    ttf.saveXML(
+        output,
+        tables=options.onlyTables,
+        skipTables=options.skipTables,
+        splitTables=options.splitTables,
+        splitGlyphs=options.splitGlyphs,
+        disassembleInstructions=options.disassembleInstructions,
+        bitmapGlyphDataFormat=options.bitmapGlyphDataFormat,
+        newlinestr=options.newlinestr,
+    )
+    ttf.close()
+
+
+@Timer(log, "Done compiling TTX in %(time).3f seconds")
+def ttCompile(input, output, options):
+    input_name = input
+    if input == "-":
+        input, input_name = sys.stdin, sys.stdin.name
+    output_name = output
+    if output == "-":
+        output, output_name = sys.stdout.buffer, sys.stdout.name
+    log.info('Compiling "%s" to "%s"...' % (input_name, output))
+    if options.useZopfli:
+        from fontTools.ttLib import sfnt
+
+        sfnt.USE_ZOPFLI = True
+    ttf = TTFont(
+        options.mergeFile,
+        flavor=options.flavor,
+        recalcBBoxes=options.recalcBBoxes,
+        recalcTimestamp=options.recalcTimestamp,
+    )
+    if options.optimizeFontSpeed:
+        ttf.cfg[OPTIMIZE_FONT_SPEED] = options.optimizeFontSpeed
+    ttf.importXML(input)
+
+    if options.recalcTimestamp is None and "head" in ttf and input is not sys.stdin:
+        # use TTX file modification time for head "modified" timestamp
+        mtime = os.path.getmtime(input)
+        ttf["head"].modified = timestampSinceEpoch(mtime)
+
+    ttf.save(output)
+
+
+def guessFileType(fileName):
+    if fileName == "-":
+        header = sys.stdin.buffer.peek(256)
+        ext = ""
+    else:
+        base, ext = os.path.splitext(fileName)
+        try:
+            with open(fileName, "rb") as f:
+                header = f.read(256)
+        except IOError:
+            return None
+
+    if header.startswith(b"\xef\xbb\xbf<?xml"):
+        header = header.lstrip(b"\xef\xbb\xbf")
+    cr, tp = getMacCreatorAndType(fileName)
+    if tp in ("sfnt", "FFIL"):
+        return "TTF"
+    if ext == ".dfont":
+        return "TTF"
+    head = Tag(header[:4])
+    if head == "OTTO":
+        return "OTF"
+    elif head == "ttcf":
+        return "TTC"
+    elif head in ("\0\1\0\0", "true"):
+        return "TTF"
+    elif head == "wOFF":
+        return "WOFF"
+    elif head == "wOF2":
+        return "WOFF2"
+    elif head == "<?xm":
+        # Use 'latin1' because that can't fail.
+        header = tostr(header, "latin1")
+        if opentypeheaderRE.search(header):
+            return "OTX"
+        else:
+            return "TTX"
+    return None
+
+
+def parseOptions(args):
+    rawOptions, files = getopt.gnu_getopt(
+        args,
+        "ld:o:fvqht:x:sgim:z:baey:",
+        [
+            "unicodedata=",
+            "recalc-timestamp",
+            "no-recalc-timestamp",
+            "flavor=",
+            "version",
+            "with-zopfli",
+            "newline=",
+            "optimize-font-speed",
+        ],
+    )
+
+    options = Options(rawOptions, len(files))
+    jobs = []
+
+    if not files:
+        raise getopt.GetoptError("Must specify at least one input file")
+
+    for input in files:
+        if input != "-" and not os.path.isfile(input):
+            raise getopt.GetoptError('File not found: "%s"' % input)
+        tp = guessFileType(input)
+        if tp in ("OTF", "TTF", "TTC", "WOFF", "WOFF2"):
+            extension = ".ttx"
+            if options.listTables:
+                action = ttList
+            else:
+                action = ttDump
+        elif tp == "TTX":
+            extension = "." + options.flavor if options.flavor else ".ttf"
+            action = ttCompile
+        elif tp == "OTX":
+            extension = "." + options.flavor if options.flavor else ".otf"
+            action = ttCompile
+        else:
+            raise getopt.GetoptError('Unknown file type: "%s"' % input)
+
+        if options.outputFile:
+            output = options.outputFile
+        else:
+            if input == "-":
+                raise getopt.GetoptError("Must provide -o when reading from stdin")
+            output = makeOutputFileName(
+                input, options.outputDir, extension, options.overWrite
+            )
+            # 'touch' output file to avoid race condition in choosing file names
+            if action != ttList:
+                open(output, "a").close()
+        jobs.append((action, input, output))
+    return jobs, options
+
+
+def process(jobs, options):
+    for action, input, output in jobs:
+        action(input, output, options)
+
+
+def main(args=None):
+    """Convert OpenType fonts to XML and back"""
+    from fontTools import configLogger
+
+    if args is None:
+        args = sys.argv[1:]
+    try:
+        jobs, options = parseOptions(args)
+    except getopt.GetoptError as e:
+        print("%s\nERROR: %s" % (__doc__, e), file=sys.stderr)
+        sys.exit(2)
+
+    configLogger(level=options.logLevel)
+
+    try:
+        process(jobs, options)
+    except KeyboardInterrupt:
+        log.error("(Cancelled.)")
+        sys.exit(1)
+    except SystemExit:
+        raise
+    except TTLibError as e:
+        log.error(e)
+        sys.exit(1)
+    except:
+        log.exception("Unhandled exception has occurred")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

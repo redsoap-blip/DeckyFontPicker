@@ -1,1 +1,158 @@
-IiIiR2VuZXJpYyB2aXNpdG9yIHBhdHRlcm4gaW1wbGVtZW50YXRpb24gZm9yIFB5dGhvbiBvYmplY3RzLiIiIgoKaW1wb3J0IGVudW0KaW1wb3J0IHdlYWtyZWYKCgpjbGFzcyBWaXNpdG9yKG9iamVjdCk6CiAgICBkZWZhdWx0U3RvcCA9IEZhbHNlCgogICAgX3Zpc2l0b3JzID0gewogICAgICAgICMgQnkgZGVmYXVsdCB3ZSBza2lwIHZpc2l0aW5nIHdlYWsgcmVmZXJlbmNlcyB0byBhdm9pZCByZWN1cnNpb24KICAgICAgICAjIGlzc3Vlcy4gVXNlcnMgY2FuIG92ZXJyaWRlIHRoaXMgYnkgcmVnaXN0ZXJpbmcgYSB2aXNpdAogICAgICAgICMgZnVuY3Rpb24gZm9yIHdlYWtyZWYuUHJveHlUeXBlLgogICAgICAgIHdlYWtyZWYuUHJveHlUeXBlOiB7Tm9uZTogbGFtYmRhIHNlbGYsIG9iaiwgKmFyZ3MsICoqa3dhcmdzOiBGYWxzZX0KICAgIH0KCiAgICBAY2xhc3NtZXRob2QKICAgIGRlZiBfcmVnaXN0ZXIoY2VsZiwgY2xhenplc19hdHRycyk6CiAgICAgICAgYXNzZXJ0IGNlbGYgIT0gVmlzaXRvciwgIlN1YmNsYXNzIFZpc2l0b3IgaW5zdGVhZC4iCiAgICAgICAgaWYgIl92aXNpdG9ycyIgbm90IGluIGNlbGYuX19kaWN0X186CiAgICAgICAgICAgIGNlbGYuX3Zpc2l0b3JzID0ge30KCiAgICAgICAgZGVmIHdyYXBwZXIobWV0aG9kKToKICAgICAgICAgICAgYXNzZXJ0IG1ldGhvZC5fX25hbWVfXyA9PSAidmlzaXQiCiAgICAgICAgICAgIGZvciBjbGF6emVzLCBhdHRycyBpbiBjbGF6emVzX2F0dHJzOgogICAgICAgICAgICAgICAgaWYgdHlwZShjbGF6emVzKSAhPSB0dXBsZToKICAgICAgICAgICAgICAgICAgICBjbGF6emVzID0gKGNsYXp6ZXMsKQogICAgICAgICAgICAgICAgaWYgdHlwZShhdHRycykgPT0gc3RyOgogICAgICAgICAgICAgICAgICAgIGF0dHJzID0gKGF0dHJzLCkKICAgICAgICAgICAgICAgIGZvciBjbGF6eiBpbiBjbGF6emVzOgogICAgICAgICAgICAgICAgICAgIF92aXNpdG9ycyA9IGNlbGYuX3Zpc2l0b3JzLnNldGRlZmF1bHQoY2xhenosIHt9KQogICAgICAgICAgICAgICAgICAgIGZvciBhdHRyIGluIGF0dHJzOgogICAgICAgICAgICAgICAgICAgICAgICBhc3NlcnQgYXR0ciBub3QgaW4gX3Zpc2l0b3JzLCAoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAiT29wcywgY2xhc3MgJyVzJyBoYXMgdmlzaXRvciBmdW5jdGlvbiBmb3IgJyVzJyBkZWZpbmVkIGFscmVhZHkuIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgJSAoY2xhenouX19uYW1lX18sIGF0dHIpCiAgICAgICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICAgICAgX3Zpc2l0b3JzW2F0dHJdID0gbWV0aG9kCiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIHJldHVybiB3cmFwcGVyCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgcmVnaXN0ZXIoY2VsZiwgY2xhenplcyk6CiAgICAgICAgaWYgdHlwZShjbGF6emVzKSAhPSB0dXBsZToKICAgICAgICAgICAgY2xhenplcyA9IChjbGF6emVzLCkKICAgICAgICByZXR1cm4gY2VsZi5fcmVnaXN0ZXIoWyhjbGF6emVzLCAoTm9uZSwpKV0pCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgcmVnaXN0ZXJfYXR0cihjZWxmLCBjbGF6emVzLCBhdHRycyk6CiAgICAgICAgY2xhenplc19hdHRycyA9IFtdCiAgICAgICAgaWYgdHlwZShjbGF6emVzKSAhPSB0dXBsZToKICAgICAgICAgICAgY2xhenplcyA9IChjbGF6emVzLCkKICAgICAgICBpZiB0eXBlKGF0dHJzKSA9PSBzdHI6CiAgICAgICAgICAgIGF0dHJzID0gKGF0dHJzLCkKICAgICAgICBmb3IgY2xhenogaW4gY2xhenplczoKICAgICAgICAgICAgY2xhenplc19hdHRycy5hcHBlbmQoKGNsYXp6LCBhdHRycykpCiAgICAgICAgcmV0dXJuIGNlbGYuX3JlZ2lzdGVyKGNsYXp6ZXNfYXR0cnMpCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgcmVnaXN0ZXJfYXR0cnMoY2VsZiwgY2xhenplc19hdHRycyk6CiAgICAgICAgcmV0dXJuIGNlbGYuX3JlZ2lzdGVyKGNsYXp6ZXNfYXR0cnMpCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgX3Zpc2l0b3JzRm9yKGNlbGYsIHRoaW5nLCBfZGVmYXVsdD17fSk6CiAgICAgICAgdHlwID0gdHlwZSh0aGluZykKCiAgICAgICAgZm9yIGNlbGYgaW4gY2VsZi5tcm8oKToKICAgICAgICAgICAgX3Zpc2l0b3JzID0gZ2V0YXR0cihjZWxmLCAiX3Zpc2l0b3JzIiwgTm9uZSkKICAgICAgICAgICAgaWYgX3Zpc2l0b3JzIGlzIE5vbmU6CiAgICAgICAgICAgICAgICBicmVhawoKICAgICAgICAgICAgZm9yIGJhc2UgaW4gdHlwLm1ybygpOgogICAgICAgICAgICAgICAgbSA9IGNlbGYuX3Zpc2l0b3JzLmdldChiYXNlLCBOb25lKQogICAgICAgICAgICAgICAgaWYgbSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICByZXR1cm4gbQoKICAgICAgICByZXR1cm4gX2RlZmF1bHQKCiAgICBkZWYgdmlzaXRPYmplY3Qoc2VsZiwgb2JqLCAqYXJncywgKiprd2FyZ3MpOgogICAgICAgICIiIkNhbGxlZCB0byB2aXNpdCBhbiBvYmplY3QuIFRoaXMgZnVuY3Rpb24gbG9vcHMgb3ZlciBhbGwgbm9uLXByaXZhdGUKICAgICAgICBhdHRyaWJ1dGVzIG9mIHRoZSBvYmplY3RzIGFuZCBjYWxscyBhbnkgdXNlci1yZWdpc3RlcmVkICh2aWEKICAgICAgICBgYEByZWdpc3Rlcl9hdHRyKClgYCBvciBgYEByZWdpc3Rlcl9hdHRycygpYGApIGBgdmlzaXQoKWBgIGZ1bmN0aW9ucy4KCiAgICAgICAgVGhlIHZpc2l0b3Igd2lsbCBwcm9jZWVkIHRvIGNhbGwgYGBzZWxmLnZpc2l0QXR0cigpYGAsIHVubGVzcyB0aGVyZSBpcyBhCiAgICAgICAgdXNlci1yZWdpc3RlcmVkIHZpc2l0IGZ1bmN0aW9uIGFuZDoKCiAgICAgICAgKiBJdCByZXR1cm5zIGBgRmFsc2VgYDsgb3IKICAgICAgICAqIEl0IHJldHVybnMgYGBOb25lYGAgKG9yIGRvZXNuJ3QgcmV0dXJuIGFueXRoaW5nKSBhbmQKICAgICAgICAgIGBgdmlzaXRvci5kZWZhdWx0U3RvcGBgIGlzIGBgVHJ1ZWBgIChub24tZGVmYXVsdCkuCiAgICAgICAgIiIiCgogICAgICAgIGtleXMgPSBzb3J0ZWQodmFycyhvYmopLmtleXMoKSkKICAgICAgICBfdmlzaXRvcnMgPSBzZWxmLl92aXNpdG9yc0ZvcihvYmopCiAgICAgICAgZGVmYXVsdFZpc2l0b3IgPSBfdmlzaXRvcnMuZ2V0KCIqIiwgTm9uZSkKICAgICAgICBmb3Iga2V5IGluIGtleXM6CiAgICAgICAgICAgIGlmIGtleVswXSA9PSAiXyI6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICB2YWx1ZSA9IGdldGF0dHIob2JqLCBrZXkpCiAgICAgICAgICAgIHZpc2l0b3JGdW5jID0gX3Zpc2l0b3JzLmdldChrZXksIGRlZmF1bHRWaXNpdG9yKQogICAgICAgICAgICBpZiB2aXNpdG9yRnVuYyBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHJldCA9IHZpc2l0b3JGdW5jKHNlbGYsIG9iaiwga2V5LCB2YWx1ZSwgKmFyZ3MsICoqa3dhcmdzKQogICAgICAgICAgICAgICAgaWYgcmV0ID09IEZhbHNlIG9yIChyZXQgaXMgTm9uZSBhbmQgc2VsZi5kZWZhdWx0U3RvcCk6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgc2VsZi52aXNpdEF0dHIob2JqLCBrZXksIHZhbHVlLCAqYXJncywgKiprd2FyZ3MpCgogICAgZGVmIHZpc2l0QXR0cihzZWxmLCBvYmosIGF0dHIsIHZhbHVlLCAqYXJncywgKiprd2FyZ3MpOgogICAgICAgICIiIkNhbGxlZCB0byB2aXNpdCBhbiBhdHRyaWJ1dGUgb2YgYW4gb2JqZWN0LiIiIgogICAgICAgIHNlbGYudmlzaXQodmFsdWUsICphcmdzLCAqKmt3YXJncykKCiAgICBkZWYgdmlzaXRMaXN0KHNlbGYsIG9iaiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICAiIiJDYWxsZWQgdG8gdmlzaXQgYW55IHZhbHVlIHRoYXQgaXMgYSBsaXN0LiIiIgogICAgICAgIGZvciB2YWx1ZSBpbiBvYmo6CiAgICAgICAgICAgIHNlbGYudmlzaXQodmFsdWUsICphcmdzLCAqKmt3YXJncykKCiAgICBkZWYgdmlzaXREaWN0KHNlbGYsIG9iaiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICAiIiJDYWxsZWQgdG8gdmlzaXQgYW55IHZhbHVlIHRoYXQgaXMgYSBkaWN0aW9uYXJ5LiIiIgogICAgICAgIGZvciB2YWx1ZSBpbiBvYmoudmFsdWVzKCk6CiAgICAgICAgICAgIHNlbGYudmlzaXQodmFsdWUsICphcmdzLCAqKmt3YXJncykKCiAgICBkZWYgdmlzaXRMZWFmKHNlbGYsIG9iaiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICAiIiJDYWxsZWQgdG8gdmlzaXQgYW55IHZhbHVlIHRoYXQgaXMgbm90IGFuIG9iamVjdCwgbGlzdCwKICAgICAgICBvciBkaWN0aW9uYXJ5LiIiIgogICAgICAgIHBhc3MKCiAgICBkZWYgdmlzaXQoc2VsZiwgb2JqLCAqYXJncywgKiprd2FyZ3MpOgogICAgICAgICIiIlRoaXMgaXMgdGhlIG1haW4gZW50cnkgdG8gdGhlIHZpc2l0b3IuIFRoZSB2aXNpdG9yIHdpbGwgdmlzaXQgb2JqZWN0CiAgICAgICAgYGBvYmpgYC4KCiAgICAgICAgVGhlIHZpc2l0b3Igd2lsbCBmaXJzdCBkZXRlcm1pbmUgaWYgdGhlcmUgaXMgYSByZWdpc3RlcmVkICh2aWEKICAgICAgICBgYEByZWdpc3RlcigpYGApIHZpc2l0IGZ1bmN0aW9uIGZvciB0aGUgdHlwZSBvZiBvYmplY3QuIElmIHRoZXJlIGlzLCBpdAogICAgICAgIHdpbGwgYmUgY2FsbGVkLCBhbmQgYGAodmlzaXRvciwgb2JqLCAqYXJncywgKiprd2FyZ3MpYGAgd2lsbCBiZSBwYXNzZWQKICAgICAgICB0byB0aGUgdXNlciB2aXNpdCBmdW5jdGlvbi4KCiAgICAgICAgVGhlIHZpc2l0b3Igd2lsbCBub3QgcmVjdXJzZSBpZiB0aGVyZSBpcyBhIHVzZXItcmVnaXN0ZXJlZCB2aXNpdAogICAgICAgIGZ1bmN0aW9uIGFuZDoKCiAgICAgICAgKiBJdCByZXR1cm5zIGBgRmFsc2VgYDsgb3IKICAgICAgICAqIEl0IHJldHVybnMgYGBOb25lYGAgKG9yIGRvZXNuJ3QgcmV0dXJuIGFueXRoaW5nKSBhbmQKICAgICAgICAgIGBgdmlzaXRvci5kZWZhdWx0U3RvcGBgIGlzIGBgVHJ1ZWBgIChub24tZGVmYXVsdCkKCiAgICAgICAgT3RoZXJ3aXNlLCAgdGhlIHZpc2l0b3Igd2lsbCBwcm9jZWVkIHRvIGRpc3BhdGNoIHRvIG9uZSBvZgogICAgICAgIGBgc2VsZi52aXNpdE9iamVjdCgpYGAsIGBgc2VsZi52aXNpdExpc3QoKWBgLCBgYHNlbGYudmlzaXREaWN0KClgYCwgb3IKICAgICAgICBgYHNlbGYudmlzaXRMZWFmKClgYCAoYW55IG9mIHdoaWNoIGNhbiBiZSBvdmVycmlkZW4gaW4gYSBzdWJjbGFzcykuCiAgICAgICAgIiIiCgogICAgICAgIHZpc2l0b3JGdW5jID0gc2VsZi5fdmlzaXRvcnNGb3Iob2JqKS5nZXQoTm9uZSwgTm9uZSkKICAgICAgICBpZiB2aXNpdG9yRnVuYyBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmV0ID0gdmlzaXRvckZ1bmMoc2VsZiwgb2JqLCAqYXJncywgKiprd2FyZ3MpCiAgICAgICAgICAgIGlmIHJldCA9PSBGYWxzZSBvciAocmV0IGlzIE5vbmUgYW5kIHNlbGYuZGVmYXVsdFN0b3ApOgogICAgICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgaWYgaGFzYXR0cihvYmosICJfX2RpY3RfXyIpIGFuZCBub3QgaXNpbnN0YW5jZShvYmosIGVudW0uRW51bSk6CiAgICAgICAgICAgIHNlbGYudmlzaXRPYmplY3Qob2JqLCAqYXJncywgKiprd2FyZ3MpCiAgICAgICAgZWxpZiBpc2luc3RhbmNlKG9iaiwgbGlzdCk6CiAgICAgICAgICAgIHNlbGYudmlzaXRMaXN0KG9iaiwgKmFyZ3MsICoqa3dhcmdzKQogICAgICAgIGVsaWYgaXNpbnN0YW5jZShvYmosIGRpY3QpOgogICAgICAgICAgICBzZWxmLnZpc2l0RGljdChvYmosICphcmdzLCAqKmt3YXJncykKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLnZpc2l0TGVhZihvYmosICphcmdzLCAqKmt3YXJncykK
+"""Generic visitor pattern implementation for Python objects."""
+
+import enum
+import weakref
+
+
+class Visitor(object):
+    defaultStop = False
+
+    _visitors = {
+        # By default we skip visiting weak references to avoid recursion
+        # issues. Users can override this by registering a visit
+        # function for weakref.ProxyType.
+        weakref.ProxyType: {None: lambda self, obj, *args, **kwargs: False}
+    }
+
+    @classmethod
+    def _register(celf, clazzes_attrs):
+        assert celf != Visitor, "Subclass Visitor instead."
+        if "_visitors" not in celf.__dict__:
+            celf._visitors = {}
+
+        def wrapper(method):
+            assert method.__name__ == "visit"
+            for clazzes, attrs in clazzes_attrs:
+                if type(clazzes) != tuple:
+                    clazzes = (clazzes,)
+                if type(attrs) == str:
+                    attrs = (attrs,)
+                for clazz in clazzes:
+                    _visitors = celf._visitors.setdefault(clazz, {})
+                    for attr in attrs:
+                        assert attr not in _visitors, (
+                            "Oops, class '%s' has visitor function for '%s' defined already."
+                            % (clazz.__name__, attr)
+                        )
+                        _visitors[attr] = method
+            return None
+
+        return wrapper
+
+    @classmethod
+    def register(celf, clazzes):
+        if type(clazzes) != tuple:
+            clazzes = (clazzes,)
+        return celf._register([(clazzes, (None,))])
+
+    @classmethod
+    def register_attr(celf, clazzes, attrs):
+        clazzes_attrs = []
+        if type(clazzes) != tuple:
+            clazzes = (clazzes,)
+        if type(attrs) == str:
+            attrs = (attrs,)
+        for clazz in clazzes:
+            clazzes_attrs.append((clazz, attrs))
+        return celf._register(clazzes_attrs)
+
+    @classmethod
+    def register_attrs(celf, clazzes_attrs):
+        return celf._register(clazzes_attrs)
+
+    @classmethod
+    def _visitorsFor(celf, thing, _default={}):
+        typ = type(thing)
+
+        for celf in celf.mro():
+            _visitors = getattr(celf, "_visitors", None)
+            if _visitors is None:
+                break
+
+            for base in typ.mro():
+                m = celf._visitors.get(base, None)
+                if m is not None:
+                    return m
+
+        return _default
+
+    def visitObject(self, obj, *args, **kwargs):
+        """Called to visit an object. This function loops over all non-private
+        attributes of the objects and calls any user-registered (via
+        ``@register_attr()`` or ``@register_attrs()``) ``visit()`` functions.
+
+        The visitor will proceed to call ``self.visitAttr()``, unless there is a
+        user-registered visit function and:
+
+        * It returns ``False``; or
+        * It returns ``None`` (or doesn't return anything) and
+          ``visitor.defaultStop`` is ``True`` (non-default).
+        """
+
+        keys = sorted(vars(obj).keys())
+        _visitors = self._visitorsFor(obj)
+        defaultVisitor = _visitors.get("*", None)
+        for key in keys:
+            if key[0] == "_":
+                continue
+            value = getattr(obj, key)
+            visitorFunc = _visitors.get(key, defaultVisitor)
+            if visitorFunc is not None:
+                ret = visitorFunc(self, obj, key, value, *args, **kwargs)
+                if ret == False or (ret is None and self.defaultStop):
+                    continue
+            self.visitAttr(obj, key, value, *args, **kwargs)
+
+    def visitAttr(self, obj, attr, value, *args, **kwargs):
+        """Called to visit an attribute of an object."""
+        self.visit(value, *args, **kwargs)
+
+    def visitList(self, obj, *args, **kwargs):
+        """Called to visit any value that is a list."""
+        for value in obj:
+            self.visit(value, *args, **kwargs)
+
+    def visitDict(self, obj, *args, **kwargs):
+        """Called to visit any value that is a dictionary."""
+        for value in obj.values():
+            self.visit(value, *args, **kwargs)
+
+    def visitLeaf(self, obj, *args, **kwargs):
+        """Called to visit any value that is not an object, list,
+        or dictionary."""
+        pass
+
+    def visit(self, obj, *args, **kwargs):
+        """This is the main entry to the visitor. The visitor will visit object
+        ``obj``.
+
+        The visitor will first determine if there is a registered (via
+        ``@register()``) visit function for the type of object. If there is, it
+        will be called, and ``(visitor, obj, *args, **kwargs)`` will be passed
+        to the user visit function.
+
+        The visitor will not recurse if there is a user-registered visit
+        function and:
+
+        * It returns ``False``; or
+        * It returns ``None`` (or doesn't return anything) and
+          ``visitor.defaultStop`` is ``True`` (non-default)
+
+        Otherwise,  the visitor will proceed to dispatch to one of
+        ``self.visitObject()``, ``self.visitList()``, ``self.visitDict()``, or
+        ``self.visitLeaf()`` (any of which can be overriden in a subclass).
+        """
+
+        visitorFunc = self._visitorsFor(obj).get(None, None)
+        if visitorFunc is not None:
+            ret = visitorFunc(self, obj, *args, **kwargs)
+            if ret == False or (ret is None and self.defaultStop):
+                return
+        if hasattr(obj, "__dict__") and not isinstance(obj, enum.Enum):
+            self.visitObject(obj, *args, **kwargs)
+        elif isinstance(obj, list):
+            self.visitList(obj, *args, **kwargs)
+        elif isinstance(obj, dict):
+            self.visitDict(obj, *args, **kwargs)
+        else:
+            self.visitLeaf(obj, *args, **kwargs)

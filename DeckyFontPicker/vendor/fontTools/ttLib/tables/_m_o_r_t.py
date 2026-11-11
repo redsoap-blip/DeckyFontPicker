@@ -1,1 +1,14 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2bW9ydC5odG1sCmNsYXNzIHRhYmxlX19tX29fcl90KEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiVGhlIEFBVCBgYG1vcnRgYCB0YWJsZSBjb250YWlucyBnbHlwaCB0cmFuc2Zvcm1hdGlvbnMgdXNlZCBmb3Igc2NyaXB0IHNoYXBpbmcgYW5kCiAgICBmb3IgdmFyaW91cyBvdGhlciBvcHRpb25hbCBzbWFydCBmZWF0dXJlcy4KCiAgICBOb3RlOiBgYG1vcnRgYCBoYXMgYmVlbiBkZXByZWNhdGVkIGluIGZhdm9yIG9mIHRoZSBuZXdlciBgYG1vcnhgYCB0YWJsZS4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2bW9ydC5odG1sCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6mort.html
+class table__m_o_r_t(BaseTTXConverter):
+    """The AAT ``mort`` table contains glyph transformations used for script shaping and
+    for various other optional smart features.
+
+    Note: ``mort`` has been deprecated in favor of the newer ``morx`` table.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6mort.html
+    """
+
+    pass

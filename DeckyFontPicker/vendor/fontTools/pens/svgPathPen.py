@@ -1,1 +1,310 @@
-ZnJvbSB0eXBpbmcgaW1wb3J0IENhbGxhYmxlCmZyb20gZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBpbXBvcnQgQmFzZVBlbgoKCmRlZiBwb2ludFRvU3RyaW5nKHB0LCBudG9zPXN0cik6CiAgICByZXR1cm4gIiAiLmpvaW4obnRvcyhpKSBmb3IgaSBpbiBwdCkKCgpjbGFzcyBTVkdQYXRoUGVuKEJhc2VQZW4pOgogICAgIiIiUGVuIHRvIGRyYXcgU1ZHIHBhdGggZCBjb21tYW5kcy4KCiAgICBBcmdzOgogICAgICAgIGdseXBoU2V0OiBhIGRpY3Rpb25hcnkgb2YgZHJhd2FibGUgZ2x5cGggb2JqZWN0cyBrZXllZCBieSBuYW1lCiAgICAgICAgICAgIHVzZWQgdG8gcmVzb2x2ZSBjb21wb25lbnQgcmVmZXJlbmNlcyBpbiBjb21wb3NpdGUgZ2x5cGhzLgogICAgICAgIG50b3M6IGEgY2FsbGFibGUgdGhhdCB0YWtlcyBhIG51bWJlciBhbmQgcmV0dXJucyBhIHN0cmluZywgdG8KICAgICAgICAgICAgY3VzdG9taXplIGhvdyBudW1iZXJzIGFyZSBmb3JtYXR0ZWQgKGRlZmF1bHQ6IHN0cikuCgogICAgOkV4YW1wbGU6CiAgICAgICAgLi4gY29kZS1ibG9jazo6CgogICAgICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgICAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMCkpCiAgICAgICAgICAgID4+PiBwZW4ubGluZVRvKCgxLCAxKSkKICAgICAgICAgICAgPj4+IHBlbi5jdXJ2ZVRvKCgyLCAyKSwgKDMsIDMpLCAoNCwgNCkpCiAgICAgICAgICAgID4+PiBwZW4uY2xvc2VQYXRoKCkKICAgICAgICAgICAgPj4+IHBlbi5nZXRDb21tYW5kcygpCiAgICAgICAgICAgICdNMCAwIDEgMUMyIDIgMyAzIDQgNFonCgogICAgTm90ZToKICAgICAgICBGb250cyBoYXZlIGEgY29vcmRpbmF0ZSBzeXN0ZW0gd2hlcmUgWSBncm93cyB1cCwgd2hlcmVhcyBpbiBTVkcsCiAgICAgICAgWSBncm93cyBkb3duLiAgQXMgc3VjaCwgcmVuZGVyaW5nIHBhdGggZGF0YSBmcm9tIHRoaXMgcGVuIGluCiAgICAgICAgU1ZHIHR5cGljYWxseSByZXN1bHRzIGluIHVwc2lkZS1kb3duIGdseXBocy4gIFlvdSBjYW4gZml4IHRoaXMKICAgICAgICBieSB3cmFwcGluZyB0aGUgZGF0YSBmcm9tIHRoaXMgcGVuIGluIGFuIFNWRyBncm91cCBlbGVtZW50IHdpdGgKICAgICAgICB0cmFuc2Zvcm0sIG9yIHdyYXAgdGhpcyBwZW4gaW4gYSB0cmFuc2Zvcm0gcGVuLiAgRm9yIGV4YW1wbGU6CiAgICAgICAgLi4gY29kZS1ibG9jazo6IHB5dGhvbgoKICAgICAgICAgICAgc3BlbiA9IHN2Z1BhdGhQZW4uU1ZHUGF0aFBlbihnbHlwaHNldCkKICAgICAgICAgICAgcGVuPSBUcmFuc2Zvcm1QZW4oc3BlbiAsICgxLCAwLCAwLCAtMSwgMCwgMCkpCiAgICAgICAgICAgIGdseXBoc2V0W2dseXBobmFtZV0uZHJhdyhwZW4pCiAgICAgICAgICAgIHByaW50KHRwZW4uZ2V0Q29tbWFuZHMoKSkKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaFNldCwgbnRvczogQ2FsbGFibGVbW2Zsb2F0XSwgc3RyXSA9IHN0cik6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBzZWxmLl9jb21tYW5kcyA9IFtdCiAgICAgICAgc2VsZi5fbGFzdENvbW1hbmQgPSBOb25lCiAgICAgICAgc2VsZi5fbGFzdFggPSBOb25lCiAgICAgICAgc2VsZi5fbGFzdFkgPSBOb25lCiAgICAgICAgc2VsZi5fbnRvcyA9IG50b3MKCiAgICBkZWYgX2hhbmRsZUFuY2hvcihzZWxmKToKICAgICAgICAiIiIKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgID4+PiBwZW4ubW92ZVRvKCgwLCAwKSkKICAgICAgICA+Pj4gcGVuLm1vdmVUbygoMTAsIDEwKSkKICAgICAgICA+Pj4gcGVuLl9jb21tYW5kcwogICAgICAgIFsnTTEwIDEwJ10KICAgICAgICAiIiIKICAgICAgICBpZiBzZWxmLl9sYXN0Q29tbWFuZCA9PSAiTSI6CiAgICAgICAgICAgIHNlbGYuX2NvbW1hbmRzLnBvcCgtMSkKCiAgICBkZWYgX21vdmVUbyhzZWxmLCBwdCk6CiAgICAgICAgIiIiCiAgICAgICAgPj4+IHBlbiA9IFNWR1BhdGhQZW4oTm9uZSkKICAgICAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMCkpCiAgICAgICAgPj4+IHBlbi5fY29tbWFuZHMKICAgICAgICBbJ00wIDAnXQoKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgID4+PiBwZW4ubW92ZVRvKCgxMCwgMCkpCiAgICAgICAgPj4+IHBlbi5fY29tbWFuZHMKICAgICAgICBbJ00xMCAwJ10KCiAgICAgICAgPj4+IHBlbiA9IFNWR1BhdGhQZW4oTm9uZSkKICAgICAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMTApKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgWydNMCAxMCddCiAgICAgICAgIiIiCiAgICAgICAgc2VsZi5faGFuZGxlQW5jaG9yKCkKICAgICAgICB0ID0gIk0lcyIgJSAocG9pbnRUb1N0cmluZyhwdCwgc2VsZi5fbnRvcykpCiAgICAgICAgc2VsZi5fY29tbWFuZHMuYXBwZW5kKHQpCiAgICAgICAgc2VsZi5fbGFzdENvbW1hbmQgPSAiTSIKICAgICAgICBzZWxmLl9sYXN0WCwgc2VsZi5fbGFzdFkgPSBwdAoKICAgIGRlZiBfbGluZVRvKHNlbGYsIHB0KToKICAgICAgICAiIiIKICAgICAgICAjIGR1cGxpY2F0ZSBwb2ludAogICAgICAgID4+PiBwZW4gPSBTVkdQYXRoUGVuKE5vbmUpCiAgICAgICAgPj4+IHBlbi5tb3ZlVG8oKDEwLCAxMCkpCiAgICAgICAgPj4+IHBlbi5saW5lVG8oKDEwLCAxMCkpCiAgICAgICAgPj4+IHBlbi5fY29tbWFuZHMKICAgICAgICBbJ00xMCAxMCddCgogICAgICAgICMgdmVydGljYWwgbGluZQogICAgICAgID4+PiBwZW4gPSBTVkdQYXRoUGVuKE5vbmUpCiAgICAgICAgPj4+IHBlbi5tb3ZlVG8oKDEwLCAxMCkpCiAgICAgICAgPj4+IHBlbi5saW5lVG8oKDEwLCAwKSkKICAgICAgICA+Pj4gcGVuLl9jb21tYW5kcwogICAgICAgIFsnTTEwIDEwJywgJ1YwJ10KCiAgICAgICAgIyBob3Jpem9udGFsIGxpbmUKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgID4+PiBwZW4ubW92ZVRvKCgxMCwgMTApKQogICAgICAgID4+PiBwZW4ubGluZVRvKCgwLCAxMCkpCiAgICAgICAgPj4+IHBlbi5fY29tbWFuZHMKICAgICAgICBbJ00xMCAxMCcsICdIMCddCgogICAgICAgICMgYmFzaWMKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgID4+PiBwZW4ubGluZVRvKCg3MCwgODApKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgWydMNzAgODAnXQoKICAgICAgICAjIGJhc2ljIGZvbGxvd2luZyBhIG1vdmV0bwogICAgICAgID4+PiBwZW4gPSBTVkdQYXRoUGVuKE5vbmUpCiAgICAgICAgPj4+IHBlbi5tb3ZlVG8oKDAsIDApKQogICAgICAgID4+PiBwZW4ubGluZVRvKCgxMCwgMTApKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgWydNMCAwJywgJyAxMCAxMCddCiAgICAgICAgIiIiCiAgICAgICAgeCwgeSA9IHB0CiAgICAgICAgIyBkdXBsaWNhdGUgcG9pbnQKICAgICAgICBpZiB4ID09IHNlbGYuX2xhc3RYIGFuZCB5ID09IHNlbGYuX2xhc3RZOgogICAgICAgICAgICByZXR1cm4KICAgICAgICAjIHZlcnRpY2FsIGxpbmUKICAgICAgICBlbGlmIHggPT0gc2VsZi5fbGFzdFg6CiAgICAgICAgICAgIGNtZCA9ICJWIgogICAgICAgICAgICBwdHMgPSBzZWxmLl9udG9zKHkpCiAgICAgICAgIyBob3Jpem9udGFsIGxpbmUKICAgICAgICBlbGlmIHkgPT0gc2VsZi5fbGFzdFk6CiAgICAgICAgICAgIGNtZCA9ICJIIgogICAgICAgICAgICBwdHMgPSBzZWxmLl9udG9zKHgpCiAgICAgICAgIyBwcmV2aW91cyB3YXMgYSBtb3ZldG8KICAgICAgICBlbGlmIHNlbGYuX2xhc3RDb21tYW5kID09ICJNIjoKICAgICAgICAgICAgY21kID0gTm9uZQogICAgICAgICAgICBwdHMgPSAiICIgKyBwb2ludFRvU3RyaW5nKHB0LCBzZWxmLl9udG9zKQogICAgICAgICMgYmFzaWMKICAgICAgICBlbHNlOgogICAgICAgICAgICBjbWQgPSAiTCIKICAgICAgICAgICAgcHRzID0gcG9pbnRUb1N0cmluZyhwdCwgc2VsZi5fbnRvcykKICAgICAgICAjIHdyaXRlIHRoZSBzdHJpbmcKICAgICAgICB0ID0gIiIKICAgICAgICBpZiBjbWQ6CiAgICAgICAgICAgIHQgKz0gY21kCiAgICAgICAgICAgIHNlbGYuX2xhc3RDb21tYW5kID0gY21kCiAgICAgICAgdCArPSBwdHMKICAgICAgICBzZWxmLl9jb21tYW5kcy5hcHBlbmQodCkKICAgICAgICAjIHN0b3JlIGZvciBmdXR1cmUgcmVmZXJlbmNlCiAgICAgICAgc2VsZi5fbGFzdFgsIHNlbGYuX2xhc3RZID0gcHQKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgcHQxLCBwdDIsIHB0Myk6CiAgICAgICAgIiIiCiAgICAgICAgPj4+IHBlbiA9IFNWR1BhdGhQZW4oTm9uZSkKICAgICAgICA+Pj4gcGVuLmN1cnZlVG8oKDEwLCAyMCksICgzMCwgNDApLCAoNTAsIDYwKSkKICAgICAgICA+Pj4gcGVuLl9jb21tYW5kcwogICAgICAgIFsnQzEwIDIwIDMwIDQwIDUwIDYwJ10KICAgICAgICAiIiIKICAgICAgICB0ID0gIkMiCiAgICAgICAgdCArPSBwb2ludFRvU3RyaW5nKHB0MSwgc2VsZi5fbnRvcykgKyAiICIKICAgICAgICB0ICs9IHBvaW50VG9TdHJpbmcocHQyLCBzZWxmLl9udG9zKSArICIgIgogICAgICAgIHQgKz0gcG9pbnRUb1N0cmluZyhwdDMsIHNlbGYuX250b3MpCiAgICAgICAgc2VsZi5fY29tbWFuZHMuYXBwZW5kKHQpCiAgICAgICAgc2VsZi5fbGFzdENvbW1hbmQgPSAiQyIKICAgICAgICBzZWxmLl9sYXN0WCwgc2VsZi5fbGFzdFkgPSBwdDMKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIHB0MSwgcHQyKToKICAgICAgICAiIiIKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lKQogICAgICAgID4+PiBwZW4ucUN1cnZlVG8oKDEwLCAyMCksICgzMCwgNDApKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgWydRMTAgMjAgMzAgNDAnXQogICAgICAgID4+PiBmcm9tIGZvbnRUb29scy5taXNjLnJvdW5kVG9vbHMgaW1wb3J0IG90Um91bmQKICAgICAgICA+Pj4gcGVuID0gU1ZHUGF0aFBlbihOb25lLCBudG9zPWxhbWJkYSB2OiBzdHIob3RSb3VuZCh2KSkpCiAgICAgICAgPj4+IHBlbi5xQ3VydmVUbygoMywgMyksICg3LCA1KSwgKDExLCA0KSkKICAgICAgICA+Pj4gcGVuLl9jb21tYW5kcwogICAgICAgIFsnUTMgMyA1IDQnLCAnUTcgNSAxMSA0J10KICAgICAgICAiIiIKICAgICAgICBhc3NlcnQgcHQyIGlzIG5vdCBOb25lCiAgICAgICAgdCA9ICJRIgogICAgICAgIHQgKz0gcG9pbnRUb1N0cmluZyhwdDEsIHNlbGYuX250b3MpICsgIiAiCiAgICAgICAgdCArPSBwb2ludFRvU3RyaW5nKHB0Miwgc2VsZi5fbnRvcykKICAgICAgICBzZWxmLl9jb21tYW5kcy5hcHBlbmQodCkKICAgICAgICBzZWxmLl9sYXN0Q29tbWFuZCA9ICJRIgogICAgICAgIHNlbGYuX2xhc3RYLCBzZWxmLl9sYXN0WSA9IHB0MgoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpOgogICAgICAgICIiIgogICAgICAgID4+PiBwZW4gPSBTVkdQYXRoUGVuKE5vbmUpCiAgICAgICAgPj4+IHBlbi5jbG9zZVBhdGgoKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgWydaJ10KICAgICAgICAiIiIKICAgICAgICBzZWxmLl9jb21tYW5kcy5hcHBlbmQoIloiKQogICAgICAgIHNlbGYuX2xhc3RDb21tYW5kID0gIloiCiAgICAgICAgc2VsZi5fbGFzdFggPSBzZWxmLl9sYXN0WSA9IE5vbmUKCiAgICBkZWYgX2VuZFBhdGgoc2VsZik6CiAgICAgICAgIiIiCiAgICAgICAgPj4+IHBlbiA9IFNWR1BhdGhQZW4oTm9uZSkKICAgICAgICA+Pj4gcGVuLmVuZFBhdGgoKQogICAgICAgID4+PiBwZW4uX2NvbW1hbmRzCiAgICAgICAgW10KICAgICAgICAiIiIKICAgICAgICBzZWxmLl9sYXN0Q29tbWFuZCA9IE5vbmUKICAgICAgICBzZWxmLl9sYXN0WCA9IHNlbGYuX2xhc3RZID0gTm9uZQoKICAgIGRlZiBnZXRDb21tYW5kcyhzZWxmKToKICAgICAgICByZXR1cm4gIiIuam9pbihzZWxmLl9jb21tYW5kcykKCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiR2VuZXJhdGUgcGVyLWNoYXJhY3RlciBTVkcgZnJvbSBmb250IGFuZCB0ZXh0IiIiCgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGltcG9ydCBzeXMKCiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKICAgIGltcG9ydCBhcmdwYXJzZQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgcGVucy5zdmdQYXRoUGVuIiwgZGVzY3JpcHRpb249IkdlbmVyYXRlIFNWRyBmcm9tIHRleHQiCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJmb250IiwgbWV0YXZhcj0iZm9udC50dGYiLCBoZWxwPSJGb250IGZpbGUuIikKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoInRleHQiLCBtZXRhdmFyPSJ0ZXh0IiwgbmFyZ3M9Ij8iLCBoZWxwPSJUZXh0IHN0cmluZy4iKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXkiLAogICAgICAgIG1ldGF2YXI9IjxudW1iZXI+IiwKICAgICAgICBoZWxwPSJGYWNlIGluZGV4IGludG8gYSBjb2xsZWN0aW9uIHRvIG9wZW4uIFplcm8gYmFzZWQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tZ2x5cGhzIiwKICAgICAgICBtZXRhdmFyPSJ3aGl0ZXNwYWNlLXNlcGFyYXRlZCBsaXN0IG9mIGdseXBoIG5hbWVzIiwKICAgICAgICB0eXBlPXN0ciwKICAgICAgICBoZWxwPSJHbHlwaHMgdG8gc2hvdy4gRXhjbHVzaXZlIHdpdGggdGV4dCBvcHRpb24iLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS12YXJpYXRpb25zIiwKICAgICAgICBtZXRhdmFyPSJBWElTPUxPQyIsCiAgICAgICAgZGVmYXVsdD0iIiwKICAgICAgICBoZWxwPSJMaXN0IG9mIHNwYWNlIHNlcGFyYXRlZCBsb2NhdGlvbnMuIEEgbG9jYXRpb24gY29uc2lzdCBpbiAiCiAgICAgICAgInRoZSBuYW1lIG9mIGEgdmFyaWF0aW9uIGF4aXMsIGZvbGxvd2VkIGJ5ICc9JyBhbmQgYSBudW1iZXIuIEUuZy46ICIKICAgICAgICAid2dodD03MDAgd2R0aD04MC4gVGhlIGRlZmF1bHQgaXMgdGhlIGxvY2F0aW9uIG9mIHRoZSBiYXNlIG1hc3Rlci4iLAogICAgKQoKICAgIG9wdGlvbnMgPSBwYXJzZXIucGFyc2VfYXJncyhhcmdzKQoKICAgIGZvbnROdW1iZXIgPSBpbnQob3B0aW9ucy55KSBpZiBvcHRpb25zLnkgaXMgbm90IE5vbmUgZWxzZSAwCgogICAgZm9udCA9IFRURm9udChvcHRpb25zLmZvbnQsIGZvbnROdW1iZXI9Zm9udE51bWJlcikKICAgIHRleHQgPSBvcHRpb25zLnRleHQKICAgIGdseXBocyA9IG9wdGlvbnMuZ2x5cGhzCgogICAgbG9jYXRpb24gPSB7fQogICAgZm9yIHRhZ192IGluIG9wdGlvbnMudmFyaWF0aW9ucy5zcGxpdCgpOgogICAgICAgIGZpZWxkcyA9IHRhZ192LnNwbGl0KCI9IikKICAgICAgICB0YWcgPSBmaWVsZHNbMF0uc3RyaXAoKQogICAgICAgIHYgPSBmbG9hdChmaWVsZHNbMV0pCiAgICAgICAgbG9jYXRpb25bdGFnXSA9IHYKCiAgICBoaGVhID0gZm9udFsiSEhFQSJdIGlmICJISEVBIiBpbiBmb250IGVsc2UgZm9udFsiaGhlYSJdCiAgICBhc2NlbnQsIGRlc2NlbnQgPSBoaGVhLmFzY2VudCwgaGhlYS5kZXNjZW50CgogICAgZ2x5cGhzZXQgPSBmb250LmdldEdseXBoU2V0KGxvY2F0aW9uPWxvY2F0aW9uKQogICAgY21hcCA9IGZvbnRbImNtYXAiXS5nZXRCZXN0Q21hcCgpCgogICAgaWYgZ2x5cGhzIGlzIG5vdCBOb25lIGFuZCB0ZXh0IGlzIG5vdCBOb25lOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIk9wdGlvbnMgLS1nbHlwaHMgYW5kIC0tdGV4dCBhcmUgZXhjbHVzaXZlIikKCiAgICBpZiBnbHlwaHMgaXMgTm9uZToKICAgICAgICBnbHlwaHMgPSAiICIuam9pbihjbWFwW29yZCh1KV0gZm9yIHUgaW4gdGV4dCkKCiAgICBnbHlwaHMgPSBnbHlwaHMuc3BsaXQoKQoKICAgIHMgPSAiIgogICAgd2lkdGggPSAwCiAgICBmb3IgZyBpbiBnbHlwaHM6CiAgICAgICAgZ2x5cGggPSBnbHlwaHNldFtnXQoKICAgICAgICBwZW4gPSBTVkdQYXRoUGVuKGdseXBoc2V0KQogICAgICAgIGdseXBoLmRyYXcocGVuKQogICAgICAgIGNvbW1hbmRzID0gcGVuLmdldENvbW1hbmRzKCkKCiAgICAgICAgcyArPSAnPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoJWQgJWQpIHNjYWxlKDEgLTEpIj48cGF0aCBkPSIlcyIvPjwvZz5cbicgJSAoCiAgICAgICAgICAgIHdpZHRoLAogICAgICAgICAgICBhc2NlbnQsCiAgICAgICAgICAgIGNvbW1hbmRzLAogICAgICAgICkKCiAgICAgICAgd2lkdGggKz0gZ2x5cGgud2lkdGgKCiAgICBwcmludCgnPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4nKQogICAgcHJpbnQoCiAgICAgICAgJzxzdmcgd2lkdGg9IiVkIiBoZWlnaHQ9IiVkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPicKICAgICAgICAlICh3aWR0aCwgYXNjZW50IC0gZGVzY2VudCkKICAgICkKICAgIHByaW50KHMsIGVuZD0iIikKICAgIHByaW50KCI8L3N2Zz4iKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgaWYgbGVuKHN5cy5hcmd2KSA9PSAxOgogICAgICAgIGltcG9ydCBkb2N0ZXN0CgogICAgICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkKCiAgICBzeXMuZXhpdChtYWluKCkpCg==
+from typing import Callable
+from fontTools.pens.basePen import BasePen
+
+
+def pointToString(pt, ntos=str):
+    return " ".join(ntos(i) for i in pt)
+
+
+class SVGPathPen(BasePen):
+    """Pen to draw SVG path d commands.
+
+    Args:
+        glyphSet: a dictionary of drawable glyph objects keyed by name
+            used to resolve component references in composite glyphs.
+        ntos: a callable that takes a number and returns a string, to
+            customize how numbers are formatted (default: str).
+
+    :Example:
+        .. code-block::
+
+            >>> pen = SVGPathPen(None)
+            >>> pen.moveTo((0, 0))
+            >>> pen.lineTo((1, 1))
+            >>> pen.curveTo((2, 2), (3, 3), (4, 4))
+            >>> pen.closePath()
+            >>> pen.getCommands()
+            'M0 0 1 1C2 2 3 3 4 4Z'
+
+    Note:
+        Fonts have a coordinate system where Y grows up, whereas in SVG,
+        Y grows down.  As such, rendering path data from this pen in
+        SVG typically results in upside-down glyphs.  You can fix this
+        by wrapping the data from this pen in an SVG group element with
+        transform, or wrap this pen in a transform pen.  For example:
+        .. code-block:: python
+
+            spen = svgPathPen.SVGPathPen(glyphset)
+            pen= TransformPen(spen , (1, 0, 0, -1, 0, 0))
+            glyphset[glyphname].draw(pen)
+            print(tpen.getCommands())
+    """
+
+    def __init__(self, glyphSet, ntos: Callable[[float], str] = str):
+        BasePen.__init__(self, glyphSet)
+        self._commands = []
+        self._lastCommand = None
+        self._lastX = None
+        self._lastY = None
+        self._ntos = ntos
+
+    def _handleAnchor(self):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((0, 0))
+        >>> pen.moveTo((10, 10))
+        >>> pen._commands
+        ['M10 10']
+        """
+        if self._lastCommand == "M":
+            self._commands.pop(-1)
+
+    def _moveTo(self, pt):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((0, 0))
+        >>> pen._commands
+        ['M0 0']
+
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((10, 0))
+        >>> pen._commands
+        ['M10 0']
+
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((0, 10))
+        >>> pen._commands
+        ['M0 10']
+        """
+        self._handleAnchor()
+        t = "M%s" % (pointToString(pt, self._ntos))
+        self._commands.append(t)
+        self._lastCommand = "M"
+        self._lastX, self._lastY = pt
+
+    def _lineTo(self, pt):
+        """
+        # duplicate point
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((10, 10))
+        >>> pen.lineTo((10, 10))
+        >>> pen._commands
+        ['M10 10']
+
+        # vertical line
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((10, 10))
+        >>> pen.lineTo((10, 0))
+        >>> pen._commands
+        ['M10 10', 'V0']
+
+        # horizontal line
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((10, 10))
+        >>> pen.lineTo((0, 10))
+        >>> pen._commands
+        ['M10 10', 'H0']
+
+        # basic
+        >>> pen = SVGPathPen(None)
+        >>> pen.lineTo((70, 80))
+        >>> pen._commands
+        ['L70 80']
+
+        # basic following a moveto
+        >>> pen = SVGPathPen(None)
+        >>> pen.moveTo((0, 0))
+        >>> pen.lineTo((10, 10))
+        >>> pen._commands
+        ['M0 0', ' 10 10']
+        """
+        x, y = pt
+        # duplicate point
+        if x == self._lastX and y == self._lastY:
+            return
+        # vertical line
+        elif x == self._lastX:
+            cmd = "V"
+            pts = self._ntos(y)
+        # horizontal line
+        elif y == self._lastY:
+            cmd = "H"
+            pts = self._ntos(x)
+        # previous was a moveto
+        elif self._lastCommand == "M":
+            cmd = None
+            pts = " " + pointToString(pt, self._ntos)
+        # basic
+        else:
+            cmd = "L"
+            pts = pointToString(pt, self._ntos)
+        # write the string
+        t = ""
+        if cmd:
+            t += cmd
+            self._lastCommand = cmd
+        t += pts
+        self._commands.append(t)
+        # store for future reference
+        self._lastX, self._lastY = pt
+
+    def _curveToOne(self, pt1, pt2, pt3):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.curveTo((10, 20), (30, 40), (50, 60))
+        >>> pen._commands
+        ['C10 20 30 40 50 60']
+        """
+        t = "C"
+        t += pointToString(pt1, self._ntos) + " "
+        t += pointToString(pt2, self._ntos) + " "
+        t += pointToString(pt3, self._ntos)
+        self._commands.append(t)
+        self._lastCommand = "C"
+        self._lastX, self._lastY = pt3
+
+    def _qCurveToOne(self, pt1, pt2):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.qCurveTo((10, 20), (30, 40))
+        >>> pen._commands
+        ['Q10 20 30 40']
+        >>> from fontTools.misc.roundTools import otRound
+        >>> pen = SVGPathPen(None, ntos=lambda v: str(otRound(v)))
+        >>> pen.qCurveTo((3, 3), (7, 5), (11, 4))
+        >>> pen._commands
+        ['Q3 3 5 4', 'Q7 5 11 4']
+        """
+        assert pt2 is not None
+        t = "Q"
+        t += pointToString(pt1, self._ntos) + " "
+        t += pointToString(pt2, self._ntos)
+        self._commands.append(t)
+        self._lastCommand = "Q"
+        self._lastX, self._lastY = pt2
+
+    def _closePath(self):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.closePath()
+        >>> pen._commands
+        ['Z']
+        """
+        self._commands.append("Z")
+        self._lastCommand = "Z"
+        self._lastX = self._lastY = None
+
+    def _endPath(self):
+        """
+        >>> pen = SVGPathPen(None)
+        >>> pen.endPath()
+        >>> pen._commands
+        []
+        """
+        self._lastCommand = None
+        self._lastX = self._lastY = None
+
+    def getCommands(self):
+        return "".join(self._commands)
+
+
+def main(args=None):
+    """Generate per-character SVG from font and text"""
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    from fontTools.ttLib import TTFont
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools pens.svgPathPen", description="Generate SVG from text"
+    )
+    parser.add_argument("font", metavar="font.ttf", help="Font file.")
+    parser.add_argument("text", metavar="text", nargs="?", help="Text string.")
+    parser.add_argument(
+        "-y",
+        metavar="<number>",
+        help="Face index into a collection to open. Zero based.",
+    )
+    parser.add_argument(
+        "--glyphs",
+        metavar="whitespace-separated list of glyph names",
+        type=str,
+        help="Glyphs to show. Exclusive with text option",
+    )
+    parser.add_argument(
+        "--variations",
+        metavar="AXIS=LOC",
+        default="",
+        help="List of space separated locations. A location consist in "
+        "the name of a variation axis, followed by '=' and a number. E.g.: "
+        "wght=700 wdth=80. The default is the location of the base master.",
+    )
+
+    options = parser.parse_args(args)
+
+    fontNumber = int(options.y) if options.y is not None else 0
+
+    font = TTFont(options.font, fontNumber=fontNumber)
+    text = options.text
+    glyphs = options.glyphs
+
+    location = {}
+    for tag_v in options.variations.split():
+        fields = tag_v.split("=")
+        tag = fields[0].strip()
+        v = float(fields[1])
+        location[tag] = v
+
+    hhea = font["HHEA"] if "HHEA" in font else font["hhea"]
+    ascent, descent = hhea.ascent, hhea.descent
+
+    glyphset = font.getGlyphSet(location=location)
+    cmap = font["cmap"].getBestCmap()
+
+    if glyphs is not None and text is not None:
+        raise ValueError("Options --glyphs and --text are exclusive")
+
+    if glyphs is None:
+        glyphs = " ".join(cmap[ord(u)] for u in text)
+
+    glyphs = glyphs.split()
+
+    s = ""
+    width = 0
+    for g in glyphs:
+        glyph = glyphset[g]
+
+        pen = SVGPathPen(glyphset)
+        glyph.draw(pen)
+        commands = pen.getCommands()
+
+        s += '<g transform="translate(%d %d) scale(1 -1)"><path d="%s"/></g>\n' % (
+            width,
+            ascent,
+            commands,
+        )
+
+        width += glyph.width
+
+    print('<?xml version="1.0" encoding="UTF-8"?>')
+    print(
+        '<svg width="%d" height="%d" xmlns="http://www.w3.org/2000/svg">'
+        % (width, ascent - descent)
+    )
+    print(s, end="")
+    print("</svg>")
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) == 1:
+        import doctest
+
+        sys.exit(doctest.testmod().failed)
+
+    sys.exit(main())

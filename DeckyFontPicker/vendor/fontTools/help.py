@@ -1,1 +1,36 @@
-aW1wb3J0IHBrZ3V0aWwKaW1wb3J0IHN5cwppbXBvcnQgZm9udFRvb2xzCmltcG9ydCBpbXBvcnRsaWIKaW1wb3J0IG9zCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAoKCmRlZiBtYWluKCk6CiAgICAiIiJTaG93IHRoaXMgaGVscCIiIgogICAgcGF0aCA9IGZvbnRUb29scy5fX3BhdGhfXwogICAgZGVzY3JpcHRpb25zID0ge30KICAgIGZvciBwa2cgaW4gc29ydGVkKAogICAgICAgIG1vZC5uYW1lCiAgICAgICAgZm9yIG1vZCBpbiBwa2d1dGlsLndhbGtfcGFja2FnZXMoW2ZvbnRUb29scy5fX3BhdGhfX1swXV0sIHByZWZpeD0iZm9udFRvb2xzLiIpCiAgICApOgogICAgICAgIHRyeToKICAgICAgICAgICAgaW1wb3J0cyA9IF9faW1wb3J0X18ocGtnLCBnbG9iYWxzKCksIGxvY2FscygpLCBbIm1haW4iXSkKICAgICAgICBleGNlcHQgSW1wb3J0RXJyb3IgYXMgZToKICAgICAgICAgICAgY29udGludWUKICAgICAgICB0cnk6CiAgICAgICAgICAgIGRlc2NyaXB0aW9uID0gaW1wb3J0cy5tYWluLl9fZG9jX18KICAgICAgICAgICAgIyBDeXRob24gbW9kdWxlcyBzZWVtIHRvIHJldHVybiAibWFpbigpIiBhcyB0aGUgZG9jc3RyaW5nCiAgICAgICAgICAgIGlmIGRlc2NyaXB0aW9uIGFuZCBkZXNjcmlwdGlvbiAhPSAibWFpbigpIjoKICAgICAgICAgICAgICAgIHBrZyA9IHBrZy5yZXBsYWNlKCJmb250VG9vbHMuIiwgIiIpLnJlcGxhY2UoIi5fX21haW5fXyIsICIiKQogICAgICAgICAgICAgICAgIyBzaG93IHRoZSBkb2NzdHJpbmcncyBmaXJzdCBsaW5lIG9ubHkKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uc1twa2ddID0gZGVzY3JpcHRpb24uc3BsaXRsaW5lcygpWzBdCiAgICAgICAgZXhjZXB0IEF0dHJpYnV0ZUVycm9yIGFzIGU6CiAgICAgICAgICAgIHBhc3MKICAgIGZvciBwa2csIGRlc2NyaXB0aW9uIGluIGRlc2NyaXB0aW9ucy5pdGVtcygpOgogICAgICAgIHByaW50KCJmb250dG9vbHMgJS0yNXMgJXMiICUgKHBrZywgZGVzY3JpcHRpb24pLCBmaWxlPXN5cy5zdGRlcnIpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHByaW50KCJmb250dG9vbHMgdiVzXG4iICUgZm9udFRvb2xzLl9fdmVyc2lvbl9fLCBmaWxlPXN5cy5zdGRlcnIpCiAgICBtYWluKCkK
+import pkgutil
+import sys
+import fontTools
+import importlib
+import os
+from pathlib import Path
+
+
+def main():
+    """Show this help"""
+    path = fontTools.__path__
+    descriptions = {}
+    for pkg in sorted(
+        mod.name
+        for mod in pkgutil.walk_packages([fontTools.__path__[0]], prefix="fontTools.")
+    ):
+        try:
+            imports = __import__(pkg, globals(), locals(), ["main"])
+        except ImportError as e:
+            continue
+        try:
+            description = imports.main.__doc__
+            # Cython modules seem to return "main()" as the docstring
+            if description and description != "main()":
+                pkg = pkg.replace("fontTools.", "").replace(".__main__", "")
+                # show the docstring's first line only
+                descriptions[pkg] = description.splitlines()[0]
+        except AttributeError as e:
+            pass
+    for pkg, description in descriptions.items():
+        print("fonttools %-25s %s" % (pkg, description), file=sys.stderr)
+
+
+if __name__ == "__main__":
+    print("fonttools v%s\n" % fontTools.__version__, file=sys.stderr)
+    main()

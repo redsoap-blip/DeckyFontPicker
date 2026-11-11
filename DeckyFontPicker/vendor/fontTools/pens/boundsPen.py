@@ -1,1 +1,97 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5hcnJheVRvb2xzIGltcG9ydCB1cGRhdGVCb3VuZHMsIHBvaW50SW5SZWN0LCB1bmlvblJlY3QKZnJvbSBmb250VG9vbHMubWlzYy5iZXppZXJUb29scyBpbXBvcnQgY2FsY0N1YmljQm91bmRzLCBjYWxjUXVhZHJhdGljQm91bmRzCmZyb20gZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBpbXBvcnQgQmFzZVBlbgoKX19hbGxfXyA9IFsiQm91bmRzUGVuIiwgIkNvbnRyb2xCb3VuZHNQZW4iXQoKCmNsYXNzIENvbnRyb2xCb3VuZHNQZW4oQmFzZVBlbik6CiAgICAiIiJQZW4gdG8gY2FsY3VsYXRlIHRoZSAiY29udHJvbCBib3VuZHMiIG9mIGEgc2hhcGUuIFRoaXMgaXMgdGhlCiAgICBib3VuZGluZyBib3ggb2YgYWxsIGNvbnRyb2wgcG9pbnRzLCBzbyBtYXkgYmUgbGFyZ2VyIHRoYW4gdGhlCiAgICBhY3R1YWwgYm91bmRpbmcgYm94IGlmIHRoZXJlIGFyZSBjdXJ2ZXMgdGhhdCBkb24ndCBoYXZlIHBvaW50cwogICAgb24gdGhlaXIgZXh0cmVtZXMuCgogICAgV2hlbiB0aGUgc2hhcGUgaGFzIGJlZW4gZHJhd24sIHRoZSBib3VuZHMgYXJlIGF2YWlsYWJsZSBhcyB0aGUKICAgIGBgYm91bmRzYGAgYXR0cmlidXRlIG9mIHRoZSBwZW4gb2JqZWN0LiBJdCdzIGEgNC10dXBsZTo6CgogICAgICAgICAgICAoeE1pbiwgeU1pbiwgeE1heCwgeU1heCkuCgogICAgSWYgYGBpZ25vcmVTaW5nbGVQb2ludHNgYCBpcyBUcnVlLCBzaW5nbGUgcG9pbnRzIGFyZSBpZ25vcmVkLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGdseXBoU2V0LCBpZ25vcmVTaW5nbGVQb2ludHM9RmFsc2UpOgogICAgICAgIEJhc2VQZW4uX19pbml0X18oc2VsZiwgZ2x5cGhTZXQpCiAgICAgICAgc2VsZi5pZ25vcmVTaW5nbGVQb2ludHMgPSBpZ25vcmVTaW5nbGVQb2ludHMKICAgICAgICBzZWxmLmluaXQoKQoKICAgIGRlZiBpbml0KHNlbGYpOgogICAgICAgIHNlbGYuYm91bmRzID0gTm9uZQogICAgICAgIHNlbGYuX3N0YXJ0ID0gTm9uZQoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHB0KToKICAgICAgICBzZWxmLl9zdGFydCA9IHB0CiAgICAgICAgaWYgbm90IHNlbGYuaWdub3JlU2luZ2xlUG9pbnRzOgogICAgICAgICAgICBzZWxmLl9hZGRNb3ZlVG8oKQoKICAgIGRlZiBfYWRkTW92ZVRvKHNlbGYpOgogICAgICAgIGlmIHNlbGYuX3N0YXJ0IGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIGJvdW5kcyA9IHNlbGYuYm91bmRzCiAgICAgICAgaWYgYm91bmRzOgogICAgICAgICAgICBzZWxmLmJvdW5kcyA9IHVwZGF0ZUJvdW5kcyhib3VuZHMsIHNlbGYuX3N0YXJ0KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHgsIHkgPSBzZWxmLl9zdGFydAogICAgICAgICAgICBzZWxmLmJvdW5kcyA9ICh4LCB5LCB4LCB5KQogICAgICAgIHNlbGYuX3N0YXJ0ID0gTm9uZQoKICAgIGRlZiBfbGluZVRvKHNlbGYsIHB0KToKICAgICAgICBzZWxmLl9hZGRNb3ZlVG8oKQogICAgICAgIHNlbGYuYm91bmRzID0gdXBkYXRlQm91bmRzKHNlbGYuYm91bmRzLCBwdCkKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgYmNwMSwgYmNwMiwgcHQpOgogICAgICAgIHNlbGYuX2FkZE1vdmVUbygpCiAgICAgICAgYm91bmRzID0gc2VsZi5ib3VuZHMKICAgICAgICBib3VuZHMgPSB1cGRhdGVCb3VuZHMoYm91bmRzLCBiY3AxKQogICAgICAgIGJvdW5kcyA9IHVwZGF0ZUJvdW5kcyhib3VuZHMsIGJjcDIpCiAgICAgICAgYm91bmRzID0gdXBkYXRlQm91bmRzKGJvdW5kcywgcHQpCiAgICAgICAgc2VsZi5ib3VuZHMgPSBib3VuZHMKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIGJjcCwgcHQpOgogICAgICAgIHNlbGYuX2FkZE1vdmVUbygpCiAgICAgICAgYm91bmRzID0gc2VsZi5ib3VuZHMKICAgICAgICBib3VuZHMgPSB1cGRhdGVCb3VuZHMoYm91bmRzLCBiY3ApCiAgICAgICAgYm91bmRzID0gdXBkYXRlQm91bmRzKGJvdW5kcywgcHQpCiAgICAgICAgc2VsZi5ib3VuZHMgPSBib3VuZHMKCgpjbGFzcyBCb3VuZHNQZW4oQ29udHJvbEJvdW5kc1Blbik6CiAgICAiIiJQZW4gdG8gY2FsY3VsYXRlIHRoZSBib3VuZHMgb2YgYSBzaGFwZS4gSXQgY2FsY3VsYXRlcyB0aGUKICAgIGNvcnJlY3QgYm91bmRzIGV2ZW4gd2hlbiB0aGUgc2hhcGUgY29udGFpbnMgY3VydmVzIHRoYXQgZG9uJ3QKICAgIGhhdmUgcG9pbnRzIG9uIHRoZWlyIGV4dHJlbWVzLiBUaGlzIGlzIHNvbWV3aGF0IHNsb3dlciB0byBjb21wdXRlCiAgICB0aGFuIHRoZSAiY29udHJvbCBib3VuZHMiLgoKICAgIFdoZW4gdGhlIHNoYXBlIGhhcyBiZWVuIGRyYXduLCB0aGUgYm91bmRzIGFyZSBhdmFpbGFibGUgYXMgdGhlCiAgICBgYGJvdW5kc2BgIGF0dHJpYnV0ZSBvZiB0aGUgcGVuIG9iamVjdC4gSXQncyBhIDQtdHVwbGU6OgoKICAgICAgICAgICAgKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpCiAgICAiIiIKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgYmNwMSwgYmNwMiwgcHQpOgogICAgICAgIHNlbGYuX2FkZE1vdmVUbygpCiAgICAgICAgYm91bmRzID0gc2VsZi5ib3VuZHMKICAgICAgICBib3VuZHMgPSB1cGRhdGVCb3VuZHMoYm91bmRzLCBwdCkKICAgICAgICBpZiBub3QgcG9pbnRJblJlY3QoYmNwMSwgYm91bmRzKSBvciBub3QgcG9pbnRJblJlY3QoYmNwMiwgYm91bmRzKToKICAgICAgICAgICAgYm91bmRzID0gdW5pb25SZWN0KAogICAgICAgICAgICAgICAgYm91bmRzLCBjYWxjQ3ViaWNCb3VuZHMoc2VsZi5fZ2V0Q3VycmVudFBvaW50KCksIGJjcDEsIGJjcDIsIHB0KQogICAgICAgICAgICApCiAgICAgICAgc2VsZi5ib3VuZHMgPSBib3VuZHMKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIGJjcCwgcHQpOgogICAgICAgIHNlbGYuX2FkZE1vdmVUbygpCiAgICAgICAgYm91bmRzID0gc2VsZi5ib3VuZHMKICAgICAgICBib3VuZHMgPSB1cGRhdGVCb3VuZHMoYm91bmRzLCBwdCkKICAgICAgICBpZiBub3QgcG9pbnRJblJlY3QoYmNwLCBib3VuZHMpOgogICAgICAgICAgICBib3VuZHMgPSB1bmlvblJlY3QoCiAgICAgICAgICAgICAgICBib3VuZHMsIGNhbGNRdWFkcmF0aWNCb3VuZHMoc2VsZi5fZ2V0Q3VycmVudFBvaW50KCksIGJjcCwgcHQpCiAgICAgICAgICAgICkKICAgICAgICBzZWxmLmJvdW5kcyA9IGJvdW5kcwo=
+from fontTools.misc.arrayTools import updateBounds, pointInRect, unionRect
+from fontTools.misc.bezierTools import calcCubicBounds, calcQuadraticBounds
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["BoundsPen", "ControlBoundsPen"]
+
+
+class ControlBoundsPen(BasePen):
+    """Pen to calculate the "control bounds" of a shape. This is the
+    bounding box of all control points, so may be larger than the
+    actual bounding box if there are curves that don't have points
+    on their extremes.
+
+    When the shape has been drawn, the bounds are available as the
+    ``bounds`` attribute of the pen object. It's a 4-tuple::
+
+            (xMin, yMin, xMax, yMax).
+
+    If ``ignoreSinglePoints`` is True, single points are ignored.
+    """
+
+    def __init__(self, glyphSet, ignoreSinglePoints=False):
+        BasePen.__init__(self, glyphSet)
+        self.ignoreSinglePoints = ignoreSinglePoints
+        self.init()
+
+    def init(self):
+        self.bounds = None
+        self._start = None
+
+    def _moveTo(self, pt):
+        self._start = pt
+        if not self.ignoreSinglePoints:
+            self._addMoveTo()
+
+    def _addMoveTo(self):
+        if self._start is None:
+            return
+        bounds = self.bounds
+        if bounds:
+            self.bounds = updateBounds(bounds, self._start)
+        else:
+            x, y = self._start
+            self.bounds = (x, y, x, y)
+        self._start = None
+
+    def _lineTo(self, pt):
+        self._addMoveTo()
+        self.bounds = updateBounds(self.bounds, pt)
+
+    def _curveToOne(self, bcp1, bcp2, pt):
+        self._addMoveTo()
+        bounds = self.bounds
+        bounds = updateBounds(bounds, bcp1)
+        bounds = updateBounds(bounds, bcp2)
+        bounds = updateBounds(bounds, pt)
+        self.bounds = bounds
+
+    def _qCurveToOne(self, bcp, pt):
+        self._addMoveTo()
+        bounds = self.bounds
+        bounds = updateBounds(bounds, bcp)
+        bounds = updateBounds(bounds, pt)
+        self.bounds = bounds
+
+
+class BoundsPen(ControlBoundsPen):
+    """Pen to calculate the bounds of a shape. It calculates the
+    correct bounds even when the shape contains curves that don't
+    have points on their extremes. This is somewhat slower to compute
+    than the "control bounds".
+
+    When the shape has been drawn, the bounds are available as the
+    ``bounds`` attribute of the pen object. It's a 4-tuple::
+
+            (xMin, yMin, xMax, yMax)
+    """
+
+    def _curveToOne(self, bcp1, bcp2, pt):
+        self._addMoveTo()
+        bounds = self.bounds
+        bounds = updateBounds(bounds, pt)
+        if not pointInRect(bcp1, bounds) or not pointInRect(bcp2, bounds):
+            bounds = unionRect(
+                bounds, calcCubicBounds(self._getCurrentPoint(), bcp1, bcp2, pt)
+            )
+        self.bounds = bounds
+
+    def _qCurveToOne(self, bcp, pt):
+        self._addMoveTo()
+        bounds = self.bounds
+        bounds = updateBounds(bounds, pt)
+        if not pointInRect(bcp, bounds):
+            bounds = unionRect(
+                bounds, calcQuadraticBounds(self._getCurrentPoint(), bcp, pt)
+            )
+        self.bounds = bounds

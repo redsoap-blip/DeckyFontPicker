@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfR19TX1VfQl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJHbHlwaCBTdWJzdGl0dXRpb24gdGFibGUKCiAgICBUaGUgYGBHU1VCYGAgdGFibGUgY29udGFpbnMgZ2x5cGgtc3Vic3RpdHV0aW9uIHJ1bGVzIHVzZWQgaW4KICAgIE9wZW5UeXBlIExheW91dC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2dzdWIKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table_G_S_U_B_(BaseTTXConverter):
+    """Glyph Substitution table
+
+    The ``GSUB`` table contains glyph-substitution rules used in
+    OpenType Layout.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/gsub
+    """
+
+    pass

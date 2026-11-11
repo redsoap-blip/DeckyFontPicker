@@ -1,1 +1,70 @@
-ZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IHN5cwppbXBvcnQgYXJyYXkKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKCmNsYXNzIHRhYmxlX19sX29fY19hKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiSW5kZXggdG8gTG9jYXRpb24gdGFibGUKCiAgICBUaGUgYGBsb2NhYGAgdGFibGUgc3RvcmVzIHRoZSBvZmZzZXRzIGluIHRoZSBgYGdseWZgYCB0YWJsZSB0aGF0IGNvcnJlc3BvbmQKICAgIHRvIHRoZSBkZXNjcmlwdGlvbnMgb2YgZWFjaCBnbHlwaC4gVGhlIGdseXBocyBhcmUgcmVmZXJlbmNlcyBieSBHbHlwaCBJRC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2xvY2EKICAgICIiIgoKICAgIGRlcGVuZGVuY2llcyA9IFsiZ2x5ZiJdCiAgICBtYXhwVGFnID0gIm1heHAiCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIGxvbmdGb3JtYXQgPSB0dEZvbnRbImhlYWQiXS5pbmRleFRvTG9jRm9ybWF0CiAgICAgICAgaWYgbG9uZ0Zvcm1hdDoKICAgICAgICAgICAgZm9ybWF0ID0gIkkiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZm9ybWF0ID0gIkgiCiAgICAgICAgbG9jYXRpb25zID0gYXJyYXkuYXJyYXkoZm9ybWF0KQogICAgICAgIGxvY2F0aW9ucy5mcm9tYnl0ZXMoZGF0YSkKICAgICAgICBpZiBzeXMuYnl0ZW9yZGVyICE9ICJiaWciOgogICAgICAgICAgICBsb2NhdGlvbnMuYnl0ZXN3YXAoKQogICAgICAgIGlmIG5vdCBsb25nRm9ybWF0OgogICAgICAgICAgICBsb2NhdGlvbnMgPSBhcnJheS5hcnJheSgiSSIsICgyICogbCBmb3IgbCBpbiBsb2NhdGlvbnMpKQogICAgICAgIGlmIGxlbihsb2NhdGlvbnMpIDwgKHR0Rm9udFtzZWxmLm1heHBUYWddLm51bUdseXBocyArIDEpOgogICAgICAgICAgICBsb2cud2FybmluZygKICAgICAgICAgICAgICAgICJjb3JydXB0ICdsb2NhJyB0YWJsZSwgb3Igd3JvbmcgbnVtR2x5cGhzIGluICdtYXhwJzogJWQgJWQiLAogICAgICAgICAgICAgICAgbGVuKGxvY2F0aW9ucykgLSAxLAogICAgICAgICAgICAgICAgdHRGb250W3NlbGYubWF4cFRhZ10ubnVtR2x5cGhzLAogICAgICAgICAgICApCiAgICAgICAgc2VsZi5sb2NhdGlvbnMgPSBsb2NhdGlvbnMKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIHRyeToKICAgICAgICAgICAgbWF4X2xvY2F0aW9uID0gbWF4KHNlbGYubG9jYXRpb25zKQogICAgICAgIGV4Y2VwdCBBdHRyaWJ1dGVFcnJvcjoKICAgICAgICAgICAgc2VsZi5zZXQoW10pCiAgICAgICAgICAgIG1heF9sb2NhdGlvbiA9IDAKICAgICAgICBpZiBtYXhfbG9jYXRpb24gPCAweDIwMDAwIGFuZCBhbGwobCAlIDIgPT0gMCBmb3IgbCBpbiBzZWxmLmxvY2F0aW9ucyk6CiAgICAgICAgICAgIGxvY2F0aW9ucyA9IGFycmF5LmFycmF5KCJIIikKICAgICAgICAgICAgZm9yIGxvY2F0aW9uIGluIHNlbGYubG9jYXRpb25zOgogICAgICAgICAgICAgICAgbG9jYXRpb25zLmFwcGVuZChsb2NhdGlvbiAvLyAyKQogICAgICAgICAgICB0dEZvbnRbImhlYWQiXS5pbmRleFRvTG9jRm9ybWF0ID0gMAogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxvY2F0aW9ucyA9IGFycmF5LmFycmF5KCJJIiwgc2VsZi5sb2NhdGlvbnMpCiAgICAgICAgICAgIHR0Rm9udFsiaGVhZCJdLmluZGV4VG9Mb2NGb3JtYXQgPSAxCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgbG9jYXRpb25zLmJ5dGVzd2FwKCkKICAgICAgICByZXR1cm4gbG9jYXRpb25zLnRvYnl0ZXMoKQoKICAgIGRlZiBzZXQoc2VsZiwgbG9jYXRpb25zKToKICAgICAgICBzZWxmLmxvY2F0aW9ucyA9IGFycmF5LmFycmF5KCJJIiwgbG9jYXRpb25zKQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgd3JpdGVyLmNvbW1lbnQoIlRoZSAnbG9jYScgdGFibGUgd2lsbCBiZSBjYWxjdWxhdGVkIGJ5IHRoZSBjb21waWxlciIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBpbmRleCk6CiAgICAgICAgcmV0dXJuIHNlbGYubG9jYXRpb25zW2luZGV4XQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5sb2NhdGlvbnMpCg==
+from . import DefaultTable
+import sys
+import array
+import logging
+
+log = logging.getLogger(__name__)
+
+
+class table__l_o_c_a(DefaultTable.DefaultTable):
+    """Index to Location table
+
+    The ``loca`` table stores the offsets in the ``glyf`` table that correspond
+    to the descriptions of each glyph. The glyphs are references by Glyph ID.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/loca
+    """
+
+    dependencies = ["glyf"]
+    maxpTag = "maxp"
+
+    def decompile(self, data, ttFont):
+        longFormat = ttFont["head"].indexToLocFormat
+        if longFormat:
+            format = "I"
+        else:
+            format = "H"
+        locations = array.array(format)
+        locations.frombytes(data)
+        if sys.byteorder != "big":
+            locations.byteswap()
+        if not longFormat:
+            locations = array.array("I", (2 * l for l in locations))
+        if len(locations) < (ttFont[self.maxpTag].numGlyphs + 1):
+            log.warning(
+                "corrupt 'loca' table, or wrong numGlyphs in 'maxp': %d %d",
+                len(locations) - 1,
+                ttFont[self.maxpTag].numGlyphs,
+            )
+        self.locations = locations
+
+    def compile(self, ttFont):
+        try:
+            max_location = max(self.locations)
+        except AttributeError:
+            self.set([])
+            max_location = 0
+        if max_location < 0x20000 and all(l % 2 == 0 for l in self.locations):
+            locations = array.array("H")
+            for location in self.locations:
+                locations.append(location // 2)
+            ttFont["head"].indexToLocFormat = 0
+        else:
+            locations = array.array("I", self.locations)
+            ttFont["head"].indexToLocFormat = 1
+        if sys.byteorder != "big":
+            locations.byteswap()
+        return locations.tobytes()
+
+    def set(self, locations):
+        self.locations = array.array("I", locations)
+
+    def toXML(self, writer, ttFont):
+        writer.comment("The 'loca' table will be calculated by the compiler")
+        writer.newline()
+
+    def __getitem__(self, index):
+        return self.locations[index]
+
+    def __len__(self):
+        return len(self.locations)

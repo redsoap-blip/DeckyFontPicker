@@ -1,1 +1,153 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IEFueQoKZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luLCBzYWZlRXZhbApmcm9tIGZvbnRUb29scy5taXNjLnhtbFdyaXRlciBpbXBvcnQgWE1MV3JpdGVyCmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQsIFRUTGliRXJyb3IKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLkRlZmF1bHRUYWJsZSBpbXBvcnQgWE1MQXR0cnMsIFhNTENvbnRlbnQKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLkVfQl9MX0NfIGltcG9ydCBzYml0TGluZU1ldHJpY3NGb3JtYXQsIFNiaXRMaW5lTWV0cmljcwoKZWJzY0hlYWRlckZvcm1hdCA9ICIiIgogICAgPiAjIGJpZyBlbmRpYW4KICAgIHZlcnNpb246ICAxNi4xNkYKICAgIG51bVNpemVzOiBJCiIiIgoKYml0bWFwU2NhbGVUYWJsZUZvcm1hdFBhcnQyID0gIiIiCiAgICA+ICMgYmlnIGVuZGlhbgogICAgcHBlbVg6ICAgICAgICAgICBCCiAgICBwcGVtWTogICAgICAgICAgIEIKICAgIHN1YnN0aXR1dGVQcGVtWDogQgogICAgc3Vic3RpdHV0ZVBwZW1ZOiBCCiIiIgoKCmNsYXNzIHRhYmxlX0VfQl9TX0NfKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiCiAgICBFbWJlZGRlZCBCaXRtYXAgU2NhbGluZyBUYWJsZQoKICAgIFRoZSBgYEVCU0NgYCB0YWJsZSBwcm92aWRlcyBhIG1lY2hhbmlzbSBmb3IgZGVzY3JpYmluZyBlbWJlZGRlZCBiaXRtYXBzIHdoaWNoIGFyZSBjcmVhdGVkIGJ5CiAgICBzY2FsaW5nIG90aGVyIGVtYmVkZGVkIGJpdG1hcHMuIFdoaWxlIHRoaXMgaXMgdGhlIHNvcnQgb2YgdGhpbmcgdGhhdCBvdXRsaW5lIGZvbnQgdGVjaG5vbG9naWVzCiAgICB3ZXJlIGludmVudGVkIHRvIGF2b2lkLCB0aGVyZSBhcmUgY2FzZXMgKHNtYWxsIHNpemVzIG9mIEthbmppLCBmb3IgZXhhbXBsZSkgd2hlcmUgc2NhbGluZyBhIGJpdG1hcAogICAgcHJvZHVjZXMgbW9yZSBsZWdpYmxlIGdseXBocyB0aGFuIHNjYW4tY29udmVydGluZyBhbiBvdXRsaW5lLiBGb3IgdGhpcyByZWFzb24sIHRoZSBFQlNDIHRhYmxlCiAgICBhbGxvd3MgYSBmb250IHRvIGRlZmluZSBhIGJpdG1hcCBzdHJpa2UgYXMgYSBzY2FsZWQgdmVyc2lvbiBvZiBhbm90aGVyIHN0cmlrZS4KCiAgICBUaGUgYGBFQlNDYGAgdGFibGUgaXMgdXNlZCB0b2dldGhlciB3aXRoIHRoZSBgYEVCRFRgYCB0YWJsZSwgd2hpY2ggcHJvdmlkZXMgZW1iZWRkZWQgbW9ub2Nocm9tZSBvcgogICAgZ3JheXNjYWxlIGJpdG1hcCBkYXRhLCBhbmQgdGhlIGBgRUJMQ2BgIHRhYmxlLCB3aGljaCBwcm92aWRlcyBlbWJlZGRlZCBiaXRtYXAgbG9jYXRvcnMuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9lYnNjCiAgICAiIiIKCiAgICBkZXBlbmRlbmNpZXMgPSBbIkVCRFQiLCAiRUJMQyJdCgogICAgdmVyc2lvbjogZmxvYXQKICAgIG51bVNpemVzOiBpbnQKICAgIGJpdG1hcFNjYWxlVGFibGVzOiBsaXN0W0JpdG1hcFNjYWxlVGFibGVdCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhOiBieXRlcywgdHRGb250OiBUVEZvbnQpOgogICAgICAgIF8sIGRhdGEgPSBzc3RydWN0LnVucGFjazIoZWJzY0hlYWRlckZvcm1hdCwgZGF0YSwgc2VsZikKICAgICAgICBzZWxmLmJpdG1hcFNjYWxlVGFibGVzID0gW10KICAgICAgICBmb3IgXyBpbiByYW5nZShzZWxmLm51bVNpemVzKToKICAgICAgICAgICAgYml0bWFwU2NhbGVUYWJsZSA9IEJpdG1hcFNjYWxlVGFibGUoKQogICAgICAgICAgICBkYXRhID0gYml0bWFwU2NhbGVUYWJsZS5kZWNvbXBpbGUoZGF0YSkKICAgICAgICAgICAgc2VsZi5iaXRtYXBTY2FsZVRhYmxlcy5hcHBlbmQoYml0bWFwU2NhbGVUYWJsZSkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQ6IFRURm9udCkgLT4gYnl0ZXM6CiAgICAgICAgc2VsZi5udW1TaXplcyA9IGxlbihzZWxmLmJpdG1hcFNjYWxlVGFibGVzKQogICAgICAgIGRhdGFMaXN0ID0gW3NzdHJ1Y3QucGFjayhlYnNjSGVhZGVyRm9ybWF0LCBzZWxmKV0KICAgICAgICBmb3IgYml0bWFwU2NhbGVUYWJsZSBpbiBzZWxmLmJpdG1hcFNjYWxlVGFibGVzOgogICAgICAgICAgICBkYXRhTGlzdC5hcHBlbmQoYml0bWFwU2NhbGVUYWJsZS5jb21waWxlKCkpCiAgICAgICAgcmV0dXJuIGJ5dGVzam9pbihkYXRhTGlzdCkKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyOiBYTUxXcml0ZXIsIHR0Rm9udDogVFRGb250LCAqKmt3YXJnczogQW55KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKAogICAgICAgICAgICAiaGVhZGVyIiwKICAgICAgICAgICAgWygidmVyc2lvbiIsIHNlbGYudmVyc2lvbiksICgibnVtU2l6ZXMiLCBsZW4oc2VsZi5iaXRtYXBTY2FsZVRhYmxlcykpXSwKICAgICAgICApCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciBpbmRleCwgYml0bWFwU2NhbGVUYWJsZSBpbiBlbnVtZXJhdGUoc2VsZi5iaXRtYXBTY2FsZVRhYmxlcyk6CiAgICAgICAgICAgIGJpdG1hcFNjYWxlVGFibGUudG9YTUwoaW5kZXgsIHdyaXRlciwgdHRGb250KQoKICAgIGRlZiBmcm9tWE1MKAogICAgICAgIHNlbGYsIG5hbWU6IHN0ciwgYXR0cnM6IGRpY3Rbc3RyLCBzdHJdLCBjb250ZW50OiBYTUxDb250ZW50LCB0dEZvbnQ6IFRURm9udAogICAgKToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAiYml0bWFwU2NhbGVUYWJsZXMiKToKICAgICAgICAgICAgc2VsZi5iaXRtYXBTY2FsZVRhYmxlcyA9IFtdCiAgICAgICAgaWYgbmFtZSA9PSAiaGVhZGVyIjoKICAgICAgICAgICAgc2VsZi52ZXJzaW9uID0gc2FmZUV2YWwoYXR0cnNbInZlcnNpb24iXSkKICAgICAgICAgICAgc2VsZi5udW1TaXplcyA9IHNhZmVFdmFsKGF0dHJzWyJudW1TaXplcyJdKQogICAgICAgIGVsaWYgbmFtZSA9PSAiYml0bWFwU2NhbGVUYWJsZSI6CiAgICAgICAgICAgIGJpdG1hcFNjYWxlVGFibGUgPSBCaXRtYXBTY2FsZVRhYmxlKCkKICAgICAgICAgICAgYml0bWFwU2NhbGVUYWJsZS5mcm9tWE1MKGNvbnRlbnQsIHR0Rm9udCkKICAgICAgICAgICAgc2VsZi5iaXRtYXBTY2FsZVRhYmxlcy5hcHBlbmQoYml0bWFwU2NhbGVUYWJsZSkKCgpjbGFzcyBCaXRtYXBTY2FsZVRhYmxlOgogICAgaG9yaTogU2JpdExpbmVNZXRyaWNzCiAgICB2ZXJ0OiBTYml0TGluZU1ldHJpY3MKICAgIHBwZW1YOiBpbnQKICAgIHBwZW1ZOiBpbnQKICAgIHN1YnN0aXR1dGVQcGVtWDogaW50CiAgICBzdWJzdGl0dXRlUHBlbVk6IGludAoKICAgIGRlZiBfX2luaXRfXygKICAgICAgICBzZWxmLAogICAgICAgIGhvcmk6IFNiaXRMaW5lTWV0cmljcyB8IE5vbmUgPSBOb25lLAogICAgICAgIHZlcnQ6IFNiaXRMaW5lTWV0cmljcyB8IE5vbmUgPSBOb25lLAogICAgICAgIHBwZW1YOiBpbnQgPSAwLAogICAgICAgIHBwZW1ZOiBpbnQgPSAwLAogICAgICAgIHN1YnN0aXR1dGVQcGVtWDogaW50ID0gMCwKICAgICAgICBzdWJzdGl0dXRlUHBlbVk6IGludCA9IDAsCiAgICApOgogICAgICAgIHNlbGYuaG9yaSA9IGhvcmkgaWYgaG9yaSBpcyBub3QgTm9uZSBlbHNlIFNiaXRMaW5lTWV0cmljcygpCiAgICAgICAgc2VsZi52ZXJ0ID0gdmVydCBpZiB2ZXJ0IGlzIG5vdCBOb25lIGVsc2UgU2JpdExpbmVNZXRyaWNzKCkKICAgICAgICBzZWxmLnBwZW1YID0gcHBlbVgKICAgICAgICBzZWxmLnBwZW1ZID0gcHBlbVkKICAgICAgICBzZWxmLnN1YnN0aXR1dGVQcGVtWCA9IHN1YnN0aXR1dGVQcGVtWAogICAgICAgIHNlbGYuc3Vic3RpdHV0ZVBwZW1ZID0gc3Vic3RpdHV0ZVBwZW1ZCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhOiBieXRlcykgLT4gYnl0ZXM6CiAgICAgICAgZHVtbXksIGRhdGEgPSBzc3RydWN0LnVucGFjazIoc2JpdExpbmVNZXRyaWNzRm9ybWF0LCBkYXRhLCBzZWxmLmhvcmkpCiAgICAgICAgZHVtbXksIGRhdGEgPSBzc3RydWN0LnVucGFjazIoc2JpdExpbmVNZXRyaWNzRm9ybWF0LCBkYXRhLCBzZWxmLnZlcnQpCiAgICAgICAgZHVtbXksIGRhdGEgPSBzc3RydWN0LnVucGFjazIoYml0bWFwU2NhbGVUYWJsZUZvcm1hdFBhcnQyLCBkYXRhLCBzZWxmKQogICAgICAgIHJldHVybiBkYXRhCgogICAgZGVmIGNvbXBpbGUoc2VsZikgLT4gYnl0ZXM6CiAgICAgICAgZGF0YUxpc3QgPSBbCiAgICAgICAgICAgIHNzdHJ1Y3QucGFjayhzYml0TGluZU1ldHJpY3NGb3JtYXQsIHNlbGYuaG9yaSksCiAgICAgICAgICAgIHNzdHJ1Y3QucGFjayhzYml0TGluZU1ldHJpY3NGb3JtYXQsIHNlbGYudmVydCksCiAgICAgICAgICAgIHNzdHJ1Y3QucGFjayhiaXRtYXBTY2FsZVRhYmxlRm9ybWF0UGFydDIsIHNlbGYpLAogICAgICAgIF0KICAgICAgICByZXR1cm4gYnl0ZXNqb2luKGRhdGFMaXN0KQoKICAgIGRlZiB0b1hNTChzZWxmLCBpbmRleDogaW50LCB3cml0ZXI6IFhNTFdyaXRlciwgdHRGb250OiBUVEZvbnQpOgogICAgICAgIHdyaXRlci5iZWdpbnRhZygiYml0bWFwU2NhbGVUYWJsZSIsIFsoImluZGV4IiwgaW5kZXgpXSkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgc2VsZi5ob3JpLnRvWE1MKCJob3JpIiwgd3JpdGVyLCB0dEZvbnQpCiAgICAgICAgc2VsZi52ZXJ0LnRvWE1MKCJ2ZXJ0Iiwgd3JpdGVyLCB0dEZvbnQpCiAgICAgICAgZm9yIG5hbWUgaW4gc3N0cnVjdC5nZXRmb3JtYXQoYml0bWFwU2NhbGVUYWJsZUZvcm1hdFBhcnQyKVsxXToKICAgICAgICAgICAgd3JpdGVyLnNpbXBsZXRhZyhuYW1lLCB2YWx1ZT1nZXRhdHRyKHNlbGYsIG5hbWUpKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLmVuZHRhZygiYml0bWFwU2NhbGVUYWJsZSIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIGNvbnRlbnQ6IFhNTENvbnRlbnQsIHR0Rm9udDogVFRGb250KToKICAgICAgICBkYXRhTmFtZXMgPSBzZXQoc3N0cnVjdC5nZXRmb3JtYXQoYml0bWFwU2NhbGVUYWJsZUZvcm1hdFBhcnQyKVsxXSkKICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBuYW1lLCBhdHRycywgY29udGVudCA9IGVsZW1lbnQKICAgICAgICAgICAgaWYgbmFtZSA9PSAic2JpdExpbmVNZXRyaWNzIjoKICAgICAgICAgICAgICAgIGRpcmVjdGlvbiA9IGF0dHJzWyJkaXJlY3Rpb24iXQogICAgICAgICAgICAgICAgaWYgZGlyZWN0aW9uIG5vdCBpbiAoImhvcmkiLCAidmVydCIpOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIFRUTGliRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgIGYiaW52YWxpZCBzYml0TGluZU1ldHJpY3MgZGlyZWN0aW9uOiB7ZGlyZWN0aW9uIXJ9IgogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIG1ldHJpY09iaiA9IFNiaXRMaW5lTWV0cmljcygpCiAgICAgICAgICAgICAgICBtZXRyaWNPYmouZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KQogICAgICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBkaXJlY3Rpb24sIG1ldHJpY09iaikKICAgICAgICAgICAgZWxpZiBuYW1lIGluIGRhdGFOYW1lczoKICAgICAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgbmFtZSwgc2FmZUV2YWwoYXR0cnNbInZhbHVlIl0pKQo=
+from __future__ import annotations
+
+from typing import Any
+
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytesjoin, safeEval
+from fontTools.misc.xmlWriter import XMLWriter
+from fontTools.ttLib import TTFont, TTLibError
+from fontTools.ttLib.tables import DefaultTable
+from fontTools.ttLib.tables.DefaultTable import XMLAttrs, XMLContent
+from fontTools.ttLib.tables.E_B_L_C_ import sbitLineMetricsFormat, SbitLineMetrics
+
+ebscHeaderFormat = """
+    > # big endian
+    version:  16.16F
+    numSizes: I
+"""
+
+bitmapScaleTableFormatPart2 = """
+    > # big endian
+    ppemX:           B
+    ppemY:           B
+    substitutePpemX: B
+    substitutePpemY: B
+"""
+
+
+class table_E_B_S_C_(DefaultTable.DefaultTable):
+    """
+    Embedded Bitmap Scaling Table
+
+    The ``EBSC`` table provides a mechanism for describing embedded bitmaps which are created by
+    scaling other embedded bitmaps. While this is the sort of thing that outline font technologies
+    were invented to avoid, there are cases (small sizes of Kanji, for example) where scaling a bitmap
+    produces more legible glyphs than scan-converting an outline. For this reason, the EBSC table
+    allows a font to define a bitmap strike as a scaled version of another strike.
+
+    The ``EBSC`` table is used together with the ``EBDT`` table, which provides embedded monochrome or
+    grayscale bitmap data, and the ``EBLC`` table, which provides embedded bitmap locators.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/ebsc
+    """
+
+    dependencies = ["EBDT", "EBLC"]
+
+    version: float
+    numSizes: int
+    bitmapScaleTables: list[BitmapScaleTable]
+
+    def decompile(self, data: bytes, ttFont: TTFont):
+        _, data = sstruct.unpack2(ebscHeaderFormat, data, self)
+        self.bitmapScaleTables = []
+        for _ in range(self.numSizes):
+            bitmapScaleTable = BitmapScaleTable()
+            data = bitmapScaleTable.decompile(data)
+            self.bitmapScaleTables.append(bitmapScaleTable)
+
+    def compile(self, ttFont: TTFont) -> bytes:
+        self.numSizes = len(self.bitmapScaleTables)
+        dataList = [sstruct.pack(ebscHeaderFormat, self)]
+        for bitmapScaleTable in self.bitmapScaleTables:
+            dataList.append(bitmapScaleTable.compile())
+        return bytesjoin(dataList)
+
+    def toXML(self, writer: XMLWriter, ttFont: TTFont, **kwargs: Any):
+        writer.simpletag(
+            "header",
+            [("version", self.version), ("numSizes", len(self.bitmapScaleTables))],
+        )
+        writer.newline()
+        for index, bitmapScaleTable in enumerate(self.bitmapScaleTables):
+            bitmapScaleTable.toXML(index, writer, ttFont)
+
+    def fromXML(
+        self, name: str, attrs: dict[str, str], content: XMLContent, ttFont: TTFont
+    ):
+        if not hasattr(self, "bitmapScaleTables"):
+            self.bitmapScaleTables = []
+        if name == "header":
+            self.version = safeEval(attrs["version"])
+            self.numSizes = safeEval(attrs["numSizes"])
+        elif name == "bitmapScaleTable":
+            bitmapScaleTable = BitmapScaleTable()
+            bitmapScaleTable.fromXML(content, ttFont)
+            self.bitmapScaleTables.append(bitmapScaleTable)
+
+
+class BitmapScaleTable:
+    hori: SbitLineMetrics
+    vert: SbitLineMetrics
+    ppemX: int
+    ppemY: int
+    substitutePpemX: int
+    substitutePpemY: int
+
+    def __init__(
+        self,
+        hori: SbitLineMetrics | None = None,
+        vert: SbitLineMetrics | None = None,
+        ppemX: int = 0,
+        ppemY: int = 0,
+        substitutePpemX: int = 0,
+        substitutePpemY: int = 0,
+    ):
+        self.hori = hori if hori is not None else SbitLineMetrics()
+        self.vert = vert if vert is not None else SbitLineMetrics()
+        self.ppemX = ppemX
+        self.ppemY = ppemY
+        self.substitutePpemX = substitutePpemX
+        self.substitutePpemY = substitutePpemY
+
+    def decompile(self, data: bytes) -> bytes:
+        dummy, data = sstruct.unpack2(sbitLineMetricsFormat, data, self.hori)
+        dummy, data = sstruct.unpack2(sbitLineMetricsFormat, data, self.vert)
+        dummy, data = sstruct.unpack2(bitmapScaleTableFormatPart2, data, self)
+        return data
+
+    def compile(self) -> bytes:
+        dataList = [
+            sstruct.pack(sbitLineMetricsFormat, self.hori),
+            sstruct.pack(sbitLineMetricsFormat, self.vert),
+            sstruct.pack(bitmapScaleTableFormatPart2, self),
+        ]
+        return bytesjoin(dataList)
+
+    def toXML(self, index: int, writer: XMLWriter, ttFont: TTFont):
+        writer.begintag("bitmapScaleTable", [("index", index)])
+        writer.newline()
+        self.hori.toXML("hori", writer, ttFont)
+        self.vert.toXML("vert", writer, ttFont)
+        for name in sstruct.getformat(bitmapScaleTableFormatPart2)[1]:
+            writer.simpletag(name, value=getattr(self, name))
+            writer.newline()
+        writer.endtag("bitmapScaleTable")
+        writer.newline()
+
+    def fromXML(self, content: XMLContent, ttFont: TTFont):
+        dataNames = set(sstruct.getformat(bitmapScaleTableFormatPart2)[1])
+        for element in content:
+            if not isinstance(element, tuple):
+                continue
+            name, attrs, content = element
+            if name == "sbitLineMetrics":
+                direction = attrs["direction"]
+                if direction not in ("hori", "vert"):
+                    raise TTLibError(
+                        f"invalid sbitLineMetrics direction: {direction!r}"
+                    )
+                metricObj = SbitLineMetrics()
+                metricObj.fromXML(name, attrs, content, ttFont)
+                setattr(self, direction, metricObj)
+            elif name in dataNames:
+                setattr(self, name, safeEval(attrs["value"]))

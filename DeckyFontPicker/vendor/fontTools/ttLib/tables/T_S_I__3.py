@@ -1,1 +1,22 @@
-IiIiVFNJezAsMSwyLDMsNX0gYXJlIHByaXZhdGUgdGFibGVzIHVzZWQgYnkgTWljcm9zb2Z0IFZpc3VhbCBUcnVlVHlwZSAoVlRUKQp0b29sIHRvIHN0b3JlIGl0cyBoaW50aW5nIHNvdXJjZSBkYXRhLgoKVFNJMyBjb250YWlucyB0aGUgdGV4dCBvZiB0aGUgZ2x5cGggcHJvZ3JhbXMgaW4gdGhlIGZvcm0gb2YgJ1ZUVFRhbGsnIGNvZGUuCgpTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS90b29scy92dHQvdHNpLXRhYmxlcwoiIiIKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKc3VwZXJjbGFzcyA9IHR0TGliLmdldFRhYmxlQ2xhc3MoIlRTSTEiKQoKCmNsYXNzIHRhYmxlX1RfU19JX18zKHN1cGVyY2xhc3MpOgogICAgZXh0cmFzID0gewogICAgICAgIDB4RkZGQTogInJlc2VydmVkMCIsCiAgICAgICAgMHhGRkZCOiAicmVzZXJ2ZWQxIiwKICAgICAgICAweEZGRkM6ICJyZXNlcnZlZDIiLAogICAgICAgIDB4RkZGRDogInJlc2VydmVkMyIsCiAgICB9CgogICAgaW5kZXh0YWJsZSA9ICJUU0kyIgo=
+"""TSI{0,1,2,3,5} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its hinting source data.
+
+TSI3 contains the text of the glyph programs in the form of 'VTTTalk' code.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from fontTools import ttLib
+
+superclass = ttLib.getTableClass("TSI1")
+
+
+class table_T_S_I__3(superclass):
+    extras = {
+        0xFFFA: "reserved0",
+        0xFFFB: "reserved1",
+        0xFFFC: "reserved2",
+        0xFFFD: "reserved3",
+    }
+
+    indextable = "TSI2"

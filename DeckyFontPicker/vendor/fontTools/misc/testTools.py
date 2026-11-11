@@ -1,1 +1,240 @@
-IiIiSGVscGVycyBmb3Igd3JpdGluZyB1bml0IHRlc3RzLiIiIgoKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IEl0ZXJhYmxlCmZyb20gaW8gaW1wb3J0IEJ5dGVzSU8KaW1wb3J0IG9zCmltcG9ydCByZQppbXBvcnQgc2h1dGlsCmltcG9ydCBzeXMKaW1wb3J0IHRlbXBmaWxlCmZyb20gdW5pdHRlc3QgaW1wb3J0IFRlc3RDYXNlIGFzIF9UZXN0Q2FzZQpmcm9tIGZvbnRUb29scy5jb25maWcgaW1wb3J0IENvbmZpZwpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgdG9ieXRlcwpmcm9tIGZvbnRUb29scy5taXNjLnhtbFdyaXRlciBpbXBvcnQgWE1MV3JpdGVyCgoKZGVmIHBhcnNlWE1MKHhtbFNuaXBwZXQpOgogICAgIiIiUGFyc2VzIGEgc25pcHBldCBvZiBYTUwuCgogICAgSW5wdXQgY2FuIGJlIGVpdGhlciBhIHNpbmdsZSBzdHJpbmcgKHVuaWNvZGUgb3IgVVRGLTggYnl0ZXMpLCBvciBhCiAgICBhIHNlcXVlbmNlIG9mIHN0cmluZ3MuCgogICAgVGhlIHJlc3VsdCBpcyBpbiB0aGUgc2FtZSBmb3JtYXQgdGhhdCB3b3VsZCBiZSByZXR1cm5lZCBieQogICAgWE1MUmVhZGVyLCBidXQgdGhlIHBhcnNlciBpbXBvc2VzIG5vIGNvbnN0cmFpbnRzIG9uIHRoZSByb290CiAgICBlbGVtZW50IHNvIGl0IGNhbiBiZSBjYWxsZWQgb24gc21hbGwgc25pcHBldHMgb2YgVFRYIGZpbGVzLgogICAgIiIiCiAgICAjIFRvIHN1cHBvcnQgc25pcHBldHMgd2l0aCBtdWx0aXBsZSBlbGVtZW50cywgd2UgYWRkIGEgZmFrZSByb290LgogICAgcmVhZGVyID0gVGVzdFhNTFJlYWRlcl8oKQogICAgeG1sID0gYiI8cm9vdD4iCiAgICBpZiBpc2luc3RhbmNlKHhtbFNuaXBwZXQsIGJ5dGVzKToKICAgICAgICB4bWwgKz0geG1sU25pcHBldAogICAgZWxpZiBpc2luc3RhbmNlKHhtbFNuaXBwZXQsIHN0cik6CiAgICAgICAgeG1sICs9IHRvYnl0ZXMoeG1sU25pcHBldCwgInV0Zi04IikKICAgIGVsaWYgaXNpbnN0YW5jZSh4bWxTbmlwcGV0LCBJdGVyYWJsZSk6CiAgICAgICAgeG1sICs9IGIiIi5qb2luKHRvYnl0ZXMocywgInV0Zi04IikgZm9yIHMgaW4geG1sU25pcHBldCkKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgVHlwZUVycm9yKAogICAgICAgICAgICAiZXhwZWN0ZWQgc3RyaW5nIG9yIHNlcXVlbmNlIG9mIHN0cmluZ3M7IGZvdW5kICVyIgogICAgICAgICAgICAlIHR5cGUoeG1sU25pcHBldCkuX19uYW1lX18KICAgICAgICApCiAgICB4bWwgKz0gYiI8L3Jvb3Q+IgogICAgcmVhZGVyLnBhcnNlci5QYXJzZSh4bWwsIDEpCiAgICByZXR1cm4gcmVhZGVyLnJvb3RbMl0KCgpkZWYgcGFyc2VYbWxJbnRvKGZvbnQsIHBhcnNlSW50bywgeG1sU25pcHBldCk6CiAgICBwYXJzZWRfeG1sID0gW2UgZm9yIGUgaW4gcGFyc2VYTUwoeG1sU25pcHBldC5zdHJpcCgpKSBpZiBub3QgaXNpbnN0YW5jZShlLCBzdHIpXQogICAgZm9yIG5hbWUsIGF0dHJzLCBjb250ZW50IGluIHBhcnNlZF94bWw6CiAgICAgICAgcGFyc2VJbnRvLmZyb21YTUwobmFtZSwgYXR0cnMsIGNvbnRlbnQsIGZvbnQpCiAgICBpZiBoYXNhdHRyKHBhcnNlSW50bywgInBvcHVsYXRlRGVmYXVsdHMiKToKICAgICAgICBwYXJzZUludG8ucG9wdWxhdGVEZWZhdWx0cygpCiAgICByZXR1cm4gcGFyc2VJbnRvCgoKY2xhc3MgRmFrZUZvbnQ6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhzKToKICAgICAgICBzZWxmLmdseXBoT3JkZXJfID0gZ2x5cGhzCiAgICAgICAgc2VsZi5yZXZlcnNlR2x5cGhPcmRlckRpY3RfID0ge2c6IGkgZm9yIGksIGcgaW4gZW51bWVyYXRlKGdseXBocyl9CiAgICAgICAgc2VsZi5sYXp5ID0gRmFsc2UKICAgICAgICBzZWxmLnRhYmxlcyA9IHt9CiAgICAgICAgc2VsZi5jZmcgPSBDb25maWcoKQoKICAgIGRlZiBfX2NvbnRhaW5zX18oc2VsZiwgdGFnKToKICAgICAgICByZXR1cm4gdGFnIGluIHNlbGYudGFibGVzCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIHRhZyk6CiAgICAgICAgcmV0dXJuIHNlbGYudGFibGVzW3RhZ10KCiAgICBkZWYgX19zZXRpdGVtX18oc2VsZiwgdGFnLCB0YWJsZSk6CiAgICAgICAgc2VsZi50YWJsZXNbdGFnXSA9IHRhYmxlCgogICAgZGVmIGdldChzZWxmLCB0YWcsIGRlZmF1bHQ9Tm9uZSk6CiAgICAgICAgcmV0dXJuIHNlbGYudGFibGVzLmdldCh0YWcsIGRlZmF1bHQpCgogICAgZGVmIGdldEdseXBoSUQoc2VsZiwgbmFtZSk6CiAgICAgICAgcmV0dXJuIHNlbGYucmV2ZXJzZUdseXBoT3JkZXJEaWN0X1tuYW1lXQoKICAgIGRlZiBnZXRHbHlwaElETWFueShzZWxmLCBsc3QpOgogICAgICAgIHJldHVybiBbc2VsZi5nZXRHbHlwaElEKGdpZCkgZm9yIGdpZCBpbiBsc3RdCgogICAgZGVmIGdldEdseXBoTmFtZShzZWxmLCBnbHlwaElEKToKICAgICAgICBpZiBnbHlwaElEIDwgbGVuKHNlbGYuZ2x5cGhPcmRlcl8pOgogICAgICAgICAgICByZXR1cm4gc2VsZi5nbHlwaE9yZGVyX1tnbHlwaElEXQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiAiZ2x5cGglLjVkIiAlIGdseXBoSUQKCiAgICBkZWYgZ2V0R2x5cGhOYW1lTWFueShzZWxmLCBsc3QpOgogICAgICAgIHJldHVybiBbc2VsZi5nZXRHbHlwaE5hbWUoZ2lkKSBmb3IgZ2lkIGluIGxzdF0KCiAgICBkZWYgZ2V0R2x5cGhPcmRlcihzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5nbHlwaE9yZGVyXwoKICAgIGRlZiBoYXNFeHRlbmRlZEdseXBoSURzKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5nbHlwaE9yZGVyXykgPiAweDEwMDAwCgogICAgZGVmIGdldEdseXBoQ291bnQoc2VsZik6CiAgICAgICAgbWF4cFRhZyA9ICJNQVhQIiBpZiAiTUFYUCIgaW4gc2VsZiBlbHNlICJtYXhwIgogICAgICAgIHJldHVybiBpbnQoc2VsZlttYXhwVGFnXS5udW1HbHlwaHMpCgogICAgZGVmIGdldFJldmVyc2VHbHlwaE1hcChzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5yZXZlcnNlR2x5cGhPcmRlckRpY3RfCgogICAgZGVmIGdldEdseXBoTmFtZXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHNvcnRlZChzZWxmLmdldEdseXBoT3JkZXIoKSkKCgpjbGFzcyBUZXN0WE1MUmVhZGVyXyhvYmplY3QpOgogICAgZGVmIF9faW5pdF9fKHNlbGYpOgogICAgICAgIGZyb20geG1sLnBhcnNlcnMuZXhwYXQgaW1wb3J0IFBhcnNlckNyZWF0ZQoKICAgICAgICBzZWxmLnBhcnNlciA9IFBhcnNlckNyZWF0ZSgpCiAgICAgICAgc2VsZi5wYXJzZXIuU3RhcnRFbGVtZW50SGFuZGxlciA9IHNlbGYuc3RhcnRFbGVtZW50XwogICAgICAgIHNlbGYucGFyc2VyLkVuZEVsZW1lbnRIYW5kbGVyID0gc2VsZi5lbmRFbGVtZW50XwogICAgICAgIHNlbGYucGFyc2VyLkNoYXJhY3RlckRhdGFIYW5kbGVyID0gc2VsZi5hZGRDaGFyYWN0ZXJEYXRhXwogICAgICAgIHNlbGYucm9vdCA9IE5vbmUKICAgICAgICBzZWxmLnN0YWNrID0gW10KCiAgICBkZWYgc3RhcnRFbGVtZW50XyhzZWxmLCBuYW1lLCBhdHRycyk6CiAgICAgICAgZWxlbWVudCA9IChuYW1lLCBhdHRycywgW10pCiAgICAgICAgaWYgc2VsZi5zdGFjazoKICAgICAgICAgICAgc2VsZi5zdGFja1stMV1bMl0uYXBwZW5kKGVsZW1lbnQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5yb290ID0gZWxlbWVudAogICAgICAgIHNlbGYuc3RhY2suYXBwZW5kKGVsZW1lbnQpCgogICAgZGVmIGVuZEVsZW1lbnRfKHNlbGYsIG5hbWUpOgogICAgICAgIHNlbGYuc3RhY2sucG9wKCkKCiAgICBkZWYgYWRkQ2hhcmFjdGVyRGF0YV8oc2VsZiwgZGF0YSk6CiAgICAgICAgc2VsZi5zdGFja1stMV1bMl0uYXBwZW5kKGRhdGEpCgoKZGVmIG1ha2VYTUxXcml0ZXIobmV3bGluZXN0cj0iXG4iKToKICAgICMgZG9uJ3Qgd3JpdGUgT1Mtc3BlY2lmaWMgbmV3IGxpbmVzCiAgICB3cml0ZXIgPSBYTUxXcml0ZXIoQnl0ZXNJTygpLCBuZXdsaW5lc3RyPW5ld2xpbmVzdHIpCiAgICAjIGVyYXNlIFhNTCBkZWNsYXJhdGlvbgogICAgd3JpdGVyLmZpbGUuc2VlaygwKQogICAgd3JpdGVyLmZpbGUudHJ1bmNhdGUoKQogICAgcmV0dXJuIHdyaXRlcgoKCmRlZiBnZXRYTUwoZnVuYywgdHRGb250PU5vbmUpOgogICAgIiIiQ2FsbCB0aGUgcGFzc2VkIHRvWE1MIGZ1bmN0aW9uIGFuZCByZXR1cm4gdGhlIHdyaXR0ZW4gY29udGVudCBhcyBhCiAgICBsaXN0IG9mIGxpbmVzICh1bmljb2RlIHN0cmluZ3MpLgogICAgUmVzdWx0IGlzIHN0cmlwcGVkIG9mIFhNTCBkZWNsYXJhdGlvbiBhbmQgT1Mtc3BlY2lmaWMgbmV3bGluZSBjaGFyYWN0ZXJzLgogICAgIiIiCiAgICB3cml0ZXIgPSBtYWtlWE1MV3JpdGVyKCkKICAgIGZ1bmMod3JpdGVyLCB0dEZvbnQpCiAgICB4bWwgPSB3cml0ZXIuZmlsZS5nZXR2YWx1ZSgpLmRlY29kZSgidXRmLTgiKQogICAgIyB0b1hNTCBtZXRob2RzIG11c3QgYWx3YXlzIGVuZCB3aXRoIGEgd3JpdGVyLm5ld2xpbmUoKQogICAgYXNzZXJ0IHhtbC5lbmRzd2l0aCgiXG4iKQogICAgcmV0dXJuIHhtbC5zcGxpdGxpbmVzKCkKCgpkZWYgc3RyaXBWYXJpYWJsZUl0ZW1zRnJvbVRUWCgKICAgIHN0cmluZzogc3RyLAogICAgdHRMaWJWZXJzaW9uOiBib29sID0gVHJ1ZSwKICAgIGNoZWNrU3VtQWRqdXN0bWVudDogYm9vbCA9IFRydWUsCiAgICBtb2RpZmllZDogYm9vbCA9IFRydWUsCiAgICBjcmVhdGVkOiBib29sID0gVHJ1ZSwKICAgIHNmbnRWZXJzaW9uOiBib29sID0gRmFsc2UsICAjIG9wdC1pbiBvbmx5CikgLT4gc3RyOgogICAgIiIiU3RyaXAgc3R1ZmYgbGlrZSB0dExpYlZlcnNpb24sIGNoZWNrc3VtcywgdGltZXN0YW1wcywgZXRjLiBmcm9tIFRUWCBkdW1wcy4iIiIKICAgICMgdHRsaWIgY2hhbmdlcyB3aXRoIHRoZSBmb250VG9vbHMgdmVyc2lvbgogICAgaWYgdHRMaWJWZXJzaW9uOgogICAgICAgIHN0cmluZyA9IHJlLnN1YignIHR0TGliVmVyc2lvbj0iW14iXSsiJywgIiIsIHN0cmluZykKICAgICMgc29tZXRpbWVzIChlLmcuIHNvbWUgc3Vic2V0dGVyIHRlc3RzKSB3ZSBkb24ndCBjYXJlIHdoZXRoZXIgaXQncyBPVEYgb3IgVFRGCiAgICBpZiBzZm50VmVyc2lvbjoKICAgICAgICBzdHJpbmcgPSByZS5zdWIoJyBzZm50VmVyc2lvbj0iW14iXSsiJywgIiIsIHN0cmluZykKICAgICMgaGVhZCB0YWJsZSBjaGVja3N1bSBhbmQgY3JlYXRpb24gYW5kIG1vZCBkYXRlIGNoYW5nZXMgd2l0aCBlYWNoIHNhdmUuCiAgICBpZiBjaGVja1N1bUFkanVzdG1lbnQ6CiAgICAgICAgc3RyaW5nID0gcmUuc3ViKCc8Y2hlY2tTdW1BZGp1c3RtZW50IHZhbHVlPSJbXiJdKyIvPicsICIiLCBzdHJpbmcpCiAgICBpZiBtb2RpZmllZDoKICAgICAgICBzdHJpbmcgPSByZS5zdWIoJzxtb2RpZmllZCB2YWx1ZT0iW14iXSsiLz4nLCAiIiwgc3RyaW5nKQogICAgaWYgY3JlYXRlZDoKICAgICAgICBzdHJpbmcgPSByZS5zdWIoJzxjcmVhdGVkIHZhbHVlPSJbXiJdKyIvPicsICIiLCBzdHJpbmcpCiAgICByZXR1cm4gc3RyaW5nCgoKY2xhc3MgTW9ja0ZvbnQob2JqZWN0KToKICAgICIiIkEgZm9udC1saWtlIG9iamVjdCB0aGF0IGF1dG9tYXRpY2FsbHkgYWRkcyBhbnkgbG9va2VkIHVwIGdseXBobmFtZQogICAgdG8gaXRzIGdseXBoT3JkZXIuIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYpOgogICAgICAgIHNlbGYuX2dseXBoT3JkZXIgPSBbIi5ub3RkZWYiXQoKICAgICAgICBjbGFzcyBBbGxvY2F0aW5nRGljdChkaWN0KToKICAgICAgICAgICAgZGVmIF9fbWlzc2luZ19fKHJldmVyc2VEaWN0LCBrZXkpOgogICAgICAgICAgICAgICAgc2VsZi5fZ2x5cGhPcmRlci5hcHBlbmQoa2V5KQogICAgICAgICAgICAgICAgZ2lkID0gbGVuKHJldmVyc2VEaWN0KQogICAgICAgICAgICAgICAgcmV2ZXJzZURpY3Rba2V5XSA9IGdpZAogICAgICAgICAgICAgICAgcmV0dXJuIGdpZAoKICAgICAgICBzZWxmLl9yZXZlcnNlR2x5cGhPcmRlciA9IEFsbG9jYXRpbmdEaWN0KHsiLm5vdGRlZiI6IDB9KQogICAgICAgIHNlbGYubGF6eSA9IEZhbHNlCgogICAgZGVmIGdldEdseXBoSUQoc2VsZiwgZ2x5cGgpOgogICAgICAgIGdpZCA9IHNlbGYuX3JldmVyc2VHbHlwaE9yZGVyW2dseXBoXQogICAgICAgIHJldHVybiBnaWQKCiAgICBkZWYgZ2V0UmV2ZXJzZUdseXBoTWFwKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLl9yZXZlcnNlR2x5cGhPcmRlcgoKICAgIGRlZiBnZXRHbHlwaE5hbWUoc2VsZiwgZ2lkKToKICAgICAgICByZXR1cm4gc2VsZi5fZ2x5cGhPcmRlcltnaWRdCgogICAgZGVmIGdldEdseXBoT3JkZXIoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX2dseXBoT3JkZXIKCgpjbGFzcyBUZXN0Q2FzZShfVGVzdENhc2UpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG1ldGhvZE5hbWUpOgogICAgICAgIF9UZXN0Q2FzZS5fX2luaXRfXyhzZWxmLCBtZXRob2ROYW1lKQogICAgICAgICMgUHl0aG9uIDMgcmVuYW1lZCBhc3NlcnRSYWlzZXNSZWdleHAgdG8gYXNzZXJ0UmFpc2VzUmVnZXgsCiAgICAgICAgIyBhbmQgZmlyZXMgZGVwcmVjYXRpb24gd2FybmluZ3MgaWYgYSBwcm9ncmFtIHVzZXMgdGhlIG9sZCBuYW1lLgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJhc3NlcnRSYWlzZXNSZWdleCIpOgogICAgICAgICAgICBzZWxmLmFzc2VydFJhaXNlc1JlZ2V4ID0gc2VsZi5hc3NlcnRSYWlzZXNSZWdleHAKCgpjbGFzcyBEYXRhRmlsZXNIYW5kbGVyKFRlc3RDYXNlKToKICAgIGRlZiBzZXRVcChzZWxmKToKICAgICAgICBzZWxmLnRlbXBkaXIgPSBOb25lCiAgICAgICAgc2VsZi5udW1fdGVtcGZpbGVzID0gMAoKICAgIGRlZiB0ZWFyRG93bihzZWxmKToKICAgICAgICBpZiBzZWxmLnRlbXBkaXI6CiAgICAgICAgICAgIHNodXRpbC5ybXRyZWUoc2VsZi50ZW1wZGlyKQoKICAgIGRlZiBnZXRwYXRoKHNlbGYsIHRlc3RmaWxlKToKICAgICAgICBmb2xkZXIgPSBvcy5wYXRoLmRpcm5hbWUoc3lzLm1vZHVsZXNbc2VsZi5fX21vZHVsZV9fXS5fX2ZpbGVfXykKICAgICAgICByZXR1cm4gb3MucGF0aC5qb2luKGZvbGRlciwgImRhdGEiLCB0ZXN0ZmlsZSkKCiAgICBkZWYgdGVtcF9kaXIoc2VsZik6CiAgICAgICAgaWYgbm90IHNlbGYudGVtcGRpcjoKICAgICAgICAgICAgc2VsZi50ZW1wZGlyID0gdGVtcGZpbGUubWtkdGVtcCgpCgogICAgZGVmIHRlbXBfZm9udChzZWxmLCBmb250X3BhdGgsIGZpbGVfbmFtZSk6CiAgICAgICAgc2VsZi50ZW1wX2RpcigpCiAgICAgICAgdGVtcHBhdGggPSBvcy5wYXRoLmpvaW4oc2VsZi50ZW1wZGlyLCBmaWxlX25hbWUpCiAgICAgICAgc2h1dGlsLmNvcHkyKGZvbnRfcGF0aCwgdGVtcHBhdGgpCiAgICAgICAgcmV0dXJuIHRlbXBwYXRoCg==
+"""Helpers for writing unit tests."""
+
+from collections.abc import Iterable
+from io import BytesIO
+import os
+import re
+import shutil
+import sys
+import tempfile
+from unittest import TestCase as _TestCase
+from fontTools.config import Config
+from fontTools.misc.textTools import tobytes
+from fontTools.misc.xmlWriter import XMLWriter
+
+
+def parseXML(xmlSnippet):
+    """Parses a snippet of XML.
+
+    Input can be either a single string (unicode or UTF-8 bytes), or a
+    a sequence of strings.
+
+    The result is in the same format that would be returned by
+    XMLReader, but the parser imposes no constraints on the root
+    element so it can be called on small snippets of TTX files.
+    """
+    # To support snippets with multiple elements, we add a fake root.
+    reader = TestXMLReader_()
+    xml = b"<root>"
+    if isinstance(xmlSnippet, bytes):
+        xml += xmlSnippet
+    elif isinstance(xmlSnippet, str):
+        xml += tobytes(xmlSnippet, "utf-8")
+    elif isinstance(xmlSnippet, Iterable):
+        xml += b"".join(tobytes(s, "utf-8") for s in xmlSnippet)
+    else:
+        raise TypeError(
+            "expected string or sequence of strings; found %r"
+            % type(xmlSnippet).__name__
+        )
+    xml += b"</root>"
+    reader.parser.Parse(xml, 1)
+    return reader.root[2]
+
+
+def parseXmlInto(font, parseInto, xmlSnippet):
+    parsed_xml = [e for e in parseXML(xmlSnippet.strip()) if not isinstance(e, str)]
+    for name, attrs, content in parsed_xml:
+        parseInto.fromXML(name, attrs, content, font)
+    if hasattr(parseInto, "populateDefaults"):
+        parseInto.populateDefaults()
+    return parseInto
+
+
+class FakeFont:
+    def __init__(self, glyphs):
+        self.glyphOrder_ = glyphs
+        self.reverseGlyphOrderDict_ = {g: i for i, g in enumerate(glyphs)}
+        self.lazy = False
+        self.tables = {}
+        self.cfg = Config()
+
+    def __contains__(self, tag):
+        return tag in self.tables
+
+    def __getitem__(self, tag):
+        return self.tables[tag]
+
+    def __setitem__(self, tag, table):
+        self.tables[tag] = table
+
+    def get(self, tag, default=None):
+        return self.tables.get(tag, default)
+
+    def getGlyphID(self, name):
+        return self.reverseGlyphOrderDict_[name]
+
+    def getGlyphIDMany(self, lst):
+        return [self.getGlyphID(gid) for gid in lst]
+
+    def getGlyphName(self, glyphID):
+        if glyphID < len(self.glyphOrder_):
+            return self.glyphOrder_[glyphID]
+        else:
+            return "glyph%.5d" % glyphID
+
+    def getGlyphNameMany(self, lst):
+        return [self.getGlyphName(gid) for gid in lst]
+
+    def getGlyphOrder(self):
+        return self.glyphOrder_
+
+    def hasExtendedGlyphIDs(self):
+        return len(self.glyphOrder_) > 0x10000
+
+    def getGlyphCount(self):
+        maxpTag = "MAXP" if "MAXP" in self else "maxp"
+        return int(self[maxpTag].numGlyphs)
+
+    def getReverseGlyphMap(self):
+        return self.reverseGlyphOrderDict_
+
+    def getGlyphNames(self):
+        return sorted(self.getGlyphOrder())
+
+
+class TestXMLReader_(object):
+    def __init__(self):
+        from xml.parsers.expat import ParserCreate
+
+        self.parser = ParserCreate()
+        self.parser.StartElementHandler = self.startElement_
+        self.parser.EndElementHandler = self.endElement_
+        self.parser.CharacterDataHandler = self.addCharacterData_
+        self.root = None
+        self.stack = []
+
+    def startElement_(self, name, attrs):
+        element = (name, attrs, [])
+        if self.stack:
+            self.stack[-1][2].append(element)
+        else:
+            self.root = element
+        self.stack.append(element)
+
+    def endElement_(self, name):
+        self.stack.pop()
+
+    def addCharacterData_(self, data):
+        self.stack[-1][2].append(data)
+
+
+def makeXMLWriter(newlinestr="\n"):
+    # don't write OS-specific new lines
+    writer = XMLWriter(BytesIO(), newlinestr=newlinestr)
+    # erase XML declaration
+    writer.file.seek(0)
+    writer.file.truncate()
+    return writer
+
+
+def getXML(func, ttFont=None):
+    """Call the passed toXML function and return the written content as a
+    list of lines (unicode strings).
+    Result is stripped of XML declaration and OS-specific newline characters.
+    """
+    writer = makeXMLWriter()
+    func(writer, ttFont)
+    xml = writer.file.getvalue().decode("utf-8")
+    # toXML methods must always end with a writer.newline()
+    assert xml.endswith("\n")
+    return xml.splitlines()
+
+
+def stripVariableItemsFromTTX(
+    string: str,
+    ttLibVersion: bool = True,
+    checkSumAdjustment: bool = True,
+    modified: bool = True,
+    created: bool = True,
+    sfntVersion: bool = False,  # opt-in only
+) -> str:
+    """Strip stuff like ttLibVersion, checksums, timestamps, etc. from TTX dumps."""
+    # ttlib changes with the fontTools version
+    if ttLibVersion:
+        string = re.sub(' ttLibVersion="[^"]+"', "", string)
+    # sometimes (e.g. some subsetter tests) we don't care whether it's OTF or TTF
+    if sfntVersion:
+        string = re.sub(' sfntVersion="[^"]+"', "", string)
+    # head table checksum and creation and mod date changes with each save.
+    if checkSumAdjustment:
+        string = re.sub('<checkSumAdjustment value="[^"]+"/>', "", string)
+    if modified:
+        string = re.sub('<modified value="[^"]+"/>', "", string)
+    if created:
+        string = re.sub('<created value="[^"]+"/>', "", string)
+    return string
+
+
+class MockFont(object):
+    """A font-like object that automatically adds any looked up glyphname
+    to its glyphOrder."""
+
+    def __init__(self):
+        self._glyphOrder = [".notdef"]
+
+        class AllocatingDict(dict):
+            def __missing__(reverseDict, key):
+                self._glyphOrder.append(key)
+                gid = len(reverseDict)
+                reverseDict[key] = gid
+                return gid
+
+        self._reverseGlyphOrder = AllocatingDict({".notdef": 0})
+        self.lazy = False
+
+    def getGlyphID(self, glyph):
+        gid = self._reverseGlyphOrder[glyph]
+        return gid
+
+    def getReverseGlyphMap(self):
+        return self._reverseGlyphOrder
+
+    def getGlyphName(self, gid):
+        return self._glyphOrder[gid]
+
+    def getGlyphOrder(self):
+        return self._glyphOrder
+
+
+class TestCase(_TestCase):
+    def __init__(self, methodName):
+        _TestCase.__init__(self, methodName)
+        # Python 3 renamed assertRaisesRegexp to assertRaisesRegex,
+        # and fires deprecation warnings if a program uses the old name.
+        if not hasattr(self, "assertRaisesRegex"):
+            self.assertRaisesRegex = self.assertRaisesRegexp
+
+
+class DataFilesHandler(TestCase):
+    def setUp(self):
+        self.tempdir = None
+        self.num_tempfiles = 0
+
+    def tearDown(self):
+        if self.tempdir:
+            shutil.rmtree(self.tempdir)
+
+    def getpath(self, testfile):
+        folder = os.path.dirname(sys.modules[self.__module__].__file__)
+        return os.path.join(folder, "data", testfile)
+
+    def temp_dir(self):
+        if not self.tempdir:
+            self.tempdir = tempfile.mkdtemp()
+
+    def temp_font(self, font_path, file_name):
+        self.temp_dir()
+        temppath = os.path.join(self.tempdir, file_name)
+        shutil.copy2(font_path, temppath)
+        return temppath

@@ -1,1 +1,81 @@
-ZnJvbSAuaW50ZXJwb2xhdGFibGVIZWxwZXJzIGltcG9ydCAqCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiZm9udFRvb2xzLnZhckxpYi5pbnRlcnBvbGF0YWJsZSIpCgoKZGVmIHRlc3RfY29udG91cl9vcmRlcihnbHlwaDAsIGdseXBoMSk6CiAgICAjIFdlIHRyeSBtYXRjaGluZyBib3RoIHRoZSBTdGF0aXN0aWNzQ29udHJvbFBlbiB2ZWN0b3IKICAgICMgYW5kIHRoZSBTdGF0aXN0aWNzUGVuIHZlY3Rvci4KICAgICMKICAgICMgSWYgZWl0aGVyIG1ldGhvZCBmb3VuZCBhbiBpZGVudGl0eSBtYXRjaGluZywgYWNjZXB0IGl0LgogICAgIyBUaGlzIGlzIGNydWNpYWwgZm9yIGZvbnRzIGxpa2UgS2FibGFtbW9bTU9SRl0udHRmIGFuZAogICAgIyBOYWJsYVtFRFBULEVITFRdLnR0Ziwgc2luY2UgdGhleSByZWFsbHkgY29uZnVzZSB0aGUKICAgICMgU3RhdGlzdGljc1BlbiB2ZWN0b3IgYmVjYXVzZSBvZiB0aGVpciBhcmVhPTAgY29udG91cnMuCgogICAgbiA9IGxlbihnbHlwaDAuY29udHJvbFZlY3RvcnMpCiAgICBtYXRjaGluZyA9IE5vbmUKICAgIG1hdGNoaW5nX2Nvc3QgPSAwCiAgICBpZGVudGl0eV9jb3N0ID0gMAogICAgZG9uZSA9IG4gPD0gMQogICAgaWYgbm90IGRvbmU6CiAgICAgICAgbTBDb250cm9sID0gZ2x5cGgwLmNvbnRyb2xWZWN0b3JzCiAgICAgICAgbTFDb250cm9sID0gZ2x5cGgxLmNvbnRyb2xWZWN0b3JzCiAgICAgICAgKAogICAgICAgICAgICBtYXRjaGluZ19jb250cm9sLAogICAgICAgICAgICBtYXRjaGluZ19jb3N0X2NvbnRyb2wsCiAgICAgICAgICAgIGlkZW50aXR5X2Nvc3RfY29udHJvbCwKICAgICAgICApID0gbWF0Y2hpbmdfZm9yX3ZlY3RvcnMobTBDb250cm9sLCBtMUNvbnRyb2wpCiAgICAgICAgZG9uZSA9IG1hdGNoaW5nX2Nvc3RfY29udHJvbCA9PSBpZGVudGl0eV9jb3N0X2NvbnRyb2wKICAgIGlmIG5vdCBkb25lOgogICAgICAgIG0wR3JlZW4gPSBnbHlwaDAuZ3JlZW5WZWN0b3JzCiAgICAgICAgbTFHcmVlbiA9IGdseXBoMS5ncmVlblZlY3RvcnMKICAgICAgICAoCiAgICAgICAgICAgIG1hdGNoaW5nX2dyZWVuLAogICAgICAgICAgICBtYXRjaGluZ19jb3N0X2dyZWVuLAogICAgICAgICAgICBpZGVudGl0eV9jb3N0X2dyZWVuLAogICAgICAgICkgPSBtYXRjaGluZ19mb3JfdmVjdG9ycyhtMEdyZWVuLCBtMUdyZWVuKQogICAgICAgIGRvbmUgPSBtYXRjaGluZ19jb3N0X2dyZWVuID09IGlkZW50aXR5X2Nvc3RfZ3JlZW4KCiAgICBpZiBub3QgZG9uZToKICAgICAgICAjIFNlZSBpZiByZXZlcnNpbmcgY29udG91cnMgaW4gb25lIG1hc3RlciBoZWxwcy4KICAgICAgICAjIFRoYXQncyBhIGNvbW1vbiBwcm9ibGVtLiAgVGhlbiB0aGUgd3Jvbmdfc3RhcnRfcG9pbnQKICAgICAgICAjIHRlc3Qgd2lsbCBmaXggdGhlbS4KICAgICAgICAjCiAgICAgICAgIyBSZXZlcnNlIHRoZSBzaWduIG9mIHRoZSBhcmVhICgwKTsgdGhlIHJlc3Qgc3RheSB0aGUgc2FtZS4KICAgICAgICBtMUNvbnRyb2xSZXZlcnNlZCA9IFsoLW1bMF0sKSArIG1bMTpdIGZvciBtIGluIG0xQ29udHJvbF0KICAgICAgICAoCiAgICAgICAgICAgIG1hdGNoaW5nX2NvbnRyb2xfcmV2ZXJzZWQsCiAgICAgICAgICAgIG1hdGNoaW5nX2Nvc3RfY29udHJvbF9yZXZlcnNlZCwKICAgICAgICAgICAgaWRlbnRpdHlfY29zdF9jb250cm9sX3JldmVyc2VkLAogICAgICAgICkgPSBtYXRjaGluZ19mb3JfdmVjdG9ycyhtMENvbnRyb2wsIG0xQ29udHJvbFJldmVyc2VkKQogICAgICAgIGRvbmUgPSBtYXRjaGluZ19jb3N0X2NvbnRyb2xfcmV2ZXJzZWQgPT0gaWRlbnRpdHlfY29zdF9jb250cm9sX3JldmVyc2VkCiAgICAgICAgaWYgbm90IGRvbmU6CiAgICAgICAgICAgIG0xR3JlZW5SZXZlcnNlZCA9IFsoLW1bMF0sKSArIG1bMTpdIGZvciBtIGluIG0xR3JlZW5dCiAgICAgICAgICAgICgKICAgICAgICAgICAgICAgIG1hdGNoaW5nX2dyZWVuX3JldmVyc2VkLAogICAgICAgICAgICAgICAgbWF0Y2hpbmdfY29zdF9ncmVlbl9yZXZlcnNlZCwKICAgICAgICAgICAgICAgIGlkZW50aXR5X2Nvc3RfZ3JlZW5fcmV2ZXJzZWQsCiAgICAgICAgICAgICkgPSBtYXRjaGluZ19mb3JfdmVjdG9ycyhtMEdyZWVuLCBtMUdyZWVuUmV2ZXJzZWQpCiAgICAgICAgICAgIGRvbmUgPSBtYXRjaGluZ19jb3N0X2dyZWVuX3JldmVyc2VkID09IGlkZW50aXR5X2Nvc3RfZ3JlZW5fcmV2ZXJzZWQKCiAgICAgICAgaWYgbm90IGRvbmU6CiAgICAgICAgICAgICMgT3RoZXJ3aXNlLCB1c2UgdGhlIGJlc3Qgb2YgdGhlIHR3byBtYXRjaGluZ3MuCiAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgIG1hdGNoaW5nX2Nvc3RfY29udHJvbCAqIGlkZW50aXR5X2Nvc3RfZ3JlZW4KICAgICAgICAgICAgICAgIDwgbWF0Y2hpbmdfY29zdF9ncmVlbiAqIGlkZW50aXR5X2Nvc3RfY29udHJvbAogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgbWF0Y2hpbmcgPSBtYXRjaGluZ19jb250cm9sCiAgICAgICAgICAgICAgICBtYXRjaGluZ19jb3N0ID0gbWF0Y2hpbmdfY29zdF9jb250cm9sCiAgICAgICAgICAgICAgICBpZGVudGl0eV9jb3N0ID0gaWRlbnRpdHlfY29zdF9jb250cm9sCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBtYXRjaGluZyA9IG1hdGNoaW5nX2dyZWVuCiAgICAgICAgICAgICAgICBtYXRjaGluZ19jb3N0ID0gbWF0Y2hpbmdfY29zdF9ncmVlbgogICAgICAgICAgICAgICAgaWRlbnRpdHlfY29zdCA9IGlkZW50aXR5X2Nvc3RfZ3JlZW4KCiAgICB0aGlzX3RvbGVyYW5jZSA9IG1hdGNoaW5nX2Nvc3QgLyBpZGVudGl0eV9jb3N0IGlmIGlkZW50aXR5X2Nvc3QgZWxzZSAxCiAgICBsb2cuZGVidWcoCiAgICAgICAgInRlc3QtY29udG91ci1vcmRlcjogdG9sZXJhbmNlICVnIiwKICAgICAgICB0aGlzX3RvbGVyYW5jZSwKICAgICkKICAgIHJldHVybiB0aGlzX3RvbGVyYW5jZSwgbWF0Y2hpbmcK
+from .interpolatableHelpers import *
+import logging
+
+log = logging.getLogger("fontTools.varLib.interpolatable")
+
+
+def test_contour_order(glyph0, glyph1):
+    # We try matching both the StatisticsControlPen vector
+    # and the StatisticsPen vector.
+    #
+    # If either method found an identity matching, accept it.
+    # This is crucial for fonts like Kablammo[MORF].ttf and
+    # Nabla[EDPT,EHLT].ttf, since they really confuse the
+    # StatisticsPen vector because of their area=0 contours.
+
+    n = len(glyph0.controlVectors)
+    matching = None
+    matching_cost = 0
+    identity_cost = 0
+    done = n <= 1
+    if not done:
+        m0Control = glyph0.controlVectors
+        m1Control = glyph1.controlVectors
+        (
+            matching_control,
+            matching_cost_control,
+            identity_cost_control,
+        ) = matching_for_vectors(m0Control, m1Control)
+        done = matching_cost_control == identity_cost_control
+    if not done:
+        m0Green = glyph0.greenVectors
+        m1Green = glyph1.greenVectors
+        (
+            matching_green,
+            matching_cost_green,
+            identity_cost_green,
+        ) = matching_for_vectors(m0Green, m1Green)
+        done = matching_cost_green == identity_cost_green
+
+    if not done:
+        # See if reversing contours in one master helps.
+        # That's a common problem.  Then the wrong_start_point
+        # test will fix them.
+        #
+        # Reverse the sign of the area (0); the rest stay the same.
+        m1ControlReversed = [(-m[0],) + m[1:] for m in m1Control]
+        (
+            matching_control_reversed,
+            matching_cost_control_reversed,
+            identity_cost_control_reversed,
+        ) = matching_for_vectors(m0Control, m1ControlReversed)
+        done = matching_cost_control_reversed == identity_cost_control_reversed
+        if not done:
+            m1GreenReversed = [(-m[0],) + m[1:] for m in m1Green]
+            (
+                matching_green_reversed,
+                matching_cost_green_reversed,
+                identity_cost_green_reversed,
+            ) = matching_for_vectors(m0Green, m1GreenReversed)
+            done = matching_cost_green_reversed == identity_cost_green_reversed
+
+        if not done:
+            # Otherwise, use the best of the two matchings.
+            if (
+                matching_cost_control * identity_cost_green
+                < matching_cost_green * identity_cost_control
+            ):
+                matching = matching_control
+                matching_cost = matching_cost_control
+                identity_cost = identity_cost_control
+            else:
+                matching = matching_green
+                matching_cost = matching_cost_green
+                identity_cost = identity_cost_green
+
+    this_tolerance = matching_cost / identity_cost if identity_cost else 1
+    log.debug(
+        "test-contour-order: tolerance %g",
+        this_tolerance,
+    )
+    return this_tolerance, matching

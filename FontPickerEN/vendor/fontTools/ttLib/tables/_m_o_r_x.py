@@ -1,1 +1,15 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2bW9yeC5odG1sCmNsYXNzIHRhYmxlX19tX29fcl94KEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiVGhlIEFBVCBgYG1vcnhgYCB0YWJsZSBjb250YWlucyBnbHlwaCB0cmFuc2Zvcm1hdGlvbnMgdXNlZCBmb3Igc2NyaXB0IHNoYXBpbmcgYW5kCiAgICBmb3IgdmFyaW91cyBvdGhlciBvcHRpb25hbCBzbWFydCBmZWF0dXJlcywgYWtpbiB0byBgYEdTVUJgYCBhbmQgYGBHUE9TYGAgZmVhdHVyZXMKICAgIGluIE9wZW5UeXBlIExheW91dC4KCiAgICBOb3RlOiBgYG1vcnhgYCBpcyBhIHJlcGxhY2VtZW50IGZvciB0aGUgbm93IGRlcHJlY2F0ZWQgYGBtb3J0YGAgdGFibGUuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2ZvbnRzL1RydWVUeXBlLVJlZmVyZW5jZS1NYW51YWwvUk0wNi9DaGFwNm1vcnguaHRtbAogICAgIiIiCgogICAgcGFzcwo=
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6morx.html
+class table__m_o_r_x(BaseTTXConverter):
+    """The AAT ``morx`` table contains glyph transformations used for script shaping and
+    for various other optional smart features, akin to ``GSUB`` and ``GPOS`` features
+    in OpenType Layout.
+
+    Note: ``morx`` is a replacement for the now deprecated ``mort`` table.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6morx.html
+    """
+
+    pass

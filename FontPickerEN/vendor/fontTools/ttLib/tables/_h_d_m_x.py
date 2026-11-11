@@ -1,1 +1,127 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZWNociwgYnl0ZW9yZCwgc3Ryam9pbgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQppbXBvcnQgYXJyYXkKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IE1hcHBpbmcKCmhkbXhIZWFkZXJGb3JtYXQgPSAiIiIKCT4gICAjIGJpZyBlbmRpYW4hCgl2ZXJzaW9uOglICgludW1SZWNvcmRzOglICglyZWNvcmRTaXplOglsCiIiIgoKCmNsYXNzIF9HbHlwaG5hbWVkTGlzdChNYXBwaW5nKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCByZXZlcnNlR2x5cGhPcmRlciwgZGF0YSk6CiAgICAgICAgc2VsZi5fYXJyYXkgPSBkYXRhCiAgICAgICAgc2VsZi5fbWFwID0gZGljdChyZXZlcnNlR2x5cGhPcmRlcikKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgayk6CiAgICAgICAgcmV0dXJuIHNlbGYuX2FycmF5W3NlbGYuX21hcFtrXV0KCiAgICBkZWYgX19sZW5fXyhzZWxmKToKICAgICAgICByZXR1cm4gbGVuKHNlbGYuX21hcCkKCiAgICBkZWYgX19pdGVyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIGl0ZXIoc2VsZi5fbWFwKQoKICAgIGRlZiBrZXlzKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLl9tYXAua2V5cygpCgoKY2xhc3MgdGFibGVfX2hfZF9tX3goRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJIb3Jpem9udGFsIERldmljZSBNZXRyaWNzIHRhYmxlCgogICAgVGhlIGBgaGRteGBgIHRhYmxlIGlzIGFuIG9wdGlvbmFsIHRhYmxlIHRoYXQgc3RvcmVzIGFkdmFuY2Ugd2lkdGhzIGZvcgogICAgZ2x5cGggb3V0bGluZXMgYXQgc3BlY2lmaWVkIHBpeGVsIHNpemVzLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvaGRteAogICAgIiIiCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIG51bUdseXBocyA9IHR0Rm9udFsibWF4cCJdLm51bUdseXBocwogICAgICAgIGdseXBoT3JkZXIgPSB0dEZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICAgICAgZHVtbXksIGRhdGEgPSBzc3RydWN0LnVucGFjazIoaGRteEhlYWRlckZvcm1hdCwgZGF0YSwgc2VsZikKICAgICAgICBzZWxmLmhkbXggPSB7fQogICAgICAgIGZvciBpIGluIHJhbmdlKHNlbGYubnVtUmVjb3Jkcyk6CiAgICAgICAgICAgIHBwZW0gPSBieXRlb3JkKGRhdGFbMF0pCiAgICAgICAgICAgIG1heFNpemUgPSBieXRlb3JkKGRhdGFbMV0pCiAgICAgICAgICAgIHdpZHRocyA9IF9HbHlwaG5hbWVkTGlzdCgKICAgICAgICAgICAgICAgIHR0Rm9udC5nZXRSZXZlcnNlR2x5cGhNYXAoKSwgYXJyYXkuYXJyYXkoIkIiLCBkYXRhWzIgOiAyICsgbnVtR2x5cGhzXSkKICAgICAgICAgICAgKQogICAgICAgICAgICBzZWxmLmhkbXhbcHBlbV0gPSB3aWR0aHMKICAgICAgICAgICAgZGF0YSA9IGRhdGFbc2VsZi5yZWNvcmRTaXplIDpdCiAgICAgICAgYXNzZXJ0IGxlbihkYXRhKSA9PSAwLCAidG9vIG11Y2ggaGRteCBkYXRhIgoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgc2VsZi52ZXJzaW9uID0gMAogICAgICAgIG51bUdseXBocyA9IHR0Rm9udFsibWF4cCJdLm51bUdseXBocwogICAgICAgIGdseXBoT3JkZXIgPSB0dEZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICAgICAgc2VsZi5yZWNvcmRTaXplID0gNCAqICgoMiArIG51bUdseXBocyArIDMpIC8vIDQpCiAgICAgICAgcGFkID0gKHNlbGYucmVjb3JkU2l6ZSAtIDIgLSBudW1HbHlwaHMpICogYiJcMCIKICAgICAgICBzZWxmLm51bVJlY29yZHMgPSBsZW4oc2VsZi5oZG14KQogICAgICAgIGRhdGEgPSBzc3RydWN0LnBhY2soaGRteEhlYWRlckZvcm1hdCwgc2VsZikKICAgICAgICBpdGVtcyA9IHNvcnRlZChzZWxmLmhkbXguaXRlbXMoKSkKICAgICAgICBmb3IgcHBlbSwgd2lkdGhzIGluIGl0ZW1zOgogICAgICAgICAgICBkYXRhID0gZGF0YSArIGJ5dGVjaHIocHBlbSkgKyBieXRlY2hyKG1heCh3aWR0aHMudmFsdWVzKCkpKQogICAgICAgICAgICBmb3IgZ2x5cGhOYW1lIGluIGdseXBoT3JkZXI6CiAgICAgICAgICAgICAgICB3aWR0aCA9IHdpZHRoc1tnbHlwaE5hbWVdCiAgICAgICAgICAgICAgICBkYXRhID0gZGF0YSArIGJ5dGVjaHIod2lkdGgpCiAgICAgICAgICAgIGRhdGEgPSBkYXRhICsgcGFkCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIHdyaXRlci5iZWdpbnRhZygiaGRteERhdGEiKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBwcGVtcyA9IHNvcnRlZChzZWxmLmhkbXgua2V5cygpKQogICAgICAgIHJlY29yZHMgPSBbXQogICAgICAgIGZvcm1hdCA9ICIiCiAgICAgICAgZm9yIHBwZW0gaW4gcHBlbXM6CiAgICAgICAgICAgIHdpZHRocyA9IHNlbGYuaGRteFtwcGVtXQogICAgICAgICAgICByZWNvcmRzLmFwcGVuZCh3aWR0aHMpCiAgICAgICAgICAgIGZvcm1hdCA9IGZvcm1hdCArICIlNGQiCiAgICAgICAgZ2x5cGhOYW1lcyA9IHR0Rm9udC5nZXRHbHlwaE9yZGVyKClbOl0KICAgICAgICBnbHlwaE5hbWVzLnNvcnQoKQogICAgICAgIG1heE5hbWVMZW4gPSBtYXgobWFwKGxlbiwgZ2x5cGhOYW1lcykpCiAgICAgICAgZm9ybWF0ID0gIiUiICsgcmVwcihtYXhOYW1lTGVuKSArICJzOiIgKyBmb3JtYXQgKyAiIDsiCiAgICAgICAgd3JpdGVyLndyaXRlKGZvcm1hdCAlICgoInBwZW0iLCkgKyB0dXBsZShwcGVtcykpKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgZm9yIGdseXBoTmFtZSBpbiBnbHlwaE5hbWVzOgogICAgICAgICAgICByb3cgPSBbXQogICAgICAgICAgICBmb3IgcHBlbSBpbiBwcGVtczoKICAgICAgICAgICAgICAgIHdpZHRocyA9IHNlbGYuaGRteFtwcGVtXQogICAgICAgICAgICAgICAgcm93LmFwcGVuZCh3aWR0aHNbZ2x5cGhOYW1lXSkKICAgICAgICAgICAgaWYgIjsiIGluIGdseXBoTmFtZToKICAgICAgICAgICAgICAgIGdseXBoTmFtZSA9ICJcXHgzYiIuam9pbihnbHlwaE5hbWUuc3BsaXQoIjsiKSkKICAgICAgICAgICAgd3JpdGVyLndyaXRlKGZvcm1hdCAlICgoZ2x5cGhOYW1lLCkgKyB0dXBsZShyb3cpKSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5lbmR0YWcoImhkbXhEYXRhIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSAhPSAiaGRteERhdGEiOgogICAgICAgICAgICByZXR1cm4KICAgICAgICBjb250ZW50ID0gc3Ryam9pbihjb250ZW50KQogICAgICAgIGxpbmVzID0gY29udGVudC5zcGxpdCgiOyIpCiAgICAgICAgdG9wUm93ID0gbGluZXNbMF0uc3BsaXQoKQogICAgICAgIGFzc2VydCB0b3BSb3dbMF0gPT0gInBwZW06IiwgImlsbGVnYWwgaGRteCBmb3JtYXQiCiAgICAgICAgcHBlbXMgPSBsaXN0KG1hcChpbnQsIHRvcFJvd1sxOl0pKQogICAgICAgIHNlbGYuaGRteCA9IGhkbXggPSB7fQogICAgICAgIGZvciBwcGVtIGluIHBwZW1zOgogICAgICAgICAgICBoZG14W3BwZW1dID0ge30KICAgICAgICBsaW5lcyA9IChsaW5lLnNwbGl0KCkgZm9yIGxpbmUgaW4gbGluZXNbMTpdKQogICAgICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgICAgICBpZiBub3QgbGluZToKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGFzc2VydCBsaW5lWzBdWy0xXSA9PSAiOiIsICJpbGxlZ2FsIGhkbXggZm9ybWF0IgogICAgICAgICAgICBnbHlwaE5hbWUgPSBsaW5lWzBdWzotMV0KICAgICAgICAgICAgaWYgIlxcIiBpbiBnbHlwaE5hbWU6CiAgICAgICAgICAgICAgICBmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKCiAgICAgICAgICAgICAgICBnbHlwaE5hbWUgPSBzYWZlRXZhbCgnIiIiJyArIGdseXBoTmFtZSArICciIiInKQogICAgICAgICAgICBsaW5lID0gbGlzdChtYXAoaW50LCBsaW5lWzE6XSkpCiAgICAgICAgICAgIGFzc2VydCBsZW4obGluZSkgPT0gbGVuKHBwZW1zKSwgImlsbGVnYWwgaGRteCBmb3JtYXQiCiAgICAgICAgICAgIGZvciBpLCBwcGVtIGluIGVudW1lcmF0ZShwcGVtcyk6CiAgICAgICAgICAgICAgICBoZG14W3BwZW1dW2dseXBoTmFtZV0gPSBsaW5lW2ldCg==
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytechr, byteord, strjoin
+from . import DefaultTable
+import array
+from collections.abc import Mapping
+
+hdmxHeaderFormat = """
+	>   # big endian!
+	version:	H
+	numRecords:	H
+	recordSize:	l
+"""
+
+
+class _GlyphnamedList(Mapping):
+    def __init__(self, reverseGlyphOrder, data):
+        self._array = data
+        self._map = dict(reverseGlyphOrder)
+
+    def __getitem__(self, k):
+        return self._array[self._map[k]]
+
+    def __len__(self):
+        return len(self._map)
+
+    def __iter__(self):
+        return iter(self._map)
+
+    def keys(self):
+        return self._map.keys()
+
+
+class table__h_d_m_x(DefaultTable.DefaultTable):
+    """Horizontal Device Metrics table
+
+    The ``hdmx`` table is an optional table that stores advance widths for
+    glyph outlines at specified pixel sizes.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/hdmx
+    """
+
+    def decompile(self, data, ttFont):
+        numGlyphs = ttFont["maxp"].numGlyphs
+        glyphOrder = ttFont.getGlyphOrder()
+        dummy, data = sstruct.unpack2(hdmxHeaderFormat, data, self)
+        self.hdmx = {}
+        for i in range(self.numRecords):
+            ppem = byteord(data[0])
+            maxSize = byteord(data[1])
+            widths = _GlyphnamedList(
+                ttFont.getReverseGlyphMap(), array.array("B", data[2 : 2 + numGlyphs])
+            )
+            self.hdmx[ppem] = widths
+            data = data[self.recordSize :]
+        assert len(data) == 0, "too much hdmx data"
+
+    def compile(self, ttFont):
+        self.version = 0
+        numGlyphs = ttFont["maxp"].numGlyphs
+        glyphOrder = ttFont.getGlyphOrder()
+        self.recordSize = 4 * ((2 + numGlyphs + 3) // 4)
+        pad = (self.recordSize - 2 - numGlyphs) * b"\0"
+        self.numRecords = len(self.hdmx)
+        data = sstruct.pack(hdmxHeaderFormat, self)
+        items = sorted(self.hdmx.items())
+        for ppem, widths in items:
+            data = data + bytechr(ppem) + bytechr(max(widths.values()))
+            for glyphName in glyphOrder:
+                width = widths[glyphName]
+                data = data + bytechr(width)
+            data = data + pad
+        return data
+
+    def toXML(self, writer, ttFont):
+        writer.begintag("hdmxData")
+        writer.newline()
+        ppems = sorted(self.hdmx.keys())
+        records = []
+        format = ""
+        for ppem in ppems:
+            widths = self.hdmx[ppem]
+            records.append(widths)
+            format = format + "%4d"
+        glyphNames = ttFont.getGlyphOrder()[:]
+        glyphNames.sort()
+        maxNameLen = max(map(len, glyphNames))
+        format = "%" + repr(maxNameLen) + "s:" + format + " ;"
+        writer.write(format % (("ppem",) + tuple(ppems)))
+        writer.newline()
+        writer.newline()
+        for glyphName in glyphNames:
+            row = []
+            for ppem in ppems:
+                widths = self.hdmx[ppem]
+                row.append(widths[glyphName])
+            if ";" in glyphName:
+                glyphName = "\\x3b".join(glyphName.split(";"))
+            writer.write(format % ((glyphName,) + tuple(row)))
+            writer.newline()
+        writer.endtag("hdmxData")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name != "hdmxData":
+            return
+        content = strjoin(content)
+        lines = content.split(";")
+        topRow = lines[0].split()
+        assert topRow[0] == "ppem:", "illegal hdmx format"
+        ppems = list(map(int, topRow[1:]))
+        self.hdmx = hdmx = {}
+        for ppem in ppems:
+            hdmx[ppem] = {}
+        lines = (line.split() for line in lines[1:])
+        for line in lines:
+            if not line:
+                continue
+            assert line[0][-1] == ":", "illegal hdmx format"
+            glyphName = line[0][:-1]
+            if "\\" in glyphName:
+                from fontTools.misc.textTools import safeEval
+
+                glyphName = safeEval('"""' + glyphName + '"""')
+            line = list(map(int, line[1:]))
+            assert len(line) == len(ppems), "illegal hdmx format"
+            for i, ppem in enumerate(ppems):
+                hdmx[ppem][glyphName] = line[i]

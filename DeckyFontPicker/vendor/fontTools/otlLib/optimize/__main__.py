@@ -1,1 +1,5 @@
-aW1wb3J0IHN5cwpmcm9tIGZvbnRUb29scy5vdGxMaWIub3B0aW1pemUgaW1wb3J0IG1haW4KCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzeXMuZXhpdChtYWluKCkpCg==
+import sys
+from fontTools.otlLib.optimize import main
+
+if __name__ == "__main__":
+    sys.exit(main())

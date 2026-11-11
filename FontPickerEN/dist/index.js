@@ -204,7 +204,11 @@
 
         // QAM / MainMenu 的文档会被 Steam 重建，后端会自动补注入；这里跟着刷新状态
         var pendingCount = state && state.targets
-            ? state.targets.filter(function (t) { return !t.ok; }).length
+            ? state.targets.filter(function (t) {
+                if (!t.ok) return true;
+                // local 模式下探测还没落定也要继续轮询
+                return state.mode === "local" && (!t.probe || t.probe.status === "pending");
+            }).length
             : -1;
 
         useEffect(function () {
@@ -228,6 +232,13 @@
             if (busy) return;
             setBusy(true);
             call("reset_font").then(function () { setBusy(false); });
+        }
+
+        // 切换投递模式：只由用户点击触发，绝不自动切换
+        function switchMode(next) {
+            if (busy) return;
+            setBusy(true);
+            call("set_mode", { mode: next }).then(function () { setBusy(false); });
         }
 
         function toggleFavorite(family) {
@@ -330,30 +341,53 @@
                 if (byName[favorites[f]]) fav.push(byName[favorites[f]]);
             }
 
-            var mono = [];
-            var serif = [];
-            var sans = [];
-            var other = [];
             var zhExtra = [];
-            // 四个基础类的 zh 子类：同一判据 + lang 含 zh；
-            // 基础类排除 zh 字体，两者互斥，全场合计仍等于原来的基础类数量
-            var monoZh = [];
-            var serifZh = [];
-            var sansZh = [];
-            var otherZh = [];
+            // Each base category has zh / ja / ko subcategories; priority zh > ja > ko,
+            // base keeps fonts with none of the three, so the 16 buckets are exclusive
+            var kinds = ["serif", "sans", "mono", "other"];
+            var subs = {};
+            for (var k = 0; k < kinds.length; k++) {
+                subs[kinds[k]] = [];
+                subs[kinds[k] + "-zh"] = [];
+                subs[kinds[k] + "-ja"] = [];
+                subs[kinds[k] + "-ko"] = [];
+            }
             for (var j = 0; j < full.length; j++) {
                 var font = full[j];
                 var monofl = isMono(font);
                 var isSerifFont = isSerif(font);
                 if (font.zh_extra) zhExtra.push(font);
-                // 判定顺序 Mono → Serif → Sans → 其他，四类互斥；zh 字体只进对应（zh）子类
-                if (monofl) { if (font.zh) monoZh.push(font); else mono.push(font); }
-                else if (isSerifFont) { if (font.zh) serifZh.push(font); else serif.push(font); }
-                else if (isSans(font)) { if (font.zh) sansZh.push(font); else sans.push(font); }
-                else if (font.zh) otherZh.push(font);
-                else other.push(font);
+                // Base category: Mono → Serif → Sans → Others, mutually exclusive
+                var kind = monofl ? "mono" : isSerifFont ? "serif" : isSans(font) ? "sans" : "other";
+                // Primary language: family region token wins (JP→ja, KR→ko, SC/TC/HK→zh);
+                // otherwise fall back to the zh > ja > ko coverage rule
+                var lang = font.primary || (font.zh ? "zh" : font.ja ? "ja" : font.ko ? "ko" : "");
+                var sub = lang ? "-" + lang : "";
+                subs[kind + sub].push(font);
             }
 
+            var BASE_NAME = { serif: "Serif", sans: "Sans", mono: "Mono", other: "Others" };
+            var BASE_NOTE = {
+                serif: "Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
+                sans: "Family name contains an explicit sans keyword (sans / grotesk / gothic / hei, etc.).",
+                mono: "Determined by fontconfig's spacing field (100 / 110) or by a family name containing a monospace keyword (mono / monospace).",
+                other: "Neither monospace nor matched by a serif / sans keyword.",
+            };
+            var SUB_SUFFIX = { zh: " (zh)", ja: " (ja)", ko: " (ko)" };
+            var SUB_NOTE = {
+                zh: "Grouped by primary language: family carries SC / TC / HK, or (without a region token) lang contains Chinese. Mutually exclusive with the base category and the other subcategories.",
+                ja: "Grouped by primary language: family carries JP (e.g. Noto Sans CJK JP), or (without a region token) lang only contains Japanese. Mutually exclusive with the base category and the other subcategories.",
+                ko: "Grouped by primary language: family carries KR, or (without a region token) lang only contains Korean. Mutually exclusive with the base category and the other subcategories.",
+            };
+            function catOf(kind, sub) {
+                return {
+                    id: kind + (sub ? "-" + sub : ""),
+                    name: BASE_NAME[kind] + (sub ? SUB_SUFFIX[sub] : ""),
+                    items: subs[kind + (sub ? "-" + sub : "")],
+                    kind: kind,
+                    note: sub ? SUB_NOTE[sub] : "No Chinese, Japanese, or Korean fonts here; see the per-language subcategories. " + BASE_NOTE[kind],
+                };
+            }
             var cats = [
                 {
                     id: "fav", name: "Favorites", items: fav, kind: "fav",
@@ -364,40 +398,15 @@
                     id: "zh-extra", name: "Chinese Coverage", items: zhExtra, kind: "zh-extra",
                     note: "Detected by charset coverage: not primarily a Chinese font, but its charset covers at least 500 code points in the CJK Unified Ideographs ranges (U+3400–U+4DBF, U+4E00–U+9FFF). Fonts that cannot be measured are skipped; currently " + zhExtra.length + " fonts.",
                 },
-                {
-                    id: "serif", name: "Serif", items: serif, kind: "serif",
-                    note: "No Chinese fonts here; see 'Serif (zh)'. Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
-                },
-                {
-                    id: "serif-zh", name: "Serif (zh)", items: serifZh, kind: "serif",
-                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Serif'; together they cover every serif font.",
-                },
-                {
-                    id: "sans", name: "Sans", items: sans, kind: "sans",
-                    note: "No Chinese fonts here; see 'Sans (zh)'. Family name contains an explicit sans keyword (sans / grotesk / gothic / hei, etc.).",
-                },
-                {
-                    id: "sans-zh", name: "Sans (zh)", items: sansZh, kind: "sans",
-                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Sans'; together they cover every sans-serif font.",
-                },
-                {
-                    id: "mono", name: "Mono", items: mono, kind: "mono",
-                    note: "No Chinese fonts here; see 'Mono (zh)'. Determined by fontconfig's spacing field (100 / 110) or by a family name containing a monospace keyword (mono / monospace / the localised word for 'monospace').",
-                },
-                {
-                    id: "mono-zh", name: "Mono (zh)", items: monoZh, kind: "mono",
-                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Mono'; together they cover every monospace font.",
-                },
-                {
-                    id: "other", name: "Others", items: other, kind: "other",
-                    note: "No Chinese fonts here; see 'Others (zh)'. Neither monospace nor matched by a serif / sans keyword.",
-                },
-                {
-                    id: "other-zh", name: "Others (zh)", items: otherZh, kind: "other",
-                    note: "Chinese only (lang contains zh). Mutually exclusive with 'Others'; together they cover every remaining font.",
-                },
-                { id: "all", name: "All Fonts", items: full, kind: "all", note: null },
             ];
+            // Order: base category → zh → ja → ko
+            for (var c = 0; c < kinds.length; c++) {
+                cats.push(catOf(kinds[c], ""));
+                cats.push(catOf(kinds[c], "zh"));
+                cats.push(catOf(kinds[c], "ja"));
+                cats.push(catOf(kinds[c], "ko"));
+            }
+            cats.push({ id: "all", name: "All Fonts", items: full, kind: "all", note: null });
 
             // 0 款的分类整块隐藏（标题也不渲染）；收藏夹与「全部字体」永远保留
             return cats.filter(function (cat) {
@@ -405,21 +414,105 @@
             });
         }, [fonts, favorites]);
 
-        // 异常时才出现的单行提示：字体准备失败 / 本地服务没起来 / 某一路注入失败
+        // Single-line notice only for global failures; per-target misses are already in the card summary
         var problemText = null;
         if (state && state.error) {
             problemText = String(state.error);
-        } else if (state && state.server && !state.server.running) {
+        } else if (state && state.mode === "extract" && state.server && !state.server.running) {
             problemText = "Local font service is not running; fonts cannot be applied";
-        } else if (state && Array.isArray(state.targets)) {
-            var failedLabels = state.targets.filter(function (t) { return !t.ok; })
-                .map(function (t) { return t.label; });
-            if (failedLabels.length) problemText = "UI injection incomplete: " + failedLabels.join(", ");
         }
-        // 注入状态只保留「已注入 / 未注入」；uid 与目标文档名只留在日志里
-        // 标签列固定宽度，保证三行的状态文字左边缘对齐
-        var TARGET_LABEL_WIDTH = "90px";
+        // Current delivery mode: local (default) / extract
+        var mode = (state && state.mode) === "extract" ? "extract" : "local";
+        var extractInfo = (state && state.modes && state.modes.extract) || null;
+        var extractUsable = !!(extractInfo && extractInfo.available !== false);
+        var extractReason = (extractInfo && extractInfo.reason) || "fontTools missing";
+        // Fixed name column, sized for the longest label ("Embedded")
+        var modeNameW = "62px";
+        var MODE_DESC = {
+            local: "browser uses installed system fonts directly; no face extraction, no cache (CSS local())",
+            extract: "extracts this font's real face and embeds it; forces .ttc to work too",
+        };
+        var switchDisabled = busy || (mode === "local" && !extractUsable);
+        var switchOKDesc = mode === "local"
+            ? (extractUsable ? "Switch to embedded mode" : "embedded mode unavailable")
+            : "Switch back to by-name mode";
+        // Only an explicit click switches modes; probe results never auto-switch
+        function doSwitchMode() {
+            if (switchDisabled) {
+                // Never fail silently: say why the click did nothing
+                if (mode === "local" && !extractUsable) setMessage("Embedded mode unavailable: " + extractReason);
+                return;
+            }
+            switchMode(mode === "local" ? "extract" : "local");
+        }
+
+        // The collapsed summary row is all you see when Current Font is closed, so
+        // hit / not injected / probe failed must be distinguishable right there
+        var summary = (function () {
+            var ts = state && Array.isArray(state.targets) ? state.targets : null;
+            if (!ts || !ts.length) return null;
+            var bad = ts.filter(function (t) { return !t.ok; }).map(function (t) { return t.label; });
+            if (bad.length) return { text: "Not injected: " + bad.join(", "), color: "#ff9b90" };
+            // Active state uses the mode color (blue) in extract mode, matching local's green
+            if (mode === "extract") return { text: "Injected", color: "#8ab4f8" };
+            var probes = ts.map(function (t) { return t.probe || null; });
+            if (probes.some(function (p) { return p && p.status === "error"; })) {
+                return { text: "probe failed (not in effect)", color: "#f0c674" };
+            }
+            if (probes.some(function (p) { return p && p.status === "miss"; })) {
+                return { text: "missed (fell back to system font)", color: "#ff9b90" };
+            }
+            if (probes.some(function (p) { return p && p.status === "hit_no_cjk"; })) {
+                return { text: "Applied (no CJK glyphs)", color: "#f0c674" };
+            }
+            if (probes.every(function (p) { return p && p.status === "hit"; })) {
+                return { text: "Applied", color: "#7ee787" };
+            }
+            return { text: "probing…", color: "rgba(255,255,255,0.55)" };
+        })();
+
+        // Injection state: injected / not injected, plus the local() probe verdict per target
+        // Fixed-width label column keeps the three status texts left-aligned
+        var TARGET_LABEL_WIDTH = "86px";
         var targetRows = (state && Array.isArray(state.targets) ? state.targets : []).map(function (target) {
+            var probe = target.probe || null;
+            var statusText;
+            var statusColor;
+            if (!target.ok) {
+                statusText = "Not injected";
+                statusColor = "#ff9b90";
+            } else if (mode === "extract") {
+                statusText = "Injected";
+                statusColor = "#8ab4f8";
+            } else if (!probe || probe.status === "pending") {
+                statusText = "probing…";
+                statusColor = "rgba(255,255,255,0.55)";
+            } else if (probe.status === "hit") {
+                statusText = "Applied";
+                statusColor = "#7ee787";
+            } else if (probe.status === "hit_no_cjk") {
+                statusText = "Applied (no CJK glyphs)";
+                statusColor = "#f0c674";
+            } else if (probe.status === "miss") {
+                statusText = "missed (fell back to system font)";
+                statusColor = "#ff9b90";
+            } else {
+                // Probe failure = this delivery method is not in effect, same bucket as a miss,
+                // but the cause is the probe itself (timeout / JS error), not the font
+                statusText = "probe failed (not in effect)";
+                statusColor = "#f0c674";
+            }
+            // No extra explanation when everything works; only abnormal states get a reason / hint
+            var detailText = null;
+            if (!target.ok) {
+                detailText = "this region is not injected; pick the font again to re-inject";
+            } else if (mode === "local" && probe && probe.status === "error") {
+                detailText = "the probe itself failed (timeout / JS error); your font is fine"
+                    + (probe.error ? ": " + String(probe.error).slice(0, 60) : "")
+                    + "; use \"Delivery\" above to switch to embedded mode";
+            } else if (mode === "local" && probe && probe.status === "miss") {
+                detailText = "identical to the fallback font, likely not in effect; try embedded mode";
+            }
             return h(deckyFrontendLib.PanelSectionRow, { key: target.key },
                 h("div", {
                     style: {
@@ -427,6 +520,10 @@
                         alignItems: "center",
                         fontSize: "13px",
                         lineHeight: "1.4",
+                        // Align with the "Delivery" text above: outer 8px + inner 12px = 20px,
+                        // same inset on both sides so the block has the same width
+                        padding: "0 20px",
+                        boxSizing: "border-box",
                     },
                 },
                     h("span", {
@@ -437,16 +534,84 @@
                             color: "#c3c8cf",
                         },
                     }, target.label),
-                    h("span", {
-                        style: {
-                            color: target.ok ? "rgba(255, 255, 255, 0.85)" : "#ff9b90",
-                            fontWeight: 600,
-                            fontSize: "12px",
-                        },
-                    }, target.ok ? "Injected" : "Not injected")
+                    h("span", { style: { display: "flex", flex: "1 1 auto", flexDirection: "column", minWidth: 0, gap: "1px" } },
+                        h("span", {
+                            style: { color: statusColor, fontWeight: 600, fontSize: "12px" },
+                        }, statusText),
+                        detailText
+                            ? h("span", {
+                                style: { color: "rgba(255,255,255,0.4)", fontSize: "10px", lineHeight: "1.45" },
+                            }, detailText)
+                            : null
+                    )
                 )
             );
         });
+
+        // One mode description line: fixed-width name column, aligned colon, hanging indent for the text
+        function modeDescLine(key, text) {
+            var active = mode === key;
+            var color = key === "extract" ? "#8ab4f8" : "#7ee787";
+            return h("div", {
+                key: "fp-mode-desc:" + key,
+                style: {
+                    display: "grid",
+                    gridTemplateColumns: modeNameW + " 1fr",
+                    columnGap: "2px",
+                },
+            },
+                h("span", {
+                    style: {
+                        whiteSpace: "nowrap",
+                        // Active keeps the mode color, inactive is plain grey; same weight so neither looks like a link
+                        fontWeight: 500,
+                        color: active ? color : "rgba(255,255,255,0.45)",
+                    },
+                }, key === "extract" ? "Embedded" : "By name"),
+                h("span", {
+                    style: {
+                        color: active ? "rgba(255,255,255,0.86)" : "rgba(255,255,255,0.4)",
+                    },
+                }, ": " + text)
+            );
+        }
+
+        // Font note now shows lang coverage: Chinese tags first; non-Chinese lists a few and says so
+        function isZhLangTag(tag) {
+            return tag === "zh" || tag.indexOf("zh-") === 0 || tag === "yue";
+        }
+        // zh-cn → zh-CN, zh-hans → zh-Hans
+        function fmtLangTag(tag) {
+            var parts = String(tag).toLowerCase().split("-");
+            var out = parts[0];
+            for (var i = 1; i < parts.length; i++) {
+                var seg = parts[i];
+                out += "-" + (seg.length === 2
+                    ? seg.toUpperCase()
+                    : seg.charAt(0).toUpperCase() + seg.slice(1));
+            }
+            return out;
+        }
+        function langLine(font) {
+            if (!font) return "lang unknown";
+            var langs = Array.isArray(font.langs) ? font.langs : [];
+            var total = typeof font.lang_count === "number" ? font.lang_count : langs.length;
+            var usable = !!(font.zh || font.zh_extra);
+            if (!langs.length) return "lang unknown";
+            var zhLangs = langs.filter(isZhLangTag);
+            if (zhLangs.length) {
+                var shownZh = zhLangs.slice(0, 2).map(fmtLangTag).join(" · ");
+                return "lang " + shownZh
+                    + (zhLangs.length > 2 ? " · " + zhLangs.length + " langs" : "");
+            }
+            var shown = langs.slice(0, 3).map(fmtLangTag).join(" · ");
+            return "lang " + shown
+                + (total > 3 ? " · " + total + " langs" : "")
+                + (usable ? " · has Chinese glyphs" : "");
+        }
+
+        // Note line under the title: shows lang coverage directly
+        var langText = current ? langLine(currentFont) : "UI font not overridden";
 
         // 「当前字体」标题行：与分区标题同一套样式与聚焦实现（fp-sec + focusClassName），
         // 左侧 ▸/▾ + 标签，右侧字体名；默认折叠，折叠时不渲染说明行与注入状态三行
@@ -494,32 +659,124 @@
                         }, currentOpen ? "▾" : "▸"),
                         h("span", { style: { marginLeft: "6px" } }, "Current font")
                     ),
-                    // 字体名与标签同一行、垂直居中；过长用省略号截断，不换行；无字体时显示空态文案
-                    h("span", {
+                    // Font name + status summary, right-aligned; the summary stays visible when collapsed
+                    h("div", {
                         className: "fp-current-name",
                         style: {
                             flex: "1 1 auto",
                             minWidth: 0,
-                            textAlign: "right",
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            fontWeight: 400,
-                            fontSize: "13px",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-end",
+                            lineHeight: "1.25",
                         },
-                    }, current || "None selected")
+                    },
+                        h("span", {
+                            style: {
+                                maxWidth: "100%",
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                fontWeight: 400,
+                                fontSize: "13px",
+                            },
+                        }, current || "None selected"),
+                        summary
+                            ? h("span", {
+                                className: "fp-current-summary",
+                                style: {
+                                    maxWidth: "100%",
+                                    // Never truncate: wrap instead and let the card grow
+                                    whiteSpace: "normal",
+                                    overflow: "visible",
+                                    wordBreak: "break-word",
+                                    textAlign: "right",
+                                    fontSize: "11px",
+                                    lineHeight: "1.4",
+                                    fontWeight: 600,
+                                    color: summary.color,
+                                },
+                            }, summary.text)
+                            : null
+                    )
                 )
             ),
             currentOpen
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:info" },
-                    h("div", { style: { fontSize: "14px", lineHeight: "1.5" } },
-                        current
-                            ? h("div", { style: { opacity: 0.72 } },
-                                (currentFont && currentFont.zh)
-                                    ? "Chinese glyphs included; safe for UI text"
-                                    : "No Chinese glyphs in this font; Chinese text falls back to " + ((state && state.fallback && state.fallback[0]) || "the system default"))
-                            : h("div", { style: { opacity: 0.72 } }, "UI font not overridden")
-                    ))
+                    h("div", {
+                        title: langText,
+                        style: {
+                            fontSize: "11px",
+                            lineHeight: "1.5",
+                            opacity: 0.72,
+                            // Centered; wraps when long and every line stays centered, never truncated
+                            textAlign: "center",
+                            whiteSpace: "normal",
+                            wordBreak: "break-word",
+                        },
+                    }, langText))
+                : null,
+            // Delivery stays inside this card: the whole row is focusable/clickable and toggles local ⇄ extract
+            currentOpen
+                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:mode" },
+                    // The outer box only reserves spacing between the focus ring and the card edge
+                    h("div", { style: { padding: "2px 8px" } },
+                    h(deckyFrontendLib.Focusable, {
+                        tabIndex: 0,
+                        className: "fp-mode-row " + (mode === "extract" ? "fp-mode-extract" : "fp-mode-local"),
+                        focusClassName: "fp-row-focus",
+                        onActivate: doSwitchMode,
+                        onClick: doSwitchMode,
+                        onOKActionDescription: switchOKDesc,
+                        style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "4px",
+                            boxSizing: "border-box",
+                            width: "100%",
+                            // Side padding keeps a safe gap after the right-aligned mode name
+                            padding: "9px 12px",
+                            borderRadius: "8px",
+                            outline: "none",
+                            textAlign: "left",
+                            cursor: switchDisabled ? "default" : "pointer",
+                            transition: "background 80ms linear",
+                        },
+                    },
+                        // Only the left label: the active mode is already highlighted below
+                        h("div", {
+                            style: {
+                                display: "flex",
+                                alignItems: "baseline",
+                                justifyContent: "space-between",
+                                gap: "8px",
+                                fontSize: "13px",
+                                lineHeight: "1.4",
+                            },
+                        },
+                            h("span", { style: { color: "#c3c8cf", flexShrink: 0 } }, "Delivery"),
+                            h("span", {
+                                "aria-hidden": "true",
+                                className: "fp-mode-swap",
+                                style: { fontSize: "12px", flexShrink: 0, lineHeight: "1.4" },
+                            }, "⇄")
+                        ),
+                        // Both descriptions always visible: active one brighter + colored name, other greyed
+                        h("div", {
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "2px",
+                                fontSize: "11px",
+                                lineHeight: "1.45",
+                            },
+                        },
+                            modeDescLine("local", MODE_DESC.local),
+                            modeDescLine("extract", extractUsable
+                                ? MODE_DESC.extract
+                                : MODE_DESC.extract + " (currently unavailable: " + extractReason + ")")
+                        )
+                    )))
                 : null,
             currentOpen ? targetRows : null,
             // 异常提示不属于可折叠内容：任何折叠状态下都常显
@@ -645,7 +902,25 @@
             "box-shadow:inset 0 0 0 1px #66c0f4!important;" +
             "color:#ffffff!important;}" +
             ".fp-sec.fp-row-focus .fp-arrow,.fp-sec:focus .fp-arrow{color:#ffffff!important;}" +
-            ".fp-sec.fp-row-focus .fp-count,.fp-sec:focus .fp-count{color:#e6f3fb!important;}";
+            ".fp-sec.fp-row-focus .fp-count,.fp-sec:focus .fp-count{color:#e6f3fb!important;}" +
+            // The Delivery row itself is clickable: ring on focus, low-key otherwise
+            ".fp-mode-row:hover{background:rgba(255,255,255,0.05)!important;}" +
+            ".fp-mode-row.fp-row-focus,.fp-mode-row:focus{" +
+            "background:rgba(255,255,255,0.07)!important;" +
+            "box-shadow:inset 0 0 0 1px #66c0f4!important;" +
+            "border-radius:8px;}" +
+            // ⇄ stays faint by default, lights up in the active mode color on focus / hover.
+            // Transform-only scaling keeps the row height unchanged.
+            ".fp-mode-swap{display:inline-block;opacity:0.45;color:rgba(255,255,255,0.7);" +
+            "transform-origin:center right;" +
+            "transition:opacity 150ms ease,transform 150ms ease,color 150ms ease;}" +
+            ".fp-mode-row:hover .fp-mode-swap,.fp-mode-row.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-row:focus .fp-mode-swap{" +
+            "opacity:1;transform:translateX(-2px) scale(1.12);}" +
+            ".fp-mode-local:hover .fp-mode-swap,.fp-mode-local.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-local:focus .fp-mode-swap{color:#7ee787!important;}" +
+            ".fp-mode-extract:hover .fp-mode-swap,.fp-mode-extract.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-extract:focus .fp-mode-swap{color:#8ab4f8!important;}";
 
         // 「加载更多」行：沿用标题行的样式与 focusClassName 聚焦方案，只负责加长列表
         function loadMoreRow(remaining, key, moreKey) {
@@ -732,7 +1007,7 @@
                 categoryRows(cat));
         });
 
-        // 收藏由字体行 X 负责、重新注入由字体行 A 负责，这里只留恢复默认
+        // Favourites live on the X button, re-inject on the A button; keep reset here
         var actionSection = h(deckyFrontendLib.PanelSection, { title: "Actions" },
             h(deckyFrontendLib.PanelSectionRow, null,
                 h(deckyFrontendLib.ButtonItem, {

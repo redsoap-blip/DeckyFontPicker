@@ -1,1 +1,233 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGlvCmltcG9ydCBvcwppbXBvcnQgc2h1dGlsCmltcG9ydCBzdGF0CmltcG9ydCB0ZW1wZmlsZQppbXBvcnQgdHlwaW5nCmltcG9ydCB6aXBmaWxlCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCgpmcm9tIC5fYmFzZSBpbXBvcnQgRlMKZnJvbSAuX2Vycm9ycyBpbXBvcnQgKAogICAgRmlsZUV4cGVjdGVkLAogICAgSWxsZWdhbEJhY2tSZWZlcmVuY2UsCiAgICBSZXNvdXJjZU5vdEZvdW5kLAogICAgUmVzb3VyY2VSZWFkT25seSwKKQpmcm9tIC5faW5mbyBpbXBvcnQgSW5mbwpmcm9tIC5fcGF0aCBpbXBvcnQgZGlybmFtZSwgZXNjYXBlc19yb290LCBmb3JjZWRpciwgbm9ybXBhdGgsIHJlbHBhdGgKZnJvbSAuX3RlbXBmcyBpbXBvcnQgVGVtcEZTCgppZiB0eXBpbmcuVFlQRV9DSEVDS0lORzoKICAgIGZyb20gY29sbGVjdGlvbnMuYWJjIGltcG9ydCBDb2xsZWN0aW9uCiAgICBmcm9tIHR5cGluZyBpbXBvcnQgSU8sIEFueQoKICAgIGZyb20gLl9zdWJmcyBpbXBvcnQgU3ViRlMKCgpjbGFzcyBaaXBGUyhGUyk6CiAgICAiIiJSZWFkIGFuZCB3cml0ZSB6aXAgZmlsZXMuIiIiCgogICAgZGVmIF9fbmV3X18oCiAgICAgICAgY2xzLCBmaWxlOiBzdHIgfCBvcy5QYXRoTGlrZSwgd3JpdGU6IGJvb2wgPSBGYWxzZSwgZW5jb2Rpbmc6IHN0ciA9ICJ1dGYtOCIKICAgICk6CiAgICAgICAgaWYgd3JpdGU6CiAgICAgICAgICAgIHJldHVybiBXcml0ZVppcEZTKGZpbGUsIGVuY29kaW5nKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiBSZWFkWmlwRlMoZmlsZSwgZW5jb2RpbmcpCgogICAgaWYgdHlwaW5nLlRZUEVfQ0hFQ0tJTkc6CgogICAgICAgIGRlZiBfX2luaXRfXygKICAgICAgICAgICAgc2VsZiwgZmlsZTogc3RyIHwgb3MuUGF0aExpa2UsIHdyaXRlOiBib29sID0gRmFsc2UsIGVuY29kaW5nOiBzdHIgPSAidXRmLTgiCiAgICAgICAgKToKICAgICAgICAgICAgcGFzcwoKCmNsYXNzIFJlYWRaaXBGUyhGUyk6CiAgICAiIiJBIHJlYWRhYmxlIHppcCBmaWxlLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmaWxlOiBzdHIgfCBvcy5QYXRoTGlrZSwgZW5jb2Rpbmc6IHN0ciA9ICJ1dGYtOCIpOgogICAgICAgIHN1cGVyKCkuX19pbml0X18oKQogICAgICAgIHNlbGYuX2ZpbGUgPSBvcy5mc3BhdGgoZmlsZSkKICAgICAgICBzZWxmLmVuY29kaW5nID0gZW5jb2RpbmcgICMgdW51c2VkCiAgICAgICAgc2VsZi5femlwID0gemlwZmlsZS5aaXBGaWxlKGZpbGUsICJyIikKICAgICAgICBzZWxmLl9kaXJlY3RvcnlfZnMgPSBOb25lCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpIC0+IHN0cjoKICAgICAgICByZXR1cm4gZiJSZWFkWmlwRlMoe3NlbGYuX2ZpbGUhcn0pIgoKICAgIGRlZiBfX3N0cl9fKHNlbGYpIC0+IHN0cjoKICAgICAgICByZXR1cm4gZiI8emlwZnMgJ3tzZWxmLl9maWxlfSc+IgoKICAgIGRlZiBfcGF0aF90b196aXBfbmFtZShzZWxmLCBwYXRoOiBzdHIpIC0+IHN0cjoKICAgICAgICAiIiJDb252ZXJ0IGEgcGF0aCB0byBhIHppcCBmaWxlIG5hbWUuIiIiCiAgICAgICAgcGF0aCA9IHJlbHBhdGgobm9ybXBhdGgocGF0aCkpCiAgICAgICAgaWYgc2VsZi5fZGlyZWN0b3J5LmlzZGlyKHBhdGgpOgogICAgICAgICAgICBwYXRoID0gZm9yY2VkaXIocGF0aCkKICAgICAgICByZXR1cm4gcGF0aAoKICAgIEBwcm9wZXJ0eQogICAgZGVmIF9kaXJlY3Rvcnkoc2VsZikgLT4gVGVtcEZTOgogICAgICAgIGlmIHNlbGYuX2RpcmVjdG9yeV9mcyBpcyBOb25lOgogICAgICAgICAgICAjIFJlamVjdCBlc2NhcGluZyBtZW1iZXIgbmFtZXMgdXAgZnJvbnQsIHNvIHRoZSBlcnJvciBuYW1lcyB0aGUgemlwCiAgICAgICAgICAgICMgZW50cnkgcmF0aGVyIHRoYW4gYSBwYXRoIHRoZSBjYWxsZXIgbmV2ZXIgcGFzc2VkLgogICAgICAgICAgICBmb3IgemlwX25hbWUgaW4gc2VsZi5femlwLm5hbWVsaXN0KCk6CiAgICAgICAgICAgICAgICBpZiBlc2NhcGVzX3Jvb3QoemlwX25hbWUpOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIElsbGVnYWxCYWNrUmVmZXJlbmNlKHppcF9uYW1lKQogICAgICAgICAgICAjIFBvcHVsYXRlIGEgbG9jYWwgbWlycm9yIGFuZCBvbmx5IHB1Ymxpc2ggaXQgb25jZSBpdCBpcyBjb21wbGV0ZToKICAgICAgICAgICAgIyBhbiBhcmNoaXZlIGNhbiBmYWlsIHBhcnR3YXkgdGhyb3VnaCBmb3IgcmVhc29ucyB0aGUgcHJlLXNjYW4gY2FuJ3QKICAgICAgICAgICAgIyBzZWUgKGEgbWVtYmVyIG5hbWVkIGJvdGggYXMgYSBmaWxlIGFuZCBhcyBhIGRpcmVjdG9yeSwgYW4gZXNjYXBpbmcKICAgICAgICAgICAgIyBuYW1lIHRoYXQgb25seSBwYXRobGliIHJlY29nbmlzZXMgb24gdGhpcyBwbGF0Zm9ybSksIGFuZCBhIGNhY2hlZAogICAgICAgICAgICAjIGhhbGYtYnVpbHQgbWlycm9yIHdvdWxkIGFuc3dlciBsYXRlciBjYWxscyBmcm9tIGEgc2lsZW50bHkKICAgICAgICAgICAgIyB0cnVuY2F0ZWQgdmlldyBvZiB0aGUgemlwIGluc3RlYWQgb2YgZmFpbGluZyBhZ2Fpbi4KICAgICAgICAgICAgX2ZzID0gVGVtcEZTKCkKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIHppcF9uYW1lIGluIHNlbGYuX3ppcC5uYW1lbGlzdCgpOgogICAgICAgICAgICAgICAgICAgIHJlc291cmNlX25hbWUgPSB6aXBfbmFtZQogICAgICAgICAgICAgICAgICAgIGlmIHJlc291cmNlX25hbWUuZW5kc3dpdGgoIi8iKToKICAgICAgICAgICAgICAgICAgICAgICAgX2ZzLm1ha2VkaXJzKHJlc291cmNlX25hbWUsIHJlY3JlYXRlPVRydWUpCiAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgX2ZzLm1ha2VkaXJzKGRpcm5hbWUocmVzb3VyY2VfbmFtZSksIHJlY3JlYXRlPVRydWUpCiAgICAgICAgICAgICAgICAgICAgICAgIF9mcy5jcmVhdGUocmVzb3VyY2VfbmFtZSkKICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgICAgIF9mcy5jbG9zZSgpCiAgICAgICAgICAgICAgICByYWlzZQogICAgICAgICAgICBzZWxmLl9kaXJlY3RvcnlfZnMgPSBfZnMKICAgICAgICByZXR1cm4gc2VsZi5fZGlyZWN0b3J5X2ZzCgogICAgZGVmIGNsb3NlKHNlbGYpOgogICAgICAgIHN1cGVyKFJlYWRaaXBGUywgc2VsZikuY2xvc2UoKQogICAgICAgIHNlbGYuX3ppcC5jbG9zZSgpCiAgICAgICAgaWYgc2VsZi5fZGlyZWN0b3J5X2ZzIGlzIG5vdCBOb25lOgogICAgICAgICAgICBzZWxmLl9kaXJlY3RvcnlfZnMuY2xvc2UoKQoKICAgIGRlZiBnZXRpbmZvKHNlbGYsIHBhdGg6IHN0ciwgbmFtZXNwYWNlczogQ29sbGVjdGlvbltzdHJdIHwgTm9uZSA9IE5vbmUpIC0+IEluZm86CiAgICAgICAgbmFtZXNwYWNlcyA9IG5hbWVzcGFjZXMgb3IgKCkKICAgICAgICByYXdfaW5mbyA9IHt9CgogICAgICAgIGlmIHBhdGggPT0gIi8iOgogICAgICAgICAgICByYXdfaW5mb1siYmFzaWMiXSA9IHsibmFtZSI6ICIiLCAiaXNfZGlyIjogVHJ1ZX0KICAgICAgICAgICAgaWYgImRldGFpbHMiIGluIG5hbWVzcGFjZXM6CiAgICAgICAgICAgICAgICByYXdfaW5mb1siZGV0YWlscyJdID0geyJ0eXBlIjogc3RhdC5TX0lGRElSfQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGJhc2ljX2luZm8gPSBzZWxmLl9kaXJlY3RvcnkuZ2V0aW5mbyhwYXRoKQogICAgICAgICAgICByYXdfaW5mb1siYmFzaWMiXSA9IHsibmFtZSI6IGJhc2ljX2luZm8ubmFtZSwgImlzX2RpciI6IGJhc2ljX2luZm8uaXNfZGlyfQoKICAgICAgICAgICAgaWYgImRldGFpbHMiIGluIG5hbWVzcGFjZXM6CiAgICAgICAgICAgICAgICB6aXBfbmFtZSA9IHNlbGYuX3BhdGhfdG9femlwX25hbWUocGF0aCkKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICB6aXBfaW5mbyA9IHNlbGYuX3ppcC5nZXRpbmZvKHppcF9uYW1lKQogICAgICAgICAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgaWYgImRldGFpbHMiIGluIG5hbWVzcGFjZXM6CiAgICAgICAgICAgICAgICAgICAgICAgIHJhd19pbmZvWyJkZXRhaWxzIl0gPSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAic2l6ZSI6IHppcF9pbmZvLmZpbGVfc2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIjogaW50KAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0YXQuU19JRkRJUiBpZiBiYXNpY19pbmZvLmlzX2RpciBlbHNlIHN0YXQuU19JRlJFRwogICAgICAgICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtb2RpZmllZCI6IGRhdGV0aW1lKCp6aXBfaW5mby5kYXRlX3RpbWUpLnRpbWVzdGFtcCgpLAogICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgIHJldHVybiBJbmZvKHJhd19pbmZvKQoKICAgIGRlZiBleGlzdHMoc2VsZiwgcGF0aDogc3RyKSAtPiBib29sOgogICAgICAgIHNlbGYuY2hlY2soKQogICAgICAgIHJldHVybiBzZWxmLl9kaXJlY3RvcnkuZXhpc3RzKHBhdGgpCgogICAgZGVmIGlzZGlyKHNlbGYsIHBhdGg6IHN0cikgLT4gYm9vbDoKICAgICAgICBzZWxmLmNoZWNrKCkKICAgICAgICByZXR1cm4gc2VsZi5fZGlyZWN0b3J5LmlzZGlyKHBhdGgpCgogICAgZGVmIGlzZmlsZShzZWxmLCBwYXRoOiBzdHIpIC0+IGJvb2w6CiAgICAgICAgc2VsZi5jaGVjaygpCiAgICAgICAgcmV0dXJuIHNlbGYuX2RpcmVjdG9yeS5pc2ZpbGUocGF0aCkKCiAgICBkZWYgbGlzdGRpcihzZWxmLCBwYXRoOiBzdHIpIC0+IHN0cjoKICAgICAgICBzZWxmLmNoZWNrKCkKICAgICAgICByZXR1cm4gc2VsZi5fZGlyZWN0b3J5Lmxpc3RkaXIocGF0aCkKCiAgICBkZWYgbWFrZWRpcihzZWxmLCBwYXRoOiBzdHIsIHJlY3JlYXRlOiBib29sID0gRmFsc2UpIC0+IFN1YkZTOgogICAgICAgIHNlbGYuY2hlY2soKQogICAgICAgIHJhaXNlIFJlc291cmNlUmVhZE9ubHkocGF0aCkKCiAgICBkZWYgbWFrZWRpcnMoc2VsZiwgcGF0aDogc3RyLCByZWNyZWF0ZTogYm9vbCA9IEZhbHNlKSAtPiBTdWJGUzoKICAgICAgICBzZWxmLmNoZWNrKCkKICAgICAgICByYWlzZSBSZXNvdXJjZVJlYWRPbmx5KHBhdGgpCgogICAgZGVmIHJlbW92ZShzZWxmLCBwYXRoOiBzdHIpOgogICAgICAgIHNlbGYuY2hlY2soKQogICAgICAgIHJhaXNlIFJlc291cmNlUmVhZE9ubHkocGF0aCkKCiAgICBkZWYgcmVtb3ZlZGlyKHNlbGYsIHBhdGg6IHN0cik6CiAgICAgICAgc2VsZi5jaGVjaygpCiAgICAgICAgcmFpc2UgUmVzb3VyY2VSZWFkT25seShwYXRoKQoKICAgIGRlZiByZW1vdmV0cmVlKHNlbGYsIHBhdGg6IHN0cik6CiAgICAgICAgc2VsZi5jaGVjaygpCiAgICAgICAgcmFpc2UgUmVzb3VyY2VSZWFkT25seShwYXRoKQoKICAgIGRlZiBtb3ZlZGlyKHNlbGYsIHNyYzogc3RyLCBkc3Q6IHN0ciwgY3JlYXRlOiBib29sID0gRmFsc2UpOgogICAgICAgIHNlbGYuY2hlY2soKQogICAgICAgIHJhaXNlIFJlc291cmNlUmVhZE9ubHkoc3JjKQoKICAgIGRlZiByZWFkYnl0ZXMoc2VsZiwgcGF0aDogc3RyKSAtPiBieXRlczoKICAgICAgICBzZWxmLmNoZWNrKCkKICAgICAgICBpZiBub3Qgc2VsZi5fZGlyZWN0b3J5LmlzZmlsZShwYXRoKToKICAgICAgICAgICAgcmFpc2UgUmVzb3VyY2VOb3RGb3VuZChwYXRoKQogICAgICAgIHppcF9uYW1lID0gc2VsZi5fcGF0aF90b196aXBfbmFtZShwYXRoKQogICAgICAgIHppcF9ieXRlcyA9IHNlbGYuX3ppcC5yZWFkKHppcF9uYW1lKQogICAgICAgIHJldHVybiB6aXBfYnl0ZXMKCiAgICBkZWYgb3BlbihzZWxmLCBwYXRoOiBzdHIsIG1vZGU6IHN0ciA9ICJyYiIsICoqa3dhcmdzKSAtPiBJT1tBbnldOgogICAgICAgIHNlbGYuY2hlY2soKQogICAgICAgIGlmIHNlbGYuX2RpcmVjdG9yeS5pc2RpcihwYXRoKToKICAgICAgICAgICAgcmFpc2UgRmlsZUV4cGVjdGVkKGYie3BhdGghcn0gaXMgYSBkaXJlY3RvcnkiKQoKICAgICAgICB6aXBfbW9kZSA9IG1vZGVbMF0KICAgICAgICBpZiB6aXBfbW9kZSA9PSAiciIgYW5kIG5vdCBzZWxmLl9kaXJlY3RvcnkuZXhpc3RzKHBhdGgpOgogICAgICAgICAgICByYWlzZSBSZXNvdXJjZU5vdEZvdW5kKGYiTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeToge3BhdGghcn0iKQoKICAgICAgICBpZiBhbnkobSBpbiBtb2RlIGZvciBtIGluICJ3YXgrIik6CiAgICAgICAgICAgIHJhaXNlIFJlc291cmNlUmVhZE9ubHkocGF0aCkKCiAgICAgICAgemlwX25hbWUgPSBzZWxmLl9wYXRoX3RvX3ppcF9uYW1lKHBhdGgpCiAgICAgICAgc3RyZWFtID0gc2VsZi5femlwLm9wZW4oemlwX25hbWUsIHppcF9tb2RlKQogICAgICAgIGlmICJiIiBpbiBtb2RlOgogICAgICAgICAgICBpZiBrd2FyZ3M6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJlbmNvZGluZyBhcmdzIGludmFsaWQgZm9yIGJpbmFyeSBvcGVyYXRpb24iKQogICAgICAgICAgICByZXR1cm4gc3RyZWFtCiAgICAgICAgIyBUZXh0IG1vZGUKICAgICAgICByZXR1cm4gaW8uVGV4dElPV3JhcHBlcihzdHJlYW0sICoqa3dhcmdzKQoKCmNsYXNzIFdyaXRlWmlwRlMoVGVtcEZTKToKICAgICIiIkEgd3JpdGFibGUgemlwIGZpbGUuIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGZpbGU6IHN0ciB8IG9zLlBhdGhMaWtlLCBlbmNvZGluZzogc3RyID0gInV0Zi04Iik6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygpCiAgICAgICAgc2VsZi5fZmlsZSA9IG9zLmZzcGF0aChmaWxlKQogICAgICAgIHNlbGYuZW5jb2RpbmcgPSBlbmNvZGluZyAgIyB1bnVzZWQKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiBmIldyaXRlWmlwRlMoe3NlbGYuX2ZpbGUhcn0pIgoKICAgIGRlZiBfX3N0cl9fKHNlbGYpIC0+IHN0cjoKICAgICAgICByZXR1cm4gZiI8emlwZnMtd3JpdGUgJ3tzZWxmLl9maWxlfSc+IgoKICAgIGRlZiBjbG9zZShzZWxmKToKICAgICAgICBpZiBzZWxmLmlzY2xvc2VkKCk6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIG91dHB1dF9kaXIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKHNlbGYuX2ZpbGUpKQogICAgICAgIG9zLm1ha2VkaXJzKG91dHB1dF9kaXIsIGV4aXN0X29rPVRydWUpCiAgICAgICAgd2l0aCB0ZW1wZmlsZS5UZW1wb3JhcnlEaXJlY3RvcnkoZGlyPW91dHB1dF9kaXIpIGFzIHN0YWdpbmc6CiAgICAgICAgICAgIGFyY2hpdmUgPSBzaHV0aWwubWFrZV9hcmNoaXZlKAogICAgICAgICAgICAgICAgb3MucGF0aC5qb2luKHN0YWdpbmcsICJhcmNoaXZlIiksCiAgICAgICAgICAgICAgICBmb3JtYXQ9InppcCIsCiAgICAgICAgICAgICAgICByb290X2Rpcj1zZWxmLl90ZW1wX2RpciwKICAgICAgICAgICAgKQogICAgICAgICAgICBvcy5yZXBsYWNlKGFyY2hpdmUsIHNlbGYuX2ZpbGUpCiAgICAgICAgc3VwZXIoKS5jbG9zZSgpCg==
+from __future__ import annotations
+
+import io
+import os
+import shutil
+import stat
+import tempfile
+import typing
+import zipfile
+from datetime import datetime
+
+from ._base import FS
+from ._errors import (
+    FileExpected,
+    IllegalBackReference,
+    ResourceNotFound,
+    ResourceReadOnly,
+)
+from ._info import Info
+from ._path import dirname, escapes_root, forcedir, normpath, relpath
+from ._tempfs import TempFS
+
+if typing.TYPE_CHECKING:
+    from collections.abc import Collection
+    from typing import IO, Any
+
+    from ._subfs import SubFS
+
+
+class ZipFS(FS):
+    """Read and write zip files."""
+
+    def __new__(
+        cls, file: str | os.PathLike, write: bool = False, encoding: str = "utf-8"
+    ):
+        if write:
+            return WriteZipFS(file, encoding)
+        else:
+            return ReadZipFS(file, encoding)
+
+    if typing.TYPE_CHECKING:
+
+        def __init__(
+            self, file: str | os.PathLike, write: bool = False, encoding: str = "utf-8"
+        ):
+            pass
+
+
+class ReadZipFS(FS):
+    """A readable zip file."""
+
+    def __init__(self, file: str | os.PathLike, encoding: str = "utf-8"):
+        super().__init__()
+        self._file = os.fspath(file)
+        self.encoding = encoding  # unused
+        self._zip = zipfile.ZipFile(file, "r")
+        self._directory_fs = None
+
+    def __repr__(self) -> str:
+        return f"ReadZipFS({self._file!r})"
+
+    def __str__(self) -> str:
+        return f"<zipfs '{self._file}'>"
+
+    def _path_to_zip_name(self, path: str) -> str:
+        """Convert a path to a zip file name."""
+        path = relpath(normpath(path))
+        if self._directory.isdir(path):
+            path = forcedir(path)
+        return path
+
+    @property
+    def _directory(self) -> TempFS:
+        if self._directory_fs is None:
+            # Reject escaping member names up front, so the error names the zip
+            # entry rather than a path the caller never passed.
+            for zip_name in self._zip.namelist():
+                if escapes_root(zip_name):
+                    raise IllegalBackReference(zip_name)
+            # Populate a local mirror and only publish it once it is complete:
+            # an archive can fail partway through for reasons the pre-scan can't
+            # see (a member named both as a file and as a directory, an escaping
+            # name that only pathlib recognises on this platform), and a cached
+            # half-built mirror would answer later calls from a silently
+            # truncated view of the zip instead of failing again.
+            _fs = TempFS()
+            try:
+                for zip_name in self._zip.namelist():
+                    resource_name = zip_name
+                    if resource_name.endswith("/"):
+                        _fs.makedirs(resource_name, recreate=True)
+                    else:
+                        _fs.makedirs(dirname(resource_name), recreate=True)
+                        _fs.create(resource_name)
+            except Exception:
+                _fs.close()
+                raise
+            self._directory_fs = _fs
+        return self._directory_fs
+
+    def close(self):
+        super(ReadZipFS, self).close()
+        self._zip.close()
+        if self._directory_fs is not None:
+            self._directory_fs.close()
+
+    def getinfo(self, path: str, namespaces: Collection[str] | None = None) -> Info:
+        namespaces = namespaces or ()
+        raw_info = {}
+
+        if path == "/":
+            raw_info["basic"] = {"name": "", "is_dir": True}
+            if "details" in namespaces:
+                raw_info["details"] = {"type": stat.S_IFDIR}
+        else:
+            basic_info = self._directory.getinfo(path)
+            raw_info["basic"] = {"name": basic_info.name, "is_dir": basic_info.is_dir}
+
+            if "details" in namespaces:
+                zip_name = self._path_to_zip_name(path)
+                try:
+                    zip_info = self._zip.getinfo(zip_name)
+                except KeyError:
+                    pass
+                else:
+                    if "details" in namespaces:
+                        raw_info["details"] = {
+                            "size": zip_info.file_size,
+                            "type": int(
+                                stat.S_IFDIR if basic_info.is_dir else stat.S_IFREG
+                            ),
+                            "modified": datetime(*zip_info.date_time).timestamp(),
+                        }
+
+        return Info(raw_info)
+
+    def exists(self, path: str) -> bool:
+        self.check()
+        return self._directory.exists(path)
+
+    def isdir(self, path: str) -> bool:
+        self.check()
+        return self._directory.isdir(path)
+
+    def isfile(self, path: str) -> bool:
+        self.check()
+        return self._directory.isfile(path)
+
+    def listdir(self, path: str) -> str:
+        self.check()
+        return self._directory.listdir(path)
+
+    def makedir(self, path: str, recreate: bool = False) -> SubFS:
+        self.check()
+        raise ResourceReadOnly(path)
+
+    def makedirs(self, path: str, recreate: bool = False) -> SubFS:
+        self.check()
+        raise ResourceReadOnly(path)
+
+    def remove(self, path: str):
+        self.check()
+        raise ResourceReadOnly(path)
+
+    def removedir(self, path: str):
+        self.check()
+        raise ResourceReadOnly(path)
+
+    def removetree(self, path: str):
+        self.check()
+        raise ResourceReadOnly(path)
+
+    def movedir(self, src: str, dst: str, create: bool = False):
+        self.check()
+        raise ResourceReadOnly(src)
+
+    def readbytes(self, path: str) -> bytes:
+        self.check()
+        if not self._directory.isfile(path):
+            raise ResourceNotFound(path)
+        zip_name = self._path_to_zip_name(path)
+        zip_bytes = self._zip.read(zip_name)
+        return zip_bytes
+
+    def open(self, path: str, mode: str = "rb", **kwargs) -> IO[Any]:
+        self.check()
+        if self._directory.isdir(path):
+            raise FileExpected(f"{path!r} is a directory")
+
+        zip_mode = mode[0]
+        if zip_mode == "r" and not self._directory.exists(path):
+            raise ResourceNotFound(f"No such file or directory: {path!r}")
+
+        if any(m in mode for m in "wax+"):
+            raise ResourceReadOnly(path)
+
+        zip_name = self._path_to_zip_name(path)
+        stream = self._zip.open(zip_name, zip_mode)
+        if "b" in mode:
+            if kwargs:
+                raise ValueError("encoding args invalid for binary operation")
+            return stream
+        # Text mode
+        return io.TextIOWrapper(stream, **kwargs)
+
+
+class WriteZipFS(TempFS):
+    """A writable zip file."""
+
+    def __init__(self, file: str | os.PathLike, encoding: str = "utf-8"):
+        super().__init__()
+        self._file = os.fspath(file)
+        self.encoding = encoding  # unused
+
+    def __repr__(self) -> str:
+        return f"WriteZipFS({self._file!r})"
+
+    def __str__(self) -> str:
+        return f"<zipfs-write '{self._file}'>"
+
+    def close(self):
+        if self.isclosed():
+            return
+        output_dir = os.path.dirname(os.path.abspath(self._file))
+        os.makedirs(output_dir, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=output_dir) as staging:
+            archive = shutil.make_archive(
+                os.path.join(staging, "archive"),
+                format="zip",
+                root_dir=self._temp_dir,
+            )
+            os.replace(archive, self._file)
+        super().close()

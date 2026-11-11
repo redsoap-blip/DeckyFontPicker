@@ -1,1 +1,56 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IFRhZywgYnl0ZXNqb2luLCBzdHJqb2luCgp0cnk6CiAgICBpbXBvcnQgeGF0dHIKZXhjZXB0IEltcG9ydEVycm9yOgogICAgeGF0dHIgPSBOb25lCgoKZGVmIF9yZXZlcnNlU3RyaW5nKHMpOgogICAgcyA9IGxpc3QocykKICAgIHMucmV2ZXJzZSgpCiAgICByZXR1cm4gc3Ryam9pbihzKQoKCmRlZiBnZXRNYWNDcmVhdG9yQW5kVHlwZShwYXRoKToKICAgICIiIlJldHVybnMgZmlsZSBjcmVhdG9yIGFuZCBmaWxlIHR5cGUgY29kZXMgZm9yIGEgcGF0aC4KCiAgICBBcmdzOgogICAgICAgICAgICBwYXRoIChzdHIpOiBBIGZpbGUgcGF0aC4KCiAgICBSZXR1cm5zOgogICAgICAgICAgICBBIHR1cGxlIG9mIHR3byA6cHk6Y2xhc3M6YGZvbnRUb29scy50ZXh0VG9vbHMuVGFnYCBvYmplY3RzLCB0aGUgZmlyc3QKICAgICAgICAgICAgcmVwcmVzZW50aW5nIHRoZSBmaWxlIGNyZWF0b3IgYW5kIHRoZSBzZWNvbmQgcmVwcmVzZW50aW5nIHRoZQogICAgICAgICAgICBmaWxlIHR5cGUuCiAgICAiIiIKICAgIGlmIHhhdHRyIGlzIG5vdCBOb25lOgogICAgICAgIHRyeToKICAgICAgICAgICAgZmluZGVySW5mbyA9IHhhdHRyLmdldHhhdHRyKHBhdGgsICJjb20uYXBwbGUuRmluZGVySW5mbyIpCiAgICAgICAgZXhjZXB0IChLZXlFcnJvciwgSU9FcnJvcik6CiAgICAgICAgICAgIHBhc3MKICAgICAgICBlbHNlOgogICAgICAgICAgICBmaWxlVHlwZSA9IFRhZyhmaW5kZXJJbmZvWzo0XSkKICAgICAgICAgICAgZmlsZUNyZWF0b3IgPSBUYWcoZmluZGVySW5mb1s0OjhdKQogICAgICAgICAgICByZXR1cm4gZmlsZUNyZWF0b3IsIGZpbGVUeXBlCiAgICByZXR1cm4gTm9uZSwgTm9uZQoKCmRlZiBzZXRNYWNDcmVhdG9yQW5kVHlwZShwYXRoLCBmaWxlQ3JlYXRvciwgZmlsZVR5cGUpOgogICAgIiIiU2V0IGZpbGUgY3JlYXRvciBhbmQgZmlsZSB0eXBlIGNvZGVzIGZvciBhIHBhdGguCgogICAgTm90ZSB0aGF0IGlmIHRoZSBgYHhhdHRyYGAgbW9kdWxlIGlzIG5vdCBpbnN0YWxsZWQsIG5vIGFjdGlvbiBpcwogICAgdGFrZW4gYnV0IG5vIGVycm9yIGlzIHJhaXNlZC4KCiAgICBBcmdzOgogICAgICAgICAgICBwYXRoIChzdHIpOiBBIGZpbGUgcGF0aC4KICAgICAgICAgICAgZmlsZUNyZWF0b3I6IEEgZm91ci1jaGFyYWN0ZXIgZmlsZSBjcmVhdG9yIHRhZy4KICAgICAgICAgICAgZmlsZVR5cGU6IEEgZm91ci1jaGFyYWN0ZXIgZmlsZSB0eXBlIHRhZy4KCiAgICAiIiIKICAgIGlmIHhhdHRyIGlzIG5vdCBOb25lOgogICAgICAgIGZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBwYWQKCiAgICAgICAgaWYgbm90IGFsbChsZW4ocykgPT0gNCBmb3IgcyBpbiAoZmlsZUNyZWF0b3IsIGZpbGVUeXBlKSk6CiAgICAgICAgICAgIHJhaXNlIFR5cGVFcnJvcigiYXJnIG11c3QgYmUgc3RyaW5nIG9mIDQgY2hhcnMiKQogICAgICAgIGZpbmRlckluZm8gPSBwYWQoYnl0ZXNqb2luKFtmaWxlVHlwZSwgZmlsZUNyZWF0b3JdKSwgMzIpCiAgICAgICAgeGF0dHIuc2V0eGF0dHIocGF0aCwgImNvbS5hcHBsZS5GaW5kZXJJbmZvIiwgZmluZGVySW5mbykK
+from fontTools.misc.textTools import Tag, bytesjoin, strjoin
+
+try:
+    import xattr
+except ImportError:
+    xattr = None
+
+
+def _reverseString(s):
+    s = list(s)
+    s.reverse()
+    return strjoin(s)
+
+
+def getMacCreatorAndType(path):
+    """Returns file creator and file type codes for a path.
+
+    Args:
+            path (str): A file path.
+
+    Returns:
+            A tuple of two :py:class:`fontTools.textTools.Tag` objects, the first
+            representing the file creator and the second representing the
+            file type.
+    """
+    if xattr is not None:
+        try:
+            finderInfo = xattr.getxattr(path, "com.apple.FinderInfo")
+        except (KeyError, IOError):
+            pass
+        else:
+            fileType = Tag(finderInfo[:4])
+            fileCreator = Tag(finderInfo[4:8])
+            return fileCreator, fileType
+    return None, None
+
+
+def setMacCreatorAndType(path, fileCreator, fileType):
+    """Set file creator and file type codes for a path.
+
+    Note that if the ``xattr`` module is not installed, no action is
+    taken but no error is raised.
+
+    Args:
+            path (str): A file path.
+            fileCreator: A four-character file creator tag.
+            fileType: A four-character file type tag.
+
+    """
+    if xattr is not None:
+        from fontTools.misc.textTools import pad
+
+        if not all(len(s) == 4 for s in (fileCreator, fileType)):
+            raise TypeError("arg must be string of 4 chars")
+        finderInfo = pad(bytesjoin([fileType, fileCreator]), 32)
+        xattr.setxattr(path, "com.apple.FinderInfo", finderInfo)

@@ -1,1 +1,91 @@
-VGhpcyBmb2xkZXIgaXMgYSBzdWJwYWNrYWdlIG9mIHR0TGliLiBFYWNoIG1vZHVsZSBoZXJlIGlzIGEgCnNwZWNpYWxpemVkIFRUL09UIHRhYmxlIGNvbnZlcnRlcjogdGhleSBjYW4gY29udmVydCByYXcgZGF0YSAKdG8gUHl0aG9uIG9iamVjdHMgYW5kIHZpY2UgdmVyc2EuIFVzdWFsbHkgeW91IGRvbid0IG5lZWQgdG8gCnVzZSB0aGUgbW9kdWxlcyBkaXJlY3RseTogdGhleSBhcmUgaW1wb3J0ZWQgYW5kIHVzZWQgCmF1dG9tYXRpY2FsbHkgd2hlbiBuZWVkZWQgYnkgdHRMaWIuCgpJZiB5b3UgYXJlIHdyaXRpbmcgeW91IG93biB0YWJsZSBjb252ZXJ0ZXIgdGhlIGZvbGxvd2luZyBpcyAKaW1wb3J0YW50LgoKVGhlIG1vZHVsZXMgaGVyZSBoYXZlIHByZXR0eSBzdHJhbmdlIG5hbWVzOiB0aGlzIGlzIGR1ZSB0byB0aGUgCmZhY3QgdGhhdCB3ZSBuZWVkIHRvIG1hcCBUVCB0YWJsZSB0YWdzICh3aGljaCBhcmUgY2FzZSBzZW5zaXRpdmUpIAp0byBmaWxlbmFtZXMgKHdoaWNoIG9uIE1hYyBhbmQgV2luIGFyZW4ndCBjYXNlIHNlbnNpdGl2ZSkgYXMgd2VsbCAKYXMgdG8gUHl0aG9uIGlkZW50aWZpZXJzLiBUaGUgbGF0dGVyIG1lYW5zIGl0IGNhbiBvbmx5IGNvbnRhaW4gCltBLVphLXowLTlfXSBhbmQgY2Fubm90IHN0YXJ0IHdpdGggYSBudW1iZXIuIAoKdHRMaWIgcHJvdmlkZXMgZnVuY3Rpb25zIHRvIGV4cGFuZCBhIHRhZyBpbnRvIHRoZSBmb3JtYXQgdXNlZCBoZXJlOgoKPj4+IGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgo+Pj4gdHRMaWIudGFnVG9JZGVudGlmaWVyKCJGT08gIikKJ0ZfT19PXycKPj4+IHR0TGliLnRhZ1RvSWRlbnRpZmllcigiY3Z0ICIpCidfY192X3QnCj4+PiB0dExpYi50YWdUb0lkZW50aWZpZXIoIk9TLzIiKQonT19TXzJmXzInCj4+PiB0dExpYi50YWdUb0lkZW50aWZpZXIoImdseWYiKQonX2dfbF95X2YnCj4+PiAKCkFuZCB2aWNlIHZlcnNhOgoKPj4+IHR0TGliLmlkZW50aWZpZXJUb1RhZygiRl9PX09fIikKJ0ZPTyAnCj4+PiB0dExpYi5pZGVudGlmaWVyVG9UYWcoIl9jX3ZfdCIpCidjdnQgJwo+Pj4gdHRMaWIuaWRlbnRpZmllclRvVGFnKCJPX1NfMmZfMiIpCidPUy8yJwo+Pj4gdHRMaWIuaWRlbnRpZmllclRvVGFnKCJfZ19sX3lfZiIpCidnbHlmJwo+Pj4gCgpFZy4gdGhlICdnbHlmJyB0YWJsZSBjb252ZXJ0ZXIgbGl2ZXMgaW4gYSBQeXRob24gZmlsZSBjYWxsZWQ6CgoJX2dfbF95X2YucHkKClRoZSBjb252ZXJ0ZXIgaXRzZWxmIGlzIGEgY2xhc3MsIG5hbWVkICJ0YWJsZV8iICsgZXhwYW5kZWR0YWcuIEVnOgoKCWNsYXNzIHRhYmxlX19nX2xfeV9mOgoJCWV0Yy4KCk5vdGUgdGhhdCBpZiB5b3UgX2RvXyBuZWVkIHRvIHVzZSBzdWNoIG1vZHVsZXMgb3IgY2xhc3NlcyBtYW51YWxseSwgCnRoZXJlIGFyZSB0d28gY29udmVuaWVudCBBUEkgZnVuY3Rpb25zIHRoYXQgbGV0IHlvdSBmaW5kIHRoZW0gYnkgdGFnOgoKPj4+IHR0TGliLmdldFRhYmxlTW9kdWxlKCdnbHlmJykKPG1vZHVsZSAndHRMaWIudGFibGVzLl9nX2xfeV9mJz4KPj4+IHR0TGliLmdldFRhYmxlQ2xhc3MoJ2dseWYnKQo8Y2xhc3MgdHRMaWIudGFibGVzLl9nX2xfeV9mLnRhYmxlX19nX2xfeV9mIGF0IDY0NWY0MDA+Cj4+PiAKCllvdSBtdXN0IHN1YmNsYXNzIGZyb20gRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS4gSXQgcHJvdmlkZXMgc29tZSBkZWZhdWx0CmJlaGF2aW9yLCBhcyB3ZWxsIGFzIGEgY29uc3RydWN0b3IgbWV0aG9kIChfX2luaXRfXykgdGhhdCB5b3UgZG9uJ3QgbmVlZCB0byAKb3ZlcnJpZGUuCgpZb3VyIGNvbnZlcnRlciBzaG91bGQgbWluaW1hbGx5IHByb3ZpZGUgdHdvIG1ldGhvZHM6CgpjbGFzcyB0YWJsZV9GX09fT18oRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6ICMgY29udmVydGVyIGZvciB0YWJsZSAnRk9PICcKCQoJZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgoJCSMgJ2RhdGEnIGlzIHRoZSByYXcgdGFibGUgZGF0YS4gVW5wYWNrIGl0IGludG8gYQoJCSMgUHl0aG9uIGRhdGEgc3RydWN0dXJlLgoJCSMgJ3R0Rm9udCcgaXMgYSB0dExpYi5UVGZpbGUgaW5zdGFuY2UsIGVuYWJsaW5nIHlvdSB0bwoJCSMgcmVmZXIgdG8gb3RoZXIgdGFibGVzLiBEbyAqKipub3QqKioga2VlcCBhIHJlZmVyZW5jZSB0bwoJCSMgaXQ6IGl0IHdpbGwgY2F1c2UgYSBjaXJjdWxhciByZWZlcmVuY2UgKHR0Rm9udCBzYXZlcyAKCQkjIGEgcmVmZXJlbmNlIHRvIHVzKSwgYW5kIHRoYXQgbWVhbnMgd2UnbGwgYmUgbGVha2luZyAKCQkjIG1lbW9yeS4gSWYgeW91IG5lZWQgdG8gdXNlIGl0IGluIG90aGVyIG1ldGhvZHMsIGp1c3QgCgkJIyBwYXNzIGl0IGFyb3VuZCBhcyBhIG1ldGhvZCBhcmd1bWVudC4KCQoJZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKCQkjIFJldHVybiB0aGUgcmF3IGRhdGEsIGFzIGNvbnZlcnRlZCBmcm9tIHRoZSBQeXRob24KCQkjIGRhdGEgc3RydWN0dXJlLiAKCQkjIEFnYWluLCAndHRGb250JyBpcyB0aGVyZSBzbyB5b3UgY2FuIGFjY2VzcyBvdGhlciB0YWJsZXMuCgkJIyBTYW1lIHdhcm5pbmcgYXBwbGllcy4KCklmIHlvdSB3YW50IHRvIHN1cHBvcnQgVFRYIGltcG9ydC9leHBvcnQgYXMgd2VsbCwgeW91IG5lZWQgdG8gcHJvdmlkZSB0d28KYWRkaXRpb25hbCBtZXRob2RzOgoKCWRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CgkJIyBYWFgKCQoJZGVmIGZyb21YTUwoc2VsZiwgKG5hbWUsIGF0dHJzLCBjb250ZW50KSwgdHRGb250KToKCQkjIFhYWAoK
+This folder is a subpackage of ttLib. Each module here is a 
+specialized TT/OT table converter: they can convert raw data 
+to Python objects and vice versa. Usually you don't need to 
+use the modules directly: they are imported and used 
+automatically when needed by ttLib.
+
+If you are writing you own table converter the following is 
+important.
+
+The modules here have pretty strange names: this is due to the 
+fact that we need to map TT table tags (which are case sensitive) 
+to filenames (which on Mac and Win aren't case sensitive) as well 
+as to Python identifiers. The latter means it can only contain 
+[A-Za-z0-9_] and cannot start with a number. 
+
+ttLib provides functions to expand a tag into the format used here:
+
+>>> from fontTools import ttLib
+>>> ttLib.tagToIdentifier("FOO ")
+'F_O_O_'
+>>> ttLib.tagToIdentifier("cvt ")
+'_c_v_t'
+>>> ttLib.tagToIdentifier("OS/2")
+'O_S_2f_2'
+>>> ttLib.tagToIdentifier("glyf")
+'_g_l_y_f'
+>>> 
+
+And vice versa:
+
+>>> ttLib.identifierToTag("F_O_O_")
+'FOO '
+>>> ttLib.identifierToTag("_c_v_t")
+'cvt '
+>>> ttLib.identifierToTag("O_S_2f_2")
+'OS/2'
+>>> ttLib.identifierToTag("_g_l_y_f")
+'glyf'
+>>> 
+
+Eg. the 'glyf' table converter lives in a Python file called:
+
+	_g_l_y_f.py
+
+The converter itself is a class, named "table_" + expandedtag. Eg:
+
+	class table__g_l_y_f:
+		etc.
+
+Note that if you _do_ need to use such modules or classes manually, 
+there are two convenient API functions that let you find them by tag:
+
+>>> ttLib.getTableModule('glyf')
+<module 'ttLib.tables._g_l_y_f'>
+>>> ttLib.getTableClass('glyf')
+<class ttLib.tables._g_l_y_f.table__g_l_y_f at 645f400>
+>>> 
+
+You must subclass from DefaultTable.DefaultTable. It provides some default
+behavior, as well as a constructor method (__init__) that you don't need to 
+override.
+
+Your converter should minimally provide two methods:
+
+class table_F_O_O_(DefaultTable.DefaultTable): # converter for table 'FOO '
+	
+	def decompile(self, data, ttFont):
+		# 'data' is the raw table data. Unpack it into a
+		# Python data structure.
+		# 'ttFont' is a ttLib.TTfile instance, enabling you to
+		# refer to other tables. Do ***not*** keep a reference to
+		# it: it will cause a circular reference (ttFont saves 
+		# a reference to us), and that means we'll be leaking 
+		# memory. If you need to use it in other methods, just 
+		# pass it around as a method argument.
+	
+	def compile(self, ttFont):
+		# Return the raw data, as converted from the Python
+		# data structure. 
+		# Again, 'ttFont' is there so you can access other tables.
+		# Same warning applies.
+
+If you want to support TTX import/export as well, you need to provide two
+additional methods:
+
+	def toXML(self, writer, ttFont):
+		# XXX
+	
+	def fromXML(self, (name, attrs, content), ttFont):
+		# XXX
+

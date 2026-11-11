@@ -1,1 +1,148 @@
-aW1wb3J0IHN5cwpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgT1BUSU1JWkVfRk9OVF9TUEVFRCwgVFRMaWJFcnJvciwgVFRMaWJGaWxlSXNDb2xsZWN0aW9uRXJyb3IKZnJvbSBmb250VG9vbHMudHRMaWIudHRGb250IGltcG9ydCAqCmZyb20gZm9udFRvb2xzLnR0TGliLnR0Q29sbGVjdGlvbiBpbXBvcnQgVFRDb2xsZWN0aW9uCgoKZGVmIG1haW4oYXJncz1Ob25lKToKICAgICIiIk9wZW4vc2F2ZSBmb250cyB3aXRoIFRURm9udCgpIG9yIFRUQ29sbGVjdGlvbigpCgogICAgICAuL2ZvbnR0b29scyB0dExpYiBbLW9GSUxFXSBbLXlOVU1CRVJdIGZpbGVzLi4uCgogICAgSWYgbXVsdGlwbGUgZmlsZXMgYXJlIGdpdmVuIG9uIHRoZSBjb21tYW5kLWxpbmUsCiAgICB0aGV5IGFyZSBlYWNoIG9wZW5lZCAoYXMgYSBmb250IG9yIGNvbGxlY3Rpb24pLAogICAgYW5kIGFkZGVkIHRvIHRoZSBmb250IGxpc3QuCgogICAgSWYgLW8gKG91dHB1dC1maWxlKSBhcmd1bWVudCBpcyBnaXZlbiwgdGhlIGZvbnQKICAgIGxpc3QgaXMgdGhlbiBzYXZlZCB0byB0aGUgb3V0cHV0IGZpbGUsIGVpdGhlciBhcwogICAgYSBzaW5nbGUgZm9udCwgaWYgdGhlcmUgaXMgb25seSBvbmUgZm9udCwgb3IgYXMKICAgIGEgY29sbGVjdGlvbiBvdGhlcndpc2UuCgogICAgSWYgLXkgKGZvbnQtbnVtYmVyKSBhcmd1bWVudCBpcyBnaXZlbiwgb25seSB0aGUKICAgIHNwZWNpZmllZCBmb250IGZyb20gY29sbGVjdGlvbnMgaXMgb3BlbmVkLgoKICAgIFRoZSBhYm92ZSBhbGxvdyBleHRyYWN0aW5nIGEgc2luZ2xlIGZvbnQgZnJvbSBhCiAgICBjb2xsZWN0aW9uLCBvciBjb21iaW5pbmcgbXVsdGlwbGUgZm9udHMgaW50byBhCiAgICBjb2xsZWN0aW9uLgoKICAgIElmIC0tbGF6eSBvciAtLW5vLWxhenkgYXJlIGdpdmUsIHRob3NlIGFyZSBwYXNzZWQKICAgIHRvIHRoZSBUVEZvbnQoKSBvciBUVENvbGxlY3Rpb24oKSBjb25zdHJ1Y3RvcnMuCiAgICAiIiIKICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCBjb25maWdMb2dnZXIKCiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIGltcG9ydCBhcmdwYXJzZQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgdHRMaWIiLAogICAgICAgIGRlc2NyaXB0aW9uPSJPcGVuL3NhdmUgZm9udHMgd2l0aCBUVEZvbnQoKSBvciBUVENvbGxlY3Rpb24oKSIsCiAgICAgICAgZXBpbG9nPSIiIgoJCUlmIG11bHRpcGxlIGZpbGVzIGFyZSBnaXZlbiBvbiB0aGUgY29tbWFuZC1saW5lLAoJCXRoZXkgYXJlIGVhY2ggb3BlbmVkIChhcyBhIGZvbnQgb3IgY29sbGVjdGlvbiksCgkJYW5kIGFkZGVkIHRvIHRoZSBmb250IGxpc3QuCgoJCVRoZSBhYm92ZSwgd2hlbiBjb21iaW5lZCB3aXRoIC1vIC8gLS1vdXRwdXQsCgkJYWxsb3dzIGZvciBleHRyYWN0aW5nIGEgc2luZ2xlIGZvbnQgZnJvbSBhCgkJY29sbGVjdGlvbiwgb3IgY29tYmluaW5nIG11bHRpcGxlIGZvbnRzIGludG8gYQoJCWNvbGxlY3Rpb24uCgkJIiIiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgiZm9udCIsIG1ldGF2YXI9ImZvbnQiLCBuYXJncz0iKiIsIGhlbHA9IkZvbnQgZmlsZS4iKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXQiLCAiLS10YWJsZSIsIG1ldGF2YXI9InRhYmxlIiwgYWN0aW9uPSJhcHBlbmQiLCBoZWxwPSJUYWJsZXMgdG8gZGVjb21waWxlLiIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1vIiwgIi0tb3V0cHV0IiwgbWV0YXZhcj0iRklMRSIsIGRlZmF1bHQ9Tm9uZSwgaGVscD0iT3V0cHV0IGZpbGUuIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXkiLCBtZXRhdmFyPSJOVU1CRVIiLCBkZWZhdWx0PS0xLCBoZWxwPSJGb250IG51bWJlciB0byBsb2FkIGZyb20gY29sbGVjdGlvbnMuIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1sYXp5IiwgYWN0aW9uPSJzdG9yZV90cnVlIiwgZGVmYXVsdD1Ob25lLCBoZWxwPSJMb2FkIGZvbnRzIGxhemlseS4iCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLW5vLWxhenkiLCBkZXN0PSJsYXp5IiwgYWN0aW9uPSJzdG9yZV9mYWxzZSIsIGhlbHA9IkxvYWQgZm9udHMgaW1tZWRpYXRlbHkuIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1mbGF2b3IiLAogICAgICAgIGRlc3Q9ImZsYXZvciIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgICAgIGhlbHA9IkZsYXZvciBvZiBvdXRwdXQgZm9udC4gJ3dvZmYnIG9yICd3b2ZmMicuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tbm8tcmVjYWxjLXRpbWVzdGFtcCIsCiAgICAgICAgZGVzdD0icmVjYWxjVGltZXN0YW1wIiwKICAgICAgICBhY3Rpb249InN0b3JlX2ZhbHNlIiwKICAgICAgICBoZWxwPSJLZWVwIHRoZSBvcmlnaW5hbCBmb250ICdtb2RpZmllZCcgdGltZXN0YW1wLiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItYiIsCiAgICAgICAgZGVzdD0icmVjYWxjQkJveGVzIiwKICAgICAgICBhY3Rpb249InN0b3JlX2ZhbHNlIiwKICAgICAgICBoZWxwPSJEb24ndCByZWNhbGMgZ2x5cGggYm91bmRpbmcgYm94ZXM6IHVzZSB0aGUgdmFsdWVzIGluIHRoZSBvcmlnaW5hbCBmb250LiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLW9wdGltaXplLWZvbnQtc3BlZWQiLAogICAgICAgIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsCiAgICAgICAgaGVscD0oCiAgICAgICAgICAgICJFbmFibGUgb3B0aW1pemF0aW9ucyB0aGF0IHByaW9yaXRpemUgc3BlZWQgb3ZlciBmaWxlIHNpemUuIFRoaXMgIgogICAgICAgICAgICAibWFpbmx5IGFmZmVjdHMgaG93IGdseWYgdGFibGUgYW5kIGd2YXIgLyBWQVJDIHRhYmxlcyBhcmUgY29tcGlsZWQuIgogICAgICAgICksCiAgICApCiAgICBvcHRpb25zID0gcGFyc2VyLnBhcnNlX2FyZ3MoYXJncykKCiAgICBmb250TnVtYmVyID0gaW50KG9wdGlvbnMueSkgaWYgb3B0aW9ucy55IGlzIG5vdCBOb25lIGVsc2UgTm9uZQogICAgb3V0RmlsZSA9IG9wdGlvbnMub3V0cHV0CiAgICBsYXp5ID0gb3B0aW9ucy5sYXp5CiAgICBmbGF2b3IgPSBvcHRpb25zLmZsYXZvcgogICAgdGFibGVzID0gb3B0aW9ucy50YWJsZQogICAgcmVjYWxjQkJveGVzID0gb3B0aW9ucy5yZWNhbGNCQm94ZXMKICAgIHJlY2FsY1RpbWVzdGFtcCA9IG9wdGlvbnMucmVjYWxjVGltZXN0YW1wCiAgICBvcHRpbWl6ZUZvbnRTcGVlZCA9IG9wdGlvbnMub3B0aW1pemVfZm9udF9zcGVlZAoKICAgIGZvbnRzID0gW10KICAgIGZvciBmIGluIG9wdGlvbnMuZm9udDoKICAgICAgICB0cnk6CiAgICAgICAgICAgIGZvbnQgPSBUVEZvbnQoCiAgICAgICAgICAgICAgICBmLAogICAgICAgICAgICAgICAgcmVjYWxjQkJveGVzPXJlY2FsY0JCb3hlcywKICAgICAgICAgICAgICAgIHJlY2FsY1RpbWVzdGFtcD1yZWNhbGNUaW1lc3RhbXAsCiAgICAgICAgICAgICAgICBmb250TnVtYmVyPWZvbnROdW1iZXIsCiAgICAgICAgICAgICAgICBsYXp5PWxhenksCiAgICAgICAgICAgICkKICAgICAgICAgICAgaWYgb3B0aW1pemVGb250U3BlZWQ6CiAgICAgICAgICAgICAgICBmb250LmNmZ1tPUFRJTUlaRV9GT05UX1NQRUVEXSA9IG9wdGltaXplRm9udFNwZWVkCiAgICAgICAgICAgIGZvbnRzLmFwcGVuZChmb250KQogICAgICAgIGV4Y2VwdCBUVExpYkZpbGVJc0NvbGxlY3Rpb25FcnJvcjoKICAgICAgICAgICAgY29sbGVjdGlvbiA9IFRUQ29sbGVjdGlvbihmLCBsYXp5PWxhenkpCiAgICAgICAgICAgIGZvbnRzLmV4dGVuZChjb2xsZWN0aW9uLmZvbnRzKQoKICAgIGlmIHRhYmxlcyBpcyBOb25lOgogICAgICAgIGlmIGxhenkgaXMgRmFsc2U6CiAgICAgICAgICAgIHRhYmxlcyA9IFsiKiJdCiAgICAgICAgZWxpZiBvcHRpbWl6ZUZvbnRTcGVlZDoKICAgICAgICAgICAgdGFibGVzID0geyJnbHlmIiwgIkdMWUYiLCAiZ3ZhciIsICJHVkFSIiwgIlZBUkMifS5pbnRlcnNlY3Rpb24oZm9udC5rZXlzKCkpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdGFibGVzID0gW10KICAgIGZvciBmb250IGluIGZvbnRzOgogICAgICAgIGlmICJHbHlwaE9yZGVyIiBpbiB0YWJsZXM6CiAgICAgICAgICAgIGZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICAgICAgZm9yIHRhYmxlIGluIHRhYmxlcyBpZiAiKiIgbm90IGluIHRhYmxlcyBlbHNlIGZvbnQua2V5cygpOgogICAgICAgICAgICBmb250W3RhYmxlXSAgIyBEZWNvbXBpbGVzCgogICAgaWYgb3V0RmlsZSBpcyBub3QgTm9uZToKICAgICAgICBpZiBsZW4oZm9udHMpID09IDE6CiAgICAgICAgICAgIGZvbnRzWzBdLmZsYXZvciA9IGZsYXZvcgogICAgICAgICAgICBmb250c1swXS5zYXZlKG91dEZpbGUpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgZmxhdm9yIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigiQ2Fubm90IHNldCBmbGF2b3IgZm9yIGNvbGxlY3Rpb25zLiIpCiAgICAgICAgICAgIGNvbGxlY3Rpb24gPSBUVENvbGxlY3Rpb24oKQogICAgICAgICAgICBjb2xsZWN0aW9uLmZvbnRzID0gZm9udHMKICAgICAgICAgICAgY29sbGVjdGlvbi5zYXZlKG91dEZpbGUpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHN5cy5leGl0KG1haW4oKSkK
+import sys
+from fontTools.ttLib import OPTIMIZE_FONT_SPEED, TTLibError, TTLibFileIsCollectionError
+from fontTools.ttLib.ttFont import *
+from fontTools.ttLib.ttCollection import TTCollection
+
+
+def main(args=None):
+    """Open/save fonts with TTFont() or TTCollection()
+
+      ./fonttools ttLib [-oFILE] [-yNUMBER] files...
+
+    If multiple files are given on the command-line,
+    they are each opened (as a font or collection),
+    and added to the font list.
+
+    If -o (output-file) argument is given, the font
+    list is then saved to the output file, either as
+    a single font, if there is only one font, or as
+    a collection otherwise.
+
+    If -y (font-number) argument is given, only the
+    specified font from collections is opened.
+
+    The above allow extracting a single font from a
+    collection, or combining multiple fonts into a
+    collection.
+
+    If --lazy or --no-lazy are give, those are passed
+    to the TTFont() or TTCollection() constructors.
+    """
+    from fontTools import configLogger
+
+    if args is None:
+        args = sys.argv[1:]
+
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools ttLib",
+        description="Open/save fonts with TTFont() or TTCollection()",
+        epilog="""
+		If multiple files are given on the command-line,
+		they are each opened (as a font or collection),
+		and added to the font list.
+
+		The above, when combined with -o / --output,
+		allows for extracting a single font from a
+		collection, or combining multiple fonts into a
+		collection.
+		""",
+    )
+    parser.add_argument("font", metavar="font", nargs="*", help="Font file.")
+    parser.add_argument(
+        "-t", "--table", metavar="table", action="append", help="Tables to decompile."
+    )
+    parser.add_argument(
+        "-o", "--output", metavar="FILE", default=None, help="Output file."
+    )
+    parser.add_argument(
+        "-y", metavar="NUMBER", default=-1, help="Font number to load from collections."
+    )
+    parser.add_argument(
+        "--lazy", action="store_true", default=None, help="Load fonts lazily."
+    )
+    parser.add_argument(
+        "--no-lazy", dest="lazy", action="store_false", help="Load fonts immediately."
+    )
+    parser.add_argument(
+        "--flavor",
+        dest="flavor",
+        default=None,
+        help="Flavor of output font. 'woff' or 'woff2'.",
+    )
+    parser.add_argument(
+        "--no-recalc-timestamp",
+        dest="recalcTimestamp",
+        action="store_false",
+        help="Keep the original font 'modified' timestamp.",
+    )
+    parser.add_argument(
+        "-b",
+        dest="recalcBBoxes",
+        action="store_false",
+        help="Don't recalc glyph bounding boxes: use the values in the original font.",
+    )
+    parser.add_argument(
+        "--optimize-font-speed",
+        action="store_true",
+        help=(
+            "Enable optimizations that prioritize speed over file size. This "
+            "mainly affects how glyf table and gvar / VARC tables are compiled."
+        ),
+    )
+    options = parser.parse_args(args)
+
+    fontNumber = int(options.y) if options.y is not None else None
+    outFile = options.output
+    lazy = options.lazy
+    flavor = options.flavor
+    tables = options.table
+    recalcBBoxes = options.recalcBBoxes
+    recalcTimestamp = options.recalcTimestamp
+    optimizeFontSpeed = options.optimize_font_speed
+
+    fonts = []
+    for f in options.font:
+        try:
+            font = TTFont(
+                f,
+                recalcBBoxes=recalcBBoxes,
+                recalcTimestamp=recalcTimestamp,
+                fontNumber=fontNumber,
+                lazy=lazy,
+            )
+            if optimizeFontSpeed:
+                font.cfg[OPTIMIZE_FONT_SPEED] = optimizeFontSpeed
+            fonts.append(font)
+        except TTLibFileIsCollectionError:
+            collection = TTCollection(f, lazy=lazy)
+            fonts.extend(collection.fonts)
+
+    if tables is None:
+        if lazy is False:
+            tables = ["*"]
+        elif optimizeFontSpeed:
+            tables = {"glyf", "GLYF", "gvar", "GVAR", "VARC"}.intersection(font.keys())
+        else:
+            tables = []
+    for font in fonts:
+        if "GlyphOrder" in tables:
+            font.getGlyphOrder()
+        for table in tables if "*" not in tables else font.keys():
+            font[table]  # Decompiles
+
+    if outFile is not None:
+        if len(fonts) == 1:
+            fonts[0].flavor = flavor
+            fonts[0].save(outFile)
+        else:
+            if flavor is not None:
+                raise TTLibError("Cannot set flavor for collections.")
+            collection = TTCollection()
+            collection.fonts = fonts
+            collection.save(outFile)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

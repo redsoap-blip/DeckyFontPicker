@@ -1,1 +1,261 @@
-ZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwppbXBvcnQgc3RydWN0CmZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IHNzdHJ1Y3QKZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVzam9pbiwgdG9zdHIKZnJvbSBjb2xsZWN0aW9ucyBpbXBvcnQgT3JkZXJlZERpY3QKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IE11dGFibGVNYXBwaW5nCgoKY2xhc3MgUmVzb3VyY2VFcnJvcihFeGNlcHRpb24pOgogICAgcGFzcwoKCmNsYXNzIFJlc291cmNlUmVhZGVyKE11dGFibGVNYXBwaW5nKToKICAgICIiIlJlYWRlciBmb3IgTWFjIE9TIHJlc291cmNlIGZvcmtzLgoKICAgIFBhcnNlcyBhIHJlc291cmNlIGZvcmsgYW5kIHJldHVybnMgcmVzb3VyY2VzIGFjY29yZGluZyB0byB0aGVpciB0eXBlLgogICAgSWYgcnVuIG9uIE9TIFgsIHRoaXMgd2lsbCBvcGVuIHRoZSByZXNvdXJjZSBmb3JrIGluIHRoZSBmaWxlc3lzdGVtLgogICAgT3RoZXJ3aXNlLCBpdCB3aWxsIG9wZW4gdGhlIGZpbGUgaXRzZWxmIGFuZCBhdHRlbXB0IHRvIHJlYWQgaXQgYXMKICAgIHRob3VnaCBpdCB3ZXJlIGEgcmVzb3VyY2UgZm9yay4KCiAgICBUaGUgcmV0dXJuZWQgb2JqZWN0IGNhbiBiZSBpbmRleGVkIGJ5IHR5cGUgYW5kIGl0ZXJhdGVkIG92ZXIsCiAgICByZXR1cm5pbmcgaW4gZWFjaCBjYXNlIGEgbGlzdCBvZiBweTpjbGFzczpgUmVzb3VyY2VgIG9iamVjdHMKICAgIHJlcHJlc2VudGluZyBhbGwgdGhlIHJlc291cmNlcyBvZiBhIGNlcnRhaW4gdHlwZS4KCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZmlsZU9yUGF0aCk6CiAgICAgICAgIiIiT3BlbiBhIGZpbGUKCiAgICAgICAgQXJnczoKICAgICAgICAgICAgICAgIGZpbGVPclBhdGg6IEVpdGhlciBhbiBvYmplY3Qgc3VwcG9ydGluZyBhIGBgcmVhZGBgIG1ldGhvZCwgYW4KICAgICAgICAgICAgICAgICAgICAgICAgYGBvcy5QYXRoTGlrZWBgIG9iamVjdCwgb3IgYSBzdHJpbmcuCiAgICAgICAgIiIiCiAgICAgICAgc2VsZi5fcmVzb3VyY2VzID0gT3JkZXJlZERpY3QoKQogICAgICAgIGlmIGhhc2F0dHIoZmlsZU9yUGF0aCwgInJlYWQiKToKICAgICAgICAgICAgc2VsZi5maWxlID0gZmlsZU9yUGF0aAogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICMgdHJ5IHJlYWRpbmcgZnJvbSB0aGUgcmVzb3VyY2UgZm9yayAob25seSB3b3JrcyBvbiBPUyBYKQogICAgICAgICAgICAgICAgc2VsZi5maWxlID0gc2VsZi5vcGVuUmVzb3VyY2VGb3JrKGZpbGVPclBhdGgpCiAgICAgICAgICAgICAgICBzZWxmLl9yZWFkRmlsZSgpCiAgICAgICAgICAgICAgICByZXR1cm4KICAgICAgICAgICAgZXhjZXB0IChSZXNvdXJjZUVycm9yLCBJT0Vycm9yKToKICAgICAgICAgICAgICAgICMgaWYgaXQgZmFpbHMsIHVzZSB0aGUgZGF0YSBmb3JrCiAgICAgICAgICAgICAgICBzZWxmLmZpbGUgPSBzZWxmLm9wZW5EYXRhRm9yayhmaWxlT3JQYXRoKQogICAgICAgIHNlbGYuX3JlYWRGaWxlKCkKCiAgICBAc3RhdGljbWV0aG9kCiAgICBkZWYgb3BlblJlc291cmNlRm9yayhwYXRoKToKICAgICAgICBpZiBoYXNhdHRyKHBhdGgsICJfX2ZzcGF0aF9fIik6ICAjIHN1cHBvcnQgb3MuUGF0aExpa2Ugb2JqZWN0cwogICAgICAgICAgICBwYXRoID0gcGF0aC5fX2ZzcGF0aF9fKCkKICAgICAgICB3aXRoIG9wZW4ocGF0aCArICIvLi5uYW1lZGZvcmsvcnNyYyIsICJyYiIpIGFzIHJlc2Zvcms6CiAgICAgICAgICAgIGRhdGEgPSByZXNmb3JrLnJlYWQoKQogICAgICAgIGluZmlsZSA9IEJ5dGVzSU8oZGF0YSkKICAgICAgICBpbmZpbGUubmFtZSA9IHBhdGgKICAgICAgICByZXR1cm4gaW5maWxlCgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIG9wZW5EYXRhRm9yayhwYXRoKToKICAgICAgICB3aXRoIG9wZW4ocGF0aCwgInJiIikgYXMgZGF0YWZvcms6CiAgICAgICAgICAgIGRhdGEgPSBkYXRhZm9yay5yZWFkKCkKICAgICAgICBpbmZpbGUgPSBCeXRlc0lPKGRhdGEpCiAgICAgICAgaW5maWxlLm5hbWUgPSBwYXRoCiAgICAgICAgcmV0dXJuIGluZmlsZQoKICAgIGRlZiBfcmVhZEZpbGUoc2VsZik6CiAgICAgICAgc2VsZi5fcmVhZEhlYWRlckFuZE1hcCgpCiAgICAgICAgc2VsZi5fcmVhZFR5cGVMaXN0KCkKCiAgICBkZWYgX3JlYWQoc2VsZiwgbnVtQnl0ZXMsIG9mZnNldD1Ob25lKToKICAgICAgICBpZiBvZmZzZXQgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHNlbGYuZmlsZS5zZWVrKG9mZnNldCkKICAgICAgICAgICAgZXhjZXB0IE92ZXJmbG93RXJyb3I6CiAgICAgICAgICAgICAgICByYWlzZSBSZXNvdXJjZUVycm9yKCJGYWlsZWQgdG8gc2VlayBvZmZzZXQgKCdvZmZzZXQnIGlzIHRvbyBsYXJnZSkiKQogICAgICAgICAgICBpZiBzZWxmLmZpbGUudGVsbCgpICE9IG9mZnNldDoKICAgICAgICAgICAgICAgIHJhaXNlIFJlc291cmNlRXJyb3IoIkZhaWxlZCB0byBzZWVrIG9mZnNldCAocmVhY2hlZCBFT0YpIikKICAgICAgICB0cnk6CiAgICAgICAgICAgIGRhdGEgPSBzZWxmLmZpbGUucmVhZChudW1CeXRlcykKICAgICAgICBleGNlcHQgT3ZlcmZsb3dFcnJvcjoKICAgICAgICAgICAgcmFpc2UgUmVzb3VyY2VFcnJvcigiQ2Fubm90IHJlYWQgcmVzb3VyY2UgKCdudW1CeXRlcycgaXMgdG9vIGxhcmdlKSIpCiAgICAgICAgaWYgbGVuKGRhdGEpICE9IG51bUJ5dGVzOgogICAgICAgICAgICByYWlzZSBSZXNvdXJjZUVycm9yKCJDYW5ub3QgcmVhZCByZXNvdXJjZSAobm90IGVub3VnaCBkYXRhKSIpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgX3JlYWRIZWFkZXJBbmRNYXAoc2VsZik6CiAgICAgICAgc2VsZi5maWxlLnNlZWsoMCkKICAgICAgICBoZWFkZXJEYXRhID0gc2VsZi5fcmVhZChSZXNvdXJjZUZvcmtIZWFkZXJTaXplKQogICAgICAgIHNzdHJ1Y3QudW5wYWNrKFJlc291cmNlRm9ya0hlYWRlciwgaGVhZGVyRGF0YSwgc2VsZikKICAgICAgICAjIHNlZWsgdG8gcmVzb3VyY2UgbWFwLCBza2lwIHJlc2VydmVkCiAgICAgICAgbWFwT2Zmc2V0ID0gc2VsZi5tYXBPZmZzZXQgKyAyMgogICAgICAgIHJlc291cmNlTWFwRGF0YSA9IHNlbGYuX3JlYWQoUmVzb3VyY2VNYXBIZWFkZXJTaXplLCBtYXBPZmZzZXQpCiAgICAgICAgc3N0cnVjdC51bnBhY2soUmVzb3VyY2VNYXBIZWFkZXIsIHJlc291cmNlTWFwRGF0YSwgc2VsZikKICAgICAgICBzZWxmLmFic1R5cGVMaXN0T2Zmc2V0ID0gc2VsZi5tYXBPZmZzZXQgKyBzZWxmLnR5cGVMaXN0T2Zmc2V0CiAgICAgICAgc2VsZi5hYnNOYW1lTGlzdE9mZnNldCA9IHNlbGYubWFwT2Zmc2V0ICsgc2VsZi5uYW1lTGlzdE9mZnNldAoKICAgIGRlZiBfcmVhZFR5cGVMaXN0KHNlbGYpOgogICAgICAgIGFic1R5cGVMaXN0T2Zmc2V0ID0gc2VsZi5hYnNUeXBlTGlzdE9mZnNldAogICAgICAgIG51bVR5cGVzRGF0YSA9IHNlbGYuX3JlYWQoMiwgYWJzVHlwZUxpc3RPZmZzZXQpCiAgICAgICAgKHNlbGYubnVtVHlwZXMsKSA9IHN0cnVjdC51bnBhY2soIj5IIiwgbnVtVHlwZXNEYXRhKQogICAgICAgIGFic1R5cGVMaXN0T2Zmc2V0MiA9IGFic1R5cGVMaXN0T2Zmc2V0ICsgMgogICAgICAgIGZvciBpIGluIHJhbmdlKHNlbGYubnVtVHlwZXMgKyAxKToKICAgICAgICAgICAgcmVzVHlwZUl0ZW1PZmZzZXQgPSBhYnNUeXBlTGlzdE9mZnNldDIgKyBSZXNvdXJjZVR5cGVJdGVtU2l6ZSAqIGkKICAgICAgICAgICAgcmVzVHlwZUl0ZW1EYXRhID0gc2VsZi5fcmVhZChSZXNvdXJjZVR5cGVJdGVtU2l6ZSwgcmVzVHlwZUl0ZW1PZmZzZXQpCiAgICAgICAgICAgIGl0ZW0gPSBzc3RydWN0LnVucGFjayhSZXNvdXJjZVR5cGVJdGVtLCByZXNUeXBlSXRlbURhdGEpCiAgICAgICAgICAgIHJlc1R5cGUgPSB0b3N0cihpdGVtWyJ0eXBlIl0sIGVuY29kaW5nPSJtYWMtcm9tYW4iKQogICAgICAgICAgICByZWZMaXN0T2Zmc2V0ID0gYWJzVHlwZUxpc3RPZmZzZXQgKyBpdGVtWyJyZWZMaXN0T2Zmc2V0Il0KICAgICAgICAgICAgbnVtUmVzID0gaXRlbVsibnVtUmVzIl0gKyAxCiAgICAgICAgICAgIHJlc291cmNlcyA9IHNlbGYuX3JlYWRSZWZlcmVuY2VMaXN0KHJlc1R5cGUsIHJlZkxpc3RPZmZzZXQsIG51bVJlcykKICAgICAgICAgICAgc2VsZi5fcmVzb3VyY2VzW3Jlc1R5cGVdID0gcmVzb3VyY2VzCgogICAgZGVmIF9yZWFkUmVmZXJlbmNlTGlzdChzZWxmLCByZXNUeXBlLCByZWZMaXN0T2Zmc2V0LCBudW1SZXMpOgogICAgICAgIHJlc291cmNlcyA9IFtdCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobnVtUmVzKToKICAgICAgICAgICAgcmVmT2Zmc2V0ID0gcmVmTGlzdE9mZnNldCArIFJlc291cmNlUmVmSXRlbVNpemUgKiBpCiAgICAgICAgICAgIHJlZkRhdGEgPSBzZWxmLl9yZWFkKFJlc291cmNlUmVmSXRlbVNpemUsIHJlZk9mZnNldCkKICAgICAgICAgICAgcmVzID0gUmVzb3VyY2UocmVzVHlwZSkKICAgICAgICAgICAgcmVzLmRlY29tcGlsZShyZWZEYXRhLCBzZWxmKQogICAgICAgICAgICByZXNvdXJjZXMuYXBwZW5kKHJlcykKICAgICAgICByZXR1cm4gcmVzb3VyY2VzCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIHJlc1R5cGUpOgogICAgICAgIHJldHVybiBzZWxmLl9yZXNvdXJjZXNbcmVzVHlwZV0KCiAgICBkZWYgX19kZWxpdGVtX18oc2VsZiwgcmVzVHlwZSk6CiAgICAgICAgZGVsIHNlbGYuX3Jlc291cmNlc1tyZXNUeXBlXQoKICAgIGRlZiBfX3NldGl0ZW1fXyhzZWxmLCByZXNUeXBlLCByZXNvdXJjZXMpOgogICAgICAgIHNlbGYuX3Jlc291cmNlc1tyZXNUeXBlXSA9IHJlc291cmNlcwoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5fcmVzb3VyY2VzKQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gaXRlcihzZWxmLl9yZXNvdXJjZXMpCgogICAgZGVmIGtleXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX3Jlc291cmNlcy5rZXlzKCkKCiAgICBAcHJvcGVydHkKICAgIGRlZiB0eXBlcyhzZWxmKToKICAgICAgICAiIiJBIGxpc3Qgb2YgdGhlIHR5cGVzIG9mIHJlc291cmNlcyBpbiB0aGUgcmVzb3VyY2UgZm9yay4iIiIKICAgICAgICByZXR1cm4gbGlzdChzZWxmLl9yZXNvdXJjZXMua2V5cygpKQoKICAgIGRlZiBjb3VudFJlc291cmNlcyhzZWxmLCByZXNUeXBlKToKICAgICAgICAiIiJSZXR1cm4gdGhlIG51bWJlciBvZiByZXNvdXJjZXMgb2YgYSBnaXZlbiB0eXBlLiIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgcmV0dXJuIGxlbihzZWxmW3Jlc1R5cGVdKQogICAgICAgIGV4Y2VwdCBLZXlFcnJvcjoKICAgICAgICAgICAgcmV0dXJuIDAKCiAgICBkZWYgZ2V0SW5kaWNlcyhzZWxmLCByZXNUeXBlKToKICAgICAgICAiIiJSZXR1cm5zIGEgbGlzdCBvZiBpbmRpY2VzIG9mIHJlc291cmNlcyBvZiBhIGdpdmVuIHR5cGUuIiIiCiAgICAgICAgbnVtUmVzID0gc2VsZi5jb3VudFJlc291cmNlcyhyZXNUeXBlKQogICAgICAgIGlmIG51bVJlczoKICAgICAgICAgICAgcmV0dXJuIGxpc3QocmFuZ2UoMSwgbnVtUmVzICsgMSkpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuIFtdCgogICAgZGVmIGdldE5hbWVzKHNlbGYsIHJlc1R5cGUpOgogICAgICAgICIiIlJldHVybiBsaXN0IG9mIG5hbWVzIG9mIGFsbCByZXNvdXJjZXMgb2YgYSBnaXZlbiB0eXBlLiIiIgogICAgICAgIHJldHVybiBbcmVzLm5hbWUgZm9yIHJlcyBpbiBzZWxmLmdldChyZXNUeXBlLCBbXSkgaWYgcmVzLm5hbWUgaXMgbm90IE5vbmVdCgogICAgZGVmIGdldEluZFJlc291cmNlKHNlbGYsIHJlc1R5cGUsIGluZGV4KToKICAgICAgICAiIiJSZXR1cm4gcmVzb3VyY2Ugb2YgZ2l2ZW4gdHlwZSBsb2NhdGVkIGF0IGFuIGluZGV4IHJhbmdpbmcgZnJvbSAxCiAgICAgICAgdG8gdGhlIG51bWJlciBvZiByZXNvdXJjZXMgZm9yIHRoYXQgdHlwZSwgb3IgTm9uZSBpZiBub3QgZm91bmQuCiAgICAgICAgIiIiCiAgICAgICAgaWYgaW5kZXggPCAxOgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzID0gc2VsZltyZXNUeXBlXVtpbmRleCAtIDFdCiAgICAgICAgZXhjZXB0IChLZXlFcnJvciwgSW5kZXhFcnJvcik6CiAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgcmV0dXJuIHJlcwoKICAgIGRlZiBnZXROYW1lZFJlc291cmNlKHNlbGYsIHJlc1R5cGUsIG5hbWUpOgogICAgICAgICIiIlJldHVybiB0aGUgbmFtZWQgcmVzb3VyY2Ugb2YgZ2l2ZW4gdHlwZSwgZWxzZSByZXR1cm4gTm9uZS4iIiIKICAgICAgICBuYW1lID0gdG9zdHIobmFtZSwgZW5jb2Rpbmc9Im1hYy1yb21hbiIpCiAgICAgICAgZm9yIHJlcyBpbiBzZWxmLmdldChyZXNUeXBlLCBbXSk6CiAgICAgICAgICAgIGlmIHJlcy5uYW1lID09IG5hbWU6CiAgICAgICAgICAgICAgICByZXR1cm4gcmVzCiAgICAgICAgcmV0dXJuIE5vbmUKCiAgICBkZWYgY2xvc2Uoc2VsZik6CiAgICAgICAgaWYgbm90IHNlbGYuZmlsZS5jbG9zZWQ6CiAgICAgICAgICAgIHNlbGYuZmlsZS5jbG9zZSgpCgoKY2xhc3MgUmVzb3VyY2Uob2JqZWN0KToKICAgICIiIlJlcHJlc2VudHMgYSByZXNvdXJjZSBzdG9yZWQgd2l0aGluIGEgcmVzb3VyY2UgZm9yay4KCiAgICBBdHRyaWJ1dGVzOgogICAgICAgICAgICB0eXBlOiByZXNvdXJjZSB0eXBlLgogICAgICAgICAgICBkYXRhOiByZXNvdXJjZSBkYXRhLgogICAgICAgICAgICBpZDogSUQuCiAgICAgICAgICAgIG5hbWU6IHJlc291cmNlIG5hbWUuCiAgICAgICAgICAgIGF0dHI6IGF0dHJpYnV0ZXMuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwgcmVzVHlwZT1Ob25lLCByZXNEYXRhPU5vbmUsIHJlc0lEPU5vbmUsIHJlc05hbWU9Tm9uZSwgcmVzQXR0cj1Ob25lCiAgICApOgogICAgICAgIHNlbGYudHlwZSA9IHJlc1R5cGUKICAgICAgICBzZWxmLmRhdGEgPSByZXNEYXRhCiAgICAgICAgc2VsZi5pZCA9IHJlc0lECiAgICAgICAgc2VsZi5uYW1lID0gcmVzTmFtZQogICAgICAgIHNlbGYuYXR0ciA9IHJlc0F0dHIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIHJlZkRhdGEsIHJlYWRlcik6CiAgICAgICAgc3N0cnVjdC51bnBhY2soUmVzb3VyY2VSZWZJdGVtLCByZWZEYXRhLCBzZWxmKQogICAgICAgICMgaW50ZXJwcmV0IDMtYnl0ZSBkYXRhT2Zmc2V0IGFzIChwYWRkZWQpIFVMT05HIHRvIHVucGFjayBpdCB3aXRoIHN0cnVjdAogICAgICAgIChzZWxmLmRhdGFPZmZzZXQsKSA9IHN0cnVjdC51bnBhY2soIj5MIiwgYnl0ZXNqb2luKFtiIlwwIiwgc2VsZi5kYXRhT2Zmc2V0XSkpCiAgICAgICAgYWJzRGF0YU9mZnNldCA9IHJlYWRlci5kYXRhT2Zmc2V0ICsgc2VsZi5kYXRhT2Zmc2V0CiAgICAgICAgKGRhdGFMZW5ndGgsKSA9IHN0cnVjdC51bnBhY2soIj5MIiwgcmVhZGVyLl9yZWFkKDQsIGFic0RhdGFPZmZzZXQpKQogICAgICAgIHNlbGYuZGF0YSA9IHJlYWRlci5fcmVhZChkYXRhTGVuZ3RoKQogICAgICAgIGlmIHNlbGYubmFtZU9mZnNldCA9PSAtMToKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgYWJzTmFtZU9mZnNldCA9IHJlYWRlci5hYnNOYW1lTGlzdE9mZnNldCArIHNlbGYubmFtZU9mZnNldAogICAgICAgIChuYW1lTGVuZ3RoLCkgPSBzdHJ1Y3QudW5wYWNrKCJCIiwgcmVhZGVyLl9yZWFkKDEsIGFic05hbWVPZmZzZXQpKQogICAgICAgIChuYW1lLCkgPSBzdHJ1Y3QudW5wYWNrKCI+JXNzIiAlIG5hbWVMZW5ndGgsIHJlYWRlci5fcmVhZChuYW1lTGVuZ3RoKSkKICAgICAgICBzZWxmLm5hbWUgPSB0b3N0cihuYW1lLCBlbmNvZGluZz0ibWFjLXJvbWFuIikKCgpSZXNvdXJjZUZvcmtIZWFkZXIgPSAiIiIKCQk+ICMgYmlnIGVuZGlhbgoJCWRhdGFPZmZzZXQ6ICAgICBMCgkJbWFwT2Zmc2V0OiAgICAgIEwKCQlkYXRhTGVuOiAgICAgICAgTAoJCW1hcExlbjogICAgICAgICBMCiIiIgoKUmVzb3VyY2VGb3JrSGVhZGVyU2l6ZSA9IHNzdHJ1Y3QuY2FsY3NpemUoUmVzb3VyY2VGb3JrSGVhZGVyKQoKUmVzb3VyY2VNYXBIZWFkZXIgPSAiIiIKCQk+ICMgYmlnIGVuZGlhbgoJCWF0dHI6ICAgICAgICAgICAgICBICgkJdHlwZUxpc3RPZmZzZXQ6ICAgIEgKCQluYW1lTGlzdE9mZnNldDogICAgSAoiIiIKClJlc291cmNlTWFwSGVhZGVyU2l6ZSA9IHNzdHJ1Y3QuY2FsY3NpemUoUmVzb3VyY2VNYXBIZWFkZXIpCgpSZXNvdXJjZVR5cGVJdGVtID0gIiIiCgkJPiAjIGJpZyBlbmRpYW4KCQl0eXBlOiAgICAgICAgICAgICAgNHMKCQludW1SZXM6ICAgICAgICAgICAgSAoJCXJlZkxpc3RPZmZzZXQ6ICAgICBICiIiIgoKUmVzb3VyY2VUeXBlSXRlbVNpemUgPSBzc3RydWN0LmNhbGNzaXplKFJlc291cmNlVHlwZUl0ZW0pCgpSZXNvdXJjZVJlZkl0ZW0gPSAiIiIKCQk+ICMgYmlnIGVuZGlhbgoJCWlkOiAgICAgICAgICAgICAgICBoCgkJbmFtZU9mZnNldDogICAgICAgIGgKCQlhdHRyOiAgICAgICAgICAgICAgQgoJCWRhdGFPZmZzZXQ6ICAgICAgICAzcwoJCXJlc2VydmVkOiAgICAgICAgICBMCiIiIgoKUmVzb3VyY2VSZWZJdGVtU2l6ZSA9IHNzdHJ1Y3QuY2FsY3NpemUoUmVzb3VyY2VSZWZJdGVtKQo=
+from io import BytesIO
+import struct
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytesjoin, tostr
+from collections import OrderedDict
+from collections.abc import MutableMapping
+
+
+class ResourceError(Exception):
+    pass
+
+
+class ResourceReader(MutableMapping):
+    """Reader for Mac OS resource forks.
+
+    Parses a resource fork and returns resources according to their type.
+    If run on OS X, this will open the resource fork in the filesystem.
+    Otherwise, it will open the file itself and attempt to read it as
+    though it were a resource fork.
+
+    The returned object can be indexed by type and iterated over,
+    returning in each case a list of py:class:`Resource` objects
+    representing all the resources of a certain type.
+
+    """
+
+    def __init__(self, fileOrPath):
+        """Open a file
+
+        Args:
+                fileOrPath: Either an object supporting a ``read`` method, an
+                        ``os.PathLike`` object, or a string.
+        """
+        self._resources = OrderedDict()
+        if hasattr(fileOrPath, "read"):
+            self.file = fileOrPath
+        else:
+            try:
+                # try reading from the resource fork (only works on OS X)
+                self.file = self.openResourceFork(fileOrPath)
+                self._readFile()
+                return
+            except (ResourceError, IOError):
+                # if it fails, use the data fork
+                self.file = self.openDataFork(fileOrPath)
+        self._readFile()
+
+    @staticmethod
+    def openResourceFork(path):
+        if hasattr(path, "__fspath__"):  # support os.PathLike objects
+            path = path.__fspath__()
+        with open(path + "/..namedfork/rsrc", "rb") as resfork:
+            data = resfork.read()
+        infile = BytesIO(data)
+        infile.name = path
+        return infile
+
+    @staticmethod
+    def openDataFork(path):
+        with open(path, "rb") as datafork:
+            data = datafork.read()
+        infile = BytesIO(data)
+        infile.name = path
+        return infile
+
+    def _readFile(self):
+        self._readHeaderAndMap()
+        self._readTypeList()
+
+    def _read(self, numBytes, offset=None):
+        if offset is not None:
+            try:
+                self.file.seek(offset)
+            except OverflowError:
+                raise ResourceError("Failed to seek offset ('offset' is too large)")
+            if self.file.tell() != offset:
+                raise ResourceError("Failed to seek offset (reached EOF)")
+        try:
+            data = self.file.read(numBytes)
+        except OverflowError:
+            raise ResourceError("Cannot read resource ('numBytes' is too large)")
+        if len(data) != numBytes:
+            raise ResourceError("Cannot read resource (not enough data)")
+        return data
+
+    def _readHeaderAndMap(self):
+        self.file.seek(0)
+        headerData = self._read(ResourceForkHeaderSize)
+        sstruct.unpack(ResourceForkHeader, headerData, self)
+        # seek to resource map, skip reserved
+        mapOffset = self.mapOffset + 22
+        resourceMapData = self._read(ResourceMapHeaderSize, mapOffset)
+        sstruct.unpack(ResourceMapHeader, resourceMapData, self)
+        self.absTypeListOffset = self.mapOffset + self.typeListOffset
+        self.absNameListOffset = self.mapOffset + self.nameListOffset
+
+    def _readTypeList(self):
+        absTypeListOffset = self.absTypeListOffset
+        numTypesData = self._read(2, absTypeListOffset)
+        (self.numTypes,) = struct.unpack(">H", numTypesData)
+        absTypeListOffset2 = absTypeListOffset + 2
+        for i in range(self.numTypes + 1):
+            resTypeItemOffset = absTypeListOffset2 + ResourceTypeItemSize * i
+            resTypeItemData = self._read(ResourceTypeItemSize, resTypeItemOffset)
+            item = sstruct.unpack(ResourceTypeItem, resTypeItemData)
+            resType = tostr(item["type"], encoding="mac-roman")
+            refListOffset = absTypeListOffset + item["refListOffset"]
+            numRes = item["numRes"] + 1
+            resources = self._readReferenceList(resType, refListOffset, numRes)
+            self._resources[resType] = resources
+
+    def _readReferenceList(self, resType, refListOffset, numRes):
+        resources = []
+        for i in range(numRes):
+            refOffset = refListOffset + ResourceRefItemSize * i
+            refData = self._read(ResourceRefItemSize, refOffset)
+            res = Resource(resType)
+            res.decompile(refData, self)
+            resources.append(res)
+        return resources
+
+    def __getitem__(self, resType):
+        return self._resources[resType]
+
+    def __delitem__(self, resType):
+        del self._resources[resType]
+
+    def __setitem__(self, resType, resources):
+        self._resources[resType] = resources
+
+    def __len__(self):
+        return len(self._resources)
+
+    def __iter__(self):
+        return iter(self._resources)
+
+    def keys(self):
+        return self._resources.keys()
+
+    @property
+    def types(self):
+        """A list of the types of resources in the resource fork."""
+        return list(self._resources.keys())
+
+    def countResources(self, resType):
+        """Return the number of resources of a given type."""
+        try:
+            return len(self[resType])
+        except KeyError:
+            return 0
+
+    def getIndices(self, resType):
+        """Returns a list of indices of resources of a given type."""
+        numRes = self.countResources(resType)
+        if numRes:
+            return list(range(1, numRes + 1))
+        else:
+            return []
+
+    def getNames(self, resType):
+        """Return list of names of all resources of a given type."""
+        return [res.name for res in self.get(resType, []) if res.name is not None]
+
+    def getIndResource(self, resType, index):
+        """Return resource of given type located at an index ranging from 1
+        to the number of resources for that type, or None if not found.
+        """
+        if index < 1:
+            return None
+        try:
+            res = self[resType][index - 1]
+        except (KeyError, IndexError):
+            return None
+        return res
+
+    def getNamedResource(self, resType, name):
+        """Return the named resource of given type, else return None."""
+        name = tostr(name, encoding="mac-roman")
+        for res in self.get(resType, []):
+            if res.name == name:
+                return res
+        return None
+
+    def close(self):
+        if not self.file.closed:
+            self.file.close()
+
+
+class Resource(object):
+    """Represents a resource stored within a resource fork.
+
+    Attributes:
+            type: resource type.
+            data: resource data.
+            id: ID.
+            name: resource name.
+            attr: attributes.
+    """
+
+    def __init__(
+        self, resType=None, resData=None, resID=None, resName=None, resAttr=None
+    ):
+        self.type = resType
+        self.data = resData
+        self.id = resID
+        self.name = resName
+        self.attr = resAttr
+
+    def decompile(self, refData, reader):
+        sstruct.unpack(ResourceRefItem, refData, self)
+        # interpret 3-byte dataOffset as (padded) ULONG to unpack it with struct
+        (self.dataOffset,) = struct.unpack(">L", bytesjoin([b"\0", self.dataOffset]))
+        absDataOffset = reader.dataOffset + self.dataOffset
+        (dataLength,) = struct.unpack(">L", reader._read(4, absDataOffset))
+        self.data = reader._read(dataLength)
+        if self.nameOffset == -1:
+            return
+        absNameOffset = reader.absNameListOffset + self.nameOffset
+        (nameLength,) = struct.unpack("B", reader._read(1, absNameOffset))
+        (name,) = struct.unpack(">%ss" % nameLength, reader._read(nameLength))
+        self.name = tostr(name, encoding="mac-roman")
+
+
+ResourceForkHeader = """
+		> # big endian
+		dataOffset:     L
+		mapOffset:      L
+		dataLen:        L
+		mapLen:         L
+"""
+
+ResourceForkHeaderSize = sstruct.calcsize(ResourceForkHeader)
+
+ResourceMapHeader = """
+		> # big endian
+		attr:              H
+		typeListOffset:    H
+		nameListOffset:    H
+"""
+
+ResourceMapHeaderSize = sstruct.calcsize(ResourceMapHeader)
+
+ResourceTypeItem = """
+		> # big endian
+		type:              4s
+		numRes:            H
+		refListOffset:     H
+"""
+
+ResourceTypeItemSize = sstruct.calcsize(ResourceTypeItem)
+
+ResourceRefItem = """
+		> # big endian
+		id:                h
+		nameOffset:        h
+		attr:              B
+		dataOffset:        3s
+		reserved:          L
+"""
+
+ResourceRefItemSize = sstruct.calcsize(ResourceRefItem)

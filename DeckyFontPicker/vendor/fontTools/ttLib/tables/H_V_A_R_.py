@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfSF9WX0FfUl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJIb3Jpem9udGFsIE1ldHJpY3MgVmFyaWF0aW9ucyB0YWJsZQoKICAgIFRoZSBgYEhWQVJgYCB0YWJsZSBjb250YWlucyB2YXJpYXRpb25zIGluIGhvcml6b250YWwgZ2x5cGggbWV0cmljcwogICAgaW4gdmFyaWFibGUgZm9udHMuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9odmFyCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+class table_H_V_A_R_(BaseTTXConverter):
+    """Horizontal Metrics Variations table
+
+    The ``HVAR`` table contains variations in horizontal glyph metrics
+    in variable fonts.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/hvar
+    """
+
+    pass

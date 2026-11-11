@@ -1,1 +1,5 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLl9oX2VfYV9kIGltcG9ydCB0YWJsZV9faF9lX2FfZAoKCmNsYXNzIHRhYmxlX19iX2hfZV9kKHRhYmxlX19oX2VfYV9kKToKICAgIHBhc3MK
+from fontTools.ttLib.tables._h_e_a_d import table__h_e_a_d
+
+
+class table__b_h_e_d(table__h_e_a_d):
+    pass

@@ -1,1 +1,146 @@
-ZnJvbSBudW1iZXJzIGltcG9ydCBOdW1iZXIKaW1wb3J0IG1hdGgKaW1wb3J0IG9wZXJhdG9yCmltcG9ydCB3YXJuaW5ncwoKX19hbGxfXyA9IFsiVmVjdG9yIl0KCgpjbGFzcyBWZWN0b3IodHVwbGUpOgogICAgIiIiQSBtYXRoLWxpa2UgdmVjdG9yLgoKICAgIFJlcHJlc2VudHMgYW4gbi1kaW1lbnNpb25hbCBudW1lcmljIHZlY3Rvci4gYGBWZWN0b3JgYCBvYmplY3RzIHN1cHBvcnQKICAgIHZlY3RvciBhZGRpdGlvbiBhbmQgc3VidHJhY3Rpb24sIHNjYWxhciBtdWx0aXBsaWNhdGlvbiBhbmQgZGl2aXNpb24sCiAgICBuZWdhdGlvbiwgcm91bmRpbmcsIGFuZCBjb21wYXJpc29uIHRlc3RzLgogICAgIiIiCgogICAgX19zbG90c19fID0gKCkKCiAgICBkZWYgX19uZXdfXyhjbHMsIHZhbHVlcywga2VlcD1GYWxzZSk6CiAgICAgICAgaWYga2VlcCBpcyBub3QgRmFsc2U6CiAgICAgICAgICAgIHdhcm5pbmdzLndhcm4oCiAgICAgICAgICAgICAgICAidGhlICdrZWVwJyBhcmd1bWVudCBoYXMgYmVlbiBkZXByZWNhdGVkIiwKICAgICAgICAgICAgICAgIERlcHJlY2F0aW9uV2FybmluZywKICAgICAgICAgICAgKQogICAgICAgIGlmIHR5cGUodmFsdWVzKSA9PSBWZWN0b3I6CiAgICAgICAgICAgICMgTm8gbmVlZCB0byBjcmVhdGUgYSBuZXcgb2JqZWN0CiAgICAgICAgICAgIHJldHVybiB2YWx1ZXMKICAgICAgICByZXR1cm4gc3VwZXIoKS5fX25ld19fKGNscywgdmFsdWVzKQoKICAgIGRlZiBfX3JlcHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gZiJ7c2VsZi5fX2NsYXNzX18uX19uYW1lX199KHtzdXBlcigpLl9fcmVwcl9fKCl9KSIKCiAgICBkZWYgX3ZlY3Rvck9wKHNlbGYsIG90aGVyLCBvcCk6CiAgICAgICAgaWYgaXNpbnN0YW5jZShvdGhlciwgVmVjdG9yKToKICAgICAgICAgICAgYXNzZXJ0IGxlbihzZWxmKSA9PSBsZW4ob3RoZXIpCiAgICAgICAgICAgIHJldHVybiBzZWxmLl9fY2xhc3NfXyhvcChhLCBiKSBmb3IgYSwgYiBpbiB6aXAoc2VsZiwgb3RoZXIpKQogICAgICAgIGlmIGlzaW5zdGFuY2Uob3RoZXIsIE51bWJlcik6CiAgICAgICAgICAgIHJldHVybiBzZWxmLl9fY2xhc3NfXyhvcCh2LCBvdGhlcikgZm9yIHYgaW4gc2VsZikKICAgICAgICByYWlzZSBOb3RJbXBsZW1lbnRlZEVycm9yKCkKCiAgICBkZWYgX3NjYWxhck9wKHNlbGYsIG90aGVyLCBvcCk6CiAgICAgICAgaWYgaXNpbnN0YW5jZShvdGhlciwgTnVtYmVyKToKICAgICAgICAgICAgcmV0dXJuIHNlbGYuX19jbGFzc19fKG9wKHYsIG90aGVyKSBmb3IgdiBpbiBzZWxmKQogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoKQoKICAgIGRlZiBfdW5hcnlPcChzZWxmLCBvcCk6CiAgICAgICAgcmV0dXJuIHNlbGYuX19jbGFzc19fKG9wKHYpIGZvciB2IGluIHNlbGYpCgogICAgZGVmIF9fYWRkX18oc2VsZiwgb3RoZXIpOgogICAgICAgIHJldHVybiBzZWxmLl92ZWN0b3JPcChvdGhlciwgb3BlcmF0b3IuYWRkKQoKICAgIF9fcmFkZF9fID0gX19hZGRfXwoKICAgIGRlZiBfX3N1Yl9fKHNlbGYsIG90aGVyKToKICAgICAgICByZXR1cm4gc2VsZi5fdmVjdG9yT3Aob3RoZXIsIG9wZXJhdG9yLnN1YikKCiAgICBkZWYgX19yc3ViX18oc2VsZiwgb3RoZXIpOgogICAgICAgIHJldHVybiBzZWxmLl92ZWN0b3JPcChvdGhlciwgX29wZXJhdG9yX3JzdWIpCgogICAgZGVmIF9fbXVsX18oc2VsZiwgb3RoZXIpOgogICAgICAgIHJldHVybiBzZWxmLl9zY2FsYXJPcChvdGhlciwgb3BlcmF0b3IubXVsKQoKICAgIF9fcm11bF9fID0gX19tdWxfXwoKICAgIGRlZiBfX3RydWVkaXZfXyhzZWxmLCBvdGhlcik6CiAgICAgICAgcmV0dXJuIHNlbGYuX3NjYWxhck9wKG90aGVyLCBvcGVyYXRvci50cnVlZGl2KQoKICAgIGRlZiBfX3J0cnVlZGl2X18oc2VsZiwgb3RoZXIpOgogICAgICAgIHJldHVybiBzZWxmLl9zY2FsYXJPcChvdGhlciwgX29wZXJhdG9yX3J0cnVlZGl2KQoKICAgIGRlZiBfX3Bvc19fKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLl91bmFyeU9wKG9wZXJhdG9yLnBvcykKCiAgICBkZWYgX19uZWdfXyhzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5fdW5hcnlPcChvcGVyYXRvci5uZWcpCgogICAgZGVmIF9fcm91bmRfXyhzZWxmLCAqLCByb3VuZD1yb3VuZCk6CiAgICAgICAgcmV0dXJuIHNlbGYuX3VuYXJ5T3Aocm91bmQpCgogICAgZGVmIF9fZXFfXyhzZWxmLCBvdGhlcik6CiAgICAgICAgaWYgaXNpbnN0YW5jZShvdGhlciwgbGlzdCk6CiAgICAgICAgICAgICMgYncgY29tcGF0IFZlY3RvcihbMSwgMiwgM10pID09IFsxLCAyLCAzXQogICAgICAgICAgICBvdGhlciA9IHR1cGxlKG90aGVyKQogICAgICAgIHJldHVybiBzdXBlcigpLl9fZXFfXyhvdGhlcikKCiAgICBkZWYgX19uZV9fKHNlbGYsIG90aGVyKToKICAgICAgICByZXR1cm4gbm90IHNlbGYuX19lcV9fKG90aGVyKQoKICAgIGRlZiBfX2Jvb2xfXyhzZWxmKToKICAgICAgICByZXR1cm4gYW55KHNlbGYpCgogICAgX19ub256ZXJvX18gPSBfX2Jvb2xfXwoKICAgIGRlZiBfX2Fic19fKHNlbGYpOgogICAgICAgIHJldHVybiBtYXRoLnNxcnQoc3VtKHggKiB4IGZvciB4IGluIHNlbGYpKQoKICAgIGRlZiBsZW5ndGgoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIHRoZSBsZW5ndGggb2YgdGhlIHZlY3Rvci4gRXF1aXZhbGVudCB0byBhYnModmVjdG9yKS4iIiIKICAgICAgICByZXR1cm4gYWJzKHNlbGYpCgogICAgZGVmIG5vcm1hbGl6ZWQoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIHRoZSBub3JtYWxpemVkIHZlY3RvciBvZiB0aGUgdmVjdG9yLiIiIgogICAgICAgIHJldHVybiBzZWxmIC8gYWJzKHNlbGYpCgogICAgZGVmIGRvdChzZWxmLCBvdGhlcik6CiAgICAgICAgIiIiUGVyZm9ybXMgdmVjdG9yIGRvdCBwcm9kdWN0LCByZXR1cm5pbmcgdGhlIHN1bSBvZgogICAgICAgIGBgYVswXSAqIGJbMF0sIGFbMV0gKiBiWzFdLCAuLi5gYCIiIgogICAgICAgIGFzc2VydCBsZW4oc2VsZikgPT0gbGVuKG90aGVyKQogICAgICAgIHJldHVybiBzdW0oYSAqIGIgZm9yIGEsIGIgaW4gemlwKHNlbGYsIG90aGVyKSkKCiAgICAjIERlcHJlY2F0ZWQgbWV0aG9kcy9wcm9wZXJ0aWVzCgogICAgZGVmIHRvSW50KHNlbGYpOgogICAgICAgIHdhcm5pbmdzLndhcm4oCiAgICAgICAgICAgICJ0aGUgJ3RvSW50JyBtZXRob2QgaGFzIGJlZW4gZGVwcmVjYXRlZCwgdXNlIHJvdW5kKHZlY3RvcikgaW5zdGVhZCIsCiAgICAgICAgICAgIERlcHJlY2F0aW9uV2FybmluZywKICAgICAgICApCiAgICAgICAgcmV0dXJuIHNlbGYuX19yb3VuZF9fKCkKCiAgICBAcHJvcGVydHkKICAgIGRlZiB2YWx1ZXMoc2VsZik6CiAgICAgICAgd2FybmluZ3Mud2FybigKICAgICAgICAgICAgInRoZSAndmFsdWVzJyBhdHRyaWJ1dGUgaGFzIGJlZW4gZGVwcmVjYXRlZCwgdXNlICIKICAgICAgICAgICAgInRoZSB2ZWN0b3Igb2JqZWN0IGl0c2VsZiBpbnN0ZWFkIiwKICAgICAgICAgICAgRGVwcmVjYXRpb25XYXJuaW5nLAogICAgICAgICkKICAgICAgICByZXR1cm4gbGlzdChzZWxmKQoKICAgIEB2YWx1ZXMuc2V0dGVyCiAgICBkZWYgdmFsdWVzKHNlbGYsIHZhbHVlcyk6CiAgICAgICAgcmFpc2UgQXR0cmlidXRlRXJyb3IoCiAgICAgICAgICAgICJjYW4ndCBzZXQgYXR0cmlidXRlLCB0aGUgJ3ZhbHVlcycgYXR0cmlidXRlIGhhcyBiZWVuIGRlcHJlY2F0ZWQiLAogICAgICAgICkKCiAgICBkZWYgaXNjbG9zZShzZWxmLCBvdGhlcjogIlZlY3RvciIsICoqa3dhcmdzKSAtPiBib29sOgogICAgICAgICIiIlJldHVybiBUcnVlIGlmIHRoZSB2ZWN0b3IgaXMgY2xvc2UgdG8gYW5vdGhlciBWZWN0b3IuIiIiCiAgICAgICAgYXNzZXJ0IGxlbihzZWxmKSA9PSBsZW4ob3RoZXIpCiAgICAgICAgcmV0dXJuIGFsbChtYXRoLmlzY2xvc2UoYSwgYiwgKiprd2FyZ3MpIGZvciBhLCBiIGluIHppcChzZWxmLCBvdGhlcikpCgoKZGVmIF9vcGVyYXRvcl9yc3ViKGEsIGIpOgogICAgcmV0dXJuIG9wZXJhdG9yLnN1YihiLCBhKQoKCmRlZiBfb3BlcmF0b3JfcnRydWVkaXYoYSwgYik6CiAgICByZXR1cm4gb3BlcmF0b3IudHJ1ZWRpdihiLCBhKQo=
+from numbers import Number
+import math
+import operator
+import warnings
+
+__all__ = ["Vector"]
+
+
+class Vector(tuple):
+    """A math-like vector.
+
+    Represents an n-dimensional numeric vector. ``Vector`` objects support
+    vector addition and subtraction, scalar multiplication and division,
+    negation, rounding, and comparison tests.
+    """
+
+    __slots__ = ()
+
+    def __new__(cls, values, keep=False):
+        if keep is not False:
+            warnings.warn(
+                "the 'keep' argument has been deprecated",
+                DeprecationWarning,
+            )
+        if type(values) == Vector:
+            # No need to create a new object
+            return values
+        return super().__new__(cls, values)
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}({super().__repr__()})"
+
+    def _vectorOp(self, other, op):
+        if isinstance(other, Vector):
+            assert len(self) == len(other)
+            return self.__class__(op(a, b) for a, b in zip(self, other))
+        if isinstance(other, Number):
+            return self.__class__(op(v, other) for v in self)
+        raise NotImplementedError()
+
+    def _scalarOp(self, other, op):
+        if isinstance(other, Number):
+            return self.__class__(op(v, other) for v in self)
+        raise NotImplementedError()
+
+    def _unaryOp(self, op):
+        return self.__class__(op(v) for v in self)
+
+    def __add__(self, other):
+        return self._vectorOp(other, operator.add)
+
+    __radd__ = __add__
+
+    def __sub__(self, other):
+        return self._vectorOp(other, operator.sub)
+
+    def __rsub__(self, other):
+        return self._vectorOp(other, _operator_rsub)
+
+    def __mul__(self, other):
+        return self._scalarOp(other, operator.mul)
+
+    __rmul__ = __mul__
+
+    def __truediv__(self, other):
+        return self._scalarOp(other, operator.truediv)
+
+    def __rtruediv__(self, other):
+        return self._scalarOp(other, _operator_rtruediv)
+
+    def __pos__(self):
+        return self._unaryOp(operator.pos)
+
+    def __neg__(self):
+        return self._unaryOp(operator.neg)
+
+    def __round__(self, *, round=round):
+        return self._unaryOp(round)
+
+    def __eq__(self, other):
+        if isinstance(other, list):
+            # bw compat Vector([1, 2, 3]) == [1, 2, 3]
+            other = tuple(other)
+        return super().__eq__(other)
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def __bool__(self):
+        return any(self)
+
+    __nonzero__ = __bool__
+
+    def __abs__(self):
+        return math.sqrt(sum(x * x for x in self))
+
+    def length(self):
+        """Return the length of the vector. Equivalent to abs(vector)."""
+        return abs(self)
+
+    def normalized(self):
+        """Return the normalized vector of the vector."""
+        return self / abs(self)
+
+    def dot(self, other):
+        """Performs vector dot product, returning the sum of
+        ``a[0] * b[0], a[1] * b[1], ...``"""
+        assert len(self) == len(other)
+        return sum(a * b for a, b in zip(self, other))
+
+    # Deprecated methods/properties
+
+    def toInt(self):
+        warnings.warn(
+            "the 'toInt' method has been deprecated, use round(vector) instead",
+            DeprecationWarning,
+        )
+        return self.__round__()
+
+    @property
+    def values(self):
+        warnings.warn(
+            "the 'values' attribute has been deprecated, use "
+            "the vector object itself instead",
+            DeprecationWarning,
+        )
+        return list(self)
+
+    @values.setter
+    def values(self, values):
+        raise AttributeError(
+            "can't set attribute, the 'values' attribute has been deprecated",
+        )
+
+    def isclose(self, other: "Vector", **kwargs) -> bool:
+        """Return True if the vector is close to another Vector."""
+        assert len(self) == len(other)
+        return all(math.isclose(a, b, **kwargs) for a, b in zip(self, other))
+
+
+def _operator_rsub(a, b):
+    return operator.sub(b, a)
+
+
+def _operator_rtruediv(a, b):
+    return operator.truediv(b, a)

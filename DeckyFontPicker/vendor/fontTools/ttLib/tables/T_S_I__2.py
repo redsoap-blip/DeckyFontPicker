@@ -1,1 +1,17 @@
-IiIiVFNJezAsMSwyLDMsNX0gYXJlIHByaXZhdGUgdGFibGVzIHVzZWQgYnkgTWljcm9zb2Z0IFZpc3VhbCBUcnVlVHlwZSAoVlRUKQp0b29sIHRvIHN0b3JlIGl0cyBoaW50aW5nIHNvdXJjZSBkYXRhLgoKVFNJMiBpcyB0aGUgaW5kZXggdGFibGUgY29udGFpbmluZyB0aGUgbGVuZ3RocyBhbmQgb2Zmc2V0cyBmb3IgdGhlIGdseXBoCnByb2dyYW1zIHRoYXQgYXJlIGNvbnRhaW5lZCBpbiB0aGUgVFNJMyB0YWJsZS4gSXQgdXNlcyB0aGUgc2FtZSBmb3JtYXQgYXMKdGhlIFRTSTAgdGFibGUuCgpTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS90b29scy92dHQvdHNpLXRhYmxlcwoiIiIKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKc3VwZXJjbGFzcyA9IHR0TGliLmdldFRhYmxlQ2xhc3MoIlRTSTAiKQoKCmNsYXNzIHRhYmxlX1RfU19JX18yKHN1cGVyY2xhc3MpOgogICAgZGVwZW5kZW5jaWVzID0gWyJUU0kzIl0K
+"""TSI{0,1,2,3,5} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its hinting source data.
+
+TSI2 is the index table containing the lengths and offsets for the glyph
+programs that are contained in the TSI3 table. It uses the same format as
+the TSI0 table.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from fontTools import ttLib
+
+superclass = ttLib.getTableClass("TSI0")
+
+
+class table_T_S_I__2(superclass):
+    dependencies = ["TSI3"]

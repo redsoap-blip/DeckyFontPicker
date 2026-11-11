@@ -1,1 +1,143 @@
-IiIiSGVscGVycyBmb3IgbWFuaXB1bGF0aW5nIDJEIHBvaW50cyBhbmQgdmVjdG9ycyBpbiBDT0xSIHRhYmxlLiIiIgoKZnJvbSBtYXRoIGltcG9ydCBjb3B5c2lnbiwgY29zLCBoeXBvdCwgaXNjbG9zZSwgcGkKZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBvdFJvdW5kCgoKZGVmIF92ZWN0b3JfYmV0d2VlbihvcmlnaW4sIHRhcmdldCk6CiAgICByZXR1cm4gKHRhcmdldFswXSAtIG9yaWdpblswXSwgdGFyZ2V0WzFdIC0gb3JpZ2luWzFdKQoKCmRlZiBfcm91bmRfcG9pbnQocHQpOgogICAgcmV0dXJuIChvdFJvdW5kKHB0WzBdKSwgb3RSb3VuZChwdFsxXSkpCgoKZGVmIF91bml0X3ZlY3Rvcih2ZWMpOgogICAgbGVuZ3RoID0gaHlwb3QoKnZlYykKICAgIGlmIGxlbmd0aCA9PSAwOgogICAgICAgIHJldHVybiBOb25lCiAgICByZXR1cm4gKHZlY1swXSAvIGxlbmd0aCwgdmVjWzFdIC8gbGVuZ3RoKQoKCl9DSVJDTEVfSU5TSURFX1RPTEVSQU5DRSA9IDFlLTQKCgojIFRoZSB1bml0IHZlY3RvcidzIFggYW5kIFkgY29tcG9uZW50cyBhcmUgcmVzcGVjdGl2ZWx5CiMgICBVID0gKGNvcyjOsSksIHNpbijOsSkpCiMgd2hlcmUgzrEgaXMgdGhlIGFuZ2xlIGJldHdlZW4gdGhlIHVuaXQgdmVjdG9yIGFuZCB0aGUgcG9zaXRpdmUgeCBheGlzLgpfVU5JVF9WRUNUT1JfVEhSRVNIT0xEID0gY29zKDMgLyA4ICogcGkpICAjID09IHNpbigxLzggKiBwaSkgPT0gMC4zODI2ODM0MzIzNjUwODk4NAoKCmRlZiBfcm91bmRpbmdfb2Zmc2V0KGRpcmVjdGlvbik6CiAgICAjIFJldHVybiAyLXR1cGxlIG9mIC0vKyAxLjAgb3IgMC4wIGFwcHJveGltYXRlbHkgYmFzZWQgb24gdGhlIGRpcmVjdGlvbiB2ZWN0b3IuCiAgICAjIFdlIGRpdmlkZSB0aGUgdW5pdCBjaXJjbGUgaW4gOCBlcXVhbCBzbGljZXMgb3JpZW50ZWQgdG93YXJkcyB0aGUgY2FyZGluYWwKICAgICMgKE4sIEUsIFMsIFcpIGFuZCBpbnRlcm1lZGlhdGUgKE5FLCBTRSwgU1csIE5XKSBkaXJlY3Rpb25zLiBUbyBlYWNoIHNsaWNlIHdlCiAgICAjIG1hcCBvbmUgb2YgdGhlIHBvc3NpYmxlIGNhc2VzOiAtMSwgMCwgKzEgZm9yIGVpdGhlciBYIGFuZCBZIGNvb3JkaW5hdGUuCiAgICAjIEUuZy4gUmV0dXJuICgrMS4wLCAtMS4wKSBpZiB1bml0IHZlY3RvciBpcyBvcmllbnRlZCB0b3dhcmRzIFNFLCBvcgogICAgIyAoLTEuMCwgMC4wKSBpZiBpdCdzIHBvaW50aW5nIFdlc3QsIGV0Yy4KICAgIHV2ID0gX3VuaXRfdmVjdG9yKGRpcmVjdGlvbikKICAgIGlmIG5vdCB1djoKICAgICAgICByZXR1cm4gKDAsIDApCgogICAgcmVzdWx0ID0gW10KICAgIGZvciB1dl9jb21wb25lbnQgaW4gdXY6CiAgICAgICAgaWYgLV9VTklUX1ZFQ1RPUl9USFJFU0hPTEQgPD0gdXZfY29tcG9uZW50IDwgX1VOSVRfVkVDVE9SX1RIUkVTSE9MRDoKICAgICAgICAgICAgIyB1bml0IHZlY3RvciBjb21wb25lbnQgbmVhciAwOiBkaXJlY3Rpb24gYWxtb3N0IG9ydGhvZ29uYWwgdG8gdGhlCiAgICAgICAgICAgICMgZGlyZWN0aW9uIG9mIHRoZSBjdXJyZW50IGF4aXMsIHRodXMga2VlcCBjb29yZGluYXRlIHVuY2hhbmdlZAogICAgICAgICAgICByZXN1bHQuYXBwZW5kKDApCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBudWRnZSBjb29yZCBieSArLy0gMS4wIGluIGRpcmVjdGlvbiBvZiB1bml0IHZlY3RvcgogICAgICAgICAgICByZXN1bHQuYXBwZW5kKGNvcHlzaWduKDEuMCwgdXZfY29tcG9uZW50KSkKICAgIHJldHVybiB0dXBsZShyZXN1bHQpCgoKY2xhc3MgQ2lyY2xlOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNlbnRyZSwgcmFkaXVzKToKICAgICAgICBzZWxmLmNlbnRyZSA9IGNlbnRyZQogICAgICAgIHNlbGYucmFkaXVzID0gcmFkaXVzCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiBmIkNpcmNsZShjZW50cmU9e3NlbGYuY2VudHJlfSwgcmFkaXVzPXtzZWxmLnJhZGl1c30pIgoKICAgIGRlZiByb3VuZChzZWxmKToKICAgICAgICByZXR1cm4gQ2lyY2xlKF9yb3VuZF9wb2ludChzZWxmLmNlbnRyZSksIG90Um91bmQoc2VsZi5yYWRpdXMpKQoKICAgIGRlZiBpbnNpZGUoc2VsZiwgb3V0ZXJfY2lyY2xlLCB0b2xlcmFuY2U9X0NJUkNMRV9JTlNJREVfVE9MRVJBTkNFKToKICAgICAgICBkaXN0ID0gc2VsZi5yYWRpdXMgKyBoeXBvdCgqX3ZlY3Rvcl9iZXR3ZWVuKHNlbGYuY2VudHJlLCBvdXRlcl9jaXJjbGUuY2VudHJlKSkKICAgICAgICByZXR1cm4gKAogICAgICAgICAgICBpc2Nsb3NlKG91dGVyX2NpcmNsZS5yYWRpdXMsIGRpc3QsIHJlbF90b2w9X0NJUkNMRV9JTlNJREVfVE9MRVJBTkNFKQogICAgICAgICAgICBvciBvdXRlcl9jaXJjbGUucmFkaXVzID4gZGlzdAogICAgICAgICkKCiAgICBkZWYgY29uY2VudHJpYyhzZWxmLCBvdGhlcik6CiAgICAgICAgcmV0dXJuIHNlbGYuY2VudHJlID09IG90aGVyLmNlbnRyZQoKICAgIGRlZiBtb3ZlKHNlbGYsIGR4LCBkeSk6CiAgICAgICAgc2VsZi5jZW50cmUgPSAoc2VsZi5jZW50cmVbMF0gKyBkeCwgc2VsZi5jZW50cmVbMV0gKyBkeSkKCgpkZWYgcm91bmRfc3RhcnRfY2lyY2xlX3N0YWJsZV9jb250YWlubWVudChjMCwgcjAsIGMxLCByMSk6CiAgICAiIiJSb3VuZCBzdGFydCBjaXJjbGUgc28gdGhhdCBpdCBzdGF5cyBpbnNpZGUvb3V0c2lkZSBlbmQgY2lyY2xlIGFmdGVyIHJvdW5kaW5nLgoKICAgIFRoZSByb3VuZGluZyBvZiBjaXJjbGUgY29vcmRpbmF0ZXMgdG8gaW50ZWdlcnMgbWF5IGNhdXNlIGFuIGFicnVwdCBjaGFuZ2UKICAgIGlmIHRoZSBzdGFydCBjaXJjbGUgYzAgaXMgc28gY2xvc2UgdG8gdGhlIGVuZCBjaXJjbGUgYzEncyBwZXJpbWl0ZXIgdGhhdAogICAgaXQgZW5kcyB1cCBmYWxsaW5nIG91dHNpZGUgKG9yIGluc2lkZSkgYXMgYSByZXN1bHQgb2YgdGhlIHJvdW5kaW5nLgogICAgVG8ga2VlcCB0aGUgZ3JhZGllbnQgdW5jaGFuZ2VkLCB3ZSBudWRnZSBpdCBpbiB0aGUgcmlnaHQgZGlyZWN0aW9uLgoKICAgIFNlZToKICAgIGh0dHBzOi8vZ2l0aHViLmNvbS9nb29nbGVmb250cy9jb2xyLWdyYWRpZW50cy1zcGVjL2lzc3Vlcy8yMDQKICAgIGh0dHBzOi8vZ2l0aHViLmNvbS9nb29nbGVmb250cy9waWNvc3ZnL2lzc3Vlcy8xNTgKICAgICIiIgogICAgc3RhcnQsIGVuZCA9IENpcmNsZShjMCwgcjApLCBDaXJjbGUoYzEsIHIxKQoKICAgIGluc2lkZV9iZWZvcmVfcm91bmQgPSBzdGFydC5pbnNpZGUoZW5kKQoKICAgIHJvdW5kX3N0YXJ0ID0gc3RhcnQucm91bmQoKQogICAgcm91bmRfZW5kID0gZW5kLnJvdW5kKCkKICAgIGluc2lkZV9hZnRlcl9yb3VuZCA9IHJvdW5kX3N0YXJ0Lmluc2lkZShyb3VuZF9lbmQpCgogICAgaWYgaW5zaWRlX2JlZm9yZV9yb3VuZCA9PSBpbnNpZGVfYWZ0ZXJfcm91bmQ6CiAgICAgICAgcmV0dXJuIHJvdW5kX3N0YXJ0CiAgICBlbGlmIGluc2lkZV9hZnRlcl9yb3VuZDoKICAgICAgICAjIHN0YXJ0IHdhcyBvdXRzaWRlIGJlZm9yZSByb3VuZGluZzogd2UgbmVlZCB0byBwdXNoIHN0YXJ0IGF3YXkgZnJvbSBlbmQKICAgICAgICBkaXJlY3Rpb24gPSBfdmVjdG9yX2JldHdlZW4ocm91bmRfZW5kLmNlbnRyZSwgcm91bmRfc3RhcnQuY2VudHJlKQogICAgICAgIHJhZGl1c19kZWx0YSA9ICsxLjAKICAgIGVsc2U6CiAgICAgICAgIyBzdGFydCB3YXMgaW5zaWRlIGJlZm9yZSByb3VuZGluZzogd2UgbmVlZCB0byBwdXNoIHN0YXJ0IHRvd2FyZHMgZW5kCiAgICAgICAgZGlyZWN0aW9uID0gX3ZlY3Rvcl9iZXR3ZWVuKHJvdW5kX3N0YXJ0LmNlbnRyZSwgcm91bmRfZW5kLmNlbnRyZSkKICAgICAgICByYWRpdXNfZGVsdGEgPSAtMS4wCiAgICBkeCwgZHkgPSBfcm91bmRpbmdfb2Zmc2V0KGRpcmVjdGlvbikKCiAgICAjIEF0IG1vc3QgMiBpdGVyYXRpb25zIG91Z2h0IHRvIGJlIGVub3VnaCB0byBjb252ZXJnZS4gQmVmb3JlIHRoZSBsb29wLCB3ZQogICAgIyBrbm93IHRoZSBzdGFydCBjaXJjbGUgZGlkbid0IGtlZXAgY29udGFpbm1lbnQgYWZ0ZXIgbm9ybWFsIHJvdW5kaW5nOyB0aHVzCiAgICAjIHdlIGNvbnRpbnVlIGFkanVzdGluZyBieSAtLysgMS4wIHVudGlsIGNvbnRhaW5tZW50IGlzIHJlc3RvcmVkLgogICAgIyBOb3JtYWwgcm91bmRpbmcgY2FuIGF0IG1vc3QgbW92ZSBlYWNoIGNvb3JkaW5hdGVzIC0vKzAuNTsgaW4gdGhlIHdvcnN0IGNhc2UKICAgICMgYm90aCB0aGUgc3RhcnQgYW5kIGVuZCBjaXJjbGUncyBjZW50cmVzIGFuZCByYWRpaSB3aWxsIGJlIHJvdW5kZWQgaW4gb3Bwb3NpdGUKICAgICMgZGlyZWN0aW9ucywgZS5nLiB3aGVuIHRoZXkgbW92ZSBhbG9uZyBhIDQ1IGRlZ3JlZSBkaWFnb25hbDoKICAgICMgICBjMCA9ICgxLjUsIDEuNSkgPT09PiAoMi4wLCAyLjApCiAgICAjICAgcjAgPSAwLjUgPT09PiAxLjAKICAgICMgICBjMSA9ICgwLjQ5OSwgMC40OTkpID09PT4gKDAuMCwgMC4wKQogICAgIyAgIHIxID0gMi40OTkgPT09PiAyLjAKICAgICMgSW4gdGhpcyBleGFtcGxlLCB0aGUgcmVsYXRpdmUgZGlzdGFuY2UgYmV0d2VlbiB0aGUgY2lyY2xlcywgY2FsY3VsYXRlZAogICAgIyBhcyByMSAtIChyMCArIGRpc3RhbmNlKGMwLCBjMSkpIGlzIGluaXRpYWxseSAwLjU3NDM3IChjMCBpcyBpbnNpZGUgYzEpLCBhbmQKICAgICMgLTEuODI4NDIgYWZ0ZXIgcm91bmRpbmcgKGMwIGlzIG5vdyBvdXRzaWRlIGMxKS4gTnVkZ2luZyBjMCBieSAtMS4wIG9uIGJvdGgKICAgICMgeCBhbmQgeSBheGVzIG1vdmVzIGl0IHRvd2FyZHMgYzEgYnkgaHlwb3QoLTEuMCwgLTEuMCkgPSAxLjQxNDIxLiBUd28gb2YgdGhlc2UKICAgICMgbW92ZXMgY292ZXIgdHdpY2UgdGhhdCBkaXN0YW5jZSwgd2hpY2ggaXMgZW5vdWdoIHRvIHJlc3RvcmUgY29udGFpbm1lbnQuCiAgICBtYXhfYXR0ZW1wdHMgPSAyCiAgICBmb3IgXyBpbiByYW5nZShtYXhfYXR0ZW1wdHMpOgogICAgICAgIGlmIHJvdW5kX3N0YXJ0LmNvbmNlbnRyaWMocm91bmRfZW5kKToKICAgICAgICAgICAgIyBjYW4ndCBtb3ZlIGMwIHRvd2FyZHMgYzEgKHRoZXkgYXJlIHRoZSBzYW1lKSwgc28gd2UgY2hhbmdlIHRoZSByYWRpdXMKICAgICAgICAgICAgcm91bmRfc3RhcnQucmFkaXVzICs9IHJhZGl1c19kZWx0YQogICAgICAgICAgICBhc3NlcnQgcm91bmRfc3RhcnQucmFkaXVzID49IDAKICAgICAgICBlbHNlOgogICAgICAgICAgICByb3VuZF9zdGFydC5tb3ZlKGR4LCBkeSkKICAgICAgICBpZiBpbnNpZGVfYmVmb3JlX3JvdW5kID09IHJvdW5kX3N0YXJ0Lmluc2lkZShyb3VuZF9lbmQpOgogICAgICAgICAgICBicmVhawogICAgZWxzZTogICMgbGlrZWx5IGEgYnVnCiAgICAgICAgcmFpc2UgQXNzZXJ0aW9uRXJyb3IoCiAgICAgICAgICAgIGYiUm91bmRpbmcgY2lyY2xlIHtzdGFydH0gIgogICAgICAgICAgICBmInsnaW5zaWRlJyBpZiBpbnNpZGVfYmVmb3JlX3JvdW5kIGVsc2UgJ291dHNpZGUnfSAiCiAgICAgICAgICAgIGYie2VuZH0gZmFpbGVkIGFmdGVyIHttYXhfYXR0ZW1wdHN9IGF0dGVtcHRzISIKICAgICAgICApCgogICAgcmV0dXJuIHJvdW5kX3N0YXJ0Cg==
+"""Helpers for manipulating 2D points and vectors in COLR table."""
+
+from math import copysign, cos, hypot, isclose, pi
+from fontTools.misc.roundTools import otRound
+
+
+def _vector_between(origin, target):
+    return (target[0] - origin[0], target[1] - origin[1])
+
+
+def _round_point(pt):
+    return (otRound(pt[0]), otRound(pt[1]))
+
+
+def _unit_vector(vec):
+    length = hypot(*vec)
+    if length == 0:
+        return None
+    return (vec[0] / length, vec[1] / length)
+
+
+_CIRCLE_INSIDE_TOLERANCE = 1e-4
+
+
+# The unit vector's X and Y components are respectively
+#   U = (cos(α), sin(α))
+# where α is the angle between the unit vector and the positive x axis.
+_UNIT_VECTOR_THRESHOLD = cos(3 / 8 * pi)  # == sin(1/8 * pi) == 0.38268343236508984
+
+
+def _rounding_offset(direction):
+    # Return 2-tuple of -/+ 1.0 or 0.0 approximately based on the direction vector.
+    # We divide the unit circle in 8 equal slices oriented towards the cardinal
+    # (N, E, S, W) and intermediate (NE, SE, SW, NW) directions. To each slice we
+    # map one of the possible cases: -1, 0, +1 for either X and Y coordinate.
+    # E.g. Return (+1.0, -1.0) if unit vector is oriented towards SE, or
+    # (-1.0, 0.0) if it's pointing West, etc.
+    uv = _unit_vector(direction)
+    if not uv:
+        return (0, 0)
+
+    result = []
+    for uv_component in uv:
+        if -_UNIT_VECTOR_THRESHOLD <= uv_component < _UNIT_VECTOR_THRESHOLD:
+            # unit vector component near 0: direction almost orthogonal to the
+            # direction of the current axis, thus keep coordinate unchanged
+            result.append(0)
+        else:
+            # nudge coord by +/- 1.0 in direction of unit vector
+            result.append(copysign(1.0, uv_component))
+    return tuple(result)
+
+
+class Circle:
+    def __init__(self, centre, radius):
+        self.centre = centre
+        self.radius = radius
+
+    def __repr__(self):
+        return f"Circle(centre={self.centre}, radius={self.radius})"
+
+    def round(self):
+        return Circle(_round_point(self.centre), otRound(self.radius))
+
+    def inside(self, outer_circle, tolerance=_CIRCLE_INSIDE_TOLERANCE):
+        dist = self.radius + hypot(*_vector_between(self.centre, outer_circle.centre))
+        return (
+            isclose(outer_circle.radius, dist, rel_tol=_CIRCLE_INSIDE_TOLERANCE)
+            or outer_circle.radius > dist
+        )
+
+    def concentric(self, other):
+        return self.centre == other.centre
+
+    def move(self, dx, dy):
+        self.centre = (self.centre[0] + dx, self.centre[1] + dy)
+
+
+def round_start_circle_stable_containment(c0, r0, c1, r1):
+    """Round start circle so that it stays inside/outside end circle after rounding.
+
+    The rounding of circle coordinates to integers may cause an abrupt change
+    if the start circle c0 is so close to the end circle c1's perimiter that
+    it ends up falling outside (or inside) as a result of the rounding.
+    To keep the gradient unchanged, we nudge it in the right direction.
+
+    See:
+    https://github.com/googlefonts/colr-gradients-spec/issues/204
+    https://github.com/googlefonts/picosvg/issues/158
+    """
+    start, end = Circle(c0, r0), Circle(c1, r1)
+
+    inside_before_round = start.inside(end)
+
+    round_start = start.round()
+    round_end = end.round()
+    inside_after_round = round_start.inside(round_end)
+
+    if inside_before_round == inside_after_round:
+        return round_start
+    elif inside_after_round:
+        # start was outside before rounding: we need to push start away from end
+        direction = _vector_between(round_end.centre, round_start.centre)
+        radius_delta = +1.0
+    else:
+        # start was inside before rounding: we need to push start towards end
+        direction = _vector_between(round_start.centre, round_end.centre)
+        radius_delta = -1.0
+    dx, dy = _rounding_offset(direction)
+
+    # At most 2 iterations ought to be enough to converge. Before the loop, we
+    # know the start circle didn't keep containment after normal rounding; thus
+    # we continue adjusting by -/+ 1.0 until containment is restored.
+    # Normal rounding can at most move each coordinates -/+0.5; in the worst case
+    # both the start and end circle's centres and radii will be rounded in opposite
+    # directions, e.g. when they move along a 45 degree diagonal:
+    #   c0 = (1.5, 1.5) ===> (2.0, 2.0)
+    #   r0 = 0.5 ===> 1.0
+    #   c1 = (0.499, 0.499) ===> (0.0, 0.0)
+    #   r1 = 2.499 ===> 2.0
+    # In this example, the relative distance between the circles, calculated
+    # as r1 - (r0 + distance(c0, c1)) is initially 0.57437 (c0 is inside c1), and
+    # -1.82842 after rounding (c0 is now outside c1). Nudging c0 by -1.0 on both
+    # x and y axes moves it towards c1 by hypot(-1.0, -1.0) = 1.41421. Two of these
+    # moves cover twice that distance, which is enough to restore containment.
+    max_attempts = 2
+    for _ in range(max_attempts):
+        if round_start.concentric(round_end):
+            # can't move c0 towards c1 (they are the same), so we change the radius
+            round_start.radius += radius_delta
+            assert round_start.radius >= 0
+        else:
+            round_start.move(dx, dy)
+        if inside_before_round == round_start.inside(round_end):
+            break
+    else:  # likely a bug
+        raise AssertionError(
+            f"Rounding circle {start} "
+            f"{'inside' if inside_before_round else 'outside'} "
+            f"{end} failed after {max_attempts} attempts!"
+        )
+
+    return round_start

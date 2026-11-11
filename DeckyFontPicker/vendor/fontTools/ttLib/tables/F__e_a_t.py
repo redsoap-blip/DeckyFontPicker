@@ -1,1 +1,159 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZsb2F0VG9GaXhlZFRvU3RyCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbApmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIC4gaW1wb3J0IGdyVXRpbHMKaW1wb3J0IHN0cnVjdAoKRmVhdF9oZHJfZm9ybWF0ID0gIiIiCiAgICA+CiAgICB2ZXJzaW9uOiAgICAxNi4xNkYKIiIiCgoKY2xhc3MgdGFibGVfRl9fZV9hX3QoRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJGZWF0dXJlIHRhYmxlCgogICAgVGhlIGBgRmVhdGBgIHRhYmxlIGlzIHVzZWQgZXhjbHVzaXZlbHkgYnkgdGhlIEdyYXBoaXRlIHNoYXBpbmcgZW5naW5lCiAgICB0byBzdG9yZSBmZWF0dXJlcyBhbmQgcG9zc2libGUgc2V0dGluZ3Mgc3BlY2lmaWVkIGluIEdETC4gR3JhcGhpdGUgZmVhdHVyZXMKICAgIGRldGVybWluZSB3aGF0IHJ1bGVzIGFyZSBhcHBsaWVkIHRvIHRyYW5zZm9ybSBhIGdseXBoIHN0cmVhbS4KCiAgICBOb3QgdG8gYmUgY29uZnVzZWQgd2l0aCBgYGZlYXRgYCwgb3IgdGhlIE9wZW5UeXBlIExheW91dCB0YWJsZXMKICAgIGBgR1NVQmBgL2BgR1BPU2BgLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZ3JhcGhpdGUuc2lsLm9yZy9ncmFwaGl0ZV90ZWNoQWJvdXQjZ3JhcGhpdGUtZm9udC10YWJsZXMKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5mZWF0dXJlcyA9IHt9CgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIF8sIGRhdGEgPSBzc3RydWN0LnVucGFjazIoRmVhdF9oZHJfZm9ybWF0LCBkYXRhLCBzZWxmKQogICAgICAgIHNlbGYudmVyc2lvbiA9IGZsb2F0KGZsb2F0VG9GaXhlZFRvU3RyKHNlbGYudmVyc2lvbiwgcHJlY2lzaW9uQml0cz0xNikpCiAgICAgICAgKG51bUZlYXRzLCkgPSBzdHJ1Y3QudW5wYWNrKCI+SCIsIGRhdGFbOjJdKQogICAgICAgIGRhdGEgPSBkYXRhWzg6XQogICAgICAgIGFsbGZlYXRzID0gW10KICAgICAgICBtYXhzZXR0aW5nID0gMAogICAgICAgIGZvciBpIGluIHJhbmdlKG51bUZlYXRzKToKICAgICAgICAgICAgaWYgc2VsZi52ZXJzaW9uID49IDIuMDoKICAgICAgICAgICAgICAgIGZpZCwgbnVtcywgXywgb2Zmc2V0LCBmbGFncywgbGlkID0gc3RydWN0LnVucGFjaygKICAgICAgICAgICAgICAgICAgICAiPkxISExISCIsIGRhdGFbMTYgKiBpIDogMTYgKiAoaSArIDEpXQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgb2Zmc2V0ID0gaW50KChvZmZzZXQgLSAxMiAtIDE2ICogbnVtRmVhdHMpIC8gNCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGZpZCwgbnVtcywgb2Zmc2V0LCBmbGFncywgbGlkID0gc3RydWN0LnVucGFjaygKICAgICAgICAgICAgICAgICAgICAiPkhITEhIIiwgZGF0YVsxMiAqIGkgOiAxMiAqIChpICsgMSldCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBvZmZzZXQgPSBpbnQoKG9mZnNldCAtIDEyIC0gMTIgKiBudW1GZWF0cykgLyA0KQogICAgICAgICAgICBhbGxmZWF0cy5hcHBlbmQoKGZpZCwgbnVtcywgb2Zmc2V0LCBmbGFncywgbGlkKSkKICAgICAgICAgICAgbWF4c2V0dGluZyA9IG1heChtYXhzZXR0aW5nLCBvZmZzZXQgKyBudW1zKQogICAgICAgIGRhdGEgPSBkYXRhWzE2ICogbnVtRmVhdHMgOl0KICAgICAgICBhbGxzZXR0aW5ncyA9IFtdCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobWF4c2V0dGluZyk6CiAgICAgICAgICAgIGlmIGxlbihkYXRhKSA+PSA0ICogKGkgKyAxKToKICAgICAgICAgICAgICAgIHZhbCwgbGlkID0gc3RydWN0LnVucGFjaygiPkhIIiwgZGF0YVs0ICogaSA6IDQgKiAoaSArIDEpXSkKICAgICAgICAgICAgICAgIGFsbHNldHRpbmdzLmFwcGVuZCgodmFsLCBsaWQpKQogICAgICAgIGZvciBpLCBmIGluIGVudW1lcmF0ZShhbGxmZWF0cyk6CiAgICAgICAgICAgIGZpZCwgbnVtcywgb2Zmc2V0LCBmbGFncywgbGlkID0gZgogICAgICAgICAgICBmb2JqID0gRmVhdHVyZSgpCiAgICAgICAgICAgIGZvYmouZmxhZ3MgPSBmbGFncwogICAgICAgICAgICBmb2JqLmxhYmVsID0gbGlkCiAgICAgICAgICAgIHNlbGYuZmVhdHVyZXNbZ3JVdGlscy5udW0ydGFnKGZpZCldID0gZm9iagogICAgICAgICAgICBmb2JqLnNldHRpbmdzID0ge30KICAgICAgICAgICAgZm9iai5kZWZhdWx0ID0gTm9uZQogICAgICAgICAgICBmb2JqLmluZGV4ID0gaQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShvZmZzZXQsIG9mZnNldCArIG51bXMpOgogICAgICAgICAgICAgICAgaWYgaSA+PSBsZW4oYWxsc2V0dGluZ3MpOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICB2aWQsIHZsaWQgPSBhbGxzZXR0aW5nc1tpXQogICAgICAgICAgICAgICAgZm9iai5zZXR0aW5nc1t2aWRdID0gdmxpZAogICAgICAgICAgICAgICAgaWYgZm9iai5kZWZhdWx0IGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgZm9iai5kZWZhdWx0ID0gdmlkCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBmZGF0ID0gYiIiCiAgICAgICAgdmRhdCA9IGIiIgogICAgICAgIG9mZnNldCA9IDAKICAgICAgICBmb3IgZiwgdiBpbiBzb3J0ZWQoc2VsZi5mZWF0dXJlcy5pdGVtcygpLCBrZXk9bGFtYmRhIHg6IHhbMV0uaW5kZXgpOgogICAgICAgICAgICBmbnVtID0gZ3JVdGlscy50YWcybnVtKGYpCiAgICAgICAgICAgIGlmIHNlbGYudmVyc2lvbiA+PSAyLjA6CiAgICAgICAgICAgICAgICBmZGF0ICs9IHN0cnVjdC5wYWNrKAogICAgICAgICAgICAgICAgICAgICI+TEhITEhIIiwKICAgICAgICAgICAgICAgICAgICBnclV0aWxzLnRhZzJudW0oZiksCiAgICAgICAgICAgICAgICAgICAgbGVuKHYuc2V0dGluZ3MpLAogICAgICAgICAgICAgICAgICAgIDAsCiAgICAgICAgICAgICAgICAgICAgb2Zmc2V0ICogNCArIDEyICsgMTYgKiBsZW4oc2VsZi5mZWF0dXJlcyksCiAgICAgICAgICAgICAgICAgICAgdi5mbGFncywKICAgICAgICAgICAgICAgICAgICB2LmxhYmVsLAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBlbGlmIGZudW0gPiA2NTUzNTogICMgc2VsZiBoZWFsaW5nIGZvciBhbHBoYWJldGljIGlkcwogICAgICAgICAgICAgICAgc2VsZi52ZXJzaW9uID0gMi4wCiAgICAgICAgICAgICAgICByZXR1cm4gc2VsZi5jb21waWxlKHR0Rm9udCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGZkYXQgKz0gc3RydWN0LnBhY2soCiAgICAgICAgICAgICAgICAgICAgIj5ISExISCIsCiAgICAgICAgICAgICAgICAgICAgZ3JVdGlscy50YWcybnVtKGYpLAogICAgICAgICAgICAgICAgICAgIGxlbih2LnNldHRpbmdzKSwKICAgICAgICAgICAgICAgICAgICBvZmZzZXQgKiA0ICsgMTIgKyAxMiAqIGxlbihzZWxmLmZlYXR1cmVzKSwKICAgICAgICAgICAgICAgICAgICB2LmZsYWdzLAogICAgICAgICAgICAgICAgICAgIHYubGFiZWwsCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIGZvciBzLCBsIGluIHNvcnRlZCgKICAgICAgICAgICAgICAgIHYuc2V0dGluZ3MuaXRlbXMoKSwga2V5PWxhbWJkYSB4OiAoLTEsIHhbMV0pIGlmIHhbMF0gPT0gdi5kZWZhdWx0IGVsc2UgeAogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgdmRhdCArPSBzdHJ1Y3QucGFjaygiPkhIIiwgcywgbCkKICAgICAgICAgICAgb2Zmc2V0ICs9IGxlbih2LnNldHRpbmdzKQogICAgICAgIGhkciA9IHNzdHJ1Y3QucGFjayhGZWF0X2hkcl9mb3JtYXQsIHNlbGYpCiAgICAgICAgcmV0dXJuIGhkciArIHN0cnVjdC5wYWNrKCI+SEhMIiwgbGVuKHNlbGYuZmVhdHVyZXMpLCAwLCAwKSArIGZkYXQgKyB2ZGF0CgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJ2ZXJzaW9uIiwgdmVyc2lvbj1zZWxmLnZlcnNpb24pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIG5hbWVUYWJsZSA9IHR0Rm9udFsibmFtZSJdIGlmICJuYW1lIiBpbiB0dEZvbnQgZWxzZSBOb25lCiAgICAgICAgZm9yIGYsIHYgaW4gc29ydGVkKHNlbGYuZmVhdHVyZXMuaXRlbXMoKSwga2V5PWxhbWJkYSB4OiB4WzFdLmluZGV4KToKICAgICAgICAgICAgbmFtZSA9IG5hbWVUYWJsZS5nZXREZWJ1Z05hbWUodi5sYWJlbCkgaWYgbmFtZVRhYmxlIGVsc2UgTm9uZQogICAgICAgICAgICBpZiBuYW1lIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQobmFtZSkKICAgICAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKAogICAgICAgICAgICAgICAgImZlYXR1cmUiLAogICAgICAgICAgICAgICAgZmlkPWYsCiAgICAgICAgICAgICAgICBsYWJlbD12LmxhYmVsLAogICAgICAgICAgICAgICAgZmxhZ3M9di5mbGFncywKICAgICAgICAgICAgICAgIGRlZmF1bHQ9KHYuZGVmYXVsdCBpZiB2LmRlZmF1bHQgZWxzZSAwKSwKICAgICAgICAgICAgKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIGZvciBzLCBsIGluIHNvcnRlZCh2LnNldHRpbmdzLml0ZW1zKCkpOgogICAgICAgICAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygic2V0dGluZyIsIHZhbHVlPXMsIGxhYmVsPWwpCiAgICAgICAgICAgICAgICBuYW1lID0gbmFtZVRhYmxlLmdldERlYnVnTmFtZShsKSBpZiBuYW1lVGFibGUgZWxzZSBOb25lCiAgICAgICAgICAgICAgICBpZiBuYW1lIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgICAgIHdyaXRlci53cml0ZSgiICAiKQogICAgICAgICAgICAgICAgICAgIHdyaXRlci5jb21tZW50KG5hbWUpCiAgICAgICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5lbmR0YWcoImZlYXR1cmUiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAidmVyc2lvbiI6CiAgICAgICAgICAgIHNlbGYudmVyc2lvbiA9IGZsb2F0KHNhZmVFdmFsKGF0dHJzWyJ2ZXJzaW9uIl0pKQogICAgICAgIGVsaWYgbmFtZSA9PSAiZmVhdHVyZSI6CiAgICAgICAgICAgIGZpZCA9IGF0dHJzWyJmaWQiXQogICAgICAgICAgICBmb2JqID0gRmVhdHVyZSgpCiAgICAgICAgICAgIGZvYmouZmxhZ3MgPSBpbnQoc2FmZUV2YWwoYXR0cnNbImZsYWdzIl0pKQogICAgICAgICAgICBmb2JqLmxhYmVsID0gaW50KHNhZmVFdmFsKGF0dHJzWyJsYWJlbCJdKSkKICAgICAgICAgICAgZm9iai5kZWZhdWx0ID0gaW50KHNhZmVFdmFsKGF0dHJzLmdldCgiZGVmYXVsdCIsICIwIikpKQogICAgICAgICAgICBmb2JqLmluZGV4ID0gbGVuKHNlbGYuZmVhdHVyZXMpCiAgICAgICAgICAgIHNlbGYuZmVhdHVyZXNbZmlkXSA9IGZvYmoKICAgICAgICAgICAgZm9iai5zZXR0aW5ncyA9IHt9CiAgICAgICAgICAgIGZvciBlbGVtZW50IGluIGNvbnRlbnQ6CiAgICAgICAgICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIHRhZywgYSwgYyA9IGVsZW1lbnQKICAgICAgICAgICAgICAgIGlmIHRhZyA9PSAic2V0dGluZyI6CiAgICAgICAgICAgICAgICAgICAgZm9iai5zZXR0aW5nc1tpbnQoc2FmZUV2YWwoYVsidmFsdWUiXSkpXSA9IGludChzYWZlRXZhbChhWyJsYWJlbCJdKSkKCgpjbGFzcyBGZWF0dXJlKG9iamVjdCk6CiAgICBwYXNzCg==
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import floatToFixedToStr
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+from . import grUtils
+import struct
+
+Feat_hdr_format = """
+    >
+    version:    16.16F
+"""
+
+
+class table_F__e_a_t(DefaultTable.DefaultTable):
+    """Feature table
+
+    The ``Feat`` table is used exclusively by the Graphite shaping engine
+    to store features and possible settings specified in GDL. Graphite features
+    determine what rules are applied to transform a glyph stream.
+
+    Not to be confused with ``feat``, or the OpenType Layout tables
+    ``GSUB``/``GPOS``.
+
+    See also https://graphite.sil.org/graphite_techAbout#graphite-font-tables
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.features = {}
+
+    def decompile(self, data, ttFont):
+        _, data = sstruct.unpack2(Feat_hdr_format, data, self)
+        self.version = float(floatToFixedToStr(self.version, precisionBits=16))
+        (numFeats,) = struct.unpack(">H", data[:2])
+        data = data[8:]
+        allfeats = []
+        maxsetting = 0
+        for i in range(numFeats):
+            if self.version >= 2.0:
+                fid, nums, _, offset, flags, lid = struct.unpack(
+                    ">LHHLHH", data[16 * i : 16 * (i + 1)]
+                )
+                offset = int((offset - 12 - 16 * numFeats) / 4)
+            else:
+                fid, nums, offset, flags, lid = struct.unpack(
+                    ">HHLHH", data[12 * i : 12 * (i + 1)]
+                )
+                offset = int((offset - 12 - 12 * numFeats) / 4)
+            allfeats.append((fid, nums, offset, flags, lid))
+            maxsetting = max(maxsetting, offset + nums)
+        data = data[16 * numFeats :]
+        allsettings = []
+        for i in range(maxsetting):
+            if len(data) >= 4 * (i + 1):
+                val, lid = struct.unpack(">HH", data[4 * i : 4 * (i + 1)])
+                allsettings.append((val, lid))
+        for i, f in enumerate(allfeats):
+            fid, nums, offset, flags, lid = f
+            fobj = Feature()
+            fobj.flags = flags
+            fobj.label = lid
+            self.features[grUtils.num2tag(fid)] = fobj
+            fobj.settings = {}
+            fobj.default = None
+            fobj.index = i
+            for i in range(offset, offset + nums):
+                if i >= len(allsettings):
+                    continue
+                vid, vlid = allsettings[i]
+                fobj.settings[vid] = vlid
+                if fobj.default is None:
+                    fobj.default = vid
+
+    def compile(self, ttFont):
+        fdat = b""
+        vdat = b""
+        offset = 0
+        for f, v in sorted(self.features.items(), key=lambda x: x[1].index):
+            fnum = grUtils.tag2num(f)
+            if self.version >= 2.0:
+                fdat += struct.pack(
+                    ">LHHLHH",
+                    grUtils.tag2num(f),
+                    len(v.settings),
+                    0,
+                    offset * 4 + 12 + 16 * len(self.features),
+                    v.flags,
+                    v.label,
+                )
+            elif fnum > 65535:  # self healing for alphabetic ids
+                self.version = 2.0
+                return self.compile(ttFont)
+            else:
+                fdat += struct.pack(
+                    ">HHLHH",
+                    grUtils.tag2num(f),
+                    len(v.settings),
+                    offset * 4 + 12 + 12 * len(self.features),
+                    v.flags,
+                    v.label,
+                )
+            for s, l in sorted(
+                v.settings.items(), key=lambda x: (-1, x[1]) if x[0] == v.default else x
+            ):
+                vdat += struct.pack(">HH", s, l)
+            offset += len(v.settings)
+        hdr = sstruct.pack(Feat_hdr_format, self)
+        return hdr + struct.pack(">HHL", len(self.features), 0, 0) + fdat + vdat
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", version=self.version)
+        writer.newline()
+        nameTable = ttFont["name"] if "name" in ttFont else None
+        for f, v in sorted(self.features.items(), key=lambda x: x[1].index):
+            name = nameTable.getDebugName(v.label) if nameTable else None
+            if name is not None:
+                writer.newline()
+                writer.comment(name)
+                writer.newline()
+            writer.begintag(
+                "feature",
+                fid=f,
+                label=v.label,
+                flags=v.flags,
+                default=(v.default if v.default else 0),
+            )
+            writer.newline()
+            for s, l in sorted(v.settings.items()):
+                writer.simpletag("setting", value=s, label=l)
+                name = nameTable.getDebugName(l) if nameTable else None
+                if name is not None:
+                    writer.write("  ")
+                    writer.comment(name)
+                writer.newline()
+            writer.endtag("feature")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = float(safeEval(attrs["version"]))
+        elif name == "feature":
+            fid = attrs["fid"]
+            fobj = Feature()
+            fobj.flags = int(safeEval(attrs["flags"]))
+            fobj.label = int(safeEval(attrs["label"]))
+            fobj.default = int(safeEval(attrs.get("default", "0")))
+            fobj.index = len(self.features)
+            self.features[fid] = fobj
+            fobj.settings = {}
+            for element in content:
+                if not isinstance(element, tuple):
+                    continue
+                tag, a, c = element
+                if tag == "setting":
+                    fobj.settings[int(safeEval(a["value"]))] = int(safeEval(a["label"]))
+
+
+class Feature(object):
+    pass

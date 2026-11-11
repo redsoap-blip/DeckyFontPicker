@@ -1,1 +1,580 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuRGVmYXVsdFRhYmxlIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBvdFRhYmxlcwpmcm9tIGZvbnRUb29scy5tZXJnZS5iYXNlIGltcG9ydCBhZGRfbWV0aG9kLCBtZXJnZU9iamVjdHMKZnJvbSBmb250VG9vbHMubWVyZ2UudXRpbCBpbXBvcnQgKgppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5tZXJnZSIpCgoKZGVmIF9nZXRfbGF5b3V0X2xpc3RzKHRhYmxlKToKICAgIHRhYmxlID0gdGFibGUudGFibGUKICAgIHJldHVybiAoCiAgICAgICAgZ2V0YXR0cih0YWJsZSwgIlNjcmlwdExpc3QyIiwgTm9uZSkgb3IgZ2V0YXR0cih0YWJsZSwgIlNjcmlwdExpc3QiLCBOb25lKSwKICAgICAgICBnZXRhdHRyKHRhYmxlLCAiRmVhdHVyZUxpc3QyIiwgTm9uZSkgb3IgZ2V0YXR0cih0YWJsZSwgIkZlYXR1cmVMaXN0IiwgTm9uZSksCiAgICAgICAgZ2V0YXR0cih0YWJsZSwgIkxvb2t1cExpc3QyIiwgTm9uZSkgb3IgZ2V0YXR0cih0YWJsZSwgIkxvb2t1cExpc3QiLCBOb25lKSwKICAgICkKCgpkZWYgX2dldF9tYXJrX2dseXBoX3NldHNfZGVmKHRhYmxlKToKICAgIHRhYmxlID0gdGFibGUudGFibGUKICAgIHJldHVybiBnZXRhdHRyKHRhYmxlLCAiTWFya0dseXBoU2V0c0RlZjIiLCBOb25lKSBvciBnZXRhdHRyKAogICAgICAgIHRhYmxlLCAiTWFya0dseXBoU2V0c0RlZiIsIE5vbmUKICAgICkKCgpkZWYgbWVyZ2VMb29rdXBMaXN0cyhsc3QpOgogICAgIyBUT0RPIERvIHNtYXJ0ZXIgbWVyZ2UuCiAgICByZXR1cm4gc3VtTGlzdHMobHN0KQoKCmRlZiBtZXJnZUZlYXR1cmVzKGxzdCk6CiAgICBhc3NlcnQgbHN0CiAgICBzZWxmID0gb3RUYWJsZXMuRmVhdHVyZSgpCiAgICBzZWxmLkZlYXR1cmVQYXJhbXMgPSBOb25lCiAgICBzZWxmLkxvb2t1cExpc3RJbmRleCA9IG1lcmdlTG9va3VwTGlzdHMoCiAgICAgICAgW2wuTG9va3VwTGlzdEluZGV4IGZvciBsIGluIGxzdCBpZiBsLkxvb2t1cExpc3RJbmRleF0KICAgICkKICAgIHNlbGYuTG9va3VwQ291bnQgPSBsZW4oc2VsZi5Mb29rdXBMaXN0SW5kZXgpCiAgICByZXR1cm4gc2VsZgoKCmRlZiBtZXJnZUZlYXR1cmVMaXN0cyhsc3QpOgogICAgZCA9IHt9CiAgICBmb3IgbCBpbiBsc3Q6CiAgICAgICAgZm9yIGYgaW4gbDoKICAgICAgICAgICAgdGFnID0gZi5GZWF0dXJlVGFnCiAgICAgICAgICAgIGlmIHRhZyBub3QgaW4gZDoKICAgICAgICAgICAgICAgIGRbdGFnXSA9IFtdCiAgICAgICAgICAgIGRbdGFnXS5hcHBlbmQoZi5GZWF0dXJlKQogICAgcmV0ID0gW10KICAgIGZvciB0YWcgaW4gc29ydGVkKGQua2V5cygpKToKICAgICAgICByZWMgPSBvdFRhYmxlcy5GZWF0dXJlUmVjb3JkKCkKICAgICAgICByZWMuRmVhdHVyZVRhZyA9IHRhZwogICAgICAgIHJlYy5GZWF0dXJlID0gbWVyZ2VGZWF0dXJlcyhkW3RhZ10pCiAgICAgICAgcmV0LmFwcGVuZChyZWMpCiAgICByZXR1cm4gcmV0CgoKZGVmIG1lcmdlTGFuZ1N5c2VzKGxzdCk6CiAgICBhc3NlcnQgbHN0CgogICAgIyBUT0RPIFN1cHBvcnQgbWVyZ2luZyBSZXFGZWF0dXJlSW5kZXgKICAgIGFzc2VydCBhbGwobC5SZXFGZWF0dXJlSW5kZXggPT0gMHhGRkZGIGZvciBsIGluIGxzdCkKCiAgICBzZWxmID0gb3RUYWJsZXMuTGFuZ1N5cygpCiAgICBzZWxmLkxvb2t1cE9yZGVyID0gTm9uZQogICAgc2VsZi5SZXFGZWF0dXJlSW5kZXggPSAweEZGRkYKICAgIHNlbGYuRmVhdHVyZUluZGV4ID0gbWVyZ2VGZWF0dXJlTGlzdHMoCiAgICAgICAgW2wuRmVhdHVyZUluZGV4IGZvciBsIGluIGxzdCBpZiBsLkZlYXR1cmVJbmRleF0KICAgICkKICAgIHNlbGYuRmVhdHVyZUNvdW50ID0gbGVuKHNlbGYuRmVhdHVyZUluZGV4KQogICAgcmV0dXJuIHNlbGYKCgpkZWYgbWVyZ2VTY3JpcHRzKGxzdCk6CiAgICBhc3NlcnQgbHN0CgogICAgaWYgbGVuKGxzdCkgPT0gMToKICAgICAgICByZXR1cm4gbHN0WzBdCiAgICBsYW5nU3lzZXMgPSB7fQogICAgZm9yIHNyIGluIGxzdDoKICAgICAgICBmb3IgbHNyIGluIHNyLkxhbmdTeXNSZWNvcmQ6CiAgICAgICAgICAgIGlmIGxzci5MYW5nU3lzVGFnIG5vdCBpbiBsYW5nU3lzZXM6CiAgICAgICAgICAgICAgICBsYW5nU3lzZXNbbHNyLkxhbmdTeXNUYWddID0gW10KICAgICAgICAgICAgbGFuZ1N5c2VzW2xzci5MYW5nU3lzVGFnXS5hcHBlbmQobHNyLkxhbmdTeXMpCiAgICBsc3JlY29yZHMgPSBbXQogICAgZm9yIHRhZywgbGFuZ1N5c19saXN0IGluIHNvcnRlZChsYW5nU3lzZXMuaXRlbXMoKSk6CiAgICAgICAgbHNyID0gb3RUYWJsZXMuTGFuZ1N5c1JlY29yZCgpCiAgICAgICAgbHNyLkxhbmdTeXMgPSBtZXJnZUxhbmdTeXNlcyhsYW5nU3lzX2xpc3QpCiAgICAgICAgbHNyLkxhbmdTeXNUYWcgPSB0YWcKICAgICAgICBsc3JlY29yZHMuYXBwZW5kKGxzcikKCiAgICBzZWxmID0gb3RUYWJsZXMuU2NyaXB0KCkKICAgIHNlbGYuTGFuZ1N5c1JlY29yZCA9IGxzcmVjb3JkcwogICAgc2VsZi5MYW5nU3lzQ291bnQgPSBsZW4obHNyZWNvcmRzKQogICAgZGZsdExhbmdTeXNlcyA9IFtzLkRlZmF1bHRMYW5nU3lzIGZvciBzIGluIGxzdCBpZiBzLkRlZmF1bHRMYW5nU3lzXQogICAgaWYgZGZsdExhbmdTeXNlczoKICAgICAgICBzZWxmLkRlZmF1bHRMYW5nU3lzID0gbWVyZ2VMYW5nU3lzZXMoZGZsdExhbmdTeXNlcykKICAgIGVsc2U6CiAgICAgICAgc2VsZi5EZWZhdWx0TGFuZ1N5cyA9IE5vbmUKICAgIHJldHVybiBzZWxmCgoKZGVmIG1lcmdlU2NyaXB0UmVjb3Jkcyhsc3QpOgogICAgZCA9IHt9CiAgICBmb3IgbCBpbiBsc3Q6CiAgICAgICAgZm9yIHMgaW4gbDoKICAgICAgICAgICAgdGFnID0gcy5TY3JpcHRUYWcKICAgICAgICAgICAgaWYgdGFnIG5vdCBpbiBkOgogICAgICAgICAgICAgICAgZFt0YWddID0gW10KICAgICAgICAgICAgZFt0YWddLmFwcGVuZChzLlNjcmlwdCkKICAgIHJldCA9IFtdCiAgICBmb3IgdGFnIGluIHNvcnRlZChkLmtleXMoKSk6CiAgICAgICAgcmVjID0gb3RUYWJsZXMuU2NyaXB0UmVjb3JkKCkKICAgICAgICByZWMuU2NyaXB0VGFnID0gdGFnCiAgICAgICAgcmVjLlNjcmlwdCA9IG1lcmdlU2NyaXB0cyhkW3RhZ10pCiAgICAgICAgcmV0LmFwcGVuZChyZWMpCiAgICByZXR1cm4gcmV0CgoKb3RUYWJsZXMuU2NyaXB0TGlzdC5tZXJnZU1hcCA9IHsKICAgICJTY3JpcHRDb3VudCI6IGxhbWJkYSBsc3Q6IE5vbmUsICAjIFRPRE8KICAgICJTY3JpcHRSZWNvcmQiOiBtZXJnZVNjcmlwdFJlY29yZHMsCn0Kb3RUYWJsZXMuQmFzZVNjcmlwdExpc3QubWVyZ2VNYXAgPSB7CiAgICAiQmFzZVNjcmlwdENvdW50IjogbGFtYmRhIGxzdDogTm9uZSwgICMgVE9ETwogICAgIyBUT0RPOiBNZXJnZSBkdXBsaWNhdGUgZW50cmllcwogICAgIkJhc2VTY3JpcHRSZWNvcmQiOiBsYW1iZGEgbHN0OiBzb3J0ZWQoCiAgICAgICAgc3VtTGlzdHMobHN0KSwga2V5PWxhbWJkYSBzOiBzLkJhc2VTY3JpcHRUYWcKICAgICksCn0KCm90VGFibGVzLkZlYXR1cmVMaXN0Lm1lcmdlTWFwID0gewogICAgIkZlYXR1cmVDb3VudCI6IHN1bSwKICAgICJGZWF0dXJlUmVjb3JkIjogbGFtYmRhIGxzdDogc29ydGVkKHN1bUxpc3RzKGxzdCksIGtleT1sYW1iZGEgczogcy5GZWF0dXJlVGFnKSwKfQoKb3RUYWJsZXMuTG9va3VwTGlzdC5tZXJnZU1hcCA9IHsKICAgICJMb29rdXBDb3VudCI6IHN1bSwKICAgICJMb29rdXAiOiBzdW1MaXN0cywKfQpvdFRhYmxlcy5Mb29rdXBMaXN0Mi5tZXJnZU1hcCA9IG90VGFibGVzLkxvb2t1cExpc3QubWVyZ2VNYXAKCm90VGFibGVzLkNvdmVyYWdlLm1lcmdlTWFwID0gewogICAgIkZvcm1hdCI6IG1pbiwKICAgICJnbHlwaHMiOiBzdW1MaXN0cywKfQoKb3RUYWJsZXMuQ2xhc3NEZWYubWVyZ2VNYXAgPSB7CiAgICAiRm9ybWF0IjogbWluLAogICAgImNsYXNzRGVmcyI6IHN1bURpY3RzLAp9CgpvdFRhYmxlcy5MaWdDYXJldExpc3QubWVyZ2VNYXAgPSB7CiAgICAiQ292ZXJhZ2UiOiBtZXJnZU9iamVjdHMsCiAgICAiTGlnR2x5cGhDb3VudCI6IHN1bSwKICAgICJMaWdHbHlwaCI6IHN1bUxpc3RzLAp9CgpvdFRhYmxlcy5BdHRhY2hMaXN0Lm1lcmdlTWFwID0gewogICAgIkNvdmVyYWdlIjogbWVyZ2VPYmplY3RzLAogICAgIkdseXBoQ291bnQiOiBzdW0sCiAgICAiQXR0YWNoUG9pbnQiOiBzdW1MaXN0cywKfQoKIyBYWFggUmVudW1iZXIgTWFya0ZpbHRlclNldHMgb2YgbG9va3VwcwpvdFRhYmxlcy5NYXJrR2x5cGhTZXRzRGVmLm1lcmdlTWFwID0gewogICAgIk1hcmtTZXRUYWJsZUZvcm1hdCI6IGVxdWFsLAogICAgIk1hcmtTZXRDb3VudCI6IHN1bSwKICAgICJDb3ZlcmFnZSI6IHN1bUxpc3RzLAp9CgpvdFRhYmxlcy5BeGlzLm1lcmdlTWFwID0gewogICAgIioiOiBtZXJnZU9iamVjdHMsCn0KCiMgWFhYIEZpeCBCQVNFIHRhYmxlIG1lcmdpbmcKb3RUYWJsZXMuQmFzZVRhZ0xpc3QubWVyZ2VNYXAgPSB7CiAgICAiQmFzZVRhZ0NvdW50Ijogc3VtLAogICAgIkJhc2VsaW5lVGFnIjogc3VtTGlzdHMsCn0KCm90VGFibGVzLk1hdGhDb25zdGFudHMubWVyZ2VNYXAgPSB7CiAgICAiKiI6IGZpcnN0LAp9CgpvdFRhYmxlcy5NYXRoR2x5cGhJbmZvLm1lcmdlTWFwID0gewogICAgIioiOiBtZXJnZU9iamVjdHMsCn0KCm90VGFibGVzLk1hdGhJdGFsaWNzQ29ycmVjdGlvbkluZm8ubWVyZ2VNYXAgPSB7CiAgICAiQ292ZXJhZ2UiOiBtZXJnZU9iamVjdHMsCiAgICAiSXRhbGljc0NvcnJlY3Rpb25Db3VudCI6IHN1bSwKICAgICJJdGFsaWNzQ29ycmVjdGlvbiI6IHN1bUxpc3RzLAp9CgpvdFRhYmxlcy5NYXRoVG9wQWNjZW50QXR0YWNobWVudC5tZXJnZU1hcCA9IHsKICAgICJUb3BBY2NlbnRDb3ZlcmFnZSI6IG1lcmdlT2JqZWN0cywKICAgICJUb3BBY2NlbnRBdHRhY2htZW50Q291bnQiOiBzdW0sCiAgICAiVG9wQWNjZW50QXR0YWNobWVudCI6IHN1bUxpc3RzLAp9CgpvdFRhYmxlcy5NYXRoS2VybkluZm8ubWVyZ2VNYXAgPSB7CiAgICAiTWF0aEtlcm5Db3ZlcmFnZSI6IG1lcmdlT2JqZWN0cywKICAgICJNYXRoS2VybkNvdW50Ijogc3VtLAogICAgIk1hdGhLZXJuSW5mb1JlY29yZHMiOiBzdW1MaXN0cywKfQoKb3RUYWJsZXMuTWF0aFZhcmlhbnRzLm1lcmdlTWFwID0gewogICAgIk1pbkNvbm5lY3Rvck92ZXJsYXAiOiBmaXJzdCwKICAgICJWZXJ0R2x5cGhDb3ZlcmFnZSI6IG1lcmdlT2JqZWN0cywKICAgICJIb3JpekdseXBoQ292ZXJhZ2UiOiBtZXJnZU9iamVjdHMsCiAgICAiVmVydEdseXBoQ291bnQiOiBzdW0sCiAgICAiSG9yaXpHbHlwaENvdW50Ijogc3VtLAogICAgIlZlcnRHbHlwaENvbnN0cnVjdGlvbiI6IHN1bUxpc3RzLAogICAgIkhvcml6R2x5cGhDb25zdHJ1Y3Rpb24iOiBzdW1MaXN0cywKfQoKb3RUYWJsZXMuR0RFRi5tZXJnZU1hcCA9IG90VGFibGVzLkdTVUIubWVyZ2VNYXAgPSBvdFRhYmxlcy5HUE9TLm1lcmdlTWFwID0gKAogICAgb3RUYWJsZXMuQkFTRS5tZXJnZU1hcAopID0gb3RUYWJsZXMuSlNURi5tZXJnZU1hcCA9IG90VGFibGVzLk1BVEgubWVyZ2VNYXAgPSB7CiAgICAiKiI6IG1lcmdlT2JqZWN0cywKICAgICJWZXJzaW9uIjogbWF4LAp9Cgp0dExpYi5nZXRUYWJsZUNsYXNzKCJHREVGIikubWVyZ2VNYXAgPSB0dExpYi5nZXRUYWJsZUNsYXNzKCJHU1VCIikubWVyZ2VNYXAgPSAoCiAgICB0dExpYi5nZXRUYWJsZUNsYXNzKCJHUE9TIikubWVyZ2VNYXAKKSA9IHR0TGliLmdldFRhYmxlQ2xhc3MoIkJBU0UiKS5tZXJnZU1hcCA9IHR0TGliLmdldFRhYmxlQ2xhc3MoCiAgICAiSlNURiIKKS5tZXJnZU1hcCA9IHR0TGliLmdldFRhYmxlQ2xhc3MoCiAgICAiTUFUSCIKKS5tZXJnZU1hcCA9IHsKICAgICJ0YWJsZVRhZyI6IG9ubHlFeGlzdGluZyhlcXVhbCksICAjIFhYWCBjbGVhbiBtZSB1cAogICAgInRhYmxlIjogbWVyZ2VPYmplY3RzLAp9CgoKQGFkZF9tZXRob2QodHRMaWIuZ2V0VGFibGVDbGFzcygiR1NVQiIpKQpkZWYgbWVyZ2Uoc2VsZiwgbSwgdGFibGVzKToKICAgIGFzc2VydCBsZW4odGFibGVzKSA9PSBsZW4obS5kdXBsaWNhdGVHbHlwaHNQZXJGb250KQogICAgZm9yIGksICh0YWJsZSwgZHVwcykgaW4gZW51bWVyYXRlKHppcCh0YWJsZXMsIG0uZHVwbGljYXRlR2x5cGhzUGVyRm9udCkpOgogICAgICAgIGlmIG5vdCBkdXBzOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIHRhYmxlIGlzIE5vbmUgb3IgdGFibGUgaXMgTm90SW1wbGVtZW50ZWQ6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgIkhhdmUgbm9uLWlkZW50aWNhbCBkdXBsaWNhdGVzIHRvIHJlc29sdmUgZm9yICclcycgYnV0IG5vIEdTVUIuIEFyZSBkdXBsaWNhdGVzIGludGVuZGVkPzogJXMiLAogICAgICAgICAgICAgICAgbS5mb250c1tpXS5fbWVyZ2VyX19uYW1lLAogICAgICAgICAgICAgICAgZHVwcywKICAgICAgICAgICAgKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBzeW50aEZlYXR1cmUgPSBOb25lCiAgICAgICAgc3ludGhMb29rdXAgPSBOb25lCiAgICAgICAgc2NyaXB0TGlzdCwgZmVhdHVyZUxpc3QsIGxvb2t1cExpc3QgPSBfZ2V0X2xheW91dF9saXN0cyh0YWJsZSkKICAgICAgICBmb3Igc2NyaXB0IGluIHNjcmlwdExpc3QuU2NyaXB0UmVjb3JkOgogICAgICAgICAgICBpZiBzY3JpcHQuU2NyaXB0VGFnID09ICJERkxUIjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlICAjIFhYWAogICAgICAgICAgICBmb3IgbGFuZ3N5cyBpbiBbc2NyaXB0LlNjcmlwdC5EZWZhdWx0TGFuZ1N5c10gKyBbCiAgICAgICAgICAgICAgICBsLkxhbmdTeXMgZm9yIGwgaW4gc2NyaXB0LlNjcmlwdC5MYW5nU3lzUmVjb3JkCiAgICAgICAgICAgIF06CiAgICAgICAgICAgICAgICBpZiBsYW5nc3lzIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUgICMgWFhYIENyZWF0ZSEKICAgICAgICAgICAgICAgIGZlYXR1cmUgPSBbdiBmb3IgdiBpbiBsYW5nc3lzLkZlYXR1cmVJbmRleCBpZiB2LkZlYXR1cmVUYWcgPT0gImxvY2wiXQogICAgICAgICAgICAgICAgYXNzZXJ0IGxlbihmZWF0dXJlKSA8PSAxCiAgICAgICAgICAgICAgICBpZiBmZWF0dXJlOgogICAgICAgICAgICAgICAgICAgIGZlYXR1cmUgPSBmZWF0dXJlWzBdCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIGlmIG5vdCBzeW50aEZlYXR1cmU6CiAgICAgICAgICAgICAgICAgICAgICAgIHN5bnRoRmVhdHVyZSA9IG90VGFibGVzLkZlYXR1cmVSZWNvcmQoKQogICAgICAgICAgICAgICAgICAgICAgICBzeW50aEZlYXR1cmUuRmVhdHVyZVRhZyA9ICJsb2NsIgogICAgICAgICAgICAgICAgICAgICAgICBmID0gc3ludGhGZWF0dXJlLkZlYXR1cmUgPSBvdFRhYmxlcy5GZWF0dXJlKCkKICAgICAgICAgICAgICAgICAgICAgICAgZi5GZWF0dXJlUGFyYW1zID0gTm9uZQogICAgICAgICAgICAgICAgICAgICAgICBmLkxvb2t1cENvdW50ID0gMAogICAgICAgICAgICAgICAgICAgICAgICBmLkxvb2t1cExpc3RJbmRleCA9IFtdCiAgICAgICAgICAgICAgICAgICAgICAgIGZlYXR1cmVMaXN0LkZlYXR1cmVSZWNvcmQuYXBwZW5kKHN5bnRoRmVhdHVyZSkKICAgICAgICAgICAgICAgICAgICAgICAgZmVhdHVyZUxpc3QuRmVhdHVyZUNvdW50ICs9IDEKICAgICAgICAgICAgICAgICAgICBmZWF0dXJlID0gc3ludGhGZWF0dXJlCiAgICAgICAgICAgICAgICAgICAgbGFuZ3N5cy5GZWF0dXJlSW5kZXguYXBwZW5kKGZlYXR1cmUpCiAgICAgICAgICAgICAgICAgICAgbGFuZ3N5cy5GZWF0dXJlSW5kZXguc29ydChrZXk9bGFtYmRhIHY6IHYuRmVhdHVyZVRhZykKCiAgICAgICAgICAgICAgICBpZiBub3Qgc3ludGhMb29rdXA6CiAgICAgICAgICAgICAgICAgICAgc3VidGFibGUgPSBvdFRhYmxlcy5TaW5nbGVTdWJzdCgpCiAgICAgICAgICAgICAgICAgICAgc3VidGFibGUubWFwcGluZyA9IGR1cHMKICAgICAgICAgICAgICAgICAgICBzeW50aExvb2t1cCA9IG90VGFibGVzLkxvb2t1cCgpCiAgICAgICAgICAgICAgICAgICAgc3ludGhMb29rdXAuTG9va3VwRmxhZyA9IDAKICAgICAgICAgICAgICAgICAgICBzeW50aExvb2t1cC5Mb29rdXBUeXBlID0gMQogICAgICAgICAgICAgICAgICAgIHN5bnRoTG9va3VwLlN1YlRhYmxlQ291bnQgPSAxCiAgICAgICAgICAgICAgICAgICAgc3ludGhMb29rdXAuU3ViVGFibGUgPSBbc3VidGFibGVdCiAgICAgICAgICAgICAgICAgICAgaWYgbG9va3VwTGlzdCBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICAjIG10aUxpYiB1c2VzIE5vbmUgYXMgZGVmYXVsdCB2YWx1ZSBmb3IgTG9va3VwTGlzdCwKICAgICAgICAgICAgICAgICAgICAgICAgIyB3aGlsZSBmZWFMaWIgcG9pbnRzIHRvIGFuIGVtcHR5IGFycmF5IHdpdGggY291bnQgMAogICAgICAgICAgICAgICAgICAgICAgICAjIFRPRE86IG1ha2UgdGhlbSBkbyB0aGUgc2FtZQogICAgICAgICAgICAgICAgICAgICAgICBsb29rdXBMaXN0ID0gb3RUYWJsZXMuTG9va3VwTGlzdCgpCiAgICAgICAgICAgICAgICAgICAgICAgIGxvb2t1cExpc3QuTG9va3VwID0gW10KICAgICAgICAgICAgICAgICAgICAgICAgbG9va3VwTGlzdC5Mb29rdXBDb3VudCA9IDAKICAgICAgICAgICAgICAgICAgICAgICAgaWYgaGFzYXR0cih0YWJsZS50YWJsZSwgIkxvb2t1cExpc3QyIik6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0YWJsZS50YWJsZS5Mb29rdXBMaXN0MiA9IGxvb2t1cExpc3QKICAgICAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRhYmxlLnRhYmxlLkxvb2t1cExpc3QgPSBsb29rdXBMaXN0CiAgICAgICAgICAgICAgICAgICAgbG9va3VwTGlzdC5Mb29rdXAuYXBwZW5kKHN5bnRoTG9va3VwKQogICAgICAgICAgICAgICAgICAgIGxvb2t1cExpc3QuTG9va3VwQ291bnQgKz0gMQoKICAgICAgICAgICAgICAgIGlmIGZlYXR1cmUuRmVhdHVyZS5Mb29rdXBMaXN0SW5kZXhbOjFdICE9IFtzeW50aExvb2t1cF06CiAgICAgICAgICAgICAgICAgICAgZmVhdHVyZS5GZWF0dXJlLkxvb2t1cExpc3RJbmRleFs6MF0gPSBbc3ludGhMb29rdXBdCiAgICAgICAgICAgICAgICAgICAgZmVhdHVyZS5GZWF0dXJlLkxvb2t1cENvdW50ICs9IDEKCiAgICBEZWZhdWx0VGFibGUubWVyZ2Uoc2VsZiwgbSwgdGFibGVzKQogICAgcmV0dXJuIHNlbGYKCgpAYWRkX21ldGhvZCgKICAgIG90VGFibGVzLlNpbmdsZVN1YnN0LAogICAgb3RUYWJsZXMuTXVsdGlwbGVTdWJzdCwKICAgIG90VGFibGVzLkFsdGVybmF0ZVN1YnN0LAogICAgb3RUYWJsZXMuTGlnYXR1cmVTdWJzdCwKICAgIG90VGFibGVzLlJldmVyc2VDaGFpblNpbmdsZVN1YnN0LAogICAgb3RUYWJsZXMuU2luZ2xlUG9zLAogICAgb3RUYWJsZXMuUGFpclBvcywKICAgIG90VGFibGVzLkN1cnNpdmVQb3MsCiAgICBvdFRhYmxlcy5NYXJrQmFzZVBvcywKICAgIG90VGFibGVzLk1hcmtMaWdQb3MsCiAgICBvdFRhYmxlcy5NYXJrTWFya1BvcywKKQpkZWYgbWFwTG9va3VwcyhzZWxmLCBsb29rdXBNYXApOgogICAgcGFzcwoKCiMgQ29waWVkIGFuZCB0cmltbWVkIGRvd24gZnJvbSBzdWJzZXQucHkKQGFkZF9tZXRob2QoCiAgICBvdFRhYmxlcy5Db250ZXh0U3Vic3QsCiAgICBvdFRhYmxlcy5DaGFpbkNvbnRleHRTdWJzdCwKICAgIG90VGFibGVzLkNvbnRleHRQb3MsCiAgICBvdFRhYmxlcy5DaGFpbkNvbnRleHRQb3MsCikKZGVmIF9fbWVyZ2VfY2xhc3NpZnlfY29udGV4dChzZWxmKToKICAgIGNsYXNzIENvbnRleHRIZWxwZXIob2JqZWN0KToKICAgICAgICBkZWYgX19pbml0X18oc2VsZiwga2xhc3MsIEZvcm1hdCk6CiAgICAgICAgICAgIGlmIGtsYXNzLl9fbmFtZV9fLmVuZHN3aXRoKCJTdWJzdCIpOgogICAgICAgICAgICAgICAgVHlwID0gIlN1YiIKICAgICAgICAgICAgICAgIFR5cGUgPSAiU3Vic3QiCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBUeXAgPSAiUG9zIgogICAgICAgICAgICAgICAgVHlwZSA9ICJQb3MiCiAgICAgICAgICAgIGlmIGtsYXNzLl9fbmFtZV9fLnN0YXJ0c3dpdGgoIkNoYWluIik6CiAgICAgICAgICAgICAgICBDaGFpbiA9ICJDaGFpbiIKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIENoYWluID0gIiIKICAgICAgICAgICAgQ2hhaW5UeXAgPSBDaGFpbiArIFR5cAoKICAgICAgICAgICAgc2VsZi5UeXAgPSBUeXAKICAgICAgICAgICAgc2VsZi5UeXBlID0gVHlwZQogICAgICAgICAgICBzZWxmLkNoYWluID0gQ2hhaW4KICAgICAgICAgICAgc2VsZi5DaGFpblR5cCA9IENoYWluVHlwCgogICAgICAgICAgICBzZWxmLkxvb2t1cFJlY29yZCA9IFR5cGUgKyAiTG9va3VwUmVjb3JkIgoKICAgICAgICAgICAgaWYgRm9ybWF0ID09IDE6CiAgICAgICAgICAgICAgICBzZWxmLlJ1bGUgPSBDaGFpblR5cCArICJSdWxlIgogICAgICAgICAgICAgICAgc2VsZi5SdWxlU2V0ID0gQ2hhaW5UeXAgKyAiUnVsZVNldCIKICAgICAgICAgICAgZWxpZiBGb3JtYXQgPT0gMjoKICAgICAgICAgICAgICAgIHNlbGYuUnVsZSA9IENoYWluVHlwICsgIkNsYXNzUnVsZSIKICAgICAgICAgICAgICAgIHNlbGYuUnVsZVNldCA9IENoYWluVHlwICsgIkNsYXNzU2V0IgoKICAgIGlmIHNlbGYuRm9ybWF0IG5vdCBpbiBbMSwgMiwgM106CiAgICAgICAgcmV0dXJuIE5vbmUgICMgRG9uJ3Qgc2hvb3QgdGhlIG1lc3NlbmdlcjsgbGV0IGl0IGdvCiAgICBpZiBub3QgaGFzYXR0cihzZWxmLl9fY2xhc3NfXywgIl9tZXJnZV9fQ29udGV4dEhlbHBlcnMiKToKICAgICAgICBzZWxmLl9fY2xhc3NfXy5fbWVyZ2VfX0NvbnRleHRIZWxwZXJzID0ge30KICAgIGlmIHNlbGYuRm9ybWF0IG5vdCBpbiBzZWxmLl9fY2xhc3NfXy5fbWVyZ2VfX0NvbnRleHRIZWxwZXJzOgogICAgICAgIGhlbHBlciA9IENvbnRleHRIZWxwZXIoc2VsZi5fX2NsYXNzX18sIHNlbGYuRm9ybWF0KQogICAgICAgIHNlbGYuX19jbGFzc19fLl9tZXJnZV9fQ29udGV4dEhlbHBlcnNbc2VsZi5Gb3JtYXRdID0gaGVscGVyCiAgICByZXR1cm4gc2VsZi5fX2NsYXNzX18uX21lcmdlX19Db250ZXh0SGVscGVyc1tzZWxmLkZvcm1hdF0KCgpAYWRkX21ldGhvZCgKICAgIG90VGFibGVzLkNvbnRleHRTdWJzdCwKICAgIG90VGFibGVzLkNoYWluQ29udGV4dFN1YnN0LAogICAgb3RUYWJsZXMuQ29udGV4dFBvcywKICAgIG90VGFibGVzLkNoYWluQ29udGV4dFBvcywKKQpkZWYgbWFwTG9va3VwcyhzZWxmLCBsb29rdXBNYXApOgogICAgYyA9IHNlbGYuX19tZXJnZV9jbGFzc2lmeV9jb250ZXh0KCkKCiAgICBpZiBzZWxmLkZvcm1hdCBpbiBbMSwgMl06CiAgICAgICAgZm9yIHJzIGluIGdldGF0dHIoc2VsZiwgYy5SdWxlU2V0KToKICAgICAgICAgICAgaWYgbm90IHJzOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgZm9yIHIgaW4gZ2V0YXR0cihycywgYy5SdWxlKToKICAgICAgICAgICAgICAgIGlmIG5vdCByOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBmb3IgbGwgaW4gZ2V0YXR0cihyLCBjLkxvb2t1cFJlY29yZCk6CiAgICAgICAgICAgICAgICAgICAgaWYgbm90IGxsOgogICAgICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgICAgIGxsLkxvb2t1cExpc3RJbmRleCA9IGxvb2t1cE1hcFtsbC5Mb29rdXBMaXN0SW5kZXhdCiAgICBlbGlmIHNlbGYuRm9ybWF0ID09IDM6CiAgICAgICAgZm9yIGxsIGluIGdldGF0dHIoc2VsZiwgYy5Mb29rdXBSZWNvcmQpOgogICAgICAgICAgICBpZiBub3QgbGw6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBsbC5Mb29rdXBMaXN0SW5kZXggPSBsb29rdXBNYXBbbGwuTG9va3VwTGlzdEluZGV4XQogICAgZWxzZToKICAgICAgICBhc3NlcnQgMCwgInVua25vd24gZm9ybWF0OiAlcyIgJSBzZWxmLkZvcm1hdAoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkV4dGVuc2lvblN1YnN0LCBvdFRhYmxlcy5FeHRlbnNpb25Qb3MpCmRlZiBtYXBMb29rdXBzKHNlbGYsIGxvb2t1cE1hcCk6CiAgICBpZiBzZWxmLkZvcm1hdCA9PSAxOgogICAgICAgIHNlbGYuRXh0U3ViVGFibGUubWFwTG9va3Vwcyhsb29rdXBNYXApCiAgICBlbHNlOgogICAgICAgIGFzc2VydCAwLCAidW5rbm93biBmb3JtYXQ6ICVzIiAlIHNlbGYuRm9ybWF0CgoKQGFkZF9tZXRob2Qob3RUYWJsZXMuTG9va3VwKQpkZWYgbWFwTG9va3VwcyhzZWxmLCBsb29rdXBNYXApOgogICAgZm9yIHN0IGluIHNlbGYuU3ViVGFibGU6CiAgICAgICAgaWYgbm90IHN0OgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHN0Lm1hcExvb2t1cHMobG9va3VwTWFwKQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkxvb2t1cExpc3QpCmRlZiBtYXBMb29rdXBzKHNlbGYsIGxvb2t1cE1hcCk6CiAgICBmb3IgbCBpbiBzZWxmLkxvb2t1cDoKICAgICAgICBpZiBub3QgbDoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBsLm1hcExvb2t1cHMobG9va3VwTWFwKQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkxvb2t1cCkKZGVmIG1hcE1hcmtGaWx0ZXJpbmdTZXRzKHNlbGYsIG1hcmtGaWx0ZXJpbmdTZXRNYXApOgogICAgaWYgc2VsZi5Mb29rdXBGbGFnICYgMHgwMDEwOgogICAgICAgIHNlbGYuTWFya0ZpbHRlcmluZ1NldCA9IG1hcmtGaWx0ZXJpbmdTZXRNYXBbc2VsZi5NYXJrRmlsdGVyaW5nU2V0XQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkxvb2t1cExpc3QpCmRlZiBtYXBNYXJrRmlsdGVyaW5nU2V0cyhzZWxmLCBtYXJrRmlsdGVyaW5nU2V0TWFwKToKICAgIGZvciBsIGluIHNlbGYuTG9va3VwOgogICAgICAgIGlmIG5vdCBsOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGwubWFwTWFya0ZpbHRlcmluZ1NldHMobWFya0ZpbHRlcmluZ1NldE1hcCkKCgpAYWRkX21ldGhvZChvdFRhYmxlcy5GZWF0dXJlKQpkZWYgbWFwTG9va3VwcyhzZWxmLCBsb29rdXBNYXApOgogICAgc2VsZi5Mb29rdXBMaXN0SW5kZXggPSBbbG9va3VwTWFwW2ldIGZvciBpIGluIHNlbGYuTG9va3VwTGlzdEluZGV4XQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkZlYXR1cmVMaXN0KQpkZWYgbWFwTG9va3VwcyhzZWxmLCBsb29rdXBNYXApOgogICAgZm9yIGYgaW4gc2VsZi5GZWF0dXJlUmVjb3JkOgogICAgICAgIGlmIG5vdCBmIG9yIG5vdCBmLkZlYXR1cmU6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZi5GZWF0dXJlLm1hcExvb2t1cHMobG9va3VwTWFwKQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLkRlZmF1bHRMYW5nU3lzLCBvdFRhYmxlcy5MYW5nU3lzKQpkZWYgbWFwRmVhdHVyZXMoc2VsZiwgZmVhdHVyZU1hcCk6CiAgICBzZWxmLkZlYXR1cmVJbmRleCA9IFtmZWF0dXJlTWFwW2ldIGZvciBpIGluIHNlbGYuRmVhdHVyZUluZGV4XQogICAgaWYgc2VsZi5SZXFGZWF0dXJlSW5kZXggIT0gNjU1MzU6CiAgICAgICAgc2VsZi5SZXFGZWF0dXJlSW5kZXggPSBmZWF0dXJlTWFwW3NlbGYuUmVxRmVhdHVyZUluZGV4XQoKCkBhZGRfbWV0aG9kKG90VGFibGVzLlNjcmlwdCkKZGVmIG1hcEZlYXR1cmVzKHNlbGYsIGZlYXR1cmVNYXApOgogICAgaWYgc2VsZi5EZWZhdWx0TGFuZ1N5czoKICAgICAgICBzZWxmLkRlZmF1bHRMYW5nU3lzLm1hcEZlYXR1cmVzKGZlYXR1cmVNYXApCiAgICBmb3IgbCBpbiBzZWxmLkxhbmdTeXNSZWNvcmQ6CiAgICAgICAgaWYgbm90IGwgb3Igbm90IGwuTGFuZ1N5czoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBsLkxhbmdTeXMubWFwRmVhdHVyZXMoZmVhdHVyZU1hcCkKCgpAYWRkX21ldGhvZChvdFRhYmxlcy5TY3JpcHRMaXN0KQpkZWYgbWFwRmVhdHVyZXMoc2VsZiwgZmVhdHVyZU1hcCk6CiAgICBmb3IgcyBpbiBzZWxmLlNjcmlwdFJlY29yZDoKICAgICAgICBpZiBub3QgcyBvciBub3Qgcy5TY3JpcHQ6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgcy5TY3JpcHQubWFwRmVhdHVyZXMoZmVhdHVyZU1hcCkKCgpkZWYgbGF5b3V0UHJlTWVyZ2UoZm9udCk6CiAgICAjIE1hcCBpbmRpY2VzIHRvIHJlZmVyZW5jZXMKCiAgICBHREVGID0gZm9udC5nZXQoIkdERUYiKQogICAgR1NVQiA9IGZvbnQuZ2V0KCJHU1VCIikKICAgIEdQT1MgPSBmb250LmdldCgiR1BPUyIpCgogICAgZm9yIHQgaW4gW0dTVUIsIEdQT1NdOgogICAgICAgIGlmIG5vdCB0OgogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBzY3JpcHRMaXN0LCBmZWF0dXJlTGlzdCwgbG9va3VwTGlzdCA9IF9nZXRfbGF5b3V0X2xpc3RzKHQpCgogICAgICAgIGlmIGxvb2t1cExpc3Q6CiAgICAgICAgICAgIGxvb2t1cE1hcCA9IHtpOiB2IGZvciBpLCB2IGluIGVudW1lcmF0ZShsb29rdXBMaXN0Lkxvb2t1cCl9CiAgICAgICAgICAgIGxvb2t1cExpc3QubWFwTG9va3Vwcyhsb29rdXBNYXApCiAgICAgICAgICAgIGZlYXR1cmVMaXN0Lm1hcExvb2t1cHMobG9va3VwTWFwKQoKICAgICAgICAgICAgbWFya0dseXBoU2V0c0RlZiA9IF9nZXRfbWFya19nbHlwaF9zZXRzX2RlZihHREVGKSBpZiBHREVGIGVsc2UgTm9uZQogICAgICAgICAgICBpZiBHREVGIGFuZCBHREVGLnRhYmxlLlZlcnNpb24gPj0gMHgwMDAxMDAwMiBhbmQgbWFya0dseXBoU2V0c0RlZjoKICAgICAgICAgICAgICAgIG1hcmtGaWx0ZXJpbmdTZXRNYXAgPSB7CiAgICAgICAgICAgICAgICAgICAgaTogdiBmb3IgaSwgdiBpbiBlbnVtZXJhdGUobWFya0dseXBoU2V0c0RlZi5Db3ZlcmFnZSkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGxvb2t1cExpc3QubWFwTWFya0ZpbHRlcmluZ1NldHMobWFya0ZpbHRlcmluZ1NldE1hcCkKCiAgICAgICAgaWYgZmVhdHVyZUxpc3QgYW5kIHNjcmlwdExpc3Q6CiAgICAgICAgICAgIGZlYXR1cmVNYXAgPSB7aTogdiBmb3IgaSwgdiBpbiBlbnVtZXJhdGUoZmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZCl9CiAgICAgICAgICAgIHNjcmlwdExpc3QubWFwRmVhdHVyZXMoZmVhdHVyZU1hcCkKCiAgICAjIFRPRE8gRmVhdHVyZVBhcmFtcyBuYW1lSURzCgoKZGVmIGxheW91dFBvc3RNZXJnZShmb250KToKICAgICMgTWFwIHJlZmVyZW5jZXMgYmFjayB0byBpbmRpY2VzCgogICAgR0RFRiA9IGZvbnQuZ2V0KCJHREVGIikKICAgIEdTVUIgPSBmb250LmdldCgiR1NVQiIpCiAgICBHUE9TID0gZm9udC5nZXQoIkdQT1MiKQoKICAgIGZvciB0IGluIFtHU1VCLCBHUE9TXToKICAgICAgICBpZiBub3QgdDoKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgc2NyaXB0TGlzdCwgZmVhdHVyZUxpc3QsIGxvb2t1cExpc3QgPSBfZ2V0X2xheW91dF9saXN0cyh0KQoKICAgICAgICBpZiBmZWF0dXJlTGlzdCBhbmQgc2NyaXB0TGlzdDoKICAgICAgICAgICAgIyBDb2xsZWN0IHVucmVnaXN0ZXJlZCAobmV3KSBmZWF0dXJlcy4KICAgICAgICAgICAgZmVhdHVyZU1hcCA9IEdyZWdhcmlvdXNJZGVudGl0eURpY3QoZmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZCkKICAgICAgICAgICAgc2NyaXB0TGlzdC5tYXBGZWF0dXJlcyhmZWF0dXJlTWFwKQoKICAgICAgICAgICAgIyBSZWNvcmQgdXNlZCBmZWF0dXJlcy4KICAgICAgICAgICAgZmVhdHVyZU1hcCA9IEF0dGVuZGFuY2VSZWNvcmRpbmdJZGVudGl0eURpY3QoZmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZCkKICAgICAgICAgICAgc2NyaXB0TGlzdC5tYXBGZWF0dXJlcyhmZWF0dXJlTWFwKQogICAgICAgICAgICB1c2VkSW5kaWNlcyA9IGZlYXR1cmVNYXAucwoKICAgICAgICAgICAgIyBSZW1vdmUgdW51c2VkIGZlYXR1cmVzCiAgICAgICAgICAgIGZlYXR1cmVMaXN0LkZlYXR1cmVSZWNvcmQgPSBbCiAgICAgICAgICAgICAgICBmIGZvciBpLCBmIGluIGVudW1lcmF0ZShmZWF0dXJlTGlzdC5GZWF0dXJlUmVjb3JkKSBpZiBpIGluIHVzZWRJbmRpY2VzCiAgICAgICAgICAgIF0KCiAgICAgICAgICAgICMgTWFwIGJhY2sgdG8gaW5kaWNlcy4KICAgICAgICAgICAgZmVhdHVyZU1hcCA9IE5vbmhhc2hhYmxlRGljdChmZWF0dXJlTGlzdC5GZWF0dXJlUmVjb3JkKQogICAgICAgICAgICBzY3JpcHRMaXN0Lm1hcEZlYXR1cmVzKGZlYXR1cmVNYXApCgogICAgICAgICAgICBmZWF0dXJlTGlzdC5GZWF0dXJlQ291bnQgPSBsZW4oZmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZCkKCiAgICAgICAgaWYgbG9va3VwTGlzdDoKICAgICAgICAgICAgIyBDb2xsZWN0IHVucmVnaXN0ZXJlZCAobmV3KSBsb29rdXBzLgogICAgICAgICAgICBsb29rdXBNYXAgPSBHcmVnYXJpb3VzSWRlbnRpdHlEaWN0KGxvb2t1cExpc3QuTG9va3VwKQogICAgICAgICAgICBmZWF0dXJlTGlzdC5tYXBMb29rdXBzKGxvb2t1cE1hcCkKICAgICAgICAgICAgbG9va3VwTGlzdC5tYXBMb29rdXBzKGxvb2t1cE1hcCkKCiAgICAgICAgICAgICMgUmVjb3JkIHVzZWQgbG9va3Vwcy4KICAgICAgICAgICAgbG9va3VwTWFwID0gQXR0ZW5kYW5jZVJlY29yZGluZ0lkZW50aXR5RGljdChsb29rdXBMaXN0Lkxvb2t1cCkKICAgICAgICAgICAgZmVhdHVyZUxpc3QubWFwTG9va3Vwcyhsb29rdXBNYXApCiAgICAgICAgICAgIGxvb2t1cExpc3QubWFwTG9va3Vwcyhsb29rdXBNYXApCiAgICAgICAgICAgIHVzZWRJbmRpY2VzID0gbG9va3VwTWFwLnMKCiAgICAgICAgICAgICMgUmVtb3ZlIHVudXNlZCBsb29rdXBzCiAgICAgICAgICAgIGxvb2t1cExpc3QuTG9va3VwID0gWwogICAgICAgICAgICAgICAgbCBmb3IgaSwgbCBpbiBlbnVtZXJhdGUobG9va3VwTGlzdC5Mb29rdXApIGlmIGkgaW4gdXNlZEluZGljZXMKICAgICAgICAgICAgXQoKICAgICAgICAgICAgIyBNYXAgYmFjayB0byBpbmRpY2VzLgogICAgICAgICAgICBsb29rdXBNYXAgPSBOb25oYXNoYWJsZURpY3QobG9va3VwTGlzdC5Mb29rdXApCiAgICAgICAgICAgIGZlYXR1cmVMaXN0Lm1hcExvb2t1cHMobG9va3VwTWFwKQogICAgICAgICAgICBsb29rdXBMaXN0Lm1hcExvb2t1cHMobG9va3VwTWFwKQoKICAgICAgICAgICAgbG9va3VwTGlzdC5Mb29rdXBDb3VudCA9IGxlbihsb29rdXBMaXN0Lkxvb2t1cCkKCiAgICAgICAgICAgIGlmIEdERUYgYW5kIEdERUYudGFibGUuVmVyc2lvbiA+PSAweDAwMDEwMDAyOgogICAgICAgICAgICAgICAgbWFya0dseXBoU2V0c0RlZiA9IF9nZXRfbWFya19nbHlwaF9zZXRzX2RlZihHREVGKQogICAgICAgICAgICAgICAgaWYgbWFya0dseXBoU2V0c0RlZjoKICAgICAgICAgICAgICAgICAgICBtYXJrRmlsdGVyaW5nU2V0TWFwID0gTm9uaGFzaGFibGVEaWN0KG1hcmtHbHlwaFNldHNEZWYuQ292ZXJhZ2UpCiAgICAgICAgICAgICAgICAgICAgbG9va3VwTGlzdC5tYXBNYXJrRmlsdGVyaW5nU2V0cyhtYXJrRmlsdGVyaW5nU2V0TWFwKQoKICAgICMgVE9ETyBGZWF0dXJlUGFyYW1zIG5hbWVJRHMK
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+from fontTools import ttLib
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
+from fontTools.ttLib.tables import otTables
+from fontTools.merge.base import add_method, mergeObjects
+from fontTools.merge.util import *
+import logging
+
+log = logging.getLogger("fontTools.merge")
+
+
+def _get_layout_lists(table):
+    table = table.table
+    return (
+        getattr(table, "ScriptList2", None) or getattr(table, "ScriptList", None),
+        getattr(table, "FeatureList2", None) or getattr(table, "FeatureList", None),
+        getattr(table, "LookupList2", None) or getattr(table, "LookupList", None),
+    )
+
+
+def _get_mark_glyph_sets_def(table):
+    table = table.table
+    return getattr(table, "MarkGlyphSetsDef2", None) or getattr(
+        table, "MarkGlyphSetsDef", None
+    )
+
+
+def mergeLookupLists(lst):
+    # TODO Do smarter merge.
+    return sumLists(lst)
+
+
+def mergeFeatures(lst):
+    assert lst
+    self = otTables.Feature()
+    self.FeatureParams = None
+    self.LookupListIndex = mergeLookupLists(
+        [l.LookupListIndex for l in lst if l.LookupListIndex]
+    )
+    self.LookupCount = len(self.LookupListIndex)
+    return self
+
+
+def mergeFeatureLists(lst):
+    d = {}
+    for l in lst:
+        for f in l:
+            tag = f.FeatureTag
+            if tag not in d:
+                d[tag] = []
+            d[tag].append(f.Feature)
+    ret = []
+    for tag in sorted(d.keys()):
+        rec = otTables.FeatureRecord()
+        rec.FeatureTag = tag
+        rec.Feature = mergeFeatures(d[tag])
+        ret.append(rec)
+    return ret
+
+
+def mergeLangSyses(lst):
+    assert lst
+
+    # TODO Support merging ReqFeatureIndex
+    assert all(l.ReqFeatureIndex == 0xFFFF for l in lst)
+
+    self = otTables.LangSys()
+    self.LookupOrder = None
+    self.ReqFeatureIndex = 0xFFFF
+    self.FeatureIndex = mergeFeatureLists(
+        [l.FeatureIndex for l in lst if l.FeatureIndex]
+    )
+    self.FeatureCount = len(self.FeatureIndex)
+    return self
+
+
+def mergeScripts(lst):
+    assert lst
+
+    if len(lst) == 1:
+        return lst[0]
+    langSyses = {}
+    for sr in lst:
+        for lsr in sr.LangSysRecord:
+            if lsr.LangSysTag not in langSyses:
+                langSyses[lsr.LangSysTag] = []
+            langSyses[lsr.LangSysTag].append(lsr.LangSys)
+    lsrecords = []
+    for tag, langSys_list in sorted(langSyses.items()):
+        lsr = otTables.LangSysRecord()
+        lsr.LangSys = mergeLangSyses(langSys_list)
+        lsr.LangSysTag = tag
+        lsrecords.append(lsr)
+
+    self = otTables.Script()
+    self.LangSysRecord = lsrecords
+    self.LangSysCount = len(lsrecords)
+    dfltLangSyses = [s.DefaultLangSys for s in lst if s.DefaultLangSys]
+    if dfltLangSyses:
+        self.DefaultLangSys = mergeLangSyses(dfltLangSyses)
+    else:
+        self.DefaultLangSys = None
+    return self
+
+
+def mergeScriptRecords(lst):
+    d = {}
+    for l in lst:
+        for s in l:
+            tag = s.ScriptTag
+            if tag not in d:
+                d[tag] = []
+            d[tag].append(s.Script)
+    ret = []
+    for tag in sorted(d.keys()):
+        rec = otTables.ScriptRecord()
+        rec.ScriptTag = tag
+        rec.Script = mergeScripts(d[tag])
+        ret.append(rec)
+    return ret
+
+
+otTables.ScriptList.mergeMap = {
+    "ScriptCount": lambda lst: None,  # TODO
+    "ScriptRecord": mergeScriptRecords,
+}
+otTables.BaseScriptList.mergeMap = {
+    "BaseScriptCount": lambda lst: None,  # TODO
+    # TODO: Merge duplicate entries
+    "BaseScriptRecord": lambda lst: sorted(
+        sumLists(lst), key=lambda s: s.BaseScriptTag
+    ),
+}
+
+otTables.FeatureList.mergeMap = {
+    "FeatureCount": sum,
+    "FeatureRecord": lambda lst: sorted(sumLists(lst), key=lambda s: s.FeatureTag),
+}
+
+otTables.LookupList.mergeMap = {
+    "LookupCount": sum,
+    "Lookup": sumLists,
+}
+otTables.LookupList2.mergeMap = otTables.LookupList.mergeMap
+
+otTables.Coverage.mergeMap = {
+    "Format": min,
+    "glyphs": sumLists,
+}
+
+otTables.ClassDef.mergeMap = {
+    "Format": min,
+    "classDefs": sumDicts,
+}
+
+otTables.LigCaretList.mergeMap = {
+    "Coverage": mergeObjects,
+    "LigGlyphCount": sum,
+    "LigGlyph": sumLists,
+}
+
+otTables.AttachList.mergeMap = {
+    "Coverage": mergeObjects,
+    "GlyphCount": sum,
+    "AttachPoint": sumLists,
+}
+
+# XXX Renumber MarkFilterSets of lookups
+otTables.MarkGlyphSetsDef.mergeMap = {
+    "MarkSetTableFormat": equal,
+    "MarkSetCount": sum,
+    "Coverage": sumLists,
+}
+
+otTables.Axis.mergeMap = {
+    "*": mergeObjects,
+}
+
+# XXX Fix BASE table merging
+otTables.BaseTagList.mergeMap = {
+    "BaseTagCount": sum,
+    "BaselineTag": sumLists,
+}
+
+otTables.MathConstants.mergeMap = {
+    "*": first,
+}
+
+otTables.MathGlyphInfo.mergeMap = {
+    "*": mergeObjects,
+}
+
+otTables.MathItalicsCorrectionInfo.mergeMap = {
+    "Coverage": mergeObjects,
+    "ItalicsCorrectionCount": sum,
+    "ItalicsCorrection": sumLists,
+}
+
+otTables.MathTopAccentAttachment.mergeMap = {
+    "TopAccentCoverage": mergeObjects,
+    "TopAccentAttachmentCount": sum,
+    "TopAccentAttachment": sumLists,
+}
+
+otTables.MathKernInfo.mergeMap = {
+    "MathKernCoverage": mergeObjects,
+    "MathKernCount": sum,
+    "MathKernInfoRecords": sumLists,
+}
+
+otTables.MathVariants.mergeMap = {
+    "MinConnectorOverlap": first,
+    "VertGlyphCoverage": mergeObjects,
+    "HorizGlyphCoverage": mergeObjects,
+    "VertGlyphCount": sum,
+    "HorizGlyphCount": sum,
+    "VertGlyphConstruction": sumLists,
+    "HorizGlyphConstruction": sumLists,
+}
+
+otTables.GDEF.mergeMap = otTables.GSUB.mergeMap = otTables.GPOS.mergeMap = (
+    otTables.BASE.mergeMap
+) = otTables.JSTF.mergeMap = otTables.MATH.mergeMap = {
+    "*": mergeObjects,
+    "Version": max,
+}
+
+ttLib.getTableClass("GDEF").mergeMap = ttLib.getTableClass("GSUB").mergeMap = (
+    ttLib.getTableClass("GPOS").mergeMap
+) = ttLib.getTableClass("BASE").mergeMap = ttLib.getTableClass(
+    "JSTF"
+).mergeMap = ttLib.getTableClass(
+    "MATH"
+).mergeMap = {
+    "tableTag": onlyExisting(equal),  # XXX clean me up
+    "table": mergeObjects,
+}
+
+
+@add_method(ttLib.getTableClass("GSUB"))
+def merge(self, m, tables):
+    assert len(tables) == len(m.duplicateGlyphsPerFont)
+    for i, (table, dups) in enumerate(zip(tables, m.duplicateGlyphsPerFont)):
+        if not dups:
+            continue
+        if table is None or table is NotImplemented:
+            log.warning(
+                "Have non-identical duplicates to resolve for '%s' but no GSUB. Are duplicates intended?: %s",
+                m.fonts[i]._merger__name,
+                dups,
+            )
+            continue
+
+        synthFeature = None
+        synthLookup = None
+        scriptList, featureList, lookupList = _get_layout_lists(table)
+        for script in scriptList.ScriptRecord:
+            if script.ScriptTag == "DFLT":
+                continue  # XXX
+            for langsys in [script.Script.DefaultLangSys] + [
+                l.LangSys for l in script.Script.LangSysRecord
+            ]:
+                if langsys is None:
+                    continue  # XXX Create!
+                feature = [v for v in langsys.FeatureIndex if v.FeatureTag == "locl"]
+                assert len(feature) <= 1
+                if feature:
+                    feature = feature[0]
+                else:
+                    if not synthFeature:
+                        synthFeature = otTables.FeatureRecord()
+                        synthFeature.FeatureTag = "locl"
+                        f = synthFeature.Feature = otTables.Feature()
+                        f.FeatureParams = None
+                        f.LookupCount = 0
+                        f.LookupListIndex = []
+                        featureList.FeatureRecord.append(synthFeature)
+                        featureList.FeatureCount += 1
+                    feature = synthFeature
+                    langsys.FeatureIndex.append(feature)
+                    langsys.FeatureIndex.sort(key=lambda v: v.FeatureTag)
+
+                if not synthLookup:
+                    subtable = otTables.SingleSubst()
+                    subtable.mapping = dups
+                    synthLookup = otTables.Lookup()
+                    synthLookup.LookupFlag = 0
+                    synthLookup.LookupType = 1
+                    synthLookup.SubTableCount = 1
+                    synthLookup.SubTable = [subtable]
+                    if lookupList is None:
+                        # mtiLib uses None as default value for LookupList,
+                        # while feaLib points to an empty array with count 0
+                        # TODO: make them do the same
+                        lookupList = otTables.LookupList()
+                        lookupList.Lookup = []
+                        lookupList.LookupCount = 0
+                        if hasattr(table.table, "LookupList2"):
+                            table.table.LookupList2 = lookupList
+                        else:
+                            table.table.LookupList = lookupList
+                    lookupList.Lookup.append(synthLookup)
+                    lookupList.LookupCount += 1
+
+                if feature.Feature.LookupListIndex[:1] != [synthLookup]:
+                    feature.Feature.LookupListIndex[:0] = [synthLookup]
+                    feature.Feature.LookupCount += 1
+
+    DefaultTable.merge(self, m, tables)
+    return self
+
+
+@add_method(
+    otTables.SingleSubst,
+    otTables.MultipleSubst,
+    otTables.AlternateSubst,
+    otTables.LigatureSubst,
+    otTables.ReverseChainSingleSubst,
+    otTables.SinglePos,
+    otTables.PairPos,
+    otTables.CursivePos,
+    otTables.MarkBasePos,
+    otTables.MarkLigPos,
+    otTables.MarkMarkPos,
+)
+def mapLookups(self, lookupMap):
+    pass
+
+
+# Copied and trimmed down from subset.py
+@add_method(
+    otTables.ContextSubst,
+    otTables.ChainContextSubst,
+    otTables.ContextPos,
+    otTables.ChainContextPos,
+)
+def __merge_classify_context(self):
+    class ContextHelper(object):
+        def __init__(self, klass, Format):
+            if klass.__name__.endswith("Subst"):
+                Typ = "Sub"
+                Type = "Subst"
+            else:
+                Typ = "Pos"
+                Type = "Pos"
+            if klass.__name__.startswith("Chain"):
+                Chain = "Chain"
+            else:
+                Chain = ""
+            ChainTyp = Chain + Typ
+
+            self.Typ = Typ
+            self.Type = Type
+            self.Chain = Chain
+            self.ChainTyp = ChainTyp
+
+            self.LookupRecord = Type + "LookupRecord"
+
+            if Format == 1:
+                self.Rule = ChainTyp + "Rule"
+                self.RuleSet = ChainTyp + "RuleSet"
+            elif Format == 2:
+                self.Rule = ChainTyp + "ClassRule"
+                self.RuleSet = ChainTyp + "ClassSet"
+
+    if self.Format not in [1, 2, 3]:
+        return None  # Don't shoot the messenger; let it go
+    if not hasattr(self.__class__, "_merge__ContextHelpers"):
+        self.__class__._merge__ContextHelpers = {}
+    if self.Format not in self.__class__._merge__ContextHelpers:
+        helper = ContextHelper(self.__class__, self.Format)
+        self.__class__._merge__ContextHelpers[self.Format] = helper
+    return self.__class__._merge__ContextHelpers[self.Format]
+
+
+@add_method(
+    otTables.ContextSubst,
+    otTables.ChainContextSubst,
+    otTables.ContextPos,
+    otTables.ChainContextPos,
+)
+def mapLookups(self, lookupMap):
+    c = self.__merge_classify_context()
+
+    if self.Format in [1, 2]:
+        for rs in getattr(self, c.RuleSet):
+            if not rs:
+                continue
+            for r in getattr(rs, c.Rule):
+                if not r:
+                    continue
+                for ll in getattr(r, c.LookupRecord):
+                    if not ll:
+                        continue
+                    ll.LookupListIndex = lookupMap[ll.LookupListIndex]
+    elif self.Format == 3:
+        for ll in getattr(self, c.LookupRecord):
+            if not ll:
+                continue
+            ll.LookupListIndex = lookupMap[ll.LookupListIndex]
+    else:
+        assert 0, "unknown format: %s" % self.Format
+
+
+@add_method(otTables.ExtensionSubst, otTables.ExtensionPos)
+def mapLookups(self, lookupMap):
+    if self.Format == 1:
+        self.ExtSubTable.mapLookups(lookupMap)
+    else:
+        assert 0, "unknown format: %s" % self.Format
+
+
+@add_method(otTables.Lookup)
+def mapLookups(self, lookupMap):
+    for st in self.SubTable:
+        if not st:
+            continue
+        st.mapLookups(lookupMap)
+
+
+@add_method(otTables.LookupList)
+def mapLookups(self, lookupMap):
+    for l in self.Lookup:
+        if not l:
+            continue
+        l.mapLookups(lookupMap)
+
+
+@add_method(otTables.Lookup)
+def mapMarkFilteringSets(self, markFilteringSetMap):
+    if self.LookupFlag & 0x0010:
+        self.MarkFilteringSet = markFilteringSetMap[self.MarkFilteringSet]
+
+
+@add_method(otTables.LookupList)
+def mapMarkFilteringSets(self, markFilteringSetMap):
+    for l in self.Lookup:
+        if not l:
+            continue
+        l.mapMarkFilteringSets(markFilteringSetMap)
+
+
+@add_method(otTables.Feature)
+def mapLookups(self, lookupMap):
+    self.LookupListIndex = [lookupMap[i] for i in self.LookupListIndex]
+
+
+@add_method(otTables.FeatureList)
+def mapLookups(self, lookupMap):
+    for f in self.FeatureRecord:
+        if not f or not f.Feature:
+            continue
+        f.Feature.mapLookups(lookupMap)
+
+
+@add_method(otTables.DefaultLangSys, otTables.LangSys)
+def mapFeatures(self, featureMap):
+    self.FeatureIndex = [featureMap[i] for i in self.FeatureIndex]
+    if self.ReqFeatureIndex != 65535:
+        self.ReqFeatureIndex = featureMap[self.ReqFeatureIndex]
+
+
+@add_method(otTables.Script)
+def mapFeatures(self, featureMap):
+    if self.DefaultLangSys:
+        self.DefaultLangSys.mapFeatures(featureMap)
+    for l in self.LangSysRecord:
+        if not l or not l.LangSys:
+            continue
+        l.LangSys.mapFeatures(featureMap)
+
+
+@add_method(otTables.ScriptList)
+def mapFeatures(self, featureMap):
+    for s in self.ScriptRecord:
+        if not s or not s.Script:
+            continue
+        s.Script.mapFeatures(featureMap)
+
+
+def layoutPreMerge(font):
+    # Map indices to references
+
+    GDEF = font.get("GDEF")
+    GSUB = font.get("GSUB")
+    GPOS = font.get("GPOS")
+
+    for t in [GSUB, GPOS]:
+        if not t:
+            continue
+
+        scriptList, featureList, lookupList = _get_layout_lists(t)
+
+        if lookupList:
+            lookupMap = {i: v for i, v in enumerate(lookupList.Lookup)}
+            lookupList.mapLookups(lookupMap)
+            featureList.mapLookups(lookupMap)
+
+            markGlyphSetsDef = _get_mark_glyph_sets_def(GDEF) if GDEF else None
+            if GDEF and GDEF.table.Version >= 0x00010002 and markGlyphSetsDef:
+                markFilteringSetMap = {
+                    i: v for i, v in enumerate(markGlyphSetsDef.Coverage)
+                }
+                lookupList.mapMarkFilteringSets(markFilteringSetMap)
+
+        if featureList and scriptList:
+            featureMap = {i: v for i, v in enumerate(featureList.FeatureRecord)}
+            scriptList.mapFeatures(featureMap)
+
+    # TODO FeatureParams nameIDs
+
+
+def layoutPostMerge(font):
+    # Map references back to indices
+
+    GDEF = font.get("GDEF")
+    GSUB = font.get("GSUB")
+    GPOS = font.get("GPOS")
+
+    for t in [GSUB, GPOS]:
+        if not t:
+            continue
+
+        scriptList, featureList, lookupList = _get_layout_lists(t)
+
+        if featureList and scriptList:
+            # Collect unregistered (new) features.
+            featureMap = GregariousIdentityDict(featureList.FeatureRecord)
+            scriptList.mapFeatures(featureMap)
+
+            # Record used features.
+            featureMap = AttendanceRecordingIdentityDict(featureList.FeatureRecord)
+            scriptList.mapFeatures(featureMap)
+            usedIndices = featureMap.s
+
+            # Remove unused features
+            featureList.FeatureRecord = [
+                f for i, f in enumerate(featureList.FeatureRecord) if i in usedIndices
+            ]
+
+            # Map back to indices.
+            featureMap = NonhashableDict(featureList.FeatureRecord)
+            scriptList.mapFeatures(featureMap)
+
+            featureList.FeatureCount = len(featureList.FeatureRecord)
+
+        if lookupList:
+            # Collect unregistered (new) lookups.
+            lookupMap = GregariousIdentityDict(lookupList.Lookup)
+            featureList.mapLookups(lookupMap)
+            lookupList.mapLookups(lookupMap)
+
+            # Record used lookups.
+            lookupMap = AttendanceRecordingIdentityDict(lookupList.Lookup)
+            featureList.mapLookups(lookupMap)
+            lookupList.mapLookups(lookupMap)
+            usedIndices = lookupMap.s
+
+            # Remove unused lookups
+            lookupList.Lookup = [
+                l for i, l in enumerate(lookupList.Lookup) if i in usedIndices
+            ]
+
+            # Map back to indices.
+            lookupMap = NonhashableDict(lookupList.Lookup)
+            featureList.mapLookups(lookupMap)
+            lookupList.mapLookups(lookupMap)
+
+            lookupList.LookupCount = len(lookupList.Lookup)
+
+            if GDEF and GDEF.table.Version >= 0x00010002:
+                markGlyphSetsDef = _get_mark_glyph_sets_def(GDEF)
+                if markGlyphSetsDef:
+                    markFilteringSetMap = NonhashableDict(markGlyphSetsDef.Coverage)
+                    lookupList.mapMarkFilteringSets(markFilteringSetMap)
+
+    # TODO FeatureParams nameIDs

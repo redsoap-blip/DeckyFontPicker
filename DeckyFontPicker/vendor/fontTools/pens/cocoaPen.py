@@ -1,1 +1,25 @@
-ZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCgpfX2FsbF9fID0gWyJDb2NvYVBlbiJdCgoKY2xhc3MgQ29jb2FQZW4oQmFzZVBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhTZXQsIHBhdGg9Tm9uZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBpZiBwYXRoIGlzIE5vbmU6CiAgICAgICAgICAgIGZyb20gQXBwS2l0IGltcG9ydCBOU0JlemllclBhdGgKCiAgICAgICAgICAgIHBhdGggPSBOU0JlemllclBhdGguYmV6aWVyUGF0aCgpCiAgICAgICAgc2VsZi5wYXRoID0gcGF0aAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHApOgogICAgICAgIHNlbGYucGF0aC5tb3ZlVG9Qb2ludF8ocCkKCiAgICBkZWYgX2xpbmVUbyhzZWxmLCBwKToKICAgICAgICBzZWxmLnBhdGgubGluZVRvUG9pbnRfKHApCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIHNlbGYucGF0aC5jdXJ2ZVRvUG9pbnRfY29udHJvbFBvaW50MV9jb250cm9sUG9pbnQyXyhwMywgcDEsIHAyKQoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIHNlbGYucGF0aC5jbG9zZVBhdGgoKQo=
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["CocoaPen"]
+
+
+class CocoaPen(BasePen):
+    def __init__(self, glyphSet, path=None):
+        BasePen.__init__(self, glyphSet)
+        if path is None:
+            from AppKit import NSBezierPath
+
+            path = NSBezierPath.bezierPath()
+        self.path = path
+
+    def _moveTo(self, p):
+        self.path.moveToPoint_(p)
+
+    def _lineTo(self, p):
+        self.path.lineToPoint_(p)
+
+    def _curveToOne(self, p1, p2, p3):
+        self.path.curveToPoint_controlPoint1_controlPoint2_(p3, p1, p2)
+
+    def _closePath(self):
+        self.path.closePath()

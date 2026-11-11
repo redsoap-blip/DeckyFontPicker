@@ -1,1 +1,55 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwpmcm9tIGNvbGxlY3Rpb25zIGltcG9ydCBkZXF1ZQpmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgQ29sbGVjdGlvbiwgSXRlcmF0b3IKCmZyb20gLl9wYXRoIGltcG9ydCBjb21iaW5lCgppZiB0eXBpbmcuVFlQRV9DSEVDS0lORzoKICAgIGZyb20gdHlwaW5nIGltcG9ydCBDYWxsYWJsZQoKICAgIGZyb20gLl9iYXNlIGltcG9ydCBGUwogICAgZnJvbSAuX2luZm8gaW1wb3J0IEluZm8KCgpjbGFzcyBCb3VuZFdhbGtlcjoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmczogRlMpOgogICAgICAgIHNlbGYuX2ZzID0gZnMKCiAgICBkZWYgX2l0ZXJfd2FsaygKICAgICAgICBzZWxmLCBwYXRoOiBzdHIsIG5hbWVzcGFjZXM6IENvbGxlY3Rpb25bc3RyXSB8IE5vbmUgPSBOb25lCiAgICApIC0+IEl0ZXJhdG9yW3R1cGxlW3N0ciwgSW5mbyB8IE5vbmVdXToKICAgICAgICAiIiJXYWxrIGZpbGVzIHVzaW5nIGEgKmJyZWFkdGggZmlyc3QqIHNlYXJjaC4iIiIKICAgICAgICBxdWV1ZSA9IGRlcXVlKFtwYXRoXSkKICAgICAgICBwdXNoID0gcXVldWUuYXBwZW5kbGVmdAogICAgICAgIHBvcCA9IHF1ZXVlLnBvcAogICAgICAgIF9zY2FuID0gc2VsZi5fZnMuc2NhbmRpcgogICAgICAgIF9jb21iaW5lID0gY29tYmluZQoKICAgICAgICB3aGlsZSBxdWV1ZToKICAgICAgICAgICAgZGlyX3BhdGggPSBwb3AoKQogICAgICAgICAgICBmb3IgaW5mbyBpbiBfc2NhbihkaXJfcGF0aCwgbmFtZXNwYWNlcz1uYW1lc3BhY2VzKToKICAgICAgICAgICAgICAgIGlmIGluZm8uaXNfZGlyOgogICAgICAgICAgICAgICAgICAgIHlpZWxkIGRpcl9wYXRoLCBpbmZvCiAgICAgICAgICAgICAgICAgICAgcHVzaChfY29tYmluZShkaXJfcGF0aCwgaW5mby5uYW1lKSkKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgeWllbGQgZGlyX3BhdGgsIGluZm8KICAgICAgICB5aWVsZCBwYXRoLCBOb25lCgogICAgZGVmIF9maWx0ZXIoCiAgICAgICAgc2VsZiwKICAgICAgICBpbmNsdWRlOiBDYWxsYWJsZVtbc3RyLCBJbmZvXSwgYm9vbF0gPSBsYW1iZGEgcGF0aCwgaW5mbzogVHJ1ZSwKICAgICAgICBwYXRoOiBzdHIgPSAiLyIsCiAgICAgICAgbmFtZXNwYWNlczogQ29sbGVjdGlvbltzdHJdIHwgTm9uZSA9IE5vbmUsCiAgICApIC0+IEl0ZXJhdG9yW3N0cl06CiAgICAgICAgX2NvbWJpbmUgPSBjb21iaW5lCiAgICAgICAgZm9yIHBhdGgsIGluZm8gaW4gc2VsZi5faXRlcl93YWxrKHBhdGgsIG5hbWVzcGFjZXMpOgogICAgICAgICAgICBpZiBpbmZvIGlzIG5vdCBOb25lIGFuZCBpbmNsdWRlKHBhdGgsIGluZm8pOgogICAgICAgICAgICAgICAgeWllbGQgX2NvbWJpbmUocGF0aCwgaW5mby5uYW1lKQoKICAgIGRlZiBmaWxlcyhzZWxmLCBwYXRoOiBzdHIgPSAiLyIpIC0+IEl0ZXJhdG9yW3N0cl06CiAgICAgICAgeWllbGQgZnJvbSBzZWxmLl9maWx0ZXIobGFtYmRhIF8sIGluZm86IGluZm8uaXNfZmlsZSwgcGF0aCkKCiAgICBkZWYgZGlycyhzZWxmLCBwYXRoOiBzdHIgPSAiLyIpIC0+IEl0ZXJhdG9yW3N0cl06CiAgICAgICAgeWllbGQgZnJvbSBzZWxmLl9maWx0ZXIobGFtYmRhIF8sIGluZm86IGluZm8uaXNfZGlyLCBwYXRoKQo=
+from __future__ import annotations
+
+import typing
+from collections import deque
+from collections.abc import Collection, Iterator
+
+from ._path import combine
+
+if typing.TYPE_CHECKING:
+    from typing import Callable
+
+    from ._base import FS
+    from ._info import Info
+
+
+class BoundWalker:
+    def __init__(self, fs: FS):
+        self._fs = fs
+
+    def _iter_walk(
+        self, path: str, namespaces: Collection[str] | None = None
+    ) -> Iterator[tuple[str, Info | None]]:
+        """Walk files using a *breadth first* search."""
+        queue = deque([path])
+        push = queue.appendleft
+        pop = queue.pop
+        _scan = self._fs.scandir
+        _combine = combine
+
+        while queue:
+            dir_path = pop()
+            for info in _scan(dir_path, namespaces=namespaces):
+                if info.is_dir:
+                    yield dir_path, info
+                    push(_combine(dir_path, info.name))
+                else:
+                    yield dir_path, info
+        yield path, None
+
+    def _filter(
+        self,
+        include: Callable[[str, Info], bool] = lambda path, info: True,
+        path: str = "/",
+        namespaces: Collection[str] | None = None,
+    ) -> Iterator[str]:
+        _combine = combine
+        for path, info in self._iter_walk(path, namespaces):
+            if info is not None and include(path, info):
+                yield _combine(path, info.name)
+
+    def files(self, path: str = "/") -> Iterator[str]:
+        yield from self._filter(lambda _, info: info.is_file, path)
+
+    def dirs(self, path: str = "/") -> Iterator[str]:
+        yield from self._filter(lambda _, info: info.is_dir, path)

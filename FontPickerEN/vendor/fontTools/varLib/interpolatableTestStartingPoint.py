@@ -1,1 +1,109 @@
-ZnJvbSAuaW50ZXJwb2xhdGFibGVIZWxwZXJzIGltcG9ydCAqCgoKZGVmIHRlc3Rfc3RhcnRpbmdfcG9pbnQoZ2x5cGgwLCBnbHlwaDEsIGl4LCB0b2xlcmFuY2UsIG1hdGNoaW5nKToKICAgIGlmIG1hdGNoaW5nIGlzIE5vbmU6CiAgICAgICAgbWF0Y2hpbmcgPSBsaXN0KHJhbmdlKGxlbihnbHlwaDAuaXNvbW9ycGhpc21zKSkpCiAgICBjb250b3VyMCA9IGdseXBoMC5pc29tb3JwaGlzbXNbaXhdCiAgICBjb250b3VyMSA9IGdseXBoMS5pc29tb3JwaGlzbXNbbWF0Y2hpbmdbaXhdXQogICAgbTBWZWN0b3JzID0gZ2x5cGgwLmdyZWVuVmVjdG9ycwogICAgbTFWZWN0b3JzID0gW2dseXBoMS5ncmVlblZlY3RvcnNbaV0gZm9yIGkgaW4gbWF0Y2hpbmddCgogICAgYzAgPSBjb250b3VyMFswXQogICAgIyBOZXh0IGZldyBsaW5lcyBkdXBsaWNhdGVkIGJlbG93LgogICAgY29zdHMgPSBbdmRpZmZfaHlwb3QyX2NvbXBsZXgoYzBbMF0sIGMxWzBdKSBmb3IgYzEgaW4gY29udG91cjFdCiAgICBtaW5fY29zdF9pZHgsIG1pbl9jb3N0ID0gbWluKGVudW1lcmF0ZShjb3N0cyksIGtleT1sYW1iZGEgeDogeFsxXSkKICAgIGZpcnN0X2Nvc3QgPSBjb3N0c1swXQogICAgcHJvcG9zZWRfcG9pbnQgPSBjb250b3VyMVttaW5fY29zdF9pZHhdWzFdCiAgICByZXZlcnNlID0gY29udG91cjFbbWluX2Nvc3RfaWR4XVsyXQoKICAgIGlmIG1pbl9jb3N0IDwgZmlyc3RfY29zdCAqIHRvbGVyYW5jZToKICAgICAgICAjIGMwIGlzIHRoZSBmaXJzdCBpc29tb3JwaGlzbSBvZiB0aGUgbTAgbWFzdGVyCiAgICAgICAgIyBjb250b3VyMSBpcyBsaXN0IG9mIGFsbCBpc29tb3JwaGlzbXMgb2YgdGhlIG0xIG1hc3RlcgogICAgICAgICMKICAgICAgICAjIElmIHRoZSB0d28gc2hhcGVzIGFyZSBib3RoIGNpcmNsZS1pc2ggYW5kIHNsaWdodGx5CiAgICAgICAgIyByb3RhdGVkLCB3ZSBkZXRlY3Qgd3Jvbmcgc3RhcnQgcG9pbnQuIFRoaXMgaXMgZm9yCiAgICAgICAgIyBleGFtcGxlIHRoZSBjYXNlIGh1bmRyZWRzIG9mIHRpbWVzIGluCiAgICAgICAgIyBSb2JvdG9TZXJpZi1JdGFsaWNbR1JBRCxvcHN6LHdkdGgsd2dodF0udHRmCiAgICAgICAgIwogICAgICAgICMgSWYgdGhlIHByb3Bvc2VkIHBvaW50IGlzIG9ubHkgb25lIG9mZiBmcm9tIHRoZSBmaXJzdAogICAgICAgICMgcG9pbnQgKGFuZCBub3QgcmV2ZXJzZWQpLCB0cnkgaGFyZGVyOgogICAgICAgICMKICAgICAgICAjIEZpbmQgdGhlIG1ham9yIGVpZ2VudmVjdG9yIG9mIHRoZSBjb3ZhcmlhbmNlIG1hdHJpeCwKICAgICAgICAjIGFuZCByb3RhdGUgdGhlIGNvbnRvdXJzIGJ5IHRoYXQgYW5nbGUuIFRoZW4gZmluZCB0aGUKICAgICAgICAjIGNsb3Nlc3QgcG9pbnQgYWdhaW4uICBJZiBpdCBtYXRjaGVzIHRoaXMgdGltZSwgbGV0IGl0CiAgICAgICAgIyBwYXNzLgoKICAgICAgICBudW1fcG9pbnRzID0gbGVuKGdseXBoMS5wb2ludHNbaXhdKQogICAgICAgIGxlZXdheSA9IDMKICAgICAgICBpZiBub3QgcmV2ZXJzZSBhbmQgKAogICAgICAgICAgICBwcm9wb3NlZF9wb2ludCA8PSBsZWV3YXkgb3IgcHJvcG9zZWRfcG9pbnQgPj0gbnVtX3BvaW50cyAtIGxlZXdheQogICAgICAgICk6CiAgICAgICAgICAgICMgVHJ5IGhhcmRlcgoKICAgICAgICAgICAgIyBSZWNvdmVyIHRoZSBjb3ZhcmlhbmNlIG1hdHJpeCBmcm9tIHRoZSBHcmVlblZlY3RvcnMuCiAgICAgICAgICAgICMgVGhpcyBpcyBhIDJ4MiBtYXRyaXguCiAgICAgICAgICAgIHRyYW5zZm9ybXMgPSBbXQogICAgICAgICAgICBmb3IgdmVjdG9yIGluIChtMFZlY3RvcnNbaXhdLCBtMVZlY3RvcnNbaXhdKToKICAgICAgICAgICAgICAgICMgbWVhblggPSB2ZWN0b3JbMV0KICAgICAgICAgICAgICAgICMgbWVhblkgPSB2ZWN0b3JbMl0KICAgICAgICAgICAgICAgIHN0ZGRldlggPSB2ZWN0b3JbM10gKiAwLjUKICAgICAgICAgICAgICAgIHN0ZGRldlkgPSB2ZWN0b3JbNF0gKiAwLjUKICAgICAgICAgICAgICAgIGNvcnJlbGF0aW9uID0gdmVjdG9yWzVdCiAgICAgICAgICAgICAgICBpZiBjb3JyZWxhdGlvbjoKICAgICAgICAgICAgICAgICAgICBjb3JyZWxhdGlvbiAvPSBhYnModmVjdG9yWzBdKQoKICAgICAgICAgICAgICAgICMgaHR0cHM6Ly9jb29raWVyb2JvdGljcy5jb20vMDA3LwogICAgICAgICAgICAgICAgYSA9IHN0ZGRldlggKiBzdGRkZXZYICAjIFZhcmlhbmNlWAogICAgICAgICAgICAgICAgYyA9IHN0ZGRldlkgKiBzdGRkZXZZICAjIFZhcmlhbmNlWQogICAgICAgICAgICAgICAgYiA9IGNvcnJlbGF0aW9uICogc3RkZGV2WCAqIHN0ZGRldlkgICMgQ292YXJpYW5jZQoKICAgICAgICAgICAgICAgIGRlbHRhID0gKCgoYSAtIGMpICogMC41KSAqKiAyICsgYiAqIGIpICoqIDAuNQogICAgICAgICAgICAgICAgbGFtYmRhMSA9IChhICsgYykgKiAwLjUgKyBkZWx0YSAgIyBNYWpvciBlaWdlbnZhbHVlCiAgICAgICAgICAgICAgICBsYW1iZGEyID0gKGEgKyBjKSAqIDAuNSAtIGRlbHRhICAjIE1pbm9yIGVpZ2VudmFsdWUKICAgICAgICAgICAgICAgIHRoZXRhID0gYXRhbjIobGFtYmRhMSAtIGEsIGIpIGlmIGIgIT0gMCBlbHNlIChwaSAqIDAuNSBpZiBhIDwgYyBlbHNlIDApCiAgICAgICAgICAgICAgICB0cmFucyA9IFRyYW5zZm9ybSgpCiAgICAgICAgICAgICAgICAjIERvbid0IHRyYW5zbGF0ZSBoZXJlLiBXZSBhcmUgd29ya2luZyBvbiB0aGUgY29tcGxleC12ZWN0b3IKICAgICAgICAgICAgICAgICMgdGhhdCBpbmNsdWRlcyBtb3JlIHRoYW4ganVzdCB0aGUgcG9pbnRzLiBJdCdzIGhvcnJpYmxlIHdoYXQKICAgICAgICAgICAgICAgICMgd2UgYXJlIGRvaW5nIGFueXdheS4uLgogICAgICAgICAgICAgICAgIyB0cmFucyA9IHRyYW5zLnRyYW5zbGF0ZShtZWFuWCwgbWVhblkpCiAgICAgICAgICAgICAgICB0cmFucyA9IHRyYW5zLnJvdGF0ZSh0aGV0YSkKICAgICAgICAgICAgICAgIGlmIGxhbWJkYTIgPCAwOgogICAgICAgICAgICAgICAgICAgIGxhbWJkYTIgPSAwCiAgICAgICAgICAgICAgICB0cmFucyA9IHRyYW5zLnNjYWxlKHNxcnQobGFtYmRhMSksIHNxcnQobGFtYmRhMikpCiAgICAgICAgICAgICAgICB0cmFuc2Zvcm1zLmFwcGVuZCh0cmFucykKCiAgICAgICAgICAgIHRyYW5zID0gdHJhbnNmb3Jtc1swXQogICAgICAgICAgICBuZXdfYzAgPSAoCiAgICAgICAgICAgICAgICBbY29tcGxleCgqdHJhbnMudHJhbnNmb3JtUG9pbnQoKHB0LnJlYWwsIHB0LmltYWcpKSkgZm9yIHB0IGluIGMwWzBdXSwKICAgICAgICAgICAgKSArIGMwWzE6XQogICAgICAgICAgICB0cmFucyA9IHRyYW5zZm9ybXNbMV0KICAgICAgICAgICAgbmV3X2NvbnRvdXIxID0gW10KICAgICAgICAgICAgZm9yIGMxIGluIGNvbnRvdXIxOgogICAgICAgICAgICAgICAgbmV3X2MxID0gKAogICAgICAgICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgICAgICAgICAgY29tcGxleCgqdHJhbnMudHJhbnNmb3JtUG9pbnQoKHB0LnJlYWwsIHB0LmltYWcpKSkKICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHB0IGluIGMxWzBdCiAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICkgKyBjMVsxOl0KICAgICAgICAgICAgICAgIG5ld19jb250b3VyMS5hcHBlbmQobmV3X2MxKQoKICAgICAgICAgICAgIyBOZXh0IGZldyBsaW5lcyBkdXBsaWNhdGUgZnJvbSBhYm92ZS4KICAgICAgICAgICAgY29zdHMgPSBbCiAgICAgICAgICAgICAgICB2ZGlmZl9oeXBvdDJfY29tcGxleChuZXdfYzBbMF0sIG5ld19jMVswXSkgZm9yIG5ld19jMSBpbiBuZXdfY29udG91cjEKICAgICAgICAgICAgXQogICAgICAgICAgICBtaW5fY29zdF9pZHgsIG1pbl9jb3N0ID0gbWluKGVudW1lcmF0ZShjb3N0cyksIGtleT1sYW1iZGEgeDogeFsxXSkKICAgICAgICAgICAgZmlyc3RfY29zdCA9IGNvc3RzWzBdCiAgICAgICAgICAgIGlmIG1pbl9jb3N0IDwgZmlyc3RfY29zdCAqIHRvbGVyYW5jZToKICAgICAgICAgICAgICAgICMgRG9uJ3QgcmVwb3J0IHRoaXMKICAgICAgICAgICAgICAgICMgbWluX2Nvc3QgPSBmaXJzdF9jb3N0CiAgICAgICAgICAgICAgICAjIHJldmVyc2UgPSBGYWxzZQogICAgICAgICAgICAgICAgIyBwcm9wb3NlZF9wb2ludCA9IDAgICMgbmV3X2NvbnRvdXIxW21pbl9jb3N0X2lkeF1bMV0KICAgICAgICAgICAgICAgIHBhc3MKCiAgICB0aGlzX3RvbGVyYW5jZSA9IG1pbl9jb3N0IC8gZmlyc3RfY29zdCBpZiBmaXJzdF9jb3N0IGVsc2UgMQogICAgbG9nLmRlYnVnKAogICAgICAgICJ0ZXN0LXN0YXJ0aW5nLXBvaW50OiB0b2xlcmFuY2UgJWciLAogICAgICAgIHRoaXNfdG9sZXJhbmNlLAogICAgKQogICAgcmV0dXJuIHRoaXNfdG9sZXJhbmNlLCBwcm9wb3NlZF9wb2ludCwgcmV2ZXJzZQo=
+from .interpolatableHelpers import *
+
+
+def test_starting_point(glyph0, glyph1, ix, tolerance, matching):
+    if matching is None:
+        matching = list(range(len(glyph0.isomorphisms)))
+    contour0 = glyph0.isomorphisms[ix]
+    contour1 = glyph1.isomorphisms[matching[ix]]
+    m0Vectors = glyph0.greenVectors
+    m1Vectors = [glyph1.greenVectors[i] for i in matching]
+
+    c0 = contour0[0]
+    # Next few lines duplicated below.
+    costs = [vdiff_hypot2_complex(c0[0], c1[0]) for c1 in contour1]
+    min_cost_idx, min_cost = min(enumerate(costs), key=lambda x: x[1])
+    first_cost = costs[0]
+    proposed_point = contour1[min_cost_idx][1]
+    reverse = contour1[min_cost_idx][2]
+
+    if min_cost < first_cost * tolerance:
+        # c0 is the first isomorphism of the m0 master
+        # contour1 is list of all isomorphisms of the m1 master
+        #
+        # If the two shapes are both circle-ish and slightly
+        # rotated, we detect wrong start point. This is for
+        # example the case hundreds of times in
+        # RobotoSerif-Italic[GRAD,opsz,wdth,wght].ttf
+        #
+        # If the proposed point is only one off from the first
+        # point (and not reversed), try harder:
+        #
+        # Find the major eigenvector of the covariance matrix,
+        # and rotate the contours by that angle. Then find the
+        # closest point again.  If it matches this time, let it
+        # pass.
+
+        num_points = len(glyph1.points[ix])
+        leeway = 3
+        if not reverse and (
+            proposed_point <= leeway or proposed_point >= num_points - leeway
+        ):
+            # Try harder
+
+            # Recover the covariance matrix from the GreenVectors.
+            # This is a 2x2 matrix.
+            transforms = []
+            for vector in (m0Vectors[ix], m1Vectors[ix]):
+                # meanX = vector[1]
+                # meanY = vector[2]
+                stddevX = vector[3] * 0.5
+                stddevY = vector[4] * 0.5
+                correlation = vector[5]
+                if correlation:
+                    correlation /= abs(vector[0])
+
+                # https://cookierobotics.com/007/
+                a = stddevX * stddevX  # VarianceX
+                c = stddevY * stddevY  # VarianceY
+                b = correlation * stddevX * stddevY  # Covariance
+
+                delta = (((a - c) * 0.5) ** 2 + b * b) ** 0.5
+                lambda1 = (a + c) * 0.5 + delta  # Major eigenvalue
+                lambda2 = (a + c) * 0.5 - delta  # Minor eigenvalue
+                theta = atan2(lambda1 - a, b) if b != 0 else (pi * 0.5 if a < c else 0)
+                trans = Transform()
+                # Don't translate here. We are working on the complex-vector
+                # that includes more than just the points. It's horrible what
+                # we are doing anyway...
+                # trans = trans.translate(meanX, meanY)
+                trans = trans.rotate(theta)
+                if lambda2 < 0:
+                    lambda2 = 0
+                trans = trans.scale(sqrt(lambda1), sqrt(lambda2))
+                transforms.append(trans)
+
+            trans = transforms[0]
+            new_c0 = (
+                [complex(*trans.transformPoint((pt.real, pt.imag))) for pt in c0[0]],
+            ) + c0[1:]
+            trans = transforms[1]
+            new_contour1 = []
+            for c1 in contour1:
+                new_c1 = (
+                    [
+                        complex(*trans.transformPoint((pt.real, pt.imag)))
+                        for pt in c1[0]
+                    ],
+                ) + c1[1:]
+                new_contour1.append(new_c1)
+
+            # Next few lines duplicate from above.
+            costs = [
+                vdiff_hypot2_complex(new_c0[0], new_c1[0]) for new_c1 in new_contour1
+            ]
+            min_cost_idx, min_cost = min(enumerate(costs), key=lambda x: x[1])
+            first_cost = costs[0]
+            if min_cost < first_cost * tolerance:
+                # Don't report this
+                # min_cost = first_cost
+                # reverse = False
+                # proposed_point = 0  # new_contour1[min_cost_idx][1]
+                pass
+
+    this_tolerance = min_cost / first_cost if first_cost else 1
+    log.debug(
+        "test-starting-point: tolerance %g",
+        this_tolerance,
+    )
+    return this_tolerance, proposed_point, reverse

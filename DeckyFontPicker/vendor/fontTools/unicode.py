@@ -1,1 +1,50 @@
-ZGVmIF9tYWtldW5pY29kZXMoZik6CiAgICBsaW5lcyA9IGl0ZXIoZi5yZWFkbGluZXMoKSkKICAgIHVuaWNvZGVzID0ge30KICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgIGlmIG5vdCBsaW5lOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIG51bSwgbmFtZSA9IGxpbmUuc3BsaXQoIjsiKVs6Ml0KICAgICAgICBpZiBuYW1lWzBdID09ICI8IjoKICAgICAgICAgICAgY29udGludWUgICMgIjxjb250cm9sPiIsIGV0Yy4KICAgICAgICBudW0gPSBpbnQobnVtLCAxNikKICAgICAgICB1bmljb2Rlc1tudW1dID0gbmFtZQogICAgcmV0dXJuIHVuaWNvZGVzCgoKY2xhc3MgX1VuaWNvZGVDdXN0b20ob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmKToKICAgICAgICBpZiBpc2luc3RhbmNlKGYsIHN0cik6CiAgICAgICAgICAgIHdpdGggb3BlbihmKSBhcyBmZDoKICAgICAgICAgICAgICAgIGNvZGVzID0gX21ha2V1bmljb2RlcyhmZCkKICAgICAgICBlbHNlOgogICAgICAgICAgICBjb2RlcyA9IF9tYWtldW5pY29kZXMoZikKICAgICAgICBzZWxmLmNvZGVzID0gY29kZXMKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgY2hhckNvZGUpOgogICAgICAgIHRyeToKICAgICAgICAgICAgcmV0dXJuIHNlbGYuY29kZXNbY2hhckNvZGVdCiAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICByZXR1cm4gIj8/Pz8iCgoKY2xhc3MgX1VuaWNvZGVCdWlsdGluKG9iamVjdCk6CiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgY2hhckNvZGUpOgogICAgICAgIHRyeToKICAgICAgICAgICAgIyB1c2UgdW5pY29kZWRhdGEgYmFja3BvcnQgdG8gcHl0aG9uMiwgaWYgYXZhaWxhYmxlOgogICAgICAgICAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9taWtla2FwL3VuaWNvZGVkYXRhMgogICAgICAgICAgICBpbXBvcnQgdW5pY29kZWRhdGEyIGFzIHVuaWNvZGVkYXRhCiAgICAgICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgICAgICBpbXBvcnQgdW5pY29kZWRhdGEKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJldHVybiB1bmljb2RlZGF0YS5uYW1lKGNocihjaGFyQ29kZSkpCiAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHJldHVybiAiPz8/PyIKCgpVbmljb2RlID0gX1VuaWNvZGVCdWlsdGluKCkKCgpkZWYgc2V0VW5pY29kZURhdGEoZik6CiAgICBnbG9iYWwgVW5pY29kZQogICAgVW5pY29kZSA9IF9Vbmljb2RlQ3VzdG9tKGYpCg==
+def _makeunicodes(f):
+    lines = iter(f.readlines())
+    unicodes = {}
+    for line in lines:
+        if not line:
+            continue
+        num, name = line.split(";")[:2]
+        if name[0] == "<":
+            continue  # "<control>", etc.
+        num = int(num, 16)
+        unicodes[num] = name
+    return unicodes
+
+
+class _UnicodeCustom(object):
+    def __init__(self, f):
+        if isinstance(f, str):
+            with open(f) as fd:
+                codes = _makeunicodes(fd)
+        else:
+            codes = _makeunicodes(f)
+        self.codes = codes
+
+    def __getitem__(self, charCode):
+        try:
+            return self.codes[charCode]
+        except KeyError:
+            return "????"
+
+
+class _UnicodeBuiltin(object):
+    def __getitem__(self, charCode):
+        try:
+            # use unicodedata backport to python2, if available:
+            # https://github.com/mikekap/unicodedata2
+            import unicodedata2 as unicodedata
+        except ImportError:
+            import unicodedata
+        try:
+            return unicodedata.name(chr(charCode))
+        except ValueError:
+            return "????"
+
+
+Unicode = _UnicodeBuiltin()
+
+
+def setUnicodeData(f):
+    global Unicode
+    Unicode = _UnicodeCustom(f)

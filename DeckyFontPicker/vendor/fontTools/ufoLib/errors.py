@@ -1,1 +1,30 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKCmNsYXNzIFVGT0xpYkVycm9yKEV4Y2VwdGlvbik6CiAgICBwYXNzCgoKY2xhc3MgVW5zdXBwb3J0ZWRVRk9Gb3JtYXQoVUZPTGliRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIEdsaWZMaWJFcnJvcihVRk9MaWJFcnJvcik6CiAgICAiIiJBbiBlcnJvciByYWlzZWQgYnkgZ2xpZkxpYi4KCiAgICBUaGlzIGNsYXNzIGlzIGEgbG9vc2UgYmFja3BvcnQgb2YgUEVQIDY3OCwgYWRkaW5nIGEgOmF0dHI6YC5ub3RlYAogICAgYXR0cmlidXRlIHRoYXQgY2FuIGhvbGQgYWRkaXRpb25hbCBjb250ZXh0IGZvciBlcnJvcnMgZW5jb3VudGVyZWQuCgogICAgSXQgd2lsbCBiZSBtYWludGFpbmVkIHVudGlsIG9ubHkgUHl0aG9uIDMuMTEtYW5kLWxhdGVyIGFyZSBzdXBwb3J0ZWQuCiAgICAiIiIKCiAgICBkZWYgX2FkZF9ub3RlKHNlbGYsIG5vdGU6IHN0cikgLT4gTm9uZToKICAgICAgICAjIExvb3NlIGJhY2twb3J0IG9mIFBFUCA2NzggdW50aWwgd2Ugb25seSBzdXBwb3J0IFB5dGhvbiAzLjExKywgdXNlZCBmb3IKICAgICAgICAjIGFkZGluZyBhZGRpdGlvbmFsIGNvbnRleHQgdG8gZXJyb3JzLgogICAgICAgICMgVE9ETzogUmVwbGFjZSB3aXRoIGh0dHBzOi8vZG9jcy5weXRob24ub3JnLzMuMTEvbGlicmFyeS9leGNlcHRpb25zLmh0bWwjQmFzZUV4Y2VwdGlvbi5hZGRfbm90ZQogICAgICAgIG1lc3NhZ2UsICpyZXN0ID0gc2VsZi5hcmdzCiAgICAgICAgc2VsZi5hcmdzID0gKChtZXNzYWdlICsgIlxuIiArIG5vdGUpLCAqcmVzdCkKCgpjbGFzcyBVbnN1cHBvcnRlZEdMSUZGb3JtYXQoR2xpZkxpYkVycm9yKToKICAgIHBhc3MK
+from __future__ import annotations
+
+
+class UFOLibError(Exception):
+    pass
+
+
+class UnsupportedUFOFormat(UFOLibError):
+    pass
+
+
+class GlifLibError(UFOLibError):
+    """An error raised by glifLib.
+
+    This class is a loose backport of PEP 678, adding a :attr:`.note`
+    attribute that can hold additional context for errors encountered.
+
+    It will be maintained until only Python 3.11-and-later are supported.
+    """
+
+    def _add_note(self, note: str) -> None:
+        # Loose backport of PEP 678 until we only support Python 3.11+, used for
+        # adding additional context to errors.
+        # TODO: Replace with https://docs.python.org/3.11/library/exceptions.html#BaseException.add_note
+        message, *rest = self.args
+        self.args = ((message + "\n" + note), *rest)
+
+
+class UnsupportedGLIFFormat(GlifLibError):
+    pass

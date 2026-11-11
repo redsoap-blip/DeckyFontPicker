@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfX2xfY19hX3IoQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJMaWdhdHVyZSBDYXJldCB0YWJsZQoKICAgIFRoZSBBQVQgYGBsY2FyYGAgdGFibGUgc3RvcmVzIGRpdmlzaW9uIHBvaW50cyB3aXRoaW4gbGlnYXR1cmVzLCB3aGljaCBhcHBsaWNhdGlvbnMKICAgIGNhbiB1c2UgdG8gcG9zaXRpb24gY2FyZXRzIHByb3Blcmx5IGJldHdlZW4gdGhlIGxvZ2ljYWwgcGFydHMgb2YgdGhlIGxpZ2F0dXJlLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZsY2FyLmh0bWwKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table__l_c_a_r(BaseTTXConverter):
+    """Ligature Caret table
+
+    The AAT ``lcar`` table stores division points within ligatures, which applications
+    can use to position carets properly between the logical parts of the ligature.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6lcar.html
+    """
+
+    pass

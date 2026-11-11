@@ -1,1 +1,177 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSAuc2JpeEdseXBoIGltcG9ydCBHbHlwaAppbXBvcnQgc3RydWN0CgpzYml4U3RyaWtlSGVhZGVyRm9ybWF0ID0gIiIiCgk+CglwcGVtOiAgICAgICAgICBICSMgVGhlIFBQRU0gZm9yIHdoaWNoIHRoaXMgc3RyaWtlIHdhcyBkZXNpZ25lZCAoZS5nLiwgOSwKCQkJCQkJIyAxMiwgMjQpCglyZXNvbHV0aW9uOiAgICBICSMgVGhlIHNjcmVlbiByZXNvbHV0aW9uIChpbiBkcGkpIGZvciB3aGljaCB0aGlzIHN0cmlrZQoJCQkJCQkjIHdhcyBkZXNpZ25lZCAoZS5nLiwgNzIpCiIiIgoKc2JpeEdseXBoRGF0YU9mZnNldEZvcm1hdCA9ICIiIgoJPgoJZ2x5cGhEYXRhT2Zmc2V0OiAgIEwJIyBPZmZzZXQgZnJvbSB0aGUgYmVnaW5uaW5nIG9mIHRoZSBzdHJpa2UgZGF0YSByZWNvcmQKCQkJCQkJCSMgdG8gZGF0YSBmb3IgdGhlIGluZGl2aWR1YWwgZ2x5cGgKIiIiCgpzYml4U3RyaWtlSGVhZGVyRm9ybWF0U2l6ZSA9IHNzdHJ1Y3QuY2FsY3NpemUoc2JpeFN0cmlrZUhlYWRlckZvcm1hdCkKc2JpeEdseXBoRGF0YU9mZnNldEZvcm1hdFNpemUgPSBzc3RydWN0LmNhbGNzaXplKHNiaXhHbHlwaERhdGFPZmZzZXRGb3JtYXQpCgoKY2xhc3MgU3RyaWtlKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgcmF3ZGF0YT1Ob25lLCBwcGVtPTAsIHJlc29sdXRpb249NzIpOgogICAgICAgIHNlbGYuZGF0YSA9IHJhd2RhdGEKICAgICAgICBzZWxmLnBwZW0gPSBwcGVtCiAgICAgICAgc2VsZi5yZXNvbHV0aW9uID0gcmVzb2x1dGlvbgogICAgICAgIHNlbGYuZ2x5cGhzID0ge30KCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaWYgc2VsZi5kYXRhIGlzIE5vbmU6CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKICAgICAgICAgICAgcmFpc2UgdHRMaWIuVFRMaWJFcnJvcgogICAgICAgIGlmIGxlbihzZWxmLmRhdGEpIDwgc2JpeFN0cmlrZUhlYWRlckZvcm1hdFNpemU6CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKICAgICAgICAgICAgcmFpc2UgKAogICAgICAgICAgICAgICAgdHRMaWIuVFRMaWJFcnJvciwKICAgICAgICAgICAgICAgICJTdHJpa2UgaGVhZGVyIHRvbyBzaG9ydDogRXhwZWN0ZWQgJXgsIGdvdCAleC4iLAogICAgICAgICAgICApICUgKHNiaXhTdHJpa2VIZWFkZXJGb3JtYXRTaXplLCBsZW4oc2VsZi5kYXRhKSkKCiAgICAgICAgIyByZWFkIFN0cmlrZSBoZWFkZXIgZnJvbSByYXcgZGF0YQogICAgICAgIHNzdHJ1Y3QudW5wYWNrKAogICAgICAgICAgICBzYml4U3RyaWtlSGVhZGVyRm9ybWF0LCBzZWxmLmRhdGFbOnNiaXhTdHJpa2VIZWFkZXJGb3JtYXRTaXplXSwgc2VsZgogICAgICAgICkKCiAgICAgICAgIyBjYWxjdWxhdGUgbnVtYmVyIG9mIGdseXBocwogICAgICAgIChmaXJzdEdseXBoRGF0YU9mZnNldCwpID0gc3RydWN0LnVucGFjaygKICAgICAgICAgICAgIj5MIiwKICAgICAgICAgICAgc2VsZi5kYXRhWwogICAgICAgICAgICAgICAgc2JpeFN0cmlrZUhlYWRlckZvcm1hdFNpemUgOiBzYml4U3RyaWtlSGVhZGVyRm9ybWF0U2l6ZQogICAgICAgICAgICAgICAgKyBzYml4R2x5cGhEYXRhT2Zmc2V0Rm9ybWF0U2l6ZQogICAgICAgICAgICBdLAogICAgICAgICkKICAgICAgICBzZWxmLm51bUdseXBocyA9ICgKICAgICAgICAgICAgZmlyc3RHbHlwaERhdGFPZmZzZXQgLSBzYml4U3RyaWtlSGVhZGVyRm9ybWF0U2l6ZQogICAgICAgICkgLy8gc2JpeEdseXBoRGF0YU9mZnNldEZvcm1hdFNpemUgLSAxCiAgICAgICAgIyBeIC0xIGJlY2F1c2UgdGhlcmUncyBvbmUgbW9yZSBvZmZzZXQgdGhhbiBnbHlwaHMKCiAgICAgICAgIyBidWlsZCBvZmZzZXQgbGlzdCBmb3Igc2luZ2xlIGdseXBoIGRhdGEgb2Zmc2V0cwogICAgICAgIHNlbGYuZ2x5cGhEYXRhT2Zmc2V0cyA9IFtdCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UoCiAgICAgICAgICAgIHNlbGYubnVtR2x5cGhzICsgMQogICAgICAgICk6ICAjICsgMSBiZWNhdXNlIHRoZXJlJ3Mgb25lIG1vcmUgb2Zmc2V0IHRoYW4gZ2x5cGhzCiAgICAgICAgICAgIHN0YXJ0ID0gaSAqIHNiaXhHbHlwaERhdGFPZmZzZXRGb3JtYXRTaXplICsgc2JpeFN0cmlrZUhlYWRlckZvcm1hdFNpemUKICAgICAgICAgICAgKGN1cnJlbnRfb2Zmc2V0LCkgPSBzdHJ1Y3QudW5wYWNrKAogICAgICAgICAgICAgICAgIj5MIiwgc2VsZi5kYXRhW3N0YXJ0IDogc3RhcnQgKyBzYml4R2x5cGhEYXRhT2Zmc2V0Rm9ybWF0U2l6ZV0KICAgICAgICAgICAgKQogICAgICAgICAgICBzZWxmLmdseXBoRGF0YU9mZnNldHMuYXBwZW5kKGN1cnJlbnRfb2Zmc2V0KQoKICAgICAgICAjIGl0ZXJhdGUgdGhyb3VnaCBvZmZzZXQgbGlzdCBhbmQgc2xpY2UgcmF3IGRhdGEgaW50byBnbHlwaCBkYXRhIHJlY29yZHMKICAgICAgICBmb3IgaSBpbiByYW5nZShzZWxmLm51bUdseXBocyk6CiAgICAgICAgICAgIGN1cnJlbnRfZ2x5cGggPSBHbHlwaCgKICAgICAgICAgICAgICAgIHJhd2RhdGE9c2VsZi5kYXRhWwogICAgICAgICAgICAgICAgICAgIHNlbGYuZ2x5cGhEYXRhT2Zmc2V0c1tpXSA6IHNlbGYuZ2x5cGhEYXRhT2Zmc2V0c1tpICsgMV0KICAgICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgICBnaWQ9aSwKICAgICAgICAgICAgKQogICAgICAgICAgICBjdXJyZW50X2dseXBoLmRlY29tcGlsZSh0dEZvbnQpCiAgICAgICAgICAgIHNlbGYuZ2x5cGhzW2N1cnJlbnRfZ2x5cGguZ2x5cGhOYW1lXSA9IGN1cnJlbnRfZ2x5cGgKICAgICAgICBkZWwgc2VsZi5nbHlwaERhdGFPZmZzZXRzCiAgICAgICAgZGVsIHNlbGYubnVtR2x5cGhzCiAgICAgICAgZGVsIHNlbGYuZGF0YQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgc2VsZi5nbHlwaERhdGFPZmZzZXRzID0gYiIiCiAgICAgICAgc2VsZi5iaXRtYXBEYXRhID0gYiIiCgogICAgICAgIGdseXBoT3JkZXIgPSB0dEZvbnQuZ2V0R2x5cGhPcmRlcigpCgogICAgICAgICMgZmlyc3QgZ2x5cGggc3RhcnRzIHJpZ2h0IGFmdGVyIHRoZSBoZWFkZXIKICAgICAgICBjdXJyZW50R2x5cGhEYXRhT2Zmc2V0ID0gKAogICAgICAgICAgICBzYml4U3RyaWtlSGVhZGVyRm9ybWF0U2l6ZQogICAgICAgICAgICArIHNiaXhHbHlwaERhdGFPZmZzZXRGb3JtYXRTaXplICogKGxlbihnbHlwaE9yZGVyKSArIDEpCiAgICAgICAgKQogICAgICAgIGZvciBnbHlwaE5hbWUgaW4gZ2x5cGhPcmRlcjoKICAgICAgICAgICAgaWYgZ2x5cGhOYW1lIGluIHNlbGYuZ2x5cGhzOgogICAgICAgICAgICAgICAgIyB3ZSBoYXZlIGdseXBoIGRhdGEgZm9yIHRoaXMgZ2x5cGgKICAgICAgICAgICAgICAgIGN1cnJlbnRfZ2x5cGggPSBzZWxmLmdseXBoc1tnbHlwaE5hbWVdCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAjIG11c3QgYWRkIGVtcHR5IGdseXBoIGRhdGEgcmVjb3JkIGZvciB0aGlzIGdseXBoCiAgICAgICAgICAgICAgICBjdXJyZW50X2dseXBoID0gR2x5cGgoZ2x5cGhOYW1lPWdseXBoTmFtZSkKICAgICAgICAgICAgY3VycmVudF9nbHlwaC5jb21waWxlKHR0Rm9udCkKICAgICAgICAgICAgY3VycmVudF9nbHlwaC5nbHlwaERhdGFPZmZzZXQgPSBjdXJyZW50R2x5cGhEYXRhT2Zmc2V0CiAgICAgICAgICAgIHNlbGYuYml0bWFwRGF0YSArPSBjdXJyZW50X2dseXBoLnJhd2RhdGEKICAgICAgICAgICAgY3VycmVudEdseXBoRGF0YU9mZnNldCArPSBsZW4oY3VycmVudF9nbHlwaC5yYXdkYXRhKQogICAgICAgICAgICBzZWxmLmdseXBoRGF0YU9mZnNldHMgKz0gc3N0cnVjdC5wYWNrKAogICAgICAgICAgICAgICAgc2JpeEdseXBoRGF0YU9mZnNldEZvcm1hdCwgY3VycmVudF9nbHlwaAogICAgICAgICAgICApCgogICAgICAgICMgYWRkIGxhc3QgIm9mZnNldCIsIHJlYWxseSB0aGUgZW5kIGFkZHJlc3Mgb2YgdGhlIGxhc3QgZ2x5cGggZGF0YSByZWNvcmQKICAgICAgICBkdW1teSA9IEdseXBoKCkKICAgICAgICBkdW1teS5nbHlwaERhdGFPZmZzZXQgPSBjdXJyZW50R2x5cGhEYXRhT2Zmc2V0CiAgICAgICAgc2VsZi5nbHlwaERhdGFPZmZzZXRzICs9IHNzdHJ1Y3QucGFjayhzYml4R2x5cGhEYXRhT2Zmc2V0Rm9ybWF0LCBkdW1teSkKCiAgICAgICAgIyBwYWNrIGhlYWRlcgogICAgICAgIHNlbGYuZGF0YSA9IHNzdHJ1Y3QucGFjayhzYml4U3RyaWtlSGVhZGVyRm9ybWF0LCBzZWxmKQogICAgICAgICMgYWRkIG9mZnNldHMgYW5kIGltYWdlIGRhdGEgYWZ0ZXIgaGVhZGVyCiAgICAgICAgc2VsZi5kYXRhICs9IHNlbGYuZ2x5cGhEYXRhT2Zmc2V0cyArIHNlbGYuYml0bWFwRGF0YQoKICAgIGRlZiB0b1hNTChzZWxmLCB4bWxXcml0ZXIsIHR0Rm9udCk6CiAgICAgICAgeG1sV3JpdGVyLmJlZ2ludGFnKCJzdHJpa2UiKQogICAgICAgIHhtbFdyaXRlci5uZXdsaW5lKCkKICAgICAgICB4bWxXcml0ZXIuc2ltcGxldGFnKCJwcGVtIiwgdmFsdWU9c2VsZi5wcGVtKQogICAgICAgIHhtbFdyaXRlci5uZXdsaW5lKCkKICAgICAgICB4bWxXcml0ZXIuc2ltcGxldGFnKCJyZXNvbHV0aW9uIiwgdmFsdWU9c2VsZi5yZXNvbHV0aW9uKQogICAgICAgIHhtbFdyaXRlci5uZXdsaW5lKCkKICAgICAgICBnbHlwaE9yZGVyID0gdHRGb250LmdldEdseXBoT3JkZXIoKQogICAgICAgIGZvciBnbHlwaE5hbWUgaW4gZ2x5cGhPcmRlcjoKICAgICAgICAgICAgaWYgZ2x5cGhOYW1lIGluIHNlbGYuZ2x5cGhzOgogICAgICAgICAgICAgICAgc2VsZi5nbHlwaHNbZ2x5cGhOYW1lXS50b1hNTCh4bWxXcml0ZXIsIHR0Rm9udCkKICAgICAgICAgICAgICAgICMgVE9ETzogd2hhdCBpZiB0aGVyZSBhcmUgbW9yZSBnbHlwaCBkYXRhIHJlY29yZHMgdGhhbiAoZ2x5ZiB0YWJsZSkgZ2x5cGhzPwogICAgICAgIHhtbFdyaXRlci5lbmR0YWcoInN0cmlrZSIpCiAgICAgICAgeG1sV3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgaW4gWyJwcGVtIiwgInJlc29sdXRpb24iXToKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBuYW1lLCBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkpCiAgICAgICAgZWxpZiBuYW1lID09ICJnbHlwaCI6CiAgICAgICAgICAgIGlmICJncmFwaGljVHlwZSIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICBteUZvcm1hdCA9IHNhZmVFdmFsKCInJyciICsgYXR0cnNbImdyYXBoaWNUeXBlIl0gKyAiJycnIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG15Rm9ybWF0ID0gTm9uZQogICAgICAgICAgICBpZiAiZ2x5cGhuYW1lIiBpbiBhdHRyczoKICAgICAgICAgICAgICAgIG15R2x5cGhOYW1lID0gc2FmZUV2YWwoIicnJyIgKyBhdHRyc1siZ2x5cGhuYW1lIl0gKyAiJycnIikKICAgICAgICAgICAgZWxpZiAibmFtZSIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICBteUdseXBoTmFtZSA9IHNhZmVFdmFsKCInJyciICsgYXR0cnNbIm5hbWUiXSArICInJyciKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgogICAgICAgICAgICAgICAgcmFpc2UgdHRMaWIuVFRMaWJFcnJvcigiR2x5cGggbXVzdCBoYXZlIGEgZ2x5cGggbmFtZS4iKQogICAgICAgICAgICBpZiAib3JpZ2luT2Zmc2V0WCIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICBteU9mZnNldFggPSBzYWZlRXZhbChhdHRyc1sib3JpZ2luT2Zmc2V0WCJdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgbXlPZmZzZXRYID0gMAogICAgICAgICAgICBpZiAib3JpZ2luT2Zmc2V0WSIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICBteU9mZnNldFkgPSBzYWZlRXZhbChhdHRyc1sib3JpZ2luT2Zmc2V0WSJdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgbXlPZmZzZXRZID0gMAogICAgICAgICAgICBjdXJyZW50X2dseXBoID0gR2x5cGgoCiAgICAgICAgICAgICAgICBnbHlwaE5hbWU9bXlHbHlwaE5hbWUsCiAgICAgICAgICAgICAgICBncmFwaGljVHlwZT1teUZvcm1hdCwKICAgICAgICAgICAgICAgIG9yaWdpbk9mZnNldFg9bXlPZmZzZXRYLAogICAgICAgICAgICAgICAgb3JpZ2luT2Zmc2V0WT1teU9mZnNldFksCiAgICAgICAgICAgICkKICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIG5hbWUsIGF0dHJzLCBjb250ZW50ID0gZWxlbWVudAogICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZ2x5cGguZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KQogICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZ2x5cGguY29tcGlsZSh0dEZvbnQpCiAgICAgICAgICAgIHNlbGYuZ2x5cGhzW2N1cnJlbnRfZ2x5cGguZ2x5cGhOYW1lXSA9IGN1cnJlbnRfZ2x5cGgKICAgICAgICBlbHNlOgogICAgICAgICAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgdHRMaWIKCiAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoImNhbid0IGhhbmRsZSAnJXMnIGVsZW1lbnQiICUgbmFtZSkK
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+from .sbixGlyph import Glyph
+import struct
+
+sbixStrikeHeaderFormat = """
+	>
+	ppem:          H	# The PPEM for which this strike was designed (e.g., 9,
+						# 12, 24)
+	resolution:    H	# The screen resolution (in dpi) for which this strike
+						# was designed (e.g., 72)
+"""
+
+sbixGlyphDataOffsetFormat = """
+	>
+	glyphDataOffset:   L	# Offset from the beginning of the strike data record
+							# to data for the individual glyph
+"""
+
+sbixStrikeHeaderFormatSize = sstruct.calcsize(sbixStrikeHeaderFormat)
+sbixGlyphDataOffsetFormatSize = sstruct.calcsize(sbixGlyphDataOffsetFormat)
+
+
+class Strike(object):
+    def __init__(self, rawdata=None, ppem=0, resolution=72):
+        self.data = rawdata
+        self.ppem = ppem
+        self.resolution = resolution
+        self.glyphs = {}
+
+    def decompile(self, ttFont):
+        if self.data is None:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError
+        if len(self.data) < sbixStrikeHeaderFormatSize:
+            from fontTools import ttLib
+
+            raise (
+                ttLib.TTLibError,
+                "Strike header too short: Expected %x, got %x.",
+            ) % (sbixStrikeHeaderFormatSize, len(self.data))
+
+        # read Strike header from raw data
+        sstruct.unpack(
+            sbixStrikeHeaderFormat, self.data[:sbixStrikeHeaderFormatSize], self
+        )
+
+        # calculate number of glyphs
+        (firstGlyphDataOffset,) = struct.unpack(
+            ">L",
+            self.data[
+                sbixStrikeHeaderFormatSize : sbixStrikeHeaderFormatSize
+                + sbixGlyphDataOffsetFormatSize
+            ],
+        )
+        self.numGlyphs = (
+            firstGlyphDataOffset - sbixStrikeHeaderFormatSize
+        ) // sbixGlyphDataOffsetFormatSize - 1
+        # ^ -1 because there's one more offset than glyphs
+
+        # build offset list for single glyph data offsets
+        self.glyphDataOffsets = []
+        for i in range(
+            self.numGlyphs + 1
+        ):  # + 1 because there's one more offset than glyphs
+            start = i * sbixGlyphDataOffsetFormatSize + sbixStrikeHeaderFormatSize
+            (current_offset,) = struct.unpack(
+                ">L", self.data[start : start + sbixGlyphDataOffsetFormatSize]
+            )
+            self.glyphDataOffsets.append(current_offset)
+
+        # iterate through offset list and slice raw data into glyph data records
+        for i in range(self.numGlyphs):
+            current_glyph = Glyph(
+                rawdata=self.data[
+                    self.glyphDataOffsets[i] : self.glyphDataOffsets[i + 1]
+                ],
+                gid=i,
+            )
+            current_glyph.decompile(ttFont)
+            self.glyphs[current_glyph.glyphName] = current_glyph
+        del self.glyphDataOffsets
+        del self.numGlyphs
+        del self.data
+
+    def compile(self, ttFont):
+        self.glyphDataOffsets = b""
+        self.bitmapData = b""
+
+        glyphOrder = ttFont.getGlyphOrder()
+
+        # first glyph starts right after the header
+        currentGlyphDataOffset = (
+            sbixStrikeHeaderFormatSize
+            + sbixGlyphDataOffsetFormatSize * (len(glyphOrder) + 1)
+        )
+        for glyphName in glyphOrder:
+            if glyphName in self.glyphs:
+                # we have glyph data for this glyph
+                current_glyph = self.glyphs[glyphName]
+            else:
+                # must add empty glyph data record for this glyph
+                current_glyph = Glyph(glyphName=glyphName)
+            current_glyph.compile(ttFont)
+            current_glyph.glyphDataOffset = currentGlyphDataOffset
+            self.bitmapData += current_glyph.rawdata
+            currentGlyphDataOffset += len(current_glyph.rawdata)
+            self.glyphDataOffsets += sstruct.pack(
+                sbixGlyphDataOffsetFormat, current_glyph
+            )
+
+        # add last "offset", really the end address of the last glyph data record
+        dummy = Glyph()
+        dummy.glyphDataOffset = currentGlyphDataOffset
+        self.glyphDataOffsets += sstruct.pack(sbixGlyphDataOffsetFormat, dummy)
+
+        # pack header
+        self.data = sstruct.pack(sbixStrikeHeaderFormat, self)
+        # add offsets and image data after header
+        self.data += self.glyphDataOffsets + self.bitmapData
+
+    def toXML(self, xmlWriter, ttFont):
+        xmlWriter.begintag("strike")
+        xmlWriter.newline()
+        xmlWriter.simpletag("ppem", value=self.ppem)
+        xmlWriter.newline()
+        xmlWriter.simpletag("resolution", value=self.resolution)
+        xmlWriter.newline()
+        glyphOrder = ttFont.getGlyphOrder()
+        for glyphName in glyphOrder:
+            if glyphName in self.glyphs:
+                self.glyphs[glyphName].toXML(xmlWriter, ttFont)
+                # TODO: what if there are more glyph data records than (glyf table) glyphs?
+        xmlWriter.endtag("strike")
+        xmlWriter.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name in ["ppem", "resolution"]:
+            setattr(self, name, safeEval(attrs["value"]))
+        elif name == "glyph":
+            if "graphicType" in attrs:
+                myFormat = safeEval("'''" + attrs["graphicType"] + "'''")
+            else:
+                myFormat = None
+            if "glyphname" in attrs:
+                myGlyphName = safeEval("'''" + attrs["glyphname"] + "'''")
+            elif "name" in attrs:
+                myGlyphName = safeEval("'''" + attrs["name"] + "'''")
+            else:
+                from fontTools import ttLib
+
+                raise ttLib.TTLibError("Glyph must have a glyph name.")
+            if "originOffsetX" in attrs:
+                myOffsetX = safeEval(attrs["originOffsetX"])
+            else:
+                myOffsetX = 0
+            if "originOffsetY" in attrs:
+                myOffsetY = safeEval(attrs["originOffsetY"])
+            else:
+                myOffsetY = 0
+            current_glyph = Glyph(
+                glyphName=myGlyphName,
+                graphicType=myFormat,
+                originOffsetX=myOffsetX,
+                originOffsetY=myOffsetY,
+            )
+            for element in content:
+                if isinstance(element, tuple):
+                    name, attrs, content = element
+                    current_glyph.fromXML(name, attrs, content, ttFont)
+                    current_glyph.compile(ttFont)
+            self.glyphs[current_glyph.glyphName] = current_glyph
+        else:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("can't handle '%s' element" % name)

@@ -1,1 +1,32 @@
-IiIiU3BlY2lhbGl6YXRpb24gb2YgZm9udFRvb2xzLm1pc2MudmlzaXRvciB0byB3b3JrIHdpdGggVFRGb250LiIiIgoKZnJvbSBmb250VG9vbHMubWlzYy52aXNpdG9yIGltcG9ydCBWaXNpdG9yCmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKCgpjbGFzcyBUVFZpc2l0b3IoVmlzaXRvcik6CiAgICBkZWYgdmlzaXRBdHRyKHNlbGYsIG9iaiwgYXR0ciwgdmFsdWUsICphcmdzLCAqKmt3YXJncyk6CiAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgVFRGb250KToKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgc3VwZXIoKS52aXNpdEF0dHIob2JqLCBhdHRyLCB2YWx1ZSwgKmFyZ3MsICoqa3dhcmdzKQoKICAgIGRlZiB2aXNpdChzZWxmLCBvYmosICphcmdzLCAqKmt3YXJncyk6CiAgICAgICAgaWYgaGFzYXR0cihvYmosICJlbnN1cmVEZWNvbXBpbGVkIik6CiAgICAgICAgICAgIG9iai5lbnN1cmVEZWNvbXBpbGVkKHJlY3Vyc2U9RmFsc2UpCiAgICAgICAgc3VwZXIoKS52aXNpdChvYmosICphcmdzLCAqKmt3YXJncykKCgpAVFRWaXNpdG9yLnJlZ2lzdGVyKFRURm9udCkKZGVmIHZpc2l0KHZpc2l0b3IsIGZvbnQsICphcmdzLCAqKmt3YXJncyk6CiAgICAjIFNvbWUgb2JqZWN0cyBoYXZlIGxpbmtzIGJhY2sgdG8gVFRGb250OyBldmVuIHRob3VnaCB3ZQogICAgIyBoYXZlIGEgY2hlY2sgaW4gdmlzaXRBdHRyIHRvIHN0b3AgdGhlbSBmcm9tIHJlY3Vyc2luZwogICAgIyBvbnRvIFRURm9udCwgc29tZXRpbWVzIHRoZXkgc3RpbGwgZG8sIGZvciBleGFtcGxlIHdoZW4KICAgICMgc29tZW9uZSBvdmVycmlkZXMgdmlzaXRBdHRyLgogICAgaWYgaGFzYXR0cih2aXNpdG9yLCAiZm9udCIpOgogICAgICAgIHJldHVybiBGYWxzZQoKICAgIHZpc2l0b3IuZm9udCA9IGZvbnQKICAgIGZvciB0YWcgaW4gZm9udC5rZXlzKCk6CiAgICAgICAgdmlzaXRvci52aXNpdChmb250W3RhZ10sICphcmdzLCAqKmt3YXJncykKICAgIGRlbCB2aXNpdG9yLmZvbnQKICAgIHJldHVybiBGYWxzZQo=
+"""Specialization of fontTools.misc.visitor to work with TTFont."""
+
+from fontTools.misc.visitor import Visitor
+from fontTools.ttLib import TTFont
+
+
+class TTVisitor(Visitor):
+    def visitAttr(self, obj, attr, value, *args, **kwargs):
+        if isinstance(value, TTFont):
+            return False
+        super().visitAttr(obj, attr, value, *args, **kwargs)
+
+    def visit(self, obj, *args, **kwargs):
+        if hasattr(obj, "ensureDecompiled"):
+            obj.ensureDecompiled(recurse=False)
+        super().visit(obj, *args, **kwargs)
+
+
+@TTVisitor.register(TTFont)
+def visit(visitor, font, *args, **kwargs):
+    # Some objects have links back to TTFont; even though we
+    # have a check in visitAttr to stop them from recursing
+    # onto TTFont, sometimes they still do, for example when
+    # someone overrides visitAttr.
+    if hasattr(visitor, "font"):
+        return False
+
+    visitor.font = font
+    for tag in font.keys():
+        visitor.visit(font[tag], *args, **kwargs)
+    del visitor.font
+    return False

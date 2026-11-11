@@ -1,1 +1,542 @@
-aW1wb3J0IHN5cwppbXBvcnQgbG9nZ2luZwppbXBvcnQgdGltZWl0CmZyb20gZnVuY3Rvb2xzIGltcG9ydCB3cmFwcwpmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgTWFwcGluZywgQ2FsbGFibGUKaW1wb3J0IHdhcm5pbmdzCmZyb20gbG9nZ2luZyBpbXBvcnQgUGVyY2VudFN0eWxlCgojIGRlZmF1bHQgbG9nZ2luZyBsZXZlbCB1c2VkIGJ5IFRpbWVyIGNsYXNzClRJTUVfTEVWRUwgPSBsb2dnaW5nLkRFQlVHCgojIHBlci1sZXZlbCBmb3JtYXQgc3RyaW5ncyB1c2VkIGJ5IHRoZSBkZWZhdWx0IGZvcm1hdHRlcgojICh0aGUgbGV2ZWwgbmFtZSBpcyBub3QgcHJpbnRlZCBmb3IgSU5GTyBhbmQgREVCVUcgbWVzc2FnZXMpCkRFRkFVTFRfRk9STUFUUyA9IHsKICAgICIqIjogIiUobGV2ZWxuYW1lKXM6ICUobWVzc2FnZSlzIiwKICAgICJJTkZPIjogIiUobWVzc2FnZSlzIiwKICAgICJERUJVRyI6ICIlKG1lc3NhZ2UpcyIsCn0KCgpjbGFzcyBMZXZlbEZvcm1hdHRlcihsb2dnaW5nLkZvcm1hdHRlcik6CiAgICAiIiJMb2cgZm9ybWF0dGVyIHdpdGggbGV2ZWwtc3BlY2lmaWMgZm9ybWF0dGluZy4KCiAgICBGb3JtYXR0ZXIgY2xhc3Mgd2hpY2ggb3B0aW9uYWxseSB0YWtlcyBhIGRpY3Qgb2YgbG9nZ2luZyBsZXZlbHMgdG8KICAgIGZvcm1hdCBzdHJpbmdzLCBhbGxvd2luZyB0byBjdXN0b21pc2UgdGhlIGxvZyByZWNvcmRzIGFwcGVhcmFuY2UgZm9yCiAgICBzcGVjaWZpYyBsZXZlbHMuCgoKICAgIEF0dHJpYnV0ZXM6CiAgICAgICAgICAgIGZtdDogQSBkaWN0aW9uYXJ5IG1hcHBpbmcgbG9nZ2luZyBsZXZlbHMgdG8gZm9ybWF0IHN0cmluZ3MuCiAgICAgICAgICAgICAgICAgICAgVGhlIGBgKmBgIGtleSBpZGVudGlmaWVzIHRoZSBkZWZhdWx0IGZvcm1hdCBzdHJpbmcuCiAgICAgICAgICAgIGRhdGVmbXQ6IEFzIHBlciBweTpjbGFzczpgbG9nZ2luZy5Gb3JtYXR0ZXJgCiAgICAgICAgICAgIHN0eWxlOiBBcyBwZXIgcHk6Y2xhc3M6YGxvZ2dpbmcuRm9ybWF0dGVyYAoKICAgID4+PiBpbXBvcnQgc3lzCiAgICA+Pj4gaGFuZGxlciA9IGxvZ2dpbmcuU3RyZWFtSGFuZGxlcihzeXMuc3Rkb3V0KQogICAgPj4+IGZvcm1hdHRlciA9IExldmVsRm9ybWF0dGVyKAogICAgLi4uICAgICBmbXQ9ewogICAgLi4uICAgICAgICAgJyonOiAgICAgJ1slKGxldmVsbmFtZSlzXSAlKG1lc3NhZ2UpcycsCiAgICAuLi4gICAgICAgICAnREVCVUcnOiAnJShuYW1lKXMgWyUobGV2ZWxuYW1lKXNdICUobWVzc2FnZSlzJywKICAgIC4uLiAgICAgICAgICdJTkZPJzogICclKG1lc3NhZ2UpcycsCiAgICAuLi4gICAgIH0pCiAgICA+Pj4gaGFuZGxlci5zZXRGb3JtYXR0ZXIoZm9ybWF0dGVyKQogICAgPj4+IGxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCd0ZXN0JykKICAgID4+PiBsb2cuc2V0TGV2ZWwobG9nZ2luZy5ERUJVRykKICAgID4+PiBsb2cuYWRkSGFuZGxlcihoYW5kbGVyKQogICAgPj4+IGxvZy5kZWJ1ZygndGhpcyB1c2VzIGEgY3VzdG9tIGZvcm1hdCBzdHJpbmcnKQogICAgdGVzdCBbREVCVUddIHRoaXMgdXNlcyBhIGN1c3RvbSBmb3JtYXQgc3RyaW5nCiAgICA+Pj4gbG9nLmluZm8oJ3RoaXMgYWxzbyB1c2VzIGEgY3VzdG9tIGZvcm1hdCBzdHJpbmcnKQogICAgdGhpcyBhbHNvIHVzZXMgYSBjdXN0b20gZm9ybWF0IHN0cmluZwogICAgPj4+IGxvZy53YXJuaW5nKCJ0aGlzIG9uZSB1c2VzIHRoZSBkZWZhdWx0IGZvcm1hdCBzdHJpbmciKQogICAgW1dBUk5JTkddIHRoaXMgb25lIHVzZXMgdGhlIGRlZmF1bHQgZm9ybWF0IHN0cmluZwogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGZtdD1Ob25lLCBkYXRlZm10PU5vbmUsIHN0eWxlPSIlIik6CiAgICAgICAgaWYgc3R5bGUgIT0gIiUiOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgIm9ubHkgJyUnIHBlcmNlbnQgc3R5bGUgaXMgc3VwcG9ydGVkIGluIGJvdGggcHl0aG9uIDIgYW5kIDMiCiAgICAgICAgICAgICkKICAgICAgICBpZiBmbXQgaXMgTm9uZToKICAgICAgICAgICAgZm10ID0gREVGQVVMVF9GT1JNQVRTCiAgICAgICAgaWYgaXNpbnN0YW5jZShmbXQsIHN0cik6CiAgICAgICAgICAgIGRlZmF1bHRfZm9ybWF0ID0gZm10CiAgICAgICAgICAgIGN1c3RvbV9mb3JtYXRzID0ge30KICAgICAgICBlbGlmIGlzaW5zdGFuY2UoZm10LCBNYXBwaW5nKToKICAgICAgICAgICAgY3VzdG9tX2Zvcm1hdHMgPSBkaWN0KGZtdCkKICAgICAgICAgICAgZGVmYXVsdF9mb3JtYXQgPSBjdXN0b21fZm9ybWF0cy5wb3AoIioiLCBOb25lKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIFR5cGVFcnJvcigiZm10IG11c3QgYmUgYSBzdHIgb3IgYSBkaWN0IG9mIHN0cjogJXIiICUgZm10KQogICAgICAgIHN1cGVyKExldmVsRm9ybWF0dGVyLCBzZWxmKS5fX2luaXRfXyhkZWZhdWx0X2Zvcm1hdCwgZGF0ZWZtdCkKICAgICAgICBzZWxmLmRlZmF1bHRfZm9ybWF0ID0gc2VsZi5fZm10CiAgICAgICAgc2VsZi5jdXN0b21fZm9ybWF0cyA9IHt9CiAgICAgICAgZm9yIGxldmVsLCBmbXQgaW4gY3VzdG9tX2Zvcm1hdHMuaXRlbXMoKToKICAgICAgICAgICAgbGV2ZWwgPSBsb2dnaW5nLl9jaGVja0xldmVsKGxldmVsKQogICAgICAgICAgICBzZWxmLmN1c3RvbV9mb3JtYXRzW2xldmVsXSA9IGZtdAoKICAgIGRlZiBmb3JtYXQoc2VsZiwgcmVjb3JkKToKICAgICAgICBpZiBzZWxmLmN1c3RvbV9mb3JtYXRzOgogICAgICAgICAgICBmbXQgPSBzZWxmLmN1c3RvbV9mb3JtYXRzLmdldChyZWNvcmQubGV2ZWxubywgc2VsZi5kZWZhdWx0X2Zvcm1hdCkKICAgICAgICAgICAgaWYgc2VsZi5fZm10ICE9IGZtdDoKICAgICAgICAgICAgICAgIHNlbGYuX2ZtdCA9IGZtdAogICAgICAgICAgICAgICAgIyBmb3IgcHl0aG9uID49IDMuMiwgX3N0eWxlIG5lZWRzIHRvIGJlIHNldCBpZiBfZm10IGNoYW5nZXMKICAgICAgICAgICAgICAgIGlmIFBlcmNlbnRTdHlsZToKICAgICAgICAgICAgICAgICAgICBzZWxmLl9zdHlsZSA9IFBlcmNlbnRTdHlsZShmbXQpCiAgICAgICAgcmV0dXJuIHN1cGVyKExldmVsRm9ybWF0dGVyLCBzZWxmKS5mb3JtYXQocmVjb3JkKQoKCmRlZiBjb25maWdMb2dnZXIoKiprd2FyZ3MpOgogICAgIiIiQSBtb3JlIHNvcGhpc3RpY2F0ZWQgbG9nZ2luZyBzeXN0ZW0gY29uZmlndWF0aW9uIG1hbmFnZXIuCgogICAgVGhpcyBpcyBtb3JlIG9yIGxlc3MgdGhlIHNhbWUgYXMgOnB5OmZ1bmM6YGxvZ2dpbmcuYmFzaWNDb25maWdgLAogICAgd2l0aCBzb21lIGFkZGl0aW9uYWwgb3B0aW9ucyBhbmQgZGVmYXVsdHMuCgogICAgVGhlIGRlZmF1bHQgYmVoYXZpb3VyIGlzIHRvIGNyZWF0ZSBhIGBgU3RyZWFtSGFuZGxlcmBgIHdoaWNoIHdyaXRlcyB0bwogICAgc3lzLnN0ZGVyciwgc2V0IGEgZm9ybWF0dGVyIHVzaW5nIHRoZSBgYERFRkFVTFRfRk9STUFUU2BgIHN0cmluZ3MsIGFuZCBhZGQKICAgIHRoZSBoYW5kbGVyIHRvIHRoZSB0b3AtbGV2ZWwgbGlicmFyeSBsb2dnZXIgKCJmb250VG9vbHMiKS4KCiAgICBBIG51bWJlciBvZiBvcHRpb25hbCBrZXl3b3JkIGFyZ3VtZW50cyBtYXkgYmUgc3BlY2lmaWVkLCB3aGljaCBjYW4gYWx0ZXIKICAgIHRoZSBkZWZhdWx0IGJlaGF2aW91ci4KCiAgICBBcmdzOgoKICAgICAgICAgICAgbG9nZ2VyOiBTcGVjaWZpZXMgdGhlIGxvZ2dlciBuYW1lIG9yIGEgTG9nZ2VyIGluc3RhbmNlIHRvIGJlCiAgICAgICAgICAgICAgICAgICAgY29uZmlndXJlZC4gKERlZmF1bHRzIHRvICJmb250VG9vbHMiIGxvZ2dlcikuIFVubGlrZSBgYGJhc2ljQ29uZmlnYGAsCiAgICAgICAgICAgICAgICAgICAgdGhpcyBmdW5jdGlvbiBjYW4gYmUgY2FsbGVkIG11bHRpcGxlIHRpbWVzIHRvIHJlY29uZmlndXJlIGEgbG9nZ2VyLgogICAgICAgICAgICAgICAgICAgIElmIHRoZSBsb2dnZXIgb3IgYW55IG9mIGl0cyBjaGlsZHJlbiBhbHJlYWR5IGV4aXN0cyBiZWZvcmUgdGhlIGNhbGwgaXMKICAgICAgICAgICAgICAgICAgICBtYWRlLCB0aGV5IHdpbGwgYmUgcmVzZXQgYmVmb3JlIHRoZSBuZXcgY29uZmlndXJhdGlvbiBpcyBhcHBsaWVkLgogICAgICAgICAgICBmaWxlbmFtZTogU3BlY2lmaWVzIHRoYXQgYSBgYEZpbGVIYW5kbGVyYGAgYmUgY3JlYXRlZCwgdXNpbmcgdGhlCiAgICAgICAgICAgICAgICAgICAgc3BlY2lmaWVkIGZpbGVuYW1lLCByYXRoZXIgdGhhbiBhIGBgU3RyZWFtSGFuZGxlcmBgLgogICAgICAgICAgICBmaWxlbW9kZTogU3BlY2lmaWVzIHRoZSBtb2RlIHRvIG9wZW4gdGhlIGZpbGUsIGlmIGZpbGVuYW1lIGlzCiAgICAgICAgICAgICAgICAgICAgc3BlY2lmaWVkLiAoSWYgZmlsZW1vZGUgaXMgdW5zcGVjaWZpZWQsIGl0IGRlZmF1bHRzIHRvIGBgYWBgKS4KICAgICAgICAgICAgZm9ybWF0OiBVc2UgdGhlIHNwZWNpZmllZCBmb3JtYXQgc3RyaW5nIGZvciB0aGUgaGFuZGxlci4gVGhpcwogICAgICAgICAgICAgICAgICAgIGFyZ3VtZW50IGFsc28gYWNjZXB0cyBhIGRpY3Rpb25hcnkgb2YgZm9ybWF0IHN0cmluZ3Mga2V5ZWQgYnkKICAgICAgICAgICAgICAgICAgICBsZXZlbCBuYW1lLCB0byBhbGxvdyBjdXN0b21pc2luZyB0aGUgcmVjb3JkcyBhcHBlYXJhbmNlIGZvcgogICAgICAgICAgICAgICAgICAgIHNwZWNpZmljIGxldmVscy4gVGhlIHNwZWNpYWwgYGAnKidgYCBrZXkgaXMgZm9yICdhbnkgb3RoZXInIGxldmVsLgogICAgICAgICAgICBkYXRlZm10OiBVc2UgdGhlIHNwZWNpZmllZCBkYXRlL3RpbWUgZm9ybWF0LgogICAgICAgICAgICBsZXZlbDogU2V0IHRoZSBsb2dnZXIgbGV2ZWwgdG8gdGhlIHNwZWNpZmllZCBsZXZlbC4KICAgICAgICAgICAgc3RyZWFtOiBVc2UgdGhlIHNwZWNpZmllZCBzdHJlYW0gdG8gaW5pdGlhbGl6ZSB0aGUgU3RyZWFtSGFuZGxlci4gTm90ZQogICAgICAgICAgICAgICAgICAgIHRoYXQgdGhpcyBhcmd1bWVudCBpcyBpbmNvbXBhdGlibGUgd2l0aCBgYGZpbGVuYW1lYGAgLSBpZiBib3RoCiAgICAgICAgICAgICAgICAgICAgYXJlIHByZXNlbnQsIGBgc3RyZWFtYGAgaXMgaWdub3JlZC4KICAgICAgICAgICAgaGFuZGxlcnM6IElmIHNwZWNpZmllZCwgdGhpcyBzaG91bGQgYmUgYW4gaXRlcmFibGUgb2YgYWxyZWFkeSBjcmVhdGVkCiAgICAgICAgICAgICAgICAgICAgaGFuZGxlcnMsIHdoaWNoIHdpbGwgYmUgYWRkZWQgdG8gdGhlIGxvZ2dlci4gQW55IGhhbmRsZXIgaW4gdGhlCiAgICAgICAgICAgICAgICAgICAgbGlzdCB3aGljaCBkb2VzIG5vdCBoYXZlIGEgZm9ybWF0dGVyIGFzc2lnbmVkIHdpbGwgYmUgYXNzaWduZWQgdGhlCiAgICAgICAgICAgICAgICAgICAgZm9ybWF0dGVyIGNyZWF0ZWQgaW4gdGhpcyBmdW5jdGlvbi4KICAgICAgICAgICAgZmlsdGVyczogSWYgc3BlY2lmaWVkLCB0aGlzIHNob3VsZCBiZSBhbiBpdGVyYWJsZSBvZiBhbHJlYWR5IGNyZWF0ZWQKICAgICAgICAgICAgICAgICAgICBmaWx0ZXJzLiBJZiB0aGUgYGBoYW5kbGVyc2BgIGRvIG5vdCBhbHJlYWR5IGhhdmUgZmlsdGVycyBhc3NpZ25lZCwKICAgICAgICAgICAgICAgICAgICB0aGVzZSBmaWx0ZXJzIHdpbGwgYmUgYWRkZWQgdG8gdGhlbS4KICAgICAgICAgICAgcHJvcGFnYXRlOiBBbGwgbG9nZ2VycyBoYXZlIGEgYGBwcm9wYWdhdGVgYCBhdHRyaWJ1dGUgd2hpY2ggZGV0ZXJtaW5lcwogICAgICAgICAgICAgICAgICAgIHdoZXRoZXIgdG8gY29udGludWUgc2VhcmNoaW5nIGZvciBoYW5kbGVycyB1cCB0aGUgbG9nZ2luZyBoaWVyYXJjaHkuCiAgICAgICAgICAgICAgICAgICAgSWYgbm90IHByb3ZpZGVkLCB0aGUgInByb3BhZ2F0ZSIgYXR0cmlidXRlIHdpbGwgYmUgc2V0IHRvIGBgRmFsc2VgYC4KICAgICIiIgogICAgIyB1c2luZyBrd2FyZ3MgdG8gZW5mb3JjZSBrZXl3b3JkLW9ubHkgYXJndW1lbnRzIGluIHB5Mi4KICAgIGhhbmRsZXJzID0ga3dhcmdzLnBvcCgiaGFuZGxlcnMiLCBOb25lKQogICAgaWYgaGFuZGxlcnMgaXMgTm9uZToKICAgICAgICBpZiAic3RyZWFtIiBpbiBrd2FyZ3MgYW5kICJmaWxlbmFtZSIgaW4ga3dhcmdzOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgIidzdHJlYW0nIGFuZCAnZmlsZW5hbWUnIHNob3VsZCBub3QgYmUgIiAic3BlY2lmaWVkIHRvZ2V0aGVyIgogICAgICAgICAgICApCiAgICBlbHNlOgogICAgICAgIGlmICJzdHJlYW0iIGluIGt3YXJncyBvciAiZmlsZW5hbWUiIGluIGt3YXJnczoKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgICAgICInc3RyZWFtJyBvciAnZmlsZW5hbWUnIHNob3VsZCBub3QgYmUgIgogICAgICAgICAgICAgICAgInNwZWNpZmllZCB0b2dldGhlciB3aXRoICdoYW5kbGVycyciCiAgICAgICAgICAgICkKICAgIGlmIGhhbmRsZXJzIGlzIE5vbmU6CiAgICAgICAgZmlsZW5hbWUgPSBrd2FyZ3MucG9wKCJmaWxlbmFtZSIsIE5vbmUpCiAgICAgICAgbW9kZSA9IGt3YXJncy5wb3AoImZpbGVtb2RlIiwgImEiKQogICAgICAgIGlmIGZpbGVuYW1lOgogICAgICAgICAgICBoID0gbG9nZ2luZy5GaWxlSGFuZGxlcihmaWxlbmFtZSwgbW9kZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzdHJlYW0gPSBrd2FyZ3MucG9wKCJzdHJlYW0iLCBOb25lKQogICAgICAgICAgICBoID0gbG9nZ2luZy5TdHJlYW1IYW5kbGVyKHN0cmVhbSkKICAgICAgICBoYW5kbGVycyA9IFtoXQogICAgIyBCeSBkZWZhdWx0LCB0aGUgdG9wLWxldmVsIGxpYnJhcnkgbG9nZ2VyIGlzIGNvbmZpZ3VyZWQuCiAgICBsb2dnZXIgPSBrd2FyZ3MucG9wKCJsb2dnZXIiLCAiZm9udFRvb2xzIikKICAgIGlmIG5vdCBsb2dnZXIgb3IgaXNpbnN0YW5jZShsb2dnZXIsIHN0cik6CiAgICAgICAgIyBlbXB0eSAiIiBvciBOb25lIG1lYW5zIHRoZSAncm9vdCcgbG9nZ2VyCiAgICAgICAgbG9nZ2VyID0gbG9nZ2luZy5nZXRMb2dnZXIobG9nZ2VyKQogICAgIyBiZWZvcmUgKHJlKWNvbmZpZ3VyaW5nLCByZXNldCBuYW1lZCBsb2dnZXIgYW5kIGl0cyBjaGlsZHJlbiAoaWYgZXhpc3QpCiAgICBfcmVzZXRFeGlzdGluZ0xvZ2dlcnMocGFyZW50PWxvZ2dlci5uYW1lKQogICAgIyB1c2UgREVGQVVMVF9GT1JNQVRTIGlmICdmb3JtYXQnIGlzIE5vbmUKICAgIGZzID0ga3dhcmdzLnBvcCgiZm9ybWF0IiwgTm9uZSkKICAgIGRmcyA9IGt3YXJncy5wb3AoImRhdGVmbXQiLCBOb25lKQogICAgIyBYWFg6ICclJyBpcyB0aGUgb25seSBmb3JtYXQgc3R5bGUgc3VwcG9ydGVkIG9uIGJvdGggcHkyIGFuZCAzCiAgICBzdHlsZSA9IGt3YXJncy5wb3AoInN0eWxlIiwgIiUiKQogICAgZm10ID0gTGV2ZWxGb3JtYXR0ZXIoZnMsIGRmcywgc3R5bGUpCiAgICBmaWx0ZXJzID0ga3dhcmdzLnBvcCgiZmlsdGVycyIsIFtdKQogICAgZm9yIGggaW4gaGFuZGxlcnM6CiAgICAgICAgaWYgaC5mb3JtYXR0ZXIgaXMgTm9uZToKICAgICAgICAgICAgaC5zZXRGb3JtYXR0ZXIoZm10KQogICAgICAgIGlmIG5vdCBoLmZpbHRlcnM6CiAgICAgICAgICAgIGZvciBmIGluIGZpbHRlcnM6CiAgICAgICAgICAgICAgICBoLmFkZEZpbHRlcihmKQogICAgICAgIGxvZ2dlci5hZGRIYW5kbGVyKGgpCiAgICBpZiBsb2dnZXIubmFtZSAhPSAicm9vdCI6CiAgICAgICAgIyBzdG9wIHNlYXJjaGluZyB1cCB0aGUgaGllcmFyY2h5IGZvciBoYW5kbGVycwogICAgICAgIGxvZ2dlci5wcm9wYWdhdGUgPSBrd2FyZ3MucG9wKCJwcm9wYWdhdGUiLCBGYWxzZSkKICAgICMgc2V0IGEgY3VzdG9tIHNldmVyaXR5IGxldmVsCiAgICBsZXZlbCA9IGt3YXJncy5wb3AoImxldmVsIiwgTm9uZSkKICAgIGlmIGxldmVsIGlzIG5vdCBOb25lOgogICAgICAgIGxvZ2dlci5zZXRMZXZlbChsZXZlbCkKICAgIGlmIGt3YXJnczoKICAgICAgICBrZXlzID0gIiwgIi5qb2luKGt3YXJncy5rZXlzKCkpCiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiVW5yZWNvZ25pc2VkIGFyZ3VtZW50KHMpOiAlcyIgJSBrZXlzKQoKCmRlZiBfcmVzZXRFeGlzdGluZ0xvZ2dlcnMocGFyZW50PSJyb290Iik6CiAgICAiIiJSZXNldCB0aGUgbG9nZ2VyIG5hbWVkICdwYXJlbnQnIGFuZCBhbGwgaXRzIGNoaWxkcmVuIHRvIHRoZWlyIGluaXRpYWwKICAgIHN0YXRlLCBpZiB0aGV5IGFscmVhZHkgZXhpc3QgaW4gdGhlIGN1cnJlbnQgY29uZmlndXJhdGlvbi4KICAgICIiIgogICAgcm9vdCA9IGxvZ2dpbmcucm9vdAogICAgIyBnZXQgc29ydGVkIGxpc3Qgb2YgYWxsIGV4aXN0aW5nIGxvZ2dlcnMKICAgIGV4aXN0aW5nID0gc29ydGVkKHJvb3QubWFuYWdlci5sb2dnZXJEaWN0LmtleXMoKSkKICAgIGlmIHBhcmVudCA9PSAicm9vdCI6CiAgICAgICAgIyBhbGwgdGhlIGV4aXN0aW5nIGxvZ2dlcnMgYXJlIGNoaWxkcmVuIG9mICdyb290JwogICAgICAgIGxvZ2dlcnNfdG9fcmVzZXQgPSBbcGFyZW50XSArIGV4aXN0aW5nCiAgICBlbGlmIHBhcmVudCBub3QgaW4gZXhpc3Rpbmc6CiAgICAgICAgIyBub3RoaW5nIHRvIGRvCiAgICAgICAgcmV0dXJuCiAgICBlbGlmIHBhcmVudCBpbiBleGlzdGluZzoKICAgICAgICBsb2dnZXJzX3RvX3Jlc2V0ID0gW3BhcmVudF0KICAgICAgICAjIGNvbGxlY3QgY2hpbGRyZW4sIHN0YXJ0aW5nIHdpdGggdGhlIGVudHJ5IGFmdGVyIHBhcmVudCBuYW1lCiAgICAgICAgaSA9IGV4aXN0aW5nLmluZGV4KHBhcmVudCkgKyAxCiAgICAgICAgcHJlZml4ZWQgPSBwYXJlbnQgKyAiLiIKICAgICAgICBwZmxlbiA9IGxlbihwcmVmaXhlZCkKICAgICAgICBudW1fZXhpc3RpbmcgPSBsZW4oZXhpc3RpbmcpCiAgICAgICAgd2hpbGUgaSA8IG51bV9leGlzdGluZzoKICAgICAgICAgICAgaWYgZXhpc3RpbmdbaV1bOnBmbGVuXSA9PSBwcmVmaXhlZDoKICAgICAgICAgICAgICAgIGxvZ2dlcnNfdG9fcmVzZXQuYXBwZW5kKGV4aXN0aW5nW2ldKQogICAgICAgICAgICBpICs9IDEKICAgIGZvciBuYW1lIGluIGxvZ2dlcnNfdG9fcmVzZXQ6CiAgICAgICAgaWYgbmFtZSA9PSAicm9vdCI6CiAgICAgICAgICAgIHJvb3Quc2V0TGV2ZWwobG9nZ2luZy5XQVJOSU5HKQogICAgICAgICAgICBmb3IgaCBpbiByb290LmhhbmRsZXJzWzpdOgogICAgICAgICAgICAgICAgcm9vdC5yZW1vdmVIYW5kbGVyKGgpCiAgICAgICAgICAgIGZvciBmIGluIHJvb3QuZmlsdGVyc1s6XToKICAgICAgICAgICAgICAgIHJvb3QucmVtb3ZlRmlsdGVycyhmKQogICAgICAgICAgICByb290LmRpc2FibGVkID0gRmFsc2UKICAgICAgICBlbHNlOgogICAgICAgICAgICBsb2dnZXIgPSByb290Lm1hbmFnZXIubG9nZ2VyRGljdFtuYW1lXQogICAgICAgICAgICBsb2dnZXIubGV2ZWwgPSBsb2dnaW5nLk5PVFNFVAogICAgICAgICAgICBsb2dnZXIuaGFuZGxlcnMgPSBbXQogICAgICAgICAgICBsb2dnZXIuZmlsdGVycyA9IFtdCiAgICAgICAgICAgIGxvZ2dlci5wcm9wYWdhdGUgPSBUcnVlCiAgICAgICAgICAgIGxvZ2dlci5kaXNhYmxlZCA9IEZhbHNlCgoKY2xhc3MgVGltZXIob2JqZWN0KToKICAgICIiIktlZXBzIHRyYWNrIG9mIG92ZXJhbGwgdGltZSBhbmQgc3BsaXQvbGFwIHRpbWVzLgoKICAgID4+PiBpbXBvcnQgdGltZQogICAgPj4+IHRpbWVyID0gVGltZXIoKQogICAgPj4+IHRpbWUuc2xlZXAoMC4wMSkKICAgID4+PiBwcmludCgiRmlyc3QgbGFwOiIsIHRpbWVyLnNwbGl0KCkpCiAgICBGaXJzdCBsYXA6IC4uLgogICAgPj4+IHRpbWUuc2xlZXAoMC4wMikKICAgID4+PiBwcmludCgiU2Vjb25kIGxhcDoiLCB0aW1lci5zcGxpdCgpKQogICAgU2Vjb25kIGxhcDogLi4uCiAgICA+Pj4gcHJpbnQoIk92ZXJhbGwgdGltZToiLCB0aW1lci50aW1lKCkpCiAgICBPdmVyYWxsIHRpbWU6IC4uLgoKICAgIENhbiBiZSB1c2VkIGFzIGEgY29udGV4dCBtYW5hZ2VyIGluc2lkZSB3aXRoLXN0YXRlbWVudHMuCgogICAgPj4+IHdpdGggVGltZXIoKSBhcyB0OgogICAgLi4uICAgICB0aW1lLnNsZWVwKDAuMDEpCiAgICA+Pj4gcHJpbnQoIiUwLjNmIHNlY29uZHMiICUgdC5lbGFwc2VkKQogICAgMC4uLiBzZWNvbmRzCgogICAgSWYgaW5pdGlhbGlzZWQgd2l0aCBhIGxvZ2dlciwgaXQgY2FuIGxvZyB0aGUgZWxhcHNlZCB0aW1lIGF1dG9tYXRpY2FsbHkKICAgIHVwb24gZXhpdGluZyB0aGUgd2l0aC1zdGF0ZW1lbnQuCgogICAgPj4+IGltcG9ydCBsb2dnaW5nCiAgICA+Pj4gbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoIm15LWZhbmN5LXRpbWVyLWxvZ2dlciIpCiAgICA+Pj4gY29uZmlnTG9nZ2VyKGxvZ2dlcj1sb2csIGxldmVsPSJERUJVRyIsIGZvcm1hdD0iJShtZXNzYWdlKXMiLCBzdHJlYW09c3lzLnN0ZG91dCkKICAgID4+PiB3aXRoIFRpbWVyKGxvZywgJ2RvIHNvbWV0aGluZycpOgogICAgLi4uICAgICB0aW1lLnNsZWVwKDAuMDEpCiAgICBUb29rIC4uLiB0byBkbyBzb21ldGhpbmcKCiAgICBUaGUgc2FtZSBUaW1lciBpbnN0YW5jZSwgaG9sZGluZyBhIHJlZmVyZW5jZSB0byBhIGxvZ2dlciwgY2FuIGJlIHJldXNlZAogICAgaW4gbXVsdGlwbGUgd2l0aC1zdGF0ZW1lbnRzLCBvcHRpb25hbGx5IHdpdGggZGlmZmVyZW50IG1lc3NhZ2VzIG9yIGxldmVscy4KCiAgICA+Pj4gdGltZXIgPSBUaW1lcihsb2cpCiAgICA+Pj4gd2l0aCB0aW1lcigpOgogICAgLi4uICAgICB0aW1lLnNsZWVwKDAuMDEpCiAgICBlbGFwc2VkIHRpbWU6IC4uLnMKICAgID4+PiB3aXRoIHRpbWVyKCdyZWRvIGl0JywgbGV2ZWw9bG9nZ2luZy5JTkZPKToKICAgIC4uLiAgICAgdGltZS5zbGVlcCgwLjAyKQogICAgVG9vayAuLi4gdG8gcmVkbyBpdAoKICAgIEl0IGNhbiBhbHNvIGJlIHVzZWQgYXMgYSBmdW5jdGlvbiBkZWNvcmF0b3IgdG8gbG9nIHRoZSB0aW1lIGVsYXBzZWQgdG8gcnVuCiAgICB0aGUgZGVjb3JhdGVkIGZ1bmN0aW9uLgoKICAgID4+PiBAdGltZXIoKQogICAgLi4uIGRlZiB0ZXN0MSgpOgogICAgLi4uICAgIHRpbWUuc2xlZXAoMC4wMSkKICAgID4+PiBAdGltZXIoJ3J1biB0ZXN0IDInLCBsZXZlbD1sb2dnaW5nLklORk8pCiAgICAuLi4gZGVmIHRlc3QyKCk6CiAgICAuLi4gICAgdGltZS5zbGVlcCgwLjAyKQogICAgPj4+IHRlc3QxKCkKICAgIFRvb2sgLi4uIHRvIHJ1biAndGVzdDEnCiAgICA+Pj4gdGVzdDIoKQogICAgVG9vayAuLi4gdG8gcnVuIHRlc3QgMgogICAgIiIiCgogICAgIyB0aW1laXQuZGVmYXVsdF90aW1lciBjaG9zZXMgdGhlIG1vc3QgYWNjdXJhdGUgY2xvY2sgZm9yIGVhY2ggcGxhdGZvcm0KICAgIF90aW1lOiBDYWxsYWJsZVtbXSwgZmxvYXRdID0gc3RhdGljbWV0aG9kKHRpbWVpdC5kZWZhdWx0X3RpbWVyKQogICAgZGVmYXVsdF9tc2cgPSAiZWxhcHNlZCB0aW1lOiAlKHRpbWUpLjNmcyIKICAgIGRlZmF1bHRfZm9ybWF0ID0gIlRvb2sgJSh0aW1lKS4zZnMgdG8gJShtc2cpcyIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbG9nZ2VyPU5vbmUsIG1zZz1Ob25lLCBsZXZlbD1Ob25lLCBzdGFydD1Ob25lKToKICAgICAgICBzZWxmLnJlc2V0KHN0YXJ0KQogICAgICAgIGlmIGxvZ2dlciBpcyBOb25lOgogICAgICAgICAgICBmb3IgYXJnIGluICgibXNnIiwgImxldmVsIik6CiAgICAgICAgICAgICAgICBpZiBsb2NhbHMoKS5nZXQoYXJnKSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCInJXMnIGNhbid0IGJlIHNwZWNpZmllZCB3aXRob3V0IGEgJ2xvZ2dlciciICUgYXJnKQogICAgICAgIHNlbGYubG9nZ2VyID0gbG9nZ2VyCiAgICAgICAgc2VsZi5sZXZlbCA9IGxldmVsIGlmIGxldmVsIGlzIG5vdCBOb25lIGVsc2UgVElNRV9MRVZFTAogICAgICAgIHNlbGYubXNnID0gbXNnCgogICAgZGVmIHJlc2V0KHNlbGYsIHN0YXJ0PU5vbmUpOgogICAgICAgICIiIlJlc2V0IHRpbWVyIHRvICdzdGFydF90aW1lJyBvciB0aGUgY3VycmVudCB0aW1lLiIiIgogICAgICAgIGlmIHN0YXJ0IGlzIE5vbmU6CiAgICAgICAgICAgIHNlbGYuc3RhcnQgPSBzZWxmLl90aW1lKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLnN0YXJ0ID0gc3RhcnQKICAgICAgICBzZWxmLmxhc3QgPSBzZWxmLnN0YXJ0CiAgICAgICAgc2VsZi5lbGFwc2VkID0gMC4wCgogICAgZGVmIHRpbWUoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIHRoZSBvdmVyYWxsIHRpbWUgKGluIHNlY29uZHMpIHNpbmNlIHRoZSB0aW1lciBzdGFydGVkLiIiIgogICAgICAgIHJldHVybiBzZWxmLl90aW1lKCkgLSBzZWxmLnN0YXJ0CgogICAgZGVmIHNwbGl0KHNlbGYpOgogICAgICAgICIiIlNwbGl0IGFuZCByZXR1cm4gdGhlIGxhcCB0aW1lIChpbiBzZWNvbmRzKSBpbiBiZXR3ZWVuIHNwbGl0cy4iIiIKICAgICAgICBjdXJyZW50ID0gc2VsZi5fdGltZSgpCiAgICAgICAgc2VsZi5lbGFwc2VkID0gY3VycmVudCAtIHNlbGYubGFzdAogICAgICAgIHNlbGYubGFzdCA9IGN1cnJlbnQKICAgICAgICByZXR1cm4gc2VsZi5lbGFwc2VkCgogICAgZGVmIGZvcm1hdFRpbWUoc2VsZiwgbXNnLCB0aW1lKToKICAgICAgICAiIiJGb3JtYXQgJ3RpbWUnIHZhbHVlIGluICdtc2cnIGFuZCByZXR1cm4gZm9ybWF0dGVkIHN0cmluZy4KICAgICAgICBJZiAnbXNnJyBjb250YWlucyBhICclKHRpbWUpJyBmb3JtYXQgc3RyaW5nLCB0cnkgdG8gdXNlIHRoYXQuCiAgICAgICAgT3RoZXJ3aXNlLCB1c2UgdGhlIHByZWRlZmluZWQgJ2RlZmF1bHRfZm9ybWF0Jy4KICAgICAgICBJZiAnbXNnJyBpcyBlbXB0eSBvciBOb25lLCBmYWxsIGJhY2sgdG8gJ2RlZmF1bHRfbXNnJy4KICAgICAgICAiIiIKICAgICAgICBpZiBub3QgbXNnOgogICAgICAgICAgICBtc2cgPSBzZWxmLmRlZmF1bHRfbXNnCiAgICAgICAgaWYgbXNnLmZpbmQoIiUodGltZSkiKSA8IDA6CiAgICAgICAgICAgIG1zZyA9IHNlbGYuZGVmYXVsdF9mb3JtYXQgJSB7Im1zZyI6IG1zZywgInRpbWUiOiB0aW1lfQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIG1zZyA9IG1zZyAlIHsidGltZSI6IHRpbWV9CiAgICAgICAgICAgIGV4Y2VwdCAoS2V5RXJyb3IsIFZhbHVlRXJyb3IpOgogICAgICAgICAgICAgICAgcGFzcyAgIyBza2lwIGlmIHRoZSBmb3JtYXQgc3RyaW5nIGlzIG1hbGZvcm1lZAogICAgICAgIHJldHVybiBtc2cKCiAgICBkZWYgX19lbnRlcl9fKHNlbGYpOgogICAgICAgICIiIlN0YXJ0IGEgbmV3IGxhcCIiIgogICAgICAgIHNlbGYubGFzdCA9IHNlbGYuX3RpbWUoKQogICAgICAgIHNlbGYuZWxhcHNlZCA9IDAuMAogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIF9fZXhpdF9fKHNlbGYsIGV4Y190eXBlLCBleGNfdmFsdWUsIHRyYWNlYmFjayk6CiAgICAgICAgIiIiRW5kIHRoZSBjdXJyZW50IGxhcC4gSWYgdGltZXIgaGFzIGEgbG9nZ2VyLCBsb2cgdGhlIHRpbWUgZWxhcHNlZCwKICAgICAgICB1c2luZyB0aGUgZm9ybWF0IHN0cmluZyBpbiBzZWxmLm1zZyAob3IgdGhlIGRlZmF1bHQgb25lKS4KICAgICAgICAiIiIKICAgICAgICB0aW1lID0gc2VsZi5zcGxpdCgpCiAgICAgICAgaWYgc2VsZi5sb2dnZXIgaXMgTm9uZSBvciBleGNfdHlwZToKICAgICAgICAgICAgIyBpZiB0aGVyZSdzIG5vIGxvZ2dlciBhdHRhY2hlZCwgb3IgaWYgYW55IGV4Y2VwdGlvbiBvY2N1cnJlZCBpbgogICAgICAgICAgICAjIHRoZSB3aXRoLXN0YXRlbWVudCwgZXhpdCB3aXRob3V0IGxvZ2dpbmcgdGhlIHRpbWUKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgbWVzc2FnZSA9IHNlbGYuZm9ybWF0VGltZShzZWxmLm1zZywgdGltZSkKICAgICAgICAjIEFsbG93IGxvZyBoYW5kbGVycyB0byBzZWUgdGhlIGluZGl2aWR1YWwgcGFydHMgdG8gZmFjaWxpdGF0ZSB0aGluZ3MKICAgICAgICAjIGxpa2UgYSBzZXJ2ZXIgYWNjdW11bGF0aW5nIGFnZ3JlZ2F0ZSBzdGF0cy4KICAgICAgICBtc2dfcGFydHMgPSB7Im1zZyI6IHNlbGYubXNnLCAidGltZSI6IHRpbWV9CiAgICAgICAgc2VsZi5sb2dnZXIubG9nKHNlbGYubGV2ZWwsIG1lc3NhZ2UsIG1zZ19wYXJ0cykKCiAgICBkZWYgX19jYWxsX18oc2VsZiwgZnVuY19vcl9tc2c9Tm9uZSwgKiprd2FyZ3MpOgogICAgICAgICIiIklmIHRoZSBmaXJzdCBhcmd1bWVudCBpcyBhIGZ1bmN0aW9uLCByZXR1cm4gYSBkZWNvcmF0b3Igd2hpY2ggcnVucwogICAgICAgIHRoZSB3cmFwcGVkIGZ1bmN0aW9uIGluc2lkZSBUaW1lcidzIGNvbnRleHQgbWFuYWdlci4KICAgICAgICBPdGhlcndpc2UsIHRyZWF0IHRoZSBmaXJzdCBhcmd1bWVudCBhcyBhICdtc2cnIHN0cmluZyBhbmQgcmV0dXJuIGFuIHVwZGF0ZWQKICAgICAgICBUaW1lciBpbnN0YW5jZSwgcmVmZXJlbmNpbmcgdGhlIHNhbWUgbG9nZ2VyLgogICAgICAgIEEgJ2xldmVsJyBrZXl3b3JkIGNhbiBhbHNvIGJlIHBhc3NlZCB0byBvdmVycmlkZSBzZWxmLmxldmVsLgogICAgICAgICIiIgogICAgICAgIGlmIGlzaW5zdGFuY2UoZnVuY19vcl9tc2csIENhbGxhYmxlKToKICAgICAgICAgICAgZnVuYyA9IGZ1bmNfb3JfbXNnCiAgICAgICAgICAgICMgdXNlIHRoZSBmdW5jdGlvbiBuYW1lIHdoZW4gbm8gZXhwbGljaXQgJ21zZycgaXMgcHJvdmlkZWQKICAgICAgICAgICAgaWYgbm90IHNlbGYubXNnOgogICAgICAgICAgICAgICAgc2VsZi5tc2cgPSAicnVuICclcyciICUgZnVuYy5fX25hbWVfXwoKICAgICAgICAgICAgQHdyYXBzKGZ1bmMpCiAgICAgICAgICAgIGRlZiB3cmFwcGVyKCphcmdzLCAqKmt3ZHMpOgogICAgICAgICAgICAgICAgd2l0aCBzZWxmOgogICAgICAgICAgICAgICAgICAgIHJldHVybiBmdW5jKCphcmdzLCAqKmt3ZHMpCgogICAgICAgICAgICByZXR1cm4gd3JhcHBlcgogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG1zZyA9IGZ1bmNfb3JfbXNnIG9yIGt3YXJncy5nZXQoIm1zZyIpCiAgICAgICAgICAgIGxldmVsID0ga3dhcmdzLmdldCgibGV2ZWwiLCBzZWxmLmxldmVsKQogICAgICAgICAgICByZXR1cm4gc2VsZi5fX2NsYXNzX18oc2VsZi5sb2dnZXIsIG1zZywgbGV2ZWwpCgogICAgZGVmIF9fZmxvYXRfXyhzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5lbGFwc2VkCgogICAgZGVmIF9faW50X18oc2VsZik6CiAgICAgICAgcmV0dXJuIGludChzZWxmLmVsYXBzZWQpCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuICIlLjNmIiAlIHNlbGYuZWxhcHNlZAoKCmNsYXNzIENoYW5uZWxzRmlsdGVyKGxvZ2dpbmcuRmlsdGVyKToKICAgICIiIlByb3ZpZGVzIGEgaGllcmFyY2hpY2FsIGZpbHRlciBmb3IgbG9nIGVudHJpZXMgYmFzZWQgb24gY2hhbm5lbCBuYW1lcy4KCiAgICBGaWx0ZXJzIG91dCByZWNvcmRzIGVtaXR0ZWQgZnJvbSBhIGxpc3Qgb2YgZW5hYmxlZCBjaGFubmVsIG5hbWVzLAogICAgaW5jbHVkaW5nIHRoZWlyIGNoaWxkcmVuLiBJdCB3b3JrcyB0aGUgc2FtZSBhcyB0aGUgYGBsb2dnaW5nLkZpbHRlcmBgCiAgICBjbGFzcywgYnV0IGFsbG93cyB0aGUgdXNlciB0byBzcGVjaWZ5IG11bHRpcGxlIGNoYW5uZWwgbmFtZXMuCgogICAgPj4+IGltcG9ydCBzeXMKICAgID4+PiBoYW5kbGVyID0gbG9nZ2luZy5TdHJlYW1IYW5kbGVyKHN5cy5zdGRvdXQpCiAgICA+Pj4gaGFuZGxlci5zZXRGb3JtYXR0ZXIobG9nZ2luZy5Gb3JtYXR0ZXIoIiUobWVzc2FnZSlzIikpCiAgICA+Pj4gZmlsdGVyID0gQ2hhbm5lbHNGaWx0ZXIoIkEuQiIsICJDLkQiKQogICAgPj4+IGhhbmRsZXIuYWRkRmlsdGVyKGZpbHRlcikKICAgID4+PiByb290ID0gbG9nZ2luZy5nZXRMb2dnZXIoKQogICAgPj4+IHJvb3QuYWRkSGFuZGxlcihoYW5kbGVyKQogICAgPj4+IHJvb3Quc2V0TGV2ZWwobGV2ZWw9bG9nZ2luZy5ERUJVRykKICAgID4+PiBsb2dnaW5nLmdldExvZ2dlcignQS5CJykuZGVidWcoJ3RoaXMgcmVjb3JkIHBhc3NlcyB0aHJvdWdoJykKICAgIHRoaXMgcmVjb3JkIHBhc3NlcyB0aHJvdWdoCiAgICA+Pj4gbG9nZ2luZy5nZXRMb2dnZXIoJ0EuQi5DJykuZGVidWcoJ3JlY29yZHMgZnJvbSBjaGlsZHJlbiBhbHNvIHBhc3MnKQogICAgcmVjb3JkcyBmcm9tIGNoaWxkcmVuIGFsc28gcGFzcwogICAgPj4+IGxvZ2dpbmcuZ2V0TG9nZ2VyKCdDLkQnKS5kZWJ1ZygndGhpcyBvbmUgYXMgd2VsbCcpCiAgICB0aGlzIG9uZSBhcyB3ZWxsCiAgICA+Pj4gbG9nZ2luZy5nZXRMb2dnZXIoJ0EuQi4nKS5kZWJ1ZygnYWxzbyB0aGlzIG9uZScpCiAgICBhbHNvIHRoaXMgb25lCiAgICA+Pj4gbG9nZ2luZy5nZXRMb2dnZXIoJ0EuRicpLmRlYnVnKCdidXQgdGhpcyBvbmUgZG9lcyBub3QhJykKICAgID4+PiBsb2dnaW5nLmdldExvZ2dlcignQy5ERScpLmRlYnVnKCduZWl0aGVyIHRoaXMgb25lIScpCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgKm5hbWVzKToKICAgICAgICBzZWxmLm5hbWVzID0gbmFtZXMKICAgICAgICBzZWxmLm51bSA9IGxlbihuYW1lcykKICAgICAgICBzZWxmLmxlbmd0aHMgPSB7bjogbGVuKG4pIGZvciBuIGluIG5hbWVzfQoKICAgIGRlZiBmaWx0ZXIoc2VsZiwgcmVjb3JkKToKICAgICAgICBpZiBzZWxmLm51bSA9PSAwOgogICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIGZvciBuYW1lIGluIHNlbGYubmFtZXM6CiAgICAgICAgICAgIG5sZW4gPSBzZWxmLmxlbmd0aHNbbmFtZV0KICAgICAgICAgICAgaWYgbmFtZSA9PSByZWNvcmQubmFtZToKICAgICAgICAgICAgICAgIHJldHVybiBUcnVlCiAgICAgICAgICAgIGVsaWYgcmVjb3JkLm5hbWUuZmluZChuYW1lLCAwLCBubGVuKSA9PSAwIGFuZCByZWNvcmQubmFtZVtubGVuXSA9PSAiLiI6CiAgICAgICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIHJldHVybiBGYWxzZQoKCmNsYXNzIENhcHR1cmluZ0xvZ0hhbmRsZXIobG9nZ2luZy5IYW5kbGVyKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBsb2dnZXIsIGxldmVsKToKICAgICAgICBzdXBlcihDYXB0dXJpbmdMb2dIYW5kbGVyLCBzZWxmKS5fX2luaXRfXyhsZXZlbD1sZXZlbCkKICAgICAgICBzZWxmLnJlY29yZHMgPSBbXQogICAgICAgIGlmIGlzaW5zdGFuY2UobG9nZ2VyLCBzdHIpOgogICAgICAgICAgICBzZWxmLmxvZ2dlciA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKGxvZ2dlcikKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmxvZ2dlciA9IGxvZ2dlcgoKICAgIGRlZiBfX2VudGVyX18oc2VsZik6CiAgICAgICAgc2VsZi5vcmlnaW5hbF9kaXNhYmxlZCA9IHNlbGYubG9nZ2VyLmRpc2FibGVkCiAgICAgICAgc2VsZi5vcmlnaW5hbF9sZXZlbCA9IHNlbGYubG9nZ2VyLmxldmVsCiAgICAgICAgc2VsZi5vcmlnaW5hbF9wcm9wYWdhdGUgPSBzZWxmLmxvZ2dlci5wcm9wYWdhdGUKCiAgICAgICAgc2VsZi5sb2dnZXIuYWRkSGFuZGxlcihzZWxmKQogICAgICAgIHNlbGYubG9nZ2VyLnNldExldmVsKHNlbGYubGV2ZWwpCiAgICAgICAgc2VsZi5sb2dnZXIuZGlzYWJsZWQgPSBGYWxzZQogICAgICAgIHNlbGYubG9nZ2VyLnByb3BhZ2F0ZSA9IEZhbHNlCgogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIF9fZXhpdF9fKHNlbGYsIHR5cGUsIHZhbHVlLCB0cmFjZWJhY2spOgogICAgICAgIHNlbGYubG9nZ2VyLnJlbW92ZUhhbmRsZXIoc2VsZikKICAgICAgICBzZWxmLmxvZ2dlci5zZXRMZXZlbChzZWxmLm9yaWdpbmFsX2xldmVsKQogICAgICAgIHNlbGYubG9nZ2VyLmRpc2FibGVkID0gc2VsZi5vcmlnaW5hbF9kaXNhYmxlZAogICAgICAgIHNlbGYubG9nZ2VyLnByb3BhZ2F0ZSA9IHNlbGYub3JpZ2luYWxfcHJvcGFnYXRlCgogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIGVtaXQoc2VsZiwgcmVjb3JkKToKICAgICAgICBzZWxmLnJlY29yZHMuYXBwZW5kKHJlY29yZCkKCiAgICBkZWYgYXNzZXJ0UmVnZXgoc2VsZiwgcmVnZXhwLCBtc2c9Tm9uZSk6CiAgICAgICAgaW1wb3J0IHJlCgogICAgICAgIHBhdHRlcm4gPSByZS5jb21waWxlKHJlZ2V4cCkKICAgICAgICBmb3IgciBpbiBzZWxmLnJlY29yZHM6CiAgICAgICAgICAgIGlmIHBhdHRlcm4uc2VhcmNoKHIuZ2V0TWVzc2FnZSgpKToKICAgICAgICAgICAgICAgIHJldHVybiBUcnVlCiAgICAgICAgaWYgbXNnIGlzIE5vbmU6CiAgICAgICAgICAgIG1zZyA9ICJQYXR0ZXJuICclcycgbm90IGZvdW5kIGluIGxvZ2dlciByZWNvcmRzIiAlIHJlZ2V4cAogICAgICAgIGFzc2VydCAwLCBtc2cKCgpjbGFzcyBMb2dNaXhpbihvYmplY3QpOgogICAgIiIiTWl4aW4gY2xhc3MgdGhhdCBhZGRzIGxvZ2dpbmcgZnVuY3Rpb25hbGl0eSB0byBhbm90aGVyIGNsYXNzLgoKICAgIFlvdSBjYW4gZGVmaW5lIGEgbmV3IGNsYXNzIHRoYXQgc3ViY2xhc3NlcyBmcm9tIGBgTG9nTWl4aW5gYCBhcyB3ZWxsIGFzCiAgICBvdGhlciBiYXNlIGNsYXNzZXMgdGhyb3VnaCBtdWx0aXBsZSBpbmhlcml0YW5jZS4KICAgIEFsbCBpbnN0YW5jZXMgb2YgdGhhdCBjbGFzcyB3aWxsIGhhdmUgYSBgYGxvZ2BgIHByb3BlcnR5IHRoYXQgcmV0dXJucwogICAgYSBgYGxvZ2dpbmcuTG9nZ2VyYGAgbmFtZWQgYWZ0ZXIgdGhlaXIgcmVzcGVjdGl2ZSBgYDxtb2R1bGU+LjxjbGFzcz5gYC4KCiAgICBGb3IgZXhhbXBsZToKCiAgICA+Pj4gY2xhc3MgQmFzZUNsYXNzKG9iamVjdCk6CiAgICAuLi4gICAgIHBhc3MKICAgID4+PiBjbGFzcyBNeUNsYXNzKExvZ01peGluLCBCYXNlQ2xhc3MpOgogICAgLi4uICAgICBwYXNzCiAgICA+Pj4gYSA9IE15Q2xhc3MoKQogICAgPj4+IGlzaW5zdGFuY2UoYS5sb2csIGxvZ2dpbmcuTG9nZ2VyKQogICAgVHJ1ZQogICAgPj4+IHByaW50KGEubG9nLm5hbWUpCiAgICBmb250VG9vbHMubWlzYy5sb2dnaW5nVG9vbHMuTXlDbGFzcwogICAgPj4+IGNsYXNzIEFub3RoZXJDbGFzcyhNeUNsYXNzKToKICAgIC4uLiAgICAgcGFzcwogICAgPj4+IGIgPSBBbm90aGVyQ2xhc3MoKQogICAgPj4+IGlzaW5zdGFuY2UoYi5sb2csIGxvZ2dpbmcuTG9nZ2VyKQogICAgVHJ1ZQogICAgPj4+IHByaW50KGIubG9nLm5hbWUpCiAgICBmb250VG9vbHMubWlzYy5sb2dnaW5nVG9vbHMuQW5vdGhlckNsYXNzCiAgICAiIiIKCiAgICBAcHJvcGVydHkKICAgIGRlZiBsb2coc2VsZik6CiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgIl9sb2ciKToKICAgICAgICAgICAgbmFtZSA9ICIuIi5qb2luKChzZWxmLl9fY2xhc3NfXy5fX21vZHVsZV9fLCBzZWxmLl9fY2xhc3NfXy5fX25hbWVfXykpCiAgICAgICAgICAgIHNlbGYuX2xvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKG5hbWUpCiAgICAgICAgcmV0dXJuIHNlbGYuX2xvZwoKCmRlZiBkZXByZWNhdGVBcmd1bWVudChuYW1lLCBtc2csIGNhdGVnb3J5PVVzZXJXYXJuaW5nKToKICAgICIiIlJhaXNlIGEgd2FybmluZyBhYm91dCBkZXByZWNhdGVkIGZ1bmN0aW9uIGFyZ3VtZW50ICduYW1lJy4iIiIKICAgIHdhcm5pbmdzLndhcm4oIiVyIGlzIGRlcHJlY2F0ZWQ7ICVzIiAlIChuYW1lLCBtc2cpLCBjYXRlZ29yeT1jYXRlZ29yeSwgc3RhY2tsZXZlbD0zKQoKCmRlZiBkZXByZWNhdGVGdW5jdGlvbihtc2csIGNhdGVnb3J5PVVzZXJXYXJuaW5nKToKICAgICIiIkRlY29yYXRvciB0byByYWlzZSBhIHdhcm5pbmcgd2hlbiBhIGRlcHJlY2F0ZWQgZnVuY3Rpb24gaXMgY2FsbGVkLiIiIgoKICAgIGRlZiBkZWNvcmF0b3IoZnVuYyk6CiAgICAgICAgQHdyYXBzKGZ1bmMpCiAgICAgICAgZGVmIHdyYXBwZXIoKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICAgICAgd2FybmluZ3Mud2FybigKICAgICAgICAgICAgICAgICIlciBpcyBkZXByZWNhdGVkOyAlcyIgJSAoZnVuYy5fX25hbWVfXywgbXNnKSwKICAgICAgICAgICAgICAgIGNhdGVnb3J5PWNhdGVnb3J5LAogICAgICAgICAgICAgICAgc3RhY2tsZXZlbD0yLAogICAgICAgICAgICApCiAgICAgICAgICAgIHJldHVybiBmdW5jKCphcmdzLCAqKmt3YXJncykKCiAgICAgICAgcmV0dXJuIHdyYXBwZXIKCiAgICByZXR1cm4gZGVjb3JhdG9yCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGltcG9ydCBkb2N0ZXN0CgogICAgc3lzLmV4aXQoZG9jdGVzdC50ZXN0bW9kKG9wdGlvbmZsYWdzPWRvY3Rlc3QuRUxMSVBTSVMpLmZhaWxlZCkK
+import sys
+import logging
+import timeit
+from functools import wraps
+from collections.abc import Mapping, Callable
+import warnings
+from logging import PercentStyle
+
+# default logging level used by Timer class
+TIME_LEVEL = logging.DEBUG
+
+# per-level format strings used by the default formatter
+# (the level name is not printed for INFO and DEBUG messages)
+DEFAULT_FORMATS = {
+    "*": "%(levelname)s: %(message)s",
+    "INFO": "%(message)s",
+    "DEBUG": "%(message)s",
+}
+
+
+class LevelFormatter(logging.Formatter):
+    """Log formatter with level-specific formatting.
+
+    Formatter class which optionally takes a dict of logging levels to
+    format strings, allowing to customise the log records appearance for
+    specific levels.
+
+
+    Attributes:
+            fmt: A dictionary mapping logging levels to format strings.
+                    The ``*`` key identifies the default format string.
+            datefmt: As per py:class:`logging.Formatter`
+            style: As per py:class:`logging.Formatter`
+
+    >>> import sys
+    >>> handler = logging.StreamHandler(sys.stdout)
+    >>> formatter = LevelFormatter(
+    ...     fmt={
+    ...         '*':     '[%(levelname)s] %(message)s',
+    ...         'DEBUG': '%(name)s [%(levelname)s] %(message)s',
+    ...         'INFO':  '%(message)s',
+    ...     })
+    >>> handler.setFormatter(formatter)
+    >>> log = logging.getLogger('test')
+    >>> log.setLevel(logging.DEBUG)
+    >>> log.addHandler(handler)
+    >>> log.debug('this uses a custom format string')
+    test [DEBUG] this uses a custom format string
+    >>> log.info('this also uses a custom format string')
+    this also uses a custom format string
+    >>> log.warning("this one uses the default format string")
+    [WARNING] this one uses the default format string
+    """
+
+    def __init__(self, fmt=None, datefmt=None, style="%"):
+        if style != "%":
+            raise ValueError(
+                "only '%' percent style is supported in both python 2 and 3"
+            )
+        if fmt is None:
+            fmt = DEFAULT_FORMATS
+        if isinstance(fmt, str):
+            default_format = fmt
+            custom_formats = {}
+        elif isinstance(fmt, Mapping):
+            custom_formats = dict(fmt)
+            default_format = custom_formats.pop("*", None)
+        else:
+            raise TypeError("fmt must be a str or a dict of str: %r" % fmt)
+        super(LevelFormatter, self).__init__(default_format, datefmt)
+        self.default_format = self._fmt
+        self.custom_formats = {}
+        for level, fmt in custom_formats.items():
+            level = logging._checkLevel(level)
+            self.custom_formats[level] = fmt
+
+    def format(self, record):
+        if self.custom_formats:
+            fmt = self.custom_formats.get(record.levelno, self.default_format)
+            if self._fmt != fmt:
+                self._fmt = fmt
+                # for python >= 3.2, _style needs to be set if _fmt changes
+                if PercentStyle:
+                    self._style = PercentStyle(fmt)
+        return super(LevelFormatter, self).format(record)
+
+
+def configLogger(**kwargs):
+    """A more sophisticated logging system configuation manager.
+
+    This is more or less the same as :py:func:`logging.basicConfig`,
+    with some additional options and defaults.
+
+    The default behaviour is to create a ``StreamHandler`` which writes to
+    sys.stderr, set a formatter using the ``DEFAULT_FORMATS`` strings, and add
+    the handler to the top-level library logger ("fontTools").
+
+    A number of optional keyword arguments may be specified, which can alter
+    the default behaviour.
+
+    Args:
+
+            logger: Specifies the logger name or a Logger instance to be
+                    configured. (Defaults to "fontTools" logger). Unlike ``basicConfig``,
+                    this function can be called multiple times to reconfigure a logger.
+                    If the logger or any of its children already exists before the call is
+                    made, they will be reset before the new configuration is applied.
+            filename: Specifies that a ``FileHandler`` be created, using the
+                    specified filename, rather than a ``StreamHandler``.
+            filemode: Specifies the mode to open the file, if filename is
+                    specified. (If filemode is unspecified, it defaults to ``a``).
+            format: Use the specified format string for the handler. This
+                    argument also accepts a dictionary of format strings keyed by
+                    level name, to allow customising the records appearance for
+                    specific levels. The special ``'*'`` key is for 'any other' level.
+            datefmt: Use the specified date/time format.
+            level: Set the logger level to the specified level.
+            stream: Use the specified stream to initialize the StreamHandler. Note
+                    that this argument is incompatible with ``filename`` - if both
+                    are present, ``stream`` is ignored.
+            handlers: If specified, this should be an iterable of already created
+                    handlers, which will be added to the logger. Any handler in the
+                    list which does not have a formatter assigned will be assigned the
+                    formatter created in this function.
+            filters: If specified, this should be an iterable of already created
+                    filters. If the ``handlers`` do not already have filters assigned,
+                    these filters will be added to them.
+            propagate: All loggers have a ``propagate`` attribute which determines
+                    whether to continue searching for handlers up the logging hierarchy.
+                    If not provided, the "propagate" attribute will be set to ``False``.
+    """
+    # using kwargs to enforce keyword-only arguments in py2.
+    handlers = kwargs.pop("handlers", None)
+    if handlers is None:
+        if "stream" in kwargs and "filename" in kwargs:
+            raise ValueError(
+                "'stream' and 'filename' should not be " "specified together"
+            )
+    else:
+        if "stream" in kwargs or "filename" in kwargs:
+            raise ValueError(
+                "'stream' or 'filename' should not be "
+                "specified together with 'handlers'"
+            )
+    if handlers is None:
+        filename = kwargs.pop("filename", None)
+        mode = kwargs.pop("filemode", "a")
+        if filename:
+            h = logging.FileHandler(filename, mode)
+        else:
+            stream = kwargs.pop("stream", None)
+            h = logging.StreamHandler(stream)
+        handlers = [h]
+    # By default, the top-level library logger is configured.
+    logger = kwargs.pop("logger", "fontTools")
+    if not logger or isinstance(logger, str):
+        # empty "" or None means the 'root' logger
+        logger = logging.getLogger(logger)
+    # before (re)configuring, reset named logger and its children (if exist)
+    _resetExistingLoggers(parent=logger.name)
+    # use DEFAULT_FORMATS if 'format' is None
+    fs = kwargs.pop("format", None)
+    dfs = kwargs.pop("datefmt", None)
+    # XXX: '%' is the only format style supported on both py2 and 3
+    style = kwargs.pop("style", "%")
+    fmt = LevelFormatter(fs, dfs, style)
+    filters = kwargs.pop("filters", [])
+    for h in handlers:
+        if h.formatter is None:
+            h.setFormatter(fmt)
+        if not h.filters:
+            for f in filters:
+                h.addFilter(f)
+        logger.addHandler(h)
+    if logger.name != "root":
+        # stop searching up the hierarchy for handlers
+        logger.propagate = kwargs.pop("propagate", False)
+    # set a custom severity level
+    level = kwargs.pop("level", None)
+    if level is not None:
+        logger.setLevel(level)
+    if kwargs:
+        keys = ", ".join(kwargs.keys())
+        raise ValueError("Unrecognised argument(s): %s" % keys)
+
+
+def _resetExistingLoggers(parent="root"):
+    """Reset the logger named 'parent' and all its children to their initial
+    state, if they already exist in the current configuration.
+    """
+    root = logging.root
+    # get sorted list of all existing loggers
+    existing = sorted(root.manager.loggerDict.keys())
+    if parent == "root":
+        # all the existing loggers are children of 'root'
+        loggers_to_reset = [parent] + existing
+    elif parent not in existing:
+        # nothing to do
+        return
+    elif parent in existing:
+        loggers_to_reset = [parent]
+        # collect children, starting with the entry after parent name
+        i = existing.index(parent) + 1
+        prefixed = parent + "."
+        pflen = len(prefixed)
+        num_existing = len(existing)
+        while i < num_existing:
+            if existing[i][:pflen] == prefixed:
+                loggers_to_reset.append(existing[i])
+            i += 1
+    for name in loggers_to_reset:
+        if name == "root":
+            root.setLevel(logging.WARNING)
+            for h in root.handlers[:]:
+                root.removeHandler(h)
+            for f in root.filters[:]:
+                root.removeFilters(f)
+            root.disabled = False
+        else:
+            logger = root.manager.loggerDict[name]
+            logger.level = logging.NOTSET
+            logger.handlers = []
+            logger.filters = []
+            logger.propagate = True
+            logger.disabled = False
+
+
+class Timer(object):
+    """Keeps track of overall time and split/lap times.
+
+    >>> import time
+    >>> timer = Timer()
+    >>> time.sleep(0.01)
+    >>> print("First lap:", timer.split())
+    First lap: ...
+    >>> time.sleep(0.02)
+    >>> print("Second lap:", timer.split())
+    Second lap: ...
+    >>> print("Overall time:", timer.time())
+    Overall time: ...
+
+    Can be used as a context manager inside with-statements.
+
+    >>> with Timer() as t:
+    ...     time.sleep(0.01)
+    >>> print("%0.3f seconds" % t.elapsed)
+    0... seconds
+
+    If initialised with a logger, it can log the elapsed time automatically
+    upon exiting the with-statement.
+
+    >>> import logging
+    >>> log = logging.getLogger("my-fancy-timer-logger")
+    >>> configLogger(logger=log, level="DEBUG", format="%(message)s", stream=sys.stdout)
+    >>> with Timer(log, 'do something'):
+    ...     time.sleep(0.01)
+    Took ... to do something
+
+    The same Timer instance, holding a reference to a logger, can be reused
+    in multiple with-statements, optionally with different messages or levels.
+
+    >>> timer = Timer(log)
+    >>> with timer():
+    ...     time.sleep(0.01)
+    elapsed time: ...s
+    >>> with timer('redo it', level=logging.INFO):
+    ...     time.sleep(0.02)
+    Took ... to redo it
+
+    It can also be used as a function decorator to log the time elapsed to run
+    the decorated function.
+
+    >>> @timer()
+    ... def test1():
+    ...    time.sleep(0.01)
+    >>> @timer('run test 2', level=logging.INFO)
+    ... def test2():
+    ...    time.sleep(0.02)
+    >>> test1()
+    Took ... to run 'test1'
+    >>> test2()
+    Took ... to run test 2
+    """
+
+    # timeit.default_timer choses the most accurate clock for each platform
+    _time: Callable[[], float] = staticmethod(timeit.default_timer)
+    default_msg = "elapsed time: %(time).3fs"
+    default_format = "Took %(time).3fs to %(msg)s"
+
+    def __init__(self, logger=None, msg=None, level=None, start=None):
+        self.reset(start)
+        if logger is None:
+            for arg in ("msg", "level"):
+                if locals().get(arg) is not None:
+                    raise ValueError("'%s' can't be specified without a 'logger'" % arg)
+        self.logger = logger
+        self.level = level if level is not None else TIME_LEVEL
+        self.msg = msg
+
+    def reset(self, start=None):
+        """Reset timer to 'start_time' or the current time."""
+        if start is None:
+            self.start = self._time()
+        else:
+            self.start = start
+        self.last = self.start
+        self.elapsed = 0.0
+
+    def time(self):
+        """Return the overall time (in seconds) since the timer started."""
+        return self._time() - self.start
+
+    def split(self):
+        """Split and return the lap time (in seconds) in between splits."""
+        current = self._time()
+        self.elapsed = current - self.last
+        self.last = current
+        return self.elapsed
+
+    def formatTime(self, msg, time):
+        """Format 'time' value in 'msg' and return formatted string.
+        If 'msg' contains a '%(time)' format string, try to use that.
+        Otherwise, use the predefined 'default_format'.
+        If 'msg' is empty or None, fall back to 'default_msg'.
+        """
+        if not msg:
+            msg = self.default_msg
+        if msg.find("%(time)") < 0:
+            msg = self.default_format % {"msg": msg, "time": time}
+        else:
+            try:
+                msg = msg % {"time": time}
+            except (KeyError, ValueError):
+                pass  # skip if the format string is malformed
+        return msg
+
+    def __enter__(self):
+        """Start a new lap"""
+        self.last = self._time()
+        self.elapsed = 0.0
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        """End the current lap. If timer has a logger, log the time elapsed,
+        using the format string in self.msg (or the default one).
+        """
+        time = self.split()
+        if self.logger is None or exc_type:
+            # if there's no logger attached, or if any exception occurred in
+            # the with-statement, exit without logging the time
+            return
+        message = self.formatTime(self.msg, time)
+        # Allow log handlers to see the individual parts to facilitate things
+        # like a server accumulating aggregate stats.
+        msg_parts = {"msg": self.msg, "time": time}
+        self.logger.log(self.level, message, msg_parts)
+
+    def __call__(self, func_or_msg=None, **kwargs):
+        """If the first argument is a function, return a decorator which runs
+        the wrapped function inside Timer's context manager.
+        Otherwise, treat the first argument as a 'msg' string and return an updated
+        Timer instance, referencing the same logger.
+        A 'level' keyword can also be passed to override self.level.
+        """
+        if isinstance(func_or_msg, Callable):
+            func = func_or_msg
+            # use the function name when no explicit 'msg' is provided
+            if not self.msg:
+                self.msg = "run '%s'" % func.__name__
+
+            @wraps(func)
+            def wrapper(*args, **kwds):
+                with self:
+                    return func(*args, **kwds)
+
+            return wrapper
+        else:
+            msg = func_or_msg or kwargs.get("msg")
+            level = kwargs.get("level", self.level)
+            return self.__class__(self.logger, msg, level)
+
+    def __float__(self):
+        return self.elapsed
+
+    def __int__(self):
+        return int(self.elapsed)
+
+    def __str__(self):
+        return "%.3f" % self.elapsed
+
+
+class ChannelsFilter(logging.Filter):
+    """Provides a hierarchical filter for log entries based on channel names.
+
+    Filters out records emitted from a list of enabled channel names,
+    including their children. It works the same as the ``logging.Filter``
+    class, but allows the user to specify multiple channel names.
+
+    >>> import sys
+    >>> handler = logging.StreamHandler(sys.stdout)
+    >>> handler.setFormatter(logging.Formatter("%(message)s"))
+    >>> filter = ChannelsFilter("A.B", "C.D")
+    >>> handler.addFilter(filter)
+    >>> root = logging.getLogger()
+    >>> root.addHandler(handler)
+    >>> root.setLevel(level=logging.DEBUG)
+    >>> logging.getLogger('A.B').debug('this record passes through')
+    this record passes through
+    >>> logging.getLogger('A.B.C').debug('records from children also pass')
+    records from children also pass
+    >>> logging.getLogger('C.D').debug('this one as well')
+    this one as well
+    >>> logging.getLogger('A.B.').debug('also this one')
+    also this one
+    >>> logging.getLogger('A.F').debug('but this one does not!')
+    >>> logging.getLogger('C.DE').debug('neither this one!')
+    """
+
+    def __init__(self, *names):
+        self.names = names
+        self.num = len(names)
+        self.lengths = {n: len(n) for n in names}
+
+    def filter(self, record):
+        if self.num == 0:
+            return True
+        for name in self.names:
+            nlen = self.lengths[name]
+            if name == record.name:
+                return True
+            elif record.name.find(name, 0, nlen) == 0 and record.name[nlen] == ".":
+                return True
+        return False
+
+
+class CapturingLogHandler(logging.Handler):
+    def __init__(self, logger, level):
+        super(CapturingLogHandler, self).__init__(level=level)
+        self.records = []
+        if isinstance(logger, str):
+            self.logger = logging.getLogger(logger)
+        else:
+            self.logger = logger
+
+    def __enter__(self):
+        self.original_disabled = self.logger.disabled
+        self.original_level = self.logger.level
+        self.original_propagate = self.logger.propagate
+
+        self.logger.addHandler(self)
+        self.logger.setLevel(self.level)
+        self.logger.disabled = False
+        self.logger.propagate = False
+
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.logger.removeHandler(self)
+        self.logger.setLevel(self.original_level)
+        self.logger.disabled = self.original_disabled
+        self.logger.propagate = self.original_propagate
+
+        return self
+
+    def emit(self, record):
+        self.records.append(record)
+
+    def assertRegex(self, regexp, msg=None):
+        import re
+
+        pattern = re.compile(regexp)
+        for r in self.records:
+            if pattern.search(r.getMessage()):
+                return True
+        if msg is None:
+            msg = "Pattern '%s' not found in logger records" % regexp
+        assert 0, msg
+
+
+class LogMixin(object):
+    """Mixin class that adds logging functionality to another class.
+
+    You can define a new class that subclasses from ``LogMixin`` as well as
+    other base classes through multiple inheritance.
+    All instances of that class will have a ``log`` property that returns
+    a ``logging.Logger`` named after their respective ``<module>.<class>``.
+
+    For example:
+
+    >>> class BaseClass(object):
+    ...     pass
+    >>> class MyClass(LogMixin, BaseClass):
+    ...     pass
+    >>> a = MyClass()
+    >>> isinstance(a.log, logging.Logger)
+    True
+    >>> print(a.log.name)
+    fontTools.misc.loggingTools.MyClass
+    >>> class AnotherClass(MyClass):
+    ...     pass
+    >>> b = AnotherClass()
+    >>> isinstance(b.log, logging.Logger)
+    True
+    >>> print(b.log.name)
+    fontTools.misc.loggingTools.AnotherClass
+    """
+
+    @property
+    def log(self):
+        if not hasattr(self, "_log"):
+            name = ".".join((self.__class__.__module__, self.__class__.__name__))
+            self._log = logging.getLogger(name)
+        return self._log
+
+
+def deprecateArgument(name, msg, category=UserWarning):
+    """Raise a warning about deprecated function argument 'name'."""
+    warnings.warn("%r is deprecated; %s" % (name, msg), category=category, stacklevel=3)
+
+
+def deprecateFunction(msg, category=UserWarning):
+    """Decorator to raise a warning when a deprecated function is called."""
+
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            warnings.warn(
+                "%r is deprecated; %s" % (func.__name__, msg),
+                category=category,
+                stacklevel=2,
+            )
+            return func(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+
+if __name__ == "__main__":
+    import doctest
+
+    sys.exit(doctest.testmod(optionflags=doctest.ELLIPSIS).failed)

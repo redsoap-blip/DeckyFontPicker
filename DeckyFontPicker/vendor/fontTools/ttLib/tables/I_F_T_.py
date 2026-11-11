@@ -1,1 +1,12 @@
-IiIiSUZUIC0gSW5jcmVtZW50YWwgRm9udCBUcmFuc2ZlciB0YWJsZS4iIiIKCiMgUmVmZXJlbmNlOiBodHRwczovL2dpdGh1Yi5jb20vZ29vZ2xlZm9udHMvZm9udGF0aW9ucy9ibG9iL21haW4vcmVhZC1mb250cy9zcmMvdGFibGVzL2lmdC5ycwoKCmZyb20gLm90QmFzZSBpbXBvcnQgQmFzZVRUWENvbnZlcnRlcgoKCmNsYXNzIHRhYmxlX0lfRl9UXyhCYXNlVFRYQ29udmVydGVyKToKICAgICIiIkluY3JlbWVudGFsIEZvbnQgVHJhbnNmZXIgdGFibGUuIiIiCgogICAgcGFzcwo=
+"""IFT - Incremental Font Transfer table."""
+
+# Reference: https://github.com/googlefonts/fontations/blob/main/read-fonts/src/tables/ift.rs
+
+
+from .otBase import BaseTTXConverter
+
+
+class table_I_F_T_(BaseTTXConverter):
+    """Incremental Font Transfer table."""
+
+    pass

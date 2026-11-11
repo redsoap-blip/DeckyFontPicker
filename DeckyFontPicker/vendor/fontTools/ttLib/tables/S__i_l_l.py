@@ -1,1 +1,92 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZsb2F0VG9GaXhlZFRvU3RyCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbApmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIC4gaW1wb3J0IGdyVXRpbHMKaW1wb3J0IHN0cnVjdAoKU2lsbF9oZHIgPSAiIiIKICAgID4KICAgIHZlcnNpb246ICAgIDE2LjE2RgoiIiIKCgpjbGFzcyB0YWJsZV9TX19pX2xfbChEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkdyYXBoaXRlIExhbmd1YWdlcyB0YWJsZQoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZ3JhcGhpdGUuc2lsLm9yZy9ncmFwaGl0ZV90ZWNoQWJvdXQjZ3JhcGhpdGUtZm9udC10YWJsZXMKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5sYW5ncyA9IHt9CgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIF8sIGRhdGEgPSBzc3RydWN0LnVucGFjazIoU2lsbF9oZHIsIGRhdGEsIHNlbGYpCiAgICAgICAgc2VsZi52ZXJzaW9uID0gZmxvYXQoZmxvYXRUb0ZpeGVkVG9TdHIoc2VsZi52ZXJzaW9uLCBwcmVjaXNpb25CaXRzPTE2KSkKICAgICAgICAobnVtTGFuZ3MsKSA9IHN0cnVjdC51bnBhY2soIj5IIiwgZGF0YVs6Ml0pCiAgICAgICAgZGF0YSA9IGRhdGFbODpdCiAgICAgICAgbWF4c2V0dGluZyA9IDAKICAgICAgICBsYW5naW5mbyA9IFtdCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobnVtTGFuZ3MpOgogICAgICAgICAgICBsYW5nY29kZSwgbnVtc2V0dGluZ3MsIG9mZnNldCA9IHN0cnVjdC51bnBhY2soCiAgICAgICAgICAgICAgICAiPjRzSEgiLCBkYXRhW2kgKiA4IDogKGkgKyAxKSAqIDhdCiAgICAgICAgICAgICkKICAgICAgICAgICAgb2Zmc2V0ID0gaW50KG9mZnNldCAvIDgpIC0gKG51bUxhbmdzICsgMSkKICAgICAgICAgICAgbGFuZ2NvZGUgPSBsYW5nY29kZS5yZXBsYWNlKGIiXDAwMCIsIGIiIikKICAgICAgICAgICAgbGFuZ2luZm8uYXBwZW5kKChsYW5nY29kZS5kZWNvZGUoInV0Zi04IiksIG51bXNldHRpbmdzLCBvZmZzZXQpKQogICAgICAgICAgICBtYXhzZXR0aW5nID0gbWF4KG1heHNldHRpbmcsIG9mZnNldCArIG51bXNldHRpbmdzKQogICAgICAgIGRhdGEgPSBkYXRhW251bUxhbmdzICogOCA6XQogICAgICAgIGZpbmZvID0gW10KICAgICAgICBmb3IgaSBpbiByYW5nZShtYXhzZXR0aW5nKToKICAgICAgICAgICAgZmlkLCB2YWwsIF8gPSBzdHJ1Y3QudW5wYWNrKCI+TEhIIiwgZGF0YVtpICogOCA6IChpICsgMSkgKiA4XSkKICAgICAgICAgICAgZmluZm8uYXBwZW5kKChmaWQsIHZhbCkpCiAgICAgICAgc2VsZi5sYW5ncyA9IHt9CiAgICAgICAgZm9yIGMsIG4sIG8gaW4gbGFuZ2luZm86CiAgICAgICAgICAgIHNlbGYubGFuZ3NbY10gPSBbXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShvLCBvICsgbik6CiAgICAgICAgICAgICAgICBzZWxmLmxhbmdzW2NdLmFwcGVuZChmaW5mb1tpXSkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGxkYXQgPSBiIiIKICAgICAgICBmZGF0ID0gYiIiCiAgICAgICAgb2Zmc2V0ID0gbGVuKHNlbGYubGFuZ3MpCiAgICAgICAgZm9yIGMsIGluZiBpbiBzb3J0ZWQoc2VsZi5sYW5ncy5pdGVtcygpKToKICAgICAgICAgICAgbGRhdCArPSBzdHJ1Y3QucGFjaygiPjRzSEgiLCBjLmVuY29kZSgidXRmOCIpLCBsZW4oaW5mKSwgOCAqIG9mZnNldCArIDIwKQogICAgICAgICAgICBmb3IgZmlkLCB2YWwgaW4gaW5mOgogICAgICAgICAgICAgICAgZmRhdCArPSBzdHJ1Y3QucGFjaygiPkxISCIsIGZpZCwgdmFsLCAwKQogICAgICAgICAgICBvZmZzZXQgKz0gbGVuKGluZikKICAgICAgICBsZGF0ICs9IHN0cnVjdC5wYWNrKCI+TEhIIiwgMHg4MDgwODA4MCwgMCwgOCAqIG9mZnNldCArIDIwKQogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIHNzdHJ1Y3QucGFjayhTaWxsX2hkciwgc2VsZikKICAgICAgICAgICAgKyBnclV0aWxzLmJpbmluZm8obGVuKHNlbGYubGFuZ3MpKQogICAgICAgICAgICArIGxkYXQKICAgICAgICAgICAgKyBmZGF0CiAgICAgICAgKQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygidmVyc2lvbiIsIHZlcnNpb249c2VsZi52ZXJzaW9uKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBmb3IgYywgaW5mIGluIHNvcnRlZChzZWxmLmxhbmdzLml0ZW1zKCkpOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoImxhbmciLCBuYW1lPWMpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIGZpZCwgdmFsIGluIGluZjoKICAgICAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImZlYXR1cmUiLCBmaWQ9Z3JVdGlscy5udW0ydGFnKGZpZCksIHZhbD12YWwpCiAgICAgICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5lbmR0YWcoImxhbmciKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAidmVyc2lvbiI6CiAgICAgICAgICAgIHNlbGYudmVyc2lvbiA9IGZsb2F0KHNhZmVFdmFsKGF0dHJzWyJ2ZXJzaW9uIl0pKQogICAgICAgIGVsaWYgbmFtZSA9PSAibGFuZyI6CiAgICAgICAgICAgIGMgPSBhdHRyc1sibmFtZSJdCiAgICAgICAgICAgIHNlbGYubGFuZ3NbY10gPSBbXQogICAgICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICB0YWcsIGEsIHN1YmNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgICAgICBpZiB0YWcgPT0gImZlYXR1cmUiOgogICAgICAgICAgICAgICAgICAgIHNlbGYubGFuZ3NbY10uYXBwZW5kKAogICAgICAgICAgICAgICAgICAgICAgICAoZ3JVdGlscy50YWcybnVtKGFbImZpZCJdKSwgaW50KHNhZmVFdmFsKGFbInZhbCJdKSkpCiAgICAgICAgICAgICAgICAgICAgKQo=
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import floatToFixedToStr
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+from . import grUtils
+import struct
+
+Sill_hdr = """
+    >
+    version:    16.16F
+"""
+
+
+class table_S__i_l_l(DefaultTable.DefaultTable):
+    """Graphite Languages table
+
+    See also https://graphite.sil.org/graphite_techAbout#graphite-font-tables
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.langs = {}
+
+    def decompile(self, data, ttFont):
+        _, data = sstruct.unpack2(Sill_hdr, data, self)
+        self.version = float(floatToFixedToStr(self.version, precisionBits=16))
+        (numLangs,) = struct.unpack(">H", data[:2])
+        data = data[8:]
+        maxsetting = 0
+        langinfo = []
+        for i in range(numLangs):
+            langcode, numsettings, offset = struct.unpack(
+                ">4sHH", data[i * 8 : (i + 1) * 8]
+            )
+            offset = int(offset / 8) - (numLangs + 1)
+            langcode = langcode.replace(b"\000", b"")
+            langinfo.append((langcode.decode("utf-8"), numsettings, offset))
+            maxsetting = max(maxsetting, offset + numsettings)
+        data = data[numLangs * 8 :]
+        finfo = []
+        for i in range(maxsetting):
+            fid, val, _ = struct.unpack(">LHH", data[i * 8 : (i + 1) * 8])
+            finfo.append((fid, val))
+        self.langs = {}
+        for c, n, o in langinfo:
+            self.langs[c] = []
+            for i in range(o, o + n):
+                self.langs[c].append(finfo[i])
+
+    def compile(self, ttFont):
+        ldat = b""
+        fdat = b""
+        offset = len(self.langs)
+        for c, inf in sorted(self.langs.items()):
+            ldat += struct.pack(">4sHH", c.encode("utf8"), len(inf), 8 * offset + 20)
+            for fid, val in inf:
+                fdat += struct.pack(">LHH", fid, val, 0)
+            offset += len(inf)
+        ldat += struct.pack(">LHH", 0x80808080, 0, 8 * offset + 20)
+        return (
+            sstruct.pack(Sill_hdr, self)
+            + grUtils.bininfo(len(self.langs))
+            + ldat
+            + fdat
+        )
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", version=self.version)
+        writer.newline()
+        for c, inf in sorted(self.langs.items()):
+            writer.begintag("lang", name=c)
+            writer.newline()
+            for fid, val in inf:
+                writer.simpletag("feature", fid=grUtils.num2tag(fid), val=val)
+                writer.newline()
+            writer.endtag("lang")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = float(safeEval(attrs["version"]))
+        elif name == "lang":
+            c = attrs["name"]
+            self.langs[c] = []
+            for element in content:
+                if not isinstance(element, tuple):
+                    continue
+                tag, a, subcontent = element
+                if tag == "feature":
+                    self.langs[c].append(
+                        (grUtils.tag2num(a["fid"]), int(safeEval(a["val"])))
+                    )

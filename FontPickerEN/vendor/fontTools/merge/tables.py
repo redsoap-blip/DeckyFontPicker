@@ -1,1 +1,376 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYiwgY2ZmTGliCmZyb20gZm9udFRvb2xzLm1pc2MucHNDaGFyU3RyaW5ncyBpbXBvcnQgVDJXaWR0aEV4dHJhY3Rvcgpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuRGVmYXVsdFRhYmxlIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSBmb250VG9vbHMubWVyZ2UuYmFzZSBpbXBvcnQgYWRkX21ldGhvZCwgbWVyZ2VPYmplY3RzCmZyb20gZm9udFRvb2xzLm1lcmdlLmNtYXAgaW1wb3J0IGNvbXB1dGVNZWdhQ21hcApmcm9tIGZvbnRUb29scy5tZXJnZS51dGlsIGltcG9ydCAqCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiZm9udFRvb2xzLm1lcmdlIikKCgp0dExpYi5nZXRUYWJsZUNsYXNzKCJtYXhwIikubWVyZ2VNYXAgPSB7CiAgICAiKiI6IG1heCwKICAgICJ0YWJsZVRhZyI6IGVxdWFsLAogICAgInRhYmxlVmVyc2lvbiI6IGVxdWFsLAogICAgIm51bUdseXBocyI6IHN1bSwKICAgICJtYXhTdG9yYWdlIjogZmlyc3QsCiAgICAibWF4RnVuY3Rpb25EZWZzIjogZmlyc3QsCiAgICAibWF4SW5zdHJ1Y3Rpb25EZWZzIjogZmlyc3QsCiAgICAjIFRPRE8gV2hlbiB3ZSBjb3JyZWN0bHkgbWVyZ2UgaGludGluZyBkYXRhLCB1cGRhdGUgdGhlc2UgdmFsdWVzOgogICAgIyBtYXhGdW5jdGlvbkRlZnMsIG1heEluc3RydWN0aW9uRGVmcywgbWF4U2l6ZU9mSW5zdHJ1Y3Rpb25zCn0KdHRMaWIuZ2V0VGFibGVDbGFzcygiTUFYUCIpLm1lcmdlTWFwID0gdHRMaWIuZ2V0VGFibGVDbGFzcygibWF4cCIpLm1lcmdlTWFwCgpoZWFkRmxhZ3NNZXJnZUJpdE1hcCA9IHsKICAgICJzaXplIjogMTYsCiAgICAiKiI6IGJpdHdpc2Vfb3IsCiAgICAxOiBiaXR3aXNlX2FuZCwgICMgQmFzZWxpbmUgYXQgeSA9IDAKICAgIDI6IGJpdHdpc2VfYW5kLCAgIyBsc2IgYXQgeCA9IDAKICAgIDM6IGJpdHdpc2VfYW5kLCAgIyBGb3JjZSBwcGVtIHRvIGludGVnZXIgdmFsdWVzLiBGSVhNRT8KICAgIDU6IGJpdHdpc2VfYW5kLCAgIyBGb250IGlzIHZlcnRpY2FsCiAgICA2OiBsYW1iZGEgYml0OiAwLCAgIyBBbHdheXMgc2V0IHRvIHplcm8KICAgIDExOiBiaXR3aXNlX2FuZCwgICMgRm9udCBkYXRhIGlzICdsb3NzbGVzcycKICAgIDEzOiBiaXR3aXNlX2FuZCwgICMgT3B0aW1pemVkIGZvciBDbGVhclR5cGUKICAgIDE0OiBiaXR3aXNlX2FuZCwgICMgTGFzdCByZXNvcnQgZm9udC4gRklYTUU/IGVxdWFsIG9yIGZpcnN0IG1heSBiZSBiZXR0ZXIKICAgIDE1OiBsYW1iZGEgYml0OiAwLCAgIyBBbHdheXMgc2V0IHRvIHplcm8KfQoKCmRlZiBtZXJnZVVuaXRzUGVyRW0obHN0KToKICAgIGxzdCA9IGxpc3QobHN0KQogICAgaWYgYW55KGl0ZW0gIT0gbHN0WzBdIGZvciBpdGVtIGluIGxzdFsxOl0pOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICJDYW5ub3QgbWVyZ2UgZm9udHMgd2l0aCBkaWZmZXJlbnQgdW5pdHNQZXJFbSB2YWx1ZXM6ICVzIiAlIGxzdAogICAgICAgICkKICAgIHJldHVybiBsc3RbMF0KCgp0dExpYi5nZXRUYWJsZUNsYXNzKCJoZWFkIikubWVyZ2VNYXAgPSB7CiAgICAidGFibGVUYWciOiBlcXVhbCwKICAgICJ0YWJsZVZlcnNpb24iOiBtYXgsCiAgICAiZm9udFJldmlzaW9uIjogbWF4LAogICAgImNoZWNrU3VtQWRqdXN0bWVudCI6IGxhbWJkYSBsc3Q6IDAsICAjIFdlIG5lZWQgKnNvbWV0aGluZyogaGVyZQogICAgIm1hZ2ljTnVtYmVyIjogZXF1YWwsCiAgICAiZmxhZ3MiOiBtZXJnZUJpdHMoaGVhZEZsYWdzTWVyZ2VCaXRNYXApLAogICAgInVuaXRzUGVyRW0iOiBtZXJnZVVuaXRzUGVyRW0sCiAgICAiY3JlYXRlZCI6IGN1cnJlbnRfdGltZSwKICAgICJtb2RpZmllZCI6IGN1cnJlbnRfdGltZSwKICAgICJ4TWluIjogbWluLAogICAgInlNaW4iOiBtaW4sCiAgICAieE1heCI6IG1heCwKICAgICJ5TWF4IjogbWF4LAogICAgIm1hY1N0eWxlIjogZmlyc3QsCiAgICAibG93ZXN0UmVjUFBFTSI6IG1heCwKICAgICJmb250RGlyZWN0aW9uSGludCI6IGxhbWJkYSBsc3Q6IDIsCiAgICAiaW5kZXhUb0xvY0Zvcm1hdCI6IGZpcnN0LAogICAgImdseXBoRGF0YUZvcm1hdCI6IGVxdWFsLAp9Cgp0dExpYi5nZXRUYWJsZUNsYXNzKCJoaGVhIikubWVyZ2VNYXAgPSB7CiAgICAiKiI6IGVxdWFsLAogICAgInRhYmxlVGFnIjogZXF1YWwsCiAgICAidGFibGVWZXJzaW9uIjogbWF4LAogICAgImFzY2VudCI6IG1heCwKICAgICJkZXNjZW50IjogbWluLAogICAgImxpbmVHYXAiOiBtYXgsCiAgICAiYWR2YW5jZVdpZHRoTWF4IjogbWF4LAogICAgIm1pbkxlZnRTaWRlQmVhcmluZyI6IG1pbiwKICAgICJtaW5SaWdodFNpZGVCZWFyaW5nIjogbWluLAogICAgInhNYXhFeHRlbnQiOiBtYXgsCiAgICAiY2FyZXRTbG9wZVJpc2UiOiBmaXJzdCwKICAgICJjYXJldFNsb3BlUnVuIjogZmlyc3QsCiAgICAiY2FyZXRPZmZzZXQiOiBmaXJzdCwKICAgICJudW1iZXJPZkhNZXRyaWNzIjogcmVjYWxjdWxhdGUsCn0KdHRMaWIuZ2V0VGFibGVDbGFzcygiSEhFQSIpLm1lcmdlTWFwID0gdHRMaWIuZ2V0VGFibGVDbGFzcygiaGhlYSIpLm1lcmdlTWFwCgp0dExpYi5nZXRUYWJsZUNsYXNzKCJ2aGVhIikubWVyZ2VNYXAgPSB7CiAgICAiKiI6IGVxdWFsLAogICAgInRhYmxlVGFnIjogZXF1YWwsCiAgICAidGFibGVWZXJzaW9uIjogbWF4LAogICAgImFzY2VudCI6IG1heCwKICAgICJkZXNjZW50IjogbWluLAogICAgImxpbmVHYXAiOiBtYXgsCiAgICAiYWR2YW5jZUhlaWdodE1heCI6IG1heCwKICAgICJtaW5Ub3BTaWRlQmVhcmluZyI6IG1pbiwKICAgICJtaW5Cb3R0b21TaWRlQmVhcmluZyI6IG1pbiwKICAgICJ5TWF4RXh0ZW50IjogbWF4LAogICAgImNhcmV0U2xvcGVSaXNlIjogZmlyc3QsCiAgICAiY2FyZXRTbG9wZVJ1biI6IGZpcnN0LAogICAgImNhcmV0T2Zmc2V0IjogZmlyc3QsCiAgICAibnVtYmVyT2ZWTWV0cmljcyI6IHJlY2FsY3VsYXRlLAp9CnR0TGliLmdldFRhYmxlQ2xhc3MoIlZIRUEiKS5tZXJnZU1hcCA9IHR0TGliLmdldFRhYmxlQ2xhc3MoInZoZWEiKS5tZXJnZU1hcAoKb3MyRnNUeXBlTWVyZ2VCaXRNYXAgPSB7CiAgICAic2l6ZSI6IDE2LAogICAgIioiOiBsYW1iZGEgYml0OiAwLAogICAgMTogYml0d2lzZV9vciwgICMgbm8gZW1iZWRkaW5nIHBlcm1pdHRlZAogICAgMjogYml0d2lzZV9hbmQsICAjIGFsbG93IHByZXZpZXdpbmcgYW5kIHByaW50aW5nIGRvY3VtZW50cwogICAgMzogYml0d2lzZV9hbmQsICAjIGFsbG93IGVkaXRpbmcgZG9jdW1lbnRzCiAgICA4OiBiaXR3aXNlX29yLCAgIyBubyBzdWJzZXR0aW5nIHBlcm1pdHRlZAogICAgOTogYml0d2lzZV9vciwgICMgbm8gZW1iZWRkaW5nIG9mIG91dGxpbmVzIHBlcm1pdHRlZAp9CgoKZGVmIG1lcmdlT3MyRnNUeXBlKGxzdCk6CiAgICBsc3QgPSBsaXN0KGxzdCkKICAgIGlmIGFsbChpdGVtID09IDAgZm9yIGl0ZW0gaW4gbHN0KToKICAgICAgICByZXR1cm4gMAoKICAgICMgQ29tcHV0ZSBsZWFzdCByZXN0cmljdGl2ZSBsb2dpYyBmb3IgZWFjaCBmc1R5cGUgdmFsdWUKICAgIGZvciBpIGluIHJhbmdlKGxlbihsc3QpKToKICAgICAgICAjIHVuc2V0IGJpdCAxIChubyBlbWJlZGRpbmcgcGVybWl0dGVkKSBpZiBlaXRoZXIgYml0IDIgb3IgMyBpcyBzZXQKICAgICAgICBpZiBsc3RbaV0gJiAweDAwMEM6CiAgICAgICAgICAgIGxzdFtpXSAmPSB+MHgwMDAyCiAgICAgICAgIyBzZXQgYml0IDIgKGFsbG93IHByZXZpZXdpbmcpIGlmIGJpdCAzIGlzIHNldCAoYWxsb3cgZWRpdGluZykKICAgICAgICBlbGlmIGxzdFtpXSAmIDB4MDAwODoKICAgICAgICAgICAgbHN0W2ldIHw9IDB4MDAwNAogICAgICAgICMgc2V0IGJpdHMgMiBhbmQgMyBpZiBldmVyeXRoaW5nIGlzIGFsbG93ZWQKICAgICAgICBlbGlmIGxzdFtpXSA9PSAwOgogICAgICAgICAgICBsc3RbaV0gPSAweDAwMEMKCiAgICBmc1R5cGUgPSBtZXJnZUJpdHMob3MyRnNUeXBlTWVyZ2VCaXRNYXApKGxzdCkKICAgICMgdW5zZXQgYml0cyAyIGFuZCAzIGlmIGJpdCAxIGlzIHNldCAoc29tZSBmb250IGlzICJubyBlbWJlZGRpbmciKQogICAgaWYgZnNUeXBlICYgMHgwMDAyOgogICAgICAgIGZzVHlwZSAmPSB+MHgwMDBDCiAgICByZXR1cm4gZnNUeXBlCgoKdHRMaWIuZ2V0VGFibGVDbGFzcygiT1MvMiIpLm1lcmdlTWFwID0gewogICAgIioiOiBmaXJzdCwKICAgICJ0YWJsZVRhZyI6IGVxdWFsLAogICAgInZlcnNpb24iOiBtYXgsCiAgICAieEF2Z0NoYXJXaWR0aCI6IGZpcnN0LCAgIyBXaWxsIGJlIHJlY2FsY3VsYXRlZCBhdCB0aGUgZW5kIG9uIHRoZSBtZXJnZWQgZm9udAogICAgImZzVHlwZSI6IG1lcmdlT3MyRnNUeXBlLCAgIyBXaWxsIGJlIG92ZXJ3cml0dGVuCiAgICAicGFub3NlIjogZmlyc3QsICAjIEZJWE1FOiBzaG91bGQgcmVhbGx5IGJlIHRoZSBmaXJzdCBMYXRpbiBmb250CiAgICAidWxVbmljb2RlUmFuZ2UxIjogYml0d2lzZV9vciwKICAgICJ1bFVuaWNvZGVSYW5nZTIiOiBiaXR3aXNlX29yLAogICAgInVsVW5pY29kZVJhbmdlMyI6IGJpdHdpc2Vfb3IsCiAgICAidWxVbmljb2RlUmFuZ2U0IjogYml0d2lzZV9vciwKICAgICJmc0ZpcnN0Q2hhckluZGV4IjogbWluLAogICAgImZzTGFzdENoYXJJbmRleCI6IG1heCwKICAgICJzVHlwb0FzY2VuZGVyIjogbWF4LAogICAgInNUeXBvRGVzY2VuZGVyIjogbWluLAogICAgInNUeXBvTGluZUdhcCI6IG1heCwKICAgICJ1c1dpbkFzY2VudCI6IG1heCwKICAgICJ1c1dpbkRlc2NlbnQiOiBtYXgsCiAgICAjIFZlcnNpb24gMQogICAgInVsQ29kZVBhZ2VSYW5nZTEiOiBvbmx5RXhpc3RpbmcoYml0d2lzZV9vciksCiAgICAidWxDb2RlUGFnZVJhbmdlMiI6IG9ubHlFeGlzdGluZyhiaXR3aXNlX29yKSwKICAgICMgVmVyc2lvbiAyLCAzLCA0CiAgICAic3hIZWlnaHQiOiBvbmx5RXhpc3RpbmcobWF4KSwKICAgICJzQ2FwSGVpZ2h0Ijogb25seUV4aXN0aW5nKG1heCksCiAgICAidXNEZWZhdWx0Q2hhciI6IG9ubHlFeGlzdGluZyhmaXJzdCksCiAgICAidXNCcmVha0NoYXIiOiBvbmx5RXhpc3RpbmcoZmlyc3QpLAogICAgInVzTWF4Q29udGV4dCI6IG9ubHlFeGlzdGluZyhtYXgpLAogICAgIyB2ZXJzaW9uIDUKICAgICJ1c0xvd2VyT3B0aWNhbFBvaW50U2l6ZSI6IG9ubHlFeGlzdGluZyhtaW4pLAogICAgInVzVXBwZXJPcHRpY2FsUG9pbnRTaXplIjogb25seUV4aXN0aW5nKG1heCksCn0KCgpAYWRkX21ldGhvZCh0dExpYi5nZXRUYWJsZUNsYXNzKCJPUy8yIikpCmRlZiBtZXJnZShzZWxmLCBtLCB0YWJsZXMpOgogICAgRGVmYXVsdFRhYmxlLm1lcmdlKHNlbGYsIG0sIHRhYmxlcykKICAgIGlmIHNlbGYudmVyc2lvbiA8IDI6CiAgICAgICAgIyBiaXRzIDggYW5kIDkgYXJlIHJlc2VydmVkIGFuZCBzaG91bGQgYmUgc2V0IHRvIHplcm8KICAgICAgICBzZWxmLmZzVHlwZSAmPSB+MHgwMzAwCiAgICBpZiBzZWxmLnZlcnNpb24gPj0gMzoKICAgICAgICAjIE9ubHkgb25lIG9mIGJpdHMgMSwgMiwgYW5kIDMgbWF5IGJlIHNldC4gV2UgYWxyZWFkeSB0YWtlCiAgICAgICAgIyBjYXJlIG9mIGJpdCAxIGltcGxpY2F0aW9ucyBpbiBtZXJnZU9zMkZzVHlwZS4gU28gdW5zZXQKICAgICAgICAjIGJpdCAyIGlmIGJpdCAzIGlzIGFscmVhZHkgc2V0LgogICAgICAgIGlmIHNlbGYuZnNUeXBlICYgMHgwMDA4OgogICAgICAgICAgICBzZWxmLmZzVHlwZSAmPSB+MHgwMDA0CiAgICByZXR1cm4gc2VsZgoKCnR0TGliLmdldFRhYmxlQ2xhc3MoInBvc3QiKS5tZXJnZU1hcCA9IHsKICAgICIqIjogZmlyc3QsCiAgICAidGFibGVUYWciOiBlcXVhbCwKICAgICJmb3JtYXRUeXBlIjogbWF4LAogICAgImlzRml4ZWRQaXRjaCI6IG1pbiwKICAgICJtaW5NZW1UeXBlNDIiOiBtYXgsCiAgICAibWF4TWVtVHlwZTQyIjogbGFtYmRhIGxzdDogMCwKICAgICJtaW5NZW1UeXBlMSI6IG1heCwKICAgICJtYXhNZW1UeXBlMSI6IGxhbWJkYSBsc3Q6IDAsCiAgICAibWFwcGluZyI6IG9ubHlFeGlzdGluZyhzdW1EaWN0cyksCiAgICAiZXh0cmFOYW1lcyI6IGxhbWJkYSBsc3Q6IFtdLAp9Cgp0dExpYi5nZXRUYWJsZUNsYXNzKCJ2bXR4IikubWVyZ2VNYXAgPSB0dExpYi5nZXRUYWJsZUNsYXNzKCJobXR4IikubWVyZ2VNYXAgPSB7CiAgICAidGFibGVUYWciOiBlcXVhbCwKICAgICJtZXRyaWNzIjogc3VtRGljdHMsCn0KdHRMaWIuZ2V0VGFibGVDbGFzcygiSE1UWCIpLm1lcmdlTWFwID0gdHRMaWIuZ2V0VGFibGVDbGFzcygiaG10eCIpLm1lcmdlTWFwCnR0TGliLmdldFRhYmxlQ2xhc3MoIlZNVFgiKS5tZXJnZU1hcCA9IHR0TGliLmdldFRhYmxlQ2xhc3MoInZtdHgiKS5tZXJnZU1hcAoKdHRMaWIuZ2V0VGFibGVDbGFzcygibmFtZSIpLm1lcmdlTWFwID0gewogICAgInRhYmxlVGFnIjogZXF1YWwsCiAgICAibmFtZXMiOiBmaXJzdCwgICMgRklYTUU/IERvZXMgbWl4aW5nIG5hbWUgcmVjb3JkcyBtYWtlIHNlbnNlPwp9Cgp0dExpYi5nZXRUYWJsZUNsYXNzKCJsb2NhIikubWVyZ2VNYXAgPSB7CiAgICAiKiI6IHJlY2FsY3VsYXRlLAogICAgInRhYmxlVGFnIjogZXF1YWwsCn0KdHRMaWIuZ2V0VGFibGVDbGFzcygiTE9DQSIpLm1lcmdlTWFwID0gdHRMaWIuZ2V0VGFibGVDbGFzcygibG9jYSIpLm1lcmdlTWFwCgp0dExpYi5nZXRUYWJsZUNsYXNzKCJnbHlmIikubWVyZ2VNYXAgPSB7CiAgICAidGFibGVUYWciOiBlcXVhbCwKICAgICJnbHlwaHMiOiBzdW1EaWN0cywKICAgICJnbHlwaE9yZGVyIjogc3VtTGlzdHMsCiAgICAiX3JldmVyc2VHbHlwaE9yZGVyIjogcmVjYWxjdWxhdGUsCiAgICAiYXhpc1RhZ3MiOiBlcXVhbCwKfQp0dExpYi5nZXRUYWJsZUNsYXNzKCJHTFlGIikubWVyZ2VNYXAgPSB0dExpYi5nZXRUYWJsZUNsYXNzKCJnbHlmIikubWVyZ2VNYXAKCgpAYWRkX21ldGhvZCh0dExpYi5nZXRUYWJsZUNsYXNzKCJnbHlmIiksIHR0TGliLmdldFRhYmxlQ2xhc3MoIkdMWUYiKSkKZGVmIG1lcmdlKHNlbGYsIG0sIHRhYmxlcyk6CiAgICBmb3IgaSwgdGFibGUgaW4gZW51bWVyYXRlKHRhYmxlcyk6CiAgICAgICAgZm9yIGcgaW4gdGFibGUuZ2x5cGhzLnZhbHVlcygpOgogICAgICAgICAgICBpZiBpOgogICAgICAgICAgICAgICAgIyBEcm9wIGhpbnRzIGZvciBhbGwgYnV0IGZpcnN0IGZvbnQsIHNpbmNlCiAgICAgICAgICAgICAgICAjIHdlIGRvbid0IG1hcCBmdW5jdGlvbnMgLyBDVlQgdmFsdWVzLgogICAgICAgICAgICAgICAgZy5yZW1vdmVIaW50aW5nKGV4dGVuZGVkPXRhYmxlLmV4dGVuZGVkKQogICAgICAgICAgICAjIEV4cGFuZCBjb21wb3NpdGUgZ2x5cGhzIHRvIGxvYWQgdGhlaXIKICAgICAgICAgICAgIyBjb21wb3NpdGUgZ2x5cGggbmFtZXMuCiAgICAgICAgICAgIGlmIGcuaXNDb21wb3NpdGUoKToKICAgICAgICAgICAgICAgIGcuZXhwYW5kKHRhYmxlKQogICAgcmV0dXJuIERlZmF1bHRUYWJsZS5tZXJnZShzZWxmLCBtLCB0YWJsZXMpCgoKdHRMaWIuZ2V0VGFibGVDbGFzcygicHJlcCIpLm1lcmdlTWFwID0gbGFtYmRhIHNlbGYsIGxzdDogZmlyc3QobHN0KQp0dExpYi5nZXRUYWJsZUNsYXNzKCJmcGdtIikubWVyZ2VNYXAgPSBsYW1iZGEgc2VsZiwgbHN0OiBmaXJzdChsc3QpCnR0TGliLmdldFRhYmxlQ2xhc3MoImN2dCAiKS5tZXJnZU1hcCA9IGxhbWJkYSBzZWxmLCBsc3Q6IGZpcnN0KGxzdCkKdHRMaWIuZ2V0VGFibGVDbGFzcygiZ2FzcCIpLm1lcmdlTWFwID0gbGFtYmRhIHNlbGYsIGxzdDogZmlyc3QoCiAgICBsc3QKKSAgIyBGSVhNRT8gQXBwZWFycyBpcnJlY29uY2lsYWJsZQoKCkBhZGRfbWV0aG9kKHR0TGliLmdldFRhYmxlQ2xhc3MoIkNGRiAiKSkKZGVmIG1lcmdlKHNlbGYsIG0sIHRhYmxlcyk6CiAgICBpZiBhbnkoaGFzYXR0cih0YWJsZS5jZmZbMF0sICJGRFNlbGVjdCIpIGZvciB0YWJsZSBpbiB0YWJsZXMpOgogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoIk1lcmdpbmcgQ0lELWtleWVkIENGRiB0YWJsZXMgaXMgbm90IHN1cHBvcnRlZCB5ZXQiKQoKICAgIGZvciB0YWJsZSBpbiB0YWJsZXM6CiAgICAgICAgdGFibGUuY2ZmLmRlc3Vicm91dGluaXplKCkKCiAgICBuZXdjZmYgPSB0YWJsZXNbMF0KICAgIG5ld2ZvbnQgPSBuZXdjZmYuY2ZmWzBdCiAgICBwcml2YXRlID0gbmV3Zm9udC5Qcml2YXRlCiAgICBuZXdEZWZhdWx0V2lkdGhYLCBuZXdOb21pbmFsV2lkdGhYID0gcHJpdmF0ZS5kZWZhdWx0V2lkdGhYLCBwcml2YXRlLm5vbWluYWxXaWR0aFgKICAgIHN0b3JlZE5hbWVzU3RyaW5ncyA9IFtdCiAgICBnbHlwaE9yZGVyU3RyaW5ncyA9IFtdCiAgICBnbHlwaE9yZGVyID0gc2V0KG5ld2ZvbnQuZ2V0R2x5cGhPcmRlcigpKQoKICAgIGZvciBuYW1lIGluIG5ld2ZvbnQuc3RyaW5ncy5zdHJpbmdzOgogICAgICAgIGlmIG5hbWUgbm90IGluIGdseXBoT3JkZXI6CiAgICAgICAgICAgIHN0b3JlZE5hbWVzU3RyaW5ncy5hcHBlbmQobmFtZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBnbHlwaE9yZGVyU3RyaW5ncy5hcHBlbmQobmFtZSkKCiAgICBjaHJzZXQgPSBsaXN0KG5ld2ZvbnQuY2hhcnNldCkKICAgIG5ld2NzID0gbmV3Zm9udC5DaGFyU3RyaW5ncwogICAgbG9nLmRlYnVnKCJGT05UIDAgQ2hhclN0cmluZ3M6ICVkLiIsIGxlbihuZXdjcykpCgogICAgZm9yIGksIHRhYmxlIGluIGVudW1lcmF0ZSh0YWJsZXNbMTpdLCBzdGFydD0xKToKICAgICAgICBmb250ID0gdGFibGUuY2ZmWzBdCiAgICAgICAgZGVmYXVsdFdpZHRoWCwgbm9taW5hbFdpZHRoWCA9ICgKICAgICAgICAgICAgZm9udC5Qcml2YXRlLmRlZmF1bHRXaWR0aFgsCiAgICAgICAgICAgIGZvbnQuUHJpdmF0ZS5ub21pbmFsV2lkdGhYLAogICAgICAgICkKICAgICAgICB3aWR0aHNEaWZmZXIgPSAoCiAgICAgICAgICAgIGRlZmF1bHRXaWR0aFggIT0gbmV3RGVmYXVsdFdpZHRoWCBvciBub21pbmFsV2lkdGhYICE9IG5ld05vbWluYWxXaWR0aFgKICAgICAgICApCiAgICAgICAgZm9udC5Qcml2YXRlID0gcHJpdmF0ZQogICAgICAgIGZvbnRHbHlwaE9yZGVyID0gc2V0KGZvbnQuZ2V0R2x5cGhPcmRlcigpKQogICAgICAgIGZvciBuYW1lIGluIGZvbnQuc3RyaW5ncy5zdHJpbmdzOgogICAgICAgICAgICBpZiBuYW1lIGluIGZvbnRHbHlwaE9yZGVyOgogICAgICAgICAgICAgICAgZ2x5cGhPcmRlclN0cmluZ3MuYXBwZW5kKG5hbWUpCiAgICAgICAgY3MgPSBmb250LkNoYXJTdHJpbmdzCiAgICAgICAgZ3MgPSB0YWJsZS5jZmYuR2xvYmFsU3VicnMKICAgICAgICBsb2cuZGVidWcoIkZvbnQgJWQgQ2hhclN0cmluZ3M6ICVkLiIsIGksIGxlbihjcykpCiAgICAgICAgY2hyc2V0LmV4dGVuZChmb250LmNoYXJzZXQpCiAgICAgICAgaWYgbmV3Y3MuY2hhclN0cmluZ3NBcmVJbmRleGVkOgogICAgICAgICAgICBmb3IgaSwgbmFtZSBpbiBlbnVtZXJhdGUoY3MuY2hhclN0cmluZ3MsIHN0YXJ0PWxlbihuZXdjcykpOgogICAgICAgICAgICAgICAgbmV3Y3MuY2hhclN0cmluZ3NbbmFtZV0gPSBpCiAgICAgICAgICAgICAgICBuZXdjcy5jaGFyU3RyaW5nc0luZGV4Lml0ZW1zLmFwcGVuZChOb25lKQogICAgICAgIGZvciBuYW1lIGluIGNzLmNoYXJTdHJpbmdzOgogICAgICAgICAgICBpZiB3aWR0aHNEaWZmZXI6CiAgICAgICAgICAgICAgICBjID0gY3NbbmFtZV0KICAgICAgICAgICAgICAgIGRlZmF1bHRXaWR0aFhUb2tlbiA9IG9iamVjdCgpCiAgICAgICAgICAgICAgICBleHRyYWN0b3IgPSBUMldpZHRoRXh0cmFjdG9yKFtdLCBbXSwgbm9taW5hbFdpZHRoWCwgZGVmYXVsdFdpZHRoWFRva2VuKQogICAgICAgICAgICAgICAgZXh0cmFjdG9yLmV4ZWN1dGUoYykKICAgICAgICAgICAgICAgIHdpZHRoID0gZXh0cmFjdG9yLndpZHRoCiAgICAgICAgICAgICAgICBpZiB3aWR0aCBpcyBub3QgZGVmYXVsdFdpZHRoWFRva2VuOgogICAgICAgICAgICAgICAgICAgICMgVGhlIGZvbGxvd2luZyB3aWxsIGJlIHdyb25nIGlmIHRoZSB3aWR0aCBpcyBhZGRlZAogICAgICAgICAgICAgICAgICAgICMgYnkgYSBzdWJyb3V0aW5lLiBPdWNoIQogICAgICAgICAgICAgICAgICAgIGMucHJvZ3JhbS5wb3AoMCkKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgd2lkdGggPSBkZWZhdWx0V2lkdGhYCiAgICAgICAgICAgICAgICBpZiB3aWR0aCAhPSBuZXdEZWZhdWx0V2lkdGhYOgogICAgICAgICAgICAgICAgICAgIGMucHJvZ3JhbS5pbnNlcnQoMCwgd2lkdGggLSBuZXdOb21pbmFsV2lkdGhYKQogICAgICAgICAgICBuZXdjc1tuYW1lXSA9IGNzW25hbWVdCgogICAgbmV3Zm9udC5jaGFyc2V0ID0gY2hyc2V0CiAgICBuZXdmb250Lm51bUdseXBocyA9IGxlbihjaHJzZXQpCiAgICBuZXdmb250LnN0cmluZ3Muc3RyaW5ncyA9IGdseXBoT3JkZXJTdHJpbmdzICsgc3RvcmVkTmFtZXNTdHJpbmdzCgogICAgcmV0dXJuIG5ld2NmZgoKCkBhZGRfbWV0aG9kKHR0TGliLmdldFRhYmxlQ2xhc3MoImNtYXAiKSkKZGVmIG1lcmdlKHNlbGYsIG0sIHRhYmxlcyk6CiAgICBpZiBub3QgaGFzYXR0cihtLCAiY21hcCIpOgogICAgICAgIGNvbXB1dGVNZWdhQ21hcChtLCB0YWJsZXMpCiAgICBjbWFwID0gbS5jbWFwCgogICAgZ2x5cGhNYXAgPSB7CiAgICAgICAgZ2x5cGhOYW1lOiBnbHlwaElECiAgICAgICAgZm9yIGdseXBoSUQsIGdseXBoTmFtZSBpbiBlbnVtZXJhdGUoZ2V0YXR0cihtLCAiZ2x5cGhPcmRlciIsICgpKSkKICAgIH0KICAgIGNtYXBCbXBPbmx5ID0gewogICAgICAgIHVuaTogZ2lkCiAgICAgICAgZm9yIHVuaSwgZ2lkIGluIGNtYXAuaXRlbXMoKQogICAgICAgIGlmIHVuaSA8PSAweEZGRkYgYW5kIGdseXBoTWFwLmdldChnaWQsIDApIDw9IDB4RkZGRgogICAgfQogICAgc2VsZi50YWJsZXMgPSBbXQogICAgbW9kdWxlID0gdHRMaWIuZ2V0VGFibGVNb2R1bGUoImNtYXAiKQogICAgaWYgbGVuKGNtYXBCbXBPbmx5KSAhPSBsZW4oY21hcCk6CiAgICAgICAgIyBmb3JtYXQtMTIgcmVxdWlyZWQgZm9yIG5vbi1CTVAgY29kZXBvaW50cyBvciBnbHlwaCBJRHMgYmV5b25kIDY0ay4KICAgICAgICBjbWFwVGFibGUgPSBtb2R1bGUuY21hcF9jbGFzc2VzWzEyXSgxMikKICAgICAgICBjbWFwVGFibGUucGxhdGZvcm1JRCA9IDMKICAgICAgICBjbWFwVGFibGUucGxhdEVuY0lEID0gMTAKICAgICAgICBjbWFwVGFibGUubGFuZ3VhZ2UgPSAwCiAgICAgICAgY21hcFRhYmxlLmNtYXAgPSBjbWFwCiAgICAgICAgc2VsZi50YWJsZXMuYXBwZW5kKGNtYXBUYWJsZSkKICAgICMgYWx3YXlzIGNyZWF0ZSBmb3JtYXQtNAogICAgY21hcFRhYmxlID0gbW9kdWxlLmNtYXBfY2xhc3Nlc1s0XSg0KQogICAgY21hcFRhYmxlLnBsYXRmb3JtSUQgPSAzCiAgICBjbWFwVGFibGUucGxhdEVuY0lEID0gMQogICAgY21hcFRhYmxlLmxhbmd1YWdlID0gMAogICAgY21hcFRhYmxlLmNtYXAgPSBjbWFwQm1wT25seQogICAgIyBvcmRlcmVkIGJ5IHBsYXRmb3JtIHRoZW4gZW5jb2RpbmcKICAgIHNlbGYudGFibGVzLmluc2VydCgwLCBjbWFwVGFibGUpCgogICAgdXZzRGljdCA9IG0udXZzRGljdAogICAgaWYgdXZzRGljdDoKICAgICAgICAjIGZvcm1hdC0xNAogICAgICAgIHV2c1RhYmxlID0gbW9kdWxlLmNtYXBfY2xhc3Nlc1sxNF0oMTQpCiAgICAgICAgdXZzVGFibGUucGxhdGZvcm1JRCA9IDAKICAgICAgICB1dnNUYWJsZS5wbGF0RW5jSUQgPSA1CiAgICAgICAgdXZzVGFibGUubGFuZ3VhZ2UgPSAwCiAgICAgICAgdXZzVGFibGUuY21hcCA9IHt9CiAgICAgICAgdXZzVGFibGUudXZzRGljdCA9IHV2c0RpY3QKICAgICAgICAjIG9yZGVyZWQgYnkgcGxhdGZvcm0gdGhlbiBlbmNvZGluZwogICAgICAgIHNlbGYudGFibGVzLmluc2VydCgwLCB1dnNUYWJsZSkKICAgIHNlbGYudGFibGVWZXJzaW9uID0gMAogICAgc2VsZi5udW1TdWJUYWJsZXMgPSBsZW4oc2VsZi50YWJsZXMpCiAgICByZXR1cm4gc2VsZgo=
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+from fontTools import ttLib, cffLib
+from fontTools.misc.psCharStrings import T2WidthExtractor
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
+from fontTools.merge.base import add_method, mergeObjects
+from fontTools.merge.cmap import computeMegaCmap
+from fontTools.merge.util import *
+import logging
+
+log = logging.getLogger("fontTools.merge")
+
+
+ttLib.getTableClass("maxp").mergeMap = {
+    "*": max,
+    "tableTag": equal,
+    "tableVersion": equal,
+    "numGlyphs": sum,
+    "maxStorage": first,
+    "maxFunctionDefs": first,
+    "maxInstructionDefs": first,
+    # TODO When we correctly merge hinting data, update these values:
+    # maxFunctionDefs, maxInstructionDefs, maxSizeOfInstructions
+}
+ttLib.getTableClass("MAXP").mergeMap = ttLib.getTableClass("maxp").mergeMap
+
+headFlagsMergeBitMap = {
+    "size": 16,
+    "*": bitwise_or,
+    1: bitwise_and,  # Baseline at y = 0
+    2: bitwise_and,  # lsb at x = 0
+    3: bitwise_and,  # Force ppem to integer values. FIXME?
+    5: bitwise_and,  # Font is vertical
+    6: lambda bit: 0,  # Always set to zero
+    11: bitwise_and,  # Font data is 'lossless'
+    13: bitwise_and,  # Optimized for ClearType
+    14: bitwise_and,  # Last resort font. FIXME? equal or first may be better
+    15: lambda bit: 0,  # Always set to zero
+}
+
+
+def mergeUnitsPerEm(lst):
+    lst = list(lst)
+    if any(item != lst[0] for item in lst[1:]):
+        raise ValueError(
+            "Cannot merge fonts with different unitsPerEm values: %s" % lst
+        )
+    return lst[0]
+
+
+ttLib.getTableClass("head").mergeMap = {
+    "tableTag": equal,
+    "tableVersion": max,
+    "fontRevision": max,
+    "checkSumAdjustment": lambda lst: 0,  # We need *something* here
+    "magicNumber": equal,
+    "flags": mergeBits(headFlagsMergeBitMap),
+    "unitsPerEm": mergeUnitsPerEm,
+    "created": current_time,
+    "modified": current_time,
+    "xMin": min,
+    "yMin": min,
+    "xMax": max,
+    "yMax": max,
+    "macStyle": first,
+    "lowestRecPPEM": max,
+    "fontDirectionHint": lambda lst: 2,
+    "indexToLocFormat": first,
+    "glyphDataFormat": equal,
+}
+
+ttLib.getTableClass("hhea").mergeMap = {
+    "*": equal,
+    "tableTag": equal,
+    "tableVersion": max,
+    "ascent": max,
+    "descent": min,
+    "lineGap": max,
+    "advanceWidthMax": max,
+    "minLeftSideBearing": min,
+    "minRightSideBearing": min,
+    "xMaxExtent": max,
+    "caretSlopeRise": first,
+    "caretSlopeRun": first,
+    "caretOffset": first,
+    "numberOfHMetrics": recalculate,
+}
+ttLib.getTableClass("HHEA").mergeMap = ttLib.getTableClass("hhea").mergeMap
+
+ttLib.getTableClass("vhea").mergeMap = {
+    "*": equal,
+    "tableTag": equal,
+    "tableVersion": max,
+    "ascent": max,
+    "descent": min,
+    "lineGap": max,
+    "advanceHeightMax": max,
+    "minTopSideBearing": min,
+    "minBottomSideBearing": min,
+    "yMaxExtent": max,
+    "caretSlopeRise": first,
+    "caretSlopeRun": first,
+    "caretOffset": first,
+    "numberOfVMetrics": recalculate,
+}
+ttLib.getTableClass("VHEA").mergeMap = ttLib.getTableClass("vhea").mergeMap
+
+os2FsTypeMergeBitMap = {
+    "size": 16,
+    "*": lambda bit: 0,
+    1: bitwise_or,  # no embedding permitted
+    2: bitwise_and,  # allow previewing and printing documents
+    3: bitwise_and,  # allow editing documents
+    8: bitwise_or,  # no subsetting permitted
+    9: bitwise_or,  # no embedding of outlines permitted
+}
+
+
+def mergeOs2FsType(lst):
+    lst = list(lst)
+    if all(item == 0 for item in lst):
+        return 0
+
+    # Compute least restrictive logic for each fsType value
+    for i in range(len(lst)):
+        # unset bit 1 (no embedding permitted) if either bit 2 or 3 is set
+        if lst[i] & 0x000C:
+            lst[i] &= ~0x0002
+        # set bit 2 (allow previewing) if bit 3 is set (allow editing)
+        elif lst[i] & 0x0008:
+            lst[i] |= 0x0004
+        # set bits 2 and 3 if everything is allowed
+        elif lst[i] == 0:
+            lst[i] = 0x000C
+
+    fsType = mergeBits(os2FsTypeMergeBitMap)(lst)
+    # unset bits 2 and 3 if bit 1 is set (some font is "no embedding")
+    if fsType & 0x0002:
+        fsType &= ~0x000C
+    return fsType
+
+
+ttLib.getTableClass("OS/2").mergeMap = {
+    "*": first,
+    "tableTag": equal,
+    "version": max,
+    "xAvgCharWidth": first,  # Will be recalculated at the end on the merged font
+    "fsType": mergeOs2FsType,  # Will be overwritten
+    "panose": first,  # FIXME: should really be the first Latin font
+    "ulUnicodeRange1": bitwise_or,
+    "ulUnicodeRange2": bitwise_or,
+    "ulUnicodeRange3": bitwise_or,
+    "ulUnicodeRange4": bitwise_or,
+    "fsFirstCharIndex": min,
+    "fsLastCharIndex": max,
+    "sTypoAscender": max,
+    "sTypoDescender": min,
+    "sTypoLineGap": max,
+    "usWinAscent": max,
+    "usWinDescent": max,
+    # Version 1
+    "ulCodePageRange1": onlyExisting(bitwise_or),
+    "ulCodePageRange2": onlyExisting(bitwise_or),
+    # Version 2, 3, 4
+    "sxHeight": onlyExisting(max),
+    "sCapHeight": onlyExisting(max),
+    "usDefaultChar": onlyExisting(first),
+    "usBreakChar": onlyExisting(first),
+    "usMaxContext": onlyExisting(max),
+    # version 5
+    "usLowerOpticalPointSize": onlyExisting(min),
+    "usUpperOpticalPointSize": onlyExisting(max),
+}
+
+
+@add_method(ttLib.getTableClass("OS/2"))
+def merge(self, m, tables):
+    DefaultTable.merge(self, m, tables)
+    if self.version < 2:
+        # bits 8 and 9 are reserved and should be set to zero
+        self.fsType &= ~0x0300
+    if self.version >= 3:
+        # Only one of bits 1, 2, and 3 may be set. We already take
+        # care of bit 1 implications in mergeOs2FsType. So unset
+        # bit 2 if bit 3 is already set.
+        if self.fsType & 0x0008:
+            self.fsType &= ~0x0004
+    return self
+
+
+ttLib.getTableClass("post").mergeMap = {
+    "*": first,
+    "tableTag": equal,
+    "formatType": max,
+    "isFixedPitch": min,
+    "minMemType42": max,
+    "maxMemType42": lambda lst: 0,
+    "minMemType1": max,
+    "maxMemType1": lambda lst: 0,
+    "mapping": onlyExisting(sumDicts),
+    "extraNames": lambda lst: [],
+}
+
+ttLib.getTableClass("vmtx").mergeMap = ttLib.getTableClass("hmtx").mergeMap = {
+    "tableTag": equal,
+    "metrics": sumDicts,
+}
+ttLib.getTableClass("HMTX").mergeMap = ttLib.getTableClass("hmtx").mergeMap
+ttLib.getTableClass("VMTX").mergeMap = ttLib.getTableClass("vmtx").mergeMap
+
+ttLib.getTableClass("name").mergeMap = {
+    "tableTag": equal,
+    "names": first,  # FIXME? Does mixing name records make sense?
+}
+
+ttLib.getTableClass("loca").mergeMap = {
+    "*": recalculate,
+    "tableTag": equal,
+}
+ttLib.getTableClass("LOCA").mergeMap = ttLib.getTableClass("loca").mergeMap
+
+ttLib.getTableClass("glyf").mergeMap = {
+    "tableTag": equal,
+    "glyphs": sumDicts,
+    "glyphOrder": sumLists,
+    "_reverseGlyphOrder": recalculate,
+    "axisTags": equal,
+}
+ttLib.getTableClass("GLYF").mergeMap = ttLib.getTableClass("glyf").mergeMap
+
+
+@add_method(ttLib.getTableClass("glyf"), ttLib.getTableClass("GLYF"))
+def merge(self, m, tables):
+    for i, table in enumerate(tables):
+        for g in table.glyphs.values():
+            if i:
+                # Drop hints for all but first font, since
+                # we don't map functions / CVT values.
+                g.removeHinting(extended=table.extended)
+            # Expand composite glyphs to load their
+            # composite glyph names.
+            if g.isComposite():
+                g.expand(table)
+    return DefaultTable.merge(self, m, tables)
+
+
+ttLib.getTableClass("prep").mergeMap = lambda self, lst: first(lst)
+ttLib.getTableClass("fpgm").mergeMap = lambda self, lst: first(lst)
+ttLib.getTableClass("cvt ").mergeMap = lambda self, lst: first(lst)
+ttLib.getTableClass("gasp").mergeMap = lambda self, lst: first(
+    lst
+)  # FIXME? Appears irreconcilable
+
+
+@add_method(ttLib.getTableClass("CFF "))
+def merge(self, m, tables):
+    if any(hasattr(table.cff[0], "FDSelect") for table in tables):
+        raise NotImplementedError("Merging CID-keyed CFF tables is not supported yet")
+
+    for table in tables:
+        table.cff.desubroutinize()
+
+    newcff = tables[0]
+    newfont = newcff.cff[0]
+    private = newfont.Private
+    newDefaultWidthX, newNominalWidthX = private.defaultWidthX, private.nominalWidthX
+    storedNamesStrings = []
+    glyphOrderStrings = []
+    glyphOrder = set(newfont.getGlyphOrder())
+
+    for name in newfont.strings.strings:
+        if name not in glyphOrder:
+            storedNamesStrings.append(name)
+        else:
+            glyphOrderStrings.append(name)
+
+    chrset = list(newfont.charset)
+    newcs = newfont.CharStrings
+    log.debug("FONT 0 CharStrings: %d.", len(newcs))
+
+    for i, table in enumerate(tables[1:], start=1):
+        font = table.cff[0]
+        defaultWidthX, nominalWidthX = (
+            font.Private.defaultWidthX,
+            font.Private.nominalWidthX,
+        )
+        widthsDiffer = (
+            defaultWidthX != newDefaultWidthX or nominalWidthX != newNominalWidthX
+        )
+        font.Private = private
+        fontGlyphOrder = set(font.getGlyphOrder())
+        for name in font.strings.strings:
+            if name in fontGlyphOrder:
+                glyphOrderStrings.append(name)
+        cs = font.CharStrings
+        gs = table.cff.GlobalSubrs
+        log.debug("Font %d CharStrings: %d.", i, len(cs))
+        chrset.extend(font.charset)
+        if newcs.charStringsAreIndexed:
+            for i, name in enumerate(cs.charStrings, start=len(newcs)):
+                newcs.charStrings[name] = i
+                newcs.charStringsIndex.items.append(None)
+        for name in cs.charStrings:
+            if widthsDiffer:
+                c = cs[name]
+                defaultWidthXToken = object()
+                extractor = T2WidthExtractor([], [], nominalWidthX, defaultWidthXToken)
+                extractor.execute(c)
+                width = extractor.width
+                if width is not defaultWidthXToken:
+                    # The following will be wrong if the width is added
+                    # by a subroutine. Ouch!
+                    c.program.pop(0)
+                else:
+                    width = defaultWidthX
+                if width != newDefaultWidthX:
+                    c.program.insert(0, width - newNominalWidthX)
+            newcs[name] = cs[name]
+
+    newfont.charset = chrset
+    newfont.numGlyphs = len(chrset)
+    newfont.strings.strings = glyphOrderStrings + storedNamesStrings
+
+    return newcff
+
+
+@add_method(ttLib.getTableClass("cmap"))
+def merge(self, m, tables):
+    if not hasattr(m, "cmap"):
+        computeMegaCmap(m, tables)
+    cmap = m.cmap
+
+    glyphMap = {
+        glyphName: glyphID
+        for glyphID, glyphName in enumerate(getattr(m, "glyphOrder", ()))
+    }
+    cmapBmpOnly = {
+        uni: gid
+        for uni, gid in cmap.items()
+        if uni <= 0xFFFF and glyphMap.get(gid, 0) <= 0xFFFF
+    }
+    self.tables = []
+    module = ttLib.getTableModule("cmap")
+    if len(cmapBmpOnly) != len(cmap):
+        # format-12 required for non-BMP codepoints or glyph IDs beyond 64k.
+        cmapTable = module.cmap_classes[12](12)
+        cmapTable.platformID = 3
+        cmapTable.platEncID = 10
+        cmapTable.language = 0
+        cmapTable.cmap = cmap
+        self.tables.append(cmapTable)
+    # always create format-4
+    cmapTable = module.cmap_classes[4](4)
+    cmapTable.platformID = 3
+    cmapTable.platEncID = 1
+    cmapTable.language = 0
+    cmapTable.cmap = cmapBmpOnly
+    # ordered by platform then encoding
+    self.tables.insert(0, cmapTable)
+
+    uvsDict = m.uvsDict
+    if uvsDict:
+        # format-14
+        uvsTable = module.cmap_classes[14](14)
+        uvsTable.platformID = 0
+        uvsTable.platEncID = 5
+        uvsTable.language = 0
+        uvsTable.cmap = {}
+        uvsTable.uvsDict = uvsDict
+        # ordered by platform then encoding
+        self.tables.insert(0, uvsTable)
+    self.tableVersion = 0
+    self.numSubTables = len(self.tables)
+    return self

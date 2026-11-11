@@ -1,1 +1,153 @@
-IiIiQ29udmVydCBTVkcgUGF0aCdzIGVsbGlwdGljYWwgYXJjcyB0byBCZXppZXIgY3VydmVzLgoKVGhlIGNvZGUgaXMgbW9zdGx5IGFkYXB0ZWQgZnJvbSBCbGluaydzIFNWR1BhdGhOb3JtYWxpemVyOjpEZWNvbXBvc2VBcmNUb0N1YmljCmh0dHBzOi8vZ2l0aHViLmNvbS9jaHJvbWl1bS9jaHJvbWl1bS9ibG9iLzkzODMxZjIvdGhpcmRfcGFydHkvCmJsaW5rL3JlbmRlcmVyL2NvcmUvc3ZnL3N2Z19wYXRoX3BhcnNlci5jYyNMMTY5LUwyNzgKIiIiCgpmcm9tIGZvbnRUb29scy5taXNjLnRyYW5zZm9ybSBpbXBvcnQgSWRlbnRpdHksIFNjYWxlCmZyb20gbWF0aCBpbXBvcnQgYXRhbjIsIGNlaWwsIGNvcywgZmFicywgaXNmaW5pdGUsIHBpLCByYWRpYW5zLCBzaW4sIHNxcnQsIHRhbgoKVFdPX1BJID0gMiAqIHBpClBJX09WRVJfVFdPID0gMC41ICogcGkKCgpkZWYgX21hcF9wb2ludChtYXRyaXgsIHB0KToKICAgICMgYXBwbHkgVHJhbnNmb3JtIG1hdHJpeCB0byBhIHBvaW50IHJlcHJlc2VudGVkIGFzIGEgY29tcGxleCBudW1iZXIKICAgIHIgPSBtYXRyaXgudHJhbnNmb3JtUG9pbnQoKHB0LnJlYWwsIHB0LmltYWcpKQogICAgcmV0dXJuIHJbMF0gKyByWzFdICogMWoKCgpjbGFzcyBFbGxpcHRpY2FsQXJjKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgY3VycmVudF9wb2ludCwgcngsIHJ5LCByb3RhdGlvbiwgbGFyZ2UsIHN3ZWVwLCB0YXJnZXRfcG9pbnQpOgogICAgICAgIHNlbGYuY3VycmVudF9wb2ludCA9IGN1cnJlbnRfcG9pbnQKICAgICAgICBzZWxmLnJ4ID0gcngKICAgICAgICBzZWxmLnJ5ID0gcnkKICAgICAgICBzZWxmLnJvdGF0aW9uID0gcm90YXRpb24KICAgICAgICBzZWxmLmxhcmdlID0gbGFyZ2UKICAgICAgICBzZWxmLnN3ZWVwID0gc3dlZXAKICAgICAgICBzZWxmLnRhcmdldF9wb2ludCA9IHRhcmdldF9wb2ludAoKICAgICAgICAjIFNWRyBhcmMncyByb3RhdGlvbiBhbmdsZSBpcyBleHByZXNzZWQgaW4gZGVncmVlcywgd2hlcmVhcyBUcmFuc2Zvcm0ucm90YXRlCiAgICAgICAgIyB1c2VzIHJhZGlhbnMKICAgICAgICBzZWxmLmFuZ2xlID0gcmFkaWFucyhyb3RhdGlvbikKCiAgICAgICAgIyB0aGVzZSBkZXJpdmVkIGF0dHJpYnV0ZXMgYXJlIGNvbXB1dGVkIGJ5IHRoZSBfcGFyYW1ldHJpemUgbWV0aG9kCiAgICAgICAgc2VsZi5jZW50ZXJfcG9pbnQgPSBzZWxmLnRoZXRhMSA9IHNlbGYudGhldGEyID0gc2VsZi50aGV0YV9hcmMgPSBOb25lCgogICAgZGVmIF9wYXJhbWV0cml6ZShzZWxmKToKICAgICAgICAjIGNvbnZlcnQgZnJvbSBlbmRvcG9pbnQgdG8gY2VudGVyIHBhcmFtZXRyaXphdGlvbjoKICAgICAgICAjIGh0dHBzOi8vd3d3LnczLm9yZy9UUi9TVkcvaW1wbG5vdGUuaHRtbCNBcmNDb252ZXJzaW9uRW5kcG9pbnRUb0NlbnRlcgoKICAgICAgICAjIElmIHJ4ID0gMCBvciByeSA9IDAgdGhlbiB0aGlzIGFyYyBpcyB0cmVhdGVkIGFzIGEgc3RyYWlnaHQgbGluZSBzZWdtZW50IChhCiAgICAgICAgIyAibGluZXRvIikgam9pbmluZyB0aGUgZW5kcG9pbnRzLgogICAgICAgICMgaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHL2ltcGxub3RlLmh0bWwjQXJjT3V0T2ZSYW5nZVBhcmFtZXRlcnMKICAgICAgICByeCA9IGZhYnMoc2VsZi5yeCkKICAgICAgICByeSA9IGZhYnMoc2VsZi5yeSkKICAgICAgICBpZiBub3QgKHJ4IGFuZCByeSk6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQoKICAgICAgICAjIElmIHRoZSBjdXJyZW50IHBvaW50IGFuZCB0YXJnZXQgcG9pbnQgZm9yIHRoZSBhcmMgYXJlIGlkZW50aWNhbCwgaXQgc2hvdWxkCiAgICAgICAgIyBiZSB0cmVhdGVkIGFzIGEgemVybyBsZW5ndGggcGF0aC4gVGhpcyBlbnN1cmVzIGNvbnRpbnVpdHkgaW4gYW5pbWF0aW9ucy4KICAgICAgICBpZiBzZWxmLnRhcmdldF9wb2ludCA9PSBzZWxmLmN1cnJlbnRfcG9pbnQ6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQoKICAgICAgICBtaWRfcG9pbnRfZGlzdGFuY2UgPSAoc2VsZi5jdXJyZW50X3BvaW50IC0gc2VsZi50YXJnZXRfcG9pbnQpICogMC41CgogICAgICAgIHBvaW50X3RyYW5zZm9ybSA9IElkZW50aXR5LnJvdGF0ZSgtc2VsZi5hbmdsZSkKCiAgICAgICAgdHJhbnNmb3JtZWRfbWlkX3BvaW50ID0gX21hcF9wb2ludChwb2ludF90cmFuc2Zvcm0sIG1pZF9wb2ludF9kaXN0YW5jZSkKICAgICAgICBzcXVhcmVfcnggPSByeCAqIHJ4CiAgICAgICAgc3F1YXJlX3J5ID0gcnkgKiByeQogICAgICAgIHNxdWFyZV94ID0gdHJhbnNmb3JtZWRfbWlkX3BvaW50LnJlYWwgKiB0cmFuc2Zvcm1lZF9taWRfcG9pbnQucmVhbAogICAgICAgIHNxdWFyZV95ID0gdHJhbnNmb3JtZWRfbWlkX3BvaW50LmltYWcgKiB0cmFuc2Zvcm1lZF9taWRfcG9pbnQuaW1hZwoKICAgICAgICAjIENoZWNrIGlmIHRoZSByYWRpaSBhcmUgYmlnIGVub3VnaCB0byBkcmF3IHRoZSBhcmMsIHNjYWxlIHJhZGlpIGlmIG5vdC4KICAgICAgICAjIGh0dHA6Ly93d3cudzMub3JnL1RSL1NWRy9pbXBsbm90ZS5odG1sI0FyY0NvcnJlY3Rpb25PdXRPZlJhbmdlUmFkaWkKICAgICAgICByYWRpaV9zY2FsZSA9IHNxdWFyZV94IC8gc3F1YXJlX3J4ICsgc3F1YXJlX3kgLyBzcXVhcmVfcnkKICAgICAgICBpZiByYWRpaV9zY2FsZSA+IDE6CiAgICAgICAgICAgIHJ4ICo9IHNxcnQocmFkaWlfc2NhbGUpCiAgICAgICAgICAgIHJ5ICo9IHNxcnQocmFkaWlfc2NhbGUpCiAgICAgICAgICAgIHNlbGYucngsIHNlbGYucnkgPSByeCwgcnkKCiAgICAgICAgcG9pbnRfdHJhbnNmb3JtID0gU2NhbGUoMSAvIHJ4LCAxIC8gcnkpLnJvdGF0ZSgtc2VsZi5hbmdsZSkKCiAgICAgICAgcG9pbnQxID0gX21hcF9wb2ludChwb2ludF90cmFuc2Zvcm0sIHNlbGYuY3VycmVudF9wb2ludCkKICAgICAgICBwb2ludDIgPSBfbWFwX3BvaW50KHBvaW50X3RyYW5zZm9ybSwgc2VsZi50YXJnZXRfcG9pbnQpCiAgICAgICAgZGVsdGEgPSBwb2ludDIgLSBwb2ludDEKCiAgICAgICAgZCA9IGRlbHRhLnJlYWwgKiBkZWx0YS5yZWFsICsgZGVsdGEuaW1hZyAqIGRlbHRhLmltYWcKICAgICAgICBzY2FsZV9mYWN0b3Jfc3F1YXJlZCA9IG1heCgxIC8gZCAtIDAuMjUsIDAuMCkKCiAgICAgICAgc2NhbGVfZmFjdG9yID0gc3FydChzY2FsZV9mYWN0b3Jfc3F1YXJlZCkKICAgICAgICBpZiBzZWxmLnN3ZWVwID09IHNlbGYubGFyZ2U6CiAgICAgICAgICAgIHNjYWxlX2ZhY3RvciA9IC1zY2FsZV9mYWN0b3IKCiAgICAgICAgZGVsdGEgKj0gc2NhbGVfZmFjdG9yCiAgICAgICAgY2VudGVyX3BvaW50ID0gKHBvaW50MSArIHBvaW50MikgKiAwLjUKICAgICAgICBjZW50ZXJfcG9pbnQgKz0gY29tcGxleCgtZGVsdGEuaW1hZywgZGVsdGEucmVhbCkKICAgICAgICBwb2ludDEgLT0gY2VudGVyX3BvaW50CiAgICAgICAgcG9pbnQyIC09IGNlbnRlcl9wb2ludAoKICAgICAgICB0aGV0YTEgPSBhdGFuMihwb2ludDEuaW1hZywgcG9pbnQxLnJlYWwpCiAgICAgICAgdGhldGEyID0gYXRhbjIocG9pbnQyLmltYWcsIHBvaW50Mi5yZWFsKQoKICAgICAgICB0aGV0YV9hcmMgPSB0aGV0YTIgLSB0aGV0YTEKICAgICAgICBpZiB0aGV0YV9hcmMgPCAwIGFuZCBzZWxmLnN3ZWVwOgogICAgICAgICAgICB0aGV0YV9hcmMgKz0gVFdPX1BJCiAgICAgICAgZWxpZiB0aGV0YV9hcmMgPiAwIGFuZCBub3Qgc2VsZi5zd2VlcDoKICAgICAgICAgICAgdGhldGFfYXJjIC09IFRXT19QSQoKICAgICAgICBzZWxmLnRoZXRhMSA9IHRoZXRhMQogICAgICAgIHNlbGYudGhldGEyID0gdGhldGExICsgdGhldGFfYXJjCiAgICAgICAgc2VsZi50aGV0YV9hcmMgPSB0aGV0YV9hcmMKICAgICAgICBzZWxmLmNlbnRlcl9wb2ludCA9IGNlbnRlcl9wb2ludAoKICAgICAgICByZXR1cm4gVHJ1ZQoKICAgIGRlZiBfZGVjb21wb3NlX3RvX2N1YmljX2N1cnZlcyhzZWxmKToKICAgICAgICBpZiBzZWxmLmNlbnRlcl9wb2ludCBpcyBOb25lIGFuZCBub3Qgc2VsZi5fcGFyYW1ldHJpemUoKToKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgIHBvaW50X3RyYW5zZm9ybSA9IElkZW50aXR5LnJvdGF0ZShzZWxmLmFuZ2xlKS5zY2FsZShzZWxmLnJ4LCBzZWxmLnJ5KQoKICAgICAgICAjIFNvbWUgcmVzdWx0cyBvZiBhdGFuMiBvbiBzb21lIHBsYXRmb3JtIGltcGxlbWVudGF0aW9ucyBhcmUgbm90IGV4YWN0CiAgICAgICAgIyBlbm91Z2guIFNvIHRoYXQgd2UgZ2V0IG1vcmUgY3ViaWMgY3VydmVzIHRoYW4gZXhwZWN0ZWQgaGVyZS4gQWRkaW5nIDAuMDAxZgogICAgICAgICMgcmVkdWNlcyB0aGUgY291bnQgb2Ygc2dlbWVudHMgdG8gdGhlIGNvcnJlY3QgY291bnQuCiAgICAgICAgbnVtX3NlZ21lbnRzID0gaW50KGNlaWwoZmFicyhzZWxmLnRoZXRhX2FyYyAvIChQSV9PVkVSX1RXTyArIDAuMDAxKSkpKQogICAgICAgIGZvciBpIGluIHJhbmdlKG51bV9zZWdtZW50cyk6CiAgICAgICAgICAgIHN0YXJ0X3RoZXRhID0gc2VsZi50aGV0YTEgKyBpICogc2VsZi50aGV0YV9hcmMgLyBudW1fc2VnbWVudHMKICAgICAgICAgICAgZW5kX3RoZXRhID0gc2VsZi50aGV0YTEgKyAoaSArIDEpICogc2VsZi50aGV0YV9hcmMgLyBudW1fc2VnbWVudHMKCiAgICAgICAgICAgIHQgPSAoNCAvIDMpICogdGFuKDAuMjUgKiAoZW5kX3RoZXRhIC0gc3RhcnRfdGhldGEpKQogICAgICAgICAgICBpZiBub3QgaXNmaW5pdGUodCk6CiAgICAgICAgICAgICAgICByZXR1cm4KCiAgICAgICAgICAgIHNpbl9zdGFydF90aGV0YSA9IHNpbihzdGFydF90aGV0YSkKICAgICAgICAgICAgY29zX3N0YXJ0X3RoZXRhID0gY29zKHN0YXJ0X3RoZXRhKQogICAgICAgICAgICBzaW5fZW5kX3RoZXRhID0gc2luKGVuZF90aGV0YSkKICAgICAgICAgICAgY29zX2VuZF90aGV0YSA9IGNvcyhlbmRfdGhldGEpCgogICAgICAgICAgICBwb2ludDEgPSBjb21wbGV4KAogICAgICAgICAgICAgICAgY29zX3N0YXJ0X3RoZXRhIC0gdCAqIHNpbl9zdGFydF90aGV0YSwKICAgICAgICAgICAgICAgIHNpbl9zdGFydF90aGV0YSArIHQgKiBjb3Nfc3RhcnRfdGhldGEsCiAgICAgICAgICAgICkKICAgICAgICAgICAgcG9pbnQxICs9IHNlbGYuY2VudGVyX3BvaW50CiAgICAgICAgICAgIHRhcmdldF9wb2ludCA9IGNvbXBsZXgoY29zX2VuZF90aGV0YSwgc2luX2VuZF90aGV0YSkKICAgICAgICAgICAgdGFyZ2V0X3BvaW50ICs9IHNlbGYuY2VudGVyX3BvaW50CiAgICAgICAgICAgIHBvaW50MiA9IHRhcmdldF9wb2ludAogICAgICAgICAgICBwb2ludDIgKz0gY29tcGxleCh0ICogc2luX2VuZF90aGV0YSwgLXQgKiBjb3NfZW5kX3RoZXRhKQoKICAgICAgICAgICAgcG9pbnQxID0gX21hcF9wb2ludChwb2ludF90cmFuc2Zvcm0sIHBvaW50MSkKICAgICAgICAgICAgcG9pbnQyID0gX21hcF9wb2ludChwb2ludF90cmFuc2Zvcm0sIHBvaW50MikKICAgICAgICAgICAgdGFyZ2V0X3BvaW50ID0gX21hcF9wb2ludChwb2ludF90cmFuc2Zvcm0sIHRhcmdldF9wb2ludCkKCiAgICAgICAgICAgIHlpZWxkIHBvaW50MSwgcG9pbnQyLCB0YXJnZXRfcG9pbnQKCiAgICBkZWYgZHJhdyhzZWxmLCBwZW4pOgogICAgICAgIGZvciBwb2ludDEsIHBvaW50MiwgdGFyZ2V0X3BvaW50IGluIHNlbGYuX2RlY29tcG9zZV90b19jdWJpY19jdXJ2ZXMoKToKICAgICAgICAgICAgcGVuLmN1cnZlVG8oCiAgICAgICAgICAgICAgICAocG9pbnQxLnJlYWwsIHBvaW50MS5pbWFnKSwKICAgICAgICAgICAgICAgIChwb2ludDIucmVhbCwgcG9pbnQyLmltYWcpLAogICAgICAgICAgICAgICAgKHRhcmdldF9wb2ludC5yZWFsLCB0YXJnZXRfcG9pbnQuaW1hZyksCiAgICAgICAgICAgICkK
+"""Convert SVG Path's elliptical arcs to Bezier curves.
+
+The code is mostly adapted from Blink's SVGPathNormalizer::DecomposeArcToCubic
+https://github.com/chromium/chromium/blob/93831f2/third_party/
+blink/renderer/core/svg/svg_path_parser.cc#L169-L278
+"""
+
+from fontTools.misc.transform import Identity, Scale
+from math import atan2, ceil, cos, fabs, isfinite, pi, radians, sin, sqrt, tan
+
+TWO_PI = 2 * pi
+PI_OVER_TWO = 0.5 * pi
+
+
+def _map_point(matrix, pt):
+    # apply Transform matrix to a point represented as a complex number
+    r = matrix.transformPoint((pt.real, pt.imag))
+    return r[0] + r[1] * 1j
+
+
+class EllipticalArc(object):
+    def __init__(self, current_point, rx, ry, rotation, large, sweep, target_point):
+        self.current_point = current_point
+        self.rx = rx
+        self.ry = ry
+        self.rotation = rotation
+        self.large = large
+        self.sweep = sweep
+        self.target_point = target_point
+
+        # SVG arc's rotation angle is expressed in degrees, whereas Transform.rotate
+        # uses radians
+        self.angle = radians(rotation)
+
+        # these derived attributes are computed by the _parametrize method
+        self.center_point = self.theta1 = self.theta2 = self.theta_arc = None
+
+    def _parametrize(self):
+        # convert from endopoint to center parametrization:
+        # https://www.w3.org/TR/SVG/implnote.html#ArcConversionEndpointToCenter
+
+        # If rx = 0 or ry = 0 then this arc is treated as a straight line segment (a
+        # "lineto") joining the endpoints.
+        # http://www.w3.org/TR/SVG/implnote.html#ArcOutOfRangeParameters
+        rx = fabs(self.rx)
+        ry = fabs(self.ry)
+        if not (rx and ry):
+            return False
+
+        # If the current point and target point for the arc are identical, it should
+        # be treated as a zero length path. This ensures continuity in animations.
+        if self.target_point == self.current_point:
+            return False
+
+        mid_point_distance = (self.current_point - self.target_point) * 0.5
+
+        point_transform = Identity.rotate(-self.angle)
+
+        transformed_mid_point = _map_point(point_transform, mid_point_distance)
+        square_rx = rx * rx
+        square_ry = ry * ry
+        square_x = transformed_mid_point.real * transformed_mid_point.real
+        square_y = transformed_mid_point.imag * transformed_mid_point.imag
+
+        # Check if the radii are big enough to draw the arc, scale radii if not.
+        # http://www.w3.org/TR/SVG/implnote.html#ArcCorrectionOutOfRangeRadii
+        radii_scale = square_x / square_rx + square_y / square_ry
+        if radii_scale > 1:
+            rx *= sqrt(radii_scale)
+            ry *= sqrt(radii_scale)
+            self.rx, self.ry = rx, ry
+
+        point_transform = Scale(1 / rx, 1 / ry).rotate(-self.angle)
+
+        point1 = _map_point(point_transform, self.current_point)
+        point2 = _map_point(point_transform, self.target_point)
+        delta = point2 - point1
+
+        d = delta.real * delta.real + delta.imag * delta.imag
+        scale_factor_squared = max(1 / d - 0.25, 0.0)
+
+        scale_factor = sqrt(scale_factor_squared)
+        if self.sweep == self.large:
+            scale_factor = -scale_factor
+
+        delta *= scale_factor
+        center_point = (point1 + point2) * 0.5
+        center_point += complex(-delta.imag, delta.real)
+        point1 -= center_point
+        point2 -= center_point
+
+        theta1 = atan2(point1.imag, point1.real)
+        theta2 = atan2(point2.imag, point2.real)
+
+        theta_arc = theta2 - theta1
+        if theta_arc < 0 and self.sweep:
+            theta_arc += TWO_PI
+        elif theta_arc > 0 and not self.sweep:
+            theta_arc -= TWO_PI
+
+        self.theta1 = theta1
+        self.theta2 = theta1 + theta_arc
+        self.theta_arc = theta_arc
+        self.center_point = center_point
+
+        return True
+
+    def _decompose_to_cubic_curves(self):
+        if self.center_point is None and not self._parametrize():
+            return
+
+        point_transform = Identity.rotate(self.angle).scale(self.rx, self.ry)
+
+        # Some results of atan2 on some platform implementations are not exact
+        # enough. So that we get more cubic curves than expected here. Adding 0.001f
+        # reduces the count of sgements to the correct count.
+        num_segments = int(ceil(fabs(self.theta_arc / (PI_OVER_TWO + 0.001))))
+        for i in range(num_segments):
+            start_theta = self.theta1 + i * self.theta_arc / num_segments
+            end_theta = self.theta1 + (i + 1) * self.theta_arc / num_segments
+
+            t = (4 / 3) * tan(0.25 * (end_theta - start_theta))
+            if not isfinite(t):
+                return
+
+            sin_start_theta = sin(start_theta)
+            cos_start_theta = cos(start_theta)
+            sin_end_theta = sin(end_theta)
+            cos_end_theta = cos(end_theta)
+
+            point1 = complex(
+                cos_start_theta - t * sin_start_theta,
+                sin_start_theta + t * cos_start_theta,
+            )
+            point1 += self.center_point
+            target_point = complex(cos_end_theta, sin_end_theta)
+            target_point += self.center_point
+            point2 = target_point
+            point2 += complex(t * sin_end_theta, -t * cos_end_theta)
+
+            point1 = _map_point(point_transform, point1)
+            point2 = _map_point(point_transform, point2)
+            target_point = _map_point(point_transform, target_point)
+
+            yield point1, point2, target_point
+
+    def draw(self, pen):
+        for point1, point2, target_point in self._decompose_to_cubic_curves():
+            pen.curveTo(
+                (point1.real, point1.imag),
+                (point2.real, point2.imag),
+                (target_point.real, target_point.imag),
+            )

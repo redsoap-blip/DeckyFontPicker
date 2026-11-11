@@ -1,1 +1,52 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSBmb250VG9vbHMubWlzYy50aW1lVG9vbHMgaW1wb3J0IHRpbWVzdGFtcEZyb21TdHJpbmcsIHRpbWVzdGFtcFRvU3RyaW5nCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCgpGRlRNRm9ybWF0ID0gIiIiCgkJPgkjIGJpZyBlbmRpYW4KCQl2ZXJzaW9uOiAgICAgICAgSQoJCUZGVGltZVN0YW1wOiAgICBRCgkJc291cmNlQ3JlYXRlZDogIFEKCQlzb3VyY2VNb2RpZmllZDogUQoiIiIKCgpjbGFzcyB0YWJsZV9GX0ZfVF9NXyhEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkZvbnRGb3JnZSBUaW1lIFN0YW1wIHRhYmxlCgogICAgVGhlIGBgRkZUTWBgIHRhYmxlIGlzIHVzZWQgYnkgdGhlIGZyZWUtc29mdHdhcmUgZm9udCBlZGl0b3IKICAgIEZvbnRGb3JnZSB0byByZWNvcmQgdGltZXN0YW1wcyBmb3IgdGhlIGNyZWF0aW9uIGFuZCBtb2RpZmljYXRpb24KICAgIG9mIGZvbnQgc291cmNlICguc2ZkKSBmaWxlcyBhbmQgYSB0aW1lc3RhbXAgZm9yIEZvbnRGb3JnZSdzCiAgICBvd24gc291cmNlIGNvZGUuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9mb250Zm9yZ2Uub3JnL2RvY3MvdGVjaHJlZi9ub24tc3RhbmRhcmQuaHRtbAogICAgIiIiCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIGR1bW15LCByZXN0ID0gc3N0cnVjdC51bnBhY2syKEZGVE1Gb3JtYXQsIGRhdGEsIHNlbGYpCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBkYXRhID0gc3N0cnVjdC5wYWNrKEZGVE1Gb3JtYXQsIHNlbGYpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIHdyaXRlci5jb21tZW50KAogICAgICAgICAgICAiRm9udEZvcmdlJ3MgdGltZXN0YW1wLCBmb250IHNvdXJjZSBjcmVhdGlvbiBhbmQgbW9kaWZpY2F0aW9uIGRhdGVzIgogICAgICAgICkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgZm9ybWF0c3RyaW5nLCBuYW1lcywgZml4ZXMgPSBzc3RydWN0LmdldGZvcm1hdChGRlRNRm9ybWF0KQogICAgICAgIGZvciBuYW1lIGluIG5hbWVzOgogICAgICAgICAgICB2YWx1ZSA9IGdldGF0dHIoc2VsZiwgbmFtZSkKICAgICAgICAgICAgaWYgbmFtZSBpbiAoIkZGVGltZVN0YW1wIiwgInNvdXJjZUNyZWF0ZWQiLCAic291cmNlTW9kaWZpZWQiKToKICAgICAgICAgICAgICAgIHZhbHVlID0gdGltZXN0YW1wVG9TdHJpbmcodmFsdWUpCiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcobmFtZSwgdmFsdWU9dmFsdWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICB2YWx1ZSA9IGF0dHJzWyJ2YWx1ZSJdCiAgICAgICAgaWYgbmFtZSBpbiAoIkZGVGltZVN0YW1wIiwgInNvdXJjZUNyZWF0ZWQiLCAic291cmNlTW9kaWZpZWQiKToKICAgICAgICAgICAgdmFsdWUgPSB0aW1lc3RhbXBGcm9tU3RyaW5nKHZhbHVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHZhbHVlID0gc2FmZUV2YWwodmFsdWUpCiAgICAgICAgc2V0YXR0cihzZWxmLCBuYW1lLCB2YWx1ZSkK
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+from fontTools.misc.timeTools import timestampFromString, timestampToString
+from . import DefaultTable
+
+FFTMFormat = """
+		>	# big endian
+		version:        I
+		FFTimeStamp:    Q
+		sourceCreated:  Q
+		sourceModified: Q
+"""
+
+
+class table_F_F_T_M_(DefaultTable.DefaultTable):
+    """FontForge Time Stamp table
+
+    The ``FFTM`` table is used by the free-software font editor
+    FontForge to record timestamps for the creation and modification
+    of font source (.sfd) files and a timestamp for FontForge's
+    own source code.
+
+    See also https://fontforge.org/docs/techref/non-standard.html
+    """
+
+    def decompile(self, data, ttFont):
+        dummy, rest = sstruct.unpack2(FFTMFormat, data, self)
+
+    def compile(self, ttFont):
+        data = sstruct.pack(FFTMFormat, self)
+        return data
+
+    def toXML(self, writer, ttFont):
+        writer.comment(
+            "FontForge's timestamp, font source creation and modification dates"
+        )
+        writer.newline()
+        formatstring, names, fixes = sstruct.getformat(FFTMFormat)
+        for name in names:
+            value = getattr(self, name)
+            if name in ("FFTimeStamp", "sourceCreated", "sourceModified"):
+                value = timestampToString(value)
+            writer.simpletag(name, value=value)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        value = attrs["value"]
+        if name in ("FFTimeStamp", "sourceCreated", "sourceModified"):
+            value = timestampFromString(value)
+        else:
+            value = safeEval(value)
+        setattr(self, name, value)

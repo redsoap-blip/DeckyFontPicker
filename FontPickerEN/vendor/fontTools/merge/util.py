@@ -1,1 +1,142 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCmZyb20gZm9udFRvb2xzLm1pc2MudGltZVRvb2xzIGltcG9ydCB0aW1lc3RhbXBOb3cKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLkRlZmF1bHRUYWJsZSBpbXBvcnQgRGVmYXVsdFRhYmxlCmZyb20gZnVuY3Rvb2xzIGltcG9ydCByZWR1Y2UKaW1wb3J0IG9wZXJhdG9yCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiZm9udFRvb2xzLm1lcmdlIikKCgojIEdlbmVyYWwgdXRpbGl0eSBmdW5jdGlvbnMgZm9yIG1lcmdpbmcgdmFsdWVzIGZyb20gZGlmZmVyZW50IGZvbnRzCgoKZGVmIGVxdWFsKGxzdCk6CiAgICBsc3QgPSBsaXN0KGxzdCkKICAgIHQgPSBpdGVyKGxzdCkKICAgIGZpcnN0ID0gbmV4dCh0KQogICAgYXNzZXJ0IGFsbChpdGVtID09IGZpcnN0IGZvciBpdGVtIGluIHQpLCAiRXhwZWN0ZWQgYWxsIGl0ZW1zIHRvIGJlIGVxdWFsOiAlcyIgJSBsc3QKICAgIHJldHVybiBmaXJzdAoKCmRlZiBmaXJzdChsc3QpOgogICAgcmV0dXJuIG5leHQoaXRlcihsc3QpKQoKCmRlZiByZWNhbGN1bGF0ZShsc3QpOgogICAgcmV0dXJuIE5vdEltcGxlbWVudGVkCgoKZGVmIGN1cnJlbnRfdGltZShsc3QpOgogICAgcmV0dXJuIHRpbWVzdGFtcE5vdygpCgoKZGVmIGJpdHdpc2VfYW5kKGxzdCk6CiAgICByZXR1cm4gcmVkdWNlKG9wZXJhdG9yLmFuZF8sIGxzdCkKCgpkZWYgYml0d2lzZV9vcihsc3QpOgogICAgcmV0dXJuIHJlZHVjZShvcGVyYXRvci5vcl8sIGxzdCkKCgpkZWYgYXZnX2ludChsc3QpOgogICAgbHN0ID0gbGlzdChsc3QpCiAgICByZXR1cm4gc3VtKGxzdCkgLy8gbGVuKGxzdCkKCgpkZWYgb25seUV4aXN0aW5nKGZ1bmMpOgogICAgIiIiUmV0dXJucyBhIGZpbHRlciBmdW5jIHRoYXQgd2hlbiBjYWxsZWQgd2l0aCBhIGxpc3QsCiAgICBvbmx5IGNhbGxzIGZ1bmMgb24gdGhlIG5vbi1Ob3RJbXBsZW1lbnRlZCBpdGVtcyBvZiB0aGUgbGlzdCwKICAgIGFuZCBvbmx5IHNvIGlmIHRoZXJlJ3MgYXQgbGVhc3Qgb25lIGl0ZW0gcmVtYWluaW5nLgogICAgT3RoZXJ3aXNlIHJldHVybnMgTm90SW1wbGVtZW50ZWQuIiIiCgogICAgZGVmIHdyYXBwZXIobHN0KToKICAgICAgICBpdGVtcyA9IFtpdGVtIGZvciBpdGVtIGluIGxzdCBpZiBpdGVtIGlzIG5vdCBOb3RJbXBsZW1lbnRlZF0KICAgICAgICByZXR1cm4gZnVuYyhpdGVtcykgaWYgaXRlbXMgZWxzZSBOb3RJbXBsZW1lbnRlZAoKICAgIHJldHVybiB3cmFwcGVyCgoKZGVmIHN1bUxpc3RzKGxzdCk6CiAgICBsID0gW10KICAgIGZvciBpdGVtIGluIGxzdDoKICAgICAgICBsLmV4dGVuZChpdGVtKQogICAgcmV0dXJuIGwKCgpkZWYgc3VtRGljdHMobHN0KToKICAgIGQgPSB7fQogICAgZm9yIGl0ZW0gaW4gbHN0OgogICAgICAgIGQudXBkYXRlKGl0ZW0pCiAgICByZXR1cm4gZAoKCmRlZiBtZXJnZUJpdHMoYml0bWFwKToKICAgIGRlZiB3cmFwcGVyKGxzdCk6CiAgICAgICAgbHN0ID0gbGlzdChsc3QpCiAgICAgICAgcmV0dXJuVmFsdWUgPSAwCiAgICAgICAgZm9yIGJpdE51bWJlciBpbiByYW5nZShiaXRtYXBbInNpemUiXSk6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIG1lcmdlTG9naWMgPSBiaXRtYXBbYml0TnVtYmVyXQogICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgbWVyZ2VMb2dpYyA9IGJpdG1hcFsiKiJdCiAgICAgICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICAgICAgcmFpc2UgRXhjZXB0aW9uKCJEb24ndCBrbm93IGhvdyB0byBtZXJnZSBiaXQgJXMiICUgYml0TnVtYmVyKQogICAgICAgICAgICBzaGlmdGVkQml0ID0gMSA8PCBiaXROdW1iZXIKICAgICAgICAgICAgbWVyZ2VkVmFsdWUgPSBtZXJnZUxvZ2ljKGJvb2woaXRlbSAmIHNoaWZ0ZWRCaXQpIGZvciBpdGVtIGluIGxzdCkKICAgICAgICAgICAgcmV0dXJuVmFsdWUgfD0gbWVyZ2VkVmFsdWUgPDwgYml0TnVtYmVyCiAgICAgICAgcmV0dXJuIHJldHVyblZhbHVlCgogICAgcmV0dXJuIHdyYXBwZXIKCgpjbGFzcyBBdHRlbmRhbmNlUmVjb3JkaW5nSWRlbnRpdHlEaWN0KG9iamVjdCk6CiAgICAiIiJBIGRpY3Rpb25hcnktbGlrZSBvYmplY3QgdGhhdCByZWNvcmRzIGluZGljZXMgb2YgaXRlbXMgYWN0dWFsbHkgYWNjZXNzZWQKICAgIGZyb20gYSBsaXN0LiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBsc3QpOgogICAgICAgIHNlbGYubCA9IGxzdAogICAgICAgIHNlbGYuZCA9IHtpZCh2KTogaSBmb3IgaSwgdiBpbiBlbnVtZXJhdGUobHN0KX0KICAgICAgICBzZWxmLnMgPSBzZXQoKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCB2KToKICAgICAgICBzZWxmLnMuYWRkKHNlbGYuZFtpZCh2KV0pCiAgICAgICAgcmV0dXJuIHYKCgpjbGFzcyBHcmVnYXJpb3VzSWRlbnRpdHlEaWN0KG9iamVjdCk6CiAgICAiIiJBIGRpY3Rpb25hcnktbGlrZSBvYmplY3QgdGhhdCB3ZWxjb21lcyBndWVzdHMgd2l0aG91dCByZXNlcnZhdGlvbnMgYW5kCiAgICBhZGRzIHRoZW0gdG8gdGhlIGVuZCBvZiB0aGUgZ3Vlc3QgbGlzdC4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbHN0KToKICAgICAgICBzZWxmLmwgPSBsc3QKICAgICAgICBzZWxmLnMgPSBzZXQoaWQodikgZm9yIHYgaW4gbHN0KQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCB2KToKICAgICAgICBpZiBpZCh2KSBub3QgaW4gc2VsZi5zOgogICAgICAgICAgICBzZWxmLnMuYWRkKGlkKHYpKQogICAgICAgICAgICBzZWxmLmwuYXBwZW5kKHYpCiAgICAgICAgcmV0dXJuIHYKCgpjbGFzcyBOb25oYXNoYWJsZURpY3Qob2JqZWN0KToKICAgICIiIkEgZGljdGlvbmFyeS1saWtlIG9iamVjdCBtYXBwaW5nIG9iamVjdHMgdG8gdmFsdWVzLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBrZXlzLCB2YWx1ZXM9Tm9uZSk6CiAgICAgICAgaWYgdmFsdWVzIGlzIE5vbmU6CiAgICAgICAgICAgIHNlbGYuZCA9IHtpZCh2KTogaSBmb3IgaSwgdiBpbiBlbnVtZXJhdGUoa2V5cyl9CiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5kID0ge2lkKGspOiB2IGZvciBrLCB2IGluIHppcChrZXlzLCB2YWx1ZXMpfQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBrKToKICAgICAgICByZXR1cm4gc2VsZi5kW2lkKGspXQoKICAgIGRlZiBfX3NldGl0ZW1fXyhzZWxmLCBrLCB2KToKICAgICAgICBzZWxmLmRbaWQoayldID0gdgoKICAgIGRlZiBfX2RlbGl0ZW1fXyhzZWxmLCBrKToKICAgICAgICBkZWwgc2VsZi5kW2lkKGspXQo=
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+from fontTools.misc.timeTools import timestampNow
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
+from functools import reduce
+import operator
+import logging
+
+log = logging.getLogger("fontTools.merge")
+
+
+# General utility functions for merging values from different fonts
+
+
+def equal(lst):
+    lst = list(lst)
+    t = iter(lst)
+    first = next(t)
+    assert all(item == first for item in t), "Expected all items to be equal: %s" % lst
+    return first
+
+
+def first(lst):
+    return next(iter(lst))
+
+
+def recalculate(lst):
+    return NotImplemented
+
+
+def current_time(lst):
+    return timestampNow()
+
+
+def bitwise_and(lst):
+    return reduce(operator.and_, lst)
+
+
+def bitwise_or(lst):
+    return reduce(operator.or_, lst)
+
+
+def avg_int(lst):
+    lst = list(lst)
+    return sum(lst) // len(lst)
+
+
+def onlyExisting(func):
+    """Returns a filter func that when called with a list,
+    only calls func on the non-NotImplemented items of the list,
+    and only so if there's at least one item remaining.
+    Otherwise returns NotImplemented."""
+
+    def wrapper(lst):
+        items = [item for item in lst if item is not NotImplemented]
+        return func(items) if items else NotImplemented
+
+    return wrapper
+
+
+def sumLists(lst):
+    l = []
+    for item in lst:
+        l.extend(item)
+    return l
+
+
+def sumDicts(lst):
+    d = {}
+    for item in lst:
+        d.update(item)
+    return d
+
+
+def mergeBits(bitmap):
+    def wrapper(lst):
+        lst = list(lst)
+        returnValue = 0
+        for bitNumber in range(bitmap["size"]):
+            try:
+                mergeLogic = bitmap[bitNumber]
+            except KeyError:
+                try:
+                    mergeLogic = bitmap["*"]
+                except KeyError:
+                    raise Exception("Don't know how to merge bit %s" % bitNumber)
+            shiftedBit = 1 << bitNumber
+            mergedValue = mergeLogic(bool(item & shiftedBit) for item in lst)
+            returnValue |= mergedValue << bitNumber
+        return returnValue
+
+    return wrapper
+
+
+class AttendanceRecordingIdentityDict(object):
+    """A dictionary-like object that records indices of items actually accessed
+    from a list."""
+
+    def __init__(self, lst):
+        self.l = lst
+        self.d = {id(v): i for i, v in enumerate(lst)}
+        self.s = set()
+
+    def __getitem__(self, v):
+        self.s.add(self.d[id(v)])
+        return v
+
+
+class GregariousIdentityDict(object):
+    """A dictionary-like object that welcomes guests without reservations and
+    adds them to the end of the guest list."""
+
+    def __init__(self, lst):
+        self.l = lst
+        self.s = set(id(v) for v in lst)
+
+    def __getitem__(self, v):
+        if id(v) not in self.s:
+            self.s.add(id(v))
+            self.l.append(v)
+        return v
+
+
+class NonhashableDict(object):
+    """A dictionary-like object mapping objects to values."""
+
+    def __init__(self, keys, values=None):
+        if values is None:
+            self.d = {id(v): i for i, v in enumerate(keys)}
+        else:
+            self.d = {id(k): v for k, v in zip(keys, values)}
+
+    def __getitem__(self, k):
+        return self.d[id(k)]
+
+    def __setitem__(self, k, v):
+        self.d[id(k)] = v
+
+    def __delitem__(self, k):
+        del self.d[id(k)]

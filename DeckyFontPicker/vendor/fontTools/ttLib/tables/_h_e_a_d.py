@@ -1,1 +1,138 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZsb2F0VG9GaXhlZFRvU3RyLCBzdHJUb0ZpeGVkVG9GbG9hdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwsIG51bTJiaW5hcnksIGJpbmFyeTJudW0KZnJvbSBmb250VG9vbHMubWlzYy50aW1lVG9vbHMgaW1wb3J0ICgKICAgIHRpbWVzdGFtcEZyb21TdHJpbmcsCiAgICB0aW1lc3RhbXBUb1N0cmluZywKICAgIHRpbWVzdGFtcE5vdywKKQpmcm9tIGZvbnRUb29scy5taXNjLnRpbWVUb29scyBpbXBvcnQgZXBvY2hfZGlmZiBhcyBtYWNfZXBvY2hfZGlmZiAgIyBGb3IgYmFja3dhcmQgY29tcGF0CmZyb20gZm9udFRvb2xzLm1pc2MuYXJyYXlUb29scyBpbXBvcnQgaW50UmVjdCwgdW5pb25SZWN0CmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCmhlYWRGb3JtYXQgPSAiIiIKCQk+CSMgYmlnIGVuZGlhbgoJCXRhYmxlVmVyc2lvbjogICAgICAgMTYuMTZGCgkJZm9udFJldmlzaW9uOiAgICAgICAxNi4xNkYKCQljaGVja1N1bUFkanVzdG1lbnQ6IEkKCQltYWdpY051bWJlcjogICAgICAgIEkKCQlmbGFnczogICAgICAgICAgICAgIEgKCQl1bml0c1BlckVtOiAgICAgICAgIEgKCQljcmVhdGVkOiAgICAgICAgICAgIFEKCQltb2RpZmllZDogICAgICAgICAgIFEKCQl4TWluOiAgICAgICAgICAgICAgIGgKCQl5TWluOiAgICAgICAgICAgICAgIGgKCQl4TWF4OiAgICAgICAgICAgICAgIGgKCQl5TWF4OiAgICAgICAgICAgICAgIGgKCQltYWNTdHlsZTogICAgICAgICAgIEgKCQlsb3dlc3RSZWNQUEVNOiAgICAgIEgKCQlmb250RGlyZWN0aW9uSGludDogIGgKCQlpbmRleFRvTG9jRm9ybWF0OiAgIGgKCQlnbHlwaERhdGFGb3JtYXQ6ICAgIGgKIiIiCgoKY2xhc3MgdGFibGVfX2hfZV9hX2QoRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJGb250IEhlYWRlciB0YWJsZQoKICAgIFRoZSBgYGhlYWRgYCB0YWJsZSBjb250YWlucyBhIHZhcmlldHkgb2YgZm9udC13aWRlIGluZm9ybWF0aW9uLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvaGVhZAogICAgIiIiCgogICAgZGVwZW5kZW5jaWVzID0gWyJtYXhwIiwgIk1BWFAiLCAibG9jYSIsICJMT0NBIiwgIkNGRiAiLCAiQ0ZGMiJdCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIGR1bW15LCByZXN0ID0gc3N0cnVjdC51bnBhY2syKGhlYWRGb3JtYXQsIGRhdGEsIHNlbGYpCiAgICAgICAgaWYgcmVzdDoKICAgICAgICAgICAgIyB0aGlzIGlzIHF1aXRlIGlsbGVnYWwsIGJ1dCB0aGVyZSBzZWVtIHRvIGJlIGZvbnRzIG91dCB0aGVyZSB0aGF0IGRvIHRoaXMKICAgICAgICAgICAgbG9nLndhcm5pbmcoImV4dHJhIGJ5dGVzIGF0IHRoZSBlbmQgb2YgJ2hlYWQnIHRhYmxlIikKICAgICAgICAgICAgYXNzZXJ0IHJlc3QgPT0gYiJcMFwwIgoKICAgICAgICAjIEZvciB0aW1lc3RhbXAgZmllbGRzLCBpZ25vcmUgdGhlIHRvcCBmb3VyIGJ5dGVzLiAgU29tZSBmb250cyBoYXZlCiAgICAgICAgIyBib2d1cyB2YWx1ZXMgdGhlcmUuICBTaW5jZSB0aWxsIDIwMzggdGhvc2UgYnl0ZXMgb25seSBjYW4gYmUgemVybywKICAgICAgICAjIGlnbm9yZSB0aGVtLgogICAgICAgICMKICAgICAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy85OSNpc3N1ZWNvbW1lbnQtNjY3NzY4MTAKICAgICAgICBmb3Igc3RhbXAgaW4gImNyZWF0ZWQiLCAibW9kaWZpZWQiOgogICAgICAgICAgICB2YWx1ZSA9IGdldGF0dHIoc2VsZiwgc3RhbXApCiAgICAgICAgICAgIGlmIHZhbHVlID4gMHhGRkZGRkZGRjoKICAgICAgICAgICAgICAgIGxvZy53YXJuaW5nKCInJXMnIHRpbWVzdGFtcCBvdXQgb2YgcmFuZ2U7IGlnbm9yaW5nIHRvcCBieXRlcyIsIHN0YW1wKQogICAgICAgICAgICAgICAgdmFsdWUgJj0gMHhGRkZGRkZGRgogICAgICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBzdGFtcCwgdmFsdWUpCiAgICAgICAgICAgIGlmIHZhbHVlIDwgMHg3QzI1OURDMDogICMgSmFudWFyeSAxLCAxOTcwIDAwOjAwOjAwCiAgICAgICAgICAgICAgICBsb2cud2FybmluZygKICAgICAgICAgICAgICAgICAgICAiJyVzJyB0aW1lc3RhbXAgc2VlbXMgdmVyeSBsb3c7IHJlZ2FyZGluZyBhcyB1bml4IHRpbWVzdGFtcCIsIHN0YW1wCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICB2YWx1ZSArPSAweDdDMjU5REMwCiAgICAgICAgICAgICAgICBzZXRhdHRyKHNlbGYsIHN0YW1wLCB2YWx1ZSkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGlmIHR0Rm9udC5yZWNhbGNCQm94ZXM6CiAgICAgICAgICAgICMgRm9yIFRULWZsYXZvcmVkIGZvbnRzLCB4TWluLCB5TWluLCB4TWF4IGFuZCB5TWF4IGFyZSBzZXQgaW4gdGFibGVfX21fYV94X3AucmVjYWxjKCkuCiAgICAgICAgICAgIGlmICJWQVJDIiBpbiB0dEZvbnQ6CiAgICAgICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLmJvdW5kc1BlbiBpbXBvcnQgQm91bmRzUGVuCgogICAgICAgICAgICAgICAgZ2x5cGhTZXQgPSB0dEZvbnQuZ2V0R2x5cGhTZXQoKQogICAgICAgICAgICAgICAgcGVuID0gQm91bmRzUGVuKGdseXBoU2V0KQogICAgICAgICAgICAgICAgZm9yIGdseXBoIGluIGdseXBoU2V0LnZhbHVlcygpOgogICAgICAgICAgICAgICAgICAgIGdseXBoLmRyYXcocGVuKQogICAgICAgICAgICAgICAgaWYgcGVuLmJvdW5kcyBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICBzZWxmLnhNaW4sIHNlbGYueU1pbiwgc2VsZi54TWF4LCBzZWxmLnlNYXggPSBpbnRSZWN0KHBlbi5ib3VuZHMpCiAgICAgICAgICAgIGVsaWYgIkNGRiAiIGluIHR0Rm9udDoKICAgICAgICAgICAgICAgIHRvcERpY3QgPSB0dEZvbnRbIkNGRiAiXS5jZmYudG9wRGljdEluZGV4WzBdCiAgICAgICAgICAgICAgICBzZWxmLnhNaW4sIHNlbGYueU1pbiwgc2VsZi54TWF4LCBzZWxmLnlNYXggPSBpbnRSZWN0KHRvcERpY3QuRm9udEJCb3gpCiAgICAgICAgICAgIGVsaWYgIkNGRjIiIGluIHR0Rm9udDoKICAgICAgICAgICAgICAgIHRvcERpY3QgPSB0dEZvbnRbIkNGRjIiXS5jZmYudG9wRGljdEluZGV4WzBdCiAgICAgICAgICAgICAgICBjaGFyU3RyaW5ncyA9IHRvcERpY3QuQ2hhclN0cmluZ3MKICAgICAgICAgICAgICAgIGZvbnRCQm94ID0gTm9uZQogICAgICAgICAgICAgICAgZm9yIGNoYXJTdHJpbmcgaW4gY2hhclN0cmluZ3MudmFsdWVzKCk6CiAgICAgICAgICAgICAgICAgICAgYm91bmRzID0gY2hhclN0cmluZy5jYWxjQm91bmRzKGNoYXJTdHJpbmdzKQogICAgICAgICAgICAgICAgICAgIGlmIGJvdW5kcyBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICAgICAgaWYgZm9udEJCb3ggaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmb250QkJveCA9IHVuaW9uUmVjdChmb250QkJveCwgYm91bmRzKQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udEJCb3ggPSBib3VuZHMKICAgICAgICAgICAgICAgIGlmIGZvbnRCQm94IGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgICAgIHNlbGYueE1pbiwgc2VsZi55TWluLCBzZWxmLnhNYXgsIHNlbGYueU1heCA9IGludFJlY3QoZm9udEJCb3gpCiAgICAgICAgaWYgdHRGb250LnJlY2FsY1RpbWVzdGFtcDoKICAgICAgICAgICAgc2VsZi5tb2RpZmllZCA9IHRpbWVzdGFtcE5vdygpCiAgICAgICAgZGF0YSA9IHNzdHJ1Y3QucGFjayhoZWFkRm9ybWF0LCBzZWxmKQogICAgICAgIHJldHVybiBkYXRhCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuY29tbWVudCgiTW9zdCBvZiB0aGlzIHRhYmxlIHdpbGwgYmUgcmVjYWxjdWxhdGVkIGJ5IHRoZSBjb21waWxlciIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIF8sIG5hbWVzLCBmaXhlcyA9IHNzdHJ1Y3QuZ2V0Zm9ybWF0KGhlYWRGb3JtYXQpCiAgICAgICAgZm9yIG5hbWUgaW4gbmFtZXM6CiAgICAgICAgICAgIHZhbHVlID0gZ2V0YXR0cihzZWxmLCBuYW1lKQogICAgICAgICAgICBpZiBuYW1lIGluIGZpeGVzOgogICAgICAgICAgICAgICAgdmFsdWUgPSBmbG9hdFRvRml4ZWRUb1N0cih2YWx1ZSwgcHJlY2lzaW9uQml0cz1maXhlc1tuYW1lXSkKICAgICAgICAgICAgZWxpZiBuYW1lIGluICgiY3JlYXRlZCIsICJtb2RpZmllZCIpOgogICAgICAgICAgICAgICAgdmFsdWUgPSB0aW1lc3RhbXBUb1N0cmluZyh2YWx1ZSkKICAgICAgICAgICAgZWxpZiBuYW1lIGluICgibWFnaWNOdW1iZXIiLCAiY2hlY2tTdW1BZGp1c3RtZW50Iik6CiAgICAgICAgICAgICAgICBpZiB2YWx1ZSA8IDA6CiAgICAgICAgICAgICAgICAgICAgdmFsdWUgPSB2YWx1ZSArIDB4MTAwMDAwMDAwCiAgICAgICAgICAgICAgICB2YWx1ZSA9IGhleCh2YWx1ZSkKICAgICAgICAgICAgICAgIGlmIHZhbHVlWy0xOl0gPT0gIkwiOgogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gdmFsdWVbOi0xXQogICAgICAgICAgICBlbGlmIG5hbWUgaW4gKCJtYWNTdHlsZSIsICJmbGFncyIpOgogICAgICAgICAgICAgICAgdmFsdWUgPSBudW0yYmluYXJ5KHZhbHVlLCAxNikKICAgICAgICAgICAgd3JpdGVyLnNpbXBsZXRhZyhuYW1lLCB2YWx1ZT12YWx1ZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIHZhbHVlID0gYXR0cnNbInZhbHVlIl0KICAgICAgICBmaXhlcyA9IHNzdHJ1Y3QuZ2V0Zm9ybWF0KGhlYWRGb3JtYXQpWzJdCiAgICAgICAgaWYgbmFtZSBpbiBmaXhlczoKICAgICAgICAgICAgdmFsdWUgPSBzdHJUb0ZpeGVkVG9GbG9hdCh2YWx1ZSwgcHJlY2lzaW9uQml0cz1maXhlc1tuYW1lXSkKICAgICAgICBlbGlmIG5hbWUgaW4gKCJjcmVhdGVkIiwgIm1vZGlmaWVkIik6CiAgICAgICAgICAgIHZhbHVlID0gdGltZXN0YW1wRnJvbVN0cmluZyh2YWx1ZSkKICAgICAgICBlbGlmIG5hbWUgaW4gKCJtYWNTdHlsZSIsICJmbGFncyIpOgogICAgICAgICAgICB2YWx1ZSA9IGJpbmFyeTJudW0odmFsdWUpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdmFsdWUgPSBzYWZlRXZhbCh2YWx1ZSkKICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHZhbHVlKQo=
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import floatToFixedToStr, strToFixedToFloat
+from fontTools.misc.textTools import safeEval, num2binary, binary2num
+from fontTools.misc.timeTools import (
+    timestampFromString,
+    timestampToString,
+    timestampNow,
+)
+from fontTools.misc.timeTools import epoch_diff as mac_epoch_diff  # For backward compat
+from fontTools.misc.arrayTools import intRect, unionRect
+from . import DefaultTable
+import logging
+
+log = logging.getLogger(__name__)
+
+headFormat = """
+		>	# big endian
+		tableVersion:       16.16F
+		fontRevision:       16.16F
+		checkSumAdjustment: I
+		magicNumber:        I
+		flags:              H
+		unitsPerEm:         H
+		created:            Q
+		modified:           Q
+		xMin:               h
+		yMin:               h
+		xMax:               h
+		yMax:               h
+		macStyle:           H
+		lowestRecPPEM:      H
+		fontDirectionHint:  h
+		indexToLocFormat:   h
+		glyphDataFormat:    h
+"""
+
+
+class table__h_e_a_d(DefaultTable.DefaultTable):
+    """Font Header table
+
+    The ``head`` table contains a variety of font-wide information.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/head
+    """
+
+    dependencies = ["maxp", "MAXP", "loca", "LOCA", "CFF ", "CFF2"]
+
+    def decompile(self, data, ttFont):
+        dummy, rest = sstruct.unpack2(headFormat, data, self)
+        if rest:
+            # this is quite illegal, but there seem to be fonts out there that do this
+            log.warning("extra bytes at the end of 'head' table")
+            assert rest == b"\0\0"
+
+        # For timestamp fields, ignore the top four bytes.  Some fonts have
+        # bogus values there.  Since till 2038 those bytes only can be zero,
+        # ignore them.
+        #
+        # https://github.com/fonttools/fonttools/issues/99#issuecomment-66776810
+        for stamp in "created", "modified":
+            value = getattr(self, stamp)
+            if value > 0xFFFFFFFF:
+                log.warning("'%s' timestamp out of range; ignoring top bytes", stamp)
+                value &= 0xFFFFFFFF
+                setattr(self, stamp, value)
+            if value < 0x7C259DC0:  # January 1, 1970 00:00:00
+                log.warning(
+                    "'%s' timestamp seems very low; regarding as unix timestamp", stamp
+                )
+                value += 0x7C259DC0
+                setattr(self, stamp, value)
+
+    def compile(self, ttFont):
+        if ttFont.recalcBBoxes:
+            # For TT-flavored fonts, xMin, yMin, xMax and yMax are set in table__m_a_x_p.recalc().
+            if "VARC" in ttFont:
+                from fontTools.pens.boundsPen import BoundsPen
+
+                glyphSet = ttFont.getGlyphSet()
+                pen = BoundsPen(glyphSet)
+                for glyph in glyphSet.values():
+                    glyph.draw(pen)
+                if pen.bounds is not None:
+                    self.xMin, self.yMin, self.xMax, self.yMax = intRect(pen.bounds)
+            elif "CFF " in ttFont:
+                topDict = ttFont["CFF "].cff.topDictIndex[0]
+                self.xMin, self.yMin, self.xMax, self.yMax = intRect(topDict.FontBBox)
+            elif "CFF2" in ttFont:
+                topDict = ttFont["CFF2"].cff.topDictIndex[0]
+                charStrings = topDict.CharStrings
+                fontBBox = None
+                for charString in charStrings.values():
+                    bounds = charString.calcBounds(charStrings)
+                    if bounds is not None:
+                        if fontBBox is not None:
+                            fontBBox = unionRect(fontBBox, bounds)
+                        else:
+                            fontBBox = bounds
+                if fontBBox is not None:
+                    self.xMin, self.yMin, self.xMax, self.yMax = intRect(fontBBox)
+        if ttFont.recalcTimestamp:
+            self.modified = timestampNow()
+        data = sstruct.pack(headFormat, self)
+        return data
+
+    def toXML(self, writer, ttFont):
+        writer.comment("Most of this table will be recalculated by the compiler")
+        writer.newline()
+        _, names, fixes = sstruct.getformat(headFormat)
+        for name in names:
+            value = getattr(self, name)
+            if name in fixes:
+                value = floatToFixedToStr(value, precisionBits=fixes[name])
+            elif name in ("created", "modified"):
+                value = timestampToString(value)
+            elif name in ("magicNumber", "checkSumAdjustment"):
+                if value < 0:
+                    value = value + 0x100000000
+                value = hex(value)
+                if value[-1:] == "L":
+                    value = value[:-1]
+            elif name in ("macStyle", "flags"):
+                value = num2binary(value, 16)
+            writer.simpletag(name, value=value)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        value = attrs["value"]
+        fixes = sstruct.getformat(headFormat)[2]
+        if name in fixes:
+            value = strToFixedToFloat(value, precisionBits=fixes[name])
+        elif name in ("created", "modified"):
+            value = timestampFromString(value)
+        elif name in ("macStyle", "flags"):
+            value = binary2num(value)
+        else:
+            value = safeEval(value)
+        setattr(self, name, value)

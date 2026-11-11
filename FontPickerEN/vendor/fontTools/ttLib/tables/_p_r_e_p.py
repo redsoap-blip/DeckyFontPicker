@@ -1,1 +1,16 @@
-ZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgpzdXBlcmNsYXNzID0gdHRMaWIuZ2V0VGFibGVDbGFzcygiZnBnbSIpCgoKY2xhc3MgdGFibGVfX3Bfcl9lX3Aoc3VwZXJjbGFzcyk6CiAgICAiIiJDb250cm9sIFZhbHVlIFByb2dyYW0gdGFibGUKCiAgICBUaGUgYGBwcmVwYGAgdGFibGUgY29udGFpbnMgVHJ1ZVR5cGUgaW5zdHJ1Y3Rpb25zIHRoYXQgY2FuIG1ha2VlIGZvbnQtd2lkZQogICAgYWx0ZXJhdGlvbnMgdG8gdGhlIENvbnRyb2wgVmFsdWUgVGFibGUuIEl0IG1heSBwb3RlbnRpYWxseSBiZSBleGVjdXRlZAogICAgYmVmb3JlIGFueSBnbHlwaCBpcyBwcm9jZXNzZWQuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9wcmVwCiAgICAiIiIKCiAgICBwYXNzCg==
+from fontTools import ttLib
+
+superclass = ttLib.getTableClass("fpgm")
+
+
+class table__p_r_e_p(superclass):
+    """Control Value Program table
+
+    The ``prep`` table contains TrueType instructions that can makee font-wide
+    alterations to the Control Value Table. It may potentially be executed
+    before any glyph is processed.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/prep
+    """
+
+    pass

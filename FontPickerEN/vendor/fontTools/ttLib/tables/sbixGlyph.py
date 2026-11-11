@@ -1,1 +1,148 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgcmVhZEhleCwgc2FmZUV2YWwKaW1wb3J0IHN0cnVjdAoKc2JpeEdseXBoSGVhZGVyRm9ybWF0ID0gIiIiCgk+CglvcmlnaW5PZmZzZXRYOiBoCSMgVGhlIHgtdmFsdWUgb2YgdGhlIHBvaW50IGluIHRoZSBnbHlwaCByZWxhdGl2ZSB0byBpdHMKCQkJCQkJIyBsb3dlci1sZWZ0IGNvcm5lciB3aGljaCBjb3JyZXNwb25kcyB0byB0aGUgb3JpZ2luIG9mCgkJCQkJCSMgdGhlIGdseXBoIG9uIHRoZSBzY3JlZW4sIHRoYXQgaXMgdGhlIHBvaW50IG9uIHRoZQoJCQkJCQkjIGJhc2VsaW5lIGF0IHRoZSBsZWZ0IGVkZ2Ugb2YgdGhlIGdseXBoLgoJb3JpZ2luT2Zmc2V0WTogaAkjIFRoZSB5LXZhbHVlIG9mIHRoZSBwb2ludCBpbiB0aGUgZ2x5cGggcmVsYXRpdmUgdG8gaXRzCgkJCQkJCSMgbG93ZXItbGVmdCBjb3JuZXIgd2hpY2ggY29ycmVzcG9uZHMgdG8gdGhlIG9yaWdpbiBvZgoJCQkJCQkjIHRoZSBnbHlwaCBvbiB0aGUgc2NyZWVuLCB0aGF0IGlzIHRoZSBwb2ludCBvbiB0aGUKCQkJCQkJIyBiYXNlbGluZSBhdCB0aGUgbGVmdCBlZGdlIG9mIHRoZSBnbHlwaC4KCWdyYXBoaWNUeXBlOiAgNHMJIyBlLmcuICJwbmcgIgoiIiIKCnNiaXhHbHlwaEhlYWRlckZvcm1hdFNpemUgPSBzc3RydWN0LmNhbGNzaXplKHNiaXhHbHlwaEhlYWRlckZvcm1hdCkKCgpjbGFzcyBHbHlwaChvYmplY3QpOgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgZ2x5cGhOYW1lPU5vbmUsCiAgICAgICAgcmVmZXJlbmNlR2x5cGhOYW1lPU5vbmUsCiAgICAgICAgb3JpZ2luT2Zmc2V0WD0wLAogICAgICAgIG9yaWdpbk9mZnNldFk9MCwKICAgICAgICBncmFwaGljVHlwZT1Ob25lLAogICAgICAgIGltYWdlRGF0YT1Ob25lLAogICAgICAgIHJhd2RhdGE9Tm9uZSwKICAgICAgICBnaWQ9MCwKICAgICk6CiAgICAgICAgc2VsZi5naWQgPSBnaWQKICAgICAgICBzZWxmLmdseXBoTmFtZSA9IGdseXBoTmFtZQogICAgICAgIHNlbGYucmVmZXJlbmNlR2x5cGhOYW1lID0gcmVmZXJlbmNlR2x5cGhOYW1lCiAgICAgICAgc2VsZi5vcmlnaW5PZmZzZXRYID0gb3JpZ2luT2Zmc2V0WAogICAgICAgIHNlbGYub3JpZ2luT2Zmc2V0WSA9IG9yaWdpbk9mZnNldFkKICAgICAgICBzZWxmLnJhd2RhdGEgPSByYXdkYXRhCiAgICAgICAgc2VsZi5ncmFwaGljVHlwZSA9IGdyYXBoaWNUeXBlCiAgICAgICAgc2VsZi5pbWFnZURhdGEgPSBpbWFnZURhdGEKCiAgICAgICAgIyBmaXggc2VsZi5ncmFwaGljVHlwZSBpZiBpdCBpcyBudWxsIHRlcm1pbmF0ZWQgb3IgdG9vIHNob3J0CiAgICAgICAgaWYgc2VsZi5ncmFwaGljVHlwZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgaWYgc2VsZi5ncmFwaGljVHlwZVstMV0gPT0gIlwwIjoKICAgICAgICAgICAgICAgIHNlbGYuZ3JhcGhpY1R5cGUgPSBzZWxmLmdyYXBoaWNUeXBlWzotMV0KICAgICAgICAgICAgaWYgbGVuKHNlbGYuZ3JhcGhpY1R5cGUpID4gNDoKICAgICAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKICAgICAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgIkdseXBoLmdyYXBoaWNUeXBlIG11c3Qgbm90IGJlIGxvbmdlciB0aGFuIDQgY2hhcmFjdGVycy4iCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIGVsaWYgbGVuKHNlbGYuZ3JhcGhpY1R5cGUpIDwgNDoKICAgICAgICAgICAgICAgICMgcGFkIHdpdGggc3BhY2VzCiAgICAgICAgICAgICAgICBzZWxmLmdyYXBoaWNUeXBlICs9ICIgICAgIls6ICg0IC0gbGVuKHNlbGYuZ3JhcGhpY1R5cGUpKV0KCiAgICBkZWYgaXNfcmVmZXJlbmNlX3R5cGUoc2VsZik6CiAgICAgICAgIiIiUmV0dXJucyBUcnVlIGlmIHRoaXMgZ2x5cGggaXMgYSByZWZlcmVuY2UgdG8gYW5vdGhlciBnbHlwaCdzIGltYWdlIGRhdGEuIiIiCiAgICAgICAgcmV0dXJuIHNlbGYuZ3JhcGhpY1R5cGUgPT0gImR1cGUiIG9yIHNlbGYuZ3JhcGhpY1R5cGUgPT0gImZsaXAiCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIHNlbGYuZ2x5cGhOYW1lID0gdHRGb250LmdldEdseXBoTmFtZShzZWxmLmdpZCkKICAgICAgICBpZiBzZWxmLnJhd2RhdGEgaXMgTm9uZToKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKCJObyB0YWJsZSBkYXRhIHRvIGRlY29tcGlsZSIpCiAgICAgICAgaWYgbGVuKHNlbGYucmF3ZGF0YSkgPiAwOgogICAgICAgICAgICBpZiBsZW4oc2VsZi5yYXdkYXRhKSA8IHNiaXhHbHlwaEhlYWRlckZvcm1hdFNpemU6CiAgICAgICAgICAgICAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgdHRMaWIKCiAgICAgICAgICAgICAgICAjIHByaW50ICJHbHlwaCAlaSBoZWFkZXIgdG9vIHNob3J0OiBFeHBlY3RlZCAleCwgZ290ICV4LiIgJSAoc2VsZi5naWQsIHNiaXhHbHlwaEhlYWRlckZvcm1hdFNpemUsIGxlbihzZWxmLnJhd2RhdGEpKQogICAgICAgICAgICAgICAgcmFpc2UgdHRMaWIuVFRMaWJFcnJvcigiR2x5cGggaGVhZGVyIHRvbyBzaG9ydC4iKQoKICAgICAgICAgICAgc3N0cnVjdC51bnBhY2soCiAgICAgICAgICAgICAgICBzYml4R2x5cGhIZWFkZXJGb3JtYXQsIHNlbGYucmF3ZGF0YVs6c2JpeEdseXBoSGVhZGVyRm9ybWF0U2l6ZV0sIHNlbGYKICAgICAgICAgICAgKQoKICAgICAgICAgICAgaWYgc2VsZi5pc19yZWZlcmVuY2VfdHlwZSgpOgogICAgICAgICAgICAgICAgIyB0aGlzIGdseXBoIGlzIGEgcmVmZXJlbmNlIHRvIGFub3RoZXIgZ2x5cGgncyBpbWFnZSBkYXRhCiAgICAgICAgICAgICAgICAoZ2lkLCkgPSBzdHJ1Y3QudW5wYWNrKCI+SCIsIHNlbGYucmF3ZGF0YVtzYml4R2x5cGhIZWFkZXJGb3JtYXRTaXplOl0pCiAgICAgICAgICAgICAgICBzZWxmLnJlZmVyZW5jZUdseXBoTmFtZSA9IHR0Rm9udC5nZXRHbHlwaE5hbWUoZ2lkKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgc2VsZi5pbWFnZURhdGEgPSBzZWxmLnJhd2RhdGFbc2JpeEdseXBoSGVhZGVyRm9ybWF0U2l6ZTpdCiAgICAgICAgICAgICAgICBzZWxmLnJlZmVyZW5jZUdseXBoTmFtZSA9IE5vbmUKICAgICAgICAjIGNsZWFuIHVwCiAgICAgICAgZGVsIHNlbGYucmF3ZGF0YQogICAgICAgIGRlbCBzZWxmLmdpZAoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaWYgc2VsZi5nbHlwaE5hbWUgaXMgTm9uZToKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKCJDYW4ndCBjb21waWxlIEdseXBoIHdpdGhvdXQgZ2x5cGggbmFtZSIpCiAgICAgICAgICAgICMgVE9ETzogaWYgdHRGb250IGhhcyBubyBtYXhwLCBjbWFwIGV0Yy4sIGlnbm9yZSBnbHlwaCBuYW1lcyBhbmQgY29tcGlsZSBieSBpbmRleD8KICAgICAgICAgICAgIyAobmVlZGVkIGlmIHlvdSBqdXN0IHdhbnQgdG8gY29tcGlsZSB0aGUgc2JpeCB0YWJsZSBvbiBpdHMgb3duKQogICAgICAgIHNlbGYuZ2lkID0gc3RydWN0LnBhY2soIj5IIiwgdHRGb250LmdldEdseXBoSUQoc2VsZi5nbHlwaE5hbWUpKQogICAgICAgIGlmIHNlbGYuZ3JhcGhpY1R5cGUgaXMgTm9uZToKICAgICAgICAgICAgcmF3ZGF0YSA9IGIiIgogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhd2RhdGEgPSBzc3RydWN0LnBhY2soc2JpeEdseXBoSGVhZGVyRm9ybWF0LCBzZWxmKQogICAgICAgICAgICBpZiBzZWxmLmlzX3JlZmVyZW5jZV90eXBlKCk6CiAgICAgICAgICAgICAgICByYXdkYXRhICs9IHN0cnVjdC5wYWNrKCI+SCIsIHR0Rm9udC5nZXRHbHlwaElEKHNlbGYucmVmZXJlbmNlR2x5cGhOYW1lKSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGFzc2VydCBzZWxmLmltYWdlRGF0YSBpcyBub3QgTm9uZQogICAgICAgICAgICAgICAgcmF3ZGF0YSArPSBzZWxmLmltYWdlRGF0YQogICAgICAgIHNlbGYucmF3ZGF0YSA9IHJhd2RhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgeG1sV3JpdGVyLCB0dEZvbnQpOgogICAgICAgIGlmIHNlbGYuZ3JhcGhpY1R5cGUgaXMgTm9uZToKICAgICAgICAgICAgIyBUT0RPOiBpZ25vcmUgZW1wdHkgZ2x5cGhzPwogICAgICAgICAgICAjIGEgZ2x5cGggZGF0YSBlbnRyeSBpcyByZXF1aXJlZCBmb3IgZWFjaCBnbHlwaCwKICAgICAgICAgICAgIyBidXQgZW1wdHkgb25lcyBjYW4gYmUgY2FsY3VsYXRlZCBhdCBjb21waWxlIHRpbWUKICAgICAgICAgICAgeG1sV3JpdGVyLnNpbXBsZXRhZygiZ2x5cGgiLCBuYW1lPXNlbGYuZ2x5cGhOYW1lKQogICAgICAgICAgICB4bWxXcml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIHhtbFdyaXRlci5iZWdpbnRhZygKICAgICAgICAgICAgImdseXBoIiwKICAgICAgICAgICAgZ3JhcGhpY1R5cGU9c2VsZi5ncmFwaGljVHlwZSwKICAgICAgICAgICAgbmFtZT1zZWxmLmdseXBoTmFtZSwKICAgICAgICAgICAgb3JpZ2luT2Zmc2V0WD1zZWxmLm9yaWdpbk9mZnNldFgsCiAgICAgICAgICAgIG9yaWdpbk9mZnNldFk9c2VsZi5vcmlnaW5PZmZzZXRZLAogICAgICAgICkKICAgICAgICB4bWxXcml0ZXIubmV3bGluZSgpCiAgICAgICAgaWYgc2VsZi5pc19yZWZlcmVuY2VfdHlwZSgpOgogICAgICAgICAgICAjIHRoaXMgZ2x5cGggaXMgYSByZWZlcmVuY2UgdG8gYW5vdGhlciBnbHlwaCBpZC4KICAgICAgICAgICAgeG1sV3JpdGVyLnNpbXBsZXRhZygicmVmIiwgZ2x5cGhuYW1lPXNlbGYucmVmZXJlbmNlR2x5cGhOYW1lKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHhtbFdyaXRlci5iZWdpbnRhZygiaGV4ZGF0YSIpCiAgICAgICAgICAgIHhtbFdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgeG1sV3JpdGVyLmR1bXBoZXgoc2VsZi5pbWFnZURhdGEpCiAgICAgICAgICAgIHhtbFdyaXRlci5lbmR0YWcoImhleGRhdGEiKQogICAgICAgIHhtbFdyaXRlci5uZXdsaW5lKCkKICAgICAgICB4bWxXcml0ZXIuZW5kdGFnKCJnbHlwaCIpCiAgICAgICAgeG1sV3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gInJlZiI6CiAgICAgICAgICAgICMgdGhpcyBnbHlwaCBpLmUuIGEgcmVmZXJlbmNlIHRvIGFub3RoZXIgZ2x5cGgncyBpbWFnZSBkYXRhLgogICAgICAgICAgICAjIGluIHRoaXMgY2FzZSBpbWFnZURhdGEgY29udGFpbnMgdGhlIGdseXBoIGlkIG9mIHRoZSByZWZlcmVuY2UgZ2x5cGgKICAgICAgICAgICAgIyBnZXQgZ2x5cGggaWQgZnJvbSBnbHlwaG5hbWUKICAgICAgICAgICAgZ2x5cGhuYW1lID0gc2FmZUV2YWwoIicnJyIgKyBhdHRyc1siZ2x5cGhuYW1lIl0gKyAiJycnIikKICAgICAgICAgICAgc2VsZi5pbWFnZURhdGEgPSBzdHJ1Y3QucGFjaygiPkgiLCB0dEZvbnQuZ2V0R2x5cGhJRChnbHlwaG5hbWUpKQogICAgICAgICAgICBzZWxmLnJlZmVyZW5jZUdseXBoTmFtZSA9IGdseXBobmFtZQogICAgICAgIGVsaWYgbmFtZSA9PSAiaGV4ZGF0YSI6CiAgICAgICAgICAgIHNlbGYuaW1hZ2VEYXRhID0gcmVhZEhleChjb250ZW50KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKICAgICAgICAgICAgcmFpc2UgdHRMaWIuVFRMaWJFcnJvcigiY2FuJ3QgaGFuZGxlICclcycgZWxlbWVudCIgJSBuYW1lKQo=
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import readHex, safeEval
+import struct
+
+sbixGlyphHeaderFormat = """
+	>
+	originOffsetX: h	# The x-value of the point in the glyph relative to its
+						# lower-left corner which corresponds to the origin of
+						# the glyph on the screen, that is the point on the
+						# baseline at the left edge of the glyph.
+	originOffsetY: h	# The y-value of the point in the glyph relative to its
+						# lower-left corner which corresponds to the origin of
+						# the glyph on the screen, that is the point on the
+						# baseline at the left edge of the glyph.
+	graphicType:  4s	# e.g. "png "
+"""
+
+sbixGlyphHeaderFormatSize = sstruct.calcsize(sbixGlyphHeaderFormat)
+
+
+class Glyph(object):
+    def __init__(
+        self,
+        glyphName=None,
+        referenceGlyphName=None,
+        originOffsetX=0,
+        originOffsetY=0,
+        graphicType=None,
+        imageData=None,
+        rawdata=None,
+        gid=0,
+    ):
+        self.gid = gid
+        self.glyphName = glyphName
+        self.referenceGlyphName = referenceGlyphName
+        self.originOffsetX = originOffsetX
+        self.originOffsetY = originOffsetY
+        self.rawdata = rawdata
+        self.graphicType = graphicType
+        self.imageData = imageData
+
+        # fix self.graphicType if it is null terminated or too short
+        if self.graphicType is not None:
+            if self.graphicType[-1] == "\0":
+                self.graphicType = self.graphicType[:-1]
+            if len(self.graphicType) > 4:
+                from fontTools import ttLib
+
+                raise ttLib.TTLibError(
+                    "Glyph.graphicType must not be longer than 4 characters."
+                )
+            elif len(self.graphicType) < 4:
+                # pad with spaces
+                self.graphicType += "    "[: (4 - len(self.graphicType))]
+
+    def is_reference_type(self):
+        """Returns True if this glyph is a reference to another glyph's image data."""
+        return self.graphicType == "dupe" or self.graphicType == "flip"
+
+    def decompile(self, ttFont):
+        self.glyphName = ttFont.getGlyphName(self.gid)
+        if self.rawdata is None:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("No table data to decompile")
+        if len(self.rawdata) > 0:
+            if len(self.rawdata) < sbixGlyphHeaderFormatSize:
+                from fontTools import ttLib
+
+                # print "Glyph %i header too short: Expected %x, got %x." % (self.gid, sbixGlyphHeaderFormatSize, len(self.rawdata))
+                raise ttLib.TTLibError("Glyph header too short.")
+
+            sstruct.unpack(
+                sbixGlyphHeaderFormat, self.rawdata[:sbixGlyphHeaderFormatSize], self
+            )
+
+            if self.is_reference_type():
+                # this glyph is a reference to another glyph's image data
+                (gid,) = struct.unpack(">H", self.rawdata[sbixGlyphHeaderFormatSize:])
+                self.referenceGlyphName = ttFont.getGlyphName(gid)
+            else:
+                self.imageData = self.rawdata[sbixGlyphHeaderFormatSize:]
+                self.referenceGlyphName = None
+        # clean up
+        del self.rawdata
+        del self.gid
+
+    def compile(self, ttFont):
+        if self.glyphName is None:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("Can't compile Glyph without glyph name")
+            # TODO: if ttFont has no maxp, cmap etc., ignore glyph names and compile by index?
+            # (needed if you just want to compile the sbix table on its own)
+        self.gid = struct.pack(">H", ttFont.getGlyphID(self.glyphName))
+        if self.graphicType is None:
+            rawdata = b""
+        else:
+            rawdata = sstruct.pack(sbixGlyphHeaderFormat, self)
+            if self.is_reference_type():
+                rawdata += struct.pack(">H", ttFont.getGlyphID(self.referenceGlyphName))
+            else:
+                assert self.imageData is not None
+                rawdata += self.imageData
+        self.rawdata = rawdata
+
+    def toXML(self, xmlWriter, ttFont):
+        if self.graphicType is None:
+            # TODO: ignore empty glyphs?
+            # a glyph data entry is required for each glyph,
+            # but empty ones can be calculated at compile time
+            xmlWriter.simpletag("glyph", name=self.glyphName)
+            xmlWriter.newline()
+            return
+        xmlWriter.begintag(
+            "glyph",
+            graphicType=self.graphicType,
+            name=self.glyphName,
+            originOffsetX=self.originOffsetX,
+            originOffsetY=self.originOffsetY,
+        )
+        xmlWriter.newline()
+        if self.is_reference_type():
+            # this glyph is a reference to another glyph id.
+            xmlWriter.simpletag("ref", glyphname=self.referenceGlyphName)
+        else:
+            xmlWriter.begintag("hexdata")
+            xmlWriter.newline()
+            xmlWriter.dumphex(self.imageData)
+            xmlWriter.endtag("hexdata")
+        xmlWriter.newline()
+        xmlWriter.endtag("glyph")
+        xmlWriter.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "ref":
+            # this glyph i.e. a reference to another glyph's image data.
+            # in this case imageData contains the glyph id of the reference glyph
+            # get glyph id from glyphname
+            glyphname = safeEval("'''" + attrs["glyphname"] + "'''")
+            self.imageData = struct.pack(">H", ttFont.getGlyphID(glyphname))
+            self.referenceGlyphName = glyphname
+        elif name == "hexdata":
+            self.imageData = readHex(content)
+        else:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("can't handle '%s' element" % name)

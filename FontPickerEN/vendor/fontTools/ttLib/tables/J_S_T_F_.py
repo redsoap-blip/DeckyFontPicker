@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfSl9TX1RfRl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJKdXN0aWZpY2F0aW9uIHRhYmxlCgogICAgVGhlIGBgSlNURmBgIHRhYmxlIGNvbnRhaW5zIGdseXBoIHN1YnN0aXR1dGlvbiBhbmQgcG9zaXRpb25pbmcKICAgIGRhdGEgdXNlZCB0byBwZXJmb3JtIHRleHQganVzdGlmaWNhdGlvbi4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2pzdGYKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table_J_S_T_F_(BaseTTXConverter):
+    """Justification table
+
+    The ``JSTF`` table contains glyph substitution and positioning
+    data used to perform text justification.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/jstf
+    """
+
+    pass

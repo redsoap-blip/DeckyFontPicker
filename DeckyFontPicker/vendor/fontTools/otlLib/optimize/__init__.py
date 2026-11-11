@@ -1,1 +1,53 @@
-ZnJvbSBhcmdwYXJzZSBpbXBvcnQgUmF3VGV4dEhlbHBGb3JtYXR0ZXIKZnJvbSBmb250VG9vbHMub3RsTGliLm9wdGltaXplLmdwb3MgaW1wb3J0IENPTVBSRVNTSU9OX0xFVkVMLCBjb21wYWN0CmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiT3B0aW1pemUgdGhlIGxheW91dCB0YWJsZXMgb2YgYW4gZXhpc3RpbmcgZm9udCIiIgogICAgZnJvbSBhcmdwYXJzZSBpbXBvcnQgQXJndW1lbnRQYXJzZXIKCiAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCgogICAgcGFyc2VyID0gQXJndW1lbnRQYXJzZXIoCiAgICAgICAgcHJvZz0ib3RsTGliLm9wdGltaXplIiwKICAgICAgICBkZXNjcmlwdGlvbj1tYWluLl9fZG9jX18sCiAgICAgICAgZm9ybWF0dGVyX2NsYXNzPVJhd1RleHRIZWxwRm9ybWF0dGVyLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgiZm9udCIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItbyIsIG1ldGF2YXI9Ik9VVFBVVEZJTEUiLCBkZXN0PSJvdXRmaWxlIiwgZGVmYXVsdD1Ob25lLCBoZWxwPSJvdXRwdXQgZmlsZSIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tZ3Bvcy1jb21wcmVzc2lvbi1sZXZlbCIsCiAgICAgICAgaGVscD1DT01QUkVTU0lPTl9MRVZFTC5oZWxwLAogICAgICAgIGRlZmF1bHQ9Q09NUFJFU1NJT05fTEVWRUwuZGVmYXVsdCwKICAgICAgICBjaG9pY2VzPWxpc3QocmFuZ2UoMTApKSwKICAgICAgICB0eXBlPWludCwKICAgICkKICAgIGxvZ2dpbmdfZ3JvdXAgPSBwYXJzZXIuYWRkX211dHVhbGx5X2V4Y2x1c2l2ZV9ncm91cChyZXF1aXJlZD1GYWxzZSkKICAgIGxvZ2dpbmdfZ3JvdXAuYWRkX2FyZ3VtZW50KAogICAgICAgICItdiIsICItLXZlcmJvc2UiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJSdW4gbW9yZSB2ZXJib3NlbHkuIgogICAgKQogICAgbG9nZ2luZ19ncm91cC5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1xIiwgIi0tcXVpZXQiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJUdXJuIHZlcmJvc2l0eSBvZmYuIgogICAgKQogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgY29uZmlnTG9nZ2VyKAogICAgICAgIGxldmVsPSgiREVCVUciIGlmIG9wdGlvbnMudmVyYm9zZSBlbHNlICJFUlJPUiIgaWYgb3B0aW9ucy5xdWlldCBlbHNlICJJTkZPIikKICAgICkKCiAgICBmb250ID0gVFRGb250KG9wdGlvbnMuZm9udCkKICAgIGNvbXBhY3QoZm9udCwgb3B0aW9ucy5ncG9zX2NvbXByZXNzaW9uX2xldmVsKQogICAgZm9udC5zYXZlKG9wdGlvbnMub3V0ZmlsZSBvciBvcHRpb25zLmZvbnQpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGltcG9ydCBzeXMKCiAgICBpZiBsZW4oc3lzLmFyZ3YpID4gMToKICAgICAgICBzeXMuZXhpdChtYWluKCkpCiAgICBpbXBvcnQgZG9jdGVzdAoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkK
+from argparse import RawTextHelpFormatter
+from fontTools.otlLib.optimize.gpos import COMPRESSION_LEVEL, compact
+from fontTools.ttLib import TTFont
+
+
+def main(args=None):
+    """Optimize the layout tables of an existing font"""
+    from argparse import ArgumentParser
+
+    from fontTools import configLogger
+
+    parser = ArgumentParser(
+        prog="otlLib.optimize",
+        description=main.__doc__,
+        formatter_class=RawTextHelpFormatter,
+    )
+    parser.add_argument("font")
+    parser.add_argument(
+        "-o", metavar="OUTPUTFILE", dest="outfile", default=None, help="output file"
+    )
+    parser.add_argument(
+        "--gpos-compression-level",
+        help=COMPRESSION_LEVEL.help,
+        default=COMPRESSION_LEVEL.default,
+        choices=list(range(10)),
+        type=int,
+    )
+    logging_group = parser.add_mutually_exclusive_group(required=False)
+    logging_group.add_argument(
+        "-v", "--verbose", action="store_true", help="Run more verbosely."
+    )
+    logging_group.add_argument(
+        "-q", "--quiet", action="store_true", help="Turn verbosity off."
+    )
+    options = parser.parse_args(args)
+
+    configLogger(
+        level=("DEBUG" if options.verbose else "ERROR" if options.quiet else "INFO")
+    )
+
+    font = TTFont(options.font)
+    compact(font, options.gpos_compression_level)
+    font.save(options.outfile or options.font)
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1:
+        sys.exit(main())
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

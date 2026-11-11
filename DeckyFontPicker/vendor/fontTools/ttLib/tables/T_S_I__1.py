@@ -1,1 +1,163 @@
-IiIiVFNJezAsMSwyLDMsNX0gYXJlIHByaXZhdGUgdGFibGVzIHVzZWQgYnkgTWljcm9zb2Z0IFZpc3VhbCBUcnVlVHlwZSAoVlRUKQp0b29sIHRvIHN0b3JlIGl0cyBoaW50aW5nIHNvdXJjZSBkYXRhLgoKVFNJMSBjb250YWlucyB0aGUgdGV4dCBvZiB0aGUgZ2x5cGggcHJvZ3JhbXMgaW4gdGhlIGZvcm0gb2YgbG93LWxldmVsIGFzc2VtYmx5CmNvZGUsIGFzIHdlbGwgYXMgdGhlICdleHRyYScgcHJvZ3JhbXMgJ2ZwZ20nLCAncHBnbScgKGkuZS4gJ3ByZXAnKSwgYW5kICdjdnQnLgoKU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvdG9vbHMvdnR0L3RzaS10YWJsZXMKIiIiCgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIGZvbnRUb29scy5taXNjLmxvZ2dpbmdUb29scyBpbXBvcnQgTG9nTWl4aW4KZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHN0cmpvaW4sIHRvYnl0ZXMsIHRvc3RyCgoKY2xhc3MgdGFibGVfVF9TX0lfXzEoTG9nTWl4aW4sIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgZXh0cmFzID0gezB4RkZGQTogInBwZ20iLCAweEZGRkI6ICJjdnQiLCAweEZGRkM6ICJyZXNlcnZlZCIsIDB4RkZGRDogImZwZ20ifQoKICAgIGluZGV4dGFibGUgPSAiVFNJMCIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgdG90YWxMZW5ndGggPSBsZW4oZGF0YSkKICAgICAgICBpbmRleHRhYmxlID0gdHRGb250W3NlbGYuaW5kZXh0YWJsZV0KICAgICAgICBmb3IgaW5kaWNlcywgaXNFeHRyYSBpbiB6aXAoCiAgICAgICAgICAgIChpbmRleHRhYmxlLmluZGljZXMsIGluZGV4dGFibGUuZXh0cmFfaW5kaWNlcyksIChGYWxzZSwgVHJ1ZSkKICAgICAgICApOgogICAgICAgICAgICBwcm9ncmFtcyA9IHt9CiAgICAgICAgICAgIGZvciBpLCAoZ2x5cGhJRCwgdGV4dExlbmd0aCwgdGV4dE9mZnNldCkgaW4gZW51bWVyYXRlKGluZGljZXMpOgogICAgICAgICAgICAgICAgaWYgaXNFeHRyYToKICAgICAgICAgICAgICAgICAgICBuYW1lID0gc2VsZi5leHRyYXNbZ2x5cGhJRF0KICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgbmFtZSA9IHR0Rm9udC5nZXRHbHlwaE5hbWUoZ2x5cGhJRCkKICAgICAgICAgICAgICAgIGlmIHRleHRPZmZzZXQgPiB0b3RhbExlbmd0aDoKICAgICAgICAgICAgICAgICAgICBzZWxmLmxvZy53YXJuaW5nKCJ0ZXh0T2Zmc2V0ID4gdG90YWxMZW5ndGg7ICVyIHNraXBwZWQiICUgbmFtZSkKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgaWYgdGV4dExlbmd0aCA8IDB4ODAwMDoKICAgICAgICAgICAgICAgICAgICAjIElmIHRoZSBsZW5ndGggc3RvcmVkIGluIHRoZSByZWNvcmQgaXMgbGVzcyB0aGFuIDMyNzY4LCB0aGVuIHVzZQogICAgICAgICAgICAgICAgICAgICMgdGhhdCBhcyB0aGUgbGVuZ3RoIG9mIHRoZSByZWNvcmQuCiAgICAgICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAgICAgZWxpZiB0ZXh0TGVuZ3RoID09IDB4ODAwMDoKICAgICAgICAgICAgICAgICAgICAjIElmIHRoZSBsZW5ndGggaXMgMzI3NjgsIGNvbXB1dGUgdGhlIGFjdHVhbCBsZW5ndGggYXMgZm9sbG93czoKICAgICAgICAgICAgICAgICAgICBpc0xhc3QgPSBpID09IChsZW4oaW5kaWNlcykgLSAxKQogICAgICAgICAgICAgICAgICAgIGlmIGlzTGFzdDoKICAgICAgICAgICAgICAgICAgICAgICAgaWYgaXNFeHRyYToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgRm9yIHRoZSBsYXN0ICJleHRyYSIgcmVjb3JkICh0aGUgdmVyeSBsYXN0IHJlY29yZCBvZiB0aGUKICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgdGFibGUpLCB0aGUgbGVuZ3RoIGlzIHRoZSBkaWZmZXJlbmNlIGJldHdlZW4gdGhlIHRvdGFsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGxlbmd0aCBvZiB0aGUgVFNJMSB0YWJsZSBhbmQgdGhlIHRleHRPZmZzZXQgb2YgdGhlIGZpbmFsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIHJlY29yZC4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5leHRUZXh0T2Zmc2V0ID0gdG90YWxMZW5ndGgKICAgICAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgRm9yIHRoZSBsYXN0ICJub3JtYWwiIHJlY29yZCAodGhlIGxhc3QgcmVjb3JkIGp1c3QgcHJpb3IKICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgdG8gdGhlIHJlY29yZCBjb250YWluaW5nIHRoZSAibWFnaWMgbnVtYmVyIiksIHRoZSBsZW5ndGgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgaXMgdGhlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgdGV4dE9mZnNldCBvZiB0aGUgcmVjb3JkCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGZvbGxvd2luZyB0aGUgIm1hZ2ljIG51bWJlciIgKDB4RkZGRSkgcmVjb3JkIChpLmUuIHRoZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBmaXJzdCAiZXh0cmEiIHJlY29yZCksIGFuZCB0aGUgdGV4dE9mZnNldCBvZiB0aGUgbGFzdAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIyAibm9ybWFsIiByZWNvcmQuCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXh0VGV4dE9mZnNldCA9IGluZGV4dGFibGUuZXh0cmFfaW5kaWNlc1swXVsyXQogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgICMgRm9yIGFsbCBvdGhlciByZWNvcmRzIHdpdGggYSBsZW5ndGggb2YgMHg4MDAwLCB0aGUgbGVuZ3RoIGlzCiAgICAgICAgICAgICAgICAgICAgICAgICMgdGhlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgdGV4dE9mZnNldCBvZiB0aGUgcmVjb3JkIGluCiAgICAgICAgICAgICAgICAgICAgICAgICMgcXVlc3Rpb24gYW5kIHRoZSB0ZXh0T2Zmc2V0IG9mIHRoZSBuZXh0IHJlY29yZC4KICAgICAgICAgICAgICAgICAgICAgICAgbmV4dFRleHRPZmZzZXQgPSBpbmRpY2VzW2kgKyAxXVsyXQogICAgICAgICAgICAgICAgICAgIGFzc2VydCBuZXh0VGV4dE9mZnNldCA+PSB0ZXh0T2Zmc2V0LCAiZW50cmllcyBub3Qgc29ydGVkIGJ5IG9mZnNldCIKICAgICAgICAgICAgICAgICAgICBpZiBuZXh0VGV4dE9mZnNldCA+IHRvdGFsTGVuZ3RoOgogICAgICAgICAgICAgICAgICAgICAgICBzZWxmLmxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIm5leHRUZXh0T2Zmc2V0ID4gdG90YWxMZW5ndGg7ICVyIHRydW5jYXRlZCIgJSBuYW1lCiAgICAgICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICAgICAgbmV4dFRleHRPZmZzZXQgPSB0b3RhbExlbmd0aAogICAgICAgICAgICAgICAgICAgIHRleHRMZW5ndGggPSBuZXh0VGV4dE9mZnNldCAtIHRleHRPZmZzZXQKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgogICAgICAgICAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgICIlciB0ZXh0TGVuZ3RoICglZCkgbXVzdCBub3QgYmUgPiAzMjc2OCIgJSAobmFtZSwgdGV4dExlbmd0aCkKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICB0ZXh0ID0gZGF0YVt0ZXh0T2Zmc2V0IDogdGV4dE9mZnNldCArIHRleHRMZW5ndGhdCiAgICAgICAgICAgICAgICBhc3NlcnQgbGVuKHRleHQpID09IHRleHRMZW5ndGgKICAgICAgICAgICAgICAgIHRleHQgPSB0b3N0cih0ZXh0LCBlbmNvZGluZz0idXRmLTgiKQogICAgICAgICAgICAgICAgaWYgdGV4dDoKICAgICAgICAgICAgICAgICAgICBwcm9ncmFtc1tuYW1lXSA9IHRleHQKICAgICAgICAgICAgaWYgaXNFeHRyYToKICAgICAgICAgICAgICAgIHNlbGYuZXh0cmFQcm9ncmFtcyA9IHByb2dyYW1zCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBzZWxmLmdseXBoUHJvZ3JhbXMgPSBwcm9ncmFtcwoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgImdseXBoUHJvZ3JhbXMiKToKICAgICAgICAgICAgc2VsZi5nbHlwaFByb2dyYW1zID0ge30KICAgICAgICAgICAgc2VsZi5leHRyYVByb2dyYW1zID0ge30KICAgICAgICBkYXRhID0gYiIiCiAgICAgICAgaW5kZXh0YWJsZSA9IHR0Rm9udFtzZWxmLmluZGV4dGFibGVdCiAgICAgICAgZ2x5cGhOYW1lcyA9IHR0Rm9udC5nZXRHbHlwaE9yZGVyKCkKCiAgICAgICAgaW5kaWNlcyA9IFtdCiAgICAgICAgZm9yIGksIG5hbWUgaW4gZW51bWVyYXRlKGdseXBoTmFtZXMpOgogICAgICAgICAgICBpZiBsZW4oZGF0YSkgJSAyOgogICAgICAgICAgICAgICAgZGF0YSA9ICgKICAgICAgICAgICAgICAgICAgICBkYXRhICsgYiJcMDE1IgogICAgICAgICAgICAgICAgKSAgIyBhbGlnbiBvbiAyLWJ5dGUgYm91bmRhcmllcywgZmlsbCB3aXRoIHJldHVybiBjaGFycy4gWXVtLgogICAgICAgICAgICBpZiBuYW1lIGluIHNlbGYuZ2x5cGhQcm9ncmFtczoKICAgICAgICAgICAgICAgIHRleHQgPSB0b2J5dGVzKHNlbGYuZ2x5cGhQcm9ncmFtc1tuYW1lXSwgZW5jb2Rpbmc9InV0Zi04IikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHRleHQgPSBiIiIKICAgICAgICAgICAgdGV4dExlbmd0aCA9IGxlbih0ZXh0KQogICAgICAgICAgICBpZiB0ZXh0TGVuZ3RoID49IDB4ODAwMDoKICAgICAgICAgICAgICAgIHRleHRMZW5ndGggPSAweDgwMDAKICAgICAgICAgICAgaW5kaWNlcy5hcHBlbmQoKGksIHRleHRMZW5ndGgsIGxlbihkYXRhKSkpCiAgICAgICAgICAgIGRhdGEgPSBkYXRhICsgdGV4dAoKICAgICAgICBleHRyYV9pbmRpY2VzID0gW10KICAgICAgICBmb3IgY29kZSwgbmFtZSBpbiBzb3J0ZWQoc2VsZi5leHRyYXMuaXRlbXMoKSk6CiAgICAgICAgICAgIGlmIGxlbihkYXRhKSAlIDI6CiAgICAgICAgICAgICAgICBkYXRhID0gKAogICAgICAgICAgICAgICAgICAgIGRhdGEgKyBiIlwwMTUiCiAgICAgICAgICAgICAgICApICAjIGFsaWduIG9uIDItYnl0ZSBib3VuZGFyaWVzLCBmaWxsIHdpdGggcmV0dXJuIGNoYXJzLgogICAgICAgICAgICBpZiBuYW1lIGluIHNlbGYuZXh0cmFQcm9ncmFtczoKICAgICAgICAgICAgICAgIHRleHQgPSB0b2J5dGVzKHNlbGYuZXh0cmFQcm9ncmFtc1tuYW1lXSwgZW5jb2Rpbmc9InV0Zi04IikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHRleHQgPSBiIiIKICAgICAgICAgICAgdGV4dExlbmd0aCA9IGxlbih0ZXh0KQogICAgICAgICAgICBpZiB0ZXh0TGVuZ3RoID49IDB4ODAwMDoKICAgICAgICAgICAgICAgIHRleHRMZW5ndGggPSAweDgwMDAKICAgICAgICAgICAgZXh0cmFfaW5kaWNlcy5hcHBlbmQoKGNvZGUsIHRleHRMZW5ndGgsIGxlbihkYXRhKSkpCiAgICAgICAgICAgIGRhdGEgPSBkYXRhICsgdGV4dAogICAgICAgIGluZGV4dGFibGUuc2V0KGluZGljZXMsIGV4dHJhX2luZGljZXMpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIG5hbWVzID0gc29ydGVkKHNlbGYuZ2x5cGhQcm9ncmFtcy5rZXlzKCkpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciBuYW1lIGluIG5hbWVzOgogICAgICAgICAgICB0ZXh0ID0gc2VsZi5nbHlwaFByb2dyYW1zW25hbWVdCiAgICAgICAgICAgIGlmIG5vdCB0ZXh0OgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJnbHlwaFByb2dyYW0iLCBuYW1lPW5hbWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLndyaXRlX25vaW5kZW50KHRleHQucmVwbGFjZSgiXHIiLCAiXG4iKSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJnbHlwaFByb2dyYW0iKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBleHRyYV9uYW1lcyA9IHNvcnRlZChzZWxmLmV4dHJhUHJvZ3JhbXMua2V5cygpKQogICAgICAgIGZvciBuYW1lIGluIGV4dHJhX25hbWVzOgogICAgICAgICAgICB0ZXh0ID0gc2VsZi5leHRyYVByb2dyYW1zW25hbWVdCiAgICAgICAgICAgIGlmIG5vdCB0ZXh0OgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJleHRyYVByb2dyYW0iLCBuYW1lPW5hbWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLndyaXRlX25vaW5kZW50KHRleHQucmVwbGFjZSgiXHIiLCAiXG4iKSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJleHRyYVByb2dyYW0iKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAiZ2x5cGhQcm9ncmFtcyIpOgogICAgICAgICAgICBzZWxmLmdseXBoUHJvZ3JhbXMgPSB7fQogICAgICAgICAgICBzZWxmLmV4dHJhUHJvZ3JhbXMgPSB7fQogICAgICAgIGxpbmVzID0gc3Ryam9pbihjb250ZW50KS5yZXBsYWNlKCJcciIsICJcbiIpLnNwbGl0KCJcbiIpCiAgICAgICAgdGV4dCA9ICJcciIuam9pbihsaW5lc1sxOi0xXSkKICAgICAgICBpZiBuYW1lID09ICJnbHlwaFByb2dyYW0iOgogICAgICAgICAgICBzZWxmLmdseXBoUHJvZ3JhbXNbYXR0cnNbIm5hbWUiXV0gPSB0ZXh0CiAgICAgICAgZWxpZiBuYW1lID09ICJleHRyYVByb2dyYW0iOgogICAgICAgICAgICBzZWxmLmV4dHJhUHJvZ3JhbXNbYXR0cnNbIm5hbWUiXV0gPSB0ZXh0Cg==
+"""TSI{0,1,2,3,5} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its hinting source data.
+
+TSI1 contains the text of the glyph programs in the form of low-level assembly
+code, as well as the 'extra' programs 'fpgm', 'ppgm' (i.e. 'prep'), and 'cvt'.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from . import DefaultTable
+from fontTools.misc.loggingTools import LogMixin
+from fontTools.misc.textTools import strjoin, tobytes, tostr
+
+
+class table_T_S_I__1(LogMixin, DefaultTable.DefaultTable):
+    extras = {0xFFFA: "ppgm", 0xFFFB: "cvt", 0xFFFC: "reserved", 0xFFFD: "fpgm"}
+
+    indextable = "TSI0"
+
+    def decompile(self, data, ttFont):
+        totalLength = len(data)
+        indextable = ttFont[self.indextable]
+        for indices, isExtra in zip(
+            (indextable.indices, indextable.extra_indices), (False, True)
+        ):
+            programs = {}
+            for i, (glyphID, textLength, textOffset) in enumerate(indices):
+                if isExtra:
+                    name = self.extras[glyphID]
+                else:
+                    name = ttFont.getGlyphName(glyphID)
+                if textOffset > totalLength:
+                    self.log.warning("textOffset > totalLength; %r skipped" % name)
+                    continue
+                if textLength < 0x8000:
+                    # If the length stored in the record is less than 32768, then use
+                    # that as the length of the record.
+                    pass
+                elif textLength == 0x8000:
+                    # If the length is 32768, compute the actual length as follows:
+                    isLast = i == (len(indices) - 1)
+                    if isLast:
+                        if isExtra:
+                            # For the last "extra" record (the very last record of the
+                            # table), the length is the difference between the total
+                            # length of the TSI1 table and the textOffset of the final
+                            # record.
+                            nextTextOffset = totalLength
+                        else:
+                            # For the last "normal" record (the last record just prior
+                            # to the record containing the "magic number"), the length
+                            # is the difference between the textOffset of the record
+                            # following the "magic number" (0xFFFE) record (i.e. the
+                            # first "extra" record), and the textOffset of the last
+                            # "normal" record.
+                            nextTextOffset = indextable.extra_indices[0][2]
+                    else:
+                        # For all other records with a length of 0x8000, the length is
+                        # the difference between the textOffset of the record in
+                        # question and the textOffset of the next record.
+                        nextTextOffset = indices[i + 1][2]
+                    assert nextTextOffset >= textOffset, "entries not sorted by offset"
+                    if nextTextOffset > totalLength:
+                        self.log.warning(
+                            "nextTextOffset > totalLength; %r truncated" % name
+                        )
+                        nextTextOffset = totalLength
+                    textLength = nextTextOffset - textOffset
+                else:
+                    from fontTools import ttLib
+
+                    raise ttLib.TTLibError(
+                        "%r textLength (%d) must not be > 32768" % (name, textLength)
+                    )
+                text = data[textOffset : textOffset + textLength]
+                assert len(text) == textLength
+                text = tostr(text, encoding="utf-8")
+                if text:
+                    programs[name] = text
+            if isExtra:
+                self.extraPrograms = programs
+            else:
+                self.glyphPrograms = programs
+
+    def compile(self, ttFont):
+        if not hasattr(self, "glyphPrograms"):
+            self.glyphPrograms = {}
+            self.extraPrograms = {}
+        data = b""
+        indextable = ttFont[self.indextable]
+        glyphNames = ttFont.getGlyphOrder()
+
+        indices = []
+        for i, name in enumerate(glyphNames):
+            if len(data) % 2:
+                data = (
+                    data + b"\015"
+                )  # align on 2-byte boundaries, fill with return chars. Yum.
+            if name in self.glyphPrograms:
+                text = tobytes(self.glyphPrograms[name], encoding="utf-8")
+            else:
+                text = b""
+            textLength = len(text)
+            if textLength >= 0x8000:
+                textLength = 0x8000
+            indices.append((i, textLength, len(data)))
+            data = data + text
+
+        extra_indices = []
+        for code, name in sorted(self.extras.items()):
+            if len(data) % 2:
+                data = (
+                    data + b"\015"
+                )  # align on 2-byte boundaries, fill with return chars.
+            if name in self.extraPrograms:
+                text = tobytes(self.extraPrograms[name], encoding="utf-8")
+            else:
+                text = b""
+            textLength = len(text)
+            if textLength >= 0x8000:
+                textLength = 0x8000
+            extra_indices.append((code, textLength, len(data)))
+            data = data + text
+        indextable.set(indices, extra_indices)
+        return data
+
+    def toXML(self, writer, ttFont):
+        names = sorted(self.glyphPrograms.keys())
+        writer.newline()
+        for name in names:
+            text = self.glyphPrograms[name]
+            if not text:
+                continue
+            writer.begintag("glyphProgram", name=name)
+            writer.newline()
+            writer.write_noindent(text.replace("\r", "\n"))
+            writer.newline()
+            writer.endtag("glyphProgram")
+            writer.newline()
+            writer.newline()
+        extra_names = sorted(self.extraPrograms.keys())
+        for name in extra_names:
+            text = self.extraPrograms[name]
+            if not text:
+                continue
+            writer.begintag("extraProgram", name=name)
+            writer.newline()
+            writer.write_noindent(text.replace("\r", "\n"))
+            writer.newline()
+            writer.endtag("extraProgram")
+            writer.newline()
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "glyphPrograms"):
+            self.glyphPrograms = {}
+            self.extraPrograms = {}
+        lines = strjoin(content).replace("\r", "\n").split("\n")
+        text = "\r".join(lines[1:-1])
+        if name == "glyphProgram":
+            self.glyphPrograms[attrs["name"]] = text
+        elif name == "extraProgram":
+            self.extraPrograms[attrs["name"]] = text

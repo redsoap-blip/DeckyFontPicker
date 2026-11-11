@@ -1,1 +1,71 @@
-IiIiZm9udFRvb2xzLm1pc2MuZW5jb2RpbmdUb29scy5weSAtLSB0b29scyBmb3Igd29ya2luZyB3aXRoIE9wZW5UeXBlIGVuY29kaW5ncy4iIiIKCmltcG9ydCBmb250VG9vbHMuZW5jb2RpbmdzLmNvZGVjcwoKIyBNYXAga2V5ZWQgYnkgcGxhdGZvcm1JRCwgdGhlbiBwbGF0RW5jSUQsIHRoZW4gcG9zc2libHkgbGFuZ0lECl9lbmNvZGluZ01hcCA9IHsKICAgIDA6IHsgICMgVW5pY29kZQogICAgICAgIDA6ICJ1dGZfMTZfYmUiLAogICAgICAgIDE6ICJ1dGZfMTZfYmUiLAogICAgICAgIDI6ICJ1dGZfMTZfYmUiLAogICAgICAgIDM6ICJ1dGZfMTZfYmUiLAogICAgICAgIDQ6ICJ1dGZfMTZfYmUiLAogICAgICAgIDU6ICJ1dGZfMTZfYmUiLAogICAgICAgIDY6ICJ1dGZfMTZfYmUiLAogICAgfSwKICAgIDE6IHsgICMgTWFjaW50b3NoCiAgICAgICAgIyBTZWUKICAgICAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy8yMzYKICAgICAgICAwOiB7ICAjIE1hY2ludG9zaCwgcGxhdEVuY0lEPT0wLCBrZXllZCBieSBsYW5nSUQKICAgICAgICAgICAgMTU6ICJtYWNfaWNlbGFuZCIsCiAgICAgICAgICAgIDE3OiAibWFjX3R1cmtpc2giLAogICAgICAgICAgICAxODogIm1hY19jcm9hdGlhbiIsCiAgICAgICAgICAgIDI0OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDI1OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDI2OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDI3OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDI4OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDM2OiAibWFjX2xhdGluMiIsCiAgICAgICAgICAgIDM3OiAibWFjX3JvbWFuaWFuIiwKICAgICAgICAgICAgMzg6ICJtYWNfbGF0aW4yIiwKICAgICAgICAgICAgMzk6ICJtYWNfbGF0aW4yIiwKICAgICAgICAgICAgNDA6ICJtYWNfbGF0aW4yIiwKICAgICAgICAgICAgRWxsaXBzaXM6ICJtYWNfcm9tYW4iLCAgIyBPdGhlcgogICAgICAgIH0sCiAgICAgICAgMTogInhfbWFjX2phcGFuZXNlX3R0eCIsCiAgICAgICAgMjogInhfbWFjX3RyYWRfY2hpbmVzZV90dHgiLAogICAgICAgIDM6ICJ4X21hY19rb3JlYW5fdHR4IiwKICAgICAgICA2OiAibWFjX2dyZWVrIiwKICAgICAgICA3OiAibWFjX2N5cmlsbGljIiwKICAgICAgICAyNTogInhfbWFjX3NpbXBfY2hpbmVzZV90dHgiLAogICAgICAgIDI5OiAibWFjX2xhdGluMiIsCiAgICAgICAgMzU6ICJtYWNfdHVya2lzaCIsCiAgICAgICAgMzc6ICJtYWNfaWNlbGFuZCIsCiAgICB9LAogICAgMjogeyAgIyBJU08KICAgICAgICAwOiAiYXNjaWkiLAogICAgICAgIDE6ICJ1dGZfMTZfYmUiLAogICAgICAgIDI6ICJsYXRpbjEiLAogICAgfSwKICAgIDM6IHsgICMgTWljcm9zb2Z0CiAgICAgICAgMDogInV0Zl8xNl9iZSIsCiAgICAgICAgMTogInV0Zl8xNl9iZSIsCiAgICAgICAgMjogInNoaWZ0X2ppcyIsCiAgICAgICAgMzogImdiMjMxMiIsCiAgICAgICAgNDogImJpZzUiLAogICAgICAgIDU6ICJldWNfa3IiLAogICAgICAgIDY6ICJqb2hhYiIsCiAgICAgICAgMTA6ICJ1dGZfMTZfYmUiLAogICAgfSwKfQoKCmRlZiBnZXRFbmNvZGluZyhwbGF0Zm9ybUlELCBwbGF0RW5jSUQsIGxhbmdJRCwgZGVmYXVsdD1Ob25lKToKICAgICIiIlJldHVybnMgdGhlIFB5dGhvbiBlbmNvZGluZyBuYW1lIGZvciBPcGVuVHlwZSBwbGF0Zm9ybUlEL2VuY29kaW5nSUQvbGFuZ0lECiAgICB0cmlwbGV0LiAgSWYgZW5jb2RpbmcgZm9yIHRoZXNlIHZhbHVlcyBpcyBub3Qga25vd24sIGJ5IGRlZmF1bHQgTm9uZSBpcwogICAgcmV0dXJuZWQuICBUaGF0IGNhbiBiZSBvdmVycmlkZW4gYnkgcGFzc2luZyBhIHZhbHVlIHRvIHRoZSBkZWZhdWx0IGFyZ3VtZW50LgogICAgIiIiCiAgICBlbmNvZGluZyA9IF9lbmNvZGluZ01hcC5nZXQocGxhdGZvcm1JRCwge30pLmdldChwbGF0RW5jSUQsIGRlZmF1bHQpCiAgICBpZiBpc2luc3RhbmNlKGVuY29kaW5nLCBkaWN0KToKICAgICAgICBlbmNvZGluZyA9IGVuY29kaW5nLmdldChsYW5nSUQsIGVuY29kaW5nW0VsbGlwc2lzXSkKICAgIHJldHVybiBlbmNvZGluZwo=
+"""fontTools.misc.encodingTools.py -- tools for working with OpenType encodings."""
+
+import fontTools.encodings.codecs
+
+# Map keyed by platformID, then platEncID, then possibly langID
+_encodingMap = {
+    0: {  # Unicode
+        0: "utf_16_be",
+        1: "utf_16_be",
+        2: "utf_16_be",
+        3: "utf_16_be",
+        4: "utf_16_be",
+        5: "utf_16_be",
+        6: "utf_16_be",
+    },
+    1: {  # Macintosh
+        # See
+        # https://github.com/fonttools/fonttools/issues/236
+        0: {  # Macintosh, platEncID==0, keyed by langID
+            15: "mac_iceland",
+            17: "mac_turkish",
+            18: "mac_croatian",
+            24: "mac_latin2",
+            25: "mac_latin2",
+            26: "mac_latin2",
+            27: "mac_latin2",
+            28: "mac_latin2",
+            36: "mac_latin2",
+            37: "mac_romanian",
+            38: "mac_latin2",
+            39: "mac_latin2",
+            40: "mac_latin2",
+            Ellipsis: "mac_roman",  # Other
+        },
+        1: "x_mac_japanese_ttx",
+        2: "x_mac_trad_chinese_ttx",
+        3: "x_mac_korean_ttx",
+        6: "mac_greek",
+        7: "mac_cyrillic",
+        25: "x_mac_simp_chinese_ttx",
+        29: "mac_latin2",
+        35: "mac_turkish",
+        37: "mac_iceland",
+    },
+    2: {  # ISO
+        0: "ascii",
+        1: "utf_16_be",
+        2: "latin1",
+    },
+    3: {  # Microsoft
+        0: "utf_16_be",
+        1: "utf_16_be",
+        2: "shift_jis",
+        3: "gb2312",
+        4: "big5",
+        5: "euc_kr",
+        6: "johab",
+        10: "utf_16_be",
+    },
+}
+
+
+def getEncoding(platformID, platEncID, langID, default=None):
+    """Returns the Python encoding name for OpenType platformID/encodingID/langID
+    triplet.  If encoding for these values is not known, by default None is
+    returned.  That can be overriden by passing a value to the default argument.
+    """
+    encoding = _encodingMap.get(platformID, {}).get(platEncID, default)
+    if isinstance(encoding, dict):
+        encoding = encoding.get(langID, encoding[Ellipsis])
+    return encoding

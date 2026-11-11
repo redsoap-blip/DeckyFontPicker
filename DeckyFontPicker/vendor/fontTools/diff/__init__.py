@@ -1,1 +1,441 @@
-aW1wb3J0IGFyZ3BhcnNlCmltcG9ydCBvcwppbXBvcnQgc3lzCmltcG9ydCBzaHV0aWwKaW1wb3J0IHN1YnByb2Nlc3MKZnJvbSB0eXBpbmcgaW1wb3J0IEl0ZXJhYmxlLCBJdGVyYXRvciwgTGlzdCwgT3B0aW9uYWwsIFRleHQsIFR1cGxlCgpmcm9tIC5jb2xvciBpbXBvcnQgY29sb3JfdW5pZmllZF9kaWZmX2xpbmUKZnJvbSAuZGlmZiBpbXBvcnQgcnVuX2V4dGVybmFsX2RpZmYsIHVfZGlmZgpmcm9tIC51dGlscyBpbXBvcnQgZmlsZV9leGlzdHMsIGdldF90YWJsZXNfYXJndW1lbnRfbGlzdAoKCmRlZiBwaXBlX291dHB1dChvdXRwdXQ6IHN0cikgLT4gTm9uZToKICAgICIiIlBpcGVzIG91dHB1dCB0byBhIHBhZ2VyIGlmIHN0ZG91dCBpcyBhIFRUWSBhbmQgYSBwYWdlciBpcyBhdmFpbGFibGUuIiIiCgogICAgaWYgbm90IG91dHB1dDoKICAgICAgICByZXR1cm4KCiAgICBpZiBub3Qgc3lzLnN0ZG91dC5pc2F0dHkoKToKICAgICAgICBzeXMuc3Rkb3V0LndyaXRlKG91dHB1dCkKICAgICAgICByZXR1cm4KCiAgICBwYWdlciA9IG9zLmdldGVudigiUEFHRVIiKSBvciBzaHV0aWwud2hpY2goImxlc3MiKQoKICAgIGlmIG5vdCBwYWdlcjoKICAgICAgICBzeXMuc3Rkb3V0LndyaXRlKG91dHB1dCkKICAgICAgICByZXR1cm4KCiAgICBwYWdlcl9jbWQgPSBbcGFnZXJdCiAgICBpZiAibGVzcyIgaW4gb3MucGF0aC5iYXNlbmFtZShwYWdlcik6CiAgICAgICAgcGFnZXJfY21kLmFwcGVuZCgiLVIiKQoKICAgIHByb2MgPSBzdWJwcm9jZXNzLlBvcGVuKHBhZ2VyX2NtZCwgc3RkaW49c3VicHJvY2Vzcy5QSVBFLCB0ZXh0PVRydWUpCiAgICB0cnk6CiAgICAgICAgcHJvYy5zdGRpbi53cml0ZShvdXRwdXQpCiAgICAgICAgcHJvYy5zdGRpbi5jbG9zZSgpCiAgICAgICAgcHJvYy53YWl0KCkKICAgIGV4Y2VwdCAoQnJva2VuUGlwZUVycm9yLCBLZXlib2FyZEludGVycnVwdCk6CiAgICAgICAgIyBQYWdlciBwcm9jZXNzIHdhcyB0ZXJtaW5hdGVkIGJlZm9yZSBhbGwgb3V0cHV0IHdhcyB3cml0dGVuLgogICAgICAgICMgVGhpcyBpcyBub3QgYW4gZXJyb3IuIFRoZSBtYWluIGV4Y2VwdGlvbiBoYW5kbGVyIHdpbGwgZGVhbCB3aXRoIGl0LgogICAgICAgIGlmIHByb2Muc3RkaW46CiAgICAgICAgICAgIHByb2Muc3RkaW4uY2xvc2UoKQogICAgICAgICMgVGhlIHByb2Nlc3MgbWlnaHQgc3RpbGwgYmUgcnVubmluZywgYnV0IHdlIGhhdmUgY2xvc2VkIG91ciBzaWRlIG9mIHRoZQogICAgICAgICMgcGlwZS4gVGhlIFBvcGVuIGRlc3RydWN0b3Igd2lsbCBzZW5kIGEgU0lHS0lMTCB0byB0aGUgY2hpbGQuCiAgICBleGNlcHQgRXhjZXB0aW9uOgogICAgICAgIGlmIHByb2Muc3RkaW46CiAgICAgICAgICAgIHByb2Muc3RkaW4uY2xvc2UoKQogICAgICAgIHJhaXNlCgoKZGVmIF9pc19nbnVfZGlmZihkaWZmX3Rvb2w6IHN0cikgLT4gYm9vbDoKICAgICIiIlJldHVybnMgVHJ1ZSBpZiB0aGUgcHJvdmlkZWQgZGlmZiBleGVjdXRhYmxlIGlzIEdOVSBkaWZmLiIiIgogICAgdHJ5OgogICAgICAgIHByb2MgPSBzdWJwcm9jZXNzLnJ1bigKICAgICAgICAgICAgW2RpZmZfdG9vbCwgIi0tdmVyc2lvbiJdLAogICAgICAgICAgICBzdGRvdXQ9c3VicHJvY2Vzcy5QSVBFLAogICAgICAgICAgICBzdGRlcnI9c3VicHJvY2Vzcy5QSVBFLAogICAgICAgICAgICB0ZXh0PVRydWUsCiAgICAgICAgKQogICAgZXhjZXB0IE9TRXJyb3I6CiAgICAgICAgcmV0dXJuIEZhbHNlCgogICAgdmVyc2lvbl9vdXRwdXQgPSAocHJvYy5zdGRvdXQgb3IgIiIpICsgKHByb2Muc3RkZXJyIG9yICIiKQogICAgcmV0dXJuICJHTlUgZGlmZnV0aWxzIiBpbiB2ZXJzaW9uX291dHB1dAoKCmRlZiBfaXRlcl9maWx0ZXJlZF90YWJsZV90YWdzKAogICAgdGFnczogSXRlcmFibGVbc3RyXSwKICAgIGluY2x1ZGVfdGFibGVzOiBPcHRpb25hbFtMaXN0W3N0cl1dID0gTm9uZSwKICAgIGV4Y2x1ZGVfdGFibGVzOiBPcHRpb25hbFtMaXN0W3N0cl1dID0gTm9uZSwKKSAtPiBJdGVyYXRvcltzdHJdOgogICAgZm9yIHRhZyBpbiB0YWdzOgogICAgICAgIGlmIGV4Y2x1ZGVfdGFibGVzIGFuZCB0YWcgaW4gZXhjbHVkZV90YWJsZXM6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgaWYgaW5jbHVkZV90YWJsZXMgYW5kIHRhZyBub3QgaW4gaW5jbHVkZV90YWJsZXM6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgeWllbGQgdGFnCgoKZGVmIHN1bW1hcml6ZSgKICAgIGZpbGUxOiBzdHIsCiAgICBmaWxlMjogc3RyLAogICAgaW5jbHVkZV90YWJsZXM6IE9wdGlvbmFsW0xpc3Rbc3RyXV0gPSBOb25lLAogICAgZXhjbHVkZV90YWJsZXM6IE9wdGlvbmFsW0xpc3Rbc3RyXV0gPSBOb25lLAogICAgZm9udF9udW1iZXJfMTogaW50ID0gLTEsCiAgICBmb250X251bWJlcl8yOiBpbnQgPSAtMSwKKSAtPiBUdXBsZVtib29sLCBzdHJdOgogICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAoKICAgIHdpdGggKAogICAgICAgIFRURm9udChmaWxlMSwgbGF6eT1UcnVlLCBmb250TnVtYmVyPWZvbnRfbnVtYmVyXzEpIGFzIGZvbnQxLAogICAgICAgIFRURm9udChmaWxlMiwgbGF6eT1UcnVlLCBmb250TnVtYmVyPWZvbnRfbnVtYmVyXzIpIGFzIGZvbnQyLAogICAgKToKICAgICAgICB0YWdzMSA9IHtzdHIodGFnKSBmb3IgdGFnIGluIGZvbnQxLnJlYWRlci5rZXlzKCl9CiAgICAgICAgdGFnczIgPSB7c3RyKHRhZykgZm9yIHRhZyBpbiBmb250Mi5yZWFkZXIua2V5cygpfQoKICAgICAgICBhbGxfdGFncyA9IHNvcnRlZCgKICAgICAgICAgICAgc2V0KAogICAgICAgICAgICAgICAgX2l0ZXJfZmlsdGVyZWRfdGFibGVfdGFncygKICAgICAgICAgICAgICAgICAgICB0YWdzMSB8IHRhZ3MyLAogICAgICAgICAgICAgICAgICAgIGluY2x1ZGVfdGFibGVzPWluY2x1ZGVfdGFibGVzLAogICAgICAgICAgICAgICAgICAgIGV4Y2x1ZGVfdGFibGVzPWV4Y2x1ZGVfdGFibGVzLAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICAgICBvbmx5MSA9IFt0YWcgZm9yIHRhZyBpbiBhbGxfdGFncyBpZiB0YWcgaW4gdGFnczEgYW5kIHRhZyBub3QgaW4gdGFnczJdCiAgICAgICAgb25seTIgPSBbdGFnIGZvciB0YWcgaW4gYWxsX3RhZ3MgaWYgdGFnIGluIHRhZ3MyIGFuZCB0YWcgbm90IGluIHRhZ3MxXQogICAgICAgIGJvdGggPSBbdGFnIGZvciB0YWcgaW4gYWxsX3RhZ3MgaWYgdGFnIGluIHRhZ3MxIGFuZCB0YWcgaW4gdGFnczJdCgogICAgICAgIGlkZW50aWNhbCA9IFRydWUKICAgICAgICBsaW5lczogTGlzdFtzdHJdID0gW10KCiAgICAgICAgbGluZXMuYXBwZW5kKGYiQmluYXJ5IHRhYmxlIHN1bW1hcnk6XG4iKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgZmlsZTE6IHtmaWxlMX1cbiIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBmaWxlMjoge2ZpbGUyfVxuIikKCiAgICAgICAgaWYgb25seTE6CiAgICAgICAgICAgIGlkZW50aWNhbCA9IEZhbHNlCiAgICAgICAgICAgIGxpbmVzLmFwcGVuZChmIlxuVGFibGVzIG9ubHkgaW4gZmlsZTEgKHtsZW4ob25seTEpfSk6XG4iKQogICAgICAgICAgICBmb3IgdGFnIGluIG9ubHkxOgogICAgICAgICAgICAgICAgbGluZXMuYXBwZW5kKGYiLSB7dGFnfSAoe2xlbihmb250MS5yZWFkZXJbdGFnXSl9IGJ5dGVzKVxuIikKICAgICAgICBpZiBvbmx5MjoKICAgICAgICAgICAgaWRlbnRpY2FsID0gRmFsc2UKICAgICAgICAgICAgbGluZXMuYXBwZW5kKGYiXG5UYWJsZXMgb25seSBpbiBmaWxlMiAoe2xlbihvbmx5Mil9KTpcbiIpCiAgICAgICAgICAgIGZvciB0YWcgaW4gb25seTI6CiAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoZiIrIHt0YWd9ICh7bGVuKGZvbnQyLnJlYWRlclt0YWddKX0gYnl0ZXMpXG4iKQoKICAgICAgICBsaW5lcy5hcHBlbmQoZiJcblRhYmxlcyBpbiBib3RoICh7bGVuKGJvdGgpfSk6XG4iKQogICAgICAgIGZvciB0YWcgaW4gYm90aDoKICAgICAgICAgICAgZGF0YTEgPSBmb250MS5yZWFkZXJbdGFnXQogICAgICAgICAgICBkYXRhMiA9IGZvbnQyLnJlYWRlclt0YWddCiAgICAgICAgICAgIGlmIGRhdGExID09IGRhdGEyOgogICAgICAgICAgICAgICAgbGluZXMuYXBwZW5kKGYiICB7dGFnfTogU0FNRSAoe2xlbihkYXRhMSl9IGJ5dGVzKVxuIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGlkZW50aWNhbCA9IEZhbHNlCiAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoZiIqIHt0YWd9OiBESUZGICh7bGVuKGRhdGExKX0gdnMge2xlbihkYXRhMil9IGJ5dGVzKVxuIikKCiAgICAgICAgaWYgaWRlbnRpY2FsOgogICAgICAgICAgICBsaW5lcy5hcHBlbmQoIlxuUmVzdWx0OiBTQU1FXG4iKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgiXG5SZXN1bHQ6IERJRkZFUkVOVFxuIikKCiAgICAgICAgcmV0dXJuIGlkZW50aWNhbCwgIiIuam9pbihsaW5lcykKCgpkZWYgZ2V0X2JpbmFyeV9leGNsdWRlX3RhYmxlcygKICAgIGZpbGUxOiBzdHIsCiAgICBmaWxlMjogc3RyLAogICAgaW5jbHVkZV90YWJsZXM6IE9wdGlvbmFsW0xpc3Rbc3RyXV0gPSBOb25lLAogICAgZXhjbHVkZV90YWJsZXM6IE9wdGlvbmFsW0xpc3Rbc3RyXV0gPSBOb25lLAogICAgZm9udF9udW1iZXJfMTogaW50ID0gLTEsCiAgICBmb250X251bWJlcl8yOiBpbnQgPSAtMSwKKSAtPiBUdXBsZVtib29sLCBzdHJdOgogICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAoKICAgIHdpdGggKAogICAgICAgIFRURm9udChmaWxlMSwgbGF6eT1UcnVlLCBmb250TnVtYmVyPWZvbnRfbnVtYmVyXzEpIGFzIGZvbnQxLAogICAgICAgIFRURm9udChmaWxlMiwgbGF6eT1UcnVlLCBmb250TnVtYmVyPWZvbnRfbnVtYmVyXzIpIGFzIGZvbnQyLAogICAgKToKICAgICAgICB0YWdzMSA9IHtzdHIodGFnKSBmb3IgdGFnIGluIGZvbnQxLnJlYWRlci5rZXlzKCl9CiAgICAgICAgdGFnczIgPSB7c3RyKHRhZykgZm9yIHRhZyBpbiBmb250Mi5yZWFkZXIua2V5cygpfQoKICAgICAgICBhbGxfdGFncyA9IHNvcnRlZCgKICAgICAgICAgICAgc2V0KAogICAgICAgICAgICAgICAgX2l0ZXJfZmlsdGVyZWRfdGFibGVfdGFncygKICAgICAgICAgICAgICAgICAgICB0YWdzMSB8IHRhZ3MyLAogICAgICAgICAgICAgICAgICAgIGluY2x1ZGVfdGFibGVzPWluY2x1ZGVfdGFibGVzLAogICAgICAgICAgICAgICAgICAgIGV4Y2x1ZGVfdGFibGVzPWV4Y2x1ZGVfdGFibGVzLAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICAgICBib3RoID0gW3RhZyBmb3IgdGFnIGluIGFsbF90YWdzIGlmIHRhZyBpbiB0YWdzMSBhbmQgdGFnIGluIHRhZ3MyXQogICAgICAgIG91dCA9IHNldCgpCgogICAgICAgIGZvciB0YWcgaW4gYm90aDoKICAgICAgICAgICAgZGF0YTEgPSBmb250MS5yZWFkZXJbdGFnXQogICAgICAgICAgICBkYXRhMiA9IGZvbnQyLnJlYWRlclt0YWddCiAgICAgICAgICAgIGlmIGRhdGExID09IGRhdGEyOgogICAgICAgICAgICAgICAgb3V0LmFkZCh0YWcpCgogICAgICAgIHJldHVybiBvdXQKCgpkZWYgbWFpbigpOgogICAgIiIiQ29tcGFyZSB0d28gZm9udHMgZm9yIGRpZmZlcmVuY2VzIiIiCiAgICAjIHRyeS9leGNlcHQgYmxvY2sgcmF0aW9uYWxlOgogICAgIyBoYW5kbGVzICJwcmVtYXR1cmUiIHNvY2tldCBjbG9zdXJlIGV4Y2VwdGlvbiB0aGF0IGlzCiAgICAjIHJhaXNlZCBieSBQeXRob24gd2hlbiBzdGRvdXQgaXMgcGlwZWQgdG8gdG9vbHMgbGlrZQogICAgIyB0aGUgYGhlYWRgIGV4ZWN1dGFibGUgYW5kIHNvY2tldCBpcyBjbG9zZWQgZWFybHkKICAgICMgc2VlOiBodHRwczovL2RvY3MucHl0aG9uLm9yZy8zL2xpYnJhcnkvc2lnbmFsLmh0bWwjbm90ZS1vbi1zaWdwaXBlCiAgICByZXQgPSAwCiAgICB0cnk6CiAgICAgICAgcmV0ID0gcnVuKHN5cy5hcmd2WzE6XSkKICAgIGV4Y2VwdCBLZXlib2FyZEludGVycnVwdDoKICAgICAgICBwYXNzCiAgICBleGNlcHQgQnJva2VuUGlwZUVycm9yOgogICAgICAgICMgUHl0aG9uIGZsdXNoZXMgc3RhbmRhcmQgc3RyZWFtcyBvbiBleGl0OyByZWRpcmVjdCByZW1haW5pbmcgb3V0cHV0CiAgICAgICAgIyB0byBkZXZudWxsIHRvIGF2b2lkIGFub3RoZXIgQnJva2VuUGlwZUVycm9yIGF0IHNodXRkb3duCiAgICAgICAgZGV2bnVsbCA9IG9zLm9wZW4ob3MuZGV2bnVsbCwgb3MuT19XUk9OTFkpCiAgICAgICAgb3MuZHVwMihkZXZudWxsLCBzeXMuc3Rkb3V0LmZpbGVubygpKQogICAgcmV0dXJuIHJldAoKCmRlZiBydW4oYXJndjogTGlzdFtUZXh0XSk6CiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyBhcmdwYXJzZSBjb21tYW5kIGxpbmUgYXJndW1lbnQgZGVmaW5pdGlvbnMKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBwYXJzZXIgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigKICAgICAgICBkZXNjcmlwdGlvbj0iQW4gT3BlblR5cGUgdGFibGUgZGlmZiB0b29sIGZvciBmb250cy4iCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItbCIsCiAgICAgICAgIi0tc3VtbWFyeSIsCiAgICAgICAgYWN0aW9uPSJzdG9yZV90cnVlIiwKICAgICAgICBoZWxwPSJSZXBvcnQgdGFibGUgcHJlc2VuY2UgYW5kIGJpbmFyeSBlcXVhbGl0eSBvbmx5IiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1VIiwKICAgICAgICAiLS1saW5lcyIsCiAgICAgICAgdHlwZT1pbnQsCiAgICAgICAgZGVmYXVsdD0zLAogICAgICAgIGhlbHA9Ik51bWJlciBvZiBjb250ZXh0IGxpbmVzIGZvciB1bmlmaWVkIGRpZmYgKGRlZmF1bHQ6IDMpIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi10IiwKICAgICAgICAiLS1pbmNsdWRlIiwKICAgICAgICB0eXBlPXN0ciwKICAgICAgICBuYXJncz0iKyIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgICAgIGhlbHA9IkZvbnQgdGFibGVzIHRvIGluY2x1ZGUuIE11bHRpcGxlIG9wdGlvbnMgYXJlIGFsbG93ZWQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi14IiwKICAgICAgICAiLS1leGNsdWRlIiwKICAgICAgICB0eXBlPXN0ciwKICAgICAgICBuYXJncz0iKyIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgICAgIGhlbHA9IkZvbnQgdGFibGVzIHRvIGV4Y2x1ZGUuIE11bHRpcGxlIG9wdGlvbnMgYXJlIGFsbG93ZWQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tZGlmZiIsIHR5cGU9c3RyLCBoZWxwPSJSdW4gZXh0ZXJuYWwgZGlmZiB0b29sIGNvbW1hbmQgKGRlZmF1bHQ6IGRpZmYpIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1kaWZmLWFyZyIsCiAgICAgICAgdHlwZT1zdHIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgICAgIGhlbHA9IkV4dGVybmFsIGRpZmYgdG9vbCBhcmd1bWVudHMgKGRlZmF1bHQ6IC11KSIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLWNvbG9yIiwKICAgICAgICBjaG9pY2VzPVsiYXV0byIsICJuZXZlciIsICJhbHdheXMiXSwKICAgICAgICBkZWZhdWx0PSJhdXRvIiwKICAgICAgICBoZWxwPSJXaGV0aGVyIHRvIGNvbG9yaXplIG91dHB1dCAoZGVmYXVsdDogYXV0bykiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS15MSIsCiAgICAgICAgdHlwZT1pbnQsCiAgICAgICAgZGVmYXVsdD0tMSwKICAgICAgICBtZXRhdmFyPSJOVU1CRVIiLAogICAgICAgIGhlbHA9IlNlbGVjdCBmb250IG51bWJlciBmb3IgVHJ1ZVR5cGUgQ29sbGVjdGlvbiAoLnR0Yy8ub3RjKSBGSUxFMSwgc3RhcnRpbmcgZnJvbSAwIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0teTIiLAogICAgICAgIHR5cGU9aW50LAogICAgICAgIGRlZmF1bHQ9LTEsCiAgICAgICAgbWV0YXZhcj0iTlVNQkVSIiwKICAgICAgICBoZWxwPSJTZWxlY3QgZm9udCBudW1iZXIgZm9yIFRydWVUeXBlIENvbGxlY3Rpb24gKC50dGMvLm90YykgRklMRTIsIHN0YXJ0aW5nIGZyb20gMCIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItYSIsCiAgICAgICAgIi0tYWx3YXlzIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9IkNvbXBhcmUgdGFibGVzIGV2ZW4gaWYgYmluYXJ5IGlkZW50aWNhbCIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItYiIsCiAgICAgICAgIi0tYmluYXJ5IiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9IkNvbXBhcmUgdGFibGVzIG9ubHkgaWYgYmluYXJpZXMgZGlmZmVyIChkZWZhdWx0KSIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItcSIsICItLXF1aWV0IiwgYWN0aW9uPSJzdG9yZV90cnVlIiwgaGVscD0iU3VwcHJlc3MgYWxsIG91dHB1dCIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoIkZJTEUxIiwgaGVscD0iRm9udCBmaWxlIHBhdGggMSIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJGSUxFMiIsIGhlbHA9IkZvbnQgZmlsZSBwYXRoIDIiKQoKICAgIGFyZ3M6IGFyZ3BhcnNlLk5hbWVzcGFjZSA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3YpCgogICAgIyAvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8KICAgICMKICAgICMgIFZhbGlkYXRpb25zCiAgICAjCiAgICAjIC8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgIyAgSW5jb21wYXRpYmxlIGFyZ3VtZW50IHZhbGlkYXRpb25zCiAgICAjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICBpZiBhcmdzLmFsd2F5cyBhbmQgYXJncy5iaW5hcnk6CiAgICAgICAgaWYgbm90IGFyZ3MucXVpZXQ6CiAgICAgICAgICAgIHN5cy5zdGRlcnIud3JpdGUoCiAgICAgICAgICAgICAgICBmIlsqXSBFcnJvcjogLS1hbHdheXMgYW5kIC0tYmluYXJ5IGFyZSBtdXR1YWxseSBleGNsdXNpdmUgb3B0aW9ucy4gIgogICAgICAgICAgICAgICAgZiJQbGVhc2UgdXNlIE9OTFkgb25lIG9mIHRoZXNlIG9wdGlvbnMgaW4geW91ciBjb21tYW5kLntvcy5saW5lc2VwfSIKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiAyCiAgICBpZiBub3QgYXJncy5hbHdheXM6CiAgICAgICAgYXJncy5iaW5hcnkgPSBUcnVlCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjICBGaWxlIHBhdGggYXJndW1lbnQgdmFsaWRhdGlvbnMKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKICAgIGlmIG5vdCBmaWxlX2V4aXN0cyhhcmdzLkZJTEUxKToKICAgICAgICBpZiBub3QgYXJncy5xdWlldDoKICAgICAgICAgICAgc3lzLnN0ZGVyci53cml0ZSgKICAgICAgICAgICAgICAgIGYiWypdIEVSUk9SOiBUaGUgZmlsZSBwYXRoICd7YXJncy5GSUxFMX0nIGNhbiBub3QgYmUgZm91bmQue29zLmxpbmVzZXB9IgogICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIDIKICAgIGlmIG5vdCBmaWxlX2V4aXN0cyhhcmdzLkZJTEUyKToKICAgICAgICBpZiBub3QgYXJncy5xdWlldDoKICAgICAgICAgICAgc3lzLnN0ZGVyci53cml0ZSgKICAgICAgICAgICAgICAgIGYiWypdIEVSUk9SOiBUaGUgZmlsZSBwYXRoICd7YXJncy5GSUxFMn0nIGNhbiBub3QgYmUgZm91bmQue29zLmxpbmVzZXB9IgogICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIDIKCiAgICAjIC8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwogICAgIwogICAgIyAgQ29tbWFuZCBsaW5lIGxvZ2ljCiAgICAjCiAgICAjIC8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLwoKICAgICMgcGFyc2UgZXhwbGljaXRseSBpbmNsdWRlZCBvciBleGNsdWRlZCB0YWJsZXMgaW4KICAgICMgdGhlIGNvbW1hbmQgbGluZSBhcmd1bWVudHMKICAgICMgc2V0IGFzIGEgUHl0aG9uIGxpc3QgaWYgaXQgd2FzIGRlZmluZWQgb24gdGhlIGNvbW1hbmQgbGluZQogICAgIyBvciBhcyBOb25lIGlmIGl0IHdhcyBub3Qgc2V0IG9uIHRoZSBjb21tYW5kIGxpbmUKICAgIGluY2x1ZGVfbGlzdDogT3B0aW9uYWxbTGlzdFtUZXh0XV0gPSBnZXRfdGFibGVzX2FyZ3VtZW50X2xpc3QoYXJncy5pbmNsdWRlKQogICAgZXhjbHVkZV9saXN0OiBPcHRpb25hbFtMaXN0W1RleHRdXSA9IGdldF90YWJsZXNfYXJndW1lbnRfbGlzdChhcmdzLmV4Y2x1ZGUpCgogICAgaWYgYXJncy5zdW1tYXJ5OgogICAgICAgIHRyeToKICAgICAgICAgICAgaWRlbnRpY2FsLCBvdXRwdXQgPSBzdW1tYXJpemUoCiAgICAgICAgICAgICAgICBhcmdzLkZJTEUxLAogICAgICAgICAgICAgICAgYXJncy5GSUxFMiwKICAgICAgICAgICAgICAgIGluY2x1ZGVfdGFibGVzPWluY2x1ZGVfbGlzdCwKICAgICAgICAgICAgICAgIGV4Y2x1ZGVfdGFibGVzPWV4Y2x1ZGVfbGlzdCwKICAgICAgICAgICAgICAgIGZvbnRfbnVtYmVyXzE9YXJncy55MSwKICAgICAgICAgICAgICAgIGZvbnRfbnVtYmVyXzI9YXJncy55MiwKICAgICAgICAgICAgKQogICAgICAgICAgICBpZiBub3QgYXJncy5xdWlldDoKICAgICAgICAgICAgICAgIHN5cy5zdGRvdXQud3JpdGUob3V0cHV0KQogICAgICAgICAgICByZXR1cm4gMCBpZiBpZGVudGljYWwgZWxzZSAxCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICBpZiBub3QgYXJncy5xdWlldDoKICAgICAgICAgICAgICAgIHN5cy5zdGRlcnIud3JpdGUoZiJbKl0gRVJST1I6IHtlfXtvcy5saW5lc2VwfSIpCiAgICAgICAgICAgIHJldHVybiAyCgogICAgaWYgYXJncy5iaW5hcnk6CiAgICAgICAgZXhjbHVkZWRfYmluYXJ5X3RhYmxlcyA9IGdldF9iaW5hcnlfZXhjbHVkZV90YWJsZXMoCiAgICAgICAgICAgIGFyZ3MuRklMRTEsCiAgICAgICAgICAgIGFyZ3MuRklMRTIsCiAgICAgICAgICAgIGluY2x1ZGVfdGFibGVzPWluY2x1ZGVfbGlzdCwKICAgICAgICAgICAgZXhjbHVkZV90YWJsZXM9ZXhjbHVkZV9saXN0LAogICAgICAgICAgICBmb250X251bWJlcl8xPWFyZ3MueTEsCiAgICAgICAgICAgIGZvbnRfbnVtYmVyXzI9YXJncy55MiwKICAgICAgICApCiAgICAgICAgaWYgaW5jbHVkZV9saXN0IGlzIG5vdCBOb25lOgogICAgICAgICAgICBpbmNsdWRlX2xpc3QgPSBbCiAgICAgICAgICAgICAgICB0YWcgZm9yIHRhZyBpbiBpbmNsdWRlX2xpc3QgaWYgdGFnIG5vdCBpbiBleGNsdWRlZF9iaW5hcnlfdGFibGVzCiAgICAgICAgICAgIF0KICAgICAgICBlbHNlOgogICAgICAgICAgICBpZiBleGNsdWRlX2xpc3QgaXMgTm9uZToKICAgICAgICAgICAgICAgIGV4Y2x1ZGVfbGlzdCA9IFtdCiAgICAgICAgICAgIGV4Y2x1ZGVfbGlzdC5leHRlbmQoc29ydGVkKGV4Y2x1ZGVkX2JpbmFyeV90YWJsZXMpKQoKICAgIGRpZmZfdG9vbCA9IGFyZ3MuZGlmZgogICAgY29sb3Jfb3V0cHV0ID0gYXJncy5jb2xvciA9PSAiYWx3YXlzIiBvciAoCiAgICAgICAgYXJncy5jb2xvciA9PSAiYXV0byIgYW5kIHN5cy5zdGRvdXQuaXNhdHR5CiAgICApCgogICAgaWYgZGlmZl90b29sIGlzIE5vbmU6CiAgICAgICAgZGlmZl90b29sID0gc2h1dGlsLndoaWNoKCJkaWZmIikKICAgIGVsaWYgZGlmZl90b29sOgogICAgICAgIGRpZmZfdG9vbCA9IHNodXRpbC53aGljaChkaWZmX3Rvb2wpCiAgICAgICAgaWYgZGlmZl90b29sIGlzIE5vbmU6CiAgICAgICAgICAgIGlmIG5vdCBhcmdzLnF1aWV0OgogICAgICAgICAgICAgICAgc3lzLnN0ZGVyci53cml0ZSgKICAgICAgICAgICAgICAgICAgICBmIlsqXSBFUlJPUjogVGhlIGV4dGVybmFsIGRpZmYgdG9vbCBleGVjdXRhYmxlICIKICAgICAgICAgICAgICAgICAgICBmIid7YXJncy5kaWZmfScgd2FzIG5vdCBmb3VuZC57b3MubGluZXNlcH0iCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIHJldHVybiAyCgogICAgdHJ5OgogICAgICAgIGlmIGRpZmZfdG9vbDoKICAgICAgICAgICAgZGlmZl9hcmcgPSBhcmdzLmRpZmZfYXJnCiAgICAgICAgICAgIGlmIGRpZmZfYXJnIGlzIE5vbmU6CiAgICAgICAgICAgICAgICBpZiBhcmdzLmxpbmVzID09IDM6CiAgICAgICAgICAgICAgICAgICAgZGlmZl9hcmcgPSBbIi11Il0KICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgZGlmZl9hcmcgPSBbIi11e30iLmZvcm1hdChhcmdzLmxpbmVzKV0KICAgICAgICAgICAgICAgIGlmIF9pc19nbnVfZGlmZihkaWZmX3Rvb2wpOgogICAgICAgICAgICAgICAgICAgIGRpZmZfYXJnLmFwcGVuZChyIi1GXlxzXHM8IikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGRpZmZfYXJnID0gZGlmZl9hcmcuc3BsaXQoKQoKICAgICAgICAgICAgb3V0cHV0ID0gcnVuX2V4dGVybmFsX2RpZmYoCiAgICAgICAgICAgICAgICBkaWZmX3Rvb2wsCiAgICAgICAgICAgICAgICBkaWZmX2FyZywKICAgICAgICAgICAgICAgIGFyZ3MuRklMRTEsCiAgICAgICAgICAgICAgICBhcmdzLkZJTEUyLAogICAgICAgICAgICAgICAgaW5jbHVkZV90YWJsZXM9aW5jbHVkZV9saXN0LAogICAgICAgICAgICAgICAgZXhjbHVkZV90YWJsZXM9ZXhjbHVkZV9saXN0LAogICAgICAgICAgICAgICAgZm9udF9udW1iZXJfYT1hcmdzLnkxLAogICAgICAgICAgICAgICAgZm9udF9udW1iZXJfYj1hcmdzLnkyLAogICAgICAgICAgICAgICAgdXNlX211bHRpcHJvY2Vzcz1UcnVlLAogICAgICAgICAgICApCiAgICAgICAgZWxzZToKICAgICAgICAgICAgb3V0cHV0ID0gdV9kaWZmKAogICAgICAgICAgICAgICAgYXJncy5GSUxFMSwKICAgICAgICAgICAgICAgIGFyZ3MuRklMRTIsCiAgICAgICAgICAgICAgICBjb250ZXh0X2xpbmVzPWFyZ3MubGluZXMsCiAgICAgICAgICAgICAgICBpbmNsdWRlX3RhYmxlcz1pbmNsdWRlX2xpc3QsCiAgICAgICAgICAgICAgICBleGNsdWRlX3RhYmxlcz1leGNsdWRlX2xpc3QsCiAgICAgICAgICAgICAgICBmb250X251bWJlcl9hPWFyZ3MueTEsCiAgICAgICAgICAgICAgICBmb250X251bWJlcl9iPWFyZ3MueTIsCiAgICAgICAgICAgICAgICB1c2VfbXVsdGlwcm9jZXNzPVRydWUsCiAgICAgICAgICAgICkKCiAgICAgICAgaWYgY29sb3Jfb3V0cHV0OgogICAgICAgICAgICBvdXRwdXQgPSBbY29sb3JfdW5pZmllZF9kaWZmX2xpbmUobGluZSkgZm9yIGxpbmUgaW4gb3V0cHV0XQoKICAgICAgICBvdXRwdXQgPSAiIi5qb2luKG91dHB1dCkKICAgICAgICBpZiBub3QgYXJncy5xdWlldDoKICAgICAgICAgICAgcGlwZV9vdXRwdXQob3V0cHV0KQogICAgICAgIHJldHVybiAxIGlmIG91dHB1dCBlbHNlIDAKCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgaWYgbm90IGFyZ3MucXVpZXQ6CiAgICAgICAgICAgIHN5cy5zdGRlcnIud3JpdGUoZiJbKl0gRVJST1I6IHtlfXtvcy5saW5lc2VwfSIpCiAgICAgICAgcmV0dXJuIDIK
+import argparse
+import os
+import sys
+import shutil
+import subprocess
+from typing import Iterable, Iterator, List, Optional, Text, Tuple
+
+from .color import color_unified_diff_line
+from .diff import run_external_diff, u_diff
+from .utils import file_exists, get_tables_argument_list
+
+
+def pipe_output(output: str) -> None:
+    """Pipes output to a pager if stdout is a TTY and a pager is available."""
+
+    if not output:
+        return
+
+    if not sys.stdout.isatty():
+        sys.stdout.write(output)
+        return
+
+    pager = os.getenv("PAGER") or shutil.which("less")
+
+    if not pager:
+        sys.stdout.write(output)
+        return
+
+    pager_cmd = [pager]
+    if "less" in os.path.basename(pager):
+        pager_cmd.append("-R")
+
+    proc = subprocess.Popen(pager_cmd, stdin=subprocess.PIPE, text=True)
+    try:
+        proc.stdin.write(output)
+        proc.stdin.close()
+        proc.wait()
+    except (BrokenPipeError, KeyboardInterrupt):
+        # Pager process was terminated before all output was written.
+        # This is not an error. The main exception handler will deal with it.
+        if proc.stdin:
+            proc.stdin.close()
+        # The process might still be running, but we have closed our side of the
+        # pipe. The Popen destructor will send a SIGKILL to the child.
+    except Exception:
+        if proc.stdin:
+            proc.stdin.close()
+        raise
+
+
+def _is_gnu_diff(diff_tool: str) -> bool:
+    """Returns True if the provided diff executable is GNU diff."""
+    try:
+        proc = subprocess.run(
+            [diff_tool, "--version"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+    except OSError:
+        return False
+
+    version_output = (proc.stdout or "") + (proc.stderr or "")
+    return "GNU diffutils" in version_output
+
+
+def _iter_filtered_table_tags(
+    tags: Iterable[str],
+    include_tables: Optional[List[str]] = None,
+    exclude_tables: Optional[List[str]] = None,
+) -> Iterator[str]:
+    for tag in tags:
+        if exclude_tables and tag in exclude_tables:
+            continue
+        if include_tables and tag not in include_tables:
+            continue
+        yield tag
+
+
+def summarize(
+    file1: str,
+    file2: str,
+    include_tables: Optional[List[str]] = None,
+    exclude_tables: Optional[List[str]] = None,
+    font_number_1: int = -1,
+    font_number_2: int = -1,
+) -> Tuple[bool, str]:
+    from fontTools.ttLib import TTFont
+
+    with (
+        TTFont(file1, lazy=True, fontNumber=font_number_1) as font1,
+        TTFont(file2, lazy=True, fontNumber=font_number_2) as font2,
+    ):
+        tags1 = {str(tag) for tag in font1.reader.keys()}
+        tags2 = {str(tag) for tag in font2.reader.keys()}
+
+        all_tags = sorted(
+            set(
+                _iter_filtered_table_tags(
+                    tags1 | tags2,
+                    include_tables=include_tables,
+                    exclude_tables=exclude_tables,
+                )
+            )
+        )
+
+        only1 = [tag for tag in all_tags if tag in tags1 and tag not in tags2]
+        only2 = [tag for tag in all_tags if tag in tags2 and tag not in tags1]
+        both = [tag for tag in all_tags if tag in tags1 and tag in tags2]
+
+        identical = True
+        lines: List[str] = []
+
+        lines.append(f"Binary table summary:\n")
+        lines.append(f"  file1: {file1}\n")
+        lines.append(f"  file2: {file2}\n")
+
+        if only1:
+            identical = False
+            lines.append(f"\nTables only in file1 ({len(only1)}):\n")
+            for tag in only1:
+                lines.append(f"- {tag} ({len(font1.reader[tag])} bytes)\n")
+        if only2:
+            identical = False
+            lines.append(f"\nTables only in file2 ({len(only2)}):\n")
+            for tag in only2:
+                lines.append(f"+ {tag} ({len(font2.reader[tag])} bytes)\n")
+
+        lines.append(f"\nTables in both ({len(both)}):\n")
+        for tag in both:
+            data1 = font1.reader[tag]
+            data2 = font2.reader[tag]
+            if data1 == data2:
+                lines.append(f"  {tag}: SAME ({len(data1)} bytes)\n")
+            else:
+                identical = False
+                lines.append(f"* {tag}: DIFF ({len(data1)} vs {len(data2)} bytes)\n")
+
+        if identical:
+            lines.append("\nResult: SAME\n")
+        else:
+            lines.append("\nResult: DIFFERENT\n")
+
+        return identical, "".join(lines)
+
+
+def get_binary_exclude_tables(
+    file1: str,
+    file2: str,
+    include_tables: Optional[List[str]] = None,
+    exclude_tables: Optional[List[str]] = None,
+    font_number_1: int = -1,
+    font_number_2: int = -1,
+) -> Tuple[bool, str]:
+    from fontTools.ttLib import TTFont
+
+    with (
+        TTFont(file1, lazy=True, fontNumber=font_number_1) as font1,
+        TTFont(file2, lazy=True, fontNumber=font_number_2) as font2,
+    ):
+        tags1 = {str(tag) for tag in font1.reader.keys()}
+        tags2 = {str(tag) for tag in font2.reader.keys()}
+
+        all_tags = sorted(
+            set(
+                _iter_filtered_table_tags(
+                    tags1 | tags2,
+                    include_tables=include_tables,
+                    exclude_tables=exclude_tables,
+                )
+            )
+        )
+
+        both = [tag for tag in all_tags if tag in tags1 and tag in tags2]
+        out = set()
+
+        for tag in both:
+            data1 = font1.reader[tag]
+            data2 = font2.reader[tag]
+            if data1 == data2:
+                out.add(tag)
+
+        return out
+
+
+def main():
+    """Compare two fonts for differences"""
+    # try/except block rationale:
+    # handles "premature" socket closure exception that is
+    # raised by Python when stdout is piped to tools like
+    # the `head` executable and socket is closed early
+    # see: https://docs.python.org/3/library/signal.html#note-on-sigpipe
+    ret = 0
+    try:
+        ret = run(sys.argv[1:])
+    except KeyboardInterrupt:
+        pass
+    except BrokenPipeError:
+        # Python flushes standard streams on exit; redirect remaining output
+        # to devnull to avoid another BrokenPipeError at shutdown
+        devnull = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(devnull, sys.stdout.fileno())
+    return ret
+
+
+def run(argv: List[Text]):
+    # ------------------------------------------
+    # argparse command line argument definitions
+    # ------------------------------------------
+    parser = argparse.ArgumentParser(
+        description="An OpenType table diff tool for fonts."
+    )
+    parser.add_argument(
+        "-l",
+        "--summary",
+        action="store_true",
+        help="Report table presence and binary equality only",
+    )
+    parser.add_argument(
+        "-U",
+        "--lines",
+        type=int,
+        default=3,
+        help="Number of context lines for unified diff (default: 3)",
+    )
+    parser.add_argument(
+        "-t",
+        "--include",
+        type=str,
+        nargs="+",
+        default=None,
+        help="Font tables to include. Multiple options are allowed.",
+    )
+    parser.add_argument(
+        "-x",
+        "--exclude",
+        type=str,
+        nargs="+",
+        default=None,
+        help="Font tables to exclude. Multiple options are allowed.",
+    )
+    parser.add_argument(
+        "--diff", type=str, help="Run external diff tool command (default: diff)"
+    )
+    parser.add_argument(
+        "--diff-arg",
+        type=str,
+        default=None,
+        help="External diff tool arguments (default: -u)",
+    )
+    parser.add_argument(
+        "--color",
+        choices=["auto", "never", "always"],
+        default="auto",
+        help="Whether to colorize output (default: auto)",
+    )
+    parser.add_argument(
+        "--y1",
+        type=int,
+        default=-1,
+        metavar="NUMBER",
+        help="Select font number for TrueType Collection (.ttc/.otc) FILE1, starting from 0",
+    )
+    parser.add_argument(
+        "--y2",
+        type=int,
+        default=-1,
+        metavar="NUMBER",
+        help="Select font number for TrueType Collection (.ttc/.otc) FILE2, starting from 0",
+    )
+    parser.add_argument(
+        "-a",
+        "--always",
+        action="store_true",
+        help="Compare tables even if binary identical",
+    )
+    parser.add_argument(
+        "-b",
+        "--binary",
+        action="store_true",
+        help="Compare tables only if binaries differ (default)",
+    )
+    parser.add_argument(
+        "-q", "--quiet", action="store_true", help="Suppress all output"
+    )
+    parser.add_argument("FILE1", help="Font file path 1")
+    parser.add_argument("FILE2", help="Font file path 2")
+
+    args: argparse.Namespace = parser.parse_args(argv)
+
+    # /////////////////////////////////////////////////////////
+    #
+    #  Validations
+    #
+    # /////////////////////////////////////////////////////////
+
+    # ----------------------------------
+    #  Incompatible argument validations
+    # ----------------------------------
+
+    if args.always and args.binary:
+        if not args.quiet:
+            sys.stderr.write(
+                f"[*] Error: --always and --binary are mutually exclusive options. "
+                f"Please use ONLY one of these options in your command.{os.linesep}"
+            )
+        return 2
+    if not args.always:
+        args.binary = True
+
+    # -------------------------------
+    #  File path argument validations
+    # -------------------------------
+
+    if not file_exists(args.FILE1):
+        if not args.quiet:
+            sys.stderr.write(
+                f"[*] ERROR: The file path '{args.FILE1}' can not be found.{os.linesep}"
+            )
+        return 2
+    if not file_exists(args.FILE2):
+        if not args.quiet:
+            sys.stderr.write(
+                f"[*] ERROR: The file path '{args.FILE2}' can not be found.{os.linesep}"
+            )
+        return 2
+
+    # /////////////////////////////////////////////////////////
+    #
+    #  Command line logic
+    #
+    # /////////////////////////////////////////////////////////
+
+    # parse explicitly included or excluded tables in
+    # the command line arguments
+    # set as a Python list if it was defined on the command line
+    # or as None if it was not set on the command line
+    include_list: Optional[List[Text]] = get_tables_argument_list(args.include)
+    exclude_list: Optional[List[Text]] = get_tables_argument_list(args.exclude)
+
+    if args.summary:
+        try:
+            identical, output = summarize(
+                args.FILE1,
+                args.FILE2,
+                include_tables=include_list,
+                exclude_tables=exclude_list,
+                font_number_1=args.y1,
+                font_number_2=args.y2,
+            )
+            if not args.quiet:
+                sys.stdout.write(output)
+            return 0 if identical else 1
+        except Exception as e:
+            if not args.quiet:
+                sys.stderr.write(f"[*] ERROR: {e}{os.linesep}")
+            return 2
+
+    if args.binary:
+        excluded_binary_tables = get_binary_exclude_tables(
+            args.FILE1,
+            args.FILE2,
+            include_tables=include_list,
+            exclude_tables=exclude_list,
+            font_number_1=args.y1,
+            font_number_2=args.y2,
+        )
+        if include_list is not None:
+            include_list = [
+                tag for tag in include_list if tag not in excluded_binary_tables
+            ]
+        else:
+            if exclude_list is None:
+                exclude_list = []
+            exclude_list.extend(sorted(excluded_binary_tables))
+
+    diff_tool = args.diff
+    color_output = args.color == "always" or (
+        args.color == "auto" and sys.stdout.isatty
+    )
+
+    if diff_tool is None:
+        diff_tool = shutil.which("diff")
+    elif diff_tool:
+        diff_tool = shutil.which(diff_tool)
+        if diff_tool is None:
+            if not args.quiet:
+                sys.stderr.write(
+                    f"[*] ERROR: The external diff tool executable "
+                    f"'{args.diff}' was not found.{os.linesep}"
+                )
+            return 2
+
+    try:
+        if diff_tool:
+            diff_arg = args.diff_arg
+            if diff_arg is None:
+                if args.lines == 3:
+                    diff_arg = ["-u"]
+                else:
+                    diff_arg = ["-u{}".format(args.lines)]
+                if _is_gnu_diff(diff_tool):
+                    diff_arg.append(r"-F^\s\s<")
+            else:
+                diff_arg = diff_arg.split()
+
+            output = run_external_diff(
+                diff_tool,
+                diff_arg,
+                args.FILE1,
+                args.FILE2,
+                include_tables=include_list,
+                exclude_tables=exclude_list,
+                font_number_a=args.y1,
+                font_number_b=args.y2,
+                use_multiprocess=True,
+            )
+        else:
+            output = u_diff(
+                args.FILE1,
+                args.FILE2,
+                context_lines=args.lines,
+                include_tables=include_list,
+                exclude_tables=exclude_list,
+                font_number_a=args.y1,
+                font_number_b=args.y2,
+                use_multiprocess=True,
+            )
+
+        if color_output:
+            output = [color_unified_diff_line(line) for line in output]
+
+        output = "".join(output)
+        if not args.quiet:
+            pipe_output(output)
+        return 1 if output else 0
+
+    except Exception as e:
+        if not args.quiet:
+            sys.stderr.write(f"[*] ERROR: {e}{os.linesep}")
+        return 2

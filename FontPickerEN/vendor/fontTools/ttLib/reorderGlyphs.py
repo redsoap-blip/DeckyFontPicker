@@ -1,1 +1,315 @@
-IiIiUmVvcmRlciBnbHlwaHMgaW4gYSBmb250LiIiIgoKX19hdXRob3JfXyA9ICJSb2QgU2hlZXRlciIKCiMgU2VlIGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RvY3VtZW50L2QvMWg5Ty1DX25kb2RzODd1WTBRZUlJY2dBTWlYMmdEVHB2T19JaE1Kc0tBcXMvCiMgZm9yIGRldGFpbHMuCgoKZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcyBpbXBvcnQgb3RCYXNlCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcyBpbXBvcnQgb3RUYWJsZXMgYXMgb3QKZnJvbSBhYmMgaW1wb3J0IEFCQywgYWJzdHJhY3RtZXRob2QKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlcXVlCmZyb20gdHlwaW5nIGltcG9ydCAoCiAgICBPcHRpb25hbCwKICAgIEFueSwKICAgIENhbGxhYmxlLAogICAgRGVxdWUsCiAgICBJdGVyYWJsZSwKICAgIExpc3QsCiAgICBUdXBsZSwKKQoKX0NPVkVSQUdFX0FUVFIgPSAiQ292ZXJhZ2UiICAjIHRhYmxlcyB0aGF0IGhhdmUgb25lIGNvdmVyYWdlIHVzZSB0aGlzIG5hbWUKCgpkZWYgX3NvcnRfYnlfZ2lkKAogICAgZ2V0X2dseXBoX2lkOiBDYWxsYWJsZVtbc3RyXSwgaW50XSwKICAgIGdseXBoczogTGlzdFtzdHJdLAogICAgcGFyYWxsZWxfbGlzdDogT3B0aW9uYWxbTGlzdFtBbnldXSwKKToKICAgIGlmIHBhcmFsbGVsX2xpc3Q6CiAgICAgICAgcmVvcmRlcmVkID0gc29ydGVkKAogICAgICAgICAgICAoKGcsIGUpIGZvciBnLCBlIGluIHppcChnbHlwaHMsIHBhcmFsbGVsX2xpc3QpKSwKICAgICAgICAgICAga2V5PWxhbWJkYSB0OiBnZXRfZ2x5cGhfaWQodFswXSksCiAgICAgICAgKQogICAgICAgIHNvcnRlZF9nbHlwaHMsIHNvcnRlZF9wYXJhbGxlbF9saXN0ID0gbWFwKGxpc3QsIHppcCgqcmVvcmRlcmVkKSkKICAgICAgICBwYXJhbGxlbF9saXN0WzpdID0gc29ydGVkX3BhcmFsbGVsX2xpc3QKICAgIGVsc2U6CiAgICAgICAgc29ydGVkX2dseXBocyA9IHNvcnRlZChnbHlwaHMsIGtleT1nZXRfZ2x5cGhfaWQpCgogICAgZ2x5cGhzWzpdID0gc29ydGVkX2dseXBocwoKCmRlZiBfZ2V0X2RvdHRlZF9hdHRyKHZhbHVlOiBBbnksIGRvdHRlZF9hdHRyOiBzdHIpIC0+IEFueToKICAgIGF0dHJfbmFtZXMgPSBkb3R0ZWRfYXR0ci5zcGxpdCgiLiIpCiAgICBhc3NlcnQgYXR0cl9uYW1lcwoKICAgIHdoaWxlIGF0dHJfbmFtZXM6CiAgICAgICAgYXR0cl9uYW1lID0gYXR0cl9uYW1lcy5wb3AoMCkKICAgICAgICB2YWx1ZSA9IGdldGF0dHIodmFsdWUsIGF0dHJfbmFtZSkKICAgIHJldHVybiB2YWx1ZQoKCmNsYXNzIFJlb3JkZXJSdWxlKEFCQyk6CiAgICAiIiJBIHJ1bGUgdG8gcmVvcmRlciBzb21ldGhpbmcgaW4gYSBmb250IHRvIG1hdGNoIHRoZSBmb250cyBnbHlwaCBvcmRlci4iIiIKCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiBhcHBseShzZWxmLCBmb250OiB0dExpYi5UVEZvbnQsIHZhbHVlOiBvdEJhc2UuQmFzZVRhYmxlKSAtPiBOb25lOiAuLi4KCgpAZGF0YWNsYXNzKGZyb3plbj1UcnVlKQpjbGFzcyBSZW9yZGVyQ292ZXJhZ2UoUmVvcmRlclJ1bGUpOgogICAgIiIiUmVvcmRlciBhIENvdmVyYWdlIHRhYmxlLCBhbmQgb3B0aW9uYWxseSBhIGxpc3QgdGhhdCBpcyBzb3J0ZWQgcGFyYWxsZWwgdG8gaXQuIiIiCgogICAgIyBBIGxpc3QgdGhhdCBpcyBwYXJhbGxlbCB0byBDb3ZlcmFnZQogICAgcGFyYWxsZWxfbGlzdF9hdHRyOiBPcHRpb25hbFtzdHJdID0gTm9uZQogICAgY292ZXJhZ2VfYXR0cjogc3RyID0gX0NPVkVSQUdFX0FUVFIKCiAgICBkZWYgYXBwbHkoc2VsZiwgZm9udDogdHRMaWIuVFRGb250LCB2YWx1ZTogb3RCYXNlLkJhc2VUYWJsZSkgLT4gTm9uZToKICAgICAgICBjb3ZlcmFnZSA9IF9nZXRfZG90dGVkX2F0dHIodmFsdWUsIHNlbGYuY292ZXJhZ2VfYXR0cikKCiAgICAgICAgaWYgdHlwZShjb3ZlcmFnZSkgaXMgbm90IGxpc3Q6CiAgICAgICAgICAgICMgTm9ybWFsIHBhdGgsIHByb2Nlc3Mgb25lIGNvdmVyYWdlIHRoYXQgbWlnaHQgaGF2ZSBhIHBhcmFsbGVsIGxpc3QKICAgICAgICAgICAgcGFyYWxsZWxfbGlzdCA9IE5vbmUKICAgICAgICAgICAgaWYgc2VsZi5wYXJhbGxlbF9saXN0X2F0dHI6CiAgICAgICAgICAgICAgICBwYXJhbGxlbF9saXN0ID0gX2dldF9kb3R0ZWRfYXR0cih2YWx1ZSwgc2VsZi5wYXJhbGxlbF9saXN0X2F0dHIpCiAgICAgICAgICAgICAgICBhc3NlcnQgKAogICAgICAgICAgICAgICAgICAgIHR5cGUocGFyYWxsZWxfbGlzdCkgaXMgbGlzdAogICAgICAgICAgICAgICAgKSwgZiJ7c2VsZi5wYXJhbGxlbF9saXN0X2F0dHJ9IHNob3VsZCBiZSBhIGxpc3QiCiAgICAgICAgICAgICAgICBhc3NlcnQgbGVuKHBhcmFsbGVsX2xpc3QpID09IGxlbihjb3ZlcmFnZS5nbHlwaHMpLCAiTm90aGluZyBtYWtlcyBzZW5zZSIKCiAgICAgICAgICAgIF9zb3J0X2J5X2dpZChmb250LmdldEdseXBoSUQsIGNvdmVyYWdlLmdseXBocywgcGFyYWxsZWxfbGlzdCkKCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBBIGZldyB0YWJsZXMgaGF2ZSBhIGxpc3Qgb2YgY292ZXJhZ2UuIE5vIHBhcmFsbGVsIGxpc3QgY2FuIGV4aXN0LgogICAgICAgICAgICBhc3NlcnQgKAogICAgICAgICAgICAgICAgbm90IHNlbGYucGFyYWxsZWxfbGlzdF9hdHRyCiAgICAgICAgICAgICksIGYiQ2FuJ3QgaGF2ZSBtdWx0aXBsZSBjb3ZlcmFnZSBBTkQgYSBwYXJhbGxlbCBsaXN0OyB7c2VsZn0iCiAgICAgICAgICAgIGZvciBjb3ZlcmFnZV9lbnRyeSBpbiBjb3ZlcmFnZToKICAgICAgICAgICAgICAgIF9zb3J0X2J5X2dpZChmb250LmdldEdseXBoSUQsIGNvdmVyYWdlX2VudHJ5LmdseXBocywgTm9uZSkKCgpAZGF0YWNsYXNzKGZyb3plbj1UcnVlKQpjbGFzcyBSZW9yZGVyTGlzdChSZW9yZGVyUnVsZSk6CiAgICAiIiJSZW9yZGVyIHRoZSBpdGVtcyB3aXRoaW4gYSBsaXN0IHRvIG1hdGNoIHRoZSB1cGRhdGVkIGdseXBoIG9yZGVyLgoKICAgIFVzZWZ1bCB3aGVuIGEgbGlzdCBvcmRlcmVkIGJ5IGNvdmVyYWdlIGl0c2VsZiBjb250YWlucyBzb21ldGhpbmcgb3JkZXJlZCBieSBhIGdpZC4KICAgIEZvciBleGFtcGxlLCB0aGUgUGFpclNldCB0YWJsZSBvZiBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvZ3BvcyNsb29rdXAtdHlwZS0yLXBhaXItYWRqdXN0bWVudC1wb3NpdGlvbmluZy1zdWJ0YWJsZS4KICAgICIiIgoKICAgIGxpc3RfYXR0cjogc3RyCiAgICBrZXk6IHN0cgoKICAgIGRlZiBhcHBseShzZWxmLCBmb250OiB0dExpYi5UVEZvbnQsIHZhbHVlOiBvdEJhc2UuQmFzZVRhYmxlKSAtPiBOb25lOgogICAgICAgIGxzdCA9IF9nZXRfZG90dGVkX2F0dHIodmFsdWUsIHNlbGYubGlzdF9hdHRyKQogICAgICAgIGFzc2VydCBpc2luc3RhbmNlKGxzdCwgbGlzdCksIGYie3NlbGYubGlzdF9hdHRyfSBzaG91bGQgYmUgYSBsaXN0IgogICAgICAgIGxzdC5zb3J0KGtleT1sYW1iZGEgdjogZm9udC5nZXRHbHlwaElEKGdldGF0dHIodiwgc2VsZi5rZXkpKSkKCgojIChUeXBlLCBPcHRpb25hbCBGb3JtYXQpID0+IExpc3RbUmVvcmRlclJ1bGVdCiMgRW5jb2RlcyB0aGUgcmVsYXRpb25zaGlwcyBDb3NpbW8gaWRlbnRpZmllZApfUkVPUkRFUl9SVUxFUyA9IHsKICAgICMgR1BPUwogICAgKG90LlNpbmdsZVBvcywgMSk6IFtSZW9yZGVyQ292ZXJhZ2UoKV0sCiAgICAob3QuU2luZ2xlUG9zLCAyKTogW1Jlb3JkZXJDb3ZlcmFnZShwYXJhbGxlbF9saXN0X2F0dHI9IlZhbHVlIildLAogICAgKG90LlBhaXJQb3MsIDEpOiBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iUGFpclNldCIpXSwKICAgIChvdC5QYWlyU2V0LCBOb25lKTogW1Jlb3JkZXJMaXN0KCJQYWlyVmFsdWVSZWNvcmQiLCBrZXk9IlNlY29uZEdseXBoIildLAogICAgKG90LlBhaXJQb3MsIDIpOiBbUmVvcmRlckNvdmVyYWdlKCldLAogICAgKG90LkN1cnNpdmVQb3MsIDEpOiBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iRW50cnlFeGl0UmVjb3JkIildLAogICAgKG90Lk1hcmtCYXNlUG9zLCAxKTogWwogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iTWFya0NvdmVyYWdlIiwgcGFyYWxsZWxfbGlzdF9hdHRyPSJNYXJrQXJyYXkuTWFya1JlY29yZCIKICAgICAgICApLAogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iQmFzZUNvdmVyYWdlIiwgcGFyYWxsZWxfbGlzdF9hdHRyPSJCYXNlQXJyYXkuQmFzZVJlY29yZCIKICAgICAgICApLAogICAgXSwKICAgIChvdC5NYXJrTGlnUG9zLCAxKTogWwogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iTWFya0NvdmVyYWdlIiwgcGFyYWxsZWxfbGlzdF9hdHRyPSJNYXJrQXJyYXkuTWFya1JlY29yZCIKICAgICAgICApLAogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iTGlnYXR1cmVDb3ZlcmFnZSIsCiAgICAgICAgICAgIHBhcmFsbGVsX2xpc3RfYXR0cj0iTGlnYXR1cmVBcnJheS5MaWdhdHVyZUF0dGFjaCIsCiAgICAgICAgKSwKICAgIF0sCiAgICAob3QuTWFya01hcmtQb3MsIDEpOiBbCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKAogICAgICAgICAgICBjb3ZlcmFnZV9hdHRyPSJNYXJrMUNvdmVyYWdlIiwgcGFyYWxsZWxfbGlzdF9hdHRyPSJNYXJrMUFycmF5Lk1hcmtSZWNvcmQiCiAgICAgICAgKSwKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UoCiAgICAgICAgICAgIGNvdmVyYWdlX2F0dHI9Ik1hcmsyQ292ZXJhZ2UiLCBwYXJhbGxlbF9saXN0X2F0dHI9Ik1hcmsyQXJyYXkuTWFyazJSZWNvcmQiCiAgICAgICAgKSwKICAgIF0sCiAgICAob3QuQ29udGV4dFBvcywgMSk6IFtSZW9yZGVyQ292ZXJhZ2UocGFyYWxsZWxfbGlzdF9hdHRyPSJQb3NSdWxlU2V0IildLAogICAgKG90LkNvbnRleHRQb3MsIDIpOiBbUmVvcmRlckNvdmVyYWdlKCldLAogICAgKG90LkNvbnRleHRQb3MsIDMpOiBbUmVvcmRlckNvdmVyYWdlKCldLAogICAgKG90LkNoYWluQ29udGV4dFBvcywgMSk6IFtSZW9yZGVyQ292ZXJhZ2UocGFyYWxsZWxfbGlzdF9hdHRyPSJDaGFpblBvc1J1bGVTZXQiKV0sCiAgICAob3QuQ2hhaW5Db250ZXh0UG9zLCAyKTogW1Jlb3JkZXJDb3ZlcmFnZSgpXSwKICAgIChvdC5DaGFpbkNvbnRleHRQb3MsIDMpOiBbCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKGNvdmVyYWdlX2F0dHI9IkJhY2t0cmFja0NvdmVyYWdlIiksCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKGNvdmVyYWdlX2F0dHI9IklucHV0Q292ZXJhZ2UiKSwKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UoY292ZXJhZ2VfYXR0cj0iTG9va0FoZWFkQ292ZXJhZ2UiKSwKICAgIF0sCiAgICAjIEdTVUIKICAgIChvdC5Db250ZXh0U3Vic3QsIDEpOiBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iU3ViUnVsZVNldCIpXSwKICAgIChvdC5Db250ZXh0U3Vic3QsIDIpOiBbUmVvcmRlckNvdmVyYWdlKCldLAogICAgKG90LkNvbnRleHRTdWJzdCwgMyk6IFtSZW9yZGVyQ292ZXJhZ2UoKV0sCiAgICAob3QuQ2hhaW5Db250ZXh0U3Vic3QsIDEpOiBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iQ2hhaW5TdWJSdWxlU2V0IildLAogICAgKG90LkNoYWluQ29udGV4dFN1YnN0LCAyKTogW1Jlb3JkZXJDb3ZlcmFnZSgpXSwKICAgIChvdC5DaGFpbkNvbnRleHRTdWJzdCwgMyk6IFsKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UoY292ZXJhZ2VfYXR0cj0iQmFja3RyYWNrQ292ZXJhZ2UiKSwKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UoY292ZXJhZ2VfYXR0cj0iSW5wdXRDb3ZlcmFnZSIpLAogICAgICAgIFJlb3JkZXJDb3ZlcmFnZShjb3ZlcmFnZV9hdHRyPSJMb29rQWhlYWRDb3ZlcmFnZSIpLAogICAgXSwKICAgIChvdC5SZXZlcnNlQ2hhaW5TaW5nbGVTdWJzdCwgMSk6IFsKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UocGFyYWxsZWxfbGlzdF9hdHRyPSJTdWJzdGl0dXRlIiksCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKGNvdmVyYWdlX2F0dHI9IkJhY2t0cmFja0NvdmVyYWdlIiksCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKGNvdmVyYWdlX2F0dHI9Ikxvb2tBaGVhZENvdmVyYWdlIiksCiAgICBdLAogICAgIyBHREVGCiAgICAob3QuQXR0YWNoTGlzdCwgTm9uZSk6IFtSZW9yZGVyQ292ZXJhZ2UocGFyYWxsZWxfbGlzdF9hdHRyPSJBdHRhY2hQb2ludCIpXSwKICAgIChvdC5MaWdDYXJldExpc3QsIE5vbmUpOiBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iTGlnR2x5cGgiKV0sCiAgICAob3QuTWFya0dseXBoU2V0c0RlZiwgTm9uZSk6IFtSZW9yZGVyQ292ZXJhZ2UoKV0sCiAgICAjIE1BVEgKICAgIChvdC5NYXRoR2x5cGhJbmZvLCBOb25lKTogW1Jlb3JkZXJDb3ZlcmFnZShjb3ZlcmFnZV9hdHRyPSJFeHRlbmRlZFNoYXBlQ292ZXJhZ2UiKV0sCiAgICAob3QuTWF0aEl0YWxpY3NDb3JyZWN0aW9uSW5mbywgTm9uZSk6IFsKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UocGFyYWxsZWxfbGlzdF9hdHRyPSJJdGFsaWNzQ29ycmVjdGlvbiIpCiAgICBdLAogICAgKG90Lk1hdGhUb3BBY2NlbnRBdHRhY2htZW50LCBOb25lKTogWwogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iVG9wQWNjZW50Q292ZXJhZ2UiLCBwYXJhbGxlbF9saXN0X2F0dHI9IlRvcEFjY2VudEF0dGFjaG1lbnQiCiAgICAgICAgKQogICAgXSwKICAgIChvdC5NYXRoS2VybkluZm8sIE5vbmUpOiBbCiAgICAgICAgUmVvcmRlckNvdmVyYWdlKAogICAgICAgICAgICBjb3ZlcmFnZV9hdHRyPSJNYXRoS2VybkNvdmVyYWdlIiwgcGFyYWxsZWxfbGlzdF9hdHRyPSJNYXRoS2VybkluZm9SZWNvcmRzIgogICAgICAgICkKICAgIF0sCiAgICAob3QuTWF0aFZhcmlhbnRzLCBOb25lKTogWwogICAgICAgIFJlb3JkZXJDb3ZlcmFnZSgKICAgICAgICAgICAgY292ZXJhZ2VfYXR0cj0iVmVydEdseXBoQ292ZXJhZ2UiLAogICAgICAgICAgICBwYXJhbGxlbF9saXN0X2F0dHI9IlZlcnRHbHlwaENvbnN0cnVjdGlvbiIsCiAgICAgICAgKSwKICAgICAgICBSZW9yZGVyQ292ZXJhZ2UoCiAgICAgICAgICAgIGNvdmVyYWdlX2F0dHI9Ikhvcml6R2x5cGhDb3ZlcmFnZSIsCiAgICAgICAgICAgIHBhcmFsbGVsX2xpc3RfYXR0cj0iSG9yaXpHbHlwaENvbnN0cnVjdGlvbiIsCiAgICAgICAgKSwKICAgIF0sCn0KCgojIEV4dGVuZGVkIGZvcm1hdHMgcmV0YWluIHRoZSBzYW1lIGNvdmVyYWdlL3BhcmFsbGVsLWFycmF5IHJlbGF0aW9uc2hpcHMuCmZvciB0YWJsZV90eXBlLCBjb21wYWN0X2Zvcm1hdCwgZXh0ZW5kZWRfZm9ybWF0IGluICgKICAgIChvdC5TaW5nbGVQb3MsIDEsIDMpLAogICAgKG90LlNpbmdsZVBvcywgMiwgNCksCiAgICAob3QuUGFpclBvcywgMSwgMyksCiAgICAob3QuUGFpclBvcywgMiwgNCksCiAgICAob3QuQ3Vyc2l2ZVBvcywgMSwgMiksCiAgICAob3QuTWFya0Jhc2VQb3MsIDEsIDIpLAogICAgKG90Lk1hcmtMaWdQb3MsIDEsIDIpLAogICAgKG90Lk1hcmtNYXJrUG9zLCAxLCAyKSwKICAgIChvdC5Db250ZXh0UG9zLCAyLCA1KSwKICAgIChvdC5Db250ZXh0UG9zLCAzLCA2KSwKICAgIChvdC5DaGFpbkNvbnRleHRQb3MsIDIsIDUpLAogICAgKG90LkNvbnRleHRTdWJzdCwgMiwgNSksCiAgICAob3QuQ29udGV4dFN1YnN0LCAzLCA2KSwKICAgIChvdC5DaGFpbkNvbnRleHRTdWJzdCwgMiwgNSksCiAgICAob3QuUmV2ZXJzZUNoYWluU2luZ2xlU3Vic3QsIDEsIDIpLAopOgogICAgX1JFT1JERVJfUlVMRVNbKHRhYmxlX3R5cGUsIGV4dGVuZGVkX2Zvcm1hdCldID0gX1JFT1JERVJfUlVMRVNbCiAgICAgICAgKHRhYmxlX3R5cGUsIGNvbXBhY3RfZm9ybWF0KQogICAgXQpmb3IgdGFibGVfdHlwZSBpbiAob3QuQ29udGV4dFBvcywgb3QuQ29udGV4dFN1YnN0KToKICAgIF9SRU9SREVSX1JVTEVTWyh0YWJsZV90eXBlLCA0KV0gPSBbUmVvcmRlckNvdmVyYWdlKHBhcmFsbGVsX2xpc3RfYXR0cj0iU2VxUnVsZVNldCIpXQpmb3IgdGFibGVfdHlwZSBpbiAob3QuQ2hhaW5Db250ZXh0UG9zLCBvdC5DaGFpbkNvbnRleHRTdWJzdCk6CiAgICBfUkVPUkRFUl9SVUxFU1sodGFibGVfdHlwZSwgNCldID0gWwogICAgICAgIFJlb3JkZXJDb3ZlcmFnZShwYXJhbGxlbF9saXN0X2F0dHI9IkNoYWluZWRTZXFSdWxlU2V0IikKICAgIF0KX1JFT1JERVJfUlVMRVNbKG90LlBhaXJTZXQyLCBOb25lKV0gPSBfUkVPUkRFUl9SVUxFU1sob3QuUGFpclNldCwgTm9uZSldCl9SRU9SREVSX1JVTEVTWyhvdC5MaWdDYXJldExpc3QyLCBOb25lKV0gPSBfUkVPUkRFUl9SVUxFU1sob3QuTGlnQ2FyZXRMaXN0LCBOb25lKV0KCgojIFRPRE8gUG9ydCB0byBvdFRyYXZlcnNlCgpTdWJUYWJsZVBhdGggPSBUdXBsZVtvdEJhc2UuQmFzZVRhYmxlLlN1YlRhYmxlRW50cnksIC4uLl0KCgpkZWYgX2Jmc19iYXNlX3RhYmxlKAogICAgcm9vdDogb3RCYXNlLkJhc2VUYWJsZSwgcm9vdF9hY2Nlc3Nvcjogc3RyCikgLT4gSXRlcmFibGVbU3ViVGFibGVQYXRoXToKICAgIHlpZWxkIGZyb20gX3RyYXZlcnNlX290X2RhdGEoCiAgICAgICAgcm9vdCwgcm9vdF9hY2Nlc3NvciwgbGFtYmRhIGZyb250aWVyLCBuZXc6IGZyb250aWVyLmV4dGVuZChuZXcpCiAgICApCgoKIyBHaXZlbiBmKGN1cnJlbnQgZnJvbnRpZXIsIG5ldyBlbnRyaWVzKSBhZGQgbmV3IGVudHJpZXMgdG8gZnJvbnRpZXIKQWRkVG9Gcm9udGllckZuID0gQ2FsbGFibGVbW0RlcXVlW1N1YlRhYmxlUGF0aF0sIExpc3RbU3ViVGFibGVQYXRoXV0sIE5vbmVdCgoKZGVmIF90cmF2ZXJzZV9vdF9kYXRhKAogICAgcm9vdDogb3RCYXNlLkJhc2VUYWJsZSwgcm9vdF9hY2Nlc3Nvcjogc3RyLCBhZGRfdG9fZnJvbnRpZXJfZm46IEFkZFRvRnJvbnRpZXJGbgopIC0+IEl0ZXJhYmxlW1N1YlRhYmxlUGF0aF06CiAgICAjIG5vIHZpc2l0ZWQgYmVjYXVzZSBnZW5lcmFsIG90RGF0YSBpcyBmb3J3YXJkLW9mZnNldCBvbmx5IGFuZCB0aHVzIGNhbm5vdCBjeWNsZQoKICAgIGZyb250aWVyOiBEZXF1ZVtTdWJUYWJsZVBhdGhdID0gZGVxdWUoKQogICAgZnJvbnRpZXIuYXBwZW5kKChvdEJhc2UuQmFzZVRhYmxlLlN1YlRhYmxlRW50cnkocm9vdF9hY2Nlc3Nvciwgcm9vdCksKSkKICAgIHdoaWxlIGZyb250aWVyOgogICAgICAgICMgcGF0aCBpcyAodmFsdWUsIGF0dHJfbmFtZSkgdHVwbGVzLiBhdHRyX25hbWUgaXMgYXR0ciBvZiBwYXJlbnQgdG8gZ2V0IHZhbHVlCiAgICAgICAgcGF0aCA9IGZyb250aWVyLnBvcGxlZnQoKQogICAgICAgIGN1cnJlbnQgPSBwYXRoWy0xXS52YWx1ZQoKICAgICAgICB5aWVsZCBwYXRoCgogICAgICAgIG5ld19lbnRyaWVzID0gW10KICAgICAgICBmb3Igc3VidGFibGVfZW50cnkgaW4gY3VycmVudC5pdGVyU3ViVGFibGVzKCk6CiAgICAgICAgICAgIG5ld19lbnRyaWVzLmFwcGVuZChwYXRoICsgKHN1YnRhYmxlX2VudHJ5LCkpCgogICAgICAgIGFkZF90b19mcm9udGllcl9mbihmcm9udGllciwgbmV3X2VudHJpZXMpCgoKZGVmIHJlb3JkZXJHbHlwaHMoZm9udDogdHRMaWIuVFRGb250LCBuZXdfZ2x5cGhfb3JkZXI6IExpc3Rbc3RyXSk6CiAgICBvbGRfZ2x5cGhfb3JkZXIgPSBmb250LmdldEdseXBoT3JkZXIoKQogICAgaWYgbGVuKG5ld19nbHlwaF9vcmRlcikgIT0gbGVuKG9sZF9nbHlwaF9vcmRlcik6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgZiJOZXcgZ2x5cGggb3JkZXIgY29udGFpbnMge2xlbihuZXdfZ2x5cGhfb3JkZXIpfSBnbHlwaHMsICIKICAgICAgICAgICAgZiJidXQgZm9udCBoYXMge2xlbihvbGRfZ2x5cGhfb3JkZXIpfSBnbHlwaHMiCiAgICAgICAgKQoKICAgIGlmIHNldChvbGRfZ2x5cGhfb3JkZXIpICE9IHNldChuZXdfZ2x5cGhfb3JkZXIpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICJOZXcgZ2x5cGggb3JkZXIgZG9lcyBub3QgY29udGFpbiB0aGUgc2FtZSBzZXQgb2YgZ2x5cGhzIGFzIHRoZSBmb250OlxuIgogICAgICAgICAgICBmIiogb25seSBpbiBuZXc6IHtzZXQobmV3X2dseXBoX29yZGVyKSAtIHNldChvbGRfZ2x5cGhfb3JkZXIpfVxuIgogICAgICAgICAgICBmIiogb25seSBpbiBvbGQ6IHtzZXQob2xkX2dseXBoX29yZGVyKSAtIHNldChuZXdfZ2x5cGhfb3JkZXIpfSIKICAgICAgICApCgogICAgIyBDaGFuZ2luZyB0aGUgb3JkZXIgb2YgZ2x5cGhzIGluIGEgVFRGb250IHJlcXVpcmVzIHRoYXQgYWxsIHRhYmxlcyB0aGF0IHVzZQogICAgIyBnbHlwaCBpbmRleGVzIGhhdmUgYmVlbiBmdWxseS4KICAgICMgQ2YuIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy8yMDYwCiAgICBmb250LmVuc3VyZURlY29tcGlsZWQoKQogICAgbm90X2xvYWRlZCA9IHNvcnRlZCh0IGZvciB0IGluIGZvbnQua2V5cygpIGlmIG5vdCBmb250LmlzTG9hZGVkKHQpKQogICAgaWYgbm90X2xvYWRlZDoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiRXZlcnl0aGluZyBzaG91bGQgYmUgbG9hZGVkLCBmb2xsb3dpbmcgYXJlbid0OiB7bm90X2xvYWRlZH0iKQoKICAgIGZvbnQuc2V0R2x5cGhPcmRlcihuZXdfZ2x5cGhfb3JkZXIpCgogICAgY292ZXJhZ2VfY29udGFpbmVycyA9IHsiR0RFRiIsICJHUE9TIiwgIkdTVUIiLCAiTUFUSCJ9CiAgICBmb3IgdGFnIGluIGNvdmVyYWdlX2NvbnRhaW5lcnM6CiAgICAgICAgaWYgdGFnIGluIGZvbnQua2V5cygpOgogICAgICAgICAgICBmb3IgcGF0aCBpbiBfYmZzX2Jhc2VfdGFibGUoZm9udFt0YWddLnRhYmxlLCBmJ2ZvbnRbInt0YWd9Il0nKToKICAgICAgICAgICAgICAgIHZhbHVlID0gcGF0aFstMV0udmFsdWUKICAgICAgICAgICAgICAgIHJlb3JkZXJfa2V5ID0gKHR5cGUodmFsdWUpLCBnZXRhdHRyKHZhbHVlLCAiRm9ybWF0IiwgTm9uZSkpCiAgICAgICAgICAgICAgICBmb3IgcmVvcmRlciBpbiBfUkVPUkRFUl9SVUxFUy5nZXQocmVvcmRlcl9rZXksIFtdKToKICAgICAgICAgICAgICAgICAgICByZW9yZGVyLmFwcGx5KGZvbnQsIHZhbHVlKQoKICAgIGZvciB0YWcgaW4gWyJDRkYgIiwgIkNGRjIiXToKICAgICAgICBpZiB0YWcgaW4gZm9udDoKICAgICAgICAgICAgY2ZmX3RhYmxlID0gZm9udFt0YWddCiAgICAgICAgICAgIGNoYXJzdHJpbmdzID0gY2ZmX3RhYmxlLmNmZi50b3BEaWN0SW5kZXhbMF0uQ2hhclN0cmluZ3MuY2hhclN0cmluZ3MKICAgICAgICAgICAgY2ZmX3RhYmxlLmNmZi50b3BEaWN0SW5kZXhbMF0uY2hhcnNldCA9IG5ld19nbHlwaF9vcmRlcgogICAgICAgICAgICBjZmZfdGFibGUuY2ZmLnRvcERpY3RJbmRleFswXS5DaGFyU3RyaW5ncy5jaGFyU3RyaW5ncyA9IHsKICAgICAgICAgICAgICAgIGs6IGNoYXJzdHJpbmdzLmdldChrKSBmb3IgayBpbiBuZXdfZ2x5cGhfb3JkZXIKICAgICAgICAgICAgfQo=
+"""Reorder glyphs in a font."""
+
+__author__ = "Rod Sheeter"
+
+# See https://docs.google.com/document/d/1h9O-C_ndods87uY0QeIIcgAMiX2gDTpvO_IhMJsKAqs/
+# for details.
+
+
+from fontTools import ttLib
+from fontTools.ttLib.tables import otBase
+from fontTools.ttLib.tables import otTables as ot
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from collections import deque
+from typing import (
+    Optional,
+    Any,
+    Callable,
+    Deque,
+    Iterable,
+    List,
+    Tuple,
+)
+
+_COVERAGE_ATTR = "Coverage"  # tables that have one coverage use this name
+
+
+def _sort_by_gid(
+    get_glyph_id: Callable[[str], int],
+    glyphs: List[str],
+    parallel_list: Optional[List[Any]],
+):
+    if parallel_list:
+        reordered = sorted(
+            ((g, e) for g, e in zip(glyphs, parallel_list)),
+            key=lambda t: get_glyph_id(t[0]),
+        )
+        sorted_glyphs, sorted_parallel_list = map(list, zip(*reordered))
+        parallel_list[:] = sorted_parallel_list
+    else:
+        sorted_glyphs = sorted(glyphs, key=get_glyph_id)
+
+    glyphs[:] = sorted_glyphs
+
+
+def _get_dotted_attr(value: Any, dotted_attr: str) -> Any:
+    attr_names = dotted_attr.split(".")
+    assert attr_names
+
+    while attr_names:
+        attr_name = attr_names.pop(0)
+        value = getattr(value, attr_name)
+    return value
+
+
+class ReorderRule(ABC):
+    """A rule to reorder something in a font to match the fonts glyph order."""
+
+    @abstractmethod
+    def apply(self, font: ttLib.TTFont, value: otBase.BaseTable) -> None: ...
+
+
+@dataclass(frozen=True)
+class ReorderCoverage(ReorderRule):
+    """Reorder a Coverage table, and optionally a list that is sorted parallel to it."""
+
+    # A list that is parallel to Coverage
+    parallel_list_attr: Optional[str] = None
+    coverage_attr: str = _COVERAGE_ATTR
+
+    def apply(self, font: ttLib.TTFont, value: otBase.BaseTable) -> None:
+        coverage = _get_dotted_attr(value, self.coverage_attr)
+
+        if type(coverage) is not list:
+            # Normal path, process one coverage that might have a parallel list
+            parallel_list = None
+            if self.parallel_list_attr:
+                parallel_list = _get_dotted_attr(value, self.parallel_list_attr)
+                assert (
+                    type(parallel_list) is list
+                ), f"{self.parallel_list_attr} should be a list"
+                assert len(parallel_list) == len(coverage.glyphs), "Nothing makes sense"
+
+            _sort_by_gid(font.getGlyphID, coverage.glyphs, parallel_list)
+
+        else:
+            # A few tables have a list of coverage. No parallel list can exist.
+            assert (
+                not self.parallel_list_attr
+            ), f"Can't have multiple coverage AND a parallel list; {self}"
+            for coverage_entry in coverage:
+                _sort_by_gid(font.getGlyphID, coverage_entry.glyphs, None)
+
+
+@dataclass(frozen=True)
+class ReorderList(ReorderRule):
+    """Reorder the items within a list to match the updated glyph order.
+
+    Useful when a list ordered by coverage itself contains something ordered by a gid.
+    For example, the PairSet table of https://docs.microsoft.com/en-us/typography/opentype/spec/gpos#lookup-type-2-pair-adjustment-positioning-subtable.
+    """
+
+    list_attr: str
+    key: str
+
+    def apply(self, font: ttLib.TTFont, value: otBase.BaseTable) -> None:
+        lst = _get_dotted_attr(value, self.list_attr)
+        assert isinstance(lst, list), f"{self.list_attr} should be a list"
+        lst.sort(key=lambda v: font.getGlyphID(getattr(v, self.key)))
+
+
+# (Type, Optional Format) => List[ReorderRule]
+# Encodes the relationships Cosimo identified
+_REORDER_RULES = {
+    # GPOS
+    (ot.SinglePos, 1): [ReorderCoverage()],
+    (ot.SinglePos, 2): [ReorderCoverage(parallel_list_attr="Value")],
+    (ot.PairPos, 1): [ReorderCoverage(parallel_list_attr="PairSet")],
+    (ot.PairSet, None): [ReorderList("PairValueRecord", key="SecondGlyph")],
+    (ot.PairPos, 2): [ReorderCoverage()],
+    (ot.CursivePos, 1): [ReorderCoverage(parallel_list_attr="EntryExitRecord")],
+    (ot.MarkBasePos, 1): [
+        ReorderCoverage(
+            coverage_attr="MarkCoverage", parallel_list_attr="MarkArray.MarkRecord"
+        ),
+        ReorderCoverage(
+            coverage_attr="BaseCoverage", parallel_list_attr="BaseArray.BaseRecord"
+        ),
+    ],
+    (ot.MarkLigPos, 1): [
+        ReorderCoverage(
+            coverage_attr="MarkCoverage", parallel_list_attr="MarkArray.MarkRecord"
+        ),
+        ReorderCoverage(
+            coverage_attr="LigatureCoverage",
+            parallel_list_attr="LigatureArray.LigatureAttach",
+        ),
+    ],
+    (ot.MarkMarkPos, 1): [
+        ReorderCoverage(
+            coverage_attr="Mark1Coverage", parallel_list_attr="Mark1Array.MarkRecord"
+        ),
+        ReorderCoverage(
+            coverage_attr="Mark2Coverage", parallel_list_attr="Mark2Array.Mark2Record"
+        ),
+    ],
+    (ot.ContextPos, 1): [ReorderCoverage(parallel_list_attr="PosRuleSet")],
+    (ot.ContextPos, 2): [ReorderCoverage()],
+    (ot.ContextPos, 3): [ReorderCoverage()],
+    (ot.ChainContextPos, 1): [ReorderCoverage(parallel_list_attr="ChainPosRuleSet")],
+    (ot.ChainContextPos, 2): [ReorderCoverage()],
+    (ot.ChainContextPos, 3): [
+        ReorderCoverage(coverage_attr="BacktrackCoverage"),
+        ReorderCoverage(coverage_attr="InputCoverage"),
+        ReorderCoverage(coverage_attr="LookAheadCoverage"),
+    ],
+    # GSUB
+    (ot.ContextSubst, 1): [ReorderCoverage(parallel_list_attr="SubRuleSet")],
+    (ot.ContextSubst, 2): [ReorderCoverage()],
+    (ot.ContextSubst, 3): [ReorderCoverage()],
+    (ot.ChainContextSubst, 1): [ReorderCoverage(parallel_list_attr="ChainSubRuleSet")],
+    (ot.ChainContextSubst, 2): [ReorderCoverage()],
+    (ot.ChainContextSubst, 3): [
+        ReorderCoverage(coverage_attr="BacktrackCoverage"),
+        ReorderCoverage(coverage_attr="InputCoverage"),
+        ReorderCoverage(coverage_attr="LookAheadCoverage"),
+    ],
+    (ot.ReverseChainSingleSubst, 1): [
+        ReorderCoverage(parallel_list_attr="Substitute"),
+        ReorderCoverage(coverage_attr="BacktrackCoverage"),
+        ReorderCoverage(coverage_attr="LookAheadCoverage"),
+    ],
+    # GDEF
+    (ot.AttachList, None): [ReorderCoverage(parallel_list_attr="AttachPoint")],
+    (ot.LigCaretList, None): [ReorderCoverage(parallel_list_attr="LigGlyph")],
+    (ot.MarkGlyphSetsDef, None): [ReorderCoverage()],
+    # MATH
+    (ot.MathGlyphInfo, None): [ReorderCoverage(coverage_attr="ExtendedShapeCoverage")],
+    (ot.MathItalicsCorrectionInfo, None): [
+        ReorderCoverage(parallel_list_attr="ItalicsCorrection")
+    ],
+    (ot.MathTopAccentAttachment, None): [
+        ReorderCoverage(
+            coverage_attr="TopAccentCoverage", parallel_list_attr="TopAccentAttachment"
+        )
+    ],
+    (ot.MathKernInfo, None): [
+        ReorderCoverage(
+            coverage_attr="MathKernCoverage", parallel_list_attr="MathKernInfoRecords"
+        )
+    ],
+    (ot.MathVariants, None): [
+        ReorderCoverage(
+            coverage_attr="VertGlyphCoverage",
+            parallel_list_attr="VertGlyphConstruction",
+        ),
+        ReorderCoverage(
+            coverage_attr="HorizGlyphCoverage",
+            parallel_list_attr="HorizGlyphConstruction",
+        ),
+    ],
+}
+
+
+# Extended formats retain the same coverage/parallel-array relationships.
+for table_type, compact_format, extended_format in (
+    (ot.SinglePos, 1, 3),
+    (ot.SinglePos, 2, 4),
+    (ot.PairPos, 1, 3),
+    (ot.PairPos, 2, 4),
+    (ot.CursivePos, 1, 2),
+    (ot.MarkBasePos, 1, 2),
+    (ot.MarkLigPos, 1, 2),
+    (ot.MarkMarkPos, 1, 2),
+    (ot.ContextPos, 2, 5),
+    (ot.ContextPos, 3, 6),
+    (ot.ChainContextPos, 2, 5),
+    (ot.ContextSubst, 2, 5),
+    (ot.ContextSubst, 3, 6),
+    (ot.ChainContextSubst, 2, 5),
+    (ot.ReverseChainSingleSubst, 1, 2),
+):
+    _REORDER_RULES[(table_type, extended_format)] = _REORDER_RULES[
+        (table_type, compact_format)
+    ]
+for table_type in (ot.ContextPos, ot.ContextSubst):
+    _REORDER_RULES[(table_type, 4)] = [ReorderCoverage(parallel_list_attr="SeqRuleSet")]
+for table_type in (ot.ChainContextPos, ot.ChainContextSubst):
+    _REORDER_RULES[(table_type, 4)] = [
+        ReorderCoverage(parallel_list_attr="ChainedSeqRuleSet")
+    ]
+_REORDER_RULES[(ot.PairSet2, None)] = _REORDER_RULES[(ot.PairSet, None)]
+_REORDER_RULES[(ot.LigCaretList2, None)] = _REORDER_RULES[(ot.LigCaretList, None)]
+
+
+# TODO Port to otTraverse
+
+SubTablePath = Tuple[otBase.BaseTable.SubTableEntry, ...]
+
+
+def _bfs_base_table(
+    root: otBase.BaseTable, root_accessor: str
+) -> Iterable[SubTablePath]:
+    yield from _traverse_ot_data(
+        root, root_accessor, lambda frontier, new: frontier.extend(new)
+    )
+
+
+# Given f(current frontier, new entries) add new entries to frontier
+AddToFrontierFn = Callable[[Deque[SubTablePath], List[SubTablePath]], None]
+
+
+def _traverse_ot_data(
+    root: otBase.BaseTable, root_accessor: str, add_to_frontier_fn: AddToFrontierFn
+) -> Iterable[SubTablePath]:
+    # no visited because general otData is forward-offset only and thus cannot cycle
+
+    frontier: Deque[SubTablePath] = deque()
+    frontier.append((otBase.BaseTable.SubTableEntry(root_accessor, root),))
+    while frontier:
+        # path is (value, attr_name) tuples. attr_name is attr of parent to get value
+        path = frontier.popleft()
+        current = path[-1].value
+
+        yield path
+
+        new_entries = []
+        for subtable_entry in current.iterSubTables():
+            new_entries.append(path + (subtable_entry,))
+
+        add_to_frontier_fn(frontier, new_entries)
+
+
+def reorderGlyphs(font: ttLib.TTFont, new_glyph_order: List[str]):
+    old_glyph_order = font.getGlyphOrder()
+    if len(new_glyph_order) != len(old_glyph_order):
+        raise ValueError(
+            f"New glyph order contains {len(new_glyph_order)} glyphs, "
+            f"but font has {len(old_glyph_order)} glyphs"
+        )
+
+    if set(old_glyph_order) != set(new_glyph_order):
+        raise ValueError(
+            "New glyph order does not contain the same set of glyphs as the font:\n"
+            f"* only in new: {set(new_glyph_order) - set(old_glyph_order)}\n"
+            f"* only in old: {set(old_glyph_order) - set(new_glyph_order)}"
+        )
+
+    # Changing the order of glyphs in a TTFont requires that all tables that use
+    # glyph indexes have been fully.
+    # Cf. https://github.com/fonttools/fonttools/issues/2060
+    font.ensureDecompiled()
+    not_loaded = sorted(t for t in font.keys() if not font.isLoaded(t))
+    if not_loaded:
+        raise ValueError(f"Everything should be loaded, following aren't: {not_loaded}")
+
+    font.setGlyphOrder(new_glyph_order)
+
+    coverage_containers = {"GDEF", "GPOS", "GSUB", "MATH"}
+    for tag in coverage_containers:
+        if tag in font.keys():
+            for path in _bfs_base_table(font[tag].table, f'font["{tag}"]'):
+                value = path[-1].value
+                reorder_key = (type(value), getattr(value, "Format", None))
+                for reorder in _REORDER_RULES.get(reorder_key, []):
+                    reorder.apply(font, value)
+
+    for tag in ["CFF ", "CFF2"]:
+        if tag in font:
+            cff_table = font[tag]
+            charstrings = cff_table.cff.topDictIndex[0].CharStrings.charStrings
+            cff_table.cff.topDictIndex[0].charset = new_glyph_order
+            cff_table.cff.topDictIndex[0].CharStrings.charStrings = {
+                k: charstrings.get(k) for k in new_glyph_order
+            }

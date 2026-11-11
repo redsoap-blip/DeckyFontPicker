@@ -1,1 +1,515 @@
-IiIiQWZmaW5lIDJEIHRyYW5zZm9ybWF0aW9uIG1hdHJpeCBjbGFzcy4KClRoZSBUcmFuc2Zvcm0gY2xhc3MgaW1wbGVtZW50cyB2YXJpb3VzIHRyYW5zZm9ybWF0aW9uIG1hdHJpeCBvcGVyYXRpb25zLApib3RoIG9uIHRoZSBtYXRyaXggaXRzZWxmLCBhcyB3ZWxsIGFzIG9uIDJEIGNvb3JkaW5hdGVzLgoKVHJhbnNmb3JtIGluc3RhbmNlcyBhcmUgZWZmZWN0aXZlbHkgaW1tdXRhYmxlOiBhbGwgbWV0aG9kcyB0aGF0IG9wZXJhdGUgb24gdGhlCnRyYW5zZm9ybWF0aW9uIGl0c2VsZiBhbHdheXMgcmV0dXJuIGEgbmV3IGluc3RhbmNlLiBUaGlzIGhhcyBhcyB0aGUKaW50ZXJlc3Rpbmcgc2lkZSBlZmZlY3QgdGhhdCBUcmFuc2Zvcm0gaW5zdGFuY2VzIGFyZSBoYXNoYWJsZSwgaWUuIHRoZXkgY2FuIGJlCnVzZWQgYXMgZGljdGlvbmFyeSBrZXlzLgoKVGhpcyBtb2R1bGUgZXhwb3J0cyB0aGUgZm9sbG93aW5nIHN5bWJvbHM6CgpUcmFuc2Zvcm0KICAgICAgICB0aGlzIGlzIHRoZSBtYWluIGNsYXNzCklkZW50aXR5CiAgICAgICAgVHJhbnNmb3JtIGluc3RhbmNlIHNldCB0byB0aGUgaWRlbnRpdHkgdHJhbnNmb3JtYXRpb24KT2Zmc2V0CiAgICAgICAgQ29udmVuaWVuY2UgZnVuY3Rpb24gdGhhdCByZXR1cm5zIGEgdHJhbnNsYXRpbmcgdHJhbnNmb3JtYXRpb24KU2NhbGUKICAgICAgICBDb252ZW5pZW5jZSBmdW5jdGlvbiB0aGF0IHJldHVybnMgYSBzY2FsaW5nIHRyYW5zZm9ybWF0aW9uCgpUaGUgRGVjb21wb3NlZFRyYW5zZm9ybSBjbGFzcyBpbXBsZW1lbnRzIGEgdHJhbnNmb3JtYXRpb24gd2l0aCBzZXBhcmF0ZQp0cmFuc2xhdGUsIHJvdGF0aW9uLCBzY2FsZSwgc2tldywgYW5kIHRyYW5zZm9ybWF0aW9uLWNlbnRlciBjb21wb25lbnRzLgoKOkV4YW1wbGU6CgogICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKDIsIDAsIDAsIDMsIDAsIDApCiAgICAgICAgPj4+IHQudHJhbnNmb3JtUG9pbnQoKDEwMCwgMTAwKSkKICAgICAgICAoMjAwLCAzMDApCiAgICAgICAgPj4+IHQgPSBTY2FsZSgyLCAzKQogICAgICAgID4+PiB0LnRyYW5zZm9ybVBvaW50KCgxMDAsIDEwMCkpCiAgICAgICAgKDIwMCwgMzAwKQogICAgICAgID4+PiB0LnRyYW5zZm9ybVBvaW50KCgwLCAwKSkKICAgICAgICAoMCwgMCkKICAgICAgICA+Pj4gdCA9IE9mZnNldCgyLCAzKQogICAgICAgID4+PiB0LnRyYW5zZm9ybVBvaW50KCgxMDAsIDEwMCkpCiAgICAgICAgKDEwMiwgMTAzKQogICAgICAgID4+PiB0LnRyYW5zZm9ybVBvaW50KCgwLCAwKSkKICAgICAgICAoMiwgMykKICAgICAgICA+Pj4gdDIgPSB0LnNjYWxlKDAuNSkKICAgICAgICA+Pj4gdDIudHJhbnNmb3JtUG9pbnQoKDEwMCwgMTAwKSkKICAgICAgICAoNTIuMCwgNTMuMCkKICAgICAgICA+Pj4gaW1wb3J0IG1hdGgKICAgICAgICA+Pj4gdDMgPSB0Mi5yb3RhdGUobWF0aC5waSAvIDIpCiAgICAgICAgPj4+IHQzLnRyYW5zZm9ybVBvaW50KCgwLCAwKSkKICAgICAgICAoMi4wLCAzLjApCiAgICAgICAgPj4+IHQzLnRyYW5zZm9ybVBvaW50KCgxMDAsIDEwMCkpCiAgICAgICAgKC00OC4wLCA1My4wKQogICAgICAgID4+PiB0ID0gSWRlbnRpdHkuc2NhbGUoMC41KS50cmFuc2xhdGUoMTAwLCAyMDApLnNrZXcoMC4xLCAwLjIpCiAgICAgICAgPj4+IHQudHJhbnNmb3JtUG9pbnRzKFsoMCwgMCksICgxLCAxKSwgKDEwMCwgMTAwKV0pCiAgICAgICAgWyg1MC4wLCAxMDAuMCksICg1MC41NTAxNjczMzYwNDI3MjYsIDEwMC42MDEzNTUwMTc3NTQzMyksICgxMDUuMDE2NzMzNjA0MjcyNTMsIDE2MC4xMzU1MDE3NzU0MzM2MildCiAgICAgICAgPj4+CiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IG1hdGgKZnJvbSB0eXBpbmcgaW1wb3J0IE5hbWVkVHVwbGUKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCgpfX2FsbF9fID0gWyJUcmFuc2Zvcm0iLCAiSWRlbnRpdHkiLCAiT2Zmc2V0IiwgIlNjYWxlIiwgIkRlY29tcG9zZWRUcmFuc2Zvcm0iXQoKCl9FUFNJTE9OID0gMWUtMTUKX09ORV9FUFNJTE9OID0gMSAtIF9FUFNJTE9OCl9NSU5VU19PTkVfRVBTSUxPTiA9IC0xICsgX0VQU0lMT04KCgpkZWYgX25vcm1TaW5Db3ModjogZmxvYXQpIC0+IGZsb2F0OgogICAgaWYgYWJzKHYpIDwgX0VQU0lMT046CiAgICAgICAgdiA9IDAKICAgIGVsaWYgdiA+IF9PTkVfRVBTSUxPTjoKICAgICAgICB2ID0gMQogICAgZWxpZiB2IDwgX01JTlVTX09ORV9FUFNJTE9OOgogICAgICAgIHYgPSAtMQogICAgcmV0dXJuIHYKCgpjbGFzcyBUcmFuc2Zvcm0oTmFtZWRUdXBsZSk6CiAgICAiIiIyeDIgdHJhbnNmb3JtYXRpb24gbWF0cml4IHBsdXMgb2Zmc2V0LCBhLmsuYS4gQWZmaW5lIHRyYW5zZm9ybS4KICAgIFRyYW5zZm9ybSBpbnN0YW5jZXMgYXJlIGltbXV0YWJsZTogYWxsIHRyYW5zZm9ybWluZyBtZXRob2RzLCBlZy4KICAgIHJvdGF0ZSgpLCByZXR1cm4gYSBuZXcgVHJhbnNmb3JtIGluc3RhbmNlLgoKICAgIDpFeGFtcGxlOgoKICAgICAgICAgICAgPj4+IHQgPSBUcmFuc2Zvcm0oKQogICAgICAgICAgICA+Pj4gdAogICAgICAgICAgICA8VHJhbnNmb3JtIFsxIDAgMCAxIDAgMF0+CiAgICAgICAgICAgID4+PiB0LnNjYWxlKDIpCiAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzIgMCAwIDIgMCAwXT4KICAgICAgICAgICAgPj4+IHQuc2NhbGUoMi41LCA1LjUpCiAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzIuNSAwIDAgNS41IDAgMF0+CiAgICAgICAgICAgID4+PgogICAgICAgICAgICA+Pj4gdC5zY2FsZSgyLCAzKS50cmFuc2Zvcm1Qb2ludCgoMTAwLCAxMDApKQogICAgICAgICAgICAoMjAwLCAzMDApCgogICAgVHJhbnNmb3JtJ3MgY29uc3RydWN0b3IgdGFrZXMgc2l4IGFyZ3VtZW50cywgYWxsIG9mIHdoaWNoIGFyZQogICAgb3B0aW9uYWwsIGFuZCBjYW4gYmUgdXNlZCBhcyBrZXl3b3JkIGFyZ3VtZW50czo6CgogICAgICAgICAgICA+Pj4gVHJhbnNmb3JtKDEyKQogICAgICAgICAgICA8VHJhbnNmb3JtIFsxMiAwIDAgMSAwIDBdPgogICAgICAgICAgICA+Pj4gVHJhbnNmb3JtKGR4PTEyKQogICAgICAgICAgICA8VHJhbnNmb3JtIFsxIDAgMCAxIDEyIDBdPgogICAgICAgICAgICA+Pj4gVHJhbnNmb3JtKHl4PTEyKQogICAgICAgICAgICA8VHJhbnNmb3JtIFsxIDAgMTIgMSAwIDBdPgoKICAgIFRyYW5zZm9ybSBpbnN0YW5jZXMgYWxzbyBiZWhhdmUgbGlrZSBzZXF1ZW5jZXMgb2YgbGVuZ3RoIDY6OgoKICAgICAgICAgICAgPj4+IGxlbihJZGVudGl0eSkKICAgICAgICAgICAgNgogICAgICAgICAgICA+Pj4gbGlzdChJZGVudGl0eSkKICAgICAgICAgICAgWzEsIDAsIDAsIDEsIDAsIDBdCiAgICAgICAgICAgID4+PiB0dXBsZShJZGVudGl0eSkKICAgICAgICAgICAgKDEsIDAsIDAsIDEsIDAsIDApCgogICAgVHJhbnNmb3JtIGluc3RhbmNlcyBhcmUgY29tcGFyYWJsZTo6CgogICAgICAgICAgICA+Pj4gdDEgPSBJZGVudGl0eS5zY2FsZSgyLCAzKS50cmFuc2xhdGUoNCwgNikKICAgICAgICAgICAgPj4+IHQyID0gSWRlbnRpdHkudHJhbnNsYXRlKDgsIDE4KS5zY2FsZSgyLCAzKQogICAgICAgICAgICA+Pj4gdDEgPT0gdDIKICAgICAgICAgICAgMQoKICAgIEJ1dCBiZXdhcmUgb2YgZmxvYXRpbmcgcG9pbnQgcm91bmRpbmcgZXJyb3JzOjoKCiAgICAgICAgICAgID4+PiB0MSA9IElkZW50aXR5LnNjYWxlKDAuMiwgMC4zKS50cmFuc2xhdGUoMC40LCAwLjYpCiAgICAgICAgICAgID4+PiB0MiA9IElkZW50aXR5LnRyYW5zbGF0ZSgwLjA4LCAwLjE4KS5zY2FsZSgwLjIsIDAuMykKICAgICAgICAgICAgPj4+IHQxCiAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzAuMiAwIDAgMC4zIDAuMDggMC4xOF0+CiAgICAgICAgICAgID4+PiB0MgogICAgICAgICAgICA8VHJhbnNmb3JtIFswLjIgMCAwIDAuMyAwLjA4IDAuMThdPgogICAgICAgICAgICA+Pj4gdDEgPT0gdDIKICAgICAgICAgICAgMAoKICAgIFRyYW5zZm9ybSBpbnN0YW5jZXMgYXJlIGhhc2hhYmxlLCBtZWFuaW5nIHlvdSBjYW4gdXNlIHRoZW0gYXMKICAgIGtleXMgaW4gZGljdGlvbmFyaWVzOjoKCiAgICAgICAgICAgID4+PiBkID0ge1NjYWxlKDEyLCAxMyk6IE5vbmV9CiAgICAgICAgICAgID4+PiBkCiAgICAgICAgICAgIHs8VHJhbnNmb3JtIFsxMiAwIDAgMTMgMCAwXT46IE5vbmV9CgogICAgQnV0IGFnYWluLCBiZXdhcmUgb2YgZmxvYXRpbmcgcG9pbnQgcm91bmRpbmcgZXJyb3JzOjoKCiAgICAgICAgICAgID4+PiB0MSA9IElkZW50aXR5LnNjYWxlKDAuMiwgMC4zKS50cmFuc2xhdGUoMC40LCAwLjYpCiAgICAgICAgICAgID4+PiB0MiA9IElkZW50aXR5LnRyYW5zbGF0ZSgwLjA4LCAwLjE4KS5zY2FsZSgwLjIsIDAuMykKICAgICAgICAgICAgPj4+IHQxCiAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzAuMiAwIDAgMC4zIDAuMDggMC4xOF0+CiAgICAgICAgICAgID4+PiB0MgogICAgICAgICAgICA8VHJhbnNmb3JtIFswLjIgMCAwIDAuMyAwLjA4IDAuMThdPgogICAgICAgICAgICA+Pj4gZCA9IHt0MTogTm9uZX0KICAgICAgICAgICAgPj4+IGQKICAgICAgICAgICAgezxUcmFuc2Zvcm0gWzAuMiAwIDAgMC4zIDAuMDggMC4xOF0+OiBOb25lfQogICAgICAgICAgICA+Pj4gZFt0Ml0KICAgICAgICAgICAgVHJhY2ViYWNrIChtb3N0IHJlY2VudCBjYWxsIGxhc3QpOgogICAgICAgICAgICAgIEZpbGUgIjxzdGRpbj4iLCBsaW5lIDEsIGluID8KICAgICAgICAgICAgS2V5RXJyb3I6IDxUcmFuc2Zvcm0gWzAuMiAwIDAgMC4zIDAuMDggMC4xOF0+CiAgICAiIiIKCiAgICB4eDogZmxvYXQgPSAxCiAgICB4eTogZmxvYXQgPSAwCiAgICB5eDogZmxvYXQgPSAwCiAgICB5eTogZmxvYXQgPSAxCiAgICBkeDogZmxvYXQgPSAwCiAgICBkeTogZmxvYXQgPSAwCgogICAgZGVmIHRyYW5zZm9ybVBvaW50KHNlbGYsIHApOgogICAgICAgICIiIlRyYW5zZm9ybSBhIHBvaW50LgoKICAgICAgICA6RXhhbXBsZToKCiAgICAgICAgICAgICAgICA+Pj4gdCA9IFRyYW5zZm9ybSgpCiAgICAgICAgICAgICAgICA+Pj4gdCA9IHQuc2NhbGUoMi41LCA1LjUpCiAgICAgICAgICAgICAgICA+Pj4gdC50cmFuc2Zvcm1Qb2ludCgoMTAwLCAxMDApKQogICAgICAgICAgICAgICAgKDI1MC4wLCA1NTAuMCkKICAgICAgICAiIiIKICAgICAgICB4LCB5ID0gcAogICAgICAgIHh4LCB4eSwgeXgsIHl5LCBkeCwgZHkgPSBzZWxmCiAgICAgICAgcmV0dXJuICh4eCAqIHggKyB5eCAqIHkgKyBkeCwgeHkgKiB4ICsgeXkgKiB5ICsgZHkpCgogICAgZGVmIHRyYW5zZm9ybVBvaW50cyhzZWxmLCBwb2ludHMpOgogICAgICAgICIiIlRyYW5zZm9ybSBhIGxpc3Qgb2YgcG9pbnRzLgoKICAgICAgICA6RXhhbXBsZToKCiAgICAgICAgICAgICAgICA+Pj4gdCA9IFNjYWxlKDIsIDMpCiAgICAgICAgICAgICAgICA+Pj4gdC50cmFuc2Zvcm1Qb2ludHMoWygwLCAwKSwgKDAsIDEwMCksICgxMDAsIDEwMCksICgxMDAsIDApXSkKICAgICAgICAgICAgICAgIFsoMCwgMCksICgwLCAzMDApLCAoMjAwLCAzMDApLCAoMjAwLCAwKV0KICAgICAgICAgICAgICAgID4+PgogICAgICAgICIiIgogICAgICAgIHh4LCB4eSwgeXgsIHl5LCBkeCwgZHkgPSBzZWxmCiAgICAgICAgcmV0dXJuIFsoeHggKiB4ICsgeXggKiB5ICsgZHgsIHh5ICogeCArIHl5ICogeSArIGR5KSBmb3IgeCwgeSBpbiBwb2ludHNdCgogICAgZGVmIHRyYW5zZm9ybVZlY3RvcihzZWxmLCB2KToKICAgICAgICAiIiJUcmFuc2Zvcm0gYW4gKGR4LCBkeSkgdmVjdG9yLCB0cmVhdGluZyB0cmFuc2xhdGlvbiBhcyB6ZXJvLgoKICAgICAgICA6RXhhbXBsZToKCiAgICAgICAgICAgICAgICA+Pj4gdCA9IFRyYW5zZm9ybSgyLCAwLCAwLCAyLCAxMCwgMjApCiAgICAgICAgICAgICAgICA+Pj4gdC50cmFuc2Zvcm1WZWN0b3IoKDMsIC00KSkKICAgICAgICAgICAgICAgICg2LCAtOCkKICAgICAgICAgICAgICAgID4+PgogICAgICAgICIiIgogICAgICAgIGR4LCBkeSA9IHYKICAgICAgICB4eCwgeHksIHl4LCB5eSA9IHNlbGZbOjRdCiAgICAgICAgcmV0dXJuICh4eCAqIGR4ICsgeXggKiBkeSwgeHkgKiBkeCArIHl5ICogZHkpCgogICAgZGVmIHRyYW5zZm9ybVZlY3RvcnMoc2VsZiwgdmVjdG9ycyk6CiAgICAgICAgIiIiVHJhbnNmb3JtIGEgbGlzdCBvZiAoZHgsIGR5KSB2ZWN0b3IsIHRyZWF0aW5nIHRyYW5zbGF0aW9uIGFzIHplcm8uCgogICAgICAgIDpFeGFtcGxlOgogICAgICAgICAgICAgICAgPj4+IHQgPSBUcmFuc2Zvcm0oMiwgMCwgMCwgMiwgMTAsIDIwKQogICAgICAgICAgICAgICAgPj4+IHQudHJhbnNmb3JtVmVjdG9ycyhbKDMsIC00KSwgKDUsIC02KV0pCiAgICAgICAgICAgICAgICBbKDYsIC04KSwgKDEwLCAtMTIpXQogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgIiIiCiAgICAgICAgeHgsIHh5LCB5eCwgeXkgPSBzZWxmWzo0XQogICAgICAgIHJldHVybiBbKHh4ICogZHggKyB5eCAqIGR5LCB4eSAqIGR4ICsgeXkgKiBkeSkgZm9yIGR4LCBkeSBpbiB2ZWN0b3JzXQoKICAgIGRlZiB0cmFuc2xhdGUoc2VsZiwgeDogZmxvYXQgPSAwLCB5OiBmbG9hdCA9IDApOgogICAgICAgICIiIlJldHVybiBhIG5ldyB0cmFuc2Zvcm1hdGlvbiwgdHJhbnNsYXRlZCAob2Zmc2V0KSBieSB4LCB5LgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKCkKICAgICAgICAgICAgICAgID4+PiB0LnRyYW5zbGF0ZSgyMCwgMzApCiAgICAgICAgICAgICAgICA8VHJhbnNmb3JtIFsxIDAgMCAxIDIwIDMwXT4KICAgICAgICAgICAgICAgID4+PgogICAgICAgICIiIgogICAgICAgIHJldHVybiBzZWxmLnRyYW5zZm9ybSgoMSwgMCwgMCwgMSwgeCwgeSkpCgogICAgZGVmIHNjYWxlKHNlbGYsIHg6IGZsb2F0ID0gMSwgeTogZmxvYXQgfCBOb25lID0gTm9uZSk6CiAgICAgICAgIiIiUmV0dXJuIGEgbmV3IHRyYW5zZm9ybWF0aW9uLCBzY2FsZWQgYnkgeCwgeS4gVGhlICd5JyBhcmd1bWVudAogICAgICAgIG1heSBiZSBOb25lLCB3aGljaCBpbXBsaWVzIHRvIHVzZSB0aGUgeCB2YWx1ZSBmb3IgeSBhcyB3ZWxsLgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKCkKICAgICAgICAgICAgICAgID4+PiB0LnNjYWxlKDUpCiAgICAgICAgICAgICAgICA8VHJhbnNmb3JtIFs1IDAgMCA1IDAgMF0+CiAgICAgICAgICAgICAgICA+Pj4gdC5zY2FsZSg1LCA2KQogICAgICAgICAgICAgICAgPFRyYW5zZm9ybSBbNSAwIDAgNiAwIDBdPgogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgIiIiCiAgICAgICAgaWYgeSBpcyBOb25lOgogICAgICAgICAgICB5ID0geAogICAgICAgIHJldHVybiBzZWxmLnRyYW5zZm9ybSgoeCwgMCwgMCwgeSwgMCwgMCkpCgogICAgZGVmIHJvdGF0ZShzZWxmLCBhbmdsZTogZmxvYXQpOgogICAgICAgICIiIlJldHVybiBhIG5ldyB0cmFuc2Zvcm1hdGlvbiwgcm90YXRlZCBieSAnYW5nbGUnIChyYWRpYW5zKS4KCiAgICAgICAgOkV4YW1wbGU6CiAgICAgICAgICAgICAgICA+Pj4gaW1wb3J0IG1hdGgKICAgICAgICAgICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKCkKICAgICAgICAgICAgICAgID4+PiB0LnJvdGF0ZShtYXRoLnBpIC8gMikKICAgICAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzAgMSAtMSAwIDAgMF0+CiAgICAgICAgICAgICAgICA+Pj4KICAgICAgICAiIiIKICAgICAgICBjID0gX25vcm1TaW5Db3MobWF0aC5jb3MoYW5nbGUpKQogICAgICAgIHMgPSBfbm9ybVNpbkNvcyhtYXRoLnNpbihhbmdsZSkpCiAgICAgICAgcmV0dXJuIHNlbGYudHJhbnNmb3JtKChjLCBzLCAtcywgYywgMCwgMCkpCgogICAgZGVmIHNrZXcoc2VsZiwgeDogZmxvYXQgPSAwLCB5OiBmbG9hdCA9IDApOgogICAgICAgICIiIlJldHVybiBhIG5ldyB0cmFuc2Zvcm1hdGlvbiwgc2tld2VkIGJ5IHggYW5kIHkuCgogICAgICAgIDpFeGFtcGxlOgogICAgICAgICAgICAgICAgPj4+IGltcG9ydCBtYXRoCiAgICAgICAgICAgICAgICA+Pj4gdCA9IFRyYW5zZm9ybSgpCiAgICAgICAgICAgICAgICA+Pj4gdC5za2V3KG1hdGgucGkgLyA0KQogICAgICAgICAgICAgICAgPFRyYW5zZm9ybSBbMSAwIDEgMSAwIDBdPgogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgIiIiCiAgICAgICAgcmV0dXJuIHNlbGYudHJhbnNmb3JtKCgxLCBtYXRoLnRhbih5KSwgbWF0aC50YW4oeCksIDEsIDAsIDApKQoKICAgIGRlZiB0cmFuc2Zvcm0oc2VsZiwgb3RoZXIpOgogICAgICAgICIiIlJldHVybiBhIG5ldyB0cmFuc2Zvcm1hdGlvbiwgdHJhbnNmb3JtZWQgYnkgYW5vdGhlcgogICAgICAgIHRyYW5zZm9ybWF0aW9uLgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKDIsIDAsIDAsIDMsIDEsIDYpCiAgICAgICAgICAgICAgICA+Pj4gdC50cmFuc2Zvcm0oKDQsIDMsIDIsIDEsIDUsIDYpKQogICAgICAgICAgICAgICAgPFRyYW5zZm9ybSBbOCA5IDQgMyAxMSAyNF0+CiAgICAgICAgICAgICAgICA+Pj4KICAgICAgICAiIiIKICAgICAgICB4eDEsIHh5MSwgeXgxLCB5eTEsIGR4MSwgZHkxID0gb3RoZXIKICAgICAgICB4eDIsIHh5MiwgeXgyLCB5eTIsIGR4MiwgZHkyID0gc2VsZgogICAgICAgIHJldHVybiBzZWxmLl9fY2xhc3NfXygKICAgICAgICAgICAgeHgxICogeHgyICsgeHkxICogeXgyLAogICAgICAgICAgICB4eDEgKiB4eTIgKyB4eTEgKiB5eTIsCiAgICAgICAgICAgIHl4MSAqIHh4MiArIHl5MSAqIHl4MiwKICAgICAgICAgICAgeXgxICogeHkyICsgeXkxICogeXkyLAogICAgICAgICAgICB4eDIgKiBkeDEgKyB5eDIgKiBkeTEgKyBkeDIsCiAgICAgICAgICAgIHh5MiAqIGR4MSArIHl5MiAqIGR5MSArIGR5MiwKICAgICAgICApCgogICAgZGVmIHJldmVyc2VUcmFuc2Zvcm0oc2VsZiwgb3RoZXIpOgogICAgICAgICIiIlJldHVybiBhIG5ldyB0cmFuc2Zvcm1hdGlvbiwgd2hpY2ggaXMgdGhlIG90aGVyIHRyYW5zZm9ybWF0aW9uCiAgICAgICAgdHJhbnNmb3JtZWQgYnkgc2VsZi4gc2VsZi5yZXZlcnNlVHJhbnNmb3JtKG90aGVyKSBpcyBlcXVpdmFsZW50IHRvCiAgICAgICAgb3RoZXIudHJhbnNmb3JtKHNlbGYpLgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiB0ID0gVHJhbnNmb3JtKDIsIDAsIDAsIDMsIDEsIDYpCiAgICAgICAgICAgICAgICA+Pj4gdC5yZXZlcnNlVHJhbnNmb3JtKCg0LCAzLCAyLCAxLCA1LCA2KSkKICAgICAgICAgICAgICAgIDxUcmFuc2Zvcm0gWzggNiA2IDMgMjEgMTVdPgogICAgICAgICAgICAgICAgPj4+IFRyYW5zZm9ybSg0LCAzLCAyLCAxLCA1LCA2KS50cmFuc2Zvcm0oKDIsIDAsIDAsIDMsIDEsIDYpKQogICAgICAgICAgICAgICAgPFRyYW5zZm9ybSBbOCA2IDYgMyAyMSAxNV0+CiAgICAgICAgICAgICAgICA+Pj4KICAgICAgICAiIiIKICAgICAgICB4eDEsIHh5MSwgeXgxLCB5eTEsIGR4MSwgZHkxID0gc2VsZgogICAgICAgIHh4MiwgeHkyLCB5eDIsIHl5MiwgZHgyLCBkeTIgPSBvdGhlcgogICAgICAgIHJldHVybiBzZWxmLl9fY2xhc3NfXygKICAgICAgICAgICAgeHgxICogeHgyICsgeHkxICogeXgyLAogICAgICAgICAgICB4eDEgKiB4eTIgKyB4eTEgKiB5eTIsCiAgICAgICAgICAgIHl4MSAqIHh4MiArIHl5MSAqIHl4MiwKICAgICAgICAgICAgeXgxICogeHkyICsgeXkxICogeXkyLAogICAgICAgICAgICB4eDIgKiBkeDEgKyB5eDIgKiBkeTEgKyBkeDIsCiAgICAgICAgICAgIHh5MiAqIGR4MSArIHl5MiAqIGR5MSArIGR5MiwKICAgICAgICApCgogICAgZGVmIGludmVyc2Uoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIHRoZSBpbnZlcnNlIHRyYW5zZm9ybWF0aW9uLgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiB0ID0gSWRlbnRpdHkudHJhbnNsYXRlKDIsIDMpLnNjYWxlKDQsIDUpCiAgICAgICAgICAgICAgICA+Pj4gdC50cmFuc2Zvcm1Qb2ludCgoMTAsIDIwKSkKICAgICAgICAgICAgICAgICg0MiwgMTAzKQogICAgICAgICAgICAgICAgPj4+IGl0ID0gdC5pbnZlcnNlKCkKICAgICAgICAgICAgICAgID4+PiBpdC50cmFuc2Zvcm1Qb2ludCgoNDIsIDEwMykpCiAgICAgICAgICAgICAgICAoMTAuMCwgMjAuMCkKICAgICAgICAgICAgICAgID4+PgogICAgICAgICIiIgogICAgICAgIGlmIHNlbGYgPT0gSWRlbnRpdHk6CiAgICAgICAgICAgIHJldHVybiBzZWxmCiAgICAgICAgeHgsIHh5LCB5eCwgeXksIGR4LCBkeSA9IHNlbGYKICAgICAgICBkZXQgPSB4eCAqIHl5IC0geXggKiB4eQogICAgICAgIHh4LCB4eSwgeXgsIHl5ID0geXkgLyBkZXQsIC14eSAvIGRldCwgLXl4IC8gZGV0LCB4eCAvIGRldAogICAgICAgIGR4LCBkeSA9IC14eCAqIGR4IC0geXggKiBkeSwgLXh5ICogZHggLSB5eSAqIGR5CiAgICAgICAgcmV0dXJuIHNlbGYuX19jbGFzc19fKHh4LCB4eSwgeXgsIHl5LCBkeCwgZHkpCgogICAgZGVmIHRvUFMoc2VsZikgLT4gc3RyOgogICAgICAgICIiIlJldHVybiBhIFBvc3RTY3JpcHQgcmVwcmVzZW50YXRpb24KCiAgICAgICAgOkV4YW1wbGU6CgogICAgICAgICAgICAgICAgPj4+IHQgPSBJZGVudGl0eS5zY2FsZSgyLCAzKS50cmFuc2xhdGUoNCwgNSkKICAgICAgICAgICAgICAgID4+PiB0LnRvUFMoKQogICAgICAgICAgICAgICAgJ1syIDAgMCAzIDggMTVdJwogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgIiIiCiAgICAgICAgcmV0dXJuICJbJXMgJXMgJXMgJXMgJXMgJXNdIiAlIHNlbGYKCiAgICBkZWYgdG9EZWNvbXBvc2VkKHNlbGYpIC0+ICJEZWNvbXBvc2VkVHJhbnNmb3JtIjoKICAgICAgICAiIiJEZWNvbXBvc2UgaW50byBhIERlY29tcG9zZWRUcmFuc2Zvcm0uIiIiCiAgICAgICAgcmV0dXJuIERlY29tcG9zZWRUcmFuc2Zvcm0uZnJvbVRyYW5zZm9ybShzZWxmKQoKICAgIGRlZiBfX2Jvb2xfXyhzZWxmKSAtPiBib29sOgogICAgICAgICIiIlJldHVybnMgVHJ1ZSBpZiB0cmFuc2Zvcm0gaXMgbm90IGlkZW50aXR5LCBGYWxzZSBvdGhlcndpc2UuCgogICAgICAgIDpFeGFtcGxlOgoKICAgICAgICAgICAgICAgID4+PiBib29sKElkZW50aXR5KQogICAgICAgICAgICAgICAgRmFsc2UKICAgICAgICAgICAgICAgID4+PiBib29sKFRyYW5zZm9ybSgpKQogICAgICAgICAgICAgICAgRmFsc2UKICAgICAgICAgICAgICAgID4+PiBib29sKFNjYWxlKDEuKSkKICAgICAgICAgICAgICAgIEZhbHNlCiAgICAgICAgICAgICAgICA+Pj4gYm9vbChTY2FsZSgyKSkKICAgICAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgICAgID4+PiBib29sKE9mZnNldCgpKQogICAgICAgICAgICAgICAgRmFsc2UKICAgICAgICAgICAgICAgID4+PiBib29sKE9mZnNldCgwKSkKICAgICAgICAgICAgICAgIEZhbHNlCiAgICAgICAgICAgICAgICA+Pj4gYm9vbChPZmZzZXQoMikpCiAgICAgICAgICAgICAgICBUcnVlCiAgICAgICAgIiIiCiAgICAgICAgcmV0dXJuIHNlbGYgIT0gSWRlbnRpdHkKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiAiPCVzIFslZyAlZyAlZyAlZyAlZyAlZ10+IiAlICgoc2VsZi5fX2NsYXNzX18uX19uYW1lX18sKSArIHNlbGYpCgoKSWRlbnRpdHkgPSBUcmFuc2Zvcm0oKQoKCmRlZiBPZmZzZXQoeDogZmxvYXQgPSAwLCB5OiBmbG9hdCA9IDApIC0+IFRyYW5zZm9ybToKICAgICIiIlJldHVybiB0aGUgaWRlbnRpdHkgdHJhbnNmb3JtYXRpb24gb2Zmc2V0IGJ5IHgsIHkuCgogICAgOkV4YW1wbGU6CiAgICAgICAgICAgID4+PiBPZmZzZXQoMiwgMykKICAgICAgICAgICAgPFRyYW5zZm9ybSBbMSAwIDAgMSAyIDNdPgogICAgICAgICAgICA+Pj4KICAgICIiIgogICAgcmV0dXJuIFRyYW5zZm9ybSgxLCAwLCAwLCAxLCB4LCB5KQoKCmRlZiBTY2FsZSh4OiBmbG9hdCwgeTogZmxvYXQgfCBOb25lID0gTm9uZSkgLT4gVHJhbnNmb3JtOgogICAgIiIiUmV0dXJuIHRoZSBpZGVudGl0eSB0cmFuc2Zvcm1hdGlvbiBzY2FsZWQgYnkgeCwgeS4gVGhlICd5JyBhcmd1bWVudAogICAgbWF5IGJlIE5vbmUsIHdoaWNoIGltcGxpZXMgdG8gdXNlIHRoZSB4IHZhbHVlIGZvciB5IGFzIHdlbGwuCgogICAgOkV4YW1wbGU6CiAgICAgICAgICAgID4+PiBTY2FsZSgyLCAzKQogICAgICAgICAgICA8VHJhbnNmb3JtIFsyIDAgMCAzIDAgMF0+CiAgICAgICAgICAgID4+PgogICAgIiIiCiAgICBpZiB5IGlzIE5vbmU6CiAgICAgICAgeSA9IHgKICAgIHJldHVybiBUcmFuc2Zvcm0oeCwgMCwgMCwgeSwgMCwgMCkKCgpAZGF0YWNsYXNzCmNsYXNzIERlY29tcG9zZWRUcmFuc2Zvcm06CiAgICAiIiJUaGUgRGVjb21wb3NlZFRyYW5zZm9ybSBjbGFzcyBpbXBsZW1lbnRzIGEgdHJhbnNmb3JtYXRpb24gd2l0aCBzZXBhcmF0ZQogICAgdHJhbnNsYXRlLCByb3RhdGlvbiwgc2NhbGUsIHNrZXcsIGFuZCB0cmFuc2Zvcm1hdGlvbi1jZW50ZXIgY29tcG9uZW50cy4KICAgICIiIgoKICAgIHRyYW5zbGF0ZVg6IGZsb2F0ID0gMAogICAgdHJhbnNsYXRlWTogZmxvYXQgPSAwCiAgICByb3RhdGlvbjogZmxvYXQgPSAwICAjIGluIGRlZ3JlZXMsIGNvdW50ZXItY2xvY2t3aXNlCiAgICBzY2FsZVg6IGZsb2F0ID0gMQogICAgc2NhbGVZOiBmbG9hdCA9IDEKICAgIHNrZXdYOiBmbG9hdCA9IDAgICMgaW4gZGVncmVlcywgY2xvY2t3aXNlCiAgICBza2V3WTogZmxvYXQgPSAwICAjIGluIGRlZ3JlZXMsIGNvdW50ZXItY2xvY2t3aXNlCiAgICB0Q2VudGVyWDogZmxvYXQgPSAwCiAgICB0Q2VudGVyWTogZmxvYXQgPSAwCgogICAgZGVmIF9fYm9vbF9fKHNlbGYpOgogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIHNlbGYudHJhbnNsYXRlWCAhPSAwCiAgICAgICAgICAgIG9yIHNlbGYudHJhbnNsYXRlWSAhPSAwCiAgICAgICAgICAgIG9yIHNlbGYucm90YXRpb24gIT0gMAogICAgICAgICAgICBvciBzZWxmLnNjYWxlWCAhPSAxCiAgICAgICAgICAgIG9yIHNlbGYuc2NhbGVZICE9IDEKICAgICAgICAgICAgb3Igc2VsZi5za2V3WCAhPSAwCiAgICAgICAgICAgIG9yIHNlbGYuc2tld1kgIT0gMAogICAgICAgICAgICBvciBzZWxmLnRDZW50ZXJYICE9IDAKICAgICAgICAgICAgb3Igc2VsZi50Q2VudGVyWSAhPSAwCiAgICAgICAgKQoKICAgIEBjbGFzc21ldGhvZAogICAgZGVmIGZyb21UcmFuc2Zvcm0oc2VsZiwgdHJhbnNmb3JtKToKICAgICAgICAiIiJSZXR1cm4gYSBEZWNvbXBvc2VkVHJhbnNmb3JtKCkgZXF1aXZhbGVudCBvZiB0aGlzIHRyYW5zZm9ybWF0aW9uLgogICAgICAgIFRoZSByZXR1cm5lZCBzb2x1dGlvbiBhbHdheXMgaGFzIHNrZXdZID0gMCwgYW5kIGFuZ2xlIGluIHRoZSAoLTE4MCwgMTgwXS4KCiAgICAgICAgOkV4YW1wbGU6CiAgICAgICAgICAgICAgICA+Pj4gRGVjb21wb3NlZFRyYW5zZm9ybS5mcm9tVHJhbnNmb3JtKFRyYW5zZm9ybSgzLCAwLCAwLCAyLCAwLCAwKSkKICAgICAgICAgICAgICAgIERlY29tcG9zZWRUcmFuc2Zvcm0odHJhbnNsYXRlWD0wLCB0cmFuc2xhdGVZPTAsIHJvdGF0aW9uPTAuMCwgc2NhbGVYPTMuMCwgc2NhbGVZPTIuMCwgc2tld1g9MC4wLCBza2V3WT0wLjAsIHRDZW50ZXJYPTAsIHRDZW50ZXJZPTApCiAgICAgICAgICAgICAgICA+Pj4gRGVjb21wb3NlZFRyYW5zZm9ybS5mcm9tVHJhbnNmb3JtKFRyYW5zZm9ybSgwLCAwLCAwLCAxLCAwLCAwKSkKICAgICAgICAgICAgICAgIERlY29tcG9zZWRUcmFuc2Zvcm0odHJhbnNsYXRlWD0wLCB0cmFuc2xhdGVZPTAsIHJvdGF0aW9uPTAuMCwgc2NhbGVYPTAuMCwgc2NhbGVZPTEuMCwgc2tld1g9MC4wLCBza2V3WT0wLjAsIHRDZW50ZXJYPTAsIHRDZW50ZXJZPTApCiAgICAgICAgICAgICAgICA+Pj4gRGVjb21wb3NlZFRyYW5zZm9ybS5mcm9tVHJhbnNmb3JtKFRyYW5zZm9ybSgwLCAwLCAxLCAxLCAwLCAwKSkKICAgICAgICAgICAgICAgIERlY29tcG9zZWRUcmFuc2Zvcm0odHJhbnNsYXRlWD0wLCB0cmFuc2xhdGVZPTAsIHJvdGF0aW9uPS00NS4wLCBzY2FsZVg9MC4wLCBzY2FsZVk9MS40MTQyMTM1NjIzNzMwOTUxLCBza2V3WD0wLjAsIHNrZXdZPTAuMCwgdENlbnRlclg9MCwgdENlbnRlclk9MCkKICAgICAgICAiIiIKICAgICAgICAjIEFkYXB0ZWQgZnJvbSBhbiBhbnN3ZXIgb24KICAgICAgICAjIGh0dHBzOi8vbWF0aC5zdGFja2V4Y2hhbmdlLmNvbS9xdWVzdGlvbnMvMTMxNTAvZXh0cmFjdGluZy1yb3RhdGlvbi1zY2FsZS12YWx1ZXMtZnJvbS0yZC10cmFuc2Zvcm1hdGlvbi1tYXRyaXgKCiAgICAgICAgYSwgYiwgYywgZCwgeCwgeSA9IHRyYW5zZm9ybQoKICAgICAgICBzeCA9IG1hdGguY29weXNpZ24oMSwgYSkKICAgICAgICBpZiBzeCA8IDA6CiAgICAgICAgICAgIGEgKj0gc3gKICAgICAgICAgICAgYiAqPSBzeAoKICAgICAgICBkZWx0YSA9IGEgKiBkIC0gYiAqIGMKCiAgICAgICAgcm90YXRpb24gPSAwCiAgICAgICAgc2NhbGVYID0gc2NhbGVZID0gMAogICAgICAgIHNrZXdYID0gMAoKICAgICAgICAjIEFwcGx5IHRoZSBRUi1saWtlIGRlY29tcG9zaXRpb24uCiAgICAgICAgaWYgYSAhPSAwIG9yIGIgIT0gMDoKICAgICAgICAgICAgciA9IG1hdGguc3FydChhICogYSArIGIgKiBiKQogICAgICAgICAgICByb3RhdGlvbiA9IG1hdGguYWNvcyhhIC8gcikgaWYgYiA+PSAwIGVsc2UgLW1hdGguYWNvcyhhIC8gcikKICAgICAgICAgICAgc2NhbGVYLCBzY2FsZVkgPSAociwgZGVsdGEgLyByKQogICAgICAgICAgICBza2V3WCA9IG1hdGguYXRhbigoYSAqIGMgKyBiICogZCkgLyAociAqIHIpKQogICAgICAgIGVsaWYgYyAhPSAwIG9yIGQgIT0gMDoKICAgICAgICAgICAgcyA9IG1hdGguc3FydChjICogYyArIGQgKiBkKQogICAgICAgICAgICByb3RhdGlvbiA9IG1hdGguYXRhbjIoLWMsIGQpCiAgICAgICAgICAgIGlmIHJvdGF0aW9uID09IC1tYXRoLnBpOgogICAgICAgICAgICAgICAgcm90YXRpb24gPSBtYXRoLnBpCiAgICAgICAgICAgIHNjYWxlWCwgc2NhbGVZID0gKGRlbHRhIC8gcywgcykKICAgICAgICBlbHNlOgogICAgICAgICAgICAjIGEgPSBiID0gYyA9IGQgPSAwCiAgICAgICAgICAgIHBhc3MKCiAgICAgICAgcmV0dXJuIERlY29tcG9zZWRUcmFuc2Zvcm0oCiAgICAgICAgICAgIHgsCiAgICAgICAgICAgIHksCiAgICAgICAgICAgIG1hdGguZGVncmVlcyhyb3RhdGlvbiksCiAgICAgICAgICAgIHNjYWxlWCAqIHN4LAogICAgICAgICAgICBzY2FsZVksCiAgICAgICAgICAgIG1hdGguZGVncmVlcyhza2V3WCkgKiBzeCwKICAgICAgICAgICAgMC4wLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICkKCiAgICBkZWYgdG9UcmFuc2Zvcm0oc2VsZikgLT4gVHJhbnNmb3JtOgogICAgICAgICIiIlJldHVybiB0aGUgVHJhbnNmb3JtKCkgZXF1aXZhbGVudCBvZiB0aGlzIHRyYW5zZm9ybWF0aW9uLgoKICAgICAgICA6RXhhbXBsZToKICAgICAgICAgICAgICAgID4+PiBEZWNvbXBvc2VkVHJhbnNmb3JtKHNjYWxlWD0yLCBzY2FsZVk9MikudG9UcmFuc2Zvcm0oKQogICAgICAgICAgICAgICAgPFRyYW5zZm9ybSBbMiAwIDAgMiAwIDBdPgogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgIiIiCiAgICAgICAgdCA9IFRyYW5zZm9ybSgpCiAgICAgICAgdCA9IHQudHJhbnNsYXRlKAogICAgICAgICAgICBzZWxmLnRyYW5zbGF0ZVggKyBzZWxmLnRDZW50ZXJYLCBzZWxmLnRyYW5zbGF0ZVkgKyBzZWxmLnRDZW50ZXJZCiAgICAgICAgKQogICAgICAgIHQgPSB0LnJvdGF0ZShtYXRoLnJhZGlhbnMoc2VsZi5yb3RhdGlvbikpCiAgICAgICAgdCA9IHQuc2NhbGUoc2VsZi5zY2FsZVgsIHNlbGYuc2NhbGVZKQogICAgICAgIHQgPSB0LnNrZXcobWF0aC5yYWRpYW5zKHNlbGYuc2tld1gpLCBtYXRoLnJhZGlhbnMoc2VsZi5za2V3WSkpCiAgICAgICAgdCA9IHQudHJhbnNsYXRlKC1zZWxmLnRDZW50ZXJYLCAtc2VsZi50Q2VudGVyWSkKICAgICAgICByZXR1cm4gdAoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCiAgICBpbXBvcnQgZG9jdGVzdAoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkK
+"""Affine 2D transformation matrix class.
+
+The Transform class implements various transformation matrix operations,
+both on the matrix itself, as well as on 2D coordinates.
+
+Transform instances are effectively immutable: all methods that operate on the
+transformation itself always return a new instance. This has as the
+interesting side effect that Transform instances are hashable, ie. they can be
+used as dictionary keys.
+
+This module exports the following symbols:
+
+Transform
+        this is the main class
+Identity
+        Transform instance set to the identity transformation
+Offset
+        Convenience function that returns a translating transformation
+Scale
+        Convenience function that returns a scaling transformation
+
+The DecomposedTransform class implements a transformation with separate
+translate, rotation, scale, skew, and transformation-center components.
+
+:Example:
+
+        >>> t = Transform(2, 0, 0, 3, 0, 0)
+        >>> t.transformPoint((100, 100))
+        (200, 300)
+        >>> t = Scale(2, 3)
+        >>> t.transformPoint((100, 100))
+        (200, 300)
+        >>> t.transformPoint((0, 0))
+        (0, 0)
+        >>> t = Offset(2, 3)
+        >>> t.transformPoint((100, 100))
+        (102, 103)
+        >>> t.transformPoint((0, 0))
+        (2, 3)
+        >>> t2 = t.scale(0.5)
+        >>> t2.transformPoint((100, 100))
+        (52.0, 53.0)
+        >>> import math
+        >>> t3 = t2.rotate(math.pi / 2)
+        >>> t3.transformPoint((0, 0))
+        (2.0, 3.0)
+        >>> t3.transformPoint((100, 100))
+        (-48.0, 53.0)
+        >>> t = Identity.scale(0.5).translate(100, 200).skew(0.1, 0.2)
+        >>> t.transformPoints([(0, 0), (1, 1), (100, 100)])
+        [(50.0, 100.0), (50.550167336042726, 100.60135501775433), (105.01673360427253, 160.13550177543362)]
+        >>>
+"""
+
+from __future__ import annotations
+
+import math
+from typing import NamedTuple
+from dataclasses import dataclass
+
+__all__ = ["Transform", "Identity", "Offset", "Scale", "DecomposedTransform"]
+
+
+_EPSILON = 1e-15
+_ONE_EPSILON = 1 - _EPSILON
+_MINUS_ONE_EPSILON = -1 + _EPSILON
+
+
+def _normSinCos(v: float) -> float:
+    if abs(v) < _EPSILON:
+        v = 0
+    elif v > _ONE_EPSILON:
+        v = 1
+    elif v < _MINUS_ONE_EPSILON:
+        v = -1
+    return v
+
+
+class Transform(NamedTuple):
+    """2x2 transformation matrix plus offset, a.k.a. Affine transform.
+    Transform instances are immutable: all transforming methods, eg.
+    rotate(), return a new Transform instance.
+
+    :Example:
+
+            >>> t = Transform()
+            >>> t
+            <Transform [1 0 0 1 0 0]>
+            >>> t.scale(2)
+            <Transform [2 0 0 2 0 0]>
+            >>> t.scale(2.5, 5.5)
+            <Transform [2.5 0 0 5.5 0 0]>
+            >>>
+            >>> t.scale(2, 3).transformPoint((100, 100))
+            (200, 300)
+
+    Transform's constructor takes six arguments, all of which are
+    optional, and can be used as keyword arguments::
+
+            >>> Transform(12)
+            <Transform [12 0 0 1 0 0]>
+            >>> Transform(dx=12)
+            <Transform [1 0 0 1 12 0]>
+            >>> Transform(yx=12)
+            <Transform [1 0 12 1 0 0]>
+
+    Transform instances also behave like sequences of length 6::
+
+            >>> len(Identity)
+            6
+            >>> list(Identity)
+            [1, 0, 0, 1, 0, 0]
+            >>> tuple(Identity)
+            (1, 0, 0, 1, 0, 0)
+
+    Transform instances are comparable::
+
+            >>> t1 = Identity.scale(2, 3).translate(4, 6)
+            >>> t2 = Identity.translate(8, 18).scale(2, 3)
+            >>> t1 == t2
+            1
+
+    But beware of floating point rounding errors::
+
+            >>> t1 = Identity.scale(0.2, 0.3).translate(0.4, 0.6)
+            >>> t2 = Identity.translate(0.08, 0.18).scale(0.2, 0.3)
+            >>> t1
+            <Transform [0.2 0 0 0.3 0.08 0.18]>
+            >>> t2
+            <Transform [0.2 0 0 0.3 0.08 0.18]>
+            >>> t1 == t2
+            0
+
+    Transform instances are hashable, meaning you can use them as
+    keys in dictionaries::
+
+            >>> d = {Scale(12, 13): None}
+            >>> d
+            {<Transform [12 0 0 13 0 0]>: None}
+
+    But again, beware of floating point rounding errors::
+
+            >>> t1 = Identity.scale(0.2, 0.3).translate(0.4, 0.6)
+            >>> t2 = Identity.translate(0.08, 0.18).scale(0.2, 0.3)
+            >>> t1
+            <Transform [0.2 0 0 0.3 0.08 0.18]>
+            >>> t2
+            <Transform [0.2 0 0 0.3 0.08 0.18]>
+            >>> d = {t1: None}
+            >>> d
+            {<Transform [0.2 0 0 0.3 0.08 0.18]>: None}
+            >>> d[t2]
+            Traceback (most recent call last):
+              File "<stdin>", line 1, in ?
+            KeyError: <Transform [0.2 0 0 0.3 0.08 0.18]>
+    """
+
+    xx: float = 1
+    xy: float = 0
+    yx: float = 0
+    yy: float = 1
+    dx: float = 0
+    dy: float = 0
+
+    def transformPoint(self, p):
+        """Transform a point.
+
+        :Example:
+
+                >>> t = Transform()
+                >>> t = t.scale(2.5, 5.5)
+                >>> t.transformPoint((100, 100))
+                (250.0, 550.0)
+        """
+        x, y = p
+        xx, xy, yx, yy, dx, dy = self
+        return (xx * x + yx * y + dx, xy * x + yy * y + dy)
+
+    def transformPoints(self, points):
+        """Transform a list of points.
+
+        :Example:
+
+                >>> t = Scale(2, 3)
+                >>> t.transformPoints([(0, 0), (0, 100), (100, 100), (100, 0)])
+                [(0, 0), (0, 300), (200, 300), (200, 0)]
+                >>>
+        """
+        xx, xy, yx, yy, dx, dy = self
+        return [(xx * x + yx * y + dx, xy * x + yy * y + dy) for x, y in points]
+
+    def transformVector(self, v):
+        """Transform an (dx, dy) vector, treating translation as zero.
+
+        :Example:
+
+                >>> t = Transform(2, 0, 0, 2, 10, 20)
+                >>> t.transformVector((3, -4))
+                (6, -8)
+                >>>
+        """
+        dx, dy = v
+        xx, xy, yx, yy = self[:4]
+        return (xx * dx + yx * dy, xy * dx + yy * dy)
+
+    def transformVectors(self, vectors):
+        """Transform a list of (dx, dy) vector, treating translation as zero.
+
+        :Example:
+                >>> t = Transform(2, 0, 0, 2, 10, 20)
+                >>> t.transformVectors([(3, -4), (5, -6)])
+                [(6, -8), (10, -12)]
+                >>>
+        """
+        xx, xy, yx, yy = self[:4]
+        return [(xx * dx + yx * dy, xy * dx + yy * dy) for dx, dy in vectors]
+
+    def translate(self, x: float = 0, y: float = 0):
+        """Return a new transformation, translated (offset) by x, y.
+
+        :Example:
+                >>> t = Transform()
+                >>> t.translate(20, 30)
+                <Transform [1 0 0 1 20 30]>
+                >>>
+        """
+        return self.transform((1, 0, 0, 1, x, y))
+
+    def scale(self, x: float = 1, y: float | None = None):
+        """Return a new transformation, scaled by x, y. The 'y' argument
+        may be None, which implies to use the x value for y as well.
+
+        :Example:
+                >>> t = Transform()
+                >>> t.scale(5)
+                <Transform [5 0 0 5 0 0]>
+                >>> t.scale(5, 6)
+                <Transform [5 0 0 6 0 0]>
+                >>>
+        """
+        if y is None:
+            y = x
+        return self.transform((x, 0, 0, y, 0, 0))
+
+    def rotate(self, angle: float):
+        """Return a new transformation, rotated by 'angle' (radians).
+
+        :Example:
+                >>> import math
+                >>> t = Transform()
+                >>> t.rotate(math.pi / 2)
+                <Transform [0 1 -1 0 0 0]>
+                >>>
+        """
+        c = _normSinCos(math.cos(angle))
+        s = _normSinCos(math.sin(angle))
+        return self.transform((c, s, -s, c, 0, 0))
+
+    def skew(self, x: float = 0, y: float = 0):
+        """Return a new transformation, skewed by x and y.
+
+        :Example:
+                >>> import math
+                >>> t = Transform()
+                >>> t.skew(math.pi / 4)
+                <Transform [1 0 1 1 0 0]>
+                >>>
+        """
+        return self.transform((1, math.tan(y), math.tan(x), 1, 0, 0))
+
+    def transform(self, other):
+        """Return a new transformation, transformed by another
+        transformation.
+
+        :Example:
+                >>> t = Transform(2, 0, 0, 3, 1, 6)
+                >>> t.transform((4, 3, 2, 1, 5, 6))
+                <Transform [8 9 4 3 11 24]>
+                >>>
+        """
+        xx1, xy1, yx1, yy1, dx1, dy1 = other
+        xx2, xy2, yx2, yy2, dx2, dy2 = self
+        return self.__class__(
+            xx1 * xx2 + xy1 * yx2,
+            xx1 * xy2 + xy1 * yy2,
+            yx1 * xx2 + yy1 * yx2,
+            yx1 * xy2 + yy1 * yy2,
+            xx2 * dx1 + yx2 * dy1 + dx2,
+            xy2 * dx1 + yy2 * dy1 + dy2,
+        )
+
+    def reverseTransform(self, other):
+        """Return a new transformation, which is the other transformation
+        transformed by self. self.reverseTransform(other) is equivalent to
+        other.transform(self).
+
+        :Example:
+                >>> t = Transform(2, 0, 0, 3, 1, 6)
+                >>> t.reverseTransform((4, 3, 2, 1, 5, 6))
+                <Transform [8 6 6 3 21 15]>
+                >>> Transform(4, 3, 2, 1, 5, 6).transform((2, 0, 0, 3, 1, 6))
+                <Transform [8 6 6 3 21 15]>
+                >>>
+        """
+        xx1, xy1, yx1, yy1, dx1, dy1 = self
+        xx2, xy2, yx2, yy2, dx2, dy2 = other
+        return self.__class__(
+            xx1 * xx2 + xy1 * yx2,
+            xx1 * xy2 + xy1 * yy2,
+            yx1 * xx2 + yy1 * yx2,
+            yx1 * xy2 + yy1 * yy2,
+            xx2 * dx1 + yx2 * dy1 + dx2,
+            xy2 * dx1 + yy2 * dy1 + dy2,
+        )
+
+    def inverse(self):
+        """Return the inverse transformation.
+
+        :Example:
+                >>> t = Identity.translate(2, 3).scale(4, 5)
+                >>> t.transformPoint((10, 20))
+                (42, 103)
+                >>> it = t.inverse()
+                >>> it.transformPoint((42, 103))
+                (10.0, 20.0)
+                >>>
+        """
+        if self == Identity:
+            return self
+        xx, xy, yx, yy, dx, dy = self
+        det = xx * yy - yx * xy
+        xx, xy, yx, yy = yy / det, -xy / det, -yx / det, xx / det
+        dx, dy = -xx * dx - yx * dy, -xy * dx - yy * dy
+        return self.__class__(xx, xy, yx, yy, dx, dy)
+
+    def toPS(self) -> str:
+        """Return a PostScript representation
+
+        :Example:
+
+                >>> t = Identity.scale(2, 3).translate(4, 5)
+                >>> t.toPS()
+                '[2 0 0 3 8 15]'
+                >>>
+        """
+        return "[%s %s %s %s %s %s]" % self
+
+    def toDecomposed(self) -> "DecomposedTransform":
+        """Decompose into a DecomposedTransform."""
+        return DecomposedTransform.fromTransform(self)
+
+    def __bool__(self) -> bool:
+        """Returns True if transform is not identity, False otherwise.
+
+        :Example:
+
+                >>> bool(Identity)
+                False
+                >>> bool(Transform())
+                False
+                >>> bool(Scale(1.))
+                False
+                >>> bool(Scale(2))
+                True
+                >>> bool(Offset())
+                False
+                >>> bool(Offset(0))
+                False
+                >>> bool(Offset(2))
+                True
+        """
+        return self != Identity
+
+    def __repr__(self) -> str:
+        return "<%s [%g %g %g %g %g %g]>" % ((self.__class__.__name__,) + self)
+
+
+Identity = Transform()
+
+
+def Offset(x: float = 0, y: float = 0) -> Transform:
+    """Return the identity transformation offset by x, y.
+
+    :Example:
+            >>> Offset(2, 3)
+            <Transform [1 0 0 1 2 3]>
+            >>>
+    """
+    return Transform(1, 0, 0, 1, x, y)
+
+
+def Scale(x: float, y: float | None = None) -> Transform:
+    """Return the identity transformation scaled by x, y. The 'y' argument
+    may be None, which implies to use the x value for y as well.
+
+    :Example:
+            >>> Scale(2, 3)
+            <Transform [2 0 0 3 0 0]>
+            >>>
+    """
+    if y is None:
+        y = x
+    return Transform(x, 0, 0, y, 0, 0)
+
+
+@dataclass
+class DecomposedTransform:
+    """The DecomposedTransform class implements a transformation with separate
+    translate, rotation, scale, skew, and transformation-center components.
+    """
+
+    translateX: float = 0
+    translateY: float = 0
+    rotation: float = 0  # in degrees, counter-clockwise
+    scaleX: float = 1
+    scaleY: float = 1
+    skewX: float = 0  # in degrees, clockwise
+    skewY: float = 0  # in degrees, counter-clockwise
+    tCenterX: float = 0
+    tCenterY: float = 0
+
+    def __bool__(self):
+        return (
+            self.translateX != 0
+            or self.translateY != 0
+            or self.rotation != 0
+            or self.scaleX != 1
+            or self.scaleY != 1
+            or self.skewX != 0
+            or self.skewY != 0
+            or self.tCenterX != 0
+            or self.tCenterY != 0
+        )
+
+    @classmethod
+    def fromTransform(self, transform):
+        """Return a DecomposedTransform() equivalent of this transformation.
+        The returned solution always has skewY = 0, and angle in the (-180, 180].
+
+        :Example:
+                >>> DecomposedTransform.fromTransform(Transform(3, 0, 0, 2, 0, 0))
+                DecomposedTransform(translateX=0, translateY=0, rotation=0.0, scaleX=3.0, scaleY=2.0, skewX=0.0, skewY=0.0, tCenterX=0, tCenterY=0)
+                >>> DecomposedTransform.fromTransform(Transform(0, 0, 0, 1, 0, 0))
+                DecomposedTransform(translateX=0, translateY=0, rotation=0.0, scaleX=0.0, scaleY=1.0, skewX=0.0, skewY=0.0, tCenterX=0, tCenterY=0)
+                >>> DecomposedTransform.fromTransform(Transform(0, 0, 1, 1, 0, 0))
+                DecomposedTransform(translateX=0, translateY=0, rotation=-45.0, scaleX=0.0, scaleY=1.4142135623730951, skewX=0.0, skewY=0.0, tCenterX=0, tCenterY=0)
+        """
+        # Adapted from an answer on
+        # https://math.stackexchange.com/questions/13150/extracting-rotation-scale-values-from-2d-transformation-matrix
+
+        a, b, c, d, x, y = transform
+
+        sx = math.copysign(1, a)
+        if sx < 0:
+            a *= sx
+            b *= sx
+
+        delta = a * d - b * c
+
+        rotation = 0
+        scaleX = scaleY = 0
+        skewX = 0
+
+        # Apply the QR-like decomposition.
+        if a != 0 or b != 0:
+            r = math.sqrt(a * a + b * b)
+            rotation = math.acos(a / r) if b >= 0 else -math.acos(a / r)
+            scaleX, scaleY = (r, delta / r)
+            skewX = math.atan((a * c + b * d) / (r * r))
+        elif c != 0 or d != 0:
+            s = math.sqrt(c * c + d * d)
+            rotation = math.atan2(-c, d)
+            if rotation == -math.pi:
+                rotation = math.pi
+            scaleX, scaleY = (delta / s, s)
+        else:
+            # a = b = c = d = 0
+            pass
+
+        return DecomposedTransform(
+            x,
+            y,
+            math.degrees(rotation),
+            scaleX * sx,
+            scaleY,
+            math.degrees(skewX) * sx,
+            0.0,
+            0,
+            0,
+        )
+
+    def toTransform(self) -> Transform:
+        """Return the Transform() equivalent of this transformation.
+
+        :Example:
+                >>> DecomposedTransform(scaleX=2, scaleY=2).toTransform()
+                <Transform [2 0 0 2 0 0]>
+                >>>
+        """
+        t = Transform()
+        t = t.translate(
+            self.translateX + self.tCenterX, self.translateY + self.tCenterY
+        )
+        t = t.rotate(math.radians(self.rotation))
+        t = t.scale(self.scaleX, self.scaleY)
+        t = t.skew(math.radians(self.skewX), math.radians(self.skewY))
+        t = t.translate(-self.tCenterX, -self.tCenterY)
+        return t
+
+
+if __name__ == "__main__":
+    import sys
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

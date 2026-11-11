@@ -1,1 +1,446 @@
-aW1wb3J0IGxvZ2dpbmcKaW1wb3J0IG9zCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlZmF1bHRkaWN0LCBuYW1lZHR1cGxlCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcwpmcm9tIGZ1bmN0b29scyBpbXBvcnQgY2FjaGVkX3Byb3BlcnR5LCByZWR1Y2UKZnJvbSBpdGVydG9vbHMgaW1wb3J0IGNoYWluCmZyb20gbWF0aCBpbXBvcnQgbG9nMgpmcm9tIHR5cGluZyBpbXBvcnQgRGVmYXVsdERpY3QsIERpY3QsIEl0ZXJhYmxlLCBMaXN0LCBTZXF1ZW5jZSwgVHVwbGUKCmZyb20gZm9udFRvb2xzLmNvbmZpZyBpbXBvcnQgT1BUSU9OUwpmcm9tIGZvbnRUb29scy5taXNjLmludFRvb2xzIGltcG9ydCBiaXRfY291bnQsIGJpdF9pbmRpY2VzCmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBvdEJhc2UsIG90VGFibGVzCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCkNPTVBSRVNTSU9OX0xFVkVMID0gT1BUSU9OU1tmIntfX25hbWVfX306Q09NUFJFU1NJT05fTEVWRUwiXQoKIyBLZXB0IGJlY2F1c2UgdWZvMmZ0IGRlcGVuZHMgb24gaXQsIHRvIGJlIHJlbW92ZWQgb25jZSB1Zm8yZnQgdXNlcyB0aGUgY29uZmlnIGluc3RlYWQKIyBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvMjU5MgpHUE9TX0NPTVBBQ1RfTU9ERV9FTlZfS0VZID0gIkZPTlRUT09MU19HUE9TX0NPTVBBQ1RfTU9ERSIKR1BPU19DT01QQUNUX01PREVfREVGQVVMVCA9IHN0cihDT01QUkVTU0lPTl9MRVZFTC5kZWZhdWx0KQoKCmRlZiBfY29tcHJlc3Npb25fbGV2ZWxfZnJvbV9lbnYoKSAtPiBpbnQ6CiAgICBlbnZfbGV2ZWwgPSBHUE9TX0NPTVBBQ1RfTU9ERV9ERUZBVUxUCiAgICBpZiBHUE9TX0NPTVBBQ1RfTU9ERV9FTlZfS0VZIGluIG9zLmVudmlyb246CiAgICAgICAgaW1wb3J0IHdhcm5pbmdzCgogICAgICAgIHdhcm5pbmdzLndhcm4oCiAgICAgICAgICAgIGYiJ3tHUE9TX0NPTVBBQ1RfTU9ERV9FTlZfS0VZfScgZW52aXJvbm1lbnQgdmFyaWFibGUgaXMgZGVwcmVjYXRlZC4gIgogICAgICAgICAgICAiUGxlYXNlIHNldCB0aGUgJ2ZvbnRUb29scy5vdGxMaWIub3B0aW1pemUuZ3BvczpDT01QUkVTU0lPTl9MRVZFTCcgb3B0aW9uICIKICAgICAgICAgICAgImluIFRURm9udC5jZmcuIiwKICAgICAgICAgICAgRGVwcmVjYXRpb25XYXJuaW5nLAogICAgICAgICkKCiAgICAgICAgZW52X2xldmVsID0gb3MuZW52aXJvbltHUE9TX0NPTVBBQ1RfTU9ERV9FTlZfS0VZXQogICAgaWYgbGVuKGVudl9sZXZlbCkgPT0gMSBhbmQgZW52X2xldmVsIGluICIwMTIzNDU2Nzg5IjoKICAgICAgICByZXR1cm4gaW50KGVudl9sZXZlbCkKICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJCYWQge0dQT1NfQ09NUEFDVF9NT0RFX0VOVl9LRVl9PXtlbnZfbGV2ZWx9IikKCgpkZWYgY29tcGFjdChmb250OiBUVEZvbnQsIGxldmVsOiBpbnQpIC0+IFRURm9udDoKICAgICMgSWRlYWwgcGxhbjoKICAgICMgIDEuIEZpbmQgbG9va3VwcyBvZiBMb29rdXAgVHlwZSAyOiBQYWlyIEFkanVzdG1lbnQgUG9zaXRpb25pbmcgU3VidGFibGUKICAgICMgICAgIGh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9ncG9zI2xvb2t1cC10eXBlLTItcGFpci1hZGp1c3RtZW50LXBvc2l0aW9uaW5nLXN1YnRhYmxlCiAgICAjICAyLiBFeHRyYWN0IGdseXBoLWdseXBoIGtlcm5pbmcgYW5kIGNsYXNzLWtlcm5pbmcgZnJvbSBhbGwgcHJlc2VudCBzdWJ0YWJsZXMKICAgICMgIDMuIFJlZ3JvdXAgaW50byBkaWZmZXJlbnQgc3VidGFibGUgYXJyYW5nZW1lbnRzCiAgICAjICA0LiBQdXQgYmFjayBpbnRvIHRoZSBsb29rdXAKICAgICMKICAgICMgQWN0dWFsIGltcGxlbWVudGF0aW9uOgogICAgIyAgMi4gT25seSBjbGFzcyBrZXJuaW5nIGlzIG9wdGltaXplZCBjdXJyZW50bHkKICAgICMgIDMuIElmIHRoZSBpbnB1dCBrZXJuaW5nIGlzIGFscmVhZHkgaW4gc2V2ZXJhbCBzdWJ0YWJsZXMsIHRoZSBzdWJ0YWJsZXMKICAgICMgICAgIGFyZSBub3QgZ3JvdXBlZCB0b2dldGhlciBmaXJzdDsgaW5zdGVhZCBlYWNoIHN1YnRhYmxlIGlzIHRyZWF0ZWQKICAgICMgICAgIGluZGVwZW5kZW50bHksIHNvIGN1cnJlbnRseSB0aGlzIHN0ZXAgaXM6CiAgICAjICAgICBTcGxpdCBleGlzdGluZyBzdWJ0YWJsZXMgaW50byBtb3JlIHNtYWxsZXIgc3VidGFibGVzCiAgICBncG9zID0gZm9udC5nZXQoIkdQT1MiKQoKICAgICMgSWYgdGhlIGZvbnQgZG9lcyBub3QgY29udGFpbiBhIEdQT1MgdGFibGUsIHRoZXJlIGlzIG5vdGhpbmcgdG8gZG8uCiAgICBpZiBncG9zIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIGZvbnQKCiAgICBsb29rdXBfbGlzdCA9IG90VGFibGVzLl9nZXRMb29rdXBMaXN0KGdwb3MudGFibGUpCiAgICBpZiBsb29rdXBfbGlzdCBpcyBOb25lOgogICAgICAgIHJldHVybiBmb250CgogICAgZm9yIGxvb2t1cCBpbiBsb29rdXBfbGlzdC5Mb29rdXA6CiAgICAgICAgaWYgbG9va3VwLkxvb2t1cFR5cGUgPT0gMjoKICAgICAgICAgICAgY29tcGFjdF9sb29rdXAoZm9udCwgbGV2ZWwsIGxvb2t1cCkKICAgICAgICBlbGlmIGxvb2t1cC5Mb29rdXBUeXBlID09IDkgYW5kIGxvb2t1cC5TdWJUYWJsZVswXS5FeHRlbnNpb25Mb29rdXBUeXBlID09IDI6CiAgICAgICAgICAgIGNvbXBhY3RfZXh0X2xvb2t1cChmb250LCBsZXZlbCwgbG9va3VwKQoKICAgIHJldHVybiBmb250CgoKZGVmIGNvbXBhY3RfbG9va3VwKGZvbnQ6IFRURm9udCwgbGV2ZWw6IGludCwgbG9va3VwOiBvdFRhYmxlcy5Mb29rdXApIC0+IE5vbmU6CiAgICBuZXdfc3VidGFibGVzID0gY29tcGFjdF9wYWlyX3Bvcyhmb250LCBsZXZlbCwgbG9va3VwLlN1YlRhYmxlKQogICAgbG9va3VwLlN1YlRhYmxlID0gbmV3X3N1YnRhYmxlcwogICAgbG9va3VwLlN1YlRhYmxlQ291bnQgPSBsZW4obmV3X3N1YnRhYmxlcykKCgpkZWYgY29tcGFjdF9leHRfbG9va3VwKGZvbnQ6IFRURm9udCwgbGV2ZWw6IGludCwgbG9va3VwOiBvdFRhYmxlcy5Mb29rdXApIC0+IE5vbmU6CiAgICBuZXdfc3VidGFibGVzID0gY29tcGFjdF9wYWlyX3BvcygKICAgICAgICBmb250LCBsZXZlbCwgW2V4dF9zdWJ0YWJsZS5FeHRTdWJUYWJsZSBmb3IgZXh0X3N1YnRhYmxlIGluIGxvb2t1cC5TdWJUYWJsZV0KICAgICkKICAgIG5ld19leHRfc3VidGFibGVzID0gW10KICAgIGZvciBzdWJ0YWJsZSBpbiBuZXdfc3VidGFibGVzOgogICAgICAgIGV4dF9zdWJ0YWJsZSA9IG90VGFibGVzLkV4dGVuc2lvblBvcygpCiAgICAgICAgZXh0X3N1YnRhYmxlLkZvcm1hdCA9IDEKICAgICAgICBleHRfc3VidGFibGUuRXh0U3ViVGFibGUgPSBzdWJ0YWJsZQogICAgICAgIG5ld19leHRfc3VidGFibGVzLmFwcGVuZChleHRfc3VidGFibGUpCiAgICBsb29rdXAuU3ViVGFibGUgPSBuZXdfZXh0X3N1YnRhYmxlcwogICAgbG9va3VwLlN1YlRhYmxlQ291bnQgPSBsZW4obmV3X2V4dF9zdWJ0YWJsZXMpCgoKZGVmIGNvbXBhY3RfcGFpcl9wb3MoCiAgICBmb250OiBUVEZvbnQsIGxldmVsOiBpbnQsIHN1YnRhYmxlczogU2VxdWVuY2Vbb3RUYWJsZXMuUGFpclBvc10KKSAtPiBTZXF1ZW5jZVtvdFRhYmxlcy5QYWlyUG9zXToKICAgIG5ld19zdWJ0YWJsZXMgPSBbXQogICAgZm9yIHN1YnRhYmxlIGluIHN1YnRhYmxlczoKICAgICAgICBpZiBzdWJ0YWJsZS5Gb3JtYXQgaW4gKDEsIDMpOgogICAgICAgICAgICAjIE5vdCBkb2luZyBhbnl0aGluZyB0byBnbHlwaC1wYWlyIGZvcm1hdHMgKHlldD8pCiAgICAgICAgICAgIG5ld19zdWJ0YWJsZXMuYXBwZW5kKHN1YnRhYmxlKQogICAgICAgIGVsaWYgc3VidGFibGUuRm9ybWF0IGluICgyLCA0KToKICAgICAgICAgICAgY2xhc3Nfc3VidGFibGVzID0gY29tcGFjdF9jbGFzc19wYWlycyhmb250LCBsZXZlbCwgc3VidGFibGUpCiAgICAgICAgICAgIGZvciBjbGFzc19zdWJ0YWJsZSBpbiBjbGFzc19zdWJ0YWJsZXM6CiAgICAgICAgICAgICAgICBjbGFzc19zdWJ0YWJsZS5Gb3JtYXQgPSBzdWJ0YWJsZS5Gb3JtYXQKICAgICAgICAgICAgbmV3X3N1YnRhYmxlcy5leHRlbmQoY2xhc3Nfc3VidGFibGVzKQogICAgcmV0dXJuIG5ld19zdWJ0YWJsZXMKCgpkZWYgY29tcGFjdF9jbGFzc19wYWlycygKICAgIGZvbnQ6IFRURm9udCwgbGV2ZWw6IGludCwgc3VidGFibGU6IG90VGFibGVzLlBhaXJQb3MKKSAtPiBMaXN0W290VGFibGVzLlBhaXJQb3NdOgogICAgZnJvbSBmb250VG9vbHMub3RsTGliLmJ1aWxkZXIgaW1wb3J0IGJ1aWxkUGFpclBvc0NsYXNzZXNTdWJ0YWJsZQoKICAgIHN1YnRhYmxlcyA9IFtdCiAgICBjbGFzc2VzMTogRGVmYXVsdERpY3RbaW50LCBMaXN0W3N0cl1dID0gZGVmYXVsdGRpY3QobGlzdCkKICAgIGZvciBnIGluIHN1YnRhYmxlLkNvdmVyYWdlLmdseXBoczoKICAgICAgICBjbGFzc2VzMVtzdWJ0YWJsZS5DbGFzc0RlZjEuY2xhc3NEZWZzLmdldChnLCAwKV0uYXBwZW5kKGcpCiAgICBjbGFzc2VzMjogRGVmYXVsdERpY3RbaW50LCBMaXN0W3N0cl1dID0gZGVmYXVsdGRpY3QobGlzdCkKICAgIGZvciBnLCBpIGluIHN1YnRhYmxlLkNsYXNzRGVmMi5jbGFzc0RlZnMuaXRlbXMoKToKICAgICAgICBjbGFzc2VzMltpXS5hcHBlbmQoZykKICAgIGFsbF9wYWlycyA9IHt9CiAgICBmb3IgaSwgY2xhc3MxIGluIGVudW1lcmF0ZShzdWJ0YWJsZS5DbGFzczFSZWNvcmQpOgogICAgICAgIGZvciBqLCBjbGFzczIgaW4gZW51bWVyYXRlKGNsYXNzMS5DbGFzczJSZWNvcmQpOgogICAgICAgICAgICBpZiBpc19yZWFsbHlfemVybyhjbGFzczIpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgYWxsX3BhaXJzWyh0dXBsZShzb3J0ZWQoY2xhc3NlczFbaV0pKSwgdHVwbGUoc29ydGVkKGNsYXNzZXMyW2pdKSkpXSA9ICgKICAgICAgICAgICAgICAgIGdldGF0dHIoY2xhc3MyLCAiVmFsdWUxIiwgTm9uZSksCiAgICAgICAgICAgICAgICBnZXRhdHRyKGNsYXNzMiwgIlZhbHVlMiIsIE5vbmUpLAogICAgICAgICAgICApCiAgICBncm91cGVkX3BhaXJzID0gY2x1c3Rlcl9wYWlyc19ieV9jbGFzczJfY292ZXJhZ2VfY3VzdG9tX2Nvc3QoZm9udCwgYWxsX3BhaXJzLCBsZXZlbCkKICAgIGZvciBwYWlycyBpbiBncm91cGVkX3BhaXJzOgogICAgICAgIHN1YnRhYmxlcy5hcHBlbmQoYnVpbGRQYWlyUG9zQ2xhc3Nlc1N1YnRhYmxlKHBhaXJzLCBmb250LmdldFJldmVyc2VHbHlwaE1hcCgpKSkKICAgIHJldHVybiBzdWJ0YWJsZXMKCgpkZWYgaXNfcmVhbGx5X3plcm8oY2xhc3MyOiBvdFRhYmxlcy5DbGFzczJSZWNvcmQpIC0+IGJvb2w6CiAgICB2MSA9IGdldGF0dHIoY2xhc3MyLCAiVmFsdWUxIiwgTm9uZSkKICAgIHYyID0gZ2V0YXR0cihjbGFzczIsICJWYWx1ZTIiLCBOb25lKQogICAgcmV0dXJuICh2MSBpcyBOb25lIG9yIHYxLmdldEVmZmVjdGl2ZUZvcm1hdCgpID09IDApIGFuZCAoCiAgICAgICAgdjIgaXMgTm9uZSBvciB2Mi5nZXRFZmZlY3RpdmVGb3JtYXQoKSA9PSAwCiAgICApCgoKUGFpcnMgPSBEaWN0WwogICAgVHVwbGVbVHVwbGVbc3RyLCAuLi5dLCBUdXBsZVtzdHIsIC4uLl1dLAogICAgVHVwbGVbb3RCYXNlLlZhbHVlUmVjb3JkLCBvdEJhc2UuVmFsdWVSZWNvcmRdLApdCgoKIyBBZGFwdGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvYmxvYi9mNjRmMGI0MmYyZDExNjNiMmQ4NTE5NGUwOTc5ZGVmNTM5ZjVkY2EzL0xpYi9mb250VG9vbHMvdHRMaWIvdGFibGVzL290VGFibGVzLnB5I0w5MzUtTDk1OApkZWYgX2dldENsYXNzUmFuZ2VzKGdseXBoSURzOiBJdGVyYWJsZVtpbnRdKToKICAgIGdseXBoSURzID0gc29ydGVkKGdseXBoSURzKQogICAgbGFzdCA9IGdseXBoSURzWzBdCiAgICByYW5nZXMgPSBbW2xhc3RdXQogICAgZm9yIGdseXBoSUQgaW4gZ2x5cGhJRHNbMTpdOgogICAgICAgIGlmIGdseXBoSUQgIT0gbGFzdCArIDE6CiAgICAgICAgICAgIHJhbmdlc1stMV0uYXBwZW5kKGxhc3QpCiAgICAgICAgICAgIHJhbmdlcy5hcHBlbmQoW2dseXBoSURdKQogICAgICAgIGxhc3QgPSBnbHlwaElECiAgICByYW5nZXNbLTFdLmFwcGVuZChsYXN0KQogICAgcmV0dXJuIHJhbmdlcywgZ2x5cGhJRHNbMF0sIGdseXBoSURzWy0xXQoKCiMgQWRhcHRlZCBmcm9tIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2Jsb2IvZjY0ZjBiNDJmMmQxMTYzYjJkODUxOTRlMDk3OWRlZjUzOWY1ZGNhMy9MaWIvZm9udFRvb2xzL3R0TGliL3RhYmxlcy9vdFRhYmxlcy5weSNMOTYwLUw5ODkKZGVmIF9jbGFzc0RlZl9ieXRlcygKICAgIGNsYXNzX2RhdGE6IExpc3RbVHVwbGVbTGlzdFtUdXBsZVtpbnQsIGludF1dLCBpbnQsIGludF1dLAogICAgY2xhc3NfaWRzOiBMaXN0W2ludF0sCiAgICBjb3ZlcmFnZT1GYWxzZSwKKToKICAgIGlmIG5vdCBjbGFzc19pZHM6CiAgICAgICAgcmV0dXJuIDAKICAgIGZpcnN0X3JhbmdlcywgbWluX2dseXBoX2lkLCBtYXhfZ2x5cGhfaWQgPSBjbGFzc19kYXRhW2NsYXNzX2lkc1swXV0KICAgIHJhbmdlX2NvdW50ID0gbGVuKGZpcnN0X3JhbmdlcykKICAgIGZvciBpIGluIGNsYXNzX2lkc1sxOl06CiAgICAgICAgZGF0YSA9IGNsYXNzX2RhdGFbaV0KICAgICAgICByYW5nZV9jb3VudCArPSBsZW4oZGF0YVswXSkKICAgICAgICBtaW5fZ2x5cGhfaWQgPSBtaW4obWluX2dseXBoX2lkLCBkYXRhWzFdKQogICAgICAgIG1heF9nbHlwaF9pZCA9IG1heChtYXhfZ2x5cGhfaWQsIGRhdGFbMl0pCiAgICBnbHlwaENvdW50ID0gbWF4X2dseXBoX2lkIC0gbWluX2dseXBoX2lkICsgMQogICAgIyBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvY2hhcHRlcjIjY2xhc3MtZGVmaW5pdGlvbi10YWJsZS1mb3JtYXQtMQogICAgZm9ybWF0MV9ieXRlcyA9IDYgKyBnbHlwaENvdW50ICogMgogICAgIyBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvY2hhcHRlcjIjY2xhc3MtZGVmaW5pdGlvbi10YWJsZS1mb3JtYXQtMgogICAgZm9ybWF0Ml9ieXRlcyA9IDQgKyByYW5nZV9jb3VudCAqIDYKICAgIHJldHVybiBtaW4oZm9ybWF0MV9ieXRlcywgZm9ybWF0Ml9ieXRlcykKCgpDbHVzdGVyaW5nQ29udGV4dCA9IG5hbWVkdHVwbGUoCiAgICAiQ2x1c3RlcmluZ0NvbnRleHQiLAogICAgWwogICAgICAgICJsaW5lcyIsCiAgICAgICAgImFsbF9jbGFzczEiLAogICAgICAgICJhbGxfY2xhc3MxX2RhdGEiLAogICAgICAgICJhbGxfY2xhc3MyX2RhdGEiLAogICAgICAgICJ2YWx1ZUZvcm1hdDFfYnl0ZXMiLAogICAgICAgICJ2YWx1ZUZvcm1hdDJfYnl0ZXMiLAogICAgXSwKKQoKCkBkYXRhY2xhc3MKY2xhc3MgQ2x1c3RlcjoKICAgIGN0eDogQ2x1c3RlcmluZ0NvbnRleHQKICAgIGluZGljZXNfYml0bWFzazogaW50CgogICAgQGNhY2hlZF9wcm9wZXJ0eQogICAgZGVmIGluZGljZXMoc2VsZik6CiAgICAgICAgcmV0dXJuIGJpdF9pbmRpY2VzKHNlbGYuaW5kaWNlc19iaXRtYXNrKQoKICAgIEBjYWNoZWRfcHJvcGVydHkKICAgIGRlZiBjb2x1bW5faW5kaWNlcyhzZWxmKToKICAgICAgICAjIEluZGljZXMgb2YgY29sdW1ucyB0aGF0IGhhdmUgYSAxIGluIGF0IGxlYXN0IDEgbGluZQogICAgICAgICMgICA9PiBiaW5hcnkgT1IgYWxsIHRoZSBsaW5lcwogICAgICAgIGJpdG1hc2sgPSByZWR1Y2UoaW50Ll9fb3JfXywgKHNlbGYuY3R4LmxpbmVzW2ldIGZvciBpIGluIHNlbGYuaW5kaWNlcykpCiAgICAgICAgcmV0dXJuIGJpdF9pbmRpY2VzKGJpdG1hc2spCgogICAgQHByb3BlcnR5CiAgICBkZWYgd2lkdGgoc2VsZik6CiAgICAgICAgIyBBZGQgMSBiZWNhdXNlIENsYXNzMj0wIGNhbm5vdCBiZSB1c2VkIGJ1dCBuZWVkcyB0byBiZSBlbmNvZGVkLgogICAgICAgIHJldHVybiBsZW4oc2VsZi5jb2x1bW5faW5kaWNlcykgKyAxCgogICAgQGNhY2hlZF9wcm9wZXJ0eQogICAgZGVmIGNvc3Qoc2VsZik6CiAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgIyAyIGJ5dGVzIHRvIHN0b3JlIHRoZSBvZmZzZXQgdG8gdGhpcyBzdWJ0YWJsZSBpbiB0aGUgTG9va3VwIHRhYmxlIGFib3ZlCiAgICAgICAgICAgIDIKICAgICAgICAgICAgIyBDb250ZW50cyBvZiB0aGUgc3VidGFibGUKICAgICAgICAgICAgIyBGcm9tOiBodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvZ3BvcyNwYWlyLWFkanVzdG1lbnQtcG9zaXRpb25pbmctZm9ybWF0LTItY2xhc3MtcGFpci1hZGp1c3RtZW50CiAgICAgICAgICAgICMgdWludDE2CXBvc0Zvcm1hdAlGb3JtYXQgaWRlbnRpZmllcjogZm9ybWF0ID0gMgogICAgICAgICAgICArIDIKICAgICAgICAgICAgIyBPZmZzZXQxNgljb3ZlcmFnZU9mZnNldAlPZmZzZXQgdG8gQ292ZXJhZ2UgdGFibGUsIGZyb20gYmVnaW5uaW5nIG9mIFBhaXJQb3Mgc3VidGFibGUuCiAgICAgICAgICAgICsgMgogICAgICAgICAgICArIHNlbGYuY292ZXJhZ2VfYnl0ZXMKICAgICAgICAgICAgIyB1aW50MTYJdmFsdWVGb3JtYXQxCVZhbHVlUmVjb3JkIGRlZmluaXRpb24g4oCUIGZvciB0aGUgZmlyc3QgZ2x5cGggb2YgdGhlIHBhaXIgKG1heSBiZSB6ZXJvKS4KICAgICAgICAgICAgKyAyCiAgICAgICAgICAgICMgdWludDE2CXZhbHVlRm9ybWF0MglWYWx1ZVJlY29yZCBkZWZpbml0aW9uIOKAlCBmb3IgdGhlIHNlY29uZCBnbHlwaCBvZiB0aGUgcGFpciAobWF5IGJlIHplcm8pLgogICAgICAgICAgICArIDIKICAgICAgICAgICAgIyBPZmZzZXQxNgljbGFzc0RlZjFPZmZzZXQJT2Zmc2V0IHRvIENsYXNzRGVmIHRhYmxlLCBmcm9tIGJlZ2lubmluZyBvZiBQYWlyUG9zIHN1YnRhYmxlIOKAlCBmb3IgdGhlIGZpcnN0IGdseXBoIG9mIHRoZSBwYWlyLgogICAgICAgICAgICArIDIKICAgICAgICAgICAgKyBzZWxmLmNsYXNzRGVmMV9ieXRlcwogICAgICAgICAgICAjIE9mZnNldDE2CWNsYXNzRGVmMk9mZnNldAlPZmZzZXQgdG8gQ2xhc3NEZWYgdGFibGUsIGZyb20gYmVnaW5uaW5nIG9mIFBhaXJQb3Mgc3VidGFibGUg4oCUIGZvciB0aGUgc2Vjb25kIGdseXBoIG9mIHRoZSBwYWlyLgogICAgICAgICAgICArIDIKICAgICAgICAgICAgKyBzZWxmLmNsYXNzRGVmMl9ieXRlcwogICAgICAgICAgICAjIHVpbnQxNgljbGFzczFDb3VudAlOdW1iZXIgb2YgY2xhc3NlcyBpbiBjbGFzc0RlZjEgdGFibGUg4oCUIGluY2x1ZGVzIENsYXNzIDAuCiAgICAgICAgICAgICsgMgogICAgICAgICAgICAjIHVpbnQxNgljbGFzczJDb3VudAlOdW1iZXIgb2YgY2xhc3NlcyBpbiBjbGFzc0RlZjIgdGFibGUg4oCUIGluY2x1ZGVzIENsYXNzIDAuCiAgICAgICAgICAgICsgMgogICAgICAgICAgICAjIENsYXNzMVJlY29yZAljbGFzczFSZWNvcmRzW2NsYXNzMUNvdW50XQlBcnJheSBvZiBDbGFzczEgcmVjb3Jkcywgb3JkZXJlZCBieSBjbGFzc2VzIGluIGNsYXNzRGVmMS4KICAgICAgICAgICAgKyAoc2VsZi5jdHgudmFsdWVGb3JtYXQxX2J5dGVzICsgc2VsZi5jdHgudmFsdWVGb3JtYXQyX2J5dGVzKQogICAgICAgICAgICAqIGxlbihzZWxmLmluZGljZXMpCiAgICAgICAgICAgICogc2VsZi53aWR0aAogICAgICAgICkKCiAgICBAcHJvcGVydHkKICAgIGRlZiBjb3ZlcmFnZV9ieXRlcyhzZWxmKToKICAgICAgICBmb3JtYXQxX2J5dGVzID0gKAogICAgICAgICAgICAjIEZyb20gaHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2NoYXB0ZXIyI2NvdmVyYWdlLWZvcm1hdC0xCiAgICAgICAgICAgICMgdWludDE2CWNvdmVyYWdlRm9ybWF0CUZvcm1hdCBpZGVudGlmaWVyIOKAlCBmb3JtYXQgPSAxCiAgICAgICAgICAgICMgdWludDE2CWdseXBoQ291bnQJTnVtYmVyIG9mIGdseXBocyBpbiB0aGUgZ2x5cGggYXJyYXkKICAgICAgICAgICAgNAogICAgICAgICAgICAjIHVpbnQxNglnbHlwaEFycmF5W2dseXBoQ291bnRdCUFycmF5IG9mIGdseXBoIElEcyDigJQgaW4gbnVtZXJpY2FsIG9yZGVyCiAgICAgICAgICAgICsgc3VtKGxlbihzZWxmLmN0eC5hbGxfY2xhc3MxW2ldKSBmb3IgaSBpbiBzZWxmLmluZGljZXMpICogMgogICAgICAgICkKICAgICAgICByYW5nZXMgPSBzb3J0ZWQoCiAgICAgICAgICAgIGNoYWluLmZyb21faXRlcmFibGUoc2VsZi5jdHguYWxsX2NsYXNzMV9kYXRhW2ldWzBdIGZvciBpIGluIHNlbGYuaW5kaWNlcykKICAgICAgICApCiAgICAgICAgbWVyZ2VkX3JhbmdlX2NvdW50ID0gMAogICAgICAgIGxhc3QgPSBOb25lCiAgICAgICAgZm9yIHN0YXJ0LCBlbmQgaW4gcmFuZ2VzOgogICAgICAgICAgICBpZiBsYXN0IGlzIG5vdCBOb25lIGFuZCBzdGFydCAhPSBsYXN0ICsgMToKICAgICAgICAgICAgICAgIG1lcmdlZF9yYW5nZV9jb3VudCArPSAxCiAgICAgICAgICAgIGxhc3QgPSBlbmQKICAgICAgICBmb3JtYXQyX2J5dGVzID0gKAogICAgICAgICAgICAjIEZyb20gaHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2NoYXB0ZXIyI2NvdmVyYWdlLWZvcm1hdC0yCiAgICAgICAgICAgICMgdWludDE2CWNvdmVyYWdlRm9ybWF0CUZvcm1hdCBpZGVudGlmaWVyIOKAlCBmb3JtYXQgPSAyCiAgICAgICAgICAgICMgdWludDE2CXJhbmdlQ291bnQJTnVtYmVyIG9mIFJhbmdlUmVjb3JkcwogICAgICAgICAgICA0CiAgICAgICAgICAgICMgUmFuZ2VSZWNvcmQJcmFuZ2VSZWNvcmRzW3JhbmdlQ291bnRdCUFycmF5IG9mIGdseXBoIHJhbmdlcyDigJQgb3JkZXJlZCBieSBzdGFydEdseXBoSUQuCiAgICAgICAgICAgICMgdWludDE2CXN0YXJ0R2x5cGhJRAlGaXJzdCBnbHlwaCBJRCBpbiB0aGUgcmFuZ2UKICAgICAgICAgICAgIyB1aW50MTYJZW5kR2x5cGhJRAlMYXN0IGdseXBoIElEIGluIHRoZSByYW5nZQogICAgICAgICAgICAjIHVpbnQxNglzdGFydENvdmVyYWdlSW5kZXgJQ292ZXJhZ2UgSW5kZXggb2YgZmlyc3QgZ2x5cGggSUQgaW4gcmFuZ2UKICAgICAgICAgICAgKyBtZXJnZWRfcmFuZ2VfY291bnQgKiA2CiAgICAgICAgKQogICAgICAgIHJldHVybiBtaW4oZm9ybWF0MV9ieXRlcywgZm9ybWF0Ml9ieXRlcykKCiAgICBAcHJvcGVydHkKICAgIGRlZiBjbGFzc0RlZjFfYnl0ZXMoc2VsZik6CiAgICAgICAgIyBXZSBjYW4gc2tpcCBlbmNvZGluZyBvbmUgb2YgdGhlIENsYXNzMSBkZWZpbml0aW9ucywgYW5kIHVzZQogICAgICAgICMgQ2xhc3MxPTAgdG8gcmVwcmVzZW50IGl0IGluc3RlYWQsIGJlY2F1c2UgQ2xhc3MxIGlzIGdhdGVkIGJ5IHRoZQogICAgICAgICMgQ292ZXJhZ2UgZGVmaW5pdGlvbi4gVXNlIENsYXNzMT0wIGZvciB0aGUgaGlnaGVzdCBieXRlIHNhdmluZ3MuCiAgICAgICAgIyBHb2luZyB0aHJvdWdoIGFsbCBvcHRpb25zIHRha2VzIHRvbyBsb25nLCBwaWNrIHRoZSBiaWdnZXN0IGNsYXNzCiAgICAgICAgIyA9IHdoYXQgaGFwcGVucyBpbiBvdGxMaWIuYnVpbGRlci5DbGFzc0RlZkJ1aWxkZXIuY2xhc3NlcygpCiAgICAgICAgYmlnZ2VzdF9pbmRleCA9IG1heChzZWxmLmluZGljZXMsIGtleT1sYW1iZGEgaTogbGVuKHNlbGYuY3R4LmFsbF9jbGFzczFbaV0pKQogICAgICAgIHJldHVybiBfY2xhc3NEZWZfYnl0ZXMoCiAgICAgICAgICAgIHNlbGYuY3R4LmFsbF9jbGFzczFfZGF0YSwgW2kgZm9yIGkgaW4gc2VsZi5pbmRpY2VzIGlmIGkgIT0gYmlnZ2VzdF9pbmRleF0KICAgICAgICApCgogICAgQHByb3BlcnR5CiAgICBkZWYgY2xhc3NEZWYyX2J5dGVzKHNlbGYpOgogICAgICAgICMgQWxsIENsYXNzMiBuZWVkIHRvIGJlIGVuY29kZWQgYmVjYXVzZSB3ZSBjYW4ndCB1c2UgQ2xhc3MyPTAKICAgICAgICByZXR1cm4gX2NsYXNzRGVmX2J5dGVzKHNlbGYuY3R4LmFsbF9jbGFzczJfZGF0YSwgc2VsZi5jb2x1bW5faW5kaWNlcykKCgpkZWYgY2x1c3Rlcl9wYWlyc19ieV9jbGFzczJfY292ZXJhZ2VfY3VzdG9tX2Nvc3QoCiAgICBmb250OiBUVEZvbnQsCiAgICBwYWlyczogUGFpcnMsCiAgICBjb21wcmVzc2lvbjogaW50ID0gNSwKKSAtPiBMaXN0W1BhaXJzXToKICAgIGlmIG5vdCBwYWlyczoKICAgICAgICAjIFRoZSBzdWJ0YWJsZSB3YXMgYWN0dWFsbHkgZW1wdHk/CiAgICAgICAgcmV0dXJuIFtwYWlyc10KCiAgICAjIFNvcnRlZCBmb3IgcmVwcm9kdWNpYmlsaXR5L2RldGVybWluaXNtCiAgICBhbGxfY2xhc3MxID0gc29ydGVkKHNldChwYWlyWzBdIGZvciBwYWlyIGluIHBhaXJzKSkKICAgIGFsbF9jbGFzczIgPSBzb3J0ZWQoc2V0KHBhaXJbMV0gZm9yIHBhaXIgaW4gcGFpcnMpKQoKICAgICMgVXNlIFB5dGhvbidzIGJpZyBpbnRzIGZvciBiaW5hcnkgdmVjdG9ycyByZXByZXNlbnRpbmcgZWFjaCBsaW5lCiAgICBsaW5lcyA9IFsKICAgICAgICBzdW0oCiAgICAgICAgICAgIDEgPDwgaSBpZiAoY2xhc3MxLCBjbGFzczIpIGluIHBhaXJzIGVsc2UgMAogICAgICAgICAgICBmb3IgaSwgY2xhc3MyIGluIGVudW1lcmF0ZShhbGxfY2xhc3MyKQogICAgICAgICkKICAgICAgICBmb3IgY2xhc3MxIGluIGFsbF9jbGFzczEKICAgIF0KCiAgICAjIE1hcCBnbHlwaCBuYW1lcyB0byBpZHMgYW5kIHdvcmsgd2l0aCBpbnRzIHRocm91Z2hvdXQgZm9yIENsYXNzRGVmIGZvcm1hdHMKICAgIG5hbWVfdG9faWQgPSBmb250LmdldFJldmVyc2VHbHlwaE1hcCgpCiAgICAjIEVhY2ggZW50cnkgaW4gdGhlIGFycmF5cyBiZWxvdyBpcyAocmFuZ2VfY291bnQsIG1pbl9nbHlwaF9pZCwgbWF4X2dseXBoX2lkKQogICAgYWxsX2NsYXNzMV9kYXRhID0gWwogICAgICAgIF9nZXRDbGFzc1JhbmdlcyhuYW1lX3RvX2lkW25hbWVdIGZvciBuYW1lIGluIGNscykgZm9yIGNscyBpbiBhbGxfY2xhc3MxCiAgICBdCiAgICBhbGxfY2xhc3MyX2RhdGEgPSBbCiAgICAgICAgX2dldENsYXNzUmFuZ2VzKG5hbWVfdG9faWRbbmFtZV0gZm9yIG5hbWUgaW4gY2xzKSBmb3IgY2xzIGluIGFsbF9jbGFzczIKICAgIF0KCiAgICBmb3JtYXQxID0gMAogICAgZm9ybWF0MiA9IDAKICAgIGZvciBwYWlyLCB2YWx1ZSBpbiBwYWlycy5pdGVtcygpOgogICAgICAgIGZvcm1hdDEgfD0gdmFsdWVbMF0uZ2V0RWZmZWN0aXZlRm9ybWF0KCkgaWYgdmFsdWVbMF0gZWxzZSAwCiAgICAgICAgZm9ybWF0MiB8PSB2YWx1ZVsxXS5nZXRFZmZlY3RpdmVGb3JtYXQoKSBpZiB2YWx1ZVsxXSBlbHNlIDAKICAgIHZhbHVlRm9ybWF0MV9ieXRlcyA9IGJpdF9jb3VudChmb3JtYXQxKSAqIDIKICAgIHZhbHVlRm9ybWF0Ml9ieXRlcyA9IGJpdF9jb3VudChmb3JtYXQyKSAqIDIKCiAgICBjdHggPSBDbHVzdGVyaW5nQ29udGV4dCgKICAgICAgICBsaW5lcywKICAgICAgICBhbGxfY2xhc3MxLAogICAgICAgIGFsbF9jbGFzczFfZGF0YSwKICAgICAgICBhbGxfY2xhc3MyX2RhdGEsCiAgICAgICAgdmFsdWVGb3JtYXQxX2J5dGVzLAogICAgICAgIHZhbHVlRm9ybWF0Ml9ieXRlcywKICAgICkKCiAgICBjbHVzdGVyX2NhY2hlOiBEaWN0W2ludCwgQ2x1c3Rlcl0gPSB7fQoKICAgIGRlZiBtYWtlX2NsdXN0ZXIoaW5kaWNlczogaW50KSAtPiBDbHVzdGVyOgogICAgICAgIGNsdXN0ZXIgPSBjbHVzdGVyX2NhY2hlLmdldChpbmRpY2VzLCBOb25lKQogICAgICAgIGlmIGNsdXN0ZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHJldHVybiBjbHVzdGVyCiAgICAgICAgY2x1c3RlciA9IENsdXN0ZXIoY3R4LCBpbmRpY2VzKQogICAgICAgIGNsdXN0ZXJfY2FjaGVbaW5kaWNlc10gPSBjbHVzdGVyCiAgICAgICAgcmV0dXJuIGNsdXN0ZXIKCiAgICBkZWYgbWVyZ2UoY2x1c3RlcjogQ2x1c3Rlciwgb3RoZXI6IENsdXN0ZXIpIC0+IENsdXN0ZXI6CiAgICAgICAgcmV0dXJuIG1ha2VfY2x1c3RlcihjbHVzdGVyLmluZGljZXNfYml0bWFzayB8IG90aGVyLmluZGljZXNfYml0bWFzaykKCiAgICAjIEFnZ2xvbWVyYXRpdmUgY2x1c3RlcmluZyBieSBoYW5kLCBjaGVja2luZyB0aGUgY29zdCBnYWluIG9mIHRoZSBuZXcKICAgICMgY2x1c3RlciBhZ2FpbnN0IHRoZSBwcmV2aW91c2x5IHNlcGFyYXRlIGNsdXN0ZXJzCiAgICAjIFN0YXJ0IHdpdGggMSBjbHVzdGVyIHBlciBsaW5lCiAgICAjIGNsdXN0ZXIgPSBzZXQgb2YgbGluZXMgPSBuZXcgc3VidGFibGUKICAgIGNsdXN0ZXJzID0gW21ha2VfY2x1c3RlcigxIDw8IGkpIGZvciBpIGluIHJhbmdlKGxlbihsaW5lcykpXQoKICAgICMgQ29zdCBvZiAxIGNsdXN0ZXIgd2l0aCBldmVyeXRoaW5nCiAgICAjIGAoMSA8PCBsZW4pIC0gMWAgZ2l2ZXMgYSBiaXRtYXNrIGZ1bGwgb2YgMSdzIG9mIGxlbmd0aCBgbGVuYAogICAgY29zdF9iZWZvcmVfc3BsaXR0aW5nID0gbWFrZV9jbHVzdGVyKCgxIDw8IGxlbihsaW5lcykpIC0gMSkuY29zdAogICAgbG9nLmRlYnVnKGYiICAgICAgICBsZW4oY2x1c3RlcnMpID0ge2xlbihjbHVzdGVycyl9IikKCiAgICB3aGlsZSBsZW4oY2x1c3RlcnMpID4gMToKICAgICAgICBsb3dlc3RfY29zdF9jaGFuZ2UgPSBOb25lCiAgICAgICAgYmVzdF9jbHVzdGVyX2luZGV4ID0gTm9uZQogICAgICAgIGJlc3Rfb3RoZXJfaW5kZXggPSBOb25lCiAgICAgICAgYmVzdF9tZXJnZWQgPSBOb25lCiAgICAgICAgZm9yIGksIGNsdXN0ZXIgaW4gZW51bWVyYXRlKGNsdXN0ZXJzKToKICAgICAgICAgICAgZm9yIGosIG90aGVyIGluIGVudW1lcmF0ZShjbHVzdGVyc1tpICsgMSA6XSk6CiAgICAgICAgICAgICAgICBtZXJnZWQgPSBtZXJnZShjbHVzdGVyLCBvdGhlcikKICAgICAgICAgICAgICAgIGNvc3RfY2hhbmdlID0gbWVyZ2VkLmNvc3QgLSBjbHVzdGVyLmNvc3QgLSBvdGhlci5jb3N0CiAgICAgICAgICAgICAgICBpZiBsb3dlc3RfY29zdF9jaGFuZ2UgaXMgTm9uZSBvciBjb3N0X2NoYW5nZSA8IGxvd2VzdF9jb3N0X2NoYW5nZToKICAgICAgICAgICAgICAgICAgICBsb3dlc3RfY29zdF9jaGFuZ2UgPSBjb3N0X2NoYW5nZQogICAgICAgICAgICAgICAgICAgIGJlc3RfY2x1c3Rlcl9pbmRleCA9IGkKICAgICAgICAgICAgICAgICAgICBiZXN0X290aGVyX2luZGV4ID0gaSArIDEgKyBqCiAgICAgICAgICAgICAgICAgICAgYmVzdF9tZXJnZWQgPSBtZXJnZWQKICAgICAgICBhc3NlcnQgbG93ZXN0X2Nvc3RfY2hhbmdlIGlzIG5vdCBOb25lCiAgICAgICAgYXNzZXJ0IGJlc3RfY2x1c3Rlcl9pbmRleCBpcyBub3QgTm9uZQogICAgICAgIGFzc2VydCBiZXN0X290aGVyX2luZGV4IGlzIG5vdCBOb25lCiAgICAgICAgYXNzZXJ0IGJlc3RfbWVyZ2VkIGlzIG5vdCBOb25lCgogICAgICAgICMgSWYgdGhlIGJlc3QgbWVyZ2Ugd2UgZm91bmQgaXMgc3RpbGwgdGFraW5nIGRvd24gdGhlIGZpbGUgc2l6ZSwgdGhlbgogICAgICAgICMgdGhlcmUncyBubyBxdWVzdGlvbjogd2UgbXVzdCBkbyBpdCwgYmVjYXVzZSBpdCdzIGJlbmVmaWNpYWwgaW4gYm90aAogICAgICAgICMgd2F5cyAobG93ZXIgZmlsZSBzaXplIGFuZCBsb3dlciBudW1iZXIgb2Ygc3VidGFibGVzKS4gIEhvd2V2ZXIsIGlmIHRoZQogICAgICAgICMgYmVzdCBtZXJnZSB3ZSBmb3VuZCBpcyBub3QgcmVkdWNpbmcgZmlsZSBzaXplIGFueW1vcmUsIHRoZW4gd2UgbmVlZCB0bwogICAgICAgICMgbG9vayBhdCB0aGUgb3RoZXIgc3RvcCBjcml0ZXJpYSA9IHRoZSBjb21wcmVzc2lvbiBmYWN0b3IuCiAgICAgICAgaWYgbG93ZXN0X2Nvc3RfY2hhbmdlID4gMDoKICAgICAgICAgICAgIyBTdG9wIGNyaXRlcmE6IGNoZWNrIHdoZXRoZXIgd2Ugc2hvdWxkIGtlZXAgbWVyZ2luZy4KICAgICAgICAgICAgIyBDb21wdXRlIHNpemUgcmVkdWN0aW9uIGJyb3VnaHQgYnkgc3BsaXR0aW5nCiAgICAgICAgICAgIGNvc3RfYWZ0ZXJfc3BsaXR0aW5nID0gc3VtKGMuY29zdCBmb3IgYyBpbiBjbHVzdGVycykKICAgICAgICAgICAgIyBzaXplX3JlZHVjdGlvbiBzbyB0aGF0IGFmdGVyID0gYmVmb3JlICogKDEgLSBzaXplX3JlZHVjdGlvbikKICAgICAgICAgICAgIyBFLmcuIGJlZm9yZSA9IDEwMDAsIGFmdGVyID0gODAwLCAxIC0gODAwLzEwMDAgPSAwLjIKICAgICAgICAgICAgc2l6ZV9yZWR1Y3Rpb24gPSAxIC0gY29zdF9hZnRlcl9zcGxpdHRpbmcgLyBjb3N0X2JlZm9yZV9zcGxpdHRpbmcKCiAgICAgICAgICAgICMgRm9yY2UgbW9yZSBtZXJnaW5nIGJ5IHRha2luZyBpbnRvIGFjY291bnQgdGhlIGNvbXByZXNzaW9uIG51bWJlci4KICAgICAgICAgICAgIyBUYXJnZXQgYmVoYXZpb3VyOiBjb21wcmVzc2lvbiBudW1iZXIgPSAxIHRvIDksIGRlZmF1bHQgNSBsaWtlIGd6aXAKICAgICAgICAgICAgIyAgIC0gMSA9IGFjY2VwdCB0byBhZGQgMSBzdWJ0YWJsZSB0byByZWR1Y2Ugc2l6ZSBieSA1MCUKICAgICAgICAgICAgIyAgIC0gNSA9IGFjY2VwdCB0byBhZGQgNSBzdWJ0YWJsZXMgdG8gcmVkdWNlIHNpemUgYnkgNTAlCiAgICAgICAgICAgICMgU2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9oYXJmYnV6ei9wYWNrdGFiL2Jsb2IvbWFzdGVyL0xpYi9wYWNrVGFiL19faW5pdF9fLnB5I0w2OTAtTDY5MQogICAgICAgICAgICAjIEdpdmVuIHRoZSBzaXplIHJlZHVjdGlvbiB3ZSBoYXZlIGFjaGlldmVkIHNvIGZhciwgY29tcHV0ZSBob3cgbWFueQogICAgICAgICAgICAjIG5ldyBzdWJ0YWJsZXMgYXJlIGFjY2VwdGFibGUuCiAgICAgICAgICAgIG1heF9uZXdfc3VidGFibGVzID0gLWxvZzIoMSAtIHNpemVfcmVkdWN0aW9uKSAqIGNvbXByZXNzaW9uCiAgICAgICAgICAgIGxvZy5kZWJ1ZygKICAgICAgICAgICAgICAgIGYiICAgICAgICAgICAgbGVuKGNsdXN0ZXJzKSA9IHtsZW4oY2x1c3RlcnMpOjNkfSAgICBzaXplX3JlZHVjdGlvbj17c2l6ZV9yZWR1Y3Rpb246NS4yZn0gICAgbWF4X25ld19zdWJ0YWJsZXM9e21heF9uZXdfc3VidGFibGVzfSIsCiAgICAgICAgICAgICkKICAgICAgICAgICAgaWYgY29tcHJlc3Npb24gPT0gOToKICAgICAgICAgICAgICAgICMgT3ZlcnJpZGUgbGV2ZWwgOSB0byBtZWFuOiBjcmVhdGUgYW55IG51bWJlciBvZiBzdWJ0YWJsZXMKICAgICAgICAgICAgICAgIG1heF9uZXdfc3VidGFibGVzID0gbGVuKGNsdXN0ZXJzKQoKICAgICAgICAgICAgIyBJZiB3ZSBoYXZlIG1hbmFnZWQgdG8gdGFrZSB0aGUgbnVtYmVyIG9mIG5ldyBzdWJ0YWJsZXMgYmVsb3cgdGhlCiAgICAgICAgICAgICMgdGhyZXNob2xkLCB0aGVuIHdlIGNhbiBzdG9wLgogICAgICAgICAgICBpZiBsZW4oY2x1c3RlcnMpIDw9IG1heF9uZXdfc3VidGFibGVzICsgMToKICAgICAgICAgICAgICAgIGJyZWFrCgogICAgICAgICMgTm8gcmVhc29uIHRvIHN0b3AgeWV0LCBkbyB0aGUgbWVyZ2UgYW5kIG1vdmUgb24gdG8gdGhlIG5leHQuCiAgICAgICAgZGVsIGNsdXN0ZXJzW2Jlc3Rfb3RoZXJfaW5kZXhdCiAgICAgICAgY2x1c3RlcnNbYmVzdF9jbHVzdGVyX2luZGV4XSA9IGJlc3RfbWVyZ2VkCgogICAgIyBBbGwgY2x1c3RlcnMgYXJlIGZpbmFsOyB0dXJuIGJpdG1hc2tzIGJhY2sgaW50byB0aGUgIlBhaXJzIiBmb3JtYXQKICAgIHBhaXJzX2J5X2NsYXNzMTogRGljdFtUdXBsZVtzdHIsIC4uLl0sIFBhaXJzXSA9IGRlZmF1bHRkaWN0KGRpY3QpCiAgICBmb3IgcGFpciwgdmFsdWVzIGluIHBhaXJzLml0ZW1zKCk6CiAgICAgICAgcGFpcnNfYnlfY2xhc3MxW3BhaXJbMF1dW3BhaXJdID0gdmFsdWVzCiAgICBwYWlyc19ncm91cHM6IExpc3RbUGFpcnNdID0gW10KICAgIGZvciBjbHVzdGVyIGluIGNsdXN0ZXJzOgogICAgICAgIHBhaXJzX2dyb3VwOiBQYWlycyA9IGRpY3QoKQogICAgICAgIGZvciBpIGluIGNsdXN0ZXIuaW5kaWNlczoKICAgICAgICAgICAgY2xhc3MxID0gYWxsX2NsYXNzMVtpXQogICAgICAgICAgICBwYWlyc19ncm91cC51cGRhdGUocGFpcnNfYnlfY2xhc3MxW2NsYXNzMV0pCiAgICAgICAgcGFpcnNfZ3JvdXBzLmFwcGVuZChwYWlyc19ncm91cCkKICAgIHJldHVybiBwYWlyc19ncm91cHMK
+import logging
+import os
+from collections import defaultdict, namedtuple
+from dataclasses import dataclass
+from functools import cached_property, reduce
+from itertools import chain
+from math import log2
+from typing import DefaultDict, Dict, Iterable, List, Sequence, Tuple
+
+from fontTools.config import OPTIONS
+from fontTools.misc.intTools import bit_count, bit_indices
+from fontTools.ttLib import TTFont
+from fontTools.ttLib.tables import otBase, otTables
+
+log = logging.getLogger(__name__)
+
+COMPRESSION_LEVEL = OPTIONS[f"{__name__}:COMPRESSION_LEVEL"]
+
+# Kept because ufo2ft depends on it, to be removed once ufo2ft uses the config instead
+# https://github.com/fonttools/fonttools/issues/2592
+GPOS_COMPACT_MODE_ENV_KEY = "FONTTOOLS_GPOS_COMPACT_MODE"
+GPOS_COMPACT_MODE_DEFAULT = str(COMPRESSION_LEVEL.default)
+
+
+def _compression_level_from_env() -> int:
+    env_level = GPOS_COMPACT_MODE_DEFAULT
+    if GPOS_COMPACT_MODE_ENV_KEY in os.environ:
+        import warnings
+
+        warnings.warn(
+            f"'{GPOS_COMPACT_MODE_ENV_KEY}' environment variable is deprecated. "
+            "Please set the 'fontTools.otlLib.optimize.gpos:COMPRESSION_LEVEL' option "
+            "in TTFont.cfg.",
+            DeprecationWarning,
+        )
+
+        env_level = os.environ[GPOS_COMPACT_MODE_ENV_KEY]
+    if len(env_level) == 1 and env_level in "0123456789":
+        return int(env_level)
+    raise ValueError(f"Bad {GPOS_COMPACT_MODE_ENV_KEY}={env_level}")
+
+
+def compact(font: TTFont, level: int) -> TTFont:
+    # Ideal plan:
+    #  1. Find lookups of Lookup Type 2: Pair Adjustment Positioning Subtable
+    #     https://docs.microsoft.com/en-us/typography/opentype/spec/gpos#lookup-type-2-pair-adjustment-positioning-subtable
+    #  2. Extract glyph-glyph kerning and class-kerning from all present subtables
+    #  3. Regroup into different subtable arrangements
+    #  4. Put back into the lookup
+    #
+    # Actual implementation:
+    #  2. Only class kerning is optimized currently
+    #  3. If the input kerning is already in several subtables, the subtables
+    #     are not grouped together first; instead each subtable is treated
+    #     independently, so currently this step is:
+    #     Split existing subtables into more smaller subtables
+    gpos = font.get("GPOS")
+
+    # If the font does not contain a GPOS table, there is nothing to do.
+    if gpos is None:
+        return font
+
+    lookup_list = otTables._getLookupList(gpos.table)
+    if lookup_list is None:
+        return font
+
+    for lookup in lookup_list.Lookup:
+        if lookup.LookupType == 2:
+            compact_lookup(font, level, lookup)
+        elif lookup.LookupType == 9 and lookup.SubTable[0].ExtensionLookupType == 2:
+            compact_ext_lookup(font, level, lookup)
+
+    return font
+
+
+def compact_lookup(font: TTFont, level: int, lookup: otTables.Lookup) -> None:
+    new_subtables = compact_pair_pos(font, level, lookup.SubTable)
+    lookup.SubTable = new_subtables
+    lookup.SubTableCount = len(new_subtables)
+
+
+def compact_ext_lookup(font: TTFont, level: int, lookup: otTables.Lookup) -> None:
+    new_subtables = compact_pair_pos(
+        font, level, [ext_subtable.ExtSubTable for ext_subtable in lookup.SubTable]
+    )
+    new_ext_subtables = []
+    for subtable in new_subtables:
+        ext_subtable = otTables.ExtensionPos()
+        ext_subtable.Format = 1
+        ext_subtable.ExtSubTable = subtable
+        new_ext_subtables.append(ext_subtable)
+    lookup.SubTable = new_ext_subtables
+    lookup.SubTableCount = len(new_ext_subtables)
+
+
+def compact_pair_pos(
+    font: TTFont, level: int, subtables: Sequence[otTables.PairPos]
+) -> Sequence[otTables.PairPos]:
+    new_subtables = []
+    for subtable in subtables:
+        if subtable.Format in (1, 3):
+            # Not doing anything to glyph-pair formats (yet?)
+            new_subtables.append(subtable)
+        elif subtable.Format in (2, 4):
+            class_subtables = compact_class_pairs(font, level, subtable)
+            for class_subtable in class_subtables:
+                class_subtable.Format = subtable.Format
+            new_subtables.extend(class_subtables)
+    return new_subtables
+
+
+def compact_class_pairs(
+    font: TTFont, level: int, subtable: otTables.PairPos
+) -> List[otTables.PairPos]:
+    from fontTools.otlLib.builder import buildPairPosClassesSubtable
+
+    subtables = []
+    classes1: DefaultDict[int, List[str]] = defaultdict(list)
+    for g in subtable.Coverage.glyphs:
+        classes1[subtable.ClassDef1.classDefs.get(g, 0)].append(g)
+    classes2: DefaultDict[int, List[str]] = defaultdict(list)
+    for g, i in subtable.ClassDef2.classDefs.items():
+        classes2[i].append(g)
+    all_pairs = {}
+    for i, class1 in enumerate(subtable.Class1Record):
+        for j, class2 in enumerate(class1.Class2Record):
+            if is_really_zero(class2):
+                continue
+            all_pairs[(tuple(sorted(classes1[i])), tuple(sorted(classes2[j])))] = (
+                getattr(class2, "Value1", None),
+                getattr(class2, "Value2", None),
+            )
+    grouped_pairs = cluster_pairs_by_class2_coverage_custom_cost(font, all_pairs, level)
+    for pairs in grouped_pairs:
+        subtables.append(buildPairPosClassesSubtable(pairs, font.getReverseGlyphMap()))
+    return subtables
+
+
+def is_really_zero(class2: otTables.Class2Record) -> bool:
+    v1 = getattr(class2, "Value1", None)
+    v2 = getattr(class2, "Value2", None)
+    return (v1 is None or v1.getEffectiveFormat() == 0) and (
+        v2 is None or v2.getEffectiveFormat() == 0
+    )
+
+
+Pairs = Dict[
+    Tuple[Tuple[str, ...], Tuple[str, ...]],
+    Tuple[otBase.ValueRecord, otBase.ValueRecord],
+]
+
+
+# Adapted from https://github.com/fonttools/fonttools/blob/f64f0b42f2d1163b2d85194e0979def539f5dca3/Lib/fontTools/ttLib/tables/otTables.py#L935-L958
+def _getClassRanges(glyphIDs: Iterable[int]):
+    glyphIDs = sorted(glyphIDs)
+    last = glyphIDs[0]
+    ranges = [[last]]
+    for glyphID in glyphIDs[1:]:
+        if glyphID != last + 1:
+            ranges[-1].append(last)
+            ranges.append([glyphID])
+        last = glyphID
+    ranges[-1].append(last)
+    return ranges, glyphIDs[0], glyphIDs[-1]
+
+
+# Adapted from https://github.com/fonttools/fonttools/blob/f64f0b42f2d1163b2d85194e0979def539f5dca3/Lib/fontTools/ttLib/tables/otTables.py#L960-L989
+def _classDef_bytes(
+    class_data: List[Tuple[List[Tuple[int, int]], int, int]],
+    class_ids: List[int],
+    coverage=False,
+):
+    if not class_ids:
+        return 0
+    first_ranges, min_glyph_id, max_glyph_id = class_data[class_ids[0]]
+    range_count = len(first_ranges)
+    for i in class_ids[1:]:
+        data = class_data[i]
+        range_count += len(data[0])
+        min_glyph_id = min(min_glyph_id, data[1])
+        max_glyph_id = max(max_glyph_id, data[2])
+    glyphCount = max_glyph_id - min_glyph_id + 1
+    # https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2#class-definition-table-format-1
+    format1_bytes = 6 + glyphCount * 2
+    # https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2#class-definition-table-format-2
+    format2_bytes = 4 + range_count * 6
+    return min(format1_bytes, format2_bytes)
+
+
+ClusteringContext = namedtuple(
+    "ClusteringContext",
+    [
+        "lines",
+        "all_class1",
+        "all_class1_data",
+        "all_class2_data",
+        "valueFormat1_bytes",
+        "valueFormat2_bytes",
+    ],
+)
+
+
+@dataclass
+class Cluster:
+    ctx: ClusteringContext
+    indices_bitmask: int
+
+    @cached_property
+    def indices(self):
+        return bit_indices(self.indices_bitmask)
+
+    @cached_property
+    def column_indices(self):
+        # Indices of columns that have a 1 in at least 1 line
+        #   => binary OR all the lines
+        bitmask = reduce(int.__or__, (self.ctx.lines[i] for i in self.indices))
+        return bit_indices(bitmask)
+
+    @property
+    def width(self):
+        # Add 1 because Class2=0 cannot be used but needs to be encoded.
+        return len(self.column_indices) + 1
+
+    @cached_property
+    def cost(self):
+        return (
+            # 2 bytes to store the offset to this subtable in the Lookup table above
+            2
+            # Contents of the subtable
+            # From: https://docs.microsoft.com/en-us/typography/opentype/spec/gpos#pair-adjustment-positioning-format-2-class-pair-adjustment
+            # uint16	posFormat	Format identifier: format = 2
+            + 2
+            # Offset16	coverageOffset	Offset to Coverage table, from beginning of PairPos subtable.
+            + 2
+            + self.coverage_bytes
+            # uint16	valueFormat1	ValueRecord definition — for the first glyph of the pair (may be zero).
+            + 2
+            # uint16	valueFormat2	ValueRecord definition — for the second glyph of the pair (may be zero).
+            + 2
+            # Offset16	classDef1Offset	Offset to ClassDef table, from beginning of PairPos subtable — for the first glyph of the pair.
+            + 2
+            + self.classDef1_bytes
+            # Offset16	classDef2Offset	Offset to ClassDef table, from beginning of PairPos subtable — for the second glyph of the pair.
+            + 2
+            + self.classDef2_bytes
+            # uint16	class1Count	Number of classes in classDef1 table — includes Class 0.
+            + 2
+            # uint16	class2Count	Number of classes in classDef2 table — includes Class 0.
+            + 2
+            # Class1Record	class1Records[class1Count]	Array of Class1 records, ordered by classes in classDef1.
+            + (self.ctx.valueFormat1_bytes + self.ctx.valueFormat2_bytes)
+            * len(self.indices)
+            * self.width
+        )
+
+    @property
+    def coverage_bytes(self):
+        format1_bytes = (
+            # From https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2#coverage-format-1
+            # uint16	coverageFormat	Format identifier — format = 1
+            # uint16	glyphCount	Number of glyphs in the glyph array
+            4
+            # uint16	glyphArray[glyphCount]	Array of glyph IDs — in numerical order
+            + sum(len(self.ctx.all_class1[i]) for i in self.indices) * 2
+        )
+        ranges = sorted(
+            chain.from_iterable(self.ctx.all_class1_data[i][0] for i in self.indices)
+        )
+        merged_range_count = 0
+        last = None
+        for start, end in ranges:
+            if last is not None and start != last + 1:
+                merged_range_count += 1
+            last = end
+        format2_bytes = (
+            # From https://docs.microsoft.com/en-us/typography/opentype/spec/chapter2#coverage-format-2
+            # uint16	coverageFormat	Format identifier — format = 2
+            # uint16	rangeCount	Number of RangeRecords
+            4
+            # RangeRecord	rangeRecords[rangeCount]	Array of glyph ranges — ordered by startGlyphID.
+            # uint16	startGlyphID	First glyph ID in the range
+            # uint16	endGlyphID	Last glyph ID in the range
+            # uint16	startCoverageIndex	Coverage Index of first glyph ID in range
+            + merged_range_count * 6
+        )
+        return min(format1_bytes, format2_bytes)
+
+    @property
+    def classDef1_bytes(self):
+        # We can skip encoding one of the Class1 definitions, and use
+        # Class1=0 to represent it instead, because Class1 is gated by the
+        # Coverage definition. Use Class1=0 for the highest byte savings.
+        # Going through all options takes too long, pick the biggest class
+        # = what happens in otlLib.builder.ClassDefBuilder.classes()
+        biggest_index = max(self.indices, key=lambda i: len(self.ctx.all_class1[i]))
+        return _classDef_bytes(
+            self.ctx.all_class1_data, [i for i in self.indices if i != biggest_index]
+        )
+
+    @property
+    def classDef2_bytes(self):
+        # All Class2 need to be encoded because we can't use Class2=0
+        return _classDef_bytes(self.ctx.all_class2_data, self.column_indices)
+
+
+def cluster_pairs_by_class2_coverage_custom_cost(
+    font: TTFont,
+    pairs: Pairs,
+    compression: int = 5,
+) -> List[Pairs]:
+    if not pairs:
+        # The subtable was actually empty?
+        return [pairs]
+
+    # Sorted for reproducibility/determinism
+    all_class1 = sorted(set(pair[0] for pair in pairs))
+    all_class2 = sorted(set(pair[1] for pair in pairs))
+
+    # Use Python's big ints for binary vectors representing each line
+    lines = [
+        sum(
+            1 << i if (class1, class2) in pairs else 0
+            for i, class2 in enumerate(all_class2)
+        )
+        for class1 in all_class1
+    ]
+
+    # Map glyph names to ids and work with ints throughout for ClassDef formats
+    name_to_id = font.getReverseGlyphMap()
+    # Each entry in the arrays below is (range_count, min_glyph_id, max_glyph_id)
+    all_class1_data = [
+        _getClassRanges(name_to_id[name] for name in cls) for cls in all_class1
+    ]
+    all_class2_data = [
+        _getClassRanges(name_to_id[name] for name in cls) for cls in all_class2
+    ]
+
+    format1 = 0
+    format2 = 0
+    for pair, value in pairs.items():
+        format1 |= value[0].getEffectiveFormat() if value[0] else 0
+        format2 |= value[1].getEffectiveFormat() if value[1] else 0
+    valueFormat1_bytes = bit_count(format1) * 2
+    valueFormat2_bytes = bit_count(format2) * 2
+
+    ctx = ClusteringContext(
+        lines,
+        all_class1,
+        all_class1_data,
+        all_class2_data,
+        valueFormat1_bytes,
+        valueFormat2_bytes,
+    )
+
+    cluster_cache: Dict[int, Cluster] = {}
+
+    def make_cluster(indices: int) -> Cluster:
+        cluster = cluster_cache.get(indices, None)
+        if cluster is not None:
+            return cluster
+        cluster = Cluster(ctx, indices)
+        cluster_cache[indices] = cluster
+        return cluster
+
+    def merge(cluster: Cluster, other: Cluster) -> Cluster:
+        return make_cluster(cluster.indices_bitmask | other.indices_bitmask)
+
+    # Agglomerative clustering by hand, checking the cost gain of the new
+    # cluster against the previously separate clusters
+    # Start with 1 cluster per line
+    # cluster = set of lines = new subtable
+    clusters = [make_cluster(1 << i) for i in range(len(lines))]
+
+    # Cost of 1 cluster with everything
+    # `(1 << len) - 1` gives a bitmask full of 1's of length `len`
+    cost_before_splitting = make_cluster((1 << len(lines)) - 1).cost
+    log.debug(f"        len(clusters) = {len(clusters)}")
+
+    while len(clusters) > 1:
+        lowest_cost_change = None
+        best_cluster_index = None
+        best_other_index = None
+        best_merged = None
+        for i, cluster in enumerate(clusters):
+            for j, other in enumerate(clusters[i + 1 :]):
+                merged = merge(cluster, other)
+                cost_change = merged.cost - cluster.cost - other.cost
+                if lowest_cost_change is None or cost_change < lowest_cost_change:
+                    lowest_cost_change = cost_change
+                    best_cluster_index = i
+                    best_other_index = i + 1 + j
+                    best_merged = merged
+        assert lowest_cost_change is not None
+        assert best_cluster_index is not None
+        assert best_other_index is not None
+        assert best_merged is not None
+
+        # If the best merge we found is still taking down the file size, then
+        # there's no question: we must do it, because it's beneficial in both
+        # ways (lower file size and lower number of subtables).  However, if the
+        # best merge we found is not reducing file size anymore, then we need to
+        # look at the other stop criteria = the compression factor.
+        if lowest_cost_change > 0:
+            # Stop critera: check whether we should keep merging.
+            # Compute size reduction brought by splitting
+            cost_after_splitting = sum(c.cost for c in clusters)
+            # size_reduction so that after = before * (1 - size_reduction)
+            # E.g. before = 1000, after = 800, 1 - 800/1000 = 0.2
+            size_reduction = 1 - cost_after_splitting / cost_before_splitting
+
+            # Force more merging by taking into account the compression number.
+            # Target behaviour: compression number = 1 to 9, default 5 like gzip
+            #   - 1 = accept to add 1 subtable to reduce size by 50%
+            #   - 5 = accept to add 5 subtables to reduce size by 50%
+            # See https://github.com/harfbuzz/packtab/blob/master/Lib/packTab/__init__.py#L690-L691
+            # Given the size reduction we have achieved so far, compute how many
+            # new subtables are acceptable.
+            max_new_subtables = -log2(1 - size_reduction) * compression
+            log.debug(
+                f"            len(clusters) = {len(clusters):3d}    size_reduction={size_reduction:5.2f}    max_new_subtables={max_new_subtables}",
+            )
+            if compression == 9:
+                # Override level 9 to mean: create any number of subtables
+                max_new_subtables = len(clusters)
+
+            # If we have managed to take the number of new subtables below the
+            # threshold, then we can stop.
+            if len(clusters) <= max_new_subtables + 1:
+                break
+
+        # No reason to stop yet, do the merge and move on to the next.
+        del clusters[best_other_index]
+        clusters[best_cluster_index] = best_merged
+
+    # All clusters are final; turn bitmasks back into the "Pairs" format
+    pairs_by_class1: Dict[Tuple[str, ...], Pairs] = defaultdict(dict)
+    for pair, values in pairs.items():
+        pairs_by_class1[pair[0]][pair] = values
+    pairs_groups: List[Pairs] = []
+    for cluster in clusters:
+        pairs_group: Pairs = dict()
+        for i in cluster.indices:
+            class1 = all_class1[i]
+            pairs_group.update(pairs_by_class1[class1])
+        pairs_groups.append(pairs_group)
+    return pairs_groups

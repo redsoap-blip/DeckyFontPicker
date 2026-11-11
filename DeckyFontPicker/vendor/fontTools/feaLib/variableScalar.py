@@ -1,1 +1,269 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IE1hcHBpbmcKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCgpmcm9tIGZvbnRUb29scy5kZXNpZ25zcGFjZUxpYiBpbXBvcnQgRGVzaWduU3BhY2VEb2N1bWVudApmcm9tIGZvbnRUb29scy50dExpYi50dEZvbnQgaW1wb3J0IFRURm9udApmcm9tIGZvbnRUb29scy52YXJMaWIubW9kZWxzIGltcG9ydCAoCiAgICBWYXJpYXRpb25Nb2RlbCwKICAgIG5vUm91bmQsCiAgICBub3JtYWxpemVWYWx1ZSwKICAgIHBpZWNld2lzZUxpbmVhck1hcCwKKQoKaW1wb3J0IHR5cGluZwppbXBvcnQgd2FybmluZ3MKCmlmIHR5cGluZy5UWVBFX0NIRUNLSU5HOgogICAgZnJvbSB0eXBpbmcgaW1wb3J0IFNlbGYKCkxvY2F0aW9uVHVwbGUgPSB0dXBsZVt0dXBsZVtzdHIsIGZsb2F0XSwgLi4uXQoiIiJBIGhhc2hhYmxlIGxvY2F0aW9uLiIiIgoKCmRlZiBMb2NhdGlvbihsb2NhdGlvbjogTWFwcGluZ1tzdHIsIGZsb2F0XSkgLT4gTG9jYXRpb25UdXBsZToKICAgICIiIkNyZWF0ZSBhIGhhc2hhYmxlIGxvY2F0aW9uIGZyb20gYSBkaWN0aW9uYXJ5LWxpa2UgbG9jYXRpb24uIiIiCiAgICByZXR1cm4gdHVwbGUoc29ydGVkKGxvY2F0aW9uLml0ZW1zKCkpKQoKCmNsYXNzIFZhcmlhYmxlU2NhbGFyOgogICAgIiIiQSBzY2FsYXIgd2l0aCBkaWZmZXJlbnQgdmFsdWVzIGF0IGRpZmZlcmVudCBwb2ludHMgaW4gdGhlIGRlc2lnbnNwYWNlLiIiIgoKICAgIHZhbHVlczogZGljdFtMb2NhdGlvblR1cGxlLCBpbnRdCiAgICAiIiJUaGUgdmFsdWVzIGFjcm9zcyB2YXJpb3VzIHVzZXItbG9jYXRpb25zLiBNdXN0IGFsd2F5cyBpbmNsdWRlIHRoZSBkZWZhdWx0CiAgICBsb2NhdGlvbiBieSB0aW1lIG9mIGJ1aWxkaW5nLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBsb2NhdGlvbl92YWx1ZT1Ob25lKToKICAgICAgICBzZWxmLnZhbHVlcyA9IHsKICAgICAgICAgICAgTG9jYXRpb24obG9jYXRpb24pOiB2YWx1ZQogICAgICAgICAgICBmb3IgbG9jYXRpb24sIHZhbHVlIGluIChsb2NhdGlvbl92YWx1ZSBvciB7fSkuaXRlbXMoKQogICAgICAgIH0KICAgICAgICAjIERlcHJlY2F0ZWQ6IG9ubHkgdXNlZCBieSB0aGUgYWRkX3RvX3ZhcmlhdGlvbl9zdG9yZSgpIGJhY2t3YXJkcy1jb21wYXQKICAgICAgICAjIHNoaW0uIE5ldyBjb2RlIHNob3VsZCB1c2UgVmFyaWFibGVTY2FsYXJCdWlsZGVyIGluc3RlYWQuCiAgICAgICAgc2VsZi5heGVzID0gW10KCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgaXRlbXMgPSBbXQogICAgICAgIGZvciBsb2NhdGlvbiwgdmFsdWUgaW4gc2VsZi52YWx1ZXMuaXRlbXMoKToKICAgICAgICAgICAgaWYgbG9jYXRpb246CiAgICAgICAgICAgICAgICBsb2MgPSAiLCIuam9pbigKICAgICAgICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAgICAgICAgIGYie2F4fT17aW50KGNvb3JkKSBpZiBmbG9hdChjb29yZCkuaXNfaW50ZWdlcigpIGVsc2UgY29vcmR9IgogICAgICAgICAgICAgICAgICAgICAgICBmb3IgYXgsIGNvb3JkIGluIGxvY2F0aW9uCiAgICAgICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgaXRlbXMuYXBwZW5kKCIlczolaSIgJSAobG9jLCB2YWx1ZSkpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBpdGVtcy5hcHBlbmQoIiVpIiAlIHZhbHVlKQogICAgICAgIHJldHVybiAiKCIgKyAoIiAiLmpvaW4oaXRlbXMpKSArICIpIgoKICAgIEBwcm9wZXJ0eQogICAgZGVmIGRvZXNfdmFyeShzZWxmKSAtPiBib29sOgogICAgICAgIHZhbHVlcyA9IGxpc3Qoc2VsZi52YWx1ZXMudmFsdWVzKCkpCiAgICAgICAgcmV0dXJuIGFueSh2ICE9IHZhbHVlc1swXSBmb3IgdiBpbiB2YWx1ZXNbMTpdKQoKICAgIGRlZiBhZGRfdmFsdWUoc2VsZiwgbG9jYXRpb246IE1hcHBpbmdbc3RyLCBmbG9hdF0sIHZhbHVlOiBpbnQpOgogICAgICAgIHNlbGYudmFsdWVzW0xvY2F0aW9uKGxvY2F0aW9uKV0gPSB2YWx1ZQoKICAgIGRlZiBhZGRfdG9fdmFyaWF0aW9uX3N0b3JlKHNlbGYsIHN0b3JlX2J1aWxkZXIsIG1vZGVsX2NhY2hlPU5vbmUsIGF2YXI9Tm9uZSk6CiAgICAgICAgIiIiRGVwcmVjYXRlZDogdXNlIFZhcmlhYmxlU2NhbGFyQnVpbGRlci5hZGRfdG9fdmFyaWF0aW9uX3N0b3JlKCkgaW5zdGVhZC4iIiIKICAgICAgICB3YXJuaW5ncy53YXJuKAogICAgICAgICAgICAiVmFyaWFibGVTY2FsYXIuYWRkX3RvX3ZhcmlhdGlvbl9zdG9yZSgpIGlzIGRlcHJlY2F0ZWQuICIKICAgICAgICAgICAgIlVzZSBWYXJpYWJsZVNjYWxhckJ1aWxkZXIuYWRkX3RvX3ZhcmlhdGlvbl9zdG9yZSgpIGluc3RlYWQuIiwKICAgICAgICAgICAgRGVwcmVjYXRpb25XYXJuaW5nLAogICAgICAgICAgICBzdGFja2xldmVsPTIsCiAgICAgICAgKQogICAgICAgIGlmIG5vdCBzZWxmLmF4ZXM6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICAgICAiLmF4ZXMgbXVzdCBiZSBkZWZpbmVkIG9uIHZhcmlhYmxlIHNjYWxhciBiZWZvcmUgY2FsbGluZyAiCiAgICAgICAgICAgICAgICAiYWRkX3RvX3ZhcmlhdGlvbl9zdG9yZSgpIgogICAgICAgICAgICApCiAgICAgICAgYnVpbGRlciA9IFZhcmlhYmxlU2NhbGFyQnVpbGRlcigKICAgICAgICAgICAgYXhpc190cmlwbGVzPXsKICAgICAgICAgICAgICAgIGF4LmF4aXNUYWc6IChheC5taW5WYWx1ZSwgYXguZGVmYXVsdFZhbHVlLCBheC5tYXhWYWx1ZSkKICAgICAgICAgICAgICAgIGZvciBheCBpbiBzZWxmLmF4ZXMKICAgICAgICAgICAgfSwKICAgICAgICAgICAgYXhpc19tYXBwaW5ncz0oe30gaWYgYXZhciBpcyBOb25lIGVsc2UgZGljdChhdmFyLnNlZ21lbnRzKSksCiAgICAgICAgICAgIG1vZGVsX2NhY2hlPW1vZGVsX2NhY2hlIGlmIG1vZGVsX2NhY2hlIGlzIG5vdCBOb25lIGVsc2Uge30sCiAgICAgICAgKQogICAgICAgIHJldHVybiBidWlsZGVyLmFkZF90b192YXJpYXRpb25fc3RvcmUoc2VsZiwgc3RvcmVfYnVpbGRlcikKCgpAZGF0YWNsYXNzCmNsYXNzIFZhcmlhYmxlU2NhbGFyQnVpbGRlcjoKICAgICIiIkEgaGVscGVyIGNsYXNzIGZvciBidWlsZGluZyB2YXJpYWJsZSBzY2FsYXJzLCBvciBvdGhlcndpc2UgaW50ZXJyb2dhdGluZwogICAgdGhlaXIgdmFyaWF0aW9uIG1vZGVsIGZvciBpbnRlcnBvbGF0aW9uIG9yIHNpbWlsYXIuIiIiCgogICAgYXhpc190cmlwbGVzOiBkaWN0W3N0ciwgdHVwbGVbZmxvYXQsIGZsb2F0LCBmbG9hdF1dCiAgICAiIiJNaW5pbXVtLCBkZWZhdWx0LCBhbmQgbWF4aW11bSBmb3IgZWFjaCBheGlzIGluIHVzZXItY29vcmRpbmF0ZXMuIiIiCiAgICBheGlzX21hcHBpbmdzOiBkaWN0W3N0ciwgTWFwcGluZ1tmbG9hdCwgZmxvYXRdXQogICAgIiIiT3B0aW9uYWwgbWFwcGluZ3MgZnJvbSBub3JtYWxpemVkIHVzZXItY29vcmRpbmF0ZXMgdG8gbm9ybWFsaXplZAogICAgZGVzaWduLWNvb3JkaW5hdGVzLiIiIgoKICAgIG1vZGVsX2NhY2hlOiBkaWN0W3R1cGxlW0xvY2F0aW9uVHVwbGUsIC4uLl0sIFZhcmlhdGlvbk1vZGVsXQogICAgIiIiV2Ugb2Z0ZW4gdXNlIHRoZSBzYW1lIGV4YWN0IGxvY2F0aW9ucyAoaS5lLiBmb250IHNvdXJjZXMpIGZvciBhIGxhcmdlCiAgICBudW1iZXIgb2YgdmFyaWFibGUgc2NhbGFycy4gSW5zdGVhZCBvZiBjcmVhdGluZyBhIG1vZGVsIGZvciBlYWNoLCBjYWNoZQogICAgdGhlbS4gQ2FjaGUgYnkgdXNlci1sb2NhdGlvbiB0byBhdm9pZCByZXBlYXRlZCBtYXBwaW5nIGNvbXB1dGF0aW9ucy4iIiIKCiAgICBAY2xhc3NtZXRob2QKICAgIGRlZiBmcm9tX3R0ZihjbHMsIHR0ZjogVFRGb250KSAtPiBTZWxmOgogICAgICAgIHJldHVybiBjbHMoCiAgICAgICAgICAgIGF4aXNfdHJpcGxlcz17CiAgICAgICAgICAgICAgICBheGlzLmF4aXNUYWc6IChheGlzLm1pblZhbHVlLCBheGlzLmRlZmF1bHRWYWx1ZSwgYXhpcy5tYXhWYWx1ZSkKICAgICAgICAgICAgICAgIGZvciBheGlzIGluIHR0ZlsiZnZhciJdLmF4ZXMKICAgICAgICAgICAgfSwKICAgICAgICAgICAgYXhpc19tYXBwaW5ncz0oCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICAgICAgaWYgKGF2YXIgOj0gdHRmLmdldCgiYXZhciIpKSBpcyBOb25lCiAgICAgICAgICAgICAgICBlbHNlIHtheGlzOiBzZWdtZW50cyBmb3IgYXhpcywgc2VnbWVudHMgaW4gYXZhci5zZWdtZW50cy5pdGVtcygpfQogICAgICAgICAgICApLAogICAgICAgICAgICBtb2RlbF9jYWNoZT17fSwKICAgICAgICApCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgZnJvbV9kZXNpZ25zcGFjZShjbHMsIGRvYzogRGVzaWduU3BhY2VEb2N1bWVudCkgLT4gU2VsZjoKICAgICAgICByZXR1cm4gY2xzKAogICAgICAgICAgICBheGlzX3RyaXBsZXM9ewogICAgICAgICAgICAgICAgYXhpcy50YWc6IChheGlzLm1pbmltdW0sIGF4aXMuZGVmYXVsdCwgYXhpcy5tYXhpbXVtKQogICAgICAgICAgICAgICAgZm9yIGF4aXMgaW4gZG9jLmF4ZXMKICAgICAgICAgICAgfSwKICAgICAgICAgICAgYXhpc19tYXBwaW5ncz17CiAgICAgICAgICAgICAgICBheGlzLnRhZzogewogICAgICAgICAgICAgICAgICAgIG5vcm1hbGl6ZVZhbHVlKAogICAgICAgICAgICAgICAgICAgICAgICB1c2VyLCAoYXhpcy5taW5pbXVtLCBheGlzLmRlZmF1bHQsIGF4aXMubWF4aW11bSkKICAgICAgICAgICAgICAgICAgICApOiBub3JtYWxpemVWYWx1ZSgKICAgICAgICAgICAgICAgICAgICAgICAgZGVzaWduLAogICAgICAgICAgICAgICAgICAgICAgICAoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBheGlzLm1hcF9mb3J3YXJkKGF4aXMubWluaW11bSksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBheGlzLm1hcF9mb3J3YXJkKGF4aXMuZGVmYXVsdCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBheGlzLm1hcF9mb3J3YXJkKGF4aXMubWF4aW11bSksCiAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICAgIGFsbG93X2RlY3JlYXNpbmc9VHJ1ZSwKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgZm9yIHVzZXIsIGRlc2lnbiBpbiBheGlzLm1hcAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZm9yIGF4aXMgaW4gZG9jLmF4ZXMKICAgICAgICAgICAgICAgIGlmIGF4aXMubWFwCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIG1vZGVsX2NhY2hlPXt9LAogICAgICAgICkKCiAgICBkZWYgX2Z1bGx5X3NwZWNpZnlfbG9jYXRpb24oc2VsZiwgbG9jYXRpb246IExvY2F0aW9uVHVwbGUpIC0+IExvY2F0aW9uVHVwbGU6CiAgICAgICAgIiIiVmFsaWRhdGUgYW5kIGZ1bGx5LXNwZWNpZnkgYSB1c2VyLXNwYWNlIGxvY2F0aW9uIGJ5IGZpbGxpbmcgaW4KICAgICAgICBtaXNzaW5nIGF4ZXMgd2l0aCB0aGVpciB1c2VyLXNwYWNlIGRlZmF1bHRzLiIiIgoKICAgICAgICBmdWxsID0ge30KICAgICAgICBmb3IgYXh0YWcsIHZhbHVlIGluIGxvY2F0aW9uOgogICAgICAgICAgICBpZiBheHRhZyBub3QgaW4gc2VsZi5heGlzX3RyaXBsZXM6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJVbmtub3duIGF4aXMgJXMgaW4gJXMiICUgKGF4dGFnLCBsb2NhdGlvbikpCiAgICAgICAgICAgIGZ1bGxbYXh0YWddID0gdmFsdWUKCiAgICAgICAgZm9yIGF4dGFnLCAoXywgYXhpc19kZWZhdWx0LCBfKSBpbiBzZWxmLmF4aXNfdHJpcGxlcy5pdGVtcygpOgogICAgICAgICAgICBpZiBheHRhZyBub3QgaW4gZnVsbDoKICAgICAgICAgICAgICAgIGZ1bGxbYXh0YWddID0gYXhpc19kZWZhdWx0CgogICAgICAgIHJldHVybiBMb2NhdGlvbihmdWxsKQoKICAgIGRlZiBfbm9ybWFsaXplX2xvY2F0aW9uKHNlbGYsIGxvY2F0aW9uOiBMb2NhdGlvblR1cGxlKSAtPiBkaWN0W3N0ciwgZmxvYXRdOgogICAgICAgICIiIk5vcm1hbGl6ZSBhIHVzZXItc3BhY2UgbG9jYXRpb24sIGFwcGx5aW5nIGF2YXIgbWFwcGluZ3MgaWYgcHJlc2VudC4KCiAgICAgICAgVE9ETzogVGhpcyBvbmx5IGhhbmRsZXMgYXZhcjEgKHBlci1heGlzIHBpZWNld2lzZSBsaW5lYXIgbWFwcGluZ3MpLAogICAgICAgIG5vdCBhdmFyMiAobXVsdGktZGltZW5zaW9uYWwgbWFwcGluZ3MpLgogICAgICAgICIiIgoKICAgICAgICByZXN1bHQgPSB7fQogICAgICAgIGZvciBheHRhZywgdmFsdWUgaW4gbG9jYXRpb246CiAgICAgICAgICAgIGF4aXNfbWluLCBheGlzX2RlZmF1bHQsIGF4aXNfbWF4ID0gc2VsZi5heGlzX3RyaXBsZXNbYXh0YWddCiAgICAgICAgICAgIG5vcm1hbGl6ZWQgPSBub3JtYWxpemVWYWx1ZSh2YWx1ZSwgKGF4aXNfbWluLCBheGlzX2RlZmF1bHQsIGF4aXNfbWF4KSkKICAgICAgICAgICAgbWFwcGluZyA9IHNlbGYuYXhpc19tYXBwaW5ncy5nZXQoYXh0YWcpCiAgICAgICAgICAgIGlmIG1hcHBpbmcgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBub3JtYWxpemVkID0gcGllY2V3aXNlTGluZWFyTWFwKG5vcm1hbGl6ZWQsIG1hcHBpbmcpCiAgICAgICAgICAgIHJlc3VsdFtheHRhZ10gPSBub3JtYWxpemVkCgogICAgICAgIHJldHVybiByZXN1bHQKCiAgICBkZWYgX2Z1bGxfbG9jYXRpb25zX2FuZF92YWx1ZXMoCiAgICAgICAgc2VsZiwgc2NhbGFyOiBWYXJpYWJsZVNjYWxhcgogICAgKSAtPiBsaXN0W3R1cGxlW0xvY2F0aW9uVHVwbGUsIGludF1dOgogICAgICAgICIiIlJldHVybiBhIGxpc3Qgb2YgKGZ1bGx5LXNwZWNpZmllZCB1c2VyLXNwYWNlIGxvY2F0aW9uLCB2YWx1ZSkgcGFpcnMsCiAgICAgICAgcHJlc2VydmluZyBvcmRlciBhbmQgbGVuZ3RoIG9mIHNjYWxhci52YWx1ZXMuIiIiCgogICAgICAgIHJldHVybiBbCiAgICAgICAgICAgIChzZWxmLl9mdWxseV9zcGVjaWZ5X2xvY2F0aW9uKGxvYyksIHZhbCkKICAgICAgICAgICAgZm9yIGxvYywgdmFsIGluIHNjYWxhci52YWx1ZXMuaXRlbXMoKQogICAgICAgIF0KCiAgICBkZWYgZGVmYXVsdF92YWx1ZShzZWxmLCBzY2FsYXI6IFZhcmlhYmxlU2NhbGFyKSAtPiBpbnQ6CiAgICAgICAgIiIiR2V0IHRoZSBkZWZhdWx0IHZhbHVlIG9mIGEgdmFyaWFibGUgc2NhbGFyLiIiIgoKICAgICAgICBkZWZhdWx0X2xvYyA9IExvY2F0aW9uKAogICAgICAgICAgICB7dGFnOiBkZWZhdWx0IGZvciB0YWcsIChfLCBkZWZhdWx0LCBfKSBpbiBzZWxmLmF4aXNfdHJpcGxlcy5pdGVtcygpfQogICAgICAgICkKICAgICAgICBmb3IgbG9jYXRpb24sIHZhbHVlIGluIHNlbGYuX2Z1bGxfbG9jYXRpb25zX2FuZF92YWx1ZXMoc2NhbGFyKToKICAgICAgICAgICAgaWYgbG9jYXRpb24gPT0gZGVmYXVsdF9sb2M6CiAgICAgICAgICAgICAgICByZXR1cm4gdmFsdWUKCiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiRGVmYXVsdCB2YWx1ZSBjb3VsZCBub3QgYmUgZm91bmQiKQoKICAgIGRlZiB2YWx1ZV9hdF9sb2NhdGlvbigKICAgICAgICBzZWxmLCBzY2FsYXI6IFZhcmlhYmxlU2NhbGFyLCBsb2NhdGlvbjogTG9jYXRpb25UdXBsZQogICAgKSAtPiBmbG9hdDoKICAgICAgICAiIiJJbnRlcnBvbGF0ZSB0aGUgdmFsdWUgb2YgYSBzY2FsYXIgZnJvbSBhIHVzZXItbG9jYXRpb24uIiIiCgogICAgICAgIGxvY2F0aW9uID0gc2VsZi5fZnVsbHlfc3BlY2lmeV9sb2NhdGlvbihsb2NhdGlvbikKICAgICAgICBwYWlycyA9IHNlbGYuX2Z1bGxfbG9jYXRpb25zX2FuZF92YWx1ZXMoc2NhbGFyKQoKICAgICAgICAjIElmIHVzZXIgbG9jYXRpb24gbWF0Y2hlcyBleGFjdGx5LCBubyBheGlzIG1hcHBpbmcgb3IgdmFyaWF0aW9uIG1vZGVsIG5lZWRlZC4KICAgICAgICBmb3IgbG9jLCB2YWwgaW4gcGFpcnM6CiAgICAgICAgICAgIGlmIGxvYyA9PSBsb2NhdGlvbjoKICAgICAgICAgICAgICAgIHJldHVybiB2YWwKCiAgICAgICAgdmFsdWVzID0gW3ZhbCBmb3IgXywgdmFsIGluIHBhaXJzXQogICAgICAgIG5vcm1hbGl6ZWRfbG9jYXRpb24gPSBzZWxmLl9ub3JtYWxpemVfbG9jYXRpb24obG9jYXRpb24pCgogICAgICAgIHZhbHVlID0gc2VsZi5tb2RlbChzY2FsYXIpLmludGVycG9sYXRlRnJvbU1hc3RlcnMobm9ybWFsaXplZF9sb2NhdGlvbiwgdmFsdWVzKQogICAgICAgIGlmIHZhbHVlIGlzIE5vbmU6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIkluc3VmZmljaWVudCBudW1iZXIgb2YgdmFsdWVzIHRvIGludGVycG9sYXRlIikKCiAgICAgICAgcmV0dXJuIHZhbHVlCgogICAgZGVmIG1vZGVsKHNlbGYsIHNjYWxhcjogVmFyaWFibGVTY2FsYXIpIC0+IFZhcmlhdGlvbk1vZGVsOgogICAgICAgICIiIlJldHVybiBhIHZhcmlhdGlvbiBtb2RlbCBiYXNlZCBvbiBhIHNjYWxhcidzIHZhbHVlcy4KCiAgICAgICAgVmFyaWFibGUgc2NhbGFycyB3aXRoIHRoZSBzYW1lIGZ1bGx5LXNwZWNpZmllZCB1c2VyLWxvY2F0aW9ucyB3aWxsIHVzZQogICAgICAgIHRoZSBzYW1lIGNhY2hlZCB2YXJpYXRpb24gbW9kZWwuIiIiCgogICAgICAgIHBhaXJzID0gc2VsZi5fZnVsbF9sb2NhdGlvbnNfYW5kX3ZhbHVlcyhzY2FsYXIpCiAgICAgICAgY2FjaGVfa2V5ID0gdHVwbGUobG9jIGZvciBsb2MsIF8gaW4gcGFpcnMpCgogICAgICAgIGNhY2hlZF9tb2RlbCA9IHNlbGYubW9kZWxfY2FjaGUuZ2V0KGNhY2hlX2tleSkKICAgICAgICBpZiBjYWNoZWRfbW9kZWwgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHJldHVybiBjYWNoZWRfbW9kZWwKCiAgICAgICAgbm9ybWFsaXplZF9sb2NhdGlvbnMgPSBbc2VsZi5fbm9ybWFsaXplX2xvY2F0aW9uKGxvYykgZm9yIGxvYywgXyBpbiBwYWlyc10KICAgICAgICBheGlzT3JkZXIgPSBsaXN0KHNlbGYuYXhpc190cmlwbGVzLmtleXMoKSkKICAgICAgICBtb2RlbCA9IHNlbGYubW9kZWxfY2FjaGVbY2FjaGVfa2V5XSA9IFZhcmlhdGlvbk1vZGVsKAogICAgICAgICAgICBub3JtYWxpemVkX2xvY2F0aW9ucywgYXhpc09yZGVyPWF4aXNPcmRlcgogICAgICAgICkKCiAgICAgICAgcmV0dXJuIG1vZGVsCgogICAgZGVmIGdldF9kZWx0YXNfYW5kX3N1cHBvcnRzKHNlbGYsIHNjYWxhcjogVmFyaWFibGVTY2FsYXIpOgogICAgICAgICIiIkNhbGN1bGF0ZSBkZWx0YXMgYW5kIHN1cHBvcnRzIGZyb20gdGhpcyBzY2FsYXIncyB2YXJpYXRpb24gbW9kZWwuIiIiCiAgICAgICAgdmFsdWVzID0gbGlzdChzY2FsYXIudmFsdWVzLnZhbHVlcygpKQogICAgICAgIHJldHVybiBzZWxmLm1vZGVsKHNjYWxhcikuZ2V0RGVsdGFzQW5kU3VwcG9ydHModmFsdWVzLCByb3VuZD1yb3VuZCkKCiAgICBkZWYgYWRkX3RvX3ZhcmlhdGlvbl9zdG9yZSgKICAgICAgICBzZWxmLCBzY2FsYXI6IFZhcmlhYmxlU2NhbGFyLCBzdG9yZV9idWlsZGVyCiAgICApIC0+IHR1cGxlW2ludCwgaW50XToKICAgICAgICAiIiJTZXJpYWxpemUgdGhpcyBzY2FsYXIncyB2YXJpYXRpb24gbW9kZWwgdG8gYSBzdG9yZSwgcmV0dXJuaW5nIHRoZQogICAgICAgIGRlZmF1bHQgdmFsdWUgYW5kIHZhcmlhdGlvbiBpbmRleC4iIiIKCiAgICAgICAgZGVsdGFzLCBzdXBwb3J0cyA9IHNlbGYuZ2V0X2RlbHRhc19hbmRfc3VwcG9ydHMoc2NhbGFyKQogICAgICAgIHN0b3JlX2J1aWxkZXIuc2V0U3VwcG9ydHMoc3VwcG9ydHMpCiAgICAgICAgaW5kZXggPSBzdG9yZV9idWlsZGVyLnN0b3JlRGVsdGFzKGRlbHRhcywgcm91bmQ9bm9Sb3VuZCkKCiAgICAgICAgIyBOT1RFOiBEZWZhdWx0IHZhbHVlIHNob3VsZCBiZSBhbiBleGFjdCBpbnRlZ2VyIGJ5IGNvbnN0cnVjdGlvbiBvZgogICAgICAgICMgICAgICAgVmFyaWFibGVTY2FsYXIuCiAgICAgICAgcmV0dXJuIGludChzZWxmLmRlZmF1bHRfdmFsdWUoc2NhbGFyKSksIGluZGV4Cg==
+from __future__ import annotations
+
+from collections.abc import Mapping
+from dataclasses import dataclass
+
+from fontTools.designspaceLib import DesignSpaceDocument
+from fontTools.ttLib.ttFont import TTFont
+from fontTools.varLib.models import (
+    VariationModel,
+    noRound,
+    normalizeValue,
+    piecewiseLinearMap,
+)
+
+import typing
+import warnings
+
+if typing.TYPE_CHECKING:
+    from typing import Self
+
+LocationTuple = tuple[tuple[str, float], ...]
+"""A hashable location."""
+
+
+def Location(location: Mapping[str, float]) -> LocationTuple:
+    """Create a hashable location from a dictionary-like location."""
+    return tuple(sorted(location.items()))
+
+
+class VariableScalar:
+    """A scalar with different values at different points in the designspace."""
+
+    values: dict[LocationTuple, int]
+    """The values across various user-locations. Must always include the default
+    location by time of building."""
+
+    def __init__(self, location_value=None):
+        self.values = {
+            Location(location): value
+            for location, value in (location_value or {}).items()
+        }
+        # Deprecated: only used by the add_to_variation_store() backwards-compat
+        # shim. New code should use VariableScalarBuilder instead.
+        self.axes = []
+
+    def __repr__(self):
+        items = []
+        for location, value in self.values.items():
+            if location:
+                loc = ",".join(
+                    [
+                        f"{ax}={int(coord) if float(coord).is_integer() else coord}"
+                        for ax, coord in location
+                    ]
+                )
+                items.append("%s:%i" % (loc, value))
+            else:
+                items.append("%i" % value)
+        return "(" + (" ".join(items)) + ")"
+
+    @property
+    def does_vary(self) -> bool:
+        values = list(self.values.values())
+        return any(v != values[0] for v in values[1:])
+
+    def add_value(self, location: Mapping[str, float], value: int):
+        self.values[Location(location)] = value
+
+    def add_to_variation_store(self, store_builder, model_cache=None, avar=None):
+        """Deprecated: use VariableScalarBuilder.add_to_variation_store() instead."""
+        warnings.warn(
+            "VariableScalar.add_to_variation_store() is deprecated. "
+            "Use VariableScalarBuilder.add_to_variation_store() instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        if not self.axes:
+            raise ValueError(
+                ".axes must be defined on variable scalar before calling "
+                "add_to_variation_store()"
+            )
+        builder = VariableScalarBuilder(
+            axis_triples={
+                ax.axisTag: (ax.minValue, ax.defaultValue, ax.maxValue)
+                for ax in self.axes
+            },
+            axis_mappings=({} if avar is None else dict(avar.segments)),
+            model_cache=model_cache if model_cache is not None else {},
+        )
+        return builder.add_to_variation_store(self, store_builder)
+
+
+@dataclass
+class VariableScalarBuilder:
+    """A helper class for building variable scalars, or otherwise interrogating
+    their variation model for interpolation or similar."""
+
+    axis_triples: dict[str, tuple[float, float, float]]
+    """Minimum, default, and maximum for each axis in user-coordinates."""
+    axis_mappings: dict[str, Mapping[float, float]]
+    """Optional mappings from normalized user-coordinates to normalized
+    design-coordinates."""
+
+    model_cache: dict[tuple[LocationTuple, ...], VariationModel]
+    """We often use the same exact locations (i.e. font sources) for a large
+    number of variable scalars. Instead of creating a model for each, cache
+    them. Cache by user-location to avoid repeated mapping computations."""
+
+    @classmethod
+    def from_ttf(cls, ttf: TTFont) -> Self:
+        return cls(
+            axis_triples={
+                axis.axisTag: (axis.minValue, axis.defaultValue, axis.maxValue)
+                for axis in ttf["fvar"].axes
+            },
+            axis_mappings=(
+                {}
+                if (avar := ttf.get("avar")) is None
+                else {axis: segments for axis, segments in avar.segments.items()}
+            ),
+            model_cache={},
+        )
+
+    @classmethod
+    def from_designspace(cls, doc: DesignSpaceDocument) -> Self:
+        return cls(
+            axis_triples={
+                axis.tag: (axis.minimum, axis.default, axis.maximum)
+                for axis in doc.axes
+            },
+            axis_mappings={
+                axis.tag: {
+                    normalizeValue(
+                        user, (axis.minimum, axis.default, axis.maximum)
+                    ): normalizeValue(
+                        design,
+                        (
+                            axis.map_forward(axis.minimum),
+                            axis.map_forward(axis.default),
+                            axis.map_forward(axis.maximum),
+                        ),
+                        allow_decreasing=True,
+                    )
+                    for user, design in axis.map
+                }
+                for axis in doc.axes
+                if axis.map
+            },
+            model_cache={},
+        )
+
+    def _fully_specify_location(self, location: LocationTuple) -> LocationTuple:
+        """Validate and fully-specify a user-space location by filling in
+        missing axes with their user-space defaults."""
+
+        full = {}
+        for axtag, value in location:
+            if axtag not in self.axis_triples:
+                raise ValueError("Unknown axis %s in %s" % (axtag, location))
+            full[axtag] = value
+
+        for axtag, (_, axis_default, _) in self.axis_triples.items():
+            if axtag not in full:
+                full[axtag] = axis_default
+
+        return Location(full)
+
+    def _normalize_location(self, location: LocationTuple) -> dict[str, float]:
+        """Normalize a user-space location, applying avar mappings if present.
+
+        TODO: This only handles avar1 (per-axis piecewise linear mappings),
+        not avar2 (multi-dimensional mappings).
+        """
+
+        result = {}
+        for axtag, value in location:
+            axis_min, axis_default, axis_max = self.axis_triples[axtag]
+            normalized = normalizeValue(value, (axis_min, axis_default, axis_max))
+            mapping = self.axis_mappings.get(axtag)
+            if mapping is not None:
+                normalized = piecewiseLinearMap(normalized, mapping)
+            result[axtag] = normalized
+
+        return result
+
+    def _full_locations_and_values(
+        self, scalar: VariableScalar
+    ) -> list[tuple[LocationTuple, int]]:
+        """Return a list of (fully-specified user-space location, value) pairs,
+        preserving order and length of scalar.values."""
+
+        return [
+            (self._fully_specify_location(loc), val)
+            for loc, val in scalar.values.items()
+        ]
+
+    def default_value(self, scalar: VariableScalar) -> int:
+        """Get the default value of a variable scalar."""
+
+        default_loc = Location(
+            {tag: default for tag, (_, default, _) in self.axis_triples.items()}
+        )
+        for location, value in self._full_locations_and_values(scalar):
+            if location == default_loc:
+                return value
+
+        raise ValueError("Default value could not be found")
+
+    def value_at_location(
+        self, scalar: VariableScalar, location: LocationTuple
+    ) -> float:
+        """Interpolate the value of a scalar from a user-location."""
+
+        location = self._fully_specify_location(location)
+        pairs = self._full_locations_and_values(scalar)
+
+        # If user location matches exactly, no axis mapping or variation model needed.
+        for loc, val in pairs:
+            if loc == location:
+                return val
+
+        values = [val for _, val in pairs]
+        normalized_location = self._normalize_location(location)
+
+        value = self.model(scalar).interpolateFromMasters(normalized_location, values)
+        if value is None:
+            raise ValueError("Insufficient number of values to interpolate")
+
+        return value
+
+    def model(self, scalar: VariableScalar) -> VariationModel:
+        """Return a variation model based on a scalar's values.
+
+        Variable scalars with the same fully-specified user-locations will use
+        the same cached variation model."""
+
+        pairs = self._full_locations_and_values(scalar)
+        cache_key = tuple(loc for loc, _ in pairs)
+
+        cached_model = self.model_cache.get(cache_key)
+        if cached_model is not None:
+            return cached_model
+
+        normalized_locations = [self._normalize_location(loc) for loc, _ in pairs]
+        axisOrder = list(self.axis_triples.keys())
+        model = self.model_cache[cache_key] = VariationModel(
+            normalized_locations, axisOrder=axisOrder
+        )
+
+        return model
+
+    def get_deltas_and_supports(self, scalar: VariableScalar):
+        """Calculate deltas and supports from this scalar's variation model."""
+        values = list(scalar.values.values())
+        return self.model(scalar).getDeltasAndSupports(values, round=round)
+
+    def add_to_variation_store(
+        self, scalar: VariableScalar, store_builder
+    ) -> tuple[int, int]:
+        """Serialize this scalar's variation model to a store, returning the
+        default value and variation index."""
+
+        deltas, supports = self.get_deltas_and_supports(scalar)
+        store_builder.setSupports(supports)
+        index = store_builder.storeDeltas(deltas, round=noRound)
+
+        # NOTE: Default value should be an exact integer by construction of
+        #       VariableScalar.
+        return int(self.default_value(scalar)), index

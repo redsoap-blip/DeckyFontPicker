@@ -1,1 +1,260 @@
-IiIiQ29tcHV0ZSBuYW1lIGluZm9ybWF0aW9uIGZvciBhIGdpdmVuIGxvY2F0aW9uIGluIHVzZXItc3BhY2UgY29vcmRpbmF0ZXMKdXNpbmcgU1RBVCBkYXRhLiBUaGlzIGNhbiBiZSB1c2VkIHRvIGZpbGwtaW4gYXV0b21hdGljYWxseSB0aGUgbmFtZXMgb2YgYW4KaW5zdGFuY2U6CgouLiBjb2RlOjogcHl0aG9uCgogICAgaW5zdGFuY2UgPSBkb2MuaW5zdGFuY2VzWzBdCiAgICBuYW1lcyA9IGdldFN0YXROYW1lcyhkb2MsIGluc3RhbmNlLmdldEZ1bGxVc2VyTG9jYXRpb24oZG9jKSkKICAgIHByaW50KG5hbWVzLnN0eWxlTmFtZXMpCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCmZyb20gdHlwaW5nIGltcG9ydCBEaWN0LCBMaXRlcmFsLCBPcHRpb25hbCwgVHVwbGUsIFVuaW9uCmltcG9ydCBsb2dnaW5nCgpmcm9tIGZvbnRUb29scy5kZXNpZ25zcGFjZUxpYiBpbXBvcnQgKAogICAgQXhpc0Rlc2NyaXB0b3IsCiAgICBBeGlzTGFiZWxEZXNjcmlwdG9yLAogICAgRGVzaWduU3BhY2VEb2N1bWVudCwKICAgIERpc2NyZXRlQXhpc0Rlc2NyaXB0b3IsCiAgICBTaW1wbGVMb2NhdGlvbkRpY3QsCiAgICBTb3VyY2VEZXNjcmlwdG9yLAopCgpMT0dHRVIgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKClJpYmJpU3R5bGVOYW1lID0gVW5pb25bCiAgICBMaXRlcmFsWyJyZWd1bGFyIl0sCiAgICBMaXRlcmFsWyJib2xkIl0sCiAgICBMaXRlcmFsWyJpdGFsaWMiXSwKICAgIExpdGVyYWxbImJvbGQgaXRhbGljIl0sCl0KCkJPTERfSVRBTElDX1RPX1JJQkJJX1NUWUxFID0gewogICAgKEZhbHNlLCBGYWxzZSk6ICJyZWd1bGFyIiwKICAgIChGYWxzZSwgVHJ1ZSk6ICJpdGFsaWMiLAogICAgKFRydWUsIEZhbHNlKTogImJvbGQiLAogICAgKFRydWUsIFRydWUpOiAiYm9sZCBpdGFsaWMiLAp9CgoKQGRhdGFjbGFzcwpjbGFzcyBTdGF0TmFtZXM6CiAgICAiIiJOYW1lIGRhdGEgZ2VuZXJhdGVkIGZyb20gdGhlIFNUQVQgdGFibGUgaW5mb3JtYXRpb24uIiIiCgogICAgZmFtaWx5TmFtZXM6IERpY3Rbc3RyLCBzdHJdCiAgICBzdHlsZU5hbWVzOiBEaWN0W3N0ciwgc3RyXQogICAgcG9zdFNjcmlwdEZvbnROYW1lOiBPcHRpb25hbFtzdHJdCiAgICBzdHlsZU1hcEZhbWlseU5hbWVzOiBEaWN0W3N0ciwgc3RyXQogICAgc3R5bGVNYXBTdHlsZU5hbWU6IE9wdGlvbmFsW1JpYmJpU3R5bGVOYW1lXQoKCmRlZiBnZXRTdGF0TmFtZXMoCiAgICBkb2M6IERlc2lnblNwYWNlRG9jdW1lbnQsIHVzZXJMb2NhdGlvbjogU2ltcGxlTG9jYXRpb25EaWN0CikgLT4gU3RhdE5hbWVzOgogICAgIiIiQ29tcHV0ZSB0aGUgZmFtaWx5LCBzdHlsZSwgUG9zdFNjcmlwdCBuYW1lcyBvZiB0aGUgZ2l2ZW4gYGB1c2VyTG9jYXRpb25gYAogICAgdXNpbmcgdGhlIGRvY3VtZW50J3MgU1RBVCBpbmZvcm1hdGlvbi4KCiAgICBBbHNvIGNvbXB1dGVzIGxvY2FsaXphdGlvbnMuCgogICAgSWYgbm90IGVub3VnaCBTVEFUIGRhdGEgaXMgYXZhaWxhYmxlIGZvciBhIGdpdmVuIG5hbWUsIGVpdGhlciBpdHMgZGljdCBvZgogICAgbG9jYWxpemVkIG5hbWVzIHdpbGwgYmUgZW1wdHkgKGZhbWlseSBhbmQgc3R5bGUgbmFtZXMpLCBvciB0aGUgbmFtZSB3aWxsIGJlCiAgICBOb25lIChQb3N0U2NyaXB0IG5hbWUpLgoKICAgIE5vdGU6IHRoaXMgbWV0aG9kIGRvZXMgbm90IGNvbnNpZGVyIGluZm8gYXR0YWNoZWQgdG8gdGhlIGluc3RhbmNlLCBsaWtlCiAgICBmYW1pbHkgbmFtZS4gVGhlIHVzZXIgbmVlZHMgdG8gb3ZlcnJpZGUgYWxsIG5hbWVzIG9uIGFuIGluc3RhbmNlIHRoYXQgU1RBVAogICAgaW5mb3JtYXRpb24gd291bGQgY29tcHV0ZSBkaWZmZXJlbnRseSB0aGFuIGRlc2lyZWQuCgogICAgLi4gdmVyc2lvbmFkZGVkOjogNS4wCiAgICAiIiIKICAgIGZhbWlseU5hbWVzOiBEaWN0W3N0ciwgc3RyXSA9IHt9CiAgICBkZWZhdWx0U291cmNlOiBPcHRpb25hbFtTb3VyY2VEZXNjcmlwdG9yXSA9IGRvYy5maW5kRGVmYXVsdCgpCiAgICBpZiBkZWZhdWx0U291cmNlIGlzIE5vbmU6CiAgICAgICAgTE9HR0VSLndhcm5pbmcoIkNhbm5vdCBkZXRlcm1pbmUgZGVmYXVsdCBzb3VyY2UgdG8gbG9vayB1cCBmYW1pbHkgbmFtZS4iKQogICAgZWxpZiBkZWZhdWx0U291cmNlLmZhbWlseU5hbWUgaXMgTm9uZToKICAgICAgICBMT0dHRVIud2FybmluZygKICAgICAgICAgICAgIkNhbm5vdCBsb29rIHVwIGZhbWlseSBuYW1lLCBhc3NpZ24gdGhlICdmYW1pbHluYW1lJyBhdHRyaWJ1dGUgdG8gdGhlIGRlZmF1bHQgc291cmNlLiIKICAgICAgICApCiAgICBlbHNlOgogICAgICAgIGZhbWlseU5hbWVzID0gewogICAgICAgICAgICAiZW4iOiBkZWZhdWx0U291cmNlLmZhbWlseU5hbWUsCiAgICAgICAgICAgICoqZGVmYXVsdFNvdXJjZS5sb2NhbGlzZWRGYW1pbHlOYW1lLAogICAgICAgIH0KCiAgICBzdHlsZU5hbWVzOiBEaWN0W3N0ciwgc3RyXSA9IHt9CiAgICAjIElmIGEgZnJlZS1zdGFuZGluZyBsYWJlbCBtYXRjaGVzIHRoZSBsb2NhdGlvbiwgdXNlIGl0IGZvciBuYW1lIGdlbmVyYXRpb24uCiAgICBsYWJlbCA9IGRvYy5sYWJlbEZvclVzZXJMb2NhdGlvbih1c2VyTG9jYXRpb24pCiAgICBpZiBsYWJlbCBpcyBub3QgTm9uZToKICAgICAgICBzdHlsZU5hbWVzID0geyJlbiI6IGxhYmVsLm5hbWUsICoqbGFiZWwubGFiZWxOYW1lc30KICAgICMgT3RoZXJ3aXNlLCBzY291ciB0aGUgYXhpcyBsYWJlbHMgZm9yIG1hdGNoZXMuCiAgICBlbHNlOgogICAgICAgICMgR2F0aGVyIGFsbCBsYW5ndWFnZXMgaW4gd2hpY2ggYXQgbGVhc3Qgb25lIHRyYW5zbGF0aW9uIGlzIHByb3ZpZGVkCiAgICAgICAgIyBUaGVuIGJ1aWxkIG5hbWVzIGZvciBhbGwgdGhlc2UgbGFuZ3VhZ2VzLCBidXQgZmFsbGJhY2sgdG8gRW5nbGlzaAogICAgICAgICMgd2hlbmV2ZXIgYSB0cmFuc2xhdGlvbiBpcyBtaXNzaW5nLgogICAgICAgIGxhYmVscyA9IF9nZXRBeGlzTGFiZWxzRm9yVXNlckxvY2F0aW9uKGRvYy5heGVzLCB1c2VyTG9jYXRpb24pCiAgICAgICAgaWYgbGFiZWxzOgogICAgICAgICAgICBsYW5ndWFnZXMgPSBzZXQoCiAgICAgICAgICAgICAgICBsYW5ndWFnZSBmb3IgbGFiZWwgaW4gbGFiZWxzIGZvciBsYW5ndWFnZSBpbiBsYWJlbC5sYWJlbE5hbWVzCiAgICAgICAgICAgICkKICAgICAgICAgICAgbGFuZ3VhZ2VzLmFkZCgiZW4iKQogICAgICAgICAgICBmb3IgbGFuZ3VhZ2UgaW4gbGFuZ3VhZ2VzOgogICAgICAgICAgICAgICAgc3R5bGVOYW1lID0gIiAiLmpvaW4oCiAgICAgICAgICAgICAgICAgICAgbGFiZWwubGFiZWxOYW1lcy5nZXQobGFuZ3VhZ2UsIGxhYmVsLmRlZmF1bHROYW1lKQogICAgICAgICAgICAgICAgICAgIGZvciBsYWJlbCBpbiBsYWJlbHMKICAgICAgICAgICAgICAgICAgICBpZiBub3QgbGFiZWwuZWxpZGFibGUKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGlmIG5vdCBzdHlsZU5hbWUgYW5kIGRvYy5lbGlkZWRGYWxsYmFja05hbWUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgc3R5bGVOYW1lID0gZG9jLmVsaWRlZEZhbGxiYWNrTmFtZQogICAgICAgICAgICAgICAgc3R5bGVOYW1lc1tsYW5ndWFnZV0gPSBzdHlsZU5hbWUKCiAgICBpZiAiZW4iIG5vdCBpbiBmYW1pbHlOYW1lcyBvciAiZW4iIG5vdCBpbiBzdHlsZU5hbWVzOgogICAgICAgICMgTm90IGVub3VnaCBpbmZvcm1hdGlvbiB0byBjb21wdXRlIFBTIG5hbWVzIG9mIHN0eWxlTWFwIG5hbWVzCiAgICAgICAgcmV0dXJuIFN0YXROYW1lcygKICAgICAgICAgICAgZmFtaWx5TmFtZXM9ZmFtaWx5TmFtZXMsCiAgICAgICAgICAgIHN0eWxlTmFtZXM9c3R5bGVOYW1lcywKICAgICAgICAgICAgcG9zdFNjcmlwdEZvbnROYW1lPU5vbmUsCiAgICAgICAgICAgIHN0eWxlTWFwRmFtaWx5TmFtZXM9e30sCiAgICAgICAgICAgIHN0eWxlTWFwU3R5bGVOYW1lPU5vbmUsCiAgICAgICAgKQoKICAgIHBvc3RTY3JpcHRGb250TmFtZSA9IGYie2ZhbWlseU5hbWVzWydlbiddfS17c3R5bGVOYW1lc1snZW4nXX0iLnJlcGxhY2UoIiAiLCAiIikKCiAgICBzdHlsZU1hcFN0eWxlTmFtZSwgcmVndWxhclVzZXJMb2NhdGlvbiA9IF9nZXRSaWJiaVN0eWxlKGRvYywgdXNlckxvY2F0aW9uKQoKICAgIHN0eWxlTmFtZXNGb3JTdHlsZU1hcCA9IHN0eWxlTmFtZXMKICAgIGlmIHJlZ3VsYXJVc2VyTG9jYXRpb24gIT0gdXNlckxvY2F0aW9uOgogICAgICAgIHJlZ3VsYXJTdGF0TmFtZXMgPSBnZXRTdGF0TmFtZXMoZG9jLCByZWd1bGFyVXNlckxvY2F0aW9uKQogICAgICAgIHN0eWxlTmFtZXNGb3JTdHlsZU1hcCA9IHJlZ3VsYXJTdGF0TmFtZXMuc3R5bGVOYW1lcwoKICAgIHN0eWxlTWFwRmFtaWx5TmFtZXMgPSB7fQogICAgZm9yIGxhbmd1YWdlIGluIHNldChmYW1pbHlOYW1lcykudW5pb24oc3R5bGVOYW1lcy5rZXlzKCkpOgogICAgICAgIGZhbWlseU5hbWUgPSBmYW1pbHlOYW1lcy5nZXQobGFuZ3VhZ2UsIGZhbWlseU5hbWVzWyJlbiJdKQogICAgICAgIHN0eWxlTmFtZSA9IHN0eWxlTmFtZXNGb3JTdHlsZU1hcC5nZXQobGFuZ3VhZ2UsIHN0eWxlTmFtZXNGb3JTdHlsZU1hcFsiZW4iXSkKICAgICAgICBzdHlsZU1hcEZhbWlseU5hbWVzW2xhbmd1YWdlXSA9IChmYW1pbHlOYW1lICsgIiAiICsgc3R5bGVOYW1lKS5zdHJpcCgpCgogICAgcmV0dXJuIFN0YXROYW1lcygKICAgICAgICBmYW1pbHlOYW1lcz1mYW1pbHlOYW1lcywKICAgICAgICBzdHlsZU5hbWVzPXN0eWxlTmFtZXMsCiAgICAgICAgcG9zdFNjcmlwdEZvbnROYW1lPXBvc3RTY3JpcHRGb250TmFtZSwKICAgICAgICBzdHlsZU1hcEZhbWlseU5hbWVzPXN0eWxlTWFwRmFtaWx5TmFtZXMsCiAgICAgICAgc3R5bGVNYXBTdHlsZU5hbWU9c3R5bGVNYXBTdHlsZU5hbWUsCiAgICApCgoKZGVmIF9nZXRTb3J0ZWRBeGlzTGFiZWxzKAogICAgYXhlczogbGlzdFtVbmlvbltBeGlzRGVzY3JpcHRvciwgRGlzY3JldGVBeGlzRGVzY3JpcHRvcl1dLAopIC0+IERpY3Rbc3RyLCBsaXN0W0F4aXNMYWJlbERlc2NyaXB0b3JdXToKICAgICIiIlJldHVybnMgYXhpcyBsYWJlbHMgc29ydGVkIGJ5IHRoZWlyIG9yZGVyaW5nLCB3aXRoIHVub3JkZXJlZCBvbmVzIGFwcGVuZGVkIGFzCiAgICB0aGV5IGFyZSBsaXN0ZWQuIiIiCgogICAgIyBGaXJzdCwgZ2V0IHRoZSBheGlzIGxhYmVscyB3aXRoIGV4cGxpY2l0IG9yZGVyaW5nLi4uCiAgICBzb3J0ZWRBeGVzID0gc29ydGVkKAogICAgICAgIChheGlzIGZvciBheGlzIGluIGF4ZXMgaWYgYXhpcy5heGlzT3JkZXJpbmcgaXMgbm90IE5vbmUpLAogICAgICAgIGtleT1sYW1iZGEgYTogYS5heGlzT3JkZXJpbmcsCiAgICApCiAgICBzb3J0ZWRMYWJlbHM6IERpY3Rbc3RyLCBsaXN0W0F4aXNMYWJlbERlc2NyaXB0b3JdXSA9IHsKICAgICAgICBheGlzLm5hbWU6IGF4aXMuYXhpc0xhYmVscyBmb3IgYXhpcyBpbiBzb3J0ZWRBeGVzCiAgICB9CgogICAgIyAuLi4gdGhlbiBhcHBlbmQgdGhlIG90aGVycyBpbiB0aGUgb3JkZXIgdGhleSBhcHBlYXIuCiAgICAjIE5PVEU6IFRoaXMgcmVsaWVzIG9uIFB5dGhvbiAzLjcrIGRpY3QncyBwcmVzZXJ2ZWQgaW5zZXJ0aW9uIG9yZGVyLgogICAgZm9yIGF4aXMgaW4gYXhlczoKICAgICAgICBpZiBheGlzLmF4aXNPcmRlcmluZyBpcyBOb25lOgogICAgICAgICAgICBzb3J0ZWRMYWJlbHNbYXhpcy5uYW1lXSA9IGF4aXMuYXhpc0xhYmVscwoKICAgIHJldHVybiBzb3J0ZWRMYWJlbHMKCgpkZWYgX2dldEF4aXNMYWJlbHNGb3JVc2VyTG9jYXRpb24oCiAgICBheGVzOiBsaXN0W1VuaW9uW0F4aXNEZXNjcmlwdG9yLCBEaXNjcmV0ZUF4aXNEZXNjcmlwdG9yXV0sCiAgICB1c2VyTG9jYXRpb246IFNpbXBsZUxvY2F0aW9uRGljdCwKKSAtPiBsaXN0W0F4aXNMYWJlbERlc2NyaXB0b3JdOgogICAgbGFiZWxzOiBsaXN0W0F4aXNMYWJlbERlc2NyaXB0b3JdID0gW10KCiAgICBhbGxBeGlzTGFiZWxzID0gX2dldFNvcnRlZEF4aXNMYWJlbHMoYXhlcykKICAgIGlmIGFsbEF4aXNMYWJlbHMua2V5cygpICE9IHVzZXJMb2NhdGlvbi5rZXlzKCk6CiAgICAgICAgTE9HR0VSLndhcm5pbmcoCiAgICAgICAgICAgIGYiTWlzbWF0Y2ggYmV0d2VlbiB1c2VyIGxvY2F0aW9uICd7dXNlckxvY2F0aW9uLmtleXMoKX0nIGFuZCBhdmFpbGFibGUgIgogICAgICAgICAgICBmImxhYmVscyBmb3IgJ3thbGxBeGlzTGFiZWxzLmtleXMoKX0nLiIKICAgICAgICApCgogICAgZm9yIGF4aXNOYW1lLCBheGlzTGFiZWxzIGluIGFsbEF4aXNMYWJlbHMuaXRlbXMoKToKICAgICAgICB1c2VyVmFsdWUgPSB1c2VyTG9jYXRpb25bYXhpc05hbWVdCiAgICAgICAgbGFiZWw6IE9wdGlvbmFsW0F4aXNMYWJlbERlc2NyaXB0b3JdID0gbmV4dCgKICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgbAogICAgICAgICAgICAgICAgZm9yIGwgaW4gYXhpc0xhYmVscwogICAgICAgICAgICAgICAgaWYgbC51c2VyVmFsdWUgPT0gdXNlclZhbHVlCiAgICAgICAgICAgICAgICBvciAoCiAgICAgICAgICAgICAgICAgICAgbC51c2VyTWluaW11bSBpcyBub3QgTm9uZQogICAgICAgICAgICAgICAgICAgIGFuZCBsLnVzZXJNYXhpbXVtIGlzIG5vdCBOb25lCiAgICAgICAgICAgICAgICAgICAgYW5kIGwudXNlck1pbmltdW0gPD0gdXNlclZhbHVlIDw9IGwudXNlck1heGltdW0KICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgKSwKICAgICAgICAgICAgTm9uZSwKICAgICAgICApCiAgICAgICAgaWYgbGFiZWwgaXMgTm9uZToKICAgICAgICAgICAgTE9HR0VSLmRlYnVnKAogICAgICAgICAgICAgICAgZiJEb2N1bWVudCBuZWVkcyBhIGxhYmVsIGZvciBheGlzICd7YXhpc05hbWV9JywgdXNlciB2YWx1ZSAne3VzZXJWYWx1ZX0nLiIKICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxhYmVscy5hcHBlbmQobGFiZWwpCgogICAgcmV0dXJuIGxhYmVscwoKCmRlZiBfZ2V0UmliYmlTdHlsZSgKICAgIHNlbGY6IERlc2lnblNwYWNlRG9jdW1lbnQsIHVzZXJMb2NhdGlvbjogU2ltcGxlTG9jYXRpb25EaWN0CikgLT4gVHVwbGVbUmliYmlTdHlsZU5hbWUsIFNpbXBsZUxvY2F0aW9uRGljdF06CiAgICAiIiJDb21wdXRlIHRoZSBSSUJCSSBzdHlsZSBuYW1lIG9mIHRoZSBnaXZlbiB1c2VyIGxvY2F0aW9uLAogICAgcmV0dXJuIHRoZSBsb2NhdGlvbiBvZiB0aGUgbWF0Y2hpbmcgUmVndWxhciBpbiB0aGUgUklCQkkgZ3JvdXAuCgogICAgLi4gdmVyc2lvbmFkZGVkOjogNS4wCiAgICAiIiIKICAgIHJlZ3VsYXJVc2VyTG9jYXRpb24gPSB7fQogICAgYXhlc19ieV90YWcgPSB7YXhpcy50YWc6IGF4aXMgZm9yIGF4aXMgaW4gc2VsZi5heGVzfQoKICAgIGJvbGQ6IGJvb2wgPSBGYWxzZQogICAgaXRhbGljOiBib29sID0gRmFsc2UKCiAgICBheGlzID0gYXhlc19ieV90YWcuZ2V0KCJ3Z2h0IikKICAgIGlmIGF4aXMgaXMgbm90IE5vbmU6CiAgICAgICAgZm9yIHJlZ3VsYXJfbGFiZWwgaW4gYXhpcy5heGlzTGFiZWxzOgogICAgICAgICAgICBpZiAoCiAgICAgICAgICAgICAgICByZWd1bGFyX2xhYmVsLmxpbmtlZFVzZXJWYWx1ZSA9PSB1c2VyTG9jYXRpb25bYXhpcy5uYW1lXQogICAgICAgICAgICAgICAgIyBJbiB0aGUgInJlY3Vyc2l2ZSIgY2FzZSB3aGVyZSBib3RoIHRoZSBSZWd1bGFyIGhhcwogICAgICAgICAgICAgICAgIyBsaW5rZWRVc2VyVmFsdWUgcG9pbnRpbmcgdGhlIEJvbGQsIGFuZCB0aGUgQm9sZCBoYXMKICAgICAgICAgICAgICAgICMgbGlua2VkVXNlclZhbHVlIHBvaW50aW5nIHRvIHRoZSBSZWd1bGFyLCBvbmx5IGNvbnNpZGVyIHRoZQogICAgICAgICAgICAgICAgIyBmaXJzdCBjYXNlOiBSZWd1bGFyIChlLmcuIDQwMCkgaGFzIGxpbmtlZFVzZXJWYWx1ZSBwb2ludGluZyB0bwogICAgICAgICAgICAgICAgIyBCb2xkIChlLmcuIDcwMCwgaGlnaGVyIHRoYW4gUmVndWxhcikKICAgICAgICAgICAgICAgIGFuZCByZWd1bGFyX2xhYmVsLnVzZXJWYWx1ZSA8IHJlZ3VsYXJfbGFiZWwubGlua2VkVXNlclZhbHVlCiAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICByZWd1bGFyVXNlckxvY2F0aW9uW2F4aXMubmFtZV0gPSByZWd1bGFyX2xhYmVsLnVzZXJWYWx1ZQogICAgICAgICAgICAgICAgYm9sZCA9IFRydWUKICAgICAgICAgICAgICAgIGJyZWFrCgogICAgYXhpcyA9IGF4ZXNfYnlfdGFnLmdldCgiaXRhbCIpIG9yIGF4ZXNfYnlfdGFnLmdldCgic2xudCIpCiAgICBpZiBheGlzIGlzIG5vdCBOb25lOgogICAgICAgIGZvciB1cHJpZ2h0X2xhYmVsIGluIGF4aXMuYXhpc0xhYmVsczoKICAgICAgICAgICAgaWYgKAogICAgICAgICAgICAgICAgdXByaWdodF9sYWJlbC5saW5rZWRVc2VyVmFsdWUgPT0gdXNlckxvY2F0aW9uW2F4aXMubmFtZV0KICAgICAgICAgICAgICAgICMgSW4gdGhlICJyZWN1cnNpdmUiIGNhc2Ugd2hlcmUgYm90aCB0aGUgVXByaWdodCBoYXMKICAgICAgICAgICAgICAgICMgbGlua2VkVXNlclZhbHVlIHBvaW50aW5nIHRoZSBJdGFsaWMsIGFuZCB0aGUgSXRhbGljIGhhcwogICAgICAgICAgICAgICAgIyBsaW5rZWRVc2VyVmFsdWUgcG9pbnRpbmcgdG8gdGhlIFVwcmlnaHQsIG9ubHkgY29uc2lkZXIgdGhlCiAgICAgICAgICAgICAgICAjIGZpcnN0IGNhc2U6IFVwcmlnaHQgKGUuZy4gaXRhbD0wLCBzbGFudD0wKSBoYXMKICAgICAgICAgICAgICAgICMgbGlua2VkVXNlclZhbHVlIHBvaW50aW5nIHRvIEl0YWxpYyAoZS5nIGl0YWw9MSwgc2xhbnQ9LTEyIG9yCiAgICAgICAgICAgICAgICAjIHNsYW50PTEyIGZvciBiYWNrd2FyZHMgaXRhbGljcywgaW4gYW55IGNhc2UgaGlnaGVyIHRoYW4KICAgICAgICAgICAgICAgICMgVXByaWdodCBpbiBhYnNvbHV0ZSB2YWx1ZSwgaGVuY2UgdGhlIGFicygpIGJlbG93LgogICAgICAgICAgICAgICAgYW5kIGFicyh1cHJpZ2h0X2xhYmVsLnVzZXJWYWx1ZSkgPCBhYnModXByaWdodF9sYWJlbC5saW5rZWRVc2VyVmFsdWUpCiAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICByZWd1bGFyVXNlckxvY2F0aW9uW2F4aXMubmFtZV0gPSB1cHJpZ2h0X2xhYmVsLnVzZXJWYWx1ZQogICAgICAgICAgICAgICAgaXRhbGljID0gVHJ1ZQogICAgICAgICAgICAgICAgYnJlYWsKCiAgICByZXR1cm4gQk9MRF9JVEFMSUNfVE9fUklCQklfU1RZTEVbYm9sZCwgaXRhbGljXSwgewogICAgICAgICoqdXNlckxvY2F0aW9uLAogICAgICAgICoqcmVndWxhclVzZXJMb2NhdGlvbiwKICAgIH0K
+"""Compute name information for a given location in user-space coordinates
+using STAT data. This can be used to fill-in automatically the names of an
+instance:
+
+.. code:: python
+
+    instance = doc.instances[0]
+    names = getStatNames(doc, instance.getFullUserLocation(doc))
+    print(names.styleNames)
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Dict, Literal, Optional, Tuple, Union
+import logging
+
+from fontTools.designspaceLib import (
+    AxisDescriptor,
+    AxisLabelDescriptor,
+    DesignSpaceDocument,
+    DiscreteAxisDescriptor,
+    SimpleLocationDict,
+    SourceDescriptor,
+)
+
+LOGGER = logging.getLogger(__name__)
+
+RibbiStyleName = Union[
+    Literal["regular"],
+    Literal["bold"],
+    Literal["italic"],
+    Literal["bold italic"],
+]
+
+BOLD_ITALIC_TO_RIBBI_STYLE = {
+    (False, False): "regular",
+    (False, True): "italic",
+    (True, False): "bold",
+    (True, True): "bold italic",
+}
+
+
+@dataclass
+class StatNames:
+    """Name data generated from the STAT table information."""
+
+    familyNames: Dict[str, str]
+    styleNames: Dict[str, str]
+    postScriptFontName: Optional[str]
+    styleMapFamilyNames: Dict[str, str]
+    styleMapStyleName: Optional[RibbiStyleName]
+
+
+def getStatNames(
+    doc: DesignSpaceDocument, userLocation: SimpleLocationDict
+) -> StatNames:
+    """Compute the family, style, PostScript names of the given ``userLocation``
+    using the document's STAT information.
+
+    Also computes localizations.
+
+    If not enough STAT data is available for a given name, either its dict of
+    localized names will be empty (family and style names), or the name will be
+    None (PostScript name).
+
+    Note: this method does not consider info attached to the instance, like
+    family name. The user needs to override all names on an instance that STAT
+    information would compute differently than desired.
+
+    .. versionadded:: 5.0
+    """
+    familyNames: Dict[str, str] = {}
+    defaultSource: Optional[SourceDescriptor] = doc.findDefault()
+    if defaultSource is None:
+        LOGGER.warning("Cannot determine default source to look up family name.")
+    elif defaultSource.familyName is None:
+        LOGGER.warning(
+            "Cannot look up family name, assign the 'familyname' attribute to the default source."
+        )
+    else:
+        familyNames = {
+            "en": defaultSource.familyName,
+            **defaultSource.localisedFamilyName,
+        }
+
+    styleNames: Dict[str, str] = {}
+    # If a free-standing label matches the location, use it for name generation.
+    label = doc.labelForUserLocation(userLocation)
+    if label is not None:
+        styleNames = {"en": label.name, **label.labelNames}
+    # Otherwise, scour the axis labels for matches.
+    else:
+        # Gather all languages in which at least one translation is provided
+        # Then build names for all these languages, but fallback to English
+        # whenever a translation is missing.
+        labels = _getAxisLabelsForUserLocation(doc.axes, userLocation)
+        if labels:
+            languages = set(
+                language for label in labels for language in label.labelNames
+            )
+            languages.add("en")
+            for language in languages:
+                styleName = " ".join(
+                    label.labelNames.get(language, label.defaultName)
+                    for label in labels
+                    if not label.elidable
+                )
+                if not styleName and doc.elidedFallbackName is not None:
+                    styleName = doc.elidedFallbackName
+                styleNames[language] = styleName
+
+    if "en" not in familyNames or "en" not in styleNames:
+        # Not enough information to compute PS names of styleMap names
+        return StatNames(
+            familyNames=familyNames,
+            styleNames=styleNames,
+            postScriptFontName=None,
+            styleMapFamilyNames={},
+            styleMapStyleName=None,
+        )
+
+    postScriptFontName = f"{familyNames['en']}-{styleNames['en']}".replace(" ", "")
+
+    styleMapStyleName, regularUserLocation = _getRibbiStyle(doc, userLocation)
+
+    styleNamesForStyleMap = styleNames
+    if regularUserLocation != userLocation:
+        regularStatNames = getStatNames(doc, regularUserLocation)
+        styleNamesForStyleMap = regularStatNames.styleNames
+
+    styleMapFamilyNames = {}
+    for language in set(familyNames).union(styleNames.keys()):
+        familyName = familyNames.get(language, familyNames["en"])
+        styleName = styleNamesForStyleMap.get(language, styleNamesForStyleMap["en"])
+        styleMapFamilyNames[language] = (familyName + " " + styleName).strip()
+
+    return StatNames(
+        familyNames=familyNames,
+        styleNames=styleNames,
+        postScriptFontName=postScriptFontName,
+        styleMapFamilyNames=styleMapFamilyNames,
+        styleMapStyleName=styleMapStyleName,
+    )
+
+
+def _getSortedAxisLabels(
+    axes: list[Union[AxisDescriptor, DiscreteAxisDescriptor]],
+) -> Dict[str, list[AxisLabelDescriptor]]:
+    """Returns axis labels sorted by their ordering, with unordered ones appended as
+    they are listed."""
+
+    # First, get the axis labels with explicit ordering...
+    sortedAxes = sorted(
+        (axis for axis in axes if axis.axisOrdering is not None),
+        key=lambda a: a.axisOrdering,
+    )
+    sortedLabels: Dict[str, list[AxisLabelDescriptor]] = {
+        axis.name: axis.axisLabels for axis in sortedAxes
+    }
+
+    # ... then append the others in the order they appear.
+    # NOTE: This relies on Python 3.7+ dict's preserved insertion order.
+    for axis in axes:
+        if axis.axisOrdering is None:
+            sortedLabels[axis.name] = axis.axisLabels
+
+    return sortedLabels
+
+
+def _getAxisLabelsForUserLocation(
+    axes: list[Union[AxisDescriptor, DiscreteAxisDescriptor]],
+    userLocation: SimpleLocationDict,
+) -> list[AxisLabelDescriptor]:
+    labels: list[AxisLabelDescriptor] = []
+
+    allAxisLabels = _getSortedAxisLabels(axes)
+    if allAxisLabels.keys() != userLocation.keys():
+        LOGGER.warning(
+            f"Mismatch between user location '{userLocation.keys()}' and available "
+            f"labels for '{allAxisLabels.keys()}'."
+        )
+
+    for axisName, axisLabels in allAxisLabels.items():
+        userValue = userLocation[axisName]
+        label: Optional[AxisLabelDescriptor] = next(
+            (
+                l
+                for l in axisLabels
+                if l.userValue == userValue
+                or (
+                    l.userMinimum is not None
+                    and l.userMaximum is not None
+                    and l.userMinimum <= userValue <= l.userMaximum
+                )
+            ),
+            None,
+        )
+        if label is None:
+            LOGGER.debug(
+                f"Document needs a label for axis '{axisName}', user value '{userValue}'."
+            )
+        else:
+            labels.append(label)
+
+    return labels
+
+
+def _getRibbiStyle(
+    self: DesignSpaceDocument, userLocation: SimpleLocationDict
+) -> Tuple[RibbiStyleName, SimpleLocationDict]:
+    """Compute the RIBBI style name of the given user location,
+    return the location of the matching Regular in the RIBBI group.
+
+    .. versionadded:: 5.0
+    """
+    regularUserLocation = {}
+    axes_by_tag = {axis.tag: axis for axis in self.axes}
+
+    bold: bool = False
+    italic: bool = False
+
+    axis = axes_by_tag.get("wght")
+    if axis is not None:
+        for regular_label in axis.axisLabels:
+            if (
+                regular_label.linkedUserValue == userLocation[axis.name]
+                # In the "recursive" case where both the Regular has
+                # linkedUserValue pointing the Bold, and the Bold has
+                # linkedUserValue pointing to the Regular, only consider the
+                # first case: Regular (e.g. 400) has linkedUserValue pointing to
+                # Bold (e.g. 700, higher than Regular)
+                and regular_label.userValue < regular_label.linkedUserValue
+            ):
+                regularUserLocation[axis.name] = regular_label.userValue
+                bold = True
+                break
+
+    axis = axes_by_tag.get("ital") or axes_by_tag.get("slnt")
+    if axis is not None:
+        for upright_label in axis.axisLabels:
+            if (
+                upright_label.linkedUserValue == userLocation[axis.name]
+                # In the "recursive" case where both the Upright has
+                # linkedUserValue pointing the Italic, and the Italic has
+                # linkedUserValue pointing to the Upright, only consider the
+                # first case: Upright (e.g. ital=0, slant=0) has
+                # linkedUserValue pointing to Italic (e.g ital=1, slant=-12 or
+                # slant=12 for backwards italics, in any case higher than
+                # Upright in absolute value, hence the abs() below.
+                and abs(upright_label.userValue) < abs(upright_label.linkedUserValue)
+            ):
+                regularUserLocation[axis.name] = upright_label.userValue
+                italic = True
+                break
+
+    return BOLD_ITALIC_TO_RIBBI_STYLE[bold, italic], {
+        **userLocation,
+        **regularUserLocation,
+    }

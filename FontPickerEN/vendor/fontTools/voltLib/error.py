@@ -1,1 +1,12 @@
-Y2xhc3MgVm9sdExpYkVycm9yKEV4Y2VwdGlvbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbWVzc2FnZSwgbG9jYXRpb24pOgogICAgICAgIEV4Y2VwdGlvbi5fX2luaXRfXyhzZWxmLCBtZXNzYWdlKQogICAgICAgIHNlbGYubG9jYXRpb24gPSBsb2NhdGlvbgoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIG1lc3NhZ2UgPSBFeGNlcHRpb24uX19zdHJfXyhzZWxmKQogICAgICAgIGlmIHNlbGYubG9jYXRpb246CiAgICAgICAgICAgIHBhdGgsIGxpbmUsIGNvbHVtbiA9IHNlbGYubG9jYXRpb24KICAgICAgICAgICAgcmV0dXJuICIlczolZDolZDogJXMiICUgKHBhdGgsIGxpbmUsIGNvbHVtbiwgbWVzc2FnZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gbWVzc2FnZQo=
+class VoltLibError(Exception):
+    def __init__(self, message, location):
+        Exception.__init__(self, message)
+        self.location = location
+
+    def __str__(self):
+        message = Exception.__str__(self)
+        if self.location:
+            path, line, column = self.location
+            return "%s:%d:%d: %s" % (path, line, column, message)
+        else:
+            return message

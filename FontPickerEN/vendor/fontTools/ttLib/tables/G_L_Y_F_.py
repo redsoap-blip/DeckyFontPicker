@@ -1,1 +1,11 @@
-ZnJvbSAuX2dfbF95X2YgaW1wb3J0IHRhYmxlX19nX2xfeV9mCgoKY2xhc3MgdGFibGVfR19MX1lfRl8odGFibGVfX2dfbF95X2YpOgogICAgbG9jYVRhZyA9ICJMT0NBIgogICAgbWF4cFRhZyA9ICJNQVhQIgogICAgaGhlYVRhZyA9ICJISEVBIgogICAgaG10eFRhZyA9ICJITVRYIgogICAgdm10eFRhZyA9ICJWTVRYIgogICAgZ3ZhclRhZyA9ICJHVkFSIgogICAgZXh0ZW5kZWQgPSBUcnVlCg==
+from ._g_l_y_f import table__g_l_y_f
+
+
+class table_G_L_Y_F_(table__g_l_y_f):
+    locaTag = "LOCA"
+    maxpTag = "MAXP"
+    hheaTag = "HHEA"
+    hmtxTag = "HMTX"
+    vmtxTag = "VMTX"
+    gvarTag = "GVAR"
+    extended = True

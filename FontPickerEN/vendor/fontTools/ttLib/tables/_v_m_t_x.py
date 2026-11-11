@@ -1,1 +1,19 @@
-ZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgpzdXBlcmNsYXNzID0gdHRMaWIuZ2V0VGFibGVDbGFzcygiaG10eCIpCgoKY2xhc3MgdGFibGVfX3ZfbV90X3goc3VwZXJjbGFzcyk6CiAgICAiIiJWZXJ0aWNhbCBNZXRyaWNzIHRhYmxlCgogICAgVGhlIGBgdm10eGBgIHRhYmxlIGNvbnRhaW5zIHBlci1nbHlwaCBtZXRyaWNzIGZvciB0aGUgZ2x5cGhzIGluIGEKICAgIGBgZ2x5ZmBgLCBgYENGRiBgYCwgb3IgYGBDRkYyYGAgdGFibGUsIGFzIG5lZWRlZCBmb3IgdmVydGljYWwgdGV4dAogICAgbGF5b3V0LgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvdm10eAogICAgIiIiCgogICAgaGVhZGVyVGFnID0gInZoZWEiCiAgICBhZHZhbmNlTmFtZSA9ICJoZWlnaHQiCiAgICBzaWRlQmVhcmluZ05hbWUgPSAidHNiIgogICAgbnVtYmVyT2ZNZXRyaWNzTmFtZSA9ICJudW1iZXJPZlZNZXRyaWNzIgo=
+from fontTools import ttLib
+
+superclass = ttLib.getTableClass("hmtx")
+
+
+class table__v_m_t_x(superclass):
+    """Vertical Metrics table
+
+    The ``vmtx`` table contains per-glyph metrics for the glyphs in a
+    ``glyf``, ``CFF ``, or ``CFF2`` table, as needed for vertical text
+    layout.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/vmtx
+    """
+
+    headerTag = "vhea"
+    advanceName = "height"
+    sideBearingName = "tsb"
+    numberOfMetricsName = "numberOfVMetrics"

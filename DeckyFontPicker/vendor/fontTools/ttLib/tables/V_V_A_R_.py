@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfVl9WX0FfUl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJWZXJ0aWNhbCBNZXRyaWNzIFZhcmlhdGlvbnMgdGFibGUKCiAgICBUaGUgYGBWVkFSYGAgdGFibGUgY29udGFpbnMgdmFyaWF0aW9uIGRhdGEgZm9yIHBlci1nbHlwaCB2ZXJ0aWNhbCBtZXRyaWNzCiAgICBpbiBhIHZhcmlhYmxlIGZvbnQuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy92dmFyCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+class table_V_V_A_R_(BaseTTXConverter):
+    """Vertical Metrics Variations table
+
+    The ``VVAR`` table contains variation data for per-glyph vertical metrics
+    in a variable font.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/vvar
+    """
+
+    pass

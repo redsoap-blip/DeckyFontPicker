@@ -1,1 +1,648 @@
-IiIiZm9udFRvb2xzLnQxTGliLnB5IC0tIFRvb2xzIGZvciBQb3N0U2NyaXB0IFR5cGUgMSBmb250cy4KCkZ1bmN0aW9ucyBmb3IgcmVhZGluZyBhbmQgd3JpdGluZyByYXcgVHlwZSAxIGRhdGE6CgpyZWFkKHBhdGgpCiAgICAgICAgcmVhZHMgYW55IFR5cGUgMSBmb250IGZpbGUsIHJldHVybnMgdGhlIHJhdyBkYXRhIGFuZCBhIHR5cGUgaW5kaWNhdG9yOgogICAgICAgICdMV0ZOJywgJ1BGQicgb3IgJ09USEVSJywgZGVwZW5kaW5nIG9uIHRoZSBmb3JtYXQgb2YgdGhlIGZpbGUgcG9pbnRlZAogICAgICAgIHRvIGJ5ICdwYXRoJy4KICAgICAgICBSYWlzZXMgYW4gZXJyb3Igd2hlbiB0aGUgZmlsZSBkb2VzIG5vdCBjb250YWluIHZhbGlkIFR5cGUgMSBkYXRhLgoKd3JpdGUocGF0aCwgZGF0YSwga2luZD0nT1RIRVInLCBkb2hleD1GYWxzZSkKICAgICAgICB3cml0ZXMgcmF3IFR5cGUgMSBkYXRhIHRvIHRoZSBmaWxlIHBvaW50ZWQgdG8gYnkgJ3BhdGgnLgogICAgICAgICdraW5kJyBjYW4gYmUgb25lIG9mICdMV0ZOJywgJ1BGQicgb3IgJ09USEVSJzsgaXQgZGVmYXVsdHMgdG8gJ09USEVSJy4KICAgICAgICAnZG9oZXgnIGlzIGEgZmxhZyB3aGljaCBkZXRlcm1pbmVzIHdoZXRoZXIgdGhlIGVleGVjIGVuY3J5cHRlZAogICAgICAgIHBhcnQgc2hvdWxkIGJlIHdyaXR0ZW4gYXMgaGV4YWRlY2ltYWwgb3IgYmluYXJ5LCBidXQgb25seSBpZiBraW5kCiAgICAgICAgaXMgJ09USEVSJy4KIiIiCgppbXBvcnQgZm9udFRvb2xzCmZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IGVleGVjCmZyb20gZm9udFRvb2xzLm1pc2MubWFjQ3JlYXRvclR5cGUgaW1wb3J0IGdldE1hY0NyZWF0b3JBbmRUeXBlCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBieXRlY2hyLCBieXRlb3JkLCBieXRlc2pvaW4sIHRvYnl0ZXMKZnJvbSBmb250VG9vbHMubWlzYy5wc09wZXJhdG9ycyBpbXBvcnQgKAogICAgX3R5cGUxX3ByZV9lZXhlY19vcmRlciwKICAgIF90eXBlMV9mb250aW5mb19vcmRlciwKICAgIF90eXBlMV9wb3N0X2VleGVjX29yZGVyLAopCmZyb20gZm9udFRvb2xzLmVuY29kaW5ncy5TdGFuZGFyZEVuY29kaW5nIGltcG9ydCBTdGFuZGFyZEVuY29kaW5nCmltcG9ydCBvcwppbXBvcnQgcmUKCl9fYXV0aG9yX18gPSAianZyIgpfX3ZlcnNpb25fXyA9ICIxLjBiMyIKREVCVUcgPSAwCgoKdHJ5OgogICAgdHJ5OgogICAgICAgIGZyb20gQ2FyYm9uIGltcG9ydCBSZXMKICAgIGV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgICAgICBpbXBvcnQgUmVzICAjIE1hY1B5dGhvbiA8IDIuMgpleGNlcHQgSW1wb3J0RXJyb3I6CiAgICBoYXZlTWFjU3VwcG9ydCA9IDAKZWxzZToKICAgIGhhdmVNYWNTdXBwb3J0ID0gMQoKCmNsYXNzIFQxRXJyb3IoRXhjZXB0aW9uKToKICAgIHBhc3MKCgpjbGFzcyBUMUZvbnQob2JqZWN0KToKICAgICIiIlR5cGUgMSBmb250IGNsYXNzLgoKICAgIFVzZXMgYSBtaW5pbWFsIGludGVycGV0ZXIgdGhhdCBzdXBwb3J0cyBqdXN0IGFib3V0IGVub3VnaCBQUyB0byBwYXJzZQogICAgVHlwZSAxIGZvbnRzLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHBhdGgsIGVuY29kaW5nPSJhc2NpaSIsIGtpbmQ9Tm9uZSk6CiAgICAgICAgaWYga2luZCBpcyBOb25lOgogICAgICAgICAgICBzZWxmLmRhdGEsIF8gPSByZWFkKHBhdGgpCiAgICAgICAgZWxpZiBraW5kID09ICJMV0ZOIjoKICAgICAgICAgICAgc2VsZi5kYXRhID0gcmVhZExXRk4ocGF0aCkKICAgICAgICBlbGlmIGtpbmQgPT0gIlBGQiI6CiAgICAgICAgICAgIHNlbGYuZGF0YSA9IHJlYWRQRkIocGF0aCkKICAgICAgICBlbGlmIGtpbmQgPT0gIk9USEVSIjoKICAgICAgICAgICAgc2VsZi5kYXRhID0gcmVhZE90aGVyKHBhdGgpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihraW5kKQogICAgICAgIHNlbGYuZW5jb2RpbmcgPSBlbmNvZGluZwoKICAgIGRlZiBzYXZlQXMoc2VsZiwgcGF0aCwgdHlwZSwgZG9oZXg9RmFsc2UpOgogICAgICAgIHdyaXRlKHBhdGgsIHNlbGYuZ2V0RGF0YSgpLCB0eXBlLCBkb2hleCkKCiAgICBkZWYgZ2V0RGF0YShzZWxmKToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAiZGF0YSIpOgogICAgICAgICAgICBzZWxmLmRhdGEgPSBzZWxmLmNyZWF0ZURhdGEoKQogICAgICAgIHJldHVybiBzZWxmLmRhdGEKCiAgICBkZWYgZ2V0R2x5cGhTZXQoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIGEgZ2VuZXJpYyBHbHlwaFNldCwgd2hpY2ggaXMgYSBkaWN0LWxpa2Ugb2JqZWN0CiAgICAgICAgbWFwcGluZyBnbHlwaCBuYW1lcyB0byBnbHlwaCBvYmplY3RzLiBUaGUgcmV0dXJuZWQgZ2x5cGggb2JqZWN0cwogICAgICAgIGhhdmUgYSAuZHJhdygpIG1ldGhvZCB0aGF0IHN1cHBvcnRzIHRoZSBQZW4gcHJvdG9jb2wsIGFuZCB3aWxsCiAgICAgICAgaGF2ZSBhbiBhdHRyaWJ1dGUgbmFtZWQgJ3dpZHRoJywgYnV0IG9ubHkgKmFmdGVyKiB0aGUgLmRyYXcoKSBtZXRob2QKICAgICAgICBoYXMgYmVlbiBjYWxsZWQuCgogICAgICAgIEluIHRoZSBjYXNlIG9mIFR5cGUgMSwgdGhlIEdseXBoU2V0IGlzIHNpbXBseSB0aGUgQ2hhclN0cmluZ3MgZGljdC4KICAgICAgICAiIiIKICAgICAgICByZXR1cm4gc2VsZlsiQ2hhclN0cmluZ3MiXQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBrZXkpOgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJmb250Iik6CiAgICAgICAgICAgIHNlbGYucGFyc2UoKQogICAgICAgIHJldHVybiBzZWxmLmZvbnRba2V5XQoKICAgIGRlZiBwYXJzZShzZWxmKToKICAgICAgICBmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBwc0xpYgogICAgICAgIGZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IHBzQ2hhclN0cmluZ3MKCiAgICAgICAgc2VsZi5mb250ID0gcHNMaWIuc3Vja2ZvbnQoc2VsZi5kYXRhLCBzZWxmLmVuY29kaW5nKQogICAgICAgIGNoYXJTdHJpbmdzID0gc2VsZi5mb250WyJDaGFyU3RyaW5ncyJdCiAgICAgICAgbGVuSVYgPSBzZWxmLmZvbnRbIlByaXZhdGUiXS5nZXQoImxlbklWIiwgNCkKICAgICAgICBhc3NlcnQgbGVuSVYgPj0gMAogICAgICAgIHN1YnJzID0gc2VsZi5mb250WyJQcml2YXRlIl1bIlN1YnJzIl0KICAgICAgICBmb3IgZ2x5cGhOYW1lLCBjaGFyU3RyaW5nIGluIGNoYXJTdHJpbmdzLml0ZW1zKCk6CiAgICAgICAgICAgIGNoYXJTdHJpbmcsIFIgPSBlZXhlYy5kZWNyeXB0KGNoYXJTdHJpbmcsIDQzMzApCiAgICAgICAgICAgIGNoYXJTdHJpbmdzW2dseXBoTmFtZV0gPSBwc0NoYXJTdHJpbmdzLlQxQ2hhclN0cmluZygKICAgICAgICAgICAgICAgIGNoYXJTdHJpbmdbbGVuSVY6XSwgc3VicnM9c3VicnMKICAgICAgICAgICAgKQogICAgICAgIGZvciBpIGluIHJhbmdlKGxlbihzdWJycykpOgogICAgICAgICAgICBjaGFyU3RyaW5nLCBSID0gZWV4ZWMuZGVjcnlwdChzdWJyc1tpXSwgNDMzMCkKICAgICAgICAgICAgc3VicnNbaV0gPSBwc0NoYXJTdHJpbmdzLlQxQ2hhclN0cmluZyhjaGFyU3RyaW5nW2xlbklWOl0sIHN1YnJzPXN1YnJzKQogICAgICAgIGRlbCBzZWxmLmRhdGEKCiAgICBkZWYgY3JlYXRlRGF0YShzZWxmKToKICAgICAgICBzZiA9IHNlbGYuZm9udAoKICAgICAgICBlZXhlY19iZWdhbiA9IEZhbHNlCiAgICAgICAgZWV4ZWNfZGljdCA9IHt9CiAgICAgICAgbGluZXMgPSBbXQogICAgICAgIGxpbmVzLmV4dGVuZCgKICAgICAgICAgICAgWwogICAgICAgICAgICAgICAgc2VsZi5fdG9ieXRlcyhmIiUhRm9udFR5cGUxLTEuMToge3NmWydGb250TmFtZSddfSIpLAogICAgICAgICAgICAgICAgc2VsZi5fdG9ieXRlcyhmIiV0MUZvbnQ6ICh7Zm9udFRvb2xzLnZlcnNpb259KSIpLAogICAgICAgICAgICAgICAgc2VsZi5fdG9ieXRlcyhmIiUlQmVnaW5SZXNvdXJjZTogZm9udCB7c2ZbJ0ZvbnROYW1lJ119IiksCiAgICAgICAgICAgIF0KICAgICAgICApCiAgICAgICAgIyBmb2xsb3cgdDF3cml0ZS5jOndyaXRlUmVnTmFtZUtleWVkRm9udAogICAgICAgIHNpemUgPSAzICAjIEhlYWRyb29tIGZvciBuZXcga2V5IGFkZGl0aW9uCiAgICAgICAgc2l6ZSArPSAxICAjIEZvbnRNYXRyaXggaXMgYWx3YXlzIGNvdW50ZWQKICAgICAgICBzaXplICs9IDEgKyAxICAjIFByaXZhdGUsIENoYXJTdGluZ3MKICAgICAgICBmb3Iga2V5IGluIGZvbnRfZGljdGlvbmFyeV9rZXlzOgogICAgICAgICAgICBzaXplICs9IGludChrZXkgaW4gc2YpCiAgICAgICAgbGluZXMuYXBwZW5kKHNlbGYuX3RvYnl0ZXMoZiJ7c2l6ZX0gZGljdCBkdXAgYmVnaW4iKSkKCiAgICAgICAgZm9yIGtleSwgdmFsdWUgaW4gc2YuaXRlbXMoKToKICAgICAgICAgICAgaWYgZWV4ZWNfYmVnYW46CiAgICAgICAgICAgICAgICBlZXhlY19kaWN0W2tleV0gPSB2YWx1ZQogICAgICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgICAgIGlmIGtleSA9PSAiRm9udEluZm8iOgogICAgICAgICAgICAgICAgZmkgPSBzZlsiRm9udEluZm8iXQogICAgICAgICAgICAgICAgIyBmb2xsb3cgdDF3cml0ZS5jOndyaXRlRm9udEluZm9EaWN0CiAgICAgICAgICAgICAgICBzaXplID0gMyAgIyBIZWFkcm9vbSBmb3IgbmV3IGtleSBhZGRpdGlvbgogICAgICAgICAgICAgICAgZm9yIHN1YmtleSBpbiBGb250SW5mb19kaWN0aW9uYXJ5X2tleXM6CiAgICAgICAgICAgICAgICAgICAgc2l6ZSArPSBpbnQoc3Via2V5IGluIGZpKQogICAgICAgICAgICAgICAgbGluZXMuYXBwZW5kKHNlbGYuX3RvYnl0ZXMoZiIvRm9udEluZm8ge3NpemV9IGRpY3QgZHVwIGJlZ2luIikpCgogICAgICAgICAgICAgICAgZm9yIHN1YmtleSwgc3VidmFsdWUgaW4gZmkuaXRlbXMoKToKICAgICAgICAgICAgICAgICAgICBsaW5lcy5leHRlbmQoc2VsZi5fbWFrZV9saW5lcyhzdWJrZXksIHN1YnZhbHVlKSkKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiImVuZCBkZWYiKQogICAgICAgICAgICBlbGlmIGtleSBpbiBfdHlwZTFfcG9zdF9lZXhlY19vcmRlcjogICMgdXN1YWxseSAnUHJpdmF0ZScKICAgICAgICAgICAgICAgIGVleGVjX2RpY3Rba2V5XSA9IHZhbHVlCiAgICAgICAgICAgICAgICBlZXhlY19iZWdhbiA9IFRydWUKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGxpbmVzLmV4dGVuZChzZWxmLl9tYWtlX2xpbmVzKGtleSwgdmFsdWUpKQogICAgICAgIGxpbmVzLmFwcGVuZChiImVuZCIpCiAgICAgICAgZWV4ZWNfcG9ydGlvbiA9IHNlbGYuZW5jb2RlX2VleGVjKGVleGVjX2RpY3QpCiAgICAgICAgbGluZXMuYXBwZW5kKGJ5dGVzam9pbihbYiJjdXJyZW50ZmlsZSBlZXhlYyAiLCBlZXhlY19wb3J0aW9uXSkpCgogICAgICAgIGZvciBfIGluIHJhbmdlKDgpOgogICAgICAgICAgICBsaW5lcy5hcHBlbmQoc2VsZi5fdG9ieXRlcygiMCIgKiA2NCkpCiAgICAgICAgbGluZXMuZXh0ZW5kKFtiImNsZWFydG9tYXJrIiwgYiIlJUVuZFJlc291cmNlIiwgYiIlJUVPRiJdKQoKICAgICAgICBkYXRhID0gYnl0ZXNqb2luKGxpbmVzLCAiXG4iKQogICAgICAgIHJldHVybiBkYXRhCgogICAgZGVmIGVuY29kZV9lZXhlYyhzZWxmLCBlZXhlY19kaWN0KToKICAgICAgICBsaW5lcyA9IFtdCgogICAgICAgICMgJy18JywgJ3wtJywgJ3wnCiAgICAgICAgUkRfa2V5LCBORF9rZXksIE5QX2tleSA9IE5vbmUsIE5vbmUsIE5vbmUKICAgICAgICBsZW5JViA9IDQKICAgICAgICBzdWJycyA9IHN0ZF9zdWJycwoKICAgICAgICAjIEVuc3VyZSB3ZSBsb29rIGF0IFByaXZhdGUgZmlyc3QsIGJlY2F1c2Ugd2UgbmVlZCBSRF9rZXksIE5EX2tleSwgTlBfa2V5IGFuZCBsZW5JVgogICAgICAgIHNvcnRlZEl0ZW1zID0gc29ydGVkKGVleGVjX2RpY3QuaXRlbXMoKSwga2V5PWxhbWJkYSBpdGVtOiBpdGVtWzBdICE9ICJQcml2YXRlIikKCiAgICAgICAgZm9yIGtleSwgdmFsdWUgaW4gc29ydGVkSXRlbXM6CiAgICAgICAgICAgIGlmIGtleSA9PSAiUHJpdmF0ZSI6CiAgICAgICAgICAgICAgICBwciA9IGVleGVjX2RpY3RbIlByaXZhdGUiXQogICAgICAgICAgICAgICAgIyBmb2xsb3cgdDF3cml0ZS5jOndyaXRlUHJpdmF0ZURpY3QKICAgICAgICAgICAgICAgIHNpemUgPSAzICAjIGZvciBSRCwgTkQsIE5QCiAgICAgICAgICAgICAgICBmb3Igc3Via2V5IGluIFByaXZhdGVfZGljdGlvbmFyeV9rZXlzOgogICAgICAgICAgICAgICAgICAgIHNpemUgKz0gaW50KHN1YmtleSBpbiBwcikKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiImR1cCAvUHJpdmF0ZSIpCiAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoc2VsZi5fdG9ieXRlcyhmIntzaXplfSBkaWN0IGR1cCBiZWdpbiIpKQogICAgICAgICAgICAgICAgZm9yIHN1YmtleSwgc3VidmFsdWUgaW4gcHIuaXRlbXMoKToKICAgICAgICAgICAgICAgICAgICBpZiBub3QgUkRfa2V5IGFuZCBzdWJ2YWx1ZSA9PSBSRF92YWx1ZToKICAgICAgICAgICAgICAgICAgICAgICAgUkRfa2V5ID0gc3Via2V5CiAgICAgICAgICAgICAgICAgICAgZWxpZiBub3QgTkRfa2V5IGFuZCBzdWJ2YWx1ZSBpbiBORF92YWx1ZXM6CiAgICAgICAgICAgICAgICAgICAgICAgIE5EX2tleSA9IHN1YmtleQogICAgICAgICAgICAgICAgICAgIGVsaWYgbm90IE5QX2tleSBhbmQgc3VidmFsdWUgaW4gUERfdmFsdWVzOgogICAgICAgICAgICAgICAgICAgICAgICBOUF9rZXkgPSBzdWJrZXkKCiAgICAgICAgICAgICAgICAgICAgaWYgc3Via2V5ID09ICJsZW5JViI6CiAgICAgICAgICAgICAgICAgICAgICAgIGxlbklWID0gc3VidmFsdWUKCiAgICAgICAgICAgICAgICAgICAgaWYgc3Via2V5ID09ICJPdGhlclN1YnJzIjoKICAgICAgICAgICAgICAgICAgICAgICAgIyBYWFg6IGFzc2VydCB0aGF0IG5vIGZsZXggaGludCBpcyB1c2VkCiAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChzZWxmLl90b2J5dGVzKGhpbnRvdGhlcnMpKQogICAgICAgICAgICAgICAgICAgIGVsaWYgc3Via2V5ID09ICJTdWJycyI6CiAgICAgICAgICAgICAgICAgICAgICAgIGZvciBzdWJyX2JpbiBpbiBzdWJ2YWx1ZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN1YnJfYmluLmNvbXBpbGUoKQogICAgICAgICAgICAgICAgICAgICAgICBzdWJycyA9IFtzdWJyX2Jpbi5ieXRlY29kZSBmb3Igc3Vicl9iaW4gaW4gc3VidmFsdWVdCiAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChmIi9TdWJycyB7bGVuKHN1YnJzKX0gYXJyYXkiLmVuY29kZSgiYXNjaWkiKSkKICAgICAgICAgICAgICAgICAgICAgICAgZm9yIGksIHN1YnJfYmluIGluIGVudW1lcmF0ZShzdWJycyk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmNyeXB0ZWRfc3ViciwgUiA9IGVleGVjLmVuY3J5cHQoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnl0ZXNqb2luKFtjaGFyX0lWWzpsZW5JVl0sIHN1YnJfYmluXSksIDQzMzAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBieXRlc2pvaW4oCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlbGYuX3RvYnl0ZXMoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZiJkdXAge2l9IHtsZW4oZW5jcnlwdGVkX3N1YnIpfSB7UkRfa2V5fSAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZW5jcnlwdGVkX3N1YnIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZWxmLl90b2J5dGVzKGYiIHtOUF9rZXl9IiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiImRlZiIpCgogICAgICAgICAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoYiJwdXQiKQogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzLmV4dGVuZChzZWxmLl9tYWtlX2xpbmVzKHN1YmtleSwgc3VidmFsdWUpKQogICAgICAgICAgICBlbGlmIGtleSA9PSAiQ2hhclN0cmluZ3MiOgogICAgICAgICAgICAgICAgbGluZXMuYXBwZW5kKGIiZHVwIC9DaGFyU3RyaW5ncyIpCiAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoCiAgICAgICAgICAgICAgICAgICAgc2VsZi5fdG9ieXRlcyhmIntsZW4oZWV4ZWNfZGljdFsnQ2hhclN0cmluZ3MnXSl9IGRpY3QgZHVwIGJlZ2luIikKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGZvciBnbHlwaF9uYW1lLCBjaGFyX2JpbiBpbiBlZXhlY19kaWN0WyJDaGFyU3RyaW5ncyJdLml0ZW1zKCk6CiAgICAgICAgICAgICAgICAgICAgY2hhcl9iaW4uY29tcGlsZSgpCiAgICAgICAgICAgICAgICAgICAgZW5jcnlwdGVkX2NoYXIsIFIgPSBlZXhlYy5lbmNyeXB0KAogICAgICAgICAgICAgICAgICAgICAgICBieXRlc2pvaW4oW2NoYXJfSVZbOmxlbklWXSwgY2hhcl9iaW4uYnl0ZWNvZGVdKSwgNDMzMAogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoCiAgICAgICAgICAgICAgICAgICAgICAgIGJ5dGVzam9pbigKICAgICAgICAgICAgICAgICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZWxmLl90b2J5dGVzKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmIi97Z2x5cGhfbmFtZX0ge2xlbihlbmNyeXB0ZWRfY2hhcil9IHtSRF9rZXl9ICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuY3J5cHRlZF9jaGFyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlbGYuX3RvYnl0ZXMoZiIge05EX2tleX0iKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIF0KICAgICAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiImVuZCBwdXQiKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgbGluZXMuZXh0ZW5kKHNlbGYuX21ha2VfbGluZXMoa2V5LCB2YWx1ZSkpCgogICAgICAgIGxpbmVzLmV4dGVuZCgKICAgICAgICAgICAgWwogICAgICAgICAgICAgICAgYiJlbmQiLAogICAgICAgICAgICAgICAgYiJkdXAgL0ZvbnROYW1lIGdldCBleGNoIGRlZmluZWZvbnQgcG9wIiwKICAgICAgICAgICAgICAgIGIibWFyayIsCiAgICAgICAgICAgICAgICBiImN1cnJlbnRmaWxlIGNsb3NlZmlsZVxuIiwKICAgICAgICAgICAgXQogICAgICAgICkKCiAgICAgICAgZWV4ZWNfcG9ydGlvbiA9IGJ5dGVzam9pbihsaW5lcywgIlxuIikKICAgICAgICBlbmNyeXB0ZWRfZWV4ZWMsIFIgPSBlZXhlYy5lbmNyeXB0KGJ5dGVzam9pbihbZWV4ZWNfSVYsIGVleGVjX3BvcnRpb25dKSwgNTU2NjUpCgogICAgICAgIHJldHVybiBlbmNyeXB0ZWRfZWV4ZWMKCiAgICBkZWYgX21ha2VfbGluZXMoc2VsZiwga2V5LCB2YWx1ZSk6CiAgICAgICAgaWYga2V5ID09ICJGb250TmFtZSI6CiAgICAgICAgICAgIHJldHVybiBbc2VsZi5fdG9ieXRlcyhmIi97a2V5fSAve3ZhbHVlfSBkZWYiKV0KICAgICAgICBpZiBrZXkgaW4gWyJpc0ZpeGVkUGl0Y2giLCAiRm9yY2VCb2xkIiwgIlJuZFN0ZW1VcCJdOgogICAgICAgICAgICByZXR1cm4gW3NlbGYuX3RvYnl0ZXMoZiIve2tleX0geyd0cnVlJyBpZiB2YWx1ZSBlbHNlICdmYWxzZSd9IGRlZiIpXQogICAgICAgIGVsaWYga2V5ID09ICJFbmNvZGluZyI6CiAgICAgICAgICAgIGlmIHZhbHVlID09IFN0YW5kYXJkRW5jb2Rpbmc6CiAgICAgICAgICAgICAgICByZXR1cm4gW3NlbGYuX3RvYnl0ZXMoZiIve2tleX0gU3RhbmRhcmRFbmNvZGluZyBkZWYiKV0KICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICMgZm9sbG93IGZvbnRUb29scy5taXNjLnBzT3BlcmF0b3JzLl90eXBlMV9FbmNvZGluZ19yZXByCiAgICAgICAgICAgICAgICBsaW5lcyA9IFtdCiAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoYiIvRW5jb2RpbmcgMjU2IGFycmF5IikKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiIjAgMSAyNTUgezEgaW5kZXggZXhjaCAvLm5vdGRlZiBwdXR9IGZvciIpCiAgICAgICAgICAgICAgICBmb3IgaSBpbiByYW5nZSgyNTYpOgogICAgICAgICAgICAgICAgICAgIG5hbWUgPSB2YWx1ZVtpXQogICAgICAgICAgICAgICAgICAgIGlmIG5hbWUgIT0gIi5ub3RkZWYiOgogICAgICAgICAgICAgICAgICAgICAgICBsaW5lcy5hcHBlbmQoc2VsZi5fdG9ieXRlcyhmImR1cCB7aX0gL3tuYW1lfSBwdXQiKSkKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChiImRlZiIpCiAgICAgICAgICAgICAgICByZXR1cm4gbGluZXMKICAgICAgICBpZiBpc2luc3RhbmNlKHZhbHVlLCBzdHIpOgogICAgICAgICAgICByZXR1cm4gW3NlbGYuX3RvYnl0ZXMoZiIve2tleX0gKHt2YWx1ZX0pIGRlZiIpXQogICAgICAgIGVsaWYgaXNpbnN0YW5jZSh2YWx1ZSwgYm9vbCk6CiAgICAgICAgICAgIHJldHVybiBbc2VsZi5fdG9ieXRlcyhmIi97a2V5fSB7J3RydWUnIGlmIHZhbHVlIGVsc2UgJ2ZhbHNlJ30gZGVmIildCiAgICAgICAgZWxpZiBpc2luc3RhbmNlKHZhbHVlLCBsaXN0KToKICAgICAgICAgICAgcmV0dXJuIFtzZWxmLl90b2J5dGVzKGYiL3trZXl9IFt7JyAnLmpvaW4oc3RyKHYpIGZvciB2IGluIHZhbHVlKX1dIGRlZiIpXQogICAgICAgIGVsaWYgaXNpbnN0YW5jZSh2YWx1ZSwgdHVwbGUpOgogICAgICAgICAgICByZXR1cm4gW3NlbGYuX3RvYnl0ZXMoZiIve2tleX0ge3t7JyAnLmpvaW4oc3RyKHYpIGZvciB2IGluIHZhbHVlKX19fSBkZWYiKV0KICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gW3NlbGYuX3RvYnl0ZXMoZiIve2tleX0ge3ZhbHVlfSBkZWYiKV0KCiAgICBkZWYgX3RvYnl0ZXMoc2VsZiwgcywgZXJyb3JzPSJzdHJpY3QiKToKICAgICAgICByZXR1cm4gdG9ieXRlcyhzLCBzZWxmLmVuY29kaW5nLCBlcnJvcnMpCgoKIyBsb3cgbGV2ZWwgVDEgZGF0YSByZWFkIGFuZCB3cml0ZSBmdW5jdGlvbnMKCgpkZWYgcmVhZChwYXRoLCBvbmx5SGVhZGVyPUZhbHNlKToKICAgICIiInJlYWRzIGFueSBUeXBlIDEgZm9udCBmaWxlLCByZXR1cm5zIHJhdyBkYXRhIiIiCiAgICBfLCBleHQgPSBvcy5wYXRoLnNwbGl0ZXh0KHBhdGgpCiAgICBleHQgPSBleHQubG93ZXIoKQogICAgY3JlYXRvciwgdHlwID0gZ2V0TWFjQ3JlYXRvckFuZFR5cGUocGF0aCkKICAgIGlmIHR5cCA9PSAiTFdGTiI6CiAgICAgICAgcmV0dXJuIHJlYWRMV0ZOKHBhdGgsIG9ubHlIZWFkZXIpLCAiTFdGTiIKICAgIGlmIGV4dCA9PSAiLnBmYiI6CiAgICAgICAgcmV0dXJuIHJlYWRQRkIocGF0aCwgb25seUhlYWRlciksICJQRkIiCiAgICBlbHNlOgogICAgICAgIHJldHVybiByZWFkT3RoZXIocGF0aCksICJPVEhFUiIKCgpkZWYgd3JpdGUocGF0aCwgZGF0YSwga2luZD0iT1RIRVIiLCBkb2hleD1GYWxzZSk6CiAgICBhc3NlcnRUeXBlMShkYXRhKQogICAga2luZCA9IGtpbmQudXBwZXIoKQogICAgdHJ5OgogICAgICAgIG9zLnJlbW92ZShwYXRoKQogICAgZXhjZXB0IG9zLmVycm9yOgogICAgICAgIHBhc3MKICAgIGVyciA9IDEKICAgIHRyeToKICAgICAgICBpZiBraW5kID09ICJMV0ZOIjoKICAgICAgICAgICAgd3JpdGVMV0ZOKHBhdGgsIGRhdGEpCiAgICAgICAgZWxpZiBraW5kID09ICJQRkIiOgogICAgICAgICAgICB3cml0ZVBGQihwYXRoLCBkYXRhKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHdyaXRlT3RoZXIocGF0aCwgZGF0YSwgZG9oZXgpCiAgICAgICAgZXJyID0gMAogICAgZmluYWxseToKICAgICAgICBpZiBlcnIgYW5kIG5vdCBERUJVRzoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgb3MucmVtb3ZlKHBhdGgpCiAgICAgICAgICAgIGV4Y2VwdCBvcy5lcnJvcjoKICAgICAgICAgICAgICAgIHBhc3MKCgojIC0tIGludGVybmFsIC0tCgpMV0ZOQ0hVTktTSVpFID0gMjAwMApIRVhMSU5FTEVOR1RIID0gODAKCgpkZWYgcmVhZExXRk4ocGF0aCwgb25seUhlYWRlcj1GYWxzZSk6CiAgICAiIiJyZWFkcyBhbiBMV0ZOIGZvbnQgZmlsZSwgcmV0dXJucyByYXcgZGF0YSIiIgogICAgZnJvbSBmb250VG9vbHMubWlzYy5tYWNSZXMgaW1wb3J0IFJlc291cmNlUmVhZGVyCgogICAgcmVhZGVyID0gUmVzb3VyY2VSZWFkZXIocGF0aCkKICAgIHRyeToKICAgICAgICBkYXRhID0gW10KICAgICAgICBmb3IgcmVzIGluIHJlYWRlci5nZXQoIlBPU1QiLCBbXSk6CiAgICAgICAgICAgIGNvZGUgPSBieXRlb3JkKHJlcy5kYXRhWzBdKQogICAgICAgICAgICBpZiBieXRlb3JkKHJlcy5kYXRhWzFdKSAhPSAwOgogICAgICAgICAgICAgICAgcmFpc2UgVDFFcnJvcigiY29ycnVwdCBMV0ZOIGZpbGUiKQogICAgICAgICAgICBpZiBjb2RlIGluIFsxLCAyXToKICAgICAgICAgICAgICAgIGlmIG9ubHlIZWFkZXIgYW5kIGNvZGUgPT0gMjoKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgZGF0YS5hcHBlbmQocmVzLmRhdGFbMjpdKQogICAgICAgICAgICBlbGlmIGNvZGUgaW4gWzMsIDVdOgogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgZWxpZiBjb2RlID09IDQ6CiAgICAgICAgICAgICAgICB3aXRoIG9wZW4ocGF0aCwgInJiIikgYXMgZjoKICAgICAgICAgICAgICAgICAgICBkYXRhLmFwcGVuZChmLnJlYWQoKSkKICAgICAgICAgICAgZWxpZiBjb2RlID09IDA6CiAgICAgICAgICAgICAgICBwYXNzICAjIGNvbW1lbnQsIGlnbm9yZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmFpc2UgVDFFcnJvcigiYmFkIGNodW5rIGNvZGU6ICIgKyByZXByKGNvZGUpKQogICAgZmluYWxseToKICAgICAgICByZWFkZXIuY2xvc2UoKQogICAgZGF0YSA9IGJ5dGVzam9pbihkYXRhKQogICAgYXNzZXJ0VHlwZTEoZGF0YSkKICAgIHJldHVybiBkYXRhCgoKZGVmIHJlYWRQRkIocGF0aCwgb25seUhlYWRlcj1GYWxzZSk6CiAgICAiIiJyZWFkcyBhIFBGQiBmb250IGZpbGUsIHJldHVybnMgcmF3IGRhdGEiIiIKICAgIGRhdGEgPSBbXQogICAgd2l0aCBvcGVuKHBhdGgsICJyYiIpIGFzIGY6CiAgICAgICAgd2hpbGUgVHJ1ZToKICAgICAgICAgICAgaWYgZi5yZWFkKDEpICE9IGJ5dGVjaHIoMTI4KToKICAgICAgICAgICAgICAgIHJhaXNlIFQxRXJyb3IoImNvcnJ1cHQgUEZCIGZpbGUiKQogICAgICAgICAgICBjb2RlID0gYnl0ZW9yZChmLnJlYWQoMSkpCiAgICAgICAgICAgIGlmIGNvZGUgaW4gWzEsIDJdOgogICAgICAgICAgICAgICAgY2h1bmtsZW4gPSBzdHJpbmdUb0xvbmcoZi5yZWFkKDQpKQogICAgICAgICAgICAgICAgY2h1bmsgPSBmLnJlYWQoY2h1bmtsZW4pCiAgICAgICAgICAgICAgICBhc3NlcnQgbGVuKGNodW5rKSA9PSBjaHVua2xlbgogICAgICAgICAgICAgICAgZGF0YS5hcHBlbmQoY2h1bmspCiAgICAgICAgICAgIGVsaWYgY29kZSA9PSAzOgogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJhaXNlIFQxRXJyb3IoImJhZCBjaHVuayBjb2RlOiAiICsgcmVwcihjb2RlKSkKICAgICAgICAgICAgaWYgb25seUhlYWRlcjoKICAgICAgICAgICAgICAgIGJyZWFrCiAgICBkYXRhID0gYnl0ZXNqb2luKGRhdGEpCiAgICBhc3NlcnRUeXBlMShkYXRhKQogICAgcmV0dXJuIGRhdGEKCgpkZWYgcmVhZE90aGVyKHBhdGgpOgogICAgIiIicmVhZHMgYW55IChmb250KSBmaWxlLCByZXR1cm5zIHJhdyBkYXRhIiIiCiAgICB3aXRoIG9wZW4ocGF0aCwgInJiIikgYXMgZjoKICAgICAgICBkYXRhID0gZi5yZWFkKCkKICAgIGFzc2VydFR5cGUxKGRhdGEpCiAgICBjaHVua3MgPSBmaW5kRW5jcnlwdGVkQ2h1bmtzKGRhdGEpCiAgICBkYXRhID0gW10KICAgIGZvciBpc0VuY3J5cHRlZCwgY2h1bmsgaW4gY2h1bmtzOgogICAgICAgIGlmIGlzRW5jcnlwdGVkIGFuZCBpc0hleChjaHVua1s6NF0pOgogICAgICAgICAgICBkYXRhLmFwcGVuZChkZUhleFN0cmluZyhjaHVuaykpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZGF0YS5hcHBlbmQoY2h1bmspCiAgICByZXR1cm4gYnl0ZXNqb2luKGRhdGEpCgoKIyBmaWxlIHdyaXRpbmcgdG9vbHMKCgpkZWYgd3JpdGVMV0ZOKHBhdGgsIGRhdGEpOgogICAgIyBSZXMuRlNwQ3JlYXRlUmVzRmlsZSB3YXMgZGVwcmVjYXRlZCBpbiBPUyBYIDEwLjUKICAgIFJlcy5GU3BDcmVhdGVSZXNGaWxlKHBhdGgsICJqdXN0IiwgIkxXRk4iLCAwKQogICAgcmVzUmVmID0gUmVzLkZTT3BlblJlc0ZpbGUocGF0aCwgMikgICMgd3JpdGUtb25seQogICAgdHJ5OgogICAgICAgIFJlcy5Vc2VSZXNGaWxlKHJlc1JlZikKICAgICAgICByZXNJRCA9IDUwMQogICAgICAgIGNodW5rcyA9IGZpbmRFbmNyeXB0ZWRDaHVua3MoZGF0YSkKICAgICAgICBmb3IgaXNFbmNyeXB0ZWQsIGNodW5rIGluIGNodW5rczoKICAgICAgICAgICAgaWYgaXNFbmNyeXB0ZWQ6CiAgICAgICAgICAgICAgICBjb2RlID0gMgogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgY29kZSA9IDEKICAgICAgICAgICAgd2hpbGUgY2h1bms6CiAgICAgICAgICAgICAgICByZXMgPSBSZXMuUmVzb3VyY2UoYnl0ZWNocihjb2RlKSArICJcMCIgKyBjaHVua1s6IExXRk5DSFVOS1NJWkUgLSAyXSkKICAgICAgICAgICAgICAgIHJlcy5BZGRSZXNvdXJjZSgiUE9TVCIsIHJlc0lELCAiIikKICAgICAgICAgICAgICAgIGNodW5rID0gY2h1bmtbTFdGTkNIVU5LU0laRSAtIDIgOl0KICAgICAgICAgICAgICAgIHJlc0lEID0gcmVzSUQgKyAxCiAgICAgICAgcmVzID0gUmVzLlJlc291cmNlKGJ5dGVjaHIoNSkgKyAiXDAiKQogICAgICAgIHJlcy5BZGRSZXNvdXJjZSgiUE9TVCIsIHJlc0lELCAiIikKICAgIGZpbmFsbHk6CiAgICAgICAgUmVzLkNsb3NlUmVzRmlsZShyZXNSZWYpCgoKZGVmIHdyaXRlUEZCKHBhdGgsIGRhdGEpOgogICAgY2h1bmtzID0gZmluZEVuY3J5cHRlZENodW5rcyhkYXRhKQogICAgd2l0aCBvcGVuKHBhdGgsICJ3YiIpIGFzIGY6CiAgICAgICAgZm9yIGlzRW5jcnlwdGVkLCBjaHVuayBpbiBjaHVua3M6CiAgICAgICAgICAgIGlmIGlzRW5jcnlwdGVkOgogICAgICAgICAgICAgICAgY29kZSA9IDIKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGNvZGUgPSAxCiAgICAgICAgICAgIGYud3JpdGUoYnl0ZWNocigxMjgpICsgYnl0ZWNocihjb2RlKSkKICAgICAgICAgICAgZi53cml0ZShsb25nVG9TdHJpbmcobGVuKGNodW5rKSkpCiAgICAgICAgICAgIGYud3JpdGUoY2h1bmspCiAgICAgICAgZi53cml0ZShieXRlY2hyKDEyOCkgKyBieXRlY2hyKDMpKQoKCmRlZiB3cml0ZU90aGVyKHBhdGgsIGRhdGEsIGRvaGV4PUZhbHNlKToKICAgIGNodW5rcyA9IGZpbmRFbmNyeXB0ZWRDaHVua3MoZGF0YSkKICAgIHdpdGggb3BlbihwYXRoLCAid2IiKSBhcyBmOgogICAgICAgIGhleGxpbmVsZW4gPSBIRVhMSU5FTEVOR1RIIC8vIDIKICAgICAgICBmb3IgaXNFbmNyeXB0ZWQsIGNodW5rIGluIGNodW5rczoKICAgICAgICAgICAgaWYgaXNFbmNyeXB0ZWQ6CiAgICAgICAgICAgICAgICBjb2RlID0gMgogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgY29kZSA9IDEKICAgICAgICAgICAgaWYgY29kZSA9PSAyIGFuZCBkb2hleDoKICAgICAgICAgICAgICAgIHdoaWxlIGNodW5rOgogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZWV4ZWMuaGV4U3RyaW5nKGNodW5rWzpoZXhsaW5lbGVuXSkpCiAgICAgICAgICAgICAgICAgICAgZi53cml0ZShiIlxyIikKICAgICAgICAgICAgICAgICAgICBjaHVuayA9IGNodW5rW2hleGxpbmVsZW46XQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZi53cml0ZShjaHVuaykKCgojIGRlY3J5cHRpb24gdG9vbHMKCkVFWEVDQkVHSU4gPSBiImN1cnJlbnRmaWxlIGVleGVjIgojIFRoZSBzcGVjIGFsbG93cyBmb3IgNTEyIEFTQ0lJIHplcm9zIGludGVycnVwdGVkIGJ5IGFyYml0cmFyeSB3aGl0ZXNwYWNlIHRvCiMgZm9sbG93IGVleGVjCkVFWEVDRU5EID0gcmUuY29tcGlsZShiIigwWyBcdFxyXG5dKil7NTEyfSIsIGZsYWdzPXJlLk0pCkVFWEVDSU5URVJOQUxFTkQgPSBiImN1cnJlbnRmaWxlIGNsb3NlZmlsZSIKRUVYRUNCRUdJTk1BUktFUiA9IGIiJS0tIGVleGVjIHN0YXJ0XHIiCkVFWEVDRU5ETUFSS0VSID0gYiIlLS0gZWV4ZWMgZW5kXHIiCgpfaXNoZXhSRSA9IHJlLmNvbXBpbGUoYiJbMC05QS1GYS1mXSokIikKCgpkZWYgaXNIZXgodGV4dCk6CiAgICByZXR1cm4gX2lzaGV4UkUubWF0Y2godGV4dCkgaXMgbm90IE5vbmUKCgpkZWYgZGVjcnlwdFR5cGUxKGRhdGEpOgogICAgY2h1bmtzID0gZmluZEVuY3J5cHRlZENodW5rcyhkYXRhKQogICAgZGF0YSA9IFtdCiAgICBmb3IgaXNFbmNyeXB0ZWQsIGNodW5rIGluIGNodW5rczoKICAgICAgICBpZiBpc0VuY3J5cHRlZDoKICAgICAgICAgICAgaWYgaXNIZXgoY2h1bmtbOjRdKToKICAgICAgICAgICAgICAgIGNodW5rID0gZGVIZXhTdHJpbmcoY2h1bmspCiAgICAgICAgICAgIGRlY3J5cHRlZCwgUiA9IGVleGVjLmRlY3J5cHQoY2h1bmssIDU1NjY1KQogICAgICAgICAgICBkZWNyeXB0ZWQgPSBkZWNyeXB0ZWRbNDpdCiAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgIGRlY3J5cHRlZFstbGVuKEVFWEVDSU5URVJOQUxFTkQpIC0gMSA6IC0xXSAhPSBFRVhFQ0lOVEVSTkFMRU5ECiAgICAgICAgICAgICAgICBhbmQgZGVjcnlwdGVkWy1sZW4oRUVYRUNJTlRFUk5BTEVORCkgLSAyIDogLTJdICE9IEVFWEVDSU5URVJOQUxFTkQKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIHJhaXNlIFQxRXJyb3IoImludmFsaWQgZW5kIG9mIGVleGVjIHBhcnQiKQogICAgICAgICAgICBkZWNyeXB0ZWQgPSBkZWNyeXB0ZWRbOiAtbGVuKEVFWEVDSU5URVJOQUxFTkQpIC0gMl0gKyBiIlxyIgogICAgICAgICAgICBkYXRhLmFwcGVuZChFRVhFQ0JFR0lOTUFSS0VSICsgZGVjcnlwdGVkICsgRUVYRUNFTkRNQVJLRVIpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgY2h1bmtbLWxlbihFRVhFQ0JFR0lOKSAtIDEgOiAtMV0gPT0gRUVYRUNCRUdJTjoKICAgICAgICAgICAgICAgIGRhdGEuYXBwZW5kKGNodW5rWzogLWxlbihFRVhFQ0JFR0lOKSAtIDFdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZGF0YS5hcHBlbmQoY2h1bmspCiAgICByZXR1cm4gYnl0ZXNqb2luKGRhdGEpCgoKZGVmIGZpbmRFbmNyeXB0ZWRDaHVua3MoZGF0YSk6CiAgICBjaHVua3MgPSBbXQogICAgd2hpbGUgVHJ1ZToKICAgICAgICBlQmVnaW4gPSBkYXRhLmZpbmQoRUVYRUNCRUdJTikKICAgICAgICBpZiBlQmVnaW4gPCAwOgogICAgICAgICAgICBicmVhawogICAgICAgIGVCZWdpbiA9IGVCZWdpbiArIGxlbihFRVhFQ0JFR0lOKSArIDEKICAgICAgICBlbmRNYXRjaCA9IEVFWEVDRU5ELnNlYXJjaChkYXRhLCBlQmVnaW4pCiAgICAgICAgaWYgZW5kTWF0Y2ggaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgVDFFcnJvcigiY2FuJ3QgZmluZCBlbmQgb2YgZWV4ZWMgcGFydCIpCiAgICAgICAgZUVuZCA9IGVuZE1hdGNoLnN0YXJ0KCkKICAgICAgICBjeXBoZXJUZXh0ID0gZGF0YVtlQmVnaW4gOiBlRW5kICsgMl0KICAgICAgICBpZiBpc0hleChjeXBoZXJUZXh0Wzo0XSk6CiAgICAgICAgICAgIGN5cGhlclRleHQgPSBkZUhleFN0cmluZyhjeXBoZXJUZXh0KQogICAgICAgIHBsYWluVGV4dCwgUiA9IGVleGVjLmRlY3J5cHQoY3lwaGVyVGV4dCwgNTU2NjUpCiAgICAgICAgZUVuZExvY2FsID0gcGxhaW5UZXh0LmZpbmQoRUVYRUNJTlRFUk5BTEVORCkKICAgICAgICBpZiBlRW5kTG9jYWwgPCAwOgogICAgICAgICAgICByYWlzZSBUMUVycm9yKCJjYW4ndCBmaW5kIGVuZCBvZiBlZXhlYyBwYXJ0IikKICAgICAgICBjaHVua3MuYXBwZW5kKCgwLCBkYXRhWzplQmVnaW5dKSkKICAgICAgICBjaHVua3MuYXBwZW5kKCgxLCBjeXBoZXJUZXh0WzogZUVuZExvY2FsICsgbGVuKEVFWEVDSU5URVJOQUxFTkQpICsgMV0pKQogICAgICAgIGRhdGEgPSBkYXRhW2VFbmQ6XQogICAgY2h1bmtzLmFwcGVuZCgoMCwgZGF0YSkpCiAgICByZXR1cm4gY2h1bmtzCgoKZGVmIGRlSGV4U3RyaW5nKGhleHN0cmluZyk6CiAgICByZXR1cm4gZWV4ZWMuZGVIZXhTdHJpbmcoYnl0ZXNqb2luKGhleHN0cmluZy5zcGxpdCgpKSkKCgojIFR5cGUgMSBhc3NlcnRpb24KCl9mb250VHlwZTFSRSA9IHJlLmNvbXBpbGUocmIiL0ZvbnRUeXBlXHMrMVxzK2RlZiIpCgoKZGVmIGFzc2VydFR5cGUxKGRhdGEpOgogICAgZm9yIGhlYWQgaW4gW2IiJSFQUy1BZG9iZUZvbnQiLCBiIiUhRm9udFR5cGUxIl06CiAgICAgICAgaWYgZGF0YVs6IGxlbihoZWFkKV0gPT0gaGVhZDoKICAgICAgICAgICAgYnJlYWsKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgVDFFcnJvcigibm90IGEgUG9zdFNjcmlwdCBmb250IikKICAgIGlmIG5vdCBfZm9udFR5cGUxUkUuc2VhcmNoKGRhdGEpOgogICAgICAgIHJhaXNlIFQxRXJyb3IoIm5vdCBhIFR5cGUgMSBmb250IikKICAgIGlmIGRhdGEuZmluZChiImN1cnJlbnRmaWxlIGVleGVjIikgPCAwOgogICAgICAgIHJhaXNlIFQxRXJyb3IoIm5vdCBhbiBlbmNyeXB0ZWQgVHlwZSAxIGZvbnQiKQogICAgIyBYWFggd2hhdCBlbHNlPwogICAgcmV0dXJuIGRhdGEKCgojIHBmYiBoZWxwZXJzCgoKZGVmIGxvbmdUb1N0cmluZyhsb25nKToKICAgIHMgPSBiIiIKICAgIGZvciBpIGluIHJhbmdlKDQpOgogICAgICAgIHMgKz0gYnl0ZWNocigobG9uZyAmICgweEZGIDw8IChpICogOCkpKSA+PiBpICogOCkKICAgIHJldHVybiBzCgoKZGVmIHN0cmluZ1RvTG9uZyhzKToKICAgIGlmIGxlbihzKSAhPSA0OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoInN0cmluZyBtdXN0IGJlIDQgYnl0ZXMgbG9uZyIpCiAgICBsID0gMAogICAgZm9yIGkgaW4gcmFuZ2UoNCk6CiAgICAgICAgbCArPSBieXRlb3JkKHNbaV0pIDw8IChpICogOCkKICAgIHJldHVybiBsCgoKIyBQUyBzdHJlYW0gaGVscGVycwoKZm9udF9kaWN0aW9uYXJ5X2tleXMgPSBsaXN0KF90eXBlMV9wcmVfZWV4ZWNfb3JkZXIpCiMgdDF3cml0ZS5jOndyaXRlUmVnTmFtZUtleWVkRm9udAojIGFsd2F5cyBjb3VudHMgZm9sbG93aW5nIGtleXMKZm9udF9kaWN0aW9uYXJ5X2tleXMucmVtb3ZlKCJGb250TWF0cml4IikKCkZvbnRJbmZvX2RpY3Rpb25hcnlfa2V5cyA9IGxpc3QoX3R5cGUxX2ZvbnRpbmZvX29yZGVyKQojIGV4dGVuZCBiZWNhdXNlIEFGREtPIHR4IG1heSB1c2UgZm9sbG93aW5nIGtleXMKRm9udEluZm9fZGljdGlvbmFyeV9rZXlzLmV4dGVuZCgKICAgIFsKICAgICAgICAiRlNUeXBlIiwKICAgICAgICAiQ29weXJpZ2h0IiwKICAgIF0KKQoKUHJpdmF0ZV9kaWN0aW9uYXJ5X2tleXMgPSBbCiAgICAjIFdlIGRvbid0IGtub3cgd2hhdCBuYW1lcyB3aWxsIGJlIGFjdHVhbGx5IHVzZWQuCiAgICAjICJSRCIsCiAgICAjICJORCIsCiAgICAjICJOUCIsCiAgICAiU3VicnMiLAogICAgIk90aGVyU3VicnMiLAogICAgIlVuaXF1ZUlEIiwKICAgICJCbHVlVmFsdWVzIiwKICAgICJPdGhlckJsdWVzIiwKICAgICJGYW1pbHlCbHVlcyIsCiAgICAiRmFtaWx5T3RoZXJCbHVlcyIsCiAgICAiQmx1ZVNjYWxlIiwKICAgICJCbHVlU2hpZnQiLAogICAgIkJsdWVGdXp6IiwKICAgICJTdGRIVyIsCiAgICAiU3RkVlciLAogICAgIlN0ZW1TbmFwSCIsCiAgICAiU3RlbVNuYXBWIiwKICAgICJGb3JjZUJvbGQiLAogICAgIkxhbmd1YWdlR3JvdXAiLAogICAgInBhc3N3b3JkIiwKICAgICJsZW5JViIsCiAgICAiTWluRmVhdHVyZSIsCiAgICAiUm5kU3RlbVVwIiwKXQoKIyB0MXdyaXRlX2hpbnRvdGhlcnMuaApoaW50b3RoZXJzID0gIiIiL090aGVyU3VicnNbe317fXt9e3N5c3RlbWRpY3QvaW50ZXJuYWxkaWN0IGtub3duIG5vdHtwb3AgM317MTE4MzYxNTg2OQpzeXN0ZW1kaWN0L2ludGVybmFsZGljdCBnZXQgZXhlYyBkdXAvc3RhcnRsb2NrIGtub3duey9zdGFydGxvY2sgZ2V0IGV4ZWN9e2R1cAovc3RydGxjayBrbm93bnsvc3RydGxjayBnZXQgZXhlY317cG9wIDN9aWZlbHNlfWlmZWxzZX1pZmVsc2V9ZXhlY3V0ZW9ubHldZGVmIiIiCiMgdDF3cml0ZS5jOnNhdmVTdGRTdWJycwpzdGRfc3VicnMgPSBbCiAgICAjIDMgMCBjYWxsb3RoZXIgcG9wIHBvcCBzZXRjdXJyZW50cG9pbnQgcmV0dXJuCiAgICBiIlx4OGVceDhiXHgwY1x4MTBceDBjXHgxMVx4MGNceDExXHgwY1x4MjFceDBiIiwKICAgICMgMCAxIGNhbGxvdGhlciByZXR1cm4KICAgIGIiXHg4Ylx4OGNceDBjXHgxMFx4MGIiLAogICAgIyAwIDIgY2FsbG90aGVyIHJldHVybgogICAgYiJceDhiXHg4ZFx4MGNceDEwXHgwYiIsCiAgICAjIHJldHVybgogICAgYiJceDBiIiwKICAgICMgMyAxIDMgY2FsbG90aGVyIHBvcCBjYWxsc3ViciByZXR1cm4KICAgIGIiXHg4ZVx4OGNceDhlXHgwY1x4MTBceDBjXHgxMVx4MGFceDBiIiwKXQojIGZvbGxvdyB0MXdyaXRlLmM6d3JpdGVSZWdOYW1lS2V5ZWRGb250CmVleGVjX0lWID0gYiJjY2NjIgpjaGFyX0lWID0gYiJceDBjXHgwY1x4MGNceDBjIgpSRF92YWx1ZSA9ICgic3RyaW5nIiwgImN1cnJlbnRmaWxlIiwgImV4Y2giLCAicmVhZHN0cmluZyIsICJwb3AiKQpORF92YWx1ZXMgPSBbKCJkZWYiLCksICgibm9hY2Nlc3MiLCAiZGVmIildClBEX3ZhbHVlcyA9IFsoInB1dCIsKSwgKCJub2FjY2VzcyIsICJwdXQiKV0K
+"""fontTools.t1Lib.py -- Tools for PostScript Type 1 fonts.
+
+Functions for reading and writing raw Type 1 data:
+
+read(path)
+        reads any Type 1 font file, returns the raw data and a type indicator:
+        'LWFN', 'PFB' or 'OTHER', depending on the format of the file pointed
+        to by 'path'.
+        Raises an error when the file does not contain valid Type 1 data.
+
+write(path, data, kind='OTHER', dohex=False)
+        writes raw Type 1 data to the file pointed to by 'path'.
+        'kind' can be one of 'LWFN', 'PFB' or 'OTHER'; it defaults to 'OTHER'.
+        'dohex' is a flag which determines whether the eexec encrypted
+        part should be written as hexadecimal or binary, but only if kind
+        is 'OTHER'.
+"""
+
+import fontTools
+from fontTools.misc import eexec
+from fontTools.misc.macCreatorType import getMacCreatorAndType
+from fontTools.misc.textTools import bytechr, byteord, bytesjoin, tobytes
+from fontTools.misc.psOperators import (
+    _type1_pre_eexec_order,
+    _type1_fontinfo_order,
+    _type1_post_eexec_order,
+)
+from fontTools.encodings.StandardEncoding import StandardEncoding
+import os
+import re
+
+__author__ = "jvr"
+__version__ = "1.0b3"
+DEBUG = 0
+
+
+try:
+    try:
+        from Carbon import Res
+    except ImportError:
+        import Res  # MacPython < 2.2
+except ImportError:
+    haveMacSupport = 0
+else:
+    haveMacSupport = 1
+
+
+class T1Error(Exception):
+    pass
+
+
+class T1Font(object):
+    """Type 1 font class.
+
+    Uses a minimal interpeter that supports just about enough PS to parse
+    Type 1 fonts.
+    """
+
+    def __init__(self, path, encoding="ascii", kind=None):
+        if kind is None:
+            self.data, _ = read(path)
+        elif kind == "LWFN":
+            self.data = readLWFN(path)
+        elif kind == "PFB":
+            self.data = readPFB(path)
+        elif kind == "OTHER":
+            self.data = readOther(path)
+        else:
+            raise ValueError(kind)
+        self.encoding = encoding
+
+    def saveAs(self, path, type, dohex=False):
+        write(path, self.getData(), type, dohex)
+
+    def getData(self):
+        if not hasattr(self, "data"):
+            self.data = self.createData()
+        return self.data
+
+    def getGlyphSet(self):
+        """Return a generic GlyphSet, which is a dict-like object
+        mapping glyph names to glyph objects. The returned glyph objects
+        have a .draw() method that supports the Pen protocol, and will
+        have an attribute named 'width', but only *after* the .draw() method
+        has been called.
+
+        In the case of Type 1, the GlyphSet is simply the CharStrings dict.
+        """
+        return self["CharStrings"]
+
+    def __getitem__(self, key):
+        if not hasattr(self, "font"):
+            self.parse()
+        return self.font[key]
+
+    def parse(self):
+        from fontTools.misc import psLib
+        from fontTools.misc import psCharStrings
+
+        self.font = psLib.suckfont(self.data, self.encoding)
+        charStrings = self.font["CharStrings"]
+        lenIV = self.font["Private"].get("lenIV", 4)
+        assert lenIV >= 0
+        subrs = self.font["Private"]["Subrs"]
+        for glyphName, charString in charStrings.items():
+            charString, R = eexec.decrypt(charString, 4330)
+            charStrings[glyphName] = psCharStrings.T1CharString(
+                charString[lenIV:], subrs=subrs
+            )
+        for i in range(len(subrs)):
+            charString, R = eexec.decrypt(subrs[i], 4330)
+            subrs[i] = psCharStrings.T1CharString(charString[lenIV:], subrs=subrs)
+        del self.data
+
+    def createData(self):
+        sf = self.font
+
+        eexec_began = False
+        eexec_dict = {}
+        lines = []
+        lines.extend(
+            [
+                self._tobytes(f"%!FontType1-1.1: {sf['FontName']}"),
+                self._tobytes(f"%t1Font: ({fontTools.version})"),
+                self._tobytes(f"%%BeginResource: font {sf['FontName']}"),
+            ]
+        )
+        # follow t1write.c:writeRegNameKeyedFont
+        size = 3  # Headroom for new key addition
+        size += 1  # FontMatrix is always counted
+        size += 1 + 1  # Private, CharStings
+        for key in font_dictionary_keys:
+            size += int(key in sf)
+        lines.append(self._tobytes(f"{size} dict dup begin"))
+
+        for key, value in sf.items():
+            if eexec_began:
+                eexec_dict[key] = value
+                continue
+
+            if key == "FontInfo":
+                fi = sf["FontInfo"]
+                # follow t1write.c:writeFontInfoDict
+                size = 3  # Headroom for new key addition
+                for subkey in FontInfo_dictionary_keys:
+                    size += int(subkey in fi)
+                lines.append(self._tobytes(f"/FontInfo {size} dict dup begin"))
+
+                for subkey, subvalue in fi.items():
+                    lines.extend(self._make_lines(subkey, subvalue))
+                lines.append(b"end def")
+            elif key in _type1_post_eexec_order:  # usually 'Private'
+                eexec_dict[key] = value
+                eexec_began = True
+            else:
+                lines.extend(self._make_lines(key, value))
+        lines.append(b"end")
+        eexec_portion = self.encode_eexec(eexec_dict)
+        lines.append(bytesjoin([b"currentfile eexec ", eexec_portion]))
+
+        for _ in range(8):
+            lines.append(self._tobytes("0" * 64))
+        lines.extend([b"cleartomark", b"%%EndResource", b"%%EOF"])
+
+        data = bytesjoin(lines, "\n")
+        return data
+
+    def encode_eexec(self, eexec_dict):
+        lines = []
+
+        # '-|', '|-', '|'
+        RD_key, ND_key, NP_key = None, None, None
+        lenIV = 4
+        subrs = std_subrs
+
+        # Ensure we look at Private first, because we need RD_key, ND_key, NP_key and lenIV
+        sortedItems = sorted(eexec_dict.items(), key=lambda item: item[0] != "Private")
+
+        for key, value in sortedItems:
+            if key == "Private":
+                pr = eexec_dict["Private"]
+                # follow t1write.c:writePrivateDict
+                size = 3  # for RD, ND, NP
+                for subkey in Private_dictionary_keys:
+                    size += int(subkey in pr)
+                lines.append(b"dup /Private")
+                lines.append(self._tobytes(f"{size} dict dup begin"))
+                for subkey, subvalue in pr.items():
+                    if not RD_key and subvalue == RD_value:
+                        RD_key = subkey
+                    elif not ND_key and subvalue in ND_values:
+                        ND_key = subkey
+                    elif not NP_key and subvalue in PD_values:
+                        NP_key = subkey
+
+                    if subkey == "lenIV":
+                        lenIV = subvalue
+
+                    if subkey == "OtherSubrs":
+                        # XXX: assert that no flex hint is used
+                        lines.append(self._tobytes(hintothers))
+                    elif subkey == "Subrs":
+                        for subr_bin in subvalue:
+                            subr_bin.compile()
+                        subrs = [subr_bin.bytecode for subr_bin in subvalue]
+                        lines.append(f"/Subrs {len(subrs)} array".encode("ascii"))
+                        for i, subr_bin in enumerate(subrs):
+                            encrypted_subr, R = eexec.encrypt(
+                                bytesjoin([char_IV[:lenIV], subr_bin]), 4330
+                            )
+                            lines.append(
+                                bytesjoin(
+                                    [
+                                        self._tobytes(
+                                            f"dup {i} {len(encrypted_subr)} {RD_key} "
+                                        ),
+                                        encrypted_subr,
+                                        self._tobytes(f" {NP_key}"),
+                                    ]
+                                )
+                            )
+                        lines.append(b"def")
+
+                        lines.append(b"put")
+                    else:
+                        lines.extend(self._make_lines(subkey, subvalue))
+            elif key == "CharStrings":
+                lines.append(b"dup /CharStrings")
+                lines.append(
+                    self._tobytes(f"{len(eexec_dict['CharStrings'])} dict dup begin")
+                )
+                for glyph_name, char_bin in eexec_dict["CharStrings"].items():
+                    char_bin.compile()
+                    encrypted_char, R = eexec.encrypt(
+                        bytesjoin([char_IV[:lenIV], char_bin.bytecode]), 4330
+                    )
+                    lines.append(
+                        bytesjoin(
+                            [
+                                self._tobytes(
+                                    f"/{glyph_name} {len(encrypted_char)} {RD_key} "
+                                ),
+                                encrypted_char,
+                                self._tobytes(f" {ND_key}"),
+                            ]
+                        )
+                    )
+                lines.append(b"end put")
+            else:
+                lines.extend(self._make_lines(key, value))
+
+        lines.extend(
+            [
+                b"end",
+                b"dup /FontName get exch definefont pop",
+                b"mark",
+                b"currentfile closefile\n",
+            ]
+        )
+
+        eexec_portion = bytesjoin(lines, "\n")
+        encrypted_eexec, R = eexec.encrypt(bytesjoin([eexec_IV, eexec_portion]), 55665)
+
+        return encrypted_eexec
+
+    def _make_lines(self, key, value):
+        if key == "FontName":
+            return [self._tobytes(f"/{key} /{value} def")]
+        if key in ["isFixedPitch", "ForceBold", "RndStemUp"]:
+            return [self._tobytes(f"/{key} {'true' if value else 'false'} def")]
+        elif key == "Encoding":
+            if value == StandardEncoding:
+                return [self._tobytes(f"/{key} StandardEncoding def")]
+            else:
+                # follow fontTools.misc.psOperators._type1_Encoding_repr
+                lines = []
+                lines.append(b"/Encoding 256 array")
+                lines.append(b"0 1 255 {1 index exch /.notdef put} for")
+                for i in range(256):
+                    name = value[i]
+                    if name != ".notdef":
+                        lines.append(self._tobytes(f"dup {i} /{name} put"))
+                lines.append(b"def")
+                return lines
+        if isinstance(value, str):
+            return [self._tobytes(f"/{key} ({value}) def")]
+        elif isinstance(value, bool):
+            return [self._tobytes(f"/{key} {'true' if value else 'false'} def")]
+        elif isinstance(value, list):
+            return [self._tobytes(f"/{key} [{' '.join(str(v) for v in value)}] def")]
+        elif isinstance(value, tuple):
+            return [self._tobytes(f"/{key} {{{' '.join(str(v) for v in value)}}} def")]
+        else:
+            return [self._tobytes(f"/{key} {value} def")]
+
+    def _tobytes(self, s, errors="strict"):
+        return tobytes(s, self.encoding, errors)
+
+
+# low level T1 data read and write functions
+
+
+def read(path, onlyHeader=False):
+    """reads any Type 1 font file, returns raw data"""
+    _, ext = os.path.splitext(path)
+    ext = ext.lower()
+    creator, typ = getMacCreatorAndType(path)
+    if typ == "LWFN":
+        return readLWFN(path, onlyHeader), "LWFN"
+    if ext == ".pfb":
+        return readPFB(path, onlyHeader), "PFB"
+    else:
+        return readOther(path), "OTHER"
+
+
+def write(path, data, kind="OTHER", dohex=False):
+    assertType1(data)
+    kind = kind.upper()
+    try:
+        os.remove(path)
+    except os.error:
+        pass
+    err = 1
+    try:
+        if kind == "LWFN":
+            writeLWFN(path, data)
+        elif kind == "PFB":
+            writePFB(path, data)
+        else:
+            writeOther(path, data, dohex)
+        err = 0
+    finally:
+        if err and not DEBUG:
+            try:
+                os.remove(path)
+            except os.error:
+                pass
+
+
+# -- internal --
+
+LWFNCHUNKSIZE = 2000
+HEXLINELENGTH = 80
+
+
+def readLWFN(path, onlyHeader=False):
+    """reads an LWFN font file, returns raw data"""
+    from fontTools.misc.macRes import ResourceReader
+
+    reader = ResourceReader(path)
+    try:
+        data = []
+        for res in reader.get("POST", []):
+            code = byteord(res.data[0])
+            if byteord(res.data[1]) != 0:
+                raise T1Error("corrupt LWFN file")
+            if code in [1, 2]:
+                if onlyHeader and code == 2:
+                    break
+                data.append(res.data[2:])
+            elif code in [3, 5]:
+                break
+            elif code == 4:
+                with open(path, "rb") as f:
+                    data.append(f.read())
+            elif code == 0:
+                pass  # comment, ignore
+            else:
+                raise T1Error("bad chunk code: " + repr(code))
+    finally:
+        reader.close()
+    data = bytesjoin(data)
+    assertType1(data)
+    return data
+
+
+def readPFB(path, onlyHeader=False):
+    """reads a PFB font file, returns raw data"""
+    data = []
+    with open(path, "rb") as f:
+        while True:
+            if f.read(1) != bytechr(128):
+                raise T1Error("corrupt PFB file")
+            code = byteord(f.read(1))
+            if code in [1, 2]:
+                chunklen = stringToLong(f.read(4))
+                chunk = f.read(chunklen)
+                assert len(chunk) == chunklen
+                data.append(chunk)
+            elif code == 3:
+                break
+            else:
+                raise T1Error("bad chunk code: " + repr(code))
+            if onlyHeader:
+                break
+    data = bytesjoin(data)
+    assertType1(data)
+    return data
+
+
+def readOther(path):
+    """reads any (font) file, returns raw data"""
+    with open(path, "rb") as f:
+        data = f.read()
+    assertType1(data)
+    chunks = findEncryptedChunks(data)
+    data = []
+    for isEncrypted, chunk in chunks:
+        if isEncrypted and isHex(chunk[:4]):
+            data.append(deHexString(chunk))
+        else:
+            data.append(chunk)
+    return bytesjoin(data)
+
+
+# file writing tools
+
+
+def writeLWFN(path, data):
+    # Res.FSpCreateResFile was deprecated in OS X 10.5
+    Res.FSpCreateResFile(path, "just", "LWFN", 0)
+    resRef = Res.FSOpenResFile(path, 2)  # write-only
+    try:
+        Res.UseResFile(resRef)
+        resID = 501
+        chunks = findEncryptedChunks(data)
+        for isEncrypted, chunk in chunks:
+            if isEncrypted:
+                code = 2
+            else:
+                code = 1
+            while chunk:
+                res = Res.Resource(bytechr(code) + "\0" + chunk[: LWFNCHUNKSIZE - 2])
+                res.AddResource("POST", resID, "")
+                chunk = chunk[LWFNCHUNKSIZE - 2 :]
+                resID = resID + 1
+        res = Res.Resource(bytechr(5) + "\0")
+        res.AddResource("POST", resID, "")
+    finally:
+        Res.CloseResFile(resRef)
+
+
+def writePFB(path, data):
+    chunks = findEncryptedChunks(data)
+    with open(path, "wb") as f:
+        for isEncrypted, chunk in chunks:
+            if isEncrypted:
+                code = 2
+            else:
+                code = 1
+            f.write(bytechr(128) + bytechr(code))
+            f.write(longToString(len(chunk)))
+            f.write(chunk)
+        f.write(bytechr(128) + bytechr(3))
+
+
+def writeOther(path, data, dohex=False):
+    chunks = findEncryptedChunks(data)
+    with open(path, "wb") as f:
+        hexlinelen = HEXLINELENGTH // 2
+        for isEncrypted, chunk in chunks:
+            if isEncrypted:
+                code = 2
+            else:
+                code = 1
+            if code == 2 and dohex:
+                while chunk:
+                    f.write(eexec.hexString(chunk[:hexlinelen]))
+                    f.write(b"\r")
+                    chunk = chunk[hexlinelen:]
+            else:
+                f.write(chunk)
+
+
+# decryption tools
+
+EEXECBEGIN = b"currentfile eexec"
+# The spec allows for 512 ASCII zeros interrupted by arbitrary whitespace to
+# follow eexec
+EEXECEND = re.compile(b"(0[ \t\r\n]*){512}", flags=re.M)
+EEXECINTERNALEND = b"currentfile closefile"
+EEXECBEGINMARKER = b"%-- eexec start\r"
+EEXECENDMARKER = b"%-- eexec end\r"
+
+_ishexRE = re.compile(b"[0-9A-Fa-f]*$")
+
+
+def isHex(text):
+    return _ishexRE.match(text) is not None
+
+
+def decryptType1(data):
+    chunks = findEncryptedChunks(data)
+    data = []
+    for isEncrypted, chunk in chunks:
+        if isEncrypted:
+            if isHex(chunk[:4]):
+                chunk = deHexString(chunk)
+            decrypted, R = eexec.decrypt(chunk, 55665)
+            decrypted = decrypted[4:]
+            if (
+                decrypted[-len(EEXECINTERNALEND) - 1 : -1] != EEXECINTERNALEND
+                and decrypted[-len(EEXECINTERNALEND) - 2 : -2] != EEXECINTERNALEND
+            ):
+                raise T1Error("invalid end of eexec part")
+            decrypted = decrypted[: -len(EEXECINTERNALEND) - 2] + b"\r"
+            data.append(EEXECBEGINMARKER + decrypted + EEXECENDMARKER)
+        else:
+            if chunk[-len(EEXECBEGIN) - 1 : -1] == EEXECBEGIN:
+                data.append(chunk[: -len(EEXECBEGIN) - 1])
+            else:
+                data.append(chunk)
+    return bytesjoin(data)
+
+
+def findEncryptedChunks(data):
+    chunks = []
+    while True:
+        eBegin = data.find(EEXECBEGIN)
+        if eBegin < 0:
+            break
+        eBegin = eBegin + len(EEXECBEGIN) + 1
+        endMatch = EEXECEND.search(data, eBegin)
+        if endMatch is None:
+            raise T1Error("can't find end of eexec part")
+        eEnd = endMatch.start()
+        cypherText = data[eBegin : eEnd + 2]
+        if isHex(cypherText[:4]):
+            cypherText = deHexString(cypherText)
+        plainText, R = eexec.decrypt(cypherText, 55665)
+        eEndLocal = plainText.find(EEXECINTERNALEND)
+        if eEndLocal < 0:
+            raise T1Error("can't find end of eexec part")
+        chunks.append((0, data[:eBegin]))
+        chunks.append((1, cypherText[: eEndLocal + len(EEXECINTERNALEND) + 1]))
+        data = data[eEnd:]
+    chunks.append((0, data))
+    return chunks
+
+
+def deHexString(hexstring):
+    return eexec.deHexString(bytesjoin(hexstring.split()))
+
+
+# Type 1 assertion
+
+_fontType1RE = re.compile(rb"/FontType\s+1\s+def")
+
+
+def assertType1(data):
+    for head in [b"%!PS-AdobeFont", b"%!FontType1"]:
+        if data[: len(head)] == head:
+            break
+    else:
+        raise T1Error("not a PostScript font")
+    if not _fontType1RE.search(data):
+        raise T1Error("not a Type 1 font")
+    if data.find(b"currentfile eexec") < 0:
+        raise T1Error("not an encrypted Type 1 font")
+    # XXX what else?
+    return data
+
+
+# pfb helpers
+
+
+def longToString(long):
+    s = b""
+    for i in range(4):
+        s += bytechr((long & (0xFF << (i * 8))) >> i * 8)
+    return s
+
+
+def stringToLong(s):
+    if len(s) != 4:
+        raise ValueError("string must be 4 bytes long")
+    l = 0
+    for i in range(4):
+        l += byteord(s[i]) << (i * 8)
+    return l
+
+
+# PS stream helpers
+
+font_dictionary_keys = list(_type1_pre_eexec_order)
+# t1write.c:writeRegNameKeyedFont
+# always counts following keys
+font_dictionary_keys.remove("FontMatrix")
+
+FontInfo_dictionary_keys = list(_type1_fontinfo_order)
+# extend because AFDKO tx may use following keys
+FontInfo_dictionary_keys.extend(
+    [
+        "FSType",
+        "Copyright",
+    ]
+)
+
+Private_dictionary_keys = [
+    # We don't know what names will be actually used.
+    # "RD",
+    # "ND",
+    # "NP",
+    "Subrs",
+    "OtherSubrs",
+    "UniqueID",
+    "BlueValues",
+    "OtherBlues",
+    "FamilyBlues",
+    "FamilyOtherBlues",
+    "BlueScale",
+    "BlueShift",
+    "BlueFuzz",
+    "StdHW",
+    "StdVW",
+    "StemSnapH",
+    "StemSnapV",
+    "ForceBold",
+    "LanguageGroup",
+    "password",
+    "lenIV",
+    "MinFeature",
+    "RndStemUp",
+]
+
+# t1write_hintothers.h
+hintothers = """/OtherSubrs[{}{}{}{systemdict/internaldict known not{pop 3}{1183615869
+systemdict/internaldict get exec dup/startlock known{/startlock get exec}{dup
+/strtlck known{/strtlck get exec}{pop 3}ifelse}ifelse}ifelse}executeonly]def"""
+# t1write.c:saveStdSubrs
+std_subrs = [
+    # 3 0 callother pop pop setcurrentpoint return
+    b"\x8e\x8b\x0c\x10\x0c\x11\x0c\x11\x0c\x21\x0b",
+    # 0 1 callother return
+    b"\x8b\x8c\x0c\x10\x0b",
+    # 0 2 callother return
+    b"\x8b\x8d\x0c\x10\x0b",
+    # return
+    b"\x0b",
+    # 3 1 3 callother pop callsubr return
+    b"\x8e\x8c\x8e\x0c\x10\x0c\x11\x0a\x0b",
+]
+# follow t1write.c:writeRegNameKeyedFont
+eexec_IV = b"cccc"
+char_IV = b"\x0c\x0c\x0c\x0c"
+RD_value = ("string", "currentfile", "exch", "readstring", "pop")
+ND_values = [("def",), ("noaccess", "def")]
+PD_values = [("put",), ("noaccess", "put")]

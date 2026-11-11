@@ -1,1 +1,234 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZsb2F0VG9GaXhlZFRvU3RyCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbAoKIyBmcm9tIGl0ZXJ0b29scyBpbXBvcnQgKgpmcm9tIGZ1bmN0b29scyBpbXBvcnQgcGFydGlhbApmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIC4gaW1wb3J0IGdyVXRpbHMKaW1wb3J0IHN0cnVjdAoKR2xhdF9mb3JtYXRfMCA9ICIiIgogICAgPiAgICAgICAgIyBiaWcgZW5kaWFuCiAgICB2ZXJzaW9uOiAxNi4xNkYKIiIiCgpHbGF0X2Zvcm1hdF8zID0gIiIiCiAgICA+CiAgICB2ZXJzaW9uOiAxNi4xNkYKICAgIGNvbXByZXNzaW9uOkwgICAgIyBjb21wcmVzc2lvbiBzY2hlbWUgb3IgcmVzZXJ2ZWQgCiIiIgoKR2xhdF9mb3JtYXRfMV9lbnRyeSA9ICIiIgogICAgPgogICAgYXR0TnVtOiAgICAgQiAgICAjIEF0dHJpYnV0ZSBudW1iZXIgb2YgZmlyc3QgYXR0cmlidXRlCiAgICBudW06ICAgICAgICBCICAgICMgTnVtYmVyIG9mIGF0dHJpYnV0ZXMgaW4gdGhpcyBydW4KIiIiCkdsYXRfZm9ybWF0XzIzX2VudHJ5ID0gIiIiCiAgICA+CiAgICBhdHROdW06ICAgICBIICAgICMgQXR0cmlidXRlIG51bWJlciBvZiBmaXJzdCBhdHRyaWJ1dGUKICAgIG51bTogICAgICAgIEggICAgIyBOdW1iZXIgb2YgYXR0cmlidXRlcyBpbiB0aGlzIHJ1bgoiIiIKCkdsYXRfZm9ybWF0XzNfb2N0YWJveF9tZXRyaWNzID0gIiIiCiAgICA+CiAgICBzdWJib3hCaXRtYXA6ICAgSCAgICAjIFdoaWNoIHN1YmJveGVzIGV4aXN0IG9uIDR4NCBncmlkCiAgICBkaWFnTmVnTWluOiAgICAgQiAgICAjIERlZmluZXMgbWluaW11bSBuZWdhdGl2ZWx5LXNsb3BlZCBkaWFnb25hbCAoc2kpCiAgICBkaWFnTmVnTWF4OiAgICAgQiAgICAjIERlZmluZXMgbWF4aW11bSBuZWdhdGl2ZWx5LXNsb3BlZCBkaWFnb25hbCAoc2EpCiAgICBkaWFnUG9zTWluOiAgICAgQiAgICAjIERlZmluZXMgbWluaW11bSBwb3NpdGl2ZWx5LXNsb3BlZCBkaWFnb25hbCAoZGkpCiAgICBkaWFnUG9zTWF4OiAgICAgQiAgICAjIERlZmluZXMgbWF4aW11bSBwb3NpdGl2ZWx5LXNsb3BlZCBkaWFnb25hbCAoZGEpCiIiIgoKR2xhdF9mb3JtYXRfM19zdWJib3hfZW50cnkgPSAiIiIKICAgID4KICAgIGxlZnQ6ICAgICAgICAgICBCICAgICMgeGkKICAgIHJpZ2h0OiAgICAgICAgICBCICAgICMgeGEKICAgIGJvdHRvbTogICAgICAgICBCICAgICMgeWkKICAgIHRvcDogICAgICAgICAgICBCICAgICMgeWEKICAgIGRpYWdOZWdNaW46ICAgICBCICAgICMgRGVmaW5lcyBtaW5pbXVtIG5lZ2F0aXZlbHktc2xvcGVkIGRpYWdvbmFsIChzaSkKICAgIGRpYWdOZWdNYXg6ICAgICBCICAgICMgRGVmaW5lcyBtYXhpbXVtIG5lZ2F0aXZlbHktc2xvcGVkIGRpYWdvbmFsIChzYSkKICAgIGRpYWdQb3NNaW46ICAgICBCICAgICMgRGVmaW5lcyBtaW5pbXVtIHBvc2l0aXZlbHktc2xvcGVkIGRpYWdvbmFsIChkaSkKICAgIGRpYWdQb3NNYXg6ICAgICBCICAgICMgRGVmaW5lcyBtYXhpbXVtIHBvc2l0aXZlbHktc2xvcGVkIGRpYWdvbmFsIChkYSkKIiIiCgoKY2xhc3MgX09iamVjdDoKICAgIHBhc3MKCgpjbGFzcyBfRGljdChkaWN0KToKICAgIHBhc3MKCgpjbGFzcyB0YWJsZV9HX19sX2FfdChEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkdyYXBoaXRlIEdseXBoIEF0dHJpYnV0ZXMgdGFibGUKCiAgICBTZWUgYWxzbyBodHRwczovL2dyYXBoaXRlLnNpbC5vcmcvZ3JhcGhpdGVfdGVjaEFib3V0I2dyYXBoaXRlLWZvbnQtdGFibGVzCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgdGFnPU5vbmUpOgogICAgICAgIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUuX19pbml0X18oc2VsZiwgdGFnKQogICAgICAgIHNlbGYuc2NoZW1lID0gMAoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBzc3RydWN0LnVucGFjazIoR2xhdF9mb3JtYXRfMCwgZGF0YSwgc2VsZikKICAgICAgICBzZWxmLnZlcnNpb24gPSBmbG9hdChmbG9hdFRvRml4ZWRUb1N0cihzZWxmLnZlcnNpb24sIHByZWNpc2lvbkJpdHM9MTYpKQogICAgICAgIGlmIHNlbGYudmVyc2lvbiA8PSAxLjk6CiAgICAgICAgICAgIGRlY29kZXIgPSBwYXJ0aWFsKHNlbGYuZGVjb21waWxlQXR0cmlidXRlczEyLCBmbXQ9R2xhdF9mb3JtYXRfMV9lbnRyeSkKICAgICAgICBlbGlmIHNlbGYudmVyc2lvbiA8PSAyLjk6CiAgICAgICAgICAgIGRlY29kZXIgPSBwYXJ0aWFsKHNlbGYuZGVjb21waWxlQXR0cmlidXRlczEyLCBmbXQ9R2xhdF9mb3JtYXRfMjNfZW50cnkpCiAgICAgICAgZWxpZiBzZWxmLnZlcnNpb24gPj0gMy4wOgogICAgICAgICAgICBkYXRhLCBzZWxmLnNjaGVtZSA9IGdyVXRpbHMuZGVjb21wcmVzcyhkYXRhKQogICAgICAgICAgICBzc3RydWN0LnVucGFjazIoR2xhdF9mb3JtYXRfMywgZGF0YSwgc2VsZikKICAgICAgICAgICAgc2VsZi5oYXNPY3RhYm94ZXMgPSAoc2VsZi5jb21wcmVzc2lvbiAmIDEpID09IDEKICAgICAgICAgICAgZGVjb2RlciA9IHNlbGYuZGVjb21waWxlQXR0cmlidXRlczMKCiAgICAgICAgZ2xvYyA9IHR0Rm9udFsiR2xvYyJdCiAgICAgICAgc2VsZi5hdHRyaWJ1dGVzID0ge30KICAgICAgICBjb3VudCA9IDAKICAgICAgICBmb3IgcywgZSBpbiB6aXAoZ2xvYywgZ2xvY1sxOl0pOgogICAgICAgICAgICBzZWxmLmF0dHJpYnV0ZXNbdHRGb250LmdldEdseXBoTmFtZShjb3VudCldID0gZGVjb2RlcihkYXRhW3M6ZV0pCiAgICAgICAgICAgIGNvdW50ICs9IDEKCiAgICBkZWYgZGVjb21waWxlQXR0cmlidXRlczEyKHNlbGYsIGRhdGEsIGZtdCk6CiAgICAgICAgYXR0cmlidXRlcyA9IF9EaWN0KCkKICAgICAgICB3aGlsZSBsZW4oZGF0YSkgPiAzOgogICAgICAgICAgICBlLCBkYXRhID0gc3N0cnVjdC51bnBhY2syKGZtdCwgZGF0YSwgX09iamVjdCgpKQogICAgICAgICAgICBrZXlzID0gcmFuZ2UoZS5hdHROdW0sIGUuYXR0TnVtICsgZS5udW0pCiAgICAgICAgICAgIGlmIGxlbihkYXRhKSA+PSAyICogZS5udW06CiAgICAgICAgICAgICAgICB2YWxzID0gc3RydWN0LnVucGFja19mcm9tKCgiPiVkaCIgJSBlLm51bSksIGRhdGEpCiAgICAgICAgICAgICAgICBhdHRyaWJ1dGVzLnVwZGF0ZSh6aXAoa2V5cywgdmFscykpCiAgICAgICAgICAgICAgICBkYXRhID0gZGF0YVsyICogZS5udW0gOl0KICAgICAgICByZXR1cm4gYXR0cmlidXRlcwoKICAgIGRlZiBkZWNvbXBpbGVBdHRyaWJ1dGVzMyhzZWxmLCBkYXRhKToKICAgICAgICBpZiBzZWxmLmhhc09jdGFib3hlczoKICAgICAgICAgICAgbywgZGF0YSA9IHNzdHJ1Y3QudW5wYWNrMihHbGF0X2Zvcm1hdF8zX29jdGFib3hfbWV0cmljcywgZGF0YSwgX09iamVjdCgpKQogICAgICAgICAgICBudW1zdWIgPSBiaW4oby5zdWJib3hCaXRtYXApLmNvdW50KCIxIikKICAgICAgICAgICAgby5zdWJib3hlcyA9IFtdCiAgICAgICAgICAgIGZvciBiIGluIHJhbmdlKG51bXN1Yik6CiAgICAgICAgICAgICAgICBpZiBsZW4oZGF0YSkgPj0gODoKICAgICAgICAgICAgICAgICAgICBzdWJib3gsIGRhdGEgPSBzc3RydWN0LnVucGFjazIoCiAgICAgICAgICAgICAgICAgICAgICAgIEdsYXRfZm9ybWF0XzNfc3ViYm94X2VudHJ5LCBkYXRhLCBfT2JqZWN0KCkKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgby5zdWJib3hlcy5hcHBlbmQoc3ViYm94KQogICAgICAgIGF0dHJzID0gc2VsZi5kZWNvbXBpbGVBdHRyaWJ1dGVzMTIoZGF0YSwgR2xhdF9mb3JtYXRfMjNfZW50cnkpCiAgICAgICAgaWYgc2VsZi5oYXNPY3RhYm94ZXM6CiAgICAgICAgICAgIGF0dHJzLm9jdGFib3ggPSBvCiAgICAgICAgcmV0dXJuIGF0dHJzCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBkYXRhID0gc3N0cnVjdC5wYWNrKEdsYXRfZm9ybWF0XzAsIHNlbGYpCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uIDw9IDEuOToKICAgICAgICAgICAgZW5jb2RlciA9IHBhcnRpYWwoc2VsZi5jb21waWxlQXR0cmlidXRlczEyLCBmbXQ9R2xhdF9mb3JtYXRfMV9lbnRyeSkKICAgICAgICBlbGlmIHNlbGYudmVyc2lvbiA8PSAyLjk6CiAgICAgICAgICAgIGVuY29kZXIgPSBwYXJ0aWFsKHNlbGYuY29tcGlsZUF0dHJpYnV0ZXMxMiwgZm10PUdsYXRfZm9ybWF0XzFfZW50cnkpCiAgICAgICAgZWxpZiBzZWxmLnZlcnNpb24gPj0gMy4wOgogICAgICAgICAgICBzZWxmLmNvbXByZXNzaW9uID0gKHNlbGYuc2NoZW1lIDw8IDI3KSArICgxIGlmIHNlbGYuaGFzT2N0YWJveGVzIGVsc2UgMCkKICAgICAgICAgICAgZGF0YSA9IHNzdHJ1Y3QucGFjayhHbGF0X2Zvcm1hdF8zLCBzZWxmKQogICAgICAgICAgICBlbmNvZGVyID0gc2VsZi5jb21waWxlQXR0cmlidXRlczMKCiAgICAgICAgZ2xvY3MgPSBbXQogICAgICAgIGZvciBuIGluIHJhbmdlKGxlbihzZWxmLmF0dHJpYnV0ZXMpKToKICAgICAgICAgICAgZ2xvY3MuYXBwZW5kKGxlbihkYXRhKSkKICAgICAgICAgICAgZGF0YSArPSBlbmNvZGVyKHNlbGYuYXR0cmlidXRlc1t0dEZvbnQuZ2V0R2x5cGhOYW1lKG4pXSkKICAgICAgICBnbG9jcy5hcHBlbmQobGVuKGRhdGEpKQogICAgICAgIHR0Rm9udFsiR2xvYyJdLnNldChnbG9jcykKCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uID49IDMuMDoKICAgICAgICAgICAgZGF0YSA9IGdyVXRpbHMuY29tcHJlc3Moc2VsZi5zY2hlbWUsIGRhdGEpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgY29tcGlsZUF0dHJpYnV0ZXMxMihzZWxmLCBhdHRycywgZm10KToKICAgICAgICBkYXRhID0gYiIiCiAgICAgICAgZm9yIGUgaW4gZ3JVdGlscy5lbnRyaWVzKGF0dHJzKToKICAgICAgICAgICAgZGF0YSArPSBzc3RydWN0LnBhY2soZm10LCB7ImF0dE51bSI6IGVbMF0sICJudW0iOiBlWzFdfSkgKyBzdHJ1Y3QucGFjaygKICAgICAgICAgICAgICAgICgiPiVkaCIgJSBsZW4oZVsyXSkpLCAqZVsyXQogICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgY29tcGlsZUF0dHJpYnV0ZXMzKHNlbGYsIGF0dHJzKToKICAgICAgICBpZiBzZWxmLmhhc09jdGFib3hlczoKICAgICAgICAgICAgbyA9IGF0dHJzLm9jdGFib3gKICAgICAgICAgICAgZGF0YSA9IHNzdHJ1Y3QucGFjayhHbGF0X2Zvcm1hdF8zX29jdGFib3hfbWV0cmljcywgbykKICAgICAgICAgICAgbnVtc3ViID0gYmluKG8uc3ViYm94Qml0bWFwKS5jb3VudCgiMSIpCiAgICAgICAgICAgIGZvciBiIGluIHJhbmdlKG51bXN1Yik6CiAgICAgICAgICAgICAgICBkYXRhICs9IHNzdHJ1Y3QucGFjayhHbGF0X2Zvcm1hdF8zX3N1YmJveF9lbnRyeSwgby5zdWJib3hlc1tiXSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBkYXRhID0gIiIKICAgICAgICByZXR1cm4gZGF0YSArIHNlbGYuY29tcGlsZUF0dHJpYnV0ZXMxMihhdHRycywgR2xhdF9mb3JtYXRfMjNfZW50cnkpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJ2ZXJzaW9uIiwgdmVyc2lvbj1zZWxmLnZlcnNpb24sIGNvbXByZXNzaW9uU2NoZW1lPXNlbGYuc2NoZW1lKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBmb3IgbiwgYSBpbiBzb3J0ZWQoCiAgICAgICAgICAgIHNlbGYuYXR0cmlidXRlcy5pdGVtcygpLCBrZXk9bGFtYmRhIHg6IHR0Rm9udC5nZXRHbHlwaElEKHhbMF0pCiAgICAgICAgKToKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJnbHlwaCIsIG5hbWU9bikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICBpZiBoYXNhdHRyKGEsICJvY3RhYm94Iik6CiAgICAgICAgICAgICAgICBvID0gYS5vY3RhYm94CiAgICAgICAgICAgICAgICBmb3JtYXRzdHJpbmcsIG5hbWVzLCBmaXhlcyA9IHNzdHJ1Y3QuZ2V0Zm9ybWF0KAogICAgICAgICAgICAgICAgICAgIEdsYXRfZm9ybWF0XzNfb2N0YWJveF9tZXRyaWNzCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICB2YWxzID0ge30KICAgICAgICAgICAgICAgIGZvciBrIGluIG5hbWVzOgogICAgICAgICAgICAgICAgICAgIGlmIGsgPT0gInN1YmJveEJpdG1hcCI6CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICAgICAgdmFsc1trXSA9ICJ7Oi4zZn0lIi5mb3JtYXQoZ2V0YXR0cihvLCBrKSAqIDEwMC4wIC8gMjU1KQogICAgICAgICAgICAgICAgdmFsc1siYml0bWFwIl0gPSAiezowWH0iLmZvcm1hdChvLnN1YmJveEJpdG1hcCkKICAgICAgICAgICAgICAgIHdyaXRlci5iZWdpbnRhZygib2N0YWJveGVzIiwgKip2YWxzKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgZm9ybWF0c3RyaW5nLCBuYW1lcywgZml4ZXMgPSBzc3RydWN0LmdldGZvcm1hdCgKICAgICAgICAgICAgICAgICAgICBHbGF0X2Zvcm1hdF8zX3N1YmJveF9lbnRyeQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgZm9yIHMgaW4gby5zdWJib3hlczoKICAgICAgICAgICAgICAgICAgICB2YWxzID0ge30KICAgICAgICAgICAgICAgICAgICBmb3IgayBpbiBuYW1lczoKICAgICAgICAgICAgICAgICAgICAgICAgdmFsc1trXSA9ICJ7Oi4zZn0lIi5mb3JtYXQoZ2V0YXR0cihzLCBrKSAqIDEwMC4wIC8gMjU1KQogICAgICAgICAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoIm9jdGFib3giLCAqKnZhbHMpCiAgICAgICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgd3JpdGVyLmVuZHRhZygib2N0YWJveGVzIikKICAgICAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIGssIHYgaW4gc29ydGVkKGEuaXRlbXMoKSk6CiAgICAgICAgICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJhdHRyaWJ1dGUiLCBpbmRleD1rLCB2YWx1ZT12KQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJnbHlwaCIpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBuYW1lID09ICJ2ZXJzaW9uIjoKICAgICAgICAgICAgc2VsZi52ZXJzaW9uID0gZmxvYXQoc2FmZUV2YWwoYXR0cnNbInZlcnNpb24iXSkpCiAgICAgICAgICAgIHNlbGYuc2NoZW1lID0gaW50KHNhZmVFdmFsKGF0dHJzWyJjb21wcmVzc2lvblNjaGVtZSJdKSkKICAgICAgICBpZiBuYW1lICE9ICJnbHlwaCI6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJhdHRyaWJ1dGVzIik6CiAgICAgICAgICAgIHNlbGYuYXR0cmlidXRlcyA9IHt9CiAgICAgICAgZ25hbWUgPSBhdHRyc1sibmFtZSJdCiAgICAgICAgYXR0cmlidXRlcyA9IF9EaWN0KCkKICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICB0YWcsIGF0dHJzLCBzdWJjb250ZW50ID0gZWxlbWVudAogICAgICAgICAgICBpZiB0YWcgPT0gImF0dHJpYnV0ZSI6CiAgICAgICAgICAgICAgICBrID0gaW50KHNhZmVFdmFsKGF0dHJzWyJpbmRleCJdKSkKICAgICAgICAgICAgICAgIHYgPSBpbnQoc2FmZUV2YWwoYXR0cnNbInZhbHVlIl0pKQogICAgICAgICAgICAgICAgYXR0cmlidXRlc1trXSA9IHYKICAgICAgICAgICAgZWxpZiB0YWcgPT0gIm9jdGFib3hlcyI6CiAgICAgICAgICAgICAgICBzZWxmLmhhc09jdGFib3hlcyA9IFRydWUKICAgICAgICAgICAgICAgIG8gPSBfT2JqZWN0KCkKICAgICAgICAgICAgICAgIG8uc3ViYm94Qml0bWFwID0gaW50KGF0dHJzWyJiaXRtYXAiXSwgMTYpCiAgICAgICAgICAgICAgICBvLnN1YmJveGVzID0gW10KICAgICAgICAgICAgICAgIGRlbCBhdHRyc1siYml0bWFwIl0KICAgICAgICAgICAgICAgIGZvciBrLCB2IGluIGF0dHJzLml0ZW1zKCk6CiAgICAgICAgICAgICAgICAgICAgc2V0YXR0cihvLCBrLCBpbnQoZmxvYXQodls6LTFdKSAqIDI1NS4wIC8gMTAwLjAgKyAwLjUpKQogICAgICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gc3ViY29udGVudDoKICAgICAgICAgICAgICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICAgICAgdGFnLCBhdHRycywgc3ViY29udGVudCA9IGVsZW1lbnQKICAgICAgICAgICAgICAgICAgICBzbyA9IF9PYmplY3QoKQogICAgICAgICAgICAgICAgICAgIGZvciBrLCB2IGluIGF0dHJzLml0ZW1zKCk6CiAgICAgICAgICAgICAgICAgICAgICAgIHNldGF0dHIoc28sIGssIGludChmbG9hdCh2WzotMV0pICogMjU1LjAgLyAxMDAuMCArIDAuNSkpCiAgICAgICAgICAgICAgICAgICAgby5zdWJib3hlcy5hcHBlbmQoc28pCiAgICAgICAgICAgICAgICBhdHRyaWJ1dGVzLm9jdGFib3ggPSBvCiAgICAgICAgc2VsZi5hdHRyaWJ1dGVzW2duYW1lXSA9IGF0dHJpYnV0ZXMK
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import floatToFixedToStr
+from fontTools.misc.textTools import safeEval
+
+# from itertools import *
+from functools import partial
+from . import DefaultTable
+from . import grUtils
+import struct
+
+Glat_format_0 = """
+    >        # big endian
+    version: 16.16F
+"""
+
+Glat_format_3 = """
+    >
+    version: 16.16F
+    compression:L    # compression scheme or reserved 
+"""
+
+Glat_format_1_entry = """
+    >
+    attNum:     B    # Attribute number of first attribute
+    num:        B    # Number of attributes in this run
+"""
+Glat_format_23_entry = """
+    >
+    attNum:     H    # Attribute number of first attribute
+    num:        H    # Number of attributes in this run
+"""
+
+Glat_format_3_octabox_metrics = """
+    >
+    subboxBitmap:   H    # Which subboxes exist on 4x4 grid
+    diagNegMin:     B    # Defines minimum negatively-sloped diagonal (si)
+    diagNegMax:     B    # Defines maximum negatively-sloped diagonal (sa)
+    diagPosMin:     B    # Defines minimum positively-sloped diagonal (di)
+    diagPosMax:     B    # Defines maximum positively-sloped diagonal (da)
+"""
+
+Glat_format_3_subbox_entry = """
+    >
+    left:           B    # xi
+    right:          B    # xa
+    bottom:         B    # yi
+    top:            B    # ya
+    diagNegMin:     B    # Defines minimum negatively-sloped diagonal (si)
+    diagNegMax:     B    # Defines maximum negatively-sloped diagonal (sa)
+    diagPosMin:     B    # Defines minimum positively-sloped diagonal (di)
+    diagPosMax:     B    # Defines maximum positively-sloped diagonal (da)
+"""
+
+
+class _Object:
+    pass
+
+
+class _Dict(dict):
+    pass
+
+
+class table_G__l_a_t(DefaultTable.DefaultTable):
+    """Graphite Glyph Attributes table
+
+    See also https://graphite.sil.org/graphite_techAbout#graphite-font-tables
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.scheme = 0
+
+    def decompile(self, data, ttFont):
+        sstruct.unpack2(Glat_format_0, data, self)
+        self.version = float(floatToFixedToStr(self.version, precisionBits=16))
+        if self.version <= 1.9:
+            decoder = partial(self.decompileAttributes12, fmt=Glat_format_1_entry)
+        elif self.version <= 2.9:
+            decoder = partial(self.decompileAttributes12, fmt=Glat_format_23_entry)
+        elif self.version >= 3.0:
+            data, self.scheme = grUtils.decompress(data)
+            sstruct.unpack2(Glat_format_3, data, self)
+            self.hasOctaboxes = (self.compression & 1) == 1
+            decoder = self.decompileAttributes3
+
+        gloc = ttFont["Gloc"]
+        self.attributes = {}
+        count = 0
+        for s, e in zip(gloc, gloc[1:]):
+            self.attributes[ttFont.getGlyphName(count)] = decoder(data[s:e])
+            count += 1
+
+    def decompileAttributes12(self, data, fmt):
+        attributes = _Dict()
+        while len(data) > 3:
+            e, data = sstruct.unpack2(fmt, data, _Object())
+            keys = range(e.attNum, e.attNum + e.num)
+            if len(data) >= 2 * e.num:
+                vals = struct.unpack_from((">%dh" % e.num), data)
+                attributes.update(zip(keys, vals))
+                data = data[2 * e.num :]
+        return attributes
+
+    def decompileAttributes3(self, data):
+        if self.hasOctaboxes:
+            o, data = sstruct.unpack2(Glat_format_3_octabox_metrics, data, _Object())
+            numsub = bin(o.subboxBitmap).count("1")
+            o.subboxes = []
+            for b in range(numsub):
+                if len(data) >= 8:
+                    subbox, data = sstruct.unpack2(
+                        Glat_format_3_subbox_entry, data, _Object()
+                    )
+                    o.subboxes.append(subbox)
+        attrs = self.decompileAttributes12(data, Glat_format_23_entry)
+        if self.hasOctaboxes:
+            attrs.octabox = o
+        return attrs
+
+    def compile(self, ttFont):
+        data = sstruct.pack(Glat_format_0, self)
+        if self.version <= 1.9:
+            encoder = partial(self.compileAttributes12, fmt=Glat_format_1_entry)
+        elif self.version <= 2.9:
+            encoder = partial(self.compileAttributes12, fmt=Glat_format_1_entry)
+        elif self.version >= 3.0:
+            self.compression = (self.scheme << 27) + (1 if self.hasOctaboxes else 0)
+            data = sstruct.pack(Glat_format_3, self)
+            encoder = self.compileAttributes3
+
+        glocs = []
+        for n in range(len(self.attributes)):
+            glocs.append(len(data))
+            data += encoder(self.attributes[ttFont.getGlyphName(n)])
+        glocs.append(len(data))
+        ttFont["Gloc"].set(glocs)
+
+        if self.version >= 3.0:
+            data = grUtils.compress(self.scheme, data)
+        return data
+
+    def compileAttributes12(self, attrs, fmt):
+        data = b""
+        for e in grUtils.entries(attrs):
+            data += sstruct.pack(fmt, {"attNum": e[0], "num": e[1]}) + struct.pack(
+                (">%dh" % len(e[2])), *e[2]
+            )
+        return data
+
+    def compileAttributes3(self, attrs):
+        if self.hasOctaboxes:
+            o = attrs.octabox
+            data = sstruct.pack(Glat_format_3_octabox_metrics, o)
+            numsub = bin(o.subboxBitmap).count("1")
+            for b in range(numsub):
+                data += sstruct.pack(Glat_format_3_subbox_entry, o.subboxes[b])
+        else:
+            data = ""
+        return data + self.compileAttributes12(attrs, Glat_format_23_entry)
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", version=self.version, compressionScheme=self.scheme)
+        writer.newline()
+        for n, a in sorted(
+            self.attributes.items(), key=lambda x: ttFont.getGlyphID(x[0])
+        ):
+            writer.begintag("glyph", name=n)
+            writer.newline()
+            if hasattr(a, "octabox"):
+                o = a.octabox
+                formatstring, names, fixes = sstruct.getformat(
+                    Glat_format_3_octabox_metrics
+                )
+                vals = {}
+                for k in names:
+                    if k == "subboxBitmap":
+                        continue
+                    vals[k] = "{:.3f}%".format(getattr(o, k) * 100.0 / 255)
+                vals["bitmap"] = "{:0X}".format(o.subboxBitmap)
+                writer.begintag("octaboxes", **vals)
+                writer.newline()
+                formatstring, names, fixes = sstruct.getformat(
+                    Glat_format_3_subbox_entry
+                )
+                for s in o.subboxes:
+                    vals = {}
+                    for k in names:
+                        vals[k] = "{:.3f}%".format(getattr(s, k) * 100.0 / 255)
+                    writer.simpletag("octabox", **vals)
+                    writer.newline()
+                writer.endtag("octaboxes")
+                writer.newline()
+            for k, v in sorted(a.items()):
+                writer.simpletag("attribute", index=k, value=v)
+                writer.newline()
+            writer.endtag("glyph")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = float(safeEval(attrs["version"]))
+            self.scheme = int(safeEval(attrs["compressionScheme"]))
+        if name != "glyph":
+            return
+        if not hasattr(self, "attributes"):
+            self.attributes = {}
+        gname = attrs["name"]
+        attributes = _Dict()
+        for element in content:
+            if not isinstance(element, tuple):
+                continue
+            tag, attrs, subcontent = element
+            if tag == "attribute":
+                k = int(safeEval(attrs["index"]))
+                v = int(safeEval(attrs["value"]))
+                attributes[k] = v
+            elif tag == "octaboxes":
+                self.hasOctaboxes = True
+                o = _Object()
+                o.subboxBitmap = int(attrs["bitmap"], 16)
+                o.subboxes = []
+                del attrs["bitmap"]
+                for k, v in attrs.items():
+                    setattr(o, k, int(float(v[:-1]) * 255.0 / 100.0 + 0.5))
+                for element in subcontent:
+                    if not isinstance(element, tuple):
+                        continue
+                    tag, attrs, subcontent = element
+                    so = _Object()
+                    for k, v in attrs.items():
+                        setattr(so, k, int(float(v[:-1]) * 255.0 / 100.0 + 0.5))
+                    o.subboxes.append(so)
+                attributes.octabox = o
+        self.attributes[gname] = attributes

@@ -1,1 +1,170 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCmZyb20gdHlwaW5nIGltcG9ydCBUWVBFX0NIRUNLSU5HLCBEaWN0LCBMaXN0LCBPcHRpb25hbCwgVW5pb24sIGNhc3QKCmlmIFRZUEVfQ0hFQ0tJTkc6CiAgICBmcm9tIGZvbnRUb29scy5kZXNpZ25zcGFjZUxpYiBpbXBvcnQgKAogICAgICAgIEF4aXNEZXNjcmlwdG9yLAogICAgICAgIERlc2lnblNwYWNlRG9jdW1lbnQsCiAgICAgICAgUmFuZ2VBeGlzU3Vic2V0RGVzY3JpcHRvciwKICAgICAgICBTaW1wbGVMb2NhdGlvbkRpY3QsCiAgICAgICAgVmFsdWVBeGlzU3Vic2V0RGVzY3JpcHRvciwKICAgICAgICBWYXJpYWJsZUZvbnREZXNjcmlwdG9yLAogICAgKQoKCmRlZiBjbGFtcCh2YWx1ZSwgbWluaW11bSwgbWF4aW11bSk6CiAgICByZXR1cm4gbWluKG1heCh2YWx1ZSwgbWluaW11bSksIG1heGltdW0pCgoKQGRhdGFjbGFzcwpjbGFzcyBSYW5nZToKICAgIG1pbmltdW06IGZsb2F0CiAgICAiIiJJbmNsdXNpdmUgbWluaW11bSBvZiB0aGUgcmFuZ2UuIiIiCiAgICBtYXhpbXVtOiBmbG9hdAogICAgIiIiSW5jbHVzaXZlIG1heGltdW0gb2YgdGhlIHJhbmdlLiIiIgogICAgZGVmYXVsdDogZmxvYXQgPSAwCiAgICAiIiJEZWZhdWx0IHZhbHVlIiIiCgogICAgZGVmIF9fcG9zdF9pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5taW5pbXVtLCBzZWxmLm1heGltdW0gPSBzb3J0ZWQoKHNlbGYubWluaW11bSwgc2VsZi5tYXhpbXVtKSkKICAgICAgICBzZWxmLmRlZmF1bHQgPSBjbGFtcChzZWxmLmRlZmF1bHQsIHNlbGYubWluaW11bSwgc2VsZi5tYXhpbXVtKQoKICAgIGRlZiBfX2NvbnRhaW5zX18oc2VsZiwgdmFsdWU6IFVuaW9uW2Zsb2F0LCBSYW5nZV0pIC0+IGJvb2w6CiAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgUmFuZ2UpOgogICAgICAgICAgICByZXR1cm4gc2VsZi5taW5pbXVtIDw9IHZhbHVlLm1pbmltdW0gYW5kIHZhbHVlLm1heGltdW0gPD0gc2VsZi5tYXhpbXVtCiAgICAgICAgcmV0dXJuIHNlbGYubWluaW11bSA8PSB2YWx1ZSA8PSBzZWxmLm1heGltdW0KCiAgICBkZWYgaW50ZXJzZWN0aW9uKHNlbGYsIG90aGVyOiBSYW5nZSkgLT4gT3B0aW9uYWxbUmFuZ2VdOgogICAgICAgIGlmIHNlbGYubWF4aW11bSA8IG90aGVyLm1pbmltdW0gb3Igc2VsZi5taW5pbXVtID4gb3RoZXIubWF4aW11bToKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gUmFuZ2UoCiAgICAgICAgICAgICAgICBtYXgoc2VsZi5taW5pbXVtLCBvdGhlci5taW5pbXVtKSwKICAgICAgICAgICAgICAgIG1pbihzZWxmLm1heGltdW0sIG90aGVyLm1heGltdW0pLAogICAgICAgICAgICAgICAgc2VsZi5kZWZhdWx0LCAgIyBXZSBkb24ndCBjYXJlIGFib3V0IHRoZSBkZWZhdWx0IGluIHRoaXMgdXNlLWNhc2UKICAgICAgICAgICAgKQoKCiMgQSByZWdpb24gc2VsZWN0aW9uIGlzIGVpdGhlciBhIHJhbmdlIG9yIGEgc2luZ2xlIHZhbHVlLCBhcyBhIERlc2lnbnNwYWNlIHY1CiMgYXhpcy1zdWJzZXQgZWxlbWVudCBvbmx5IGFsbG93cyBhIHNpbmdsZSBkaXNjcmV0ZSB2YWx1ZSBvciBhIHJhbmdlIGZvciBhCiMgdmFyaWFibGUtZm9udCBlbGVtZW50LgpSZWdpb24gPSBEaWN0W3N0ciwgVW5pb25bUmFuZ2UsIGZsb2F0XV0KCiMgQSBjb25kaXRpb25zZXQgaXMgYSBzZXQgb2YgbmFtZWQgcmFuZ2VzLgpDb25kaXRpb25TZXQgPSBEaWN0W3N0ciwgUmFuZ2VdCgojIEEgcnVsZSBpcyBhIGxpc3Qgb2YgY29uZGl0aW9uc2V0cyB3aGVyZSBhbnkgaGFzIHRvIGJlIHJlbGV2YW50IGZvciB0aGUgd2hvbGUgcnVsZSB0byBiZSByZWxldmFudC4KUnVsZSA9IExpc3RbQ29uZGl0aW9uU2V0XQpSdWxlcyA9IERpY3Rbc3RyLCBSdWxlXQoKCmRlZiBsb2NhdGlvbkluUmVnaW9uKGxvY2F0aW9uOiBTaW1wbGVMb2NhdGlvbkRpY3QsIHJlZ2lvbjogUmVnaW9uKSAtPiBib29sOgogICAgZm9yIG5hbWUsIHZhbHVlIGluIGxvY2F0aW9uLml0ZW1zKCk6CiAgICAgICAgaWYgbmFtZSBub3QgaW4gcmVnaW9uOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICByZWdpb25WYWx1ZSA9IHJlZ2lvbltuYW1lXQogICAgICAgIGlmIGlzaW5zdGFuY2UocmVnaW9uVmFsdWUsIChmbG9hdCwgaW50KSk6CiAgICAgICAgICAgIGlmIHZhbHVlICE9IHJlZ2lvblZhbHVlOgogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgdmFsdWUgbm90IGluIHJlZ2lvblZhbHVlOgogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICByZXR1cm4gVHJ1ZQoKCmRlZiByZWdpb25JblJlZ2lvbihyZWdpb246IFJlZ2lvbiwgc3VwZXJSZWdpb246IFJlZ2lvbikgLT4gYm9vbDoKICAgIGZvciBuYW1lLCB2YWx1ZSBpbiByZWdpb24uaXRlbXMoKToKICAgICAgICBpZiBub3QgbmFtZSBpbiBzdXBlclJlZ2lvbjoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgc3VwZXJWYWx1ZSA9IHN1cGVyUmVnaW9uW25hbWVdCiAgICAgICAgaWYgaXNpbnN0YW5jZShzdXBlclZhbHVlLCAoZmxvYXQsIGludCkpOgogICAgICAgICAgICBpZiB2YWx1ZSAhPSBzdXBlclZhbHVlOgogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgdmFsdWUgbm90IGluIHN1cGVyVmFsdWU6CiAgICAgICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgIHJldHVybiBUcnVlCgoKZGVmIHVzZXJSZWdpb25Ub0Rlc2lnblJlZ2lvbihkb2M6IERlc2lnblNwYWNlRG9jdW1lbnQsIHVzZXJSZWdpb246IFJlZ2lvbikgLT4gUmVnaW9uOgogICAgZnJvbSBmb250VG9vbHMuZGVzaWduc3BhY2VMaWIgaW1wb3J0IERlc2lnblNwYWNlRG9jdW1lbnRFcnJvcgoKICAgIGRlc2lnblJlZ2lvbiA9IHt9CiAgICBmb3IgbmFtZSwgdmFsdWUgaW4gdXNlclJlZ2lvbi5pdGVtcygpOgogICAgICAgIGF4aXMgPSBkb2MuZ2V0QXhpcyhuYW1lKQogICAgICAgIGlmIGF4aXMgaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgRGVzaWduU3BhY2VEb2N1bWVudEVycm9yKAogICAgICAgICAgICAgICAgZiJDYW5ub3QgZmluZCBheGlzIG5hbWVkICd7bmFtZX0nIGZvciByZWdpb24uIgogICAgICAgICAgICApCiAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgKGZsb2F0LCBpbnQpKToKICAgICAgICAgICAgZGVzaWduUmVnaW9uW25hbWVdID0gYXhpcy5tYXBfZm9yd2FyZCh2YWx1ZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBkZXNpZ25SZWdpb25bbmFtZV0gPSBSYW5nZSgKICAgICAgICAgICAgICAgIGF4aXMubWFwX2ZvcndhcmQodmFsdWUubWluaW11bSksCiAgICAgICAgICAgICAgICBheGlzLm1hcF9mb3J3YXJkKHZhbHVlLm1heGltdW0pLAogICAgICAgICAgICAgICAgYXhpcy5tYXBfZm9yd2FyZCh2YWx1ZS5kZWZhdWx0KSwKICAgICAgICAgICAgKQogICAgcmV0dXJuIGRlc2lnblJlZ2lvbgoKCmRlZiBnZXRWRlVzZXJSZWdpb24oZG9jOiBEZXNpZ25TcGFjZURvY3VtZW50LCB2ZjogVmFyaWFibGVGb250RGVzY3JpcHRvcikgLT4gUmVnaW9uOgogICAgIiIiUmV0dXJuIHRoZSB1c2VyLXNwYWNlIHJlZ2lvbiBjb3ZlcmVkIGJ5IGEgdmFyaWFibGUgZm9udC4KCiAgICBPbWl0dGVkIGJvdW5kcyBpbmhlcml0IHRoZSBheGlzIGxpbWl0cy4gQW4gb21pdHRlZCBkZWZhdWx0IGluaGVyaXRzIHRoZQogICAgYXhpcyBkZWZhdWx0OyBpbmhlcml0ZWQgb3IgZXhwbGljaXQgZGVmYXVsdHMgYXJlIGNsYW1wZWQgdG8gdGhlIHN1YnNldC4KICAgIEF4ZXMgbm90IGxpc3RlZCBpbiBgYHZmLmF4aXNTdWJzZXRzYGAgYXJlIGZpeGVkIGF0IHRoZWlyIGRlZmF1bHQgbG9jYXRpb24uCiAgICBWYWx1ZSBzdWJzZXRzIHJlc29sdmUgdG8gYSBzaW5nbGUgbG9jYXRpb24uCgogICAgUmFpc2VzIDpjbGFzczpgRGVzaWduU3BhY2VEb2N1bWVudEVycm9yYCBpZiBhIHN1YnNldCByZWZlcnMgdG8gYSBtaXNzaW5nCiAgICBheGlzIG9yIHNlbGVjdHMgYSByYW5nZSBvbiBhIGRpc2NyZXRlIGF4aXMuCiAgICAiIiIKICAgIGZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliIGltcG9ydCAoCiAgICAgICAgQXhpc0Rlc2NyaXB0b3IsCiAgICAgICAgRGVzaWduU3BhY2VEb2N1bWVudEVycm9yLAogICAgICAgIFJhbmdlQXhpc1N1YnNldERlc2NyaXB0b3IsCiAgICAgICAgVmFsdWVBeGlzU3Vic2V0RGVzY3JpcHRvciwKICAgICkKCiAgICB2ZlVzZXJSZWdpb246IFJlZ2lvbiA9IHt9CiAgICAjIEZvciBlYWNoIGF4aXMsIDIgY2FzZXM6CiAgICAjICAtIGl0IGhhcyBhIHJhbmdlID0gaXQncyBhbiBheGlzIGluIHRoZSBWRiBEUwogICAgIyAgLSBpdCdzIGEgc2luZ2xlIGxvY2F0aW9uID0gdXNlIGl0IHRvIGtub3cgd2hpY2ggcnVsZXMgc2hvdWxkIGFwcGx5IGluIHRoZSBWRgogICAgZm9yIGF4aXNTdWJzZXQgaW4gdmYuYXhpc1N1YnNldHM6CiAgICAgICAgYXhpcyA9IGRvYy5nZXRBeGlzKGF4aXNTdWJzZXQubmFtZSkKICAgICAgICBpZiBheGlzIGlzIE5vbmU6CiAgICAgICAgICAgIHJhaXNlIERlc2lnblNwYWNlRG9jdW1lbnRFcnJvcigKICAgICAgICAgICAgICAgIGYiQ2Fubm90IGZpbmQgYXhpcyBuYW1lZCAne2F4aXNTdWJzZXQubmFtZX0nIGZvciB2YXJpYWJsZSBmb250ICd7dmYubmFtZX0nLiIKICAgICAgICAgICAgKQogICAgICAgIGlmIGhhc2F0dHIoYXhpc1N1YnNldCwgInVzZXJNaW5pbXVtIik6CiAgICAgICAgICAgICMgTXlweSBkb2Vzbid0IHN1cHBvcnQgbmFycm93aW5nIHVuaW9uIHR5cGVzIHZpYSBoYXNhdHRyKCkKICAgICAgICAgICAgIyBUT0RPKFB5dGhvbiAzLjEwKTogdXNlIFR5cGVHdWFyZAogICAgICAgICAgICAjIGh0dHBzOi8vbXlweS5yZWFkdGhlZG9jcy5pby9lbi9zdGFibGUvdHlwZV9uYXJyb3dpbmcuaHRtbAogICAgICAgICAgICBheGlzU3Vic2V0ID0gY2FzdChSYW5nZUF4aXNTdWJzZXREZXNjcmlwdG9yLCBheGlzU3Vic2V0KQogICAgICAgICAgICBpZiBub3QgaGFzYXR0cihheGlzLCAibWluaW11bSIpOgogICAgICAgICAgICAgICAgcmFpc2UgRGVzaWduU3BhY2VEb2N1bWVudEVycm9yKAogICAgICAgICAgICAgICAgICAgIGYiQ2Fubm90IHNlbGVjdCBhIHJhbmdlIG92ZXIgJ3theGlzLm5hbWV9JyBmb3IgdmFyaWFibGUgZm9udCAne3ZmLm5hbWV9JyAiCiAgICAgICAgICAgICAgICAgICAgImJlY2F1c2UgaXQncyBhIGRpc2NyZXRlIGF4aXMsIHVzZSBvbmx5ICd1c2VyVmFsdWUnIGluc3RlYWQuIgogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBheGlzID0gY2FzdChBeGlzRGVzY3JpcHRvciwgYXhpcykKICAgICAgICAgICAgdmZVc2VyUmVnaW9uW2F4aXMubmFtZV0gPSBSYW5nZSgKICAgICAgICAgICAgICAgIG1heChheGlzU3Vic2V0LnVzZXJNaW5pbXVtLCBheGlzLm1pbmltdW0pLAogICAgICAgICAgICAgICAgbWluKGF4aXNTdWJzZXQudXNlck1heGltdW0sIGF4aXMubWF4aW11bSksCiAgICAgICAgICAgICAgICAoCiAgICAgICAgICAgICAgICAgICAgYXhpc1N1YnNldC51c2VyRGVmYXVsdAogICAgICAgICAgICAgICAgICAgIGlmIGF4aXNTdWJzZXQudXNlckRlZmF1bHQgaXMgbm90IE5vbmUKICAgICAgICAgICAgICAgICAgICBlbHNlIGF4aXMuZGVmYXVsdAogICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGF4aXNTdWJzZXQgPSBjYXN0KFZhbHVlQXhpc1N1YnNldERlc2NyaXB0b3IsIGF4aXNTdWJzZXQpCiAgICAgICAgICAgIHZmVXNlclJlZ2lvbltheGlzLm5hbWVdID0gYXhpc1N1YnNldC51c2VyVmFsdWUKICAgICMgQW55IGF4aXMgbm90IG1lbnRpb25lZCBleHBsaWNpdGx5IGhhcyBhIHNpbmdsZSBsb2NhdGlvbiA9IGRlZmF1bHQgdmFsdWUKICAgIGZvciBheGlzIGluIGRvYy5heGVzOgogICAgICAgIGlmIGF4aXMubmFtZSBub3QgaW4gdmZVc2VyUmVnaW9uOgogICAgICAgICAgICBhc3NlcnQgaXNpbnN0YW5jZSgKICAgICAgICAgICAgICAgIGF4aXMuZGVmYXVsdCwgKGludCwgZmxvYXQpCiAgICAgICAgICAgICksIGYiQXhpcyAne2F4aXMubmFtZX0nIGhhcyBubyB2YWxpZCBkZWZhdWx0IHZhbHVlLiIKICAgICAgICAgICAgdmZVc2VyUmVnaW9uW2F4aXMubmFtZV0gPSBheGlzLmRlZmF1bHQKICAgIHJldHVybiB2ZlVzZXJSZWdpb24K
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, Dict, List, Optional, Union, cast
+
+if TYPE_CHECKING:
+    from fontTools.designspaceLib import (
+        AxisDescriptor,
+        DesignSpaceDocument,
+        RangeAxisSubsetDescriptor,
+        SimpleLocationDict,
+        ValueAxisSubsetDescriptor,
+        VariableFontDescriptor,
+    )
+
+
+def clamp(value, minimum, maximum):
+    return min(max(value, minimum), maximum)
+
+
+@dataclass
+class Range:
+    minimum: float
+    """Inclusive minimum of the range."""
+    maximum: float
+    """Inclusive maximum of the range."""
+    default: float = 0
+    """Default value"""
+
+    def __post_init__(self):
+        self.minimum, self.maximum = sorted((self.minimum, self.maximum))
+        self.default = clamp(self.default, self.minimum, self.maximum)
+
+    def __contains__(self, value: Union[float, Range]) -> bool:
+        if isinstance(value, Range):
+            return self.minimum <= value.minimum and value.maximum <= self.maximum
+        return self.minimum <= value <= self.maximum
+
+    def intersection(self, other: Range) -> Optional[Range]:
+        if self.maximum < other.minimum or self.minimum > other.maximum:
+            return None
+        else:
+            return Range(
+                max(self.minimum, other.minimum),
+                min(self.maximum, other.maximum),
+                self.default,  # We don't care about the default in this use-case
+            )
+
+
+# A region selection is either a range or a single value, as a Designspace v5
+# axis-subset element only allows a single discrete value or a range for a
+# variable-font element.
+Region = Dict[str, Union[Range, float]]
+
+# A conditionset is a set of named ranges.
+ConditionSet = Dict[str, Range]
+
+# A rule is a list of conditionsets where any has to be relevant for the whole rule to be relevant.
+Rule = List[ConditionSet]
+Rules = Dict[str, Rule]
+
+
+def locationInRegion(location: SimpleLocationDict, region: Region) -> bool:
+    for name, value in location.items():
+        if name not in region:
+            return False
+        regionValue = region[name]
+        if isinstance(regionValue, (float, int)):
+            if value != regionValue:
+                return False
+        else:
+            if value not in regionValue:
+                return False
+    return True
+
+
+def regionInRegion(region: Region, superRegion: Region) -> bool:
+    for name, value in region.items():
+        if not name in superRegion:
+            return False
+        superValue = superRegion[name]
+        if isinstance(superValue, (float, int)):
+            if value != superValue:
+                return False
+        else:
+            if value not in superValue:
+                return False
+    return True
+
+
+def userRegionToDesignRegion(doc: DesignSpaceDocument, userRegion: Region) -> Region:
+    from fontTools.designspaceLib import DesignSpaceDocumentError
+
+    designRegion = {}
+    for name, value in userRegion.items():
+        axis = doc.getAxis(name)
+        if axis is None:
+            raise DesignSpaceDocumentError(
+                f"Cannot find axis named '{name}' for region."
+            )
+        if isinstance(value, (float, int)):
+            designRegion[name] = axis.map_forward(value)
+        else:
+            designRegion[name] = Range(
+                axis.map_forward(value.minimum),
+                axis.map_forward(value.maximum),
+                axis.map_forward(value.default),
+            )
+    return designRegion
+
+
+def getVFUserRegion(doc: DesignSpaceDocument, vf: VariableFontDescriptor) -> Region:
+    """Return the user-space region covered by a variable font.
+
+    Omitted bounds inherit the axis limits. An omitted default inherits the
+    axis default; inherited or explicit defaults are clamped to the subset.
+    Axes not listed in ``vf.axisSubsets`` are fixed at their default location.
+    Value subsets resolve to a single location.
+
+    Raises :class:`DesignSpaceDocumentError` if a subset refers to a missing
+    axis or selects a range on a discrete axis.
+    """
+    from fontTools.designspaceLib import (
+        AxisDescriptor,
+        DesignSpaceDocumentError,
+        RangeAxisSubsetDescriptor,
+        ValueAxisSubsetDescriptor,
+    )
+
+    vfUserRegion: Region = {}
+    # For each axis, 2 cases:
+    #  - it has a range = it's an axis in the VF DS
+    #  - it's a single location = use it to know which rules should apply in the VF
+    for axisSubset in vf.axisSubsets:
+        axis = doc.getAxis(axisSubset.name)
+        if axis is None:
+            raise DesignSpaceDocumentError(
+                f"Cannot find axis named '{axisSubset.name}' for variable font '{vf.name}'."
+            )
+        if hasattr(axisSubset, "userMinimum"):
+            # Mypy doesn't support narrowing union types via hasattr()
+            # TODO(Python 3.10): use TypeGuard
+            # https://mypy.readthedocs.io/en/stable/type_narrowing.html
+            axisSubset = cast(RangeAxisSubsetDescriptor, axisSubset)
+            if not hasattr(axis, "minimum"):
+                raise DesignSpaceDocumentError(
+                    f"Cannot select a range over '{axis.name}' for variable font '{vf.name}' "
+                    "because it's a discrete axis, use only 'userValue' instead."
+                )
+            axis = cast(AxisDescriptor, axis)
+            vfUserRegion[axis.name] = Range(
+                max(axisSubset.userMinimum, axis.minimum),
+                min(axisSubset.userMaximum, axis.maximum),
+                (
+                    axisSubset.userDefault
+                    if axisSubset.userDefault is not None
+                    else axis.default
+                ),
+            )
+        else:
+            axisSubset = cast(ValueAxisSubsetDescriptor, axisSubset)
+            vfUserRegion[axis.name] = axisSubset.userValue
+    # Any axis not mentioned explicitly has a single location = default value
+    for axis in doc.axes:
+        if axis.name not in vfUserRegion:
+            assert isinstance(
+                axis.default, (int, float)
+            ), f"Axis '{axis.name}' has no valid default value."
+            vfUserRegion[axis.name] = axis.default
+    return vfUserRegion

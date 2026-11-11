@@ -1,1 +1,47 @@
-IiIiREVQUkVDQVRFRCAtIFRoaXMgbW9kdWxlIGlzIGtlcHQgaGVyZSBvbmx5IGFzIGEgYmFja3dhcmQgY29tcGF0aWJpbGl0eSBzaGltCmZvciB0aGUgb2xkIGB1Zm9MaWIucGxpc3RsaWJgIG1vZHVsZSwgd2hpY2ggd2FzIG1vdmVkIHRvIDpjbGFzczpgZm9udFRvb2xzLm1pc2MucGxpc3RsaWJgLgpQbGVhc2UgdXNlIHRoZSBsYXR0ZXIgaW5zdGVhZC4KIiIiCgpmcm9tIGZvbnRUb29scy5taXNjLnBsaXN0bGliIGltcG9ydCBkdW1wLCBkdW1wcywgbG9hZCwgbG9hZHMKZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHRvYnl0ZXMKCiMgVGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgd2VyZSBwYXJ0IG9mIHRoZSBvbGQgcHkyLWxpa2UgdWZvTGliLnBsaXN0bGliIEFQSS4KIyBUaGV5IGFyZSBrZXB0IG9ubHkgZm9yIGJhY2t3YXJkIGNvbXBhdGlibGl0eS4KZnJvbSBmb250VG9vbHMudWZvTGliLnV0aWxzIGltcG9ydCBkZXByZWNhdGVkCgoKQGRlcHJlY2F0ZWQoIlVzZSAnZm9udFRvb2xzLm1pc2MucGxpc3RsaWIubG9hZCcgaW5zdGVhZCIpCmRlZiByZWFkUGxpc3QocGF0aF9vcl9maWxlKToKICAgIGRpZF9vcGVuID0gRmFsc2UKICAgIGlmIGlzaW5zdGFuY2UocGF0aF9vcl9maWxlLCBzdHIpOgogICAgICAgIHBhdGhfb3JfZmlsZSA9IG9wZW4ocGF0aF9vcl9maWxlLCAicmIiKQogICAgICAgIGRpZF9vcGVuID0gVHJ1ZQogICAgdHJ5OgogICAgICAgIHJldHVybiBsb2FkKHBhdGhfb3JfZmlsZSwgdXNlX2J1aWx0aW5fdHlwZXM9RmFsc2UpCiAgICBmaW5hbGx5OgogICAgICAgIGlmIGRpZF9vcGVuOgogICAgICAgICAgICBwYXRoX29yX2ZpbGUuY2xvc2UoKQoKCkBkZXByZWNhdGVkKCJVc2UgJ2ZvbnRUb29scy5taXNjLnBsaXN0bGliLmR1bXAnIGluc3RlYWQiKQpkZWYgd3JpdGVQbGlzdCh2YWx1ZSwgcGF0aF9vcl9maWxlKToKICAgIGRpZF9vcGVuID0gRmFsc2UKICAgIGlmIGlzaW5zdGFuY2UocGF0aF9vcl9maWxlLCBzdHIpOgogICAgICAgIHBhdGhfb3JfZmlsZSA9IG9wZW4ocGF0aF9vcl9maWxlLCAid2IiKQogICAgICAgIGRpZF9vcGVuID0gVHJ1ZQogICAgdHJ5OgogICAgICAgIGR1bXAodmFsdWUsIHBhdGhfb3JfZmlsZSwgdXNlX2J1aWx0aW5fdHlwZXM9RmFsc2UpCiAgICBmaW5hbGx5OgogICAgICAgIGlmIGRpZF9vcGVuOgogICAgICAgICAgICBwYXRoX29yX2ZpbGUuY2xvc2UoKQoKCkBkZXByZWNhdGVkKCJVc2UgJ2ZvbnRUb29scy5taXNjLnBsaXN0bGliLmxvYWRzJyBpbnN0ZWFkIikKZGVmIHJlYWRQbGlzdEZyb21TdHJpbmcoZGF0YSk6CiAgICByZXR1cm4gbG9hZHModG9ieXRlcyhkYXRhLCBlbmNvZGluZz0idXRmLTgiKSwgdXNlX2J1aWx0aW5fdHlwZXM9RmFsc2UpCgoKQGRlcHJlY2F0ZWQoIlVzZSAnZm9udFRvb2xzLm1pc2MucGxpc3RsaWIuZHVtcHMnIGluc3RlYWQiKQpkZWYgd3JpdGVQbGlzdFRvU3RyaW5nKHZhbHVlKToKICAgIHJldHVybiBkdW1wcyh2YWx1ZSwgdXNlX2J1aWx0aW5fdHlwZXM9RmFsc2UpCg==
+"""DEPRECATED - This module is kept here only as a backward compatibility shim
+for the old `ufoLib.plistlib` module, which was moved to :class:`fontTools.misc.plistlib`.
+Please use the latter instead.
+"""
+
+from fontTools.misc.plistlib import dump, dumps, load, loads
+from fontTools.misc.textTools import tobytes
+
+# The following functions were part of the old py2-like ufoLib.plistlib API.
+# They are kept only for backward compatiblity.
+from fontTools.ufoLib.utils import deprecated
+
+
+@deprecated("Use 'fontTools.misc.plistlib.load' instead")
+def readPlist(path_or_file):
+    did_open = False
+    if isinstance(path_or_file, str):
+        path_or_file = open(path_or_file, "rb")
+        did_open = True
+    try:
+        return load(path_or_file, use_builtin_types=False)
+    finally:
+        if did_open:
+            path_or_file.close()
+
+
+@deprecated("Use 'fontTools.misc.plistlib.dump' instead")
+def writePlist(value, path_or_file):
+    did_open = False
+    if isinstance(path_or_file, str):
+        path_or_file = open(path_or_file, "wb")
+        did_open = True
+    try:
+        dump(value, path_or_file, use_builtin_types=False)
+    finally:
+        if did_open:
+            path_or_file.close()
+
+
+@deprecated("Use 'fontTools.misc.plistlib.loads' instead")
+def readPlistFromString(data):
+    return loads(tobytes(data, encoding="utf-8"), use_builtin_types=False)
+
+
+@deprecated("Use 'fontTools.misc.plistlib.dumps' instead")
+def writePlistToString(value):
+    return dumps(value, use_builtin_types=False)

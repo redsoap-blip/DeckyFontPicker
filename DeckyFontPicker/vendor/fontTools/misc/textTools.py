@@ -1,1 +1,156 @@
-IiIiZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzLnB5IC0tIG1pc2NlbGxhbmVvdXMgcm91dGluZXMuIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgYXN0CmltcG9ydCBzdHJpbmcKCiMgYWxpYXMga2VwdCBmb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eQpzYWZlRXZhbCA9IGFzdC5saXRlcmFsX2V2YWwKCgpjbGFzcyBUYWcoc3RyKToKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiB0cmFuc2NvZGUoYmxvYik6CiAgICAgICAgaWYgaXNpbnN0YW5jZShibG9iLCBieXRlcyk6CiAgICAgICAgICAgIGJsb2IgPSBibG9iLmRlY29kZSgibGF0aW4tMSIpCiAgICAgICAgcmV0dXJuIGJsb2IKCiAgICBkZWYgX19uZXdfXyhzZWxmLCBjb250ZW50KToKICAgICAgICByZXR1cm4gc3RyLl9fbmV3X18oc2VsZiwgc2VsZi50cmFuc2NvZGUoY29udGVudCkpCgogICAgZGVmIF9fbmVfXyhzZWxmLCBvdGhlcik6CiAgICAgICAgcmVzdWx0ID0gc2VsZi5fX2VxX18ob3RoZXIpCiAgICAgICAgcmV0dXJuIHJlc3VsdCBpZiByZXN1bHQgaXMgTm90SW1wbGVtZW50ZWQgZWxzZSBub3QgcmVzdWx0CgogICAgZGVmIF9fZXFfXyhzZWxmLCBvdGhlcik6CiAgICAgICAgcmV0dXJuIHN0ci5fX2VxX18oc2VsZiwgc2VsZi50cmFuc2NvZGUob3RoZXIpKQoKICAgIGRlZiBfX2hhc2hfXyhzZWxmKToKICAgICAgICByZXR1cm4gc3RyLl9faGFzaF9fKHNlbGYpCgogICAgZGVmIHRvYnl0ZXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuZW5jb2RlKCJsYXRpbi0xIikKCgpkZWYgcmVhZEhleChjb250ZW50KToKICAgICIiIkNvbnZlcnQgYSBsaXN0IG9mIGhleCBzdHJpbmdzIHRvIGJpbmFyeSBkYXRhLiIiIgogICAgcmV0dXJuIGRlSGV4U3RyKHN0cmpvaW4oY2h1bmsgZm9yIGNodW5rIGluIGNvbnRlbnQgaWYgaXNpbnN0YW5jZShjaHVuaywgc3RyKSkpCgoKZGVmIGRlSGV4U3RyKGhleGRhdGEpOgogICAgIiIiQ29udmVydCBhIGhleCBzdHJpbmcgdG8gYmluYXJ5IGRhdGEuIiIiCiAgICBoZXhkYXRhID0gc3Ryam9pbihoZXhkYXRhLnNwbGl0KCkpCiAgICBpZiBsZW4oaGV4ZGF0YSkgJSAyOgogICAgICAgIGhleGRhdGEgPSBoZXhkYXRhICsgIjAiCiAgICBkYXRhID0gW10KICAgIGZvciBpIGluIHJhbmdlKDAsIGxlbihoZXhkYXRhKSwgMik6CiAgICAgICAgZGF0YS5hcHBlbmQoYnl0ZWNocihpbnQoaGV4ZGF0YVtpIDogaSArIDJdLCAxNikpKQogICAgcmV0dXJuIGJ5dGVzam9pbihkYXRhKQoKCmRlZiBoZXhTdHIoZGF0YSk6CiAgICAiIiJDb252ZXJ0IGJpbmFyeSBkYXRhIHRvIGEgaGV4IHN0cmluZy4iIiIKICAgIGggPSBzdHJpbmcuaGV4ZGlnaXRzCiAgICByID0gIiIKICAgIGZvciBjIGluIGRhdGE6CiAgICAgICAgaSA9IGJ5dGVvcmQoYykKICAgICAgICByID0gciArIGhbKGkgPj4gNCkgJiAweEZdICsgaFtpICYgMHhGXQogICAgcmV0dXJuIHIKCgpkZWYgbnVtMmJpbmFyeShsLCBiaXRzPTMyKToKICAgIGl0ZW1zID0gW10KICAgIGJpbmFyeSA9ICIiCiAgICBmb3IgaSBpbiByYW5nZShiaXRzKToKICAgICAgICBpZiBsICYgMHgxOgogICAgICAgICAgICBiaW5hcnkgPSAiMSIgKyBiaW5hcnkKICAgICAgICBlbHNlOgogICAgICAgICAgICBiaW5hcnkgPSAiMCIgKyBiaW5hcnkKICAgICAgICBsID0gbCA+PiAxCiAgICAgICAgaWYgbm90ICgoaSArIDEpICUgOCk6CiAgICAgICAgICAgIGl0ZW1zLmFwcGVuZChiaW5hcnkpCiAgICAgICAgICAgIGJpbmFyeSA9ICIiCiAgICBpZiBiaW5hcnk6CiAgICAgICAgaXRlbXMuYXBwZW5kKGJpbmFyeSkKICAgIGl0ZW1zLnJldmVyc2UoKQogICAgYXNzZXJ0IGwgaW4gKDAsIC0xKSwgIm51bWJlciBkb2Vzbid0IGZpdCBpbiBudW1iZXIgb2YgYml0cyIKICAgIHJldHVybiAiICIuam9pbihpdGVtcykKCgpkZWYgYmluYXJ5Mm51bShiaW4pOgogICAgYmluID0gc3Ryam9pbihiaW4uc3BsaXQoKSkKICAgIGwgPSAwCiAgICBmb3IgZGlnaXQgaW4gYmluOgogICAgICAgIGwgPSBsIDw8IDEKICAgICAgICBpZiBkaWdpdCAhPSAiMCI6CiAgICAgICAgICAgIGwgPSBsIHwgMHgxCiAgICByZXR1cm4gbAoKCmRlZiBjYXNlbGVzc1NvcnQoYWxpc3QpOgogICAgIiIiUmV0dXJuIGEgc29ydGVkIGNvcHkgb2YgYSBsaXN0LiBJZiB0aGVyZSBhcmUgb25seSBzdHJpbmdzCiAgICBpbiB0aGUgbGlzdCwgaXQgd2lsbCBub3QgY29uc2lkZXIgY2FzZS4KICAgICIiIgoKICAgIHRyeToKICAgICAgICByZXR1cm4gc29ydGVkKGFsaXN0LCBrZXk9bGFtYmRhIGE6IChhLmxvd2VyKCksIGEpKQogICAgZXhjZXB0IFR5cGVFcnJvcjoKICAgICAgICByZXR1cm4gc29ydGVkKGFsaXN0KQoKCmRlZiBwYWQoZGF0YSwgc2l6ZSk6CiAgICByIiIiUGFkIGJ5dGUgc3RyaW5nICdkYXRhJyB3aXRoIG51bGwgYnl0ZXMgdW50aWwgaXRzIGxlbmd0aCBpcyBhCiAgICBtdWx0aXBsZSBvZiAnc2l6ZScuCgogICAgPj4+IGxlbihwYWQoYidhYmNkJywgNCkpCiAgICA0CiAgICA+Pj4gbGVuKHBhZChiJ2FiY2RlJywgMikpCiAgICA2CiAgICA+Pj4gbGVuKHBhZChiJ2FiY2RlJywgNCkpCiAgICA4CiAgICA+Pj4gcGFkKGInYWJjZGVmJywgNCkgPT0gYidhYmNkZWZceDAwXHgwMCcKICAgIFRydWUKICAgICIiIgogICAgZGF0YSA9IHRvYnl0ZXMoZGF0YSkKICAgIGlmIHNpemUgPiAxOgogICAgICAgIHJlbWFpbmRlciA9IGxlbihkYXRhKSAlIHNpemUKICAgICAgICBpZiByZW1haW5kZXI6CiAgICAgICAgICAgIGRhdGEgKz0gYiJcMCIgKiAoc2l6ZSAtIHJlbWFpbmRlcikKICAgIHJldHVybiBkYXRhCgoKZGVmIHRvc3RyKHM6IHN0ciB8IGJ5dGVzLCBlbmNvZGluZzogc3RyID0gImFzY2lpIiwgZXJyb3JzOiBzdHIgPSAic3RyaWN0IikgLT4gc3RyOgogICAgaWYgbm90IGlzaW5zdGFuY2Uocywgc3RyKToKICAgICAgICByZXR1cm4gcy5kZWNvZGUoZW5jb2RpbmcsIGVycm9ycykKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIHMKCgpkZWYgdG9ieXRlcyhzOiBzdHIgfCBieXRlcywgZW5jb2Rpbmc6IHN0ciA9ICJhc2NpaSIsIGVycm9yczogc3RyID0gInN0cmljdCIpIC0+IGJ5dGVzOgogICAgaWYgaXNpbnN0YW5jZShzLCBzdHIpOgogICAgICAgIHJldHVybiBzLmVuY29kZShlbmNvZGluZywgZXJyb3JzKQogICAgZWxzZToKICAgICAgICByZXR1cm4gYnl0ZXMocykKCgpkZWYgYnl0ZWNocihuKToKICAgIHJldHVybiBieXRlcyhbbl0pCgoKZGVmIGJ5dGVvcmQoYyk6CiAgICByZXR1cm4gYyBpZiBpc2luc3RhbmNlKGMsIGludCkgZWxzZSBvcmQoYykKCgpkZWYgc3Ryam9pbihpdGVyYWJsZSwgam9pbmVyPSIiKToKICAgIHJldHVybiB0b3N0cihqb2luZXIpLmpvaW4oaXRlcmFibGUpCgoKZGVmIGJ5dGVzam9pbihpdGVyYWJsZSwgam9pbmVyPWIiIik6CiAgICByZXR1cm4gdG9ieXRlcyhqb2luZXIpLmpvaW4odG9ieXRlcyhpdGVtKSBmb3IgaXRlbSBpbiBpdGVyYWJsZSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IGRvY3Rlc3QsIHN5cwoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkK
+"""fontTools.misc.textTools.py -- miscellaneous routines."""
+
+from __future__ import annotations
+
+import ast
+import string
+
+# alias kept for backward compatibility
+safeEval = ast.literal_eval
+
+
+class Tag(str):
+    @staticmethod
+    def transcode(blob):
+        if isinstance(blob, bytes):
+            blob = blob.decode("latin-1")
+        return blob
+
+    def __new__(self, content):
+        return str.__new__(self, self.transcode(content))
+
+    def __ne__(self, other):
+        result = self.__eq__(other)
+        return result if result is NotImplemented else not result
+
+    def __eq__(self, other):
+        return str.__eq__(self, self.transcode(other))
+
+    def __hash__(self):
+        return str.__hash__(self)
+
+    def tobytes(self):
+        return self.encode("latin-1")
+
+
+def readHex(content):
+    """Convert a list of hex strings to binary data."""
+    return deHexStr(strjoin(chunk for chunk in content if isinstance(chunk, str)))
+
+
+def deHexStr(hexdata):
+    """Convert a hex string to binary data."""
+    hexdata = strjoin(hexdata.split())
+    if len(hexdata) % 2:
+        hexdata = hexdata + "0"
+    data = []
+    for i in range(0, len(hexdata), 2):
+        data.append(bytechr(int(hexdata[i : i + 2], 16)))
+    return bytesjoin(data)
+
+
+def hexStr(data):
+    """Convert binary data to a hex string."""
+    h = string.hexdigits
+    r = ""
+    for c in data:
+        i = byteord(c)
+        r = r + h[(i >> 4) & 0xF] + h[i & 0xF]
+    return r
+
+
+def num2binary(l, bits=32):
+    items = []
+    binary = ""
+    for i in range(bits):
+        if l & 0x1:
+            binary = "1" + binary
+        else:
+            binary = "0" + binary
+        l = l >> 1
+        if not ((i + 1) % 8):
+            items.append(binary)
+            binary = ""
+    if binary:
+        items.append(binary)
+    items.reverse()
+    assert l in (0, -1), "number doesn't fit in number of bits"
+    return " ".join(items)
+
+
+def binary2num(bin):
+    bin = strjoin(bin.split())
+    l = 0
+    for digit in bin:
+        l = l << 1
+        if digit != "0":
+            l = l | 0x1
+    return l
+
+
+def caselessSort(alist):
+    """Return a sorted copy of a list. If there are only strings
+    in the list, it will not consider case.
+    """
+
+    try:
+        return sorted(alist, key=lambda a: (a.lower(), a))
+    except TypeError:
+        return sorted(alist)
+
+
+def pad(data, size):
+    r"""Pad byte string 'data' with null bytes until its length is a
+    multiple of 'size'.
+
+    >>> len(pad(b'abcd', 4))
+    4
+    >>> len(pad(b'abcde', 2))
+    6
+    >>> len(pad(b'abcde', 4))
+    8
+    >>> pad(b'abcdef', 4) == b'abcdef\x00\x00'
+    True
+    """
+    data = tobytes(data)
+    if size > 1:
+        remainder = len(data) % size
+        if remainder:
+            data += b"\0" * (size - remainder)
+    return data
+
+
+def tostr(s: str | bytes, encoding: str = "ascii", errors: str = "strict") -> str:
+    if not isinstance(s, str):
+        return s.decode(encoding, errors)
+    else:
+        return s
+
+
+def tobytes(s: str | bytes, encoding: str = "ascii", errors: str = "strict") -> bytes:
+    if isinstance(s, str):
+        return s.encode(encoding, errors)
+    else:
+        return bytes(s)
+
+
+def bytechr(n):
+    return bytes([n])
+
+
+def byteord(c):
+    return c if isinstance(c, int) else ord(c)
+
+
+def strjoin(iterable, joiner=""):
+    return tostr(joiner).join(iterable)
+
+
+def bytesjoin(iterable, joiner=b""):
+    return tobytes(joiner).join(tobytes(item) for item in iterable)
+
+
+if __name__ == "__main__":
+    import doctest, sys
+
+    sys.exit(doctest.testmod().failed)

@@ -1,1 +1,113 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBub1JvdW5kCmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQsIG5ld1RhYmxlCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcyBpbXBvcnQgb3RUYWJsZXMgYXMgb3QKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLm90QmFzZSBpbXBvcnQgT1RUYWJsZVdyaXRlcgpmcm9tIGZvbnRUb29scy52YXJMaWIgaW1wb3J0IEhWQVJfRklFTERTLCBWVkFSX0ZJRUxEUywgX2FkZF9WSFZBUgpmcm9tIGZvbnRUb29scy52YXJMaWIgaW1wb3J0IGJ1aWxkZXIsIG1vZGVscywgdmFyU3RvcmUKZnJvbSBmb250VG9vbHMubWlzYy5maXhlZFRvb2xzIGltcG9ydCBmaXhlZFRvRmxvYXQgYXMgZmkyZmwKZnJvbSBmb250VG9vbHMubWlzYy5jbGlUb29scyBpbXBvcnQgbWFrZU91dHB1dEZpbGVOYW1lCmZyb20gZnVuY3Rvb2xzIGltcG9ydCBwYXJ0aWFsCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiZm9udFRvb2xzLnZhckxpYi5hdmFyIikKCgpkZWYgX2dldF9hZHZhbmNlX21ldHJpY3MoZm9udCwgYXhpc1RhZ3MsIHRhYmxlRmllbGRzKToKICAgICMgVGhlcmUncyB0d28gd2F5cyB3ZSBjYW4gZ28gZnJvbSBoZXJlOgogICAgIyAxLiBGb3IgZWFjaCBnbHlwaCwgYXQgZWFjaCBtYXN0ZXIgcGVhaywgY29tcHV0ZSB0aGUgdmFsdWUgb2YgdGhlCiAgICAjICAgIGFkdmFuY2Ugd2lkdGggYXQgdGhhdCBwZWFrLiAgVGhlbiBwYXNzIHRoZXNlIGFsbCB0byBhIFZhcmlhdGlvbk1vZGVsCiAgICAjICAgIGJ1aWxkZXIgdG8gY29tcHV0ZSBiYWNrIHRoZSBkZWx0YXMuCiAgICAjIDIuIEZvciBlYWNoIG1hc3RlciBwZWFrLCBwdWxsIG91dCB0aGUgZGVsdGFzIG9mIHRoZSBhZHZhbmNlIHdpZHRoIGRpcmVjdGx5LAogICAgIyAgICBhbmQgZmVlZCB0aGVzZSB0byB0aGUgVmFyU3RvcmVCdWlsZGVyLCBmb3Jnb2luZyB0aGUgcmVtb2RlbGluZyBzdGVwLgogICAgIyBXZSdsbCBnbyB3aXRoIHRoZSBzZWNvbmQgb3B0aW9uLCBhcyBpdCdzIHNpbXBsZXIsIGZhc3RlciwgYW5kIG1vcmUgZGlyZWN0LgogICAgZ3ZhciA9IGZvbnRbIkdWQVIiXSBpZiAiR1ZBUiIgaW4gZm9udCBlbHNlIGZvbnRbImd2YXIiXQogICAgdmhBZHZhbmNlRGVsdGFzQW5kU3VwcG9ydHMgPSB7fQogICAgZ2x5cGhPcmRlciA9IGZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICBwaGFudG9tSW5kZXggPSB0YWJsZUZpZWxkcy5waGFudG9tSW5kZXgKICAgIGZvciBnbHlwaE5hbWUgaW4gZ2x5cGhPcmRlcjoKICAgICAgICBzdXBwb3J0cyA9IFtdCiAgICAgICAgZGVsdGFzID0gW10KICAgICAgICB2YXJpYXRpb25zID0gZ3Zhci52YXJpYXRpb25zLmdldChnbHlwaE5hbWUsIFtdKQoKICAgICAgICBmb3IgdHYgaW4gdmFyaWF0aW9uczoKICAgICAgICAgICAgc3VwcG9ydHMuYXBwZW5kKHR2LmF4ZXMpCiAgICAgICAgICAgIHBoYW50b21zID0gdHYuY29vcmRpbmF0ZXNbLTQ6XQogICAgICAgICAgICBwaGFudG9tcyA9IHBoYW50b21zW3BoYW50b21JbmRleCAqIDIgOiBwaGFudG9tSW5kZXggKiAyICsgMl0KICAgICAgICAgICAgYXNzZXJ0IGxlbihwaGFudG9tcykgPT0gMgogICAgICAgICAgICBwaGFudG9tc1swXSA9IHBoYW50b21zWzBdW3BoYW50b21JbmRleF0gaWYgcGhhbnRvbXNbMF0gaXMgbm90IE5vbmUgZWxzZSAwCiAgICAgICAgICAgIHBoYW50b21zWzFdID0gcGhhbnRvbXNbMV1bcGhhbnRvbUluZGV4XSBpZiBwaGFudG9tc1sxXSBpcyBub3QgTm9uZSBlbHNlIDAKICAgICAgICAgICAgZGVsdGFzLmFwcGVuZChwaGFudG9tc1sxXSAtIHBoYW50b21zWzBdKQoKICAgICAgICB2aEFkdmFuY2VEZWx0YXNBbmRTdXBwb3J0c1tnbHlwaE5hbWVdID0gKGRlbHRhcywgc3VwcG9ydHMpCgogICAgdk9yaWdEZWx0YXNBbmRTdXBwb3J0cyA9IE5vbmUgICMgVE9ETwoKICAgIHJldHVybiB2aEFkdmFuY2VEZWx0YXNBbmRTdXBwb3J0cywgdk9yaWdEZWx0YXNBbmRTdXBwb3J0cwoKCmRlZiBhZGRfSFZBUihmb250KToKICAgIGlmICJIVkFSIiBpbiBmb250OgogICAgICAgIGRlbCBmb250WyJIVkFSIl0KICAgIGF4aXNUYWdzID0gW2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiBmb250WyJmdmFyIl0uYXhlc10KICAgIGdldEFkdmFuY2VNZXRyaWNzID0gcGFydGlhbChfZ2V0X2FkdmFuY2VfbWV0cmljcywgZm9udCwgYXhpc1RhZ3MsIEhWQVJfRklFTERTKQogICAgX2FkZF9WSFZBUihmb250LCBheGlzVGFncywgSFZBUl9GSUVMRFMsIGdldEFkdmFuY2VNZXRyaWNzKQoKCmRlZiBhZGRfVlZBUihmb250KToKICAgIGlmICJWVkFSIiBpbiBmb250OgogICAgICAgIGRlbCBmb250WyJWVkFSIl0KICAgIGF4aXNUYWdzID0gW2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiBmb250WyJmdmFyIl0uYXhlc10KICAgIGdldEFkdmFuY2VNZXRyaWNzID0gcGFydGlhbChfZ2V0X2FkdmFuY2VfbWV0cmljcywgZm9udCwgYXhpc1RhZ3MsIFZWQVJfRklFTERTKQogICAgX2FkZF9WSFZBUihmb250LCBheGlzVGFncywgVlZBUl9GSUVMRFMsIGdldEFkdmFuY2VNZXRyaWNzKQoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICAiIiJBZGQgYEhWQVJgIHRhYmxlIHRvIHZhcmlhYmxlIGZvbnQuIiIiCgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGltcG9ydCBzeXMKCiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCBjb25maWdMb2dnZXIKICAgIGZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliIGltcG9ydCBEZXNpZ25TcGFjZURvY3VtZW50CiAgICBpbXBvcnQgYXJncGFyc2UKCiAgICBwYXJzZXIgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigKICAgICAgICAiZm9udHRvb2xzIHZhckxpYi5odmFyIiwKICAgICAgICBkZXNjcmlwdGlvbj0iQWRkIGBIVkFSYCB0YWJsZSBmcm9tIHRvIHZhcmlhYmxlIGZvbnQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoImZvbnQiLCBtZXRhdmFyPSJ2YXJmb250LnR0ZiIsIGhlbHA9IlZhcmlhYmxlLWZvbnQgZmlsZS4iKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLW8iLAogICAgICAgICItLW91dHB1dC1maWxlIiwKICAgICAgICB0eXBlPXN0ciwKICAgICAgICBoZWxwPSJPdXRwdXQgZm9udCBmaWxlIG5hbWUuIiwKICAgICkKCiAgICBvcHRpb25zID0gcGFyc2VyLnBhcnNlX2FyZ3MoYXJncykKCiAgICBjb25maWdMb2dnZXIobGV2ZWw9IldBUk5JTkciKQoKICAgIGZvbnQgPSBUVEZvbnQob3B0aW9ucy5mb250KQogICAgaWYgbm90ICJmdmFyIiBpbiBmb250OgogICAgICAgIGxvZy5lcnJvcigiTm90IGEgdmFyaWFibGUgZm9udC4iKQogICAgICAgIHJldHVybiAxCgogICAgYWRkX0hWQVIoZm9udCkKICAgIGlmICJ2bXR4IiBpbiBmb250IG9yICJWTVRYIiBpbiBmb250OgogICAgICAgIGFkZF9WVkFSKGZvbnQpCgogICAgaWYgb3B0aW9ucy5vdXRwdXRfZmlsZSBpcyBOb25lOgogICAgICAgIG91dGZpbGUgPSBtYWtlT3V0cHV0RmlsZU5hbWUob3B0aW9ucy5mb250LCBvdmVyV3JpdGU9VHJ1ZSwgc3VmZml4PSIuaHZhciIpCiAgICBlbHNlOgogICAgICAgIG91dGZpbGUgPSBvcHRpb25zLm91dHB1dF9maWxlCiAgICBpZiBvdXRmaWxlOgogICAgICAgIGxvZy5pbmZvKCJTYXZpbmcgJXMiLCBvdXRmaWxlKQogICAgICAgIGZvbnQuc2F2ZShvdXRmaWxlKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgc3lzLmV4aXQobWFpbigpKQo=
+from fontTools.misc.roundTools import noRound
+from fontTools.ttLib import TTFont, newTable
+from fontTools.ttLib.tables import otTables as ot
+from fontTools.ttLib.tables.otBase import OTTableWriter
+from fontTools.varLib import HVAR_FIELDS, VVAR_FIELDS, _add_VHVAR
+from fontTools.varLib import builder, models, varStore
+from fontTools.misc.fixedTools import fixedToFloat as fi2fl
+from fontTools.misc.cliTools import makeOutputFileName
+from functools import partial
+import logging
+
+log = logging.getLogger("fontTools.varLib.avar")
+
+
+def _get_advance_metrics(font, axisTags, tableFields):
+    # There's two ways we can go from here:
+    # 1. For each glyph, at each master peak, compute the value of the
+    #    advance width at that peak.  Then pass these all to a VariationModel
+    #    builder to compute back the deltas.
+    # 2. For each master peak, pull out the deltas of the advance width directly,
+    #    and feed these to the VarStoreBuilder, forgoing the remodeling step.
+    # We'll go with the second option, as it's simpler, faster, and more direct.
+    gvar = font["GVAR"] if "GVAR" in font else font["gvar"]
+    vhAdvanceDeltasAndSupports = {}
+    glyphOrder = font.getGlyphOrder()
+    phantomIndex = tableFields.phantomIndex
+    for glyphName in glyphOrder:
+        supports = []
+        deltas = []
+        variations = gvar.variations.get(glyphName, [])
+
+        for tv in variations:
+            supports.append(tv.axes)
+            phantoms = tv.coordinates[-4:]
+            phantoms = phantoms[phantomIndex * 2 : phantomIndex * 2 + 2]
+            assert len(phantoms) == 2
+            phantoms[0] = phantoms[0][phantomIndex] if phantoms[0] is not None else 0
+            phantoms[1] = phantoms[1][phantomIndex] if phantoms[1] is not None else 0
+            deltas.append(phantoms[1] - phantoms[0])
+
+        vhAdvanceDeltasAndSupports[glyphName] = (deltas, supports)
+
+    vOrigDeltasAndSupports = None  # TODO
+
+    return vhAdvanceDeltasAndSupports, vOrigDeltasAndSupports
+
+
+def add_HVAR(font):
+    if "HVAR" in font:
+        del font["HVAR"]
+    axisTags = [axis.axisTag for axis in font["fvar"].axes]
+    getAdvanceMetrics = partial(_get_advance_metrics, font, axisTags, HVAR_FIELDS)
+    _add_VHVAR(font, axisTags, HVAR_FIELDS, getAdvanceMetrics)
+
+
+def add_VVAR(font):
+    if "VVAR" in font:
+        del font["VVAR"]
+    axisTags = [axis.axisTag for axis in font["fvar"].axes]
+    getAdvanceMetrics = partial(_get_advance_metrics, font, axisTags, VVAR_FIELDS)
+    _add_VHVAR(font, axisTags, VVAR_FIELDS, getAdvanceMetrics)
+
+
+def main(args=None):
+    """Add `HVAR` table to variable font."""
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    from fontTools import configLogger
+    from fontTools.designspaceLib import DesignSpaceDocument
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools varLib.hvar",
+        description="Add `HVAR` table from to variable font.",
+    )
+    parser.add_argument("font", metavar="varfont.ttf", help="Variable-font file.")
+    parser.add_argument(
+        "-o",
+        "--output-file",
+        type=str,
+        help="Output font file name.",
+    )
+
+    options = parser.parse_args(args)
+
+    configLogger(level="WARNING")
+
+    font = TTFont(options.font)
+    if not "fvar" in font:
+        log.error("Not a variable font.")
+        return 1
+
+    add_HVAR(font)
+    if "vmtx" in font or "VMTX" in font:
+        add_VVAR(font)
+
+    if options.output_file is None:
+        outfile = makeOutputFileName(options.font, overWrite=True, suffix=".hvar")
+    else:
+        outfile = options.output_file
+    if outfile:
+        log.info("Saving %s", outfile)
+        font.save(outfile)
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

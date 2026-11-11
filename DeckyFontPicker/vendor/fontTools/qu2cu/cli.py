@@ -1,1 +1,128 @@
-aW1wb3J0IG9zCmltcG9ydCBhcmdwYXJzZQppbXBvcnQgbG9nZ2luZwpmcm9tIGZvbnRUb29scy5taXNjLmNsaVRvb2xzIGltcG9ydCBtYWtlT3V0cHV0RmlsZU5hbWUKZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udApmcm9tIGZvbnRUb29scy50dExpYi5iZXlvbmQ2NGsgaW1wb3J0IHVwcGVyX3RhYmxlcwpmcm9tIGZvbnRUb29scy5wZW5zLnF1MmN1UGVuIGltcG9ydCBRdTJDdVBlbgpmcm9tIGZvbnRUb29scy5wZW5zLnR0R2x5cGhQZW4gaW1wb3J0IFRUR2x5cGhQZW4KaW1wb3J0IGZvbnRUb29scwoKbG9nZ2VyID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5xdTJjdSIpCgoKZGVmIF9mb250X3RvX2N1YmljKGlucHV0X3BhdGgsIG91dHB1dF9wYXRoPU5vbmUsICoqa3dhcmdzKToKICAgIGZvbnQgPSBUVEZvbnQoaW5wdXRfcGF0aCkKICAgIGxvZ2dlci5pbmZvKCJDb252ZXJ0aW5nIGN1cnZlcyBmb3IgJXMiLCBpbnB1dF9wYXRoKQoKICAgIHN0YXRzID0ge30gaWYga3dhcmdzWyJkdW1wX3N0YXRzIl0gZWxzZSBOb25lCiAgICBxdTJjdV9rd2FyZ3MgPSB7CiAgICAgICAgInN0YXRzIjogc3RhdHMsCiAgICAgICAgIm1heF9lcnIiOiBrd2FyZ3NbIm1heF9lcnJfZW0iXSAqIGZvbnRbImhlYWQiXS51bml0c1BlckVtLAogICAgICAgICJhbGxfY3ViaWMiOiBrd2FyZ3NbImFsbF9jdWJpYyJdLAogICAgfQoKICAgIGlmICJndmFyIiBpbiBmb250IG9yICJHVkFSIiBpbiBmb250OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIkNhbm5vdCBjb252ZXJ0IHZhcmlhYmxlIGZvbnQiKQogICAgdXBwZXJfdGFibGVzKGZvbnQpCiAgICBnbHlwaFNldCA9IGZvbnQuZ2V0R2x5cGhTZXQoKQogICAgZ2x5cGhPcmRlciA9IGZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICBnbHlmID0gZm9udFsiR0xZRiJdCiAgICBmb3IgZ2x5cGhOYW1lIGluIGdseXBoT3JkZXI6CiAgICAgICAgZ2x5cGggPSBnbHlwaFNldFtnbHlwaE5hbWVdCiAgICAgICAgdHRwZW4gPSBUVEdseXBoUGVuKGdseXBoU2V0KQogICAgICAgIHBlbiA9IFF1MkN1UGVuKHR0cGVuLCAqKnF1MmN1X2t3YXJncykKICAgICAgICBnbHlwaC5kcmF3KHBlbikKICAgICAgICBnbHlmW2dseXBoTmFtZV0gPSB0dHBlbi5nbHlwaChkcm9wSW1wbGllZE9uQ3VydmVzPVRydWUpCgogICAgaWYga3dhcmdzWyJkdW1wX3N0YXRzIl06CiAgICAgICAgbG9nZ2VyLmluZm8oIlN0YXRzOiAlcyIsIHN0YXRzKQoKICAgIGxvZ2dlci5pbmZvKCJTYXZpbmcgJXMiLCBvdXRwdXRfcGF0aCkKICAgIGZvbnQuc2F2ZShvdXRwdXRfcGF0aCkKCgpkZWYgX21haW4oYXJncz1Ob25lKToKICAgICIiIkNvbnZlcnQgYW4gT3BlblR5cGUgZm9udCBmcm9tIHF1YWRyYXRpYyB0byBjdWJpYyBjdXJ2ZXMiIiIKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKHByb2c9InF1MmN1IikKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoIi0tdmVyc2lvbiIsIGFjdGlvbj0idmVyc2lvbiIsIHZlcnNpb249Zm9udFRvb2xzLl9fdmVyc2lvbl9fKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiaW5maWxlcyIsCiAgICAgICAgbmFyZ3M9IisiLAogICAgICAgIG1ldGF2YXI9IklOUFVUIiwKICAgICAgICBoZWxwPSJvbmUgb3IgbW9yZSBpbnB1dCBUVEYgc291cmNlIGZpbGUocykuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoIi12IiwgIi0tdmVyYm9zZSIsIGFjdGlvbj0iY291bnQiLCBkZWZhdWx0PTApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItZSIsCiAgICAgICAgIi0tY29udmVyc2lvbi1lcnJvciIsCiAgICAgICAgdHlwZT1mbG9hdCwKICAgICAgICBtZXRhdmFyPSJFUlJPUiIsCiAgICAgICAgZGVmYXVsdD0wLjAwMSwKICAgICAgICBoZWxwPSJtYXhpdW11bSBhcHByb3hpbWF0aW9uIGVycm9yIG1lYXN1cmVkIGluIEVNIChkZWZhdWx0OiAwLjAwMSkiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWMiLAogICAgICAgICItLWFsbC1jdWJpYyIsCiAgICAgICAgZGVmYXVsdD1GYWxzZSwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9IndoZXRoZXIgdG8gb25seSB1c2UgY3ViaWMgY3VydmVzIiwKICAgICkKCiAgICBvdXRwdXRfcGFyc2VyID0gcGFyc2VyLmFkZF9tdXR1YWxseV9leGNsdXNpdmVfZ3JvdXAoKQogICAgb3V0cHV0X3BhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1vIiwKICAgICAgICAiLS1vdXRwdXQtZmlsZSIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgICAgIG1ldGF2YXI9Ik9VVFBVVCIsCiAgICAgICAgaGVscD0oIm91dHB1dCBmaWxlbmFtZSBmb3IgdGhlIGNvbnZlcnRlZCBUVEYuIiksCiAgICApCiAgICBvdXRwdXRfcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWQiLAogICAgICAgICItLW91dHB1dC1kaXIiLAogICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICAgICBtZXRhdmFyPSJESVJFQ1RPUlkiLAogICAgICAgIGhlbHA9Im91dHB1dCBkaXJlY3Rvcnkgd2hlcmUgdG8gc2F2ZSBjb252ZXJ0ZWQgVFRGcyIsCiAgICApCgogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgaWYgb3B0aW9ucy5jb252ZXJzaW9uX2Vycm9yIDw9IDA6CiAgICAgICAgcGFyc2VyLmVycm9yKCItLWNvbnZlcnNpb24tZXJyb3IgbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybyIpCgogICAgaWYgbm90IG9wdGlvbnMudmVyYm9zZToKICAgICAgICBsZXZlbCA9ICJXQVJOSU5HIgogICAgZWxpZiBvcHRpb25zLnZlcmJvc2UgPT0gMToKICAgICAgICBsZXZlbCA9ICJJTkZPIgogICAgZWxzZToKICAgICAgICBsZXZlbCA9ICJERUJVRyIKICAgIGxvZ2dpbmcuYmFzaWNDb25maWcobGV2ZWw9bGV2ZWwpCgogICAgaWYgbGVuKG9wdGlvbnMuaW5maWxlcykgPiAxIGFuZCBvcHRpb25zLm91dHB1dF9maWxlOgogICAgICAgIHBhcnNlci5lcnJvcigiLW8vLS1vdXRwdXQtZmlsZSBjYW4ndCBiZSB1c2VkIHdpdGggbXVsdGlsZSBpbnB1dHMiKQoKICAgIGlmIG9wdGlvbnMub3V0cHV0X2RpcjoKICAgICAgICBvdXRwdXRfZGlyID0gb3B0aW9ucy5vdXRwdXRfZGlyCiAgICAgICAgaWYgbm90IG9zLnBhdGguZXhpc3RzKG91dHB1dF9kaXIpOgogICAgICAgICAgICBvcy5ta2RpcihvdXRwdXRfZGlyKQogICAgICAgIGVsaWYgbm90IG9zLnBhdGguaXNkaXIob3V0cHV0X2Rpcik6CiAgICAgICAgICAgIHBhcnNlci5lcnJvcigiJyVzJyBpcyBub3QgYSBkaXJlY3RvcnkiICUgb3V0cHV0X2RpcikKICAgICAgICBvdXRwdXRfcGF0aHMgPSBbCiAgICAgICAgICAgIG9zLnBhdGguam9pbihvdXRwdXRfZGlyLCBvcy5wYXRoLmJhc2VuYW1lKHApKSBmb3IgcCBpbiBvcHRpb25zLmluZmlsZXMKICAgICAgICBdCiAgICBlbGlmIG9wdGlvbnMub3V0cHV0X2ZpbGU6CiAgICAgICAgb3V0cHV0X3BhdGhzID0gW29wdGlvbnMub3V0cHV0X2ZpbGVdCiAgICBlbHNlOgogICAgICAgIG91dHB1dF9wYXRocyA9IFsKICAgICAgICAgICAgbWFrZU91dHB1dEZpbGVOYW1lKHAsIG92ZXJXcml0ZT1UcnVlLCBzdWZmaXg9Ii5jdWJpYyIpCiAgICAgICAgICAgIGZvciBwIGluIG9wdGlvbnMuaW5maWxlcwogICAgICAgIF0KCiAgICBrd2FyZ3MgPSBkaWN0KAogICAgICAgIGR1bXBfc3RhdHM9b3B0aW9ucy52ZXJib3NlID4gMCwKICAgICAgICBtYXhfZXJyX2VtPW9wdGlvbnMuY29udmVyc2lvbl9lcnJvciwKICAgICAgICBhbGxfY3ViaWM9b3B0aW9ucy5hbGxfY3ViaWMsCiAgICApCgogICAgZm9yIGlucHV0X3BhdGgsIG91dHB1dF9wYXRoIGluIHppcChvcHRpb25zLmluZmlsZXMsIG91dHB1dF9wYXRocyk6CiAgICAgICAgX2ZvbnRfdG9fY3ViaWMoaW5wdXRfcGF0aCwgb3V0cHV0X3BhdGgsICoqa3dhcmdzKQo=
+import os
+import argparse
+import logging
+from fontTools.misc.cliTools import makeOutputFileName
+from fontTools.ttLib import TTFont
+from fontTools.ttLib.beyond64k import upper_tables
+from fontTools.pens.qu2cuPen import Qu2CuPen
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+import fontTools
+
+logger = logging.getLogger("fontTools.qu2cu")
+
+
+def _font_to_cubic(input_path, output_path=None, **kwargs):
+    font = TTFont(input_path)
+    logger.info("Converting curves for %s", input_path)
+
+    stats = {} if kwargs["dump_stats"] else None
+    qu2cu_kwargs = {
+        "stats": stats,
+        "max_err": kwargs["max_err_em"] * font["head"].unitsPerEm,
+        "all_cubic": kwargs["all_cubic"],
+    }
+
+    if "gvar" in font or "GVAR" in font:
+        raise ValueError("Cannot convert variable font")
+    upper_tables(font)
+    glyphSet = font.getGlyphSet()
+    glyphOrder = font.getGlyphOrder()
+    glyf = font["GLYF"]
+    for glyphName in glyphOrder:
+        glyph = glyphSet[glyphName]
+        ttpen = TTGlyphPen(glyphSet)
+        pen = Qu2CuPen(ttpen, **qu2cu_kwargs)
+        glyph.draw(pen)
+        glyf[glyphName] = ttpen.glyph(dropImpliedOnCurves=True)
+
+    if kwargs["dump_stats"]:
+        logger.info("Stats: %s", stats)
+
+    logger.info("Saving %s", output_path)
+    font.save(output_path)
+
+
+def _main(args=None):
+    """Convert an OpenType font from quadratic to cubic curves"""
+    parser = argparse.ArgumentParser(prog="qu2cu")
+    parser.add_argument("--version", action="version", version=fontTools.__version__)
+    parser.add_argument(
+        "infiles",
+        nargs="+",
+        metavar="INPUT",
+        help="one or more input TTF source file(s).",
+    )
+    parser.add_argument("-v", "--verbose", action="count", default=0)
+    parser.add_argument(
+        "-e",
+        "--conversion-error",
+        type=float,
+        metavar="ERROR",
+        default=0.001,
+        help="maxiumum approximation error measured in EM (default: 0.001)",
+    )
+    parser.add_argument(
+        "-c",
+        "--all-cubic",
+        default=False,
+        action="store_true",
+        help="whether to only use cubic curves",
+    )
+
+    output_parser = parser.add_mutually_exclusive_group()
+    output_parser.add_argument(
+        "-o",
+        "--output-file",
+        default=None,
+        metavar="OUTPUT",
+        help=("output filename for the converted TTF."),
+    )
+    output_parser.add_argument(
+        "-d",
+        "--output-dir",
+        default=None,
+        metavar="DIRECTORY",
+        help="output directory where to save converted TTFs",
+    )
+
+    options = parser.parse_args(args)
+
+    if options.conversion_error <= 0:
+        parser.error("--conversion-error must be greater than zero")
+
+    if not options.verbose:
+        level = "WARNING"
+    elif options.verbose == 1:
+        level = "INFO"
+    else:
+        level = "DEBUG"
+    logging.basicConfig(level=level)
+
+    if len(options.infiles) > 1 and options.output_file:
+        parser.error("-o/--output-file can't be used with multile inputs")
+
+    if options.output_dir:
+        output_dir = options.output_dir
+        if not os.path.exists(output_dir):
+            os.mkdir(output_dir)
+        elif not os.path.isdir(output_dir):
+            parser.error("'%s' is not a directory" % output_dir)
+        output_paths = [
+            os.path.join(output_dir, os.path.basename(p)) for p in options.infiles
+        ]
+    elif options.output_file:
+        output_paths = [options.output_file]
+    else:
+        output_paths = [
+            makeOutputFileName(p, overWrite=True, suffix=".cubic")
+            for p in options.infiles
+        ]
+
+    kwargs = dict(
+        dump_stats=options.verbose > 0,
+        max_err_em=options.conversion_error,
+        all_cubic=options.all_cubic,
+    )
+
+    for input_path, output_path in zip(options.infiles, output_paths):
+        _font_to_cubic(input_path, output_path, **kwargs)

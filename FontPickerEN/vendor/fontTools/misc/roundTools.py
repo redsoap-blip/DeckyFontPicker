@@ -1,1 +1,151 @@
-IiIiClZhcmlvdXMgcm91bmQtdG8taW50ZWdlciBoZWxwZXJzLgoiIiIKCmltcG9ydCBtYXRoCmltcG9ydCBmdW5jdG9vbHMKaW1wb3J0IGxvZ2dpbmcKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IENhbGxhYmxlCmZyb20gdHlwaW5nIGltcG9ydCBUeXBlQWxpYXMKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKX19hbGxfXyA9IFsKICAgICJub1JvdW5kIiwKICAgICJvdFJvdW5kIiwKICAgICJtYXliZVJvdW5kIiwKICAgICJyb3VuZEZ1bmMiLAogICAgIm5lYXJlc3RNdWx0aXBsZVNob3J0ZXN0UmVwciIsCl0KClJvdW5kaW5nRnVuY3Rpb246IFR5cGVBbGlhcyA9IENhbGxhYmxlW1tmbG9hdF0sIGZsb2F0XQoiIiJBIHJvdW5kaW5nIHN0cmF0ZWd5IGZvciBudW1iZXJzOyBjYW4gcmV0dXJuIGEgZmxvYXQgYXMgd2VsbCBhcyBhbiBpbnQsIGFzIGluCnNvbWUgc3RyYXRlZ2llcyByb3VuZGluZyBpcyBjb25kaXRpb25hbC4iIiIKCgpkZWYgbm9Sb3VuZCh2YWx1ZTogZmxvYXQpIC0+IGZsb2F0OgogICAgIiIiUmV0dXJuIGZsb2F0IHZhbHVlIHVubW9kaWZpZWQ7IGRvIG5vdCByb3VuZC4KCiAgICBBcmdzOgogICAgICAgICAgICB2YWx1ZSAoZmxvYXQpOiBUaGUgaW5wdXQgZmxvYXRpbmctcG9pbnQgdmFsdWUuCgogICAgUmV0dXJucwogICAgICAgICAgICBmbG9hdDogVGhlIHNhbWUgdmFsdWUuCiAgICAiIiIKICAgIHJldHVybiB2YWx1ZQoKCmRlZiBvdFJvdW5kKHZhbHVlOiBmbG9hdCkgLT4gaW50OgogICAgIiIiUm91bmQgZmxvYXQgdmFsdWUgdG8gbmVhcmVzdCBpbnRlZ2VyIHRvd2FyZHMgYGArSW5maW5pdHlgYC4KCiAgICBUaGUgT3BlblR5cGUgc3BlYyAoaW4gdGhlIHNlY3Rpb24gb24gYCJub3JtYWxpemF0aW9uIiBvZiBPcGVuVHlwZSBGb250IFZhcmlhdGlvbnMgPGh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9vdHZhcm92ZXJ2aWV3I2Nvb3JkaW5hdGUtc2NhbGVzLWFuZC1ub3JtYWxpemF0aW9uPmBfKQogICAgZGVmaW5lcyB0aGUgcmVxdWlyZWQgbWV0aG9kIGZvciBjb252ZXJ0aW5nIGZsb2F0aW5nIHBvaW50IHZhbHVlcyB0bwogICAgZml4ZWQtcG9pbnQuIEluIHBhcnRpY3VsYXIgaXQgc3BlY2lmaWVzIHRoZSBmb2xsb3dpbmcgcm91bmRpbmcgc3RyYXRlZ3k6CgogICAgICAgICAgICBmb3IgZnJhY3Rpb25hbCB2YWx1ZXMgb2YgMC41IGFuZCBoaWdoZXIsIHRha2UgdGhlIG5leHQgaGlnaGVyIGludGVnZXI7CiAgICAgICAgICAgIGZvciBvdGhlciBmcmFjdGlvbmFsIHZhbHVlcywgdHJ1bmNhdGUuCgogICAgVGhpcyBmdW5jdGlvbiByb3VuZHMgdGhlIGZsb2F0aW5nLXBvaW50IHZhbHVlIGFjY29yZGluZyB0byB0aGlzIHN0cmF0ZWd5CiAgICBpbiBwcmVwYXJhdGlvbiBmb3IgY29udmVyc2lvbiB0byBmaXhlZC1wb2ludC4KCiAgICBBcmdzOgogICAgICAgICAgICB2YWx1ZSAoZmxvYXQpOiBUaGUgaW5wdXQgZmxvYXRpbmctcG9pbnQgdmFsdWUuCgogICAgUmV0dXJucwogICAgICAgICAgICBpbnQ6IFRoZSByb3VuZGVkIHZhbHVlLgogICAgIiIiCiAgICAjIFNlZSB0aGlzIHRocmVhZCBmb3IgaG93IHdlIGVuZGVkIHVwIHdpdGggdGhpcyBpbXBsZW1lbnRhdGlvbjoKICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvaXNzdWVzLzEyNDgjaXNzdWVjb21tZW50LTM4MzE5ODE2NgogICAgcmV0dXJuIGludChtYXRoLmZsb29yKHZhbHVlICsgMC41KSkKCgpkZWYgbWF5YmVSb3VuZCh2OiBmbG9hdCwgdG9sZXJhbmNlOiBmbG9hdCwgcm91bmQ6IFJvdW5kaW5nRnVuY3Rpb24gPSBvdFJvdW5kKSAtPiBmbG9hdDoKICAgICIiIlJvdW5kIG9ubHkgaWYgcm91bmRpbmcgY2hhbmdlcyB0aGUgdmFsdWUgYnkgbm8gbW9yZSB0aGFuIGEgZ2l2ZW4gYW1vdW50LgoKICAgIEFyZ3M6CiAgICAgICAgICAgIHZhbHVlIChmbG9hdCk6IFRoZSBpbnB1dCBmbG9hdGluZy1wb2ludCB2YWx1ZS4KICAgICAgICAgICAgdG9sZXJhbmNlIChmbG9hdCk6IFRoZSBtYXhpbXVtIGFic29sdXRlIGRpZmZlcmVuY2UgcGVybWl0dGVkLgogICAgICAgICAgICByb3VuZCAoZnVuY3Rpb24pOiBUaGUgcm91bmRpbmcgc3RyYXRlZ3ksIHRha2luZyBhbmQgZ2l2aW5nIGEgZmxvYXQuCgogICAgUmV0dXJucwogICAgICAgICAgICBmbG9hdDogQSByb3VuZGVkIHZhbHVlIGlmIHdpdGhpbiB0b2xlcmFuY2UsIG90aGVyd2lzZSB0aGUgb3JpZ2luYWwuCiAgICAiIiIKICAgIHJvdW5kZWQgPSByb3VuZCh2KQogICAgcmV0dXJuIHJvdW5kZWQgaWYgYWJzKHJvdW5kZWQgLSB2KSA8PSB0b2xlcmFuY2UgZWxzZSB2CgoKZGVmIHJvdW5kRnVuYyh0b2xlcmFuY2U6IGZsb2F0LCByb3VuZDogUm91bmRpbmdGdW5jdGlvbiA9IG90Um91bmQpIC0+IFJvdW5kaW5nRnVuY3Rpb246CiAgICAiIiJNYWtlIGEgY29uZGl0aW9uYWwgcm91bmRpbmcgc3RyYXRlZ3kgZnJvbSBhIGJhc2Ugc3RyYXRlZ3kgYW5kIHRvbGVyYW5jZS4KCiAgICBUaGlzIHByZWNvbmZpZ3VyZXMgOmZ1bmM6YG1heWJlUm91bmRgIHdpdGggZml4ZWQgYXJndW1lbnRzLCBhbGxvd2luZyBpdCB0byBiZQogICAgdXNlZCBhbnl3aGVyZSBhIHNpbXBsZSByb3VuZGluZyBmdW5jdGlvbiBpcyBhY2NlcHRlZC4KCiAgICBUaGUgdG9sZXJhbmNlIGlzIHZhbGlkYXRlZCB0byBlbnN1cmUgaXQgaXMgYWJzb2x1dGUsIGFuZCB0aGUgY2FzZXMgd2hlcmUKICAgIHJvdW5kaW5nIHdvdWxkIG5ldmVyIG9yIGFsd2F5cyBvY2N1ciBhcmUgb3B0aW1pemVkLiBSb3VuZGluZyBtdXN0IG5ldmVyCiAgICBjaGFuZ2UgYSB2YWx1ZSBieSBtb3JlIHRoYW4gMC41IGZvciB0aGlzIHRvIGJlIHNvdW5kIChlLmcuICA6cHk6ZnVuYzpgY2VpbGAKICAgIGNvdWxkIGNoYW5nZSBieSB0b28gbXVjaCkuCgogICAgQXJnczoKICAgICAgICAgICAgdG9sZXJhbmNlIChmbG9hdCk6IFRoZSBtYXhpbXVtIGFic29sdXRlIGRpZmZlcmVuY2UgcGVybWl0dGVkLgogICAgICAgICAgICByb3VuZCAoZnVuY3Rpb24pOiBUaGUgcm91bmRpbmcgc3RyYXRlZ3ksIHRha2luZyBhbmQgZ2l2aW5nIGEgZmxvYXQuCgogICAgUmV0dXJucwogICAgICAgICAgICBmdW5jdGlvbjogQSBzdHJhdGVneSB0aGF0IGNvbmRpdGlvbmFsbHkgcm91bmRzIGJhc2VkIG9uIHRvbGVyYW5jZS4KICAgICIiIgogICAgaWYgdG9sZXJhbmNlIDwgMDoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJSb3VuZGluZyB0b2xlcmFuY2UgbXVzdCBiZSBwb3NpdGl2ZSIpCgogICAgaWYgdG9sZXJhbmNlID09IDA6CiAgICAgICAgcmV0dXJuIG5vUm91bmQKCiAgICBpZiB0b2xlcmFuY2UgPj0gMC41OgogICAgICAgIHJldHVybiByb3VuZAoKICAgIHJldHVybiBmdW5jdG9vbHMucGFydGlhbChtYXliZVJvdW5kLCB0b2xlcmFuY2U9dG9sZXJhbmNlLCByb3VuZD1yb3VuZCkKCgpkZWYgbmVhcmVzdE11bHRpcGxlU2hvcnRlc3RSZXByKHZhbHVlOiBmbG9hdCwgZmFjdG9yOiBmbG9hdCkgLT4gc3RyOgogICAgIiIiUm91bmQgdG8gbmVhcmVzdCBtdWx0aXBsZSBvZiBmYWN0b3IgYW5kIHJldHVybiBzaG9ydGVzdCBkZWNpbWFsIHJlcHJlc2VudGF0aW9uLgoKICAgIFRoaXMgY2hvb3NlcyB0aGUgZmxvYXQgdGhhdCBpcyBjbG9zZXIgdG8gYSBtdWx0aXBsZSBvZiB0aGUgZ2l2ZW4gZmFjdG9yIHdoaWxlCiAgICBoYXZpbmcgdGhlIHNob3J0ZXN0IGRlY2ltYWwgcmVwcmVzZW50YXRpb24gKHRoZSBsZWFzdCBudW1iZXIgb2YgZnJhY3Rpb25hbCBkZWNpbWFsCiAgICBkaWdpdHMpLgoKICAgIEZvciBleGFtcGxlLCBnaXZlbiB0aGUgZm9sbG93aW5nOgoKICAgID4+PiBuZWFyZXN0TXVsdGlwbGVTaG9ydGVzdFJlcHIoLTAuNjE4ODM1NDQ5MjE4NzUsIDEuMC8oMTw8MTQpKQogICAgJy0wLjYxODg0JwoKICAgIFVzZWZ1bCB3aGVuIHlvdSBuZWVkIHRvIHNlcmlhbGl6ZSBvciBwcmludCBhIGZpeGVkLXBvaW50IG51bWJlciAob3IgbXVsdGlwbGVzCiAgICB0aGVyZW9mLCBzdWNoIGFzIEYyRG90MTQgZnJhY3Rpb25zIG9mIDE4MCBkZWdyZWVzIGluIENPTFJ2MSBQYWludFJvdGF0ZSkgaW4KICAgIGEgaHVtYW4tcmVhZGFibGUgZm9ybS4KCiAgICBBcmdzOgogICAgICAgIHZhbHVlICh2YWx1ZSk6IFRoZSB2YWx1ZSB0byBiZSByb3VuZGVkIGFuZCBzZXJpYWxpemVkLgogICAgICAgIGZhY3RvciAoZmxvYXQpOiBUaGUgdmFsdWUgd2hpY2ggdGhlIHJlc3VsdCBpcyBhIGNsb3NlIG11bHRpcGxlIG9mLgoKICAgIFJldHVybnM6CiAgICAgICAgc3RyOiBBIGNvbXBhY3Qgc3RyaW5nIHJlcHJlc2VudGF0aW9uIG9mIHRoZSB2YWx1ZS4KICAgICIiIgogICAgaWYgbm90IHZhbHVlOgogICAgICAgIHJldHVybiAiMC4wIgoKICAgIHZhbHVlID0gb3RSb3VuZCh2YWx1ZSAvIGZhY3RvcikgKiBmYWN0b3IKICAgIGVwcyA9IDAuNSAqIGZhY3RvcgogICAgbG8gPSB2YWx1ZSAtIGVwcwogICAgaGkgPSB2YWx1ZSArIGVwcwogICAgIyBJZiB0aGUgcmFuZ2Ugb2YgdmFsaWQgY2hvaWNlcyBzcGFucyBhbiBpbnRlZ2VyLCByZXR1cm4gdGhlIGludGVnZXIuCiAgICBpZiBpbnQobG8pICE9IGludChoaSk6CiAgICAgICAgcmV0dXJuIHN0cihmbG9hdChyb3VuZCh2YWx1ZSkpKQoKICAgIGZtdCA9ICIlLjhmIgogICAgbG8gPSBmbXQgJSBsbwogICAgaGkgPSBmbXQgJSBoaQogICAgYXNzZXJ0IGxlbihsbykgPT0gbGVuKGhpKSBhbmQgbG8gIT0gaGkKICAgIGZvciBpIGluIHJhbmdlKGxlbihsbykpOgogICAgICAgIGlmIGxvW2ldICE9IGhpW2ldOgogICAgICAgICAgICBicmVhawogICAgcGVyaW9kID0gbG8uZmluZCgiLiIpCiAgICBhc3NlcnQgcGVyaW9kIDwgaQogICAgZm10ID0gIiUlLiVkZiIgJSAoaSAtIHBlcmlvZCkKICAgIHJldHVybiBmbXQgJSB2YWx1ZQo=
+"""
+Various round-to-integer helpers.
+"""
+
+import math
+import functools
+import logging
+from collections.abc import Callable
+from typing import TypeAlias
+
+log = logging.getLogger(__name__)
+
+__all__ = [
+    "noRound",
+    "otRound",
+    "maybeRound",
+    "roundFunc",
+    "nearestMultipleShortestRepr",
+]
+
+RoundingFunction: TypeAlias = Callable[[float], float]
+"""A rounding strategy for numbers; can return a float as well as an int, as in
+some strategies rounding is conditional."""
+
+
+def noRound(value: float) -> float:
+    """Return float value unmodified; do not round.
+
+    Args:
+            value (float): The input floating-point value.
+
+    Returns
+            float: The same value.
+    """
+    return value
+
+
+def otRound(value: float) -> int:
+    """Round float value to nearest integer towards ``+Infinity``.
+
+    The OpenType spec (in the section on `"normalization" of OpenType Font Variations <https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview#coordinate-scales-and-normalization>`_)
+    defines the required method for converting floating point values to
+    fixed-point. In particular it specifies the following rounding strategy:
+
+            for fractional values of 0.5 and higher, take the next higher integer;
+            for other fractional values, truncate.
+
+    This function rounds the floating-point value according to this strategy
+    in preparation for conversion to fixed-point.
+
+    Args:
+            value (float): The input floating-point value.
+
+    Returns
+            int: The rounded value.
+    """
+    # See this thread for how we ended up with this implementation:
+    # https://github.com/fonttools/fonttools/issues/1248#issuecomment-383198166
+    return int(math.floor(value + 0.5))
+
+
+def maybeRound(v: float, tolerance: float, round: RoundingFunction = otRound) -> float:
+    """Round only if rounding changes the value by no more than a given amount.
+
+    Args:
+            value (float): The input floating-point value.
+            tolerance (float): The maximum absolute difference permitted.
+            round (function): The rounding strategy, taking and giving a float.
+
+    Returns
+            float: A rounded value if within tolerance, otherwise the original.
+    """
+    rounded = round(v)
+    return rounded if abs(rounded - v) <= tolerance else v
+
+
+def roundFunc(tolerance: float, round: RoundingFunction = otRound) -> RoundingFunction:
+    """Make a conditional rounding strategy from a base strategy and tolerance.
+
+    This preconfigures :func:`maybeRound` with fixed arguments, allowing it to be
+    used anywhere a simple rounding function is accepted.
+
+    The tolerance is validated to ensure it is absolute, and the cases where
+    rounding would never or always occur are optimized. Rounding must never
+    change a value by more than 0.5 for this to be sound (e.g.  :py:func:`ceil`
+    could change by too much).
+
+    Args:
+            tolerance (float): The maximum absolute difference permitted.
+            round (function): The rounding strategy, taking and giving a float.
+
+    Returns
+            function: A strategy that conditionally rounds based on tolerance.
+    """
+    if tolerance < 0:
+        raise ValueError("Rounding tolerance must be positive")
+
+    if tolerance == 0:
+        return noRound
+
+    if tolerance >= 0.5:
+        return round
+
+    return functools.partial(maybeRound, tolerance=tolerance, round=round)
+
+
+def nearestMultipleShortestRepr(value: float, factor: float) -> str:
+    """Round to nearest multiple of factor and return shortest decimal representation.
+
+    This chooses the float that is closer to a multiple of the given factor while
+    having the shortest decimal representation (the least number of fractional decimal
+    digits).
+
+    For example, given the following:
+
+    >>> nearestMultipleShortestRepr(-0.61883544921875, 1.0/(1<<14))
+    '-0.61884'
+
+    Useful when you need to serialize or print a fixed-point number (or multiples
+    thereof, such as F2Dot14 fractions of 180 degrees in COLRv1 PaintRotate) in
+    a human-readable form.
+
+    Args:
+        value (value): The value to be rounded and serialized.
+        factor (float): The value which the result is a close multiple of.
+
+    Returns:
+        str: A compact string representation of the value.
+    """
+    if not value:
+        return "0.0"
+
+    value = otRound(value / factor) * factor
+    eps = 0.5 * factor
+    lo = value - eps
+    hi = value + eps
+    # If the range of valid choices spans an integer, return the integer.
+    if int(lo) != int(hi):
+        return str(float(round(value)))
+
+    fmt = "%.8f"
+    lo = fmt % lo
+    hi = fmt % hi
+    assert len(lo) == len(hi) and lo != hi
+    for i in range(len(lo)):
+        if lo[i] != hi[i]:
+            break
+    period = lo.find(".")
+    assert period < i
+    fmt = "%%.%df" % (i - period)
+    return fmt % value

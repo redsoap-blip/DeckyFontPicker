@@ -1,1 +1,124 @@
-ZnJvbSBmb250VG9vbHMudmFyTGliLm1vZGVscyBpbXBvcnQgbm9ybWFsaXplVmFsdWUKCgpkZWYgX2Rlbm9ybWFsaXplKHYsIHRyaXBsZXQpOgogICAgaWYgdiA+PSAwOgogICAgICAgIHJldHVybiB0cmlwbGV0WzFdICsgdiAqICh0cmlwbGV0WzJdIC0gdHJpcGxldFsxXSkKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIHRyaXBsZXRbMV0gKyB2ICogKHRyaXBsZXRbMV0gLSB0cmlwbGV0WzBdKQoKCmRlZiBtYXAoCiAgICBmb250LCBsb2NhdGlvbiwgKiwgaW5wdXROb3JtYWxpemVkPUZhbHNlLCBvdXRwdXROb3JtYWxpemVkPUZhbHNlLCBkcm9wWmVyb2VzPUZhbHNlCik6CiAgICBpZiAiZnZhciIgbm90IGluIGZvbnQ6CiAgICAgICAgcmV0dXJuIE5vbmUKCiAgICBmdmFyID0gZm9udFsiZnZhciJdCiAgICBheGVzID0ge2EuYXhpc1RhZzogKGEubWluVmFsdWUsIGEuZGVmYXVsdFZhbHVlLCBhLm1heFZhbHVlKSBmb3IgYSBpbiBmdmFyLmF4ZXN9CiAgICB1bmtub3duQXhlcyA9IHNvcnRlZCh0YWcgZm9yIHRhZyBpbiBsb2NhdGlvbiBpZiB0YWcgbm90IGluIGF4ZXMpCiAgICBpZiB1bmtub3duQXhlczoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiVW5rbm93biBheGlzIHRhZyhzKTogeycsICcuam9pbih1bmtub3duQXhlcyl9IikKCiAgICBpZiBub3QgaW5wdXROb3JtYWxpemVkOgogICAgICAgIGxvY2F0aW9uID0gewogICAgICAgICAgICB0YWc6IG5vcm1hbGl6ZVZhbHVlKHZhbHVlLCBheGVzW3RhZ10pIGZvciB0YWcsIHZhbHVlIGluIGxvY2F0aW9uLml0ZW1zKCkKICAgICAgICB9CgogICAgaWYgImF2YXIiIGluIGZvbnQ6CiAgICAgICAgbG9jYXRpb24gPSBmb250WyJhdmFyIl0ucmVub3JtYWxpemVMb2NhdGlvbihsb2NhdGlvbiwgZm9udCwgZHJvcFplcm9lcykKCiAgICBpZiBub3Qgb3V0cHV0Tm9ybWFsaXplZDoKICAgICAgICBsb2NhdGlvbiA9IHsKICAgICAgICAgICAgdGFnOiBfZGVub3JtYWxpemUodmFsdWUsIGF4ZXNbdGFnXSkgZm9yIHRhZywgdmFsdWUgaW4gbG9jYXRpb24uaXRlbXMoKQogICAgICAgIH0KCiAgICByZXR1cm4gbG9jYXRpb24KCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiTWFwIHZhcmlhdGlvbiBjb29yZGluYXRlcyB0aHJvdWdoIHRoZSBgYXZhcmAgdGFibGUuIiIiCgogICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAogICAgaW1wb3J0IGFyZ3BhcnNlCgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGltcG9ydCBzeXMKCiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgdmFyTGliLmF2YXIubWFwIiwKICAgICAgICBkZXNjcmlwdGlvbj0iTWFwIHZhcmlhdGlvbiBjb29yZGluYXRlcyB0aHJvdWdoIHRoZSBgYXZhcmAgdGFibGUuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoImZvbnQiLCBtZXRhdmFyPSJ2YXJmb250LnR0ZiIsIGhlbHA9IlZhcmlhYmxlLWZvbnQgZmlsZS4iKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiY29vcmRzIiwKICAgICAgICBtZXRhdmFyPSJbQVhJUz12YWx1ZS4uLl0iLAogICAgICAgIGhlbHA9IkNvb3JkaW5hdGVzIHRvIG1hcCwgZS5nLiAnd2dodD03MDAgd2R0aD03NScuIiwKICAgICAgICBuYXJncz0iKiIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWYiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJEbyBub3Qgb21pdCBheGVzIGF0IGRlZmF1bHQgbG9jYXRpb24uIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWkiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJJbnB1dCBjb29yZGluYXRlcyBhcmUgbm9ybWFsaXplZCAoLTEuLjEpLiIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1vIiwgYWN0aW9uPSJzdG9yZV90cnVlIiwgaGVscD0iT3V0cHV0IGNvb3JkaW5hdGVzIGFzIG5vcm1hbGl6ZWQgKC0xLi4xKS4iCiAgICApCgogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgaWYgbm90IG9wdGlvbnMuY29vcmRzOgogICAgICAgIHBhcnNlci5lcnJvcigKICAgICAgICAgICAgIk5vIGNvb3JkaW5hdGVzIHByb3ZpZGVkLiBQbGVhc2Ugc3BlY2lmeSBhdCBsZWFzdCBvbmUgYXhpcyBjb29yZGluYXRlIChlLmcuLCB3Z2h0PTUwMCkiCiAgICAgICAgKQoKICAgIGlmIG9wdGlvbnMuZm9udC5lbmRzd2l0aCgiLmRlc2lnbnNwYWNlIik6CiAgICAgICAgZnJvbSAuYnVpbGQgaW1wb3J0IGJ1aWxkCgogICAgICAgIGZvbnQgPSBUVEZvbnQoKQogICAgICAgIGJ1aWxkKGZvbnQsIG9wdGlvbnMuZm9udCkKICAgIGVsc2U6CiAgICAgICAgZm9udCA9IFRURm9udChvcHRpb25zLmZvbnQpCiAgICAgICAgaWYgImZ2YXIiIG5vdCBpbiBmb250OgogICAgICAgICAgICBwYXJzZXIuZXJyb3IoZiJGb250ICd7b3B0aW9ucy5mb250fScgZG9lcyBub3QgY29udGFpbiBhbiAnZnZhcicgdGFibGUuIikKCiAgICBsb2NhdGlvbiA9IHt9CiAgICBmb3IgaXRlbSBpbiBvcHRpb25zLmNvb3JkczoKICAgICAgICB0YWcsIHNlcCwgdmFsdWUgPSBpdGVtLnBhcnRpdGlvbigiPSIpCiAgICAgICAgaWYgbm90IHNlcCBvciBub3QgdGFnIG9yIG5vdCB2YWx1ZToKICAgICAgICAgICAgcGFyc2VyLmVycm9yKAogICAgICAgICAgICAgICAgZiJJbnZhbGlkIGNvb3JkaW5hdGUge2l0ZW0hcn0uIEV4cGVjdGVkIEFYSVM9dmFsdWUsIGUuZy4gd2dodD01MDAiCiAgICAgICAgICAgICkKICAgICAgICB0cnk6CiAgICAgICAgICAgIGxvY2F0aW9uW3RhZ10gPSBmbG9hdCh2YWx1ZSkKICAgICAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICAgICAgcGFyc2VyLmVycm9yKAogICAgICAgICAgICAgICAgZiJJbnZhbGlkIGNvb3JkaW5hdGUgdmFsdWUgaW4ge2l0ZW0hcn0uIEV4cGVjdGVkIGEgbnVtYmVyIGFmdGVyICc9JyIKICAgICAgICAgICAgKQoKICAgIHRyeToKICAgICAgICBtYXBwZWQgPSBtYXAoCiAgICAgICAgICAgIGZvbnQsCiAgICAgICAgICAgIGxvY2F0aW9uLAogICAgICAgICAgICBpbnB1dE5vcm1hbGl6ZWQ9b3B0aW9ucy5pLAogICAgICAgICAgICBvdXRwdXROb3JtYWxpemVkPW9wdGlvbnMubywKICAgICAgICAgICAgZHJvcFplcm9lcz1ub3Qgb3B0aW9ucy5mLAogICAgICAgICkKICAgIGV4Y2VwdCBWYWx1ZUVycm9yIGFzIGU6CiAgICAgICAgcGFyc2VyLmVycm9yKHN0cihlKSkKICAgIGFzc2VydCBtYXBwZWQgaXMgbm90IE5vbmUKCiAgICBmb3IgdGFnIGluIG1hcHBlZDoKICAgICAgICB2ID0gbWFwcGVkW3RhZ10KICAgICAgICB2ID0gaW50KHYpIGlmIHYgPT0gaW50KHYpIGVsc2UgdgogICAgICAgIHByaW50KGYie3RhZ309e3Y6Z30iKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgc3lzLmV4aXQobWFpbigpKQo=
+from fontTools.varLib.models import normalizeValue
+
+
+def _denormalize(v, triplet):
+    if v >= 0:
+        return triplet[1] + v * (triplet[2] - triplet[1])
+    else:
+        return triplet[1] + v * (triplet[1] - triplet[0])
+
+
+def map(
+    font, location, *, inputNormalized=False, outputNormalized=False, dropZeroes=False
+):
+    if "fvar" not in font:
+        return None
+
+    fvar = font["fvar"]
+    axes = {a.axisTag: (a.minValue, a.defaultValue, a.maxValue) for a in fvar.axes}
+    unknownAxes = sorted(tag for tag in location if tag not in axes)
+    if unknownAxes:
+        raise ValueError(f"Unknown axis tag(s): {', '.join(unknownAxes)}")
+
+    if not inputNormalized:
+        location = {
+            tag: normalizeValue(value, axes[tag]) for tag, value in location.items()
+        }
+
+    if "avar" in font:
+        location = font["avar"].renormalizeLocation(location, font, dropZeroes)
+
+    if not outputNormalized:
+        location = {
+            tag: _denormalize(value, axes[tag]) for tag, value in location.items()
+        }
+
+    return location
+
+
+def main(args=None):
+    """Map variation coordinates through the `avar` table."""
+
+    from fontTools.ttLib import TTFont
+    import argparse
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    parser = argparse.ArgumentParser(
+        "fonttools varLib.avar.map",
+        description="Map variation coordinates through the `avar` table.",
+    )
+    parser.add_argument("font", metavar="varfont.ttf", help="Variable-font file.")
+    parser.add_argument(
+        "coords",
+        metavar="[AXIS=value...]",
+        help="Coordinates to map, e.g. 'wght=700 wdth=75'.",
+        nargs="*",
+        default=None,
+    )
+    parser.add_argument(
+        "-f", action="store_true", help="Do not omit axes at default location."
+    )
+    parser.add_argument(
+        "-i", action="store_true", help="Input coordinates are normalized (-1..1)."
+    )
+    parser.add_argument(
+        "-o", action="store_true", help="Output coordinates as normalized (-1..1)."
+    )
+
+    options = parser.parse_args(args)
+
+    if not options.coords:
+        parser.error(
+            "No coordinates provided. Please specify at least one axis coordinate (e.g., wght=500)"
+        )
+
+    if options.font.endswith(".designspace"):
+        from .build import build
+
+        font = TTFont()
+        build(font, options.font)
+    else:
+        font = TTFont(options.font)
+        if "fvar" not in font:
+            parser.error(f"Font '{options.font}' does not contain an 'fvar' table.")
+
+    location = {}
+    for item in options.coords:
+        tag, sep, value = item.partition("=")
+        if not sep or not tag or not value:
+            parser.error(
+                f"Invalid coordinate {item!r}. Expected AXIS=value, e.g. wght=500"
+            )
+        try:
+            location[tag] = float(value)
+        except ValueError:
+            parser.error(
+                f"Invalid coordinate value in {item!r}. Expected a number after '='"
+            )
+
+    try:
+        mapped = map(
+            font,
+            location,
+            inputNormalized=options.i,
+            outputNormalized=options.o,
+            dropZeroes=not options.f,
+        )
+    except ValueError as e:
+        parser.error(str(e))
+    assert mapped is not None
+
+    for tag in mapped:
+        v = mapped[tag]
+        v = int(v) if v == int(v) else v
+        print(f"{tag}={v:g}")
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

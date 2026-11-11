@@ -1,1 +1,101 @@
-ZnJvbSBmb250VG9vbHMucGVucy5maWx0ZXJQZW4gaW1wb3J0IENvbnRvdXJGaWx0ZXJQZW4KCgpjbGFzcyBFeHBsaWNpdENsb3NpbmdMaW5lUGVuKENvbnRvdXJGaWx0ZXJQZW4pOgogICAgIiIiQSBmaWx0ZXIgcGVuIHRoYXQgYWRkcyBhbiBleHBsaWNpdCBsaW5lVG8gdG8gdGhlIGZpcnN0IHBvaW50IG9mIGVhY2ggY2xvc2VkCiAgICBjb250b3VyIGlmIHRoZSBlbmQgcG9pbnQgb2YgdGhlIGxhc3Qgc2VnbWVudCBpcyBub3QgYWxyZWFkeSB0aGUgc2FtZSBhcyB0aGUgZmlyc3QgcG9pbnQuCiAgICBPdGhlcndpc2UsIGl0IHBhc3NlcyB0aGUgY29udG91ciB0aHJvdWdoIHVuY2hhbmdlZC4KCiAgICA+Pj4gZnJvbSBwcHJpbnQgaW1wb3J0IHBwcmludAogICAgPj4+IGZyb20gZm9udFRvb2xzLnBlbnMucmVjb3JkaW5nUGVuIGltcG9ydCBSZWNvcmRpbmdQZW4KICAgID4+PiByZWMgPSBSZWNvcmRpbmdQZW4oKQogICAgPj4+IHBlbiA9IEV4cGxpY2l0Q2xvc2luZ0xpbmVQZW4ocmVjKQogICAgPj4+IHBlbi5tb3ZlVG8oKDAsIDApKQogICAgPj4+IHBlbi5saW5lVG8oKDEwMCwgMCkpCiAgICA+Pj4gcGVuLmxpbmVUbygoMTAwLCAxMDApKQogICAgPj4+IHBlbi5jbG9zZVBhdGgoKQogICAgPj4+IHBwcmludChyZWMudmFsdWUpCiAgICBbKCdtb3ZlVG8nLCAoKDAsIDApLCkpLAogICAgICgnbGluZVRvJywgKCgxMDAsIDApLCkpLAogICAgICgnbGluZVRvJywgKCgxMDAsIDEwMCksKSksCiAgICAgKCdsaW5lVG8nLCAoKDAsIDApLCkpLAogICAgICgnY2xvc2VQYXRoJywgKCkpXQogICAgPj4+IHJlYyA9IFJlY29yZGluZ1BlbigpCiAgICA+Pj4gcGVuID0gRXhwbGljaXRDbG9zaW5nTGluZVBlbihyZWMpCiAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMCkpCiAgICA+Pj4gcGVuLmxpbmVUbygoMTAwLCAwKSkKICAgID4+PiBwZW4ubGluZVRvKCgxMDAsIDEwMCkpCiAgICA+Pj4gcGVuLmxpbmVUbygoMCwgMCkpCiAgICA+Pj4gcGVuLmNsb3NlUGF0aCgpCiAgICA+Pj4gcHByaW50KHJlYy52YWx1ZSkKICAgIFsoJ21vdmVUbycsICgoMCwgMCksKSksCiAgICAgKCdsaW5lVG8nLCAoKDEwMCwgMCksKSksCiAgICAgKCdsaW5lVG8nLCAoKDEwMCwgMTAwKSwpKSwKICAgICAoJ2xpbmVUbycsICgoMCwgMCksKSksCiAgICAgKCdjbG9zZVBhdGgnLCAoKSldCiAgICA+Pj4gcmVjID0gUmVjb3JkaW5nUGVuKCkKICAgID4+PiBwZW4gPSBFeHBsaWNpdENsb3NpbmdMaW5lUGVuKHJlYykKICAgID4+PiBwZW4ubW92ZVRvKCgwLCAwKSkKICAgID4+PiBwZW4uY3VydmVUbygoMTAwLCAwKSwgKDAsIDEwMCksICgxMDAsIDEwMCkpCiAgICA+Pj4gcGVuLmNsb3NlUGF0aCgpCiAgICA+Pj4gcHByaW50KHJlYy52YWx1ZSkKICAgIFsoJ21vdmVUbycsICgoMCwgMCksKSksCiAgICAgKCdjdXJ2ZVRvJywgKCgxMDAsIDApLCAoMCwgMTAwKSwgKDEwMCwgMTAwKSkpLAogICAgICgnbGluZVRvJywgKCgwLCAwKSwpKSwKICAgICAoJ2Nsb3NlUGF0aCcsICgpKV0KICAgID4+PiByZWMgPSBSZWNvcmRpbmdQZW4oKQogICAgPj4+IHBlbiA9IEV4cGxpY2l0Q2xvc2luZ0xpbmVQZW4ocmVjKQogICAgPj4+IHBlbi5tb3ZlVG8oKDAsIDApKQogICAgPj4+IHBlbi5jdXJ2ZVRvKCgxMDAsIDApLCAoMCwgMTAwKSwgKDEwMCwgMTAwKSkKICAgID4+PiBwZW4ubGluZVRvKCgwLCAwKSkKICAgID4+PiBwZW4uY2xvc2VQYXRoKCkKICAgID4+PiBwcHJpbnQocmVjLnZhbHVlKQogICAgWygnbW92ZVRvJywgKCgwLCAwKSwpKSwKICAgICAoJ2N1cnZlVG8nLCAoKDEwMCwgMCksICgwLCAxMDApLCAoMTAwLCAxMDApKSksCiAgICAgKCdsaW5lVG8nLCAoKDAsIDApLCkpLAogICAgICgnY2xvc2VQYXRoJywgKCkpXQogICAgPj4+IHJlYyA9IFJlY29yZGluZ1BlbigpCiAgICA+Pj4gcGVuID0gRXhwbGljaXRDbG9zaW5nTGluZVBlbihyZWMpCiAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMCkpCiAgICA+Pj4gcGVuLmN1cnZlVG8oKDEwMCwgMCksICgwLCAxMDApLCAoMCwgMCkpCiAgICA+Pj4gcGVuLmNsb3NlUGF0aCgpCiAgICA+Pj4gcHByaW50KHJlYy52YWx1ZSkKICAgIFsoJ21vdmVUbycsICgoMCwgMCksKSksCiAgICAgKCdjdXJ2ZVRvJywgKCgxMDAsIDApLCAoMCwgMTAwKSwgKDAsIDApKSksCiAgICAgKCdjbG9zZVBhdGgnLCAoKSldCiAgICA+Pj4gcmVjID0gUmVjb3JkaW5nUGVuKCkKICAgID4+PiBwZW4gPSBFeHBsaWNpdENsb3NpbmdMaW5lUGVuKHJlYykKICAgID4+PiBwZW4ubW92ZVRvKCgwLCAwKSkKICAgID4+PiBwZW4uY2xvc2VQYXRoKCkKICAgID4+PiBwcHJpbnQocmVjLnZhbHVlKQogICAgWygnbW92ZVRvJywgKCgwLCAwKSwpKSwgKCdjbG9zZVBhdGgnLCAoKSldCiAgICA+Pj4gcmVjID0gUmVjb3JkaW5nUGVuKCkKICAgID4+PiBwZW4gPSBFeHBsaWNpdENsb3NpbmdMaW5lUGVuKHJlYykKICAgID4+PiBwZW4uY2xvc2VQYXRoKCkKICAgID4+PiBwcHJpbnQocmVjLnZhbHVlKQogICAgWygnY2xvc2VQYXRoJywgKCkpXQogICAgPj4+IHJlYyA9IFJlY29yZGluZ1BlbigpCiAgICA+Pj4gcGVuID0gRXhwbGljaXRDbG9zaW5nTGluZVBlbihyZWMpCiAgICA+Pj4gcGVuLm1vdmVUbygoMCwgMCkpCiAgICA+Pj4gcGVuLmxpbmVUbygoMTAwLCAwKSkKICAgID4+PiBwZW4ubGluZVRvKCgxMDAsIDEwMCkpCiAgICA+Pj4gcGVuLmVuZFBhdGgoKQogICAgPj4+IHBwcmludChyZWMudmFsdWUpCiAgICBbKCdtb3ZlVG8nLCAoKDAsIDApLCkpLAogICAgICgnbGluZVRvJywgKCgxMDAsIDApLCkpLAogICAgICgnbGluZVRvJywgKCgxMDAsIDEwMCksKSksCiAgICAgKCdlbmRQYXRoJywgKCkpXQogICAgIiIiCgogICAgZGVmIGZpbHRlckNvbnRvdXIoc2VsZiwgY29udG91cik6CiAgICAgICAgaWYgKAogICAgICAgICAgICBub3QgY29udG91cgogICAgICAgICAgICBvciBjb250b3VyWzBdWzBdICE9ICJtb3ZlVG8iCiAgICAgICAgICAgIG9yIGNvbnRvdXJbLTFdWzBdICE9ICJjbG9zZVBhdGgiCiAgICAgICAgICAgIG9yIGxlbihjb250b3VyKSA8IDMKICAgICAgICApOgogICAgICAgICAgICByZXR1cm4KICAgICAgICBtb3ZlUHQgPSBjb250b3VyWzBdWzFdWzBdCiAgICAgICAgbGFzdFNlZyA9IGNvbnRvdXJbLTJdWzFdCiAgICAgICAgaWYgbGFzdFNlZyBhbmQgbW92ZVB0ICE9IGxhc3RTZWdbLTFdOgogICAgICAgICAgICBjb250b3VyWy0xOl0gPSBbKCJsaW5lVG8iLCAobW92ZVB0LCkpLCAoImNsb3NlUGF0aCIsICgpKV0K
+from fontTools.pens.filterPen import ContourFilterPen
+
+
+class ExplicitClosingLinePen(ContourFilterPen):
+    """A filter pen that adds an explicit lineTo to the first point of each closed
+    contour if the end point of the last segment is not already the same as the first point.
+    Otherwise, it passes the contour through unchanged.
+
+    >>> from pprint import pprint
+    >>> from fontTools.pens.recordingPen import RecordingPen
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.lineTo((100, 0))
+    >>> pen.lineTo((100, 100))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('lineTo', ((100, 0),)),
+     ('lineTo', ((100, 100),)),
+     ('lineTo', ((0, 0),)),
+     ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.lineTo((100, 0))
+    >>> pen.lineTo((100, 100))
+    >>> pen.lineTo((0, 0))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('lineTo', ((100, 0),)),
+     ('lineTo', ((100, 100),)),
+     ('lineTo', ((0, 0),)),
+     ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.curveTo((100, 0), (0, 100), (100, 100))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('curveTo', ((100, 0), (0, 100), (100, 100))),
+     ('lineTo', ((0, 0),)),
+     ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.curveTo((100, 0), (0, 100), (100, 100))
+    >>> pen.lineTo((0, 0))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('curveTo', ((100, 0), (0, 100), (100, 100))),
+     ('lineTo', ((0, 0),)),
+     ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.curveTo((100, 0), (0, 100), (0, 0))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('curveTo', ((100, 0), (0, 100), (0, 0))),
+     ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)), ('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.closePath()
+    >>> pprint(rec.value)
+    [('closePath', ())]
+    >>> rec = RecordingPen()
+    >>> pen = ExplicitClosingLinePen(rec)
+    >>> pen.moveTo((0, 0))
+    >>> pen.lineTo((100, 0))
+    >>> pen.lineTo((100, 100))
+    >>> pen.endPath()
+    >>> pprint(rec.value)
+    [('moveTo', ((0, 0),)),
+     ('lineTo', ((100, 0),)),
+     ('lineTo', ((100, 100),)),
+     ('endPath', ())]
+    """
+
+    def filterContour(self, contour):
+        if (
+            not contour
+            or contour[0][0] != "moveTo"
+            or contour[-1][0] != "closePath"
+            or len(contour) < 3
+        ):
+            return
+        movePt = contour[0][1][0]
+        lastSeg = contour[-2][1]
+        if lastSeg and movePt != lastSeg[-1]:
+            contour[-1:] = [("lineTo", (movePt,)), ("closePath", ())]

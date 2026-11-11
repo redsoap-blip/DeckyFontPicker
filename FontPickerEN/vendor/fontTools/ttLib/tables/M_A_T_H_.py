@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfTV9BX1RfSF8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJNYXRoZW1hdGljYWwgVHlwZXNldHRpbmcgdGFibGUKCiAgICBUaGUgYGBNQVRIYGAgdGFibGUgY29udGFpbnMgYSB2YXJpZXR5IG9mIGluZm9ybWF0aW9uIG5lZWRlZCB0bwogICAgdHlwZXNldCBnbHlwaHMgaW4gbWF0aGVtYXRpY2FsIGZvcm11bGFzIGFuZCBleHByZXNzaW9ucy4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL21hdGgKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table_M_A_T_H_(BaseTTXConverter):
+    """Mathematical Typesetting table
+
+    The ``MATH`` table contains a variety of information needed to
+    typeset glyphs in mathematical formulas and expressions.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/math
+    """
+
+    pass

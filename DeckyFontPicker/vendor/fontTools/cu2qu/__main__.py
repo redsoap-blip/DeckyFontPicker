@@ -1,1 +1,5 @@
-aW1wb3J0IHN5cwpmcm9tIC5jbGkgaW1wb3J0IF9tYWluIGFzIG1haW4KCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzeXMuZXhpdChtYWluKCkpCg==
+import sys
+from .cli import _main as main
+
+if __name__ == "__main__":
+    sys.exit(main())

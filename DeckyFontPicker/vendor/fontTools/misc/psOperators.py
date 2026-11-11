@@ -1,1 +1,572 @@
-X2FjY2Vzc3N0cmluZ3MgPSB7MDogIiIsIDE6ICJyZWFkb25seSIsIDI6ICJleGVjdXRlb25seSIsIDM6ICJub2FjY2VzcyJ9CgoKY2xhc3MgcHNfb2JqZWN0KG9iamVjdCk6CiAgICBsaXRlcmFsID0gMQogICAgYWNjZXNzID0gMAogICAgdmFsdWUgPSBOb25lCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHZhbHVlKToKICAgICAgICBzZWxmLnZhbHVlID0gdmFsdWUKICAgICAgICBzZWxmLnR5cGUgPSBzZWxmLl9fY2xhc3NfXy5fX25hbWVfX1szOl0gKyAidHlwZSIKCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgcmV0dXJuICI8JXMgJXM+IiAlIChzZWxmLl9fY2xhc3NfXy5fX25hbWVfX1szOl0sIHJlcHIoc2VsZi52YWx1ZSkpCgoKY2xhc3MgcHNfb3BlcmF0b3IocHNfb2JqZWN0KToKICAgIGxpdGVyYWwgPSAwCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIGZ1bmN0aW9uKToKICAgICAgICBzZWxmLm5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi5mdW5jdGlvbiA9IGZ1bmN0aW9uCiAgICAgICAgc2VsZi50eXBlID0gc2VsZi5fX2NsYXNzX18uX19uYW1lX19bMzpdICsgInR5cGUiCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiAiPG9wZXJhdG9yICVzPiIgJSBzZWxmLm5hbWUKCgpjbGFzcyBwc19wcm9jZWR1cmUocHNfb2JqZWN0KToKICAgIGxpdGVyYWwgPSAwCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiAiPHByb2NlZHVyZT4iCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcHNzdHJpbmcgPSAieyIKICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4oc2VsZi52YWx1ZSkpOgogICAgICAgICAgICBpZiBpOgogICAgICAgICAgICAgICAgcHNzdHJpbmcgPSBwc3N0cmluZyArICIgIiArIHN0cihzZWxmLnZhbHVlW2ldKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcHNzdHJpbmcgPSBwc3N0cmluZyArIHN0cihzZWxmLnZhbHVlW2ldKQogICAgICAgIHJldHVybiBwc3N0cmluZyArICJ9IgoKCmNsYXNzIHBzX25hbWUocHNfb2JqZWN0KToKICAgIGxpdGVyYWwgPSAwCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgaWYgc2VsZi5saXRlcmFsOgogICAgICAgICAgICByZXR1cm4gIi8iICsgc2VsZi52YWx1ZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiBzZWxmLnZhbHVlCgoKY2xhc3MgcHNfbGl0ZXJhbChwc19vYmplY3QpOgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuICIvIiArIHNlbGYudmFsdWUKCgpjbGFzcyBwc19hcnJheShwc19vYmplY3QpOgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcHNzdHJpbmcgPSAiWyIKICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4oc2VsZi52YWx1ZSkpOgogICAgICAgICAgICBpdGVtID0gc2VsZi52YWx1ZVtpXQogICAgICAgICAgICBhY2Nlc3MgPSBfYWNjZXNzc3RyaW5nc1tpdGVtLmFjY2Vzc10KICAgICAgICAgICAgaWYgYWNjZXNzOgogICAgICAgICAgICAgICAgYWNjZXNzID0gIiAiICsgYWNjZXNzCiAgICAgICAgICAgIGlmIGk6CiAgICAgICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgIiAiICsgc3RyKGl0ZW0pICsgYWNjZXNzCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgc3RyKGl0ZW0pICsgYWNjZXNzCiAgICAgICAgcmV0dXJuIHBzc3RyaW5nICsgIl0iCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiAiPGFycmF5PiIKCgpfdHlwZTFfcHJlX2VleGVjX29yZGVyID0gWwogICAgIkZvbnRJbmZvIiwKICAgICJGb250TmFtZSIsCiAgICAiRW5jb2RpbmciLAogICAgIlBhaW50VHlwZSIsCiAgICAiRm9udFR5cGUiLAogICAgIkZvbnRNYXRyaXgiLAogICAgIkZvbnRCQm94IiwKICAgICJVbmlxdWVJRCIsCiAgICAiTWV0cmljcyIsCiAgICAiU3Ryb2tlV2lkdGgiLApdCgpfdHlwZTFfZm9udGluZm9fb3JkZXIgPSBbCiAgICAidmVyc2lvbiIsCiAgICAiTm90aWNlIiwKICAgICJGdWxsTmFtZSIsCiAgICAiRmFtaWx5TmFtZSIsCiAgICAiV2VpZ2h0IiwKICAgICJJdGFsaWNBbmdsZSIsCiAgICAiaXNGaXhlZFBpdGNoIiwKICAgICJVbmRlcmxpbmVQb3NpdGlvbiIsCiAgICAiVW5kZXJsaW5lVGhpY2tuZXNzIiwKXQoKX3R5cGUxX3Bvc3RfZWV4ZWNfb3JkZXIgPSBbIlByaXZhdGUiLCAiQ2hhclN0cmluZ3MiLCAiRklEIl0KCgpkZWYgX3R5cGUxX2l0ZW1fcmVwcihrZXksIHZhbHVlKToKICAgIHBzc3RyaW5nID0gIiIKICAgIGFjY2VzcyA9IF9hY2Nlc3NzdHJpbmdzW3ZhbHVlLmFjY2Vzc10KICAgIGlmIGFjY2VzczoKICAgICAgICBhY2Nlc3MgPSBhY2Nlc3MgKyAiICIKICAgIGlmIGtleSA9PSAiQ2hhclN0cmluZ3MiOgogICAgICAgIHBzc3RyaW5nID0gcHNzdHJpbmcgKyAiLyVzICVzIGRlZlxuIiAlICgKICAgICAgICAgICAga2V5LAogICAgICAgICAgICBfdHlwZTFfQ2hhclN0cmluZ19yZXByKHZhbHVlLnZhbHVlKSwKICAgICAgICApCiAgICBlbGlmIGtleSA9PSAiRW5jb2RpbmciOgogICAgICAgIHBzc3RyaW5nID0gcHNzdHJpbmcgKyBfdHlwZTFfRW5jb2RpbmdfcmVwcih2YWx1ZSwgYWNjZXNzKQogICAgZWxzZToKICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgIi8lcyAlcyAlc2RlZlxuIiAlIChzdHIoa2V5KSwgc3RyKHZhbHVlKSwgYWNjZXNzKQogICAgcmV0dXJuIHBzc3RyaW5nCgoKZGVmIF90eXBlMV9FbmNvZGluZ19yZXByKGVuY29kaW5nLCBhY2Nlc3MpOgogICAgZW5jb2RpbmcgPSBlbmNvZGluZy52YWx1ZQogICAgcHNzdHJpbmcgPSAiL0VuY29kaW5nIDI1NiBhcnJheVxuMCAxIDI1NSB7MSBpbmRleCBleGNoIC8ubm90ZGVmIHB1dH0gZm9yXG4iCiAgICBmb3IgaSBpbiByYW5nZSgyNTYpOgogICAgICAgIG5hbWUgPSBlbmNvZGluZ1tpXS52YWx1ZQogICAgICAgIGlmIG5hbWUgIT0gIi5ub3RkZWYiOgogICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgImR1cCAlZCAvJXMgcHV0XG4iICUgKGksIG5hbWUpCiAgICByZXR1cm4gcHNzdHJpbmcgKyBhY2Nlc3MgKyAiZGVmXG4iCgoKZGVmIF90eXBlMV9DaGFyU3RyaW5nX3JlcHIoY2hhcnN0cmluZ3MpOgogICAgaXRlbXMgPSBzb3J0ZWQoY2hhcnN0cmluZ3MuaXRlbXMoKSkKICAgIHJldHVybiAieHh4IgoKCmNsYXNzIHBzX2ZvbnQocHNfb2JqZWN0KToKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHBzc3RyaW5nID0gIiVkIGRpY3QgZHVwIGJlZ2luXG4iICUgbGVuKHNlbGYudmFsdWUpCiAgICAgICAgZm9yIGtleSBpbiBfdHlwZTFfcHJlX2VleGVjX29yZGVyOgogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IHNlbGYudmFsdWVba2V5XQogICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICBwYXNzCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgX3R5cGUxX2l0ZW1fcmVwcihrZXksIHZhbHVlKQogICAgICAgIGl0ZW1zID0gc29ydGVkKHNlbGYudmFsdWUuaXRlbXMoKSkKICAgICAgICBmb3Iga2V5LCB2YWx1ZSBpbiBpdGVtczoKICAgICAgICAgICAgaWYga2V5IG5vdCBpbiBfdHlwZTFfcHJlX2VleGVjX29yZGVyICsgX3R5cGUxX3Bvc3RfZWV4ZWNfb3JkZXI6CiAgICAgICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgX3R5cGUxX2l0ZW1fcmVwcihrZXksIHZhbHVlKQogICAgICAgIHBzc3RyaW5nID0gcHNzdHJpbmcgKyAiY3VycmVudGRpY3QgZW5kXG5jdXJyZW50ZmlsZSBlZXhlY1xuZHVwICIKICAgICAgICBmb3Iga2V5IGluIF90eXBlMV9wb3N0X2VleGVjX29yZGVyOgogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IHNlbGYudmFsdWVba2V5XQogICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICBwYXNzCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgX3R5cGUxX2l0ZW1fcmVwcihrZXksIHZhbHVlKQogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIHBzc3RyaW5nCiAgICAgICAgICAgICsgImR1cC9Gb250TmFtZSBnZXQgZXhjaCBkZWZpbmVmb250IHBvcFxubWFyayBjdXJyZW50ZmlsZSBjbG9zZWZpbGVcbiIKICAgICAgICAgICAgKyA4ICogKDY0ICogIjAiICsgIlxuIikKICAgICAgICAgICAgKyAiY2xlYXJ0b21hcmsiCiAgICAgICAgICAgICsgIlxuIgogICAgICAgICkKCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgcmV0dXJuICI8Zm9udD4iCgoKY2xhc3MgcHNfZmlsZShwc19vYmplY3QpOgogICAgcGFzcwoKCmNsYXNzIHBzX2RpY3QocHNfb2JqZWN0KToKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHBzc3RyaW5nID0gIiVkIGRpY3QgZHVwIGJlZ2luXG4iICUgbGVuKHNlbGYudmFsdWUpCiAgICAgICAgaXRlbXMgPSBzb3J0ZWQoc2VsZi52YWx1ZS5pdGVtcygpKQogICAgICAgIGZvciBrZXksIHZhbHVlIGluIGl0ZW1zOgogICAgICAgICAgICBhY2Nlc3MgPSBfYWNjZXNzc3RyaW5nc1t2YWx1ZS5hY2Nlc3NdCiAgICAgICAgICAgIGlmIGFjY2VzczoKICAgICAgICAgICAgICAgIGFjY2VzcyA9IGFjY2VzcyArICIgIgogICAgICAgICAgICBwc3N0cmluZyA9IHBzc3RyaW5nICsgIi8lcyAlcyAlc2RlZlxuIiAlIChzdHIoa2V5KSwgc3RyKHZhbHVlKSwgYWNjZXNzKQogICAgICAgIHJldHVybiBwc3N0cmluZyArICJlbmQgIgoKICAgIGRlZiBfX3JlcHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gIjxkaWN0PiIKCgpjbGFzcyBwc19tYXJrKHBzX29iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi52YWx1ZSA9ICJtYXJrIgogICAgICAgIHNlbGYudHlwZSA9IHNlbGYuX19jbGFzc19fLl9fbmFtZV9fWzM6XSArICJ0eXBlIgoKCmNsYXNzIHBzX3Byb2NtYXJrKHBzX29iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi52YWx1ZSA9ICJwcm9jbWFyayIKICAgICAgICBzZWxmLnR5cGUgPSBzZWxmLl9fY2xhc3NfXy5fX25hbWVfX1szOl0gKyAidHlwZSIKCgpjbGFzcyBwc19udWxsKHBzX29iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi50eXBlID0gc2VsZi5fX2NsYXNzX18uX19uYW1lX19bMzpdICsgInR5cGUiCgoKY2xhc3MgcHNfYm9vbGVhbihwc19vYmplY3QpOgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgaWYgc2VsZi52YWx1ZToKICAgICAgICAgICAgcmV0dXJuICJ0cnVlIgogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiAiZmFsc2UiCgoKY2xhc3MgcHNfc3RyaW5nKHBzX29iamVjdCk6CiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gIiglcykiICUgcmVwcihzZWxmLnZhbHVlKVsxOi0xXQoKCmNsYXNzIHBzX2ludGVnZXIocHNfb2JqZWN0KToKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJldHVybiByZXByKHNlbGYudmFsdWUpCgoKY2xhc3MgcHNfcmVhbChwc19vYmplY3QpOgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIHJlcHIoc2VsZi52YWx1ZSkKCgpjbGFzcyBQU09wZXJhdG9ycyhvYmplY3QpOgogICAgZGVmIHBzX2RlZihzZWxmKToKICAgICAgICBvYmogPSBzZWxmLnBvcCgpCiAgICAgICAgbmFtZSA9IHNlbGYucG9wKCkKICAgICAgICBzZWxmLmRpY3RzdGFja1stMV1bbmFtZS52YWx1ZV0gPSBvYmoKCiAgICBkZWYgcHNfYmluZChzZWxmKToKICAgICAgICBwcm9jID0gc2VsZi5wb3AoInByb2NlZHVyZXR5cGUiKQogICAgICAgIHNlbGYucHJvY19iaW5kKHByb2MpCiAgICAgICAgc2VsZi5wdXNoKHByb2MpCgogICAgZGVmIHByb2NfYmluZChzZWxmLCBwcm9jKToKICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4ocHJvYy52YWx1ZSkpOgogICAgICAgICAgICBpdGVtID0gcHJvYy52YWx1ZVtpXQogICAgICAgICAgICBpZiBpdGVtLnR5cGUgPT0gInByb2NlZHVyZXR5cGUiOgogICAgICAgICAgICAgICAgc2VsZi5wcm9jX2JpbmQoaXRlbSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGlmIG5vdCBpdGVtLmxpdGVyYWw6CiAgICAgICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgICAgICBvYmogPSBzZWxmLnJlc29sdmVfbmFtZShpdGVtLnZhbHVlKQogICAgICAgICAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIG9iai50eXBlID09ICJvcGVyYXRvcnR5cGUiOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgcHJvYy52YWx1ZVtpXSA9IG9iagoKICAgIGRlZiBwc19leGNoKHNlbGYpOgogICAgICAgIGlmIGxlbihzZWxmLnN0YWNrKSA8IDI6CiAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigic3RhY2sgdW5kZXJmbG93IikKICAgICAgICBvYmoxID0gc2VsZi5wb3AoKQogICAgICAgIG9iajIgPSBzZWxmLnBvcCgpCiAgICAgICAgc2VsZi5wdXNoKG9iajEpCiAgICAgICAgc2VsZi5wdXNoKG9iajIpCgogICAgZGVmIHBzX2R1cChzZWxmKToKICAgICAgICBpZiBub3Qgc2VsZi5zdGFjazoKICAgICAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJzdGFjayB1bmRlcmZsb3ciKQogICAgICAgIHNlbGYucHVzaChzZWxmLnN0YWNrWy0xXSkKCiAgICBkZWYgcHNfZXhlYyhzZWxmKToKICAgICAgICBvYmogPSBzZWxmLnBvcCgpCiAgICAgICAgaWYgb2JqLnR5cGUgPT0gInByb2NlZHVyZXR5cGUiOgogICAgICAgICAgICBzZWxmLmNhbGxfcHJvY2VkdXJlKG9iaikKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmhhbmRsZV9vYmplY3Qob2JqKQoKICAgIGRlZiBwc19jb3VudChzZWxmKToKICAgICAgICBzZWxmLnB1c2gocHNfaW50ZWdlcihsZW4oc2VsZi5zdGFjaykpKQoKICAgIGRlZiBwc19lcShzZWxmKToKICAgICAgICBhbnkxID0gc2VsZi5wb3AoKQogICAgICAgIGFueTIgPSBzZWxmLnBvcCgpCiAgICAgICAgc2VsZi5wdXNoKHBzX2Jvb2xlYW4oYW55MS52YWx1ZSA9PSBhbnkyLnZhbHVlKSkKCiAgICBkZWYgcHNfbmUoc2VsZik6CiAgICAgICAgYW55MSA9IHNlbGYucG9wKCkKICAgICAgICBhbnkyID0gc2VsZi5wb3AoKQogICAgICAgIHNlbGYucHVzaChwc19ib29sZWFuKGFueTEudmFsdWUgIT0gYW55Mi52YWx1ZSkpCgogICAgZGVmIHBzX2N2eChzZWxmKToKICAgICAgICBvYmogPSBzZWxmLnBvcCgpCiAgICAgICAgb2JqLmxpdGVyYWwgPSAwCiAgICAgICAgc2VsZi5wdXNoKG9iaikKCiAgICBkZWYgcHNfbWF0cml4KHNlbGYpOgogICAgICAgIG1hdHJpeCA9IFsKICAgICAgICAgICAgcHNfcmVhbCgxLjApLAogICAgICAgICAgICBwc19pbnRlZ2VyKDApLAogICAgICAgICAgICBwc19pbnRlZ2VyKDApLAogICAgICAgICAgICBwc19yZWFsKDEuMCksCiAgICAgICAgICAgIHBzX2ludGVnZXIoMCksCiAgICAgICAgICAgIHBzX2ludGVnZXIoMCksCiAgICAgICAgXQogICAgICAgIHNlbGYucHVzaChwc19hcnJheShtYXRyaXgpKQoKICAgIGRlZiBwc19zdHJpbmcoc2VsZik6CiAgICAgICAgbnVtID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIikudmFsdWUKICAgICAgICBzZWxmLnB1c2gocHNfc3RyaW5nKCJcMCIgKiBudW0pKQoKICAgIGRlZiBwc190eXBlKHNlbGYpOgogICAgICAgIG9iaiA9IHNlbGYucG9wKCkKICAgICAgICBzZWxmLnB1c2gocHNfc3RyaW5nKG9iai50eXBlKSkKCiAgICBkZWYgcHNfc3RvcmUoc2VsZik6CiAgICAgICAgdmFsdWUgPSBzZWxmLnBvcCgpCiAgICAgICAga2V5ID0gc2VsZi5wb3AoKQogICAgICAgIG5hbWUgPSBrZXkudmFsdWUKICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4oc2VsZi5kaWN0c3RhY2spIC0gMSwgLTEsIC0xKToKICAgICAgICAgICAgaWYgbmFtZSBpbiBzZWxmLmRpY3RzdGFja1tpXToKICAgICAgICAgICAgICAgIHNlbGYuZGljdHN0YWNrW2ldW25hbWVdID0gdmFsdWUKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgc2VsZi5kaWN0c3RhY2tbLTFdW25hbWVdID0gdmFsdWUKCiAgICBkZWYgcHNfd2hlcmUoc2VsZik6CiAgICAgICAgbmFtZSA9IHNlbGYucG9wKCkKICAgICAgICAjIFhYWAogICAgICAgIHNlbGYucHVzaChwc19ib29sZWFuKDApKQoKICAgIGRlZiBwc19zeXN0ZW1kaWN0KHNlbGYpOgogICAgICAgIHNlbGYucHVzaChwc19kaWN0KHNlbGYuZGljdHN0YWNrWzBdKSkKCiAgICBkZWYgcHNfdXNlcmRpY3Qoc2VsZik6CiAgICAgICAgc2VsZi5wdXNoKHBzX2RpY3Qoc2VsZi5kaWN0c3RhY2tbMV0pKQoKICAgIGRlZiBwc19jdXJyZW50ZGljdChzZWxmKToKICAgICAgICBzZWxmLnB1c2gocHNfZGljdChzZWxmLmRpY3RzdGFja1stMV0pKQoKICAgIGRlZiBwc19jdXJyZW50ZmlsZShzZWxmKToKICAgICAgICBzZWxmLnB1c2gocHNfZmlsZShzZWxmLnRva2VuaXplcikpCgogICAgZGVmIHBzX2VleGVjKHNlbGYpOgogICAgICAgIGYgPSBzZWxmLnBvcCgiZmlsZXR5cGUiKS52YWx1ZQogICAgICAgIGYuc3RhcnRlZXhlYygpCgogICAgZGVmIHBzX2Nsb3NlZmlsZShzZWxmKToKICAgICAgICBmID0gc2VsZi5wb3AoImZpbGV0eXBlIikudmFsdWUKICAgICAgICBmLnNraXB3aGl0ZSgpCiAgICAgICAgZi5zdG9wZWV4ZWMoKQoKICAgIGRlZiBwc19jbGVhcnRvbWFyayhzZWxmKToKICAgICAgICBvYmogPSBzZWxmLnBvcCgpCiAgICAgICAgd2hpbGUgb2JqICE9IHNlbGYubWFyazoKICAgICAgICAgICAgb2JqID0gc2VsZi5wb3AoKQoKICAgIGRlZiBwc19yZWFkc3RyaW5nKHNlbGYsIHBzX2Jvb2xlYW49cHNfYm9vbGVhbiwgbGVuPWxlbik6CiAgICAgICAgcyA9IHNlbGYucG9wKCJzdHJpbmd0eXBlIikKICAgICAgICBvbGRzdHIgPSBzLnZhbHVlCiAgICAgICAgZiA9IHNlbGYucG9wKCJmaWxldHlwZSIpCiAgICAgICAgIyBwYWQgPSBmaWxlLnZhbHVlLnJlYWQoMSkKICAgICAgICAjIGZvciBTdHJpbmdJTywgdGhpcyBpcyBmYXN0ZXIKICAgICAgICBmLnZhbHVlLnBvcyA9IGYudmFsdWUucG9zICsgMQogICAgICAgIG5ld3N0ciA9IGYudmFsdWUucmVhZChsZW4ob2xkc3RyKSkKICAgICAgICBzLnZhbHVlID0gbmV3c3RyCiAgICAgICAgc2VsZi5wdXNoKHMpCiAgICAgICAgc2VsZi5wdXNoKHBzX2Jvb2xlYW4obGVuKG9sZHN0cikgPT0gbGVuKG5ld3N0cikpKQoKICAgIGRlZiBwc19rbm93bihzZWxmKToKICAgICAgICBrZXkgPSBzZWxmLnBvcCgpCiAgICAgICAgZCA9IHNlbGYucG9wKCJkaWN0dHlwZSIsICJmb250dHlwZSIpCiAgICAgICAgc2VsZi5wdXNoKHBzX2Jvb2xlYW4oa2V5LnZhbHVlIGluIGQudmFsdWUpKQoKICAgIGRlZiBwc19pZihzZWxmKToKICAgICAgICBwcm9jID0gc2VsZi5wb3AoInByb2NlZHVyZXR5cGUiKQogICAgICAgIGlmIHNlbGYucG9wKCJib29sZWFudHlwZSIpLnZhbHVlOgogICAgICAgICAgICBzZWxmLmNhbGxfcHJvY2VkdXJlKHByb2MpCgogICAgZGVmIHBzX2lmZWxzZShzZWxmKToKICAgICAgICBwcm9jMiA9IHNlbGYucG9wKCJwcm9jZWR1cmV0eXBlIikKICAgICAgICBwcm9jMSA9IHNlbGYucG9wKCJwcm9jZWR1cmV0eXBlIikKICAgICAgICBpZiBzZWxmLnBvcCgiYm9vbGVhbnR5cGUiKS52YWx1ZToKICAgICAgICAgICAgc2VsZi5jYWxsX3Byb2NlZHVyZShwcm9jMSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmNhbGxfcHJvY2VkdXJlKHByb2MyKQoKICAgIGRlZiBwc19yZWFkb25seShzZWxmKToKICAgICAgICBvYmogPSBzZWxmLnBvcCgpCiAgICAgICAgaWYgb2JqLmFjY2VzcyA8IDE6CiAgICAgICAgICAgIG9iai5hY2Nlc3MgPSAxCiAgICAgICAgc2VsZi5wdXNoKG9iaikKCiAgICBkZWYgcHNfZXhlY3V0ZW9ubHkoc2VsZik6CiAgICAgICAgb2JqID0gc2VsZi5wb3AoKQogICAgICAgIGlmIG9iai5hY2Nlc3MgPCAyOgogICAgICAgICAgICBvYmouYWNjZXNzID0gMgogICAgICAgIHNlbGYucHVzaChvYmopCgogICAgZGVmIHBzX25vYWNjZXNzKHNlbGYpOgogICAgICAgIG9iaiA9IHNlbGYucG9wKCkKICAgICAgICBpZiBvYmouYWNjZXNzIDwgMzoKICAgICAgICAgICAgb2JqLmFjY2VzcyA9IDMKICAgICAgICBzZWxmLnB1c2gob2JqKQoKICAgIGRlZiBwc19ub3Qoc2VsZik6CiAgICAgICAgb2JqID0gc2VsZi5wb3AoImJvb2xlYW50eXBlIiwgImludGVnZXJ0eXBlIikKICAgICAgICBpZiBvYmoudHlwZSA9PSAiYm9vbGVhbnR5cGUiOgogICAgICAgICAgICBzZWxmLnB1c2gocHNfYm9vbGVhbihub3Qgb2JqLnZhbHVlKSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLnB1c2gocHNfaW50ZWdlcih+b2JqLnZhbHVlKSkKCiAgICBkZWYgcHNfcHJpbnQoc2VsZik6CiAgICAgICAgc3RyID0gc2VsZi5wb3AoInN0cmluZ3R5cGUiKQogICAgICAgIHByaW50KCJQUyBvdXRwdXQgLS0tPiIsIHN0ci52YWx1ZSkKCiAgICBkZWYgcHNfYW5jaG9yc2VhcmNoKHNlbGYpOgogICAgICAgIHNlZWsgPSBzZWxmLnBvcCgic3RyaW5ndHlwZSIpCiAgICAgICAgcyA9IHNlbGYucG9wKCJzdHJpbmd0eXBlIikKICAgICAgICBzZWVrbGVuID0gbGVuKHNlZWsudmFsdWUpCiAgICAgICAgaWYgcy52YWx1ZVs6c2Vla2xlbl0gPT0gc2Vlay52YWx1ZToKICAgICAgICAgICAgc2VsZi5wdXNoKHBzX3N0cmluZyhzLnZhbHVlW3NlZWtsZW46XSkpCiAgICAgICAgICAgIHNlbGYucHVzaChzZWVrKQogICAgICAgICAgICBzZWxmLnB1c2gocHNfYm9vbGVhbigxKSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLnB1c2gocykKICAgICAgICAgICAgc2VsZi5wdXNoKHBzX2Jvb2xlYW4oMCkpCgogICAgZGVmIHBzX2FycmF5KHNlbGYpOgogICAgICAgIG51bSA9IHNlbGYucG9wKCJpbnRlZ2VydHlwZSIpCiAgICAgICAgYXJyYXkgPSBwc19hcnJheShbTm9uZV0gKiBudW0udmFsdWUpCiAgICAgICAgc2VsZi5wdXNoKGFycmF5KQoKICAgIGRlZiBwc19hc3RvcmUoc2VsZik6CiAgICAgICAgYXJyYXkgPSBzZWxmLnBvcCgiYXJyYXl0eXBlIikKICAgICAgICBmb3IgaSBpbiByYW5nZShsZW4oYXJyYXkudmFsdWUpIC0gMSwgLTEsIC0xKToKICAgICAgICAgICAgYXJyYXkudmFsdWVbaV0gPSBzZWxmLnBvcCgpCiAgICAgICAgc2VsZi5wdXNoKGFycmF5KQoKICAgIGRlZiBwc19sb2FkKHNlbGYpOgogICAgICAgIG5hbWUgPSBzZWxmLnBvcCgpCiAgICAgICAgc2VsZi5wdXNoKHNlbGYucmVzb2x2ZV9uYW1lKG5hbWUudmFsdWUpKQoKICAgIGRlZiBwc19wdXQoc2VsZik6CiAgICAgICAgb2JqMSA9IHNlbGYucG9wKCkKICAgICAgICBvYmoyID0gc2VsZi5wb3AoKQogICAgICAgIG9iajMgPSBzZWxmLnBvcCgiYXJyYXl0eXBlIiwgImRpY3R0eXBlIiwgInN0cmluZ3R5cGUiLCAicHJvY2VkdXJldHlwZSIpCiAgICAgICAgdHAgPSBvYmozLnR5cGUKICAgICAgICBpZiB0cCA9PSAiYXJyYXl0eXBlIiBvciB0cCA9PSAicHJvY2VkdXJldHlwZSI6CiAgICAgICAgICAgIG9iajMudmFsdWVbb2JqMi52YWx1ZV0gPSBvYmoxCiAgICAgICAgZWxpZiB0cCA9PSAiZGljdHR5cGUiOgogICAgICAgICAgICBvYmozLnZhbHVlW29iajIudmFsdWVdID0gb2JqMQogICAgICAgIGVsaWYgdHAgPT0gInN0cmluZ3R5cGUiOgogICAgICAgICAgICBpbmRleCA9IG9iajIudmFsdWUKICAgICAgICAgICAgb2JqMy52YWx1ZSA9IG9iajMudmFsdWVbOmluZGV4XSArIGNocihvYmoxLnZhbHVlKSArIG9iajMudmFsdWVbaW5kZXggKyAxIDpdCgogICAgZGVmIHBzX2dldChzZWxmKToKICAgICAgICBvYmoxID0gc2VsZi5wb3AoKQogICAgICAgIGlmIG9iajEudmFsdWUgPT0gIkVuY29kaW5nIjoKICAgICAgICAgICAgcGFzcwogICAgICAgIG9iajIgPSBzZWxmLnBvcCgKICAgICAgICAgICAgImFycmF5dHlwZSIsICJkaWN0dHlwZSIsICJzdHJpbmd0eXBlIiwgInByb2NlZHVyZXR5cGUiLCAiZm9udHR5cGUiCiAgICAgICAgKQogICAgICAgIHRwID0gb2JqMi50eXBlCiAgICAgICAgaWYgdHAgaW4gKCJhcnJheXR5cGUiLCAicHJvY2VkdXJldHlwZSIpOgogICAgICAgICAgICBzZWxmLnB1c2gob2JqMi52YWx1ZVtvYmoxLnZhbHVlXSkKICAgICAgICBlbGlmIHRwIGluICgiZGljdHR5cGUiLCAiZm9udHR5cGUiKToKICAgICAgICAgICAgc2VsZi5wdXNoKG9iajIudmFsdWVbb2JqMS52YWx1ZV0pCiAgICAgICAgZWxpZiB0cCA9PSAic3RyaW5ndHlwZSI6CiAgICAgICAgICAgIHNlbGYucHVzaChwc19pbnRlZ2VyKG9yZChvYmoyLnZhbHVlW29iajEudmFsdWVdKSkpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgYXNzZXJ0IEZhbHNlLCAic2hvdWxkbid0IGdldCBoZXJlIgoKICAgIGRlZiBwc19nZXRpbnRlcnZhbChzZWxmKToKICAgICAgICBvYmoxID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIikKICAgICAgICBvYmoyID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIikKICAgICAgICBvYmozID0gc2VsZi5wb3AoImFycmF5dHlwZSIsICJzdHJpbmd0eXBlIikKICAgICAgICB0cCA9IG9iajMudHlwZQogICAgICAgIGlmIHRwID09ICJhcnJheXR5cGUiOgogICAgICAgICAgICBzZWxmLnB1c2gocHNfYXJyYXkob2JqMy52YWx1ZVtvYmoyLnZhbHVlIDogb2JqMi52YWx1ZSArIG9iajEudmFsdWVdKSkKICAgICAgICBlbGlmIHRwID09ICJzdHJpbmd0eXBlIjoKICAgICAgICAgICAgc2VsZi5wdXNoKHBzX3N0cmluZyhvYmozLnZhbHVlW29iajIudmFsdWUgOiBvYmoyLnZhbHVlICsgb2JqMS52YWx1ZV0pKQoKICAgIGRlZiBwc19wdXRpbnRlcnZhbChzZWxmKToKICAgICAgICBvYmoxID0gc2VsZi5wb3AoImFycmF5dHlwZSIsICJzdHJpbmd0eXBlIikKICAgICAgICBvYmoyID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIikKICAgICAgICBvYmozID0gc2VsZi5wb3AoImFycmF5dHlwZSIsICJzdHJpbmd0eXBlIikKICAgICAgICB0cCA9IG9iajMudHlwZQogICAgICAgIGlmIHRwID09ICJhcnJheXR5cGUiOgogICAgICAgICAgICBvYmozLnZhbHVlW29iajIudmFsdWUgOiBvYmoyLnZhbHVlICsgbGVuKG9iajEudmFsdWUpXSA9IG9iajEudmFsdWUKICAgICAgICBlbGlmIHRwID09ICJzdHJpbmd0eXBlIjoKICAgICAgICAgICAgbmV3c3RyID0gb2JqMy52YWx1ZVs6IG9iajIudmFsdWVdCiAgICAgICAgICAgIG5ld3N0ciA9IG5ld3N0ciArIG9iajEudmFsdWUKICAgICAgICAgICAgbmV3c3RyID0gbmV3c3RyICsgb2JqMy52YWx1ZVtvYmoyLnZhbHVlICsgbGVuKG9iajEudmFsdWUpIDpdCiAgICAgICAgICAgIG9iajMudmFsdWUgPSBuZXdzdHIKCiAgICBkZWYgcHNfY3ZuKHNlbGYpOgogICAgICAgIHNlbGYucHVzaChwc19uYW1lKHNlbGYucG9wKCJzdHJpbmd0eXBlIikudmFsdWUpKQoKICAgIGRlZiBwc19pbmRleChzZWxmKToKICAgICAgICBuID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIikudmFsdWUKICAgICAgICBpZiBuIDwgMDoKICAgICAgICAgICAgcmFpc2UgUnVudGltZUVycm9yKCJpbmRleCBtYXkgbm90IGJlIG5lZ2F0aXZlIikKICAgICAgICBzZWxmLnB1c2goc2VsZi5zdGFja1stMSAtIG5dKQoKICAgIGRlZiBwc19mb3Ioc2VsZik6CiAgICAgICAgcHJvYyA9IHNlbGYucG9wKCJwcm9jZWR1cmV0eXBlIikKICAgICAgICBsaW1pdCA9IHNlbGYucG9wKCJpbnRlZ2VydHlwZSIsICJyZWFsdHlwZSIpLnZhbHVlCiAgICAgICAgaW5jcmVtZW50ID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIiwgInJlYWx0eXBlIikudmFsdWUKICAgICAgICBpID0gc2VsZi5wb3AoImludGVnZXJ0eXBlIiwgInJlYWx0eXBlIikudmFsdWUKICAgICAgICB3aGlsZSAxOgogICAgICAgICAgICBpZiBpbmNyZW1lbnQgPiAwOgogICAgICAgICAgICAgICAgaWYgaSA+IGxpbWl0OgogICAgICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBpZiBpIDwgbGltaXQ6CiAgICAgICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgaWYgdHlwZShpKSA9PSB0eXBlKDAuMCk6CiAgICAgICAgICAgICAgICBzZWxmLnB1c2gocHNfcmVhbChpKSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHNlbGYucHVzaChwc19pbnRlZ2VyKGkpKQogICAgICAgICAgICBzZWxmLmNhbGxfcHJvY2VkdXJlKHByb2MpCiAgICAgICAgICAgIGkgPSBpICsgaW5jcmVtZW50CgogICAgZGVmIHBzX2ZvcmFsbChzZWxmKToKICAgICAgICBwcm9jID0gc2VsZi5wb3AoInByb2NlZHVyZXR5cGUiKQogICAgICAgIG9iaiA9IHNlbGYucG9wKCJhcnJheXR5cGUiLCAic3RyaW5ndHlwZSIsICJkaWN0dHlwZSIpCiAgICAgICAgdHAgPSBvYmoudHlwZQogICAgICAgIGlmIHRwID09ICJhcnJheXR5cGUiOgogICAgICAgICAgICBmb3IgaXRlbSBpbiBvYmoudmFsdWU6CiAgICAgICAgICAgICAgICBzZWxmLnB1c2goaXRlbSkKICAgICAgICAgICAgICAgIHNlbGYuY2FsbF9wcm9jZWR1cmUocHJvYykKICAgICAgICBlbGlmIHRwID09ICJzdHJpbmd0eXBlIjoKICAgICAgICAgICAgZm9yIGl0ZW0gaW4gb2JqLnZhbHVlOgogICAgICAgICAgICAgICAgc2VsZi5wdXNoKHBzX2ludGVnZXIob3JkKGl0ZW0pKSkKICAgICAgICAgICAgICAgIHNlbGYuY2FsbF9wcm9jZWR1cmUocHJvYykKICAgICAgICBlbGlmIHRwID09ICJkaWN0dHlwZSI6CiAgICAgICAgICAgIGZvciBrZXksIHZhbHVlIGluIG9iai52YWx1ZS5pdGVtcygpOgogICAgICAgICAgICAgICAgc2VsZi5wdXNoKHBzX25hbWUoa2V5KSkKICAgICAgICAgICAgICAgIHNlbGYucHVzaCh2YWx1ZSkKICAgICAgICAgICAgICAgIHNlbGYuY2FsbF9wcm9jZWR1cmUocHJvYykKCiAgICBkZWYgcHNfZGVmaW5lZm9udChzZWxmKToKICAgICAgICBmb250ID0gc2VsZi5wb3AoImRpY3R0eXBlIikKICAgICAgICBuYW1lID0gc2VsZi5wb3AoKQogICAgICAgIGZvbnQgPSBwc19mb250KGZvbnQudmFsdWUpCiAgICAgICAgc2VsZi5kaWN0c3RhY2tbMF1bIkZvbnREaXJlY3RvcnkiXS52YWx1ZVtuYW1lLnZhbHVlXSA9IGZvbnQKICAgICAgICBzZWxmLnB1c2goZm9udCkKCiAgICBkZWYgcHNfZmluZGZvbnQoc2VsZik6CiAgICAgICAgbmFtZSA9IHNlbGYucG9wKCkKICAgICAgICBmb250ID0gc2VsZi5kaWN0c3RhY2tbMF1bIkZvbnREaXJlY3RvcnkiXS52YWx1ZVtuYW1lLnZhbHVlXQogICAgICAgIHNlbGYucHVzaChmb250KQoKICAgIGRlZiBwc19wb3Aoc2VsZik6CiAgICAgICAgc2VsZi5wb3AoKQoKICAgIGRlZiBwc19kaWN0KHNlbGYpOgogICAgICAgIHNlbGYucG9wKCJpbnRlZ2VydHlwZSIpCiAgICAgICAgc2VsZi5wdXNoKHBzX2RpY3Qoe30pKQoKICAgIGRlZiBwc19iZWdpbihzZWxmKToKICAgICAgICBzZWxmLmRpY3RzdGFjay5hcHBlbmQoc2VsZi5wb3AoImRpY3R0eXBlIikudmFsdWUpCgogICAgZGVmIHBzX2VuZChzZWxmKToKICAgICAgICBpZiBsZW4oc2VsZi5kaWN0c3RhY2spID4gMjoKICAgICAgICAgICAgZGVsIHNlbGYuZGljdHN0YWNrWy0xXQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIFJ1bnRpbWVFcnJvcigiZGljdHN0YWNrIHVuZGVyZmxvdyIpCgoKbm90ZGVmID0gIi5ub3RkZWYiCmZyb20gZm9udFRvb2xzLmVuY29kaW5ncy5TdGFuZGFyZEVuY29kaW5nIGltcG9ydCBTdGFuZGFyZEVuY29kaW5nCgpwc19TdGFuZGFyZEVuY29kaW5nID0gbGlzdChtYXAocHNfbmFtZSwgU3RhbmRhcmRFbmNvZGluZykpCg==
+_accessstrings = {0: "", 1: "readonly", 2: "executeonly", 3: "noaccess"}
+
+
+class ps_object(object):
+    literal = 1
+    access = 0
+    value = None
+
+    def __init__(self, value):
+        self.value = value
+        self.type = self.__class__.__name__[3:] + "type"
+
+    def __repr__(self):
+        return "<%s %s>" % (self.__class__.__name__[3:], repr(self.value))
+
+
+class ps_operator(ps_object):
+    literal = 0
+
+    def __init__(self, name, function):
+        self.name = name
+        self.function = function
+        self.type = self.__class__.__name__[3:] + "type"
+
+    def __repr__(self):
+        return "<operator %s>" % self.name
+
+
+class ps_procedure(ps_object):
+    literal = 0
+
+    def __repr__(self):
+        return "<procedure>"
+
+    def __str__(self):
+        psstring = "{"
+        for i in range(len(self.value)):
+            if i:
+                psstring = psstring + " " + str(self.value[i])
+            else:
+                psstring = psstring + str(self.value[i])
+        return psstring + "}"
+
+
+class ps_name(ps_object):
+    literal = 0
+
+    def __str__(self):
+        if self.literal:
+            return "/" + self.value
+        else:
+            return self.value
+
+
+class ps_literal(ps_object):
+    def __str__(self):
+        return "/" + self.value
+
+
+class ps_array(ps_object):
+    def __str__(self):
+        psstring = "["
+        for i in range(len(self.value)):
+            item = self.value[i]
+            access = _accessstrings[item.access]
+            if access:
+                access = " " + access
+            if i:
+                psstring = psstring + " " + str(item) + access
+            else:
+                psstring = psstring + str(item) + access
+        return psstring + "]"
+
+    def __repr__(self):
+        return "<array>"
+
+
+_type1_pre_eexec_order = [
+    "FontInfo",
+    "FontName",
+    "Encoding",
+    "PaintType",
+    "FontType",
+    "FontMatrix",
+    "FontBBox",
+    "UniqueID",
+    "Metrics",
+    "StrokeWidth",
+]
+
+_type1_fontinfo_order = [
+    "version",
+    "Notice",
+    "FullName",
+    "FamilyName",
+    "Weight",
+    "ItalicAngle",
+    "isFixedPitch",
+    "UnderlinePosition",
+    "UnderlineThickness",
+]
+
+_type1_post_eexec_order = ["Private", "CharStrings", "FID"]
+
+
+def _type1_item_repr(key, value):
+    psstring = ""
+    access = _accessstrings[value.access]
+    if access:
+        access = access + " "
+    if key == "CharStrings":
+        psstring = psstring + "/%s %s def\n" % (
+            key,
+            _type1_CharString_repr(value.value),
+        )
+    elif key == "Encoding":
+        psstring = psstring + _type1_Encoding_repr(value, access)
+    else:
+        psstring = psstring + "/%s %s %sdef\n" % (str(key), str(value), access)
+    return psstring
+
+
+def _type1_Encoding_repr(encoding, access):
+    encoding = encoding.value
+    psstring = "/Encoding 256 array\n0 1 255 {1 index exch /.notdef put} for\n"
+    for i in range(256):
+        name = encoding[i].value
+        if name != ".notdef":
+            psstring = psstring + "dup %d /%s put\n" % (i, name)
+    return psstring + access + "def\n"
+
+
+def _type1_CharString_repr(charstrings):
+    items = sorted(charstrings.items())
+    return "xxx"
+
+
+class ps_font(ps_object):
+    def __str__(self):
+        psstring = "%d dict dup begin\n" % len(self.value)
+        for key in _type1_pre_eexec_order:
+            try:
+                value = self.value[key]
+            except KeyError:
+                pass
+            else:
+                psstring = psstring + _type1_item_repr(key, value)
+        items = sorted(self.value.items())
+        for key, value in items:
+            if key not in _type1_pre_eexec_order + _type1_post_eexec_order:
+                psstring = psstring + _type1_item_repr(key, value)
+        psstring = psstring + "currentdict end\ncurrentfile eexec\ndup "
+        for key in _type1_post_eexec_order:
+            try:
+                value = self.value[key]
+            except KeyError:
+                pass
+            else:
+                psstring = psstring + _type1_item_repr(key, value)
+        return (
+            psstring
+            + "dup/FontName get exch definefont pop\nmark currentfile closefile\n"
+            + 8 * (64 * "0" + "\n")
+            + "cleartomark"
+            + "\n"
+        )
+
+    def __repr__(self):
+        return "<font>"
+
+
+class ps_file(ps_object):
+    pass
+
+
+class ps_dict(ps_object):
+    def __str__(self):
+        psstring = "%d dict dup begin\n" % len(self.value)
+        items = sorted(self.value.items())
+        for key, value in items:
+            access = _accessstrings[value.access]
+            if access:
+                access = access + " "
+            psstring = psstring + "/%s %s %sdef\n" % (str(key), str(value), access)
+        return psstring + "end "
+
+    def __repr__(self):
+        return "<dict>"
+
+
+class ps_mark(ps_object):
+    def __init__(self):
+        self.value = "mark"
+        self.type = self.__class__.__name__[3:] + "type"
+
+
+class ps_procmark(ps_object):
+    def __init__(self):
+        self.value = "procmark"
+        self.type = self.__class__.__name__[3:] + "type"
+
+
+class ps_null(ps_object):
+    def __init__(self):
+        self.type = self.__class__.__name__[3:] + "type"
+
+
+class ps_boolean(ps_object):
+    def __str__(self):
+        if self.value:
+            return "true"
+        else:
+            return "false"
+
+
+class ps_string(ps_object):
+    def __str__(self):
+        return "(%s)" % repr(self.value)[1:-1]
+
+
+class ps_integer(ps_object):
+    def __str__(self):
+        return repr(self.value)
+
+
+class ps_real(ps_object):
+    def __str__(self):
+        return repr(self.value)
+
+
+class PSOperators(object):
+    def ps_def(self):
+        obj = self.pop()
+        name = self.pop()
+        self.dictstack[-1][name.value] = obj
+
+    def ps_bind(self):
+        proc = self.pop("proceduretype")
+        self.proc_bind(proc)
+        self.push(proc)
+
+    def proc_bind(self, proc):
+        for i in range(len(proc.value)):
+            item = proc.value[i]
+            if item.type == "proceduretype":
+                self.proc_bind(item)
+            else:
+                if not item.literal:
+                    try:
+                        obj = self.resolve_name(item.value)
+                    except:
+                        pass
+                    else:
+                        if obj.type == "operatortype":
+                            proc.value[i] = obj
+
+    def ps_exch(self):
+        if len(self.stack) < 2:
+            raise RuntimeError("stack underflow")
+        obj1 = self.pop()
+        obj2 = self.pop()
+        self.push(obj1)
+        self.push(obj2)
+
+    def ps_dup(self):
+        if not self.stack:
+            raise RuntimeError("stack underflow")
+        self.push(self.stack[-1])
+
+    def ps_exec(self):
+        obj = self.pop()
+        if obj.type == "proceduretype":
+            self.call_procedure(obj)
+        else:
+            self.handle_object(obj)
+
+    def ps_count(self):
+        self.push(ps_integer(len(self.stack)))
+
+    def ps_eq(self):
+        any1 = self.pop()
+        any2 = self.pop()
+        self.push(ps_boolean(any1.value == any2.value))
+
+    def ps_ne(self):
+        any1 = self.pop()
+        any2 = self.pop()
+        self.push(ps_boolean(any1.value != any2.value))
+
+    def ps_cvx(self):
+        obj = self.pop()
+        obj.literal = 0
+        self.push(obj)
+
+    def ps_matrix(self):
+        matrix = [
+            ps_real(1.0),
+            ps_integer(0),
+            ps_integer(0),
+            ps_real(1.0),
+            ps_integer(0),
+            ps_integer(0),
+        ]
+        self.push(ps_array(matrix))
+
+    def ps_string(self):
+        num = self.pop("integertype").value
+        self.push(ps_string("\0" * num))
+
+    def ps_type(self):
+        obj = self.pop()
+        self.push(ps_string(obj.type))
+
+    def ps_store(self):
+        value = self.pop()
+        key = self.pop()
+        name = key.value
+        for i in range(len(self.dictstack) - 1, -1, -1):
+            if name in self.dictstack[i]:
+                self.dictstack[i][name] = value
+                break
+        self.dictstack[-1][name] = value
+
+    def ps_where(self):
+        name = self.pop()
+        # XXX
+        self.push(ps_boolean(0))
+
+    def ps_systemdict(self):
+        self.push(ps_dict(self.dictstack[0]))
+
+    def ps_userdict(self):
+        self.push(ps_dict(self.dictstack[1]))
+
+    def ps_currentdict(self):
+        self.push(ps_dict(self.dictstack[-1]))
+
+    def ps_currentfile(self):
+        self.push(ps_file(self.tokenizer))
+
+    def ps_eexec(self):
+        f = self.pop("filetype").value
+        f.starteexec()
+
+    def ps_closefile(self):
+        f = self.pop("filetype").value
+        f.skipwhite()
+        f.stopeexec()
+
+    def ps_cleartomark(self):
+        obj = self.pop()
+        while obj != self.mark:
+            obj = self.pop()
+
+    def ps_readstring(self, ps_boolean=ps_boolean, len=len):
+        s = self.pop("stringtype")
+        oldstr = s.value
+        f = self.pop("filetype")
+        # pad = file.value.read(1)
+        # for StringIO, this is faster
+        f.value.pos = f.value.pos + 1
+        newstr = f.value.read(len(oldstr))
+        s.value = newstr
+        self.push(s)
+        self.push(ps_boolean(len(oldstr) == len(newstr)))
+
+    def ps_known(self):
+        key = self.pop()
+        d = self.pop("dicttype", "fonttype")
+        self.push(ps_boolean(key.value in d.value))
+
+    def ps_if(self):
+        proc = self.pop("proceduretype")
+        if self.pop("booleantype").value:
+            self.call_procedure(proc)
+
+    def ps_ifelse(self):
+        proc2 = self.pop("proceduretype")
+        proc1 = self.pop("proceduretype")
+        if self.pop("booleantype").value:
+            self.call_procedure(proc1)
+        else:
+            self.call_procedure(proc2)
+
+    def ps_readonly(self):
+        obj = self.pop()
+        if obj.access < 1:
+            obj.access = 1
+        self.push(obj)
+
+    def ps_executeonly(self):
+        obj = self.pop()
+        if obj.access < 2:
+            obj.access = 2
+        self.push(obj)
+
+    def ps_noaccess(self):
+        obj = self.pop()
+        if obj.access < 3:
+            obj.access = 3
+        self.push(obj)
+
+    def ps_not(self):
+        obj = self.pop("booleantype", "integertype")
+        if obj.type == "booleantype":
+            self.push(ps_boolean(not obj.value))
+        else:
+            self.push(ps_integer(~obj.value))
+
+    def ps_print(self):
+        str = self.pop("stringtype")
+        print("PS output --->", str.value)
+
+    def ps_anchorsearch(self):
+        seek = self.pop("stringtype")
+        s = self.pop("stringtype")
+        seeklen = len(seek.value)
+        if s.value[:seeklen] == seek.value:
+            self.push(ps_string(s.value[seeklen:]))
+            self.push(seek)
+            self.push(ps_boolean(1))
+        else:
+            self.push(s)
+            self.push(ps_boolean(0))
+
+    def ps_array(self):
+        num = self.pop("integertype")
+        array = ps_array([None] * num.value)
+        self.push(array)
+
+    def ps_astore(self):
+        array = self.pop("arraytype")
+        for i in range(len(array.value) - 1, -1, -1):
+            array.value[i] = self.pop()
+        self.push(array)
+
+    def ps_load(self):
+        name = self.pop()
+        self.push(self.resolve_name(name.value))
+
+    def ps_put(self):
+        obj1 = self.pop()
+        obj2 = self.pop()
+        obj3 = self.pop("arraytype", "dicttype", "stringtype", "proceduretype")
+        tp = obj3.type
+        if tp == "arraytype" or tp == "proceduretype":
+            obj3.value[obj2.value] = obj1
+        elif tp == "dicttype":
+            obj3.value[obj2.value] = obj1
+        elif tp == "stringtype":
+            index = obj2.value
+            obj3.value = obj3.value[:index] + chr(obj1.value) + obj3.value[index + 1 :]
+
+    def ps_get(self):
+        obj1 = self.pop()
+        if obj1.value == "Encoding":
+            pass
+        obj2 = self.pop(
+            "arraytype", "dicttype", "stringtype", "proceduretype", "fonttype"
+        )
+        tp = obj2.type
+        if tp in ("arraytype", "proceduretype"):
+            self.push(obj2.value[obj1.value])
+        elif tp in ("dicttype", "fonttype"):
+            self.push(obj2.value[obj1.value])
+        elif tp == "stringtype":
+            self.push(ps_integer(ord(obj2.value[obj1.value])))
+        else:
+            assert False, "shouldn't get here"
+
+    def ps_getinterval(self):
+        obj1 = self.pop("integertype")
+        obj2 = self.pop("integertype")
+        obj3 = self.pop("arraytype", "stringtype")
+        tp = obj3.type
+        if tp == "arraytype":
+            self.push(ps_array(obj3.value[obj2.value : obj2.value + obj1.value]))
+        elif tp == "stringtype":
+            self.push(ps_string(obj3.value[obj2.value : obj2.value + obj1.value]))
+
+    def ps_putinterval(self):
+        obj1 = self.pop("arraytype", "stringtype")
+        obj2 = self.pop("integertype")
+        obj3 = self.pop("arraytype", "stringtype")
+        tp = obj3.type
+        if tp == "arraytype":
+            obj3.value[obj2.value : obj2.value + len(obj1.value)] = obj1.value
+        elif tp == "stringtype":
+            newstr = obj3.value[: obj2.value]
+            newstr = newstr + obj1.value
+            newstr = newstr + obj3.value[obj2.value + len(obj1.value) :]
+            obj3.value = newstr
+
+    def ps_cvn(self):
+        self.push(ps_name(self.pop("stringtype").value))
+
+    def ps_index(self):
+        n = self.pop("integertype").value
+        if n < 0:
+            raise RuntimeError("index may not be negative")
+        self.push(self.stack[-1 - n])
+
+    def ps_for(self):
+        proc = self.pop("proceduretype")
+        limit = self.pop("integertype", "realtype").value
+        increment = self.pop("integertype", "realtype").value
+        i = self.pop("integertype", "realtype").value
+        while 1:
+            if increment > 0:
+                if i > limit:
+                    break
+            else:
+                if i < limit:
+                    break
+            if type(i) == type(0.0):
+                self.push(ps_real(i))
+            else:
+                self.push(ps_integer(i))
+            self.call_procedure(proc)
+            i = i + increment
+
+    def ps_forall(self):
+        proc = self.pop("proceduretype")
+        obj = self.pop("arraytype", "stringtype", "dicttype")
+        tp = obj.type
+        if tp == "arraytype":
+            for item in obj.value:
+                self.push(item)
+                self.call_procedure(proc)
+        elif tp == "stringtype":
+            for item in obj.value:
+                self.push(ps_integer(ord(item)))
+                self.call_procedure(proc)
+        elif tp == "dicttype":
+            for key, value in obj.value.items():
+                self.push(ps_name(key))
+                self.push(value)
+                self.call_procedure(proc)
+
+    def ps_definefont(self):
+        font = self.pop("dicttype")
+        name = self.pop()
+        font = ps_font(font.value)
+        self.dictstack[0]["FontDirectory"].value[name.value] = font
+        self.push(font)
+
+    def ps_findfont(self):
+        name = self.pop()
+        font = self.dictstack[0]["FontDirectory"].value[name.value]
+        self.push(font)
+
+    def ps_pop(self):
+        self.pop()
+
+    def ps_dict(self):
+        self.pop("integertype")
+        self.push(ps_dict({}))
+
+    def ps_begin(self):
+        self.dictstack.append(self.pop("dicttype").value)
+
+    def ps_end(self):
+        if len(self.dictstack) > 2:
+            del self.dictstack[-1]
+        else:
+            raise RuntimeError("dictstack underflow")
+
+
+notdef = ".notdef"
+from fontTools.encodings.StandardEncoding import StandardEncoding
+
+ps_StandardEncoding = list(map(ps_name, StandardEncoding))

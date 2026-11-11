@@ -1,1 +1,382 @@
-IyBDb3B5cmlnaHQgMjAxNSBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLgojCiMgTGljZW5zZWQgdW5kZXIgdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlICJMaWNlbnNlIik7CiMgeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgojIFlvdSBtYXkgb2J0YWluIGEgY29weSBvZiB0aGUgTGljZW5zZSBhdAojCiMgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAojCiMgVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQojIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuICJBUyBJUyIgQkFTSVMsCiMgV0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZIEtJTkQsIGVpdGhlciBleHByZXNzIG9yIGltcGxpZWQuCiMgU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZAojIGxpbWl0YXRpb25zIHVuZGVyIHRoZSBMaWNlbnNlLgoKCiIiIkNvbnZlcnRzIGN1YmljIGJlemllciBjdXJ2ZXMgdG8gcXVhZHJhdGljIHNwbGluZXMuCgpDb252ZXJzaW9uIGlzIHBlcmZvcm1lZCBzdWNoIHRoYXQgdGhlIHF1YWRyYXRpYyBzcGxpbmVzIGtlZXAgdGhlIHNhbWUgZW5kLWN1cnZlCnRhbmdlbnRzIGFzIHRoZSBvcmlnaW5hbCBjdWJpY3MuIFRoZSBhcHByb2FjaCBpcyBpdGVyYXRpdmUsIGluY3JlYXNpbmcgdGhlCm51bWJlciBvZiBzZWdtZW50cyBmb3IgYSBzcGxpbmUgdW50aWwgdGhlIGVycm9yIGdldHMgYmVsb3cgYSBib3VuZC4KClJlc3BlY3RpdmUgY3VydmVzIGZyb20gbXVsdGlwbGUgZm9udHMgd2lsbCBiZSBjb252ZXJ0ZWQgYXQgb25jZSB0byBlbnN1cmUgdGhhdAp0aGUgcmVzdWx0aW5nIHNwbGluZXMgYXJlIGludGVycG9sYXRpb24tY29tcGF0aWJsZS4KIiIiCgppbXBvcnQgbG9nZ2luZwpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IEFic3RyYWN0UGVuCmZyb20gZm9udFRvb2xzLnBlbnMucG9pbnRQZW4gaW1wb3J0IFBvaW50VG9TZWdtZW50UGVuCmZyb20gZm9udFRvb2xzLnBlbnMucmV2ZXJzZUNvbnRvdXJQZW4gaW1wb3J0IFJldmVyc2VDb250b3VyUGVuCgpmcm9tIC4gaW1wb3J0IGN1cnZlc190b19xdWFkcmF0aWMKZnJvbSAuZXJyb3JzIGltcG9ydCAoCiAgICBVbmVxdWFsWmlwTGVuZ3Roc0Vycm9yLAogICAgSW5jb21wYXRpYmxlU2VnbWVudE51bWJlckVycm9yLAogICAgSW5jb21wYXRpYmxlU2VnbWVudFR5cGVzRXJyb3IsCiAgICBJbmNvbXBhdGlibGVHbHlwaHNFcnJvciwKICAgIEluY29tcGF0aWJsZUZvbnRzRXJyb3IsCikKCl9fYWxsX18gPSBbImZvbnRzX3RvX3F1YWRyYXRpYyIsICJmb250X3RvX3F1YWRyYXRpYyJdCgojIFRoZSBkZWZhdWx0IGFwcHJveGltYXRpb24gZXJyb3IgYmVsb3cgaXMgYSByZWxhdGl2ZSB2YWx1ZSAoMS8xMDAwIG9mIHRoZSBFTSBzcXVhcmUpLgojIExhdGVyIG9uLCB3ZSBjb252ZXJ0IGl0IHRvIGFic29sdXRlIGZvbnQgdW5pdHMgYnkgbXVsdGlwbHlpbmcgaXQgYnkgYSBmb250J3MgVVBFTQojIChzZWUgZm9udHNfdG9fcXVhZHJhdGljKS4KREVGQVVMVF9NQVhfRVJSID0gMC4wMDEKQ1VSVkVfVFlQRV9MSUJfS0VZID0gImNvbS5naXRodWIuZ29vZ2xlaTE4bi5jdTJxdS5jdXJ2ZV90eXBlIgoKbG9nZ2VyID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgoKX3ppcCA9IHppcAoKCmRlZiB6aXAoKmFyZ3MpOgogICAgIiIiRW5zdXJlIGVhY2ggYXJndW1lbnQgdG8gemlwIGhhcyB0aGUgc2FtZSBsZW5ndGguIEFsc28gbWFrZSBzdXJlIGEgbGlzdCBpcwogICAgcmV0dXJuZWQgZm9yIHB5dGhvbiAyLzMgY29tcGF0aWJpbGl0eS4KICAgICIiIgoKICAgIGlmIGxlbihzZXQobGVuKGEpIGZvciBhIGluIGFyZ3MpKSAhPSAxOgogICAgICAgIHJhaXNlIFVuZXF1YWxaaXBMZW5ndGhzRXJyb3IoKmFyZ3MpCiAgICByZXR1cm4gbGlzdChfemlwKCphcmdzKSkKCgpkZWYgX3ZhbGlkYXRlX3Bvc2l0aXZlX3RvbGVyYW5jZSh2YWx1ZSwgbmFtZSk6CiAgICBpZiB2YWx1ZSA8PSAwOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJ7bmFtZX0gbXVzdCBiZSBncmVhdGVyIHRoYW4gemVybyIpCgoKZGVmIF92YWxpZGF0ZV9wb3NpdGl2ZV90b2xlcmFuY2VzKHZhbHVlcywgbmFtZSk6CiAgICBmb3IgdmFsdWUgaW4gdmFsdWVzOgogICAgICAgIF92YWxpZGF0ZV9wb3NpdGl2ZV90b2xlcmFuY2UodmFsdWUsIG5hbWUpCgoKZGVmIF92YWxpZGF0ZV9sZW5ndGgodmFsdWVzLCBleHBlY3RlZCwgbmFtZSk6CiAgICBpZiBsZW4odmFsdWVzKSAhPSBleHBlY3RlZDoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYie25hbWV9IG11c3QgbWF0Y2ggdGhlIG51bWJlciBvZiBpbnB1dHMiKQoKCmNsYXNzIEdldFNlZ21lbnRzUGVuKEFic3RyYWN0UGVuKToKICAgICIiIlBlbiB0byBjb2xsZWN0IHNlZ21lbnRzIGludG8gbGlzdHMgb2YgcG9pbnRzIGZvciBjb252ZXJzaW9uLgoKICAgIEN1cnZlcyBhbHdheXMgaW5jbHVkZSB0aGVpciBpbml0aWFsIG9uLWN1cnZlIHBvaW50LCBzbyBzb21lIHBvaW50cyBhcmUKICAgIGR1cGxpY2F0ZWQgYmV0d2VlbiBzZWdtZW50cy4KICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICAgICBzZWxmLl9sYXN0X3B0ID0gTm9uZQogICAgICAgIHNlbGYuc2VnbWVudHMgPSBbXQoKICAgIGRlZiBfYWRkX3NlZ21lbnQoc2VsZiwgdGFnLCAqYXJncyk6CiAgICAgICAgaWYgdGFnIGluIFsibW92ZSIsICJsaW5lIiwgInFjdXJ2ZSIsICJjdXJ2ZSJdOgogICAgICAgICAgICBzZWxmLl9sYXN0X3B0ID0gYXJnc1stMV0KICAgICAgICBzZWxmLnNlZ21lbnRzLmFwcGVuZCgodGFnLCBhcmdzKSkKCiAgICBkZWYgbW92ZVRvKHNlbGYsIHB0KToKICAgICAgICBzZWxmLl9hZGRfc2VnbWVudCgibW92ZSIsIHB0KQoKICAgIGRlZiBsaW5lVG8oc2VsZiwgcHQpOgogICAgICAgIHNlbGYuX2FkZF9zZWdtZW50KCJsaW5lIiwgcHQpCgogICAgZGVmIHFDdXJ2ZVRvKHNlbGYsICpwb2ludHMpOgogICAgICAgIHNlbGYuX2FkZF9zZWdtZW50KCJxY3VydmUiLCBzZWxmLl9sYXN0X3B0LCAqcG9pbnRzKQoKICAgIGRlZiBjdXJ2ZVRvKHNlbGYsICpwb2ludHMpOgogICAgICAgIHNlbGYuX2FkZF9zZWdtZW50KCJjdXJ2ZSIsIHNlbGYuX2xhc3RfcHQsICpwb2ludHMpCgogICAgZGVmIGNsb3NlUGF0aChzZWxmKToKICAgICAgICBzZWxmLl9hZGRfc2VnbWVudCgiY2xvc2UiKQoKICAgIGRlZiBlbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYuX2FkZF9zZWdtZW50KCJlbmQiKQoKICAgIGRlZiBhZGRDb21wb25lbnQoc2VsZiwgZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbik6CiAgICAgICAgcGFzcwoKCmRlZiBfZ2V0X3NlZ21lbnRzKGdseXBoKToKICAgICIiIkdldCBhIGdseXBoJ3Mgc2VnbWVudHMgYXMgZXh0cmFjdGVkIGJ5IEdldFNlZ21lbnRzUGVuLiIiIgoKICAgIHBlbiA9IEdldFNlZ21lbnRzUGVuKCkKICAgICMgZ2x5cGguZHJhdyhwZW4pCiAgICAjIFdlIGNhbid0IHNpbXBseSBkcmF3IHRoZSBnbHlwaCB3aXRoIHRoZSBwZW4sIGJ1dCB3ZSBtdXN0IGluaXRpYWxpemUgdGhlCiAgICAjIFBvaW50VG9TZWdtZW50UGVuIGV4cGxpY2l0bHkgd2l0aCBvdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmU9VHJ1ZS4KICAgICMgQnkgZGVmYXVsdCBQb2ludFRvU2VnbWVudFBlbiBkb2VzIG5vdCBvdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmUgLS0gdW5sZXNzCiAgICAjIGxhc3QgYW5kIGZpcnN0IHBvaW50IG9uIGNsb3NlZCBjb250b3VyIGFyZSBkdXBsaWNhdGVkLiBCZWNhdXNlIHdlIGFyZQogICAgIyBjb252ZXJ0aW5nIG11bHRpcGxlIGdseXBocyBhdCB0aGUgc2FtZSB0aW1lLCB3ZSB3YW50IHRvIG1ha2Ugc3VyZQogICAgIyB0aGlzIGZ1bmN0aW9uIHJldHVybnMgdGhlIHNhbWUgbnVtYmVyIG9mIHNlZ21lbnRzLCB3aGV0aGVyIG9yIG5vdAogICAgIyB0aGUgbGFzdCBhbmQgZmlyc3QgcG9pbnQgb3ZlcmxhcC4KICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2dvb2dsZWZvbnRzL2ZvbnRtYWtlL2lzc3Vlcy81NzIKICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvcHVsbC8xNzIwCiAgICBwb2ludFBlbiA9IFBvaW50VG9TZWdtZW50UGVuKHBlbiwgb3V0cHV0SW1wbGllZENsb3NpbmdMaW5lPVRydWUpCiAgICBnbHlwaC5kcmF3UG9pbnRzKHBvaW50UGVuKQogICAgcmV0dXJuIHBlbi5zZWdtZW50cwoKCmRlZiBfc2V0X3NlZ21lbnRzKGdseXBoLCBzZWdtZW50cywgcmV2ZXJzZV9kaXJlY3Rpb24pOgogICAgIiIiRHJhdyBzZWdtZW50cyBhcyBleHRyYWN0ZWQgYnkgR2V0U2VnbWVudHNQZW4gYmFjayB0byBhIGdseXBoLiIiIgoKICAgIGdseXBoLmNsZWFyQ29udG91cnMoKQogICAgcGVuID0gZ2x5cGguZ2V0UGVuKCkKICAgIGlmIHJldmVyc2VfZGlyZWN0aW9uOgogICAgICAgIHBlbiA9IFJldmVyc2VDb250b3VyUGVuKHBlbikKICAgIGZvciB0YWcsIGFyZ3MgaW4gc2VnbWVudHM6CiAgICAgICAgaWYgdGFnID09ICJtb3ZlIjoKICAgICAgICAgICAgcGVuLm1vdmVUbygqYXJncykKICAgICAgICBlbGlmIHRhZyA9PSAibGluZSI6CiAgICAgICAgICAgIHBlbi5saW5lVG8oKmFyZ3MpCiAgICAgICAgZWxpZiB0YWcgPT0gImN1cnZlIjoKICAgICAgICAgICAgcGVuLmN1cnZlVG8oKmFyZ3NbMTpdKQogICAgICAgIGVsaWYgdGFnID09ICJxY3VydmUiOgogICAgICAgICAgICBwZW4ucUN1cnZlVG8oKmFyZ3NbMTpdKQogICAgICAgIGVsaWYgdGFnID09ICJjbG9zZSI6CiAgICAgICAgICAgIHBlbi5jbG9zZVBhdGgoKQogICAgICAgIGVsaWYgdGFnID09ICJlbmQiOgogICAgICAgICAgICBwZW4uZW5kUGF0aCgpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmFpc2UgQXNzZXJ0aW9uRXJyb3IoJ1VuaGFuZGxlZCBzZWdtZW50IHR5cGUgIiVzIicgJSB0YWcpCgoKZGVmIF9zZWdtZW50c190b19xdWFkcmF0aWMoc2VnbWVudHMsIG1heF9lcnIsIHN0YXRzLCBhbGxfcXVhZHJhdGljPVRydWUpOgogICAgIiIiUmV0dXJuIHF1YWRyYXRpYyBhcHByb3hpbWF0aW9ucyBvZiBjdWJpYyBzZWdtZW50cy4iIiIKCiAgICBhc3NlcnQgYWxsKHNbMF0gPT0gImN1cnZlIiBmb3IgcyBpbiBzZWdtZW50cyksICJOb24tY3ViaWMgZ2l2ZW4gdG8gY29udmVydCIKCiAgICBuZXdfcG9pbnRzID0gY3VydmVzX3RvX3F1YWRyYXRpYyhbc1sxXSBmb3IgcyBpbiBzZWdtZW50c10sIG1heF9lcnIsIGFsbF9xdWFkcmF0aWMpCiAgICBuID0gbGVuKG5ld19wb2ludHNbMF0pCiAgICBhc3NlcnQgYWxsKGxlbihzKSA9PSBuIGZvciBzIGluIG5ld19wb2ludHNbMTpdKSwgIkNvbnZlcnRlZCBpbmNvbXBhdGlibHkiCgogICAgc3BsaW5lX2xlbmd0aCA9IHN0cihuIC0gMikKICAgIHN0YXRzW3NwbGluZV9sZW5ndGhdID0gc3RhdHMuZ2V0KHNwbGluZV9sZW5ndGgsIDApICsgMQoKICAgIGlmIGFsbF9xdWFkcmF0aWMgb3IgbiA9PSAzOgogICAgICAgIHJldHVybiBbKCJxY3VydmUiLCBwKSBmb3IgcCBpbiBuZXdfcG9pbnRzXQogICAgZWxzZToKICAgICAgICByZXR1cm4gWygiY3VydmUiLCBwKSBmb3IgcCBpbiBuZXdfcG9pbnRzXQoKCmRlZiBfZ2x5cGhzX3RvX3F1YWRyYXRpYyhnbHlwaHMsIG1heF9lcnIsIHJldmVyc2VfZGlyZWN0aW9uLCBzdGF0cywgYWxsX3F1YWRyYXRpYz1UcnVlKToKICAgICIiIkRvIHRoZSBhY3R1YWwgY29udmVyc2lvbiBvZiBhIHNldCBvZiBjb21wYXRpYmxlIGdseXBocywgYWZ0ZXIgYXJndW1lbnRzCiAgICBoYXZlIGJlZW4gc2V0IHVwLgoKICAgIEVtcHR5IGdseXBocyAod2l0aG91dCBjb250b3VycykgYXJlIGlnbm9yZWQgYW5kIHBhc3NlZCB0aHJvdWdoIHVuY2hhbmdlZC4KCiAgICBSZXR1cm4gVHJ1ZSBpZiB0aGUgZ2x5cGhzIHdlcmUgbW9kaWZpZWQsIGVsc2UgcmV0dXJuIEZhbHNlLgogICAgIiIiCgogICAgIyBTa2lwIGVtcHR5IGdseXBocyAod2l0aCB6ZXJvIGNvbnRvdXJzKQogICAgbm9uX2VtcHR5X2luZGljZXMgPSBbaSBmb3IgaSwgZyBpbiBlbnVtZXJhdGUoZ2x5cGhzKSBpZiBsZW4oZykgPiAwXQogICAgaWYgbm90IG5vbl9lbXB0eV9pbmRpY2VzOgogICAgICAgIHJldHVybiBGYWxzZQoKICAgIGdseXBocyA9IFtnbHlwaHNbaV0gZm9yIGkgaW4gbm9uX2VtcHR5X2luZGljZXNdCiAgICBtYXhfZXJyID0gW21heF9lcnJbaV0gZm9yIGkgaW4gbm9uX2VtcHR5X2luZGljZXNdCgogICAgdHJ5OgogICAgICAgIHNlZ21lbnRzX2J5X2xvY2F0aW9uID0gemlwKCpbX2dldF9zZWdtZW50cyhnKSBmb3IgZyBpbiBnbHlwaHNdKQogICAgZXhjZXB0IFVuZXF1YWxaaXBMZW5ndGhzRXJyb3I6CiAgICAgICAgcmFpc2UgSW5jb21wYXRpYmxlU2VnbWVudE51bWJlckVycm9yKGdseXBocykKICAgIGlmIG5vdCBhbnkoc2VnbWVudHNfYnlfbG9jYXRpb24pOgogICAgICAgIHJldHVybiBGYWxzZQoKICAgICMgYWx3YXlzIG1vZGlmeSBpbnB1dCBnbHlwaHMgaWYgcmV2ZXJzZV9kaXJlY3Rpb24gaXMgVHJ1ZQogICAgZ2x5cGhzX21vZGlmaWVkID0gcmV2ZXJzZV9kaXJlY3Rpb24KCiAgICBuZXdfc2VnbWVudHNfYnlfbG9jYXRpb24gPSBbXQogICAgaW5jb21wYXRpYmxlID0ge30KICAgIGZvciBpLCBzZWdtZW50cyBpbiBlbnVtZXJhdGUoc2VnbWVudHNfYnlfbG9jYXRpb24pOgogICAgICAgIHRhZyA9IHNlZ21lbnRzWzBdWzBdCiAgICAgICAgaWYgbm90IGFsbChzWzBdID09IHRhZyBmb3IgcyBpbiBzZWdtZW50c1sxOl0pOgogICAgICAgICAgICBpbmNvbXBhdGlibGVbaV0gPSBbc1swXSBmb3IgcyBpbiBzZWdtZW50c10KICAgICAgICBlbGlmIHRhZyA9PSAiY3VydmUiOgogICAgICAgICAgICBuZXdfc2VnbWVudHMgPSBfc2VnbWVudHNfdG9fcXVhZHJhdGljKAogICAgICAgICAgICAgICAgc2VnbWVudHMsIG1heF9lcnIsIHN0YXRzLCBhbGxfcXVhZHJhdGljCiAgICAgICAgICAgICkKICAgICAgICAgICAgaWYgYWxsX3F1YWRyYXRpYyBvciBuZXdfc2VnbWVudHMgIT0gc2VnbWVudHM6CiAgICAgICAgICAgICAgICBnbHlwaHNfbW9kaWZpZWQgPSBUcnVlCiAgICAgICAgICAgIHNlZ21lbnRzID0gbmV3X3NlZ21lbnRzCiAgICAgICAgbmV3X3NlZ21lbnRzX2J5X2xvY2F0aW9uLmFwcGVuZChzZWdtZW50cykKCiAgICBpZiBnbHlwaHNfbW9kaWZpZWQ6CiAgICAgICAgbmV3X3NlZ21lbnRzX2J5X2dseXBoID0gemlwKCpuZXdfc2VnbWVudHNfYnlfbG9jYXRpb24pCiAgICAgICAgZm9yIGdseXBoLCBuZXdfc2VnbWVudHMgaW4gemlwKGdseXBocywgbmV3X3NlZ21lbnRzX2J5X2dseXBoKToKICAgICAgICAgICAgX3NldF9zZWdtZW50cyhnbHlwaCwgbmV3X3NlZ21lbnRzLCByZXZlcnNlX2RpcmVjdGlvbikKCiAgICBpZiBpbmNvbXBhdGlibGU6CiAgICAgICAgcmFpc2UgSW5jb21wYXRpYmxlU2VnbWVudFR5cGVzRXJyb3IoZ2x5cGhzLCBzZWdtZW50cz1pbmNvbXBhdGlibGUpCiAgICByZXR1cm4gZ2x5cGhzX21vZGlmaWVkCgoKZGVmIGdseXBoc190b19xdWFkcmF0aWMoCiAgICBnbHlwaHMsIG1heF9lcnI9Tm9uZSwgcmV2ZXJzZV9kaXJlY3Rpb249RmFsc2UsIHN0YXRzPU5vbmUsIGFsbF9xdWFkcmF0aWM9VHJ1ZQopOgogICAgIiIiQ29udmVydCB0aGUgY3VydmVzIG9mIGEgc2V0IG9mIGNvbXBhdGlibGUgb2YgZ2x5cGhzIHRvIHF1YWRyYXRpYy4KCiAgICBBbGwgY3VydmVzIHdpbGwgYmUgY29udmVydGVkIHRvIHF1YWRyYXRpYyBhdCBvbmNlLCBlbnN1cmluZyBpbnRlcnBvbGF0aW9uCiAgICBjb21wYXRpYmlsaXR5LiBJZiB0aGlzIGlzIG5vdCByZXF1aXJlZCwgY2FsbGluZyBnbHlwaHNfdG9fcXVhZHJhdGljIHdpdGggb25lCiAgICBnbHlwaCBhdCBhIHRpbWUgbWF5IHlpZWxkIHNsaWdodGx5IG1vcmUgb3B0aW1pemVkIHJlc3VsdHMuCgogICAgRW1wdHkgZ2x5cGhzICh3aXRob3V0IGNvbnRvdXJzKSBhcmUgaWdub3JlZCBhbmQgcGFzc2VkIHRocm91Z2ggdW5jaGFuZ2VkLgoKICAgIFJldHVybiBUcnVlIGlmIGdseXBocyB3ZXJlIG1vZGlmaWVkLCBlbHNlIHJldHVybiBGYWxzZS4KCiAgICBSYWlzZXMgSW5jb21wYXRpYmxlR2x5cGhzRXJyb3IgaWYgZ2x5cGhzIGhhdmUgbm9uLWludGVycG9sYXRhYmxlIG91dGxpbmVzLgogICAgIiIiCiAgICBpZiBzdGF0cyBpcyBOb25lOgogICAgICAgIHN0YXRzID0ge30KCiAgICBpZiBtYXhfZXJyIGlzIE5vbmU6CiAgICAgICAgIyBhc3N1bWUgMTAwMCBpcyB0aGUgZGVmYXVsdCBVUEVNCiAgICAgICAgbWF4X2VyciA9IERFRkFVTFRfTUFYX0VSUiAqIDEwMDAKCiAgICBpZiBpc2luc3RhbmNlKG1heF9lcnIsIChsaXN0LCB0dXBsZSkpOgogICAgICAgIG1heF9lcnJvcnMgPSBtYXhfZXJyCiAgICBlbHNlOgogICAgICAgIG1heF9lcnJvcnMgPSBbbWF4X2Vycl0gKiBsZW4oZ2x5cGhzKQogICAgX3ZhbGlkYXRlX2xlbmd0aChtYXhfZXJyb3JzLCBsZW4oZ2x5cGhzKSwgIm1heF9lcnIiKQogICAgX3ZhbGlkYXRlX3Bvc2l0aXZlX3RvbGVyYW5jZXMobWF4X2Vycm9ycywgIm1heF9lcnIiKQoKICAgIHJldHVybiBfZ2x5cGhzX3RvX3F1YWRyYXRpYygKICAgICAgICBnbHlwaHMsIG1heF9lcnJvcnMsIHJldmVyc2VfZGlyZWN0aW9uLCBzdGF0cywgYWxsX3F1YWRyYXRpYwogICAgKQoKCmRlZiBmb250c190b19xdWFkcmF0aWMoCiAgICBmb250cywKICAgIG1heF9lcnJfZW09Tm9uZSwKICAgIG1heF9lcnI9Tm9uZSwKICAgIHJldmVyc2VfZGlyZWN0aW9uPUZhbHNlLAogICAgc3RhdHM9Tm9uZSwKICAgIGR1bXBfc3RhdHM9RmFsc2UsCiAgICByZW1lbWJlcl9jdXJ2ZV90eXBlPVRydWUsCiAgICBhbGxfcXVhZHJhdGljPVRydWUsCik6CiAgICAiIiJDb252ZXJ0IHRoZSBjdXJ2ZXMgb2YgYSBjb2xsZWN0aW9uIG9mIGZvbnRzIHRvIHF1YWRyYXRpYy4KCiAgICBBbGwgY3VydmVzIHdpbGwgYmUgY29udmVydGVkIHRvIHF1YWRyYXRpYyBhdCBvbmNlLCBlbnN1cmluZyBpbnRlcnBvbGF0aW9uCiAgICBjb21wYXRpYmlsaXR5LiBJZiB0aGlzIGlzIG5vdCByZXF1aXJlZCwgY2FsbGluZyBmb250c190b19xdWFkcmF0aWMgd2l0aCBvbmUKICAgIGZvbnQgYXQgYSB0aW1lIG1heSB5aWVsZCBzbGlnaHRseSBtb3JlIG9wdGltaXplZCByZXN1bHRzLgoKICAgIEVtcHR5IGdseXBocyAod2l0aG91dCBjb250b3VycykgYXJlIGlnbm9yZWQgYW5kIHBhc3NlZCB0aHJvdWdoIHVuY2hhbmdlZC4KCiAgICBSZXR1cm4gdGhlIHNldCBvZiBtb2RpZmllZCBnbHlwaCBuYW1lcyBpZiBhbnksIGVsc2UgcmV0dXJuIGFuIGVtcHR5IHNldC4KCiAgICBCeSBkZWZhdWx0LCBjdTJxdSBzdG9yZXMgdGhlIGN1cnZlIHR5cGUgaW4gdGhlIGZvbnRzJyBsaWIsIHVuZGVyIGEgcHJpdmF0ZQogICAga2V5ICJjb20uZ2l0aHViLmdvb2dsZWkxOG4uY3UycXUuY3VydmVfdHlwZSIsIGFuZCB3aWxsIG5vdCB0cnkgdG8gY29udmVydAogICAgdGhlbSBhZ2FpbiBpZiB0aGUgY3VydmUgdHlwZSBpcyBhbHJlYWR5IHNldCB0byAicXVhZHJhdGljIi4KICAgIFNldHRpbmcgJ3JlbWVtYmVyX2N1cnZlX3R5cGUnIHRvIEZhbHNlIGRpc2FibGVzIHRoaXMgb3B0aW1pemF0aW9uLgoKICAgIFJhaXNlcyBJbmNvbXBhdGlibGVGb250c0Vycm9yIGlmIHNhbWUtbmFtZWQgZ2x5cGhzIGZyb20gZGlmZmVyZW50IGZvbnRzCiAgICBoYXZlIG5vbi1pbnRlcnBvbGF0YWJsZSBvdXRsaW5lcy4KICAgICIiIgoKICAgIGlmIHJlbWVtYmVyX2N1cnZlX3R5cGU6CiAgICAgICAgY3VydmVfdHlwZXMgPSB7Zi5saWIuZ2V0KENVUlZFX1RZUEVfTElCX0tFWSwgImN1YmljIikgZm9yIGYgaW4gZm9udHN9CiAgICAgICAgaWYgbGVuKGN1cnZlX3R5cGVzKSA9PSAxOgogICAgICAgICAgICBjdXJ2ZV90eXBlID0gbmV4dChpdGVyKGN1cnZlX3R5cGVzKSkKICAgICAgICAgICAgaWYgY3VydmVfdHlwZSBpbiAoInF1YWRyYXRpYyIsICJtaXhlZCIpOgogICAgICAgICAgICAgICAgbG9nZ2VyLmluZm8oIkN1cnZlcyBhbHJlYWR5IGNvbnZlcnRlZCB0byBxdWFkcmF0aWMiKQogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgICAgIGVsaWYgY3VydmVfdHlwZSA9PSAiY3ViaWMiOgogICAgICAgICAgICAgICAgcGFzcyAgIyBrZWVwIGNvbnZlcnRpbmcKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoY3VydmVfdHlwZSkKICAgICAgICBlbGlmIGxlbihjdXJ2ZV90eXBlcykgPiAxOgogICAgICAgICAgICAjIGdvaW5nIHRvIGNyYXNoIGxhdGVyIGlmIHRoZXkgZG8gZGlmZmVyCiAgICAgICAgICAgIGxvZ2dlci53YXJuaW5nKCJmb250cyBtYXkgY29udGFpbiBkaWZmZXJlbnQgY3VydmUgdHlwZXMiKQoKICAgIGlmIHN0YXRzIGlzIE5vbmU6CiAgICAgICAgc3RhdHMgPSB7fQoKICAgIGlmIG1heF9lcnJfZW0gaXMgbm90IE5vbmUgYW5kIG1heF9lcnIgaXMgbm90IE5vbmU6CiAgICAgICAgcmFpc2UgVHlwZUVycm9yKCJPbmx5IG9uZSBvZiBtYXhfZXJyIGFuZCBtYXhfZXJyX2VtIGNhbiBiZSBzcGVjaWZpZWQuIikKICAgIGlmIG1heF9lcnJfZW0gaXMgTm9uZSBhbmQgbWF4X2VyciBpcyBOb25lOgogICAgICAgIG1heF9lcnJfZW0gPSBERUZBVUxUX01BWF9FUlIKCiAgICBpZiBpc2luc3RhbmNlKG1heF9lcnIsIChsaXN0LCB0dXBsZSkpOgogICAgICAgIF92YWxpZGF0ZV9sZW5ndGgobWF4X2VyciwgbGVuKGZvbnRzKSwgIm1heF9lcnIiKQogICAgICAgIG1heF9lcnJvcnMgPSBtYXhfZXJyCiAgICAgICAgX3ZhbGlkYXRlX3Bvc2l0aXZlX3RvbGVyYW5jZXMobWF4X2Vycm9ycywgIm1heF9lcnIiKQogICAgZWxpZiBtYXhfZXJyIGlzIG5vdCBOb25lOgogICAgICAgIF92YWxpZGF0ZV9wb3NpdGl2ZV90b2xlcmFuY2UobWF4X2VyciwgIm1heF9lcnIiKQogICAgICAgIG1heF9lcnJvcnMgPSBbbWF4X2Vycl0gKiBsZW4oZm9udHMpCgogICAgaWYgaXNpbnN0YW5jZShtYXhfZXJyX2VtLCAobGlzdCwgdHVwbGUpKToKICAgICAgICBfdmFsaWRhdGVfbGVuZ3RoKG1heF9lcnJfZW0sIGxlbihmb250cyksICJtYXhfZXJyX2VtIikKICAgICAgICBfdmFsaWRhdGVfcG9zaXRpdmVfdG9sZXJhbmNlcyhtYXhfZXJyX2VtLCAibWF4X2Vycl9lbSIpCiAgICAgICAgbWF4X2Vycm9ycyA9IFtmLmluZm8udW5pdHNQZXJFbSAqIGUgZm9yIGYsIGUgaW4gemlwKGZvbnRzLCBtYXhfZXJyX2VtKV0KICAgIGVsaWYgbWF4X2Vycl9lbSBpcyBub3QgTm9uZToKICAgICAgICBfdmFsaWRhdGVfcG9zaXRpdmVfdG9sZXJhbmNlKG1heF9lcnJfZW0sICJtYXhfZXJyX2VtIikKICAgICAgICBtYXhfZXJyb3JzID0gW2YuaW5mby51bml0c1BlckVtICogbWF4X2Vycl9lbSBmb3IgZiBpbiBmb250c10KCiAgICBtb2RpZmllZCA9IHNldCgpCiAgICBnbHlwaF9lcnJvcnMgPSB7fQogICAgZm9yIG5hbWUgaW4gc2V0KCkudW5pb24oKihmLmtleXMoKSBmb3IgZiBpbiBmb250cykpOgogICAgICAgIGdseXBocyA9IFtdCiAgICAgICAgY3VyX21heF9lcnJvcnMgPSBbXQogICAgICAgIGZvciBmb250LCBlcnJvciBpbiB6aXAoZm9udHMsIG1heF9lcnJvcnMpOgogICAgICAgICAgICBpZiBuYW1lIGluIGZvbnQ6CiAgICAgICAgICAgICAgICBnbHlwaHMuYXBwZW5kKGZvbnRbbmFtZV0pCiAgICAgICAgICAgICAgICBjdXJfbWF4X2Vycm9ycy5hcHBlbmQoZXJyb3IpCiAgICAgICAgdHJ5OgogICAgICAgICAgICBpZiBfZ2x5cGhzX3RvX3F1YWRyYXRpYygKICAgICAgICAgICAgICAgIGdseXBocywgY3VyX21heF9lcnJvcnMsIHJldmVyc2VfZGlyZWN0aW9uLCBzdGF0cywgYWxsX3F1YWRyYXRpYwogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgbW9kaWZpZWQuYWRkKG5hbWUpCiAgICAgICAgZXhjZXB0IEluY29tcGF0aWJsZUdseXBoc0Vycm9yIGFzIGV4YzoKICAgICAgICAgICAgbG9nZ2VyLmVycm9yKGV4YykKICAgICAgICAgICAgZ2x5cGhfZXJyb3JzW25hbWVdID0gZXhjCgogICAgaWYgZ2x5cGhfZXJyb3JzOgogICAgICAgIHJhaXNlIEluY29tcGF0aWJsZUZvbnRzRXJyb3IoZ2x5cGhfZXJyb3JzKQoKICAgIGlmIG1vZGlmaWVkIGFuZCBkdW1wX3N0YXRzOgogICAgICAgIHNwbGluZV9sZW5ndGhzID0gc29ydGVkKHN0YXRzLmtleXMoKSkKICAgICAgICBsb2dnZXIuaW5mbygKICAgICAgICAgICAgIk5ldyBzcGxpbmUgbGVuZ3RoczogJXMiCiAgICAgICAgICAgICUgKCIsICIuam9pbigiJXM6ICVkIiAlIChsLCBzdGF0c1tsXSkgZm9yIGwgaW4gc3BsaW5lX2xlbmd0aHMpKQogICAgICAgICkKCiAgICBpZiByZW1lbWJlcl9jdXJ2ZV90eXBlOgogICAgICAgIGZvciBmb250IGluIGZvbnRzOgogICAgICAgICAgICBjdXJ2ZV90eXBlID0gZm9udC5saWIuZ2V0KENVUlZFX1RZUEVfTElCX0tFWSwgImN1YmljIikKICAgICAgICAgICAgbmV3X2N1cnZlX3R5cGUgPSAicXVhZHJhdGljIiBpZiBhbGxfcXVhZHJhdGljIGVsc2UgIm1peGVkIgogICAgICAgICAgICBpZiBjdXJ2ZV90eXBlICE9IG5ld19jdXJ2ZV90eXBlOgogICAgICAgICAgICAgICAgZm9udC5saWJbQ1VSVkVfVFlQRV9MSUJfS0VZXSA9IG5ld19jdXJ2ZV90eXBlCiAgICByZXR1cm4gbW9kaWZpZWQKCgpkZWYgZ2x5cGhfdG9fcXVhZHJhdGljKGdseXBoLCAqKmt3YXJncyk6CiAgICAiIiJDb252ZW5pZW5jZSB3cmFwcGVyIGFyb3VuZCBnbHlwaHNfdG9fcXVhZHJhdGljLCBmb3IganVzdCBvbmUgZ2x5cGguCiAgICBSZXR1cm4gVHJ1ZSBpZiB0aGUgZ2x5cGggd2FzIG1vZGlmaWVkLCBlbHNlIHJldHVybiBGYWxzZS4KICAgICIiIgoKICAgIHJldHVybiBnbHlwaHNfdG9fcXVhZHJhdGljKFtnbHlwaF0sICoqa3dhcmdzKQoKCmRlZiBmb250X3RvX3F1YWRyYXRpYyhmb250LCAqKmt3YXJncyk6CiAgICAiIiJDb252ZW5pZW5jZSB3cmFwcGVyIGFyb3VuZCBmb250c190b19xdWFkcmF0aWMsIGZvciBqdXN0IG9uZSBmb250LgogICAgUmV0dXJuIHRoZSBzZXQgb2YgbW9kaWZpZWQgZ2x5cGggbmFtZXMgaWYgYW55LCBlbHNlIHJldHVybiBlbXB0eSBzZXQuCiAgICAiIiIKCiAgICByZXR1cm4gZm9udHNfdG9fcXVhZHJhdGljKFtmb250XSwgKiprd2FyZ3MpCg==
+# Copyright 2015 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+"""Converts cubic bezier curves to quadratic splines.
+
+Conversion is performed such that the quadratic splines keep the same end-curve
+tangents as the original cubics. The approach is iterative, increasing the
+number of segments for a spline until the error gets below a bound.
+
+Respective curves from multiple fonts will be converted at once to ensure that
+the resulting splines are interpolation-compatible.
+"""
+
+import logging
+from fontTools.pens.basePen import AbstractPen
+from fontTools.pens.pointPen import PointToSegmentPen
+from fontTools.pens.reverseContourPen import ReverseContourPen
+
+from . import curves_to_quadratic
+from .errors import (
+    UnequalZipLengthsError,
+    IncompatibleSegmentNumberError,
+    IncompatibleSegmentTypesError,
+    IncompatibleGlyphsError,
+    IncompatibleFontsError,
+)
+
+__all__ = ["fonts_to_quadratic", "font_to_quadratic"]
+
+# The default approximation error below is a relative value (1/1000 of the EM square).
+# Later on, we convert it to absolute font units by multiplying it by a font's UPEM
+# (see fonts_to_quadratic).
+DEFAULT_MAX_ERR = 0.001
+CURVE_TYPE_LIB_KEY = "com.github.googlei18n.cu2qu.curve_type"
+
+logger = logging.getLogger(__name__)
+
+
+_zip = zip
+
+
+def zip(*args):
+    """Ensure each argument to zip has the same length. Also make sure a list is
+    returned for python 2/3 compatibility.
+    """
+
+    if len(set(len(a) for a in args)) != 1:
+        raise UnequalZipLengthsError(*args)
+    return list(_zip(*args))
+
+
+def _validate_positive_tolerance(value, name):
+    if value <= 0:
+        raise ValueError(f"{name} must be greater than zero")
+
+
+def _validate_positive_tolerances(values, name):
+    for value in values:
+        _validate_positive_tolerance(value, name)
+
+
+def _validate_length(values, expected, name):
+    if len(values) != expected:
+        raise ValueError(f"{name} must match the number of inputs")
+
+
+class GetSegmentsPen(AbstractPen):
+    """Pen to collect segments into lists of points for conversion.
+
+    Curves always include their initial on-curve point, so some points are
+    duplicated between segments.
+    """
+
+    def __init__(self):
+        self._last_pt = None
+        self.segments = []
+
+    def _add_segment(self, tag, *args):
+        if tag in ["move", "line", "qcurve", "curve"]:
+            self._last_pt = args[-1]
+        self.segments.append((tag, args))
+
+    def moveTo(self, pt):
+        self._add_segment("move", pt)
+
+    def lineTo(self, pt):
+        self._add_segment("line", pt)
+
+    def qCurveTo(self, *points):
+        self._add_segment("qcurve", self._last_pt, *points)
+
+    def curveTo(self, *points):
+        self._add_segment("curve", self._last_pt, *points)
+
+    def closePath(self):
+        self._add_segment("close")
+
+    def endPath(self):
+        self._add_segment("end")
+
+    def addComponent(self, glyphName, transformation):
+        pass
+
+
+def _get_segments(glyph):
+    """Get a glyph's segments as extracted by GetSegmentsPen."""
+
+    pen = GetSegmentsPen()
+    # glyph.draw(pen)
+    # We can't simply draw the glyph with the pen, but we must initialize the
+    # PointToSegmentPen explicitly with outputImpliedClosingLine=True.
+    # By default PointToSegmentPen does not outputImpliedClosingLine -- unless
+    # last and first point on closed contour are duplicated. Because we are
+    # converting multiple glyphs at the same time, we want to make sure
+    # this function returns the same number of segments, whether or not
+    # the last and first point overlap.
+    # https://github.com/googlefonts/fontmake/issues/572
+    # https://github.com/fonttools/fonttools/pull/1720
+    pointPen = PointToSegmentPen(pen, outputImpliedClosingLine=True)
+    glyph.drawPoints(pointPen)
+    return pen.segments
+
+
+def _set_segments(glyph, segments, reverse_direction):
+    """Draw segments as extracted by GetSegmentsPen back to a glyph."""
+
+    glyph.clearContours()
+    pen = glyph.getPen()
+    if reverse_direction:
+        pen = ReverseContourPen(pen)
+    for tag, args in segments:
+        if tag == "move":
+            pen.moveTo(*args)
+        elif tag == "line":
+            pen.lineTo(*args)
+        elif tag == "curve":
+            pen.curveTo(*args[1:])
+        elif tag == "qcurve":
+            pen.qCurveTo(*args[1:])
+        elif tag == "close":
+            pen.closePath()
+        elif tag == "end":
+            pen.endPath()
+        else:
+            raise AssertionError('Unhandled segment type "%s"' % tag)
+
+
+def _segments_to_quadratic(segments, max_err, stats, all_quadratic=True):
+    """Return quadratic approximations of cubic segments."""
+
+    assert all(s[0] == "curve" for s in segments), "Non-cubic given to convert"
+
+    new_points = curves_to_quadratic([s[1] for s in segments], max_err, all_quadratic)
+    n = len(new_points[0])
+    assert all(len(s) == n for s in new_points[1:]), "Converted incompatibly"
+
+    spline_length = str(n - 2)
+    stats[spline_length] = stats.get(spline_length, 0) + 1
+
+    if all_quadratic or n == 3:
+        return [("qcurve", p) for p in new_points]
+    else:
+        return [("curve", p) for p in new_points]
+
+
+def _glyphs_to_quadratic(glyphs, max_err, reverse_direction, stats, all_quadratic=True):
+    """Do the actual conversion of a set of compatible glyphs, after arguments
+    have been set up.
+
+    Empty glyphs (without contours) are ignored and passed through unchanged.
+
+    Return True if the glyphs were modified, else return False.
+    """
+
+    # Skip empty glyphs (with zero contours)
+    non_empty_indices = [i for i, g in enumerate(glyphs) if len(g) > 0]
+    if not non_empty_indices:
+        return False
+
+    glyphs = [glyphs[i] for i in non_empty_indices]
+    max_err = [max_err[i] for i in non_empty_indices]
+
+    try:
+        segments_by_location = zip(*[_get_segments(g) for g in glyphs])
+    except UnequalZipLengthsError:
+        raise IncompatibleSegmentNumberError(glyphs)
+    if not any(segments_by_location):
+        return False
+
+    # always modify input glyphs if reverse_direction is True
+    glyphs_modified = reverse_direction
+
+    new_segments_by_location = []
+    incompatible = {}
+    for i, segments in enumerate(segments_by_location):
+        tag = segments[0][0]
+        if not all(s[0] == tag for s in segments[1:]):
+            incompatible[i] = [s[0] for s in segments]
+        elif tag == "curve":
+            new_segments = _segments_to_quadratic(
+                segments, max_err, stats, all_quadratic
+            )
+            if all_quadratic or new_segments != segments:
+                glyphs_modified = True
+            segments = new_segments
+        new_segments_by_location.append(segments)
+
+    if glyphs_modified:
+        new_segments_by_glyph = zip(*new_segments_by_location)
+        for glyph, new_segments in zip(glyphs, new_segments_by_glyph):
+            _set_segments(glyph, new_segments, reverse_direction)
+
+    if incompatible:
+        raise IncompatibleSegmentTypesError(glyphs, segments=incompatible)
+    return glyphs_modified
+
+
+def glyphs_to_quadratic(
+    glyphs, max_err=None, reverse_direction=False, stats=None, all_quadratic=True
+):
+    """Convert the curves of a set of compatible of glyphs to quadratic.
+
+    All curves will be converted to quadratic at once, ensuring interpolation
+    compatibility. If this is not required, calling glyphs_to_quadratic with one
+    glyph at a time may yield slightly more optimized results.
+
+    Empty glyphs (without contours) are ignored and passed through unchanged.
+
+    Return True if glyphs were modified, else return False.
+
+    Raises IncompatibleGlyphsError if glyphs have non-interpolatable outlines.
+    """
+    if stats is None:
+        stats = {}
+
+    if max_err is None:
+        # assume 1000 is the default UPEM
+        max_err = DEFAULT_MAX_ERR * 1000
+
+    if isinstance(max_err, (list, tuple)):
+        max_errors = max_err
+    else:
+        max_errors = [max_err] * len(glyphs)
+    _validate_length(max_errors, len(glyphs), "max_err")
+    _validate_positive_tolerances(max_errors, "max_err")
+
+    return _glyphs_to_quadratic(
+        glyphs, max_errors, reverse_direction, stats, all_quadratic
+    )
+
+
+def fonts_to_quadratic(
+    fonts,
+    max_err_em=None,
+    max_err=None,
+    reverse_direction=False,
+    stats=None,
+    dump_stats=False,
+    remember_curve_type=True,
+    all_quadratic=True,
+):
+    """Convert the curves of a collection of fonts to quadratic.
+
+    All curves will be converted to quadratic at once, ensuring interpolation
+    compatibility. If this is not required, calling fonts_to_quadratic with one
+    font at a time may yield slightly more optimized results.
+
+    Empty glyphs (without contours) are ignored and passed through unchanged.
+
+    Return the set of modified glyph names if any, else return an empty set.
+
+    By default, cu2qu stores the curve type in the fonts' lib, under a private
+    key "com.github.googlei18n.cu2qu.curve_type", and will not try to convert
+    them again if the curve type is already set to "quadratic".
+    Setting 'remember_curve_type' to False disables this optimization.
+
+    Raises IncompatibleFontsError if same-named glyphs from different fonts
+    have non-interpolatable outlines.
+    """
+
+    if remember_curve_type:
+        curve_types = {f.lib.get(CURVE_TYPE_LIB_KEY, "cubic") for f in fonts}
+        if len(curve_types) == 1:
+            curve_type = next(iter(curve_types))
+            if curve_type in ("quadratic", "mixed"):
+                logger.info("Curves already converted to quadratic")
+                return False
+            elif curve_type == "cubic":
+                pass  # keep converting
+            else:
+                raise NotImplementedError(curve_type)
+        elif len(curve_types) > 1:
+            # going to crash later if they do differ
+            logger.warning("fonts may contain different curve types")
+
+    if stats is None:
+        stats = {}
+
+    if max_err_em is not None and max_err is not None:
+        raise TypeError("Only one of max_err and max_err_em can be specified.")
+    if max_err_em is None and max_err is None:
+        max_err_em = DEFAULT_MAX_ERR
+
+    if isinstance(max_err, (list, tuple)):
+        _validate_length(max_err, len(fonts), "max_err")
+        max_errors = max_err
+        _validate_positive_tolerances(max_errors, "max_err")
+    elif max_err is not None:
+        _validate_positive_tolerance(max_err, "max_err")
+        max_errors = [max_err] * len(fonts)
+
+    if isinstance(max_err_em, (list, tuple)):
+        _validate_length(max_err_em, len(fonts), "max_err_em")
+        _validate_positive_tolerances(max_err_em, "max_err_em")
+        max_errors = [f.info.unitsPerEm * e for f, e in zip(fonts, max_err_em)]
+    elif max_err_em is not None:
+        _validate_positive_tolerance(max_err_em, "max_err_em")
+        max_errors = [f.info.unitsPerEm * max_err_em for f in fonts]
+
+    modified = set()
+    glyph_errors = {}
+    for name in set().union(*(f.keys() for f in fonts)):
+        glyphs = []
+        cur_max_errors = []
+        for font, error in zip(fonts, max_errors):
+            if name in font:
+                glyphs.append(font[name])
+                cur_max_errors.append(error)
+        try:
+            if _glyphs_to_quadratic(
+                glyphs, cur_max_errors, reverse_direction, stats, all_quadratic
+            ):
+                modified.add(name)
+        except IncompatibleGlyphsError as exc:
+            logger.error(exc)
+            glyph_errors[name] = exc
+
+    if glyph_errors:
+        raise IncompatibleFontsError(glyph_errors)
+
+    if modified and dump_stats:
+        spline_lengths = sorted(stats.keys())
+        logger.info(
+            "New spline lengths: %s"
+            % (", ".join("%s: %d" % (l, stats[l]) for l in spline_lengths))
+        )
+
+    if remember_curve_type:
+        for font in fonts:
+            curve_type = font.lib.get(CURVE_TYPE_LIB_KEY, "cubic")
+            new_curve_type = "quadratic" if all_quadratic else "mixed"
+            if curve_type != new_curve_type:
+                font.lib[CURVE_TYPE_LIB_KEY] = new_curve_type
+    return modified
+
+
+def glyph_to_quadratic(glyph, **kwargs):
+    """Convenience wrapper around glyphs_to_quadratic, for just one glyph.
+    Return True if the glyph was modified, else return False.
+    """
+
+    return glyphs_to_quadratic([glyph], **kwargs)
+
+
+def font_to_quadratic(font, **kwargs):
+    """Convenience wrapper around fonts_to_quadratic, for just one font.
+    Return the set of modified glyph names if any, else return empty set.
+    """
+
+    return fonts_to_quadratic([font], **kwargs)

@@ -1,1 +1,56 @@
-IiIiQmVuY2htYXJrIHRoZSBxdTJjdSBhbGdvcml0aG0gcGVyZm9ybWFuY2UuIiIiCgpmcm9tIC5xdTJjdSBpbXBvcnQgKgpmcm9tIGZvbnRUb29scy5jdTJxdSBpbXBvcnQgY3VydmVfdG9fcXVhZHJhdGljCmltcG9ydCByYW5kb20KaW1wb3J0IHRpbWVpdAoKTUFYX0VSUiA9IDAuNQpOVU1fQ1VSVkVTID0gNQoKCmRlZiBnZW5lcmF0ZV9jdXJ2ZXMobik6CiAgICBwb2ludHMgPSBbCiAgICAgICAgdHVwbGUoZmxvYXQocmFuZG9tLnJhbmRpbnQoMCwgMjA0OCkpIGZvciBjb29yZCBpbiByYW5nZSgyKSkKICAgICAgICBmb3IgcG9pbnQgaW4gcmFuZ2UoMSArIDMgKiBuKQogICAgXQogICAgY3VydmVzID0gW10KICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIGN1cnZlcy5hcHBlbmQodHVwbGUocG9pbnRzW2kgKiAzIDogaSAqIDMgKyA0XSkpCiAgICByZXR1cm4gY3VydmVzCgoKZGVmIHNldHVwX3F1YWRyYXRpY190b19jdXJ2ZXMoKToKICAgIGN1cnZlcyA9IGdlbmVyYXRlX2N1cnZlcyhOVU1fQ1VSVkVTKQogICAgcXVhZHJhdGljcyA9IFtjdXJ2ZV90b19xdWFkcmF0aWMoY3VydmUsIE1BWF9FUlIpIGZvciBjdXJ2ZSBpbiBjdXJ2ZXNdCiAgICByZXR1cm4gcXVhZHJhdGljcywgTUFYX0VSUgoKCmRlZiBydW5fYmVuY2htYXJrKG1vZHVsZSwgZnVuY3Rpb24sIHNldHVwX3N1ZmZpeD0iIiwgcmVwZWF0PTI1LCBudW1iZXI9MSk6CiAgICBzZXR1cF9mdW5jID0gInNldHVwXyIgKyBmdW5jdGlvbgogICAgaWYgc2V0dXBfc3VmZml4OgogICAgICAgIHByaW50KCIlcyB3aXRoICVzOiIgJSAoZnVuY3Rpb24sIHNldHVwX3N1ZmZpeCksIGVuZD0iIikKICAgICAgICBzZXR1cF9mdW5jICs9ICJfIiArIHNldHVwX3N1ZmZpeAogICAgZWxzZToKICAgICAgICBwcmludCgiJXM6IiAlIGZ1bmN0aW9uLCBlbmQ9IiIpCgogICAgZGVmIHdyYXBwZXIoZnVuY3Rpb24sIHNldHVwX2Z1bmMpOgogICAgICAgIGZ1bmN0aW9uID0gZ2xvYmFscygpW2Z1bmN0aW9uXQogICAgICAgIHNldHVwX2Z1bmMgPSBnbG9iYWxzKClbc2V0dXBfZnVuY10KCiAgICAgICAgZGVmIHdyYXBwZWQoKToKICAgICAgICAgICAgcmV0dXJuIGZ1bmN0aW9uKCpzZXR1cF9mdW5jKCkpCgogICAgICAgIHJldHVybiB3cmFwcGVkCgogICAgcmVzdWx0cyA9IHRpbWVpdC5yZXBlYXQod3JhcHBlcihmdW5jdGlvbiwgc2V0dXBfZnVuYyksIHJlcGVhdD1yZXBlYXQsIG51bWJlcj1udW1iZXIpCiAgICBwcmludCgiXHQlNS4xZnVzIiAlIChtaW4ocmVzdWx0cykgKiAxMDAwMDAwLjAgLyBudW1iZXIpKQoKCmRlZiBtYWluKCk6CiAgICBydW5fYmVuY2htYXJrKCJxdTJjdSIsICJxdWFkcmF0aWNfdG9fY3VydmVzIikKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgcmFuZG9tLnNlZWQoMSkKICAgIG1haW4oKQo=
+"""Benchmark the qu2cu algorithm performance."""
+
+from .qu2cu import *
+from fontTools.cu2qu import curve_to_quadratic
+import random
+import timeit
+
+MAX_ERR = 0.5
+NUM_CURVES = 5
+
+
+def generate_curves(n):
+    points = [
+        tuple(float(random.randint(0, 2048)) for coord in range(2))
+        for point in range(1 + 3 * n)
+    ]
+    curves = []
+    for i in range(n):
+        curves.append(tuple(points[i * 3 : i * 3 + 4]))
+    return curves
+
+
+def setup_quadratic_to_curves():
+    curves = generate_curves(NUM_CURVES)
+    quadratics = [curve_to_quadratic(curve, MAX_ERR) for curve in curves]
+    return quadratics, MAX_ERR
+
+
+def run_benchmark(module, function, setup_suffix="", repeat=25, number=1):
+    setup_func = "setup_" + function
+    if setup_suffix:
+        print("%s with %s:" % (function, setup_suffix), end="")
+        setup_func += "_" + setup_suffix
+    else:
+        print("%s:" % function, end="")
+
+    def wrapper(function, setup_func):
+        function = globals()[function]
+        setup_func = globals()[setup_func]
+
+        def wrapped():
+            return function(*setup_func())
+
+        return wrapped
+
+    results = timeit.repeat(wrapper(function, setup_func), repeat=repeat, number=number)
+    print("\t%5.1fus" % (min(results) * 1000000.0 / number))
+
+
+def main():
+    run_benchmark("qu2cu", "quadratic_to_curves")
+
+
+if __name__ == "__main__":
+    random.seed(1)
+    main()

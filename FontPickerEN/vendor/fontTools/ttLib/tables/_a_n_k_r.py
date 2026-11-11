@@ -1,1 +1,15 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfX2Ffbl9rX3IoQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJBbmNob3IgUG9pbnQgdGFibGUKCiAgICBUaGUgYW5jaG9yIHBvaW50IHRhYmxlIHByb3ZpZGVzIGEgd2F5IHRvIGRlZmluZSBhbmNob3IgcG9pbnRzLgogICAgVGhlc2UgYXJlIHBvaW50cyB3aXRoaW4gdGhlIGNvb3JkaW5hdGUgc3BhY2Ugb2YgYSBnaXZlbiBnbHlwaCwKICAgIGluZGVwZW5kZW50IG9mIHRoZSBjb250cm9sIHBvaW50cyB1c2VkIHRvIHJlbmRlciB0aGUgZ2x5cGguCiAgICBBbmNob3IgcG9pbnRzIGFyZSB1c2VkIGluIGNvbmp1bmN0aW9uIHdpdGggdGhlIGBga2VyeGBgIHRhYmxlLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZhbmtyLmh0bWwKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table__a_n_k_r(BaseTTXConverter):
+    """Anchor Point table
+
+    The anchor point table provides a way to define anchor points.
+    These are points within the coordinate space of a given glyph,
+    independent of the control points used to render the glyph.
+    Anchor points are used in conjunction with the ``kerx`` table.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6ankr.html
+    """
+
+    pass

@@ -1,1 +1,460 @@
-IiIiTW9kdWxlIGZvciByZWFkaW5nIFRGTSAoVGVYIEZvbnQgTWV0cmljcykgZmlsZXMuCgpUaGUgVEZNIGZvcm1hdCBpcyBkZXNjcmliZWQgaW4gdGhlIFRGdG9QTCBXRUIgc291cmNlIGNvZGUsIHdob3NlIHR5cGVzZXQgZm9ybQpjYW4gYmUgZm91bmQgb24gYENUQU4gPGh0dHA6Ly9taXJyb3JzLmN0YW4ub3JnL2luZm8va251dGgtcGRmL3RleHdhcmUvdGZ0b3BsLnBkZj5gXy4KCiAgICAgICAgPj4+IGZyb20gZm9udFRvb2xzLnRmbUxpYiBpbXBvcnQgVEZNCiAgICAgICAgPj4+IHRmbSA9IFRGTSgiVGVzdHMvdGZtTGliL2RhdGEvY21yMTAudGZtIikKICAgICAgICA+Pj4KICAgICAgICA+Pj4gIyBBY2Nlc3NpbmcgYW4gYXR0cmlidXRlIGdldHMgeW91IG1ldGFkYXRhLgogICAgICAgID4+PiB0Zm0uY2hlY2tzdW0KICAgICAgICAxMjc0MTEwMDczCiAgICAgICAgPj4+IHRmbS5kZXNpZ25zaXplCiAgICAgICAgMTAuMAogICAgICAgID4+PiB0Zm0uY29kaW5nc2NoZW1lCiAgICAgICAgJ1RlWCB0ZXh0JwogICAgICAgID4+PiB0Zm0uZmFtaWx5CiAgICAgICAgJ0NNUicKICAgICAgICA+Pj4gdGZtLnNldmVuX2JpdF9zYWZlX2ZsYWcKICAgICAgICBGYWxzZQogICAgICAgID4+PiB0Zm0uZmFjZQogICAgICAgIDIzNAogICAgICAgID4+PiB0Zm0uZXh0cmFoZWFkZXIKICAgICAgICB7fQogICAgICAgID4+PiB0Zm0uZm9udGRpbWVucwogICAgICAgIHsnU0xBTlQnOiAwLjAsICdTUEFDRSc6IDAuMzMzMzMzOTY5MTE2MjEwOTQsICdTVFJFVENIJzogMC4xNjY2NjY5ODQ1NTgxMDU0NywgJ1NIUklOSyc6IDAuMTExMTExNjQwOTMwMTc1NzgsICdYSEVJR0hUJzogMC40MzA1NTUzNDM2Mjc5Mjk3LCAnUVVBRCc6IDEuMDAwMDAyODYxMDIyOTQ5MiwgJ0VYVFJBU1BBQ0UnOiAwLjExMTExMTY0MDkzMDE3NTc4fQogICAgICAgID4+PiAjIEFjY2Vzc2luZyBhIGNoYXJhY3RlciBnZXRzIHlvdSBpdHMgbWV0cmljcy4KICAgICAgICA+Pj4gIyDigJx3aWR0aOKAnSBpcyBhbHdheXMgYXZhaWxhYmxlLCBvdGhlciBtZXRyaWNzIGFyZSBhdmFpbGFibGUgb25seSB3aGVuCiAgICAgICAgPj4+ICMgYXBwbGljYWJsZS4gQWxsIHZhbHVlcyBhcmUgcmVsYXRpdmUgdG8g4oCcZGVzaWduc2l6ZeKAnS4KICAgICAgICA+Pj4gdGZtLmNoYXJzW29yZCgiZyIpXQogICAgICAgIHsnd2lkdGgnOiAwLjUwMDAwMTkwNzM0ODYzMjgsICdoZWlnaHQnOiAwLjQzMDU1NTM0MzYyNzkyOTcsICdkZXB0aCc6IDAuMTk0NDQ0NjU2MzcyMDcwMywgJ2l0YWxpYyc6IDAuMDEzODg4MzU5MDY5ODI0MjE5fQogICAgICAgID4+PiAjIEtlcm5pbmcgYW5kIGxpZ2F0dXJlIGNhbiBiZSBhY2Nlc3NlZCBhcyB3ZWxsLgogICAgICAgID4+PiB0Zm0ua2VybmluZ1tvcmQoImMiKV0KICAgICAgICB7MTA0OiAtMC4wMjc3Nzg2MjU0ODgyODEyNSwgMTA3OiAtMC4wMjc3Nzg2MjU0ODgyODEyNX0KICAgICAgICA+Pj4gdGZtLmxpZ2F0dXJlc1tvcmQoImYiKV0KICAgICAgICB7MTA1OiAoJ0xJRycsIDEyKSwgMTAyOiAoJ0xJRycsIDExKSwgMTA4OiAoJ0xJRycsIDEzKX0KIiIiCgpmcm9tIHR5cGVzIGltcG9ydCBTaW1wbGVOYW1lc3BhY2UKCmZyb20gZm9udFRvb2xzLm1pc2Muc3N0cnVjdCBpbXBvcnQgY2FsY3NpemUsIHVucGFjaywgdW5wYWNrMgoKU0laRVNfRk9STUFUID0gIiIiCiAgICA+CiAgICBsZjogaCAgICAjIGxlbmd0aCBvZiB0aGUgZW50aXJlIGZpbGUsIGluIHdvcmRzCiAgICBsaDogaCAgICAjIGxlbmd0aCBvZiB0aGUgaGVhZGVyIGRhdGEsIGluIHdvcmRzCiAgICBiYzogaCAgICAjIHNtYWxsZXN0IGNoYXJhY3RlciBjb2RlIGluIHRoZSBmb250CiAgICBlYzogaCAgICAjIGxhcmdlc3QgY2hhcmFjdGVyIGNvZGUgaW4gdGhlIGZvbnQKICAgIG53OiBoICAgICMgbnVtYmVyIG9mIHdvcmRzIGluIHRoZSB3aWR0aCB0YWJsZQogICAgbmg6IGggICAgIyBudW1iZXIgb2Ygd29yZHMgaW4gdGhlIGhlaWdodCB0YWJsZQogICAgbmQ6IGggICAgIyBudW1iZXIgb2Ygd29yZHMgaW4gdGhlIGRlcHRoIHRhYmxlCiAgICBuaTogaCAgICAjIG51bWJlciBvZiB3b3JkcyBpbiB0aGUgaXRhbGljIGNvcnJlY3Rpb24gdGFibGUKICAgIG5sOiBoICAgICMgbnVtYmVyIG9mIHdvcmRzIGluIHRoZSBsaWdhdHVyZS9rZXJuIHRhYmxlCiAgICBuazogaCAgICAjIG51bWJlciBvZiB3b3JkcyBpbiB0aGUga2VybiB0YWJsZQogICAgbmU6IGggICAgIyBudW1iZXIgb2Ygd29yZHMgaW4gdGhlIGV4dGVuc2libGUgY2hhcmFjdGVyIHRhYmxlCiAgICBucDogaCAgICAjIG51bWJlciBvZiBmb250IHBhcmFtZXRlciB3b3JkcwoiIiIKClNJWkVTX1NJWkUgPSBjYWxjc2l6ZShTSVpFU19GT1JNQVQpCgpGSVhFRF9GT1JNQVQgPSAiMTIuMjBGIgoKSEVBREVSX0ZPUk1BVDEgPSBmIiIiCiAgICA+CiAgICBjaGVja3N1bTogICAgICAgICAgICBMCiAgICBkZXNpZ25zaXplOiAgICAgICAgICB7RklYRURfRk9STUFUfQoiIiIKCkhFQURFUl9GT1JNQVQyID0gZiIiIgogICAge0hFQURFUl9GT1JNQVQxfQogICAgY29kaW5nc2NoZW1lOiAgICAgICAgNDBwCiIiIgoKSEVBREVSX0ZPUk1BVDMgPSBmIiIiCiAgICB7SEVBREVSX0ZPUk1BVDJ9CiAgICBmYW1pbHk6ICAgICAgICAgICAgICAyMHAKIiIiCgpIRUFERVJfRk9STUFUNCA9IGYiIiIKICAgIHtIRUFERVJfRk9STUFUM30KICAgIHNldmVuX2JpdF9zYWZlX2ZsYWc6ID8KICAgIGlnbm9yZWQ6ICAgICAgICAgICAgIHgKICAgIGlnbm9yZWQ6ICAgICAgICAgICAgIHgKICAgIGZhY2U6ICAgICAgICAgICAgICAgIEIKIiIiCgpIRUFERVJfU0laRTEgPSBjYWxjc2l6ZShIRUFERVJfRk9STUFUMSkKSEVBREVSX1NJWkUyID0gY2FsY3NpemUoSEVBREVSX0ZPUk1BVDIpCkhFQURFUl9TSVpFMyA9IGNhbGNzaXplKEhFQURFUl9GT1JNQVQzKQpIRUFERVJfU0laRTQgPSBjYWxjc2l6ZShIRUFERVJfRk9STUFUNCkKCkxJR19LRVJOX0NPTU1BTkQgPSAiIiIKICAgID4KICAgIHNraXBfYnl0ZTogQgogICAgbmV4dF9jaGFyOiBCCiAgICBvcF9ieXRlOiBCCiAgICByZW1haW5kZXI6IEIKIiIiCgpCQVNFX1BBUkFNUyA9IFsKICAgICJTTEFOVCIsCiAgICAiU1BBQ0UiLAogICAgIlNUUkVUQ0giLAogICAgIlNIUklOSyIsCiAgICAiWEhFSUdIVCIsCiAgICAiUVVBRCIsCiAgICAiRVhUUkFTUEFDRSIsCl0KCk1BVEhTWV9QQVJBTVMgPSBbCiAgICAiTlVNMSIsCiAgICAiTlVNMiIsCiAgICAiTlVNMyIsCiAgICAiREVOT00xIiwKICAgICJERU5PTTIiLAogICAgIlNVUDEiLAogICAgIlNVUDIiLAogICAgIlNVUDMiLAogICAgIlNVQjEiLAogICAgIlNVQjIiLAogICAgIlNVUERST1AiLAogICAgIlNVQkRST1AiLAogICAgIkRFTElNMSIsCiAgICAiREVMSU0yIiwKICAgICJBWElTSEVJR0hUIiwKXQoKTUFUSEVYX1BBUkFNUyA9IFsKICAgICJERUZBVUxUUlVMRVRISUNLTkVTUyIsCiAgICAiQklHT1BTUEFDSU5HMSIsCiAgICAiQklHT1BTUEFDSU5HMiIsCiAgICAiQklHT1BTUEFDSU5HMyIsCiAgICAiQklHT1BTUEFDSU5HNCIsCiAgICAiQklHT1BTUEFDSU5HNSIsCl0KClZBTklMTEEgPSAwCk1BVEhTWSA9IDEKTUFUSEVYID0gMgoKVU5SRUFDSEFCTEUgPSAwClBBU1NUSFJPVUdIID0gMQpBQ0NFU1NBQkxFID0gMgoKTk9fVEFHID0gMApMSUdfVEFHID0gMQpMSVNUX1RBRyA9IDIKRVhUX1RBRyA9IDMKClNUT1BfRkxBRyA9IDEyOApLRVJOX0ZMQUcgPSAxMjgKCgpjbGFzcyBURk1FeGNlcHRpb24oRXhjZXB0aW9uKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBtZXNzYWdlKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKG1lc3NhZ2UpCgoKY2xhc3MgVEZNOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGZpbGUpOgogICAgICAgIHNlbGYuX3JlYWQoZmlsZSkKCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgZiI8VEZNIgogICAgICAgICAgICBmIiBmb3Ige3NlbGYuZmFtaWx5fSIKICAgICAgICAgICAgZiIgaW4ge3NlbGYuY29kaW5nc2NoZW1lfSIKICAgICAgICAgICAgZiIgYXQge3NlbGYuZGVzaWduc2l6ZTpnfXB0PiIKICAgICAgICApCgogICAgZGVmIF9yZWFkKHNlbGYsIGZpbGUpOgogICAgICAgIGlmIGhhc2F0dHIoZmlsZSwgInJlYWQiKToKICAgICAgICAgICAgZGF0YSA9IGZpbGUucmVhZCgpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgd2l0aCBvcGVuKGZpbGUsICJyYiIpIGFzIGZwOgogICAgICAgICAgICAgICAgZGF0YSA9IGZwLnJlYWQoKQoKICAgICAgICBzZWxmLl9kYXRhID0gZGF0YQoKICAgICAgICBpZiBsZW4oZGF0YSkgPCBTSVpFU19TSVpFOgogICAgICAgICAgICByYWlzZSBURk1FeGNlcHRpb24oIlRvbyBzaG9ydCBpbnB1dCBmaWxlIikKCiAgICAgICAgc2l6ZXMgPSBTaW1wbGVOYW1lc3BhY2UoKQogICAgICAgIHVucGFjazIoU0laRVNfRk9STUFULCBkYXRhLCBzaXplcykKCiAgICAgICAgIyBEbyBzb21lIGZpbGUgc3RydWN0dXJlIHNhbml0eSBjaGVja3MuCiAgICAgICAgIyBUZVggYW5kIFRGdG9QTCBkbyBhZGRpdGlvbmFsIGZ1bmN0aW9uYWwgY2hlY2tzIGFuZCBtaWdodCBldmVuIGNvcnJlY3QKICAgICAgICAjIOKAnGVycm9yc+KAnSBpbiB0aGUgaW5wdXQgZmlsZSwgYnV0IHdlIGluc3RlYWQgdHJ5IHRvIG91dHB1dCB0aGUgZmlsZSBhcwogICAgICAgICMgaXQgaXMgYXMgbG9uZyBhcyBpdCBpcyBwYXJzYWJsZSwgZXZlbiBpZiB0aGUgZGF0YSBtYWtlIG5vIHNlbnNlLgoKICAgICAgICBpZiBzaXplcy5sZiA8IDA6CiAgICAgICAgICAgIHJhaXNlIFRGTUV4Y2VwdGlvbigiVGhlIGZpbGUgY2xhaW1zIHRvIGhhdmUgbmVnYXRpdmUgb3IgemVybyBsZW5ndGghIikKCiAgICAgICAgaWYgbGVuKGRhdGEpIDwgc2l6ZXMubGYgKiA0OgogICAgICAgICAgICByYWlzZSBURk1FeGNlcHRpb24oIlRoZSBmaWxlIGhhcyBmZXdlciBieXRlcyB0aGFuIGl0IGNsYWltcyEiKQoKICAgICAgICBmb3IgbmFtZSwgbGVuZ3RoIGluIHZhcnMoc2l6ZXMpLml0ZW1zKCk6CiAgICAgICAgICAgIGlmIGxlbmd0aCA8IDA6CiAgICAgICAgICAgICAgICByYWlzZSBURk1FeGNlcHRpb24oIlRoZSBzdWJmaWxlIHNpemU6ICd7bmFtZX0nIGlzIG5lZ2F0aXZlISIpCgogICAgICAgIGlmIHNpemVzLmxoIDwgMjoKICAgICAgICAgICAgcmFpc2UgVEZNRXhjZXB0aW9uKGYiVGhlIGhlYWRlciBsZW5ndGggaXMgb25seSB7c2l6ZXMubGh9ISIpCgogICAgICAgIGlmIHNpemVzLmJjID4gc2l6ZXMuZWMgKyAxIG9yIHNpemVzLmVjID4gMjU1OgogICAgICAgICAgICByYWlzZSBURk1FeGNlcHRpb24oCiAgICAgICAgICAgICAgICBmIlRoZSBjaGFyYWN0ZXIgY29kZSByYW5nZSB7c2l6ZXMuYmN9Li57c2l6ZXMuZWN9IGlzIGlsbGVnYWwhIgogICAgICAgICAgICApCgogICAgICAgIGlmIHNpemVzLm53ID09IDAgb3Igc2l6ZXMubmggPT0gMCBvciBzaXplcy5uZCA9PSAwIG9yIHNpemVzLm5pID09IDA6CiAgICAgICAgICAgIHJhaXNlIFRGTUV4Y2VwdGlvbigiSW5jb21wbGV0ZSBzdWJmaWxlcyBmb3IgY2hhcmFjdGVyIGRpbWVuc2lvbnMhIikKCiAgICAgICAgaWYgc2l6ZXMubmUgPiAyNTY6CiAgICAgICAgICAgIHJhaXNlIFRGTUV4Y2VwdGlvbihmIlRoZXJlIGFyZSB7bmV9IGV4dGVuc2libGUgcmVjaXBlcyEiKQoKICAgICAgICBpZiBzaXplcy5sZiAhPSAoCiAgICAgICAgICAgIDYKICAgICAgICAgICAgKyBzaXplcy5saAogICAgICAgICAgICArIChzaXplcy5lYyAtIHNpemVzLmJjICsgMSkKICAgICAgICAgICAgKyBzaXplcy5udwogICAgICAgICAgICArIHNpemVzLm5oCiAgICAgICAgICAgICsgc2l6ZXMubmQKICAgICAgICAgICAgKyBzaXplcy5uaQogICAgICAgICAgICArIHNpemVzLm5sCiAgICAgICAgICAgICsgc2l6ZXMubmsKICAgICAgICAgICAgKyBzaXplcy5uZQogICAgICAgICAgICArIHNpemVzLm5wCiAgICAgICAgKToKICAgICAgICAgICAgcmFpc2UgVEZNRXhjZXB0aW9uKCJTdWJmaWxlIHNpemVzIGRvbuKAmXQgYWRkIHVwIHRvIHRoZSBzdGF0ZWQgdG90YWwiKQoKICAgICAgICAjIFN1YmZpbGUgb2Zmc2V0cywgdXNlZCBpbiB0aGUgaGVscGVyIGZ1bmN0aW9uIGJlbG93LiBUaGVzZSBhbGwgYXJlCiAgICAgICAgIyAzMi1iaXQgd29yZCBvZmZzZXRzIG5vdCA4LWJpdCBieXRlIG9mZnNldHMuCiAgICAgICAgY2hhcl9iYXNlID0gNiArIHNpemVzLmxoIC0gc2l6ZXMuYmMKICAgICAgICB3aWR0aF9iYXNlID0gY2hhcl9iYXNlICsgc2l6ZXMuZWMgKyAxCiAgICAgICAgaGVpZ2h0X2Jhc2UgPSB3aWR0aF9iYXNlICsgc2l6ZXMubncKICAgICAgICBkZXB0aF9iYXNlID0gaGVpZ2h0X2Jhc2UgKyBzaXplcy5uaAogICAgICAgIGl0YWxpY19iYXNlID0gZGVwdGhfYmFzZSArIHNpemVzLm5kCiAgICAgICAgbGlnX2tlcm5fYmFzZSA9IGl0YWxpY19iYXNlICsgc2l6ZXMubmkKICAgICAgICBrZXJuX2Jhc2UgPSBsaWdfa2Vybl9iYXNlICsgc2l6ZXMubmwKICAgICAgICBleHRlbl9iYXNlID0ga2Vybl9iYXNlICsgc2l6ZXMubmsKICAgICAgICBwYXJhbV9iYXNlID0gZXh0ZW5fYmFzZSArIHNpemVzLm5lCgogICAgICAgICMgSGVscGVyIGZ1bmN0aW9ucyBmb3IgYWNjZXNzaW5nIGluZGl2aWR1YWwgZGF0YS4gSWYgdGhpcyBsb29rcwogICAgICAgICMgbm9uaWRpb21hdGljIFB5dGhvbiwgSSBibGFtZSB0aGUgZWZmZWN0IG9mIHJlYWRpbmcgdGhlIGxpdGVyYXRlIFdFQgogICAgICAgICMgZG9jdW1lbnRhdGlvbiBvZiBURnRvUEwuCiAgICAgICAgZGVmIGNoYXJfaW5mbyhjKToKICAgICAgICAgICAgcmV0dXJuIDQgKiAoY2hhcl9iYXNlICsgYykKCiAgICAgICAgZGVmIHdpZHRoX2luZGV4KGMpOgogICAgICAgICAgICByZXR1cm4gZGF0YVtjaGFyX2luZm8oYyldCgogICAgICAgIGRlZiBub25lZXhpc3RlbnQoYyk6CiAgICAgICAgICAgIHJldHVybiBjIDwgc2l6ZXMuYmMgb3IgYyA+IHNpemVzLmVjIG9yIHdpZHRoX2luZGV4KGMpID09IDAKCiAgICAgICAgZGVmIGhlaWdodF9pbmRleChjKToKICAgICAgICAgICAgcmV0dXJuIGRhdGFbY2hhcl9pbmZvKGMpICsgMV0gLy8gMTYKCiAgICAgICAgZGVmIGRlcHRoX2luZGV4KGMpOgogICAgICAgICAgICByZXR1cm4gZGF0YVtjaGFyX2luZm8oYykgKyAxXSAlIDE2CgogICAgICAgIGRlZiBpdGFsaWNfaW5kZXgoYyk6CiAgICAgICAgICAgIHJldHVybiBkYXRhW2NoYXJfaW5mbyhjKSArIDJdIC8vIDQKCiAgICAgICAgZGVmIHRhZyhjKToKICAgICAgICAgICAgcmV0dXJuIGRhdGFbY2hhcl9pbmZvKGMpICsgMl0gJSA0CgogICAgICAgIGRlZiByZW1haW5kZXIoYyk6CiAgICAgICAgICAgIHJldHVybiBkYXRhW2NoYXJfaW5mbyhjKSArIDNdCgogICAgICAgIGRlZiB3aWR0aChjKToKICAgICAgICAgICAgciA9IDQgKiAod2lkdGhfYmFzZSArIHdpZHRoX2luZGV4KGMpKQogICAgICAgICAgICByZXR1cm4gcmVhZF9maXhlZChyLCAidiIpWyJ2Il0KCiAgICAgICAgZGVmIGhlaWdodChjKToKICAgICAgICAgICAgciA9IDQgKiAoaGVpZ2h0X2Jhc2UgKyBoZWlnaHRfaW5kZXgoYykpCiAgICAgICAgICAgIHJldHVybiByZWFkX2ZpeGVkKHIsICJ2IilbInYiXQoKICAgICAgICBkZWYgZGVwdGgoYyk6CiAgICAgICAgICAgIHIgPSA0ICogKGRlcHRoX2Jhc2UgKyBkZXB0aF9pbmRleChjKSkKICAgICAgICAgICAgcmV0dXJuIHJlYWRfZml4ZWQociwgInYiKVsidiJdCgogICAgICAgIGRlZiBpdGFsaWMoYyk6CiAgICAgICAgICAgIHIgPSA0ICogKGl0YWxpY19iYXNlICsgaXRhbGljX2luZGV4KGMpKQogICAgICAgICAgICByZXR1cm4gcmVhZF9maXhlZChyLCAidiIpWyJ2Il0KCiAgICAgICAgZGVmIGV4dGVuKGMpOgogICAgICAgICAgICByZXR1cm4gNCAqIChleHRlbl9iYXNlICsgcmVtYWluZGVyKGMpKQoKICAgICAgICBkZWYgbGlnX3N0ZXAoaSk6CiAgICAgICAgICAgIHJldHVybiA0ICogKGxpZ19rZXJuX2Jhc2UgKyBpKQoKICAgICAgICBkZWYgbGlnX2tlcm5fY29tbWFuZChpKToKICAgICAgICAgICAgY29tbWFuZCA9IFNpbXBsZU5hbWVzcGFjZSgpCiAgICAgICAgICAgIHVucGFjazIoTElHX0tFUk5fQ09NTUFORCwgZGF0YVtpOl0sIGNvbW1hbmQpCiAgICAgICAgICAgIHJldHVybiBjb21tYW5kCgogICAgICAgIGRlZiBrZXJuKGkpOgogICAgICAgICAgICByID0gNCAqIChrZXJuX2Jhc2UgKyBpKQogICAgICAgICAgICByZXR1cm4gcmVhZF9maXhlZChyLCAidiIpWyJ2Il0KCiAgICAgICAgZGVmIHBhcmFtKGkpOgogICAgICAgICAgICByZXR1cm4gNCAqIChwYXJhbV9iYXNlICsgaSkKCiAgICAgICAgZGVmIHJlYWRfZml4ZWQoaW5kZXgsIGtleSwgb2JqPU5vbmUpOgogICAgICAgICAgICByZXQgPSB1bnBhY2syKGYiPjt7a2V5fTp7RklYRURfRk9STUFUfSIsIGRhdGFbaW5kZXg6XSwgb2JqKQogICAgICAgICAgICByZXR1cm4gcmV0WzBdCgogICAgICAgICMgU2V0IGFsbCBhdHRyaWJ1dGVzIHRvIGVtcHR5IHZhbHVlcyByZWdhcmRsZXNzIG9mIHRoZSBoZWFkZXIgc2l6ZS4KICAgICAgICB1bnBhY2soSEVBREVSX0ZPUk1BVDQsIFswXSAqIEhFQURFUl9TSVpFNCwgc2VsZikKCiAgICAgICAgb2Zmc2V0ID0gMjQKICAgICAgICBsZW5ndGggPSBzaXplcy5saCAqIDQKICAgICAgICBzZWxmLmV4dHJhaGVhZGVyID0ge30KICAgICAgICBpZiBsZW5ndGggPj0gSEVBREVSX1NJWkU0OgogICAgICAgICAgICByZXN0ID0gdW5wYWNrMihIRUFERVJfRk9STUFUNCwgZGF0YVtvZmZzZXQ6XSwgc2VsZilbMV0KICAgICAgICAgICAgaWYgc2VsZi5mYWNlIDwgMTg6CiAgICAgICAgICAgICAgICBzID0gc2VsZi5mYWNlICUgMgogICAgICAgICAgICAgICAgYiA9IHNlbGYuZmFjZSAvLyAyCiAgICAgICAgICAgICAgICBzZWxmLmZhY2UgPSAiTUJMIltiICUgM10gKyAiUkkiW3NdICsgIlJDRSJbYiAvLyAzXQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShzaXplcy5saCAtIEhFQURFUl9TSVpFNCAvLyA0KToKICAgICAgICAgICAgICAgIHJlc3QgPSB1bnBhY2syKGYiPjtIRUFERVJ7aSArIDE4fTpsIiwgcmVzdCwgc2VsZi5leHRyYWhlYWRlcilbMV0KICAgICAgICBlbGlmIGxlbmd0aCA+PSBIRUFERVJfU0laRTM6CiAgICAgICAgICAgIHVucGFjazIoSEVBREVSX0ZPUk1BVDMsIGRhdGFbb2Zmc2V0Ol0sIHNlbGYpCiAgICAgICAgZWxpZiBsZW5ndGggPj0gSEVBREVSX1NJWkUyOgogICAgICAgICAgICB1bnBhY2syKEhFQURFUl9GT1JNQVQyLCBkYXRhW29mZnNldDpdLCBzZWxmKQogICAgICAgIGVsaWYgbGVuZ3RoID49IEhFQURFUl9TSVpFMToKICAgICAgICAgICAgdW5wYWNrMihIRUFERVJfRk9STUFUMSwgZGF0YVtvZmZzZXQ6XSwgc2VsZikKCiAgICAgICAgc2VsZi5mb250dHlwZSA9IFZBTklMTEEKICAgICAgICBzY2hlbWUgPSBzZWxmLmNvZGluZ3NjaGVtZS51cHBlcigpCiAgICAgICAgaWYgc2NoZW1lLnN0YXJ0c3dpdGgoIlRFWCBNQVRIIFNZIik6CiAgICAgICAgICAgIHNlbGYuZm9udHR5cGUgPSBNQVRIU1kKICAgICAgICBlbGlmIHNjaGVtZS5zdGFydHN3aXRoKCJURVggTUFUSCBFWCIpOgogICAgICAgICAgICBzZWxmLmZvbnR0eXBlID0gTUFUSEVYCgogICAgICAgIHNlbGYuZm9udGRpbWVucyA9IHt9CiAgICAgICAgZm9yIGkgaW4gcmFuZ2Uoc2l6ZXMubnApOgogICAgICAgICAgICBuYW1lID0gZiJQQVJBTUVURVJ7aSsxfSIKICAgICAgICAgICAgaWYgaSA8PSA2OgogICAgICAgICAgICAgICAgbmFtZSA9IEJBU0VfUEFSQU1TW2ldCiAgICAgICAgICAgIGVsaWYgc2VsZi5mb250dHlwZSA9PSBNQVRIU1kgYW5kIGkgPD0gMjE6CiAgICAgICAgICAgICAgICBuYW1lID0gTUFUSFNZX1BBUkFNU1tpIC0gN10KICAgICAgICAgICAgZWxpZiBzZWxmLmZvbnR0eXBlID09IE1BVEhFWCBhbmQgaSA8PSAxMjoKICAgICAgICAgICAgICAgIG5hbWUgPSBNQVRIRVhfUEFSQU1TW2kgLSA3XQogICAgICAgICAgICByZWFkX2ZpeGVkKHBhcmFtKGkpLCBuYW1lLCBzZWxmLmZvbnRkaW1lbnMpCgogICAgICAgIGxpZ19rZXJuX21hcCA9IHt9CiAgICAgICAgc2VsZi5yaWdodF9ib3VuZGFyeV9jaGFyID0gTm9uZQogICAgICAgIHNlbGYubGVmdF9ib3VuZGFyeV9jaGFyID0gTm9uZQogICAgICAgIGlmIHNpemVzLm5sID4gMDoKICAgICAgICAgICAgY21kID0gbGlnX2tlcm5fY29tbWFuZChsaWdfc3RlcCgwKSkKICAgICAgICAgICAgaWYgY21kLnNraXBfYnl0ZSA9PSAyNTU6CiAgICAgICAgICAgICAgICBzZWxmLnJpZ2h0X2JvdW5kYXJ5X2NoYXIgPSBjbWQubmV4dF9jaGFyCgogICAgICAgICAgICBjbWQgPSBsaWdfa2Vybl9jb21tYW5kKGxpZ19zdGVwKChzaXplcy5ubCAtIDEpKSkKICAgICAgICAgICAgaWYgY21kLnNraXBfYnl0ZSA9PSAyNTU6CiAgICAgICAgICAgICAgICBzZWxmLmxlZnRfYm91bmRhcnlfY2hhciA9IDI1NgogICAgICAgICAgICAgICAgciA9IDI1NiAqIGNtZC5vcF9ieXRlICsgY21kLnJlbWFpbmRlcgogICAgICAgICAgICAgICAgbGlnX2tlcm5fbWFwW3NlbGYubGVmdF9ib3VuZGFyeV9jaGFyXSA9IHIKCiAgICAgICAgc2VsZi5jaGFycyA9IHt9CiAgICAgICAgZm9yIGMgaW4gcmFuZ2Uoc2l6ZXMuYmMsIHNpemVzLmVjICsgMSk6CiAgICAgICAgICAgIGlmIHdpZHRoX2luZGV4KGMpID4gMDoKICAgICAgICAgICAgICAgIHNlbGYuY2hhcnNbY10gPSBpbmZvID0ge30KICAgICAgICAgICAgICAgIGluZm9bIndpZHRoIl0gPSB3aWR0aChjKQogICAgICAgICAgICAgICAgaWYgaGVpZ2h0X2luZGV4KGMpID4gMDoKICAgICAgICAgICAgICAgICAgICBpbmZvWyJoZWlnaHQiXSA9IGhlaWdodChjKQogICAgICAgICAgICAgICAgaWYgZGVwdGhfaW5kZXgoYykgPiAwOgogICAgICAgICAgICAgICAgICAgIGluZm9bImRlcHRoIl0gPSBkZXB0aChjKQogICAgICAgICAgICAgICAgaWYgaXRhbGljX2luZGV4KGMpID4gMDoKICAgICAgICAgICAgICAgICAgICBpbmZvWyJpdGFsaWMiXSA9IGl0YWxpYyhjKQogICAgICAgICAgICAgICAgY2hhcl90YWcgPSB0YWcoYykKICAgICAgICAgICAgICAgIGlmIGNoYXJfdGFnID09IE5PX1RBRzoKICAgICAgICAgICAgICAgICAgICBwYXNzCiAgICAgICAgICAgICAgICBlbGlmIGNoYXJfdGFnID09IExJR19UQUc6CiAgICAgICAgICAgICAgICAgICAgbGlnX2tlcm5fbWFwW2NdID0gcmVtYWluZGVyKGMpCiAgICAgICAgICAgICAgICBlbGlmIGNoYXJfdGFnID09IExJU1RfVEFHOgogICAgICAgICAgICAgICAgICAgIGluZm9bIm5leHRsYXJnZXIiXSA9IHJlbWFpbmRlcihjKQogICAgICAgICAgICAgICAgZWxpZiBjaGFyX3RhZyA9PSBFWFRfVEFHOgogICAgICAgICAgICAgICAgICAgIGluZm9bInZhcmNoYXIiXSA9IHZhcmNoYXIgPSB7fQogICAgICAgICAgICAgICAgICAgIGZvciBpIGluIHJhbmdlKDQpOgogICAgICAgICAgICAgICAgICAgICAgICBwYXJ0ID0gZGF0YVtleHRlbihjKSArIGldCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGkgPT0gMyBvciBwYXJ0ID4gMDoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWUgPSAicmVwIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgaSA9PSAwOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWUgPSAidG9wIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxpZiBpID09IDE6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmFtZSA9ICJtaWQiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbGlmIGkgPT0gMjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuYW1lID0gImJvdCIKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIG5vbmVleGlzdGVudChwYXJ0KToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXJjaGFyW25hbWVdID0gYwogICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXJjaGFyW25hbWVdID0gcGFydAoKICAgICAgICBzZWxmLmxpZ2F0dXJlcyA9IHt9CiAgICAgICAgc2VsZi5rZXJuaW5nID0ge30KICAgICAgICBmb3IgYywgaSBpbiBzb3J0ZWQobGlnX2tlcm5fbWFwLml0ZW1zKCkpOgogICAgICAgICAgICBjbWQgPSBsaWdfa2Vybl9jb21tYW5kKGxpZ19zdGVwKGkpKQogICAgICAgICAgICBpZiBjbWQuc2tpcF9ieXRlID4gU1RPUF9GTEFHOgogICAgICAgICAgICAgICAgaSA9IDI1NiAqIGNtZC5vcF9ieXRlICsgY21kLnJlbWFpbmRlcgoKICAgICAgICAgICAgd2hpbGUgaSA8IHNpemVzLm5sOgogICAgICAgICAgICAgICAgY21kID0gbGlnX2tlcm5fY29tbWFuZChsaWdfc3RlcChpKSkKICAgICAgICAgICAgICAgIGlmIGNtZC5za2lwX2J5dGUgPiBTVE9QX0ZMQUc6CiAgICAgICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBpZiBjbWQub3BfYnl0ZSA+PSBLRVJOX0ZMQUc6CiAgICAgICAgICAgICAgICAgICAgICAgIHIgPSAyNTYgKiAoY21kLm9wX2J5dGUgLSBLRVJOX0ZMQUcpICsgY21kLnJlbWFpbmRlcgogICAgICAgICAgICAgICAgICAgICAgICBzZWxmLmtlcm5pbmcuc2V0ZGVmYXVsdChjLCB7fSlbY21kLm5leHRfY2hhcl0gPSBrZXJuKHIpCiAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgciA9IGNtZC5vcF9ieXRlCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIHIgPT0gNCBvciAociA+IDcgYW5kIHIgIT0gMTEpOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBMaWdhdHVyZSBzdGVwIHdpdGggbm9uc3RhbmRhcmQgY29kZSwgd2Ugb3V0cHV0CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIHRoZSBjb2RlIHZlcmJhdGltLgogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGlnID0gcgogICAgICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGlnID0gIiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIHIgJSA0ID4gMToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsaWcgKz0gIi8iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsaWcgKz0gIkxJRyIKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIHIgJSAyICE9IDA6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGlnICs9ICIvIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgd2hpbGUgciA+IDM6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGlnICs9ICI+IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHIgLT0gNAogICAgICAgICAgICAgICAgICAgICAgICBzZWxmLmxpZ2F0dXJlcy5zZXRkZWZhdWx0KGMsIHt9KVtjbWQubmV4dF9jaGFyXSA9ICgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxpZywKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNtZC5yZW1haW5kZXIsCiAgICAgICAgICAgICAgICAgICAgICAgICkKCiAgICAgICAgICAgICAgICBpZiBjbWQuc2tpcF9ieXRlID49IFNUT1BfRkxBRzoKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgaSArPSBjbWQuc2tpcF9ieXRlICsgMQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgdGZtID0gVEZNKHN5cy5hcmd2WzFdKQogICAgcHJpbnQoCiAgICAgICAgIlxuIi5qb2luKAogICAgICAgICAgICB4CiAgICAgICAgICAgIGZvciB4IGluIFsKICAgICAgICAgICAgICAgIGYidGZtLmNoZWNrc3VtPXt0Zm0uY2hlY2tzdW19IiwKICAgICAgICAgICAgICAgIGYidGZtLmRlc2lnbnNpemU9e3RmbS5kZXNpZ25zaXplfSIsCiAgICAgICAgICAgICAgICBmInRmbS5jb2RpbmdzY2hlbWU9e3RmbS5jb2RpbmdzY2hlbWV9IiwKICAgICAgICAgICAgICAgIGYidGZtLmZvbnR0eXBlPXt0Zm0uZm9udHR5cGV9IiwKICAgICAgICAgICAgICAgIGYidGZtLmZhbWlseT17dGZtLmZhbWlseX0iLAogICAgICAgICAgICAgICAgZiJ0Zm0uc2V2ZW5fYml0X3NhZmVfZmxhZz17dGZtLnNldmVuX2JpdF9zYWZlX2ZsYWd9IiwKICAgICAgICAgICAgICAgIGYidGZtLmZhY2U9e3RmbS5mYWNlfSIsCiAgICAgICAgICAgICAgICBmInRmbS5leHRyYWhlYWRlcj17dGZtLmV4dHJhaGVhZGVyfSIsCiAgICAgICAgICAgICAgICBmInRmbS5mb250ZGltZW5zPXt0Zm0uZm9udGRpbWVuc30iLAogICAgICAgICAgICAgICAgZiJ0Zm0ucmlnaHRfYm91bmRhcnlfY2hhcj17dGZtLnJpZ2h0X2JvdW5kYXJ5X2NoYXJ9IiwKICAgICAgICAgICAgICAgIGYidGZtLmxlZnRfYm91bmRhcnlfY2hhcj17dGZtLmxlZnRfYm91bmRhcnlfY2hhcn0iLAogICAgICAgICAgICAgICAgZiJ0Zm0ua2VybmluZz17dGZtLmtlcm5pbmd9IiwKICAgICAgICAgICAgICAgIGYidGZtLmxpZ2F0dXJlcz17dGZtLmxpZ2F0dXJlc30iLAogICAgICAgICAgICAgICAgZiJ0Zm0uY2hhcnM9e3RmbS5jaGFyc30iLAogICAgICAgICAgICBdCiAgICAgICAgKQogICAgKQogICAgcHJpbnQodGZtKQo=
+"""Module for reading TFM (TeX Font Metrics) files.
+
+The TFM format is described in the TFtoPL WEB source code, whose typeset form
+can be found on `CTAN <http://mirrors.ctan.org/info/knuth-pdf/texware/tftopl.pdf>`_.
+
+        >>> from fontTools.tfmLib import TFM
+        >>> tfm = TFM("Tests/tfmLib/data/cmr10.tfm")
+        >>>
+        >>> # Accessing an attribute gets you metadata.
+        >>> tfm.checksum
+        1274110073
+        >>> tfm.designsize
+        10.0
+        >>> tfm.codingscheme
+        'TeX text'
+        >>> tfm.family
+        'CMR'
+        >>> tfm.seven_bit_safe_flag
+        False
+        >>> tfm.face
+        234
+        >>> tfm.extraheader
+        {}
+        >>> tfm.fontdimens
+        {'SLANT': 0.0, 'SPACE': 0.33333396911621094, 'STRETCH': 0.16666698455810547, 'SHRINK': 0.11111164093017578, 'XHEIGHT': 0.4305553436279297, 'QUAD': 1.0000028610229492, 'EXTRASPACE': 0.11111164093017578}
+        >>> # Accessing a character gets you its metrics.
+        >>> # “width” is always available, other metrics are available only when
+        >>> # applicable. All values are relative to “designsize”.
+        >>> tfm.chars[ord("g")]
+        {'width': 0.5000019073486328, 'height': 0.4305553436279297, 'depth': 0.1944446563720703, 'italic': 0.013888359069824219}
+        >>> # Kerning and ligature can be accessed as well.
+        >>> tfm.kerning[ord("c")]
+        {104: -0.02777862548828125, 107: -0.02777862548828125}
+        >>> tfm.ligatures[ord("f")]
+        {105: ('LIG', 12), 102: ('LIG', 11), 108: ('LIG', 13)}
+"""
+
+from types import SimpleNamespace
+
+from fontTools.misc.sstruct import calcsize, unpack, unpack2
+
+SIZES_FORMAT = """
+    >
+    lf: h    # length of the entire file, in words
+    lh: h    # length of the header data, in words
+    bc: h    # smallest character code in the font
+    ec: h    # largest character code in the font
+    nw: h    # number of words in the width table
+    nh: h    # number of words in the height table
+    nd: h    # number of words in the depth table
+    ni: h    # number of words in the italic correction table
+    nl: h    # number of words in the ligature/kern table
+    nk: h    # number of words in the kern table
+    ne: h    # number of words in the extensible character table
+    np: h    # number of font parameter words
+"""
+
+SIZES_SIZE = calcsize(SIZES_FORMAT)
+
+FIXED_FORMAT = "12.20F"
+
+HEADER_FORMAT1 = f"""
+    >
+    checksum:            L
+    designsize:          {FIXED_FORMAT}
+"""
+
+HEADER_FORMAT2 = f"""
+    {HEADER_FORMAT1}
+    codingscheme:        40p
+"""
+
+HEADER_FORMAT3 = f"""
+    {HEADER_FORMAT2}
+    family:              20p
+"""
+
+HEADER_FORMAT4 = f"""
+    {HEADER_FORMAT3}
+    seven_bit_safe_flag: ?
+    ignored:             x
+    ignored:             x
+    face:                B
+"""
+
+HEADER_SIZE1 = calcsize(HEADER_FORMAT1)
+HEADER_SIZE2 = calcsize(HEADER_FORMAT2)
+HEADER_SIZE3 = calcsize(HEADER_FORMAT3)
+HEADER_SIZE4 = calcsize(HEADER_FORMAT4)
+
+LIG_KERN_COMMAND = """
+    >
+    skip_byte: B
+    next_char: B
+    op_byte: B
+    remainder: B
+"""
+
+BASE_PARAMS = [
+    "SLANT",
+    "SPACE",
+    "STRETCH",
+    "SHRINK",
+    "XHEIGHT",
+    "QUAD",
+    "EXTRASPACE",
+]
+
+MATHSY_PARAMS = [
+    "NUM1",
+    "NUM2",
+    "NUM3",
+    "DENOM1",
+    "DENOM2",
+    "SUP1",
+    "SUP2",
+    "SUP3",
+    "SUB1",
+    "SUB2",
+    "SUPDROP",
+    "SUBDROP",
+    "DELIM1",
+    "DELIM2",
+    "AXISHEIGHT",
+]
+
+MATHEX_PARAMS = [
+    "DEFAULTRULETHICKNESS",
+    "BIGOPSPACING1",
+    "BIGOPSPACING2",
+    "BIGOPSPACING3",
+    "BIGOPSPACING4",
+    "BIGOPSPACING5",
+]
+
+VANILLA = 0
+MATHSY = 1
+MATHEX = 2
+
+UNREACHABLE = 0
+PASSTHROUGH = 1
+ACCESSABLE = 2
+
+NO_TAG = 0
+LIG_TAG = 1
+LIST_TAG = 2
+EXT_TAG = 3
+
+STOP_FLAG = 128
+KERN_FLAG = 128
+
+
+class TFMException(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+
+
+class TFM:
+    def __init__(self, file):
+        self._read(file)
+
+    def __repr__(self):
+        return (
+            f"<TFM"
+            f" for {self.family}"
+            f" in {self.codingscheme}"
+            f" at {self.designsize:g}pt>"
+        )
+
+    def _read(self, file):
+        if hasattr(file, "read"):
+            data = file.read()
+        else:
+            with open(file, "rb") as fp:
+                data = fp.read()
+
+        self._data = data
+
+        if len(data) < SIZES_SIZE:
+            raise TFMException("Too short input file")
+
+        sizes = SimpleNamespace()
+        unpack2(SIZES_FORMAT, data, sizes)
+
+        # Do some file structure sanity checks.
+        # TeX and TFtoPL do additional functional checks and might even correct
+        # “errors” in the input file, but we instead try to output the file as
+        # it is as long as it is parsable, even if the data make no sense.
+
+        if sizes.lf < 0:
+            raise TFMException("The file claims to have negative or zero length!")
+
+        if len(data) < sizes.lf * 4:
+            raise TFMException("The file has fewer bytes than it claims!")
+
+        for name, length in vars(sizes).items():
+            if length < 0:
+                raise TFMException("The subfile size: '{name}' is negative!")
+
+        if sizes.lh < 2:
+            raise TFMException(f"The header length is only {sizes.lh}!")
+
+        if sizes.bc > sizes.ec + 1 or sizes.ec > 255:
+            raise TFMException(
+                f"The character code range {sizes.bc}..{sizes.ec} is illegal!"
+            )
+
+        if sizes.nw == 0 or sizes.nh == 0 or sizes.nd == 0 or sizes.ni == 0:
+            raise TFMException("Incomplete subfiles for character dimensions!")
+
+        if sizes.ne > 256:
+            raise TFMException(f"There are {ne} extensible recipes!")
+
+        if sizes.lf != (
+            6
+            + sizes.lh
+            + (sizes.ec - sizes.bc + 1)
+            + sizes.nw
+            + sizes.nh
+            + sizes.nd
+            + sizes.ni
+            + sizes.nl
+            + sizes.nk
+            + sizes.ne
+            + sizes.np
+        ):
+            raise TFMException("Subfile sizes don’t add up to the stated total")
+
+        # Subfile offsets, used in the helper function below. These all are
+        # 32-bit word offsets not 8-bit byte offsets.
+        char_base = 6 + sizes.lh - sizes.bc
+        width_base = char_base + sizes.ec + 1
+        height_base = width_base + sizes.nw
+        depth_base = height_base + sizes.nh
+        italic_base = depth_base + sizes.nd
+        lig_kern_base = italic_base + sizes.ni
+        kern_base = lig_kern_base + sizes.nl
+        exten_base = kern_base + sizes.nk
+        param_base = exten_base + sizes.ne
+
+        # Helper functions for accessing individual data. If this looks
+        # nonidiomatic Python, I blame the effect of reading the literate WEB
+        # documentation of TFtoPL.
+        def char_info(c):
+            return 4 * (char_base + c)
+
+        def width_index(c):
+            return data[char_info(c)]
+
+        def noneexistent(c):
+            return c < sizes.bc or c > sizes.ec or width_index(c) == 0
+
+        def height_index(c):
+            return data[char_info(c) + 1] // 16
+
+        def depth_index(c):
+            return data[char_info(c) + 1] % 16
+
+        def italic_index(c):
+            return data[char_info(c) + 2] // 4
+
+        def tag(c):
+            return data[char_info(c) + 2] % 4
+
+        def remainder(c):
+            return data[char_info(c) + 3]
+
+        def width(c):
+            r = 4 * (width_base + width_index(c))
+            return read_fixed(r, "v")["v"]
+
+        def height(c):
+            r = 4 * (height_base + height_index(c))
+            return read_fixed(r, "v")["v"]
+
+        def depth(c):
+            r = 4 * (depth_base + depth_index(c))
+            return read_fixed(r, "v")["v"]
+
+        def italic(c):
+            r = 4 * (italic_base + italic_index(c))
+            return read_fixed(r, "v")["v"]
+
+        def exten(c):
+            return 4 * (exten_base + remainder(c))
+
+        def lig_step(i):
+            return 4 * (lig_kern_base + i)
+
+        def lig_kern_command(i):
+            command = SimpleNamespace()
+            unpack2(LIG_KERN_COMMAND, data[i:], command)
+            return command
+
+        def kern(i):
+            r = 4 * (kern_base + i)
+            return read_fixed(r, "v")["v"]
+
+        def param(i):
+            return 4 * (param_base + i)
+
+        def read_fixed(index, key, obj=None):
+            ret = unpack2(f">;{key}:{FIXED_FORMAT}", data[index:], obj)
+            return ret[0]
+
+        # Set all attributes to empty values regardless of the header size.
+        unpack(HEADER_FORMAT4, [0] * HEADER_SIZE4, self)
+
+        offset = 24
+        length = sizes.lh * 4
+        self.extraheader = {}
+        if length >= HEADER_SIZE4:
+            rest = unpack2(HEADER_FORMAT4, data[offset:], self)[1]
+            if self.face < 18:
+                s = self.face % 2
+                b = self.face // 2
+                self.face = "MBL"[b % 3] + "RI"[s] + "RCE"[b // 3]
+            for i in range(sizes.lh - HEADER_SIZE4 // 4):
+                rest = unpack2(f">;HEADER{i + 18}:l", rest, self.extraheader)[1]
+        elif length >= HEADER_SIZE3:
+            unpack2(HEADER_FORMAT3, data[offset:], self)
+        elif length >= HEADER_SIZE2:
+            unpack2(HEADER_FORMAT2, data[offset:], self)
+        elif length >= HEADER_SIZE1:
+            unpack2(HEADER_FORMAT1, data[offset:], self)
+
+        self.fonttype = VANILLA
+        scheme = self.codingscheme.upper()
+        if scheme.startswith("TEX MATH SY"):
+            self.fonttype = MATHSY
+        elif scheme.startswith("TEX MATH EX"):
+            self.fonttype = MATHEX
+
+        self.fontdimens = {}
+        for i in range(sizes.np):
+            name = f"PARAMETER{i+1}"
+            if i <= 6:
+                name = BASE_PARAMS[i]
+            elif self.fonttype == MATHSY and i <= 21:
+                name = MATHSY_PARAMS[i - 7]
+            elif self.fonttype == MATHEX and i <= 12:
+                name = MATHEX_PARAMS[i - 7]
+            read_fixed(param(i), name, self.fontdimens)
+
+        lig_kern_map = {}
+        self.right_boundary_char = None
+        self.left_boundary_char = None
+        if sizes.nl > 0:
+            cmd = lig_kern_command(lig_step(0))
+            if cmd.skip_byte == 255:
+                self.right_boundary_char = cmd.next_char
+
+            cmd = lig_kern_command(lig_step((sizes.nl - 1)))
+            if cmd.skip_byte == 255:
+                self.left_boundary_char = 256
+                r = 256 * cmd.op_byte + cmd.remainder
+                lig_kern_map[self.left_boundary_char] = r
+
+        self.chars = {}
+        for c in range(sizes.bc, sizes.ec + 1):
+            if width_index(c) > 0:
+                self.chars[c] = info = {}
+                info["width"] = width(c)
+                if height_index(c) > 0:
+                    info["height"] = height(c)
+                if depth_index(c) > 0:
+                    info["depth"] = depth(c)
+                if italic_index(c) > 0:
+                    info["italic"] = italic(c)
+                char_tag = tag(c)
+                if char_tag == NO_TAG:
+                    pass
+                elif char_tag == LIG_TAG:
+                    lig_kern_map[c] = remainder(c)
+                elif char_tag == LIST_TAG:
+                    info["nextlarger"] = remainder(c)
+                elif char_tag == EXT_TAG:
+                    info["varchar"] = varchar = {}
+                    for i in range(4):
+                        part = data[exten(c) + i]
+                        if i == 3 or part > 0:
+                            name = "rep"
+                            if i == 0:
+                                name = "top"
+                            elif i == 1:
+                                name = "mid"
+                            elif i == 2:
+                                name = "bot"
+                            if noneexistent(part):
+                                varchar[name] = c
+                            else:
+                                varchar[name] = part
+
+        self.ligatures = {}
+        self.kerning = {}
+        for c, i in sorted(lig_kern_map.items()):
+            cmd = lig_kern_command(lig_step(i))
+            if cmd.skip_byte > STOP_FLAG:
+                i = 256 * cmd.op_byte + cmd.remainder
+
+            while i < sizes.nl:
+                cmd = lig_kern_command(lig_step(i))
+                if cmd.skip_byte > STOP_FLAG:
+                    pass
+                else:
+                    if cmd.op_byte >= KERN_FLAG:
+                        r = 256 * (cmd.op_byte - KERN_FLAG) + cmd.remainder
+                        self.kerning.setdefault(c, {})[cmd.next_char] = kern(r)
+                    else:
+                        r = cmd.op_byte
+                        if r == 4 or (r > 7 and r != 11):
+                            # Ligature step with nonstandard code, we output
+                            # the code verbatim.
+                            lig = r
+                        else:
+                            lig = ""
+                            if r % 4 > 1:
+                                lig += "/"
+                            lig += "LIG"
+                            if r % 2 != 0:
+                                lig += "/"
+                            while r > 3:
+                                lig += ">"
+                                r -= 4
+                        self.ligatures.setdefault(c, {})[cmd.next_char] = (
+                            lig,
+                            cmd.remainder,
+                        )
+
+                if cmd.skip_byte >= STOP_FLAG:
+                    break
+                i += cmd.skip_byte + 1
+
+
+if __name__ == "__main__":
+    import sys
+
+    tfm = TFM(sys.argv[1])
+    print(
+        "\n".join(
+            x
+            for x in [
+                f"tfm.checksum={tfm.checksum}",
+                f"tfm.designsize={tfm.designsize}",
+                f"tfm.codingscheme={tfm.codingscheme}",
+                f"tfm.fonttype={tfm.fonttype}",
+                f"tfm.family={tfm.family}",
+                f"tfm.seven_bit_safe_flag={tfm.seven_bit_safe_flag}",
+                f"tfm.face={tfm.face}",
+                f"tfm.extraheader={tfm.extraheader}",
+                f"tfm.fontdimens={tfm.fontdimens}",
+                f"tfm.right_boundary_char={tfm.right_boundary_char}",
+                f"tfm.left_boundary_char={tfm.left_boundary_char}",
+                f"tfm.kerning={tfm.kerning}",
+                f"tfm.ligatures={tfm.ligatures}",
+                f"tfm.chars={tfm.chars}",
+            ]
+        )
+    )
+    print(tfm)

@@ -1,1 +1,452 @@
-ZnJvbSBmb250VG9vbHMudm9sdExpYi5lcnJvciBpbXBvcnQgVm9sdExpYkVycm9yCmZyb20gdHlwaW5nIGltcG9ydCBOYW1lZFR1cGxlCgoKY2xhc3MgUG9zKE5hbWVkVHVwbGUpOgogICAgYWR2OiBpbnQKICAgIGR4OiBpbnQKICAgIGR5OiBpbnQKICAgIGFkdl9hZGp1c3RfYnk6IGRpY3QKICAgIGR4X2FkanVzdF9ieTogZGljdAogICAgZHlfYWRqdXN0X2J5OiBkaWN0CgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmVzID0gIiBQT1MiCiAgICAgICAgZm9yIGF0dHIgaW4gKCJhZHYiLCAiZHgiLCAiZHkiKToKICAgICAgICAgICAgdmFsdWUgPSBnZXRhdHRyKHNlbGYsIGF0dHIpCiAgICAgICAgICAgIGlmIHZhbHVlIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgcmVzICs9IGYiIHthdHRyLnVwcGVyKCl9IHt2YWx1ZX0iCiAgICAgICAgICAgICAgICBhZGp1c3RfYnkgPSBnZXRhdHRyKHNlbGYsIGYie2F0dHJ9X2FkanVzdF9ieSIsIHt9KQogICAgICAgICAgICAgICAgZm9yIHNpemUsIGFkanVzdG1lbnQgaW4gYWRqdXN0X2J5Lml0ZW1zKCk6CiAgICAgICAgICAgICAgICAgICAgcmVzICs9IGYiIEFESlVTVF9CWSB7YWRqdXN0bWVudH0gQVQge3NpemV9IgogICAgICAgIHJlcyArPSAiIEVORF9QT1MiCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIEVsZW1lbnQob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBzZWxmLmxvY2F0aW9uID0gbG9jYXRpb24KCiAgICBkZWYgYnVpbGQoc2VsZiwgYnVpbGRlcik6CiAgICAgICAgcGFzcwoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IKCgpjbGFzcyBTdGF0ZW1lbnQoRWxlbWVudCk6CiAgICBwYXNzCgoKY2xhc3MgRXhwcmVzc2lvbihFbGVtZW50KToKICAgIHBhc3MKCgpjbGFzcyBWb2x0RmlsZShTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbj1Ob25lKQogICAgICAgIHNlbGYuc3RhdGVtZW50cyA9IFtdCgogICAgZGVmIGJ1aWxkKHNlbGYsIGJ1aWxkZXIpOgogICAgICAgIGZvciBzIGluIHNlbGYuc3RhdGVtZW50czoKICAgICAgICAgICAgcy5idWlsZChidWlsZGVyKQoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJldHVybiAiXG4iICsgIlxuIi5qb2luKHN0cihzKSBmb3IgcyBpbiBzZWxmLnN0YXRlbWVudHMpICsgIiBFTkRcbiIKCgpjbGFzcyBHbHlwaERlZmluaXRpb24oU3RhdGVtZW50KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lLCBnaWQsIGd1bmljb2RlLCBndHlwZSwgY29tcG9uZW50cywgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgU3RhdGVtZW50Ll9faW5pdF9fKHNlbGYsIGxvY2F0aW9uKQogICAgICAgIHNlbGYubmFtZSA9IG5hbWUKICAgICAgICBzZWxmLmlkID0gZ2lkCiAgICAgICAgc2VsZi51bmljb2RlID0gZ3VuaWNvZGUKICAgICAgICBzZWxmLnR5cGUgPSBndHlwZQogICAgICAgIHNlbGYuY29tcG9uZW50cyA9IGNvbXBvbmVudHMKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXMgPSBmJ0RFRl9HTFlQSCAie3NlbGYubmFtZX0iIElEIHtzZWxmLmlkfScKICAgICAgICBpZiBzZWxmLnVuaWNvZGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGlmIGxlbihzZWxmLnVuaWNvZGUpID4gMToKICAgICAgICAgICAgICAgIHVuaWNvZGVzID0gIiwiLmpvaW4oZiJVK3t1OjA0WH0iIGZvciB1IGluIHNlbGYudW5pY29kZSkKICAgICAgICAgICAgICAgIHJlcyArPSBmJyBVTklDT0RFVkFMVUVTICJ7dW5pY29kZXN9IicKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJlcyArPSBmIiBVTklDT0RFIHtzZWxmLnVuaWNvZGVbMF19IgogICAgICAgIGlmIHNlbGYudHlwZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmVzICs9IGYiIFRZUEUge3NlbGYudHlwZX0iCiAgICAgICAgaWYgc2VsZi5jb21wb25lbnRzIGlzIG5vdCBOb25lOgogICAgICAgICAgICByZXMgKz0gZiIgQ09NUE9ORU5UUyB7c2VsZi5jb21wb25lbnRzfSIKICAgICAgICByZXMgKz0gIiBFTkRfR0xZUEgiCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIEdyb3VwRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIGVudW0sIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLm5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi5lbnVtID0gZW51bQogICAgICAgIHNlbGYuZ2x5cGhzXyA9IE5vbmUKCiAgICBkZWYgZ2x5cGhTZXQoc2VsZiwgZ3JvdXBzPU5vbmUpOgogICAgICAgIGlmIGdyb3VwcyBpcyBub3QgTm9uZSBhbmQgc2VsZi5uYW1lIGluIGdyb3VwczoKICAgICAgICAgICAgcmFpc2UgVm9sdExpYkVycm9yKAogICAgICAgICAgICAgICAgJ0dyb3VwICIlcyIgY29udGFpbnMgaXRzZWxmLicgJSAoc2VsZi5uYW1lKSwgc2VsZi5sb2NhdGlvbgogICAgICAgICAgICApCiAgICAgICAgaWYgc2VsZi5nbHlwaHNfIGlzIE5vbmU6CiAgICAgICAgICAgIGlmIGdyb3VwcyBpcyBOb25lOgogICAgICAgICAgICAgICAgZ3JvdXBzID0gc2V0KHtzZWxmLm5hbWV9KQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZ3JvdXBzLmFkZChzZWxmLm5hbWUpCiAgICAgICAgICAgIHNlbGYuZ2x5cGhzXyA9IHNlbGYuZW51bS5nbHlwaFNldChncm91cHMpCiAgICAgICAgcmV0dXJuIHNlbGYuZ2x5cGhzXwoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIGVudW0gPSBzZWxmLmVudW0gYW5kIHN0cihzZWxmLmVudW0pIG9yICIiCiAgICAgICAgcmV0dXJuIGYnREVGX0dST1VQICJ7c2VsZi5uYW1lfSJcbntlbnVtfVxuRU5EX0dST1VQJwoKCmNsYXNzIEdseXBoTmFtZShFeHByZXNzaW9uKToKICAgICIiIkEgc2luZ2xlIGdseXBoIG5hbWUsIHN1Y2ggYXMgY2VkaWxsYS4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGgsIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIEV4cHJlc3Npb24uX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5nbHlwaCA9IGdseXBoCgogICAgZGVmIGdseXBoU2V0KHNlbGYpOgogICAgICAgIHJldHVybiAoc2VsZi5nbHlwaCwpCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIGYnIEdMWVBIICJ7c2VsZi5nbHlwaH0iJwoKCmNsYXNzIEVudW0oRXhwcmVzc2lvbik6CiAgICAiIiJBbiBlbnVtIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGVudW0sIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIEV4cHJlc3Npb24uX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5lbnVtID0gZW51bQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICBmb3IgZSBpbiBzZWxmLmdseXBoU2V0KCk6CiAgICAgICAgICAgIHlpZWxkIGUKCiAgICBkZWYgZ2x5cGhTZXQoc2VsZiwgZ3JvdXBzPU5vbmUpOgogICAgICAgIGdseXBocyA9IFtdCiAgICAgICAgZm9yIGVsZW1lbnQgaW4gc2VsZi5lbnVtOgogICAgICAgICAgICBpZiBpc2luc3RhbmNlKGVsZW1lbnQsIChHcm91cE5hbWUsIEVudW0pKToKICAgICAgICAgICAgICAgIGdseXBocy5leHRlbmQoZWxlbWVudC5nbHlwaFNldChncm91cHMpKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZ2x5cGhzLmV4dGVuZChlbGVtZW50LmdseXBoU2V0KCkpCiAgICAgICAgcmV0dXJuIHR1cGxlKGdseXBocykKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICBlbnVtID0gIiIuam9pbihzdHIoZSkgZm9yIGUgaW4gc2VsZi5lbnVtKQogICAgICAgIHJldHVybiBmIiBFTlVNe2VudW19IEVORF9FTlVNIgoKCmNsYXNzIEdyb3VwTmFtZShFeHByZXNzaW9uKToKICAgICIiIkEgZ2x5cGggZ3JvdXAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ3JvdXAsIHBhcnNlciwgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgRXhwcmVzc2lvbi5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLmdyb3VwID0gZ3JvdXAKICAgICAgICBzZWxmLnBhcnNlcl8gPSBwYXJzZXIKCiAgICBkZWYgZ2x5cGhTZXQoc2VsZiwgZ3JvdXBzPU5vbmUpOgogICAgICAgIGdyb3VwID0gc2VsZi5wYXJzZXJfLnJlc29sdmVfZ3JvdXAoc2VsZi5ncm91cCkKICAgICAgICBpZiBncm91cCBpcyBub3QgTm9uZToKICAgICAgICAgICAgc2VsZi5nbHlwaHNfID0gZ3JvdXAuZ2x5cGhTZXQoZ3JvdXBzKQogICAgICAgICAgICByZXR1cm4gc2VsZi5nbHlwaHNfCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmFpc2UgVm9sdExpYkVycm9yKAogICAgICAgICAgICAgICAgJ0dyb3VwICIlcyIgaXMgdXNlZCBidXQgdW5kZWZpbmVkLicgJSAoc2VsZi5ncm91cCksIHNlbGYubG9jYXRpb24KICAgICAgICAgICAgKQoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJldHVybiBmJyBHUk9VUCAie3NlbGYuZ3JvdXB9IicKCgpjbGFzcyBSYW5nZShFeHByZXNzaW9uKToKICAgICIiIkEgZ2x5cGggcmFuZ2UiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgc3RhcnQsIGVuZCwgcGFyc2VyLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBFeHByZXNzaW9uLl9faW5pdF9fKHNlbGYsIGxvY2F0aW9uKQogICAgICAgIHNlbGYuc3RhcnQgPSBzdGFydAogICAgICAgIHNlbGYuZW5kID0gZW5kCiAgICAgICAgc2VsZi5wYXJzZXIgPSBwYXJzZXIKCiAgICBkZWYgZ2x5cGhTZXQoc2VsZik6CiAgICAgICAgcmV0dXJuIHR1cGxlKHNlbGYucGFyc2VyLmdseXBoX3JhbmdlKHNlbGYuc3RhcnQsIHNlbGYuZW5kKSkKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gZicgUkFOR0UgIntzZWxmLnN0YXJ0fSIgVE8gIntzZWxmLmVuZH0iJwoKCmNsYXNzIFNjcmlwdERlZmluaXRpb24oU3RhdGVtZW50KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lLCB0YWcsIGxhbmdzLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBTdGF0ZW1lbnQuX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5uYW1lID0gbmFtZQogICAgICAgIHNlbGYudGFnID0gdGFnCiAgICAgICAgc2VsZi5sYW5ncyA9IGxhbmdzCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmVzID0gIkRFRl9TQ1JJUFQiCiAgICAgICAgaWYgc2VsZi5uYW1lIGlzIG5vdCBOb25lOgogICAgICAgICAgICByZXMgKz0gZicgTkFNRSAie3NlbGYubmFtZX0iJwogICAgICAgIHJlcyArPSBmJyBUQUcgIntzZWxmLnRhZ30iXG5cbicKICAgICAgICBmb3IgbGFuZyBpbiBzZWxmLmxhbmdzOgogICAgICAgICAgICByZXMgKz0gZiJ7bGFuZ30iCiAgICAgICAgcmVzICs9ICJFTkRfU0NSSVBUIgogICAgICAgIHJldHVybiByZXMKCgpjbGFzcyBMYW5nU3lzRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIHRhZywgZmVhdHVyZXMsIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLm5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi50YWcgPSB0YWcKICAgICAgICBzZWxmLmZlYXR1cmVzID0gZmVhdHVyZXMKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXMgPSAiREVGX0xBTkdTWVMiCiAgICAgICAgaWYgc2VsZi5uYW1lIGlzIG5vdCBOb25lOgogICAgICAgICAgICByZXMgKz0gZicgTkFNRSAie3NlbGYubmFtZX0iJwogICAgICAgIHJlcyArPSBmJyBUQUcgIntzZWxmLnRhZ30iXG5cbicKICAgICAgICBmb3IgZmVhdHVyZSBpbiBzZWxmLmZlYXR1cmVzOgogICAgICAgICAgICByZXMgKz0gZiJ7ZmVhdHVyZX0iCiAgICAgICAgcmVzICs9ICJFTkRfTEFOR1NZU1xuIgogICAgICAgIHJldHVybiByZXMKCgpjbGFzcyBGZWF0dXJlRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIHRhZywgbG9va3VwcywgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgU3RhdGVtZW50Ll9faW5pdF9fKHNlbGYsIGxvY2F0aW9uKQogICAgICAgIHNlbGYubmFtZSA9IG5hbWUKICAgICAgICBzZWxmLnRhZyA9IHRhZwogICAgICAgIHNlbGYubG9va3VwcyA9IGxvb2t1cHMKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXMgPSBmJ0RFRl9GRUFUVVJFIE5BTUUgIntzZWxmLm5hbWV9IiBUQUcgIntzZWxmLnRhZ30iXG4nCiAgICAgICAgcmVzICs9ICIgIiArICIgIi5qb2luKGYnTE9PS1VQICJ7bH0iJyBmb3IgbCBpbiBzZWxmLmxvb2t1cHMpICsgIlxuIgogICAgICAgIHJlcyArPSAiRU5EX0ZFQVRVUkVcbiIKICAgICAgICByZXR1cm4gcmVzCgoKY2xhc3MgTG9va3VwRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgbmFtZSwKICAgICAgICBwcm9jZXNzX2Jhc2UsCiAgICAgICAgcHJvY2Vzc19tYXJrcywKICAgICAgICBtYXJrX2dseXBoX3NldCwKICAgICAgICBkaXJlY3Rpb24sCiAgICAgICAgcmV2ZXJzYWwsCiAgICAgICAgY29tbWVudHMsCiAgICAgICAgY29udGV4dCwKICAgICAgICBzdWIsCiAgICAgICAgcG9zLAogICAgICAgIGxvY2F0aW9uPU5vbmUsCiAgICApOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLm5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi5wcm9jZXNzX2Jhc2UgPSBwcm9jZXNzX2Jhc2UKICAgICAgICBzZWxmLnByb2Nlc3NfbWFya3MgPSBwcm9jZXNzX21hcmtzCiAgICAgICAgc2VsZi5tYXJrX2dseXBoX3NldCA9IG1hcmtfZ2x5cGhfc2V0CiAgICAgICAgc2VsZi5kaXJlY3Rpb24gPSBkaXJlY3Rpb24KICAgICAgICBzZWxmLnJldmVyc2FsID0gcmV2ZXJzYWwKICAgICAgICBzZWxmLmNvbW1lbnRzID0gY29tbWVudHMKICAgICAgICBzZWxmLmNvbnRleHQgPSBjb250ZXh0CiAgICAgICAgc2VsZi5zdWIgPSBzdWIKICAgICAgICBzZWxmLnBvcyA9IHBvcwoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJlcyA9IGYnREVGX0xPT0tVUCAie3NlbGYubmFtZX0iJwogICAgICAgIHJlcyArPSBmJyB7c2VsZi5wcm9jZXNzX2Jhc2UgYW5kICJQUk9DRVNTX0JBU0UiIG9yICJTS0lQX0JBU0UifScKICAgICAgICBpZiBzZWxmLnByb2Nlc3NfbWFya3M6CiAgICAgICAgICAgIHJlcyArPSAiIFBST0NFU1NfTUFSS1MgIgogICAgICAgICAgICBpZiBzZWxmLm1hcmtfZ2x5cGhfc2V0OgogICAgICAgICAgICAgICAgcmVzICs9IGYnTUFSS19HTFlQSF9TRVQgIntzZWxmLm1hcmtfZ2x5cGhfc2V0fSInCiAgICAgICAgICAgIGVsaWYgaXNpbnN0YW5jZShzZWxmLnByb2Nlc3NfbWFya3MsIHN0cik6CiAgICAgICAgICAgICAgICByZXMgKz0gZicie3NlbGYucHJvY2Vzc19tYXJrc30iJwogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmVzICs9ICJBTEwiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmVzICs9ICIgU0tJUF9NQVJLUyIKICAgICAgICBpZiBzZWxmLmRpcmVjdGlvbiBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmVzICs9IGYiIERJUkVDVElPTiB7c2VsZi5kaXJlY3Rpb259IgogICAgICAgIGlmIHNlbGYucmV2ZXJzYWw6CiAgICAgICAgICAgIHJlcyArPSAiIFJFVkVSU0FMIgogICAgICAgIGlmIHNlbGYuY29tbWVudHMgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGNvbW1lbnRzID0gc2VsZi5jb21tZW50cy5yZXBsYWNlKCJcbiIsIHIiXG4iKQogICAgICAgICAgICByZXMgKz0gZidcbkNPTU1FTlRTICJ7Y29tbWVudHN9IicKICAgICAgICBpZiBzZWxmLmNvbnRleHQ6CiAgICAgICAgICAgIHJlcyArPSAiXG4iICsgIlxuIi5qb2luKHN0cihjKSBmb3IgYyBpbiBzZWxmLmNvbnRleHQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmVzICs9ICJcbklOX0NPTlRFWFRcbkVORF9DT05URVhUIgogICAgICAgIGlmIHNlbGYuc3ViOgogICAgICAgICAgICByZXMgKz0gZiJcbntzZWxmLnN1Yn0iCiAgICAgICAgaWYgc2VsZi5wb3M6CiAgICAgICAgICAgIHJlcyArPSBmIlxue3NlbGYucG9zfSIKICAgICAgICByZXR1cm4gcmVzCgoKY2xhc3MgU3Vic3RpdHV0aW9uRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG1hcHBpbmcsIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLm1hcHBpbmcgPSBtYXBwaW5nCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmVzID0gIkFTX1NVQlNUSVRVVElPTlxuIgogICAgICAgIGZvciBzcmMsIGRzdCBpbiBzZWxmLm1hcHBpbmcuaXRlbXMoKToKICAgICAgICAgICAgc3JjID0gIiIuam9pbihzdHIocykgZm9yIHMgaW4gc3JjKQogICAgICAgICAgICBkc3QgPSAiIi5qb2luKHN0cihkKSBmb3IgZCBpbiBkc3QpCiAgICAgICAgICAgIHJlcyArPSBmIlNVQntzcmN9XG5XSVRIe2RzdH1cbkVORF9TVUJcbiIKICAgICAgICByZXMgKz0gIkVORF9TVUJTVElUVVRJT04iCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIFN1YnN0aXR1dGlvblNpbmdsZURlZmluaXRpb24oU3Vic3RpdHV0aW9uRGVmaW5pdGlvbik6CiAgICBwYXNzCgoKY2xhc3MgU3Vic3RpdHV0aW9uTXVsdGlwbGVEZWZpbml0aW9uKFN1YnN0aXR1dGlvbkRlZmluaXRpb24pOgogICAgcGFzcwoKCmNsYXNzIFN1YnN0aXR1dGlvbkxpZ2F0dXJlRGVmaW5pdGlvbihTdWJzdGl0dXRpb25EZWZpbml0aW9uKToKICAgIHBhc3MKCgpjbGFzcyBTdWJzdGl0dXRpb25BbHRlcm5hdGVEZWZpbml0aW9uKFN1YnN0aXR1dGlvbkRlZmluaXRpb24pOgogICAgcGFzcwoKCmNsYXNzIFN1YnN0aXR1dGlvblJldmVyc2VDaGFpbmluZ1NpbmdsZURlZmluaXRpb24oU3Vic3RpdHV0aW9uRGVmaW5pdGlvbik6CiAgICBwYXNzCgoKY2xhc3MgUG9zaXRpb25BdHRhY2hEZWZpbml0aW9uKFN0YXRlbWVudCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgY292ZXJhZ2UsIGNvdmVyYWdlX3RvLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBTdGF0ZW1lbnQuX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5jb3ZlcmFnZSA9IGNvdmVyYWdlCiAgICAgICAgc2VsZi5jb3ZlcmFnZV90byA9IGNvdmVyYWdlX3RvCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgY292ZXJhZ2UgPSAiIi5qb2luKHN0cihjKSBmb3IgYyBpbiBzZWxmLmNvdmVyYWdlKQogICAgICAgIHJlcyA9IGYiQVNfUE9TSVRJT05cbkFUVEFDSHtjb3ZlcmFnZX1cblRPIgogICAgICAgIGZvciBjb3ZlcmFnZSwgYW5jaG9yIGluIHNlbGYuY292ZXJhZ2VfdG86CiAgICAgICAgICAgIGNvdmVyYWdlID0gIiIuam9pbihzdHIoYykgZm9yIGMgaW4gY292ZXJhZ2UpCiAgICAgICAgICAgIHJlcyArPSBmJ3tjb3ZlcmFnZX0gQVQgQU5DSE9SICJ7YW5jaG9yfSInCiAgICAgICAgcmVzICs9ICJcbkVORF9BVFRBQ0hcbkVORF9QT1NJVElPTiIKICAgICAgICByZXR1cm4gcmVzCgoKY2xhc3MgUG9zaXRpb25BdHRhY2hDdXJzaXZlRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNvdmVyYWdlc19leGl0LCBjb3ZlcmFnZXNfZW50ZXIsIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLmNvdmVyYWdlc19leGl0ID0gY292ZXJhZ2VzX2V4aXQKICAgICAgICBzZWxmLmNvdmVyYWdlc19lbnRlciA9IGNvdmVyYWdlc19lbnRlcgoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJlcyA9ICJBU19QT1NJVElPTlxuQVRUQUNIX0NVUlNJVkUiCiAgICAgICAgZm9yIGNvdmVyYWdlIGluIHNlbGYuY292ZXJhZ2VzX2V4aXQ6CiAgICAgICAgICAgIGNvdmVyYWdlID0gIiIuam9pbihzdHIoYykgZm9yIGMgaW4gY292ZXJhZ2UpCiAgICAgICAgICAgIHJlcyArPSBmIlxuRVhJVCB7Y292ZXJhZ2V9IgogICAgICAgIGZvciBjb3ZlcmFnZSBpbiBzZWxmLmNvdmVyYWdlc19lbnRlcjoKICAgICAgICAgICAgY292ZXJhZ2UgPSAiIi5qb2luKHN0cihjKSBmb3IgYyBpbiBjb3ZlcmFnZSkKICAgICAgICAgICAgcmVzICs9IGYiXG5FTlRFUiB7Y292ZXJhZ2V9IgogICAgICAgIHJlcyArPSAiXG5FTkRfQVRUQUNIXG5FTkRfUE9TSVRJT04iCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIFBvc2l0aW9uQWRqdXN0UGFpckRlZmluaXRpb24oU3RhdGVtZW50KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBjb3ZlcmFnZXNfMSwgY292ZXJhZ2VzXzIsIGFkanVzdF9wYWlyLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBTdGF0ZW1lbnQuX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5jb3ZlcmFnZXNfMSA9IGNvdmVyYWdlc18xCiAgICAgICAgc2VsZi5jb3ZlcmFnZXNfMiA9IGNvdmVyYWdlc18yCiAgICAgICAgc2VsZi5hZGp1c3RfcGFpciA9IGFkanVzdF9wYWlyCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmVzID0gIkFTX1BPU0lUSU9OXG5BREpVU1RfUEFJUlxuIgogICAgICAgIGZvciBjb3ZlcmFnZSBpbiBzZWxmLmNvdmVyYWdlc18xOgogICAgICAgICAgICBjb3ZlcmFnZSA9ICIgIi5qb2luKHN0cihjKSBmb3IgYyBpbiBjb3ZlcmFnZSkKICAgICAgICAgICAgcmVzICs9IGYiIEZJUlNUIHtjb3ZlcmFnZX0iCiAgICAgICAgcmVzICs9ICJcbiIKICAgICAgICBmb3IgY292ZXJhZ2UgaW4gc2VsZi5jb3ZlcmFnZXNfMjoKICAgICAgICAgICAgY292ZXJhZ2UgPSAiICIuam9pbihzdHIoYykgZm9yIGMgaW4gY292ZXJhZ2UpCiAgICAgICAgICAgIHJlcyArPSBmIiBTRUNPTkQge2NvdmVyYWdlfSIKICAgICAgICByZXMgKz0gIlxuIgogICAgICAgIGZvciAoaWRfMSwgaWRfMiksIChwb3NfMSwgcG9zXzIpIGluIHNlbGYuYWRqdXN0X3BhaXIuaXRlbXMoKToKICAgICAgICAgICAgcmVzICs9IGYiIHtpZF8xfSB7aWRfMn0gQll7cG9zXzF9e3Bvc18yfVxuIgogICAgICAgIHJlcyArPSAiXG5FTkRfQURKVVNUXG5FTkRfUE9TSVRJT04iCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIFBvc2l0aW9uQWRqdXN0U2luZ2xlRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGFkanVzdF9zaW5nbGUsIGxvY2F0aW9uPU5vbmUpOgogICAgICAgIFN0YXRlbWVudC5fX2luaXRfXyhzZWxmLCBsb2NhdGlvbikKICAgICAgICBzZWxmLmFkanVzdF9zaW5nbGUgPSBhZGp1c3Rfc2luZ2xlCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmVzID0gIkFTX1BPU0lUSU9OXG5BREpVU1RfU0lOR0xFIgogICAgICAgIGZvciBjb3ZlcmFnZSwgcG9zIGluIHNlbGYuYWRqdXN0X3NpbmdsZToKICAgICAgICAgICAgY292ZXJhZ2UgPSAiIi5qb2luKHN0cihjKSBmb3IgYyBpbiBjb3ZlcmFnZSkKICAgICAgICAgICAgcmVzICs9IGYie2NvdmVyYWdlfSBCWXtwb3N9IgogICAgICAgIHJlcyArPSAiXG5FTkRfQURKVVNUXG5FTkRfUE9TSVRJT04iCiAgICAgICAgcmV0dXJuIHJlcwoKCmNsYXNzIENvbnRleHREZWZpbml0aW9uKFN0YXRlbWVudCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZXhfb3JfaW4sIGxlZnQ9Tm9uZSwgcmlnaHQ9Tm9uZSwgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgU3RhdGVtZW50Ll9faW5pdF9fKHNlbGYsIGxvY2F0aW9uKQogICAgICAgIHNlbGYuZXhfb3JfaW4gPSBleF9vcl9pbgogICAgICAgIHNlbGYubGVmdCA9IGxlZnQgaWYgbGVmdCBpcyBub3QgTm9uZSBlbHNlIFtdCiAgICAgICAgc2VsZi5yaWdodCA9IHJpZ2h0IGlmIHJpZ2h0IGlzIG5vdCBOb25lIGVsc2UgW10KCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXMgPSBzZWxmLmV4X29yX2luICsgIlxuIgogICAgICAgIGZvciBjb3ZlcmFnZSBpbiBzZWxmLmxlZnQ6CiAgICAgICAgICAgIGNvdmVyYWdlID0gIiIuam9pbihzdHIoYykgZm9yIGMgaW4gY292ZXJhZ2UpCiAgICAgICAgICAgIHJlcyArPSBmIiBMRUZUe2NvdmVyYWdlfVxuIgogICAgICAgIGZvciBjb3ZlcmFnZSBpbiBzZWxmLnJpZ2h0OgogICAgICAgICAgICBjb3ZlcmFnZSA9ICIiLmpvaW4oc3RyKGMpIGZvciBjIGluIGNvdmVyYWdlKQogICAgICAgICAgICByZXMgKz0gZiIgUklHSFR7Y292ZXJhZ2V9XG4iCiAgICAgICAgcmVzICs9ICJFTkRfQ09OVEVYVCIKICAgICAgICByZXR1cm4gcmVzCgoKY2xhc3MgQW5jaG9yRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIGdpZCwgZ2x5cGhfbmFtZSwgY29tcG9uZW50LCBsb2NrZWQsIHBvcywgbG9jYXRpb249Tm9uZSk6CiAgICAgICAgU3RhdGVtZW50Ll9faW5pdF9fKHNlbGYsIGxvY2F0aW9uKQogICAgICAgIHNlbGYubmFtZSA9IG5hbWUKICAgICAgICBzZWxmLmdpZCA9IGdpZAogICAgICAgIHNlbGYuZ2x5cGhfbmFtZSA9IGdseXBoX25hbWUKICAgICAgICBzZWxmLmNvbXBvbmVudCA9IGNvbXBvbmVudAogICAgICAgIHNlbGYubG9ja2VkID0gbG9ja2VkCiAgICAgICAgc2VsZi5wb3MgPSBwb3MKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICBsb2NrZWQgPSBzZWxmLmxvY2tlZCBhbmQgIiBMT0NLRUQiIG9yICIiCiAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgZidERUZfQU5DSE9SICJ7c2VsZi5uYW1lfSInCiAgICAgICAgICAgIGYiIE9OIHtzZWxmLmdpZH0iCiAgICAgICAgICAgIGYiIEdMWVBIIHtzZWxmLmdseXBoX25hbWV9IgogICAgICAgICAgICBmIiBDT01QT05FTlQge3NlbGYuY29tcG9uZW50fSIKICAgICAgICAgICAgZiJ7bG9ja2VkfSIKICAgICAgICAgICAgZiIgQVQge3NlbGYucG9zfSBFTkRfQU5DSE9SIgogICAgICAgICkKCgpjbGFzcyBTZXR0aW5nRGVmaW5pdGlvbihTdGF0ZW1lbnQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWUsIHZhbHVlLCBsb2NhdGlvbj1Ob25lKToKICAgICAgICBTdGF0ZW1lbnQuX19pbml0X18oc2VsZiwgbG9jYXRpb24pCiAgICAgICAgc2VsZi5uYW1lID0gbmFtZQogICAgICAgIHNlbGYudmFsdWUgPSB2YWx1ZQoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIGlmIHNlbGYudmFsdWUgaXMgVHJ1ZToKICAgICAgICAgICAgcmV0dXJuIGYie3NlbGYubmFtZX0iCiAgICAgICAgaWYgaXNpbnN0YW5jZShzZWxmLnZhbHVlLCAodHVwbGUsIGxpc3QpKToKICAgICAgICAgICAgdmFsdWUgPSAiICIuam9pbihzdHIodikgZm9yIHYgaW4gc2VsZi52YWx1ZSkKICAgICAgICAgICAgcmV0dXJuIGYie3NlbGYubmFtZX0ge3ZhbHVlfSIKICAgICAgICByZXR1cm4gZiJ7c2VsZi5uYW1lfSB7c2VsZi52YWx1ZX0iCg==
+from fontTools.voltLib.error import VoltLibError
+from typing import NamedTuple
+
+
+class Pos(NamedTuple):
+    adv: int
+    dx: int
+    dy: int
+    adv_adjust_by: dict
+    dx_adjust_by: dict
+    dy_adjust_by: dict
+
+    def __str__(self):
+        res = " POS"
+        for attr in ("adv", "dx", "dy"):
+            value = getattr(self, attr)
+            if value is not None:
+                res += f" {attr.upper()} {value}"
+                adjust_by = getattr(self, f"{attr}_adjust_by", {})
+                for size, adjustment in adjust_by.items():
+                    res += f" ADJUST_BY {adjustment} AT {size}"
+        res += " END_POS"
+        return res
+
+
+class Element(object):
+    def __init__(self, location=None):
+        self.location = location
+
+    def build(self, builder):
+        pass
+
+    def __str__(self):
+        raise NotImplementedError
+
+
+class Statement(Element):
+    pass
+
+
+class Expression(Element):
+    pass
+
+
+class VoltFile(Statement):
+    def __init__(self):
+        Statement.__init__(self, location=None)
+        self.statements = []
+
+    def build(self, builder):
+        for s in self.statements:
+            s.build(builder)
+
+    def __str__(self):
+        return "\n" + "\n".join(str(s) for s in self.statements) + " END\n"
+
+
+class GlyphDefinition(Statement):
+    def __init__(self, name, gid, gunicode, gtype, components, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.id = gid
+        self.unicode = gunicode
+        self.type = gtype
+        self.components = components
+
+    def __str__(self):
+        res = f'DEF_GLYPH "{self.name}" ID {self.id}'
+        if self.unicode is not None:
+            if len(self.unicode) > 1:
+                unicodes = ",".join(f"U+{u:04X}" for u in self.unicode)
+                res += f' UNICODEVALUES "{unicodes}"'
+            else:
+                res += f" UNICODE {self.unicode[0]}"
+        if self.type is not None:
+            res += f" TYPE {self.type}"
+        if self.components is not None:
+            res += f" COMPONENTS {self.components}"
+        res += " END_GLYPH"
+        return res
+
+
+class GroupDefinition(Statement):
+    def __init__(self, name, enum, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.enum = enum
+        self.glyphs_ = None
+
+    def glyphSet(self, groups=None):
+        if groups is not None and self.name in groups:
+            raise VoltLibError(
+                'Group "%s" contains itself.' % (self.name), self.location
+            )
+        if self.glyphs_ is None:
+            if groups is None:
+                groups = set({self.name})
+            else:
+                groups.add(self.name)
+            self.glyphs_ = self.enum.glyphSet(groups)
+        return self.glyphs_
+
+    def __str__(self):
+        enum = self.enum and str(self.enum) or ""
+        return f'DEF_GROUP "{self.name}"\n{enum}\nEND_GROUP'
+
+
+class GlyphName(Expression):
+    """A single glyph name, such as cedilla."""
+
+    def __init__(self, glyph, location=None):
+        Expression.__init__(self, location)
+        self.glyph = glyph
+
+    def glyphSet(self):
+        return (self.glyph,)
+
+    def __str__(self):
+        return f' GLYPH "{self.glyph}"'
+
+
+class Enum(Expression):
+    """An enum"""
+
+    def __init__(self, enum, location=None):
+        Expression.__init__(self, location)
+        self.enum = enum
+
+    def __iter__(self):
+        for e in self.glyphSet():
+            yield e
+
+    def glyphSet(self, groups=None):
+        glyphs = []
+        for element in self.enum:
+            if isinstance(element, (GroupName, Enum)):
+                glyphs.extend(element.glyphSet(groups))
+            else:
+                glyphs.extend(element.glyphSet())
+        return tuple(glyphs)
+
+    def __str__(self):
+        enum = "".join(str(e) for e in self.enum)
+        return f" ENUM{enum} END_ENUM"
+
+
+class GroupName(Expression):
+    """A glyph group"""
+
+    def __init__(self, group, parser, location=None):
+        Expression.__init__(self, location)
+        self.group = group
+        self.parser_ = parser
+
+    def glyphSet(self, groups=None):
+        group = self.parser_.resolve_group(self.group)
+        if group is not None:
+            self.glyphs_ = group.glyphSet(groups)
+            return self.glyphs_
+        else:
+            raise VoltLibError(
+                'Group "%s" is used but undefined.' % (self.group), self.location
+            )
+
+    def __str__(self):
+        return f' GROUP "{self.group}"'
+
+
+class Range(Expression):
+    """A glyph range"""
+
+    def __init__(self, start, end, parser, location=None):
+        Expression.__init__(self, location)
+        self.start = start
+        self.end = end
+        self.parser = parser
+
+    def glyphSet(self):
+        return tuple(self.parser.glyph_range(self.start, self.end))
+
+    def __str__(self):
+        return f' RANGE "{self.start}" TO "{self.end}"'
+
+
+class ScriptDefinition(Statement):
+    def __init__(self, name, tag, langs, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.tag = tag
+        self.langs = langs
+
+    def __str__(self):
+        res = "DEF_SCRIPT"
+        if self.name is not None:
+            res += f' NAME "{self.name}"'
+        res += f' TAG "{self.tag}"\n\n'
+        for lang in self.langs:
+            res += f"{lang}"
+        res += "END_SCRIPT"
+        return res
+
+
+class LangSysDefinition(Statement):
+    def __init__(self, name, tag, features, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.tag = tag
+        self.features = features
+
+    def __str__(self):
+        res = "DEF_LANGSYS"
+        if self.name is not None:
+            res += f' NAME "{self.name}"'
+        res += f' TAG "{self.tag}"\n\n'
+        for feature in self.features:
+            res += f"{feature}"
+        res += "END_LANGSYS\n"
+        return res
+
+
+class FeatureDefinition(Statement):
+    def __init__(self, name, tag, lookups, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.tag = tag
+        self.lookups = lookups
+
+    def __str__(self):
+        res = f'DEF_FEATURE NAME "{self.name}" TAG "{self.tag}"\n'
+        res += " " + " ".join(f'LOOKUP "{l}"' for l in self.lookups) + "\n"
+        res += "END_FEATURE\n"
+        return res
+
+
+class LookupDefinition(Statement):
+    def __init__(
+        self,
+        name,
+        process_base,
+        process_marks,
+        mark_glyph_set,
+        direction,
+        reversal,
+        comments,
+        context,
+        sub,
+        pos,
+        location=None,
+    ):
+        Statement.__init__(self, location)
+        self.name = name
+        self.process_base = process_base
+        self.process_marks = process_marks
+        self.mark_glyph_set = mark_glyph_set
+        self.direction = direction
+        self.reversal = reversal
+        self.comments = comments
+        self.context = context
+        self.sub = sub
+        self.pos = pos
+
+    def __str__(self):
+        res = f'DEF_LOOKUP "{self.name}"'
+        res += f' {self.process_base and "PROCESS_BASE" or "SKIP_BASE"}'
+        if self.process_marks:
+            res += " PROCESS_MARKS "
+            if self.mark_glyph_set:
+                res += f'MARK_GLYPH_SET "{self.mark_glyph_set}"'
+            elif isinstance(self.process_marks, str):
+                res += f'"{self.process_marks}"'
+            else:
+                res += "ALL"
+        else:
+            res += " SKIP_MARKS"
+        if self.direction is not None:
+            res += f" DIRECTION {self.direction}"
+        if self.reversal:
+            res += " REVERSAL"
+        if self.comments is not None:
+            comments = self.comments.replace("\n", r"\n")
+            res += f'\nCOMMENTS "{comments}"'
+        if self.context:
+            res += "\n" + "\n".join(str(c) for c in self.context)
+        else:
+            res += "\nIN_CONTEXT\nEND_CONTEXT"
+        if self.sub:
+            res += f"\n{self.sub}"
+        if self.pos:
+            res += f"\n{self.pos}"
+        return res
+
+
+class SubstitutionDefinition(Statement):
+    def __init__(self, mapping, location=None):
+        Statement.__init__(self, location)
+        self.mapping = mapping
+
+    def __str__(self):
+        res = "AS_SUBSTITUTION\n"
+        for src, dst in self.mapping.items():
+            src = "".join(str(s) for s in src)
+            dst = "".join(str(d) for d in dst)
+            res += f"SUB{src}\nWITH{dst}\nEND_SUB\n"
+        res += "END_SUBSTITUTION"
+        return res
+
+
+class SubstitutionSingleDefinition(SubstitutionDefinition):
+    pass
+
+
+class SubstitutionMultipleDefinition(SubstitutionDefinition):
+    pass
+
+
+class SubstitutionLigatureDefinition(SubstitutionDefinition):
+    pass
+
+
+class SubstitutionAlternateDefinition(SubstitutionDefinition):
+    pass
+
+
+class SubstitutionReverseChainingSingleDefinition(SubstitutionDefinition):
+    pass
+
+
+class PositionAttachDefinition(Statement):
+    def __init__(self, coverage, coverage_to, location=None):
+        Statement.__init__(self, location)
+        self.coverage = coverage
+        self.coverage_to = coverage_to
+
+    def __str__(self):
+        coverage = "".join(str(c) for c in self.coverage)
+        res = f"AS_POSITION\nATTACH{coverage}\nTO"
+        for coverage, anchor in self.coverage_to:
+            coverage = "".join(str(c) for c in coverage)
+            res += f'{coverage} AT ANCHOR "{anchor}"'
+        res += "\nEND_ATTACH\nEND_POSITION"
+        return res
+
+
+class PositionAttachCursiveDefinition(Statement):
+    def __init__(self, coverages_exit, coverages_enter, location=None):
+        Statement.__init__(self, location)
+        self.coverages_exit = coverages_exit
+        self.coverages_enter = coverages_enter
+
+    def __str__(self):
+        res = "AS_POSITION\nATTACH_CURSIVE"
+        for coverage in self.coverages_exit:
+            coverage = "".join(str(c) for c in coverage)
+            res += f"\nEXIT {coverage}"
+        for coverage in self.coverages_enter:
+            coverage = "".join(str(c) for c in coverage)
+            res += f"\nENTER {coverage}"
+        res += "\nEND_ATTACH\nEND_POSITION"
+        return res
+
+
+class PositionAdjustPairDefinition(Statement):
+    def __init__(self, coverages_1, coverages_2, adjust_pair, location=None):
+        Statement.__init__(self, location)
+        self.coverages_1 = coverages_1
+        self.coverages_2 = coverages_2
+        self.adjust_pair = adjust_pair
+
+    def __str__(self):
+        res = "AS_POSITION\nADJUST_PAIR\n"
+        for coverage in self.coverages_1:
+            coverage = " ".join(str(c) for c in coverage)
+            res += f" FIRST {coverage}"
+        res += "\n"
+        for coverage in self.coverages_2:
+            coverage = " ".join(str(c) for c in coverage)
+            res += f" SECOND {coverage}"
+        res += "\n"
+        for (id_1, id_2), (pos_1, pos_2) in self.adjust_pair.items():
+            res += f" {id_1} {id_2} BY{pos_1}{pos_2}\n"
+        res += "\nEND_ADJUST\nEND_POSITION"
+        return res
+
+
+class PositionAdjustSingleDefinition(Statement):
+    def __init__(self, adjust_single, location=None):
+        Statement.__init__(self, location)
+        self.adjust_single = adjust_single
+
+    def __str__(self):
+        res = "AS_POSITION\nADJUST_SINGLE"
+        for coverage, pos in self.adjust_single:
+            coverage = "".join(str(c) for c in coverage)
+            res += f"{coverage} BY{pos}"
+        res += "\nEND_ADJUST\nEND_POSITION"
+        return res
+
+
+class ContextDefinition(Statement):
+    def __init__(self, ex_or_in, left=None, right=None, location=None):
+        Statement.__init__(self, location)
+        self.ex_or_in = ex_or_in
+        self.left = left if left is not None else []
+        self.right = right if right is not None else []
+
+    def __str__(self):
+        res = self.ex_or_in + "\n"
+        for coverage in self.left:
+            coverage = "".join(str(c) for c in coverage)
+            res += f" LEFT{coverage}\n"
+        for coverage in self.right:
+            coverage = "".join(str(c) for c in coverage)
+            res += f" RIGHT{coverage}\n"
+        res += "END_CONTEXT"
+        return res
+
+
+class AnchorDefinition(Statement):
+    def __init__(self, name, gid, glyph_name, component, locked, pos, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.gid = gid
+        self.glyph_name = glyph_name
+        self.component = component
+        self.locked = locked
+        self.pos = pos
+
+    def __str__(self):
+        locked = self.locked and " LOCKED" or ""
+        return (
+            f'DEF_ANCHOR "{self.name}"'
+            f" ON {self.gid}"
+            f" GLYPH {self.glyph_name}"
+            f" COMPONENT {self.component}"
+            f"{locked}"
+            f" AT {self.pos} END_ANCHOR"
+        )
+
+
+class SettingDefinition(Statement):
+    def __init__(self, name, value, location=None):
+        Statement.__init__(self, location)
+        self.name = name
+        self.value = value
+
+    def __str__(self):
+        if self.value is True:
+            return f"{self.name}"
+        if isinstance(self.value, (tuple, list)):
+            value = " ".join(str(v) for v in self.value)
+            return f"{self.name} {value}"
+        return f"{self.name} {self.value}"

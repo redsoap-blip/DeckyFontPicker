@@ -1,1 +1,35 @@
-aW1wb3J0IGpzb24KZnJvbSB0ZXh0d3JhcCBpbXBvcnQgaW5kZW50Cgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgdG9zdHIKCgpjbGFzcyB0YWJsZV9EX19lX2JfZyhEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5kYXRhID0ge30KCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgc2VsZi5kYXRhID0ganNvbi5sb2FkcyhkYXRhKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgcmV0dXJuIGpzb24uZHVtcHMoc2VsZi5kYXRhKS5lbmNvZGUoInV0Zi04IikKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgICMgbWFrZSBzdXJlIGpzb24gaW5kZW50YXRpb24gaW5zaWRlIENEQVRBIGJsb2NrIG1hdGNoZXMgWE1MV3JpdGVyJ3MKICAgICAgICBkYXRhID0ganNvbi5kdW1wcyhzZWxmLmRhdGEsIGluZGVudD1sZW4od3JpdGVyLmluZGVudHdoaXRlKSkKICAgICAgICBwcmVmaXggPSB0b3N0cih3cml0ZXIuaW5kZW50d2hpdGUpICogKHdyaXRlci5pbmRlbnRsZXZlbCArIDEpCiAgICAgICAgIyBidXQgZG9uJ3QgaW5kZW50IHRoZSBmaXJzdCBqc29uIGxpbmUgc28gaXQncyBhZGphY2VudCB0byBgPCFbQ0RBVEFbe2AKICAgICAgICBjZGF0YSA9IGluZGVudChkYXRhLCBwcmVmaXgsIGxhbWJkYSBsbjogbG4gIT0gIntcbiIpCgogICAgICAgIHdyaXRlci5iZWdpbnRhZygianNvbiIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci53cml0ZWNkYXRhKGNkYXRhKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuZW5kdGFnKCJqc29uIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAianNvbiI6CiAgICAgICAgICAgIHNlbGYuZGF0YSA9IGpzb24ubG9hZHMoIiIuam9pbihjb250ZW50KSkK
+import json
+from textwrap import indent
+
+from . import DefaultTable
+from fontTools.misc.textTools import tostr
+
+
+class table_D__e_b_g(DefaultTable.DefaultTable):
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.data = {}
+
+    def decompile(self, data, ttFont):
+        self.data = json.loads(data)
+
+    def compile(self, ttFont):
+        return json.dumps(self.data).encode("utf-8")
+
+    def toXML(self, writer, ttFont):
+        # make sure json indentation inside CDATA block matches XMLWriter's
+        data = json.dumps(self.data, indent=len(writer.indentwhite))
+        prefix = tostr(writer.indentwhite) * (writer.indentlevel + 1)
+        # but don't indent the first json line so it's adjacent to `<![CDATA[{`
+        cdata = indent(data, prefix, lambda ln: ln != "{\n")
+
+        writer.begintag("json")
+        writer.newline()
+        writer.writecdata(cdata)
+        writer.newline()
+        writer.endtag("json")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "json":
+            self.data = json.loads("".join(content))

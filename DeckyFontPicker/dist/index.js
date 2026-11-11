@@ -204,7 +204,11 @@
 
         // QAM / MainMenu 的文档会被 Steam 重建，后端会自动补注入；这里跟着刷新状态
         var pendingCount = state && state.targets
-            ? state.targets.filter(function (t) { return !t.ok; }).length
+            ? state.targets.filter(function (t) {
+                if (!t.ok) return true;
+                // local 模式下探测还没落定也要继续轮询
+                return state.mode === "local" && (!t.probe || t.probe.status === "pending");
+            }).length
             : -1;
 
         useEffect(function () {
@@ -228,6 +232,13 @@
             if (busy) return;
             setBusy(true);
             call("reset_font").then(function () { setBusy(false); });
+        }
+
+        // 切换投递模式：只由用户点击触发，绝不自动切换
+        function switchMode(next) {
+            if (busy) return;
+            setBusy(true);
+            call("set_mode", { mode: next }).then(function () { setBusy(false); });
         }
 
         function toggleFavorite(family) {
@@ -330,30 +341,53 @@
                 if (byName[favorites[f]]) fav.push(byName[favorites[f]]);
             }
 
-            var mono = [];
-            var serif = [];
-            var sans = [];
-            var other = [];
             var zhExtra = [];
-            // 四个基础类的 zh 子类：同一判据 + lang 含 zh；
-            // 基础类排除 zh 字体，两者互斥，全场合计仍等于原来的基础类数量
-            var monoZh = [];
-            var serifZh = [];
-            var sansZh = [];
-            var otherZh = [];
+            // 四个基础类下各分 zh / ja / ko 子类；归属优先级 zh > ja > ko，
+            // 基础类只留三者都不含的字体，16 个分区互斥，合计仍等于全量
+            var kinds = ["serif", "sans", "mono", "other"];
+            var subs = {};
+            for (var k = 0; k < kinds.length; k++) {
+                subs[kinds[k]] = [];
+                subs[kinds[k] + "-zh"] = [];
+                subs[kinds[k] + "-ja"] = [];
+                subs[kinds[k] + "-ko"] = [];
+            }
             for (var j = 0; j < full.length; j++) {
                 var font = full[j];
                 var monofl = isMono(font);
                 var isSerifFont = isSerif(font);
                 if (font.zh_extra) zhExtra.push(font);
-                // 判定顺序 Mono → Serif → Sans → 其他，四类互斥；zh 字体只进对应（zh）子类
-                if (monofl) { if (font.zh) monoZh.push(font); else mono.push(font); }
-                else if (isSerifFont) { if (font.zh) serifZh.push(font); else serif.push(font); }
-                else if (isSans(font)) { if (font.zh) sansZh.push(font); else sans.push(font); }
-                else if (font.zh) otherZh.push(font);
-                else other.push(font);
+                // 基础类判定顺序 Mono → Serif → Sans → 其他，四类互斥
+                var kind = monofl ? "mono" : isSerifFont ? "serif" : isSans(font) ? "sans" : "other";
+                // 主语言：族名地区标记优先（JP→ja、KR→ko、SC/TC/HK→zh），
+                // 没有标记再按 zh > ja > ko 的覆盖规则
+                var lang = font.primary || (font.zh ? "zh" : font.ja ? "ja" : font.ko ? "ko" : "");
+                var sub = lang ? "-" + lang : "";
+                subs[kind + sub].push(font);
             }
 
+            var BASE_NAME = { serif: "Serif 衬线", sans: "Sans 无衬线", mono: "Mono 等宽", other: "其他" };
+            var BASE_NOTE = {
+                serif: "只能按 family 名启发式判断（Serif / Song / Ming / Times / 楷 等），名字里含 sans 的排除。",
+                sans: "名字里含明确无衬线关键词（sans / grotesk / gothic / 黑 等）。",
+                mono: "按 fontconfig 的 spacing 字段判定（100 / 110），或 family 名里含 mono / 等宽。",
+                other: "既非等宽、名字里也没有明确衬线 / 无衬线关键词的字体。",
+            };
+            var SUB_SUFFIX = { zh: "（zh）", ja: "（ja）", ko: "（ko）" };
+            var SUB_NOTE = {
+                zh: "按主语言归入：族名带 SC / TC / HK，或没有地区标记时 lang 含中文，与基础类及其它子类互斥。",
+                ja: "按主语言归入：族名带 JP（如 Noto Sans CJK JP），或没有地区标记时 lang 只含日文，与基础类及其它子类互斥。",
+                ko: "按主语言归入：族名带 KR，或没有地区标记时 lang 只含韩文，与基础类及其它子类互斥。",
+            };
+            function catOf(kind, sub) {
+                return {
+                    id: kind + (sub ? "-" + sub : ""),
+                    name: BASE_NAME[kind] + (sub ? SUB_SUFFIX[sub] : ""),
+                    items: subs[kind + (sub ? "-" + sub : "")],
+                    kind: kind,
+                    note: sub ? SUB_NOTE[sub] : "不含中文、日文、韩文，见各自子类。" + BASE_NOTE[kind],
+                };
+            }
             var cats = [
                 {
                     id: "fav", name: "收藏夹", items: fav, kind: "fav",
@@ -364,40 +398,15 @@
                     id: "zh-extra", name: "含中文", items: zhExtra, kind: "zh-extra",
                     note: "按字符集覆盖判定：本身不是中文主字体，但 charset 与 CJK 统一表意文字（U+3400–U+4DBF、U+4E00–U+9FFF）的交集 ≥ 500 个码位。判不出的字体不列入，当前命中 " + zhExtra.length + " 款。",
                 },
-                {
-                    id: "serif", name: "Serif 衬线", items: serif, kind: "serif",
-                    note: "不含中文，中文见「Serif 衬线（zh）」。只能按 family 名启发式判断（Serif / Song / Ming / Times / 楷 等），名字里含 sans 的排除。",
-                },
-                {
-                    id: "serif-zh", name: "Serif 衬线（zh）", items: serifZh, kind: "serif",
-                    note: "仅中文部分（lang 含 zh），与「Serif 衬线」互斥，两者合计为衬线类全部字体。",
-                },
-                {
-                    id: "sans", name: "Sans 无衬线", items: sans, kind: "sans",
-                    note: "不含中文，中文见「Sans 无衬线（zh）」。名字里含明确无衬线关键词（sans / grotesk / gothic / 黑 等）。",
-                },
-                {
-                    id: "sans-zh", name: "Sans 无衬线（zh）", items: sansZh, kind: "sans",
-                    note: "仅中文部分（lang 含 zh），与「Sans 无衬线」互斥，两者合计为无衬线类全部字体。",
-                },
-                {
-                    id: "mono", name: "Mono 等宽", items: mono, kind: "mono",
-                    note: "不含中文，中文见「Mono 等宽（zh）」。按 fontconfig 的 spacing 字段判定（100 / 110），或 family 名里含 mono / 等宽。",
-                },
-                {
-                    id: "mono-zh", name: "Mono 等宽（zh）", items: monoZh, kind: "mono",
-                    note: "仅中文部分（lang 含 zh），与「Mono 等宽」互斥，两者合计为等宽类全部字体。",
-                },
-                {
-                    id: "other", name: "其他", items: other, kind: "other",
-                    note: "不含中文，中文见「其他（zh）」。既非等宽、名字里也没有明确衬线 / 无衬线关键词的字体。",
-                },
-                {
-                    id: "other-zh", name: "其他（zh）", items: otherZh, kind: "other",
-                    note: "仅中文部分（lang 含 zh），与「其他」互斥，两者合计为其他类全部字体。",
-                },
-                { id: "all", name: "全部字体", items: full, kind: "all", note: null },
             ];
+            // 顺序：基础类 → zh → ja → ko
+            for (var c = 0; c < kinds.length; c++) {
+                cats.push(catOf(kinds[c], ""));
+                cats.push(catOf(kinds[c], "zh"));
+                cats.push(catOf(kinds[c], "ja"));
+                cats.push(catOf(kinds[c], "ko"));
+            }
+            cats.push({ id: "all", name: "全部字体", items: full, kind: "all", note: null });
 
             // 0 款的分类整块隐藏（标题也不渲染）；收藏夹与「全部字体」永远保留
             return cats.filter(function (cat) {
@@ -405,21 +414,104 @@
             });
         }, [fonts, favorites]);
 
-        // 异常时才出现的单行提示：字体准备失败 / 本地服务没起来 / 某一路注入失败
+        // 只在整体性故障时出现的单行提示；某一路未注入已由卡内摘要行表达，不再重复
         var problemText = null;
         if (state && state.error) {
             problemText = String(state.error);
-        } else if (state && state.server && !state.server.running) {
+        } else if (state && state.mode === "extract" && state.server && !state.server.running) {
             problemText = "本地字体服务未启动，字体无法生效";
-        } else if (state && Array.isArray(state.targets)) {
-            var failedLabels = state.targets.filter(function (t) { return !t.ok; })
-                .map(function (t) { return t.label; });
-            if (failedLabels.length) problemText = "界面注入未完成：" + failedLabels.join("、");
         }
-        // 注入状态只保留「已注入 / 未注入」；uid 与目标文档名只留在日志里
+        // 当前投递模式：local（默认） / extract
+        var mode = (state && state.mode) === "extract" ? "extract" : "local";
+        var extractInfo = (state && state.modes && state.modes.extract) || null;
+        var extractUsable = !!(extractInfo && extractInfo.available !== false);
+        var extractReason = (extractInfo && extractInfo.reason) || "缺少 fontTools";
+        // 描述行模式名固定列宽，按最长的四字模式名计算
+        var modeNameW = "50px";
+        var MODE_DESC = {
+            local: "浏览器直接取系统里已安装的字体，不抽 face、不缓存（CSS local()）",
+            extract: "取出该字体的真实 face 嵌入页面，.ttc 也能强制生效",
+        };
+        var switchDisabled = busy || (mode === "local" && !extractUsable);
+        var switchOKDesc = mode === "local"
+            ? (extractUsable ? "切换到抽取嵌入" : "抽取嵌入不可用")
+            : "切换回按名引用";
+        // 只能由用户主动点，探测结果不触发任何自动切换
+        function doSwitchMode() {
+            if (switchDisabled) {
+                // 点了要给出原因，不能静默无反应
+                if (mode === "local" && !extractUsable) setMessage("抽取嵌入不可用：" + extractReason);
+                return;
+            }
+            switchMode(mode === "local" ? "extract" : "local");
+        }
+
+        // 「当前字体」收起时只看得到摘要行，所以命中 / 未注入 / 探测失败必须在这里也能分辨
+        var summary = (function () {
+            var ts = state && Array.isArray(state.targets) ? state.targets : null;
+            if (!ts || !ts.length) return null;
+            var bad = ts.filter(function (t) { return !t.ok; }).map(function (t) { return t.label; });
+            if (bad.length) return { text: "未注入：" + bad.join("、"), color: "#ff9b90" };
+            // 抽取模式下生效态用模式色（蓝），与 local 的绿形成对称关系
+            if (mode === "extract") return { text: "已注入", color: "#8ab4f8" };
+            var probes = ts.map(function (t) { return t.probe || null; });
+            if (probes.some(function (p) { return p && p.status === "error"; })) {
+                return { text: "探测失败（未生效）", color: "#f0c674" };
+            }
+            if (probes.some(function (p) { return p && p.status === "miss"; })) {
+                return { text: "未命中（已回退系统字体）", color: "#ff9b90" };
+            }
+            if (probes.some(function (p) { return p && p.status === "hit_no_cjk"; })) {
+                return { text: "已命中（无中文字形）", color: "#f0c674" };
+            }
+            if (probes.every(function (p) { return p && p.status === "hit"; })) {
+                return { text: "已命中", color: "#7ee787" };
+            }
+            return { text: "检测中…", color: "rgba(255,255,255,0.55)" };
+        })();
+
+        // 注入状态：已注入 / 未注入 + local 模式下每个目标的命中探测结论
         // 标签列固定宽度，保证三行的状态文字左边缘对齐
-        var TARGET_LABEL_WIDTH = "90px";
+        var TARGET_LABEL_WIDTH = "86px";
         var targetRows = (state && Array.isArray(state.targets) ? state.targets : []).map(function (target) {
+            var probe = target.probe || null;
+            var statusText;
+            var statusColor;
+            if (!target.ok) {
+                statusText = "未注入";
+                statusColor = "#ff9b90";
+            } else if (mode === "extract") {
+                statusText = "已注入";
+                // 生效态颜色跟随注入模式：抽取嵌入蓝、按名引用绿
+                statusColor = "#8ab4f8";
+            } else if (!probe || probe.status === "pending") {
+                statusText = "检测中…";
+                statusColor = "rgba(255,255,255,0.55)";
+            } else if (probe.status === "hit") {
+                statusText = "已命中";
+                statusColor = "#7ee787";
+            } else if (probe.status === "hit_no_cjk") {
+                statusText = "已命中（无中文字形）";
+                statusColor = "#f0c674";
+            } else if (probe.status === "miss") {
+                statusText = "未命中（已回退系统字体）";
+                statusColor = "#ff9b90";
+            } else {
+                // 探测失败 = 这种方式没有生效，和「未命中」同属未生效，但原因是探测本身
+                statusText = "探测失败（未生效）";
+                statusColor = "#f0c674";
+            }
+            // 正常生效时不补解释；只有异常情况才给原因 / 指引
+            var detailText = null;
+            if (!target.ok) {
+                detailText = "该区域未注入，重新选择字体可触发注入";
+            } else if (mode === "local" && probe && probe.status === "error") {
+                detailText = "探测本身出错（超时 / JS 异常），与你的字体无关"
+                    + (probe.error ? "：" + String(probe.error).slice(0, 60) : "")
+                    + "；可在上方「注入方式」切到抽取嵌入";
+            } else if (mode === "local" && probe && probe.status === "miss") {
+                detailText = "与回退字体无差异，疑似未生效；可切到抽取嵌入";
+            }
             return h(deckyFrontendLib.PanelSectionRow, { key: target.key },
                 h("div", {
                     style: {
@@ -427,6 +519,10 @@
                         alignItems: "center",
                         fontSize: "13px",
                         lineHeight: "1.4",
+                        // 与上方「注入方式」文本对齐：外层 8px + 内层 12px = 20px，
+                        // 左右同边距，宽度与那一块一致
+                        padding: "0 20px",
+                        boxSizing: "border-box",
                     },
                 },
                     h("span", {
@@ -437,16 +533,84 @@
                             color: "#c3c8cf",
                         },
                     }, target.label),
-                    h("span", {
-                        style: {
-                            color: target.ok ? "rgba(255, 255, 255, 0.85)" : "#ff9b90",
-                            fontWeight: 600,
-                            fontSize: "12px",
-                        },
-                    }, target.ok ? "已注入" : "未注入")
+                    h("span", { style: { display: "flex", flex: "1 1 auto", flexDirection: "column", minWidth: 0, gap: "1px" } },
+                        h("span", {
+                            style: { color: statusColor, fontWeight: 600, fontSize: "12px" },
+                        }, statusText),
+                        detailText
+                            ? h("span", {
+                                style: { color: "rgba(255,255,255,0.4)", fontSize: "10px", lineHeight: "1.45" },
+                            }, detailText)
+                            : null
+                    )
                 )
             );
         });
+
+        // 一行模式说明：模式名列固定宽度、冒号对齐，说明文字在第二列悬挂缩进
+        function modeDescLine(key, text) {
+            var active = mode === key;
+            var color = key === "extract" ? "#8ab4f8" : "#7ee787";
+            return h("div", {
+                key: "fp-mode-desc:" + key,
+                style: {
+                    display: "grid",
+                    gridTemplateColumns: modeNameW + " 1fr",
+                    columnGap: "2px",
+                },
+            },
+                h("span", {
+                    style: {
+                        whiteSpace: "nowrap",
+                        // 生效那条用模式色、未生效统一灰，两者字重一致，避免像链接
+                        fontWeight: 500,
+                        color: active ? color : "rgba(255,255,255,0.45)",
+                    },
+                }, key === "extract" ? "抽取嵌入" : "按名引用"),
+                h("span", {
+                    style: {
+                        color: active ? "rgba(255,255,255,0.86)" : "rgba(255,255,255,0.4)",
+                    },
+                }, "：" + text)
+            );
+        }
+
+        // 字体说明改用 lang 覆盖：中文相关项优先；非中文只列前几项
+        function isZhLangTag(tag) {
+            return tag === "zh" || tag.indexOf("zh-") === 0 || tag === "yue";
+        }
+        // zh-cn → zh-CN，zh-hans → zh-Hans
+        function fmtLangTag(tag) {
+            var parts = String(tag).toLowerCase().split("-");
+            var out = parts[0];
+            for (var i = 1; i < parts.length; i++) {
+                var seg = parts[i];
+                out += "-" + (seg.length === 2
+                    ? seg.toUpperCase()
+                    : seg.charAt(0).toUpperCase() + seg.slice(1));
+            }
+            return out;
+        }
+        function langLine(font) {
+            if (!font) return "lang 未知";
+            var langs = Array.isArray(font.langs) ? font.langs : [];
+            var total = typeof font.lang_count === "number" ? font.lang_count : langs.length;
+            var usable = !!(font.zh || font.zh_extra);
+            if (!langs.length) return "lang 未知";
+            var zhLangs = langs.filter(isZhLangTag);
+            if (zhLangs.length) {
+                var shownZh = zhLangs.slice(0, 2).map(fmtLangTag).join(" · ");
+                return "lang " + shownZh
+                    + (zhLangs.length > 2 ? " · 等 " + zhLangs.length + " 种" : "");
+            }
+            var shown = langs.slice(0, 3).map(fmtLangTag).join(" · ");
+            return "lang " + shown
+                + (total > 3 ? " · 等 " + total + " 种" : "")
+                + (usable ? " · 含中文字形" : "");
+        }
+
+        // 标题下的说明行：直接展示 lang 覆盖
+        var langText = current ? langLine(currentFont) : "未覆盖界面字体";
 
         // 「当前字体」标题行：与分区标题同一套样式与聚焦实现（fp-sec + focusClassName），
         // 左侧 ▸/▾ + 标签，右侧字体名；默认折叠，折叠时不渲染说明行与注入状态三行
@@ -494,32 +658,124 @@
                         }, currentOpen ? "▾" : "▸"),
                         h("span", { style: { marginLeft: "6px" } }, "当前字体")
                     ),
-                    // 字体名与标签同一行、垂直居中；过长用省略号截断，不换行；无字体时显示空态文案
-                    h("span", {
+                    // 字体名 + 状态摘要同一列、右对齐；摘要行在收起状态也能看到三态
+                    h("div", {
                         className: "fp-current-name",
                         style: {
                             flex: "1 1 auto",
                             minWidth: 0,
-                            textAlign: "right",
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            fontWeight: 400,
-                            fontSize: "13px",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "flex-end",
+                            lineHeight: "1.25",
                         },
-                    }, current || "未选择")
+                    },
+                        h("span", {
+                            style: {
+                                maxWidth: "100%",
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                fontWeight: 400,
+                                fontSize: "13px",
+                            },
+                        }, current || "未选择"),
+                        summary
+                            ? h("span", {
+                                className: "fp-current-summary",
+                                style: {
+                                    maxWidth: "100%",
+                                    // 不截断：目标多 / 名字长时整体换行，卡片高度自适应
+                                    whiteSpace: "normal",
+                                    overflow: "visible",
+                                    wordBreak: "break-word",
+                                    textAlign: "right",
+                                    fontSize: "11px",
+                                    lineHeight: "1.4",
+                                    fontWeight: 600,
+                                    color: summary.color,
+                                },
+                            }, summary.text)
+                            : null
+                    )
                 )
             ),
             currentOpen
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:info" },
-                    h("div", { style: { fontSize: "14px", lineHeight: "1.5" } },
-                        current
-                            ? h("div", { style: { opacity: 0.72 } },
-                                (currentFont && currentFont.zh)
-                                    ? "含中文字形，可直接用于界面文本"
-                                    : "该字体不含中文字形，中文回退到 " + ((state && state.fallback && state.fallback[0]) || "系统默认"))
-                            : h("div", { style: { opacity: 0.72 } }, "未覆盖界面字体")
-                    ))
+                    h("div", {
+                        title: langText,
+                        style: {
+                            fontSize: "11px",
+                            lineHeight: "1.5",
+                            opacity: 0.72,
+                            // 水平居中；太长就换行，每一行都居中，不截断
+                            textAlign: "center",
+                            whiteSpace: "normal",
+                            wordBreak: "break-word",
+                        },
+                    }, langText))
+                : null,
+            // 注入方式并回本卡：整行可聚焦可点击，点一下就在 local ⇄ face 抽取 间切换
+            currentOpen
+                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:mode" },
+                    // 外层只留焦点描边与卡片边缘的留白，本身不可聚焦
+                    h("div", { style: { padding: "2px 8px" } },
+                    h(deckyFrontendLib.Focusable, {
+                        tabIndex: 0,
+                        className: "fp-mode-row " + (mode === "extract" ? "fp-mode-extract" : "fp-mode-local"),
+                        focusClassName: "fp-row-focus",
+                        onActivate: doSwitchMode,
+                        onClick: doSwitchMode,
+                        onOKActionDescription: switchOKDesc,
+                        style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "4px",
+                            boxSizing: "border-box",
+                            width: "100%",
+                            // 左右内边距保证模式名右对齐后仍有安全边距
+                            padding: "9px 12px",
+                            borderRadius: "8px",
+                            outline: "none",
+                            textAlign: "left",
+                            cursor: switchDisabled ? "default" : "pointer",
+                            transition: "background 80ms linear",
+                        },
+                    },
+                        // 只留左侧标签：模式名已在下方两段描述里用同色标出，右侧不再重复
+                        h("div", {
+                            style: {
+                                display: "flex",
+                                alignItems: "baseline",
+                                justifyContent: "space-between",
+                                gap: "8px",
+                                fontSize: "13px",
+                                lineHeight: "1.4",
+                            },
+                        },
+                            h("span", { style: { color: "#c3c8cf", flexShrink: 0 } }, "注入方式"),
+                            h("span", {
+                                "aria-hidden": "true",
+                                className: "fp-mode-swap",
+                                style: { fontSize: "12px", flexShrink: 0, lineHeight: "1.4" },
+                            }, "⇄")
+                        ),
+                        // 两种模式的说明常显：当前那条更亮 + 模式名同色，另一条统一灰
+                        h("div", {
+                            style: {
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "2px",
+                                fontSize: "11px",
+                                lineHeight: "1.45",
+                            },
+                        },
+                            modeDescLine("local", MODE_DESC.local),
+                            modeDescLine("extract", extractUsable
+                                ? MODE_DESC.extract
+                                : MODE_DESC.extract + "（当前不可用：" + extractReason + "）")
+                        )
+                    )))
                 : null,
             currentOpen ? targetRows : null,
             // 异常提示不属于可折叠内容：任何折叠状态下都常显
@@ -645,7 +901,24 @@
             "box-shadow:inset 0 0 0 1px #66c0f4!important;" +
             "color:#ffffff!important;}" +
             ".fp-sec.fp-row-focus .fp-arrow,.fp-sec:focus .fp-arrow{color:#ffffff!important;}" +
-            ".fp-sec.fp-row-focus .fp-count,.fp-sec:focus .fp-count{color:#e6f3fb!important;}";
+            ".fp-sec.fp-row-focus .fp-count,.fp-sec:focus .fp-count{color:#e6f3fb!important;}" +
+            // 「注入方式」整行本身可点：聚焦时描边，未聚焦时保持低调
+            ".fp-mode-row:hover{background:rgba(255,255,255,0.05)!important;}" +
+            ".fp-mode-row.fp-row-focus,.fp-mode-row:focus{" +
+            "background:rgba(255,255,255,0.07)!important;" +
+            "box-shadow:inset 0 0 0 1px #66c0f4!important;" +
+            "border-radius:8px;}" +
+            // 右侧 ⇄：平时很淡，聚焦 / hover 时用当前模式色点亮；只用 transform 放大，不撑行高
+            ".fp-mode-swap{display:inline-block;opacity:0.45;color:rgba(255,255,255,0.7);" +
+            "transform-origin:center right;" +
+            "transition:opacity 150ms ease,transform 150ms ease,color 150ms ease;}" +
+            ".fp-mode-row:hover .fp-mode-swap,.fp-mode-row.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-row:focus .fp-mode-swap{" +
+            "opacity:1;transform:translateX(-2px) scale(1.12);}" +
+            ".fp-mode-local:hover .fp-mode-swap,.fp-mode-local.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-local:focus .fp-mode-swap{color:#7ee787!important;}" +
+            ".fp-mode-extract:hover .fp-mode-swap,.fp-mode-extract.fp-row-focus .fp-mode-swap," +
+            ".fp-mode-extract:focus .fp-mode-swap{color:#8ab4f8!important;}";
 
         // 「加载更多」行：沿用标题行的样式与 focusClassName 聚焦方案，只负责加长列表
         function loadMoreRow(remaining, key, moreKey) {
@@ -732,7 +1005,7 @@
                 categoryRows(cat));
         });
 
-        // 收藏由字体行 X 负责、重新注入由字体行 A 负责，这里只留恢复默认
+        // 收藏由字体行 X 负责、重新注入由字体行 A 负责；这里保留恢复默认
         var actionSection = h(deckyFrontendLib.PanelSection, { title: "操作" },
             h(deckyFrontendLib.PanelSectionRow, null,
                 h(deckyFrontendLib.ButtonItem, {

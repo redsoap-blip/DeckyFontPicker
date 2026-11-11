@@ -1,1 +1,489 @@
-dHJ5OgogICAgaW1wb3J0IGN5dGhvbgpleGNlcHQgKEF0dHJpYnV0ZUVycm9yLCBJbXBvcnRFcnJvcik6CiAgICAjIGlmIGN5dGhvbiBub3QgaW5zdGFsbGVkLCB1c2UgbW9jayBtb2R1bGUgd2l0aCBuby1vcCBkZWNvcmF0b3JzIGFuZCB0eXBlcwogICAgZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgY3l0aG9uCkNPTVBJTEVEID0gY3l0aG9uLmNvbXBpbGVkCgpmcm9tIHR5cGluZyBpbXBvcnQgKAogICAgU2VxdWVuY2UsCiAgICBUdXBsZSwKICAgIFVuaW9uLAopCmZyb20gbnVtYmVycyBpbXBvcnQgSW50ZWdyYWwsIFJlYWwKCl9Qb2ludCA9IFR1cGxlW1JlYWwsIFJlYWxdCl9EZWx0YSA9IFR1cGxlW1JlYWwsIFJlYWxdCl9Qb2ludFNlZ21lbnQgPSBTZXF1ZW5jZVtfUG9pbnRdCl9EZWx0YVNlZ21lbnQgPSBTZXF1ZW5jZVtfRGVsdGFdCl9EZWx0YU9yTm9uZSA9IFVuaW9uW19EZWx0YSwgTm9uZV0KX0RlbHRhT3JOb25lU2VnbWVudCA9IFNlcXVlbmNlW19EZWx0YU9yTm9uZV0KX0VuZHBvaW50cyA9IFNlcXVlbmNlW0ludGVncmFsXQoKCk1BWF9MT09LQkFDSyA9IDgKCgpAY3l0aG9uLmNmdW5jCkBjeXRob24ubG9jYWxzKAogICAgaj1jeXRob24uaW50LAogICAgbj1jeXRob24uaW50LAogICAgeDE9Y3l0aG9uLmRvdWJsZSwKICAgIHgyPWN5dGhvbi5kb3VibGUsCiAgICBkMT1jeXRob24uZG91YmxlLAogICAgZDI9Y3l0aG9uLmRvdWJsZSwKICAgIHNjYWxlPWN5dGhvbi5kb3VibGUsCiAgICB4PWN5dGhvbi5kb3VibGUsCiAgICBkPWN5dGhvbi5kb3VibGUsCikKZGVmIGl1cF9zZWdtZW50KAogICAgY29vcmRzOiBfUG9pbnRTZWdtZW50LCByYzE6IF9Qb2ludCwgcmQxOiBfRGVsdGEsIHJjMjogX1BvaW50LCByZDI6IF9EZWx0YQopOiAgIyAtPiBfRGVsdGFTZWdtZW50OgogICAgIiIiR2l2ZW4gdHdvIHJlZmVyZW5jZSBjb29yZGluYXRlcyBgcmMxYCAmIGByYzJgIGFuZCB0aGVpciByZXNwZWN0aXZlCiAgICBkZWx0YSB2ZWN0b3JzIGByZDFgICYgYHJkMmAsIHJldHVybnMgaW50ZXJwb2xhdGVkIGRlbHRhcyBmb3IgdGhlIHNldCBvZgogICAgY29vcmRpbmF0ZXMgYGNvb3Jkc2AuIiIiCgogICAgIyByYzEgPSByZWZlcmVuY2UgY29vcmQgMQogICAgIyByZDEgPSByZWZlcmVuY2UgZGVsdGEgMQogICAgb3V0X2FycmF5cyA9IFtOb25lLCBOb25lXQogICAgZm9yIGogaW4gMCwgMToKICAgICAgICBvdXRfYXJyYXlzW2pdID0gb3V0ID0gW10KICAgICAgICB4MSwgeDIsIGQxLCBkMiA9IHJjMVtqXSwgcmMyW2pdLCByZDFbal0sIHJkMltqXQoKICAgICAgICBpZiB4MSA9PSB4MjoKICAgICAgICAgICAgbiA9IGxlbihjb29yZHMpCiAgICAgICAgICAgIGlmIGQxID09IGQyOgogICAgICAgICAgICAgICAgb3V0LmV4dGVuZChbZDFdICogbikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG91dC5leHRlbmQoWzBdICogbikKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgaWYgeDEgPiB4MjoKICAgICAgICAgICAgeDEsIHgyID0geDIsIHgxCiAgICAgICAgICAgIGQxLCBkMiA9IGQyLCBkMQoKICAgICAgICAjIHgxIDwgeDIKICAgICAgICBzY2FsZSA9IChkMiAtIGQxKSAvICh4MiAtIHgxKQogICAgICAgIGZvciBwYWlyIGluIGNvb3JkczoKICAgICAgICAgICAgeCA9IHBhaXJbal0KCiAgICAgICAgICAgIGlmIHggPD0geDE6CiAgICAgICAgICAgICAgICBkID0gZDEKICAgICAgICAgICAgZWxpZiB4ID49IHgyOgogICAgICAgICAgICAgICAgZCA9IGQyCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAjIEludGVycG9sYXRlCiAgICAgICAgICAgICAgICAjCiAgICAgICAgICAgICAgICAjIE5PVEU6IHdlIGFzc2lnbiBhbiBleHBsaWNpdCBpbnRlcm1lZGlhdGUgdmFyaWFibGUgaGVyZSBpbgogICAgICAgICAgICAgICAgIyBvcmRlciB0byBkaXNhYmxlIGEgZnVzZWQgbXVsLWFkZCBvcHRpbWl6YXRpb24uIFNlZToKICAgICAgICAgICAgICAgICMKICAgICAgICAgICAgICAgICMgLSBodHRwczovL2dvZGJvbHQub3JnL3ovWXNQNFQzVHFLLAogICAgICAgICAgICAgICAgIyAtIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy8zNzAzCiAgICAgICAgICAgICAgICBudWRnZSA9ICh4IC0geDEpICogc2NhbGUKICAgICAgICAgICAgICAgIGQgPSBkMSArIG51ZGdlCgogICAgICAgICAgICBvdXQuYXBwZW5kKGQpCgogICAgcmV0dXJuIHppcCgqb3V0X2FycmF5cykKCgpkZWYgaXVwX2NvbnRvdXIoZGVsdGFzOiBfRGVsdGFPck5vbmVTZWdtZW50LCBjb29yZHM6IF9Qb2ludFNlZ21lbnQpIC0+IF9EZWx0YVNlZ21lbnQ6CiAgICAiIiJGb3IgdGhlIGNvbnRvdXIgZ2l2ZW4gaW4gYGNvb3Jkc2AsIGludGVycG9sYXRlIGFueSBtaXNzaW5nCiAgICBkZWx0YSB2YWx1ZXMgaW4gZGVsdGEgdmVjdG9yIGBkZWx0YXNgLgoKICAgIFJldHVybnMgZnVsbHkgZmlsbGVkLW91dCBkZWx0YSB2ZWN0b3IuIiIiCgogICAgYXNzZXJ0IGxlbihkZWx0YXMpID09IGxlbihjb29yZHMpCiAgICBpZiBOb25lIG5vdCBpbiBkZWx0YXM6CiAgICAgICAgcmV0dXJuIGRlbHRhcwoKICAgIG4gPSBsZW4oZGVsdGFzKQogICAgIyBpbmRpY2VzIG9mIHBvaW50cyB3aXRoIGV4cGxpY2l0IGRlbHRhcwogICAgaW5kaWNlcyA9IFtpIGZvciBpLCB2IGluIGVudW1lcmF0ZShkZWx0YXMpIGlmIHYgaXMgbm90IE5vbmVdCiAgICBpZiBub3QgaW5kaWNlczoKICAgICAgICAjIEFsbCBkZWx0YXMgYXJlIE5vbmUuICBSZXR1cm4gMCwwIGZvciBhbGwuCiAgICAgICAgcmV0dXJuIFsoMCwgMCldICogbgoKICAgIG91dCA9IFtdCiAgICBpdCA9IGl0ZXIoaW5kaWNlcykKICAgIHN0YXJ0ID0gbmV4dChpdCkKICAgIGlmIHN0YXJ0ICE9IDA6CiAgICAgICAgIyBJbml0aWFsIHNlZ21lbnQgdGhhdCB3cmFwcyBhcm91bmQKICAgICAgICBpMSwgaTIsIHJpMSwgcmkyID0gMCwgc3RhcnQsIHN0YXJ0LCBpbmRpY2VzWy0xXQogICAgICAgIG91dC5leHRlbmQoCiAgICAgICAgICAgIGl1cF9zZWdtZW50KAogICAgICAgICAgICAgICAgY29vcmRzW2kxOmkyXSwgY29vcmRzW3JpMV0sIGRlbHRhc1tyaTFdLCBjb29yZHNbcmkyXSwgZGVsdGFzW3JpMl0KICAgICAgICAgICAgKQogICAgICAgICkKICAgIG91dC5hcHBlbmQoZGVsdGFzW3N0YXJ0XSkKICAgIGZvciBlbmQgaW4gaXQ6CiAgICAgICAgaWYgZW5kIC0gc3RhcnQgPiAxOgogICAgICAgICAgICBpMSwgaTIsIHJpMSwgcmkyID0gc3RhcnQgKyAxLCBlbmQsIHN0YXJ0LCBlbmQKICAgICAgICAgICAgb3V0LmV4dGVuZCgKICAgICAgICAgICAgICAgIGl1cF9zZWdtZW50KAogICAgICAgICAgICAgICAgICAgIGNvb3Jkc1tpMTppMl0sIGNvb3Jkc1tyaTFdLCBkZWx0YXNbcmkxXSwgY29vcmRzW3JpMl0sIGRlbHRhc1tyaTJdCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICkKICAgICAgICBvdXQuYXBwZW5kKGRlbHRhc1tlbmRdKQogICAgICAgIHN0YXJ0ID0gZW5kCiAgICBpZiBzdGFydCAhPSBuIC0gMToKICAgICAgICAjIEZpbmFsIHNlZ21lbnQgdGhhdCB3cmFwcyBhcm91bmQKICAgICAgICBpMSwgaTIsIHJpMSwgcmkyID0gc3RhcnQgKyAxLCBuLCBzdGFydCwgaW5kaWNlc1swXQogICAgICAgIG91dC5leHRlbmQoCiAgICAgICAgICAgIGl1cF9zZWdtZW50KAogICAgICAgICAgICAgICAgY29vcmRzW2kxOmkyXSwgY29vcmRzW3JpMV0sIGRlbHRhc1tyaTFdLCBjb29yZHNbcmkyXSwgZGVsdGFzW3JpMl0KICAgICAgICAgICAgKQogICAgICAgICkKCiAgICBhc3NlcnQgbGVuKGRlbHRhcykgPT0gbGVuKG91dCksIChsZW4oZGVsdGFzKSwgbGVuKG91dCkpCiAgICByZXR1cm4gb3V0CgoKZGVmIGl1cF9kZWx0YSgKICAgIGRlbHRhczogX0RlbHRhT3JOb25lU2VnbWVudCwgY29vcmRzOiBfUG9pbnRTZWdtZW50LCBlbmRzOiBfRW5kcG9pbnRzCikgLT4gX0RlbHRhU2VnbWVudDoKICAgICIiIkZvciB0aGUgb3V0bGluZSBnaXZlbiBpbiBgY29vcmRzYCwgd2l0aCBjb250b3VyIGVuZHBvaW50cyBnaXZlbgogICAgaW4gc29ydGVkIGluY3JlYXNpbmcgb3JkZXIgaW4gYGVuZHNgLCBpbnRlcnBvbGF0ZSBhbnkgbWlzc2luZwogICAgZGVsdGEgdmFsdWVzIGluIGRlbHRhIHZlY3RvciBgZGVsdGFzYC4KCiAgICBSZXR1cm5zIGZ1bGx5IGZpbGxlZC1vdXQgZGVsdGEgdmVjdG9yLiIiIgoKICAgIGFzc2VydCBzb3J0ZWQoZW5kcykgPT0gZW5kcyBhbmQgbGVuKGNvb3JkcykgPT0gKGVuZHNbLTFdICsgMSBpZiBlbmRzIGVsc2UgMCkgKyA0CiAgICBuID0gbGVuKGNvb3JkcykKICAgIGVuZHMgPSBlbmRzICsgW24gLSA0LCBuIC0gMywgbiAtIDIsIG4gLSAxXQogICAgb3V0ID0gW10KICAgIHN0YXJ0ID0gMAogICAgZm9yIGVuZCBpbiBlbmRzOgogICAgICAgIGVuZCArPSAxCiAgICAgICAgY29udG91ciA9IGl1cF9jb250b3VyKGRlbHRhc1tzdGFydDplbmRdLCBjb29yZHNbc3RhcnQ6ZW5kXSkKICAgICAgICBvdXQuZXh0ZW5kKGNvbnRvdXIpCiAgICAgICAgc3RhcnQgPSBlbmQKCiAgICByZXR1cm4gb3V0CgoKIyBPcHRpbWl6ZXIKCgpAY3l0aG9uLmNmdW5jCkBjeXRob24uaW5saW5lCkBjeXRob24ubG9jYWxzKAogICAgaT1jeXRob24uaW50LAogICAgaj1jeXRob24uaW50LAogICAgIyB0b2xlcmFuY2U9Y3l0aG9uLmRvdWJsZSwgIyBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvMzI4MgogICAgeD1jeXRob24uZG91YmxlLAogICAgeT1jeXRob24uZG91YmxlLAogICAgcD1jeXRob24uZG91YmxlLAogICAgcT1jeXRob24uZG91YmxlLAopCkBjeXRob24ucmV0dXJucyhpbnQpCmRlZiBjYW5faXVwX2luX2JldHdlZW4oCiAgICBkZWx0YXM6IF9EZWx0YVNlZ21lbnQsCiAgICBjb29yZHM6IF9Qb2ludFNlZ21lbnQsCiAgICBpOiBJbnRlZ3JhbCwKICAgIGo6IEludGVncmFsLAogICAgdG9sZXJhbmNlOiBSZWFsLAopOiAgIyAtPiBib29sOgogICAgIiIiUmV0dXJuIHRydWUgaWYgdGhlIGRlbHRhcyBmb3IgcG9pbnRzIGF0IGBpYCBhbmQgYGpgIChgaSA8IGpgKSBjYW4gYmUKICAgIHN1Y2Nlc3NmdWxseSB1c2VkIHRvIGludGVycG9sYXRlIGRlbHRhcyBmb3IgcG9pbnRzIGluIGJldHdlZW4gdGhlbSB3aXRoaW4KICAgIHByb3ZpZGVkIGVycm9yIHRvbGVyYW5jZS4iIiIKCiAgICBhc3NlcnQgaiAtIGkgPj0gMgogICAgaW50ZXJwID0gaXVwX3NlZ21lbnQoY29vcmRzW2kgKyAxIDogal0sIGNvb3Jkc1tpXSwgZGVsdGFzW2ldLCBjb29yZHNbal0sIGRlbHRhc1tqXSkKICAgIGRlbHRhcyA9IGRlbHRhc1tpICsgMSA6IGpdCgogICAgcmV0dXJuIGFsbCgKICAgICAgICBhYnMoY29tcGxleCh4IC0gcCwgeSAtIHEpKSA8PSB0b2xlcmFuY2UKICAgICAgICBmb3IgKHgsIHkpLCAocCwgcSkgaW4gemlwKGRlbHRhcywgaW50ZXJwKQogICAgKQoKCkBjeXRob24ubG9jYWxzKAogICAgY2o9Y3l0aG9uLmRvdWJsZSwKICAgIGRqPWN5dGhvbi5kb3VibGUsCiAgICBsY2o9Y3l0aG9uLmRvdWJsZSwKICAgIGxkaj1jeXRob24uZG91YmxlLAogICAgbmNqPWN5dGhvbi5kb3VibGUsCiAgICBuZGo9Y3l0aG9uLmRvdWJsZSwKICAgIGZvcmNlPWN5dGhvbi5pbnQsCiAgICBmb3JjZWQ9c2V0LAopCmRlZiBfaXVwX2NvbnRvdXJfYm91bmRfZm9yY2VkX3NldCgKICAgIGRlbHRhczogX0RlbHRhU2VnbWVudCwgY29vcmRzOiBfUG9pbnRTZWdtZW50LCB0b2xlcmFuY2U6IFJlYWwgPSAwCikgLT4gc2V0OgogICAgIiIiVGhlIGZvcmNlZCBzZXQgaXMgYSBjb25zZXJ2YXRpdmUgc2V0IG9mIHBvaW50cyBvbiB0aGUgY29udG91ciB0aGF0IG11c3QgYmUgZW5jb2RlZAogICAgZXhwbGljaXRseSAoaWUuIGNhbm5vdCBiZSBpbnRlcnBvbGF0ZWQpLiAgQ2FsY3VsYXRpbmcgdGhpcyBzZXQgYWxsb3dzIGZvciBzaWduaWZpY2FudGx5CiAgICBzcGVlZGluZyB1cCB0aGUgZHluYW1pYy1wcm9ncmFtbWluZywgYXMgd2VsbCBhcyByZXNvbHZlIGNpcmN1bGFyaXR5IGluIERQLgoKICAgIFRoZSBzZXQgaXMgcHJlY2lzZTsgdGhhdCBpcywgaWYgYW4gaW5kZXggaXMgaW4gdGhlIHJldHVybmVkIHNldCwgdGhlbiB0aGVyZSBpcyBubyB3YXkKICAgIHRoYXQgSVVQIGNhbiBnZW5lcmF0ZSBkZWx0YSBmb3IgdGhhdCBwb2ludCwgZ2l2ZW4gYGNvb3Jkc2AgYW5kIGBkZWx0YXNgLgogICAgIiIiCiAgICBhc3NlcnQgbGVuKGRlbHRhcykgPT0gbGVuKGNvb3JkcykKCiAgICBuID0gbGVuKGRlbHRhcykKICAgIGZvcmNlZCA9IHNldCgpCiAgICAjIFRyYWNrICJsYXN0IiBhbmQgIm5leHQiIHBvaW50cyBvbiB0aGUgY29udG91ciBhcyB3ZSBzd2VlcC4KICAgIGZvciBpIGluIHJhbmdlKGxlbihkZWx0YXMpIC0gMSwgLTEsIC0xKToKICAgICAgICBsZCwgbGMgPSBkZWx0YXNbaSAtIDFdLCBjb29yZHNbaSAtIDFdCiAgICAgICAgZCwgYyA9IGRlbHRhc1tpXSwgY29vcmRzW2ldCiAgICAgICAgbmQsIG5jID0gZGVsdGFzW2kgLSBuICsgMV0sIGNvb3Jkc1tpIC0gbiArIDFdCgogICAgICAgIGZvciBqIGluICgwLCAxKTogICMgRm9yIFggYW5kIGZvciBZCiAgICAgICAgICAgIGNqID0gY1tqXQogICAgICAgICAgICBkaiA9IGRbal0KICAgICAgICAgICAgbGNqID0gbGNbal0KICAgICAgICAgICAgbGRqID0gbGRbal0KICAgICAgICAgICAgbmNqID0gbmNbal0KICAgICAgICAgICAgbmRqID0gbmRbal0KCiAgICAgICAgICAgIGlmIGxjaiA8PSBuY2o6CiAgICAgICAgICAgICAgICBjMSwgYzIgPSBsY2osIG5jagogICAgICAgICAgICAgICAgZDEsIGQyID0gbGRqLCBuZGoKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGMxLCBjMiA9IG5jaiwgbGNqCiAgICAgICAgICAgICAgICBkMSwgZDIgPSBuZGosIGxkagoKICAgICAgICAgICAgZm9yY2UgPSBGYWxzZQoKICAgICAgICAgICAgIyBJZiB0aGUgdHdvIGNvb3JkaW5hdGVzIGFyZSB0aGUgc2FtZSwgdGhlbiB0aGUgaW50ZXJwb2xhdGlvbgogICAgICAgICAgICAjIGFsZ29yaXRobSBwcm9kdWNlcyB0aGUgc2FtZSBkZWx0YSBpZiBib3RoIGRlbHRhcyBhcmUgZXF1YWwsCiAgICAgICAgICAgICMgYW5kIHplcm8gaWYgdGhleSBkaWZmZXIuCiAgICAgICAgICAgICMKICAgICAgICAgICAgIyBUaGlzIHRlc3QgaGFzIHRvIGJlIGJlZm9yZSB0aGUgbmV4dCBvbmUuCiAgICAgICAgICAgIGlmIGMxID09IGMyOgogICAgICAgICAgICAgICAgaWYgYWJzKGQxIC0gZDIpID4gdG9sZXJhbmNlIGFuZCBhYnMoZGopID4gdG9sZXJhbmNlOgogICAgICAgICAgICAgICAgICAgIGZvcmNlID0gVHJ1ZQoKICAgICAgICAgICAgIyBJZiBjb29yZGluYXRlIGZvciBjdXJyZW50IHBvaW50IGlzIGJldHdlZW4gY29vcmRpbmF0ZSBvZiBhZGphY2VudAogICAgICAgICAgICAjIHBvaW50cyBvbiB0aGUgdHdvIHNpZGVzLCBidXQgdGhlIGRlbHRhIGZvciBjdXJyZW50IHBvaW50IGlzIE5PVAogICAgICAgICAgICAjIGJldHdlZW4gZGVsdGEgZm9yIHRob3NlIGFkamFjZW50IHBvaW50cyAoY29uc2lkZXJpbmcgdG9sZXJhbmNlCiAgICAgICAgICAgICMgYWxsb3dhbmNlKSwgdGhlbiB0aGVyZSBpcyBubyB3YXkgdGhhdCBjdXJyZW50IHBvaW50IGNhbiBiZSBJVVAtZWQuCiAgICAgICAgICAgICMgTWFyayBpdCBmb3JjZWQuCiAgICAgICAgICAgIGVsaWYgYzEgPD0gY2ogPD0gYzI6ICAjIGFuZCBjMSAhPSBjMgogICAgICAgICAgICAgICAgaWYgbm90IChtaW4oZDEsIGQyKSAtIHRvbGVyYW5jZSA8PSBkaiA8PSBtYXgoZDEsIGQyKSArIHRvbGVyYW5jZSk6CiAgICAgICAgICAgICAgICAgICAgZm9yY2UgPSBUcnVlCgogICAgICAgICAgICAjIE90aGVyd2lzZSwgdGhlIGRlbHRhIHNob3VsZCBlaXRoZXIgbWF0Y2ggdGhlIGNsb3Nlc3QsIG9yIGhhdmUgdGhlCiAgICAgICAgICAgICMgc2FtZSBzaWduIGFzIHRoZSBpbnRlcnBvbGF0aW9uIG9mIHRoZSB0d28gZGVsdGFzLgogICAgICAgICAgICBlbHNlOiAgIyBjaiA8IGMxIG9yIGMyIDwgY2oKICAgICAgICAgICAgICAgIGlmIGQxICE9IGQyOgogICAgICAgICAgICAgICAgICAgIGlmIGNqIDwgYzE6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFicyhkaikgPiB0b2xlcmFuY2UKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFuZCBhYnMoZGogLSBkMSkgPiB0b2xlcmFuY2UKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFuZCAoKGRqIC0gdG9sZXJhbmNlIDwgZDEpICE9IChkMSA8IGQyKSkKICAgICAgICAgICAgICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvcmNlID0gVHJ1ZQogICAgICAgICAgICAgICAgICAgIGVsc2U6ICAjIGMyIDwgY2oKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgYWJzKGRqKSA+IHRvbGVyYW5jZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5kIGFicyhkaiAtIGQyKSA+IHRvbGVyYW5jZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5kICgoZDIgPCBkaiArIHRvbGVyYW5jZSkgIT0gKGQxIDwgZDIpKQogICAgICAgICAgICAgICAgICAgICAgICApOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9yY2UgPSBUcnVlCgogICAgICAgICAgICBpZiBmb3JjZToKICAgICAgICAgICAgICAgIGZvcmNlZC5hZGQoaSkKICAgICAgICAgICAgICAgIGJyZWFrCgogICAgcmV0dXJuIGZvcmNlZAoKCkBjeXRob24ubG9jYWxzKAogICAgaT1jeXRob24uaW50LAogICAgaj1jeXRob24uaW50LAogICAgYmVzdF9jb3N0PWN5dGhvbi5kb3VibGUsCiAgICBiZXN0X2o9Y3l0aG9uLmludCwKICAgIGNvc3Q9Y3l0aG9uLmRvdWJsZSwKICAgIGZvcmNlZD1zZXQsCiAgICB0b2xlcmFuY2U9Y3l0aG9uLmRvdWJsZSwKKQpkZWYgX2l1cF9jb250b3VyX29wdGltaXplX2RwKAogICAgZGVsdGFzOiBfRGVsdGFTZWdtZW50LAogICAgY29vcmRzOiBfUG9pbnRTZWdtZW50LAogICAgZm9yY2VkPXNldCgpLAogICAgdG9sZXJhbmNlOiBSZWFsID0gMCwKICAgIGxvb2tiYWNrOiBJbnRlZ3JhbCA9IE5vbmUsCik6CiAgICAiIiJTdHJhaWdodGZvcndhcmQgRHluYW1pYy1Qcm9ncmFtbWluZy4gIEZvciBlYWNoIGluZGV4IGksIGZpbmQgbGVhc3QtY29zdGx5IGVuY29kaW5nIG9mCiAgICBwb2ludHMgMCB0byBpIHdoZXJlIGkgaXMgZXhwbGljaXRseSBlbmNvZGVkLiAgV2UgZmluZCB0aGlzIGJ5IGNvbnNpZGVyaW5nIGFsbCBwcmV2aW91cwogICAgZXhwbGljaXQgcG9pbnRzIGogYW5kIGNoZWNrIHdoZXRoZXIgaW50ZXJwb2xhdGlvbiBjYW4gZmlsbCBwb2ludHMgYmV0d2VlbiBqIGFuZCBpLgoKICAgIE5vdGUgdGhhdCBzb2x1dGlvbiBhbHdheXMgZW5jb2RlcyBsYXN0IHBvaW50IGV4cGxpY2l0bHkuICBIaWdoZXItbGV2ZWwgaXMgcmVzcG9uc2libGUKICAgIGZvciByZW1vdmluZyB0aGF0IHJlc3RyaWN0aW9uLgoKICAgIEFzIG1ham9yIHNwZWVkdXAsIHdlIHN0b3AgbG9va2luZyBmdXJ0aGVyIHdoZW5ldmVyIHdlIHNlZSBhICJmb3JjZWQiIHBvaW50LiIiIgoKICAgIG4gPSBsZW4oZGVsdGFzKQogICAgaWYgbG9va2JhY2sgaXMgTm9uZToKICAgICAgICBsb29rYmFjayA9IG4KICAgIGxvb2tiYWNrID0gbWluKGxvb2tiYWNrLCBNQVhfTE9PS0JBQ0spCiAgICBjb3N0cyA9IHstMTogMH0KICAgIGNoYWluID0gey0xOiBOb25lfQogICAgZm9yIGkgaW4gcmFuZ2UoMCwgbik6CiAgICAgICAgYmVzdF9jb3N0ID0gY29zdHNbaSAtIDFdICsgMQoKICAgICAgICBjb3N0c1tpXSA9IGJlc3RfY29zdAogICAgICAgIGNoYWluW2ldID0gaSAtIDEKCiAgICAgICAgaWYgaSAtIDEgaW4gZm9yY2VkOgogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBmb3IgaiBpbiByYW5nZShpIC0gMiwgbWF4KGkgLSBsb29rYmFjaywgLTIpLCAtMSk6CiAgICAgICAgICAgIGNvc3QgPSBjb3N0c1tqXSArIDEKCiAgICAgICAgICAgIGlmIGNvc3QgPCBiZXN0X2Nvc3QgYW5kIGNhbl9pdXBfaW5fYmV0d2VlbihkZWx0YXMsIGNvb3JkcywgaiwgaSwgdG9sZXJhbmNlKToKICAgICAgICAgICAgICAgIGNvc3RzW2ldID0gYmVzdF9jb3N0ID0gY29zdAogICAgICAgICAgICAgICAgY2hhaW5baV0gPSBqCgogICAgICAgICAgICBpZiBqIGluIGZvcmNlZDoKICAgICAgICAgICAgICAgIGJyZWFrCgogICAgcmV0dXJuIGNoYWluLCBjb3N0cwoKCmRlZiBfcm90X2xpc3QobDogbGlzdCwgazogaW50KToKICAgICIiIlJvdGF0ZSBsaXN0IGJ5IGsgaXRlbXMgZm9yd2FyZC4gIEllLiBpdGVtIGF0IHBvc2l0aW9uIDAgd2lsbCBiZQogICAgYXQgcG9zaXRpb24gayBpbiByZXR1cm5lZCBsaXN0LiAgTmVnYXRpdmUgayBpcyBhbGxvd2VkLiIiIgogICAgbiA9IGxlbihsKQogICAgayAlPSBuCiAgICBpZiBub3QgazoKICAgICAgICByZXR1cm4gbAogICAgcmV0dXJuIGxbbiAtIGsgOl0gKyBsWzogbiAtIGtdCgoKZGVmIF9yb3Rfc2V0KHM6IHNldCwgazogaW50LCBuOiBpbnQpOgogICAgayAlPSBuCiAgICBpZiBub3QgazoKICAgICAgICByZXR1cm4gcwogICAgcmV0dXJuIHsodiArIGspICUgbiBmb3IgdiBpbiBzfQoKCmRlZiBpdXBfY29udG91cl9vcHRpbWl6ZSgKICAgIGRlbHRhczogX0RlbHRhU2VnbWVudCwgY29vcmRzOiBfUG9pbnRTZWdtZW50LCB0b2xlcmFuY2U6IFJlYWwgPSAwLjAKKSAtPiBfRGVsdGFPck5vbmVTZWdtZW50OgogICAgIiIiRm9yIGNvbnRvdXIgd2l0aCBjb29yZGluYXRlcyBgY29vcmRzYCwgb3B0aW1pemUgYSBzZXQgb2YgZGVsdGEKICAgIHZhbHVlcyBgZGVsdGFzYCB3aXRoaW4gZXJyb3IgYHRvbGVyYW5jZWAuCgogICAgUmV0dXJucyBkZWx0YSB2ZWN0b3IgdGhhdCBoYXMgbW9zdCBudW1iZXIgb2YgTm9uZSBpdGVtcyBpbnN0ZWFkIG9mCiAgICB0aGUgaW5wdXQgZGVsdGEuCiAgICAiIiIKCiAgICBuID0gbGVuKGRlbHRhcykKCiAgICAjIEdldCB0aGUgZWFzeSBjYXNlcyBvdXQgb2YgdGhlIHdheToKCiAgICAjIElmIGFsbCBhcmUgd2l0aGluIHRvbGVyYW5jZSBkaXN0YW5jZSBvZiAwLCBlbmNvZGUgbm90aGluZzoKICAgIGlmIGFsbChhYnMoY29tcGxleCgqcCkpIDw9IHRvbGVyYW5jZSBmb3IgcCBpbiBkZWx0YXMpOgogICAgICAgIHJldHVybiBbTm9uZV0gKiBuCgogICAgIyBJZiB0aGVyZSdzIGV4YWN0bHkgb25lIHBvaW50LCByZXR1cm4gaXQ6CiAgICBpZiBuID09IDE6CiAgICAgICAgcmV0dXJuIGRlbHRhcwoKICAgICMgSWYgYWxsIGRlbHRhcyBhcmUgZXhhY3RseSB0aGUgc2FtZSwgcmV0dXJuIGp1c3Qgb25lICh0aGUgZmlyc3Qgb25lKToKICAgIGQwID0gZGVsdGFzWzBdCiAgICBpZiBhbGwoZDAgPT0gZCBmb3IgZCBpbiBkZWx0YXMpOgogICAgICAgIHJldHVybiBbZDBdICsgW05vbmVdICogKG4gLSAxKQoKICAgICMgRWxzZSwgc29sdmUgdGhlIGdlbmVyYWwgcHJvYmxlbSB1c2luZyBEeW5hbWljIFByb2dyYW1taW5nLgoKICAgIGZvcmNlZCA9IF9pdXBfY29udG91cl9ib3VuZF9mb3JjZWRfc2V0KGRlbHRhcywgY29vcmRzLCB0b2xlcmFuY2UpCiAgICAjIFRoZSBfaXVwX2NvbnRvdXJfb3B0aW1pemVfZHAoKSByb3V0aW5lIHJldHVybnMgdGhlIG9wdGltYWwgZW5jb2RpbmcKICAgICMgc29sdXRpb24gZ2l2ZW4gdGhlIGNvbnN0cmFpbnQgdGhhdCB0aGUgbGFzdCBwb2ludCBpcyBhbHdheXMgZW5jb2RlZC4KICAgICMgVG8gcmVtb3ZlIHRoaXMgY29uc3RyYWludCwgd2UgdXNlIHR3byBkaWZmZXJlbnQgbWV0aG9kcywgZGVwZW5kaW5nIG9uCiAgICAjIHdoZXRoZXIgZm9yY2VkIHNldCBpcyBub24tZW1wdHkgb3Igbm90OgoKICAgICMgRGVidWdnaW5nOiBNYWtlIHRoZSBuZXh0IGlmIGFsd2F5cyB0YWtlIHRoZSBzZWNvbmQgYnJhbmNoIGFuZCBvYnNlcnZlCiAgICAjIGlmIHRoZSBmb250IHNpemUgY2hhbmdlcyAocmVkdWNlZCk7IHRoYXQgd291bGQgbWVhbiB0aGUgZm9yY2VkLXNldAogICAgIyBoYXMgbWVtYmVycyBpdCBzaG91bGQgbm90IGhhdmUuCiAgICBpZiBmb3JjZWQ6CiAgICAgICAgIyBGb3JjZWQgc2V0IGlzIG5vbi1lbXB0eTogcm90YXRlIHRoZSBjb250b3VyIHN0YXJ0IHBvaW50CiAgICAgICAgIyBzdWNoIHRoYXQgdGhlIGxhc3QgcG9pbnQgaW4gdGhlIGxpc3QgaXMgYSBmb3JjZWQgcG9pbnQuCiAgICAgICAgayA9IChuIC0gMSkgLSBtYXgoZm9yY2VkKQogICAgICAgIGFzc2VydCBrID49IDAKCiAgICAgICAgZGVsdGFzID0gX3JvdF9saXN0KGRlbHRhcywgaykKICAgICAgICBjb29yZHMgPSBfcm90X2xpc3QoY29vcmRzLCBrKQogICAgICAgIGZvcmNlZCA9IF9yb3Rfc2V0KGZvcmNlZCwgaywgbikKCiAgICAgICAgIyBEZWJ1Z2dpbmc6IFBhc3MgYSBzZXQoKSBpbnN0ZWFkIG9mIGZvcmNlZCB2YXJpYWJsZSB0byB0aGUgbmV4dCBjYWxsCiAgICAgICAgIyB0byBleGVyY2lzZSBmb3JjZWQtc2V0IGNvbXB1dGF0aW9uIGZvciB1bmRlci1jb3VudGluZy4KICAgICAgICBjaGFpbiwgY29zdHMgPSBfaXVwX2NvbnRvdXJfb3B0aW1pemVfZHAoZGVsdGFzLCBjb29yZHMsIGZvcmNlZCwgdG9sZXJhbmNlKQoKICAgICAgICAjIEFzc2VtYmxlIHNvbHV0aW9uLgogICAgICAgIHNvbHV0aW9uID0gc2V0KCkKICAgICAgICBpID0gbiAtIDEKICAgICAgICB3aGlsZSBpIGlzIG5vdCBOb25lOgogICAgICAgICAgICBzb2x1dGlvbi5hZGQoaSkKICAgICAgICAgICAgaSA9IGNoYWluW2ldCiAgICAgICAgc29sdXRpb24ucmVtb3ZlKC0xKQoKICAgICAgICAjIGlmIG5vdCBmb3JjZWQgPD0gc29sdXRpb246CiAgICAgICAgIyAJcHJpbnQoImNvb3JkIiwgY29vcmRzKQogICAgICAgICMgCXByaW50KCJkZWx0YXMiLCBkZWx0YXMpCiAgICAgICAgIyAJcHJpbnQoImxlbiIsIGxlbihkZWx0YXMpKQogICAgICAgIGFzc2VydCBmb3JjZWQgPD0gc29sdXRpb24sIChmb3JjZWQsIHNvbHV0aW9uKQoKICAgICAgICBkZWx0YXMgPSBbZGVsdGFzW2ldIGlmIGkgaW4gc29sdXRpb24gZWxzZSBOb25lIGZvciBpIGluIHJhbmdlKG4pXQoKICAgICAgICBkZWx0YXMgPSBfcm90X2xpc3QoZGVsdGFzLCAtaykKICAgIGVsc2U6CiAgICAgICAgIyBSZXBlYXQgdGhlIGNvbnRvdXIgYW4gZXh0cmEgdGltZSwgc29sdmUgdGhlIG5ldyBjYXNlLCB0aGVuIGxvb2sgZm9yIHNvbHV0aW9ucyBvZiB0aGUKICAgICAgICAjIGNpcmN1bGFyIG4tbGVuZ3RoIHByb2JsZW0gaW4gdGhlIHNvbHV0aW9uIGZvciBuZXcgbGluZWFyIGNhc2UuICBJIGNhbm5vdCBwcm92ZSB0aGF0CiAgICAgICAgIyB0aGlzIGFsd2F5cyBwcm9kdWNlcyB0aGUgb3B0aW1hbCBzb2x1dGlvbi4uLgogICAgICAgIGNoYWluLCBjb3N0cyA9IF9pdXBfY29udG91cl9vcHRpbWl6ZV9kcCgKICAgICAgICAgICAgZGVsdGFzICsgZGVsdGFzLCBjb29yZHMgKyBjb29yZHMsIGZvcmNlZCwgdG9sZXJhbmNlLCBuCiAgICAgICAgKQogICAgICAgIGJlc3Rfc29sLCBiZXN0X2Nvc3QgPSBOb25lLCBuICsgMQoKICAgICAgICBmb3Igc3RhcnQgaW4gcmFuZ2UobiAtIDEsIGxlbihjb3N0cykgLSAxKToKICAgICAgICAgICAgIyBBc3NlbWJsZSBzb2x1dGlvbi4KICAgICAgICAgICAgc29sdXRpb24gPSBzZXQoKQogICAgICAgICAgICBpID0gc3RhcnQKICAgICAgICAgICAgd2hpbGUgaSA+IHN0YXJ0IC0gbjoKICAgICAgICAgICAgICAgIHNvbHV0aW9uLmFkZChpICUgbikKICAgICAgICAgICAgICAgIGkgPSBjaGFpbltpXQogICAgICAgICAgICBpZiBpID09IHN0YXJ0IC0gbjoKICAgICAgICAgICAgICAgIGNvc3QgPSBjb3N0c1tzdGFydF0gLSBjb3N0c1tzdGFydCAtIG5dCiAgICAgICAgICAgICAgICBpZiBjb3N0IDw9IGJlc3RfY29zdDoKICAgICAgICAgICAgICAgICAgICBiZXN0X3NvbCwgYmVzdF9jb3N0ID0gc29sdXRpb24sIGNvc3QKCiAgICAgICAgIyBpZiBub3QgZm9yY2VkIDw9IGJlc3Rfc29sOgogICAgICAgICMgCXByaW50KCJjb29yZCIsIGNvb3JkcykKICAgICAgICAjIAlwcmludCgiZGVsdGFzIiwgZGVsdGFzKQogICAgICAgICMgCXByaW50KCJsZW4iLCBsZW4oZGVsdGFzKSkKICAgICAgICBhc3NlcnQgZm9yY2VkIDw9IGJlc3Rfc29sLCAoZm9yY2VkLCBiZXN0X3NvbCkKCiAgICAgICAgZGVsdGFzID0gW2RlbHRhc1tpXSBpZiBpIGluIGJlc3Rfc29sIGVsc2UgTm9uZSBmb3IgaSBpbiByYW5nZShuKV0KCiAgICByZXR1cm4gZGVsdGFzCgoKZGVmIGl1cF9kZWx0YV9vcHRpbWl6ZSgKICAgIGRlbHRhczogX0RlbHRhU2VnbWVudCwKICAgIGNvb3JkczogX1BvaW50U2VnbWVudCwKICAgIGVuZHM6IF9FbmRwb2ludHMsCiAgICB0b2xlcmFuY2U6IFJlYWwgPSAwLjAsCikgLT4gX0RlbHRhT3JOb25lU2VnbWVudDoKICAgICIiIkZvciB0aGUgb3V0bGluZSBnaXZlbiBpbiBgY29vcmRzYCwgd2l0aCBjb250b3VyIGVuZHBvaW50cyBnaXZlbgogICAgaW4gc29ydGVkIGluY3JlYXNpbmcgb3JkZXIgaW4gYGVuZHNgLCBvcHRpbWl6ZSBhIHNldCBvZiBkZWx0YQogICAgdmFsdWVzIGBkZWx0YXNgIHdpdGhpbiBlcnJvciBgdG9sZXJhbmNlYC4KCiAgICBSZXR1cm5zIGRlbHRhIHZlY3RvciB0aGF0IGhhcyBtb3N0IG51bWJlciBvZiBOb25lIGl0ZW1zIGluc3RlYWQgb2YKICAgIHRoZSBpbnB1dCBkZWx0YS4KICAgICIiIgogICAgYXNzZXJ0IHNvcnRlZChlbmRzKSA9PSBlbmRzIGFuZCBsZW4oY29vcmRzKSA9PSAoZW5kc1stMV0gKyAxIGlmIGVuZHMgZWxzZSAwKSArIDQKICAgIG4gPSBsZW4oY29vcmRzKQogICAgZW5kcyA9IGVuZHMgKyBbbiAtIDQsIG4gLSAzLCBuIC0gMiwgbiAtIDFdCiAgICBvdXQgPSBbXQogICAgc3RhcnQgPSAwCiAgICBmb3IgZW5kIGluIGVuZHM6CiAgICAgICAgY29udG91ciA9IGl1cF9jb250b3VyX29wdGltaXplKAogICAgICAgICAgICBkZWx0YXNbc3RhcnQgOiBlbmQgKyAxXSwgY29vcmRzW3N0YXJ0IDogZW5kICsgMV0sIHRvbGVyYW5jZQogICAgICAgICkKICAgICAgICBhc3NlcnQgbGVuKGNvbnRvdXIpID09IGVuZCAtIHN0YXJ0ICsgMQogICAgICAgIG91dC5leHRlbmQoY29udG91cikKICAgICAgICBzdGFydCA9IGVuZCArIDEKCiAgICByZXR1cm4gb3V0Cg==
+try:
+    import cython
+except (AttributeError, ImportError):
+    # if cython not installed, use mock module with no-op decorators and types
+    from fontTools.misc import cython
+COMPILED = cython.compiled
+
+from typing import (
+    Sequence,
+    Tuple,
+    Union,
+)
+from numbers import Integral, Real
+
+_Point = Tuple[Real, Real]
+_Delta = Tuple[Real, Real]
+_PointSegment = Sequence[_Point]
+_DeltaSegment = Sequence[_Delta]
+_DeltaOrNone = Union[_Delta, None]
+_DeltaOrNoneSegment = Sequence[_DeltaOrNone]
+_Endpoints = Sequence[Integral]
+
+
+MAX_LOOKBACK = 8
+
+
+@cython.cfunc
+@cython.locals(
+    j=cython.int,
+    n=cython.int,
+    x1=cython.double,
+    x2=cython.double,
+    d1=cython.double,
+    d2=cython.double,
+    scale=cython.double,
+    x=cython.double,
+    d=cython.double,
+)
+def iup_segment(
+    coords: _PointSegment, rc1: _Point, rd1: _Delta, rc2: _Point, rd2: _Delta
+):  # -> _DeltaSegment:
+    """Given two reference coordinates `rc1` & `rc2` and their respective
+    delta vectors `rd1` & `rd2`, returns interpolated deltas for the set of
+    coordinates `coords`."""
+
+    # rc1 = reference coord 1
+    # rd1 = reference delta 1
+    out_arrays = [None, None]
+    for j in 0, 1:
+        out_arrays[j] = out = []
+        x1, x2, d1, d2 = rc1[j], rc2[j], rd1[j], rd2[j]
+
+        if x1 == x2:
+            n = len(coords)
+            if d1 == d2:
+                out.extend([d1] * n)
+            else:
+                out.extend([0] * n)
+            continue
+
+        if x1 > x2:
+            x1, x2 = x2, x1
+            d1, d2 = d2, d1
+
+        # x1 < x2
+        scale = (d2 - d1) / (x2 - x1)
+        for pair in coords:
+            x = pair[j]
+
+            if x <= x1:
+                d = d1
+            elif x >= x2:
+                d = d2
+            else:
+                # Interpolate
+                #
+                # NOTE: we assign an explicit intermediate variable here in
+                # order to disable a fused mul-add optimization. See:
+                #
+                # - https://godbolt.org/z/YsP4T3TqK,
+                # - https://github.com/fonttools/fonttools/issues/3703
+                nudge = (x - x1) * scale
+                d = d1 + nudge
+
+            out.append(d)
+
+    return zip(*out_arrays)
+
+
+def iup_contour(deltas: _DeltaOrNoneSegment, coords: _PointSegment) -> _DeltaSegment:
+    """For the contour given in `coords`, interpolate any missing
+    delta values in delta vector `deltas`.
+
+    Returns fully filled-out delta vector."""
+
+    assert len(deltas) == len(coords)
+    if None not in deltas:
+        return deltas
+
+    n = len(deltas)
+    # indices of points with explicit deltas
+    indices = [i for i, v in enumerate(deltas) if v is not None]
+    if not indices:
+        # All deltas are None.  Return 0,0 for all.
+        return [(0, 0)] * n
+
+    out = []
+    it = iter(indices)
+    start = next(it)
+    if start != 0:
+        # Initial segment that wraps around
+        i1, i2, ri1, ri2 = 0, start, start, indices[-1]
+        out.extend(
+            iup_segment(
+                coords[i1:i2], coords[ri1], deltas[ri1], coords[ri2], deltas[ri2]
+            )
+        )
+    out.append(deltas[start])
+    for end in it:
+        if end - start > 1:
+            i1, i2, ri1, ri2 = start + 1, end, start, end
+            out.extend(
+                iup_segment(
+                    coords[i1:i2], coords[ri1], deltas[ri1], coords[ri2], deltas[ri2]
+                )
+            )
+        out.append(deltas[end])
+        start = end
+    if start != n - 1:
+        # Final segment that wraps around
+        i1, i2, ri1, ri2 = start + 1, n, start, indices[0]
+        out.extend(
+            iup_segment(
+                coords[i1:i2], coords[ri1], deltas[ri1], coords[ri2], deltas[ri2]
+            )
+        )
+
+    assert len(deltas) == len(out), (len(deltas), len(out))
+    return out
+
+
+def iup_delta(
+    deltas: _DeltaOrNoneSegment, coords: _PointSegment, ends: _Endpoints
+) -> _DeltaSegment:
+    """For the outline given in `coords`, with contour endpoints given
+    in sorted increasing order in `ends`, interpolate any missing
+    delta values in delta vector `deltas`.
+
+    Returns fully filled-out delta vector."""
+
+    assert sorted(ends) == ends and len(coords) == (ends[-1] + 1 if ends else 0) + 4
+    n = len(coords)
+    ends = ends + [n - 4, n - 3, n - 2, n - 1]
+    out = []
+    start = 0
+    for end in ends:
+        end += 1
+        contour = iup_contour(deltas[start:end], coords[start:end])
+        out.extend(contour)
+        start = end
+
+    return out
+
+
+# Optimizer
+
+
+@cython.cfunc
+@cython.inline
+@cython.locals(
+    i=cython.int,
+    j=cython.int,
+    # tolerance=cython.double, # https://github.com/fonttools/fonttools/issues/3282
+    x=cython.double,
+    y=cython.double,
+    p=cython.double,
+    q=cython.double,
+)
+@cython.returns(int)
+def can_iup_in_between(
+    deltas: _DeltaSegment,
+    coords: _PointSegment,
+    i: Integral,
+    j: Integral,
+    tolerance: Real,
+):  # -> bool:
+    """Return true if the deltas for points at `i` and `j` (`i < j`) can be
+    successfully used to interpolate deltas for points in between them within
+    provided error tolerance."""
+
+    assert j - i >= 2
+    interp = iup_segment(coords[i + 1 : j], coords[i], deltas[i], coords[j], deltas[j])
+    deltas = deltas[i + 1 : j]
+
+    return all(
+        abs(complex(x - p, y - q)) <= tolerance
+        for (x, y), (p, q) in zip(deltas, interp)
+    )
+
+
+@cython.locals(
+    cj=cython.double,
+    dj=cython.double,
+    lcj=cython.double,
+    ldj=cython.double,
+    ncj=cython.double,
+    ndj=cython.double,
+    force=cython.int,
+    forced=set,
+)
+def _iup_contour_bound_forced_set(
+    deltas: _DeltaSegment, coords: _PointSegment, tolerance: Real = 0
+) -> set:
+    """The forced set is a conservative set of points on the contour that must be encoded
+    explicitly (ie. cannot be interpolated).  Calculating this set allows for significantly
+    speeding up the dynamic-programming, as well as resolve circularity in DP.
+
+    The set is precise; that is, if an index is in the returned set, then there is no way
+    that IUP can generate delta for that point, given `coords` and `deltas`.
+    """
+    assert len(deltas) == len(coords)
+
+    n = len(deltas)
+    forced = set()
+    # Track "last" and "next" points on the contour as we sweep.
+    for i in range(len(deltas) - 1, -1, -1):
+        ld, lc = deltas[i - 1], coords[i - 1]
+        d, c = deltas[i], coords[i]
+        nd, nc = deltas[i - n + 1], coords[i - n + 1]
+
+        for j in (0, 1):  # For X and for Y
+            cj = c[j]
+            dj = d[j]
+            lcj = lc[j]
+            ldj = ld[j]
+            ncj = nc[j]
+            ndj = nd[j]
+
+            if lcj <= ncj:
+                c1, c2 = lcj, ncj
+                d1, d2 = ldj, ndj
+            else:
+                c1, c2 = ncj, lcj
+                d1, d2 = ndj, ldj
+
+            force = False
+
+            # If the two coordinates are the same, then the interpolation
+            # algorithm produces the same delta if both deltas are equal,
+            # and zero if they differ.
+            #
+            # This test has to be before the next one.
+            if c1 == c2:
+                if abs(d1 - d2) > tolerance and abs(dj) > tolerance:
+                    force = True
+
+            # If coordinate for current point is between coordinate of adjacent
+            # points on the two sides, but the delta for current point is NOT
+            # between delta for those adjacent points (considering tolerance
+            # allowance), then there is no way that current point can be IUP-ed.
+            # Mark it forced.
+            elif c1 <= cj <= c2:  # and c1 != c2
+                if not (min(d1, d2) - tolerance <= dj <= max(d1, d2) + tolerance):
+                    force = True
+
+            # Otherwise, the delta should either match the closest, or have the
+            # same sign as the interpolation of the two deltas.
+            else:  # cj < c1 or c2 < cj
+                if d1 != d2:
+                    if cj < c1:
+                        if (
+                            abs(dj) > tolerance
+                            and abs(dj - d1) > tolerance
+                            and ((dj - tolerance < d1) != (d1 < d2))
+                        ):
+                            force = True
+                    else:  # c2 < cj
+                        if (
+                            abs(dj) > tolerance
+                            and abs(dj - d2) > tolerance
+                            and ((d2 < dj + tolerance) != (d1 < d2))
+                        ):
+                            force = True
+
+            if force:
+                forced.add(i)
+                break
+
+    return forced
+
+
+@cython.locals(
+    i=cython.int,
+    j=cython.int,
+    best_cost=cython.double,
+    best_j=cython.int,
+    cost=cython.double,
+    forced=set,
+    tolerance=cython.double,
+)
+def _iup_contour_optimize_dp(
+    deltas: _DeltaSegment,
+    coords: _PointSegment,
+    forced=set(),
+    tolerance: Real = 0,
+    lookback: Integral = None,
+):
+    """Straightforward Dynamic-Programming.  For each index i, find least-costly encoding of
+    points 0 to i where i is explicitly encoded.  We find this by considering all previous
+    explicit points j and check whether interpolation can fill points between j and i.
+
+    Note that solution always encodes last point explicitly.  Higher-level is responsible
+    for removing that restriction.
+
+    As major speedup, we stop looking further whenever we see a "forced" point."""
+
+    n = len(deltas)
+    if lookback is None:
+        lookback = n
+    lookback = min(lookback, MAX_LOOKBACK)
+    costs = {-1: 0}
+    chain = {-1: None}
+    for i in range(0, n):
+        best_cost = costs[i - 1] + 1
+
+        costs[i] = best_cost
+        chain[i] = i - 1
+
+        if i - 1 in forced:
+            continue
+
+        for j in range(i - 2, max(i - lookback, -2), -1):
+            cost = costs[j] + 1
+
+            if cost < best_cost and can_iup_in_between(deltas, coords, j, i, tolerance):
+                costs[i] = best_cost = cost
+                chain[i] = j
+
+            if j in forced:
+                break
+
+    return chain, costs
+
+
+def _rot_list(l: list, k: int):
+    """Rotate list by k items forward.  Ie. item at position 0 will be
+    at position k in returned list.  Negative k is allowed."""
+    n = len(l)
+    k %= n
+    if not k:
+        return l
+    return l[n - k :] + l[: n - k]
+
+
+def _rot_set(s: set, k: int, n: int):
+    k %= n
+    if not k:
+        return s
+    return {(v + k) % n for v in s}
+
+
+def iup_contour_optimize(
+    deltas: _DeltaSegment, coords: _PointSegment, tolerance: Real = 0.0
+) -> _DeltaOrNoneSegment:
+    """For contour with coordinates `coords`, optimize a set of delta
+    values `deltas` within error `tolerance`.
+
+    Returns delta vector that has most number of None items instead of
+    the input delta.
+    """
+
+    n = len(deltas)
+
+    # Get the easy cases out of the way:
+
+    # If all are within tolerance distance of 0, encode nothing:
+    if all(abs(complex(*p)) <= tolerance for p in deltas):
+        return [None] * n
+
+    # If there's exactly one point, return it:
+    if n == 1:
+        return deltas
+
+    # If all deltas are exactly the same, return just one (the first one):
+    d0 = deltas[0]
+    if all(d0 == d for d in deltas):
+        return [d0] + [None] * (n - 1)
+
+    # Else, solve the general problem using Dynamic Programming.
+
+    forced = _iup_contour_bound_forced_set(deltas, coords, tolerance)
+    # The _iup_contour_optimize_dp() routine returns the optimal encoding
+    # solution given the constraint that the last point is always encoded.
+    # To remove this constraint, we use two different methods, depending on
+    # whether forced set is non-empty or not:
+
+    # Debugging: Make the next if always take the second branch and observe
+    # if the font size changes (reduced); that would mean the forced-set
+    # has members it should not have.
+    if forced:
+        # Forced set is non-empty: rotate the contour start point
+        # such that the last point in the list is a forced point.
+        k = (n - 1) - max(forced)
+        assert k >= 0
+
+        deltas = _rot_list(deltas, k)
+        coords = _rot_list(coords, k)
+        forced = _rot_set(forced, k, n)
+
+        # Debugging: Pass a set() instead of forced variable to the next call
+        # to exercise forced-set computation for under-counting.
+        chain, costs = _iup_contour_optimize_dp(deltas, coords, forced, tolerance)
+
+        # Assemble solution.
+        solution = set()
+        i = n - 1
+        while i is not None:
+            solution.add(i)
+            i = chain[i]
+        solution.remove(-1)
+
+        # if not forced <= solution:
+        # 	print("coord", coords)
+        # 	print("deltas", deltas)
+        # 	print("len", len(deltas))
+        assert forced <= solution, (forced, solution)
+
+        deltas = [deltas[i] if i in solution else None for i in range(n)]
+
+        deltas = _rot_list(deltas, -k)
+    else:
+        # Repeat the contour an extra time, solve the new case, then look for solutions of the
+        # circular n-length problem in the solution for new linear case.  I cannot prove that
+        # this always produces the optimal solution...
+        chain, costs = _iup_contour_optimize_dp(
+            deltas + deltas, coords + coords, forced, tolerance, n
+        )
+        best_sol, best_cost = None, n + 1
+
+        for start in range(n - 1, len(costs) - 1):
+            # Assemble solution.
+            solution = set()
+            i = start
+            while i > start - n:
+                solution.add(i % n)
+                i = chain[i]
+            if i == start - n:
+                cost = costs[start] - costs[start - n]
+                if cost <= best_cost:
+                    best_sol, best_cost = solution, cost
+
+        # if not forced <= best_sol:
+        # 	print("coord", coords)
+        # 	print("deltas", deltas)
+        # 	print("len", len(deltas))
+        assert forced <= best_sol, (forced, best_sol)
+
+        deltas = [deltas[i] if i in best_sol else None for i in range(n)]
+
+    return deltas
+
+
+def iup_delta_optimize(
+    deltas: _DeltaSegment,
+    coords: _PointSegment,
+    ends: _Endpoints,
+    tolerance: Real = 0.0,
+) -> _DeltaOrNoneSegment:
+    """For the outline given in `coords`, with contour endpoints given
+    in sorted increasing order in `ends`, optimize a set of delta
+    values `deltas` within error `tolerance`.
+
+    Returns delta vector that has most number of None items instead of
+    the input delta.
+    """
+    assert sorted(ends) == ends and len(coords) == (ends[-1] + 1 if ends else 0) + 4
+    n = len(coords)
+    ends = ends + [n - 4, n - 3, n - 2, n - 1]
+    out = []
+    start = 0
+    for end in ends:
+        contour = iup_contour_optimize(
+            deltas[start : end + 1], coords[start : end + 1], tolerance
+        )
+        assert len(contour) == end - start + 1
+        out.extend(contour)
+        start = end + 1
+
+    return out

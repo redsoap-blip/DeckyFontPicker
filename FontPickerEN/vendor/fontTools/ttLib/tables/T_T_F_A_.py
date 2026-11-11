@@ -1,1 +1,14 @@
-ZnJvbSAuIGltcG9ydCBhc2NpaVRhYmxlCgoKY2xhc3MgdGFibGVfVF9UX0ZfQV8oYXNjaWlUYWJsZS5hc2NpaVRhYmxlKToKICAgICIiInR0ZmF1dG9oaW50IHBhcmFtZXRlcnMgdGFibGUKCiAgICBUaGUgYGBUVEZBYGAgdGFibGUgaXMgdXNlZCBieSB0aGUgZnJlZS1zb2Z0d2FyZSBgdHRmYXV0b2hpbnRgIHByb2dyYW0KICAgIHRvIHJlY29yZCB0aGUgcGFyYW1ldGVycyB0aGF0IGB0dGZhdXRvaGludGAgd2FzIGNhbGxlZCB3aXRoIHdoZW4gaXQKICAgIHdhcyB1c2VkIHRvIGF1dG8taGludCB0aGUgZm9udC4KCiAgICBTZWUgYWxzbyBodHRwOi8vZnJlZXR5cGUub3JnL3R0ZmF1dG9oaW50L2RvYy90dGZhdXRvaGludC5odG1sI21pc2NlbGxhbmVvdXMtMQogICAgIiIiCgogICAgcGFzcwo=
+from . import asciiTable
+
+
+class table_T_T_F_A_(asciiTable.asciiTable):
+    """ttfautohint parameters table
+
+    The ``TTFA`` table is used by the free-software `ttfautohint` program
+    to record the parameters that `ttfautohint` was called with when it
+    was used to auto-hint the font.
+
+    See also http://freetype.org/ttfautohint/doc/ttfautohint.html#miscellaneous-1
+    """
+
+    pass

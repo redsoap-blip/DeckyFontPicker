@@ -1,1 +1,99 @@
-ZnJvbSBmb250VG9vbHMudm9sdExpYi5lcnJvciBpbXBvcnQgVm9sdExpYkVycm9yCgoKY2xhc3MgTGV4ZXIob2JqZWN0KToKICAgIE5VTUJFUiA9ICJOVU1CRVIiCiAgICBTVFJJTkcgPSAiU1RSSU5HIgogICAgTkFNRSA9ICJOQU1FIgogICAgTkVXTElORSA9ICJORVdMSU5FIgoKICAgIENIQVJfV0hJVEVTUEFDRV8gPSAiIFx0IgogICAgQ0hBUl9ORVdMSU5FXyA9ICJcclxuIgogICAgQ0hBUl9ESUdJVF8gPSAiMDEyMzQ1Njc4OSIKICAgIENIQVJfVUNfTEVUVEVSXyA9ICJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWiIKICAgIENIQVJfTENfTEVUVEVSXyA9ICJhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5eiIKICAgIENIQVJfVU5ERVJTQ09SRV8gPSAiXyIKICAgIENIQVJfUEVSSU9EXyA9ICIuIgogICAgQ0hBUl9OQU1FX1NUQVJUXyA9ICgKICAgICAgICBDSEFSX1VDX0xFVFRFUl8gKyBDSEFSX0xDX0xFVFRFUl8gKyBDSEFSX1BFUklPRF8gKyBDSEFSX1VOREVSU0NPUkVfCiAgICApCiAgICBDSEFSX05BTUVfQ09OVElOVUFUSU9OXyA9IENIQVJfTkFNRV9TVEFSVF8gKyBDSEFSX0RJR0lUXwoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0ZXh0LCBmaWxlbmFtZSk6CiAgICAgICAgc2VsZi5maWxlbmFtZV8gPSBmaWxlbmFtZQogICAgICAgIHNlbGYubGluZV8gPSAxCiAgICAgICAgc2VsZi5wb3NfID0gMAogICAgICAgIHNlbGYubGluZV9zdGFydF8gPSAwCiAgICAgICAgc2VsZi50ZXh0XyA9IHRleHQKICAgICAgICBzZWxmLnRleHRfbGVuZ3RoXyA9IGxlbih0ZXh0KQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gc2VsZgoKICAgIGRlZiBuZXh0KHNlbGYpOiAgIyBQeXRob24gMgogICAgICAgIHJldHVybiBzZWxmLl9fbmV4dF9fKCkKCiAgICBkZWYgX19uZXh0X18oc2VsZik6ICAjIFB5dGhvbiAzCiAgICAgICAgd2hpbGUgVHJ1ZToKICAgICAgICAgICAgdG9rZW5fdHlwZSwgdG9rZW4sIGxvY2F0aW9uID0gc2VsZi5uZXh0XygpCiAgICAgICAgICAgIGlmIHRva2VuX3R5cGUgbm90IGluIHtMZXhlci5ORVdMSU5FfToKICAgICAgICAgICAgICAgIHJldHVybiAodG9rZW5fdHlwZSwgdG9rZW4sIGxvY2F0aW9uKQoKICAgIGRlZiBsb2NhdGlvbl8oc2VsZik6CiAgICAgICAgY29sdW1uID0gc2VsZi5wb3NfIC0gc2VsZi5saW5lX3N0YXJ0XyArIDEKICAgICAgICByZXR1cm4gKHNlbGYuZmlsZW5hbWVfIG9yICI8dm9sdD4iLCBzZWxmLmxpbmVfLCBjb2x1bW4pCgogICAgZGVmIG5leHRfKHNlbGYpOgogICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX1dISVRFU1BBQ0VfKQogICAgICAgIGxvY2F0aW9uID0gc2VsZi5sb2NhdGlvbl8oKQogICAgICAgIHN0YXJ0ID0gc2VsZi5wb3NfCiAgICAgICAgdGV4dCA9IHNlbGYudGV4dF8KICAgICAgICBsaW1pdCA9IGxlbih0ZXh0KQogICAgICAgIGlmIHN0YXJ0ID49IGxpbWl0OgogICAgICAgICAgICByYWlzZSBTdG9wSXRlcmF0aW9uKCkKICAgICAgICBjdXJfY2hhciA9IHRleHRbc3RhcnRdCiAgICAgICAgbmV4dF9jaGFyID0gdGV4dFtzdGFydCArIDFdIGlmIHN0YXJ0ICsgMSA8IGxpbWl0IGVsc2UgTm9uZQoKICAgICAgICBpZiBjdXJfY2hhciA9PSAiXG4iOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLmxpbmVfICs9IDEKICAgICAgICAgICAgc2VsZi5saW5lX3N0YXJ0XyA9IHNlbGYucG9zXwogICAgICAgICAgICByZXR1cm4gKExleGVyLk5FV0xJTkUsIE5vbmUsIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICJcciI6CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAyIGlmIG5leHRfY2hhciA9PSAiXG4iIGVsc2UgMQogICAgICAgICAgICBzZWxmLmxpbmVfICs9IDEKICAgICAgICAgICAgc2VsZi5saW5lX3N0YXJ0XyA9IHNlbGYucG9zXwogICAgICAgICAgICByZXR1cm4gKExleGVyLk5FV0xJTkUsIE5vbmUsIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICciJzoKICAgICAgICAgICAgc2VsZi5wb3NfICs9IDEKICAgICAgICAgICAgc2VsZi5zY2FuX3VudGlsXygnIlxyXG4nKQogICAgICAgICAgICBpZiBzZWxmLnBvc18gPCBzZWxmLnRleHRfbGVuZ3RoXyBhbmQgc2VsZi50ZXh0X1tzZWxmLnBvc19dID09ICciJzoKICAgICAgICAgICAgICAgIHNlbGYucG9zXyArPSAxCiAgICAgICAgICAgICAgICByZXR1cm4gKExleGVyLlNUUklORywgdGV4dFtzdGFydCArIDEgOiBzZWxmLnBvc18gLSAxXSwgbG9jYXRpb24pCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICByYWlzZSBWb2x0TGliRXJyb3IoIkV4cGVjdGVkICdcIicgdG8gdGVybWluYXRlIHN0cmluZyIsIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyIGluIExleGVyLkNIQVJfTkFNRV9TVEFSVF86CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAxCiAgICAgICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX05BTUVfQ09OVElOVUFUSU9OXykKICAgICAgICAgICAgdG9rZW4gPSB0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXQogICAgICAgICAgICByZXR1cm4gKExleGVyLk5BTUUsIHRva2VuLCBsb2NhdGlvbikKICAgICAgICBpZiBjdXJfY2hhciBpbiBMZXhlci5DSEFSX0RJR0lUXzoKICAgICAgICAgICAgc2VsZi5zY2FuX292ZXJfKExleGVyLkNIQVJfRElHSVRfKQogICAgICAgICAgICByZXR1cm4gKExleGVyLk5VTUJFUiwgaW50KHRleHRbc3RhcnQgOiBzZWxmLnBvc19dLCAxMCksIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICItIiBhbmQgbmV4dF9jaGFyIGluIExleGVyLkNIQVJfRElHSVRfOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9ESUdJVF8pCiAgICAgICAgICAgIHJldHVybiAoTGV4ZXIuTlVNQkVSLCBpbnQodGV4dFtzdGFydCA6IHNlbGYucG9zX10sIDEwKSwgbG9jYXRpb24pCiAgICAgICAgcmFpc2UgVm9sdExpYkVycm9yKCJVbmV4cGVjdGVkIGNoYXJhY3RlcjogJyVzJyIgJSBjdXJfY2hhciwgbG9jYXRpb24pCgogICAgZGVmIHNjYW5fb3Zlcl8oc2VsZiwgdmFsaWQpOgogICAgICAgIHAgPSBzZWxmLnBvc18KICAgICAgICB3aGlsZSBwIDwgc2VsZi50ZXh0X2xlbmd0aF8gYW5kIHNlbGYudGV4dF9bcF0gaW4gdmFsaWQ6CiAgICAgICAgICAgIHAgKz0gMQogICAgICAgIHNlbGYucG9zXyA9IHAKCiAgICBkZWYgc2Nhbl91bnRpbF8oc2VsZiwgc3RvcF9hdCk6CiAgICAgICAgcCA9IHNlbGYucG9zXwogICAgICAgIHdoaWxlIHAgPCBzZWxmLnRleHRfbGVuZ3RoXyBhbmQgc2VsZi50ZXh0X1twXSBub3QgaW4gc3RvcF9hdDoKICAgICAgICAgICAgcCArPSAxCiAgICAgICAgc2VsZi5wb3NfID0gcAo=
+from fontTools.voltLib.error import VoltLibError
+
+
+class Lexer(object):
+    NUMBER = "NUMBER"
+    STRING = "STRING"
+    NAME = "NAME"
+    NEWLINE = "NEWLINE"
+
+    CHAR_WHITESPACE_ = " \t"
+    CHAR_NEWLINE_ = "\r\n"
+    CHAR_DIGIT_ = "0123456789"
+    CHAR_UC_LETTER_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    CHAR_LC_LETTER_ = "abcdefghijklmnopqrstuvwxyz"
+    CHAR_UNDERSCORE_ = "_"
+    CHAR_PERIOD_ = "."
+    CHAR_NAME_START_ = (
+        CHAR_UC_LETTER_ + CHAR_LC_LETTER_ + CHAR_PERIOD_ + CHAR_UNDERSCORE_
+    )
+    CHAR_NAME_CONTINUATION_ = CHAR_NAME_START_ + CHAR_DIGIT_
+
+    def __init__(self, text, filename):
+        self.filename_ = filename
+        self.line_ = 1
+        self.pos_ = 0
+        self.line_start_ = 0
+        self.text_ = text
+        self.text_length_ = len(text)
+
+    def __iter__(self):
+        return self
+
+    def next(self):  # Python 2
+        return self.__next__()
+
+    def __next__(self):  # Python 3
+        while True:
+            token_type, token, location = self.next_()
+            if token_type not in {Lexer.NEWLINE}:
+                return (token_type, token, location)
+
+    def location_(self):
+        column = self.pos_ - self.line_start_ + 1
+        return (self.filename_ or "<volt>", self.line_, column)
+
+    def next_(self):
+        self.scan_over_(Lexer.CHAR_WHITESPACE_)
+        location = self.location_()
+        start = self.pos_
+        text = self.text_
+        limit = len(text)
+        if start >= limit:
+            raise StopIteration()
+        cur_char = text[start]
+        next_char = text[start + 1] if start + 1 < limit else None
+
+        if cur_char == "\n":
+            self.pos_ += 1
+            self.line_ += 1
+            self.line_start_ = self.pos_
+            return (Lexer.NEWLINE, None, location)
+        if cur_char == "\r":
+            self.pos_ += 2 if next_char == "\n" else 1
+            self.line_ += 1
+            self.line_start_ = self.pos_
+            return (Lexer.NEWLINE, None, location)
+        if cur_char == '"':
+            self.pos_ += 1
+            self.scan_until_('"\r\n')
+            if self.pos_ < self.text_length_ and self.text_[self.pos_] == '"':
+                self.pos_ += 1
+                return (Lexer.STRING, text[start + 1 : self.pos_ - 1], location)
+            else:
+                raise VoltLibError("Expected '\"' to terminate string", location)
+        if cur_char in Lexer.CHAR_NAME_START_:
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_NAME_CONTINUATION_)
+            token = text[start : self.pos_]
+            return (Lexer.NAME, token, location)
+        if cur_char in Lexer.CHAR_DIGIT_:
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.NUMBER, int(text[start : self.pos_], 10), location)
+        if cur_char == "-" and next_char in Lexer.CHAR_DIGIT_:
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.NUMBER, int(text[start : self.pos_], 10), location)
+        raise VoltLibError("Unexpected character: '%s'" % cur_char, location)
+
+    def scan_over_(self, valid):
+        p = self.pos_
+        while p < self.text_length_ and self.text_[p] in valid:
+            p += 1
+        self.pos_ = p
+
+    def scan_until_(self, stop_at):
+        p = self.pos_
+        while p < self.text_length_ and self.text_[p] not in stop_at:
+            p += 1
+        self.pos_ = p

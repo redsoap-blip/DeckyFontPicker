@@ -1,1 +1,305 @@
-IiIiQ0ZGIHRvIENGRjIgY29udmVydGVyLiIiIgoKZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udCwgbmV3VGFibGUKZnJvbSBmb250VG9vbHMubWlzYy5jbGlUb29scyBpbXBvcnQgbWFrZU91dHB1dEZpbGVOYW1lCmZyb20gZm9udFRvb2xzLm1pc2MucHNDaGFyU3RyaW5ncyBpbXBvcnQgVDJXaWR0aEV4dHJhY3Rvcgpmcm9tIGZvbnRUb29scy5jZmZMaWIgaW1wb3J0ICgKICAgIFRvcERpY3RJbmRleCwKICAgIEZEQXJyYXlJbmRleCwKICAgIEZvbnREaWN0LAogICAgYnVpbGRPcmRlciwKICAgIHRvcERpY3RPcGVyYXRvcnMsCiAgICBwcml2YXRlRGljdE9wZXJhdG9ycywKICAgIHRvcERpY3RPcGVyYXRvcnMyLAogICAgcHJpdmF0ZURpY3RPcGVyYXRvcnMyLAopCmZyb20gaW8gaW1wb3J0IEJ5dGVzSU8KaW1wb3J0IGxvZ2dpbmcKCl9fYWxsX18gPSBbImNvbnZlcnRDRkZUb0NGRjIiLCAibWFpbiJdCgoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5jZmZMaWIiKQoKCmNsYXNzIF9Ob21pbmFsV2lkdGhVc2VkRXJyb3IoRXhjZXB0aW9uKToKICAgIGRlZiBfX2FkZF9fKHNlbGYsIG90aGVyKToKICAgICAgICByYWlzZSBzZWxmCgogICAgZGVmIF9fcmFkZF9fKHNlbGYsIG90aGVyKToKICAgICAgICByYWlzZSBzZWxmCgoKZGVmIF9jb252ZXJ0Q0ZGVG9DRkYyKGNmZiwgb3RGb250KToKICAgICIiIkNvbnZlcnRzIHRoaXMgb2JqZWN0IGZyb20gQ0ZGIGZvcm1hdCB0byBDRkYyIGZvcm1hdC4gVGhpcyBjb252ZXJzaW9uCiAgICBpcyBkb25lICdpbi1wbGFjZScuIFRoZSBjb252ZXJzaW9uIGNhbm5vdCBiZSByZXZlcnNlZC4KCiAgICBUaGlzIGFzc3VtZXMgYSBkZWNvbXBpbGVkIENGRiB0YWJsZS4gKGkuZS4gdGhhdCB0aGUgb2JqZWN0IGhhcyBiZWVuCiAgICBmaWxsZWQgdmlhIDptZXRoOmBkZWNvbXBpbGVgIGFuZCBlLmcuIG5vdCBsb2FkZWQgZnJvbSBYTUwuKSIiIgoKICAgICMgQ2xlYW4gdXAgVDJDaGFyU3RyaW5ncwoKICAgIHRvcERpY3QgPSBjZmYudG9wRGljdEluZGV4WzBdCiAgICBmZEFycmF5ID0gdG9wRGljdC5GREFycmF5IGlmIGhhc2F0dHIodG9wRGljdCwgIkZEQXJyYXkiKSBlbHNlIE5vbmUKICAgIGNoYXJTdHJpbmdzID0gdG9wRGljdC5DaGFyU3RyaW5ncwogICAgZ2xvYmFsU3VicnMgPSBjZmYuR2xvYmFsU3VicnMKICAgIGxvY2FsU3VicnMgPSAoCiAgICAgICAgW2dldGF0dHIoZmQuUHJpdmF0ZSwgIlN1YnJzIiwgW10pIGZvciBmZCBpbiBmZEFycmF5XQogICAgICAgIGlmIGZkQXJyYXkKICAgICAgICBlbHNlICgKICAgICAgICAgICAgW3RvcERpY3QuUHJpdmF0ZS5TdWJyc10KICAgICAgICAgICAgaWYgaGFzYXR0cih0b3BEaWN0LCAiUHJpdmF0ZSIpIGFuZCBoYXNhdHRyKHRvcERpY3QuUHJpdmF0ZSwgIlN1YnJzIikKICAgICAgICAgICAgZWxzZSBbXQogICAgICAgICkKICAgICkKCiAgICBmb3IgZ2x5cGhOYW1lIGluIGNoYXJTdHJpbmdzLmtleXMoKToKICAgICAgICBjcywgZmRJbmRleCA9IGNoYXJTdHJpbmdzLmdldEl0ZW1BbmRTZWxlY3RvcihnbHlwaE5hbWUpCiAgICAgICAgY3MuZGVjb21waWxlKCkKCiAgICAjIENsZWFuIHVwIHN1YnJvdXRpbmVzIGZpcnN0CiAgICBmb3Igc3VicnMgaW4gW2dsb2JhbFN1YnJzXSArIGxvY2FsU3VicnM6CiAgICAgICAgZm9yIHN1YnIgaW4gc3VicnM6CiAgICAgICAgICAgIHByb2dyYW0gPSBzdWJyLnByb2dyYW0KICAgICAgICAgICAgaSA9IGogPSBsZW4ocHJvZ3JhbSkKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgaSA9IHByb2dyYW0uaW5kZXgoInJldHVybiIpCiAgICAgICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBqID0gcHJvZ3JhbS5pbmRleCgiZW5kY2hhciIpCiAgICAgICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICBwcm9ncmFtW21pbihpLCBqKSA6XSA9IFtdCgogICAgIyBDbGVhbiB1cCBnbHlwaCBjaGFyc3RyaW5ncwogICAgcmVtb3ZlVW51c2VkU3VicnMgPSBGYWxzZQogICAgbm9taW5hbFdpZHRoWEVycm9yID0gX05vbWluYWxXaWR0aFVzZWRFcnJvcigpCiAgICBmb3IgZ2x5cGhOYW1lIGluIGNoYXJTdHJpbmdzLmtleXMoKToKICAgICAgICBjcywgZmRJbmRleCA9IGNoYXJTdHJpbmdzLmdldEl0ZW1BbmRTZWxlY3RvcihnbHlwaE5hbWUpCiAgICAgICAgcHJvZ3JhbSA9IGNzLnByb2dyYW0KCiAgICAgICAgdGhpc0xvY2FsU3VicnMgPSAoCiAgICAgICAgICAgIGxvY2FsU3VicnNbZmRJbmRleF0KICAgICAgICAgICAgaWYgZmRJbmRleCBpcyBub3QgTm9uZQogICAgICAgICAgICBlbHNlICgKICAgICAgICAgICAgICAgIGdldGF0dHIodG9wRGljdC5Qcml2YXRlLCAiU3VicnMiLCBbXSkKICAgICAgICAgICAgICAgIGlmIGhhc2F0dHIodG9wRGljdCwgIlByaXZhdGUiKQogICAgICAgICAgICAgICAgZWxzZSBbXQogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICAgICAjIEludGVudGlvbmFsbHkgdXNlIGN1c3RvbSB0eXBlIGZvciBub21pbmFsV2lkdGhYLCBzdWNoIHRoYXQgYW55CiAgICAgICAgIyBDaGFyU3RyaW5nIHRoYXQgaGFzIGFuIGV4cGxpY2l0IHdpZHRoIGVuY29kZWQgd2lsbCB0aHJvdyBiYWNrIHRvIHVzLgogICAgICAgIGV4dHJhY3RvciA9IFQyV2lkdGhFeHRyYWN0b3IoCiAgICAgICAgICAgIHRoaXNMb2NhbFN1YnJzLAogICAgICAgICAgICBnbG9iYWxTdWJycywKICAgICAgICAgICAgbm9taW5hbFdpZHRoWEVycm9yLAogICAgICAgICAgICAwLAogICAgICAgICkKICAgICAgICB0cnk6CiAgICAgICAgICAgIGV4dHJhY3Rvci5leGVjdXRlKGNzKQogICAgICAgIGV4Y2VwdCBfTm9taW5hbFdpZHRoVXNlZEVycm9yOgogICAgICAgICAgICAjIFByb2dyYW0gaGFzIGV4cGxpY2l0IHdpZHRoLiBXZSB3YW50IHRvIGRyb3AgaXQsIGJ1dCBjYW4ndAogICAgICAgICAgICAjIGp1c3QgcG9wIHRoZSBmaXJzdCBudW1iZXIgc2luY2UgaXQgbWF5IGJlIGEgc3Vicm91dGluZSBjYWxsLgogICAgICAgICAgICAjIEluc3RlYWQsIHdoZW4gc2VlaW5nIHRoYXQsIHdlIGVtYmVkIHRoZSBzdWJyb3V0aW5lIGFuZCByZWN1cnNlLgogICAgICAgICAgICAjIElmIHRoaXMgZXZlciBoYXBwZW5lZCwgd2UgbGF0ZXIgcHJ1bmUgdW51c2VkIHN1YnJvdXRpbmVzLgogICAgICAgICAgICB3aGlsZSBsZW4ocHJvZ3JhbSkgPj0gMiBhbmQgcHJvZ3JhbVsxXSBpbiBbImNhbGxzdWJyIiwgImNhbGxnc3ViciJdOgogICAgICAgICAgICAgICAgcmVtb3ZlVW51c2VkU3VicnMgPSBUcnVlCiAgICAgICAgICAgICAgICBzdWJyTnVtYmVyID0gcHJvZ3JhbS5wb3AoMCkKICAgICAgICAgICAgICAgIGFzc2VydCBpc2luc3RhbmNlKHN1YnJOdW1iZXIsIGludCksIHN1YnJOdW1iZXIKICAgICAgICAgICAgICAgIG9wID0gcHJvZ3JhbS5wb3AoMCkKICAgICAgICAgICAgICAgIGJpYXMgPSBleHRyYWN0b3IubG9jYWxCaWFzIGlmIG9wID09ICJjYWxsc3ViciIgZWxzZSBleHRyYWN0b3IuZ2xvYmFsQmlhcwogICAgICAgICAgICAgICAgc3Vick51bWJlciArPSBiaWFzCiAgICAgICAgICAgICAgICBzdWJyU2V0ID0gdGhpc0xvY2FsU3VicnMgaWYgb3AgPT0gImNhbGxzdWJyIiBlbHNlIGdsb2JhbFN1YnJzCiAgICAgICAgICAgICAgICBzdWJyUHJvZ3JhbSA9IHN1YnJTZXRbc3Vick51bWJlcl0ucHJvZ3JhbQogICAgICAgICAgICAgICAgcHJvZ3JhbVs6MF0gPSBzdWJyUHJvZ3JhbQogICAgICAgICAgICAjIE5vdyBwb3AgdGhlIGFjdHVhbCB3aWR0aAogICAgICAgICAgICBhc3NlcnQgbGVuKHByb2dyYW0pID49IDEsIHByb2dyYW0KICAgICAgICAgICAgcHJvZ3JhbS5wb3AoMCkKCiAgICAgICAgaWYgcHJvZ3JhbSBhbmQgcHJvZ3JhbVstMV0gPT0gImVuZGNoYXIiOgogICAgICAgICAgICBwcm9ncmFtLnBvcCgpCgogICAgaWYgcmVtb3ZlVW51c2VkU3VicnM6CiAgICAgICAgY2ZmLnJlbW92ZV91bnVzZWRfc3Vicm91dGluZXMoKQoKICAgICMgVXBjb252ZXJ0IFRvcERpY3QKCiAgICBjZmYubWFqb3IgPSAyCiAgICBjZmYyR2V0R2x5cGhPcmRlciA9IGNmZi5vdEZvbnQuZ2V0R2x5cGhPcmRlcgogICAgdG9wRGljdERhdGEgPSBUb3BEaWN0SW5kZXgoTm9uZSwgY2ZmMkdldEdseXBoT3JkZXIpCiAgICBmb3IgaXRlbSBpbiBjZmYudG9wRGljdEluZGV4OgogICAgICAgICMgSXRlcmF0ZSBvdmVyLCBzdWNoIHRoYXQgYWxsIGFyZSBkZWNvbXBpbGVkCiAgICAgICAgdG9wRGljdERhdGEuYXBwZW5kKGl0ZW0pCiAgICBjZmYudG9wRGljdEluZGV4ID0gdG9wRGljdERhdGEKICAgIHRvcERpY3QgPSB0b3BEaWN0RGF0YVswXQogICAgaWYgaGFzYXR0cih0b3BEaWN0LCAiUHJpdmF0ZSIpOgogICAgICAgIHByaXZhdGVEaWN0ID0gdG9wRGljdC5Qcml2YXRlCiAgICBlbHNlOgogICAgICAgIHByaXZhdGVEaWN0ID0gTm9uZQogICAgb3BPcmRlciA9IGJ1aWxkT3JkZXIodG9wRGljdE9wZXJhdG9yczIpCiAgICB0b3BEaWN0Lm9yZGVyID0gb3BPcmRlcgogICAgdG9wRGljdC5jZmYyR2V0R2x5cGhPcmRlciA9IGNmZjJHZXRHbHlwaE9yZGVyCgogICAgaWYgbm90IGhhc2F0dHIodG9wRGljdCwgIkZEQXJyYXkiKToKICAgICAgICBmZEFycmF5ID0gdG9wRGljdC5GREFycmF5ID0gRkRBcnJheUluZGV4KCkKICAgICAgICBmZEFycmF5LnN0cmluZ3MgPSBOb25lCiAgICAgICAgZmRBcnJheS5HbG9iYWxTdWJycyA9IHRvcERpY3QuR2xvYmFsU3VicnMKICAgICAgICB0b3BEaWN0Lkdsb2JhbFN1YnJzLmZkQXJyYXkgPSBmZEFycmF5CiAgICAgICAgY2hhclN0cmluZ3MgPSB0b3BEaWN0LkNoYXJTdHJpbmdzCiAgICAgICAgaWYgY2hhclN0cmluZ3MuY2hhclN0cmluZ3NBcmVJbmRleGVkOgogICAgICAgICAgICBjaGFyU3RyaW5ncy5jaGFyU3RyaW5nc0luZGV4LmZkQXJyYXkgPSBmZEFycmF5CiAgICAgICAgZWxzZToKICAgICAgICAgICAgY2hhclN0cmluZ3MuZmRBcnJheSA9IGZkQXJyYXkKICAgICAgICBmb250RGljdCA9IEZvbnREaWN0KCkKICAgICAgICBmb250RGljdC5zZXRDRkYyKFRydWUpCiAgICAgICAgZmRBcnJheS5hcHBlbmQoZm9udERpY3QpCiAgICAgICAgZm9udERpY3QuUHJpdmF0ZSA9IHByaXZhdGVEaWN0CiAgICAgICAgcHJpdmF0ZU9wT3JkZXIgPSBidWlsZE9yZGVyKHByaXZhdGVEaWN0T3BlcmF0b3JzMikKICAgICAgICBpZiBwcml2YXRlRGljdCBpcyBub3QgTm9uZToKICAgICAgICAgICAgZm9yIGVudHJ5IGluIHByaXZhdGVEaWN0T3BlcmF0b3JzOgogICAgICAgICAgICAgICAga2V5ID0gZW50cnlbMV0KICAgICAgICAgICAgICAgIGlmIGtleSBub3QgaW4gcHJpdmF0ZU9wT3JkZXI6CiAgICAgICAgICAgICAgICAgICAgaWYga2V5IGluIHByaXZhdGVEaWN0LnJhd0RpY3Q6CiAgICAgICAgICAgICAgICAgICAgICAgICMgcHJpbnQgIlJlbW92aW5nIHByaXZhdGUgZGljdCIsIGtleQogICAgICAgICAgICAgICAgICAgICAgICBkZWwgcHJpdmF0ZURpY3QucmF3RGljdFtrZXldCiAgICAgICAgICAgICAgICAgICAgaWYgaGFzYXR0cihwcml2YXRlRGljdCwga2V5KToKICAgICAgICAgICAgICAgICAgICAgICAgZGVsYXR0cihwcml2YXRlRGljdCwga2V5KQogICAgICAgICAgICAgICAgICAgICAgICAjIHByaW50ICJSZW1vdmluZyBwcml2YXRlRGljdCBhdHRyIiwga2V5CiAgICBlbHNlOgogICAgICAgICMgY2xlYW4gdXAgdGhlIFByaXZhdGVEaWN0cyBpbiB0aGUgZmRBcnJheQogICAgICAgIGZkQXJyYXkgPSB0b3BEaWN0LkZEQXJyYXkKICAgICAgICBwcml2YXRlT3BPcmRlciA9IGJ1aWxkT3JkZXIocHJpdmF0ZURpY3RPcGVyYXRvcnMyKQogICAgICAgIGZvciBmb250RGljdCBpbiBmZEFycmF5OgogICAgICAgICAgICBmb250RGljdC5zZXRDRkYyKFRydWUpCiAgICAgICAgICAgIGZvciBrZXkgaW4gbGlzdChmb250RGljdC5yYXdEaWN0LmtleXMoKSk6CiAgICAgICAgICAgICAgICBpZiBrZXkgbm90IGluIGZvbnREaWN0Lm9yZGVyOgogICAgICAgICAgICAgICAgICAgIGRlbCBmb250RGljdC5yYXdEaWN0W2tleV0KICAgICAgICAgICAgICAgICAgICBpZiBoYXNhdHRyKGZvbnREaWN0LCBrZXkpOgogICAgICAgICAgICAgICAgICAgICAgICBkZWxhdHRyKGZvbnREaWN0LCBrZXkpCgogICAgICAgICAgICBwcml2YXRlRGljdCA9IGZvbnREaWN0LlByaXZhdGUKICAgICAgICAgICAgZm9yIGVudHJ5IGluIHByaXZhdGVEaWN0T3BlcmF0b3JzOgogICAgICAgICAgICAgICAga2V5ID0gZW50cnlbMV0KICAgICAgICAgICAgICAgIGlmIGtleSBub3QgaW4gcHJpdmF0ZU9wT3JkZXI6CiAgICAgICAgICAgICAgICAgICAgaWYga2V5IGluIGxpc3QocHJpdmF0ZURpY3QucmF3RGljdC5rZXlzKCkpOgogICAgICAgICAgICAgICAgICAgICAgICAjIHByaW50ICJSZW1vdmluZyBwcml2YXRlIGRpY3QiLCBrZXkKICAgICAgICAgICAgICAgICAgICAgICAgZGVsIHByaXZhdGVEaWN0LnJhd0RpY3Rba2V5XQogICAgICAgICAgICAgICAgICAgIGlmIGhhc2F0dHIocHJpdmF0ZURpY3QsIGtleSk6CiAgICAgICAgICAgICAgICAgICAgICAgIGRlbGF0dHIocHJpdmF0ZURpY3QsIGtleSkKICAgICAgICAgICAgICAgICAgICAgICAgIyBwcmludCAiUmVtb3ZpbmcgcHJpdmF0ZURpY3QgYXR0ciIsIGtleQoKICAgICMgTm93IGRlbGV0ZSB1cCB0aGUgZGVwcmVjYXRlZCB0b3BEaWN0IG9wZXJhdG9ycyBmcm9tIENGRiAxLjAKICAgIGZvciBlbnRyeSBpbiB0b3BEaWN0T3BlcmF0b3JzOgogICAgICAgIGtleSA9IGVudHJ5WzFdCiAgICAgICAgIyBXZSBzZWVtIHRvIG5lZWQgdG8ga2VlcCB0aGUgY2hhcnNldCBvcGVyYXRvciBmb3Igbm93LAogICAgICAgICMgb3Igd2UgZmFpbCB0byBjb21waWxlIHdpdGggc29tZSBmb250cywgbGlrZSBBZGRpdGlvbkZvbnQub3RmLgogICAgICAgICMgSSBkb24ndCBrbm93IHdoaWNoIGtpbmQgb2YgQ0ZGIGZvbnQgdGhvc2UgYXJlLiBCdXQga2VlcGluZwogICAgICAgICMgY2hhcnNldCBzZWVtcyB0byB3b3JrLiBJdCB3aWxsIGJlIHJlbW92ZWQgd2hlbiB3ZSBzYXZlIGFuZAogICAgICAgICMgcmVhZCB0aGUgZm9udCBhZ2Fpbi4KICAgICAgICAjCiAgICAgICAgIyBBZGRpdGlvbkZvbnQub3RmIGhhcyA8RW5jb2RpbmcgbmFtZT0iU3RhbmRhcmRFbmNvZGluZyIvPi4KICAgICAgICBpZiBrZXkgPT0gImNoYXJzZXQiOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIGtleSBub3QgaW4gb3BPcmRlcjoKICAgICAgICAgICAgaWYga2V5IGluIHRvcERpY3QucmF3RGljdDoKICAgICAgICAgICAgICAgIGRlbCB0b3BEaWN0LnJhd0RpY3Rba2V5XQogICAgICAgICAgICBpZiBoYXNhdHRyKHRvcERpY3QsIGtleSk6CiAgICAgICAgICAgICAgICBkZWxhdHRyKHRvcERpY3QsIGtleSkKCiAgICAjIFRPRE8oYmVoZGFkKTogV2hhdCBkb2VzIHRoZSBmb2xsb3dpbmcgY29tbWVudCBldmVuIG1lYW4/IEJvdGggQ0ZGIGFuZCBDRkYyCiAgICAjIHVzZSB0aGUgc2FtZSBUMkNoYXJzdHJpbmcgY2xhc3MuIEkgKnRoaW5rKiB3aGF0IGl0IG1lYW5zIGlzIHRoYXQgdGhlIENoYXJTdHJpbmdzCiAgICAjIHdlcmUgbG9hZGVkIGZvciBDRkYxLCBhbmQgd2UgbmVlZCB0byByZWxvYWQgdGhlbSBmb3IgQ0ZGMiB0byBzZXQgdmFyc3RvcmUsIGV0YwogICAgIyBvbiB0aGVtLiBBdCBsZWFzdCB0aGF0J3Mgd2hhdCBJIHVuZGVyc3RhbmQuIEl0J3MgcHJvYmFibHkgc2FmZSB0byByZW1vdmUgdGhpcwogICAgIyBhbmQganVzdCBzZXQgdnN0b3JlIHdoZXJlIG5lZWRlZC4KICAgICMKICAgICMgU2VlIGNvbW1lbnQgYWJvdmUgYWJvdXQgY2hhcnNldCBhcyB3ZWxsLgoKICAgICMgQXQgdGhpcyBwb2ludCwgdGhlIFN1YnJzIGFuZCBDaGFyc3RyaW5ncyBhcmUgYWxsIHN0aWxsIFQyQ2hhcnN0cmluZyBjbGFzcwogICAgIyBlYXNpZXN0IHRvIGZpeCB0aGlzIGJ5IGNvbXBpbGluZywgdGhlbiBkZWNvbXBpbGluZyBhZ2FpbgogICAgZmlsZSA9IEJ5dGVzSU8oKQogICAgY2ZmLmNvbXBpbGUoZmlsZSwgb3RGb250LCBpc0NGRjI9VHJ1ZSkKICAgIGZpbGUuc2VlaygwKQogICAgY2ZmLmRlY29tcGlsZShmaWxlLCBvdEZvbnQsIGlzQ0ZGMj1UcnVlKQoKCmRlZiBjb252ZXJ0Q0ZGVG9DRkYyKGZvbnQpOgogICAgY2ZmID0gZm9udFsiQ0ZGICJdLmNmZgogICAgZGVsIGZvbnRbIkNGRiAiXQogICAgX2NvbnZlcnRDRkZUb0NGRjIoY2ZmLCBmb250KQogICAgdGFibGUgPSBmb250WyJDRkYyIl0gPSBuZXdUYWJsZSgiQ0ZGMiIpCiAgICB0YWJsZS5jZmYgPSBjZmYKCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiQ29udmVydCBDRkYgT1RGIGZvbnQgdG8gQ0ZGMiBPVEYgZm9udCIiIgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGltcG9ydCBzeXMKCiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIGltcG9ydCBhcmdwYXJzZQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgY2ZmTGliLkNGRlRvQ0ZGMiIsCiAgICAgICAgZGVzY3JpcHRpb249IlVwZ3JhZGUgYSBDRkYgZm9udCB0byBDRkYyLiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJpbnB1dCIsIG1ldGF2YXI9IklOUFVULnR0ZiIsIGhlbHA9IklucHV0IE9URiBmaWxlIHdpdGggQ0ZGIHRhYmxlLiIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1vIiwKICAgICAgICAiLS1vdXRwdXQiLAogICAgICAgIG1ldGF2YXI9Ik9VVFBVVC50dGYiLAogICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICAgICBoZWxwPSJPdXRwdXQgaW5zdGFuY2UgT1RGIGZpbGUgKGRlZmF1bHQ6IElOUFVULUNGRjIudHRmKS4iLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1uby1yZWNhbGMtdGltZXN0YW1wIiwKICAgICAgICBkZXN0PSJyZWNhbGNfdGltZXN0YW1wIiwKICAgICAgICBhY3Rpb249InN0b3JlX2ZhbHNlIiwKICAgICAgICBoZWxwPSJEb24ndCBzZXQgdGhlIG91dHB1dCBmb250J3MgdGltZXN0YW1wIHRvIHRoZSBjdXJyZW50IHRpbWUuIiwKICAgICkKICAgIGxvZ2dpbmdHcm91cCA9IHBhcnNlci5hZGRfbXV0dWFsbHlfZXhjbHVzaXZlX2dyb3VwKHJlcXVpcmVkPUZhbHNlKQogICAgbG9nZ2luZ0dyb3VwLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXYiLCAiLS12ZXJib3NlIiwgYWN0aW9uPSJzdG9yZV90cnVlIiwgaGVscD0iUnVuIG1vcmUgdmVyYm9zZWx5LiIKICAgICkKICAgIGxvZ2dpbmdHcm91cC5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1xIiwgIi0tcXVpZXQiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJUdXJuIHZlcmJvc2l0eSBvZmYuIgogICAgKQogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IGNvbmZpZ0xvZ2dlcgoKICAgIGNvbmZpZ0xvZ2dlcigKICAgICAgICBsZXZlbD0oIkRFQlVHIiBpZiBvcHRpb25zLnZlcmJvc2UgZWxzZSAiRVJST1IiIGlmIG9wdGlvbnMucXVpZXQgZWxzZSAiSU5GTyIpCiAgICApCgogICAgaW1wb3J0IG9zCgogICAgaW5maWxlID0gb3B0aW9ucy5pbnB1dAogICAgaWYgbm90IG9zLnBhdGguaXNmaWxlKGluZmlsZSk6CiAgICAgICAgcGFyc2VyLmVycm9yKCJObyBzdWNoIGZpbGUgJ3t9JyIuZm9ybWF0KGluZmlsZSkpCgogICAgb3V0ZmlsZSA9ICgKICAgICAgICBtYWtlT3V0cHV0RmlsZU5hbWUoaW5maWxlLCBvdmVyV3JpdGU9VHJ1ZSwgc3VmZml4PSItQ0ZGMiIpCiAgICAgICAgaWYgbm90IG9wdGlvbnMub3V0cHV0CiAgICAgICAgZWxzZSBvcHRpb25zLm91dHB1dAogICAgKQoKICAgIGZvbnQgPSBUVEZvbnQoaW5maWxlLCByZWNhbGNUaW1lc3RhbXA9b3B0aW9ucy5yZWNhbGNfdGltZXN0YW1wLCByZWNhbGNCQm94ZXM9RmFsc2UpCgogICAgY29udmVydENGRlRvQ0ZGMihmb250KQoKICAgIGxvZy5pbmZvKAogICAgICAgICJTYXZpbmcgJXMiLAogICAgICAgIG91dGZpbGUsCiAgICApCiAgICBmb250LnNhdmUob3V0ZmlsZSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwoKICAgIHN5cy5leGl0KG1haW4oc3lzLmFyZ3ZbMTpdKSkK
+"""CFF to CFF2 converter."""
+
+from fontTools.ttLib import TTFont, newTable
+from fontTools.misc.cliTools import makeOutputFileName
+from fontTools.misc.psCharStrings import T2WidthExtractor
+from fontTools.cffLib import (
+    TopDictIndex,
+    FDArrayIndex,
+    FontDict,
+    buildOrder,
+    topDictOperators,
+    privateDictOperators,
+    topDictOperators2,
+    privateDictOperators2,
+)
+from io import BytesIO
+import logging
+
+__all__ = ["convertCFFToCFF2", "main"]
+
+
+log = logging.getLogger("fontTools.cffLib")
+
+
+class _NominalWidthUsedError(Exception):
+    def __add__(self, other):
+        raise self
+
+    def __radd__(self, other):
+        raise self
+
+
+def _convertCFFToCFF2(cff, otFont):
+    """Converts this object from CFF format to CFF2 format. This conversion
+    is done 'in-place'. The conversion cannot be reversed.
+
+    This assumes a decompiled CFF table. (i.e. that the object has been
+    filled via :meth:`decompile` and e.g. not loaded from XML.)"""
+
+    # Clean up T2CharStrings
+
+    topDict = cff.topDictIndex[0]
+    fdArray = topDict.FDArray if hasattr(topDict, "FDArray") else None
+    charStrings = topDict.CharStrings
+    globalSubrs = cff.GlobalSubrs
+    localSubrs = (
+        [getattr(fd.Private, "Subrs", []) for fd in fdArray]
+        if fdArray
+        else (
+            [topDict.Private.Subrs]
+            if hasattr(topDict, "Private") and hasattr(topDict.Private, "Subrs")
+            else []
+        )
+    )
+
+    for glyphName in charStrings.keys():
+        cs, fdIndex = charStrings.getItemAndSelector(glyphName)
+        cs.decompile()
+
+    # Clean up subroutines first
+    for subrs in [globalSubrs] + localSubrs:
+        for subr in subrs:
+            program = subr.program
+            i = j = len(program)
+            try:
+                i = program.index("return")
+            except ValueError:
+                pass
+            try:
+                j = program.index("endchar")
+            except ValueError:
+                pass
+            program[min(i, j) :] = []
+
+    # Clean up glyph charstrings
+    removeUnusedSubrs = False
+    nominalWidthXError = _NominalWidthUsedError()
+    for glyphName in charStrings.keys():
+        cs, fdIndex = charStrings.getItemAndSelector(glyphName)
+        program = cs.program
+
+        thisLocalSubrs = (
+            localSubrs[fdIndex]
+            if fdIndex is not None
+            else (
+                getattr(topDict.Private, "Subrs", [])
+                if hasattr(topDict, "Private")
+                else []
+            )
+        )
+
+        # Intentionally use custom type for nominalWidthX, such that any
+        # CharString that has an explicit width encoded will throw back to us.
+        extractor = T2WidthExtractor(
+            thisLocalSubrs,
+            globalSubrs,
+            nominalWidthXError,
+            0,
+        )
+        try:
+            extractor.execute(cs)
+        except _NominalWidthUsedError:
+            # Program has explicit width. We want to drop it, but can't
+            # just pop the first number since it may be a subroutine call.
+            # Instead, when seeing that, we embed the subroutine and recurse.
+            # If this ever happened, we later prune unused subroutines.
+            while len(program) >= 2 and program[1] in ["callsubr", "callgsubr"]:
+                removeUnusedSubrs = True
+                subrNumber = program.pop(0)
+                assert isinstance(subrNumber, int), subrNumber
+                op = program.pop(0)
+                bias = extractor.localBias if op == "callsubr" else extractor.globalBias
+                subrNumber += bias
+                subrSet = thisLocalSubrs if op == "callsubr" else globalSubrs
+                subrProgram = subrSet[subrNumber].program
+                program[:0] = subrProgram
+            # Now pop the actual width
+            assert len(program) >= 1, program
+            program.pop(0)
+
+        if program and program[-1] == "endchar":
+            program.pop()
+
+    if removeUnusedSubrs:
+        cff.remove_unused_subroutines()
+
+    # Upconvert TopDict
+
+    cff.major = 2
+    cff2GetGlyphOrder = cff.otFont.getGlyphOrder
+    topDictData = TopDictIndex(None, cff2GetGlyphOrder)
+    for item in cff.topDictIndex:
+        # Iterate over, such that all are decompiled
+        topDictData.append(item)
+    cff.topDictIndex = topDictData
+    topDict = topDictData[0]
+    if hasattr(topDict, "Private"):
+        privateDict = topDict.Private
+    else:
+        privateDict = None
+    opOrder = buildOrder(topDictOperators2)
+    topDict.order = opOrder
+    topDict.cff2GetGlyphOrder = cff2GetGlyphOrder
+
+    if not hasattr(topDict, "FDArray"):
+        fdArray = topDict.FDArray = FDArrayIndex()
+        fdArray.strings = None
+        fdArray.GlobalSubrs = topDict.GlobalSubrs
+        topDict.GlobalSubrs.fdArray = fdArray
+        charStrings = topDict.CharStrings
+        if charStrings.charStringsAreIndexed:
+            charStrings.charStringsIndex.fdArray = fdArray
+        else:
+            charStrings.fdArray = fdArray
+        fontDict = FontDict()
+        fontDict.setCFF2(True)
+        fdArray.append(fontDict)
+        fontDict.Private = privateDict
+        privateOpOrder = buildOrder(privateDictOperators2)
+        if privateDict is not None:
+            for entry in privateDictOperators:
+                key = entry[1]
+                if key not in privateOpOrder:
+                    if key in privateDict.rawDict:
+                        # print "Removing private dict", key
+                        del privateDict.rawDict[key]
+                    if hasattr(privateDict, key):
+                        delattr(privateDict, key)
+                        # print "Removing privateDict attr", key
+    else:
+        # clean up the PrivateDicts in the fdArray
+        fdArray = topDict.FDArray
+        privateOpOrder = buildOrder(privateDictOperators2)
+        for fontDict in fdArray:
+            fontDict.setCFF2(True)
+            for key in list(fontDict.rawDict.keys()):
+                if key not in fontDict.order:
+                    del fontDict.rawDict[key]
+                    if hasattr(fontDict, key):
+                        delattr(fontDict, key)
+
+            privateDict = fontDict.Private
+            for entry in privateDictOperators:
+                key = entry[1]
+                if key not in privateOpOrder:
+                    if key in list(privateDict.rawDict.keys()):
+                        # print "Removing private dict", key
+                        del privateDict.rawDict[key]
+                    if hasattr(privateDict, key):
+                        delattr(privateDict, key)
+                        # print "Removing privateDict attr", key
+
+    # Now delete up the deprecated topDict operators from CFF 1.0
+    for entry in topDictOperators:
+        key = entry[1]
+        # We seem to need to keep the charset operator for now,
+        # or we fail to compile with some fonts, like AdditionFont.otf.
+        # I don't know which kind of CFF font those are. But keeping
+        # charset seems to work. It will be removed when we save and
+        # read the font again.
+        #
+        # AdditionFont.otf has <Encoding name="StandardEncoding"/>.
+        if key == "charset":
+            continue
+        if key not in opOrder:
+            if key in topDict.rawDict:
+                del topDict.rawDict[key]
+            if hasattr(topDict, key):
+                delattr(topDict, key)
+
+    # TODO(behdad): What does the following comment even mean? Both CFF and CFF2
+    # use the same T2Charstring class. I *think* what it means is that the CharStrings
+    # were loaded for CFF1, and we need to reload them for CFF2 to set varstore, etc
+    # on them. At least that's what I understand. It's probably safe to remove this
+    # and just set vstore where needed.
+    #
+    # See comment above about charset as well.
+
+    # At this point, the Subrs and Charstrings are all still T2Charstring class
+    # easiest to fix this by compiling, then decompiling again
+    file = BytesIO()
+    cff.compile(file, otFont, isCFF2=True)
+    file.seek(0)
+    cff.decompile(file, otFont, isCFF2=True)
+
+
+def convertCFFToCFF2(font):
+    cff = font["CFF "].cff
+    del font["CFF "]
+    _convertCFFToCFF2(cff, font)
+    table = font["CFF2"] = newTable("CFF2")
+    table.cff = cff
+
+
+def main(args=None):
+    """Convert CFF OTF font to CFF2 OTF font"""
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools cffLib.CFFToCFF2",
+        description="Upgrade a CFF font to CFF2.",
+    )
+    parser.add_argument(
+        "input", metavar="INPUT.ttf", help="Input OTF file with CFF table."
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        metavar="OUTPUT.ttf",
+        default=None,
+        help="Output instance OTF file (default: INPUT-CFF2.ttf).",
+    )
+    parser.add_argument(
+        "--no-recalc-timestamp",
+        dest="recalc_timestamp",
+        action="store_false",
+        help="Don't set the output font's timestamp to the current time.",
+    )
+    loggingGroup = parser.add_mutually_exclusive_group(required=False)
+    loggingGroup.add_argument(
+        "-v", "--verbose", action="store_true", help="Run more verbosely."
+    )
+    loggingGroup.add_argument(
+        "-q", "--quiet", action="store_true", help="Turn verbosity off."
+    )
+    options = parser.parse_args(args)
+
+    from fontTools import configLogger
+
+    configLogger(
+        level=("DEBUG" if options.verbose else "ERROR" if options.quiet else "INFO")
+    )
+
+    import os
+
+    infile = options.input
+    if not os.path.isfile(infile):
+        parser.error("No such file '{}'".format(infile))
+
+    outfile = (
+        makeOutputFileName(infile, overWrite=True, suffix="-CFF2")
+        if not options.output
+        else options.output
+    )
+
+    font = TTFont(infile, recalcTimestamp=options.recalc_timestamp, recalcBBoxes=False)
+
+    convertCFFToCFF2(font)
+
+    log.info(
+        "Saving %s",
+        outfile,
+    )
+    font.save(outfile)
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main(sys.argv[1:]))

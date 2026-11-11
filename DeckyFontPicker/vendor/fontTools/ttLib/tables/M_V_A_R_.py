@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfTV9WX0FfUl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJNZXRyaWNzIFZhcmlhdGlvbnMgdGFibGUKCiAgICBUaGUgYGBNVkFSYGAgdGFibGUgY29udGFpbnMgdmFyaWF0aW9uIGluZm9ybWF0aW9uIGZvciBmb250LXdpZGUKICAgIG1ldHJpY3MgaW4gYSB2YXJpYWJsZSBmb250LgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvbXZhcgogICAgIiIiCgogICAgcGFzcwo=
+from .otBase import BaseTTXConverter
+
+
+class table_M_V_A_R_(BaseTTXConverter):
+    """Metrics Variations table
+
+    The ``MVAR`` table contains variation information for font-wide
+    metrics in a variable font.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/mvar
+    """
+
+    pass

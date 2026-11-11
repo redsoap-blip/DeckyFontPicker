@@ -1,1 +1,68 @@
-IiIiTWluaW1hbCwgc3RkbGliLW9ubHkgcmVwbGFjZW1lbnQgZm9yIFtgcHlmaWxlc3lzdGVtMmBdWzFdIEFQSSBmb3IgdXNlIGJ5IGBmb250VG9vbHMudWZvTGliYC4KClRoaXMgcGFja2FnZSBpcyBhIHBhcnRpYWwgcmVpbXBsZW1lbnRhdGlvbiBvZiB0aGUgYGZzYCBwYWNrYWdlIGJ5IFdpbGwgTWNHdWdhbiwgdXNlZCB1bmRlciB0aGUKTUlUIGxpY2Vuc2UuIFNlZSBMSUNFTlNFLmV4dGVybmFsIGZvciBkZXRhaWxzLgoKTm90ZSB0aGlzIG9ubHkgZXhwb3J0cyBhICoqc3Vic2V0Kiogb2YgdGhlIGBweWZpbGVzeXN0ZW0yYCBBUEksIGluIHBhcnRpY3VsYXIgdGhlIG1vZHVsZXMsCmNsYXNzZXMgYW5kIGZ1bmN0aW9ucyB0aGF0IGFyZSBjdXJyZW50bHkgdXNlZCBkaXJlY3RseSBieSBgZm9udFRvb2xzLnVmb0xpYmAuCgpJdCBvcHBvcnR1bmlzdGljYWxseSB0cmllcyB0byBpbXBvcnQgdGhlIHJlbGV2YW50IG1vZHVsZXMgZnJvbSB0aGUgdXBzdHJlYW0gYGZzYCBwYWNrYWdlCndoZW4gdGhpcyBpcyBhdmFpbGFibGUuIE90aGVyd2lzZSBpdCBmYWxscyBiYWNrIHRvIHRoZSByZXBsYWNlbWVudCBtb2R1bGVzIHdpdGhpbiB0aGlzIHBhY2thZ2UuCgpBcyBvZiB2ZXJzaW9uIDQuNTkuMCwgdGhlIGBmb250dG9vbHNbdWZvXWAgZXh0cmEgbm8gbG9uZ2VyIHJlcXVpcmVzIHRoZSBgZnNgIHBhY2thZ2UsIHRodXMKdGhpcyBgZm9udFRvb2xzLm1pc2MuZmlsZXN5c3RlbWAgcGFja2FnZSBpcyB1c2VkIGJ5IGRlZmF1bHQuCgpDbGllbnQgY29kZSBjYW4gZWl0aGVyIHJlcGxhY2UgYGltcG9ydCBmc2Agd2l0aCBgZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgZmlsZXN5c3RlbSBhcyBmc2AKaWYgdGhhdCBoYXBwZW5zIHRvIHdvcmsgKG5vIGd1YXJhbnRlZSksIG9yIHRoZXkgY2FuIGNvbnRpbnVlIHRvIHVzZSBgZnNgIGJ1dCB0aGV5IHdpbGwgaGF2ZQp0byBzcGVjaWZ5IGl0IGFzIGFuIGV4cGxpY2l0IGRlcGVuZGVuY3kgb2YgdGhlaXIgcHJvamVjdC4KClsxXTogaHR0cHM6Ly9naXRodWIuY29tL1B5RmlsZXN5c3RlbS9weWZpbGVzeXN0ZW0yCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKdHJ5OgogICAgX19pbXBvcnRfXygiZnMiKQpleGNlcHQgSW1wb3J0RXJyb3I6CiAgICBmcm9tIC4gaW1wb3J0IF9iYXNlIGFzIGJhc2UKICAgIGZyb20gLiBpbXBvcnQgX2NvcHkgYXMgY29weQogICAgZnJvbSAuIGltcG9ydCBfZXJyb3JzIGFzIGVycm9ycwogICAgZnJvbSAuIGltcG9ydCBfaW5mbyBhcyBpbmZvCiAgICBmcm9tIC4gaW1wb3J0IF9vc2ZzIGFzIG9zZnMKICAgIGZyb20gLiBpbXBvcnQgX3BhdGggYXMgcGF0aAogICAgZnJvbSAuIGltcG9ydCBfc3ViZnMgYXMgc3ViZnMKICAgIGZyb20gLiBpbXBvcnQgX3RlbXBmcyBhcyB0ZW1wZnMKICAgIGZyb20gLiBpbXBvcnQgX3Rvb2xzIGFzIHRvb2xzCiAgICBmcm9tIC4gaW1wb3J0IF93YWxrIGFzIHdhbGsKICAgIGZyb20gLiBpbXBvcnQgX3ppcGZzIGFzIHppcGZzCgogICAgX2hhdmVGUyA9IEZhbHNlCmVsc2U6CiAgICBpbXBvcnQgZnMuYmFzZSBhcyBiYXNlCiAgICBpbXBvcnQgZnMuY29weSBhcyBjb3B5CiAgICBpbXBvcnQgZnMuZXJyb3JzIGFzIGVycm9ycwogICAgaW1wb3J0IGZzLmluZm8gYXMgaW5mbwogICAgaW1wb3J0IGZzLm9zZnMgYXMgb3NmcwogICAgaW1wb3J0IGZzLnBhdGggYXMgcGF0aAogICAgaW1wb3J0IGZzLnN1YmZzIGFzIHN1YmZzCiAgICBpbXBvcnQgZnMudGVtcGZzIGFzIHRlbXBmcwogICAgaW1wb3J0IGZzLnRvb2xzIGFzIHRvb2xzCiAgICBpbXBvcnQgZnMud2FsayBhcyB3YWxrCiAgICBpbXBvcnQgZnMuemlwZnMgYXMgemlwZnMKCiAgICBfaGF2ZUZTID0gVHJ1ZQoKCl9fYWxsX18gPSBbCiAgICAiYmFzZSIsCiAgICAiY29weSIsCiAgICAiZXJyb3JzIiwKICAgICJpbmZvIiwKICAgICJvc2ZzIiwKICAgICJwYXRoIiwKICAgICJzdWJmcyIsCiAgICAidGVtcGZzIiwKICAgICJ0b29scyIsCiAgICAid2FsayIsCiAgICAiemlwZnMiLApdCg==
+"""Minimal, stdlib-only replacement for [`pyfilesystem2`][1] API for use by `fontTools.ufoLib`.
+
+This package is a partial reimplementation of the `fs` package by Will McGugan, used under the
+MIT license. See LICENSE.external for details.
+
+Note this only exports a **subset** of the `pyfilesystem2` API, in particular the modules,
+classes and functions that are currently used directly by `fontTools.ufoLib`.
+
+It opportunistically tries to import the relevant modules from the upstream `fs` package
+when this is available. Otherwise it falls back to the replacement modules within this package.
+
+As of version 4.59.0, the `fonttools[ufo]` extra no longer requires the `fs` package, thus
+this `fontTools.misc.filesystem` package is used by default.
+
+Client code can either replace `import fs` with `from fontTools.misc import filesystem as fs`
+if that happens to work (no guarantee), or they can continue to use `fs` but they will have
+to specify it as an explicit dependency of their project.
+
+[1]: https://github.com/PyFilesystem/pyfilesystem2
+"""
+
+from __future__ import annotations
+
+try:
+    __import__("fs")
+except ImportError:
+    from . import _base as base
+    from . import _copy as copy
+    from . import _errors as errors
+    from . import _info as info
+    from . import _osfs as osfs
+    from . import _path as path
+    from . import _subfs as subfs
+    from . import _tempfs as tempfs
+    from . import _tools as tools
+    from . import _walk as walk
+    from . import _zipfs as zipfs
+
+    _haveFS = False
+else:
+    import fs.base as base
+    import fs.copy as copy
+    import fs.errors as errors
+    import fs.info as info
+    import fs.osfs as osfs
+    import fs.path as path
+    import fs.subfs as subfs
+    import fs.tempfs as tempfs
+    import fs.tools as tools
+    import fs.walk as walk
+    import fs.zipfs as zipfs
+
+    _haveFS = True
+
+
+__all__ = [
+    "base",
+    "copy",
+    "errors",
+    "info",
+    "osfs",
+    "path",
+    "subfs",
+    "tempfs",
+    "tools",
+    "walk",
+    "zipfs",
+]

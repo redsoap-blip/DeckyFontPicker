@@ -1,1 +1,350 @@
-IiIiCkNvZGUgb2YgdGhlIGNvbmZpZyBzeXN0ZW07IG5vdCByZWxhdGVkIHRvIGZvbnRUb29scyBvciBmb250cyBpbiBwYXJ0aWN1bGFyLgoKVGhlIG9wdGlvbnMgdGhhdCBhcmUgc3BlY2lmaWMgdG8gZm9udFRvb2xzIGFyZSBpbiA6bW9kOmBmb250VG9vbHMuY29uZmlnYC4KClRvIGNyZWF0ZSB5b3VyIG93biBjb25maWcgc3lzdGVtLCB5b3UgbmVlZCB0byBjcmVhdGUgYW4gaW5zdGFuY2Ugb2YKOmNsYXNzOmBPcHRpb25zYCwgYW5kIGEgc3ViY2xhc3Mgb2YgOmNsYXNzOmBBYnN0cmFjdENvbmZpZ2Agd2l0aCBpdHMKYGBvcHRpb25zYGAgY2xhc3MgdmFyaWFibGUgc2V0IHRvIHlvdXIgaW5zdGFuY2Ugb2YgT3B0aW9ucy4KCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGxvZ2dpbmcKZnJvbSBkYXRhY2xhc3NlcyBpbXBvcnQgZGF0YWNsYXNzCmZyb20gdHlwaW5nIGltcG9ydCAoCiAgICBBbnksCiAgICBDYWxsYWJsZSwKICAgIENsYXNzVmFyLAogICAgRGljdCwKICAgIEl0ZXJhYmxlLAogICAgTWFwcGluZywKICAgIE11dGFibGVNYXBwaW5nLAogICAgT3B0aW9uYWwsCiAgICBTZXQsCiAgICBVbmlvbiwKKQoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgpfX2FsbF9fID0gWwogICAgIkFic3RyYWN0Q29uZmlnIiwKICAgICJDb25maWdBbHJlYWR5UmVnaXN0ZXJlZEVycm9yIiwKICAgICJDb25maWdFcnJvciIsCiAgICAiQ29uZmlnVW5rbm93bk9wdGlvbkVycm9yIiwKICAgICJDb25maWdWYWx1ZVBhcnNpbmdFcnJvciIsCiAgICAiQ29uZmlnVmFsdWVWYWxpZGF0aW9uRXJyb3IiLAogICAgIk9wdGlvbiIsCiAgICAiT3B0aW9ucyIsCl0KCgpjbGFzcyBDb25maWdFcnJvcihFeGNlcHRpb24pOgogICAgIiIiQmFzZSBleGNlcHRpb24gZm9yIHRoZSBjb25maWcgbW9kdWxlLiIiIgoKCmNsYXNzIENvbmZpZ0FscmVhZHlSZWdpc3RlcmVkRXJyb3IoQ29uZmlnRXJyb3IpOgogICAgIiIiUmFpc2VkIHdoZW4gYSBtb2R1bGUgdHJpZXMgdG8gcmVnaXN0ZXIgYSBjb25maWd1cmF0aW9uIG9wdGlvbiB0aGF0CiAgICBhbHJlYWR5IGV4aXN0cy4KCiAgICBTaG91bGQgbm90IGJlIHJhaXNlZCB0b28gbXVjaCByZWFsbHksIG9ubHkgd2hlbiBkZXZlbG9waW5nIG5ldyBmb250VG9vbHMKICAgIG1vZHVsZXMuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbmFtZSk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXyhmIkNvbmZpZyBvcHRpb24ge25hbWV9IGlzIGFscmVhZHkgcmVnaXN0ZXJlZC4iKQoKCmNsYXNzIENvbmZpZ1ZhbHVlUGFyc2luZ0Vycm9yKENvbmZpZ0Vycm9yKToKICAgICIiIlJhaXNlZCB3aGVuIGEgY29uZmlndXJhdGlvbiB2YWx1ZSBjYW5ub3QgYmUgcGFyc2VkLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lLCB2YWx1ZSk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygKICAgICAgICAgICAgZiJDb25maWcgb3B0aW9uIHtuYW1lfTogdmFsdWUgY2Fubm90IGJlIHBhcnNlZCAoZ2l2ZW4ge3JlcHIodmFsdWUpfSkiCiAgICAgICAgKQoKCmNsYXNzIENvbmZpZ1ZhbHVlVmFsaWRhdGlvbkVycm9yKENvbmZpZ0Vycm9yKToKICAgICIiIlJhaXNlZCB3aGVuIGEgY29uZmlndXJhdGlvbiB2YWx1ZSBjYW5ub3QgYmUgdmFsaWRhdGVkLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lLCB2YWx1ZSk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygKICAgICAgICAgICAgZiJDb25maWcgb3B0aW9uIHtuYW1lfTogdmFsdWUgaXMgaW52YWxpZCAoZ2l2ZW4ge3JlcHIodmFsdWUpfSkiCiAgICAgICAgKQoKCmNsYXNzIENvbmZpZ1Vua25vd25PcHRpb25FcnJvcihDb25maWdFcnJvcik6CiAgICAiIiJSYWlzZWQgd2hlbiBhIGNvbmZpZ3VyYXRpb24gb3B0aW9uIGlzIHVua25vd24uIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG9wdGlvbl9vcl9uYW1lKToKICAgICAgICBuYW1lID0gKAogICAgICAgICAgICBmIid7b3B0aW9uX29yX25hbWUubmFtZX0nIChpZD17aWQob3B0aW9uX29yX25hbWUpfSk+IgogICAgICAgICAgICBpZiBpc2luc3RhbmNlKG9wdGlvbl9vcl9uYW1lLCBPcHRpb24pCiAgICAgICAgICAgIGVsc2UgZiIne29wdGlvbl9vcl9uYW1lfSciCiAgICAgICAgKQogICAgICAgIHN1cGVyKCkuX19pbml0X18oZiJDb25maWcgb3B0aW9uIHtuYW1lfSBpcyB1bmtub3duIikKCgojIGVxPUZhbHNlIGJlY2F1c2UgT3B0aW9ucyBhcmUgdW5pcXVlLCBub3QgZnVuZ2libGUgb2JqZWN0cwpAZGF0YWNsYXNzKGZyb3plbj1UcnVlLCBlcT1GYWxzZSkKY2xhc3MgT3B0aW9uOgogICAgbmFtZTogc3RyCiAgICAiIiJVbmlxdWUgbmFtZSBpZGVudGlmeWluZyB0aGUgb3B0aW9uIChlLmcuIHBhY2thZ2UubW9kdWxlOk1ZX09QVElPTikuIiIiCiAgICBoZWxwOiBzdHIKICAgICIiIkhlbHAgdGV4dCBmb3IgdGhpcyBvcHRpb24uIiIiCiAgICBkZWZhdWx0OiBBbnkKICAgICIiIkRlZmF1bHQgdmFsdWUgZm9yIHRoaXMgb3B0aW9uLiIiIgogICAgcGFyc2U6IENhbGxhYmxlW1tzdHJdLCBBbnldCiAgICAiIiJUdXJuIGlucHV0IChlLmcuIHN0cmluZykgaW50byBwcm9wZXIgdHlwZS4gT25seSB3aGVuIHJlYWRpbmcgZnJvbSBmaWxlLiIiIgogICAgdmFsaWRhdGU6IE9wdGlvbmFsW0NhbGxhYmxlW1tBbnldLCBib29sXV0gPSBOb25lCiAgICAiIiJSZXR1cm4gdHJ1ZSBpZiB0aGUgZ2l2ZW4gdmFsdWUgaXMgYW4gYWNjZXB0YWJsZSB2YWx1ZS4iIiIKCiAgICBAc3RhdGljbWV0aG9kCiAgICBkZWYgcGFyc2Vfb3B0aW9uYWxfYm9vbCh2OiBzdHIpIC0+IE9wdGlvbmFsW2Jvb2xdOgogICAgICAgIHMgPSBzdHIodikubG93ZXIoKQogICAgICAgIGlmIHMgaW4geyIwIiwgIm5vIiwgImZhbHNlIn06CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIGlmIHMgaW4geyIxIiwgInllcyIsICJ0cnVlIn06CiAgICAgICAgICAgIHJldHVybiBUcnVlCiAgICAgICAgaWYgcyBpbiB7ImF1dG8iLCAibm9uZSJ9OgogICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoImludmFsaWQgb3B0aW9uYWwgYm9vbDoge3Yhcn0iKQoKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiB2YWxpZGF0ZV9vcHRpb25hbF9ib29sKHY6IEFueSkgLT4gYm9vbDoKICAgICAgICByZXR1cm4gdiBpcyBOb25lIG9yIGlzaW5zdGFuY2UodiwgYm9vbCkKCgpjbGFzcyBPcHRpb25zKE1hcHBpbmcpOgogICAgIiIiUmVnaXN0cnkgb2YgYXZhaWxhYmxlIG9wdGlvbnMgZm9yIGEgZ2l2ZW4gY29uZmlnIHN5c3RlbS4KCiAgICBEZWZpbmUgbmV3IG9wdGlvbnMgdXNpbmcgdGhlIDptZXRoOmByZWdpc3RlcigpYCBtZXRob2QuCgogICAgQWNjZXNzIGV4aXN0aW5nIG9wdGlvbnMgdXNpbmcgdGhlIE1hcHBpbmcgaW50ZXJmYWNlLgogICAgIiIiCgogICAgX19vcHRpb25zOiBEaWN0W3N0ciwgT3B0aW9uXQoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBvdGhlcjogIk9wdGlvbnMiID0gTm9uZSkgLT4gTm9uZToKICAgICAgICBzZWxmLl9fb3B0aW9ucyA9IHt9CiAgICAgICAgaWYgb3RoZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGZvciBvcHRpb24gaW4gb3RoZXIudmFsdWVzKCk6CiAgICAgICAgICAgICAgICBzZWxmLnJlZ2lzdGVyX29wdGlvbihvcHRpb24pCgogICAgZGVmIHJlZ2lzdGVyKAogICAgICAgIHNlbGYsCiAgICAgICAgbmFtZTogc3RyLAogICAgICAgIGhlbHA6IHN0ciwKICAgICAgICBkZWZhdWx0OiBBbnksCiAgICAgICAgcGFyc2U6IENhbGxhYmxlW1tzdHJdLCBBbnldLAogICAgICAgIHZhbGlkYXRlOiBPcHRpb25hbFtDYWxsYWJsZVtbQW55XSwgYm9vbF1dID0gTm9uZSwKICAgICkgLT4gT3B0aW9uOgogICAgICAgICIiIkNyZWF0ZSBhbmQgcmVnaXN0ZXIgYSBuZXcgb3B0aW9uLiIiIgogICAgICAgIHJldHVybiBzZWxmLnJlZ2lzdGVyX29wdGlvbihPcHRpb24obmFtZSwgaGVscCwgZGVmYXVsdCwgcGFyc2UsIHZhbGlkYXRlKSkKCiAgICBkZWYgcmVnaXN0ZXJfb3B0aW9uKHNlbGYsIG9wdGlvbjogT3B0aW9uKSAtPiBPcHRpb246CiAgICAgICAgIiIiUmVnaXN0ZXIgYSBuZXcgb3B0aW9uLiIiIgogICAgICAgIG5hbWUgPSBvcHRpb24ubmFtZQogICAgICAgIGlmIG5hbWUgaW4gc2VsZi5fX29wdGlvbnM6CiAgICAgICAgICAgIHJhaXNlIENvbmZpZ0FscmVhZHlSZWdpc3RlcmVkRXJyb3IobmFtZSkKICAgICAgICBzZWxmLl9fb3B0aW9uc1tuYW1lXSA9IG9wdGlvbgogICAgICAgIHJldHVybiBvcHRpb24KCiAgICBkZWYgaXNfcmVnaXN0ZXJlZChzZWxmLCBvcHRpb246IE9wdGlvbikgLT4gYm9vbDoKICAgICAgICAiIiJSZXR1cm4gVHJ1ZSBpZiB0aGUgc2FtZSBvcHRpb24gb2JqZWN0IGlzIGFscmVhZHkgcmVnaXN0ZXJlZC4iIiIKICAgICAgICByZXR1cm4gc2VsZi5fX29wdGlvbnMuZ2V0KG9wdGlvbi5uYW1lKSBpcyBvcHRpb24KCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwga2V5OiBzdHIpIC0+IE9wdGlvbjoKICAgICAgICByZXR1cm4gc2VsZi5fX29wdGlvbnMuX19nZXRpdGVtX18oa2V5KQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKSAtPiBJdGVyYXRvcltzdHJdOgogICAgICAgIHJldHVybiBzZWxmLl9fb3B0aW9ucy5fX2l0ZXJfXygpCgogICAgZGVmIF9fbGVuX18oc2VsZikgLT4gaW50OgogICAgICAgIHJldHVybiBzZWxmLl9fb3B0aW9ucy5fX2xlbl9fKCkKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIGYie3NlbGYuX19jbGFzc19fLl9fbmFtZV9ffSh7e1xuIgogICAgICAgICAgICArICIiLmpvaW4oCiAgICAgICAgICAgICAgICBmIiAgICB7ayFyfTogT3B0aW9uKGRlZmF1bHQ9e3YuZGVmYXVsdCFyfSwgLi4uKSxcbiIKICAgICAgICAgICAgICAgIGZvciBrLCB2IGluIHNlbGYuX19vcHRpb25zLml0ZW1zKCkKICAgICAgICAgICAgKQogICAgICAgICAgICArICJ9KSIKICAgICAgICApCgoKX1VTRV9HTE9CQUxfREVGQVVMVCA9IG9iamVjdCgpCgoKY2xhc3MgQWJzdHJhY3RDb25maWcoTXV0YWJsZU1hcHBpbmcpOgogICAgIiIiCiAgICBDcmVhdGUgYSBzZXQgb2YgY29uZmlnIHZhbHVlcywgb3B0aW9uYWxseSBwcmUtZmlsbGVkIHdpdGggdmFsdWVzIGZyb20KICAgIHRoZSBnaXZlbiBkaWN0aW9uYXJ5IG9yIHByZS1leGlzdGluZyBjb25maWcgb2JqZWN0LgoKICAgIFRoZSBjbGFzcyBpbXBsZW1lbnRzIHRoZSBNdXRhYmxlTWFwcGluZyBwcm90b2NvbCBrZXllZCBieSBvcHRpb24gbmFtZSAoYHN0cmApLgogICAgRm9yIGNvbnZlbmllbmNlIGl0cyBtZXRob2RzIGFjY2VwdCBlaXRoZXIgT3B0aW9uIG9yIHN0ciBhcyB0aGUga2V5IHBhcmFtZXRlci4KCiAgICAuLiBzZWVhbHNvOjogOm1ldGg6YHNldCgpYAoKICAgIFRoaXMgY29uZmlnIGNsYXNzIGlzIGFic3RyYWN0IGJlY2F1c2UgaXQgbmVlZHMgaXRzIGBgb3B0aW9uc2BgIGNsYXNzCiAgICB2YXIgdG8gYmUgc2V0IHRvIGFuIGluc3RhbmNlIG9mIDpjbGFzczpgT3B0aW9uc2AgYmVmb3JlIGl0IGNhbiBiZQogICAgaW5zdGFuY2lhdGVkIGFuZCB1c2VkLgoKICAgIC4uIGNvZGU6OiBweXRob24KCiAgICAgICAgY2xhc3MgTXlDb25maWcoQWJzdHJhY3RDb25maWcpOgogICAgICAgICAgICBvcHRpb25zID0gT3B0aW9ucygpCgogICAgICAgIE15Q29uZmlnLnJlZ2lzdGVyX29wdGlvbiggInRlc3Q6b3B0aW9uX25hbWUiLCAiVGhpcyBpcyBhbiBvcHRpb24iLCAwLCBpbnQsIGxhbWJkYSB2OiBpc2luc3RhbmNlKHYsIGludCkpCgogICAgICAgIGNmZyA9IE15Q29uZmlnKHsidGVzdDpvcHRpb25fbmFtZSI6IDEwfSkKCiAgICAiIiIKCiAgICBvcHRpb25zOiBDbGFzc1ZhcltPcHRpb25zXQoKICAgIEBjbGFzc21ldGhvZAogICAgZGVmIHJlZ2lzdGVyX29wdGlvbigKICAgICAgICBjbHMsCiAgICAgICAgbmFtZTogc3RyLAogICAgICAgIGhlbHA6IHN0ciwKICAgICAgICBkZWZhdWx0OiBBbnksCiAgICAgICAgcGFyc2U6IENhbGxhYmxlW1tzdHJdLCBBbnldLAogICAgICAgIHZhbGlkYXRlOiBPcHRpb25hbFtDYWxsYWJsZVtbQW55XSwgYm9vbF1dID0gTm9uZSwKICAgICkgLT4gT3B0aW9uOgogICAgICAgICIiIlJlZ2lzdGVyIGFuIGF2YWlsYWJsZSBvcHRpb24gaW4gdGhpcyBjb25maWcgc3lzdGVtLiIiIgogICAgICAgIHJldHVybiBjbHMub3B0aW9ucy5yZWdpc3RlcigKICAgICAgICAgICAgbmFtZSwgaGVscD1oZWxwLCBkZWZhdWx0PWRlZmF1bHQsIHBhcnNlPXBhcnNlLCB2YWxpZGF0ZT12YWxpZGF0ZQogICAgICAgICkKCiAgICBfdmFsdWVzOiBEaWN0W3N0ciwgQW55XQoKICAgIGRlZiBfX2luaXRfXygKICAgICAgICBzZWxmLAogICAgICAgIHZhbHVlczogVW5pb25bCiAgICAgICAgICAgIEFic3RyYWN0Q29uZmlnLCBEaWN0W1VuaW9uW09wdGlvbiwgc3RyXSwgQW55XSwgTWFwcGluZ1tzdHIsIEFueV0KICAgICAgICBdID0ge30sCiAgICAgICAgcGFyc2VfdmFsdWVzOiBib29sID0gRmFsc2UsCiAgICAgICAgc2tpcF91bmtub3duOiBib29sID0gRmFsc2UsCiAgICApOgogICAgICAgIHNlbGYuX3ZhbHVlcyA9IHt9CiAgICAgICAgdmFsdWVzX2RpY3QgPSB2YWx1ZXMuX3ZhbHVlcyBpZiBpc2luc3RhbmNlKHZhbHVlcywgQWJzdHJhY3RDb25maWcpIGVsc2UgdmFsdWVzCiAgICAgICAgZm9yIG5hbWUsIHZhbHVlIGluIHZhbHVlc19kaWN0Lml0ZW1zKCk6CiAgICAgICAgICAgIHNlbGYuc2V0KG5hbWUsIHZhbHVlLCBwYXJzZV92YWx1ZXMsIHNraXBfdW5rbm93bikKCiAgICBkZWYgX3Jlc29sdmVfb3B0aW9uKHNlbGYsIG9wdGlvbl9vcl9uYW1lOiBVbmlvbltPcHRpb24sIHN0cl0pIC0+IE9wdGlvbjoKICAgICAgICBpZiBpc2luc3RhbmNlKG9wdGlvbl9vcl9uYW1lLCBPcHRpb24pOgogICAgICAgICAgICBvcHRpb24gPSBvcHRpb25fb3JfbmFtZQogICAgICAgICAgICBpZiBub3Qgc2VsZi5vcHRpb25zLmlzX3JlZ2lzdGVyZWQob3B0aW9uKToKICAgICAgICAgICAgICAgIHJhaXNlIENvbmZpZ1Vua25vd25PcHRpb25FcnJvcihvcHRpb24pCiAgICAgICAgICAgIHJldHVybiBvcHRpb24KICAgICAgICBlbGlmIGlzaW5zdGFuY2Uob3B0aW9uX29yX25hbWUsIHN0cik6CiAgICAgICAgICAgIG5hbWUgPSBvcHRpb25fb3JfbmFtZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICByZXR1cm4gc2VsZi5vcHRpb25zW25hbWVdCiAgICAgICAgICAgIGV4Y2VwdCBLZXlFcnJvcjoKICAgICAgICAgICAgICAgIHJhaXNlIENvbmZpZ1Vua25vd25PcHRpb25FcnJvcihuYW1lKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIFR5cGVFcnJvcigKICAgICAgICAgICAgICAgICJleHBlY3RlZCBPcHRpb24gb3Igc3RyLCBmb3VuZCAiCiAgICAgICAgICAgICAgICBmInt0eXBlKG9wdGlvbl9vcl9uYW1lKS5fX25hbWVfX306IHtvcHRpb25fb3JfbmFtZSFyfSIKICAgICAgICAgICAgKQoKICAgIGRlZiBzZXQoCiAgICAgICAgc2VsZiwKICAgICAgICBvcHRpb25fb3JfbmFtZTogVW5pb25bT3B0aW9uLCBzdHJdLAogICAgICAgIHZhbHVlOiBBbnksCiAgICAgICAgcGFyc2VfdmFsdWVzOiBib29sID0gRmFsc2UsCiAgICAgICAgc2tpcF91bmtub3duOiBib29sID0gRmFsc2UsCiAgICApOgogICAgICAgICIiIlNldCB0aGUgdmFsdWUgb2YgYW4gb3B0aW9uLgoKICAgICAgICBBcmdzOgogICAgICAgICAgICAqIGBvcHRpb25fb3JfbmFtZWA6IGFuIGBPcHRpb25gIG9iamVjdCBvciBpdHMgbmFtZSAoYHN0cmApLgogICAgICAgICAgICAqIGB2YWx1ZWA6IHRoZSB2YWx1ZSB0byBiZSBhc3NpZ25lZCB0byBnaXZlbiBvcHRpb24uCiAgICAgICAgICAgICogYHBhcnNlX3ZhbHVlc2A6IHBhcnNlIHRoZSBjb25maWd1cmF0aW9uIHZhbHVlIGZyb20gYSBzdHJpbmcgaW50bwogICAgICAgICAgICAgICAgaXRzIHByb3BlciB0eXBlLCBhcyBwZXIgaXRzIGBPcHRpb25gIG9iamVjdC4gVGhlIGRlZmF1bHQKICAgICAgICAgICAgICAgIGJlaGF2aW9yIGlzIHRvIHJhaXNlIGBDb25maWdWYWx1ZVZhbGlkYXRpb25FcnJvcmAgd2hlbiB0aGUgdmFsdWUKICAgICAgICAgICAgICAgIGlzIG5vdCBvZiB0aGUgcmlnaHQgdHlwZS4gVXNlZnVsIHdoZW4gcmVhZGluZyBvcHRpb25zIGZyb20gYQogICAgICAgICAgICAgICAgZmlsZSB0eXBlIHRoYXQgZG9lc24ndCBzdXBwb3J0IGFzIG1hbnkgdHlwZXMgYXMgUHl0aG9uLgogICAgICAgICAgICAqIGBza2lwX3Vua25vd25gOiBza2lwIHVua25vd24gY29uZmlndXJhdGlvbiBvcHRpb25zLiBUaGUgZGVmYXVsdAogICAgICAgICAgICAgICAgYmVoYXZpb3VyIGlzIHRvIHJhaXNlIGBDb25maWdVbmtub3duT3B0aW9uRXJyb3JgLiBVc2VmdWwgd2hlbgogICAgICAgICAgICAgICAgcmVhZGluZyBvcHRpb25zIGZyb20gYSBjb25maWd1cmF0aW9uIGZpbGUgdGhhdCBoYXMgZXh0cmEgZW50cmllcwogICAgICAgICAgICAgICAgKGUuZy4gZm9yIGEgbGF0ZXIgdmVyc2lvbiBvZiBmb250VG9vbHMpCiAgICAgICAgIiIiCiAgICAgICAgdHJ5OgogICAgICAgICAgICBvcHRpb24gPSBzZWxmLl9yZXNvbHZlX29wdGlvbihvcHRpb25fb3JfbmFtZSkKICAgICAgICBleGNlcHQgQ29uZmlnVW5rbm93bk9wdGlvbkVycm9yIGFzIGU6CiAgICAgICAgICAgIGlmIHNraXBfdW5rbm93bjoKICAgICAgICAgICAgICAgIGxvZy5kZWJ1ZyhzdHIoZSkpCiAgICAgICAgICAgICAgICByZXR1cm4KICAgICAgICAgICAgcmFpc2UKCiAgICAgICAgIyBDYW4gYmUgdXNlZnVsIGlmIHRoZSB2YWx1ZXMgY29tZSBmcm9tIGEgc291cmNlIHRoYXQgZG9lc24ndCBoYXZlCiAgICAgICAgIyBzdHJpY3QgdHlwaW5nICguaW5pIGZpbGU/IFRlcm1pbmFsIGlucHV0PykKICAgICAgICBpZiBwYXJzZV92YWx1ZXM6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHZhbHVlID0gb3B0aW9uLnBhcnNlKHZhbHVlKQogICAgICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgICAgICByYWlzZSBDb25maWdWYWx1ZVBhcnNpbmdFcnJvcihvcHRpb24ubmFtZSwgdmFsdWUpIGZyb20gZQoKICAgICAgICBpZiBvcHRpb24udmFsaWRhdGUgaXMgbm90IE5vbmUgYW5kIG5vdCBvcHRpb24udmFsaWRhdGUodmFsdWUpOgogICAgICAgICAgICByYWlzZSBDb25maWdWYWx1ZVZhbGlkYXRpb25FcnJvcihvcHRpb24ubmFtZSwgdmFsdWUpCgogICAgICAgIHNlbGYuX3ZhbHVlc1tvcHRpb24ubmFtZV0gPSB2YWx1ZQoKICAgIGRlZiBnZXQoCiAgICAgICAgc2VsZiwgb3B0aW9uX29yX25hbWU6IFVuaW9uW09wdGlvbiwgc3RyXSwgZGVmYXVsdDogQW55ID0gX1VTRV9HTE9CQUxfREVGQVVMVAogICAgKSAtPiBBbnk6CiAgICAgICAgIiIiCiAgICAgICAgR2V0IHRoZSB2YWx1ZSBvZiBhbiBvcHRpb24uIFRoZSB2YWx1ZSB3aGljaCBpcyByZXR1cm5lZCBpcyB0aGUgZmlyc3QKICAgICAgICBwcm92aWRlZCBhbW9uZzoKCiAgICAgICAgMS4gYSB1c2VyLXByb3ZpZGVkIHZhbHVlIGluIHRoZSBvcHRpb25zJ3MgYGBzZWxmLl92YWx1ZXNgYCBkaWN0CiAgICAgICAgMi4gYSBjYWxsZXItcHJvdmlkZWQgZGVmYXVsdCB2YWx1ZSB0byB0aGlzIG1ldGhvZCBjYWxsCiAgICAgICAgMy4gdGhlIGdsb2JhbCBkZWZhdWx0IGZvciB0aGUgb3B0aW9uIHByb3ZpZGVkIGluIGBgZm9udFRvb2xzLmNvbmZpZ2BgCgogICAgICAgIFRoaXMgaXMgdG8gcHJvdmlkZSB0aGUgYWJpbGl0eSB0byBtaWdyYXRlIHByb2dyZXNzaXZlbHkgZnJvbSBjb25maWcKICAgICAgICBvcHRpb25zIHBhc3NlZCBhcyBhcmd1bWVudHMgdG8gZm9udFRvb2xzIEFQSXMgdG8gY29uZmlnIG9wdGlvbnMgcmVhZAogICAgICAgIGZyb20gdGhlIGN1cnJlbnQgVFRGb250LCBlLmcuCgogICAgICAgIC4uIGNvZGU6OiBweXRob24KCiAgICAgICAgICAgIGRlZiBmb250VG9vbHNBUEkoZm9udCwgc29tZV9vcHRpb24pOgogICAgICAgICAgICAgICAgdmFsdWUgPSBmb250LmNmZy5nZXQoInNvbWVMaWIubW9kdWxlOlNPTUVfT1BUSU9OIiwgc29tZV9vcHRpb24pCiAgICAgICAgICAgICAgICAjIHVzZSB2YWx1ZQoKICAgICAgICBUaGF0IHdheSwgdGhlIGZ1bmN0aW9uIHdpbGwgd29yayB0aGUgc2FtZSBmb3IgdXNlcnMgb2YgdGhlIEFQSSB0aGF0CiAgICAgICAgc3RpbGwgcGFzcyB0aGUgb3B0aW9uIHRvIHRoZSBmdW5jdGlvbiBjYWxsLCBidXQgd2lsbCBmYXZvdXIgdGhlIG5ldwogICAgICAgIGNvbmZpZyBtZWNoYW5pc20gaWYgdGhlIGdpdmVuIGZvbnQgc3BlY2lmaWVzIGEgdmFsdWUgZm9yIHRoYXQgb3B0aW9uLgogICAgICAgICIiIgogICAgICAgIG9wdGlvbiA9IHNlbGYuX3Jlc29sdmVfb3B0aW9uKG9wdGlvbl9vcl9uYW1lKQogICAgICAgIGlmIG9wdGlvbi5uYW1lIGluIHNlbGYuX3ZhbHVlczoKICAgICAgICAgICAgcmV0dXJuIHNlbGYuX3ZhbHVlc1tvcHRpb24ubmFtZV0KICAgICAgICBpZiBkZWZhdWx0IGlzIG5vdCBfVVNFX0dMT0JBTF9ERUZBVUxUOgogICAgICAgICAgICByZXR1cm4gZGVmYXVsdAogICAgICAgIHJldHVybiBvcHRpb24uZGVmYXVsdAoKICAgIGRlZiBjb3B5KHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLl9fY2xhc3NfXyhzZWxmLl92YWx1ZXMpCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIG9wdGlvbl9vcl9uYW1lOiBVbmlvbltPcHRpb24sIHN0cl0pIC0+IEFueToKICAgICAgICByZXR1cm4gc2VsZi5nZXQob3B0aW9uX29yX25hbWUpCgogICAgZGVmIF9fc2V0aXRlbV9fKHNlbGYsIG9wdGlvbl9vcl9uYW1lOiBVbmlvbltPcHRpb24sIHN0cl0sIHZhbHVlOiBBbnkpIC0+IE5vbmU6CiAgICAgICAgcmV0dXJuIHNlbGYuc2V0KG9wdGlvbl9vcl9uYW1lLCB2YWx1ZSkKCiAgICBkZWYgX19kZWxpdGVtX18oc2VsZiwgb3B0aW9uX29yX25hbWU6IFVuaW9uW09wdGlvbiwgc3RyXSkgLT4gTm9uZToKICAgICAgICBvcHRpb24gPSBzZWxmLl9yZXNvbHZlX29wdGlvbihvcHRpb25fb3JfbmFtZSkKICAgICAgICBkZWwgc2VsZi5fdmFsdWVzW29wdGlvbi5uYW1lXQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKSAtPiBJdGVyYWJsZVtzdHJdOgogICAgICAgIHJldHVybiBzZWxmLl92YWx1ZXMuX19pdGVyX18oKQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpIC0+IGludDoKICAgICAgICByZXR1cm4gbGVuKHNlbGYuX3ZhbHVlcykKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiBmIntzZWxmLl9fY2xhc3NfXy5fX25hbWVfX30oe3JlcHIoc2VsZi5fdmFsdWVzKX0pIgo=
+"""
+Code of the config system; not related to fontTools or fonts in particular.
+
+The options that are specific to fontTools are in :mod:`fontTools.config`.
+
+To create your own config system, you need to create an instance of
+:class:`Options`, and a subclass of :class:`AbstractConfig` with its
+``options`` class variable set to your instance of Options.
+
+"""
+
+from __future__ import annotations
+
+import logging
+from dataclasses import dataclass
+from typing import (
+    Any,
+    Callable,
+    ClassVar,
+    Dict,
+    Iterable,
+    Mapping,
+    MutableMapping,
+    Optional,
+    Set,
+    Union,
+)
+
+log = logging.getLogger(__name__)
+
+__all__ = [
+    "AbstractConfig",
+    "ConfigAlreadyRegisteredError",
+    "ConfigError",
+    "ConfigUnknownOptionError",
+    "ConfigValueParsingError",
+    "ConfigValueValidationError",
+    "Option",
+    "Options",
+]
+
+
+class ConfigError(Exception):
+    """Base exception for the config module."""
+
+
+class ConfigAlreadyRegisteredError(ConfigError):
+    """Raised when a module tries to register a configuration option that
+    already exists.
+
+    Should not be raised too much really, only when developing new fontTools
+    modules.
+    """
+
+    def __init__(self, name):
+        super().__init__(f"Config option {name} is already registered.")
+
+
+class ConfigValueParsingError(ConfigError):
+    """Raised when a configuration value cannot be parsed."""
+
+    def __init__(self, name, value):
+        super().__init__(
+            f"Config option {name}: value cannot be parsed (given {repr(value)})"
+        )
+
+
+class ConfigValueValidationError(ConfigError):
+    """Raised when a configuration value cannot be validated."""
+
+    def __init__(self, name, value):
+        super().__init__(
+            f"Config option {name}: value is invalid (given {repr(value)})"
+        )
+
+
+class ConfigUnknownOptionError(ConfigError):
+    """Raised when a configuration option is unknown."""
+
+    def __init__(self, option_or_name):
+        name = (
+            f"'{option_or_name.name}' (id={id(option_or_name)})>"
+            if isinstance(option_or_name, Option)
+            else f"'{option_or_name}'"
+        )
+        super().__init__(f"Config option {name} is unknown")
+
+
+# eq=False because Options are unique, not fungible objects
+@dataclass(frozen=True, eq=False)
+class Option:
+    name: str
+    """Unique name identifying the option (e.g. package.module:MY_OPTION)."""
+    help: str
+    """Help text for this option."""
+    default: Any
+    """Default value for this option."""
+    parse: Callable[[str], Any]
+    """Turn input (e.g. string) into proper type. Only when reading from file."""
+    validate: Optional[Callable[[Any], bool]] = None
+    """Return true if the given value is an acceptable value."""
+
+    @staticmethod
+    def parse_optional_bool(v: str) -> Optional[bool]:
+        s = str(v).lower()
+        if s in {"0", "no", "false"}:
+            return False
+        if s in {"1", "yes", "true"}:
+            return True
+        if s in {"auto", "none"}:
+            return None
+        raise ValueError("invalid optional bool: {v!r}")
+
+    @staticmethod
+    def validate_optional_bool(v: Any) -> bool:
+        return v is None or isinstance(v, bool)
+
+
+class Options(Mapping):
+    """Registry of available options for a given config system.
+
+    Define new options using the :meth:`register()` method.
+
+    Access existing options using the Mapping interface.
+    """
+
+    __options: Dict[str, Option]
+
+    def __init__(self, other: "Options" = None) -> None:
+        self.__options = {}
+        if other is not None:
+            for option in other.values():
+                self.register_option(option)
+
+    def register(
+        self,
+        name: str,
+        help: str,
+        default: Any,
+        parse: Callable[[str], Any],
+        validate: Optional[Callable[[Any], bool]] = None,
+    ) -> Option:
+        """Create and register a new option."""
+        return self.register_option(Option(name, help, default, parse, validate))
+
+    def register_option(self, option: Option) -> Option:
+        """Register a new option."""
+        name = option.name
+        if name in self.__options:
+            raise ConfigAlreadyRegisteredError(name)
+        self.__options[name] = option
+        return option
+
+    def is_registered(self, option: Option) -> bool:
+        """Return True if the same option object is already registered."""
+        return self.__options.get(option.name) is option
+
+    def __getitem__(self, key: str) -> Option:
+        return self.__options.__getitem__(key)
+
+    def __iter__(self) -> Iterator[str]:
+        return self.__options.__iter__()
+
+    def __len__(self) -> int:
+        return self.__options.__len__()
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}({{\n"
+            + "".join(
+                f"    {k!r}: Option(default={v.default!r}, ...),\n"
+                for k, v in self.__options.items()
+            )
+            + "})"
+        )
+
+
+_USE_GLOBAL_DEFAULT = object()
+
+
+class AbstractConfig(MutableMapping):
+    """
+    Create a set of config values, optionally pre-filled with values from
+    the given dictionary or pre-existing config object.
+
+    The class implements the MutableMapping protocol keyed by option name (`str`).
+    For convenience its methods accept either Option or str as the key parameter.
+
+    .. seealso:: :meth:`set()`
+
+    This config class is abstract because it needs its ``options`` class
+    var to be set to an instance of :class:`Options` before it can be
+    instanciated and used.
+
+    .. code:: python
+
+        class MyConfig(AbstractConfig):
+            options = Options()
+
+        MyConfig.register_option( "test:option_name", "This is an option", 0, int, lambda v: isinstance(v, int))
+
+        cfg = MyConfig({"test:option_name": 10})
+
+    """
+
+    options: ClassVar[Options]
+
+    @classmethod
+    def register_option(
+        cls,
+        name: str,
+        help: str,
+        default: Any,
+        parse: Callable[[str], Any],
+        validate: Optional[Callable[[Any], bool]] = None,
+    ) -> Option:
+        """Register an available option in this config system."""
+        return cls.options.register(
+            name, help=help, default=default, parse=parse, validate=validate
+        )
+
+    _values: Dict[str, Any]
+
+    def __init__(
+        self,
+        values: Union[
+            AbstractConfig, Dict[Union[Option, str], Any], Mapping[str, Any]
+        ] = {},
+        parse_values: bool = False,
+        skip_unknown: bool = False,
+    ):
+        self._values = {}
+        values_dict = values._values if isinstance(values, AbstractConfig) else values
+        for name, value in values_dict.items():
+            self.set(name, value, parse_values, skip_unknown)
+
+    def _resolve_option(self, option_or_name: Union[Option, str]) -> Option:
+        if isinstance(option_or_name, Option):
+            option = option_or_name
+            if not self.options.is_registered(option):
+                raise ConfigUnknownOptionError(option)
+            return option
+        elif isinstance(option_or_name, str):
+            name = option_or_name
+            try:
+                return self.options[name]
+            except KeyError:
+                raise ConfigUnknownOptionError(name)
+        else:
+            raise TypeError(
+                "expected Option or str, found "
+                f"{type(option_or_name).__name__}: {option_or_name!r}"
+            )
+
+    def set(
+        self,
+        option_or_name: Union[Option, str],
+        value: Any,
+        parse_values: bool = False,
+        skip_unknown: bool = False,
+    ):
+        """Set the value of an option.
+
+        Args:
+            * `option_or_name`: an `Option` object or its name (`str`).
+            * `value`: the value to be assigned to given option.
+            * `parse_values`: parse the configuration value from a string into
+                its proper type, as per its `Option` object. The default
+                behavior is to raise `ConfigValueValidationError` when the value
+                is not of the right type. Useful when reading options from a
+                file type that doesn't support as many types as Python.
+            * `skip_unknown`: skip unknown configuration options. The default
+                behaviour is to raise `ConfigUnknownOptionError`. Useful when
+                reading options from a configuration file that has extra entries
+                (e.g. for a later version of fontTools)
+        """
+        try:
+            option = self._resolve_option(option_or_name)
+        except ConfigUnknownOptionError as e:
+            if skip_unknown:
+                log.debug(str(e))
+                return
+            raise
+
+        # Can be useful if the values come from a source that doesn't have
+        # strict typing (.ini file? Terminal input?)
+        if parse_values:
+            try:
+                value = option.parse(value)
+            except Exception as e:
+                raise ConfigValueParsingError(option.name, value) from e
+
+        if option.validate is not None and not option.validate(value):
+            raise ConfigValueValidationError(option.name, value)
+
+        self._values[option.name] = value
+
+    def get(
+        self, option_or_name: Union[Option, str], default: Any = _USE_GLOBAL_DEFAULT
+    ) -> Any:
+        """
+        Get the value of an option. The value which is returned is the first
+        provided among:
+
+        1. a user-provided value in the options's ``self._values`` dict
+        2. a caller-provided default value to this method call
+        3. the global default for the option provided in ``fontTools.config``
+
+        This is to provide the ability to migrate progressively from config
+        options passed as arguments to fontTools APIs to config options read
+        from the current TTFont, e.g.
+
+        .. code:: python
+
+            def fontToolsAPI(font, some_option):
+                value = font.cfg.get("someLib.module:SOME_OPTION", some_option)
+                # use value
+
+        That way, the function will work the same for users of the API that
+        still pass the option to the function call, but will favour the new
+        config mechanism if the given font specifies a value for that option.
+        """
+        option = self._resolve_option(option_or_name)
+        if option.name in self._values:
+            return self._values[option.name]
+        if default is not _USE_GLOBAL_DEFAULT:
+            return default
+        return option.default
+
+    def copy(self):
+        return self.__class__(self._values)
+
+    def __getitem__(self, option_or_name: Union[Option, str]) -> Any:
+        return self.get(option_or_name)
+
+    def __setitem__(self, option_or_name: Union[Option, str], value: Any) -> None:
+        return self.set(option_or_name, value)
+
+    def __delitem__(self, option_or_name: Union[Option, str]) -> None:
+        option = self._resolve_option(option_or_name)
+        del self._values[option.name]
+
+    def __iter__(self) -> Iterable[str]:
+        return self._values.__iter__()
+
+    def __len__(self) -> int:
+        return len(self._values)
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({repr(self._values)})"

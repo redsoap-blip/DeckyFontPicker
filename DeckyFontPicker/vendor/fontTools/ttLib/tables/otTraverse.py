@@ -1,1 +1,162 @@
-IiIiTWV0aG9kcyBmb3IgdHJhdmVyc2luZyB0cmVlcyBvZiBvdERhdGEtZHJpdmVuIE9wZW5UeXBlIHRhYmxlcy4iIiIKCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlcXVlCmZyb20gdHlwaW5nIGltcG9ydCBDYWxsYWJsZSwgRGVxdWUsIEl0ZXJhYmxlLCBMaXN0LCBPcHRpb25hbCwgVHVwbGUKZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVGFibGUKCl9fYWxsX18gPSBbCiAgICAiYmZzX2Jhc2VfdGFibGUiLAogICAgImRmc19iYXNlX3RhYmxlIiwKICAgICJTdWJUYWJsZVBhdGgiLApdCgoKY2xhc3MgU3ViVGFibGVQYXRoKFR1cGxlW0Jhc2VUYWJsZS5TdWJUYWJsZUVudHJ5LCAuLi5dKToKICAgIGRlZiBfX3N0cl9fKHNlbGYpIC0+IHN0cjoKICAgICAgICBwYXRoX3BhcnRzID0gW10KICAgICAgICBmb3IgZW50cnkgaW4gc2VsZjoKICAgICAgICAgICAgcGF0aF9wYXJ0ID0gZW50cnkubmFtZQogICAgICAgICAgICBpZiBlbnRyeS5pbmRleCBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHBhdGhfcGFydCArPSBmIlt7ZW50cnkuaW5kZXh9XSIKICAgICAgICAgICAgcGF0aF9wYXJ0cy5hcHBlbmQocGF0aF9wYXJ0KQogICAgICAgIHJldHVybiAiLiIuam9pbihwYXRoX3BhcnRzKQoKCiMgR2l2ZW4gZihjdXJyZW50IGZyb250aWVyLCBuZXcgZW50cmllcykgYWRkIG5ldyBlbnRyaWVzIHRvIGZyb250aWVyCkFkZFRvRnJvbnRpZXJGbiA9IENhbGxhYmxlW1tEZXF1ZVtTdWJUYWJsZVBhdGhdLCBMaXN0W1N1YlRhYmxlUGF0aF1dLCBOb25lXQoKCmRlZiBkZnNfYmFzZV90YWJsZSgKICAgIHJvb3Q6IEJhc2VUYWJsZSwKICAgIHJvb3RfYWNjZXNzb3I6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgc2tpcF9yb290OiBib29sID0gRmFsc2UsCiAgICBwcmVkaWNhdGU6IE9wdGlvbmFsW0NhbGxhYmxlW1tTdWJUYWJsZVBhdGhdLCBib29sXV0gPSBOb25lLAogICAgaXRlcl9zdWJ0YWJsZXNfZm46IE9wdGlvbmFsWwogICAgICAgIENhbGxhYmxlW1tCYXNlVGFibGVdLCBJdGVyYWJsZVtCYXNlVGFibGUuU3ViVGFibGVFbnRyeV1dCiAgICBdID0gTm9uZSwKKSAtPiBJdGVyYWJsZVtTdWJUYWJsZVBhdGhdOgogICAgIiIiRGVwdGgtZmlyc3Qgc2VhcmNoIHRyZWUgb2YgQmFzZVRhYmxlcy4KCiAgICBBcmdzOgogICAgICAgIHJvb3QgKEJhc2VUYWJsZSk6IHRoZSByb290IG9mIHRoZSB0cmVlLgogICAgICAgIHJvb3RfYWNjZXNzb3IgKE9wdGlvbmFsW3N0cl0pOiBhdHRyaWJ1dGUgbmFtZSBmb3IgdGhlIHJvb3QgdGFibGUsIGlmIGFueSAobW9zdGx5CiAgICAgICAgICAgIHVzZWZ1bCBmb3IgZGVidWdnaW5nKS4KICAgICAgICBza2lwX3Jvb3QgKE9wdGlvbmFsW2Jvb2xdKTogaWYgVHJ1ZSwgdGhlIHJvb3QgaXRzZWxmIGlzIG5vdCB2aXNpdGVkLCBvbmx5IGl0cwogICAgICAgICAgICBjaGlsZHJlbi4KICAgICAgICBwcmVkaWNhdGUgKE9wdGlvbmFsW0NhbGxhYmxlW1tTdWJUYWJsZVBhdGhdLCBib29sXV0pOiBmdW5jdGlvbiB0byBmaWx0ZXIgb3V0CiAgICAgICAgICAgIHBhdGhzLiBJZiBUcnVlLCB0aGUgcGF0aCBpcyB5aWVsZGVkIGFuZCBpdHMgc3VidGFibGVzIGFyZSBhZGRlZCB0byB0aGUKICAgICAgICAgICAgcXVldWUuIElmIEZhbHNlLCB0aGUgcGF0aCBpcyBza2lwcGVkIGFuZCBpdHMgc3VidGFibGVzIGFyZSBub3QgdHJhdmVyc2VkLgogICAgICAgIGl0ZXJfc3VidGFibGVzX2ZuIChPcHRpb25hbFtDYWxsYWJsZVtbQmFzZVRhYmxlXSwgSXRlcmFibGVbQmFzZVRhYmxlLlN1YlRhYmxlRW50cnldXV0pOgogICAgICAgICAgICBmdW5jdGlvbiB0byBpdGVyYXRlIG92ZXIgc3VidGFibGVzIG9mIGEgdGFibGUuIElmIE5vbmUsIHRoZSBkZWZhdWx0CiAgICAgICAgICAgIEJhc2VUYWJsZS5pdGVyU3ViVGFibGVzKCkgaXMgdXNlZC4KCiAgICBZaWVsZHM6CiAgICAgICAgU3ViVGFibGVQYXRoOiB0dXBsZXMgb2YgQmFzZVRhYmxlLlN1YlRhYmxlRW50cnkobmFtZSwgdGFibGUsIGluZGV4KSBuYW1lZHR1cGxlcwogICAgICAgIGZvciBlYWNoIG9mIHRoZSBub2RlcyBpbiB0aGUgdHJlZS4gVGhlIGxhc3QgZW50cnkgaW4gYSBwYXRoIGlzIHRoZSBjdXJyZW50CiAgICAgICAgc3VidGFibGUsIHdoZXJlYXMgcHJlY2VkaW5nIG9uZXMgcmVmZXIgdG8gaXRzIHBhcmVudCB0YWJsZXMgYWxsIHRoZSB3YXkgdXAgdG8KICAgICAgICB0aGUgcm9vdC4KICAgICIiIgogICAgeWllbGQgZnJvbSBfdHJhdmVyc2Vfb3RfZGF0YSgKICAgICAgICByb290LAogICAgICAgIHJvb3RfYWNjZXNzb3IsCiAgICAgICAgc2tpcF9yb290LAogICAgICAgIHByZWRpY2F0ZSwKICAgICAgICBsYW1iZGEgZnJvbnRpZXIsIG5ldzogZnJvbnRpZXIuZXh0ZW5kbGVmdChyZXZlcnNlZChuZXcpKSwKICAgICAgICBpdGVyX3N1YnRhYmxlc19mbiwKICAgICkKCgpkZWYgYmZzX2Jhc2VfdGFibGUoCiAgICByb290OiBCYXNlVGFibGUsCiAgICByb290X2FjY2Vzc29yOiBPcHRpb25hbFtzdHJdID0gTm9uZSwKICAgIHNraXBfcm9vdDogYm9vbCA9IEZhbHNlLAogICAgcHJlZGljYXRlOiBPcHRpb25hbFtDYWxsYWJsZVtbU3ViVGFibGVQYXRoXSwgYm9vbF1dID0gTm9uZSwKICAgIGl0ZXJfc3VidGFibGVzX2ZuOiBPcHRpb25hbFsKICAgICAgICBDYWxsYWJsZVtbQmFzZVRhYmxlXSwgSXRlcmFibGVbQmFzZVRhYmxlLlN1YlRhYmxlRW50cnldXQogICAgXSA9IE5vbmUsCikgLT4gSXRlcmFibGVbU3ViVGFibGVQYXRoXToKICAgICIiIkJyZWFkdGgtZmlyc3Qgc2VhcmNoIHRyZWUgb2YgQmFzZVRhYmxlcy4KCiAgICBBcmdzOgogICAgICAgIHJvb3QKICAgICAgICAgICAgdGhlIHJvb3Qgb2YgdGhlIHRyZWUuCiAgICAgICAgcm9vdF9hY2Nlc3NvciAoT3B0aW9uYWxbc3RyXSk6IGF0dHJpYnV0ZSBuYW1lIGZvciB0aGUgcm9vdCB0YWJsZSwgaWYgYW55IChtb3N0bHkKICAgICAgICAgICAgdXNlZnVsIGZvciBkZWJ1Z2dpbmcpLgogICAgICAgIHNraXBfcm9vdCAoT3B0aW9uYWxbYm9vbF0pOiBpZiBUcnVlLCB0aGUgcm9vdCBpdHNlbGYgaXMgbm90IHZpc2l0ZWQsIG9ubHkgaXRzCiAgICAgICAgICAgIGNoaWxkcmVuLgogICAgICAgIHByZWRpY2F0ZSAoT3B0aW9uYWxbQ2FsbGFibGVbW1N1YlRhYmxlUGF0aF0sIGJvb2xdXSk6IGZ1bmN0aW9uIHRvIGZpbHRlciBvdXQKICAgICAgICAgICAgcGF0aHMuIElmIFRydWUsIHRoZSBwYXRoIGlzIHlpZWxkZWQgYW5kIGl0cyBzdWJ0YWJsZXMgYXJlIGFkZGVkIHRvIHRoZQogICAgICAgICAgICBxdWV1ZS4gSWYgRmFsc2UsIHRoZSBwYXRoIGlzIHNraXBwZWQgYW5kIGl0cyBzdWJ0YWJsZXMgYXJlIG5vdCB0cmF2ZXJzZWQuCiAgICAgICAgaXRlcl9zdWJ0YWJsZXNfZm4gKE9wdGlvbmFsW0NhbGxhYmxlW1tCYXNlVGFibGVdLCBJdGVyYWJsZVtCYXNlVGFibGUuU3ViVGFibGVFbnRyeV1dXSk6CiAgICAgICAgICAgIGZ1bmN0aW9uIHRvIGl0ZXJhdGUgb3ZlciBzdWJ0YWJsZXMgb2YgYSB0YWJsZS4gSWYgTm9uZSwgdGhlIGRlZmF1bHQKICAgICAgICAgICAgQmFzZVRhYmxlLml0ZXJTdWJUYWJsZXMoKSBpcyB1c2VkLgoKICAgIFlpZWxkczoKICAgICAgICBTdWJUYWJsZVBhdGg6IHR1cGxlcyBvZiBCYXNlVGFibGUuU3ViVGFibGVFbnRyeShuYW1lLCB0YWJsZSwgaW5kZXgpIG5hbWVkdHVwbGVzCiAgICAgICAgZm9yIGVhY2ggb2YgdGhlIG5vZGVzIGluIHRoZSB0cmVlLiBUaGUgbGFzdCBlbnRyeSBpbiBhIHBhdGggaXMgdGhlIGN1cnJlbnQKICAgICAgICBzdWJ0YWJsZSwgd2hlcmVhcyBwcmVjZWRpbmcgb25lcyByZWZlciB0byBpdHMgcGFyZW50IHRhYmxlcyBhbGwgdGhlIHdheSB1cCB0bwogICAgICAgIHRoZSByb290LgogICAgIiIiCiAgICB5aWVsZCBmcm9tIF90cmF2ZXJzZV9vdF9kYXRhKAogICAgICAgIHJvb3QsCiAgICAgICAgcm9vdF9hY2Nlc3NvciwKICAgICAgICBza2lwX3Jvb3QsCiAgICAgICAgcHJlZGljYXRlLAogICAgICAgIGxhbWJkYSBmcm9udGllciwgbmV3OiBmcm9udGllci5leHRlbmQobmV3KSwKICAgICAgICBpdGVyX3N1YnRhYmxlc19mbiwKICAgICkKCgpkZWYgX3RyYXZlcnNlX290X2RhdGEoCiAgICByb290OiBCYXNlVGFibGUsCiAgICByb290X2FjY2Vzc29yOiBPcHRpb25hbFtzdHJdLAogICAgc2tpcF9yb290OiBib29sLAogICAgcHJlZGljYXRlOiBPcHRpb25hbFtDYWxsYWJsZVtbU3ViVGFibGVQYXRoXSwgYm9vbF1dLAogICAgYWRkX3RvX2Zyb250aWVyX2ZuOiBBZGRUb0Zyb250aWVyRm4sCiAgICBpdGVyX3N1YnRhYmxlc19mbjogT3B0aW9uYWxbCiAgICAgICAgQ2FsbGFibGVbW0Jhc2VUYWJsZV0sIEl0ZXJhYmxlW0Jhc2VUYWJsZS5TdWJUYWJsZUVudHJ5XV0KICAgIF0gPSBOb25lLAopIC0+IEl0ZXJhYmxlW1N1YlRhYmxlUGF0aF06CiAgICAjIG5vIHZpc2l0ZWQgYmVjYXVzZSBnZW5lcmFsIG90RGF0YSBjYW5ub3QgY3ljbGUgKGZvcndhcmQtb2Zmc2V0IG9ubHkpCiAgICBpZiByb290X2FjY2Vzc29yIGlzIE5vbmU6CiAgICAgICAgcm9vdF9hY2Nlc3NvciA9IHR5cGUocm9vdCkuX19uYW1lX18KCiAgICBpZiBwcmVkaWNhdGUgaXMgTm9uZToKCiAgICAgICAgZGVmIHByZWRpY2F0ZShwYXRoKToKICAgICAgICAgICAgcmV0dXJuIFRydWUKCiAgICBpZiBpdGVyX3N1YnRhYmxlc19mbiBpcyBOb25lOgoKICAgICAgICBkZWYgaXRlcl9zdWJ0YWJsZXNfZm4odGFibGUpOgogICAgICAgICAgICByZXR1cm4gdGFibGUuaXRlclN1YlRhYmxlcygpCgogICAgZnJvbnRpZXI6IERlcXVlW1N1YlRhYmxlUGF0aF0gPSBkZXF1ZSgpCgogICAgcm9vdF9lbnRyeSA9IEJhc2VUYWJsZS5TdWJUYWJsZUVudHJ5KHJvb3RfYWNjZXNzb3IsIHJvb3QpCiAgICBpZiBub3Qgc2tpcF9yb290OgogICAgICAgIGZyb250aWVyLmFwcGVuZCgocm9vdF9lbnRyeSwpKQogICAgZWxzZToKICAgICAgICBhZGRfdG9fZnJvbnRpZXJfZm4oCiAgICAgICAgICAgIGZyb250aWVyLAogICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAocm9vdF9lbnRyeSwgc3VidGFibGVfZW50cnkpCiAgICAgICAgICAgICAgICBmb3Igc3VidGFibGVfZW50cnkgaW4gaXRlcl9zdWJ0YWJsZXNfZm4ocm9vdCkKICAgICAgICAgICAgXSwKICAgICAgICApCgogICAgd2hpbGUgZnJvbnRpZXI6CiAgICAgICAgIyBwYXRoIGlzICh2YWx1ZSwgYXR0cl9uYW1lKSB0dXBsZXMuIGF0dHJfbmFtZSBpcyBhdHRyIG9mIHBhcmVudCB0byBnZXQgdmFsdWUKICAgICAgICBwYXRoID0gZnJvbnRpZXIucG9wbGVmdCgpCiAgICAgICAgY3VycmVudCA9IHBhdGhbLTFdLnZhbHVlCgogICAgICAgIGlmIG5vdCBwcmVkaWNhdGUocGF0aCk6CiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIHlpZWxkIFN1YlRhYmxlUGF0aChwYXRoKQoKICAgICAgICBuZXdfZW50cmllcyA9IFsKICAgICAgICAgICAgcGF0aCArIChzdWJ0YWJsZV9lbnRyeSwpIGZvciBzdWJ0YWJsZV9lbnRyeSBpbiBpdGVyX3N1YnRhYmxlc19mbihjdXJyZW50KQogICAgICAgIF0KCiAgICAgICAgYWRkX3RvX2Zyb250aWVyX2ZuKGZyb250aWVyLCBuZXdfZW50cmllcykK
+"""Methods for traversing trees of otData-driven OpenType tables."""
+
+from collections import deque
+from typing import Callable, Deque, Iterable, List, Optional, Tuple
+from .otBase import BaseTable
+
+__all__ = [
+    "bfs_base_table",
+    "dfs_base_table",
+    "SubTablePath",
+]
+
+
+class SubTablePath(Tuple[BaseTable.SubTableEntry, ...]):
+    def __str__(self) -> str:
+        path_parts = []
+        for entry in self:
+            path_part = entry.name
+            if entry.index is not None:
+                path_part += f"[{entry.index}]"
+            path_parts.append(path_part)
+        return ".".join(path_parts)
+
+
+# Given f(current frontier, new entries) add new entries to frontier
+AddToFrontierFn = Callable[[Deque[SubTablePath], List[SubTablePath]], None]
+
+
+def dfs_base_table(
+    root: BaseTable,
+    root_accessor: Optional[str] = None,
+    skip_root: bool = False,
+    predicate: Optional[Callable[[SubTablePath], bool]] = None,
+    iter_subtables_fn: Optional[
+        Callable[[BaseTable], Iterable[BaseTable.SubTableEntry]]
+    ] = None,
+) -> Iterable[SubTablePath]:
+    """Depth-first search tree of BaseTables.
+
+    Args:
+        root (BaseTable): the root of the tree.
+        root_accessor (Optional[str]): attribute name for the root table, if any (mostly
+            useful for debugging).
+        skip_root (Optional[bool]): if True, the root itself is not visited, only its
+            children.
+        predicate (Optional[Callable[[SubTablePath], bool]]): function to filter out
+            paths. If True, the path is yielded and its subtables are added to the
+            queue. If False, the path is skipped and its subtables are not traversed.
+        iter_subtables_fn (Optional[Callable[[BaseTable], Iterable[BaseTable.SubTableEntry]]]):
+            function to iterate over subtables of a table. If None, the default
+            BaseTable.iterSubTables() is used.
+
+    Yields:
+        SubTablePath: tuples of BaseTable.SubTableEntry(name, table, index) namedtuples
+        for each of the nodes in the tree. The last entry in a path is the current
+        subtable, whereas preceding ones refer to its parent tables all the way up to
+        the root.
+    """
+    yield from _traverse_ot_data(
+        root,
+        root_accessor,
+        skip_root,
+        predicate,
+        lambda frontier, new: frontier.extendleft(reversed(new)),
+        iter_subtables_fn,
+    )
+
+
+def bfs_base_table(
+    root: BaseTable,
+    root_accessor: Optional[str] = None,
+    skip_root: bool = False,
+    predicate: Optional[Callable[[SubTablePath], bool]] = None,
+    iter_subtables_fn: Optional[
+        Callable[[BaseTable], Iterable[BaseTable.SubTableEntry]]
+    ] = None,
+) -> Iterable[SubTablePath]:
+    """Breadth-first search tree of BaseTables.
+
+    Args:
+        root
+            the root of the tree.
+        root_accessor (Optional[str]): attribute name for the root table, if any (mostly
+            useful for debugging).
+        skip_root (Optional[bool]): if True, the root itself is not visited, only its
+            children.
+        predicate (Optional[Callable[[SubTablePath], bool]]): function to filter out
+            paths. If True, the path is yielded and its subtables are added to the
+            queue. If False, the path is skipped and its subtables are not traversed.
+        iter_subtables_fn (Optional[Callable[[BaseTable], Iterable[BaseTable.SubTableEntry]]]):
+            function to iterate over subtables of a table. If None, the default
+            BaseTable.iterSubTables() is used.
+
+    Yields:
+        SubTablePath: tuples of BaseTable.SubTableEntry(name, table, index) namedtuples
+        for each of the nodes in the tree. The last entry in a path is the current
+        subtable, whereas preceding ones refer to its parent tables all the way up to
+        the root.
+    """
+    yield from _traverse_ot_data(
+        root,
+        root_accessor,
+        skip_root,
+        predicate,
+        lambda frontier, new: frontier.extend(new),
+        iter_subtables_fn,
+    )
+
+
+def _traverse_ot_data(
+    root: BaseTable,
+    root_accessor: Optional[str],
+    skip_root: bool,
+    predicate: Optional[Callable[[SubTablePath], bool]],
+    add_to_frontier_fn: AddToFrontierFn,
+    iter_subtables_fn: Optional[
+        Callable[[BaseTable], Iterable[BaseTable.SubTableEntry]]
+    ] = None,
+) -> Iterable[SubTablePath]:
+    # no visited because general otData cannot cycle (forward-offset only)
+    if root_accessor is None:
+        root_accessor = type(root).__name__
+
+    if predicate is None:
+
+        def predicate(path):
+            return True
+
+    if iter_subtables_fn is None:
+
+        def iter_subtables_fn(table):
+            return table.iterSubTables()
+
+    frontier: Deque[SubTablePath] = deque()
+
+    root_entry = BaseTable.SubTableEntry(root_accessor, root)
+    if not skip_root:
+        frontier.append((root_entry,))
+    else:
+        add_to_frontier_fn(
+            frontier,
+            [
+                (root_entry, subtable_entry)
+                for subtable_entry in iter_subtables_fn(root)
+            ],
+        )
+
+    while frontier:
+        # path is (value, attr_name) tuples. attr_name is attr of parent to get value
+        path = frontier.popleft()
+        current = path[-1].value
+
+        if not predicate(path):
+            continue
+
+        yield SubTablePath(path)
+
+        new_entries = [
+            path + (subtable_entry,) for subtable_entry in iter_subtables_fn(current)
+        ]
+
+        add_to_frontier_fn(frontier, new_entries)

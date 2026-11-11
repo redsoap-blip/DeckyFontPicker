@@ -1,1 +1,34 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwpmcm9tIHBhdGhsaWIgaW1wb3J0IFB1cmVQb3NpeFBhdGgKCmZyb20gLl9lcnJvcnMgaW1wb3J0IERpcmVjdG9yeU5vdEVtcHR5CgppZiB0eXBpbmcuVFlQRV9DSEVDS0lORzoKICAgIGZyb20gdHlwaW5nIGltcG9ydCBJTwoKICAgIGZyb20gLl9iYXNlIGltcG9ydCBGUwoKCmRlZiByZW1vdmVfZW1wdHkoZnM6IEZTLCBwYXRoOiBzdHIpOgogICAgIiIiUmVtb3ZlIGFsbCBlbXB0eSBwYXJlbnRzLiIiIgogICAgcGF0aCA9IFB1cmVQb3NpeFBhdGgocGF0aCkKICAgIHJvb3QgPSBQdXJlUG9zaXhQYXRoKCIvIikKICAgIHRyeToKICAgICAgICB3aGlsZSBwYXRoICE9IHJvb3Q6CiAgICAgICAgICAgIGZzLnJlbW92ZWRpcihwYXRoLmFzX3Bvc2l4KCkpCiAgICAgICAgICAgIHBhdGggPSBwYXRoLnBhcmVudAogICAgZXhjZXB0IERpcmVjdG9yeU5vdEVtcHR5OgogICAgICAgIHBhc3MKCgpkZWYgY29weV9maWxlX2RhdGEoc3JjX2ZpbGU6IElPLCBkc3RfZmlsZTogSU8sIGNodW5rX3NpemU6IGludCB8IE5vbmUgPSBOb25lKToKICAgICIiIkNvcHkgZGF0YSBmcm9tIG9uZSBmaWxlIG9iamVjdCB0byBhbm90aGVyLiIiIgogICAgX2NodW5rX3NpemUgPSAxMDI0ICogMTAyNCBpZiBjaHVua19zaXplIGlzIE5vbmUgZWxzZSBjaHVua19zaXplCiAgICByZWFkID0gc3JjX2ZpbGUucmVhZAogICAgd3JpdGUgPSBkc3RfZmlsZS53cml0ZQogICAgIyBpbiBpdGVyKGNhbGxhYmxlLCBzZW50aWxlbCksIGNhbGxhYmxlIGlzIGNhbGxlZCB1bnRpbCBpdCByZXR1cm5zIHRoZSBzZW50aW5lbDsKICAgICMgdGhpcyBhbGxvd3MgdG8gY29weSBgY2h1bmtfc2l6ZWAgYnl0ZXMgYXQgYSB0aW1lLgogICAgZm9yIGNodW5rIGluIGl0ZXIobGFtYmRhOiByZWFkKF9jaHVua19zaXplKSBvciBOb25lLCBOb25lKToKICAgICAgICB3cml0ZShjaHVuaykK
+from __future__ import annotations
+
+import typing
+from pathlib import PurePosixPath
+
+from ._errors import DirectoryNotEmpty
+
+if typing.TYPE_CHECKING:
+    from typing import IO
+
+    from ._base import FS
+
+
+def remove_empty(fs: FS, path: str):
+    """Remove all empty parents."""
+    path = PurePosixPath(path)
+    root = PurePosixPath("/")
+    try:
+        while path != root:
+            fs.removedir(path.as_posix())
+            path = path.parent
+    except DirectoryNotEmpty:
+        pass
+
+
+def copy_file_data(src_file: IO, dst_file: IO, chunk_size: int | None = None):
+    """Copy data from one file object to another."""
+    _chunk_size = 1024 * 1024 if chunk_size is None else chunk_size
+    read = src_file.read
+    write = dst_file.write
+    # in iter(callable, sentilel), callable is called until it returns the sentinel;
+    # this allows to copy `chunk_size` bytes at a time.
+    for chunk in iter(lambda: read(_chunk_size) or None, None):
+        write(chunk)

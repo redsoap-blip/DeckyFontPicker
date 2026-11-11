@@ -1,1 +1,112 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luLCBzdHJqb2luLCByZWFkSGV4CmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVExpYkVycm9yCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCgojIEFwcGxlJ3MgZG9jdW1lbnRhdGlvbiBvZiAnbWV0YSc6CiMgaHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2ZvbnRzL1RydWVUeXBlLVJlZmVyZW5jZS1NYW51YWwvUk0wNi9DaGFwNm1ldGEuaHRtbAoKTUVUQV9IRUFERVJfRk9STUFUID0gIiIiCiAgICA+ICMgYmlnIGVuZGlhbgogICAgdmVyc2lvbjogICAgIEwKICAgIGZsYWdzOiAgICAgICBMCiAgICBkYXRhT2Zmc2V0OiAgTAogICAgbnVtRGF0YU1hcHM6IEwKIiIiCgoKREFUQV9NQVBfRk9STUFUID0gIiIiCiAgICA+ICMgYmlnIGVuZGlhbgogICAgdGFnOiAgICAgICAgIDRzCiAgICBkYXRhT2Zmc2V0OiAgTAogICAgZGF0YUxlbmd0aDogIEwKIiIiCgoKY2xhc3MgdGFibGVfX21fZV90X2EoRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJNZXRhZGF0YSB0YWJsZQoKICAgIFRoZSBgYG1ldGFgYCB0YWJsZSBjb250YWlucyB2YXJpb3VzIG1ldGFkYXRhIHZhbHVlcyBmb3IgdGhlIGZvbnQuIEVhY2gKICAgIGNhdGVnb3J5IG9mIG1ldGFkYXRhIGluIHRoZSB0YWJsZSBpcyBpZGVudGlmaWVkIGJ5IGEgZm91ci1jaGFyYWN0ZXIgdGFnLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvbWV0YQogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHRhZz1Ob25lKToKICAgICAgICBEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlLl9faW5pdF9fKHNlbGYsIHRhZykKICAgICAgICBzZWxmLmRhdGEgPSB7fQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBoZWFkZXJTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShNRVRBX0hFQURFUl9GT1JNQVQpCiAgICAgICAgaGVhZGVyID0gc3N0cnVjdC51bnBhY2soTUVUQV9IRUFERVJfRk9STUFULCBkYXRhWzA6aGVhZGVyU2l6ZV0pCiAgICAgICAgaWYgaGVhZGVyWyJ2ZXJzaW9uIl0gIT0gMToKICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigidW5zdXBwb3J0ZWQgJ21ldGEnIHZlcnNpb24gJWQiICUgaGVhZGVyWyJ2ZXJzaW9uIl0pCiAgICAgICAgZGF0YU1hcFNpemUgPSBzc3RydWN0LmNhbGNzaXplKERBVEFfTUFQX0ZPUk1BVCkKICAgICAgICBmb3IgaSBpbiByYW5nZShoZWFkZXJbIm51bURhdGFNYXBzIl0pOgogICAgICAgICAgICBkYXRhTWFwT2Zmc2V0ID0gaGVhZGVyU2l6ZSArIGkgKiBkYXRhTWFwU2l6ZQogICAgICAgICAgICBkYXRhTWFwID0gc3N0cnVjdC51bnBhY2soCiAgICAgICAgICAgICAgICBEQVRBX01BUF9GT1JNQVQsIGRhdGFbZGF0YU1hcE9mZnNldCA6IGRhdGFNYXBPZmZzZXQgKyBkYXRhTWFwU2l6ZV0KICAgICAgICAgICAgKQogICAgICAgICAgICB0YWcgPSBkYXRhTWFwWyJ0YWciXQogICAgICAgICAgICBvZmZzZXQgPSBkYXRhTWFwWyJkYXRhT2Zmc2V0Il0KICAgICAgICAgICAgc2VsZi5kYXRhW3RhZ10gPSBkYXRhW29mZnNldCA6IG9mZnNldCArIGRhdGFNYXBbImRhdGFMZW5ndGgiXV0KICAgICAgICAgICAgaWYgdGFnIGluIFsiZGxuZyIsICJzbG5nIl06CiAgICAgICAgICAgICAgICBzZWxmLmRhdGFbdGFnXSA9IHNlbGYuZGF0YVt0YWddLmRlY29kZSgidXRmLTgiKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAga2V5cyA9IHNvcnRlZChzZWxmLmRhdGEua2V5cygpKQogICAgICAgIGhlYWRlclNpemUgPSBzc3RydWN0LmNhbGNzaXplKE1FVEFfSEVBREVSX0ZPUk1BVCkKICAgICAgICBkYXRhT2Zmc2V0ID0gaGVhZGVyU2l6ZSArIGxlbihrZXlzKSAqIHNzdHJ1Y3QuY2FsY3NpemUoREFUQV9NQVBfRk9STUFUKQogICAgICAgIGhlYWRlciA9IHNzdHJ1Y3QucGFjaygKICAgICAgICAgICAgTUVUQV9IRUFERVJfRk9STUFULAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidmVyc2lvbiI6IDEsCiAgICAgICAgICAgICAgICAiZmxhZ3MiOiAwLAogICAgICAgICAgICAgICAgImRhdGFPZmZzZXQiOiBkYXRhT2Zmc2V0LAogICAgICAgICAgICAgICAgIm51bURhdGFNYXBzIjogbGVuKGtleXMpLAogICAgICAgICAgICB9LAogICAgICAgICkKICAgICAgICBkYXRhTWFwcyA9IFtdCiAgICAgICAgZGF0YUJsb2NrcyA9IFtdCiAgICAgICAgZm9yIHRhZyBpbiBrZXlzOgogICAgICAgICAgICBpZiB0YWcgaW4gWyJkbG5nIiwgInNsbmciXToKICAgICAgICAgICAgICAgIGRhdGEgPSBzZWxmLmRhdGFbdGFnXS5lbmNvZGUoInV0Zi04IikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGRhdGEgPSBzZWxmLmRhdGFbdGFnXQogICAgICAgICAgICBkYXRhTWFwcy5hcHBlbmQoCiAgICAgICAgICAgICAgICBzc3RydWN0LnBhY2soCiAgICAgICAgICAgICAgICAgICAgREFUQV9NQVBfRk9STUFULAogICAgICAgICAgICAgICAgICAgIHsidGFnIjogdGFnLCAiZGF0YU9mZnNldCI6IGRhdGFPZmZzZXQsICJkYXRhTGVuZ3RoIjogbGVuKGRhdGEpfSwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgKQogICAgICAgICAgICBkYXRhQmxvY2tzLmFwcGVuZChkYXRhKQogICAgICAgICAgICBkYXRhT2Zmc2V0ICs9IGxlbihkYXRhKQogICAgICAgIHJldHVybiBieXRlc2pvaW4oW2hlYWRlcl0gKyBkYXRhTWFwcyArIGRhdGFCbG9ja3MpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBmb3IgdGFnIGluIHNvcnRlZChzZWxmLmRhdGEua2V5cygpKToKICAgICAgICAgICAgaWYgdGFnIGluIFsiZGxuZyIsICJzbG5nIl06CiAgICAgICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoInRleHQiLCB0YWc9dGFnKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgd3JpdGVyLndyaXRlKHNlbGYuZGF0YVt0YWddKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgd3JpdGVyLmVuZHRhZygidGV4dCIpCiAgICAgICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoImhleGRhdGEiLCB0YWc9dGFnKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgZGF0YSA9IHNlbGYuZGF0YVt0YWddCiAgICAgICAgICAgICAgICBpZiBtaW4oZGF0YSkgPj0gMHgyMCBhbmQgbWF4KGRhdGEpIDw9IDB4N0U6CiAgICAgICAgICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQoImFzY2lpOiAiICsgZGF0YS5kZWNvZGUoImFzY2lpIikpCiAgICAgICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICAgICAgd3JpdGVyLmR1bXBoZXgoZGF0YSkKICAgICAgICAgICAgICAgIHdyaXRlci5lbmR0YWcoImhleGRhdGEiKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gImhleGRhdGEiOgogICAgICAgICAgICBzZWxmLmRhdGFbYXR0cnNbInRhZyJdXSA9IHJlYWRIZXgoY29udGVudCkKICAgICAgICBlbGlmIG5hbWUgPT0gInRleHQiIGFuZCBhdHRyc1sidGFnIl0gaW4gWyJkbG5nIiwgInNsbmciXToKICAgICAgICAgICAgc2VsZi5kYXRhW2F0dHJzWyJ0YWciXV0gPSBzdHJqb2luKGNvbnRlbnQpLnN0cmlwKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICByYWlzZSBUVExpYkVycm9yKCJjYW4ndCBoYW5kbGUgJyVzJyBlbGVtZW50IiAlIG5hbWUpCg==
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytesjoin, strjoin, readHex
+from fontTools.ttLib import TTLibError
+from . import DefaultTable
+
+# Apple's documentation of 'meta':
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6meta.html
+
+META_HEADER_FORMAT = """
+    > # big endian
+    version:     L
+    flags:       L
+    dataOffset:  L
+    numDataMaps: L
+"""
+
+
+DATA_MAP_FORMAT = """
+    > # big endian
+    tag:         4s
+    dataOffset:  L
+    dataLength:  L
+"""
+
+
+class table__m_e_t_a(DefaultTable.DefaultTable):
+    """Metadata table
+
+    The ``meta`` table contains various metadata values for the font. Each
+    category of metadata in the table is identified by a four-character tag.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/meta
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.data = {}
+
+    def decompile(self, data, ttFont):
+        headerSize = sstruct.calcsize(META_HEADER_FORMAT)
+        header = sstruct.unpack(META_HEADER_FORMAT, data[0:headerSize])
+        if header["version"] != 1:
+            raise TTLibError("unsupported 'meta' version %d" % header["version"])
+        dataMapSize = sstruct.calcsize(DATA_MAP_FORMAT)
+        for i in range(header["numDataMaps"]):
+            dataMapOffset = headerSize + i * dataMapSize
+            dataMap = sstruct.unpack(
+                DATA_MAP_FORMAT, data[dataMapOffset : dataMapOffset + dataMapSize]
+            )
+            tag = dataMap["tag"]
+            offset = dataMap["dataOffset"]
+            self.data[tag] = data[offset : offset + dataMap["dataLength"]]
+            if tag in ["dlng", "slng"]:
+                self.data[tag] = self.data[tag].decode("utf-8")
+
+    def compile(self, ttFont):
+        keys = sorted(self.data.keys())
+        headerSize = sstruct.calcsize(META_HEADER_FORMAT)
+        dataOffset = headerSize + len(keys) * sstruct.calcsize(DATA_MAP_FORMAT)
+        header = sstruct.pack(
+            META_HEADER_FORMAT,
+            {
+                "version": 1,
+                "flags": 0,
+                "dataOffset": dataOffset,
+                "numDataMaps": len(keys),
+            },
+        )
+        dataMaps = []
+        dataBlocks = []
+        for tag in keys:
+            if tag in ["dlng", "slng"]:
+                data = self.data[tag].encode("utf-8")
+            else:
+                data = self.data[tag]
+            dataMaps.append(
+                sstruct.pack(
+                    DATA_MAP_FORMAT,
+                    {"tag": tag, "dataOffset": dataOffset, "dataLength": len(data)},
+                )
+            )
+            dataBlocks.append(data)
+            dataOffset += len(data)
+        return bytesjoin([header] + dataMaps + dataBlocks)
+
+    def toXML(self, writer, ttFont):
+        for tag in sorted(self.data.keys()):
+            if tag in ["dlng", "slng"]:
+                writer.begintag("text", tag=tag)
+                writer.newline()
+                writer.write(self.data[tag])
+                writer.newline()
+                writer.endtag("text")
+                writer.newline()
+            else:
+                writer.begintag("hexdata", tag=tag)
+                writer.newline()
+                data = self.data[tag]
+                if min(data) >= 0x20 and max(data) <= 0x7E:
+                    writer.comment("ascii: " + data.decode("ascii"))
+                    writer.newline()
+                writer.dumphex(data)
+                writer.endtag("hexdata")
+                writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "hexdata":
+            self.data[attrs["tag"]] = readHex(content)
+        elif name == "text" and attrs["tag"] in ["dlng", "slng"]:
+            self.data[attrs["tag"]] = strjoin(content).strip()
+        else:
+            raise TTLibError("can't handle '%s' element" % name)

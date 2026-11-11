@@ -1,1 +1,25 @@
-X19hbGxfXyA9IFsicG9wQ291bnQiLCAiYml0X2NvdW50IiwgImJpdF9pbmRpY2VzIl0KCgp0cnk6CiAgICBiaXRfY291bnQgPSBpbnQuYml0X2NvdW50CmV4Y2VwdCBBdHRyaWJ1dGVFcnJvcjoKCiAgICBkZWYgYml0X2NvdW50KHYpOgogICAgICAgIHJldHVybiBiaW4odikuY291bnQoIjEiKQoKCiIiIlJldHVybiBudW1iZXIgb2YgMSBiaXRzIChwb3B1bGF0aW9uIGNvdW50KSBvZiB0aGUgYWJzb2x1dGUgdmFsdWUgb2YgYW4gaW50ZWdlci4KClNlZSBodHRwczovL2RvY3MucHl0aG9uLm9yZy8zLjEwL2xpYnJhcnkvc3RkdHlwZXMuaHRtbCNpbnQuYml0X2NvdW50CiIiIgpwb3BDb3VudCA9IGJpdF9jb3VudCAgIyBhbGlhcwoKCmRlZiBiaXRfaW5kaWNlcyh2KToKICAgICIiIlJldHVybiBsaXN0IG9mIGluZGljZXMgd2hlcmUgYml0cyBhcmUgc2V0LCAwIGJlaW5nIHRoZSBpbmRleCBvZiB0aGUgbGVhc3Qgc2lnbmlmaWNhbnQgYml0LgoKICAgID4+PiBiaXRfaW5kaWNlcygwYjEwMSkKICAgIFswLCAyXQogICAgIiIiCiAgICByZXR1cm4gW2kgZm9yIGksIGIgaW4gZW51bWVyYXRlKGJpbih2KVs6Oi0xXSkgaWYgYiA9PSAiMSJdCg==
+__all__ = ["popCount", "bit_count", "bit_indices"]
+
+
+try:
+    bit_count = int.bit_count
+except AttributeError:
+
+    def bit_count(v):
+        return bin(v).count("1")
+
+
+"""Return number of 1 bits (population count) of the absolute value of an integer.
+
+See https://docs.python.org/3.10/library/stdtypes.html#int.bit_count
+"""
+popCount = bit_count  # alias
+
+
+def bit_indices(v):
+    """Return list of indices where bits are set, 0 being the index of the least significant bit.
+
+    >>> bit_indices(0b101)
+    [0, 2]
+    """
+    return [i for i, b in enumerate(bin(v)[::-1]) if b == "1"]

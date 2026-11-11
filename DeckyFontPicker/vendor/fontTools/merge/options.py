@@ -1,1 +1,85 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCgpjbGFzcyBPcHRpb25zKG9iamVjdCk6CiAgICBjbGFzcyBVbmtub3duT3B0aW9uRXJyb3IoRXhjZXB0aW9uKToKICAgICAgICBwYXNzCgogICAgZGVmIF9faW5pdF9fKHNlbGYsICoqa3dhcmdzKToKICAgICAgICBzZWxmLnZlcmJvc2UgPSBGYWxzZQogICAgICAgIHNlbGYudGltaW5nID0gRmFsc2UKICAgICAgICBzZWxmLmRyb3BfdGFibGVzID0gW10KICAgICAgICBzZWxmLmlucHV0X2ZpbGUgPSBOb25lCiAgICAgICAgc2VsZi5vdXRwdXRfZmlsZSA9ICJtZXJnZWQudHRmIgogICAgICAgIHNlbGYuaW1wb3J0X2ZpbGUgPSBOb25lCgogICAgICAgIHNlbGYuc2V0KCoqa3dhcmdzKQoKICAgIGRlZiBzZXQoc2VsZiwgKiprd2FyZ3MpOgogICAgICAgIGZvciBrLCB2IGluIGt3YXJncy5pdGVtcygpOgogICAgICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCBrKToKICAgICAgICAgICAgICAgIHJhaXNlIHNlbGYuVW5rbm93bk9wdGlvbkVycm9yKCJVbmtub3duIG9wdGlvbiAnJXMnIiAlIGspCiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgaywgdikKCiAgICBkZWYgcGFyc2Vfb3B0cyhzZWxmLCBhcmd2LCBpZ25vcmVfdW5rbm93bj1bXSk6CiAgICAgICAgcmV0ID0gW10KICAgICAgICBvcHRzID0ge30KICAgICAgICBmb3IgYSBpbiBhcmd2OgogICAgICAgICAgICBvcmlnX2EgPSBhCiAgICAgICAgICAgIGlmIG5vdCBhLnN0YXJ0c3dpdGgoIi0tIik6CiAgICAgICAgICAgICAgICByZXQuYXBwZW5kKGEpCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBhID0gYVsyOl0KICAgICAgICAgICAgaSA9IGEuZmluZCgiPSIpCiAgICAgICAgICAgIG9wID0gIj0iCiAgICAgICAgICAgIGlmIGkgPT0gLTE6CiAgICAgICAgICAgICAgICBpZiBhLnN0YXJ0c3dpdGgoIm5vLSIpOgogICAgICAgICAgICAgICAgICAgIGsgPSBhWzM6XQogICAgICAgICAgICAgICAgICAgIHYgPSBGYWxzZQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBrID0gYQogICAgICAgICAgICAgICAgICAgIHYgPSBUcnVlCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBrID0gYVs6aV0KICAgICAgICAgICAgICAgIGlmIGtbLTFdIGluICItKyI6CiAgICAgICAgICAgICAgICAgICAgb3AgPSBrWy0xXSArICI9IiAgIyBPcHMgaXMgJy09JyBvciAnKz0nIG5vdy4KICAgICAgICAgICAgICAgICAgICBrID0ga1s6LTFdCiAgICAgICAgICAgICAgICB2ID0gYVtpICsgMSA6XQogICAgICAgICAgICBvayA9IGsKICAgICAgICAgICAgayA9IGsucmVwbGFjZSgiLSIsICJfIikKICAgICAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgayk6CiAgICAgICAgICAgICAgICBpZiBpZ25vcmVfdW5rbm93biBpcyBUcnVlIG9yIG9rIGluIGlnbm9yZV91bmtub3duOgogICAgICAgICAgICAgICAgICAgIHJldC5hcHBlbmQob3JpZ19hKQogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIHNlbGYuVW5rbm93bk9wdGlvbkVycm9yKCJVbmtub3duIG9wdGlvbiAnJXMnIiAlIGEpCgogICAgICAgICAgICBvdiA9IGdldGF0dHIoc2VsZiwgaykKICAgICAgICAgICAgaWYgaXNpbnN0YW5jZShvdiwgYm9vbCk6CiAgICAgICAgICAgICAgICB2ID0gYm9vbCh2KQogICAgICAgICAgICBlbGlmIGlzaW5zdGFuY2Uob3YsIGludCk6CiAgICAgICAgICAgICAgICB2ID0gaW50KHYpCiAgICAgICAgICAgIGVsaWYgaXNpbnN0YW5jZShvdiwgbGlzdCk6CiAgICAgICAgICAgICAgICB2diA9IHYuc3BsaXQoIiwiKQogICAgICAgICAgICAgICAgaWYgdnYgPT0gWyIiXToKICAgICAgICAgICAgICAgICAgICB2diA9IFtdCiAgICAgICAgICAgICAgICB2diA9IFtpbnQoeCwgMCkgaWYgbGVuKHgpIGFuZCB4WzBdIGluICIwMTIzNDU2Nzg5IiBlbHNlIHggZm9yIHggaW4gdnZdCiAgICAgICAgICAgICAgICBpZiBvcCA9PSAiPSI6CiAgICAgICAgICAgICAgICAgICAgdiA9IHZ2CiAgICAgICAgICAgICAgICBlbGlmIG9wID09ICIrPSI6CiAgICAgICAgICAgICAgICAgICAgdiA9IG92CiAgICAgICAgICAgICAgICAgICAgdi5leHRlbmQodnYpCiAgICAgICAgICAgICAgICBlbGlmIG9wID09ICItPSI6CiAgICAgICAgICAgICAgICAgICAgdiA9IG92CiAgICAgICAgICAgICAgICAgICAgZm9yIHggaW4gdnY6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIHggaW4gdjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHYucmVtb3ZlKHgpCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIGFzc2VydCAwCgogICAgICAgICAgICBvcHRzW2tdID0gdgogICAgICAgIHNlbGYuc2V0KCoqb3B0cykKCiAgICAgICAgcmV0dXJuIHJldAo=
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+
+class Options(object):
+    class UnknownOptionError(Exception):
+        pass
+
+    def __init__(self, **kwargs):
+        self.verbose = False
+        self.timing = False
+        self.drop_tables = []
+        self.input_file = None
+        self.output_file = "merged.ttf"
+        self.import_file = None
+
+        self.set(**kwargs)
+
+    def set(self, **kwargs):
+        for k, v in kwargs.items():
+            if not hasattr(self, k):
+                raise self.UnknownOptionError("Unknown option '%s'" % k)
+            setattr(self, k, v)
+
+    def parse_opts(self, argv, ignore_unknown=[]):
+        ret = []
+        opts = {}
+        for a in argv:
+            orig_a = a
+            if not a.startswith("--"):
+                ret.append(a)
+                continue
+            a = a[2:]
+            i = a.find("=")
+            op = "="
+            if i == -1:
+                if a.startswith("no-"):
+                    k = a[3:]
+                    v = False
+                else:
+                    k = a
+                    v = True
+            else:
+                k = a[:i]
+                if k[-1] in "-+":
+                    op = k[-1] + "="  # Ops is '-=' or '+=' now.
+                    k = k[:-1]
+                v = a[i + 1 :]
+            ok = k
+            k = k.replace("-", "_")
+            if not hasattr(self, k):
+                if ignore_unknown is True or ok in ignore_unknown:
+                    ret.append(orig_a)
+                    continue
+                else:
+                    raise self.UnknownOptionError("Unknown option '%s'" % a)
+
+            ov = getattr(self, k)
+            if isinstance(ov, bool):
+                v = bool(v)
+            elif isinstance(ov, int):
+                v = int(v)
+            elif isinstance(ov, list):
+                vv = v.split(",")
+                if vv == [""]:
+                    vv = []
+                vv = [int(x, 0) if len(x) and x[0] in "0123456789" else x for x in vv]
+                if op == "=":
+                    v = vv
+                elif op == "+=":
+                    v = ov
+                    v.extend(vv)
+                elif op == "-=":
+                    v = ov
+                    for x in vv:
+                        if x in v:
+                            v.remove(x)
+                else:
+                    assert 0
+
+            opts[k] = v
+        self.set(**opts)
+
+        return ret

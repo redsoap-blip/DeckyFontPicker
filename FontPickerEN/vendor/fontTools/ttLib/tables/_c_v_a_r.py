@@ -1,1 +1,93 @@
-ZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5UdXBsZVZhcmlhdGlvbiBpbXBvcnQgKAogICAgY29tcGlsZVR1cGxlVmFyaWF0aW9uU3RvcmUsCiAgICBkZWNvbXBpbGVUdXBsZVZhcmlhdGlvblN0b3JlLAogICAgVHVwbGVWYXJpYXRpb24sCikKCiMgaHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS90eXBvZ3JhcGh5L290c3BlYy9jdmFyLmh0bQojIGh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vdHlwb2dyYXBoeS9vdHNwZWMvb3R2YXJjb21tb25mb3JtYXRzLmh0bQojIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZjdmFyLmh0bWwKCkNWQVJfSEVBREVSX0ZPUk1BVCA9ICIiIgogICAgPiAjIGJpZyBlbmRpYW4KICAgIG1ham9yVmVyc2lvbjogICAgICAgIEgKICAgIG1pbm9yVmVyc2lvbjogICAgICAgIEgKICAgIHR1cGxlVmFyaWF0aW9uQ291bnQ6IEgKICAgIG9mZnNldFRvRGF0YTogICAgICAgIEgKIiIiCgpDVkFSX0hFQURFUl9TSVpFID0gc3N0cnVjdC5jYWxjc2l6ZShDVkFSX0hFQURFUl9GT1JNQVQpCgoKY2xhc3MgdGFibGVfX2Nfdl9hX3IoRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJDb250cm9sIFZhbHVlIFRhYmxlIChDVlQpIHZhcmlhdGlvbnMgdGFibGUKCiAgICBUaGUgYGBjdmFyYGAgdGFibGUgY29udGFpbnMgdmFyaWF0aW9ucyBmb3IgdGhlIHZhbHVlcyBpbiBhIGBgY3Z0YGAKICAgIHRhYmxlLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvY3ZhcgogICAgIiIiCgogICAgZGVwZW5kZW5jaWVzID0gWyJjdnQgIiwgImZ2YXIiXQoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5tYWpvclZlcnNpb24sIHNlbGYubWlub3JWZXJzaW9uID0gMSwgMAogICAgICAgIHNlbGYudmFyaWF0aW9ucyA9IFtdCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250LCB1c2VTaGFyZWRQb2ludHM9RmFsc2UpOgogICAgICAgIHR1cGxlVmFyaWF0aW9uQ291bnQsIHR1cGxlcywgZGF0YSA9IGNvbXBpbGVUdXBsZVZhcmlhdGlvblN0b3JlKAogICAgICAgICAgICB2YXJpYXRpb25zPVt2IGZvciB2IGluIHNlbGYudmFyaWF0aW9ucyBpZiB2Lmhhc0ltcGFjdCgpXSwKICAgICAgICAgICAgcG9pbnRDb3VudD1sZW4odHRGb250WyJjdnQgIl0udmFsdWVzKSwKICAgICAgICAgICAgYXhpc1RhZ3M9W2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiB0dEZvbnRbImZ2YXIiXS5heGVzXSwKICAgICAgICAgICAgc2hhcmVkVHVwbGVJbmRpY2VzPXt9LAogICAgICAgICAgICB1c2VTaGFyZWRQb2ludHM9dXNlU2hhcmVkUG9pbnRzLAogICAgICAgICkKICAgICAgICBoZWFkZXIgPSB7CiAgICAgICAgICAgICJtYWpvclZlcnNpb24iOiBzZWxmLm1ham9yVmVyc2lvbiwKICAgICAgICAgICAgIm1pbm9yVmVyc2lvbiI6IHNlbGYubWlub3JWZXJzaW9uLAogICAgICAgICAgICAidHVwbGVWYXJpYXRpb25Db3VudCI6IHR1cGxlVmFyaWF0aW9uQ291bnQsCiAgICAgICAgICAgICJvZmZzZXRUb0RhdGEiOiBDVkFSX0hFQURFUl9TSVpFICsgbGVuKHR1cGxlcyksCiAgICAgICAgfQogICAgICAgIHJldHVybiBiIiIuam9pbihbc3N0cnVjdC5wYWNrKENWQVJfSEVBREVSX0ZPUk1BVCwgaGVhZGVyKSwgdHVwbGVzLCBkYXRhXSkKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgYXhpc1RhZ3MgPSBbYXhpcy5heGlzVGFnIGZvciBheGlzIGluIHR0Rm9udFsiZnZhciJdLmF4ZXNdCiAgICAgICAgaGVhZGVyID0ge30KICAgICAgICBzc3RydWN0LnVucGFjayhDVkFSX0hFQURFUl9GT1JNQVQsIGRhdGFbMDpDVkFSX0hFQURFUl9TSVpFXSwgaGVhZGVyKQogICAgICAgIHNlbGYubWFqb3JWZXJzaW9uID0gaGVhZGVyWyJtYWpvclZlcnNpb24iXQogICAgICAgIHNlbGYubWlub3JWZXJzaW9uID0gaGVhZGVyWyJtaW5vclZlcnNpb24iXQogICAgICAgIGFzc2VydCBzZWxmLm1ham9yVmVyc2lvbiA9PSAxLCBzZWxmLm1ham9yVmVyc2lvbgogICAgICAgIHNlbGYudmFyaWF0aW9ucyA9IGRlY29tcGlsZVR1cGxlVmFyaWF0aW9uU3RvcmUoCiAgICAgICAgICAgIHRhYmxlVGFnPXNlbGYudGFibGVUYWcsCiAgICAgICAgICAgIGF4aXNUYWdzPWF4aXNUYWdzLAogICAgICAgICAgICB0dXBsZVZhcmlhdGlvbkNvdW50PWhlYWRlclsidHVwbGVWYXJpYXRpb25Db3VudCJdLAogICAgICAgICAgICBwb2ludENvdW50PWxlbih0dEZvbnRbImN2dCAiXS52YWx1ZXMpLAogICAgICAgICAgICBzaGFyZWRUdXBsZXM9Tm9uZSwKICAgICAgICAgICAgZGF0YT1kYXRhLAogICAgICAgICAgICBwb3M9Q1ZBUl9IRUFERVJfU0laRSwKICAgICAgICAgICAgZGF0YVBvcz1oZWFkZXJbIm9mZnNldFRvRGF0YSJdLAogICAgICAgICkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBuYW1lID09ICJ2ZXJzaW9uIjoKICAgICAgICAgICAgc2VsZi5tYWpvclZlcnNpb24gPSBpbnQoYXR0cnMuZ2V0KCJtYWpvciIsICIxIikpCiAgICAgICAgICAgIHNlbGYubWlub3JWZXJzaW9uID0gaW50KGF0dHJzLmdldCgibWlub3IiLCAiMCIpKQogICAgICAgIGVsaWYgbmFtZSA9PSAidHVwbGUiOgogICAgICAgICAgICB2YWx1ZUNvdW50ID0gbGVuKHR0Rm9udFsiY3Z0ICJdLnZhbHVlcykKICAgICAgICAgICAgdmFyID0gVHVwbGVWYXJpYXRpb24oe30sIFtOb25lXSAqIHZhbHVlQ291bnQpCiAgICAgICAgICAgIHNlbGYudmFyaWF0aW9ucy5hcHBlbmQodmFyKQogICAgICAgICAgICBmb3IgdHVwbGVFbGVtZW50IGluIGNvbnRlbnQ6CiAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKHR1cGxlRWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIHR1cGxlTmFtZSwgdHVwbGVBdHRycywgdHVwbGVDb250ZW50ID0gdHVwbGVFbGVtZW50CiAgICAgICAgICAgICAgICAgICAgdmFyLmZyb21YTUwodHVwbGVOYW1lLCB0dXBsZUF0dHJzLCB0dXBsZUNvbnRlbnQpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBheGlzVGFncyA9IFtheGlzLmF4aXNUYWcgZm9yIGF4aXMgaW4gdHRGb250WyJmdmFyIl0uYXhlc10KICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJ2ZXJzaW9uIiwgbWFqb3I9c2VsZi5tYWpvclZlcnNpb24sIG1pbm9yPXNlbGYubWlub3JWZXJzaW9uKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBmb3IgdmFyIGluIHNlbGYudmFyaWF0aW9uczoKICAgICAgICAgICAgdmFyLnRvWE1MKHdyaXRlciwgYXhpc1RhZ3MpCg==
+from . import DefaultTable
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytesjoin
+from fontTools.ttLib.tables.TupleVariation import (
+    compileTupleVariationStore,
+    decompileTupleVariationStore,
+    TupleVariation,
+)
+
+# https://www.microsoft.com/typography/otspec/cvar.htm
+# https://www.microsoft.com/typography/otspec/otvarcommonformats.htm
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cvar.html
+
+CVAR_HEADER_FORMAT = """
+    > # big endian
+    majorVersion:        H
+    minorVersion:        H
+    tupleVariationCount: H
+    offsetToData:        H
+"""
+
+CVAR_HEADER_SIZE = sstruct.calcsize(CVAR_HEADER_FORMAT)
+
+
+class table__c_v_a_r(DefaultTable.DefaultTable):
+    """Control Value Table (CVT) variations table
+
+    The ``cvar`` table contains variations for the values in a ``cvt``
+    table.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cvar
+    """
+
+    dependencies = ["cvt ", "fvar"]
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.majorVersion, self.minorVersion = 1, 0
+        self.variations = []
+
+    def compile(self, ttFont, useSharedPoints=False):
+        tupleVariationCount, tuples, data = compileTupleVariationStore(
+            variations=[v for v in self.variations if v.hasImpact()],
+            pointCount=len(ttFont["cvt "].values),
+            axisTags=[axis.axisTag for axis in ttFont["fvar"].axes],
+            sharedTupleIndices={},
+            useSharedPoints=useSharedPoints,
+        )
+        header = {
+            "majorVersion": self.majorVersion,
+            "minorVersion": self.minorVersion,
+            "tupleVariationCount": tupleVariationCount,
+            "offsetToData": CVAR_HEADER_SIZE + len(tuples),
+        }
+        return b"".join([sstruct.pack(CVAR_HEADER_FORMAT, header), tuples, data])
+
+    def decompile(self, data, ttFont):
+        axisTags = [axis.axisTag for axis in ttFont["fvar"].axes]
+        header = {}
+        sstruct.unpack(CVAR_HEADER_FORMAT, data[0:CVAR_HEADER_SIZE], header)
+        self.majorVersion = header["majorVersion"]
+        self.minorVersion = header["minorVersion"]
+        assert self.majorVersion == 1, self.majorVersion
+        self.variations = decompileTupleVariationStore(
+            tableTag=self.tableTag,
+            axisTags=axisTags,
+            tupleVariationCount=header["tupleVariationCount"],
+            pointCount=len(ttFont["cvt "].values),
+            sharedTuples=None,
+            data=data,
+            pos=CVAR_HEADER_SIZE,
+            dataPos=header["offsetToData"],
+        )
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.majorVersion = int(attrs.get("major", "1"))
+            self.minorVersion = int(attrs.get("minor", "0"))
+        elif name == "tuple":
+            valueCount = len(ttFont["cvt "].values)
+            var = TupleVariation({}, [None] * valueCount)
+            self.variations.append(var)
+            for tupleElement in content:
+                if isinstance(tupleElement, tuple):
+                    tupleName, tupleAttrs, tupleContent = tupleElement
+                    var.fromXML(tupleName, tupleAttrs, tupleContent)
+
+    def toXML(self, writer, ttFont):
+        axisTags = [axis.axisTag for axis in ttFont["fvar"].axes]
+        writer.simpletag("version", major=self.majorVersion, minor=self.minorVersion)
+        writer.newline()
+        for var in self.variations:
+            var.toXML(writer, axisTags)

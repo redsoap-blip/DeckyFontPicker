@@ -1,1 +1,136 @@
-IiIiRXh0ZW5kIHRoZSBQeXRob24gY29kZWNzIG1vZHVsZSB3aXRoIGEgZmV3IGVuY29kaW5ncyB0aGF0IGFyZSB1c2VkIGluIE9wZW5UeXBlIChuYW1lIHRhYmxlKQpidXQgbWlzc2luZyBmcm9tIFB5dGhvbi4gIFNlZSBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvMjM2IGZvciBkZXRhaWxzLgoiIiIKCmltcG9ydCBjb2RlY3MKaW1wb3J0IGVuY29kaW5ncwoKCmNsYXNzIEV4dGVuZENvZGVjKGNvZGVjcy5Db2RlYyk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbmFtZSwgYmFzZV9lbmNvZGluZywgbWFwcGluZyk6CiAgICAgICAgc2VsZi5uYW1lID0gbmFtZQogICAgICAgIHNlbGYuYmFzZV9lbmNvZGluZyA9IGJhc2VfZW5jb2RpbmcKICAgICAgICBzZWxmLm1hcHBpbmcgPSBtYXBwaW5nCiAgICAgICAgc2VsZi5yZXZlcnNlID0ge3Y6IGsgZm9yIGssIHYgaW4gbWFwcGluZy5pdGVtcygpfQogICAgICAgIHNlbGYubWF4X2xlbiA9IG1heChsZW4odikgZm9yIHYgaW4gbWFwcGluZy52YWx1ZXMoKSkKICAgICAgICBzZWxmLmluZm8gPSBjb2RlY3MuQ29kZWNJbmZvKAogICAgICAgICAgICBuYW1lPXNlbGYubmFtZSwgZW5jb2RlPXNlbGYuZW5jb2RlLCBkZWNvZGU9c2VsZi5kZWNvZGUKICAgICAgICApCiAgICAgICAgY29kZWNzLnJlZ2lzdGVyX2Vycm9yKG5hbWUsIHNlbGYuZXJyb3IpCgogICAgZGVmIF9tYXAoc2VsZiwgbWFwcGVyLCBvdXRwdXRfdHlwZSwgZXhjX3R5cGUsIGlucHV0LCBlcnJvcnMpOgogICAgICAgIGJhc2VfZXJyb3JfaGFuZGxlciA9IGNvZGVjcy5sb29rdXBfZXJyb3IoZXJyb3JzKQogICAgICAgIGxlbmd0aCA9IGxlbihpbnB1dCkKICAgICAgICBvdXQgPSBvdXRwdXRfdHlwZSgpCiAgICAgICAgd2hpbGUgaW5wdXQ6CiAgICAgICAgICAgICMgZmlyc3QgdHJ5IHRvIHVzZSBzZWxmLmVycm9yIGFzIHRoZSBlcnJvciBoYW5kbGVyCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHBhcnQgPSBtYXBwZXIoaW5wdXQsIHNlbGYuYmFzZV9lbmNvZGluZywgZXJyb3JzPXNlbGYubmFtZSkKICAgICAgICAgICAgICAgIG91dCArPSBwYXJ0CiAgICAgICAgICAgICAgICBicmVhayAgIyBBbGwgY29udmVydGVkCiAgICAgICAgICAgIGV4Y2VwdCBleGNfdHlwZSBhcyBlOgogICAgICAgICAgICAgICAgIyBlbHNlIGNvbnZlcnQgdGhlIGNvcnJlY3QgcGFydCwgaGFuZGxlIGVycm9yIGFzIHJlcXVlc3RlZCBhbmQgY29udGludWUKICAgICAgICAgICAgICAgIG91dCArPSBtYXBwZXIoaW5wdXRbOiBlLnN0YXJ0XSwgc2VsZi5iYXNlX2VuY29kaW5nLCBzZWxmLm5hbWUpCiAgICAgICAgICAgICAgICByZXBsYWNlbWVudCwgcG9zID0gYmFzZV9lcnJvcl9oYW5kbGVyKGUpCiAgICAgICAgICAgICAgICBvdXQgKz0gcmVwbGFjZW1lbnQKICAgICAgICAgICAgICAgIGlucHV0ID0gaW5wdXRbcG9zOl0KICAgICAgICByZXR1cm4gb3V0LCBsZW5ndGgKCiAgICBkZWYgZW5jb2RlKHNlbGYsIGlucHV0LCBlcnJvcnM9InN0cmljdCIpOgogICAgICAgIHJldHVybiBzZWxmLl9tYXAoY29kZWNzLmVuY29kZSwgYnl0ZXMsIFVuaWNvZGVFbmNvZGVFcnJvciwgaW5wdXQsIGVycm9ycykKCiAgICBkZWYgZGVjb2RlKHNlbGYsIGlucHV0LCBlcnJvcnM9InN0cmljdCIpOgogICAgICAgIHJldHVybiBzZWxmLl9tYXAoY29kZWNzLmRlY29kZSwgc3RyLCBVbmljb2RlRGVjb2RlRXJyb3IsIGlucHV0LCBlcnJvcnMpCgogICAgZGVmIGVycm9yKHNlbGYsIGUpOgogICAgICAgIGlmIGlzaW5zdGFuY2UoZSwgVW5pY29kZURlY29kZUVycm9yKToKICAgICAgICAgICAgZm9yIGVuZCBpbiByYW5nZShlLnN0YXJ0ICsgMSwgZS5lbmQgKyAxKToKICAgICAgICAgICAgICAgIHMgPSBlLm9iamVjdFtlLnN0YXJ0IDogZW5kXQogICAgICAgICAgICAgICAgaWYgcyBpbiBzZWxmLm1hcHBpbmc6CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHNlbGYubWFwcGluZ1tzXSwgZW5kCiAgICAgICAgZWxpZiBpc2luc3RhbmNlKGUsIFVuaWNvZGVFbmNvZGVFcnJvcik6CiAgICAgICAgICAgIGZvciBlbmQgaW4gcmFuZ2UoZS5zdGFydCArIDEsIGUuc3RhcnQgKyBzZWxmLm1heF9sZW4gKyAxKToKICAgICAgICAgICAgICAgIHMgPSBlLm9iamVjdFtlLnN0YXJ0IDogZW5kXQogICAgICAgICAgICAgICAgaWYgcyBpbiBzZWxmLnJldmVyc2U6CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHNlbGYucmV2ZXJzZVtzXSwgZW5kCiAgICAgICAgZS5lbmNvZGluZyA9IHNlbGYubmFtZQogICAgICAgIHJhaXNlIGUKCgpfZXh0ZW5kZWRfZW5jb2RpbmdzID0gewogICAgInhfbWFjX2phcGFuZXNlX3R0eCI6ICgKICAgICAgICAic2hpZnRfamlzIiwKICAgICAgICB7CiAgICAgICAgICAgIGIiXHhmYyI6IGNocigweDAwN0MpLAogICAgICAgICAgICBiIlx4N2UiOiBjaHIoMHgwMDdFKSwKICAgICAgICAgICAgYiJceDgwIjogY2hyKDB4MDA1QyksCiAgICAgICAgICAgIGIiXHhhMCI6IGNocigweDAwQTApLAogICAgICAgICAgICBiIlx4ZmQiOiBjaHIoMHgwMEE5KSwKICAgICAgICAgICAgYiJceGZlIjogY2hyKDB4MjEyMiksCiAgICAgICAgICAgIGIiXHhmZiI6IGNocigweDIwMjYpLAogICAgICAgIH0sCiAgICApLAogICAgInhfbWFjX3RyYWRfY2hpbmVzZV90dHgiOiAoCiAgICAgICAgImJpZzUiLAogICAgICAgIHsKICAgICAgICAgICAgYiJceDgwIjogY2hyKDB4MDA1QyksCiAgICAgICAgICAgIGIiXHhhMCI6IGNocigweDAwQTApLAogICAgICAgICAgICBiIlx4ZmQiOiBjaHIoMHgwMEE5KSwKICAgICAgICAgICAgYiJceGZlIjogY2hyKDB4MjEyMiksCiAgICAgICAgICAgIGIiXHhmZiI6IGNocigweDIwMjYpLAogICAgICAgIH0sCiAgICApLAogICAgInhfbWFjX2tvcmVhbl90dHgiOiAoCiAgICAgICAgImV1Y19rciIsCiAgICAgICAgewogICAgICAgICAgICBiIlx4ODAiOiBjaHIoMHgwMEEwKSwKICAgICAgICAgICAgYiJceDgxIjogY2hyKDB4MjBBOSksCiAgICAgICAgICAgIGIiXHg4MiI6IGNocigweDIwMTQpLAogICAgICAgICAgICBiIlx4ODMiOiBjaHIoMHgwMEE5KSwKICAgICAgICAgICAgYiJceGZlIjogY2hyKDB4MjEyMiksCiAgICAgICAgICAgIGIiXHhmZiI6IGNocigweDIwMjYpLAogICAgICAgIH0sCiAgICApLAogICAgInhfbWFjX3NpbXBfY2hpbmVzZV90dHgiOiAoCiAgICAgICAgImdiMjMxMiIsCiAgICAgICAgewogICAgICAgICAgICBiIlx4ODAiOiBjaHIoMHgwMEZDKSwKICAgICAgICAgICAgYiJceGEwIjogY2hyKDB4MDBBMCksCiAgICAgICAgICAgIGIiXHhmZCI6IGNocigweDAwQTkpLAogICAgICAgICAgICBiIlx4ZmUiOiBjaHIoMHgyMTIyKSwKICAgICAgICAgICAgYiJceGZmIjogY2hyKDB4MjAyNiksCiAgICAgICAgfSwKICAgICksCn0KCl9jYWNoZSA9IHt9CgoKZGVmIHNlYXJjaF9mdW5jdGlvbihuYW1lKToKICAgIG5hbWUgPSBlbmNvZGluZ3Mubm9ybWFsaXplX2VuY29kaW5nKG5hbWUpICAjIFJhdGhlciB1bmRvY3VtZW50ZWQuLi4KICAgIGlmIG5hbWUgaW4gX2V4dGVuZGVkX2VuY29kaW5nczoKICAgICAgICBpZiBuYW1lIG5vdCBpbiBfY2FjaGU6CiAgICAgICAgICAgIGJhc2VfZW5jb2RpbmcsIG1hcHBpbmcgPSBfZXh0ZW5kZWRfZW5jb2RpbmdzW25hbWVdCiAgICAgICAgICAgIGFzc2VydCBuYW1lWy00Ol0gPT0gIl90dHgiCiAgICAgICAgICAgICMgUHl0aG9uIDIgZGlkbid0IGhhdmUgYW55IG9mIHRoZSBlbmNvZGluZ3MgdGhhdCB3ZSBhcmUgaW1wbGVtZW50aW5nCiAgICAgICAgICAgICMgaW4gdGhpcyBmaWxlLiAgUHl0aG9uIDMgYWRkZWQgYWxpYXNlcyBmb3IgdGhlIEVhc3QgQXNpYW4gb25lcywgbWFwcGluZwogICAgICAgICAgICAjIHRoZW0gInRlbXBvcmFyaWx5IiB0byB0aGUgc2FtZSBiYXNlIGVuY29kaW5nIGFzIHVzLCB3aXRoIGEgY29tbWVudAogICAgICAgICAgICAjIHN1Z2dlc3RpbmcgdGhhdCBmdWxsIGltcGxlbWVudGF0aW9uIHdpbGwgYXBwZWFyIHNvbWUgdGltZSBsYXRlci4KICAgICAgICAgICAgIyBBcyBzdWNoLCB0cnkgdGhlIFB5dGhvbiB2ZXJzaW9uIG9mIHRoZSB4X21hY18uLi4gZmlyc3QsIGlmIHRoYXQgaXMgZm91bmQsCiAgICAgICAgICAgICMgdXNlICp0aGF0KiBhcyBvdXIgYmFzZSBlbmNvZGluZy4gIFRoaXMgd291bGQgbWFrZSBvdXIgZW5jb2RpbmcgdXBncmFkZQogICAgICAgICAgICAjIHRvIHRoZSBmdWxsIGVuY29kaW5nIHdoZW4gYW5kIGlmIFB5dGhvbiBmaW5hbGx5IGltcGxlbWVudHMgdGhhdC4KICAgICAgICAgICAgIyBodHRwOi8vYnVncy5weXRob24ub3JnL2lzc3VlMjQwNDEKICAgICAgICAgICAgYmFzZV9lbmNvZGluZ3MgPSBbbmFtZVs6LTRdLCBiYXNlX2VuY29kaW5nXQogICAgICAgICAgICBmb3IgYmFzZV9lbmNvZGluZyBpbiBiYXNlX2VuY29kaW5nczoKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICBjb2RlY3MubG9va3VwKGJhc2VfZW5jb2RpbmcpCiAgICAgICAgICAgICAgICBleGNlcHQgTG9va3VwRXJyb3I6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIF9jYWNoZVtuYW1lXSA9IEV4dGVuZENvZGVjKG5hbWUsIGJhc2VfZW5jb2RpbmcsIG1hcHBpbmcpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgIHJldHVybiBfY2FjaGVbbmFtZV0uaW5mbwoKICAgIHJldHVybiBOb25lCgoKY29kZWNzLnJlZ2lzdGVyKHNlYXJjaF9mdW5jdGlvbikK
+"""Extend the Python codecs module with a few encodings that are used in OpenType (name table)
+but missing from Python.  See https://github.com/fonttools/fonttools/issues/236 for details.
+"""
+
+import codecs
+import encodings
+
+
+class ExtendCodec(codecs.Codec):
+    def __init__(self, name, base_encoding, mapping):
+        self.name = name
+        self.base_encoding = base_encoding
+        self.mapping = mapping
+        self.reverse = {v: k for k, v in mapping.items()}
+        self.max_len = max(len(v) for v in mapping.values())
+        self.info = codecs.CodecInfo(
+            name=self.name, encode=self.encode, decode=self.decode
+        )
+        codecs.register_error(name, self.error)
+
+    def _map(self, mapper, output_type, exc_type, input, errors):
+        base_error_handler = codecs.lookup_error(errors)
+        length = len(input)
+        out = output_type()
+        while input:
+            # first try to use self.error as the error handler
+            try:
+                part = mapper(input, self.base_encoding, errors=self.name)
+                out += part
+                break  # All converted
+            except exc_type as e:
+                # else convert the correct part, handle error as requested and continue
+                out += mapper(input[: e.start], self.base_encoding, self.name)
+                replacement, pos = base_error_handler(e)
+                out += replacement
+                input = input[pos:]
+        return out, length
+
+    def encode(self, input, errors="strict"):
+        return self._map(codecs.encode, bytes, UnicodeEncodeError, input, errors)
+
+    def decode(self, input, errors="strict"):
+        return self._map(codecs.decode, str, UnicodeDecodeError, input, errors)
+
+    def error(self, e):
+        if isinstance(e, UnicodeDecodeError):
+            for end in range(e.start + 1, e.end + 1):
+                s = e.object[e.start : end]
+                if s in self.mapping:
+                    return self.mapping[s], end
+        elif isinstance(e, UnicodeEncodeError):
+            for end in range(e.start + 1, e.start + self.max_len + 1):
+                s = e.object[e.start : end]
+                if s in self.reverse:
+                    return self.reverse[s], end
+        e.encoding = self.name
+        raise e
+
+
+_extended_encodings = {
+    "x_mac_japanese_ttx": (
+        "shift_jis",
+        {
+            b"\xfc": chr(0x007C),
+            b"\x7e": chr(0x007E),
+            b"\x80": chr(0x005C),
+            b"\xa0": chr(0x00A0),
+            b"\xfd": chr(0x00A9),
+            b"\xfe": chr(0x2122),
+            b"\xff": chr(0x2026),
+        },
+    ),
+    "x_mac_trad_chinese_ttx": (
+        "big5",
+        {
+            b"\x80": chr(0x005C),
+            b"\xa0": chr(0x00A0),
+            b"\xfd": chr(0x00A9),
+            b"\xfe": chr(0x2122),
+            b"\xff": chr(0x2026),
+        },
+    ),
+    "x_mac_korean_ttx": (
+        "euc_kr",
+        {
+            b"\x80": chr(0x00A0),
+            b"\x81": chr(0x20A9),
+            b"\x82": chr(0x2014),
+            b"\x83": chr(0x00A9),
+            b"\xfe": chr(0x2122),
+            b"\xff": chr(0x2026),
+        },
+    ),
+    "x_mac_simp_chinese_ttx": (
+        "gb2312",
+        {
+            b"\x80": chr(0x00FC),
+            b"\xa0": chr(0x00A0),
+            b"\xfd": chr(0x00A9),
+            b"\xfe": chr(0x2122),
+            b"\xff": chr(0x2026),
+        },
+    ),
+}
+
+_cache = {}
+
+
+def search_function(name):
+    name = encodings.normalize_encoding(name)  # Rather undocumented...
+    if name in _extended_encodings:
+        if name not in _cache:
+            base_encoding, mapping = _extended_encodings[name]
+            assert name[-4:] == "_ttx"
+            # Python 2 didn't have any of the encodings that we are implementing
+            # in this file.  Python 3 added aliases for the East Asian ones, mapping
+            # them "temporarily" to the same base encoding as us, with a comment
+            # suggesting that full implementation will appear some time later.
+            # As such, try the Python version of the x_mac_... first, if that is found,
+            # use *that* as our base encoding.  This would make our encoding upgrade
+            # to the full encoding when and if Python finally implements that.
+            # http://bugs.python.org/issue24041
+            base_encodings = [name[:-4], base_encoding]
+            for base_encoding in base_encodings:
+                try:
+                    codecs.lookup(base_encoding)
+                except LookupError:
+                    continue
+                _cache[name] = ExtendCodec(name, base_encoding, mapping)
+                break
+        return _cache[name].info
+
+    return None
+
+
+codecs.register(search_function)

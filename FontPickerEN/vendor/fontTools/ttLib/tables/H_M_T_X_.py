@@ -1,1 +1,6 @@
-ZnJvbSAuX2hfbV90X3ggaW1wb3J0IHRhYmxlX19oX21fdF94CgoKY2xhc3MgdGFibGVfSF9NX1RfWF8odGFibGVfX2hfbV90X3gpOgogICAgaGVhZGVyVGFnID0gIkhIRUEiCiAgICBtYXhwVGFnID0gIk1BWFAiCg==
+from ._h_m_t_x import table__h_m_t_x
+
+
+class table_H_M_T_X_(table__h_m_t_x):
+    headerTag = "HHEA"
+    maxpTag = "MAXP"

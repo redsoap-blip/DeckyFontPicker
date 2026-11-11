@@ -1,1 +1,14 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2b3BiZC5odG1sCmNsYXNzIHRhYmxlX19vX3BfYl9kKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiT3B0aWNhbCBCb3VuZHMgdGFibGUKCiAgICBUaGUgQUFUIGBgb3BiZGBgIHRhYmxlIGNvbnRhaW5zIG9wdGljYWwgYm91bmRhcnkgcG9pbnRzIGZvciBnbHlwaHMsIHdoaWNoCiAgICBhcHBsaWNhdGlvbnMgY2FuIHVzZSBmb3IgdGhlIHZpc3VhbCBhbGlnbm1lbnQgb2YgbGluZXMgb2YgdGV4dC4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2b3BiZC5odG1sCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6opbd.html
+class table__o_p_b_d(BaseTTXConverter):
+    """Optical Bounds table
+
+    The AAT ``opbd`` table contains optical boundary points for glyphs, which
+    applications can use for the visual alignment of lines of text.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6opbd.html
+    """
+
+    pass

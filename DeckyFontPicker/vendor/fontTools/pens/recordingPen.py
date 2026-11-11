@@ -1,1 +1,342 @@
-IiIiUGVuIHJlY29yZGluZyBvcGVyYXRpb25zIHRoYXQgY2FuIGJlIGFjY2Vzc2VkIG9yIHJlcGxheWVkLiIiIgoKZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBBYnN0cmFjdFBlbiwgRGVjb21wb3NpbmdQZW4KZnJvbSBmb250VG9vbHMucGVucy5wb2ludFBlbiBpbXBvcnQgQWJzdHJhY3RQb2ludFBlbiwgRGVjb21wb3NpbmdQb2ludFBlbgoKX19hbGxfXyA9IFsKICAgICJyZXBsYXlSZWNvcmRpbmciLAogICAgIlJlY29yZGluZ1BlbiIsCiAgICAiRGVjb21wb3NpbmdSZWNvcmRpbmdQZW4iLAogICAgIkRlY29tcG9zaW5nUmVjb3JkaW5nUG9pbnRQZW4iLAogICAgIlJlY29yZGluZ1BvaW50UGVuIiwKICAgICJsZXJwUmVjb3JkaW5ncyIsCl0KCgpkZWYgcmVwbGF5UmVjb3JkaW5nKHJlY29yZGluZywgcGVuKToKICAgICIiIlJlcGxheSBhIHJlY29yZGluZywgYXMgcHJvZHVjZWQgYnkgUmVjb3JkaW5nUGVuIG9yIERlY29tcG9zaW5nUmVjb3JkaW5nUGVuLAogICAgdG8gYSBwZW4uCgogICAgTm90ZSB0aGF0IHJlY29yZGluZyBkb2VzIG5vdCBoYXZlIHRvIGJlIHByb2R1Y2VkIGJ5IHRob3NlIHBlbnMuCiAgICBJdCBjYW4gYmUgYW55IGl0ZXJhYmxlIG9mIHR1cGxlcyBvZiBtZXRob2QgbmFtZSBhbmQgdHVwbGUtb2YtYXJndW1lbnRzLgogICAgTGlrZXdpc2UsIHBlbiBjYW4gYmUgYW55IG9iamVjdHMgcmVjZWl2aW5nIHRob3NlIG1ldGhvZCBjYWxscy4KICAgICIiIgogICAgZm9yIGVudHJ5IGluIHJlY29yZGluZzoKICAgICAgICBvcGVyYXRvciwgb3BlcmFuZHMgPSBlbnRyeVs6Ml0KICAgICAgICBrd2FyZ3MgPSBlbnRyeVsyXSBpZiBsZW4oZW50cnkpID09IDMgZWxzZSB7fQogICAgICAgIGdldGF0dHIocGVuLCBvcGVyYXRvcikoKm9wZXJhbmRzLCAqKmt3YXJncykKCgpjbGFzcyBSZWNvcmRpbmdQZW4oQWJzdHJhY3RQZW4pOgogICAgIiIiUGVuIHJlY29yZGluZyBvcGVyYXRpb25zIHRoYXQgY2FuIGJlIGFjY2Vzc2VkIG9yIHJlcGxheWVkLgoKICAgIFRoZSByZWNvcmRpbmcgY2FuIGJlIGFjY2Vzc2VkIGFzIHBlbi52YWx1ZTsgb3IgcmVwbGF5ZWQgdXNpbmcKICAgIHBlbi5yZXBsYXkob3RoZXJQZW4pLgoKICAgIDpFeGFtcGxlOgogICAgICAgIC4uIGNvZGUtYmxvY2s6OgoKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAogICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLnJlY29yZGluZ1BlbiBpbXBvcnQgUmVjb3JkaW5nUGVuCgogICAgICAgICAgICBnbHlwaF9uYW1lID0gJ2RvbGxhcicKICAgICAgICAgICAgZm9udF9wYXRoID0gJ015Rm9udC5vdGYnCgogICAgICAgICAgICBmb250ID0gVFRGb250KGZvbnRfcGF0aCkKICAgICAgICAgICAgZ2x5cGhzZXQgPSBmb250LmdldEdseXBoU2V0KCkKICAgICAgICAgICAgZ2x5cGggPSBnbHlwaHNldFtnbHlwaF9uYW1lXQoKICAgICAgICAgICAgcGVuID0gUmVjb3JkaW5nUGVuKCkKICAgICAgICAgICAgZ2x5cGguZHJhdyhwZW4pCiAgICAgICAgICAgIHByaW50KHBlbi52YWx1ZSkKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICAgICBzZWxmLnZhbHVlID0gW10KCiAgICBkZWYgbW92ZVRvKHNlbGYsIHAwKToKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgoIm1vdmVUbyIsIChwMCwpKSkKCiAgICBkZWYgbGluZVRvKHNlbGYsIHAxKToKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgoImxpbmVUbyIsIChwMSwpKSkKCiAgICBkZWYgcUN1cnZlVG8oc2VsZiwgKnBvaW50cyk6CiAgICAgICAgc2VsZi52YWx1ZS5hcHBlbmQoKCJxQ3VydmVUbyIsIHBvaW50cykpCgogICAgZGVmIGN1cnZlVG8oc2VsZiwgKnBvaW50cyk6CiAgICAgICAgc2VsZi52YWx1ZS5hcHBlbmQoKCJjdXJ2ZVRvIiwgcG9pbnRzKSkKCiAgICBkZWYgY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIHNlbGYudmFsdWUuYXBwZW5kKCgiY2xvc2VQYXRoIiwgKCkpKQoKICAgIGRlZiBlbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYudmFsdWUuYXBwZW5kKCgiZW5kUGF0aCIsICgpKSkKCiAgICBkZWYgYWRkQ29tcG9uZW50KHNlbGYsIGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24pOgogICAgICAgIHNlbGYudmFsdWUuYXBwZW5kKCgiYWRkQ29tcG9uZW50IiwgKGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24pKSkKCiAgICBkZWYgYWRkVmFyQ29tcG9uZW50KAogICAgICAgIHNlbGYsIGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24sIGxvY2F0aW9uLCAqLCByZXNldFVuc3BlY2lmaWVkQXhlcz1GYWxzZQogICAgKToKICAgICAgICBrd2FyZ3MgPSB7InJlc2V0VW5zcGVjaWZpZWRBeGVzIjogVHJ1ZX0gaWYgcmVzZXRVbnNwZWNpZmllZEF4ZXMgZWxzZSB7fQogICAgICAgIGVudHJ5ID0gKCJhZGRWYXJDb21wb25lbnQiLCAoZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgbG9jYXRpb24pKQogICAgICAgIGlmIGt3YXJnczoKICAgICAgICAgICAgZW50cnkgKz0gKGt3YXJncywpCiAgICAgICAgc2VsZi52YWx1ZS5hcHBlbmQoZW50cnkpCgogICAgZGVmIHJlcGxheShzZWxmLCBwZW4pOgogICAgICAgIHJlcGxheVJlY29yZGluZyhzZWxmLnZhbHVlLCBwZW4pCgogICAgZHJhdyA9IHJlcGxheQoKCmNsYXNzIERlY29tcG9zaW5nUmVjb3JkaW5nUGVuKERlY29tcG9zaW5nUGVuLCBSZWNvcmRpbmdQZW4pOgogICAgIiIiU2FtZSBhcyBSZWNvcmRpbmdQZW4sIGV4Y2VwdCB0aGF0IGl0IGRvZXNuJ3Qga2VlcCBjb21wb25lbnRzCiAgICBhcyByZWZlcmVuY2VzLCBidXQgZHJhd3MgdGhlbSBkZWNvbXBvc2VkIGFzIHJlZ3VsYXIgY29udG91cnMuCgogICAgVGhlIGNvbnN0cnVjdG9yIHRha2VzIGEgcmVxdWlyZWQgJ2dseXBoU2V0JyBwb3NpdGlvbmFsIGFyZ3VtZW50LAogICAgYSBkaWN0aW9uYXJ5IG9mIGdseXBoIG9iamVjdHMgKGkuZS4gd2l0aCBhICdkcmF3JyBtZXRob2QpIGtleWVkCiAgICBieSB0aGlyIG5hbWU7IG90aGVyIGFyZ3VtZW50cyBhcmUgZm9yd2FyZGVkIHRvIHRoZSBEZWNvbXBvc2luZ1BlbidzCiAgICBjb25zdHJ1Y3Rvcjo6CgogICAgICAgID4+PiBjbGFzcyBTaW1wbGVHbHlwaChvYmplY3QpOgogICAgICAgIC4uLiAgICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICAuLi4gICAgICAgICBwZW4ubW92ZVRvKCgwLCAwKSkKICAgICAgICAuLi4gICAgICAgICBwZW4uY3VydmVUbygoMSwgMSksICgyLCAyKSwgKDMsIDMpKQogICAgICAgIC4uLiAgICAgICAgIHBlbi5jbG9zZVBhdGgoKQogICAgICAgID4+PiBjbGFzcyBDb21wb3NpdGVHbHlwaChvYmplY3QpOgogICAgICAgIC4uLiAgICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICAuLi4gICAgICAgICBwZW4uYWRkQ29tcG9uZW50KCdhJywgKDEsIDAsIDAsIDEsIC0xLCAxKSkKICAgICAgICA+Pj4gY2xhc3MgTWlzc2luZ0NvbXBvbmVudChvYmplY3QpOgogICAgICAgIC4uLiAgICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICAuLi4gICAgICAgICBwZW4uYWRkQ29tcG9uZW50KCdmb29iYXInLCAoMSwgMCwgMCwgMSwgMCwgMCkpCiAgICAgICAgPj4+IGNsYXNzIEZsaXBwZWRDb21wb25lbnQob2JqZWN0KToKICAgICAgICAuLi4gICAgIGRlZiBkcmF3KHNlbGYsIHBlbik6CiAgICAgICAgLi4uICAgICAgICAgcGVuLmFkZENvbXBvbmVudCgnYScsICgtMSwgMCwgMCwgMSwgMCwgMCkpCiAgICAgICAgPj4+IGdseXBoU2V0ID0gewogICAgICAgIC4uLiAgICAnYSc6IFNpbXBsZUdseXBoKCksCiAgICAgICAgLi4uICAgICdiJzogQ29tcG9zaXRlR2x5cGgoKSwKICAgICAgICAuLi4gICAgJ2MnOiBNaXNzaW5nQ29tcG9uZW50KCksCiAgICAgICAgLi4uICAgICdkJzogRmxpcHBlZENvbXBvbmVudCgpLAogICAgICAgIC4uLiB9CiAgICAgICAgPj4+IGZvciBuYW1lLCBnbHlwaCBpbiBzb3J0ZWQoZ2x5cGhTZXQuaXRlbXMoKSk6CiAgICAgICAgLi4uICAgICBwZW4gPSBEZWNvbXBvc2luZ1JlY29yZGluZ1BlbihnbHlwaFNldCkKICAgICAgICAuLi4gICAgIHRyeToKICAgICAgICAuLi4gICAgICAgICBnbHlwaC5kcmF3KHBlbikKICAgICAgICAuLi4gICAgIGV4Y2VwdCBwZW4uTWlzc2luZ0NvbXBvbmVudEVycm9yOgogICAgICAgIC4uLiAgICAgICAgIHBhc3MKICAgICAgICAuLi4gICAgIHByaW50KCJ7fToge30iLmZvcm1hdChuYW1lLCBwZW4udmFsdWUpKQogICAgICAgIGE6IFsoJ21vdmVUbycsICgoMCwgMCksKSksICgnY3VydmVUbycsICgoMSwgMSksICgyLCAyKSwgKDMsIDMpKSksICgnY2xvc2VQYXRoJywgKCkpXQogICAgICAgIGI6IFsoJ21vdmVUbycsICgoLTEsIDEpLCkpLCAoJ2N1cnZlVG8nLCAoKDAsIDIpLCAoMSwgMyksICgyLCA0KSkpLCAoJ2Nsb3NlUGF0aCcsICgpKV0KICAgICAgICBjOiBbXQogICAgICAgIGQ6IFsoJ21vdmVUbycsICgoMCwgMCksKSksICgnY3VydmVUbycsICgoLTEsIDEpLCAoLTIsIDIpLCAoLTMsIDMpKSksICgnY2xvc2VQYXRoJywgKCkpXQoKICAgICAgICA+Pj4gZm9yIG5hbWUsIGdseXBoIGluIHNvcnRlZChnbHlwaFNldC5pdGVtcygpKToKICAgICAgICAuLi4gICAgIHBlbiA9IERlY29tcG9zaW5nUmVjb3JkaW5nUGVuKAogICAgICAgIC4uLiAgICAgICAgIGdseXBoU2V0LCBza2lwTWlzc2luZ0NvbXBvbmVudHM9VHJ1ZSwgcmV2ZXJzZUZsaXBwZWQ9VHJ1ZSwKICAgICAgICAuLi4gICAgICkKICAgICAgICAuLi4gICAgIGdseXBoLmRyYXcocGVuKQogICAgICAgIC4uLiAgICAgcHJpbnQoInt9OiB7fSIuZm9ybWF0KG5hbWUsIHBlbi52YWx1ZSkpCiAgICAgICAgYTogWygnbW92ZVRvJywgKCgwLCAwKSwpKSwgKCdjdXJ2ZVRvJywgKCgxLCAxKSwgKDIsIDIpLCAoMywgMykpKSwgKCdjbG9zZVBhdGgnLCAoKSldCiAgICAgICAgYjogWygnbW92ZVRvJywgKCgtMSwgMSksKSksICgnY3VydmVUbycsICgoMCwgMiksICgxLCAzKSwgKDIsIDQpKSksICgnY2xvc2VQYXRoJywgKCkpXQogICAgICAgIGM6IFtdCiAgICAgICAgZDogWygnbW92ZVRvJywgKCgwLCAwKSwpKSwgKCdsaW5lVG8nLCAoKC0zLCAzKSwpKSwgKCdjdXJ2ZVRvJywgKCgtMiwgMiksICgtMSwgMSksICgwLCAwKSkpLCAoJ2Nsb3NlUGF0aCcsICgpKV0KICAgICIiIgoKICAgICMgcmFpc2VzIE1pc3NpbmdDb21wb25lbnRFcnJvcihLZXlFcnJvcikgaWYgYmFzZSBnbHlwaCBpcyBub3QgZm91bmQgaW4gZ2x5cGhTZXQKICAgIHNraXBNaXNzaW5nQ29tcG9uZW50cyA9IEZhbHNlCgoKY2xhc3MgUmVjb3JkaW5nUG9pbnRQZW4oQWJzdHJhY3RQb2ludFBlbik6CiAgICAiIiJQb2ludFBlbiByZWNvcmRpbmcgb3BlcmF0aW9ucyB0aGF0IGNhbiBiZSBhY2Nlc3NlZCBvciByZXBsYXllZC4KCiAgICBUaGUgcmVjb3JkaW5nIGNhbiBiZSBhY2Nlc3NlZCBhcyBwZW4udmFsdWU7IG9yIHJlcGxheWVkIHVzaW5nCiAgICBwb2ludFBlbi5yZXBsYXkob3RoZXJQb2ludFBlbikuCgogICAgOkV4YW1wbGU6CiAgICAgICAgLi4gY29kZS1ibG9jazo6CgogICAgICAgICAgICBmcm9tIGRlZmNvbiBpbXBvcnQgRm9udAogICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLnJlY29yZGluZ1BlbiBpbXBvcnQgUmVjb3JkaW5nUG9pbnRQZW4KCiAgICAgICAgICAgIGdseXBoX25hbWUgPSAnYScKICAgICAgICAgICAgZm9udF9wYXRoID0gJ015Rm9udC51Zm8nCgogICAgICAgICAgICBmb250ID0gRm9udChmb250X3BhdGgpCiAgICAgICAgICAgIGdseXBoID0gZm9udFtnbHlwaF9uYW1lXQoKICAgICAgICAgICAgcGVuID0gUmVjb3JkaW5nUG9pbnRQZW4oKQogICAgICAgICAgICBnbHlwaC5kcmF3UG9pbnRzKHBlbikKICAgICAgICAgICAgcHJpbnQocGVuLnZhbHVlKQoKICAgICAgICAgICAgbmV3X2dseXBoID0gZm9udC5uZXdHbHlwaCgnYicpCiAgICAgICAgICAgIHBlbi5yZXBsYXkobmV3X2dseXBoLmdldFBvaW50UGVuKCkpCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi52YWx1ZSA9IFtdCgogICAgZGVmIGJlZ2luUGF0aChzZWxmLCBpZGVudGlmaWVyPU5vbmUsICoqa3dhcmdzKToKICAgICAgICBpZiBpZGVudGlmaWVyIGlzIG5vdCBOb25lOgogICAgICAgICAgICBrd2FyZ3NbImlkZW50aWZpZXIiXSA9IGlkZW50aWZpZXIKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgoImJlZ2luUGF0aCIsICgpLCBrd2FyZ3MpKQoKICAgIGRlZiBlbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYudmFsdWUuYXBwZW5kKCgiZW5kUGF0aCIsICgpLCB7fSkpCgogICAgZGVmIGFkZFBvaW50KAogICAgICAgIHNlbGYsIHB0LCBzZWdtZW50VHlwZT1Ob25lLCBzbW9vdGg9RmFsc2UsIG5hbWU9Tm9uZSwgaWRlbnRpZmllcj1Ob25lLCAqKmt3YXJncwogICAgKToKICAgICAgICBpZiBpZGVudGlmaWVyIGlzIG5vdCBOb25lOgogICAgICAgICAgICBrd2FyZ3NbImlkZW50aWZpZXIiXSA9IGlkZW50aWZpZXIKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgoImFkZFBvaW50IiwgKHB0LCBzZWdtZW50VHlwZSwgc21vb3RoLCBuYW1lKSwga3dhcmdzKSkKCiAgICBkZWYgYWRkQ29tcG9uZW50KHNlbGYsIGJhc2VHbHlwaE5hbWUsIHRyYW5zZm9ybWF0aW9uLCBpZGVudGlmaWVyPU5vbmUsICoqa3dhcmdzKToKICAgICAgICBpZiBpZGVudGlmaWVyIGlzIG5vdCBOb25lOgogICAgICAgICAgICBrd2FyZ3NbImlkZW50aWZpZXIiXSA9IGlkZW50aWZpZXIKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgoImFkZENvbXBvbmVudCIsIChiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiksIGt3YXJncykpCgogICAgZGVmIGFkZFZhckNvbXBvbmVudCgKICAgICAgICBzZWxmLCBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgbG9jYXRpb24sIGlkZW50aWZpZXI9Tm9uZSwgKiprd2FyZ3MKICAgICk6CiAgICAgICAgaWYgaWRlbnRpZmllciBpcyBub3QgTm9uZToKICAgICAgICAgICAga3dhcmdzWyJpZGVudGlmaWVyIl0gPSBpZGVudGlmaWVyCiAgICAgICAgc2VsZi52YWx1ZS5hcHBlbmQoCiAgICAgICAgICAgICgiYWRkVmFyQ29tcG9uZW50IiwgKGJhc2VHbHlwaE5hbWUsIHRyYW5zZm9ybWF0aW9uLCBsb2NhdGlvbiksIGt3YXJncykKICAgICAgICApCgogICAgZGVmIHJlcGxheShzZWxmLCBwb2ludFBlbik6CiAgICAgICAgZm9yIG9wZXJhdG9yLCBhcmdzLCBrd2FyZ3MgaW4gc2VsZi52YWx1ZToKICAgICAgICAgICAgZ2V0YXR0cihwb2ludFBlbiwgb3BlcmF0b3IpKCphcmdzLCAqKmt3YXJncykKCiAgICBkcmF3UG9pbnRzID0gcmVwbGF5CgoKY2xhc3MgRGVjb21wb3NpbmdSZWNvcmRpbmdQb2ludFBlbihEZWNvbXBvc2luZ1BvaW50UGVuLCBSZWNvcmRpbmdQb2ludFBlbik6CiAgICAiIiJTYW1lIGFzIFJlY29yZGluZ1BvaW50UGVuLCBleGNlcHQgdGhhdCBpdCBkb2Vzbid0IGtlZXAgY29tcG9uZW50cwogICAgYXMgcmVmZXJlbmNlcywgYnV0IGRyYXdzIHRoZW0gZGVjb21wb3NlZCBhcyByZWd1bGFyIGNvbnRvdXJzLgoKICAgIFRoZSBjb25zdHJ1Y3RvciB0YWtlcyBhIHJlcXVpcmVkICdnbHlwaFNldCcgcG9zaXRpb25hbCBhcmd1bWVudCwKICAgIGEgZGljdGlvbmFyeSBvZiBwb2ludFBlbi1kcmF3YWJsZSBnbHlwaCBvYmplY3RzIChpLmUuIHdpdGggYSAnZHJhd1BvaW50cycgbWV0aG9kKQogICAga2V5ZWQgYnkgdGhpciBuYW1lOyBvdGhlciBhcmd1bWVudHMgYXJlIGZvcndhcmRlZCB0byB0aGUgRGVjb21wb3NpbmdQb2ludFBlbidzCiAgICBjb25zdHJ1Y3Rvcjo6CgogICAgICAgID4+PiBmcm9tIHBwcmludCBpbXBvcnQgcHByaW50CiAgICAgICAgPj4+IGNsYXNzIFNpbXBsZUdseXBoKG9iamVjdCk6CiAgICAgICAgLi4uICAgICBkZWYgZHJhd1BvaW50cyhzZWxmLCBwZW4pOgogICAgICAgIC4uLiAgICAgICAgIHBlbi5iZWdpblBhdGgoKQogICAgICAgIC4uLiAgICAgICAgIHBlbi5hZGRQb2ludCgoMCwgMCksICJsaW5lIikKICAgICAgICAuLi4gICAgICAgICBwZW4uYWRkUG9pbnQoKDEsIDEpKQogICAgICAgIC4uLiAgICAgICAgIHBlbi5hZGRQb2ludCgoMiwgMikpCiAgICAgICAgLi4uICAgICAgICAgcGVuLmFkZFBvaW50KCgzLCAzKSwgImN1cnZlIikKICAgICAgICAuLi4gICAgICAgICBwZW4uZW5kUGF0aCgpCiAgICAgICAgPj4+IGNsYXNzIENvbXBvc2l0ZUdseXBoKG9iamVjdCk6CiAgICAgICAgLi4uICAgICBkZWYgZHJhd1BvaW50cyhzZWxmLCBwZW4pOgogICAgICAgIC4uLiAgICAgICAgIHBlbi5hZGRDb21wb25lbnQoJ2EnLCAoMSwgMCwgMCwgMSwgLTEsIDEpKQogICAgICAgID4+PiBjbGFzcyBNaXNzaW5nQ29tcG9uZW50KG9iamVjdCk6CiAgICAgICAgLi4uICAgICBkZWYgZHJhd1BvaW50cyhzZWxmLCBwZW4pOgogICAgICAgIC4uLiAgICAgICAgIHBlbi5hZGRDb21wb25lbnQoJ2Zvb2JhcicsICgxLCAwLCAwLCAxLCAwLCAwKSkKICAgICAgICA+Pj4gY2xhc3MgRmxpcHBlZENvbXBvbmVudChvYmplY3QpOgogICAgICAgIC4uLiAgICAgZGVmIGRyYXdQb2ludHMoc2VsZiwgcGVuKToKICAgICAgICAuLi4gICAgICAgICBwZW4uYWRkQ29tcG9uZW50KCdhJywgKC0xLCAwLCAwLCAxLCAwLCAwKSkKICAgICAgICA+Pj4gZ2x5cGhTZXQgPSB7CiAgICAgICAgLi4uICAgICdhJzogU2ltcGxlR2x5cGgoKSwKICAgICAgICAuLi4gICAgJ2InOiBDb21wb3NpdGVHbHlwaCgpLAogICAgICAgIC4uLiAgICAnYyc6IE1pc3NpbmdDb21wb25lbnQoKSwKICAgICAgICAuLi4gICAgJ2QnOiBGbGlwcGVkQ29tcG9uZW50KCksCiAgICAgICAgLi4uIH0KICAgICAgICA+Pj4gZm9yIG5hbWUsIGdseXBoIGluIHNvcnRlZChnbHlwaFNldC5pdGVtcygpKToKICAgICAgICAuLi4gICAgIHBlbiA9IERlY29tcG9zaW5nUmVjb3JkaW5nUG9pbnRQZW4oZ2x5cGhTZXQpCiAgICAgICAgLi4uICAgICB0cnk6CiAgICAgICAgLi4uICAgICAgICAgZ2x5cGguZHJhd1BvaW50cyhwZW4pCiAgICAgICAgLi4uICAgICBleGNlcHQgcGVuLk1pc3NpbmdDb21wb25lbnRFcnJvcjoKICAgICAgICAuLi4gICAgICAgICBwYXNzCiAgICAgICAgLi4uICAgICBwcHJpbnQoe25hbWU6IHBlbi52YWx1ZX0pCiAgICAgICAgeydhJzogWygnYmVnaW5QYXRoJywgKCksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMCksICdsaW5lJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKDEsIDEpLCBOb25lLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMiwgMiksIE5vbmUsIEZhbHNlLCBOb25lKSwge30pLAogICAgICAgICAgICAgICAoJ2FkZFBvaW50JywgKCgzLCAzKSwgJ2N1cnZlJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnZW5kUGF0aCcsICgpLCB7fSldfQogICAgICAgIHsnYic6IFsoJ2JlZ2luUGF0aCcsICgpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0xLCAxKSwgJ2xpbmUnLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMiksIE5vbmUsIEZhbHNlLCBOb25lKSwge30pLAogICAgICAgICAgICAgICAoJ2FkZFBvaW50JywgKCgxLCAzKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKDIsIDQpLCAnY3VydmUnLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdlbmRQYXRoJywgKCksIHt9KV19CiAgICAgICAgeydjJzogW119CiAgICAgICAgeydkJzogWygnYmVnaW5QYXRoJywgKCksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMCksICdsaW5lJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0xLCAxKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0yLCAyKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0zLCAzKSwgJ2N1cnZlJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnZW5kUGF0aCcsICgpLCB7fSldfQoKICAgICAgICA+Pj4gZm9yIG5hbWUsIGdseXBoIGluIHNvcnRlZChnbHlwaFNldC5pdGVtcygpKToKICAgICAgICAuLi4gICAgIHBlbiA9IERlY29tcG9zaW5nUmVjb3JkaW5nUG9pbnRQZW4oCiAgICAgICAgLi4uICAgICAgICAgZ2x5cGhTZXQsIHNraXBNaXNzaW5nQ29tcG9uZW50cz1UcnVlLCByZXZlcnNlRmxpcHBlZD1UcnVlLAogICAgICAgIC4uLiAgICAgKQogICAgICAgIC4uLiAgICAgZ2x5cGguZHJhd1BvaW50cyhwZW4pCiAgICAgICAgLi4uICAgICBwcHJpbnQoe25hbWU6IHBlbi52YWx1ZX0pCiAgICAgICAgeydhJzogWygnYmVnaW5QYXRoJywgKCksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMCksICdsaW5lJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKDEsIDEpLCBOb25lLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMiwgMiksIE5vbmUsIEZhbHNlLCBOb25lKSwge30pLAogICAgICAgICAgICAgICAoJ2FkZFBvaW50JywgKCgzLCAzKSwgJ2N1cnZlJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnZW5kUGF0aCcsICgpLCB7fSldfQogICAgICAgIHsnYic6IFsoJ2JlZ2luUGF0aCcsICgpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0xLCAxKSwgJ2xpbmUnLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMiksIE5vbmUsIEZhbHNlLCBOb25lKSwge30pLAogICAgICAgICAgICAgICAoJ2FkZFBvaW50JywgKCgxLCAzKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKDIsIDQpLCAnY3VydmUnLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgICAgICAgICAgICAgKCdlbmRQYXRoJywgKCksIHt9KV19CiAgICAgICAgeydjJzogW119CiAgICAgICAgeydkJzogWygnYmVnaW5QYXRoJywgKCksIHt9KSwKICAgICAgICAgICAgICAgKCdhZGRQb2ludCcsICgoMCwgMCksICdjdXJ2ZScsIEZhbHNlLCBOb25lKSwge30pLAogICAgICAgICAgICAgICAoJ2FkZFBvaW50JywgKCgtMywgMyksICdsaW5lJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0yLCAyKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnYWRkUG9pbnQnLCAoKC0xLCAxKSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAgICAgICAgICAgICgnZW5kUGF0aCcsICgpLCB7fSldfQogICAgIiIiCgogICAgIyByYWlzZXMgTWlzc2luZ0NvbXBvbmVudEVycm9yKEtleUVycm9yKSBpZiBiYXNlIGdseXBoIGlzIG5vdCBmb3VuZCBpbiBnbHlwaFNldAogICAgc2tpcE1pc3NpbmdDb21wb25lbnRzID0gRmFsc2UKCgpkZWYgbGVycFJlY29yZGluZ3MocmVjb3JkaW5nMSwgcmVjb3JkaW5nMiwgZmFjdG9yPTAuNSk6CiAgICAiIiJMaW5lYXJseSBpbnRlcnBvbGF0ZSBiZXR3ZWVuIHR3byByZWNvcmRpbmdzLiBUaGUgcmVjb3JkaW5ncwogICAgbXVzdCBiZSBkZWNvbXBvc2VkLCBpLmUuIHRoZXkgbXVzdCBub3QgY29udGFpbiBhbnkgY29tcG9uZW50cy4KCiAgICBGYWN0b3IgaXMgdHlwaWNhbGx5IGJldHdlZW4gMCBhbmQgMS4gMCBtZWFucyB0aGUgZmlyc3QgcmVjb3JkaW5nLAogICAgMSBtZWFucyB0aGUgc2Vjb25kIHJlY29yZGluZywgYW5kIDAuNSBtZWFucyB0aGUgYXZlcmFnZSBvZiB0aGUKICAgIHR3byByZWNvcmRpbmdzLiBPdGhlciB2YWx1ZXMgYXJlIHBvc3NpYmxlLCBhbmQgY2FuIGJlIHVzZWZ1bCB0bwogICAgZXh0cmFwb2xhdGUuIERlZmF1bHRzIHRvIDAuNS4KCiAgICBSZXR1cm5zIGEgZ2VuZXJhdG9yIHdpdGggdGhlIG5ldyByZWNvcmRpbmcuCiAgICAiIiIKICAgIGlmIGxlbihyZWNvcmRpbmcxKSAhPSBsZW4ocmVjb3JkaW5nMik6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgIk1pc21hdGNoZWQgbGVuZ3RoczogJWQgYW5kICVkIiAlIChsZW4ocmVjb3JkaW5nMSksIGxlbihyZWNvcmRpbmcyKSkKICAgICAgICApCiAgICBmb3IgKG9wMSwgYXJnczEpLCAob3AyLCBhcmdzMikgaW4gemlwKHJlY29yZGluZzEsIHJlY29yZGluZzIpOgogICAgICAgIGlmIG9wMSAhPSBvcDI6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIk1pc21hdGNoZWQgb3BlcmF0aW9uczogJXMsICVzIiAlIChvcDEsIG9wMikpCiAgICAgICAgaWYgb3AxID09ICJhZGRDb21wb25lbnQiOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJDYW5ub3QgaW50ZXJwb2xhdGUgY29tcG9uZW50cyIpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbWlkX2FyZ3MgPSBbCiAgICAgICAgICAgICAgICAoeDEgKyAoeDIgLSB4MSkgKiBmYWN0b3IsIHkxICsgKHkyIC0geTEpICogZmFjdG9yKQogICAgICAgICAgICAgICAgZm9yICh4MSwgeTEpLCAoeDIsIHkyKSBpbiB6aXAoYXJnczEsIGFyZ3MyKQogICAgICAgICAgICBdCiAgICAgICAgeWllbGQgKG9wMSwgbWlkX2FyZ3MpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHBlbiA9IFJlY29yZGluZ1BlbigpCiAgICBwZW4ubW92ZVRvKCgwLCAwKSkKICAgIHBlbi5saW5lVG8oKDAsIDEwMCkpCiAgICBwZW4uY3VydmVUbygoNTAsIDc1KSwgKDYwLCA1MCksICg1MCwgMjUpKQogICAgcGVuLmNsb3NlUGF0aCgpCiAgICBmcm9tIHBwcmludCBpbXBvcnQgcHByaW50CgogICAgcHByaW50KHBlbi52YWx1ZSkK
+"""Pen recording operations that can be accessed or replayed."""
+
+from fontTools.pens.basePen import AbstractPen, DecomposingPen
+from fontTools.pens.pointPen import AbstractPointPen, DecomposingPointPen
+
+__all__ = [
+    "replayRecording",
+    "RecordingPen",
+    "DecomposingRecordingPen",
+    "DecomposingRecordingPointPen",
+    "RecordingPointPen",
+    "lerpRecordings",
+]
+
+
+def replayRecording(recording, pen):
+    """Replay a recording, as produced by RecordingPen or DecomposingRecordingPen,
+    to a pen.
+
+    Note that recording does not have to be produced by those pens.
+    It can be any iterable of tuples of method name and tuple-of-arguments.
+    Likewise, pen can be any objects receiving those method calls.
+    """
+    for entry in recording:
+        operator, operands = entry[:2]
+        kwargs = entry[2] if len(entry) == 3 else {}
+        getattr(pen, operator)(*operands, **kwargs)
+
+
+class RecordingPen(AbstractPen):
+    """Pen recording operations that can be accessed or replayed.
+
+    The recording can be accessed as pen.value; or replayed using
+    pen.replay(otherPen).
+
+    :Example:
+        .. code-block::
+
+            from fontTools.ttLib import TTFont
+            from fontTools.pens.recordingPen import RecordingPen
+
+            glyph_name = 'dollar'
+            font_path = 'MyFont.otf'
+
+            font = TTFont(font_path)
+            glyphset = font.getGlyphSet()
+            glyph = glyphset[glyph_name]
+
+            pen = RecordingPen()
+            glyph.draw(pen)
+            print(pen.value)
+    """
+
+    def __init__(self):
+        self.value = []
+
+    def moveTo(self, p0):
+        self.value.append(("moveTo", (p0,)))
+
+    def lineTo(self, p1):
+        self.value.append(("lineTo", (p1,)))
+
+    def qCurveTo(self, *points):
+        self.value.append(("qCurveTo", points))
+
+    def curveTo(self, *points):
+        self.value.append(("curveTo", points))
+
+    def closePath(self):
+        self.value.append(("closePath", ()))
+
+    def endPath(self):
+        self.value.append(("endPath", ()))
+
+    def addComponent(self, glyphName, transformation):
+        self.value.append(("addComponent", (glyphName, transformation)))
+
+    def addVarComponent(
+        self, glyphName, transformation, location, *, resetUnspecifiedAxes=False
+    ):
+        kwargs = {"resetUnspecifiedAxes": True} if resetUnspecifiedAxes else {}
+        entry = ("addVarComponent", (glyphName, transformation, location))
+        if kwargs:
+            entry += (kwargs,)
+        self.value.append(entry)
+
+    def replay(self, pen):
+        replayRecording(self.value, pen)
+
+    draw = replay
+
+
+class DecomposingRecordingPen(DecomposingPen, RecordingPen):
+    """Same as RecordingPen, except that it doesn't keep components
+    as references, but draws them decomposed as regular contours.
+
+    The constructor takes a required 'glyphSet' positional argument,
+    a dictionary of glyph objects (i.e. with a 'draw' method) keyed
+    by thir name; other arguments are forwarded to the DecomposingPen's
+    constructor::
+
+        >>> class SimpleGlyph(object):
+        ...     def draw(self, pen):
+        ...         pen.moveTo((0, 0))
+        ...         pen.curveTo((1, 1), (2, 2), (3, 3))
+        ...         pen.closePath()
+        >>> class CompositeGlyph(object):
+        ...     def draw(self, pen):
+        ...         pen.addComponent('a', (1, 0, 0, 1, -1, 1))
+        >>> class MissingComponent(object):
+        ...     def draw(self, pen):
+        ...         pen.addComponent('foobar', (1, 0, 0, 1, 0, 0))
+        >>> class FlippedComponent(object):
+        ...     def draw(self, pen):
+        ...         pen.addComponent('a', (-1, 0, 0, 1, 0, 0))
+        >>> glyphSet = {
+        ...    'a': SimpleGlyph(),
+        ...    'b': CompositeGlyph(),
+        ...    'c': MissingComponent(),
+        ...    'd': FlippedComponent(),
+        ... }
+        >>> for name, glyph in sorted(glyphSet.items()):
+        ...     pen = DecomposingRecordingPen(glyphSet)
+        ...     try:
+        ...         glyph.draw(pen)
+        ...     except pen.MissingComponentError:
+        ...         pass
+        ...     print("{}: {}".format(name, pen.value))
+        a: [('moveTo', ((0, 0),)), ('curveTo', ((1, 1), (2, 2), (3, 3))), ('closePath', ())]
+        b: [('moveTo', ((-1, 1),)), ('curveTo', ((0, 2), (1, 3), (2, 4))), ('closePath', ())]
+        c: []
+        d: [('moveTo', ((0, 0),)), ('curveTo', ((-1, 1), (-2, 2), (-3, 3))), ('closePath', ())]
+
+        >>> for name, glyph in sorted(glyphSet.items()):
+        ...     pen = DecomposingRecordingPen(
+        ...         glyphSet, skipMissingComponents=True, reverseFlipped=True,
+        ...     )
+        ...     glyph.draw(pen)
+        ...     print("{}: {}".format(name, pen.value))
+        a: [('moveTo', ((0, 0),)), ('curveTo', ((1, 1), (2, 2), (3, 3))), ('closePath', ())]
+        b: [('moveTo', ((-1, 1),)), ('curveTo', ((0, 2), (1, 3), (2, 4))), ('closePath', ())]
+        c: []
+        d: [('moveTo', ((0, 0),)), ('lineTo', ((-3, 3),)), ('curveTo', ((-2, 2), (-1, 1), (0, 0))), ('closePath', ())]
+    """
+
+    # raises MissingComponentError(KeyError) if base glyph is not found in glyphSet
+    skipMissingComponents = False
+
+
+class RecordingPointPen(AbstractPointPen):
+    """PointPen recording operations that can be accessed or replayed.
+
+    The recording can be accessed as pen.value; or replayed using
+    pointPen.replay(otherPointPen).
+
+    :Example:
+        .. code-block::
+
+            from defcon import Font
+            from fontTools.pens.recordingPen import RecordingPointPen
+
+            glyph_name = 'a'
+            font_path = 'MyFont.ufo'
+
+            font = Font(font_path)
+            glyph = font[glyph_name]
+
+            pen = RecordingPointPen()
+            glyph.drawPoints(pen)
+            print(pen.value)
+
+            new_glyph = font.newGlyph('b')
+            pen.replay(new_glyph.getPointPen())
+    """
+
+    def __init__(self):
+        self.value = []
+
+    def beginPath(self, identifier=None, **kwargs):
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.value.append(("beginPath", (), kwargs))
+
+    def endPath(self):
+        self.value.append(("endPath", (), {}))
+
+    def addPoint(
+        self, pt, segmentType=None, smooth=False, name=None, identifier=None, **kwargs
+    ):
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.value.append(("addPoint", (pt, segmentType, smooth, name), kwargs))
+
+    def addComponent(self, baseGlyphName, transformation, identifier=None, **kwargs):
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.value.append(("addComponent", (baseGlyphName, transformation), kwargs))
+
+    def addVarComponent(
+        self, baseGlyphName, transformation, location, identifier=None, **kwargs
+    ):
+        if identifier is not None:
+            kwargs["identifier"] = identifier
+        self.value.append(
+            ("addVarComponent", (baseGlyphName, transformation, location), kwargs)
+        )
+
+    def replay(self, pointPen):
+        for operator, args, kwargs in self.value:
+            getattr(pointPen, operator)(*args, **kwargs)
+
+    drawPoints = replay
+
+
+class DecomposingRecordingPointPen(DecomposingPointPen, RecordingPointPen):
+    """Same as RecordingPointPen, except that it doesn't keep components
+    as references, but draws them decomposed as regular contours.
+
+    The constructor takes a required 'glyphSet' positional argument,
+    a dictionary of pointPen-drawable glyph objects (i.e. with a 'drawPoints' method)
+    keyed by thir name; other arguments are forwarded to the DecomposingPointPen's
+    constructor::
+
+        >>> from pprint import pprint
+        >>> class SimpleGlyph(object):
+        ...     def drawPoints(self, pen):
+        ...         pen.beginPath()
+        ...         pen.addPoint((0, 0), "line")
+        ...         pen.addPoint((1, 1))
+        ...         pen.addPoint((2, 2))
+        ...         pen.addPoint((3, 3), "curve")
+        ...         pen.endPath()
+        >>> class CompositeGlyph(object):
+        ...     def drawPoints(self, pen):
+        ...         pen.addComponent('a', (1, 0, 0, 1, -1, 1))
+        >>> class MissingComponent(object):
+        ...     def drawPoints(self, pen):
+        ...         pen.addComponent('foobar', (1, 0, 0, 1, 0, 0))
+        >>> class FlippedComponent(object):
+        ...     def drawPoints(self, pen):
+        ...         pen.addComponent('a', (-1, 0, 0, 1, 0, 0))
+        >>> glyphSet = {
+        ...    'a': SimpleGlyph(),
+        ...    'b': CompositeGlyph(),
+        ...    'c': MissingComponent(),
+        ...    'd': FlippedComponent(),
+        ... }
+        >>> for name, glyph in sorted(glyphSet.items()):
+        ...     pen = DecomposingRecordingPointPen(glyphSet)
+        ...     try:
+        ...         glyph.drawPoints(pen)
+        ...     except pen.MissingComponentError:
+        ...         pass
+        ...     pprint({name: pen.value})
+        {'a': [('beginPath', (), {}),
+               ('addPoint', ((0, 0), 'line', False, None), {}),
+               ('addPoint', ((1, 1), None, False, None), {}),
+               ('addPoint', ((2, 2), None, False, None), {}),
+               ('addPoint', ((3, 3), 'curve', False, None), {}),
+               ('endPath', (), {})]}
+        {'b': [('beginPath', (), {}),
+               ('addPoint', ((-1, 1), 'line', False, None), {}),
+               ('addPoint', ((0, 2), None, False, None), {}),
+               ('addPoint', ((1, 3), None, False, None), {}),
+               ('addPoint', ((2, 4), 'curve', False, None), {}),
+               ('endPath', (), {})]}
+        {'c': []}
+        {'d': [('beginPath', (), {}),
+               ('addPoint', ((0, 0), 'line', False, None), {}),
+               ('addPoint', ((-1, 1), None, False, None), {}),
+               ('addPoint', ((-2, 2), None, False, None), {}),
+               ('addPoint', ((-3, 3), 'curve', False, None), {}),
+               ('endPath', (), {})]}
+
+        >>> for name, glyph in sorted(glyphSet.items()):
+        ...     pen = DecomposingRecordingPointPen(
+        ...         glyphSet, skipMissingComponents=True, reverseFlipped=True,
+        ...     )
+        ...     glyph.drawPoints(pen)
+        ...     pprint({name: pen.value})
+        {'a': [('beginPath', (), {}),
+               ('addPoint', ((0, 0), 'line', False, None), {}),
+               ('addPoint', ((1, 1), None, False, None), {}),
+               ('addPoint', ((2, 2), None, False, None), {}),
+               ('addPoint', ((3, 3), 'curve', False, None), {}),
+               ('endPath', (), {})]}
+        {'b': [('beginPath', (), {}),
+               ('addPoint', ((-1, 1), 'line', False, None), {}),
+               ('addPoint', ((0, 2), None, False, None), {}),
+               ('addPoint', ((1, 3), None, False, None), {}),
+               ('addPoint', ((2, 4), 'curve', False, None), {}),
+               ('endPath', (), {})]}
+        {'c': []}
+        {'d': [('beginPath', (), {}),
+               ('addPoint', ((0, 0), 'curve', False, None), {}),
+               ('addPoint', ((-3, 3), 'line', False, None), {}),
+               ('addPoint', ((-2, 2), None, False, None), {}),
+               ('addPoint', ((-1, 1), None, False, None), {}),
+               ('endPath', (), {})]}
+    """
+
+    # raises MissingComponentError(KeyError) if base glyph is not found in glyphSet
+    skipMissingComponents = False
+
+
+def lerpRecordings(recording1, recording2, factor=0.5):
+    """Linearly interpolate between two recordings. The recordings
+    must be decomposed, i.e. they must not contain any components.
+
+    Factor is typically between 0 and 1. 0 means the first recording,
+    1 means the second recording, and 0.5 means the average of the
+    two recordings. Other values are possible, and can be useful to
+    extrapolate. Defaults to 0.5.
+
+    Returns a generator with the new recording.
+    """
+    if len(recording1) != len(recording2):
+        raise ValueError(
+            "Mismatched lengths: %d and %d" % (len(recording1), len(recording2))
+        )
+    for (op1, args1), (op2, args2) in zip(recording1, recording2):
+        if op1 != op2:
+            raise ValueError("Mismatched operations: %s, %s" % (op1, op2))
+        if op1 == "addComponent":
+            raise ValueError("Cannot interpolate components")
+        else:
+            mid_args = [
+                (x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
+                for (x1, y1), (x2, y2) in zip(args1, args2)
+            ]
+        yield (op1, mid_args)
+
+
+if __name__ == "__main__":
+    pen = RecordingPen()
+    pen.moveTo((0, 0))
+    pen.lineTo((0, 100))
+    pen.curveTo((50, 75), (60, 50), (50, 25))
+    pen.closePath()
+    from pprint import pprint
+
+    pprint(pen.value)

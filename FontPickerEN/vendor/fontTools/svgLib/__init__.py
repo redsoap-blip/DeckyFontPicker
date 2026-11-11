@@ -1,1 +1,3 @@
-ZnJvbSAucGF0aCBpbXBvcnQgU1ZHUGF0aCwgcGFyc2VfcGF0aAoKX19hbGxfXyA9IFsiU1ZHUGF0aCIsICJwYXJzZV9wYXRoIl0K
+from .path import SVGPath, parse_path
+
+__all__ = ["SVGPath", "parse_path"]

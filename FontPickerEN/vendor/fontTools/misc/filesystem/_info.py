@@ -1,1 +1,75 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZSwgdGltZXpvbmUKCmZyb20gLl9lcnJvcnMgaW1wb3J0IE1pc3NpbmdJbmZvTmFtZXNwYWNlCgppZiB0eXBpbmcuVFlQRV9DSEVDS0lORzoKICAgIGZyb20gY29sbGVjdGlvbnMuYWJjIGltcG9ydCBNYXBwaW5nCiAgICBmcm9tIHR5cGluZyBpbXBvcnQgQW55CgoKZGVmIGVwb2NoX3RvX2RhdGV0aW1lKHQ6IGludCB8IE5vbmUpIC0+IGRhdGV0aW1lIHwgTm9uZToKICAgICIiIkNvbnZlcnQgZXBvY2ggdGltZSB0byBhIFVUQyBkYXRldGltZS4iIiIKICAgIGlmIHQgaXMgTm9uZToKICAgICAgICByZXR1cm4gTm9uZQogICAgcmV0dXJuIGRhdGV0aW1lLmZyb210aW1lc3RhbXAodCwgdHo9dGltZXpvbmUudXRjKQoKCmNsYXNzIEluZm86CiAgICBfX3Nsb3RzX18gPSBbInJhdyIsICJuYW1lc3BhY2VzIl0KCiAgICBkZWYgX19pbml0X18oc2VsZiwgcmF3X2luZm86IE1hcHBpbmdbc3RyLCBBbnldKToKICAgICAgICBzZWxmLnJhdyA9IHJhd19pbmZvCiAgICAgICAgc2VsZi5uYW1lc3BhY2VzID0gZnJvemVuc2V0KHJhd19pbmZvLmtleXMoKSkKCiAgICBkZWYgZ2V0KHNlbGYsIG5hbWVzcGFjZTogc3RyLCBrZXk6IHN0ciwgZGVmYXVsdDogQW55IHwgTm9uZSA9IE5vbmUpIC0+IEFueSB8IE5vbmU6CiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXR1cm4gc2VsZi5yYXdbbmFtZXNwYWNlXS5nZXQoa2V5LCBkZWZhdWx0KQogICAgICAgIGV4Y2VwdCBLZXlFcnJvcjoKICAgICAgICAgICAgcmFpc2UgTWlzc2luZ0luZm9OYW1lc3BhY2UoZiJOYW1lc3BhY2Uge25hbWVzcGFjZSFyfSBkb2VzIG5vdCBleGlzdCIpCgogICAgQHByb3BlcnR5CiAgICBkZWYgbmFtZShzZWxmKSAtPiBzdHI6CiAgICAgICAgcmV0dXJuIHNlbGYuZ2V0KCJiYXNpYyIsICJuYW1lIikKCiAgICBAcHJvcGVydHkKICAgIGRlZiBpc19kaXIoc2VsZikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gc2VsZi5nZXQoImJhc2ljIiwgImlzX2RpciIpCgogICAgQHByb3BlcnR5CiAgICBkZWYgaXNfZmlsZShzZWxmKSAtPiBib29sOgogICAgICAgIHJldHVybiBub3Qgc2VsZi5pc19kaXIKCiAgICBAcHJvcGVydHkKICAgIGRlZiBhY2Nlc3NlZChzZWxmKSAtPiBkYXRldGltZSB8IE5vbmU6CiAgICAgICAgcmV0dXJuIGVwb2NoX3RvX2RhdGV0aW1lKHNlbGYuZ2V0KCJkZXRhaWxzIiwgImFjY2Vzc2VkIikpCgogICAgQHByb3BlcnR5CiAgICBkZWYgbW9kaWZpZWQoc2VsZikgLT4gZGF0ZXRpbWUgfCBOb25lOgogICAgICAgIHJldHVybiBlcG9jaF90b19kYXRldGltZShzZWxmLmdldCgiZGV0YWlscyIsICJtb2RpZmllZCIpKQoKICAgIEBwcm9wZXJ0eQogICAgZGVmIHNpemUoc2VsZikgLT4gaW50IHwgTm9uZToKICAgICAgICByZXR1cm4gc2VsZi5nZXQoImRldGFpbHMiLCAic2l6ZSIpCgogICAgQHByb3BlcnR5CiAgICBkZWYgdHlwZShzZWxmKSAtPiBpbnQgfCBOb25lOgogICAgICAgIHJldHVybiBzZWxmLmdldCgiZGV0YWlscyIsICJ0eXBlIikKCiAgICBAcHJvcGVydHkKICAgIGRlZiBjcmVhdGVkKHNlbGYpIC0+IGRhdGV0aW1lIHwgTm9uZToKICAgICAgICByZXR1cm4gZXBvY2hfdG9fZGF0ZXRpbWUoc2VsZi5nZXQoImRldGFpbHMiLCAiY3JlYXRlZCIpKQoKICAgIEBwcm9wZXJ0eQogICAgZGVmIG1ldGFkYXRhX2NoYW5nZWQoc2VsZikgLT4gZGF0ZXRpbWUgfCBOb25lOgogICAgICAgIHJldHVybiBlcG9jaF90b19kYXRldGltZShzZWxmLmdldCgiZGV0YWlscyIsICJtZXRhZGF0YV9jaGFuZ2VkIikpCgogICAgZGVmIF9fc3RyX18oc2VsZikgLT4gc3RyOgogICAgICAgIGlmIHNlbGYuaXNfZGlyOgogICAgICAgICAgICByZXR1cm4gIjxkaXIgJ3t9Jz4iLmZvcm1hdChzZWxmLm5hbWUpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuICI8ZmlsZSAne30nPiIuZm9ybWF0KHNlbGYubmFtZSkKCiAgICBfX3JlcHJfXyA9IF9fc3RyX18K
+from __future__ import annotations
+
+import typing
+from datetime import datetime, timezone
+
+from ._errors import MissingInfoNamespace
+
+if typing.TYPE_CHECKING:
+    from collections.abc import Mapping
+    from typing import Any
+
+
+def epoch_to_datetime(t: int | None) -> datetime | None:
+    """Convert epoch time to a UTC datetime."""
+    if t is None:
+        return None
+    return datetime.fromtimestamp(t, tz=timezone.utc)
+
+
+class Info:
+    __slots__ = ["raw", "namespaces"]
+
+    def __init__(self, raw_info: Mapping[str, Any]):
+        self.raw = raw_info
+        self.namespaces = frozenset(raw_info.keys())
+
+    def get(self, namespace: str, key: str, default: Any | None = None) -> Any | None:
+        try:
+            return self.raw[namespace].get(key, default)
+        except KeyError:
+            raise MissingInfoNamespace(f"Namespace {namespace!r} does not exist")
+
+    @property
+    def name(self) -> str:
+        return self.get("basic", "name")
+
+    @property
+    def is_dir(self) -> bool:
+        return self.get("basic", "is_dir")
+
+    @property
+    def is_file(self) -> bool:
+        return not self.is_dir
+
+    @property
+    def accessed(self) -> datetime | None:
+        return epoch_to_datetime(self.get("details", "accessed"))
+
+    @property
+    def modified(self) -> datetime | None:
+        return epoch_to_datetime(self.get("details", "modified"))
+
+    @property
+    def size(self) -> int | None:
+        return self.get("details", "size")
+
+    @property
+    def type(self) -> int | None:
+        return self.get("details", "type")
+
+    @property
+    def created(self) -> datetime | None:
+        return epoch_to_datetime(self.get("details", "created"))
+
+    @property
+    def metadata_changed(self) -> datetime | None:
+        return epoch_to_datetime(self.get("details", "metadata_changed"))
+
+    def __str__(self) -> str:
+        if self.is_dir:
+            return "<dir '{}'>".format(self.name)
+        else:
+            return "<file '{}'>".format(self.name)
+
+    __repr__ = __str__

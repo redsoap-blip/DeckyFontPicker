@@ -1,1 +1,6 @@
-IiIiREVQUkVDQVRFRCAtIFRoaXMgbW9kdWxlIGlzIGtlcHQgaGVyZSBvbmx5IGFzIGEgYmFja3dhcmQgY29tcGF0aWJpbGl0eSBzaGltCmZvciB0aGUgb2xkIHVmb0xpYi5ldHJlZSBtb2R1bGUsIHdoaWNoIHdhcyBtb3ZlZCB0byA6bW9kOmBmb250VG9vbHMubWlzYy5ldHJlZWAuClBsZWFzZSB1c2UgdGhlIGxhdHRlciBpbnN0ZWFkLgoiIiIKCmZyb20gZm9udFRvb2xzLm1pc2MuZXRyZWUgaW1wb3J0ICoK
+"""DEPRECATED - This module is kept here only as a backward compatibility shim
+for the old ufoLib.etree module, which was moved to :mod:`fontTools.misc.etree`.
+Please use the latter instead.
+"""
+
+from fontTools.misc.etree import *

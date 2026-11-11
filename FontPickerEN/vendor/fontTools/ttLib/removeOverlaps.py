@@ -1,1 +1,404 @@
-IiIiU2ltcGxpZnkgVHJ1ZVR5cGUgZ2x5cGhzIGJ5IG1lcmdpbmcgb3ZlcmxhcHBpbmcgY29udG91cnMvY29tcG9uZW50cy4KClJlcXVpcmVzIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvc2tpYS1wYXRob3BzCiIiIgoKaW1wb3J0IGl0ZXJ0b29scwppbXBvcnQgbG9nZ2luZwpmcm9tIHR5cGluZyBpbXBvcnQgQ2FsbGFibGUsIEl0ZXJhYmxlLCBPcHRpb25hbCwgTWFwcGluZwoKZnJvbSBmb250VG9vbHMuY2ZmTGliIGltcG9ydCBDRkZGb250U2V0CmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCB0dEZvbnQKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBfZ19sX3lfZgpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMgaW1wb3J0IF9oX21fdF94CmZyb20gZm9udFRvb2xzLm1pc2MucHNDaGFyU3RyaW5ncyBpbXBvcnQgVDJDaGFyU3RyaW5nCmZyb20gZm9udFRvb2xzLm1pc2Mucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZCwgbm9Sb3VuZApmcm9tIGZvbnRUb29scy5wZW5zLnR0R2x5cGhQZW4gaW1wb3J0IFRUR2x5cGhQZW4KZnJvbSBmb250VG9vbHMucGVucy50MkNoYXJTdHJpbmdQZW4gaW1wb3J0IFQyQ2hhclN0cmluZ1BlbgoKaW1wb3J0IHBhdGhvcHMKCl9fYWxsX18gPSBbInJlbW92ZU92ZXJsYXBzIl0KCgpjbGFzcyBSZW1vdmVPdmVybGFwc0Vycm9yKEV4Y2VwdGlvbik6CiAgICBwYXNzCgoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy50dExpYi5yZW1vdmVPdmVybGFwcyIpCgpfVFRHbHlwaE1hcHBpbmcgPSBNYXBwaW5nW3N0ciwgdHRGb250Ll9UVEdseXBoXQoKCmRlZiBza1BhdGhGcm9tR2x5cGgoZ2x5cGhOYW1lOiBzdHIsIGdseXBoU2V0OiBfVFRHbHlwaE1hcHBpbmcpIC0+IHBhdGhvcHMuUGF0aDoKICAgIHBhdGggPSBwYXRob3BzLlBhdGgoKQogICAgcGF0aFBlbiA9IHBhdGguZ2V0UGVuKGdseXBoU2V0PWdseXBoU2V0KQogICAgZ2x5cGhTZXRbZ2x5cGhOYW1lXS5kcmF3KHBhdGhQZW4pCiAgICByZXR1cm4gcGF0aAoKCmRlZiBza1BhdGhGcm9tR2x5cGhDb21wb25lbnQoCiAgICBjb21wb25lbnQ6IF9nX2xfeV9mLkdseXBoQ29tcG9uZW50LCBnbHlwaFNldDogX1RUR2x5cGhNYXBwaW5nCik6CiAgICBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiA9IGNvbXBvbmVudC5nZXRDb21wb25lbnRJbmZvKCkKICAgIHBhdGggPSBza1BhdGhGcm9tR2x5cGgoYmFzZUdseXBoTmFtZSwgZ2x5cGhTZXQpCiAgICByZXR1cm4gcGF0aC50cmFuc2Zvcm0oKnRyYW5zZm9ybWF0aW9uKQoKCmRlZiBjb21wb25lbnRzT3ZlcmxhcChnbHlwaDogX2dfbF95X2YuR2x5cGgsIGdseXBoU2V0OiBfVFRHbHlwaE1hcHBpbmcpIC0+IGJvb2w6CiAgICBpZiBub3QgZ2x5cGguaXNDb21wb3NpdGUoKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJUaGlzIG1ldGhvZCBvbmx5IHdvcmtzIHdpdGggVHJ1ZVR5cGUgY29tcG9zaXRlIGdseXBocyIpCiAgICBpZiBsZW4oZ2x5cGguY29tcG9uZW50cykgPCAyOgogICAgICAgIHJldHVybiBGYWxzZSAgIyBzaW5nbGUgY29tcG9uZW50LCBubyBvdmVybGFwcwoKICAgIGNvbXBvbmVudF9wYXRocyA9IHt9CgogICAgZGVmIF9nZXRfbnRoX2NvbXBvbmVudF9wYXRoKGluZGV4OiBpbnQpIC0+IHBhdGhvcHMuUGF0aDoKICAgICAgICBpZiBpbmRleCBub3QgaW4gY29tcG9uZW50X3BhdGhzOgogICAgICAgICAgICBjb21wb25lbnRfcGF0aHNbaW5kZXhdID0gc2tQYXRoRnJvbUdseXBoQ29tcG9uZW50KAogICAgICAgICAgICAgICAgZ2x5cGguY29tcG9uZW50c1tpbmRleF0sIGdseXBoU2V0CiAgICAgICAgICAgICkKICAgICAgICByZXR1cm4gY29tcG9uZW50X3BhdGhzW2luZGV4XQoKICAgIHJldHVybiBhbnkoCiAgICAgICAgcGF0aG9wcy5vcCgKICAgICAgICAgICAgX2dldF9udGhfY29tcG9uZW50X3BhdGgoaSksCiAgICAgICAgICAgIF9nZXRfbnRoX2NvbXBvbmVudF9wYXRoKGopLAogICAgICAgICAgICBwYXRob3BzLlBhdGhPcC5JTlRFUlNFQ1RJT04sCiAgICAgICAgICAgIGZpeF93aW5kaW5nPUZhbHNlLAogICAgICAgICAgICBrZWVwX3N0YXJ0aW5nX3BvaW50cz1GYWxzZSwKICAgICAgICApCiAgICAgICAgZm9yIGksIGogaW4gaXRlcnRvb2xzLmNvbWJpbmF0aW9ucyhyYW5nZShsZW4oZ2x5cGguY29tcG9uZW50cykpLCAyKQogICAgKQoKCmRlZiB0dGZHbHlwaEZyb21Ta1BhdGgocGF0aDogcGF0aG9wcy5QYXRoKSAtPiBfZ19sX3lfZi5HbHlwaDoKICAgICMgU2tpYSBwYXRocyBoYXZlIG5vICdjb21wb25lbnRzJywgbm8gbmVlZCBmb3IgZ2x5cGhTZXQKICAgIHR0UGVuID0gVFRHbHlwaFBlbihnbHlwaFNldD1Ob25lKQogICAgcGF0aC5kcmF3KHR0UGVuKQogICAgZ2x5cGggPSB0dFBlbi5nbHlwaCgpCiAgICBhc3NlcnQgbm90IGdseXBoLmlzQ29tcG9zaXRlKCkKICAgICMgY29tcHV0ZSBnbHlwaC54TWluIChnbHlmVGFibGUgcGFyYW1ldGVyIHVudXNlZCBmb3Igbm9uIGNvbXBvc2l0ZXMpCiAgICBnbHlwaC5yZWNhbGNCb3VuZHMoZ2x5ZlRhYmxlPU5vbmUpCiAgICByZXR1cm4gZ2x5cGgKCgpkZWYgX2NoYXJTdHJpbmdfZnJvbV9Ta1BhdGgoCiAgICBwYXRoOiBwYXRob3BzLlBhdGgsIGNoYXJTdHJpbmc6IFQyQ2hhclN0cmluZwopIC0+IFQyQ2hhclN0cmluZzoKICAgIGlmIGNoYXJTdHJpbmcud2lkdGggPT0gY2hhclN0cmluZy5wcml2YXRlLmRlZmF1bHRXaWR0aFg6CiAgICAgICAgd2lkdGggPSBOb25lCiAgICBlbHNlOgogICAgICAgIHdpZHRoID0gY2hhclN0cmluZy53aWR0aCAtIGNoYXJTdHJpbmcucHJpdmF0ZS5ub21pbmFsV2lkdGhYCiAgICB0MlBlbiA9IFQyQ2hhclN0cmluZ1Blbih3aWR0aD13aWR0aCwgZ2x5cGhTZXQ9Tm9uZSkKICAgIHBhdGguZHJhdyh0MlBlbikKICAgIHJldHVybiB0MlBlbi5nZXRDaGFyU3RyaW5nKGNoYXJTdHJpbmcucHJpdmF0ZSwgY2hhclN0cmluZy5nbG9iYWxTdWJycykKCgpkZWYgX3JvdW5kX3BhdGgoCiAgICBwYXRoOiBwYXRob3BzLlBhdGgsIHJvdW5kOiBDYWxsYWJsZVtbZmxvYXRdLCBmbG9hdF0gPSBvdFJvdW5kCikgLT4gcGF0aG9wcy5QYXRoOgogICAgcm91bmRlZF9wYXRoID0gcGF0aG9wcy5QYXRoKCkKICAgIGZvciB2ZXJiLCBwb2ludHMgaW4gcGF0aDoKICAgICAgICByb3VuZGVkX3BhdGguYWRkKHZlcmIsICooKHJvdW5kKHBbMF0pLCByb3VuZChwWzFdKSkgZm9yIHAgaW4gcG9pbnRzKSkKICAgIHJldHVybiByb3VuZGVkX3BhdGgKCgpkZWYgX3NpbXBsaWZ5KAogICAgcGF0aDogcGF0aG9wcy5QYXRoLAogICAgZGVidWdHbHlwaE5hbWU6IHN0ciwKICAgICosCiAgICByb3VuZDogQ2FsbGFibGVbW2Zsb2F0XSwgZmxvYXRdID0gb3RSb3VuZCwKKSAtPiBwYXRob3BzLlBhdGg6CiAgICAjIHNraWEtcGF0aG9wcyBoYXMgYSBidWcgd2hlcmUgaXQgc29tZXRpbWVzIGZhaWxzIHRvIHNpbXBsaWZ5IHBhdGhzIHdoZW4gdGhlcmUKICAgICMgYXJlIGZsb2F0IGNvb3JkaW5hdGVzIGFuZCBjb250cm9sIHBvaW50cyBhcmUgdmVyeSBjbG9zZSB0byBvbmUgYW5vdGhlci4KICAgICMgUm91bmRpbmcgY29vcmRpbmF0ZXMgdG8gaW50ZWdlcnMgd29ya3MgYXJvdW5kIHRoZSBidWcuCiAgICAjIFNpbmNlIHdlIGFyZSBnb2luZyB0byByb3VuZCBnbHlmIGNvb3JkaW5hdGVzIGxhdGVyIG9uIGFueXdheSwgaGVyZSBpdCBpcwogICAgIyBvaygtaXNoKSB0byBhbHNvIHJvdW5kIGJlZm9yZSBzaW1wbGlmeS4gQmV0dGVyIHRoYW4gZmFpbGluZyB0aGUgd2hvbGUgcHJvY2VzcwogICAgIyBmb3IgdGhlIGVudGlyZSBmb250LgogICAgIyBodHRwczovL2J1Z3MuY2hyb21pdW0ub3JnL3Avc2tpYS9pc3N1ZXMvZGV0YWlsP2lkPTExOTU4CiAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9nb29nbGUvZm9udHMvaXNzdWVzLzMzNjUKICAgICMgVE9ETyhhbnRocm90eXBlKTogcmVtb3ZlIG9uY2UgdGhpcyBTa2lhIGJ1ZyBpcyBmaXhlZAogICAgdHJ5OgogICAgICAgIHJldHVybiBwYXRob3BzLnNpbXBsaWZ5KHBhdGgsIGNsb2Nrd2lzZT1wYXRoLmNsb2Nrd2lzZSkKICAgIGV4Y2VwdCBwYXRob3BzLlBhdGhPcHNFcnJvcjoKICAgICAgICBwYXNzCgogICAgcGF0aCA9IF9yb3VuZF9wYXRoKHBhdGgsIHJvdW5kPXJvdW5kKQogICAgdHJ5OgogICAgICAgIHBhdGggPSBwYXRob3BzLnNpbXBsaWZ5KHBhdGgsIGNsb2Nrd2lzZT1wYXRoLmNsb2Nrd2lzZSkKICAgICAgICBsb2cuZGVidWcoCiAgICAgICAgICAgICJza2lhLXBhdGhvcHMgZmFpbGVkIHRvIHNpbXBsaWZ5ICclcycgd2l0aCBmbG9hdCBjb29yZGluYXRlcywgIgogICAgICAgICAgICAiYnV0IHN1Y2NlZGVkIHVzaW5nIHJvdW5kZWQgaW50ZWdlciBjb29yZGluYXRlcyIsCiAgICAgICAgICAgIGRlYnVnR2x5cGhOYW1lLAogICAgICAgICkKICAgICAgICByZXR1cm4gcGF0aAogICAgZXhjZXB0IHBhdGhvcHMuUGF0aE9wc0Vycm9yIGFzIGU6CiAgICAgICAgaWYgbG9nLmlzRW5hYmxlZEZvcihsb2dnaW5nLkRFQlVHKToKICAgICAgICAgICAgcGF0aC5kdW1wKCkKICAgICAgICByYWlzZSBSZW1vdmVPdmVybGFwc0Vycm9yKAogICAgICAgICAgICBmIkZhaWxlZCB0byByZW1vdmUgb3ZlcmxhcHMgZnJvbSBnbHlwaCB7ZGVidWdHbHlwaE5hbWUhcn0iCiAgICAgICAgKSBmcm9tIGUKCiAgICByYWlzZSBBc3NlcnRpb25FcnJvcigiVW5yZWFjaGFibGUiKQoKCmRlZiBfc2FtZV9wYXRoKHBhdGgxOiBwYXRob3BzLlBhdGgsIHBhdGgyOiBwYXRob3BzLlBhdGgpIC0+IGJvb2w6CiAgICByZXR1cm4ge3R1cGxlKGMpIGZvciBjIGluIHBhdGgxLmNvbnRvdXJzfSA9PSB7dHVwbGUoYykgZm9yIGMgaW4gcGF0aDIuY29udG91cnN9CgoKZGVmIHJlbW92ZVRUR2x5cGhPdmVybGFwcygKICAgIGdseXBoTmFtZTogc3RyLAogICAgZ2x5cGhTZXQ6IF9UVEdseXBoTWFwcGluZywKICAgIGdseWZUYWJsZTogX2dfbF95X2YudGFibGVfX2dfbF95X2YsCiAgICBobXR4VGFibGU6IF9oX21fdF94LnRhYmxlX19oX21fdF94LAogICAgcmVtb3ZlSGludGluZzogYm9vbCA9IFRydWUsCikgLT4gYm9vbDoKICAgIGdseXBoID0gZ2x5ZlRhYmxlW2dseXBoTmFtZV0KICAgICMgZGVjb21wb3NlIGNvbXBvc2l0ZSBnbHlwaHMgb25seSBpZiBjb21wb25lbnRzIG92ZXJsYXAgZWFjaCBvdGhlcgogICAgaWYgKAogICAgICAgIGdseXBoLm51bWJlck9mQ29udG91cnMgPiAwCiAgICAgICAgb3IgZ2x5cGguaXNDb21wb3NpdGUoKQogICAgICAgIGFuZCBjb21wb25lbnRzT3ZlcmxhcChnbHlwaCwgZ2x5cGhTZXQpCiAgICApOgogICAgICAgIHBhdGggPSBza1BhdGhGcm9tR2x5cGgoZ2x5cGhOYW1lLCBnbHlwaFNldCkKCiAgICAgICAgIyByZW1vdmUgb3ZlcmxhcHMKICAgICAgICBwYXRoMiA9IF9zaW1wbGlmeShwYXRoLCBnbHlwaE5hbWUpCgogICAgICAgICMgcmVwbGFjZSBUVEdseXBoIGlmIHNpbXBsaWZpZWQgcGF0aCBpcyBkaWZmZXJlbnQgKGlnbm9yaW5nIGNvbnRvdXIgb3JkZXIpCiAgICAgICAgaWYgbm90IF9zYW1lX3BhdGgocGF0aCwgcGF0aDIpOgogICAgICAgICAgICBnbHlmVGFibGVbZ2x5cGhOYW1lXSA9IGdseXBoID0gdHRmR2x5cGhGcm9tU2tQYXRoKHBhdGgyKQogICAgICAgICAgICAjIHNpbXBsaWZpZWQgZ2x5cGggaXMgYWx3YXlzIHVuaGludGVkCiAgICAgICAgICAgIGFzc2VydCBub3QgZ2x5cGgucHJvZ3JhbQogICAgICAgICAgICAjIGFsc28gZW5zdXJlIGhtdHggTFNCID09IGdseXBoLnhNaW4gc28gZ2x5cGggb3JpZ2luIGlzIGF0IHg9MAogICAgICAgICAgICB3aWR0aCwgbHNiID0gaG10eFRhYmxlW2dseXBoTmFtZV0KICAgICAgICAgICAgaWYgbHNiICE9IGdseXBoLnhNaW46CiAgICAgICAgICAgICAgICBobXR4VGFibGVbZ2x5cGhOYW1lXSA9ICh3aWR0aCwgZ2x5cGgueE1pbikKICAgICAgICAgICAgcmV0dXJuIFRydWUKCiAgICBpZiByZW1vdmVIaW50aW5nOgogICAgICAgIGdseXBoLnJlbW92ZUhpbnRpbmcoKQogICAgcmV0dXJuIEZhbHNlCgoKZGVmIF9yZW1vdmVfZ2x5Zl9vdmVybGFwcygKICAgICosCiAgICBmb250OiB0dEZvbnQuVFRGb250LAogICAgZ2x5cGhOYW1lczogSXRlcmFibGVbc3RyXSwKICAgIGdseXBoU2V0OiBfVFRHbHlwaE1hcHBpbmcsCiAgICByZW1vdmVIaW50aW5nOiBib29sLAogICAgaWdub3JlRXJyb3JzOiBib29sLAopIC0+IE5vbmU6CiAgICBnbHlmVGFnID0gIkdMWUYiIGlmICJHTFlGIiBpbiBmb250IGVsc2UgImdseWYiCiAgICBobXR4VGFnID0gIkhNVFgiIGlmIGdseWZUYWcgPT0gIkdMWUYiIGVsc2UgImhtdHgiCiAgICBnbHlmVGFibGUgPSBmb250W2dseWZUYWddCiAgICBobXR4VGFibGUgPSBmb250W2htdHhUYWddCgogICAgIyBwcm9jZXNzIGFsbCBzaW1wbGUgZ2x5cGhzIGZpcnN0LCB0aGVuIGNvbXBvc2l0ZXMgd2l0aCBpbmNyZWFzaW5nIGNvbXBvbmVudCBkZXB0aCwKICAgICMgc28gdGhhdCBieSB0aGUgdGltZSB3ZSB0ZXN0IGZvciBjb21wb25lbnQgaW50ZXJzZWN0aW9ucyB0aGUgcmVzcGVjdGl2ZSBiYXNlIGdseXBocwogICAgIyBoYXZlIGFscmVhZHkgYmVlbiBzaW1wbGlmaWVkCiAgICBtYXhwVmFsdWVzQ2FjaGUgPSB7fQogICAgZ2x5cGhOYW1lcyA9IHNvcnRlZCgKICAgICAgICBnbHlwaE5hbWVzLAogICAgICAgIGtleT1sYW1iZGEgbmFtZTogKAogICAgICAgICAgICAoCiAgICAgICAgICAgICAgICBnbHlmVGFibGVbbmFtZV0KICAgICAgICAgICAgICAgIC5nZXRDb21wb3NpdGVNYXhwVmFsdWVzKGdseWZUYWJsZSwgbWF4cFZhbHVlc0NhY2hlPW1heHBWYWx1ZXNDYWNoZSkKICAgICAgICAgICAgICAgIC5tYXhDb21wb25lbnREZXB0aAogICAgICAgICAgICAgICAgaWYgZ2x5ZlRhYmxlW25hbWVdLmlzQ29tcG9zaXRlKCkKICAgICAgICAgICAgICAgIGVsc2UgMAogICAgICAgICAgICApLAogICAgICAgICAgICBuYW1lLAogICAgICAgICksCiAgICApCiAgICBtb2RpZmllZCA9IHNldCgpCiAgICBmb3IgZ2x5cGhOYW1lIGluIGdseXBoTmFtZXM6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBpZiByZW1vdmVUVEdseXBoT3ZlcmxhcHMoCiAgICAgICAgICAgICAgICBnbHlwaE5hbWUsIGdseXBoU2V0LCBnbHlmVGFibGUsIGhtdHhUYWJsZSwgcmVtb3ZlSGludGluZwogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgbW9kaWZpZWQuYWRkKGdseXBoTmFtZSkKICAgICAgICBleGNlcHQgUmVtb3ZlT3ZlcmxhcHNFcnJvcjoKICAgICAgICAgICAgaWYgbm90IGlnbm9yZUVycm9yczoKICAgICAgICAgICAgICAgIHJhaXNlCiAgICAgICAgICAgIGxvZy5lcnJvcigiRmFpbGVkIHRvIHJlbW92ZSBvdmVybGFwcyBmb3IgJyVzJyIsIGdseXBoTmFtZSkKCiAgICBsb2cuZGVidWcoIlJlbW92ZWQgb3ZlcmxhcHMgZm9yICVzIGdseXBoczpcbiVzIiwgbGVuKG1vZGlmaWVkKSwgIiAiLmpvaW4obW9kaWZpZWQpKQoKCmRlZiBfcmVtb3ZlX2NoYXJzdHJpbmdfb3ZlcmxhcHMoCiAgICAqLAogICAgZ2x5cGhOYW1lOiBzdHIsCiAgICBnbHlwaFNldDogX1RUR2x5cGhNYXBwaW5nLAogICAgY2ZmRm9udFNldDogQ0ZGRm9udFNldCwKKSAtPiBib29sOgogICAgcGF0aCA9IHNrUGF0aEZyb21HbHlwaChnbHlwaE5hbWUsIGdseXBoU2V0KQoKICAgICMgcmVtb3ZlIG92ZXJsYXBzCiAgICBwYXRoMiA9IF9zaW1wbGlmeShwYXRoLCBnbHlwaE5hbWUsIHJvdW5kPW5vUm91bmQpCgogICAgIyByZXBsYWNlIFRUR2x5cGggaWYgc2ltcGxpZmllZCBwYXRoIGlzIGRpZmZlcmVudCAoaWdub3JpbmcgY29udG91ciBvcmRlcikKICAgIGlmIG5vdCBfc2FtZV9wYXRoKHBhdGgsIHBhdGgyKToKICAgICAgICBjaGFyU3RyaW5ncyA9IGNmZkZvbnRTZXRbMF0uQ2hhclN0cmluZ3MKICAgICAgICBjaGFyU3RyaW5nc1tnbHlwaE5hbWVdID0gX2NoYXJTdHJpbmdfZnJvbV9Ta1BhdGgocGF0aDIsIGNoYXJTdHJpbmdzW2dseXBoTmFtZV0pCiAgICAgICAgcmV0dXJuIFRydWUKCiAgICByZXR1cm4gRmFsc2UKCgpkZWYgX3JlbW92ZV9jZmZfb3ZlcmxhcHMoCiAgICAqLAogICAgZm9udDogdHRGb250LlRURm9udCwKICAgIGdseXBoTmFtZXM6IEl0ZXJhYmxlW3N0cl0sCiAgICBnbHlwaFNldDogX1RUR2x5cGhNYXBwaW5nLAogICAgcmVtb3ZlSGludGluZzogYm9vbCwKICAgIGlnbm9yZUVycm9yczogYm9vbCwKICAgIHRhYmxlX3RhZzogc3RyLAogICAgcmVtb3ZlVW51c2VkU3Vicm91dGluZXM6IGJvb2wgPSBUcnVlLAopIC0+IE5vbmU6CiAgICBjZmZGb250U2V0ID0gZm9udFt0YWJsZV90YWddLmNmZgogICAgbW9kaWZpZWQgPSBzZXQoKQogICAgZm9yIGdseXBoTmFtZSBpbiBnbHlwaE5hbWVzOgogICAgICAgIHRyeToKICAgICAgICAgICAgaWYgX3JlbW92ZV9jaGFyc3RyaW5nX292ZXJsYXBzKAogICAgICAgICAgICAgICAgZ2x5cGhOYW1lPWdseXBoTmFtZSwKICAgICAgICAgICAgICAgIGdseXBoU2V0PWdseXBoU2V0LAogICAgICAgICAgICAgICAgY2ZmRm9udFNldD1jZmZGb250U2V0LAogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgbW9kaWZpZWQuYWRkKGdseXBoTmFtZSkKICAgICAgICBleGNlcHQgUmVtb3ZlT3ZlcmxhcHNFcnJvcjoKICAgICAgICAgICAgaWYgbm90IGlnbm9yZUVycm9yczoKICAgICAgICAgICAgICAgIHJhaXNlCiAgICAgICAgICAgIGxvZy5lcnJvcigiRmFpbGVkIHRvIHJlbW92ZSBvdmVybGFwcyBmb3IgJyVzJyIsIGdseXBoTmFtZSkKCiAgICBpZiBub3QgbW9kaWZpZWQ6CiAgICAgICAgbG9nLmRlYnVnKCJObyBvdmVybGFwcyBmb3VuZCBpbiB0aGUgc3BlY2lmaWVkIENGRiBnbHlwaHMiKQogICAgICAgIHJldHVybgoKICAgIGlmIHJlbW92ZUhpbnRpbmc6CiAgICAgICAgY2ZmRm9udFNldC5yZW1vdmVfaGludHMoKQoKICAgIGlmIHJlbW92ZVVudXNlZFN1YnJvdXRpbmVzOgogICAgICAgIGNmZkZvbnRTZXQucmVtb3ZlX3VudXNlZF9zdWJyb3V0aW5lcygpCgogICAgbG9nLmRlYnVnKCJSZW1vdmVkIG92ZXJsYXBzIGZvciAlcyBnbHlwaHM6XG4lcyIsIGxlbihtb2RpZmllZCksICIgIi5qb2luKG1vZGlmaWVkKSkKCgpkZWYgcmVtb3ZlT3ZlcmxhcHMoCiAgICBmb250OiB0dEZvbnQuVFRGb250LAogICAgZ2x5cGhOYW1lczogT3B0aW9uYWxbSXRlcmFibGVbc3RyXV0gPSBOb25lLAogICAgcmVtb3ZlSGludGluZzogYm9vbCA9IFRydWUsCiAgICBpZ25vcmVFcnJvcnM6IGJvb2wgPSBGYWxzZSwKICAgICosCiAgICByZW1vdmVVbnVzZWRTdWJyb3V0aW5lczogYm9vbCA9IFRydWUsCikgLT4gTm9uZToKICAgICIiIlNpbXBsaWZ5IGdseXBocyBpbiBUVEZvbnQgYnkgbWVyZ2luZyBvdmVybGFwcGluZyBjb250b3Vycy4KCiAgICBPdmVybGFwcGluZyBjb21wb25lbnRzIGFyZSBmaXJzdCBkZWNvbXBvc2VkIHRvIHNpbXBsZSBjb250b3VycywgdGhlbiBtZXJnZWQuCgogICAgQ3VycmVudGx5IHRoaXMgb25seSB3b3JrcyBmb3IgZm9udHMgd2l0aCAnZ2x5ZicvJ0dMWUYnLCAnQ0ZGICcsIG9yICdDRkYyJwogICAgdGFibGVzLiBSYWlzZXMgTm90SW1wbGVtZW50ZWRFcnJvciBpZiBhbGwgb2YgdGhlc2UgdGFibGVzIGFyZSBhYnNlbnQuCgogICAgTm90ZSB0aGF0IHJlbW92aW5nIG92ZXJsYXBzIGludmFsaWRhdGVzIHRoZSBoaW50aW5nLiBCeSBkZWZhdWx0IHdlIGRyb3AgaGludGluZwogICAgZnJvbSBhbGwgZ2x5cGhzIHdoZXRoZXIgb3Igbm90IG92ZXJsYXBzIGFyZSByZW1vdmVkIGZyb20gYSBnaXZlbiBvbmUsIGFzIGl0IHdvdWxkCiAgICBsb29rIHdlaXJkIGlmIG9ubHkgc29tZSBnbHlwaHMgYXJlIGxlZnQgKHVuKWhpbnRlZC4KCiAgICBBcmdzOgogICAgICAgIGZvbnQ6IGlucHV0IFRURm9udCBvYmplY3QsIG1vZGlmaWVkIGluIHBsYWNlLgogICAgICAgIGdseXBoTmFtZXM6IG9wdGlvbmFsIGl0ZXJhYmxlIG9mIGdseXBoIG5hbWVzIChzdHIpIHRvIHJlbW92ZSBvdmVybGFwcyBmcm9tLgogICAgICAgICAgICBCeSBkZWZhdWx0LCBhbGwgZ2x5cGhzIGluIHRoZSBmb250IGFyZSBwcm9jZXNzZWQuCiAgICAgICAgcmVtb3ZlSGludGluZyAoYm9vbCk6IHNldCB0byBGYWxzZSB0byBrZWVwIGhpbnRpbmcgZm9yIHVubW9kaWZpZWQgZ2x5cGhzLgogICAgICAgIGlnbm9yZUVycm9ycyAoYm9vbCk6IHNldCB0byBUcnVlIHRvIGlnbm9yZSBlcnJvcnMgd2hpbGUgcmVtb3Zpbmcgb3ZlcmxhcHMsCiAgICAgICAgICAgIHRodXMga2VlcGluZyB0aGUgdHJpY2t5IGdseXBocyB1bmNoYW5nZWQgKGZvbnR0b29scy9mb250dG9vbHMjMjM2MykuCiAgICAgICAgcmVtb3ZlVW51c2VkU3Vicm91dGluZXMgKGJvb2wpOiBzZXQgdG8gRmFsc2UgdG8ga2VlcCB1bnVzZWQgc3Vicm91dGluZXMKICAgICAgICAgICAgaW4gQ0ZGIHRhYmxlIGFmdGVyIHJlbW92aW5nIG92ZXJsYXBzLiBEZWZhdWx0IGlzIHRvIHJlbW92ZSB0aGVtIGlmCiAgICAgICAgICAgIGFueSBnbHlwaHMgYXJlIG1vZGlmaWVkLgogICAgIiIiCgogICAgaWYgKAogICAgICAgICJnbHlmIiBub3QgaW4gZm9udAogICAgICAgIGFuZCAiR0xZRiIgbm90IGluIGZvbnQKICAgICAgICBhbmQgIkNGRiAiIG5vdCBpbiBmb250CiAgICAgICAgYW5kICJDRkYyIiBub3QgaW4gZm9udAogICAgKToKICAgICAgICByYWlzZSBOb3RJbXBsZW1lbnRlZEVycm9yKAogICAgICAgICAgICAiTm8gb3V0bGluZSBkYXRhIGZvdW5kIGluIHRoZSBmb250OiBtaXNzaW5nICdnbHlmJywgJ0dMWUYnLCAnQ0ZGICcsIG9yICdDRkYyJyB0YWJsZSIKICAgICAgICApCgogICAgaWYgZ2x5cGhOYW1lcyBpcyBOb25lOgogICAgICAgIGdseXBoTmFtZXMgPSBmb250LmdldEdseXBoT3JkZXIoKQoKICAgICMgV3JhcHMgdGhlIHVuZGVybHlpbmcgZ2x5cGhzLCB0YWtlcyBjYXJlIG9mIGludGVyZmFjaW5nIHdpdGggZHJhd2luZyBwZW5zCiAgICBnbHlwaFNldCA9IGZvbnQuZ2V0R2x5cGhTZXQoKQoKICAgIGlmICJnbHlmIiBpbiBmb250IG9yICJHTFlGIiBpbiBmb250OgogICAgICAgIF9yZW1vdmVfZ2x5Zl9vdmVybGFwcygKICAgICAgICAgICAgZm9udD1mb250LAogICAgICAgICAgICBnbHlwaE5hbWVzPWdseXBoTmFtZXMsCiAgICAgICAgICAgIGdseXBoU2V0PWdseXBoU2V0LAogICAgICAgICAgICByZW1vdmVIaW50aW5nPXJlbW92ZUhpbnRpbmcsCiAgICAgICAgICAgIGlnbm9yZUVycm9ycz1pZ25vcmVFcnJvcnMsCiAgICAgICAgKQoKICAgIGlmICJDRkYgIiBpbiBmb250IG9yICJDRkYyIiBpbiBmb250OgogICAgICAgIF9yZW1vdmVfY2ZmX292ZXJsYXBzKAogICAgICAgICAgICBmb250PWZvbnQsCiAgICAgICAgICAgIGdseXBoTmFtZXM9Z2x5cGhOYW1lcywKICAgICAgICAgICAgZ2x5cGhTZXQ9Z2x5cGhTZXQsCiAgICAgICAgICAgIHJlbW92ZUhpbnRpbmc9cmVtb3ZlSGludGluZywKICAgICAgICAgICAgaWdub3JlRXJyb3JzPWlnbm9yZUVycm9ycywKICAgICAgICAgICAgdGFibGVfdGFnPSJDRkYgIiBpZiAiQ0ZGICIgaW4gZm9udCBlbHNlICJDRkYyIiwKICAgICAgICAgICAgcmVtb3ZlVW51c2VkU3Vicm91dGluZXM9cmVtb3ZlVW51c2VkU3Vicm91dGluZXMsCiAgICAgICAgKQoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICAiIiJTaW1wbGlmeSBnbHlwaHMgaW4gVFRGb250IGJ5IG1lcmdpbmcgb3ZlcmxhcHBpbmcgY29udG91cnMuIiIiCgogICAgaW1wb3J0IGFyZ3BhcnNlCgogICAgcGFyc2VyID0gYXJncGFyc2UuQXJndW1lbnRQYXJzZXIoCiAgICAgICAgImZvbnR0b29scyB0dExpYi5yZW1vdmVPdmVybGFwcyIsIGRlc2NyaXB0aW9uPV9fZG9jX18KICAgICkKCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJpbnB1dCIsIG1ldGF2YXI9IklOUFVULnR0ZiIsIGhlbHA9IklucHV0IGZvbnQgZmlsZSIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJvdXRwdXQiLCBtZXRhdmFyPSJPVVRQVVQudHRmIiwgaGVscD0iT3V0cHV0IGZvbnQgZmlsZSIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJnbHlwaHMiLAogICAgICAgIG1ldGF2YXI9IkdMWVBIUyIsCiAgICAgICAgbmFyZ3M9IioiLAogICAgICAgIGhlbHA9Ik9wdGlvbmFsIGxpc3Qgb2YgZ2x5cGggbmFtZXMgdG8gcmVtb3ZlIG92ZXJsYXBzIGZyb20iLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1rZWVwLWhpbnRpbmciLAogICAgICAgIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsCiAgICAgICAgaGVscD0iS2VlcCBoaW50aW5nIGZvciB1bm1vZGlmaWVkIGdseXBocywgZGVmYXVsdCBpcyB0byBkcm9wIGhpbnRpbmciLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1pZ25vcmUtZXJyb3JzIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9Imlnbm9yZSBlcnJvcnMgd2hpbGUgcmVtb3Zpbmcgb3ZlcmxhcHMsICIKICAgICAgICAidGh1cyBrZWVwaW5nIHRoZSB0cmlja3kgZ2x5cGhzIHVuY2hhbmdlZCIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLWtlZXAtdW51c2VkLXN1YnJvdXRpbmVzIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9IktlZXAgdW51c2VkIHN1YnJvdXRpbmVzIGluIENGRiB0YWJsZSBhZnRlciByZW1vdmluZyBvdmVybGFwcywgIgogICAgICAgICJkZWZhdWx0IGlzIHRvIHJlbW92ZSB0aGVtIGlmIGFueSBnbHlwaHMgYXJlIG1vZGlmaWVkIiwKICAgICkKICAgIGFyZ3MgPSBwYXJzZXIucGFyc2VfYXJncyhhcmdzKQoKICAgIHdpdGggdHRGb250LlRURm9udChhcmdzLmlucHV0KSBhcyBmb250OgogICAgICAgIHJlbW92ZU92ZXJsYXBzKAogICAgICAgICAgICBmb250PWZvbnQsCiAgICAgICAgICAgIGdseXBoTmFtZXM9YXJncy5nbHlwaHMgb3IgTm9uZSwKICAgICAgICAgICAgcmVtb3ZlSGludGluZz1ub3QgYXJncy5rZWVwX2hpbnRpbmcsCiAgICAgICAgICAgIGlnbm9yZUVycm9ycz1hcmdzLmlnbm9yZV9lcnJvcnMsCiAgICAgICAgICAgIHJlbW92ZVVudXNlZFN1YnJvdXRpbmVzPW5vdCBhcmdzLmtlZXBfdW51c2VkX3N1YnJvdXRpbmVzLAogICAgICAgICkKICAgICAgICBmb250LnNhdmUoYXJncy5vdXRwdXQpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+"""Simplify TrueType glyphs by merging overlapping contours/components.
+
+Requires https://github.com/fonttools/skia-pathops
+"""
+
+import itertools
+import logging
+from typing import Callable, Iterable, Optional, Mapping
+
+from fontTools.cffLib import CFFFontSet
+from fontTools.ttLib import ttFont
+from fontTools.ttLib.tables import _g_l_y_f
+from fontTools.ttLib.tables import _h_m_t_x
+from fontTools.misc.psCharStrings import T2CharString
+from fontTools.misc.roundTools import otRound, noRound
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+from fontTools.pens.t2CharStringPen import T2CharStringPen
+
+import pathops
+
+__all__ = ["removeOverlaps"]
+
+
+class RemoveOverlapsError(Exception):
+    pass
+
+
+log = logging.getLogger("fontTools.ttLib.removeOverlaps")
+
+_TTGlyphMapping = Mapping[str, ttFont._TTGlyph]
+
+
+def skPathFromGlyph(glyphName: str, glyphSet: _TTGlyphMapping) -> pathops.Path:
+    path = pathops.Path()
+    pathPen = path.getPen(glyphSet=glyphSet)
+    glyphSet[glyphName].draw(pathPen)
+    return path
+
+
+def skPathFromGlyphComponent(
+    component: _g_l_y_f.GlyphComponent, glyphSet: _TTGlyphMapping
+):
+    baseGlyphName, transformation = component.getComponentInfo()
+    path = skPathFromGlyph(baseGlyphName, glyphSet)
+    return path.transform(*transformation)
+
+
+def componentsOverlap(glyph: _g_l_y_f.Glyph, glyphSet: _TTGlyphMapping) -> bool:
+    if not glyph.isComposite():
+        raise ValueError("This method only works with TrueType composite glyphs")
+    if len(glyph.components) < 2:
+        return False  # single component, no overlaps
+
+    component_paths = {}
+
+    def _get_nth_component_path(index: int) -> pathops.Path:
+        if index not in component_paths:
+            component_paths[index] = skPathFromGlyphComponent(
+                glyph.components[index], glyphSet
+            )
+        return component_paths[index]
+
+    return any(
+        pathops.op(
+            _get_nth_component_path(i),
+            _get_nth_component_path(j),
+            pathops.PathOp.INTERSECTION,
+            fix_winding=False,
+            keep_starting_points=False,
+        )
+        for i, j in itertools.combinations(range(len(glyph.components)), 2)
+    )
+
+
+def ttfGlyphFromSkPath(path: pathops.Path) -> _g_l_y_f.Glyph:
+    # Skia paths have no 'components', no need for glyphSet
+    ttPen = TTGlyphPen(glyphSet=None)
+    path.draw(ttPen)
+    glyph = ttPen.glyph()
+    assert not glyph.isComposite()
+    # compute glyph.xMin (glyfTable parameter unused for non composites)
+    glyph.recalcBounds(glyfTable=None)
+    return glyph
+
+
+def _charString_from_SkPath(
+    path: pathops.Path, charString: T2CharString
+) -> T2CharString:
+    if charString.width == charString.private.defaultWidthX:
+        width = None
+    else:
+        width = charString.width - charString.private.nominalWidthX
+    t2Pen = T2CharStringPen(width=width, glyphSet=None)
+    path.draw(t2Pen)
+    return t2Pen.getCharString(charString.private, charString.globalSubrs)
+
+
+def _round_path(
+    path: pathops.Path, round: Callable[[float], float] = otRound
+) -> pathops.Path:
+    rounded_path = pathops.Path()
+    for verb, points in path:
+        rounded_path.add(verb, *((round(p[0]), round(p[1])) for p in points))
+    return rounded_path
+
+
+def _simplify(
+    path: pathops.Path,
+    debugGlyphName: str,
+    *,
+    round: Callable[[float], float] = otRound,
+) -> pathops.Path:
+    # skia-pathops has a bug where it sometimes fails to simplify paths when there
+    # are float coordinates and control points are very close to one another.
+    # Rounding coordinates to integers works around the bug.
+    # Since we are going to round glyf coordinates later on anyway, here it is
+    # ok(-ish) to also round before simplify. Better than failing the whole process
+    # for the entire font.
+    # https://bugs.chromium.org/p/skia/issues/detail?id=11958
+    # https://github.com/google/fonts/issues/3365
+    # TODO(anthrotype): remove once this Skia bug is fixed
+    try:
+        return pathops.simplify(path, clockwise=path.clockwise)
+    except pathops.PathOpsError:
+        pass
+
+    path = _round_path(path, round=round)
+    try:
+        path = pathops.simplify(path, clockwise=path.clockwise)
+        log.debug(
+            "skia-pathops failed to simplify '%s' with float coordinates, "
+            "but succeded using rounded integer coordinates",
+            debugGlyphName,
+        )
+        return path
+    except pathops.PathOpsError as e:
+        if log.isEnabledFor(logging.DEBUG):
+            path.dump()
+        raise RemoveOverlapsError(
+            f"Failed to remove overlaps from glyph {debugGlyphName!r}"
+        ) from e
+
+    raise AssertionError("Unreachable")
+
+
+def _same_path(path1: pathops.Path, path2: pathops.Path) -> bool:
+    return {tuple(c) for c in path1.contours} == {tuple(c) for c in path2.contours}
+
+
+def removeTTGlyphOverlaps(
+    glyphName: str,
+    glyphSet: _TTGlyphMapping,
+    glyfTable: _g_l_y_f.table__g_l_y_f,
+    hmtxTable: _h_m_t_x.table__h_m_t_x,
+    removeHinting: bool = True,
+) -> bool:
+    glyph = glyfTable[glyphName]
+    # decompose composite glyphs only if components overlap each other
+    if (
+        glyph.numberOfContours > 0
+        or glyph.isComposite()
+        and componentsOverlap(glyph, glyphSet)
+    ):
+        path = skPathFromGlyph(glyphName, glyphSet)
+
+        # remove overlaps
+        path2 = _simplify(path, glyphName)
+
+        # replace TTGlyph if simplified path is different (ignoring contour order)
+        if not _same_path(path, path2):
+            glyfTable[glyphName] = glyph = ttfGlyphFromSkPath(path2)
+            # simplified glyph is always unhinted
+            assert not glyph.program
+            # also ensure hmtx LSB == glyph.xMin so glyph origin is at x=0
+            width, lsb = hmtxTable[glyphName]
+            if lsb != glyph.xMin:
+                hmtxTable[glyphName] = (width, glyph.xMin)
+            return True
+
+    if removeHinting:
+        glyph.removeHinting()
+    return False
+
+
+def _remove_glyf_overlaps(
+    *,
+    font: ttFont.TTFont,
+    glyphNames: Iterable[str],
+    glyphSet: _TTGlyphMapping,
+    removeHinting: bool,
+    ignoreErrors: bool,
+) -> None:
+    glyfTag = "GLYF" if "GLYF" in font else "glyf"
+    hmtxTag = "HMTX" if glyfTag == "GLYF" else "hmtx"
+    glyfTable = font[glyfTag]
+    hmtxTable = font[hmtxTag]
+
+    # process all simple glyphs first, then composites with increasing component depth,
+    # so that by the time we test for component intersections the respective base glyphs
+    # have already been simplified
+    maxpValuesCache = {}
+    glyphNames = sorted(
+        glyphNames,
+        key=lambda name: (
+            (
+                glyfTable[name]
+                .getCompositeMaxpValues(glyfTable, maxpValuesCache=maxpValuesCache)
+                .maxComponentDepth
+                if glyfTable[name].isComposite()
+                else 0
+            ),
+            name,
+        ),
+    )
+    modified = set()
+    for glyphName in glyphNames:
+        try:
+            if removeTTGlyphOverlaps(
+                glyphName, glyphSet, glyfTable, hmtxTable, removeHinting
+            ):
+                modified.add(glyphName)
+        except RemoveOverlapsError:
+            if not ignoreErrors:
+                raise
+            log.error("Failed to remove overlaps for '%s'", glyphName)
+
+    log.debug("Removed overlaps for %s glyphs:\n%s", len(modified), " ".join(modified))
+
+
+def _remove_charstring_overlaps(
+    *,
+    glyphName: str,
+    glyphSet: _TTGlyphMapping,
+    cffFontSet: CFFFontSet,
+) -> bool:
+    path = skPathFromGlyph(glyphName, glyphSet)
+
+    # remove overlaps
+    path2 = _simplify(path, glyphName, round=noRound)
+
+    # replace TTGlyph if simplified path is different (ignoring contour order)
+    if not _same_path(path, path2):
+        charStrings = cffFontSet[0].CharStrings
+        charStrings[glyphName] = _charString_from_SkPath(path2, charStrings[glyphName])
+        return True
+
+    return False
+
+
+def _remove_cff_overlaps(
+    *,
+    font: ttFont.TTFont,
+    glyphNames: Iterable[str],
+    glyphSet: _TTGlyphMapping,
+    removeHinting: bool,
+    ignoreErrors: bool,
+    table_tag: str,
+    removeUnusedSubroutines: bool = True,
+) -> None:
+    cffFontSet = font[table_tag].cff
+    modified = set()
+    for glyphName in glyphNames:
+        try:
+            if _remove_charstring_overlaps(
+                glyphName=glyphName,
+                glyphSet=glyphSet,
+                cffFontSet=cffFontSet,
+            ):
+                modified.add(glyphName)
+        except RemoveOverlapsError:
+            if not ignoreErrors:
+                raise
+            log.error("Failed to remove overlaps for '%s'", glyphName)
+
+    if not modified:
+        log.debug("No overlaps found in the specified CFF glyphs")
+        return
+
+    if removeHinting:
+        cffFontSet.remove_hints()
+
+    if removeUnusedSubroutines:
+        cffFontSet.remove_unused_subroutines()
+
+    log.debug("Removed overlaps for %s glyphs:\n%s", len(modified), " ".join(modified))
+
+
+def removeOverlaps(
+    font: ttFont.TTFont,
+    glyphNames: Optional[Iterable[str]] = None,
+    removeHinting: bool = True,
+    ignoreErrors: bool = False,
+    *,
+    removeUnusedSubroutines: bool = True,
+) -> None:
+    """Simplify glyphs in TTFont by merging overlapping contours.
+
+    Overlapping components are first decomposed to simple contours, then merged.
+
+    Currently this only works for fonts with 'glyf'/'GLYF', 'CFF ', or 'CFF2'
+    tables. Raises NotImplementedError if all of these tables are absent.
+
+    Note that removing overlaps invalidates the hinting. By default we drop hinting
+    from all glyphs whether or not overlaps are removed from a given one, as it would
+    look weird if only some glyphs are left (un)hinted.
+
+    Args:
+        font: input TTFont object, modified in place.
+        glyphNames: optional iterable of glyph names (str) to remove overlaps from.
+            By default, all glyphs in the font are processed.
+        removeHinting (bool): set to False to keep hinting for unmodified glyphs.
+        ignoreErrors (bool): set to True to ignore errors while removing overlaps,
+            thus keeping the tricky glyphs unchanged (fonttools/fonttools#2363).
+        removeUnusedSubroutines (bool): set to False to keep unused subroutines
+            in CFF table after removing overlaps. Default is to remove them if
+            any glyphs are modified.
+    """
+
+    if (
+        "glyf" not in font
+        and "GLYF" not in font
+        and "CFF " not in font
+        and "CFF2" not in font
+    ):
+        raise NotImplementedError(
+            "No outline data found in the font: missing 'glyf', 'GLYF', 'CFF ', or 'CFF2' table"
+        )
+
+    if glyphNames is None:
+        glyphNames = font.getGlyphOrder()
+
+    # Wraps the underlying glyphs, takes care of interfacing with drawing pens
+    glyphSet = font.getGlyphSet()
+
+    if "glyf" in font or "GLYF" in font:
+        _remove_glyf_overlaps(
+            font=font,
+            glyphNames=glyphNames,
+            glyphSet=glyphSet,
+            removeHinting=removeHinting,
+            ignoreErrors=ignoreErrors,
+        )
+
+    if "CFF " in font or "CFF2" in font:
+        _remove_cff_overlaps(
+            font=font,
+            glyphNames=glyphNames,
+            glyphSet=glyphSet,
+            removeHinting=removeHinting,
+            ignoreErrors=ignoreErrors,
+            table_tag="CFF " if "CFF " in font else "CFF2",
+            removeUnusedSubroutines=removeUnusedSubroutines,
+        )
+
+
+def main(args=None):
+    """Simplify glyphs in TTFont by merging overlapping contours."""
+
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools ttLib.removeOverlaps", description=__doc__
+    )
+
+    parser.add_argument("input", metavar="INPUT.ttf", help="Input font file")
+    parser.add_argument("output", metavar="OUTPUT.ttf", help="Output font file")
+    parser.add_argument(
+        "glyphs",
+        metavar="GLYPHS",
+        nargs="*",
+        help="Optional list of glyph names to remove overlaps from",
+    )
+    parser.add_argument(
+        "--keep-hinting",
+        action="store_true",
+        help="Keep hinting for unmodified glyphs, default is to drop hinting",
+    )
+    parser.add_argument(
+        "--ignore-errors",
+        action="store_true",
+        help="ignore errors while removing overlaps, "
+        "thus keeping the tricky glyphs unchanged",
+    )
+    parser.add_argument(
+        "--keep-unused-subroutines",
+        action="store_true",
+        help="Keep unused subroutines in CFF table after removing overlaps, "
+        "default is to remove them if any glyphs are modified",
+    )
+    args = parser.parse_args(args)
+
+    with ttFont.TTFont(args.input) as font:
+        removeOverlaps(
+            font=font,
+            glyphNames=args.glyphs or None,
+            removeHinting=not args.keep_hinting,
+            ignoreErrors=args.ignore_errors,
+            removeUnusedSubroutines=not args.keep_unused_subroutines,
+        )
+        font.save(args.output)
+
+
+if __name__ == "__main__":
+    main()

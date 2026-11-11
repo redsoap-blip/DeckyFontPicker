@@ -1,1 +1,5 @@
-aW1wb3J0IHN5cwpmcm9tIGZvbnRUb29scy52YXJMaWIuaW5zdGFuY2VyIGltcG9ydCBtYWluCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgc3lzLmV4aXQobWFpbigpKQo=
+import sys
+from fontTools.varLib.instancer import main
+
+if __name__ == "__main__":
+    sys.exit(main())

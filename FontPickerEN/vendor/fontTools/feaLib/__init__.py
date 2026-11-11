@@ -1,1 +1,4 @@
-IiIiZm9udFRvb2xzLmZlYUxpYiAtLSBhIHBhY2thZ2UgZm9yIGRlYWxpbmcgd2l0aCBPcGVuVHlwZSBmZWF0dXJlIGZpbGVzLiIiIgoKIyBUaGUgc3RydWN0dXJlIG9mIE9wZW5UeXBlIGZlYXR1cmUgZmlsZXMgaXMgZGVmaW5lZCBoZXJlOgojIGh0dHA6Ly93d3cuYWRvYmUuY29tL2Rldm5ldC9vcGVudHlwZS9hZmRrby90b3BpY19mZWF0dXJlX2ZpbGVfc3ludGF4Lmh0bWwK
+"""fontTools.feaLib -- a package for dealing with OpenType feature files."""
+
+# The structure of OpenType feature files is defined here:
+# http://www.adobe.com/devnet/opentype/afdko/topic_feature_file_syntax.html

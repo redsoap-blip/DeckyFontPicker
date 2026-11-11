@@ -1,1 +1,61 @@
-ZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwpmcm9tIGZvbnRUb29scyBpbXBvcnQgY2ZmTGliCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCgoKY2xhc3MgdGFibGVfQ19GX0ZfKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiQ29tcGFjdCBGb250IEZvcm1hdCB0YWJsZSAodmVyc2lvbiAxKQoKICAgIFRoZSBgYENGRmBgIHRhYmxlIGVtYmVkcyBhIENGRi1mb3JtYXR0ZWQgZm9udC4gVGhlIENGRiBmb250IGZvcm1hdAogICAgcHJlZGF0ZXMgT3BlblR5cGUgYW5kIGNvdWxkIGJlIHVzZWQgYXMgYSBzdGFuZGFsb25lIGZvbnQgZmlsZSwgYnV0IHRoZQogICAgYGBDRkZgYCB0YWJsZSBpcyBhbHNvIHVzZWQgdG8gcGFja2FnZSBDRkYgZm9udHMgaW50byBhbiBPcGVuVHlwZQogICAgY29udGFpbmVyLgoKICAgIC4uIG5vdGU6OgogICAgICAgYGBDRkZgYCBoYXMgYmVlbiBzdWNjZWVkZWQgYnkgYGBDRkYyYGAsIHdoaWNoIGVsaW1pbmF0ZXMgbXVjaCBvZgogICAgICAgdGhlIHJlZHVuZGFuY3kgaW5jdXJyZWQgYnkgZW1iZWRkaW5nIENGRiB2ZXJzaW9uIDEgaW4gYW4gT3BlblR5cGUKICAgICAgIGZvbnQuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9jZmYKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5jZmYgPSBjZmZMaWIuQ0ZGRm9udFNldCgpCiAgICAgICAgc2VsZi5fZ2F2ZUdseXBoT3JkZXIgPSBGYWxzZQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgb3RGb250KToKICAgICAgICBzZWxmLmNmZi5kZWNvbXBpbGUoQnl0ZXNJTyhkYXRhKSwgb3RGb250LCBpc0NGRjI9RmFsc2UpCiAgICAgICAgYXNzZXJ0IGxlbihzZWxmLmNmZikgPT0gMSwgImNhbid0IGRlYWwgd2l0aCBtdWx0aS1mb250IENGRiB0YWJsZXMuIgoKICAgIGRlZiBjb21waWxlKHNlbGYsIG90Rm9udCk6CiAgICAgICAgZiA9IEJ5dGVzSU8oKQogICAgICAgIHNlbGYuY2ZmLmNvbXBpbGUoZiwgb3RGb250LCBpc0NGRjI9RmFsc2UpCiAgICAgICAgcmV0dXJuIGYuZ2V0dmFsdWUoKQoKICAgIGRlZiBoYXZlR2x5cGhOYW1lcyhzZWxmKToKICAgICAgICBpZiBoYXNhdHRyKHNlbGYuY2ZmW3NlbGYuY2ZmLmZvbnROYW1lc1swXV0sICJST1MiKToKICAgICAgICAgICAgcmV0dXJuIEZhbHNlICAjIENJRC1rZXllZCBmb250CiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuIFRydWUKCiAgICBkZWYgZ2V0R2x5cGhPcmRlcihzZWxmKToKICAgICAgICBpZiBzZWxmLl9nYXZlR2x5cGhPcmRlcjoKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCgogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKCJpbGxlZ2FsIHVzZSBvZiBnZXRHbHlwaE9yZGVyKCkiKQogICAgICAgIHNlbGYuX2dhdmVHbHlwaE9yZGVyID0gVHJ1ZQogICAgICAgIHJldHVybiBzZWxmLmNmZltzZWxmLmNmZi5mb250TmFtZXNbMF1dLmdldEdseXBoT3JkZXIoKQoKICAgIGRlZiBzZXRHbHlwaE9yZGVyKHNlbGYsIGdseXBoT3JkZXIpOgogICAgICAgIHBhc3MKICAgICAgICAjIFhYWAogICAgICAgICMgc2VsZi5jZmZbc2VsZi5jZmYuZm9udE5hbWVzWzBdXS5zZXRHbHlwaE9yZGVyKGdseXBoT3JkZXIpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgb3RGb250KToKICAgICAgICBzZWxmLmNmZi50b1hNTCh3cml0ZXIpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIG90Rm9udCk6CiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgImNmZiIpOgogICAgICAgICAgICBzZWxmLmNmZiA9IGNmZkxpYi5DRkZGb250U2V0KCkKICAgICAgICBzZWxmLmNmZi5mcm9tWE1MKG5hbWUsIGF0dHJzLCBjb250ZW50LCBvdEZvbnQpCg==
+from io import BytesIO
+from fontTools import cffLib
+from . import DefaultTable
+
+
+class table_C_F_F_(DefaultTable.DefaultTable):
+    """Compact Font Format table (version 1)
+
+    The ``CFF`` table embeds a CFF-formatted font. The CFF font format
+    predates OpenType and could be used as a standalone font file, but the
+    ``CFF`` table is also used to package CFF fonts into an OpenType
+    container.
+
+    .. note::
+       ``CFF`` has been succeeded by ``CFF2``, which eliminates much of
+       the redundancy incurred by embedding CFF version 1 in an OpenType
+       font.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cff
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.cff = cffLib.CFFFontSet()
+        self._gaveGlyphOrder = False
+
+    def decompile(self, data, otFont):
+        self.cff.decompile(BytesIO(data), otFont, isCFF2=False)
+        assert len(self.cff) == 1, "can't deal with multi-font CFF tables."
+
+    def compile(self, otFont):
+        f = BytesIO()
+        self.cff.compile(f, otFont, isCFF2=False)
+        return f.getvalue()
+
+    def haveGlyphNames(self):
+        if hasattr(self.cff[self.cff.fontNames[0]], "ROS"):
+            return False  # CID-keyed font
+        else:
+            return True
+
+    def getGlyphOrder(self):
+        if self._gaveGlyphOrder:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("illegal use of getGlyphOrder()")
+        self._gaveGlyphOrder = True
+        return self.cff[self.cff.fontNames[0]].getGlyphOrder()
+
+    def setGlyphOrder(self, glyphOrder):
+        pass
+        # XXX
+        # self.cff[self.cff.fontNames[0]].setGlyphOrder(glyphOrder)
+
+    def toXML(self, writer, otFont):
+        self.cff.toXML(writer)
+
+    def fromXML(self, name, attrs, content, otFont):
+        if not hasattr(self, "cff"):
+            self.cff = cffLib.CFFFontSet()
+        self.cff.fromXML(name, attrs, content, otFont)

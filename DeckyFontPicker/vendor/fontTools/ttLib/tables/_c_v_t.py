@@ -1,1 +1,56 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHNhZmVFdmFsCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmltcG9ydCBzeXMKaW1wb3J0IGFycmF5CgoKY2xhc3MgdGFibGVfX2Nfdl90KERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiQ29udHJvbCBWYWx1ZSBUYWJsZQoKICAgIFRoZSBDb250cm9sIFZhbHVlIFRhYmxlIGhvbGRzIGEgbGlzdCBvZiB2YWx1ZXMgdGhhdCBjYW4gYmUgcmVmZXJlbmNlZAogICAgYnkgVHJ1ZVR5cGUgZm9udCBpbnN0cnVjdGlvbnMuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9jdnQKICAgICIiIgoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICB2YWx1ZXMgPSBhcnJheS5hcnJheSgiaCIpCiAgICAgICAgdmFsdWVzLmZyb21ieXRlcyhkYXRhKQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIHZhbHVlcy5ieXRlc3dhcCgpCiAgICAgICAgc2VsZi52YWx1ZXMgPSB2YWx1ZXMKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJ2YWx1ZXMiKToKICAgICAgICAgICAgcmV0dXJuIGIiIgogICAgICAgIHZhbHVlcyA9IHNlbGYudmFsdWVzWzpdCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgdmFsdWVzLmJ5dGVzd2FwKCkKICAgICAgICByZXR1cm4gdmFsdWVzLnRvYnl0ZXMoKQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgZm9yIGksIHZhbHVlIGluIGVudW1lcmF0ZShzZWxmLnZhbHVlcyk6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImN2IiwgdmFsdWU9dmFsdWUsIGluZGV4PWkpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAidmFsdWVzIik6CiAgICAgICAgICAgIHNlbGYudmFsdWVzID0gYXJyYXkuYXJyYXkoImgiKQogICAgICAgIGlmIG5hbWUgPT0gImN2IjoKICAgICAgICAgICAgaW5kZXggPSBzYWZlRXZhbChhdHRyc1siaW5kZXgiXSkKICAgICAgICAgICAgdmFsdWUgPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKICAgICAgICAgICAgZm9yIGkgaW4gcmFuZ2UoMSArIGluZGV4IC0gbGVuKHNlbGYudmFsdWVzKSk6CiAgICAgICAgICAgICAgICBzZWxmLnZhbHVlcy5hcHBlbmQoMCkKICAgICAgICAgICAgc2VsZi52YWx1ZXNbaW5kZXhdID0gdmFsdWUKCiAgICBkZWYgX19sZW5fXyhzZWxmKToKICAgICAgICByZXR1cm4gbGVuKHNlbGYudmFsdWVzKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBpbmRleCk6CiAgICAgICAgcmV0dXJuIHNlbGYudmFsdWVzW2luZGV4XQoKICAgIGRlZiBfX3NldGl0ZW1fXyhzZWxmLCBpbmRleCwgdmFsdWUpOgogICAgICAgIHNlbGYudmFsdWVzW2luZGV4XSA9IHZhbHVlCgogICAgZGVmIF9fZGVsaXRlbV9fKHNlbGYsIGluZGV4KToKICAgICAgICBkZWwgc2VsZi52YWx1ZXNbaW5kZXhdCg==
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+import sys
+import array
+
+
+class table__c_v_t(DefaultTable.DefaultTable):
+    """Control Value Table
+
+    The Control Value Table holds a list of values that can be referenced
+    by TrueType font instructions.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cvt
+    """
+
+    def decompile(self, data, ttFont):
+        values = array.array("h")
+        values.frombytes(data)
+        if sys.byteorder != "big":
+            values.byteswap()
+        self.values = values
+
+    def compile(self, ttFont):
+        if not hasattr(self, "values"):
+            return b""
+        values = self.values[:]
+        if sys.byteorder != "big":
+            values.byteswap()
+        return values.tobytes()
+
+    def toXML(self, writer, ttFont):
+        for i, value in enumerate(self.values):
+            writer.simpletag("cv", value=value, index=i)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "values"):
+            self.values = array.array("h")
+        if name == "cv":
+            index = safeEval(attrs["index"])
+            value = safeEval(attrs["value"])
+            for i in range(1 + index - len(self.values)):
+                self.values.append(0)
+            self.values[index] = value
+
+    def __len__(self):
+        return len(self.values)
+
+    def __getitem__(self, index):
+        return self.values[index]
+
+    def __setitem__(self, index, value):
+        self.values[index] = value
+
+    def __delitem__(self, index):
+        del self.values[index]

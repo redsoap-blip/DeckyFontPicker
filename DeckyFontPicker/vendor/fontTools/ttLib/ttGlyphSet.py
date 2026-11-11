@@ -1,1 +1,590 @@
-IiIiR2x5cGhTZXRzIHJldHVybmVkIGJ5IGEgVFRGb250LiIiIgoKZnJvbSBhYmMgaW1wb3J0IEFCQywgYWJzdHJhY3RtZXRob2QKZnJvbSBjb2xsZWN0aW9ucy5hYmMgaW1wb3J0IE1hcHBpbmcKZnJvbSBjb250ZXh0bGliIGltcG9ydCBjb250ZXh0bWFuYWdlcgpmcm9tIGNvcHkgaW1wb3J0IGNvcHksIGRlZXBjb3B5CmZyb20gdHlwZXMgaW1wb3J0IFNpbXBsZU5hbWVzcGFjZQpmcm9tIGZvbnRUb29scy5taXNjLnZlY3RvciBpbXBvcnQgVmVjdG9yCmZyb20gZm9udFRvb2xzLm1pc2MuZml4ZWRUb29scyBpbXBvcnQgb3RSb3VuZCwgZml4ZWRUb0Zsb2F0IGFzIGZpMmZsCmZyb20gZm9udFRvb2xzLm1pc2MubG9nZ2luZ1Rvb2xzIGltcG9ydCBkZXByZWNhdGVGdW5jdGlvbgpmcm9tIGZvbnRUb29scy5taXNjLnRyYW5zZm9ybSBpbXBvcnQgVHJhbnNmb3JtLCBEZWNvbXBvc2VkVHJhbnNmb3JtCmZyb20gZm9udFRvb2xzLnBlbnMudHJhbnNmb3JtUGVuIGltcG9ydCBUcmFuc2Zvcm1QZW4sIFRyYW5zZm9ybVBvaW50UGVuCmZyb20gZm9udFRvb2xzLnBlbnMucmVjb3JkaW5nUGVuIGltcG9ydCAoCiAgICBEZWNvbXBvc2luZ1JlY29yZGluZ1BlbiwKICAgIGxlcnBSZWNvcmRpbmdzLAogICAgcmVwbGF5UmVjb3JkaW5nLAopCgoKZGVmIF9nZXRWYXJpYXRpb25BeGVzKGZvbnQpOgogICAgaWYgImZ2YXIiIGluIGZvbnQ6CiAgICAgICAgcmV0dXJuIGZvbnRbImZ2YXIiXS5heGVzCgogICAgIyBWQVJDIHBlcm1pdHMgc3RhdGljIGZvbnRzIHRvIHJldGFpbiBndmFyIG9yIENGRjIgdmFyaWF0aW9uIGRhdGEgZm9yCiAgICAjIGNvbXBvbmVudC1pbnRlcm5hbCBjb29yZGluYXRlcyB3aXRob3V0IGV4cG9zaW5nIGF4ZXMgdGhyb3VnaCBmdmFyLgogICAgYXhpc0NvdW50ID0gMAogICAgZ3ZhciA9IGZvbnQuZ2V0KCJHVkFSIiBpZiAiR1ZBUiIgaW4gZm9udCBlbHNlICJndmFyIikKICAgIGlmIGd2YXIgaXMgbm90IE5vbmU6CiAgICAgICAgYXhpc0NvdW50ID0gZ3Zhci5heGlzQ291bnQKICAgIGlmICJDRkYyIiBpbiBmb250OgogICAgICAgIGNmZiA9IG5leHQoaXRlcihmb250WyJDRkYyIl0uY2ZmLnZhbHVlcygpKSkKICAgICAgICB2YXJTdG9yZSA9IGdldGF0dHIoY2ZmLkNoYXJTdHJpbmdzLCAidmFyU3RvcmUiLCBOb25lKQogICAgICAgIGlmIHZhclN0b3JlIGlzIG5vdCBOb25lOgogICAgICAgICAgICBheGlzQ291bnQgPSBtYXgoCiAgICAgICAgICAgICAgICBheGlzQ291bnQsIHZhclN0b3JlLm90VmFyU3RvcmUuVmFyUmVnaW9uTGlzdC5SZWdpb25BeGlzQ291bnQKICAgICAgICAgICAgKQogICAgcmV0dXJuIFtTaW1wbGVOYW1lc3BhY2UoYXhpc1RhZz1pKSBmb3IgaSBpbiByYW5nZShheGlzQ291bnQpXQoKCmNsYXNzIF9UVEdseXBoU2V0KE1hcHBpbmcpOgogICAgIiIiR2VuZXJpYyBkaWN0LWxpa2UgR2x5cGhTZXQgY2xhc3MgdGhhdCBwdWxscyBtZXRyaWNzIGZyb20gaG10eCBhbmQKICAgIGdseXBoIHNoYXBlIGZyb20gVHJ1ZVR5cGUgb3IgQ0ZGLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgZm9udCwKICAgICAgICBsb2NhdGlvbiwKICAgICAgICBnbHlwaHNNYXBwaW5nLAogICAgICAgICosCiAgICAgICAgaE1ldHJpY3NUYWc9ImhtdHgiLAogICAgICAgIHZNZXRyaWNzVGFnPSJ2bXR4IiwKICAgICAgICByZWNhbGNCb3VuZHM9VHJ1ZSwKICAgICk6CiAgICAgICAgc2VsZi5yZWNhbGNCb3VuZHMgPSByZWNhbGNCb3VuZHMKICAgICAgICBzZWxmLmZvbnQgPSBmb250CiAgICAgICAgc2VsZi5heGVzID0gX2dldFZhcmlhdGlvbkF4ZXMoZm9udCkKICAgICAgICBzZWxmLmxvY2F0aW9uID0gbG9jYXRpb24gaWYgbG9jYXRpb24gaXMgbm90IE5vbmUgZWxzZSB7fQogICAgICAgIHNlbGYucmF3TG9jYXRpb24gPSB7fSAgIyBWYXJDb21wb25lbnQtb25seSBsb2NhdGlvbgogICAgICAgIHNlbGYub3JpZ2luYWxMb2NhdGlvbiA9IGxvY2F0aW9uIGlmIGxvY2F0aW9uIGlzIG5vdCBOb25lIGVsc2Uge30KICAgICAgICBzZWxmLmRlcHRoID0gMAogICAgICAgIHNlbGYubG9jYXRpb25TdGFjayA9IFtdCiAgICAgICAgc2VsZi5yYXdMb2NhdGlvblN0YWNrID0gW10KICAgICAgICBzZWxmLmdseXBoc01hcHBpbmcgPSBnbHlwaHNNYXBwaW5nCiAgICAgICAgc2VsZi5faE1ldHJpY3NUYWcgPSBoTWV0cmljc1RhZwogICAgICAgIHNlbGYuX3ZNZXRyaWNzVGFnID0gdk1ldHJpY3NUYWcKICAgICAgICBzZWxmLmhNZXRyaWNzID0gZm9udFtoTWV0cmljc1RhZ10ubWV0cmljcwogICAgICAgIHNlbGYudk1ldHJpY3MgPSBnZXRhdHRyKGZvbnQuZ2V0KHZNZXRyaWNzVGFnKSwgIm1ldHJpY3MiLCBOb25lKQogICAgICAgIHNlbGYuaHZhclRhYmxlID0gTm9uZQogICAgICAgIHNlbGYudnZhclRhYmxlID0gTm9uZQogICAgICAgIGlmIGxvY2F0aW9uOgogICAgICAgICAgICBmcm9tIGZvbnRUb29scy52YXJMaWIudmFyU3RvcmUgaW1wb3J0IFZhclN0b3JlSW5zdGFuY2VyCgogICAgICAgICAgICBzZWxmLmh2YXJUYWJsZSA9IGdldGF0dHIoZm9udC5nZXQoIkhWQVIiKSwgInRhYmxlIiwgTm9uZSkKICAgICAgICAgICAgaWYgc2VsZi5odmFyVGFibGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBzZWxmLmh2YXJJbnN0YW5jZXIgPSBWYXJTdG9yZUluc3RhbmNlcigKICAgICAgICAgICAgICAgICAgICBzZWxmLmh2YXJUYWJsZS5WYXJTdG9yZSwgc2VsZi5heGVzLCBsb2NhdGlvbgogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBzZWxmLnZ2YXJUYWJsZSA9IGdldGF0dHIoZm9udC5nZXQoIlZWQVIiKSwgInRhYmxlIiwgTm9uZSkKICAgICAgICAgICAgaWYgc2VsZi52dmFyVGFibGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBzZWxmLnZ2YXJJbnN0YW5jZXIgPSBWYXJTdG9yZUluc3RhbmNlcigKICAgICAgICAgICAgICAgICAgICBzZWxmLnZ2YXJUYWJsZS5WYXJTdG9yZSwgc2VsZi5heGVzLCBsb2NhdGlvbgogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAjIFRPRE8gVk9SRwoKICAgIEBjb250ZXh0bWFuYWdlcgogICAgZGVmIHB1c2hMb2NhdGlvbihzZWxmLCBsb2NhdGlvbiwgcmVzZXQ6IGJvb2wpOgogICAgICAgIHNlbGYubG9jYXRpb25TdGFjay5hcHBlbmQoc2VsZi5sb2NhdGlvbikKICAgICAgICBzZWxmLnJhd0xvY2F0aW9uU3RhY2suYXBwZW5kKHNlbGYucmF3TG9jYXRpb24pCiAgICAgICAgaWYgcmVzZXQ6CiAgICAgICAgICAgIHNlbGYubG9jYXRpb24gPSBzZWxmLm9yaWdpbmFsTG9jYXRpb24uY29weSgpCiAgICAgICAgICAgIHNlbGYucmF3TG9jYXRpb24gPSB7fQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYubG9jYXRpb24gPSBzZWxmLmxvY2F0aW9uLmNvcHkoKQogICAgICAgICAgICBzZWxmLnJhd0xvY2F0aW9uID0ge30KICAgICAgICBzZWxmLmxvY2F0aW9uLnVwZGF0ZShsb2NhdGlvbikKICAgICAgICBzZWxmLnJhd0xvY2F0aW9uLnVwZGF0ZShsb2NhdGlvbikKCiAgICAgICAgdHJ5OgogICAgICAgICAgICB5aWVsZCBOb25lCiAgICAgICAgZmluYWxseToKICAgICAgICAgICAgc2VsZi5sb2NhdGlvbiA9IHNlbGYubG9jYXRpb25TdGFjay5wb3AoKQogICAgICAgICAgICBzZWxmLnJhd0xvY2F0aW9uID0gc2VsZi5yYXdMb2NhdGlvblN0YWNrLnBvcCgpCgogICAgQGNvbnRleHRtYW5hZ2VyCiAgICBkZWYgcHVzaERlcHRoKHNlbGYpOgogICAgICAgIHRyeToKICAgICAgICAgICAgZGVwdGggPSBzZWxmLmRlcHRoCiAgICAgICAgICAgIHNlbGYuZGVwdGggKz0gMQogICAgICAgICAgICB5aWVsZCBkZXB0aAogICAgICAgIGZpbmFsbHk6CiAgICAgICAgICAgIHNlbGYuZGVwdGggLT0gMQoKICAgIGRlZiBfX2NvbnRhaW5zX18oc2VsZiwgZ2x5cGhOYW1lKToKICAgICAgICByZXR1cm4gZ2x5cGhOYW1lIGluIHNlbGYuZ2x5cGhzTWFwcGluZwoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gaXRlcihzZWxmLmdseXBoc01hcHBpbmcua2V5cygpKQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5nbHlwaHNNYXBwaW5nKQoKICAgIEBkZXByZWNhdGVGdW5jdGlvbigKICAgICAgICAidXNlICdnbHlwaE5hbWUgaW4gZ2x5cGhTZXQnIGluc3RlYWQiLCBjYXRlZ29yeT1EZXByZWNhdGlvbldhcm5pbmcKICAgICkKICAgIGRlZiBoYXNfa2V5KHNlbGYsIGdseXBoTmFtZSk6CiAgICAgICAgcmV0dXJuIGdseXBoTmFtZSBpbiBzZWxmLmdseXBoc01hcHBpbmcKCgpjbGFzcyBfVFRHbHlwaFNldEdseWYoX1RUR2x5cGhTZXQpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGZvbnQsIGxvY2F0aW9uLCBnbHlmVGFnLCByZWNhbGNCb3VuZHM9VHJ1ZSk6CiAgICAgICAgc2VsZi5nbHlmVGFibGUgPSBmb250W2dseWZUYWddCiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygKICAgICAgICAgICAgZm9udCwKICAgICAgICAgICAgbG9jYXRpb24sCiAgICAgICAgICAgIHNlbGYuZ2x5ZlRhYmxlLAogICAgICAgICAgICBoTWV0cmljc1RhZz1zZWxmLmdseWZUYWJsZS5obXR4VGFnLAogICAgICAgICAgICB2TWV0cmljc1RhZz1zZWxmLmdseWZUYWJsZS52bXR4VGFnLAogICAgICAgICAgICByZWNhbGNCb3VuZHM9cmVjYWxjQm91bmRzLAogICAgICAgICkKICAgICAgICBzZWxmLmd2YXJUYWJsZSA9IGZvbnQuZ2V0KHNlbGYuZ2x5ZlRhYmxlLmd2YXJUYWcpCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIGdseXBoTmFtZSk6CiAgICAgICAgcmV0dXJuIF9UVEdseXBoR2x5ZihzZWxmLCBnbHlwaE5hbWUsIHJlY2FsY0JvdW5kcz1zZWxmLnJlY2FsY0JvdW5kcykKCgpjbGFzcyBfVFRHbHlwaFNldENGRihfVFRHbHlwaFNldCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZm9udCwgbG9jYXRpb24pOgogICAgICAgIHRhYmxlVGFnID0gIkNGRjIiIGlmICJDRkYyIiBpbiBmb250IGVsc2UgIkNGRiAiCiAgICAgICAgc2VsZi5jaGFyU3RyaW5ncyA9IGxpc3QoZm9udFt0YWJsZVRhZ10uY2ZmLnZhbHVlcygpKVswXS5DaGFyU3RyaW5ncwogICAgICAgIHN1cGVyKCkuX19pbml0X18oCiAgICAgICAgICAgIGZvbnQsCiAgICAgICAgICAgIGxvY2F0aW9uLAogICAgICAgICAgICBzZWxmLmNoYXJTdHJpbmdzLAogICAgICAgICAgICBoTWV0cmljc1RhZz0iSE1UWCIgaWYgIkhNVFgiIGluIGZvbnQgZWxzZSAiaG10eCIsCiAgICAgICAgICAgIHZNZXRyaWNzVGFnPSJWTVRYIiBpZiAiVk1UWCIgaW4gZm9udCBlbHNlICJ2bXR4IiwKICAgICAgICApCiAgICAgICAgc2VsZi5zZXRMb2NhdGlvbihsb2NhdGlvbikKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgZ2x5cGhOYW1lKToKICAgICAgICByZXR1cm4gX1RUR2x5cGhDRkYoc2VsZiwgZ2x5cGhOYW1lKQoKICAgIGRlZiBzZXRMb2NhdGlvbihzZWxmLCBsb2NhdGlvbik6CiAgICAgICAgc2VsZi5ibGVuZGVyID0gTm9uZQogICAgICAgIGlmIGxvY2F0aW9uOgogICAgICAgICAgICAjIFRPRE8gT3B0aW1pemUgYnkgdXNpbmcgaW5zdGFuY2VyLnNldExvY2F0aW9uKCkKCiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSBpbXBvcnQgVmFyU3RvcmVJbnN0YW5jZXIKCiAgICAgICAgICAgIHZhclN0b3JlID0gZ2V0YXR0cihzZWxmLmNoYXJTdHJpbmdzLCAidmFyU3RvcmUiLCBOb25lKQogICAgICAgICAgICBpZiB2YXJTdG9yZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIGluc3RhbmNlciA9IFZhclN0b3JlSW5zdGFuY2VyKHZhclN0b3JlLm90VmFyU3RvcmUsIHNlbGYuYXhlcywgbG9jYXRpb24pCiAgICAgICAgICAgICAgICBzZWxmLmJsZW5kZXIgPSBpbnN0YW5jZXIuaW50ZXJwb2xhdGVGcm9tRGVsdGFzCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5ibGVuZGVyID0gTm9uZQoKICAgIEBjb250ZXh0bWFuYWdlcgogICAgZGVmIHB1c2hMb2NhdGlvbihzZWxmLCBsb2NhdGlvbiwgcmVzZXQ6IGJvb2wpOgogICAgICAgIHRyeToKICAgICAgICAgICAgd2l0aCBfVFRHbHlwaFNldC5wdXNoTG9jYXRpb24oc2VsZiwgbG9jYXRpb24sIHJlc2V0KSBhcyB2YWx1ZToKICAgICAgICAgICAgICAgIHNlbGYuc2V0TG9jYXRpb24oc2VsZi5sb2NhdGlvbikKICAgICAgICAgICAgICAgIHlpZWxkIHZhbHVlCiAgICAgICAgZmluYWxseToKICAgICAgICAgICAgIyBSZXN0b3JlIHRoZSBibGVuZGVyIGFmdGVyIHRoZSBiYXNlIGNvbnRleHQgcG9wcyB0aGUgcGFyZW50IGxvY2F0aW9uLgogICAgICAgICAgICBzZWxmLnNldExvY2F0aW9uKHNlbGYubG9jYXRpb24pCgoKY2xhc3MgX1RUR2x5cGhTZXRWQVJDKF9UVEdseXBoU2V0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmb250LCBsb2NhdGlvbiwgZ2x5cGhTZXQpOgogICAgICAgIHNlbGYuZ2x5cGhTZXQgPSBnbHlwaFNldAogICAgICAgIHN1cGVyKCkuX19pbml0X18oCiAgICAgICAgICAgIGZvbnQsCiAgICAgICAgICAgIGxvY2F0aW9uLAogICAgICAgICAgICBkaWN0LmZyb21rZXlzKGZvbnQuZ2V0R2x5cGhPcmRlcigpKSwKICAgICAgICAgICAgaE1ldHJpY3NUYWc9Z2x5cGhTZXQuX2hNZXRyaWNzVGFnLAogICAgICAgICAgICB2TWV0cmljc1RhZz1nbHlwaFNldC5fdk1ldHJpY3NUYWcsCiAgICAgICAgKQogICAgICAgIHNlbGYudmFyY1RhYmxlID0gZm9udFsiVkFSQyJdLnRhYmxlCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIGdseXBoTmFtZSk6CiAgICAgICAgdmFyYyA9IHNlbGYudmFyY1RhYmxlCiAgICAgICAgaWYgZ2x5cGhOYW1lIG5vdCBpbiB2YXJjLkNvdmVyYWdlLmdseXBoczoKICAgICAgICAgICAgcmV0dXJuIHNlbGYuZ2x5cGhTZXRbZ2x5cGhOYW1lXQogICAgICAgIHJldHVybiBfVFRHbHlwaFZBUkMoc2VsZiwgZ2x5cGhOYW1lKQoKCmNsYXNzIF9UVEdseXBoKEFCQyk6CiAgICAiIiJHbHlwaCBvYmplY3QgdGhhdCBzdXBwb3J0cyB0aGUgUGVuIHByb3RvY29sLCBtZWFuaW5nIHRoYXQgaXQgaGFzCiAgICAuZHJhdygpIGFuZCAuZHJhd1BvaW50cygpIG1ldGhvZHMgdGhhdCB0YWtlIGEgcGVuIG9iamVjdCBhcyB0aGVpciBvbmx5CiAgICBhcmd1bWVudC4gQWRkaXRpb25hbGx5IHRoZXJlIGFyZSAnd2lkdGgnIGFuZCAnbHNiJyBhdHRyaWJ1dGVzLCByZWFkIGZyb20KICAgIHRoZSAnaG10eCcgdGFibGUuCgogICAgSWYgdGhlIGZvbnQgY29udGFpbnMgYSAndm10eCcgdGFibGUsIHRoZXJlIHdpbGwgYWxzbyBiZSAnaGVpZ2h0JyBhbmQgJ3RzYicKICAgIGF0dHJpYnV0ZXMuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhTZXQsIGdseXBoTmFtZSwgKiwgcmVjYWxjQm91bmRzPVRydWUpOgogICAgICAgIHNlbGYuZ2x5cGhTZXQgPSBnbHlwaFNldAogICAgICAgIHNlbGYubmFtZSA9IGdseXBoTmFtZQogICAgICAgIHNlbGYucmVjYWxjQm91bmRzID0gcmVjYWxjQm91bmRzCiAgICAgICAgc2VsZi53aWR0aCwgc2VsZi5sc2IgPSBnbHlwaFNldC5oTWV0cmljc1tnbHlwaE5hbWVdCiAgICAgICAgaWYgZ2x5cGhTZXQudk1ldHJpY3MgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHNlbGYuaGVpZ2h0LCBzZWxmLnRzYiA9IGdseXBoU2V0LnZNZXRyaWNzW2dseXBoTmFtZV0KICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmhlaWdodCwgc2VsZi50c2IgPSBOb25lLCBOb25lCiAgICAgICAgaWYgZ2x5cGhTZXQubG9jYXRpb24gYW5kIGdseXBoU2V0Lmh2YXJUYWJsZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgdmFyaWR4ID0gKAogICAgICAgICAgICAgICAgZ2x5cGhTZXQuZm9udC5nZXRHbHlwaElEKGdseXBoTmFtZSkKICAgICAgICAgICAgICAgIGlmIGdseXBoU2V0Lmh2YXJUYWJsZS5BZHZXaWR0aE1hcCBpcyBOb25lCiAgICAgICAgICAgICAgICBlbHNlIGdseXBoU2V0Lmh2YXJUYWJsZS5BZHZXaWR0aE1hcC5tYXBwaW5nW2dseXBoTmFtZV0KICAgICAgICAgICAgKQogICAgICAgICAgICAjIEFuIGltcGxpY2l0IG1hcHBpbmcgYWx3YXlzIHVzZXMgb3V0ZXIgaW5kZXggemVyby4gT3ZlcnNpemVkCiAgICAgICAgICAgICMgZ2x5cGggSURzIG11c3Qgbm90IGJlIGludGVycHJldGVkIGFzIHBhY2tlZCB2YXJpYXRpb24gaW5kaWNlcy4KICAgICAgICAgICAgaWYgZ2x5cGhTZXQuaHZhclRhYmxlLkFkdldpZHRoTWFwIGlzIG5vdCBOb25lIG9yIHZhcmlkeCA8PSAweEZGRkY6CiAgICAgICAgICAgICAgICBzZWxmLndpZHRoICs9IGdseXBoU2V0Lmh2YXJJbnN0YW5jZXJbdmFyaWR4XQogICAgICAgIGlmIHNlbGYuaGVpZ2h0IGlzIG5vdCBOb25lIGFuZCBnbHlwaFNldC52dmFyVGFibGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHZhcmlkeCA9ICgKICAgICAgICAgICAgICAgIGdseXBoU2V0LmZvbnQuZ2V0R2x5cGhJRChnbHlwaE5hbWUpCiAgICAgICAgICAgICAgICBpZiBnbHlwaFNldC52dmFyVGFibGUuQWR2SGVpZ2h0TWFwIGlzIE5vbmUKICAgICAgICAgICAgICAgIGVsc2UgZ2x5cGhTZXQudnZhclRhYmxlLkFkdkhlaWdodE1hcC5tYXBwaW5nW2dseXBoTmFtZV0KICAgICAgICAgICAgKQogICAgICAgICAgICBpZiBnbHlwaFNldC52dmFyVGFibGUuQWR2SGVpZ2h0TWFwIGlzIG5vdCBOb25lIG9yIHZhcmlkeCA8PSAweEZGRkY6CiAgICAgICAgICAgICAgICBzZWxmLmhlaWdodCArPSBnbHlwaFNldC52dmFySW5zdGFuY2VyW3ZhcmlkeF0KICAgICAgICAjIFRPRE86IFZPUkcKCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiBkcmF3KHNlbGYsIHBlbik6CiAgICAgICAgIiIiRHJhdyB0aGUgZ2x5cGggb250byBgYHBlbmBgLiBTZWUgZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBmb3IgZGV0YWlscwogICAgICAgIGhvdyB0aGF0IHdvcmtzLgogICAgICAgICIiIgogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IKCiAgICBkZWYgZHJhd1BvaW50cyhzZWxmLCBwZW4pOgogICAgICAgICIiIkRyYXcgdGhlIGdseXBoIG9udG8gYGBwZW5gYC4gU2VlIGZvbnRUb29scy5wZW5zLnBvaW50UGVuIGZvciBkZXRhaWxzCiAgICAgICAgaG93IHRoYXQgd29ya3MuCiAgICAgICAgIiIiCiAgICAgICAgZnJvbSBmb250VG9vbHMucGVucy5wb2ludFBlbiBpbXBvcnQgU2VnbWVudFRvUG9pbnRQZW4KCiAgICAgICAgc2VsZi5kcmF3KFNlZ21lbnRUb1BvaW50UGVuKHBlbikpCgoKY2xhc3MgX1RUR2x5cGhHbHlmKF9UVEdseXBoKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaFNldCwgZ2x5cGhOYW1lLCAqLCByZWNhbGNCb3VuZHM9VHJ1ZSk6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXyhnbHlwaFNldCwgZ2x5cGhOYW1lLCByZWNhbGNCb3VuZHM9cmVjYWxjQm91bmRzKQogICAgICAgICMgV2l0aG91dCBIVkFSIHRoZSBhZHZhbmNlIGF0IGEgbm9uLWRlZmF1bHQgbG9jYXRpb24gY29tZXMgZnJvbSB0aGUKICAgICAgICAjIGd2YXIgcGhhbnRvbSBwb2ludHM6IGNvbXB1dGUgaXQgbGF6aWx5IG9uIGZpcnN0IGFjY2Vzcy4KICAgICAgICBpZiAoCiAgICAgICAgICAgIGdseXBoU2V0LmxvY2F0aW9uCiAgICAgICAgICAgIGFuZCBnbHlwaFNldC5odmFyVGFibGUgaXMgTm9uZQogICAgICAgICAgICBhbmQgZ2x5cGhTZXQuZ3ZhclRhYmxlIGlzIG5vdCBOb25lCiAgICAgICAgKToKICAgICAgICAgICAgc2VsZi5fd2lkdGggPSBOb25lCgogICAgQHByb3BlcnR5CiAgICBkZWYgd2lkdGgoc2VsZik6CiAgICAgICAgaWYgc2VsZi5fd2lkdGggaXMgTm9uZToKICAgICAgICAgICAgaWYgc2VsZi5uYW1lIGluIHNlbGYuZ2x5cGhTZXQuZ3ZhclRhYmxlLnZhcmlhdGlvbnM6CiAgICAgICAgICAgICAgICAjIG5vIEhWQVI6IHRoaXMgYWxzbyBzZXRzIHNlbGYuX3dpZHRoIGZyb20gdGhlIHBoYW50b20gcG9pbnRzCiAgICAgICAgICAgICAgICBzZWxmLl9nZXRHbHlwaEluc3RhbmNlKCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICMgbm8gZ3ZhciBlbnRyeTogZ2x5cGggZG9lc24ndCB2YXJ5LCBobXR4IGFkdmFuY2UgaXMgcmlnaHQKICAgICAgICAgICAgICAgIHNlbGYuX3dpZHRoID0gc2VsZi5nbHlwaFNldC5oTWV0cmljc1tzZWxmLm5hbWVdWzBdCiAgICAgICAgcmV0dXJuIHNlbGYuX3dpZHRoCgogICAgQHdpZHRoLnNldHRlcgogICAgZGVmIHdpZHRoKHNlbGYsIHZhbHVlKToKICAgICAgICBzZWxmLl93aWR0aCA9IHZhbHVlCgogICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICAiIiJEcmF3IHRoZSBnbHlwaCBvbnRvIGBgcGVuYGAuIFNlZSBmb250VG9vbHMucGVucy5iYXNlUGVuIGZvciBkZXRhaWxzCiAgICAgICAgaG93IHRoYXQgd29ya3MuCiAgICAgICAgIiIiCiAgICAgICAgZ2x5cGgsIG9mZnNldCA9IHNlbGYuX2dldEdseXBoQW5kT2Zmc2V0KCkKCiAgICAgICAgd2l0aCBzZWxmLmdseXBoU2V0LnB1c2hEZXB0aCgpIGFzIGRlcHRoOgogICAgICAgICAgICBpZiBkZXB0aDoKICAgICAgICAgICAgICAgIG9mZnNldCA9IDAgICMgT2Zmc2V0IHNob3VsZCBvbmx5IGFwcGx5IGF0IHRvcC1sZXZlbAoKICAgICAgICAgICAgZ2x5cGguZHJhdyhwZW4sIHNlbGYuZ2x5cGhTZXQuZ2x5ZlRhYmxlLCBvZmZzZXQpCgogICAgZGVmIGRyYXdQb2ludHMoc2VsZiwgcGVuKToKICAgICAgICAiIiJEcmF3IHRoZSBnbHlwaCBvbnRvIGBgcGVuYGAuIFNlZSBmb250VG9vbHMucGVucy5wb2ludFBlbiBmb3IgZGV0YWlscwogICAgICAgIGhvdyB0aGF0IHdvcmtzLgogICAgICAgICIiIgogICAgICAgIGdseXBoLCBvZmZzZXQgPSBzZWxmLl9nZXRHbHlwaEFuZE9mZnNldCgpCgogICAgICAgIHdpdGggc2VsZi5nbHlwaFNldC5wdXNoRGVwdGgoKSBhcyBkZXB0aDoKICAgICAgICAgICAgaWYgZGVwdGg6CiAgICAgICAgICAgICAgICBvZmZzZXQgPSAwICAjIE9mZnNldCBzaG91bGQgb25seSBhcHBseSBhdCB0b3AtbGV2ZWwKCiAgICAgICAgICAgIGdseXBoLmRyYXdQb2ludHMocGVuLCBzZWxmLmdseXBoU2V0LmdseWZUYWJsZSwgb2Zmc2V0KQoKICAgIGRlZiBfZ2V0R2x5cGhBbmRPZmZzZXQoc2VsZik6CiAgICAgICAgaWYgc2VsZi5nbHlwaFNldC5sb2NhdGlvbiBhbmQgc2VsZi5nbHlwaFNldC5ndmFyVGFibGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGdseXBoID0gc2VsZi5fZ2V0R2x5cGhJbnN0YW5jZSgpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZ2x5cGggPSBzZWxmLmdseXBoU2V0LmdseWZUYWJsZVtzZWxmLm5hbWVdCgogICAgICAgIG9mZnNldCA9IHNlbGYubHNiIC0gZ2x5cGgueE1pbiBpZiBoYXNhdHRyKGdseXBoLCAieE1pbiIpIGVsc2UgMAogICAgICAgIHJldHVybiBnbHlwaCwgb2Zmc2V0CgogICAgZGVmIF9nZXRHbHlwaEluc3RhbmNlKHNlbGYpOgogICAgICAgIGZyb20gZm9udFRvb2xzLnZhckxpYi5pdXAgaW1wb3J0IGl1cF9kZWx0YQogICAgICAgIGZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5fZ19sX3lfZiBpbXBvcnQgR2x5cGhDb29yZGluYXRlcwogICAgICAgIGZyb20gZm9udFRvb2xzLnZhckxpYi5tb2RlbHMgaW1wb3J0IHN1cHBvcnRTY2FsYXIKCiAgICAgICAgZ2x5cGhTZXQgPSBzZWxmLmdseXBoU2V0CiAgICAgICAgZ2x5ZlRhYmxlID0gZ2x5cGhTZXQuZ2x5ZlRhYmxlCiAgICAgICAgdmFyaWF0aW9ucyA9IGdseXBoU2V0Lmd2YXJUYWJsZS52YXJpYXRpb25zW3NlbGYubmFtZV0KICAgICAgICBoTWV0cmljcyA9IGdseXBoU2V0LmhNZXRyaWNzCiAgICAgICAgdk1ldHJpY3MgPSBnbHlwaFNldC52TWV0cmljcwogICAgICAgIGNvb3JkaW5hdGVzLCBfID0gZ2x5ZlRhYmxlLl9nZXRDb29yZGluYXRlc0FuZENvbnRyb2xzKAogICAgICAgICAgICBzZWxmLm5hbWUsIGhNZXRyaWNzLCB2TWV0cmljcwogICAgICAgICkKICAgICAgICBvcmlnQ29vcmRzLCBlbmRQdHMgPSBOb25lLCBOb25lCiAgICAgICAgZm9yIHZhciBpbiB2YXJpYXRpb25zOgogICAgICAgICAgICBzY2FsYXIgPSBzdXBwb3J0U2NhbGFyKGdseXBoU2V0LmxvY2F0aW9uLCB2YXIuYXhlcykKICAgICAgICAgICAgaWYgbm90IHNjYWxhcjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGRlbHRhID0gdmFyLmNvb3JkaW5hdGVzCiAgICAgICAgICAgIGlmIE5vbmUgaW4gZGVsdGE6CiAgICAgICAgICAgICAgICBpZiBvcmlnQ29vcmRzIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgb3JpZ0Nvb3JkcywgY29udHJvbCA9IGdseWZUYWJsZS5fZ2V0Q29vcmRpbmF0ZXNBbmRDb250cm9scygKICAgICAgICAgICAgICAgICAgICAgICAgc2VsZi5uYW1lLCBoTWV0cmljcywgdk1ldHJpY3MKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgZW5kUHRzID0gKAogICAgICAgICAgICAgICAgICAgICAgICBjb250cm9sWzFdIGlmIGNvbnRyb2xbMF0gPj0gMSBlbHNlIGxpc3QocmFuZ2UobGVuKGNvbnRyb2xbMV0pKSkKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBkZWx0YSA9IGl1cF9kZWx0YShkZWx0YSwgb3JpZ0Nvb3JkcywgZW5kUHRzKQogICAgICAgICAgICBjb29yZGluYXRlcyArPSBHbHlwaENvb3JkaW5hdGVzKGRlbHRhKSAqIHNjYWxhcgoKICAgICAgICBnbHlwaCA9IGNvcHkoZ2x5ZlRhYmxlW3NlbGYubmFtZV0pICAjIFNoYWxsb3cgY29weQogICAgICAgIHdpZHRoLCBsc2IsIGhlaWdodCwgdHNiID0gX3NldENvb3JkaW5hdGVzKAogICAgICAgICAgICBnbHlwaCwgY29vcmRpbmF0ZXMsIGdseWZUYWJsZSwgcmVjYWxjQm91bmRzPXNlbGYucmVjYWxjQm91bmRzCiAgICAgICAgKQogICAgICAgIHNlbGYubHNiID0gbHNiCiAgICAgICAgc2VsZi50c2IgPSB0c2IKICAgICAgICBpZiBnbHlwaFNldC5odmFyVGFibGUgaXMgTm9uZToKICAgICAgICAgICAgIyBubyBIVkFSOiBsZXQncyBzZXQgbWV0cmljcyBmcm9tIHRoZSBwaGFudG9tIHBvaW50cwogICAgICAgICAgICBzZWxmLndpZHRoID0gd2lkdGgKICAgICAgICBpZiBnbHlwaFNldC52dmFyVGFibGUgaXMgTm9uZToKICAgICAgICAgICAgc2VsZi5oZWlnaHQgPSBoZWlnaHQKICAgICAgICByZXR1cm4gZ2x5cGgKCgpjbGFzcyBfVFRHbHlwaENGRihfVFRHbHlwaCk6CiAgICBkZWYgZHJhdyhzZWxmLCBwZW4pOgogICAgICAgICIiIkRyYXcgdGhlIGdseXBoIG9udG8gYGBwZW5gYC4gU2VlIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gZm9yIGRldGFpbHMKICAgICAgICBob3cgdGhhdCB3b3Jrcy4KICAgICAgICAiIiIKICAgICAgICBzZWxmLmdseXBoU2V0LmNoYXJTdHJpbmdzW3NlbGYubmFtZV0uZHJhdyhwZW4sIHNlbGYuZ2x5cGhTZXQuYmxlbmRlcikKCgpkZWYgX2V2YWx1YXRlQ29uZGl0aW9uKGNvbmRpdGlvbiwgYXhlcywgbG9jYXRpb24sIGluc3RhbmNlcik6CiAgICBpZiBjb25kaXRpb24gaXMgTm9uZToKICAgICAgICAjIEEgbnVsbCBjb25kaXRpb24gb2Zmc2V0IGRlbm90ZXMgVHJ1ZS4KICAgICAgICByZXR1cm4gVHJ1ZQoKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gMToKICAgICAgICAjIENvbmRpdGlvbkF4aXNSYW5nZQogICAgICAgIGF4aXNJbmRleCA9IGNvbmRpdGlvbi5BeGlzSW5kZXgKICAgICAgICBheGlzVGFnID0gYXhlc1theGlzSW5kZXhdLmF4aXNUYWcKICAgICAgICBheGlzVmFsdWUgPSBsb2NhdGlvbi5nZXQoYXhpc1RhZywgMCkKICAgICAgICBtaW5WYWx1ZSA9IGNvbmRpdGlvbi5GaWx0ZXJSYW5nZU1pblZhbHVlCiAgICAgICAgbWF4VmFsdWUgPSBjb25kaXRpb24uRmlsdGVyUmFuZ2VNYXhWYWx1ZQogICAgICAgIHJldHVybiBtaW5WYWx1ZSA8PSBheGlzVmFsdWUgPD0gbWF4VmFsdWUKICAgIGVsaWYgY29uZGl0aW9uLkZvcm1hdCA9PSAyOgogICAgICAgICMgQ29uZGl0aW9uVmFsdWUKICAgICAgICBmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMub3RUYWJsZXMgaW1wb3J0IE5PX1ZBUklBVElPTl9JTkRFWAoKICAgICAgICB2YWx1ZSA9IGNvbmRpdGlvbi5EZWZhdWx0VmFsdWUKICAgICAgICBpZiBjb25kaXRpb24uVmFySWR4ICE9IE5PX1ZBUklBVElPTl9JTkRFWDoKICAgICAgICAgICAgZGVsdGFzID0gaW5zdGFuY2VyW2NvbmRpdGlvbi5WYXJJZHhdCiAgICAgICAgICAgIGlmIGRlbHRhczoKICAgICAgICAgICAgICAgIHZhbHVlICs9IGRlbHRhc1swXQogICAgICAgIHJldHVybiB2YWx1ZSA+IDAKICAgIGVsaWYgY29uZGl0aW9uLkZvcm1hdCA9PSAzOgogICAgICAgICMgQ29uZGl0aW9uQW5kCiAgICAgICAgZm9yIHN1YmNvbmRpdGlvbiBpbiBjb25kaXRpb24uQ29uZGl0aW9uVGFibGU6CiAgICAgICAgICAgIGlmIG5vdCBfZXZhbHVhdGVDb25kaXRpb24oc3ViY29uZGl0aW9uLCBheGVzLCBsb2NhdGlvbiwgaW5zdGFuY2VyKToKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIHJldHVybiBUcnVlCiAgICBlbGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gNDoKICAgICAgICAjIENvbmRpdGlvbk9yCiAgICAgICAgZm9yIHN1YmNvbmRpdGlvbiBpbiBjb25kaXRpb24uQ29uZGl0aW9uVGFibGU6CiAgICAgICAgICAgIGlmIF9ldmFsdWF0ZUNvbmRpdGlvbihzdWJjb25kaXRpb24sIGF4ZXMsIGxvY2F0aW9uLCBpbnN0YW5jZXIpOgogICAgICAgICAgICAgICAgcmV0dXJuIFRydWUKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGVsaWYgY29uZGl0aW9uLkZvcm1hdCA9PSA1OgogICAgICAgICMgQ29uZGl0aW9uTmVnYXRlCiAgICAgICAgcmV0dXJuIG5vdCBfZXZhbHVhdGVDb25kaXRpb24oCiAgICAgICAgICAgIGNvbmRpdGlvbi5Db25kaXRpb25UYWJsZSwgYXhlcywgbG9jYXRpb24sIGluc3RhbmNlcgogICAgICAgICkKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIEZhbHNlICAjIFVua29ud24gY29uZGl0aW9uIGZvcm1hdAoKCmNsYXNzIF9UVEdseXBoVkFSQyhfVFRHbHlwaCk6CiAgICBkZWYgX2RyYXcoc2VsZiwgcGVuLCBpc1BvaW50UGVuKToKICAgICAgICAiIiJEcmF3IHRoZSBnbHlwaCBvbnRvIGBgcGVuYGAuIFNlZSBmb250VG9vbHMucGVucy5iYXNlUGVuIGZvciBkZXRhaWxzCiAgICAgICAgaG93IHRoYXQgd29ya3MuCiAgICAgICAgIiIiCiAgICAgICAgZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLm90VGFibGVzIGltcG9ydCAoCiAgICAgICAgICAgIFZhckNvbXBvbmVudEZsYWdzLAogICAgICAgICAgICBOT19WQVJJQVRJT05fSU5ERVgsCiAgICAgICAgKQoKICAgICAgICBnbHlwaFNldCA9IHNlbGYuZ2x5cGhTZXQKICAgICAgICB2YXJjID0gZ2x5cGhTZXQudmFyY1RhYmxlCiAgICAgICAgaWR4ID0gdmFyYy5Db3ZlcmFnZS5nbHlwaHMuaW5kZXgoc2VsZi5uYW1lKQogICAgICAgIGdseXBoID0gdmFyYy5WYXJDb21wb3NpdGVHbHlwaHMuVmFyQ29tcG9zaXRlR2x5cGhbaWR4XQoKICAgICAgICBmcm9tIGZvbnRUb29scy52YXJMaWIubXVsdGlWYXJTdG9yZSBpbXBvcnQgTXVsdGlWYXJTdG9yZUluc3RhbmNlcgogICAgICAgIGZyb20gZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSBpbXBvcnQgVmFyU3RvcmVJbnN0YW5jZXIKCiAgICAgICAgYXhlcyA9IGdseXBoU2V0LmF4ZXMKICAgICAgICBpbnN0YW5jZXIgPSBNdWx0aVZhclN0b3JlSW5zdGFuY2VyKAogICAgICAgICAgICB2YXJjLk11bHRpVmFyU3RvcmUsIGF4ZXMsIHNlbGYuZ2x5cGhTZXQubG9jYXRpb24KICAgICAgICApCgogICAgICAgIGZvciBjb21wIGluIGdseXBoLmNvbXBvbmVudHM6CiAgICAgICAgICAgIGlmIGNvbXAuY29uZGl0aW9uSW5kZXggaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24gPSB2YXJjLkNvbmRpdGlvbkxpc3QuQ29uZGl0aW9uVGFibGVbY29tcC5jb25kaXRpb25JbmRleF0KICAgICAgICAgICAgICAgIGlmIG5vdCBfZXZhbHVhdGVDb25kaXRpb24oCiAgICAgICAgICAgICAgICAgICAgY29uZGl0aW9uLCBheGVzLCBzZWxmLmdseXBoU2V0LmxvY2F0aW9uLCBpbnN0YW5jZXIKICAgICAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgICAgIGxvY2F0aW9uID0ge30KICAgICAgICAgICAgaWYgY29tcC5heGlzSW5kaWNlc0luZGV4IGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgYXhpc0luZGljZXMgPSB2YXJjLkF4aXNJbmRpY2VzTGlzdC5JdGVtW2NvbXAuYXhpc0luZGljZXNJbmRleF0KICAgICAgICAgICAgICAgIGF4aXNWYWx1ZXMgPSBWZWN0b3IoY29tcC5heGlzVmFsdWVzKQogICAgICAgICAgICAgICAgaWYgY29tcC5heGlzVmFsdWVzVmFySW5kZXggIT0gTk9fVkFSSUFUSU9OX0lOREVYOgogICAgICAgICAgICAgICAgICAgIGF4aXNWYWx1ZXMgKz0gZmkyZmwoaW5zdGFuY2VyW2NvbXAuYXhpc1ZhbHVlc1ZhckluZGV4XSwgMTQpCiAgICAgICAgICAgICAgICBhc3NlcnQgbGVuKGF4aXNJbmRpY2VzKSA9PSBsZW4oYXhpc1ZhbHVlcyksICgKICAgICAgICAgICAgICAgICAgICBsZW4oYXhpc0luZGljZXMpLAogICAgICAgICAgICAgICAgICAgIGxlbihheGlzVmFsdWVzKSwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGxvY2F0aW9uID0ge2F4ZXNbaV0uYXhpc1RhZzogdiBmb3IgaSwgdiBpbiB6aXAoYXhpc0luZGljZXMsIGF4aXNWYWx1ZXMpfQoKICAgICAgICAgICAgaWYgY29tcC50cmFuc2Zvcm1WYXJJbmRleCAhPSBOT19WQVJJQVRJT05fSU5ERVg6CiAgICAgICAgICAgICAgICBkZWx0YXMgPSBpbnN0YW5jZXJbY29tcC50cmFuc2Zvcm1WYXJJbmRleF0KICAgICAgICAgICAgICAgIGNvbXAgPSBkZWVwY29weShjb21wKQogICAgICAgICAgICAgICAgY29tcC5hcHBseVRyYW5zZm9ybURlbHRhcyhkZWx0YXMpCiAgICAgICAgICAgIHRyYW5zZm9ybSA9IGNvbXAudHJhbnNmb3JtCgogICAgICAgICAgICByZXNldCA9IGNvbXAuZmxhZ3MgJiBWYXJDb21wb25lbnRGbGFncy5SRVNFVF9VTlNQRUNJRklFRF9BWEVTCiAgICAgICAgICAgIHdpdGggc2VsZi5nbHlwaFNldC5nbHlwaFNldC5wdXNoTG9jYXRpb24obG9jYXRpb24sIHJlc2V0KToKICAgICAgICAgICAgICAgIHdpdGggc2VsZi5nbHlwaFNldC5wdXNoTG9jYXRpb24obG9jYXRpb24sIHJlc2V0KToKICAgICAgICAgICAgICAgICAgICBzaG91bGREZWNvbXBvc2UgPSBzZWxmLm5hbWUgPT0gY29tcC5nbHlwaE5hbWUKCiAgICAgICAgICAgICAgICAgICAgaWYgbm90IHNob3VsZERlY29tcG9zZToKICAgICAgICAgICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgICAgICAgICAga3dhcmdzID0geyJyZXNldFVuc3BlY2lmaWVkQXhlcyI6IFRydWV9IGlmIHJlc2V0IGVsc2Uge30KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBlbi5hZGRWYXJDb21wb25lbnQoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29tcC5nbHlwaE5hbWUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlbGYuZ2x5cGhTZXQucmF3TG9jYXRpb24sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKiprd2FyZ3MsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgICAgIGV4Y2VwdCBBdHRyaWJ1dGVFcnJvcjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNob3VsZERlY29tcG9zZSA9IFRydWUKCiAgICAgICAgICAgICAgICAgICAgaWYgc2hvdWxkRGVjb21wb3NlOgogICAgICAgICAgICAgICAgICAgICAgICB0ID0gdHJhbnNmb3JtLnRvVHJhbnNmb3JtKCkKICAgICAgICAgICAgICAgICAgICAgICAgY29tcEdseXBoU2V0ID0gKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VsZi5nbHlwaFNldAogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgY29tcC5nbHlwaE5hbWUgIT0gc2VsZi5uYW1lCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGdseXBoU2V0LmdseXBoU2V0CiAgICAgICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICAgICAgZyA9IGNvbXBHbHlwaFNldFtjb21wLmdseXBoTmFtZV0KICAgICAgICAgICAgICAgICAgICAgICAgaWYgaXNQb2ludFBlbjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRQZW4gPSBUcmFuc2Zvcm1Qb2ludFBlbihwZW4sIHQpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBnLmRyYXdQb2ludHModFBlbikKICAgICAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRQZW4gPSBUcmFuc2Zvcm1QZW4ocGVuLCB0KQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZy5kcmF3KHRQZW4pCgogICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICBzZWxmLl9kcmF3KHBlbiwgRmFsc2UpCgogICAgZGVmIGRyYXdQb2ludHMoc2VsZiwgcGVuKToKICAgICAgICBzZWxmLl9kcmF3KHBlbiwgVHJ1ZSkKCgpkZWYgX3NldENvb3JkaW5hdGVzKGdseXBoLCBjb29yZCwgZ2x5ZlRhYmxlLCAqLCByZWNhbGNCb3VuZHM9VHJ1ZSk6CiAgICAjIEhhbmRsZSBwaGFudG9tIHBvaW50cyBmb3IgKGxlZnQsIHJpZ2h0LCB0b3AsIGJvdHRvbSkgcG9zaXRpb25zLgogICAgYXNzZXJ0IGxlbihjb29yZCkgPj0gNAogICAgbGVmdFNpZGVYID0gY29vcmRbLTRdWzBdCiAgICByaWdodFNpZGVYID0gY29vcmRbLTNdWzBdCiAgICB0b3BTaWRlWSA9IGNvb3JkWy0yXVsxXQogICAgYm90dG9tU2lkZVkgPSBjb29yZFstMV1bMV0KCiAgICBmb3IgXyBpbiByYW5nZSg0KToKICAgICAgICBkZWwgY29vcmRbLTFdCgogICAgaWYgZ2x5cGguaXNDb21wb3NpdGUoKToKICAgICAgICBhc3NlcnQgbGVuKGNvb3JkKSA9PSBsZW4oZ2x5cGguY29tcG9uZW50cykKICAgICAgICBnbHlwaC5jb21wb25lbnRzID0gW2NvcHkoY29tcCkgZm9yIGNvbXAgaW4gZ2x5cGguY29tcG9uZW50c10gICMgU2hhbGxvdyBjb3B5CiAgICAgICAgZm9yIHAsIGNvbXAgaW4gemlwKGNvb3JkLCBnbHlwaC5jb21wb25lbnRzKToKICAgICAgICAgICAgaWYgaGFzYXR0cihjb21wLCAieCIpOgogICAgICAgICAgICAgICAgY29tcC54LCBjb21wLnkgPSBwCiAgICBlbGlmIGdseXBoLm51bWJlck9mQ29udG91cnMgPT0gMDoKICAgICAgICBhc3NlcnQgbGVuKGNvb3JkKSA9PSAwCiAgICBlbHNlOgogICAgICAgIGFzc2VydCBsZW4oY29vcmQpID09IGxlbihnbHlwaC5jb29yZGluYXRlcykKICAgICAgICBnbHlwaC5jb29yZGluYXRlcyA9IGNvb3JkCgogICAgaWYgcmVjYWxjQm91bmRzOgogICAgICAgIGdseXBoLnJlY2FsY0JvdW5kcyhnbHlmVGFibGUpCgogICAgaG9yaXpvbnRhbEFkdmFuY2VXaWR0aCA9IG90Um91bmQocmlnaHRTaWRlWCAtIGxlZnRTaWRlWCkKICAgIHZlcnRpY2FsQWR2YW5jZVdpZHRoID0gb3RSb3VuZCh0b3BTaWRlWSAtIGJvdHRvbVNpZGVZKQogICAgbGVmdFNpZGVCZWFyaW5nID0gb3RSb3VuZChnbHlwaC54TWluIC0gbGVmdFNpZGVYKQogICAgdG9wU2lkZUJlYXJpbmcgPSBvdFJvdW5kKHRvcFNpZGVZIC0gZ2x5cGgueU1heCkKICAgIHJldHVybiAoCiAgICAgICAgaG9yaXpvbnRhbEFkdmFuY2VXaWR0aCwKICAgICAgICBsZWZ0U2lkZUJlYXJpbmcsCiAgICAgICAgdmVydGljYWxBZHZhbmNlV2lkdGgsCiAgICAgICAgdG9wU2lkZUJlYXJpbmcsCiAgICApCgoKY2xhc3MgTGVycEdseXBoU2V0KE1hcHBpbmcpOgogICAgIiIiQSBnbHlwaHNldCB0aGF0IGludGVycG9sYXRlcyBiZXR3ZWVuIHR3byBvdGhlciBnbHlwaHNldHMuCgogICAgRmFjdG9yIGlzIHR5cGljYWxseSBiZXR3ZWVuIDAgYW5kIDEuIDAgbWVhbnMgdGhlIGZpcnN0IGdseXBoc2V0LAogICAgMSBtZWFucyB0aGUgc2Vjb25kIGdseXBoc2V0LCBhbmQgMC41IG1lYW5zIHRoZSBhdmVyYWdlIG9mIHRoZQogICAgdHdvIGdseXBoc2V0cy4gT3RoZXIgdmFsdWVzIGFyZSBwb3NzaWJsZSwgYW5kIGNhbiBiZSB1c2VmdWwgdG8KICAgIGV4dHJhcG9sYXRlLiBEZWZhdWx0cyB0byAwLjUuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhzZXQxLCBnbHlwaHNldDIsIGZhY3Rvcj0wLjUpOgogICAgICAgIHNlbGYuZ2x5cGhzZXQxID0gZ2x5cGhzZXQxCiAgICAgICAgc2VsZi5nbHlwaHNldDIgPSBnbHlwaHNldDIKICAgICAgICBzZWxmLmZhY3RvciA9IGZhY3RvcgoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBnbHlwaG5hbWUpOgogICAgICAgIGlmIGdseXBobmFtZSBpbiBzZWxmLmdseXBoc2V0MSBhbmQgZ2x5cGhuYW1lIGluIHNlbGYuZ2x5cGhzZXQyOgogICAgICAgICAgICByZXR1cm4gTGVycEdseXBoKGdseXBobmFtZSwgc2VsZikKICAgICAgICByYWlzZSBLZXlFcnJvcihnbHlwaG5hbWUpCgogICAgZGVmIF9fY29udGFpbnNfXyhzZWxmLCBnbHlwaG5hbWUpOgogICAgICAgIHJldHVybiBnbHlwaG5hbWUgaW4gc2VsZi5nbHlwaHNldDEgYW5kIGdseXBobmFtZSBpbiBzZWxmLmdseXBoc2V0MgoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICBzZXQxID0gc2V0KHNlbGYuZ2x5cGhzZXQxKQogICAgICAgIHNldDIgPSBzZXQoc2VsZi5nbHlwaHNldDIpCiAgICAgICAgcmV0dXJuIGl0ZXIoc2V0MS5pbnRlcnNlY3Rpb24oc2V0MikpCgogICAgZGVmIF9fbGVuX18oc2VsZik6CiAgICAgICAgc2V0MSA9IHNldChzZWxmLmdseXBoc2V0MSkKICAgICAgICBzZXQyID0gc2V0KHNlbGYuZ2x5cGhzZXQyKQogICAgICAgIHJldHVybiBsZW4oc2V0MS5pbnRlcnNlY3Rpb24oc2V0MikpCgoKY2xhc3MgTGVycEdseXBoOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGdseXBobmFtZSwgZ2x5cGhzZXQpOgogICAgICAgIHNlbGYuZ2x5cGhzZXQgPSBnbHlwaHNldAogICAgICAgIHNlbGYuZ2x5cGhuYW1lID0gZ2x5cGhuYW1lCgogICAgZGVmIGRyYXcoc2VsZiwgcGVuKToKICAgICAgICByZWNvcmRpbmcxID0gRGVjb21wb3NpbmdSZWNvcmRpbmdQZW4oc2VsZi5nbHlwaHNldC5nbHlwaHNldDEpCiAgICAgICAgc2VsZi5nbHlwaHNldC5nbHlwaHNldDFbc2VsZi5nbHlwaG5hbWVdLmRyYXcocmVjb3JkaW5nMSkKICAgICAgICByZWNvcmRpbmcyID0gRGVjb21wb3NpbmdSZWNvcmRpbmdQZW4oc2VsZi5nbHlwaHNldC5nbHlwaHNldDIpCiAgICAgICAgc2VsZi5nbHlwaHNldC5nbHlwaHNldDJbc2VsZi5nbHlwaG5hbWVdLmRyYXcocmVjb3JkaW5nMikKCiAgICAgICAgZmFjdG9yID0gc2VsZi5nbHlwaHNldC5mYWN0b3IKCiAgICAgICAgcmVwbGF5UmVjb3JkaW5nKGxlcnBSZWNvcmRpbmdzKHJlY29yZGluZzEudmFsdWUsIHJlY29yZGluZzIudmFsdWUsIGZhY3RvciksIHBlbikK
+"""GlyphSets returned by a TTFont."""
+
+from abc import ABC, abstractmethod
+from collections.abc import Mapping
+from contextlib import contextmanager
+from copy import copy, deepcopy
+from types import SimpleNamespace
+from fontTools.misc.vector import Vector
+from fontTools.misc.fixedTools import otRound, fixedToFloat as fi2fl
+from fontTools.misc.loggingTools import deprecateFunction
+from fontTools.misc.transform import Transform, DecomposedTransform
+from fontTools.pens.transformPen import TransformPen, TransformPointPen
+from fontTools.pens.recordingPen import (
+    DecomposingRecordingPen,
+    lerpRecordings,
+    replayRecording,
+)
+
+
+def _getVariationAxes(font):
+    if "fvar" in font:
+        return font["fvar"].axes
+
+    # VARC permits static fonts to retain gvar or CFF2 variation data for
+    # component-internal coordinates without exposing axes through fvar.
+    axisCount = 0
+    gvar = font.get("GVAR" if "GVAR" in font else "gvar")
+    if gvar is not None:
+        axisCount = gvar.axisCount
+    if "CFF2" in font:
+        cff = next(iter(font["CFF2"].cff.values()))
+        varStore = getattr(cff.CharStrings, "varStore", None)
+        if varStore is not None:
+            axisCount = max(
+                axisCount, varStore.otVarStore.VarRegionList.RegionAxisCount
+            )
+    return [SimpleNamespace(axisTag=i) for i in range(axisCount)]
+
+
+class _TTGlyphSet(Mapping):
+    """Generic dict-like GlyphSet class that pulls metrics from hmtx and
+    glyph shape from TrueType or CFF.
+    """
+
+    def __init__(
+        self,
+        font,
+        location,
+        glyphsMapping,
+        *,
+        hMetricsTag="hmtx",
+        vMetricsTag="vmtx",
+        recalcBounds=True,
+    ):
+        self.recalcBounds = recalcBounds
+        self.font = font
+        self.axes = _getVariationAxes(font)
+        self.location = location if location is not None else {}
+        self.rawLocation = {}  # VarComponent-only location
+        self.originalLocation = location if location is not None else {}
+        self.depth = 0
+        self.locationStack = []
+        self.rawLocationStack = []
+        self.glyphsMapping = glyphsMapping
+        self._hMetricsTag = hMetricsTag
+        self._vMetricsTag = vMetricsTag
+        self.hMetrics = font[hMetricsTag].metrics
+        self.vMetrics = getattr(font.get(vMetricsTag), "metrics", None)
+        self.hvarTable = None
+        self.vvarTable = None
+        if location:
+            from fontTools.varLib.varStore import VarStoreInstancer
+
+            self.hvarTable = getattr(font.get("HVAR"), "table", None)
+            if self.hvarTable is not None:
+                self.hvarInstancer = VarStoreInstancer(
+                    self.hvarTable.VarStore, self.axes, location
+                )
+            self.vvarTable = getattr(font.get("VVAR"), "table", None)
+            if self.vvarTable is not None:
+                self.vvarInstancer = VarStoreInstancer(
+                    self.vvarTable.VarStore, self.axes, location
+                )
+            # TODO VORG
+
+    @contextmanager
+    def pushLocation(self, location, reset: bool):
+        self.locationStack.append(self.location)
+        self.rawLocationStack.append(self.rawLocation)
+        if reset:
+            self.location = self.originalLocation.copy()
+            self.rawLocation = {}
+        else:
+            self.location = self.location.copy()
+            self.rawLocation = {}
+        self.location.update(location)
+        self.rawLocation.update(location)
+
+        try:
+            yield None
+        finally:
+            self.location = self.locationStack.pop()
+            self.rawLocation = self.rawLocationStack.pop()
+
+    @contextmanager
+    def pushDepth(self):
+        try:
+            depth = self.depth
+            self.depth += 1
+            yield depth
+        finally:
+            self.depth -= 1
+
+    def __contains__(self, glyphName):
+        return glyphName in self.glyphsMapping
+
+    def __iter__(self):
+        return iter(self.glyphsMapping.keys())
+
+    def __len__(self):
+        return len(self.glyphsMapping)
+
+    @deprecateFunction(
+        "use 'glyphName in glyphSet' instead", category=DeprecationWarning
+    )
+    def has_key(self, glyphName):
+        return glyphName in self.glyphsMapping
+
+
+class _TTGlyphSetGlyf(_TTGlyphSet):
+    def __init__(self, font, location, glyfTag, recalcBounds=True):
+        self.glyfTable = font[glyfTag]
+        super().__init__(
+            font,
+            location,
+            self.glyfTable,
+            hMetricsTag=self.glyfTable.hmtxTag,
+            vMetricsTag=self.glyfTable.vmtxTag,
+            recalcBounds=recalcBounds,
+        )
+        self.gvarTable = font.get(self.glyfTable.gvarTag)
+
+    def __getitem__(self, glyphName):
+        return _TTGlyphGlyf(self, glyphName, recalcBounds=self.recalcBounds)
+
+
+class _TTGlyphSetCFF(_TTGlyphSet):
+    def __init__(self, font, location):
+        tableTag = "CFF2" if "CFF2" in font else "CFF "
+        self.charStrings = list(font[tableTag].cff.values())[0].CharStrings
+        super().__init__(
+            font,
+            location,
+            self.charStrings,
+            hMetricsTag="HMTX" if "HMTX" in font else "hmtx",
+            vMetricsTag="VMTX" if "VMTX" in font else "vmtx",
+        )
+        self.setLocation(location)
+
+    def __getitem__(self, glyphName):
+        return _TTGlyphCFF(self, glyphName)
+
+    def setLocation(self, location):
+        self.blender = None
+        if location:
+            # TODO Optimize by using instancer.setLocation()
+
+            from fontTools.varLib.varStore import VarStoreInstancer
+
+            varStore = getattr(self.charStrings, "varStore", None)
+            if varStore is not None:
+                instancer = VarStoreInstancer(varStore.otVarStore, self.axes, location)
+                self.blender = instancer.interpolateFromDeltas
+        else:
+            self.blender = None
+
+    @contextmanager
+    def pushLocation(self, location, reset: bool):
+        try:
+            with _TTGlyphSet.pushLocation(self, location, reset) as value:
+                self.setLocation(self.location)
+                yield value
+        finally:
+            # Restore the blender after the base context pops the parent location.
+            self.setLocation(self.location)
+
+
+class _TTGlyphSetVARC(_TTGlyphSet):
+    def __init__(self, font, location, glyphSet):
+        self.glyphSet = glyphSet
+        super().__init__(
+            font,
+            location,
+            dict.fromkeys(font.getGlyphOrder()),
+            hMetricsTag=glyphSet._hMetricsTag,
+            vMetricsTag=glyphSet._vMetricsTag,
+        )
+        self.varcTable = font["VARC"].table
+
+    def __getitem__(self, glyphName):
+        varc = self.varcTable
+        if glyphName not in varc.Coverage.glyphs:
+            return self.glyphSet[glyphName]
+        return _TTGlyphVARC(self, glyphName)
+
+
+class _TTGlyph(ABC):
+    """Glyph object that supports the Pen protocol, meaning that it has
+    .draw() and .drawPoints() methods that take a pen object as their only
+    argument. Additionally there are 'width' and 'lsb' attributes, read from
+    the 'hmtx' table.
+
+    If the font contains a 'vmtx' table, there will also be 'height' and 'tsb'
+    attributes.
+    """
+
+    def __init__(self, glyphSet, glyphName, *, recalcBounds=True):
+        self.glyphSet = glyphSet
+        self.name = glyphName
+        self.recalcBounds = recalcBounds
+        self.width, self.lsb = glyphSet.hMetrics[glyphName]
+        if glyphSet.vMetrics is not None:
+            self.height, self.tsb = glyphSet.vMetrics[glyphName]
+        else:
+            self.height, self.tsb = None, None
+        if glyphSet.location and glyphSet.hvarTable is not None:
+            varidx = (
+                glyphSet.font.getGlyphID(glyphName)
+                if glyphSet.hvarTable.AdvWidthMap is None
+                else glyphSet.hvarTable.AdvWidthMap.mapping[glyphName]
+            )
+            # An implicit mapping always uses outer index zero. Oversized
+            # glyph IDs must not be interpreted as packed variation indices.
+            if glyphSet.hvarTable.AdvWidthMap is not None or varidx <= 0xFFFF:
+                self.width += glyphSet.hvarInstancer[varidx]
+        if self.height is not None and glyphSet.vvarTable is not None:
+            varidx = (
+                glyphSet.font.getGlyphID(glyphName)
+                if glyphSet.vvarTable.AdvHeightMap is None
+                else glyphSet.vvarTable.AdvHeightMap.mapping[glyphName]
+            )
+            if glyphSet.vvarTable.AdvHeightMap is not None or varidx <= 0xFFFF:
+                self.height += glyphSet.vvarInstancer[varidx]
+        # TODO: VORG
+
+    @abstractmethod
+    def draw(self, pen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.basePen for details
+        how that works.
+        """
+        raise NotImplementedError
+
+    def drawPoints(self, pen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.pointPen for details
+        how that works.
+        """
+        from fontTools.pens.pointPen import SegmentToPointPen
+
+        self.draw(SegmentToPointPen(pen))
+
+
+class _TTGlyphGlyf(_TTGlyph):
+    def __init__(self, glyphSet, glyphName, *, recalcBounds=True):
+        super().__init__(glyphSet, glyphName, recalcBounds=recalcBounds)
+        # Without HVAR the advance at a non-default location comes from the
+        # gvar phantom points: compute it lazily on first access.
+        if (
+            glyphSet.location
+            and glyphSet.hvarTable is None
+            and glyphSet.gvarTable is not None
+        ):
+            self._width = None
+
+    @property
+    def width(self):
+        if self._width is None:
+            if self.name in self.glyphSet.gvarTable.variations:
+                # no HVAR: this also sets self._width from the phantom points
+                self._getGlyphInstance()
+            else:
+                # no gvar entry: glyph doesn't vary, hmtx advance is right
+                self._width = self.glyphSet.hMetrics[self.name][0]
+        return self._width
+
+    @width.setter
+    def width(self, value):
+        self._width = value
+
+    def draw(self, pen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.basePen for details
+        how that works.
+        """
+        glyph, offset = self._getGlyphAndOffset()
+
+        with self.glyphSet.pushDepth() as depth:
+            if depth:
+                offset = 0  # Offset should only apply at top-level
+
+            glyph.draw(pen, self.glyphSet.glyfTable, offset)
+
+    def drawPoints(self, pen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.pointPen for details
+        how that works.
+        """
+        glyph, offset = self._getGlyphAndOffset()
+
+        with self.glyphSet.pushDepth() as depth:
+            if depth:
+                offset = 0  # Offset should only apply at top-level
+
+            glyph.drawPoints(pen, self.glyphSet.glyfTable, offset)
+
+    def _getGlyphAndOffset(self):
+        if self.glyphSet.location and self.glyphSet.gvarTable is not None:
+            glyph = self._getGlyphInstance()
+        else:
+            glyph = self.glyphSet.glyfTable[self.name]
+
+        offset = self.lsb - glyph.xMin if hasattr(glyph, "xMin") else 0
+        return glyph, offset
+
+    def _getGlyphInstance(self):
+        from fontTools.varLib.iup import iup_delta
+        from fontTools.ttLib.tables._g_l_y_f import GlyphCoordinates
+        from fontTools.varLib.models import supportScalar
+
+        glyphSet = self.glyphSet
+        glyfTable = glyphSet.glyfTable
+        variations = glyphSet.gvarTable.variations[self.name]
+        hMetrics = glyphSet.hMetrics
+        vMetrics = glyphSet.vMetrics
+        coordinates, _ = glyfTable._getCoordinatesAndControls(
+            self.name, hMetrics, vMetrics
+        )
+        origCoords, endPts = None, None
+        for var in variations:
+            scalar = supportScalar(glyphSet.location, var.axes)
+            if not scalar:
+                continue
+            delta = var.coordinates
+            if None in delta:
+                if origCoords is None:
+                    origCoords, control = glyfTable._getCoordinatesAndControls(
+                        self.name, hMetrics, vMetrics
+                    )
+                    endPts = (
+                        control[1] if control[0] >= 1 else list(range(len(control[1])))
+                    )
+                delta = iup_delta(delta, origCoords, endPts)
+            coordinates += GlyphCoordinates(delta) * scalar
+
+        glyph = copy(glyfTable[self.name])  # Shallow copy
+        width, lsb, height, tsb = _setCoordinates(
+            glyph, coordinates, glyfTable, recalcBounds=self.recalcBounds
+        )
+        self.lsb = lsb
+        self.tsb = tsb
+        if glyphSet.hvarTable is None:
+            # no HVAR: let's set metrics from the phantom points
+            self.width = width
+        if glyphSet.vvarTable is None:
+            self.height = height
+        return glyph
+
+
+class _TTGlyphCFF(_TTGlyph):
+    def draw(self, pen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.basePen for details
+        how that works.
+        """
+        self.glyphSet.charStrings[self.name].draw(pen, self.glyphSet.blender)
+
+
+def _evaluateCondition(condition, axes, location, instancer):
+    if condition is None:
+        # A null condition offset denotes True.
+        return True
+
+    if condition.Format == 1:
+        # ConditionAxisRange
+        axisIndex = condition.AxisIndex
+        axisTag = axes[axisIndex].axisTag
+        axisValue = location.get(axisTag, 0)
+        minValue = condition.FilterRangeMinValue
+        maxValue = condition.FilterRangeMaxValue
+        return minValue <= axisValue <= maxValue
+    elif condition.Format == 2:
+        # ConditionValue
+        from fontTools.ttLib.tables.otTables import NO_VARIATION_INDEX
+
+        value = condition.DefaultValue
+        if condition.VarIdx != NO_VARIATION_INDEX:
+            deltas = instancer[condition.VarIdx]
+            if deltas:
+                value += deltas[0]
+        return value > 0
+    elif condition.Format == 3:
+        # ConditionAnd
+        for subcondition in condition.ConditionTable:
+            if not _evaluateCondition(subcondition, axes, location, instancer):
+                return False
+        return True
+    elif condition.Format == 4:
+        # ConditionOr
+        for subcondition in condition.ConditionTable:
+            if _evaluateCondition(subcondition, axes, location, instancer):
+                return True
+        return False
+    elif condition.Format == 5:
+        # ConditionNegate
+        return not _evaluateCondition(
+            condition.ConditionTable, axes, location, instancer
+        )
+    else:
+        return False  # Unkonwn condition format
+
+
+class _TTGlyphVARC(_TTGlyph):
+    def _draw(self, pen, isPointPen):
+        """Draw the glyph onto ``pen``. See fontTools.pens.basePen for details
+        how that works.
+        """
+        from fontTools.ttLib.tables.otTables import (
+            VarComponentFlags,
+            NO_VARIATION_INDEX,
+        )
+
+        glyphSet = self.glyphSet
+        varc = glyphSet.varcTable
+        idx = varc.Coverage.glyphs.index(self.name)
+        glyph = varc.VarCompositeGlyphs.VarCompositeGlyph[idx]
+
+        from fontTools.varLib.multiVarStore import MultiVarStoreInstancer
+        from fontTools.varLib.varStore import VarStoreInstancer
+
+        axes = glyphSet.axes
+        instancer = MultiVarStoreInstancer(
+            varc.MultiVarStore, axes, self.glyphSet.location
+        )
+
+        for comp in glyph.components:
+            if comp.conditionIndex is not None:
+                condition = varc.ConditionList.ConditionTable[comp.conditionIndex]
+                if not _evaluateCondition(
+                    condition, axes, self.glyphSet.location, instancer
+                ):
+                    continue
+
+            location = {}
+            if comp.axisIndicesIndex is not None:
+                axisIndices = varc.AxisIndicesList.Item[comp.axisIndicesIndex]
+                axisValues = Vector(comp.axisValues)
+                if comp.axisValuesVarIndex != NO_VARIATION_INDEX:
+                    axisValues += fi2fl(instancer[comp.axisValuesVarIndex], 14)
+                assert len(axisIndices) == len(axisValues), (
+                    len(axisIndices),
+                    len(axisValues),
+                )
+                location = {axes[i].axisTag: v for i, v in zip(axisIndices, axisValues)}
+
+            if comp.transformVarIndex != NO_VARIATION_INDEX:
+                deltas = instancer[comp.transformVarIndex]
+                comp = deepcopy(comp)
+                comp.applyTransformDeltas(deltas)
+            transform = comp.transform
+
+            reset = comp.flags & VarComponentFlags.RESET_UNSPECIFIED_AXES
+            with self.glyphSet.glyphSet.pushLocation(location, reset):
+                with self.glyphSet.pushLocation(location, reset):
+                    shouldDecompose = self.name == comp.glyphName
+
+                    if not shouldDecompose:
+                        try:
+                            kwargs = {"resetUnspecifiedAxes": True} if reset else {}
+                            pen.addVarComponent(
+                                comp.glyphName,
+                                transform,
+                                self.glyphSet.rawLocation,
+                                **kwargs,
+                            )
+                        except AttributeError:
+                            shouldDecompose = True
+
+                    if shouldDecompose:
+                        t = transform.toTransform()
+                        compGlyphSet = (
+                            self.glyphSet
+                            if comp.glyphName != self.name
+                            else glyphSet.glyphSet
+                        )
+                        g = compGlyphSet[comp.glyphName]
+                        if isPointPen:
+                            tPen = TransformPointPen(pen, t)
+                            g.drawPoints(tPen)
+                        else:
+                            tPen = TransformPen(pen, t)
+                            g.draw(tPen)
+
+    def draw(self, pen):
+        self._draw(pen, False)
+
+    def drawPoints(self, pen):
+        self._draw(pen, True)
+
+
+def _setCoordinates(glyph, coord, glyfTable, *, recalcBounds=True):
+    # Handle phantom points for (left, right, top, bottom) positions.
+    assert len(coord) >= 4
+    leftSideX = coord[-4][0]
+    rightSideX = coord[-3][0]
+    topSideY = coord[-2][1]
+    bottomSideY = coord[-1][1]
+
+    for _ in range(4):
+        del coord[-1]
+
+    if glyph.isComposite():
+        assert len(coord) == len(glyph.components)
+        glyph.components = [copy(comp) for comp in glyph.components]  # Shallow copy
+        for p, comp in zip(coord, glyph.components):
+            if hasattr(comp, "x"):
+                comp.x, comp.y = p
+    elif glyph.numberOfContours == 0:
+        assert len(coord) == 0
+    else:
+        assert len(coord) == len(glyph.coordinates)
+        glyph.coordinates = coord
+
+    if recalcBounds:
+        glyph.recalcBounds(glyfTable)
+
+    horizontalAdvanceWidth = otRound(rightSideX - leftSideX)
+    verticalAdvanceWidth = otRound(topSideY - bottomSideY)
+    leftSideBearing = otRound(glyph.xMin - leftSideX)
+    topSideBearing = otRound(topSideY - glyph.yMax)
+    return (
+        horizontalAdvanceWidth,
+        leftSideBearing,
+        verticalAdvanceWidth,
+        topSideBearing,
+    )
+
+
+class LerpGlyphSet(Mapping):
+    """A glyphset that interpolates between two other glyphsets.
+
+    Factor is typically between 0 and 1. 0 means the first glyphset,
+    1 means the second glyphset, and 0.5 means the average of the
+    two glyphsets. Other values are possible, and can be useful to
+    extrapolate. Defaults to 0.5.
+    """
+
+    def __init__(self, glyphset1, glyphset2, factor=0.5):
+        self.glyphset1 = glyphset1
+        self.glyphset2 = glyphset2
+        self.factor = factor
+
+    def __getitem__(self, glyphname):
+        if glyphname in self.glyphset1 and glyphname in self.glyphset2:
+            return LerpGlyph(glyphname, self)
+        raise KeyError(glyphname)
+
+    def __contains__(self, glyphname):
+        return glyphname in self.glyphset1 and glyphname in self.glyphset2
+
+    def __iter__(self):
+        set1 = set(self.glyphset1)
+        set2 = set(self.glyphset2)
+        return iter(set1.intersection(set2))
+
+    def __len__(self):
+        set1 = set(self.glyphset1)
+        set2 = set(self.glyphset2)
+        return len(set1.intersection(set2))
+
+
+class LerpGlyph:
+    def __init__(self, glyphname, glyphset):
+        self.glyphset = glyphset
+        self.glyphname = glyphname
+
+    def draw(self, pen):
+        recording1 = DecomposingRecordingPen(self.glyphset.glyphset1)
+        self.glyphset.glyphset1[self.glyphname].draw(recording1)
+        recording2 = DecomposingRecordingPen(self.glyphset.glyphset2)
+        self.glyphset.glyphset2[self.glyphname].draw(recording2)
+
+        factor = self.glyphset.factor
+
+        replayRecording(lerpRecordings(recording1.value, recording2.value, factor), pen)

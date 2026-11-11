@@ -1,1 +1,51 @@
-IiIiQ2FsY3VsYXRlIHRoZSBhcmVhIG9mIGEgZ2x5cGguIiIiCgpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IEJhc2VQZW4KCl9fYWxsX18gPSBbIkFyZWFQZW4iXQoKCmNsYXNzIEFyZWFQZW4oQmFzZVBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhzZXQ9Tm9uZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaHNldCkKICAgICAgICBzZWxmLnZhbHVlID0gMAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHAwKToKICAgICAgICBzZWxmLl9wMCA9IHNlbGYuX3N0YXJ0UG9pbnQgPSBwMAoKICAgIGRlZiBfbGluZVRvKHNlbGYsIHAxKToKICAgICAgICB4MCwgeTAgPSBzZWxmLl9wMAogICAgICAgIHgxLCB5MSA9IHAxCiAgICAgICAgc2VsZi52YWx1ZSAtPSAoeDEgLSB4MCkgKiAoeTEgKyB5MCkgKiAwLjUKICAgICAgICBzZWxmLl9wMCA9IHAxCgogICAgZGVmIF9xQ3VydmVUb09uZShzZWxmLCBwMSwgcDIpOgogICAgICAgICMgaHR0cHM6Ly9naXRodWIuY29tL1BvbWF4L2JlemllcmluZm8vaXNzdWVzLzQ0CiAgICAgICAgcDAgPSBzZWxmLl9wMAogICAgICAgIHgwLCB5MCA9IHAwWzBdLCBwMFsxXQogICAgICAgIHgxLCB5MSA9IHAxWzBdIC0geDAsIHAxWzFdIC0geTAKICAgICAgICB4MiwgeTIgPSBwMlswXSAtIHgwLCBwMlsxXSAtIHkwCiAgICAgICAgc2VsZi52YWx1ZSAtPSAoeDIgKiB5MSAtIHgxICogeTIpIC8gMwogICAgICAgIHNlbGYuX2xpbmVUbyhwMikKICAgICAgICBzZWxmLl9wMCA9IHAyCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgICMgaHR0cHM6Ly9naXRodWIuY29tL1BvbWF4L2JlemllcmluZm8vaXNzdWVzLzQ0CiAgICAgICAgcDAgPSBzZWxmLl9wMAogICAgICAgIHgwLCB5MCA9IHAwWzBdLCBwMFsxXQogICAgICAgIHgxLCB5MSA9IHAxWzBdIC0geDAsIHAxWzFdIC0geTAKICAgICAgICB4MiwgeTIgPSBwMlswXSAtIHgwLCBwMlsxXSAtIHkwCiAgICAgICAgeDMsIHkzID0gcDNbMF0gLSB4MCwgcDNbMV0gLSB5MAogICAgICAgIHNlbGYudmFsdWUgLT0gKHgxICogKC15MiAtIHkzKSArIHgyICogKHkxIC0gMiAqIHkzKSArIHgzICogKHkxICsgMiAqIHkyKSkgKiAwLjE1CiAgICAgICAgc2VsZi5fbGluZVRvKHAzKQogICAgICAgIHNlbGYuX3AwID0gcDMKCiAgICBkZWYgX2Nsb3NlUGF0aChzZWxmKToKICAgICAgICBzZWxmLl9saW5lVG8oc2VsZi5fc3RhcnRQb2ludCkKICAgICAgICBkZWwgc2VsZi5fcDAsIHNlbGYuX3N0YXJ0UG9pbnQKCiAgICBkZWYgX2VuZFBhdGgoc2VsZik6CiAgICAgICAgaWYgc2VsZi5fcDAgIT0gc2VsZi5fc3RhcnRQb2ludDoKICAgICAgICAgICAgIyBBcmVhIGlzIG5vdCBkZWZpbmVkIGZvciBvcGVuIGNvbnRvdXJzLgogICAgICAgICAgICByYWlzZSBOb3RJbXBsZW1lbnRlZEVycm9yCiAgICAgICAgZGVsIHNlbGYuX3AwLCBzZWxmLl9zdGFydFBvaW50Cg==
+"""Calculate the area of a glyph."""
+
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["AreaPen"]
+
+
+class AreaPen(BasePen):
+    def __init__(self, glyphset=None):
+        BasePen.__init__(self, glyphset)
+        self.value = 0
+
+    def _moveTo(self, p0):
+        self._p0 = self._startPoint = p0
+
+    def _lineTo(self, p1):
+        x0, y0 = self._p0
+        x1, y1 = p1
+        self.value -= (x1 - x0) * (y1 + y0) * 0.5
+        self._p0 = p1
+
+    def _qCurveToOne(self, p1, p2):
+        # https://github.com/Pomax/bezierinfo/issues/44
+        p0 = self._p0
+        x0, y0 = p0[0], p0[1]
+        x1, y1 = p1[0] - x0, p1[1] - y0
+        x2, y2 = p2[0] - x0, p2[1] - y0
+        self.value -= (x2 * y1 - x1 * y2) / 3
+        self._lineTo(p2)
+        self._p0 = p2
+
+    def _curveToOne(self, p1, p2, p3):
+        # https://github.com/Pomax/bezierinfo/issues/44
+        p0 = self._p0
+        x0, y0 = p0[0], p0[1]
+        x1, y1 = p1[0] - x0, p1[1] - y0
+        x2, y2 = p2[0] - x0, p2[1] - y0
+        x3, y3 = p3[0] - x0, p3[1] - y0
+        self.value -= (x1 * (-y2 - y3) + x2 * (y1 - 2 * y3) + x3 * (y1 + 2 * y2)) * 0.15
+        self._lineTo(p3)
+        self._p0 = p3
+
+    def _closePath(self):
+        self._lineTo(self._startPoint)
+        del self._p0, self._startPoint
+
+    def _endPath(self):
+        if self._p0 != self._startPoint:
+            # Area is not defined for open contours.
+            raise NotImplementedError
+        del self._p0, self._startPoint

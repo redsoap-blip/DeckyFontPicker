@@ -1,1 +1,322 @@
-ZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCmZyb20gZm9udFRvb2xzLnR0TGliLnN0YW5kYXJkR2x5cGhPcmRlciBpbXBvcnQgc3RhbmRhcmRHbHlwaE9yZGVyCmZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IHNzdHJ1Y3QKZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVjaHIsIGJ5dGVvcmQsIHRvYnl0ZXMsIHRvc3RyLCBzYWZlRXZhbCwgcmVhZEhleApmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQppbXBvcnQgc3lzCmltcG9ydCBzdHJ1Y3QKaW1wb3J0IGFycmF5CmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCnBvc3RGb3JtYXQgPSAiIiIKCT4KCWZvcm1hdFR5cGU6CQkJMTYuMTZGCglpdGFsaWNBbmdsZToJCTE2LjE2RgkJIyBpdGFsaWMgYW5nbGUgaW4gZGVncmVlcwoJdW5kZXJsaW5lUG9zaXRpb246CWgKCXVuZGVybGluZVRoaWNrbmVzczoJaAoJaXNGaXhlZFBpdGNoOgkJTAoJbWluTWVtVHlwZTQyOgkJTAkJCSMgbWluaW11bSBtZW1vcnkgaWYgVHJ1ZVR5cGUgZm9udCBpcyBkb3dubG9hZGVkCgltYXhNZW1UeXBlNDI6CQlMCQkJIyBtYXhpbXVtIG1lbW9yeSBpZiBUcnVlVHlwZSBmb250IGlzIGRvd25sb2FkZWQKCW1pbk1lbVR5cGUxOgkJTAkJCSMgbWluaW11bSBtZW1vcnkgaWYgVHlwZTEgZm9udCBpcyBkb3dubG9hZGVkCgltYXhNZW1UeXBlMToJCUwJCQkjIG1heGltdW0gbWVtb3J5IGlmIFR5cGUxIGZvbnQgaXMgZG93bmxvYWRlZAoiIiIKCnBvc3RGb3JtYXRTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShwb3N0Rm9ybWF0KQoKCmNsYXNzIHRhYmxlX19wX29fc190KERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiUG9zdFNjcmlwdCB0YWJsZQoKICAgIFRoZSBgYHBvc3RgYCB0YWJsZSBjb250YWlucyBpbmZvcm1hdGlvbiBuZWVkZWQgdG8gdXNlIHRoZSBmb250IG9uCiAgICBQb3N0U2NyaXB0IHByaW50ZXJzLCBpbmNsdWRpbmcgdGhlIFBvc3RTY3JpcHQgbmFtZXMgb2YgZ2x5cGhzIGFuZAogICAgZGF0YSB0aGF0IHdhcyBzdG9yZWQgaW4gdGhlIGBgRm9udEluZm9gYCBkaWN0aW9uYXJ5IGZvciBUeXBlIDEgZm9udHMuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9wb3N0CiAgICAiIiIKCiAgICBkZXBlbmRlbmNpZXMgPSBbIm1heHAiLCAiTUFYUCJdCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIHNzdHJ1Y3QudW5wYWNrKHBvc3RGb3JtYXQsIGRhdGFbOnBvc3RGb3JtYXRTaXplXSwgc2VsZikKICAgICAgICBkYXRhID0gZGF0YVtwb3N0Rm9ybWF0U2l6ZTpdCiAgICAgICAgaWYgc2VsZi5mb3JtYXRUeXBlID09IDEuMDoKICAgICAgICAgICAgc2VsZi5kZWNvZGVfZm9ybWF0XzFfMChkYXRhLCB0dEZvbnQpCiAgICAgICAgZWxpZiBzZWxmLmZvcm1hdFR5cGUgPT0gMi4wOgogICAgICAgICAgICBzZWxmLmRlY29kZV9mb3JtYXRfMl8wKGRhdGEsIHR0Rm9udCkKICAgICAgICBlbGlmIHNlbGYuZm9ybWF0VHlwZSA9PSAzLjA6CiAgICAgICAgICAgIHNlbGYuZGVjb2RlX2Zvcm1hdF8zXzAoZGF0YSwgdHRGb250KQogICAgICAgIGVsaWYgc2VsZi5mb3JtYXRUeXBlID09IDQuMDoKICAgICAgICAgICAgc2VsZi5kZWNvZGVfZm9ybWF0XzRfMChkYXRhLCB0dEZvbnQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBzdXBwb3J0ZWQgZm9ybWF0CiAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoCiAgICAgICAgICAgICAgICAiJ3Bvc3QnIHRhYmxlIGZvcm1hdCAlZiBub3Qgc3VwcG9ydGVkIiAlIHNlbGYuZm9ybWF0VHlwZQogICAgICAgICAgICApCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBkYXRhID0gc3N0cnVjdC5wYWNrKHBvc3RGb3JtYXQsIHNlbGYpCiAgICAgICAgaWYgc2VsZi5mb3JtYXRUeXBlID09IDEuMDoKICAgICAgICAgICAgcGFzcyAgIyB3ZSdyZSBkb25lCiAgICAgICAgZWxpZiBzZWxmLmZvcm1hdFR5cGUgPT0gMi4wOgogICAgICAgICAgICBkYXRhID0gZGF0YSArIHNlbGYuZW5jb2RlX2Zvcm1hdF8yXzAodHRGb250KQogICAgICAgIGVsaWYgc2VsZi5mb3JtYXRUeXBlID09IDMuMDoKICAgICAgICAgICAgcGFzcyAgIyB3ZSdyZSBkb25lCiAgICAgICAgZWxpZiBzZWxmLmZvcm1hdFR5cGUgPT0gNC4wOgogICAgICAgICAgICBkYXRhID0gZGF0YSArIHNlbGYuZW5jb2RlX2Zvcm1hdF80XzAodHRGb250KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgICMgc3VwcG9ydGVkIGZvcm1hdAogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKAogICAgICAgICAgICAgICAgIidwb3N0JyB0YWJsZSBmb3JtYXQgJWYgbm90IHN1cHBvcnRlZCIgJSBzZWxmLmZvcm1hdFR5cGUKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiBkYXRhCgogICAgZGVmIGdldEdseXBoT3JkZXIoc2VsZik6CiAgICAgICAgIiIiVGhpcyBmdW5jdGlvbiB3aWxsIGdldCBjYWxsZWQgYnkgYSB0dExpYi5UVEZvbnQgaW5zdGFuY2UuCiAgICAgICAgRG8gbm90IGNhbGwgdGhpcyBmdW5jdGlvbiB5b3Vyc2VsZiwgdXNlIFRURm9udCgpLmdldEdseXBoT3JkZXIoKQogICAgICAgIG9yIGl0cyByZWxhdGl2ZXMgaW5zdGVhZCEKICAgICAgICAiIiIKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAiZ2x5cGhPcmRlciIpOgogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKCJpbGxlZ2FsIHVzZSBvZiBnZXRHbHlwaE9yZGVyKCkiKQogICAgICAgIGdseXBoT3JkZXIgPSBzZWxmLmdseXBoT3JkZXIKICAgICAgICBkZWwgc2VsZi5nbHlwaE9yZGVyCiAgICAgICAgcmV0dXJuIGdseXBoT3JkZXIKCiAgICBkZWYgZGVjb2RlX2Zvcm1hdF8xXzAoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBzZWxmLmdseXBoT3JkZXIgPSBzdGFuZGFyZEdseXBoT3JkZXJbOiB0dEZvbnQuZ2V0R2x5cGhDb3VudCgpXQoKICAgIGRlZiBkZWNvZGVfZm9ybWF0XzJfMChzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIChudW1HbHlwaHMsKSA9IHN0cnVjdC51bnBhY2soIj5IIiwgZGF0YVs6Ml0pCiAgICAgICAgbnVtR2x5cGhzID0gaW50KG51bUdseXBocykKICAgICAgICBnbHlwaENvdW50ID0gdHRGb250LmdldEdseXBoQ291bnQoKQogICAgICAgIGlmIG51bUdseXBocyA+IGdseXBoQ291bnQ6CiAgICAgICAgICAgICMgQXNzdW1lIHRoZSBudW1HbHlwaHMgZmllbGQgaXMgYm9ndXMsIHNvIHN5bmMgd2l0aCBtYXhwLgogICAgICAgICAgICAjIEkndmUgc2VlbiB0aGlzIGluIG9uZSBmb250LCBhbmQgaWYgdGhlIGFzc3VtcHRpb24gaXMKICAgICAgICAgICAgIyB3cm9uZyBlbHNld2hlcmUsIHdlbGwsIHNvIGJlIGl0OiBpdCdzIGhhcmQgZW5vdWdoIHRvCiAgICAgICAgICAgICMgd29yayBhcm91bmQgX29uZV8gbm9uLWNvbmZvcm1pbmcgcG9zdCBmb3JtYXQuLi4KICAgICAgICAgICAgbnVtR2x5cGhzID0gZ2x5cGhDb3VudAogICAgICAgIGRhdGEgPSBkYXRhWzI6XQogICAgICAgIGluZGljZXMgPSBhcnJheS5hcnJheSgiSCIpCiAgICAgICAgaW5kaWNlcy5mcm9tYnl0ZXMoZGF0YVs6IDIgKiBudW1HbHlwaHNdKQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIGluZGljZXMuYnl0ZXN3YXAoKQogICAgICAgIGRhdGEgPSBkYXRhWzIgKiBudW1HbHlwaHMgOl0KICAgICAgICBtYXhJbmRleCA9IG1heChpbmRpY2VzLCBkZWZhdWx0PTApCiAgICAgICAgc2VsZi5leHRyYU5hbWVzID0gZXh0cmFOYW1lcyA9IHVucGFja1BTdHJpbmdzKGRhdGEsIG1heEluZGV4IC0gMjU3KQogICAgICAgIHNlbGYuZ2x5cGhPcmRlciA9IGdseXBoT3JkZXIgPSBbIiJdICogZ2x5cGhDb3VudAogICAgICAgIGZvciBnbHlwaElEIGluIHJhbmdlKG51bUdseXBocyk6CiAgICAgICAgICAgIGluZGV4ID0gaW5kaWNlc1tnbHlwaElEXQogICAgICAgICAgICBpZiBpbmRleCA+IDI1NzoKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICBuYW1lID0gZXh0cmFOYW1lc1tpbmRleCAtIDI1OF0KICAgICAgICAgICAgICAgIGV4Y2VwdCBJbmRleEVycm9yOgogICAgICAgICAgICAgICAgICAgIG5hbWUgPSAiIgogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBmZXRjaCBuYW1lcyBmcm9tIHN0YW5kYXJkIGxpc3QKICAgICAgICAgICAgICAgIG5hbWUgPSBzdGFuZGFyZEdseXBoT3JkZXJbaW5kZXhdCiAgICAgICAgICAgIGdseXBoT3JkZXJbZ2x5cGhJRF0gPSBuYW1lCiAgICAgICAgc2VsZi5idWlsZF9wc05hbWVNYXBwaW5nKHR0Rm9udCkKCiAgICBkZWYgYnVpbGRfcHNOYW1lTWFwcGluZyhzZWxmLCB0dEZvbnQpOgogICAgICAgIG1hcHBpbmcgPSB7fQogICAgICAgIGFsbE5hbWVzID0ge30KICAgICAgICBnbHlwaE9yZGVyTmFtZXMgPSBzZXQoc2VsZi5nbHlwaE9yZGVyKQogICAgICAgIGZvciBpIGluIHJhbmdlKHR0Rm9udC5nZXRHbHlwaENvdW50KCkpOgogICAgICAgICAgICBnbHlwaE5hbWUgPSBwc05hbWUgPSBzZWxmLmdseXBoT3JkZXJbaV0KICAgICAgICAgICAgaWYgZ2x5cGhOYW1lID09ICIiOgogICAgICAgICAgICAgICAgZ2x5cGhOYW1lID0gImdseXBoJS41ZCIgJSBpCgogICAgICAgICAgICBpZiBnbHlwaE5hbWUgaW4gYWxsTmFtZXM6CiAgICAgICAgICAgICAgICAjIG1ha2UgdXAgYSBuZXcgZ2x5cGhOYW1lIHRoYXQncyB1bmlxdWUKICAgICAgICAgICAgICAgIG4gPSBhbGxOYW1lc1tnbHlwaE5hbWVdCiAgICAgICAgICAgICAgICAjIGNoZWNrIGlmIHRoZSBnbHlwaCBuYW1lIGV4aXN0cyBpbiB0aGUgZ2x5cGggb3JkZXIKICAgICAgICAgICAgICAgIHdoaWxlIGYie2dseXBoTmFtZX0ue259IiBpbiBnbHlwaE9yZGVyTmFtZXM6CiAgICAgICAgICAgICAgICAgICAgbiArPSAxCiAgICAgICAgICAgICAgICBhbGxOYW1lc1tnbHlwaE5hbWVdID0gbiArIDEKICAgICAgICAgICAgICAgIGdseXBoTmFtZSA9IGYie2dseXBoTmFtZX0ue259IgoKICAgICAgICAgICAgYWxsTmFtZXNbZ2x5cGhOYW1lXSA9IDEKICAgICAgICAgICAgaWYgZ2x5cGhOYW1lICE9IHBzTmFtZToKICAgICAgICAgICAgICAgIHNlbGYuZ2x5cGhPcmRlcltpXSA9IGdseXBoTmFtZQogICAgICAgICAgICAgICAgbWFwcGluZ1tnbHlwaE5hbWVdID0gcHNOYW1lCgogICAgICAgIHNlbGYubWFwcGluZyA9IG1hcHBpbmcKCiAgICBkZWYgZGVjb2RlX2Zvcm1hdF8zXzAoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICAjIFNldHRpbmcgc2VsZi5nbHlwaE9yZGVyIHRvIE5vbmUgd2lsbCBjYXVzZSB0aGUgVFRGb250IG9iamVjdAogICAgICAgICMgdHJ5IGFuZCBjb25zdHJ1Y3QgZ2x5cGggbmFtZXMgZnJvbSBhIFVuaWNvZGUgY21hcCB0YWJsZS4KICAgICAgICBzZWxmLmdseXBoT3JkZXIgPSBOb25lCgogICAgZGVmIGRlY29kZV9mb3JtYXRfNF8wKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgZnJvbSBmb250VG9vbHMgaW1wb3J0IGFnbAoKICAgICAgICBudW1HbHlwaHMgPSB0dEZvbnQuZ2V0R2x5cGhDb3VudCgpCiAgICAgICAgaW5kaWNlcyA9IGFycmF5LmFycmF5KCJIIikKICAgICAgICBpbmRpY2VzLmZyb21ieXRlcyhkYXRhKQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIGluZGljZXMuYnl0ZXN3YXAoKQogICAgICAgICMgSW4gc29tZSBvbGRlciBmb250cywgdGhlIHNpemUgb2YgdGhlIHBvc3QgdGFibGUgZG9lc24ndCBtYXRjaAogICAgICAgICMgdGhlIG51bWJlciBvZiBnbHlwaHMuIFNvbWV0aW1lcyBpdCdzIGJpZ2dlciwgc29tZXRpbWVzIHNtYWxsZXIuCiAgICAgICAgc2VsZi5nbHlwaE9yZGVyID0gZ2x5cGhPcmRlciA9IFsiIl0gKiBpbnQobnVtR2x5cGhzKQogICAgICAgIGZvciBpIGluIHJhbmdlKG1pbihsZW4oaW5kaWNlcyksIG51bUdseXBocykpOgogICAgICAgICAgICBpZiBpbmRpY2VzW2ldID09IDB4RkZGRjoKICAgICAgICAgICAgICAgIHNlbGYuZ2x5cGhPcmRlcltpXSA9ICIiCiAgICAgICAgICAgIGVsaWYgaW5kaWNlc1tpXSBpbiBhZ2wuVVYyQUdMOgogICAgICAgICAgICAgICAgc2VsZi5nbHlwaE9yZGVyW2ldID0gYWdsLlVWMkFHTFtpbmRpY2VzW2ldXQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgc2VsZi5nbHlwaE9yZGVyW2ldID0gInVuaSUwNFgiICUgaW5kaWNlc1tpXQogICAgICAgIHNlbGYuYnVpbGRfcHNOYW1lTWFwcGluZyh0dEZvbnQpCgogICAgZGVmIGVuY29kZV9mb3JtYXRfMl8wKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgbnVtR2x5cGhzID0gdHRGb250LmdldEdseXBoQ291bnQoKQogICAgICAgIGdseXBoT3JkZXIgPSB0dEZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICAgICAgYXNzZXJ0IGxlbihnbHlwaE9yZGVyKSA9PSBudW1HbHlwaHMKICAgICAgICBpbmRpY2VzID0gYXJyYXkuYXJyYXkoIkgiKQogICAgICAgIGV4dHJhRGljdCA9IHt9CiAgICAgICAgZXh0cmFOYW1lcyA9IHNlbGYuZXh0cmFOYW1lcyA9IFsKICAgICAgICAgICAgbiBmb3IgbiBpbiBzZWxmLmV4dHJhTmFtZXMgaWYgbiBub3QgaW4gc3RhbmRhcmRHbHlwaE9yZGVyCiAgICAgICAgXQogICAgICAgIGZvciBpLCBuYW1lIGluIGVudW1lcmF0ZShleHRyYU5hbWVzKToKICAgICAgICAgICAgZXh0cmFEaWN0W25hbWVdID0gaQogICAgICAgIGZvciBnbHlwaE5hbWUgaW4gZ2x5cGhPcmRlcjoKICAgICAgICAgICAgaWYgZ2x5cGhOYW1lIGluIHNlbGYubWFwcGluZzoKICAgICAgICAgICAgICAgIHBzTmFtZSA9IHNlbGYubWFwcGluZ1tnbHlwaE5hbWVdCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwc05hbWUgPSBnbHlwaE5hbWUKICAgICAgICAgICAgaWYgcHNOYW1lIGluIGV4dHJhRGljdDoKICAgICAgICAgICAgICAgIGluZGV4ID0gMjU4ICsgZXh0cmFEaWN0W3BzTmFtZV0KICAgICAgICAgICAgZWxpZiBwc05hbWUgaW4gc3RhbmRhcmRHbHlwaE9yZGVyOgogICAgICAgICAgICAgICAgaW5kZXggPSBzdGFuZGFyZEdseXBoT3JkZXIuaW5kZXgocHNOYW1lKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgaW5kZXggPSAyNTggKyBsZW4oZXh0cmFOYW1lcykKICAgICAgICAgICAgICAgIGV4dHJhRGljdFtwc05hbWVdID0gbGVuKGV4dHJhTmFtZXMpCiAgICAgICAgICAgICAgICBleHRyYU5hbWVzLmFwcGVuZChwc05hbWUpCiAgICAgICAgICAgIGluZGljZXMuYXBwZW5kKGluZGV4KQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIGluZGljZXMuYnl0ZXN3YXAoKQogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIHN0cnVjdC5wYWNrKCI+SCIsIG51bUdseXBocykgKyBpbmRpY2VzLnRvYnl0ZXMoKSArIHBhY2tQU3RyaW5ncyhleHRyYU5hbWVzKQogICAgICAgICkKCiAgICBkZWYgZW5jb2RlX2Zvcm1hdF80XzAoc2VsZiwgdHRGb250KToKICAgICAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgYWdsCgogICAgICAgIG51bUdseXBocyA9IHR0Rm9udC5nZXRHbHlwaENvdW50KCkKICAgICAgICBnbHlwaE9yZGVyID0gdHRGb250LmdldEdseXBoT3JkZXIoKQogICAgICAgIGFzc2VydCBsZW4oZ2x5cGhPcmRlcikgPT0gbnVtR2x5cGhzCiAgICAgICAgaW5kaWNlcyA9IGFycmF5LmFycmF5KCJIIikKICAgICAgICBmb3IgZ2x5cGhJRCBpbiBnbHlwaE9yZGVyOgogICAgICAgICAgICBnbHlwaElEID0gZ2x5cGhJRC5zcGxpdCgiIyIpWzBdCiAgICAgICAgICAgIGlmIGdseXBoSUQgaW4gYWdsLkFHTDJVVjoKICAgICAgICAgICAgICAgIGluZGljZXMuYXBwZW5kKGFnbC5BR0wyVVZbZ2x5cGhJRF0pCiAgICAgICAgICAgIGVsaWYgbGVuKGdseXBoSUQpID09IDcgYW5kIGdseXBoSURbOjNdID09ICJ1bmkiOgogICAgICAgICAgICAgICAgaW5kaWNlcy5hcHBlbmQoaW50KGdseXBoSURbMzpdLCAxNikpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBpbmRpY2VzLmFwcGVuZCgweEZGRkYpCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgaW5kaWNlcy5ieXRlc3dhcCgpCiAgICAgICAgcmV0dXJuIGluZGljZXMudG9ieXRlcygpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBmb3JtYXRzdHJpbmcsIG5hbWVzLCBmaXhlcyA9IHNzdHJ1Y3QuZ2V0Zm9ybWF0KHBvc3RGb3JtYXQpCiAgICAgICAgZm9yIG5hbWUgaW4gbmFtZXM6CiAgICAgICAgICAgIHZhbHVlID0gZ2V0YXR0cihzZWxmLCBuYW1lKQogICAgICAgICAgICB3cml0ZXIuc2ltcGxldGFnKG5hbWUsIHZhbHVlPXZhbHVlKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgaWYgaGFzYXR0cihzZWxmLCAibWFwcGluZyIpOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoInBzTmFtZXMiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgICAgIHdyaXRlci5jb21tZW50KAogICAgICAgICAgICAgICAgIlRoaXMgZmlsZSB1c2VzIHVuaXF1ZSBnbHlwaCBuYW1lcyBiYXNlZCBvbiB0aGUgaW5mb3JtYXRpb25cbiIKICAgICAgICAgICAgICAgICJmb3VuZCBpbiB0aGUgJ3Bvc3QnIHRhYmxlLiBTaW5jZSB0aGVzZSBuYW1lcyBtaWdodCBub3QgYmUgdW5pcXVlLFxuIgogICAgICAgICAgICAgICAgIndlIGhhdmUgdG8gaW52ZW50IGFydGlmaWNpYWwgbmFtZXMgaW4gY2FzZSBvZiBjbGFzaGVzLiBJbiBvcmRlciB0b1xuIgogICAgICAgICAgICAgICAgImJlIGFibGUgdG8gcmV0YWluIHRoZSBvcmlnaW5hbCBpbmZvcm1hdGlvbiwgd2UgbmVlZCBhIG5hbWUgdG9cbiIKICAgICAgICAgICAgICAgICJwcyBuYW1lIG1hcHBpbmcgZm9yIHRob3NlIGNhc2VzIHdoZXJlIHRoZXkgZGlmZmVyLiBUaGF0J3Mgd2hhdFxuIgogICAgICAgICAgICAgICAgInlvdSBzZWUgYmVsb3cuXG4iCiAgICAgICAgICAgICkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICBpdGVtcyA9IHNvcnRlZChzZWxmLm1hcHBpbmcuaXRlbXMoKSkKICAgICAgICAgICAgZm9yIG5hbWUsIHBzTmFtZSBpbiBpdGVtczoKICAgICAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInBzTmFtZSIsIG5hbWU9bmFtZSwgcHNOYW1lPXBzTmFtZSkKICAgICAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmVuZHRhZygicHNOYW1lcyIpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBpZiBoYXNhdHRyKHNlbGYsICJleHRyYU5hbWVzIik6CiAgICAgICAgICAgIHdyaXRlci5iZWdpbnRhZygiZXh0cmFOYW1lcyIpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQoCiAgICAgICAgICAgICAgICAiZm9sbG93aW5nIGFyZSB0aGUgbmFtZSB0aGF0IGFyZSBub3QgdGFrZW4gZnJvbSB0aGUgc3RhbmRhcmQgTWFjIGdseXBoIG9yZGVyIgogICAgICAgICAgICApCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIG5hbWUgaW4gc2VsZi5leHRyYU5hbWVzOgogICAgICAgICAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygicHNOYW1lIiwgbmFtZT1uYW1lKQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJleHRyYU5hbWVzIikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGlmIGhhc2F0dHIoc2VsZiwgImRhdGEiKToKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJoZXhkYXRhIikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZHVtcGhleChzZWxmLmRhdGEpCiAgICAgICAgICAgIHdyaXRlci5lbmR0YWcoImhleGRhdGEiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSBub3QgaW4gKCJwc05hbWVzIiwgImV4dHJhTmFtZXMiLCAiaGV4ZGF0YSIpOgogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKSkKICAgICAgICBlbGlmIG5hbWUgPT0gInBzTmFtZXMiOgogICAgICAgICAgICBzZWxmLm1hcHBpbmcgPSB7fQogICAgICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBuYW1lLCBhdHRycywgY29udGVudCA9IGVsZW1lbnQKICAgICAgICAgICAgICAgIGlmIG5hbWUgPT0gInBzTmFtZSI6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5tYXBwaW5nW2F0dHJzWyJuYW1lIl1dID0gYXR0cnNbInBzTmFtZSJdCiAgICAgICAgZWxpZiBuYW1lID09ICJleHRyYU5hbWVzIjoKICAgICAgICAgICAgc2VsZi5leHRyYU5hbWVzID0gW10KICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKGVsZW1lbnQsIHR1cGxlKToKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgICAgICBpZiBuYW1lID09ICJwc05hbWUiOgogICAgICAgICAgICAgICAgICAgIHNlbGYuZXh0cmFOYW1lcy5hcHBlbmQoYXR0cnNbIm5hbWUiXSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmRhdGEgPSByZWFkSGV4KGNvbnRlbnQpCgoKZGVmIHVucGFja1BTdHJpbmdzKGRhdGEsIG4pOgogICAgIyBleHRyYWN0IG4gUGFzY2FsIHN0cmluZ3MgZnJvbSBkYXRhLgogICAgIyBpZiB0aGVyZSBpcyBub3QgZW5vdWdoIGRhdGEsIHVzZSAiIgoKICAgIHN0cmluZ3MgPSBbXQogICAgaW5kZXggPSAwCiAgICBkYXRhTGVuID0gbGVuKGRhdGEpCgogICAgZm9yIF8gaW4gcmFuZ2Uobik6CiAgICAgICAgaWYgZGF0YUxlbiA8PSBpbmRleDoKICAgICAgICAgICAgbGVuZ3RoID0gMAogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxlbmd0aCA9IGJ5dGVvcmQoZGF0YVtpbmRleF0pCiAgICAgICAgaW5kZXggKz0gMQoKICAgICAgICBpZiBkYXRhTGVuIDw9IGluZGV4ICsgbGVuZ3RoIC0gMToKICAgICAgICAgICAgbmFtZSA9ICIiCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbmFtZSA9IHRvc3RyKGRhdGFbaW5kZXggOiBpbmRleCArIGxlbmd0aF0sIGVuY29kaW5nPSJsYXRpbjEiKQogICAgICAgIHN0cmluZ3MuYXBwZW5kKG5hbWUpCiAgICAgICAgaW5kZXggKz0gbGVuZ3RoCgogICAgaWYgaW5kZXggPCBkYXRhTGVuOgogICAgICAgIGxvZy53YXJuaW5nKCIlZCBleHRyYSBieXRlcyBpbiBwb3N0LnN0cmluZ0RhdGEgYXJyYXkiLCBkYXRhTGVuIC0gaW5kZXgpCgogICAgZWxpZiBkYXRhTGVuIDwgaW5kZXg6CiAgICAgICAgbG9nLndhcm5pbmcoIm5vdCBlbm91Z2ggZGF0YSBpbiBwb3N0LnN0cmluZ0RhdGEgYXJyYXkiKQoKICAgIHJldHVybiBzdHJpbmdzCgoKZGVmIHBhY2tQU3RyaW5ncyhzdHJpbmdzKToKICAgIGRhdGEgPSBiIiIKICAgIGZvciBzIGluIHN0cmluZ3M6CiAgICAgICAgZGF0YSA9IGRhdGEgKyBieXRlY2hyKGxlbihzKSkgKyB0b2J5dGVzKHMsIGVuY29kaW5nPSJsYXRpbjEiKQogICAgcmV0dXJuIGRhdGEK
+from fontTools import ttLib
+from fontTools.ttLib.standardGlyphOrder import standardGlyphOrder
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import bytechr, byteord, tobytes, tostr, safeEval, readHex
+from . import DefaultTable
+import sys
+import struct
+import array
+import logging
+
+log = logging.getLogger(__name__)
+
+postFormat = """
+	>
+	formatType:			16.16F
+	italicAngle:		16.16F		# italic angle in degrees
+	underlinePosition:	h
+	underlineThickness:	h
+	isFixedPitch:		L
+	minMemType42:		L			# minimum memory if TrueType font is downloaded
+	maxMemType42:		L			# maximum memory if TrueType font is downloaded
+	minMemType1:		L			# minimum memory if Type1 font is downloaded
+	maxMemType1:		L			# maximum memory if Type1 font is downloaded
+"""
+
+postFormatSize = sstruct.calcsize(postFormat)
+
+
+class table__p_o_s_t(DefaultTable.DefaultTable):
+    """PostScript table
+
+    The ``post`` table contains information needed to use the font on
+    PostScript printers, including the PostScript names of glyphs and
+    data that was stored in the ``FontInfo`` dictionary for Type 1 fonts.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/post
+    """
+
+    dependencies = ["maxp", "MAXP"]
+
+    def decompile(self, data, ttFont):
+        sstruct.unpack(postFormat, data[:postFormatSize], self)
+        data = data[postFormatSize:]
+        if self.formatType == 1.0:
+            self.decode_format_1_0(data, ttFont)
+        elif self.formatType == 2.0:
+            self.decode_format_2_0(data, ttFont)
+        elif self.formatType == 3.0:
+            self.decode_format_3_0(data, ttFont)
+        elif self.formatType == 4.0:
+            self.decode_format_4_0(data, ttFont)
+        else:
+            # supported format
+            raise ttLib.TTLibError(
+                "'post' table format %f not supported" % self.formatType
+            )
+
+    def compile(self, ttFont):
+        data = sstruct.pack(postFormat, self)
+        if self.formatType == 1.0:
+            pass  # we're done
+        elif self.formatType == 2.0:
+            data = data + self.encode_format_2_0(ttFont)
+        elif self.formatType == 3.0:
+            pass  # we're done
+        elif self.formatType == 4.0:
+            data = data + self.encode_format_4_0(ttFont)
+        else:
+            # supported format
+            raise ttLib.TTLibError(
+                "'post' table format %f not supported" % self.formatType
+            )
+        return data
+
+    def getGlyphOrder(self):
+        """This function will get called by a ttLib.TTFont instance.
+        Do not call this function yourself, use TTFont().getGlyphOrder()
+        or its relatives instead!
+        """
+        if not hasattr(self, "glyphOrder"):
+            raise ttLib.TTLibError("illegal use of getGlyphOrder()")
+        glyphOrder = self.glyphOrder
+        del self.glyphOrder
+        return glyphOrder
+
+    def decode_format_1_0(self, data, ttFont):
+        self.glyphOrder = standardGlyphOrder[: ttFont.getGlyphCount()]
+
+    def decode_format_2_0(self, data, ttFont):
+        (numGlyphs,) = struct.unpack(">H", data[:2])
+        numGlyphs = int(numGlyphs)
+        glyphCount = ttFont.getGlyphCount()
+        if numGlyphs > glyphCount:
+            # Assume the numGlyphs field is bogus, so sync with maxp.
+            # I've seen this in one font, and if the assumption is
+            # wrong elsewhere, well, so be it: it's hard enough to
+            # work around _one_ non-conforming post format...
+            numGlyphs = glyphCount
+        data = data[2:]
+        indices = array.array("H")
+        indices.frombytes(data[: 2 * numGlyphs])
+        if sys.byteorder != "big":
+            indices.byteswap()
+        data = data[2 * numGlyphs :]
+        maxIndex = max(indices, default=0)
+        self.extraNames = extraNames = unpackPStrings(data, maxIndex - 257)
+        self.glyphOrder = glyphOrder = [""] * glyphCount
+        for glyphID in range(numGlyphs):
+            index = indices[glyphID]
+            if index > 257:
+                try:
+                    name = extraNames[index - 258]
+                except IndexError:
+                    name = ""
+            else:
+                # fetch names from standard list
+                name = standardGlyphOrder[index]
+            glyphOrder[glyphID] = name
+        self.build_psNameMapping(ttFont)
+
+    def build_psNameMapping(self, ttFont):
+        mapping = {}
+        allNames = {}
+        glyphOrderNames = set(self.glyphOrder)
+        for i in range(ttFont.getGlyphCount()):
+            glyphName = psName = self.glyphOrder[i]
+            if glyphName == "":
+                glyphName = "glyph%.5d" % i
+
+            if glyphName in allNames:
+                # make up a new glyphName that's unique
+                n = allNames[glyphName]
+                # check if the glyph name exists in the glyph order
+                while f"{glyphName}.{n}" in glyphOrderNames:
+                    n += 1
+                allNames[glyphName] = n + 1
+                glyphName = f"{glyphName}.{n}"
+
+            allNames[glyphName] = 1
+            if glyphName != psName:
+                self.glyphOrder[i] = glyphName
+                mapping[glyphName] = psName
+
+        self.mapping = mapping
+
+    def decode_format_3_0(self, data, ttFont):
+        # Setting self.glyphOrder to None will cause the TTFont object
+        # try and construct glyph names from a Unicode cmap table.
+        self.glyphOrder = None
+
+    def decode_format_4_0(self, data, ttFont):
+        from fontTools import agl
+
+        numGlyphs = ttFont.getGlyphCount()
+        indices = array.array("H")
+        indices.frombytes(data)
+        if sys.byteorder != "big":
+            indices.byteswap()
+        # In some older fonts, the size of the post table doesn't match
+        # the number of glyphs. Sometimes it's bigger, sometimes smaller.
+        self.glyphOrder = glyphOrder = [""] * int(numGlyphs)
+        for i in range(min(len(indices), numGlyphs)):
+            if indices[i] == 0xFFFF:
+                self.glyphOrder[i] = ""
+            elif indices[i] in agl.UV2AGL:
+                self.glyphOrder[i] = agl.UV2AGL[indices[i]]
+            else:
+                self.glyphOrder[i] = "uni%04X" % indices[i]
+        self.build_psNameMapping(ttFont)
+
+    def encode_format_2_0(self, ttFont):
+        numGlyphs = ttFont.getGlyphCount()
+        glyphOrder = ttFont.getGlyphOrder()
+        assert len(glyphOrder) == numGlyphs
+        indices = array.array("H")
+        extraDict = {}
+        extraNames = self.extraNames = [
+            n for n in self.extraNames if n not in standardGlyphOrder
+        ]
+        for i, name in enumerate(extraNames):
+            extraDict[name] = i
+        for glyphName in glyphOrder:
+            if glyphName in self.mapping:
+                psName = self.mapping[glyphName]
+            else:
+                psName = glyphName
+            if psName in extraDict:
+                index = 258 + extraDict[psName]
+            elif psName in standardGlyphOrder:
+                index = standardGlyphOrder.index(psName)
+            else:
+                index = 258 + len(extraNames)
+                extraDict[psName] = len(extraNames)
+                extraNames.append(psName)
+            indices.append(index)
+        if sys.byteorder != "big":
+            indices.byteswap()
+        return (
+            struct.pack(">H", numGlyphs) + indices.tobytes() + packPStrings(extraNames)
+        )
+
+    def encode_format_4_0(self, ttFont):
+        from fontTools import agl
+
+        numGlyphs = ttFont.getGlyphCount()
+        glyphOrder = ttFont.getGlyphOrder()
+        assert len(glyphOrder) == numGlyphs
+        indices = array.array("H")
+        for glyphID in glyphOrder:
+            glyphID = glyphID.split("#")[0]
+            if glyphID in agl.AGL2UV:
+                indices.append(agl.AGL2UV[glyphID])
+            elif len(glyphID) == 7 and glyphID[:3] == "uni":
+                indices.append(int(glyphID[3:], 16))
+            else:
+                indices.append(0xFFFF)
+        if sys.byteorder != "big":
+            indices.byteswap()
+        return indices.tobytes()
+
+    def toXML(self, writer, ttFont):
+        formatstring, names, fixes = sstruct.getformat(postFormat)
+        for name in names:
+            value = getattr(self, name)
+            writer.simpletag(name, value=value)
+            writer.newline()
+        if hasattr(self, "mapping"):
+            writer.begintag("psNames")
+            writer.newline()
+            writer.comment(
+                "This file uses unique glyph names based on the information\n"
+                "found in the 'post' table. Since these names might not be unique,\n"
+                "we have to invent artificial names in case of clashes. In order to\n"
+                "be able to retain the original information, we need a name to\n"
+                "ps name mapping for those cases where they differ. That's what\n"
+                "you see below.\n"
+            )
+            writer.newline()
+            items = sorted(self.mapping.items())
+            for name, psName in items:
+                writer.simpletag("psName", name=name, psName=psName)
+                writer.newline()
+            writer.endtag("psNames")
+            writer.newline()
+        if hasattr(self, "extraNames"):
+            writer.begintag("extraNames")
+            writer.newline()
+            writer.comment(
+                "following are the name that are not taken from the standard Mac glyph order"
+            )
+            writer.newline()
+            for name in self.extraNames:
+                writer.simpletag("psName", name=name)
+                writer.newline()
+            writer.endtag("extraNames")
+            writer.newline()
+        if hasattr(self, "data"):
+            writer.begintag("hexdata")
+            writer.newline()
+            writer.dumphex(self.data)
+            writer.endtag("hexdata")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name not in ("psNames", "extraNames", "hexdata"):
+            setattr(self, name, safeEval(attrs["value"]))
+        elif name == "psNames":
+            self.mapping = {}
+            for element in content:
+                if not isinstance(element, tuple):
+                    continue
+                name, attrs, content = element
+                if name == "psName":
+                    self.mapping[attrs["name"]] = attrs["psName"]
+        elif name == "extraNames":
+            self.extraNames = []
+            for element in content:
+                if not isinstance(element, tuple):
+                    continue
+                name, attrs, content = element
+                if name == "psName":
+                    self.extraNames.append(attrs["name"])
+        else:
+            self.data = readHex(content)
+
+
+def unpackPStrings(data, n):
+    # extract n Pascal strings from data.
+    # if there is not enough data, use ""
+
+    strings = []
+    index = 0
+    dataLen = len(data)
+
+    for _ in range(n):
+        if dataLen <= index:
+            length = 0
+        else:
+            length = byteord(data[index])
+        index += 1
+
+        if dataLen <= index + length - 1:
+            name = ""
+        else:
+            name = tostr(data[index : index + length], encoding="latin1")
+        strings.append(name)
+        index += length
+
+    if index < dataLen:
+        log.warning("%d extra bytes in post.stringData array", dataLen - index)
+
+    elif dataLen < index:
+        log.warning("not enough data in post.stringData array")
+
+    return strings
+
+
+def packPStrings(strings):
+    data = b""
+    for s in strings:
+        data = data + bytechr(len(s)) + tobytes(s, encoding="latin1")
+    return data

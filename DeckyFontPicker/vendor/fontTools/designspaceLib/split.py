@@ -1,1 +1,530 @@
-IiIiQWxsb3dzIGJ1aWxkaW5nIGFsbCB0aGUgdmFyaWFibGUgZm9udHMgb2YgYSBEZXNpZ25TcGFjZSB2ZXJzaW9uIDUgYnkKc3BsaXR0aW5nIHRoZSBkb2N1bWVudCBpbnRvIGludGVycG9sYWJsZSBzdWItc3BhY2UsIHRoZW4gaW50byBlYWNoIFZGLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmltcG9ydCBpdGVydG9vbHMKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IG1hdGgKZnJvbSB0eXBpbmcgaW1wb3J0IEFueSwgQ2FsbGFibGUsIERpY3QsIEl0ZXJhdG9yLCBMaXN0LCBPcHRpb25hbCwgVHVwbGUsIGNhc3QKCmZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliIGltcG9ydCAoCiAgICBBeGlzRGVzY3JpcHRvciwKICAgIEF4aXNNYXBwaW5nRGVzY3JpcHRvciwKICAgIERlc2lnblNwYWNlRG9jdW1lbnQsCiAgICBEaXNjcmV0ZUF4aXNEZXNjcmlwdG9yLAogICAgSW5zdGFuY2VEZXNjcmlwdG9yLAogICAgUnVsZURlc2NyaXB0b3IsCiAgICBTaW1wbGVMb2NhdGlvbkRpY3QsCiAgICBTb3VyY2VEZXNjcmlwdG9yLAogICAgVmFyaWFibGVGb250RGVzY3JpcHRvciwKKQpmcm9tIGZvbnRUb29scy5kZXNpZ25zcGFjZUxpYi5zdGF0TmFtZXMgaW1wb3J0IFN0YXROYW1lcywgZ2V0U3RhdE5hbWVzCmZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliLnR5cGVzIGltcG9ydCAoCiAgICBDb25kaXRpb25TZXQsCiAgICBSYW5nZSwKICAgIFJlZ2lvbiwKICAgIGdldFZGVXNlclJlZ2lvbiwKICAgIGxvY2F0aW9uSW5SZWdpb24sCiAgICByZWdpb25JblJlZ2lvbiwKICAgIHVzZXJSZWdpb25Ub0Rlc2lnblJlZ2lvbiwKKQoKTE9HR0VSID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgpNYWtlSW5zdGFuY2VGaWxlbmFtZUNhbGxhYmxlID0gQ2FsbGFibGVbCiAgICBbRGVzaWduU3BhY2VEb2N1bWVudCwgSW5zdGFuY2VEZXNjcmlwdG9yLCBTdGF0TmFtZXNdLCBzdHIKXQoKCmRlZiBkZWZhdWx0TWFrZUluc3RhbmNlRmlsZW5hbWUoCiAgICBkb2M6IERlc2lnblNwYWNlRG9jdW1lbnQsIGluc3RhbmNlOiBJbnN0YW5jZURlc2NyaXB0b3IsIHN0YXROYW1lczogU3RhdE5hbWVzCikgLT4gc3RyOgogICAgIiIiRGVmYXVsdCBjYWxsYWJsZSB0byBzeW50aGVzaXplIGFuIGluc3RhbmNlIGZpbGVuYW1lCiAgICB3aGVuIG1ha2VOYW1lcz1UcnVlLCBmb3IgaW5zdGFuY2VzIHRoYXQgZG9uJ3Qgc3BlY2lmeSBhbiBpbnN0YW5jZSBuYW1lCiAgICBpbiB0aGUgZGVzaWduc3BhY2UuIFRoaXMgcGFydCBvZiB0aGUgbmFtZSBnZW5lcmF0aW9uIGNhbiBiZSBvdmVycmlkZW4KICAgIGJlY2F1c2UgaXQncyBub3Qgc3BlY2lmaWVkIGJ5IHRoZSBTVEFUIHRhYmxlLgogICAgIiIiCiAgICBmYW1pbHlOYW1lID0gaW5zdGFuY2UuZmFtaWx5TmFtZSBvciBzdGF0TmFtZXMuZmFtaWx5TmFtZXMuZ2V0KCJlbiIpCiAgICBzdHlsZU5hbWUgPSBpbnN0YW5jZS5zdHlsZU5hbWUgb3Igc3RhdE5hbWVzLnN0eWxlTmFtZXMuZ2V0KCJlbiIpCiAgICByZXR1cm4gZiJ7ZmFtaWx5TmFtZX0te3N0eWxlTmFtZX0udHRmIgoKCmRlZiBfbG9jYWxpc2VkTmFtZXMoc3RhdE5hbWVzOiBEaWN0W3N0ciwgc3RyXSwgbmFtZTogT3B0aW9uYWxbc3RyXSkgLT4gRGljdFtzdHIsIHN0cl06CiAgICAiIiJSZXR1cm4gdGhlIGxvY2FsaXNlZCBTVEFUIG5hbWVzIGlmIHRoZXkgdHJhbnNsYXRlIGBgbmFtZWBgLCBlbHNlIG5vdGhpbmcuIiIiCiAgICByZXR1cm4gc3RhdE5hbWVzIGlmIHN0YXROYW1lcy5nZXQoImVuIikgPT0gbmFtZSBlbHNlIHt9CgoKZGVmIF93YXJuT3V0T2ZBeGVzKGRvYzogRGVzaWduU3BhY2VEb2N1bWVudCkgLT4gTm9uZToKICAgIGRvY1VzZXJSZWdpb24gPSB7CiAgICAgICAgYXhpcy5uYW1lOiAoCiAgICAgICAgICAgIHR1cGxlKGF4aXMudmFsdWVzKQogICAgICAgICAgICBpZiBoYXNhdHRyKGF4aXMsICJ2YWx1ZXMiKQogICAgICAgICAgICBlbHNlIFJhbmdlKGF4aXMubWluaW11bSwgYXhpcy5tYXhpbXVtLCBheGlzLmRlZmF1bHQpCiAgICAgICAgKQogICAgICAgIGZvciBheGlzIGluIGRvYy5heGVzCiAgICB9CiAgICBmb3Igc291cmNlIGluIGRvYy5zb3VyY2VzOgogICAgICAgIHNvdXJjZVVzZXJMb2NhdGlvbiA9IGRvYy5tYXBfYmFja3dhcmQoc291cmNlLmRlc2lnbkxvY2F0aW9uKQogICAgICAgIGlmIG5vdCBsb2NhdGlvbkluUmVnaW9uKHNvdXJjZVVzZXJMb2NhdGlvbiwgZG9jVXNlclJlZ2lvbik6CiAgICAgICAgICAgIExPR0dFUi53YXJuaW5nKAogICAgICAgICAgICAgICAgIlNvdXJjZSAnJXMnIGhhcyBsb2NhdGlvbiBvdXRzaWRlIHRoZSBkb2N1bWVudCdzIGF4ZXMsIGRyb3BwaW5nOiAlcyIsCiAgICAgICAgICAgICAgICBzb3VyY2UubmFtZSBvciBzb3VyY2UuZmlsZW5hbWUgb3IgIjx1bm5hbWVkIHNvdXJjZT4iLAogICAgICAgICAgICAgICAgc291cmNlVXNlckxvY2F0aW9uLAogICAgICAgICAgICApCiAgICBmb3IgaW5zdGFuY2UgaW4gZG9jLmluc3RhbmNlczoKICAgICAgICBpbnN0YW5jZVVzZXJMb2NhdGlvbiA9IGluc3RhbmNlLmdldEZ1bGxVc2VyTG9jYXRpb24oZG9jKQogICAgICAgIGlmIG5vdCBsb2NhdGlvbkluUmVnaW9uKGluc3RhbmNlVXNlckxvY2F0aW9uLCBkb2NVc2VyUmVnaW9uKToKICAgICAgICAgICAgTE9HR0VSLndhcm5pbmcoCiAgICAgICAgICAgICAgICAiSW5zdGFuY2UgJyVzJyBoYXMgbG9jYXRpb24gb3V0c2lkZSB0aGUgZG9jdW1lbnQncyBheGVzLCBkcm9wcGluZzogJXMiLAogICAgICAgICAgICAgICAgaW5zdGFuY2UubmFtZQogICAgICAgICAgICAgICAgb3IgaW5zdGFuY2UuZmlsZW5hbWUKICAgICAgICAgICAgICAgIG9yIGYie2luc3RhbmNlLmZhbWlseU5hbWUgb3IgJyd9IHtpbnN0YW5jZS5zdHlsZU5hbWUgb3IgJyd9Ii5zdHJpcCgpCiAgICAgICAgICAgICAgICBvciAiPHVubmFtZWQgaW5zdGFuY2U+IiwKICAgICAgICAgICAgICAgIGluc3RhbmNlVXNlckxvY2F0aW9uLAogICAgICAgICAgICApCgoKZGVmIHNwbGl0SW50ZXJwb2xhYmxlKAogICAgZG9jOiBEZXNpZ25TcGFjZURvY3VtZW50LAogICAgbWFrZU5hbWVzOiBib29sID0gVHJ1ZSwKICAgIGV4cGFuZExvY2F0aW9uczogYm9vbCA9IFRydWUsCiAgICBtYWtlSW5zdGFuY2VGaWxlbmFtZTogTWFrZUluc3RhbmNlRmlsZW5hbWVDYWxsYWJsZSA9IGRlZmF1bHRNYWtlSW5zdGFuY2VGaWxlbmFtZSwKKSAtPiBJdGVyYXRvcltUdXBsZVtTaW1wbGVMb2NhdGlvbkRpY3QsIERlc2lnblNwYWNlRG9jdW1lbnRdXToKICAgICIiIlNwbGl0IHRoZSBnaXZlbiBEUzUgaW50byBzZXZlcmFsIGludGVycG9sYWJsZSBzdWItZGVzaWduc3BhY2VzLgogICAgVGhlcmUgYXJlIGFzIG1hbnkgaW50ZXJwb2xhYmxlIHN1Yi1zcGFjZXMgYXMgdGhlcmUgYXJlIGNvbWJpbmF0aW9ucyBvZgogICAgZGlzY3JldGUgYXhpcyB2YWx1ZXMuCgogICAgRS5nLiB3aXRoIGF4ZXM6CiAgICAgICAgLSBpdGFsaWMgKGRpc2NyZXRlKSBVcHJpZ2h0IG9yIEl0YWxpYwogICAgICAgIC0gc3R5bGUgKGRpc2NyZXRlKSBTYW5zIG9yIFNlcmlmCiAgICAgICAgLSB3ZWlnaHQgKGNvbnRpbnVvdXMpIDEwMCB0byA5MDAKCiAgICBUaGVyZSBhcmUgNCBzdWItc3BhY2VzIGluIHdoaWNoIHRoZSBXZWlnaHQgYXhpcyBzaG91bGQgaW50ZXJwb2xhdGU6CiAgICAoVXByaWdodCwgU2FucyksIChVcHJpZ2h0LCBTZXJpZiksIChJdGFsaWMsIFNhbnMpIGFuZCAoSXRhbGljLCBTZXJpZikuCgogICAgVGhlIHN1Yi1kZXNpZ25zcGFjZXMgc3RpbGwgaW5jbHVkZSB0aGUgZnVsbCBheGlzIGRlZmluaXRpb25zIGFuZCBTVEFUIGRhdGEsCiAgICBidXQgdGhlIHJ1bGVzLCBzb3VyY2VzLCB2YXJpYWJsZSBmb250cywgaW5zdGFuY2VzIGFyZSB0cmltbWVkIGRvd24gdG8gb25seQogICAga2VlcCB3aGF0IGZhbGxzIHdpdGhpbiB0aGUgaW50ZXJwb2xhYmxlIHN1Yi1zcGFjZS4KCiAgICBBcmdzOgogICAgICAtIGBgbWFrZU5hbWVzYGA6IFdoZXRoZXIgdG8gY29tcHV0ZSB0aGUgaW5zdGFuY2UgZmFtaWx5IGFuZCBzdHlsZQogICAgICAgIG5hbWVzIHVzaW5nIHRoZSBTVEFUIGRhdGEuCiAgICAgIC0gYGBleHBhbmRMb2NhdGlvbnNgYDogV2hldGhlciB0byB0dXJuIGFsbCBsb2NhdGlvbnMgaW50byAiZnVsbCIKICAgICAgICBsb2NhdGlvbnMsIGluY2x1ZGluZyBpbXBsaWNpdCBkZWZhdWx0IGF4aXMgdmFsdWVzIHdoZXJlIG1pc3NpbmcuCiAgICAgIC0gYGBtYWtlSW5zdGFuY2VGaWxlbmFtZWBgOiBDYWxsYWJsZSB0byBzeW50aGVzaXplIGFuIGluc3RhbmNlIGZpbGVuYW1lCiAgICAgICAgd2hlbiBtYWtlTmFtZXM9VHJ1ZSwgZm9yIGluc3RhbmNlcyB0aGF0IGRvbid0IHNwZWNpZnkgYW4gaW5zdGFuY2UgbmFtZQogICAgICAgIGluIHRoZSBkZXNpZ25zcGFjZS4gVGhpcyBwYXJ0IG9mIHRoZSBuYW1lIGdlbmVyYXRpb24gY2FuIGJlIG92ZXJyaWRkZW4KICAgICAgICBiZWNhdXNlIGl0J3Mgbm90IHNwZWNpZmllZCBieSB0aGUgU1RBVCB0YWJsZS4KCiAgICAuLiB2ZXJzaW9uYWRkZWQ6OiA1LjAKICAgICIiIgogICAgX3dhcm5PdXRPZkF4ZXMoZG9jKQogICAgZGlzY3JldGVBeGVzID0gW10KICAgIGludGVycG9sYWJsZVVzZXJSZWdpb246IFJlZ2lvbiA9IHt9CiAgICBmb3IgYXhpcyBpbiBkb2MuYXhlczoKICAgICAgICBpZiBoYXNhdHRyKGF4aXMsICJ2YWx1ZXMiKToKICAgICAgICAgICAgIyBNeXB5IGRvZXNuJ3Qgc3VwcG9ydCBuYXJyb3dpbmcgdW5pb24gdHlwZXMgdmlhIGhhc2F0dHIoKQogICAgICAgICAgICAjIFRPRE8oUHl0aG9uIDMuMTApOiB1c2UgVHlwZUd1YXJkCiAgICAgICAgICAgICMgaHR0cHM6Ly9teXB5LnJlYWR0aGVkb2NzLmlvL2VuL3N0YWJsZS90eXBlX25hcnJvd2luZy5odG1sCiAgICAgICAgICAgIGF4aXMgPSBjYXN0KERpc2NyZXRlQXhpc0Rlc2NyaXB0b3IsIGF4aXMpCiAgICAgICAgICAgIGRpc2NyZXRlQXhlcy5hcHBlbmQoYXhpcykKICAgICAgICBlbHNlOgogICAgICAgICAgICBheGlzID0gY2FzdChBeGlzRGVzY3JpcHRvciwgYXhpcykKICAgICAgICAgICAgaW50ZXJwb2xhYmxlVXNlclJlZ2lvbltheGlzLm5hbWVdID0gUmFuZ2UoCiAgICAgICAgICAgICAgICBheGlzLm1pbmltdW0sCiAgICAgICAgICAgICAgICBheGlzLm1heGltdW0sCiAgICAgICAgICAgICAgICBheGlzLmRlZmF1bHQsCiAgICAgICAgICAgICkKICAgIHZhbHVlQ29tYmluYXRpb25zID0gaXRlcnRvb2xzLnByb2R1Y3QoKltheGlzLnZhbHVlcyBmb3IgYXhpcyBpbiBkaXNjcmV0ZUF4ZXNdKQogICAgZm9yIHZhbHVlcyBpbiB2YWx1ZUNvbWJpbmF0aW9uczoKICAgICAgICBkaXNjcmV0ZVVzZXJMb2NhdGlvbiA9IHsKICAgICAgICAgICAgZGlzY3JldGVBeGlzLm5hbWU6IHZhbHVlCiAgICAgICAgICAgIGZvciBkaXNjcmV0ZUF4aXMsIHZhbHVlIGluIHppcChkaXNjcmV0ZUF4ZXMsIHZhbHVlcykKICAgICAgICB9CiAgICAgICAgc3ViRG9jID0gX2V4dHJhY3RTdWJTcGFjZSgKICAgICAgICAgICAgZG9jLAogICAgICAgICAgICB7KippbnRlcnBvbGFibGVVc2VyUmVnaW9uLCAqKmRpc2NyZXRlVXNlckxvY2F0aW9ufSwKICAgICAgICAgICAga2VlcFZGcz1UcnVlLAogICAgICAgICAgICBtYWtlTmFtZXM9bWFrZU5hbWVzLAogICAgICAgICAgICBleHBhbmRMb2NhdGlvbnM9ZXhwYW5kTG9jYXRpb25zLAogICAgICAgICAgICBtYWtlSW5zdGFuY2VGaWxlbmFtZT1tYWtlSW5zdGFuY2VGaWxlbmFtZSwKICAgICAgICApCiAgICAgICAgeWllbGQgZGlzY3JldGVVc2VyTG9jYXRpb24sIHN1YkRvYwoKCmRlZiBzcGxpdFZhcmlhYmxlRm9udHMoCiAgICBkb2M6IERlc2lnblNwYWNlRG9jdW1lbnQsCiAgICBtYWtlTmFtZXM6IGJvb2wgPSBGYWxzZSwKICAgIGV4cGFuZExvY2F0aW9uczogYm9vbCA9IEZhbHNlLAogICAgbWFrZUluc3RhbmNlRmlsZW5hbWU6IE1ha2VJbnN0YW5jZUZpbGVuYW1lQ2FsbGFibGUgPSBkZWZhdWx0TWFrZUluc3RhbmNlRmlsZW5hbWUsCikgLT4gSXRlcmF0b3JbVHVwbGVbc3RyLCBEZXNpZ25TcGFjZURvY3VtZW50XV06CiAgICAiIiJDb252ZXJ0IGVhY2ggdmFyaWFibGUgZm9udCBsaXN0ZWQgaW4gdGhpcyBkb2N1bWVudCBpbnRvIGEgc3RhbmRhbG9uZQogICAgZGVzaWduc3BhY2UuIFRoaXMgY2FuIGJlIHVzZWQgdG8gY29tcGlsZSBhbGwgdGhlIHZhcmlhYmxlIGZvbnRzIGZyb20gYQogICAgZm9ybWF0IDUgZGVzaWduc3BhY2UgdXNpbmcgdG9vbHMgdGhhdCBjYW4gb25seSBkZWFsIHdpdGggMSBWRiBhdCBhIHRpbWUuCgogICAgQXJnczoKICAgICAgLSBgYG1ha2VOYW1lc2BgOiBXaGV0aGVyIHRvIGNvbXB1dGUgdGhlIGluc3RhbmNlIGZhbWlseSBhbmQgc3R5bGUKICAgICAgICBuYW1lcyB1c2luZyB0aGUgU1RBVCBkYXRhLgogICAgICAtIGBgZXhwYW5kTG9jYXRpb25zYGA6IFdoZXRoZXIgdG8gdHVybiBhbGwgbG9jYXRpb25zIGludG8gImZ1bGwiCiAgICAgICAgbG9jYXRpb25zLCBpbmNsdWRpbmcgaW1wbGljaXQgZGVmYXVsdCBheGlzIHZhbHVlcyB3aGVyZSBtaXNzaW5nLgogICAgICAtIGBgbWFrZUluc3RhbmNlRmlsZW5hbWVgYDogQ2FsbGFibGUgdG8gc3ludGhlc2l6ZSBhbiBpbnN0YW5jZSBmaWxlbmFtZQogICAgICAgIHdoZW4gbWFrZU5hbWVzPVRydWUsIGZvciBpbnN0YW5jZXMgdGhhdCBkb24ndCBzcGVjaWZ5IGFuIGluc3RhbmNlIG5hbWUKICAgICAgICBpbiB0aGUgZGVzaWduc3BhY2UuIFRoaXMgcGFydCBvZiB0aGUgbmFtZSBnZW5lcmF0aW9uIGNhbiBiZSBvdmVycmlkZGVuCiAgICAgICAgYmVjYXVzZSBpdCdzIG5vdCBzcGVjaWZpZWQgYnkgdGhlIFNUQVQgdGFibGUuCgogICAgLi4gdmVyc2lvbmFkZGVkOjogNS4wCiAgICAiIiIKICAgIF93YXJuT3V0T2ZBeGVzKGRvYykKICAgICMgTWFrZSBvbmUgRGVzaWduc3BhY2VEb2MgdjUgZm9yIGVhY2ggdmFyaWFibGUgZm9udAogICAgZm9yIHZmIGluIGRvYy5nZXRWYXJpYWJsZUZvbnRzKCk6CiAgICAgICAgdmZVc2VyUmVnaW9uID0gZ2V0VkZVc2VyUmVnaW9uKGRvYywgdmYpCiAgICAgICAgdmZEb2MgPSBfZXh0cmFjdFN1YlNwYWNlKAogICAgICAgICAgICBkb2MsCiAgICAgICAgICAgIHZmVXNlclJlZ2lvbiwKICAgICAgICAgICAga2VlcFZGcz1GYWxzZSwKICAgICAgICAgICAgbWFrZU5hbWVzPW1ha2VOYW1lcywKICAgICAgICAgICAgZXhwYW5kTG9jYXRpb25zPWV4cGFuZExvY2F0aW9ucywKICAgICAgICAgICAgbWFrZUluc3RhbmNlRmlsZW5hbWU9bWFrZUluc3RhbmNlRmlsZW5hbWUsCiAgICAgICAgKQogICAgICAgIHZmRG9jLmxpYiA9IHsqKnZmRG9jLmxpYiwgKip2Zi5saWJ9CiAgICAgICAgaWYgInB1YmxpYy5mb250SW5mbyIgaW4gZG9jLmxpYiBhbmQgInB1YmxpYy5mb250SW5mbyIgaW4gdmYubGliOgogICAgICAgICAgICB2ZkRvYy5saWJbInB1YmxpYy5mb250SW5mbyJdID0gewogICAgICAgICAgICAgICAgKipkb2MubGliWyJwdWJsaWMuZm9udEluZm8iXSwKICAgICAgICAgICAgICAgICoqdmYubGliWyJwdWJsaWMuZm9udEluZm8iXSwKICAgICAgICAgICAgfQogICAgICAgIHlpZWxkIHZmLm5hbWUsIHZmRG9jCgoKZGVmIGNvbnZlcnQ1dG80KAogICAgZG9jOiBEZXNpZ25TcGFjZURvY3VtZW50LAopIC0+IERpY3Rbc3RyLCBEZXNpZ25TcGFjZURvY3VtZW50XToKICAgICIiIkNvbnZlcnQgZWFjaCB2YXJpYWJsZSBmb250IGxpc3RlZCBpbiB0aGlzIGRvY3VtZW50IGludG8gYSBzdGFuZGFsb25lCiAgICBmb3JtYXQgNCBkZXNpZ25zcGFjZS4gVGhpcyBjYW4gYmUgdXNlZCB0byBjb21waWxlIGFsbCB0aGUgdmFyaWFibGUgZm9udHMKICAgIGZyb20gYSBmb3JtYXQgNSBkZXNpZ25zcGFjZSB1c2luZyB0b29scyB0aGF0IG9ubHkga25vdyBhYm91dCBmb3JtYXQgNC4KCiAgICAuLiB2ZXJzaW9uYWRkZWQ6OiA1LjAKICAgICIiIgogICAgdmZzID0ge30KICAgIGZvciBfbG9jYXRpb24sIHN1YkRvYyBpbiBzcGxpdEludGVycG9sYWJsZShkb2MpOgogICAgICAgIGZvciB2Zk5hbWUsIHZmRG9jIGluIHNwbGl0VmFyaWFibGVGb250cyhzdWJEb2MpOgogICAgICAgICAgICB2ZkRvYy5mb3JtYXRWZXJzaW9uID0gIjQuMSIKICAgICAgICAgICAgdmZzW3ZmTmFtZV0gPSB2ZkRvYwogICAgcmV0dXJuIHZmcwoKCmRlZiBfZXh0cmFjdFN1YlNwYWNlKAogICAgZG9jOiBEZXNpZ25TcGFjZURvY3VtZW50LAogICAgdXNlclJlZ2lvbjogUmVnaW9uLAogICAgKiwKICAgIGtlZXBWRnM6IGJvb2wsCiAgICBtYWtlTmFtZXM6IGJvb2wsCiAgICBleHBhbmRMb2NhdGlvbnM6IGJvb2wsCiAgICBtYWtlSW5zdGFuY2VGaWxlbmFtZTogTWFrZUluc3RhbmNlRmlsZW5hbWVDYWxsYWJsZSwKKSAtPiBEZXNpZ25TcGFjZURvY3VtZW50OgogICAgc3ViRG9jID0gRGVzaWduU3BhY2VEb2N1bWVudCgpCiAgICAjIERvbid0IGluY2x1ZGUgU1RBVCBpbmZvCiAgICAjIEZJWE1FOiAoSmFueSkgbGV0J3MgdGhpbmsgYWJvdXQgaXQuIE5vdCBpbmNsdWRlID0gT0sgYmVjYXVzZSB0aGUgcG9pbnQgb2YKICAgICMgdGhlIHNwbGl0dGluZyBpcyB0byBidWlsZCBWRnMgYW5kIHdlJ2xsIHVzZSB0aGUgU1RBVCBkYXRhIG9mIHRoZSBmdWxsCiAgICAjIGRvY3VtZW50IHRvIGdlbmVyYXRlIHRoZSBTVEFUIG9mIHRoZSBWRnMsIHNvICJubyBuZWVkIiB0byBoYXZlIFNUQVQgZGF0YQogICAgIyBpbiBzdWItZG9jcy4gQ291bnRlcnBvaW50OiB3aGF0IGlmIHNvbWVvbmUgd2FudHMgdG8gc3BsaXQgdGhpcyBEUyBmb3IKICAgICMgb3RoZXIgcHVycG9zZXM/ICBNYXliZSBmb3IgdGhhdCBpdCB3b3VsZCBiZSB1c2VmdWwgdG8gYWxzbyBzdWJzZXQgdGhlIFNUQVQKICAgICMgZGF0YT8KICAgICMgc3ViRG9jLmVsaWRlZEZhbGxiYWNrTmFtZSA9IGRvYy5lbGlkZWRGYWxsYmFja05hbWUKCiAgICBkZWYgbWF5YmVFeHBhbmREZXNpZ25Mb2NhdGlvbihvYmplY3QpOgogICAgICAgIGlmIGV4cGFuZExvY2F0aW9uczoKICAgICAgICAgICAgcmV0dXJuIG9iamVjdC5nZXRGdWxsRGVzaWduTG9jYXRpb24oZG9jKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJldHVybiBvYmplY3QuZGVzaWduTG9jYXRpb24KCiAgICBmb3IgYXhpcyBpbiBkb2MuYXhlczoKICAgICAgICByYW5nZSA9IHVzZXJSZWdpb25bYXhpcy5uYW1lXQogICAgICAgIGlmIGlzaW5zdGFuY2UocmFuZ2UsIFJhbmdlKSBhbmQgaGFzYXR0cihheGlzLCAibWluaW11bSIpOgogICAgICAgICAgICAjIE15cHkgZG9lc24ndCBzdXBwb3J0IG5hcnJvd2luZyB1bmlvbiB0eXBlcyB2aWEgaGFzYXR0cigpCiAgICAgICAgICAgICMgVE9ETyhQeXRob24gMy4xMCk6IHVzZSBUeXBlR3VhcmQKICAgICAgICAgICAgIyBodHRwczovL215cHkucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL3R5cGVfbmFycm93aW5nLmh0bWwKICAgICAgICAgICAgYXhpcyA9IGNhc3QoQXhpc0Rlc2NyaXB0b3IsIGF4aXMpCiAgICAgICAgICAgIHN1YkRvYy5hZGRBeGlzKAogICAgICAgICAgICAgICAgQXhpc0Rlc2NyaXB0b3IoCiAgICAgICAgICAgICAgICAgICAgIyBTYW1lIGluZm8KICAgICAgICAgICAgICAgICAgICB0YWc9YXhpcy50YWcsCiAgICAgICAgICAgICAgICAgICAgbmFtZT1heGlzLm5hbWUsCiAgICAgICAgICAgICAgICAgICAgbGFiZWxOYW1lcz1heGlzLmxhYmVsTmFtZXMsCiAgICAgICAgICAgICAgICAgICAgaGlkZGVuPWF4aXMuaGlkZGVuLAogICAgICAgICAgICAgICAgICAgICMgU3Vic2V0IHJhbmdlCiAgICAgICAgICAgICAgICAgICAgbWluaW11bT1tYXgocmFuZ2UubWluaW11bSwgYXhpcy5taW5pbXVtKSwKICAgICAgICAgICAgICAgICAgICBkZWZhdWx0PXJhbmdlLmRlZmF1bHQsCiAgICAgICAgICAgICAgICAgICAgbWF4aW11bT1taW4ocmFuZ2UubWF4aW11bSwgYXhpcy5tYXhpbXVtKSwKICAgICAgICAgICAgICAgICAgICBtYXA9WwogICAgICAgICAgICAgICAgICAgICAgICAodXNlciwgZGVzaWduKQogICAgICAgICAgICAgICAgICAgICAgICBmb3IgdXNlciwgZGVzaWduIGluIGF4aXMubWFwCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIHJhbmdlLm1pbmltdW0gPD0gdXNlciA8PSByYW5nZS5tYXhpbXVtCiAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICAgICAjIERvbid0IGluY2x1ZGUgU1RBVCBpbmZvCiAgICAgICAgICAgICAgICAgICAgYXhpc09yZGVyaW5nPU5vbmUsCiAgICAgICAgICAgICAgICAgICAgYXhpc0xhYmVscz1Ob25lLAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICApCgogICAgc3ViRG9jLmF4aXNNYXBwaW5ncyA9IG1hcHBpbmdzID0gW10KICAgIHN1YkRvY0F4ZXMgPSB7YXhpcy5uYW1lIGZvciBheGlzIGluIHN1YkRvYy5heGVzfQogICAgZm9yIG1hcHBpbmcgaW4gZG9jLmF4aXNNYXBwaW5nczoKICAgICAgICBpZiBub3QgYWxsKGF4aXMgaW4gc3ViRG9jQXhlcyBmb3IgYXhpcyBpbiBtYXBwaW5nLmlucHV0TG9jYXRpb24ua2V5cygpKToKICAgICAgICAgICAgY29udGludWUKICAgICAgICBpZiBub3QgYWxsKGF4aXMgaW4gc3ViRG9jQXhlcyBmb3IgYXhpcyBpbiBtYXBwaW5nLm91dHB1dExvY2F0aW9uLmtleXMoKSk6CiAgICAgICAgICAgIExPR0dFUi5lcnJvcigKICAgICAgICAgICAgICAgICJJbiBheGlzIG1hcHBpbmcgZnJvbSBpbnB1dCAlcywgc29tZSBvdXRwdXQgYXhlcyBhcmUgbm90IGluIHRoZSB2YXJpYWJsZS1mb250OiAlcyIsCiAgICAgICAgICAgICAgICBtYXBwaW5nLmlucHV0TG9jYXRpb24sCiAgICAgICAgICAgICAgICBtYXBwaW5nLm91dHB1dExvY2F0aW9uLAogICAgICAgICAgICApCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIG1hcHBpbmdBeGVzID0gc2V0KCkKICAgICAgICBtYXBwaW5nQXhlcy51cGRhdGUobWFwcGluZy5pbnB1dExvY2F0aW9uLmtleXMoKSkKICAgICAgICBtYXBwaW5nQXhlcy51cGRhdGUobWFwcGluZy5vdXRwdXRMb2NhdGlvbi5rZXlzKCkpCiAgICAgICAgZm9yIGF4aXMgaW4gZG9jLmF4ZXM6CiAgICAgICAgICAgIGlmIGF4aXMubmFtZSBub3QgaW4gbWFwcGluZ0F4ZXM6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICByYW5nZSA9IHVzZXJSZWdpb25bYXhpcy5uYW1lXQogICAgICAgICAgICBpZiAoCiAgICAgICAgICAgICAgICByYW5nZS5taW5pbXVtICE9IGF4aXMubWluaW11bQogICAgICAgICAgICAgICAgb3IgKHJhbmdlLmRlZmF1bHQgaXMgbm90IE5vbmUgYW5kIHJhbmdlLmRlZmF1bHQgIT0gYXhpcy5kZWZhdWx0KQogICAgICAgICAgICAgICAgb3IgcmFuZ2UubWF4aW11bSAhPSBheGlzLm1heGltdW0KICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIExPR0dFUi5lcnJvcigKICAgICAgICAgICAgICAgICAgICAiTGltaXRpbmcgYXhpcyByYW5nZXMgdXNlZCBpbiA8bWFwcGluZz4gZWxlbWVudHMgbm90IHN1cHBvcnRlZDogJXMiLAogICAgICAgICAgICAgICAgICAgIGF4aXMubmFtZSwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIG1hcHBpbmdzLmFwcGVuZCgKICAgICAgICAgICAgQXhpc01hcHBpbmdEZXNjcmlwdG9yKAogICAgICAgICAgICAgICAgaW5wdXRMb2NhdGlvbj1tYXBwaW5nLmlucHV0TG9jYXRpb24sCiAgICAgICAgICAgICAgICBvdXRwdXRMb2NhdGlvbj1tYXBwaW5nLm91dHB1dExvY2F0aW9uLAogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICMgRG9uJ3QgaW5jbHVkZSBTVEFUIGluZm8KICAgICMgc3ViRG9jLmxvY2F0aW9uTGFiZWxzID0gZG9jLmxvY2F0aW9uTGFiZWxzCgogICAgIyBSdWxlczogc3Vic2V0IHRoZW0gYmFzZWQgb24gY29uZGl0aW9ucwogICAgZGVzaWduUmVnaW9uID0gdXNlclJlZ2lvblRvRGVzaWduUmVnaW9uKGRvYywgdXNlclJlZ2lvbikKICAgIHN1YkRvYy5ydWxlcyA9IF9zdWJzZXRSdWxlc0Jhc2VkT25Db25kaXRpb25zKGRvYy5ydWxlcywgZGVzaWduUmVnaW9uKQogICAgc3ViRG9jLnJ1bGVzUHJvY2Vzc2luZ0xhc3QgPSBkb2MucnVsZXNQcm9jZXNzaW5nTGFzdAoKICAgICMgU291cmNlczoga2VlcCBvbmx5IHRoZSBvbmVzIHRoYXQgZmFsbCB3aXRoaW4gdGhlIGtlcHQgYXhpcyByYW5nZXMKICAgIGZvciBzb3VyY2UgaW4gZG9jLnNvdXJjZXM6CiAgICAgICAgaWYgbm90IGxvY2F0aW9uSW5SZWdpb24oZG9jLm1hcF9iYWNrd2FyZChzb3VyY2UuZGVzaWduTG9jYXRpb24pLCB1c2VyUmVnaW9uKToKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgc3ViRG9jLmFkZFNvdXJjZSgKICAgICAgICAgICAgU291cmNlRGVzY3JpcHRvcigKICAgICAgICAgICAgICAgIGZpbGVuYW1lPXNvdXJjZS5maWxlbmFtZSwKICAgICAgICAgICAgICAgIHBhdGg9c291cmNlLnBhdGgsCiAgICAgICAgICAgICAgICBmb250PXNvdXJjZS5mb250LAogICAgICAgICAgICAgICAgbmFtZT1zb3VyY2UubmFtZSwKICAgICAgICAgICAgICAgIGRlc2lnbkxvY2F0aW9uPV9maWx0ZXJMb2NhdGlvbigKICAgICAgICAgICAgICAgICAgICB1c2VyUmVnaW9uLCBtYXliZUV4cGFuZERlc2lnbkxvY2F0aW9uKHNvdXJjZSkKICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICBsYXllck5hbWU9c291cmNlLmxheWVyTmFtZSwKICAgICAgICAgICAgICAgIGZhbWlseU5hbWU9c291cmNlLmZhbWlseU5hbWUsCiAgICAgICAgICAgICAgICBzdHlsZU5hbWU9c291cmNlLnN0eWxlTmFtZSwKICAgICAgICAgICAgICAgIG11dGVLZXJuaW5nPXNvdXJjZS5tdXRlS2VybmluZywKICAgICAgICAgICAgICAgIG11dGVJbmZvPXNvdXJjZS5tdXRlSW5mbywKICAgICAgICAgICAgICAgIG11dGVkR2x5cGhOYW1lcz1zb3VyY2UubXV0ZWRHbHlwaE5hbWVzLAogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICMgQ29weSBmYW1pbHkgbmFtZSB0cmFuc2xhdGlvbnMgZnJvbSB0aGUgb2xkIGRlZmF1bHQgc291cmNlIHRvIHRoZSBuZXcgZGVmYXVsdAogICAgdmZEZWZhdWx0ID0gc3ViRG9jLmZpbmREZWZhdWx0KCkKICAgIG9sZERlZmF1bHQgPSBkb2MuZmluZERlZmF1bHQoKQogICAgaWYgdmZEZWZhdWx0IGlzIG5vdCBOb25lIGFuZCBvbGREZWZhdWx0IGlzIG5vdCBOb25lOgogICAgICAgIHZmRGVmYXVsdC5sb2NhbGlzZWRGYW1pbHlOYW1lID0gb2xkRGVmYXVsdC5sb2NhbGlzZWRGYW1pbHlOYW1lCgogICAgIyBWYXJpYWJsZSBmb250czoga2VlcCBvbmx5IHRoZSBvbmVzIHRoYXQgZmFsbCB3aXRoaW4gdGhlIGtlcHQgYXhpcyByYW5nZXMKICAgIGlmIGtlZXBWRnM6CiAgICAgICAgIyBOb3RlOiBjYWxsIGdldFZhcmlhYmxlRm9udCgpIHRvIG1ha2UgdGhlIGltcGxpY2l0IFZGcyBleHBsaWNpdAogICAgICAgIGZvciB2ZiBpbiBkb2MuZ2V0VmFyaWFibGVGb250cygpOgogICAgICAgICAgICB2ZlVzZXJSZWdpb24gPSBnZXRWRlVzZXJSZWdpb24oZG9jLCB2ZikKICAgICAgICAgICAgaWYgcmVnaW9uSW5SZWdpb24odmZVc2VyUmVnaW9uLCB1c2VyUmVnaW9uKToKICAgICAgICAgICAgICAgIHN1YkRvYy5hZGRWYXJpYWJsZUZvbnQoCiAgICAgICAgICAgICAgICAgICAgVmFyaWFibGVGb250RGVzY3JpcHRvcigKICAgICAgICAgICAgICAgICAgICAgICAgbmFtZT12Zi5uYW1lLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxlbmFtZT12Zi5maWxlbmFtZSwKICAgICAgICAgICAgICAgICAgICAgICAgYXhpc1N1YnNldHM9WwogICAgICAgICAgICAgICAgICAgICAgICAgICAgYXhpc1N1YnNldAogICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9yIGF4aXNTdWJzZXQgaW4gdmYuYXhpc1N1YnNldHMKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UodXNlclJlZ2lvbltheGlzU3Vic2V0Lm5hbWVdLCBSYW5nZSkKICAgICAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICAgICAgICAgbGliPXZmLmxpYiwKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICApCgogICAgIyBJbnN0YW5jZXM6IHNhbWUgYXMgU291cmNlcyArIGNvbXB1dGUgbWlzc2luZyBuYW1lcwogICAgZm9yIGluc3RhbmNlIGluIGRvYy5pbnN0YW5jZXM6CiAgICAgICAgaWYgbm90IGxvY2F0aW9uSW5SZWdpb24oaW5zdGFuY2UuZ2V0RnVsbFVzZXJMb2NhdGlvbihkb2MpLCB1c2VyUmVnaW9uKToKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgaWYgbWFrZU5hbWVzOgogICAgICAgICAgICBzdGF0TmFtZXMgPSBnZXRTdGF0TmFtZXMoZG9jLCBpbnN0YW5jZS5nZXRGdWxsVXNlckxvY2F0aW9uKGRvYykpCiAgICAgICAgICAgICMgTmFtZXMgc2V0IGV4cGxpY2l0bHkgb24gdGhlIGluc3RhbmNlIHRha2UgcHJlY2VkZW5jZSBvdmVyIHRoZQogICAgICAgICAgICAjIG9uZXMgY29tcHV0ZWQgZnJvbSB0aGUgU1RBVCBsYWJlbHMsIGluIGV2ZXJ5IGxhbmd1YWdlOiB0aGUKICAgICAgICAgICAgIyBsb2NhbGlzZWQgU1RBVCBuYW1lcyBvbmx5IGFwcGx5IHdoZW4gdGhleSB0cmFuc2xhdGUgdGhlIEVuZ2xpc2gKICAgICAgICAgICAgIyBuYW1lIHRoYXQgaXMgYWN0dWFsbHkgdXNlZCwgYW5kIGEgUG9zdFNjcmlwdCBuYW1lIGlzIG9ubHkgbWFkZQogICAgICAgICAgICAjIHVwIGZvciBhbiBpbnN0YW5jZSB0aGF0IGhhcyBubyBzdHlsZSBuYW1lIG9mIGl0cyBvd24uCiAgICAgICAgICAgIGZhbWlseU5hbWUgPSBpbnN0YW5jZS5mYW1pbHlOYW1lIG9yIHN0YXROYW1lcy5mYW1pbHlOYW1lcy5nZXQoImVuIikKICAgICAgICAgICAgc3R5bGVOYW1lID0gaW5zdGFuY2Uuc3R5bGVOYW1lIG9yIHN0YXROYW1lcy5zdHlsZU5hbWVzLmdldCgiZW4iKQogICAgICAgICAgICBsb2NhbGlzZWRGYW1pbHlOYW1lID0gaW5zdGFuY2UubG9jYWxpc2VkRmFtaWx5TmFtZSBvciBfbG9jYWxpc2VkTmFtZXMoCiAgICAgICAgICAgICAgICBzdGF0TmFtZXMuZmFtaWx5TmFtZXMsIGZhbWlseU5hbWUKICAgICAgICAgICAgKQogICAgICAgICAgICBsb2NhbGlzZWRTdHlsZU5hbWUgPSBpbnN0YW5jZS5sb2NhbGlzZWRTdHlsZU5hbWUgb3IgX2xvY2FsaXNlZE5hbWVzKAogICAgICAgICAgICAgICAgc3RhdE5hbWVzLnN0eWxlTmFtZXMsIHN0eWxlTmFtZQogICAgICAgICAgICApCiAgICAgICAgICAgIHBvc3RTY3JpcHRGb250TmFtZSA9IGluc3RhbmNlLnBvc3RTY3JpcHRGb250TmFtZQogICAgICAgICAgICBpZiBwb3N0U2NyaXB0Rm9udE5hbWUgaXMgTm9uZSBhbmQgbm90ICgKICAgICAgICAgICAgICAgIGluc3RhbmNlLnN0eWxlTmFtZSBvciBpbnN0YW5jZS5sb2NhbGlzZWRTdHlsZU5hbWUKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIHBvc3RTY3JpcHRGb250TmFtZSA9IHN0YXROYW1lcy5wb3N0U2NyaXB0Rm9udE5hbWUKICAgICAgICAgICAgc3ViRG9jLmFkZEluc3RhbmNlKAogICAgICAgICAgICAgICAgSW5zdGFuY2VEZXNjcmlwdG9yKAogICAgICAgICAgICAgICAgICAgIGZpbGVuYW1lPWluc3RhbmNlLmZpbGVuYW1lCiAgICAgICAgICAgICAgICAgICAgb3IgbWFrZUluc3RhbmNlRmlsZW5hbWUoZG9jLCBpbnN0YW5jZSwgc3RhdE5hbWVzKSwKICAgICAgICAgICAgICAgICAgICBwYXRoPWluc3RhbmNlLnBhdGgsCiAgICAgICAgICAgICAgICAgICAgZm9udD1pbnN0YW5jZS5mb250LAogICAgICAgICAgICAgICAgICAgIG5hbWU9aW5zdGFuY2UubmFtZSBvciBmIntmYW1pbHlOYW1lfSB7c3R5bGVOYW1lfSIsCiAgICAgICAgICAgICAgICAgICAgdXNlckxvY2F0aW9uPXt9IGlmIGV4cGFuZExvY2F0aW9ucyBlbHNlIGluc3RhbmNlLnVzZXJMb2NhdGlvbiwKICAgICAgICAgICAgICAgICAgICBkZXNpZ25Mb2NhdGlvbj1fZmlsdGVyTG9jYXRpb24oCiAgICAgICAgICAgICAgICAgICAgICAgIHVzZXJSZWdpb24sIG1heWJlRXhwYW5kRGVzaWduTG9jYXRpb24oaW5zdGFuY2UpCiAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICBmYW1pbHlOYW1lPWZhbWlseU5hbWUsCiAgICAgICAgICAgICAgICAgICAgc3R5bGVOYW1lPXN0eWxlTmFtZSwKICAgICAgICAgICAgICAgICAgICBwb3N0U2NyaXB0Rm9udE5hbWU9cG9zdFNjcmlwdEZvbnROYW1lLAogICAgICAgICAgICAgICAgICAgIHN0eWxlTWFwRmFtaWx5TmFtZT1pbnN0YW5jZS5zdHlsZU1hcEZhbWlseU5hbWUKICAgICAgICAgICAgICAgICAgICBvciBzdGF0TmFtZXMuc3R5bGVNYXBGYW1pbHlOYW1lcy5nZXQoImVuIiksCiAgICAgICAgICAgICAgICAgICAgc3R5bGVNYXBTdHlsZU5hbWU9aW5zdGFuY2Uuc3R5bGVNYXBTdHlsZU5hbWUKICAgICAgICAgICAgICAgICAgICBvciBzdGF0TmFtZXMuc3R5bGVNYXBTdHlsZU5hbWUsCiAgICAgICAgICAgICAgICAgICAgbG9jYWxpc2VkRmFtaWx5TmFtZT1sb2NhbGlzZWRGYW1pbHlOYW1lLAogICAgICAgICAgICAgICAgICAgIGxvY2FsaXNlZFN0eWxlTmFtZT1sb2NhbGlzZWRTdHlsZU5hbWUsCiAgICAgICAgICAgICAgICAgICAgbG9jYWxpc2VkU3R5bGVNYXBGYW1pbHlOYW1lPWluc3RhbmNlLmxvY2FsaXNlZFN0eWxlTWFwRmFtaWx5TmFtZQogICAgICAgICAgICAgICAgICAgIG9yIHN0YXROYW1lcy5zdHlsZU1hcEZhbWlseU5hbWVzLAogICAgICAgICAgICAgICAgICAgIGxvY2FsaXNlZFN0eWxlTWFwU3R5bGVOYW1lPWluc3RhbmNlLmxvY2FsaXNlZFN0eWxlTWFwU3R5bGVOYW1lCiAgICAgICAgICAgICAgICAgICAgb3Ige30sCiAgICAgICAgICAgICAgICAgICAgbGliPWluc3RhbmNlLmxpYiwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHN1YkRvYy5hZGRJbnN0YW5jZSgKICAgICAgICAgICAgICAgIEluc3RhbmNlRGVzY3JpcHRvcigKICAgICAgICAgICAgICAgICAgICBmaWxlbmFtZT1pbnN0YW5jZS5maWxlbmFtZSwKICAgICAgICAgICAgICAgICAgICBwYXRoPWluc3RhbmNlLnBhdGgsCiAgICAgICAgICAgICAgICAgICAgZm9udD1pbnN0YW5jZS5mb250LAogICAgICAgICAgICAgICAgICAgIG5hbWU9aW5zdGFuY2UubmFtZSwKICAgICAgICAgICAgICAgICAgICB1c2VyTG9jYXRpb249e30gaWYgZXhwYW5kTG9jYXRpb25zIGVsc2UgaW5zdGFuY2UudXNlckxvY2F0aW9uLAogICAgICAgICAgICAgICAgICAgIGRlc2lnbkxvY2F0aW9uPV9maWx0ZXJMb2NhdGlvbigKICAgICAgICAgICAgICAgICAgICAgICAgdXNlclJlZ2lvbiwgbWF5YmVFeHBhbmREZXNpZ25Mb2NhdGlvbihpbnN0YW5jZSkKICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgIGZhbWlseU5hbWU9aW5zdGFuY2UuZmFtaWx5TmFtZSwKICAgICAgICAgICAgICAgICAgICBzdHlsZU5hbWU9aW5zdGFuY2Uuc3R5bGVOYW1lLAogICAgICAgICAgICAgICAgICAgIHBvc3RTY3JpcHRGb250TmFtZT1pbnN0YW5jZS5wb3N0U2NyaXB0Rm9udE5hbWUsCiAgICAgICAgICAgICAgICAgICAgc3R5bGVNYXBGYW1pbHlOYW1lPWluc3RhbmNlLnN0eWxlTWFwRmFtaWx5TmFtZSwKICAgICAgICAgICAgICAgICAgICBzdHlsZU1hcFN0eWxlTmFtZT1pbnN0YW5jZS5zdHlsZU1hcFN0eWxlTmFtZSwKICAgICAgICAgICAgICAgICAgICBsb2NhbGlzZWRGYW1pbHlOYW1lPWluc3RhbmNlLmxvY2FsaXNlZEZhbWlseU5hbWUsCiAgICAgICAgICAgICAgICAgICAgbG9jYWxpc2VkU3R5bGVOYW1lPWluc3RhbmNlLmxvY2FsaXNlZFN0eWxlTmFtZSwKICAgICAgICAgICAgICAgICAgICBsb2NhbGlzZWRTdHlsZU1hcEZhbWlseU5hbWU9aW5zdGFuY2UubG9jYWxpc2VkU3R5bGVNYXBGYW1pbHlOYW1lLAogICAgICAgICAgICAgICAgICAgIGxvY2FsaXNlZFN0eWxlTWFwU3R5bGVOYW1lPWluc3RhbmNlLmxvY2FsaXNlZFN0eWxlTWFwU3R5bGVOYW1lLAogICAgICAgICAgICAgICAgICAgIGxpYj1pbnN0YW5jZS5saWIsCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICkKCiAgICBzdWJEb2MubGliID0gZG9jLmxpYgoKICAgIHJldHVybiBzdWJEb2MKCgpkZWYgX2NvbmRpdGlvblNldEZyb20oY29uZGl0aW9uU2V0OiBMaXN0W0RpY3Rbc3RyLCBBbnldXSkgLT4gQ29uZGl0aW9uU2V0OgogICAgYzogRGljdFtzdHIsIFJhbmdlXSA9IHt9CiAgICBmb3IgY29uZGl0aW9uIGluIGNvbmRpdGlvblNldDoKICAgICAgICBtaW5pbXVtLCBtYXhpbXVtID0gY29uZGl0aW9uLmdldCgibWluaW11bSIpLCBjb25kaXRpb24uZ2V0KCJtYXhpbXVtIikKICAgICAgICBjW2NvbmRpdGlvblsibmFtZSJdXSA9IFJhbmdlKAogICAgICAgICAgICBtaW5pbXVtIGlmIG1pbmltdW0gaXMgbm90IE5vbmUgZWxzZSAtbWF0aC5pbmYsCiAgICAgICAgICAgIG1heGltdW0gaWYgbWF4aW11bSBpcyBub3QgTm9uZSBlbHNlIG1hdGguaW5mLAogICAgICAgICkKICAgIHJldHVybiBjCgoKZGVmIF9zdWJzZXRSdWxlc0Jhc2VkT25Db25kaXRpb25zKAogICAgcnVsZXM6IExpc3RbUnVsZURlc2NyaXB0b3JdLCBkZXNpZ25SZWdpb246IFJlZ2lvbgopIC0+IExpc3RbUnVsZURlc2NyaXB0b3JdOgogICAgIyBXaGF0IHJ1bGVzIHRvIGtlZXA6CiAgICAjICAtIEtlZXAgdGhlIHJ1bGUgaWYgYW55IGNvbmRpdGlvbnNldCBpcyByZWxldmFudC4KICAgICMgIC0gQSBjb25kaXRpb25zZXQgaXMgcmVsZXZhbnQgaWYgYWxsIGNvbmRpdGlvbnMgYXJlIHJlbGV2YW50IG9yIGl0IGlzIGVtcHR5LgogICAgIyAgLSBBIGNvbmRpdGlvbiBpcyByZWxldmFudCBpZgogICAgIyAgICAtIGF4aXMgaXMgcG9pbnQgKEMtQVApLAogICAgIyAgICAgICAtIGFuZCBwb2ludCBpbiBjb25kaXRpb24ncyByYW5nZSAoQy1BUC1pbikKICAgICMgICAgICAgICAgICAoaW4gdGhpcyBjYXNlIHJlbW92ZSB0aGUgY29uZGl0aW9uIGJlY2F1c2UgaXQncyBhbHdheXMgdHJ1ZSkKICAgICMgICAgICAgLSBlbHNlIChDLUFQLW91dCkgd2hvbGUgY29uZGl0aW9uc2V0IGNhbiBiZSBkaXNjYXJkZWQgKGNvbmRpdGlvbiBmYWxzZQogICAgIyAgICAgICAgID0+IGNvbmRpdGlvbnNldCBmYWxzZSkKICAgICMgICAgLSBheGlzIGlzIHJhbmdlIChDLUFSKSwKICAgICMgICAgICAgLSAoQy1BUi1hbGwpIGFuZCBheGlzIHJhbmdlIGZ1bGx5IGNvbnRhaW5lZCBpbiBjb25kaXRpb24gcmFuZ2U6IHdlIGNhbgogICAgIyAgICAgICAgIHNjcmFwIHRoZSBjb25kaXRpb24gYmVjYXVzZSBpdCdzIGFsd2F5cyB0cnVlCiAgICAjICAgICAgIC0gKEMtQVItaW50ZXIpIGFuZCBpbnRlcnNlY3Rpb24oYXhpcyByYW5nZSwgY29uZGl0aW9uIHJhbmdlKSBub3QgZW1wdHk6CiAgICAjICAgICAgICAga2VlcCB0aGUgY29uZGl0aW9uIHdpdGggdGhlIHNtYWxsZXIgcmFuZ2UgKD0gaW50ZXJzZWN0aW9uKQogICAgIyAgICAgICAtIChDLUFSLW5vbmUpIGVsc2UsIHdob2xlIGNvbmRpdGlvbnNldCBjYW4gYmUgZGlzY2FyZGVkCiAgICBuZXdSdWxlczogTGlzdFtSdWxlRGVzY3JpcHRvcl0gPSBbXQogICAgZm9yIHJ1bGUgaW4gcnVsZXM6CiAgICAgICAgbmV3UnVsZTogUnVsZURlc2NyaXB0b3IgPSBSdWxlRGVzY3JpcHRvcigKICAgICAgICAgICAgbmFtZT1ydWxlLm5hbWUsIGNvbmRpdGlvblNldHM9W10sIHN1YnM9cnVsZS5zdWJzCiAgICAgICAgKQogICAgICAgIGZvciBjb25kaXRpb25zZXQgaW4gcnVsZS5jb25kaXRpb25TZXRzOgogICAgICAgICAgICBjcyA9IF9jb25kaXRpb25TZXRGcm9tKGNvbmRpdGlvbnNldCkKICAgICAgICAgICAgbmV3Q29uZGl0aW9uc2V0OiBMaXN0W0RpY3Rbc3RyLCBBbnldXSA9IFtdCiAgICAgICAgICAgIGRpc2NhcmRDb25kaXRpb25zZXQgPSBGYWxzZQogICAgICAgICAgICBmb3Igc2VsZWN0aW9uTmFtZSwgc2VsZWN0aW9uVmFsdWUgaW4gZGVzaWduUmVnaW9uLml0ZW1zKCk6CiAgICAgICAgICAgICAgICAjIFRPRE86IEVuc3VyZSB0aGF0IGFsbChrZXkgaW4gY29uZGl0aW9uc2V0IGZvciBrZXkgaW4gcmVnaW9uLmtleXMoKSk/CiAgICAgICAgICAgICAgICBpZiBzZWxlY3Rpb25OYW1lIG5vdCBpbiBjczoKICAgICAgICAgICAgICAgICAgICAjIHJhaXNlIEV4Y2VwdGlvbigiU2VsZWN0aW9uIGhhcyBkaWZmZXJlbnQgYXhlcyB0aGFuIHRoZSBydWxlcyIpCiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2Uoc2VsZWN0aW9uVmFsdWUsIChmbG9hdCwgaW50KSk6ICAjIGlzIHBvaW50CiAgICAgICAgICAgICAgICAgICAgIyBDYXNlIEMtQVAtaW4KICAgICAgICAgICAgICAgICAgICBpZiBzZWxlY3Rpb25WYWx1ZSBpbiBjc1tzZWxlY3Rpb25OYW1lXToKICAgICAgICAgICAgICAgICAgICAgICAgcGFzcyAgIyBhbHdheXMgbWF0Y2hlcywgY29uZGl0aW9uc2V0IGNhbiBzdGF5IGVtcHR5IGZvciB0aGlzIG9uZS4KICAgICAgICAgICAgICAgICAgICAjIENhc2UgQy1BUC1vdXQKICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICBkaXNjYXJkQ29uZGl0aW9uc2V0ID0gVHJ1ZQogICAgICAgICAgICAgICAgZWxzZTogICMgaXMgcmFuZ2UKICAgICAgICAgICAgICAgICAgICAjIENhc2UgQy1BUi1hbGwKICAgICAgICAgICAgICAgICAgICBpZiBzZWxlY3Rpb25WYWx1ZSBpbiBjc1tzZWxlY3Rpb25OYW1lXToKICAgICAgICAgICAgICAgICAgICAgICAgcGFzcyAgIyBhbHdheXMgbWF0Y2hlcywgY29uZGl0aW9uc2V0IGNhbiBzdGF5IGVtcHR5IGZvciB0aGlzIG9uZS4KICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICBpbnRlcnNlY3Rpb24gPSBjc1tzZWxlY3Rpb25OYW1lXS5pbnRlcnNlY3Rpb24oc2VsZWN0aW9uVmFsdWUpCiAgICAgICAgICAgICAgICAgICAgICAgICMgQ2FzZSBDLUFSLWludGVyCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGludGVyc2VjdGlvbiBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5ld0NvbmRpdGlvbnNldC5hcHBlbmQoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAibmFtZSI6IHNlbGVjdGlvbk5hbWUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtaW5pbXVtIjogaW50ZXJzZWN0aW9uLm1pbmltdW0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJtYXhpbXVtIjogaW50ZXJzZWN0aW9uLm1heGltdW0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgICAgICAgICAjIENhc2UgQy1BUi1ub25lCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkaXNjYXJkQ29uZGl0aW9uc2V0ID0gVHJ1ZQogICAgICAgICAgICBpZiBub3QgZGlzY2FyZENvbmRpdGlvbnNldDoKICAgICAgICAgICAgICAgIG5ld1J1bGUuY29uZGl0aW9uU2V0cy5hcHBlbmQobmV3Q29uZGl0aW9uc2V0KQogICAgICAgIGlmIG5ld1J1bGUuY29uZGl0aW9uU2V0czoKICAgICAgICAgICAgbmV3UnVsZXMuYXBwZW5kKG5ld1J1bGUpCgogICAgcmV0dXJuIG5ld1J1bGVzCgoKZGVmIF9maWx0ZXJMb2NhdGlvbigKICAgIHVzZXJSZWdpb246IFJlZ2lvbiwKICAgIGxvY2F0aW9uOiBEaWN0W3N0ciwgZmxvYXRdLAopIC0+IERpY3Rbc3RyLCBmbG9hdF06CiAgICByZXR1cm4gewogICAgICAgIG5hbWU6IHZhbHVlCiAgICAgICAgZm9yIG5hbWUsIHZhbHVlIGluIGxvY2F0aW9uLml0ZW1zKCkKICAgICAgICBpZiBuYW1lIGluIHVzZXJSZWdpb24gYW5kIGlzaW5zdGFuY2UodXNlclJlZ2lvbltuYW1lXSwgUmFuZ2UpCiAgICB9Cg==
+"""Allows building all the variable fonts of a DesignSpace version 5 by
+splitting the document into interpolable sub-space, then into each VF.
+"""
+
+from __future__ import annotations
+
+import itertools
+import logging
+import math
+from typing import Any, Callable, Dict, Iterator, List, Optional, Tuple, cast
+
+from fontTools.designspaceLib import (
+    AxisDescriptor,
+    AxisMappingDescriptor,
+    DesignSpaceDocument,
+    DiscreteAxisDescriptor,
+    InstanceDescriptor,
+    RuleDescriptor,
+    SimpleLocationDict,
+    SourceDescriptor,
+    VariableFontDescriptor,
+)
+from fontTools.designspaceLib.statNames import StatNames, getStatNames
+from fontTools.designspaceLib.types import (
+    ConditionSet,
+    Range,
+    Region,
+    getVFUserRegion,
+    locationInRegion,
+    regionInRegion,
+    userRegionToDesignRegion,
+)
+
+LOGGER = logging.getLogger(__name__)
+
+MakeInstanceFilenameCallable = Callable[
+    [DesignSpaceDocument, InstanceDescriptor, StatNames], str
+]
+
+
+def defaultMakeInstanceFilename(
+    doc: DesignSpaceDocument, instance: InstanceDescriptor, statNames: StatNames
+) -> str:
+    """Default callable to synthesize an instance filename
+    when makeNames=True, for instances that don't specify an instance name
+    in the designspace. This part of the name generation can be overriden
+    because it's not specified by the STAT table.
+    """
+    familyName = instance.familyName or statNames.familyNames.get("en")
+    styleName = instance.styleName or statNames.styleNames.get("en")
+    return f"{familyName}-{styleName}.ttf"
+
+
+def _localisedNames(statNames: Dict[str, str], name: Optional[str]) -> Dict[str, str]:
+    """Return the localised STAT names if they translate ``name``, else nothing."""
+    return statNames if statNames.get("en") == name else {}
+
+
+def _warnOutOfAxes(doc: DesignSpaceDocument) -> None:
+    docUserRegion = {
+        axis.name: (
+            tuple(axis.values)
+            if hasattr(axis, "values")
+            else Range(axis.minimum, axis.maximum, axis.default)
+        )
+        for axis in doc.axes
+    }
+    for source in doc.sources:
+        sourceUserLocation = doc.map_backward(source.designLocation)
+        if not locationInRegion(sourceUserLocation, docUserRegion):
+            LOGGER.warning(
+                "Source '%s' has location outside the document's axes, dropping: %s",
+                source.name or source.filename or "<unnamed source>",
+                sourceUserLocation,
+            )
+    for instance in doc.instances:
+        instanceUserLocation = instance.getFullUserLocation(doc)
+        if not locationInRegion(instanceUserLocation, docUserRegion):
+            LOGGER.warning(
+                "Instance '%s' has location outside the document's axes, dropping: %s",
+                instance.name
+                or instance.filename
+                or f"{instance.familyName or ''} {instance.styleName or ''}".strip()
+                or "<unnamed instance>",
+                instanceUserLocation,
+            )
+
+
+def splitInterpolable(
+    doc: DesignSpaceDocument,
+    makeNames: bool = True,
+    expandLocations: bool = True,
+    makeInstanceFilename: MakeInstanceFilenameCallable = defaultMakeInstanceFilename,
+) -> Iterator[Tuple[SimpleLocationDict, DesignSpaceDocument]]:
+    """Split the given DS5 into several interpolable sub-designspaces.
+    There are as many interpolable sub-spaces as there are combinations of
+    discrete axis values.
+
+    E.g. with axes:
+        - italic (discrete) Upright or Italic
+        - style (discrete) Sans or Serif
+        - weight (continuous) 100 to 900
+
+    There are 4 sub-spaces in which the Weight axis should interpolate:
+    (Upright, Sans), (Upright, Serif), (Italic, Sans) and (Italic, Serif).
+
+    The sub-designspaces still include the full axis definitions and STAT data,
+    but the rules, sources, variable fonts, instances are trimmed down to only
+    keep what falls within the interpolable sub-space.
+
+    Args:
+      - ``makeNames``: Whether to compute the instance family and style
+        names using the STAT data.
+      - ``expandLocations``: Whether to turn all locations into "full"
+        locations, including implicit default axis values where missing.
+      - ``makeInstanceFilename``: Callable to synthesize an instance filename
+        when makeNames=True, for instances that don't specify an instance name
+        in the designspace. This part of the name generation can be overridden
+        because it's not specified by the STAT table.
+
+    .. versionadded:: 5.0
+    """
+    _warnOutOfAxes(doc)
+    discreteAxes = []
+    interpolableUserRegion: Region = {}
+    for axis in doc.axes:
+        if hasattr(axis, "values"):
+            # Mypy doesn't support narrowing union types via hasattr()
+            # TODO(Python 3.10): use TypeGuard
+            # https://mypy.readthedocs.io/en/stable/type_narrowing.html
+            axis = cast(DiscreteAxisDescriptor, axis)
+            discreteAxes.append(axis)
+        else:
+            axis = cast(AxisDescriptor, axis)
+            interpolableUserRegion[axis.name] = Range(
+                axis.minimum,
+                axis.maximum,
+                axis.default,
+            )
+    valueCombinations = itertools.product(*[axis.values for axis in discreteAxes])
+    for values in valueCombinations:
+        discreteUserLocation = {
+            discreteAxis.name: value
+            for discreteAxis, value in zip(discreteAxes, values)
+        }
+        subDoc = _extractSubSpace(
+            doc,
+            {**interpolableUserRegion, **discreteUserLocation},
+            keepVFs=True,
+            makeNames=makeNames,
+            expandLocations=expandLocations,
+            makeInstanceFilename=makeInstanceFilename,
+        )
+        yield discreteUserLocation, subDoc
+
+
+def splitVariableFonts(
+    doc: DesignSpaceDocument,
+    makeNames: bool = False,
+    expandLocations: bool = False,
+    makeInstanceFilename: MakeInstanceFilenameCallable = defaultMakeInstanceFilename,
+) -> Iterator[Tuple[str, DesignSpaceDocument]]:
+    """Convert each variable font listed in this document into a standalone
+    designspace. This can be used to compile all the variable fonts from a
+    format 5 designspace using tools that can only deal with 1 VF at a time.
+
+    Args:
+      - ``makeNames``: Whether to compute the instance family and style
+        names using the STAT data.
+      - ``expandLocations``: Whether to turn all locations into "full"
+        locations, including implicit default axis values where missing.
+      - ``makeInstanceFilename``: Callable to synthesize an instance filename
+        when makeNames=True, for instances that don't specify an instance name
+        in the designspace. This part of the name generation can be overridden
+        because it's not specified by the STAT table.
+
+    .. versionadded:: 5.0
+    """
+    _warnOutOfAxes(doc)
+    # Make one DesignspaceDoc v5 for each variable font
+    for vf in doc.getVariableFonts():
+        vfUserRegion = getVFUserRegion(doc, vf)
+        vfDoc = _extractSubSpace(
+            doc,
+            vfUserRegion,
+            keepVFs=False,
+            makeNames=makeNames,
+            expandLocations=expandLocations,
+            makeInstanceFilename=makeInstanceFilename,
+        )
+        vfDoc.lib = {**vfDoc.lib, **vf.lib}
+        if "public.fontInfo" in doc.lib and "public.fontInfo" in vf.lib:
+            vfDoc.lib["public.fontInfo"] = {
+                **doc.lib["public.fontInfo"],
+                **vf.lib["public.fontInfo"],
+            }
+        yield vf.name, vfDoc
+
+
+def convert5to4(
+    doc: DesignSpaceDocument,
+) -> Dict[str, DesignSpaceDocument]:
+    """Convert each variable font listed in this document into a standalone
+    format 4 designspace. This can be used to compile all the variable fonts
+    from a format 5 designspace using tools that only know about format 4.
+
+    .. versionadded:: 5.0
+    """
+    vfs = {}
+    for _location, subDoc in splitInterpolable(doc):
+        for vfName, vfDoc in splitVariableFonts(subDoc):
+            vfDoc.formatVersion = "4.1"
+            vfs[vfName] = vfDoc
+    return vfs
+
+
+def _extractSubSpace(
+    doc: DesignSpaceDocument,
+    userRegion: Region,
+    *,
+    keepVFs: bool,
+    makeNames: bool,
+    expandLocations: bool,
+    makeInstanceFilename: MakeInstanceFilenameCallable,
+) -> DesignSpaceDocument:
+    subDoc = DesignSpaceDocument()
+    # Don't include STAT info
+    # FIXME: (Jany) let's think about it. Not include = OK because the point of
+    # the splitting is to build VFs and we'll use the STAT data of the full
+    # document to generate the STAT of the VFs, so "no need" to have STAT data
+    # in sub-docs. Counterpoint: what if someone wants to split this DS for
+    # other purposes?  Maybe for that it would be useful to also subset the STAT
+    # data?
+    # subDoc.elidedFallbackName = doc.elidedFallbackName
+
+    def maybeExpandDesignLocation(object):
+        if expandLocations:
+            return object.getFullDesignLocation(doc)
+        else:
+            return object.designLocation
+
+    for axis in doc.axes:
+        range = userRegion[axis.name]
+        if isinstance(range, Range) and hasattr(axis, "minimum"):
+            # Mypy doesn't support narrowing union types via hasattr()
+            # TODO(Python 3.10): use TypeGuard
+            # https://mypy.readthedocs.io/en/stable/type_narrowing.html
+            axis = cast(AxisDescriptor, axis)
+            subDoc.addAxis(
+                AxisDescriptor(
+                    # Same info
+                    tag=axis.tag,
+                    name=axis.name,
+                    labelNames=axis.labelNames,
+                    hidden=axis.hidden,
+                    # Subset range
+                    minimum=max(range.minimum, axis.minimum),
+                    default=range.default,
+                    maximum=min(range.maximum, axis.maximum),
+                    map=[
+                        (user, design)
+                        for user, design in axis.map
+                        if range.minimum <= user <= range.maximum
+                    ],
+                    # Don't include STAT info
+                    axisOrdering=None,
+                    axisLabels=None,
+                )
+            )
+
+    subDoc.axisMappings = mappings = []
+    subDocAxes = {axis.name for axis in subDoc.axes}
+    for mapping in doc.axisMappings:
+        if not all(axis in subDocAxes for axis in mapping.inputLocation.keys()):
+            continue
+        if not all(axis in subDocAxes for axis in mapping.outputLocation.keys()):
+            LOGGER.error(
+                "In axis mapping from input %s, some output axes are not in the variable-font: %s",
+                mapping.inputLocation,
+                mapping.outputLocation,
+            )
+            continue
+
+        mappingAxes = set()
+        mappingAxes.update(mapping.inputLocation.keys())
+        mappingAxes.update(mapping.outputLocation.keys())
+        for axis in doc.axes:
+            if axis.name not in mappingAxes:
+                continue
+            range = userRegion[axis.name]
+            if (
+                range.minimum != axis.minimum
+                or (range.default is not None and range.default != axis.default)
+                or range.maximum != axis.maximum
+            ):
+                LOGGER.error(
+                    "Limiting axis ranges used in <mapping> elements not supported: %s",
+                    axis.name,
+                )
+                continue
+
+        mappings.append(
+            AxisMappingDescriptor(
+                inputLocation=mapping.inputLocation,
+                outputLocation=mapping.outputLocation,
+            )
+        )
+
+    # Don't include STAT info
+    # subDoc.locationLabels = doc.locationLabels
+
+    # Rules: subset them based on conditions
+    designRegion = userRegionToDesignRegion(doc, userRegion)
+    subDoc.rules = _subsetRulesBasedOnConditions(doc.rules, designRegion)
+    subDoc.rulesProcessingLast = doc.rulesProcessingLast
+
+    # Sources: keep only the ones that fall within the kept axis ranges
+    for source in doc.sources:
+        if not locationInRegion(doc.map_backward(source.designLocation), userRegion):
+            continue
+
+        subDoc.addSource(
+            SourceDescriptor(
+                filename=source.filename,
+                path=source.path,
+                font=source.font,
+                name=source.name,
+                designLocation=_filterLocation(
+                    userRegion, maybeExpandDesignLocation(source)
+                ),
+                layerName=source.layerName,
+                familyName=source.familyName,
+                styleName=source.styleName,
+                muteKerning=source.muteKerning,
+                muteInfo=source.muteInfo,
+                mutedGlyphNames=source.mutedGlyphNames,
+            )
+        )
+
+    # Copy family name translations from the old default source to the new default
+    vfDefault = subDoc.findDefault()
+    oldDefault = doc.findDefault()
+    if vfDefault is not None and oldDefault is not None:
+        vfDefault.localisedFamilyName = oldDefault.localisedFamilyName
+
+    # Variable fonts: keep only the ones that fall within the kept axis ranges
+    if keepVFs:
+        # Note: call getVariableFont() to make the implicit VFs explicit
+        for vf in doc.getVariableFonts():
+            vfUserRegion = getVFUserRegion(doc, vf)
+            if regionInRegion(vfUserRegion, userRegion):
+                subDoc.addVariableFont(
+                    VariableFontDescriptor(
+                        name=vf.name,
+                        filename=vf.filename,
+                        axisSubsets=[
+                            axisSubset
+                            for axisSubset in vf.axisSubsets
+                            if isinstance(userRegion[axisSubset.name], Range)
+                        ],
+                        lib=vf.lib,
+                    )
+                )
+
+    # Instances: same as Sources + compute missing names
+    for instance in doc.instances:
+        if not locationInRegion(instance.getFullUserLocation(doc), userRegion):
+            continue
+
+        if makeNames:
+            statNames = getStatNames(doc, instance.getFullUserLocation(doc))
+            # Names set explicitly on the instance take precedence over the
+            # ones computed from the STAT labels, in every language: the
+            # localised STAT names only apply when they translate the English
+            # name that is actually used, and a PostScript name is only made
+            # up for an instance that has no style name of its own.
+            familyName = instance.familyName or statNames.familyNames.get("en")
+            styleName = instance.styleName or statNames.styleNames.get("en")
+            localisedFamilyName = instance.localisedFamilyName or _localisedNames(
+                statNames.familyNames, familyName
+            )
+            localisedStyleName = instance.localisedStyleName or _localisedNames(
+                statNames.styleNames, styleName
+            )
+            postScriptFontName = instance.postScriptFontName
+            if postScriptFontName is None and not (
+                instance.styleName or instance.localisedStyleName
+            ):
+                postScriptFontName = statNames.postScriptFontName
+            subDoc.addInstance(
+                InstanceDescriptor(
+                    filename=instance.filename
+                    or makeInstanceFilename(doc, instance, statNames),
+                    path=instance.path,
+                    font=instance.font,
+                    name=instance.name or f"{familyName} {styleName}",
+                    userLocation={} if expandLocations else instance.userLocation,
+                    designLocation=_filterLocation(
+                        userRegion, maybeExpandDesignLocation(instance)
+                    ),
+                    familyName=familyName,
+                    styleName=styleName,
+                    postScriptFontName=postScriptFontName,
+                    styleMapFamilyName=instance.styleMapFamilyName
+                    or statNames.styleMapFamilyNames.get("en"),
+                    styleMapStyleName=instance.styleMapStyleName
+                    or statNames.styleMapStyleName,
+                    localisedFamilyName=localisedFamilyName,
+                    localisedStyleName=localisedStyleName,
+                    localisedStyleMapFamilyName=instance.localisedStyleMapFamilyName
+                    or statNames.styleMapFamilyNames,
+                    localisedStyleMapStyleName=instance.localisedStyleMapStyleName
+                    or {},
+                    lib=instance.lib,
+                )
+            )
+        else:
+            subDoc.addInstance(
+                InstanceDescriptor(
+                    filename=instance.filename,
+                    path=instance.path,
+                    font=instance.font,
+                    name=instance.name,
+                    userLocation={} if expandLocations else instance.userLocation,
+                    designLocation=_filterLocation(
+                        userRegion, maybeExpandDesignLocation(instance)
+                    ),
+                    familyName=instance.familyName,
+                    styleName=instance.styleName,
+                    postScriptFontName=instance.postScriptFontName,
+                    styleMapFamilyName=instance.styleMapFamilyName,
+                    styleMapStyleName=instance.styleMapStyleName,
+                    localisedFamilyName=instance.localisedFamilyName,
+                    localisedStyleName=instance.localisedStyleName,
+                    localisedStyleMapFamilyName=instance.localisedStyleMapFamilyName,
+                    localisedStyleMapStyleName=instance.localisedStyleMapStyleName,
+                    lib=instance.lib,
+                )
+            )
+
+    subDoc.lib = doc.lib
+
+    return subDoc
+
+
+def _conditionSetFrom(conditionSet: List[Dict[str, Any]]) -> ConditionSet:
+    c: Dict[str, Range] = {}
+    for condition in conditionSet:
+        minimum, maximum = condition.get("minimum"), condition.get("maximum")
+        c[condition["name"]] = Range(
+            minimum if minimum is not None else -math.inf,
+            maximum if maximum is not None else math.inf,
+        )
+    return c
+
+
+def _subsetRulesBasedOnConditions(
+    rules: List[RuleDescriptor], designRegion: Region
+) -> List[RuleDescriptor]:
+    # What rules to keep:
+    #  - Keep the rule if any conditionset is relevant.
+    #  - A conditionset is relevant if all conditions are relevant or it is empty.
+    #  - A condition is relevant if
+    #    - axis is point (C-AP),
+    #       - and point in condition's range (C-AP-in)
+    #            (in this case remove the condition because it's always true)
+    #       - else (C-AP-out) whole conditionset can be discarded (condition false
+    #         => conditionset false)
+    #    - axis is range (C-AR),
+    #       - (C-AR-all) and axis range fully contained in condition range: we can
+    #         scrap the condition because it's always true
+    #       - (C-AR-inter) and intersection(axis range, condition range) not empty:
+    #         keep the condition with the smaller range (= intersection)
+    #       - (C-AR-none) else, whole conditionset can be discarded
+    newRules: List[RuleDescriptor] = []
+    for rule in rules:
+        newRule: RuleDescriptor = RuleDescriptor(
+            name=rule.name, conditionSets=[], subs=rule.subs
+        )
+        for conditionset in rule.conditionSets:
+            cs = _conditionSetFrom(conditionset)
+            newConditionset: List[Dict[str, Any]] = []
+            discardConditionset = False
+            for selectionName, selectionValue in designRegion.items():
+                # TODO: Ensure that all(key in conditionset for key in region.keys())?
+                if selectionName not in cs:
+                    # raise Exception("Selection has different axes than the rules")
+                    continue
+                if isinstance(selectionValue, (float, int)):  # is point
+                    # Case C-AP-in
+                    if selectionValue in cs[selectionName]:
+                        pass  # always matches, conditionset can stay empty for this one.
+                    # Case C-AP-out
+                    else:
+                        discardConditionset = True
+                else:  # is range
+                    # Case C-AR-all
+                    if selectionValue in cs[selectionName]:
+                        pass  # always matches, conditionset can stay empty for this one.
+                    else:
+                        intersection = cs[selectionName].intersection(selectionValue)
+                        # Case C-AR-inter
+                        if intersection is not None:
+                            newConditionset.append(
+                                {
+                                    "name": selectionName,
+                                    "minimum": intersection.minimum,
+                                    "maximum": intersection.maximum,
+                                }
+                            )
+                        # Case C-AR-none
+                        else:
+                            discardConditionset = True
+            if not discardConditionset:
+                newRule.conditionSets.append(newConditionset)
+        if newRule.conditionSets:
+            newRules.append(newRule)
+
+    return newRules
+
+
+def _filterLocation(
+    userRegion: Region,
+    location: Dict[str, float],
+) -> Dict[str, float]:
+    return {
+        name: value
+        for name, value in location.items()
+        if name in userRegion and isinstance(userRegion[name], Range)
+    }

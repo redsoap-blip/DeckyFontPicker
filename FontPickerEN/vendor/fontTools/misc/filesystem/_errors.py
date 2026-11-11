@@ -1,1 +1,61 @@
-Y2xhc3MgRlNFcnJvcihFeGNlcHRpb24pOgogICAgcGFzcwoKCmNsYXNzIENyZWF0ZUZhaWxlZChGU0Vycm9yKToKICAgIHBhc3MKCgpjbGFzcyBGaWxlc3lzdGVtQ2xvc2VkKEZTRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIE1pc3NpbmdJbmZvTmFtZXNwYWNlKEZTRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIE5vU3lzUGF0aChGU0Vycm9yKToKICAgIHBhc3MKCgpjbGFzcyBPcGVyYXRpb25GYWlsZWQoRlNFcnJvcik6CiAgICBwYXNzCgoKY2xhc3MgSWxsZWdhbERlc3RpbmF0aW9uKE9wZXJhdGlvbkZhaWxlZCk6CiAgICBwYXNzCgoKY2xhc3MgUmVzb3VyY2VFcnJvcihGU0Vycm9yKToKICAgIHBhc3MKCgpjbGFzcyBSZXNvdXJjZU5vdEZvdW5kKFJlc291cmNlRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIERpcmVjdG9yeUV4cGVjdGVkKFJlc291cmNlRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIERpcmVjdG9yeU5vdEVtcHR5KFJlc291cmNlRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIEZpbGVFeHBlY3RlZChSZXNvdXJjZUVycm9yKToKICAgIHBhc3MKCgpjbGFzcyBEZXN0aW5hdGlvbkV4aXN0cyhSZXNvdXJjZUVycm9yKToKICAgIHBhc3MKCgpjbGFzcyBSZXNvdXJjZVJlYWRPbmx5KFJlc291cmNlRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIElsbGVnYWxCYWNrUmVmZXJlbmNlKFZhbHVlRXJyb3IpOgogICAgIyBOYW1lZCBhZnRlciBmcy5lcnJvcnMuSWxsZWdhbEJhY2tSZWZlcmVuY2UgKHdoaWNoIGlzIGFsc28gYSBWYWx1ZUVycm9yIGFuZAogICAgIyBub3QgYW4gRlNFcnJvcikgc28gdGhhdCBjb2RlIGNhdGNoaW5nIHRoZSB1cHN0cmVhbSBlcnJvciBrZWVwcyB3b3JraW5nLgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHBhdGgpOgogICAgICAgIHN1cGVyKCkuX19pbml0X18oZiJwYXRoIHtwYXRoIXJ9IHJlc29sdmVzIG91dHNpZGUgb2YgdGhlIGZpbGVzeXN0ZW0gcm9vdCIpCg==
+class FSError(Exception):
+    pass
+
+
+class CreateFailed(FSError):
+    pass
+
+
+class FilesystemClosed(FSError):
+    pass
+
+
+class MissingInfoNamespace(FSError):
+    pass
+
+
+class NoSysPath(FSError):
+    pass
+
+
+class OperationFailed(FSError):
+    pass
+
+
+class IllegalDestination(OperationFailed):
+    pass
+
+
+class ResourceError(FSError):
+    pass
+
+
+class ResourceNotFound(ResourceError):
+    pass
+
+
+class DirectoryExpected(ResourceError):
+    pass
+
+
+class DirectoryNotEmpty(ResourceError):
+    pass
+
+
+class FileExpected(ResourceError):
+    pass
+
+
+class DestinationExists(ResourceError):
+    pass
+
+
+class ResourceReadOnly(ResourceError):
+    pass
+
+
+class IllegalBackReference(ValueError):
+    # Named after fs.errors.IllegalBackReference (which is also a ValueError and
+    # not an FSError) so that code catching the upstream error keeps working.
+    def __init__(self, path):
+        super().__init__(f"path {path!r} resolves outside of the filesystem root")

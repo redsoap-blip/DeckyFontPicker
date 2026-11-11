@@ -1,1 +1,433 @@
-IyBjeXRob246IGxhbmd1YWdlX2xldmVsPTMKIyBkaXN0dXRpbHM6IGRlZmluZV9tYWNyb3M9Q1lUSE9OX1RSQUNFX05PR0lMPTEKCiMgQ29weXJpZ2h0IDIwMjMgR29vZ2xlIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIyBDb3B5cmlnaHQgMjAyMyBCZWhkYWQgRXNmYWhib2QuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuCiMKIyBMaWNlbnNlZCB1bmRlciB0aGUgQXBhY2hlIExpY2Vuc2UsIFZlcnNpb24gMi4wICh0aGUgIkxpY2Vuc2UiKTsKIyB5b3UgbWF5IG5vdCB1c2UgdGhpcyBmaWxlIGV4Y2VwdCBpbiBjb21wbGlhbmNlIHdpdGggdGhlIExpY2Vuc2UuCiMgWW91IG1heSBvYnRhaW4gYSBjb3B5IG9mIHRoZSBMaWNlbnNlIGF0CiMKIyAgICAgaHR0cDovL3d3dy5hcGFjaGUub3JnL2xpY2Vuc2VzL0xJQ0VOU0UtMi4wCiMKIyBVbmxlc3MgcmVxdWlyZWQgYnkgYXBwbGljYWJsZSBsYXcgb3IgYWdyZWVkIHRvIGluIHdyaXRpbmcsIHNvZnR3YXJlCiMgZGlzdHJpYnV0ZWQgdW5kZXIgdGhlIExpY2Vuc2UgaXMgZGlzdHJpYnV0ZWQgb24gYW4gIkFTIElTIiBCQVNJUywKIyBXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4KIyBTZWUgdGhlIExpY2Vuc2UgZm9yIHRoZSBzcGVjaWZpYyBsYW5ndWFnZSBnb3Zlcm5pbmcgcGVybWlzc2lvbnMgYW5kCiMgbGltaXRhdGlvbnMgdW5kZXIgdGhlIExpY2Vuc2UuCgp0cnk6CiAgICBpbXBvcnQgY3l0aG9uCmV4Y2VwdCAoQXR0cmlidXRlRXJyb3IsIEltcG9ydEVycm9yKToKICAgICMgaWYgY3l0aG9uIG5vdCBpbnN0YWxsZWQsIHVzZSBtb2NrIG1vZHVsZSB3aXRoIG5vLW9wIGRlY29yYXRvcnMgYW5kIHR5cGVzCiAgICBmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBjeXRob24KQ09NUElMRUQgPSBjeXRob24uY29tcGlsZWQKCmZyb20gZm9udFRvb2xzLm1pc2MuYmV6aWVyVG9vbHMgaW1wb3J0IHNwbGl0Q3ViaWNBdFRDCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IG5hbWVkdHVwbGUKaW1wb3J0IG1hdGgKZnJvbSB0eXBpbmcgaW1wb3J0ICgKICAgIExpc3QsCiAgICBTZXF1ZW5jZSwKICAgIFR1cGxlLAogICAgVW5pb24sCikKCl9fYWxsX18gPSBbInF1YWRyYXRpY190b19jdXJ2ZXMiXQoKCiMgQ29waWVkIGZyb20gY3UycXUKQGN5dGhvbi5jZnVuYwpAY3l0aG9uLnJldHVybnMoY3l0aG9uLmludCkKQGN5dGhvbi5sb2NhbHMoCiAgICB0b2xlcmFuY2U9Y3l0aG9uLmRvdWJsZSwKICAgIHAwPWN5dGhvbi5jb21wbGV4LAogICAgcDE9Y3l0aG9uLmNvbXBsZXgsCiAgICBwMj1jeXRob24uY29tcGxleCwKICAgIHAzPWN5dGhvbi5jb21wbGV4LAopCkBjeXRob24ubG9jYWxzKG1pZD1jeXRob24uY29tcGxleCwgZGVyaXYzPWN5dGhvbi5jb21wbGV4KQpkZWYgY3ViaWNfZmFydGhlc3RfZml0X2luc2lkZShwMCwgcDEsIHAyLCBwMywgdG9sZXJhbmNlKToKICAgICIiIkNoZWNrIGlmIGEgY3ViaWMgQmV6aWVyIGxpZXMgd2l0aGluIGEgZ2l2ZW4gZGlzdGFuY2Ugb2YgdGhlIG9yaWdpbi4KCiAgICAiT3JpZ2luIiBtZWFucyAqdGhlKiBvcmlnaW4gKDAsMCksIG5vdCB0aGUgc3RhcnQgb2YgdGhlIGN1cnZlLiBOb3RlIHRoYXQgbm8KICAgIGNoZWNrcyBhcmUgbWFkZSBvbiB0aGUgc3RhcnQgYW5kIGVuZCBwb3NpdGlvbnMgb2YgdGhlIGN1cnZlOyB0aGlzIGZ1bmN0aW9uCiAgICBvbmx5IGNoZWNrcyB0aGUgaW5zaWRlIG9mIHRoZSBjdXJ2ZS4KCiAgICBBcmdzOgogICAgICAgIHAwIChjb21wbGV4KTogU3RhcnQgcG9pbnQgb2YgY3VydmUuCiAgICAgICAgcDEgKGNvbXBsZXgpOiBGaXJzdCBoYW5kbGUgb2YgY3VydmUuCiAgICAgICAgcDIgKGNvbXBsZXgpOiBTZWNvbmQgaGFuZGxlIG9mIGN1cnZlLgogICAgICAgIHAzIChjb21wbGV4KTogRW5kIHBvaW50IG9mIGN1cnZlLgogICAgICAgIHRvbGVyYW5jZSAoZG91YmxlKTogRGlzdGFuY2UgZnJvbSBvcmlnaW4uCgogICAgUmV0dXJuczoKICAgICAgICBib29sOiBUcnVlIGlmIHRoZSBjdWJpYyBCZXppZXIgYGBwYGAgZW50aXJlbHkgbGllcyB3aXRoaW4gYSBkaXN0YW5jZQogICAgICAgIGBgdG9sZXJhbmNlYGAgb2YgdGhlIG9yaWdpbiwgRmFsc2Ugb3RoZXJ3aXNlLgogICAgIiIiCiAgICAjIEZpcnN0IGNoZWNrIHAyIHRoZW4gcDEsIGFzIHAyIGhhcyBoaWdoZXIgZXJyb3IgZWFybHkgb24uCiAgICBpZiBhYnMocDIpIDw9IHRvbGVyYW5jZSBhbmQgYWJzKHAxKSA8PSB0b2xlcmFuY2U6CiAgICAgICAgcmV0dXJuIFRydWUKCiAgICAjIFNwbGl0LgogICAgbWlkID0gKHAwICsgMyAqIChwMSArIHAyKSArIHAzKSAqIDAuMTI1CiAgICBpZiBhYnMobWlkKSA+IHRvbGVyYW5jZToKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGRlcml2MyA9IChwMyArIHAyIC0gcDEgLSBwMCkgKiAwLjEyNQogICAgcmV0dXJuIGN1YmljX2ZhcnRoZXN0X2ZpdF9pbnNpZGUoCiAgICAgICAgcDAsIChwMCArIHAxKSAqIDAuNSwgbWlkIC0gZGVyaXYzLCBtaWQsIHRvbGVyYW5jZQogICAgKSBhbmQgY3ViaWNfZmFydGhlc3RfZml0X2luc2lkZShtaWQsIG1pZCArIGRlcml2MywgKHAyICsgcDMpICogMC41LCBwMywgdG9sZXJhbmNlKQoKCkBjeXRob24ubG9jYWxzKAogICAgcDA9Y3l0aG9uLmNvbXBsZXgsCiAgICBwMT1jeXRob24uY29tcGxleCwKICAgIHAyPWN5dGhvbi5jb21wbGV4LAogICAgcDFfMl8zPWN5dGhvbi5jb21wbGV4LAopCmRlZiBlbGV2YXRlX3F1YWRyYXRpYyhwMCwgcDEsIHAyKToKICAgICIiIkdpdmVuIGEgcXVhZHJhdGljIGJlemllciBjdXJ2ZSwgcmV0dXJuIGl0cyBkZWdyZWUtZWxldmF0ZWQgY3ViaWMuIiIiCgogICAgIyBodHRwczovL3BvbWF4LmdpdGh1Yi5pby9iZXppZXJpbmZvLyNyZW9yZGVyaW5nCiAgICBwMV8yXzMgPSBwMSAqICgyIC8gMykKICAgIHJldHVybiAoCiAgICAgICAgcDAsCiAgICAgICAgKHAwICogKDEgLyAzKSArIHAxXzJfMyksCiAgICAgICAgKHAyICogKDEgLyAzKSArIHAxXzJfMyksCiAgICAgICAgcDIsCiAgICApCgoKQGN5dGhvbi5jZnVuYwpAY3l0aG9uLmxvY2FscygKICAgIHN0YXJ0PWN5dGhvbi5pbnQsCiAgICBuPWN5dGhvbi5pbnQsCiAgICBrPWN5dGhvbi5pbnQsCiAgICBwcm9kX3JhdGlvPWN5dGhvbi5kb3VibGUsCiAgICBzdW1fcmF0aW89Y3l0aG9uLmRvdWJsZSwKICAgIHJhdGlvPWN5dGhvbi5kb3VibGUsCiAgICB0PWN5dGhvbi5kb3VibGUsCiAgICBwMD1jeXRob24uY29tcGxleCwKICAgIHAxPWN5dGhvbi5jb21wbGV4LAogICAgcDI9Y3l0aG9uLmNvbXBsZXgsCiAgICBwMz1jeXRob24uY29tcGxleCwKKQpkZWYgbWVyZ2VfY3VydmVzKGN1cnZlcywgc3RhcnQsIG4pOgogICAgIiIiR2l2ZSBhIGN1YmljLUJlemllciBzcGxpbmUsIHJlY29uc3RydWN0IG9uZSBjdWJpYy1CZXppZXIKICAgIHRoYXQgaGFzIHRoZSBzYW1lIGVuZHBvaW50cyBhbmQgdGFuZ2VudHMgYW5kIGFwcHJveG1hdGVzCiAgICB0aGUgc3BsaW5lLiIiIgoKICAgICMgUmVjb25zdHJ1Y3QgdGhlIHQgdmFsdWVzIG9mIHRoZSBjdXQgc2VnbWVudHMKICAgIHByb2RfcmF0aW8gPSAxLjAKICAgIHN1bV9yYXRpbyA9IDEuMAogICAgdHMgPSBbMV0KICAgIGZvciBrIGluIHJhbmdlKDEsIG4pOgogICAgICAgIGNrID0gY3VydmVzW3N0YXJ0ICsga10KICAgICAgICBjX2JlZm9yZSA9IGN1cnZlc1tzdGFydCArIGsgLSAxXQoKICAgICAgICAjIHx0XyhrKzEpIC0gdF9rfCAvIHx0X2sgLSB0XyhrIC0gMSl8ID0gcmF0aW8KICAgICAgICBhc3NlcnQgY2tbMF0gPT0gY19iZWZvcmVbM10KICAgICAgICByYXRpbyA9IGFicyhja1sxXSAtIGNrWzBdKSAvIGFicyhjX2JlZm9yZVszXSAtIGNfYmVmb3JlWzJdKQoKICAgICAgICBwcm9kX3JhdGlvICo9IHJhdGlvCiAgICAgICAgc3VtX3JhdGlvICs9IHByb2RfcmF0aW8KICAgICAgICB0cy5hcHBlbmQoc3VtX3JhdGlvKQoKICAgICMgKHQobikgLSB0KG4gLSAxKSkgLyAodF8oMSkgLSB0KDApKSA9IHByb2RfcmF0aW8KCiAgICB0cyA9IFt0IC8gc3VtX3JhdGlvIGZvciB0IGluIHRzWzotMV1dCgogICAgcDAgPSBjdXJ2ZXNbc3RhcnRdWzBdCiAgICBwMSA9IGN1cnZlc1tzdGFydF1bMV0KICAgIHAyID0gY3VydmVzW3N0YXJ0ICsgbiAtIDFdWzJdCiAgICBwMyA9IGN1cnZlc1tzdGFydCArIG4gLSAxXVszXQoKICAgICMgQnVpbGQgdGhlIGN1cnZlIGJ5IHNjYWxpbmcgdGhlIGNvbnRyb2wtcG9pbnRzLgogICAgcDEgPSBwMCArIChwMSAtIHAwKSAvICh0c1swXSBpZiB0cyBlbHNlIDEpCiAgICBwMiA9IHAzICsgKHAyIC0gcDMpIC8gKCgxIC0gdHNbLTFdKSBpZiB0cyBlbHNlIDEpCgogICAgY3VydmUgPSAocDAsIHAxLCBwMiwgcDMpCgogICAgcmV0dXJuIGN1cnZlLCB0cwoKCkBjeXRob24ubG9jYWxzKAogICAgY291bnQ9Y3l0aG9uLmludCwKICAgIG51bV9vZmZjdXJ2ZXM9Y3l0aG9uLmludCwKICAgIGk9Y3l0aG9uLmludCwKICAgIG9mZjE9Y3l0aG9uLmNvbXBsZXgsCiAgICBvZmYyPWN5dGhvbi5jb21wbGV4LAogICAgb249Y3l0aG9uLmNvbXBsZXgsCikKZGVmIGFkZF9pbXBsaWNpdF9vbl9jdXJ2ZXMocCk6CiAgICBxID0gbGlzdChwKQogICAgY291bnQgPSAwCiAgICBudW1fb2ZmY3VydmVzID0gbGVuKHApIC0gMgogICAgZm9yIGkgaW4gcmFuZ2UoMSwgbnVtX29mZmN1cnZlcyk6CiAgICAgICAgb2ZmMSA9IHBbaV0KICAgICAgICBvZmYyID0gcFtpICsgMV0KICAgICAgICBvbiA9IG9mZjEgKyAob2ZmMiAtIG9mZjEpICogMC41CiAgICAgICAgcS5pbnNlcnQoaSArIDEgKyBjb3VudCwgb24pCiAgICAgICAgY291bnQgKz0gMQogICAgcmV0dXJuIHEKCgpQb2ludCA9IFVuaW9uW1R1cGxlW2Zsb2F0LCBmbG9hdF0sIGNvbXBsZXhdCgoKZGVmIF9yYWlzZV9pbmNvbXBhdGlibGVfcG9pbnQocG9pbnQsIHByZXZpb3VzX3BvaW50KToKICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgZiJRdWFkcmF0aWMgc3BsaW5lcyBtdXN0IGNvbm5lY3QgZW5kLXRvLXN0YXJ0OyBnb3Qge3ByZXZpb3VzX3BvaW50IXJ9IHRoZW4ge3BvaW50IXJ9IgogICAgKQoKCmRlZiBfdmFsaWRhdGVfc3BsaW5lX2xlbmd0aChzcGxpbmUpOgogICAgaWYgbGVuKHNwbGluZSkgPCAzOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIlF1YWRyYXRpYyBzcGxpbmVzIG11c3QgY29udGFpbiBhdCBsZWFzdCAzIHBvaW50cyIpCgoKZGVmIF92YWxpZGF0ZV9wb3NpdGl2ZV90b2xlcmFuY2UobWF4X2Vycik6CiAgICBpZiBtYXhfZXJyIDw9IDA6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigibWF4X2VyciBtdXN0IGJlIGdyZWF0ZXIgdGhhbiB6ZXJvIikKCgpAY3l0aG9uLmxvY2FscygKICAgIGNvc3Q9Y3l0aG9uLmludCwKICAgIGlzX2NvbXBsZXg9Y3l0aG9uLmludCwKKQpkZWYgcXVhZHJhdGljX3RvX2N1cnZlcygKICAgIHF1YWRzOiBMaXN0W1NlcXVlbmNlW1BvaW50XV0sCiAgICBtYXhfZXJyOiBmbG9hdCA9IDAuNSwKICAgIGFsbF9jdWJpYzogYm9vbCA9IEZhbHNlLAopIC0+IExpc3RbVHVwbGVbUG9pbnQsIC4uLl1dOgogICAgIiIiQ29udmVydHMgYSBjb25uZWN0aW5nIGxpc3Qgb2YgcXVhZHJhdGljIHNwbGluZXMgdG8gYSBsaXN0IG9mIHF1YWRyYXRpYwogICAgYW5kIGN1YmljIGN1cnZlcy4KCiAgICBBIHF1YWRyYXRpYyBzcGxpbmUgaXMgc3BlY2lmaWVkIGFzIGEgc2VxdWVuY2Ugb2YgcG9pbnRzLiAgRWl0aGVyIGVhY2ggcG9pbnQgaXMKICAgIGEgMi10dXBsZSBvZiBYLFkgY29vcmRpbmF0ZXMsIG9yIGVhY2ggcG9pbnQgaXMgYSBjb21wbGV4IG51bWJlciB3aXRoCiAgICByZWFsL2ltYWdpbmFyeSBjb21wb25lbnRzIHJlcHJlc2VudGluZyBYLFkgY29vcmRpbmF0ZXMuCgogICAgVGhlIGZpcnN0IGFuZCBsYXN0IHBvaW50cyBhcmUgb24tY3VydmUgcG9pbnRzIGFuZCB0aGUgcmVzdCBhcmUgb2ZmLWN1cnZlCiAgICBwb2ludHMsIHdpdGggYW4gaW1wbGllZCBvbi1jdXJ2ZSBwb2ludCBpbiB0aGUgbWlkZGxlIGJldHdlZW4gZXZlcnkgdHdvCiAgICBjb25zZXF1dGl2ZSBvZmYtY3VydmUgcG9pbnRzLgoKICAgIFJldHVybnM6CiAgICAgICAgVGhlIG91dHB1dCBpcyBhIGxpc3Qgb2YgdHVwbGVzIG9mIHBvaW50cy4gUG9pbnRzIGFyZSByZXByZXNlbnRlZAogICAgICAgIGluIHRoZSBzYW1lIGZvcm1hdCBhcyB0aGUgaW5wdXQsIGVpdGhlciBhcyAyLXR1cGxlcyBvciBjb21wbGV4IG51bWJlcnMuCiAgICAgICAgSWYgYGBxdWFkc2BgIGlzIGVtcHR5LCByZXR1cm5zIGFuIGVtcHR5IGxpc3QuCgogICAgICAgIEVhY2ggdHVwbGUgaXMgZWl0aGVyIG9mIGxlbmd0aCB0aHJlZSwgZm9yIGEgcXVhZHJhdGljIGN1cnZlLCBvciBmb3VyLAogICAgICAgIGZvciBhIGN1YmljIGN1cnZlLiAgRWFjaCBjdXJ2ZSdzIGxhc3QgcG9pbnQgaXMgdGhlIHNhbWUgYXMgdGhlIG5leHQKICAgICAgICBjdXJ2ZSdzIGZpcnN0IHBvaW50LgoKICAgIEFyZ3M6CiAgICAgICAgcXVhZHM6IHF1YWRyYXRpYyBzcGxpbmVzCgogICAgICAgIG1heF9lcnI6IGFic29sdXRlIGVycm9yIHRvbGVyYW5jZTsgZGVmYXVsdHMgdG8gMC41CgogICAgICAgIGFsbF9jdWJpYzogaWYgVHJ1ZSwgb25seSBjdWJpYyBjdXJ2ZXMgYXJlIGdlbmVyYXRlZDsgZGVmYXVsdHMgdG8gRmFsc2UKCiAgICBSYWlzZXM6CiAgICAgICAgVmFsdWVFcnJvcjogaWYgYW4gaW5wdXQgc3BsaW5lIGhhcyBmZXdlciB0aGFuIDMgcG9pbnRzLCBvciBpZiBhZGphY2VudAogICAgICAgIHNwbGluZXMgZG8gbm90IGNvbm5lY3QgZW5kLXRvLXN0YXJ0LgogICAgIiIiCiAgICBpZiBub3QgcXVhZHM6CiAgICAgICAgcmV0dXJuIFtdCiAgICBfdmFsaWRhdGVfcG9zaXRpdmVfdG9sZXJhbmNlKG1heF9lcnIpCiAgICBmb3Igc3BsaW5lIGluIHF1YWRzOgogICAgICAgIF92YWxpZGF0ZV9zcGxpbmVfbGVuZ3RoKHNwbGluZSkKCiAgICBpc19jb21wbGV4ID0gdHlwZShxdWFkc1swXVswXSkgaXMgY29tcGxleAogICAgaWYgbm90IGlzX2NvbXBsZXg6CiAgICAgICAgcXVhZHMgPSBbW2NvbXBsZXgoeCwgeSkgZm9yICh4LCB5KSBpbiBwXSBmb3IgcCBpbiBxdWFkc10KCiAgICBxID0gW3F1YWRzWzBdWzBdXQogICAgY29zdHMgPSBbMV0KICAgIGNvc3QgPSAxCiAgICBmb3IgcCBpbiBxdWFkczoKICAgICAgICBpZiBxWy0xXSAhPSBwWzBdOgogICAgICAgICAgICBfcmFpc2VfaW5jb21wYXRpYmxlX3BvaW50KHBbMF0sIHFbLTFdKQogICAgICAgIGZvciBpIGluIHJhbmdlKGxlbihwKSAtIDIpOgogICAgICAgICAgICBjb3N0ICs9IDEKICAgICAgICAgICAgY29zdHMuYXBwZW5kKGNvc3QpCiAgICAgICAgICAgIGNvc3RzLmFwcGVuZChjb3N0KQogICAgICAgIHFxID0gYWRkX2ltcGxpY2l0X29uX2N1cnZlcyhwKVsxOl0KICAgICAgICBjb3N0cy5wb3AoKQogICAgICAgIHEuZXh0ZW5kKHFxKQogICAgICAgIGNvc3QgKz0gMQogICAgICAgIGNvc3RzLmFwcGVuZChjb3N0KQoKICAgIGN1cnZlcyA9IHNwbGluZV90b19jdXJ2ZXMocSwgY29zdHMsIG1heF9lcnIsIGFsbF9jdWJpYykKCiAgICBpZiBub3QgaXNfY29tcGxleDoKICAgICAgICBjdXJ2ZXMgPSBbdHVwbGUoKGMucmVhbCwgYy5pbWFnKSBmb3IgYyBpbiBjdXJ2ZSkgZm9yIGN1cnZlIGluIGN1cnZlc10KICAgIHJldHVybiBjdXJ2ZXMKCgpTb2x1dGlvbiA9IG5hbWVkdHVwbGUoIlNvbHV0aW9uIiwgWyJudW1fcG9pbnRzIiwgImVycm9yIiwgInN0YXJ0X2luZGV4IiwgImlzX2N1YmljIl0pCgoKQGN5dGhvbi5sb2NhbHMoCiAgICBpPWN5dGhvbi5pbnQsCiAgICBqPWN5dGhvbi5pbnQsCiAgICBrPWN5dGhvbi5pbnQsCiAgICBzdGFydD1jeXRob24uaW50LAogICAgaV9zb2xfY291bnQ9Y3l0aG9uLmludCwKICAgIGpfc29sX2NvdW50PWN5dGhvbi5pbnQsCiAgICB0aGlzX3NvbF9jb3VudD1jeXRob24uaW50LAogICAgdG9sZXJhbmNlPWN5dGhvbi5kb3VibGUsCiAgICBlcnI9Y3l0aG9uLmRvdWJsZSwKICAgIGVycm9yPWN5dGhvbi5kb3VibGUsCiAgICBpX3NvbF9lcnJvcj1jeXRob24uZG91YmxlLAogICAgal9zb2xfZXJyb3I9Y3l0aG9uLmRvdWJsZSwKICAgIGFsbF9jdWJpYz1jeXRob24uaW50LAogICAgaXNfY3ViaWM9Y3l0aG9uLmludCwKICAgIGNvdW50PWN5dGhvbi5pbnQsCiAgICBwMD1jeXRob24uY29tcGxleCwKICAgIHAxPWN5dGhvbi5jb21wbGV4LAogICAgcDI9Y3l0aG9uLmNvbXBsZXgsCiAgICBwMz1jeXRob24uY29tcGxleCwKICAgIHY9Y3l0aG9uLmNvbXBsZXgsCiAgICB1PWN5dGhvbi5jb21wbGV4LAopCmRlZiBzcGxpbmVfdG9fY3VydmVzKHEsIGNvc3RzLCB0b2xlcmFuY2U9MC41LCBhbGxfY3ViaWM9RmFsc2UpOgogICAgIiIiCiAgICBxOiBxdWFkcmF0aWMgc3BsaW5lIHdpdGggYWx0ZXJuYXRpbmcgb24tY3VydmUgLyBvZmYtY3VydmUgcG9pbnRzLgoKICAgIGNvc3RzOiBjdW11bGF0aXZlIGxpc3Qgb2YgZW5jb2RpbmcgY29zdCBvZiBxIGluIHRlcm1zIG9mIG51bWJlciBvZgogICAgICBwb2ludHMgdGhhdCBuZWVkIHRvIGJlIGVuY29kZWQuICBJbXBsaWVkIG9uLWN1cnZlIHBvaW50cyBkbyBub3QKICAgICAgY29udHJpYnV0ZSB0byB0aGUgY29zdC4gSWYgYWxsIHBvaW50cyBuZWVkIHRvIGJlIGVuY29kZWQsIHRoZW4KICAgICAgY29zdHMgd2lsbCBiZSByYW5nZSgxLCBsZW4ocSkrMSkuCiAgICAiIiIKCiAgICBhc3NlcnQgbGVuKHEpID49IDMsICJxdWFkcmF0aWMgc3BsaW5lIHJlcXVpcmVzIGF0IGxlYXN0IDMgcG9pbnRzIgoKICAgICMgRWxldmF0ZSBxdWFkcmF0aWMgc2VnbWVudHMgdG8gY3ViaWMKICAgIGVsZXZhdGVkX3F1YWRyYXRpY3MgPSBbCiAgICAgICAgZWxldmF0ZV9xdWFkcmF0aWMoKnFbaSA6IGkgKyAzXSkgZm9yIGkgaW4gcmFuZ2UoMCwgbGVuKHEpIC0gMiwgMikKICAgIF0KCiAgICAjIEZpbmQgc2hhcnAgY29ybmVyczsgdGhleSBoYXZlIHRvIGJlIG9uY3VydmVzIGZvciBzdXJlLgogICAgZm9yY2VkID0gc2V0KCkKICAgIGZvciBpIGluIHJhbmdlKDEsIGxlbihlbGV2YXRlZF9xdWFkcmF0aWNzKSk6CiAgICAgICAgcDAgPSBlbGV2YXRlZF9xdWFkcmF0aWNzW2kgLSAxXVsyXQogICAgICAgIHAxID0gZWxldmF0ZWRfcXVhZHJhdGljc1tpXVswXQogICAgICAgIHAyID0gZWxldmF0ZWRfcXVhZHJhdGljc1tpXVsxXQogICAgICAgIGlmIGFicyhwMSAtIHAwKSArIGFicyhwMiAtIHAxKSA+IHRvbGVyYW5jZSArIGFicyhwMiAtIHAwKToKICAgICAgICAgICAgZm9yY2VkLmFkZChpKQoKICAgICMgRHluYW1pYy1Qcm9ncmFtbWluZyB0byBmaW5kIHRoZSBzb2x1dGlvbiB3aXRoIGZld2VzdCBudW1iZXIgb2YKICAgICMgY3ViaWMgY3VydmVzLCBhbmQgd2l0aGluIHRob3NlIHRoZSBvbmUgd2l0aCBzbWFsbGVzdCBlcnJvci4KICAgIHNvbHMgPSBbU29sdXRpb24oMCwgMCwgMCwgRmFsc2UpXQogICAgaW1wb3NzaWJsZSA9IFNvbHV0aW9uKGxlbihlbGV2YXRlZF9xdWFkcmF0aWNzKSAqIDMgKyAxLCAwLCAxLCBGYWxzZSkKICAgIHN0YXJ0ID0gMAogICAgZm9yIGkgaW4gcmFuZ2UoMSwgbGVuKGVsZXZhdGVkX3F1YWRyYXRpY3MpICsgMSk6CiAgICAgICAgYmVzdF9zb2wgPSBpbXBvc3NpYmxlCiAgICAgICAgZm9yIGogaW4gcmFuZ2Uoc3RhcnQsIGkpOgogICAgICAgICAgICBqX3NvbF9jb3VudCwgal9zb2xfZXJyb3IgPSBzb2xzW2pdLm51bV9wb2ludHMsIHNvbHNbal0uZXJyb3IKCiAgICAgICAgICAgIGlmIG5vdCBhbGxfY3ViaWM6CiAgICAgICAgICAgICAgICAjIFNvbHV0aW9uIHdpdGggcXVhZHJhdGljcyBiZXR3ZWVuIGo6aQogICAgICAgICAgICAgICAgdGhpc19jb3VudCA9IGNvc3RzWzIgKiBpIC0gMV0gLSBjb3N0c1syICogal0gKyAxCiAgICAgICAgICAgICAgICBpX3NvbF9jb3VudCA9IGpfc29sX2NvdW50ICsgdGhpc19jb3VudAogICAgICAgICAgICAgICAgaV9zb2xfZXJyb3IgPSBqX3NvbF9lcnJvcgogICAgICAgICAgICAgICAgaV9zb2wgPSBTb2x1dGlvbihpX3NvbF9jb3VudCwgaV9zb2xfZXJyb3IsIGkgLSBqLCBGYWxzZSkKICAgICAgICAgICAgICAgIGlmIGlfc29sIDwgYmVzdF9zb2w6CiAgICAgICAgICAgICAgICAgICAgYmVzdF9zb2wgPSBpX3NvbAoKICAgICAgICAgICAgICAgIGlmIHRoaXNfY291bnQgPD0gMzoKICAgICAgICAgICAgICAgICAgICAjIENhbid0IGdldCBhbnkgYmV0dGVyIHRoYW4gdGhpcyBpbiB0aGUgcGF0aCBiZWxvdwogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgICAgICAjIEZpdCBlbGV2YXRlZF9xdWFkcmF0aWNzW2o6aV0gaW50byBvbmUgY3ViaWMKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgY3VydmUsIHRzID0gbWVyZ2VfY3VydmVzKGVsZXZhdGVkX3F1YWRyYXRpY3MsIGosIGkgLSBqKQogICAgICAgICAgICBleGNlcHQgWmVyb0RpdmlzaW9uRXJyb3I6CiAgICAgICAgICAgICAgICBjb250aW51ZQoKICAgICAgICAgICAgIyBOb3cgcmVjb25zdHJ1Y3QgdGhlIHNlZ21lbnRzIGZyb20gdGhlIGZpdHRlZCBjdXJ2ZQogICAgICAgICAgICByZWNvbnN0cnVjdGVkX2l0ZXIgPSBzcGxpdEN1YmljQXRUQygqY3VydmUsICp0cykKICAgICAgICAgICAgcmVjb25zdHJ1Y3RlZCA9IFtdCgogICAgICAgICAgICAjIEtub3QgZXJyb3JzCiAgICAgICAgICAgIGVycm9yID0gMAogICAgICAgICAgICBmb3IgaywgcmVjb25zdCBpbiBlbnVtZXJhdGUocmVjb25zdHJ1Y3RlZF9pdGVyKToKICAgICAgICAgICAgICAgIG9yaWcgPSBlbGV2YXRlZF9xdWFkcmF0aWNzW2ogKyBrXQogICAgICAgICAgICAgICAgZXJyID0gYWJzKHJlY29uc3RbM10gLSBvcmlnWzNdKQogICAgICAgICAgICAgICAgZXJyb3IgPSBtYXgoZXJyb3IsIGVycikKICAgICAgICAgICAgICAgIGlmIGVycm9yID4gdG9sZXJhbmNlOgogICAgICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICByZWNvbnN0cnVjdGVkLmFwcGVuZChyZWNvbnN0KQogICAgICAgICAgICBpZiBlcnJvciA+IHRvbGVyYW5jZToKICAgICAgICAgICAgICAgICMgTm90IGZlYXNpYmxlCiAgICAgICAgICAgICAgICBjb250aW51ZQoKICAgICAgICAgICAgIyBJbnRlcmlvciBlcnJvcnMKICAgICAgICAgICAgZm9yIGssIHJlY29uc3QgaW4gZW51bWVyYXRlKHJlY29uc3RydWN0ZWQpOgogICAgICAgICAgICAgICAgb3JpZyA9IGVsZXZhdGVkX3F1YWRyYXRpY3NbaiArIGtdCiAgICAgICAgICAgICAgICBwMCwgcDEsIHAyLCBwMyA9IHR1cGxlKHYgLSB1IGZvciB2LCB1IGluIHppcChyZWNvbnN0LCBvcmlnKSkKCiAgICAgICAgICAgICAgICBpZiBub3QgY3ViaWNfZmFydGhlc3RfZml0X2luc2lkZShwMCwgcDEsIHAyLCBwMywgdG9sZXJhbmNlKToKICAgICAgICAgICAgICAgICAgICBlcnJvciA9IHRvbGVyYW5jZSArIDEKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICBpZiBlcnJvciA+IHRvbGVyYW5jZToKICAgICAgICAgICAgICAgICMgTm90IGZlYXNpYmxlCiAgICAgICAgICAgICAgICBjb250aW51ZQoKICAgICAgICAgICAgIyBTYXZlIGJlc3Qgc29sdXRpb24KICAgICAgICAgICAgaV9zb2xfY291bnQgPSBqX3NvbF9jb3VudCArIDMKICAgICAgICAgICAgaV9zb2xfZXJyb3IgPSBtYXgoal9zb2xfZXJyb3IsIGVycm9yKQogICAgICAgICAgICBpX3NvbCA9IFNvbHV0aW9uKGlfc29sX2NvdW50LCBpX3NvbF9lcnJvciwgaSAtIGosIFRydWUpCiAgICAgICAgICAgIGlmIGlfc29sIDwgYmVzdF9zb2w6CiAgICAgICAgICAgICAgICBiZXN0X3NvbCA9IGlfc29sCgogICAgICAgICAgICBpZiBpX3NvbF9jb3VudCA9PSAzOgogICAgICAgICAgICAgICAgIyBDYW4ndCBnZXQgYW55IGJldHRlciB0aGFuIHRoaXMKICAgICAgICAgICAgICAgIGJyZWFrCgogICAgICAgIHNvbHMuYXBwZW5kKGJlc3Rfc29sKQogICAgICAgIGlmIGkgaW4gZm9yY2VkOgogICAgICAgICAgICBzdGFydCA9IGkKCiAgICAjIFJlY29uc3RydWN0IHNvbHV0aW9uCiAgICBzcGxpdHMgPSBbXQogICAgY3ViaWMgPSBbXQogICAgaSA9IGxlbihzb2xzKSAtIDEKICAgIHdoaWxlIGk6CiAgICAgICAgY291bnQsIGlzX2N1YmljID0gc29sc1tpXS5zdGFydF9pbmRleCwgc29sc1tpXS5pc19jdWJpYwogICAgICAgIHNwbGl0cy5hcHBlbmQoaSkKICAgICAgICBjdWJpYy5hcHBlbmQoaXNfY3ViaWMpCiAgICAgICAgaSAtPSBjb3VudAogICAgY3VydmVzID0gW10KICAgIGogPSAwCiAgICBmb3IgaSwgaXNfY3ViaWMgaW4gcmV2ZXJzZWQobGlzdCh6aXAoc3BsaXRzLCBjdWJpYykpKToKICAgICAgICBpZiBpc19jdWJpYzoKICAgICAgICAgICAgY3VydmVzLmFwcGVuZChtZXJnZV9jdXJ2ZXMoZWxldmF0ZWRfcXVhZHJhdGljcywgaiwgaSAtIGopWzBdKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZvciBrIGluIHJhbmdlKGosIGkpOgogICAgICAgICAgICAgICAgY3VydmVzLmFwcGVuZChxW2sgKiAyIDogayAqIDIgKyAzXSkKICAgICAgICBqID0gaQoKICAgIHJldHVybiBjdXJ2ZXMKCgpkZWYgbWFpbigpOgogICAgZnJvbSBmb250VG9vbHMuY3UycXUuYmVuY2htYXJrIGltcG9ydCBnZW5lcmF0ZV9jdXJ2ZQogICAgZnJvbSBmb250VG9vbHMuY3UycXUgaW1wb3J0IGN1cnZlX3RvX3F1YWRyYXRpYwoKICAgIHRvbGVyYW5jZSA9IDAuMDUKICAgIHJlY29uc3RydWN0X3RvbGVyYW5jZSA9IHRvbGVyYW5jZSAqIDEKICAgIGN1cnZlID0gZ2VuZXJhdGVfY3VydmUoKQogICAgcXVhZHJhdGljcyA9IGN1cnZlX3RvX3F1YWRyYXRpYyhjdXJ2ZSwgdG9sZXJhbmNlKQogICAgcHJpbnQoCiAgICAgICAgImN1MnF1IHRvbGVyYW5jZSAlZy4gcXUyY3UgdG9sZXJhbmNlICVnLiIgJSAodG9sZXJhbmNlLCByZWNvbnN0cnVjdF90b2xlcmFuY2UpCiAgICApCiAgICBwcmludCgiT25lIHJhbmRvbSBjdWJpYyB0dXJuZWQgaW50byAlZCBxdWFkcmF0aWNzLiIgJSBsZW4ocXVhZHJhdGljcykpCiAgICBjdXJ2ZXMgPSBxdWFkcmF0aWNfdG9fY3VydmVzKFtxdWFkcmF0aWNzXSwgcmVjb25zdHJ1Y3RfdG9sZXJhbmNlKQogICAgcHJpbnQoIlRob3NlIHF1YWRyYXRpY3MgdHVybmVkIGJhY2sgaW50byAlZCBjdWJpY3MuICIgJSBsZW4oY3VydmVzKSkKICAgIHByaW50KCJPcmlnaW5hbCBjdXJ2ZToiLCBjdXJ2ZSkKICAgIHByaW50KCJSZWNvbnN0cnVjdGVkIGN1cnZlKHMpOiIsIGN1cnZlcykKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgbWFpbigpCg==
+# cython: language_level=3
+# distutils: define_macros=CYTHON_TRACE_NOGIL=1
+
+# Copyright 2023 Google Inc. All Rights Reserved.
+# Copyright 2023 Behdad Esfahbod. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+try:
+    import cython
+except (AttributeError, ImportError):
+    # if cython not installed, use mock module with no-op decorators and types
+    from fontTools.misc import cython
+COMPILED = cython.compiled
+
+from fontTools.misc.bezierTools import splitCubicAtTC
+from collections import namedtuple
+import math
+from typing import (
+    List,
+    Sequence,
+    Tuple,
+    Union,
+)
+
+__all__ = ["quadratic_to_curves"]
+
+
+# Copied from cu2qu
+@cython.cfunc
+@cython.returns(cython.int)
+@cython.locals(
+    tolerance=cython.double,
+    p0=cython.complex,
+    p1=cython.complex,
+    p2=cython.complex,
+    p3=cython.complex,
+)
+@cython.locals(mid=cython.complex, deriv3=cython.complex)
+def cubic_farthest_fit_inside(p0, p1, p2, p3, tolerance):
+    """Check if a cubic Bezier lies within a given distance of the origin.
+
+    "Origin" means *the* origin (0,0), not the start of the curve. Note that no
+    checks are made on the start and end positions of the curve; this function
+    only checks the inside of the curve.
+
+    Args:
+        p0 (complex): Start point of curve.
+        p1 (complex): First handle of curve.
+        p2 (complex): Second handle of curve.
+        p3 (complex): End point of curve.
+        tolerance (double): Distance from origin.
+
+    Returns:
+        bool: True if the cubic Bezier ``p`` entirely lies within a distance
+        ``tolerance`` of the origin, False otherwise.
+    """
+    # First check p2 then p1, as p2 has higher error early on.
+    if abs(p2) <= tolerance and abs(p1) <= tolerance:
+        return True
+
+    # Split.
+    mid = (p0 + 3 * (p1 + p2) + p3) * 0.125
+    if abs(mid) > tolerance:
+        return False
+    deriv3 = (p3 + p2 - p1 - p0) * 0.125
+    return cubic_farthest_fit_inside(
+        p0, (p0 + p1) * 0.5, mid - deriv3, mid, tolerance
+    ) and cubic_farthest_fit_inside(mid, mid + deriv3, (p2 + p3) * 0.5, p3, tolerance)
+
+
+@cython.locals(
+    p0=cython.complex,
+    p1=cython.complex,
+    p2=cython.complex,
+    p1_2_3=cython.complex,
+)
+def elevate_quadratic(p0, p1, p2):
+    """Given a quadratic bezier curve, return its degree-elevated cubic."""
+
+    # https://pomax.github.io/bezierinfo/#reordering
+    p1_2_3 = p1 * (2 / 3)
+    return (
+        p0,
+        (p0 * (1 / 3) + p1_2_3),
+        (p2 * (1 / 3) + p1_2_3),
+        p2,
+    )
+
+
+@cython.cfunc
+@cython.locals(
+    start=cython.int,
+    n=cython.int,
+    k=cython.int,
+    prod_ratio=cython.double,
+    sum_ratio=cython.double,
+    ratio=cython.double,
+    t=cython.double,
+    p0=cython.complex,
+    p1=cython.complex,
+    p2=cython.complex,
+    p3=cython.complex,
+)
+def merge_curves(curves, start, n):
+    """Give a cubic-Bezier spline, reconstruct one cubic-Bezier
+    that has the same endpoints and tangents and approxmates
+    the spline."""
+
+    # Reconstruct the t values of the cut segments
+    prod_ratio = 1.0
+    sum_ratio = 1.0
+    ts = [1]
+    for k in range(1, n):
+        ck = curves[start + k]
+        c_before = curves[start + k - 1]
+
+        # |t_(k+1) - t_k| / |t_k - t_(k - 1)| = ratio
+        assert ck[0] == c_before[3]
+        ratio = abs(ck[1] - ck[0]) / abs(c_before[3] - c_before[2])
+
+        prod_ratio *= ratio
+        sum_ratio += prod_ratio
+        ts.append(sum_ratio)
+
+    # (t(n) - t(n - 1)) / (t_(1) - t(0)) = prod_ratio
+
+    ts = [t / sum_ratio for t in ts[:-1]]
+
+    p0 = curves[start][0]
+    p1 = curves[start][1]
+    p2 = curves[start + n - 1][2]
+    p3 = curves[start + n - 1][3]
+
+    # Build the curve by scaling the control-points.
+    p1 = p0 + (p1 - p0) / (ts[0] if ts else 1)
+    p2 = p3 + (p2 - p3) / ((1 - ts[-1]) if ts else 1)
+
+    curve = (p0, p1, p2, p3)
+
+    return curve, ts
+
+
+@cython.locals(
+    count=cython.int,
+    num_offcurves=cython.int,
+    i=cython.int,
+    off1=cython.complex,
+    off2=cython.complex,
+    on=cython.complex,
+)
+def add_implicit_on_curves(p):
+    q = list(p)
+    count = 0
+    num_offcurves = len(p) - 2
+    for i in range(1, num_offcurves):
+        off1 = p[i]
+        off2 = p[i + 1]
+        on = off1 + (off2 - off1) * 0.5
+        q.insert(i + 1 + count, on)
+        count += 1
+    return q
+
+
+Point = Union[Tuple[float, float], complex]
+
+
+def _raise_incompatible_point(point, previous_point):
+    raise ValueError(
+        f"Quadratic splines must connect end-to-start; got {previous_point!r} then {point!r}"
+    )
+
+
+def _validate_spline_length(spline):
+    if len(spline) < 3:
+        raise ValueError("Quadratic splines must contain at least 3 points")
+
+
+def _validate_positive_tolerance(max_err):
+    if max_err <= 0:
+        raise ValueError("max_err must be greater than zero")
+
+
+@cython.locals(
+    cost=cython.int,
+    is_complex=cython.int,
+)
+def quadratic_to_curves(
+    quads: List[Sequence[Point]],
+    max_err: float = 0.5,
+    all_cubic: bool = False,
+) -> List[Tuple[Point, ...]]:
+    """Converts a connecting list of quadratic splines to a list of quadratic
+    and cubic curves.
+
+    A quadratic spline is specified as a sequence of points.  Either each point is
+    a 2-tuple of X,Y coordinates, or each point is a complex number with
+    real/imaginary components representing X,Y coordinates.
+
+    The first and last points are on-curve points and the rest are off-curve
+    points, with an implied on-curve point in the middle between every two
+    consequtive off-curve points.
+
+    Returns:
+        The output is a list of tuples of points. Points are represented
+        in the same format as the input, either as 2-tuples or complex numbers.
+        If ``quads`` is empty, returns an empty list.
+
+        Each tuple is either of length three, for a quadratic curve, or four,
+        for a cubic curve.  Each curve's last point is the same as the next
+        curve's first point.
+
+    Args:
+        quads: quadratic splines
+
+        max_err: absolute error tolerance; defaults to 0.5
+
+        all_cubic: if True, only cubic curves are generated; defaults to False
+
+    Raises:
+        ValueError: if an input spline has fewer than 3 points, or if adjacent
+        splines do not connect end-to-start.
+    """
+    if not quads:
+        return []
+    _validate_positive_tolerance(max_err)
+    for spline in quads:
+        _validate_spline_length(spline)
+
+    is_complex = type(quads[0][0]) is complex
+    if not is_complex:
+        quads = [[complex(x, y) for (x, y) in p] for p in quads]
+
+    q = [quads[0][0]]
+    costs = [1]
+    cost = 1
+    for p in quads:
+        if q[-1] != p[0]:
+            _raise_incompatible_point(p[0], q[-1])
+        for i in range(len(p) - 2):
+            cost += 1
+            costs.append(cost)
+            costs.append(cost)
+        qq = add_implicit_on_curves(p)[1:]
+        costs.pop()
+        q.extend(qq)
+        cost += 1
+        costs.append(cost)
+
+    curves = spline_to_curves(q, costs, max_err, all_cubic)
+
+    if not is_complex:
+        curves = [tuple((c.real, c.imag) for c in curve) for curve in curves]
+    return curves
+
+
+Solution = namedtuple("Solution", ["num_points", "error", "start_index", "is_cubic"])
+
+
+@cython.locals(
+    i=cython.int,
+    j=cython.int,
+    k=cython.int,
+    start=cython.int,
+    i_sol_count=cython.int,
+    j_sol_count=cython.int,
+    this_sol_count=cython.int,
+    tolerance=cython.double,
+    err=cython.double,
+    error=cython.double,
+    i_sol_error=cython.double,
+    j_sol_error=cython.double,
+    all_cubic=cython.int,
+    is_cubic=cython.int,
+    count=cython.int,
+    p0=cython.complex,
+    p1=cython.complex,
+    p2=cython.complex,
+    p3=cython.complex,
+    v=cython.complex,
+    u=cython.complex,
+)
+def spline_to_curves(q, costs, tolerance=0.5, all_cubic=False):
+    """
+    q: quadratic spline with alternating on-curve / off-curve points.
+
+    costs: cumulative list of encoding cost of q in terms of number of
+      points that need to be encoded.  Implied on-curve points do not
+      contribute to the cost. If all points need to be encoded, then
+      costs will be range(1, len(q)+1).
+    """
+
+    assert len(q) >= 3, "quadratic spline requires at least 3 points"
+
+    # Elevate quadratic segments to cubic
+    elevated_quadratics = [
+        elevate_quadratic(*q[i : i + 3]) for i in range(0, len(q) - 2, 2)
+    ]
+
+    # Find sharp corners; they have to be oncurves for sure.
+    forced = set()
+    for i in range(1, len(elevated_quadratics)):
+        p0 = elevated_quadratics[i - 1][2]
+        p1 = elevated_quadratics[i][0]
+        p2 = elevated_quadratics[i][1]
+        if abs(p1 - p0) + abs(p2 - p1) > tolerance + abs(p2 - p0):
+            forced.add(i)
+
+    # Dynamic-Programming to find the solution with fewest number of
+    # cubic curves, and within those the one with smallest error.
+    sols = [Solution(0, 0, 0, False)]
+    impossible = Solution(len(elevated_quadratics) * 3 + 1, 0, 1, False)
+    start = 0
+    for i in range(1, len(elevated_quadratics) + 1):
+        best_sol = impossible
+        for j in range(start, i):
+            j_sol_count, j_sol_error = sols[j].num_points, sols[j].error
+
+            if not all_cubic:
+                # Solution with quadratics between j:i
+                this_count = costs[2 * i - 1] - costs[2 * j] + 1
+                i_sol_count = j_sol_count + this_count
+                i_sol_error = j_sol_error
+                i_sol = Solution(i_sol_count, i_sol_error, i - j, False)
+                if i_sol < best_sol:
+                    best_sol = i_sol
+
+                if this_count <= 3:
+                    # Can't get any better than this in the path below
+                    continue
+
+            # Fit elevated_quadratics[j:i] into one cubic
+            try:
+                curve, ts = merge_curves(elevated_quadratics, j, i - j)
+            except ZeroDivisionError:
+                continue
+
+            # Now reconstruct the segments from the fitted curve
+            reconstructed_iter = splitCubicAtTC(*curve, *ts)
+            reconstructed = []
+
+            # Knot errors
+            error = 0
+            for k, reconst in enumerate(reconstructed_iter):
+                orig = elevated_quadratics[j + k]
+                err = abs(reconst[3] - orig[3])
+                error = max(error, err)
+                if error > tolerance:
+                    break
+                reconstructed.append(reconst)
+            if error > tolerance:
+                # Not feasible
+                continue
+
+            # Interior errors
+            for k, reconst in enumerate(reconstructed):
+                orig = elevated_quadratics[j + k]
+                p0, p1, p2, p3 = tuple(v - u for v, u in zip(reconst, orig))
+
+                if not cubic_farthest_fit_inside(p0, p1, p2, p3, tolerance):
+                    error = tolerance + 1
+                    break
+            if error > tolerance:
+                # Not feasible
+                continue
+
+            # Save best solution
+            i_sol_count = j_sol_count + 3
+            i_sol_error = max(j_sol_error, error)
+            i_sol = Solution(i_sol_count, i_sol_error, i - j, True)
+            if i_sol < best_sol:
+                best_sol = i_sol
+
+            if i_sol_count == 3:
+                # Can't get any better than this
+                break
+
+        sols.append(best_sol)
+        if i in forced:
+            start = i
+
+    # Reconstruct solution
+    splits = []
+    cubic = []
+    i = len(sols) - 1
+    while i:
+        count, is_cubic = sols[i].start_index, sols[i].is_cubic
+        splits.append(i)
+        cubic.append(is_cubic)
+        i -= count
+    curves = []
+    j = 0
+    for i, is_cubic in reversed(list(zip(splits, cubic))):
+        if is_cubic:
+            curves.append(merge_curves(elevated_quadratics, j, i - j)[0])
+        else:
+            for k in range(j, i):
+                curves.append(q[k * 2 : k * 2 + 3])
+        j = i
+
+    return curves
+
+
+def main():
+    from fontTools.cu2qu.benchmark import generate_curve
+    from fontTools.cu2qu import curve_to_quadratic
+
+    tolerance = 0.05
+    reconstruct_tolerance = tolerance * 1
+    curve = generate_curve()
+    quadratics = curve_to_quadratic(curve, tolerance)
+    print(
+        "cu2qu tolerance %g. qu2cu tolerance %g." % (tolerance, reconstruct_tolerance)
+    )
+    print("One random cubic turned into %d quadratics." % len(quadratics))
+    curves = quadratic_to_curves([quadratics], reconstruct_tolerance)
+    print("Those quadratics turned back into %d cubics. " % len(curves))
+    print("Original curve:", curve)
+    print("Reconstructed curve(s):", curves)
+
+
+if __name__ == "__main__":
+    main()

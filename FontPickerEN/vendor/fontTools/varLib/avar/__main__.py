@@ -1,1 +1,72 @@
-aW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJmb250VG9vbHMudmFyTGliLmF2YXIiKQoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICBmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250CiAgICBmcm9tIGZvbnRUb29scy5taXNjLmNsaVRvb2xzIGltcG9ydCBtYWtlT3V0cHV0RmlsZU5hbWUKICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCBjb25maWdMb2dnZXIKICAgIGltcG9ydCBhcmdwYXJzZQogICAgaW1wb3J0IHN5cwoKICAgIHByaW50KAogICAgICAgICJXQVJOSU5HOiBUaGlzIHNjcmlwdCBpcyBkZXByZWNhdGVkLiBVc2UgYGZvbnR0b29scyB2YXJMaWIuYXZhci5idWlsZGAgIgogICAgICAgICJvciBgZm9udHRvb2xzIHZhckxpYi5hdmFyLnVuYnVpbGRgIGluc3RlYWQuXG4iLAogICAgICAgIGZpbGU9c3lzLnN0ZGVyciwKICAgICkKCiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgdmFyTGliLmF2YXIiLAogICAgICAgIGRlc2NyaXB0aW9uPSJBZGQgYGF2YXJgIHRhYmxlIGZyb20gZGVzaWduc3BhY2UgZmlsZSB0byB2YXJpYWJsZSBmb250LiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJmb250IiwgbWV0YXZhcj0idmFyZm9udC50dGYiLCBoZWxwPSJWYXJpYWJsZS1mb250IGZpbGUuIikKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgImRlc2lnbnNwYWNlIiwKICAgICAgICBtZXRhdmFyPSJmYW1pbHkuZGVzaWduc3BhY2UiLAogICAgICAgIGhlbHA9IkRlc2lnbnNwYWNlIGZpbGUuIiwKICAgICAgICBuYXJncz0iPyIsCiAgICAgICAgZGVmYXVsdD1Ob25lLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLW8iLAogICAgICAgICItLW91dHB1dC1maWxlIiwKICAgICAgICB0eXBlPXN0ciwKICAgICAgICBoZWxwPSJPdXRwdXQgZm9udCBmaWxlIG5hbWUuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi12IiwgIi0tdmVyYm9zZSIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsIGhlbHA9IlJ1biBtb3JlIHZlcmJvc2VseS4iCiAgICApCgogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgY29uZmlnTG9nZ2VyKGxldmVsPSgiSU5GTyIgaWYgb3B0aW9ucy52ZXJib3NlIGVsc2UgIldBUk5JTkciKSkKCiAgICBmb250ID0gVFRGb250KG9wdGlvbnMuZm9udCkKCiAgICBpZiBvcHRpb25zLmRlc2lnbnNwYWNlIGlzIE5vbmU6CiAgICAgICAgZnJvbSAudW5idWlsZCBpbXBvcnQgdW5idWlsZAoKICAgICAgICB1bmJ1aWxkKGZvbnQpCiAgICAgICAgcmV0dXJuIDAKCiAgICBmcm9tIC5idWlsZCBpbXBvcnQgYnVpbGQKCiAgICBidWlsZChmb250LCBvcHRpb25zLmRlc2lnbnNwYWNlKQoKICAgIGlmIG9wdGlvbnMub3V0cHV0X2ZpbGUgaXMgTm9uZToKICAgICAgICBvdXRmaWxlID0gbWFrZU91dHB1dEZpbGVOYW1lKG9wdGlvbnMuZm9udCwgb3ZlcldyaXRlPVRydWUsIHN1ZmZpeD0iLmF2YXIiKQogICAgZWxzZToKICAgICAgICBvdXRmaWxlID0gb3B0aW9ucy5vdXRwdXRfZmlsZQogICAgaWYgb3V0ZmlsZToKICAgICAgICBsb2cuaW5mbygiU2F2aW5nICVzIiwgb3V0ZmlsZSkKICAgICAgICBmb250LnNhdmUob3V0ZmlsZSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwoKICAgIHN5cy5leGl0KG1haW4oKSkK
+import logging
+
+log = logging.getLogger("fontTools.varLib.avar")
+
+
+def main(args=None):
+    from fontTools.ttLib import TTFont
+    from fontTools.misc.cliTools import makeOutputFileName
+    from fontTools import configLogger
+    import argparse
+    import sys
+
+    print(
+        "WARNING: This script is deprecated. Use `fonttools varLib.avar.build` "
+        "or `fonttools varLib.avar.unbuild` instead.\n",
+        file=sys.stderr,
+    )
+
+    if args is None:
+        args = sys.argv[1:]
+
+    parser = argparse.ArgumentParser(
+        "fonttools varLib.avar",
+        description="Add `avar` table from designspace file to variable font.",
+    )
+    parser.add_argument("font", metavar="varfont.ttf", help="Variable-font file.")
+    parser.add_argument(
+        "designspace",
+        metavar="family.designspace",
+        help="Designspace file.",
+        nargs="?",
+        default=None,
+    )
+    parser.add_argument(
+        "-o",
+        "--output-file",
+        type=str,
+        help="Output font file name.",
+    )
+    parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Run more verbosely."
+    )
+
+    options = parser.parse_args(args)
+
+    configLogger(level=("INFO" if options.verbose else "WARNING"))
+
+    font = TTFont(options.font)
+
+    if options.designspace is None:
+        from .unbuild import unbuild
+
+        unbuild(font)
+        return 0
+
+    from .build import build
+
+    build(font, options.designspace)
+
+    if options.output_file is None:
+        outfile = makeOutputFileName(options.font, overWrite=True, suffix=".avar")
+    else:
+        outfile = options.output_file
+    if outfile:
+        log.info("Saving %s", outfile)
+        font.save(outfile)
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

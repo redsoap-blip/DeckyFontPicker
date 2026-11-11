@@ -1,1 +1,191 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgcHNDaGFyU3RyaW5ncwpmcm9tIGZvbnRUb29scyBpbXBvcnQgdHRMaWIKZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBOdWxsUGVuCmZyb20gZm9udFRvb2xzLm1pc2Mucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZApmcm9tIGZvbnRUb29scy5taXNjLmxvZ2dpbmdUb29scyBpbXBvcnQgZGVwcmVjYXRlRnVuY3Rpb24KZnJvbSBmb250VG9vbHMuc3Vic2V0LnV0aWwgaW1wb3J0IF9hZGRfbWV0aG9kLCBfdW5pcV9zb3J0CgoKY2xhc3MgX0Nsb3N1cmVHbHlwaHNUMkRlY29tcGlsZXIocHNDaGFyU3RyaW5ncy5TaW1wbGVUMkRlY29tcGlsZXIpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGNvbXBvbmVudHMsIGxvY2FsU3VicnMsIGdsb2JhbFN1YnJzKToKICAgICAgICBwc0NoYXJTdHJpbmdzLlNpbXBsZVQyRGVjb21waWxlci5fX2luaXRfXyhzZWxmLCBsb2NhbFN1YnJzLCBnbG9iYWxTdWJycykKICAgICAgICBzZWxmLmNvbXBvbmVudHMgPSBjb21wb25lbnRzCgogICAgZGVmIG9wX2VuZGNoYXIoc2VsZiwgaW5kZXgpOgogICAgICAgIGFyZ3MgPSBzZWxmLnBvcGFsbCgpCiAgICAgICAgaWYgbGVuKGFyZ3MpID49IDQ6CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzLmVuY29kaW5ncy5TdGFuZGFyZEVuY29kaW5nIGltcG9ydCBTdGFuZGFyZEVuY29kaW5nCgogICAgICAgICAgICAjIGVuZGNoYXIgY2FuIGRvIHNlYWMgYWNjZW50IGJ1bGRpbmc7IFRoZSBUMiBzcGVjIHNheXMgaXQncyBkZXByZWNhdGVkLAogICAgICAgICAgICAjIGJ1dCByZWNlbnQgc29mdHdhcmUgdGhhdCBzaGFsbCByZW1haW4gbmFtZWxlc3MgZG9lcyBvdXRwdXQgaXQuCiAgICAgICAgICAgIGFkeCwgYWR5LCBiY2hhciwgYWNoYXIgPSBhcmdzWy00Ol0KICAgICAgICAgICAgYmFzZUdseXBoID0gU3RhbmRhcmRFbmNvZGluZ1tiY2hhcl0KICAgICAgICAgICAgYWNjZW50R2x5cGggPSBTdGFuZGFyZEVuY29kaW5nW2FjaGFyXQogICAgICAgICAgICBzZWxmLmNvbXBvbmVudHMuYWRkKGJhc2VHbHlwaCkKICAgICAgICAgICAgc2VsZi5jb21wb25lbnRzLmFkZChhY2NlbnRHbHlwaCkKCgpAX2FkZF9tZXRob2QodHRMaWIuZ2V0VGFibGVDbGFzcygiQ0ZGICIpKQpkZWYgY2xvc3VyZV9nbHlwaHMoc2VsZiwgcyk6CiAgICBjZmYgPSBzZWxmLmNmZgogICAgYXNzZXJ0IGxlbihjZmYpID09IDEKICAgIGZvbnQgPSBjZmZbY2ZmLmtleXMoKVswXV0KICAgIGdseXBoU2V0ID0gZm9udC5DaGFyU3RyaW5ncwoKICAgIGRlY29tcG9zZSA9IHMuZ2x5cGhzCiAgICB3aGlsZSBkZWNvbXBvc2U6CiAgICAgICAgY29tcG9uZW50cyA9IHNldCgpCiAgICAgICAgZm9yIGcgaW4gZGVjb21wb3NlOgogICAgICAgICAgICBpZiBnIG5vdCBpbiBnbHlwaFNldDoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGdsID0gZ2x5cGhTZXRbZ10KCiAgICAgICAgICAgIHN1YnJzID0gZ2V0YXR0cihnbC5wcml2YXRlLCAiU3VicnMiLCBbXSkKICAgICAgICAgICAgZGVjb21waWxlciA9IF9DbG9zdXJlR2x5cGhzVDJEZWNvbXBpbGVyKGNvbXBvbmVudHMsIHN1YnJzLCBnbC5nbG9iYWxTdWJycykKICAgICAgICAgICAgZGVjb21waWxlci5leGVjdXRlKGdsKQogICAgICAgIGNvbXBvbmVudHMgLT0gcy5nbHlwaHMKICAgICAgICBzLmdseXBocy51cGRhdGUoY29tcG9uZW50cykKICAgICAgICBkZWNvbXBvc2UgPSBjb21wb25lbnRzCgoKZGVmIF9lbXB0eV9jaGFyc3RyaW5nKGZvbnQsIGdseXBoTmFtZSwgaXNDRkYyLCBpZ25vcmVXaWR0aD1GYWxzZSk6CiAgICBjLCBmZFNlbGVjdEluZGV4ID0gZm9udC5DaGFyU3RyaW5ncy5nZXRJdGVtQW5kU2VsZWN0b3IoZ2x5cGhOYW1lKQogICAgaWYgaXNDRkYyIG9yIGlnbm9yZVdpZHRoOgogICAgICAgICMgQ0ZGMiBjaGFyc3RyaW5ncyBoYXZlIG5vIHdpZHRocyBub3IgJ2VuZGNoYXInIG9wZXJhdG9ycwogICAgICAgIGMuc2V0UHJvZ3JhbShbXSBpZiBpc0NGRjIgZWxzZSBbImVuZGNoYXIiXSkKICAgIGVsc2U6CiAgICAgICAgaWYgaGFzYXR0cihmb250LCAiRkRBcnJheSIpIGFuZCBmb250LkZEQXJyYXkgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHByaXZhdGUgPSBmb250LkZEQXJyYXlbZmRTZWxlY3RJbmRleF0uUHJpdmF0ZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHByaXZhdGUgPSBmb250LlByaXZhdGUKICAgICAgICBkZmx0V2RYID0gcHJpdmF0ZS5kZWZhdWx0V2lkdGhYCiAgICAgICAgbm1ubFdkWCA9IHByaXZhdGUubm9taW5hbFdpZHRoWAogICAgICAgIHBlbiA9IE51bGxQZW4oKQogICAgICAgIGMuZHJhdyhwZW4pICAjIHRoaXMgd2lsbCBzZXQgdGhlIGNoYXJzdHJpbmcncyB3aWR0aAogICAgICAgIGlmIGMud2lkdGggIT0gZGZsdFdkWDoKICAgICAgICAgICAgYy5wcm9ncmFtID0gW2Mud2lkdGggLSBubW5sV2RYLCAiZW5kY2hhciJdCiAgICAgICAgZWxzZToKICAgICAgICAgICAgYy5wcm9ncmFtID0gWyJlbmRjaGFyIl0KCgpAX2FkZF9tZXRob2QodHRMaWIuZ2V0VGFibGVDbGFzcygiQ0ZGICIpKQpkZWYgcHJ1bmVfcHJlX3N1YnNldChzZWxmLCBmb250LCBvcHRpb25zKToKICAgIGNmZiA9IHNlbGYuY2ZmCiAgICAjIENGRiB0YWJsZSBtdXN0IGhhdmUgb25lIGZvbnQgb25seQogICAgY2ZmLmZvbnROYW1lcyA9IGNmZi5mb250TmFtZXNbOjFdCgogICAgaWYgb3B0aW9ucy5ub3RkZWZfZ2x5cGggYW5kIG5vdCBvcHRpb25zLm5vdGRlZl9vdXRsaW5lOgogICAgICAgIGlzQ0ZGMiA9IGNmZi5tYWpvciA+IDEKICAgICAgICBmb3IgZm9udG5hbWUgaW4gY2ZmLmtleXMoKToKICAgICAgICAgICAgZm9udCA9IGNmZltmb250bmFtZV0KICAgICAgICAgICAgX2VtcHR5X2NoYXJzdHJpbmcoZm9udCwgIi5ub3RkZWYiLCBpc0NGRjI9aXNDRkYyKQoKICAgICMgQ2xlYXIgdXNlbGVzcyBFbmNvZGluZwogICAgZm9yIGZvbnRuYW1lIGluIGNmZi5rZXlzKCk6CiAgICAgICAgZm9udCA9IGNmZltmb250bmFtZV0KICAgICAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy82MjAKICAgICAgICBmb250LkVuY29kaW5nID0gIlN0YW5kYXJkRW5jb2RpbmciCgogICAgcmV0dXJuIFRydWUgICMgYm9vbChjZmYuZm9udE5hbWVzKQoKCkBfYWRkX21ldGhvZCh0dExpYi5nZXRUYWJsZUNsYXNzKCJDRkYgIikpCmRlZiBzdWJzZXRfZ2x5cGhzKHNlbGYsIHMpOgogICAgY2ZmID0gc2VsZi5jZmYKICAgIGZvciBmb250bmFtZSBpbiBjZmYua2V5cygpOgogICAgICAgIGZvbnQgPSBjZmZbZm9udG5hbWVdCiAgICAgICAgY3MgPSBmb250LkNoYXJTdHJpbmdzCgogICAgICAgIGdseXBocyA9IHMuZ2x5cGhzLnVuaW9uKHMuZ2x5cGhzX2VtcHRpZWQpCgogICAgICAgICMgTG9hZCBhbGwgZ2x5cGhzCiAgICAgICAgZm9yIGcgaW4gZm9udC5jaGFyc2V0OgogICAgICAgICAgICBpZiBnIG5vdCBpbiBnbHlwaHM6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBjLCBfID0gY3MuZ2V0SXRlbUFuZFNlbGVjdG9yKGcpCgogICAgICAgIGlmIGNzLmNoYXJTdHJpbmdzQXJlSW5kZXhlZDoKICAgICAgICAgICAgaW5kaWNlcyA9IFtpIGZvciBpLCBnIGluIGVudW1lcmF0ZShmb250LmNoYXJzZXQpIGlmIGcgaW4gZ2x5cGhzXQogICAgICAgICAgICBjc2kgPSBjcy5jaGFyU3RyaW5nc0luZGV4CiAgICAgICAgICAgIGNzaS5pdGVtcyA9IFtjc2kuaXRlbXNbaV0gZm9yIGkgaW4gaW5kaWNlc10KICAgICAgICAgICAgZGVsIGNzaS5maWxlLCBjc2kub2Zmc2V0cwogICAgICAgICAgICBuZXdDaGFyU3RyaW5ncyA9IHt9CiAgICAgICAgICAgIGZvciBpbmRpY2VzSWR4LCBjaGFyc2V0SWR4IGluIGVudW1lcmF0ZShpbmRpY2VzKToKICAgICAgICAgICAgICAgIGcgPSBmb250LmNoYXJzZXRbY2hhcnNldElkeF0KICAgICAgICAgICAgICAgIGlmIGcgaW4gY3MuY2hhclN0cmluZ3M6CiAgICAgICAgICAgICAgICAgICAgbmV3Q2hhclN0cmluZ3NbZ10gPSBpbmRpY2VzSWR4CiAgICAgICAgICAgIGNzLmNoYXJTdHJpbmdzID0gbmV3Q2hhclN0cmluZ3MKICAgICAgICBlbHNlOgogICAgICAgICAgICBjcy5jaGFyU3RyaW5ncyA9IHtnOiB2IGZvciBnLCB2IGluIGNzLmNoYXJTdHJpbmdzLml0ZW1zKCkgaWYgZyBpbiBnbHlwaHN9CiAgICAgICAgaWYgaGFzYXR0cihmb250LCAiRkRTZWxlY3QiKToKICAgICAgICAgICAgc2VsID0gZm9udC5GRFNlbGVjdAogICAgICAgICAgICBzZWwuZm9ybWF0ID0gTm9uZQogICAgICAgICAgICAjIEZEU2VsZWN0IG1heSBhbHNvIG1hcCBWQVJDLW9ubHkgZ2x5cGhzIGJleW9uZCB0aGUgQ0ZGMiBjaGFyc2V0LgogICAgICAgICAgICBzZWwuZ2lkQXJyYXkgPSBbCiAgICAgICAgICAgICAgICBzZWwuZ2lkQXJyYXlbaV0KICAgICAgICAgICAgICAgIGZvciBpLCBnIGluIGVudW1lcmF0ZShzLm9yaWdfZ2x5cGhfb3JkZXIpCiAgICAgICAgICAgICAgICBpZiBnIGluIGdseXBocyBhbmQgaSA8IGxlbihzZWwuZ2lkQXJyYXkpCiAgICAgICAgICAgIF0KICAgICAgICBmb250LmNoYXJzZXQgPSBbZyBmb3IgZyBpbiBmb250LmNoYXJzZXQgaWYgZyBpbiBnbHlwaHNdCiAgICAgICAgZm9udC5udW1HbHlwaHMgPSBsZW4oZm9udC5jaGFyc2V0KQoKICAgICAgICBpZiBzLm9wdGlvbnMucmV0YWluX2dpZHM6CiAgICAgICAgICAgIGlzQ0ZGMiA9IGNmZi5tYWpvciA+IDEKICAgICAgICAgICAgZm9yIGcgaW4gcy5nbHlwaHNfZW1wdGllZDoKICAgICAgICAgICAgICAgIGlmIGcgbm90IGluIGNzOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBfZW1wdHlfY2hhcnN0cmluZyhmb250LCBnLCBpc0NGRjI9aXNDRkYyLCBpZ25vcmVXaWR0aD1UcnVlKQoKICAgIHJldHVybiBUcnVlICAjIGFueShjZmZbZm9udG5hbWVdLm51bUdseXBocyBmb3IgZm9udG5hbWUgaW4gY2ZmLmtleXMoKSkKCgpAX2FkZF9tZXRob2QodHRMaWIuZ2V0VGFibGVDbGFzcygiQ0ZGICIpKQpkZWYgcHJ1bmVfcG9zdF9zdWJzZXQoc2VsZiwgdHRmRm9udCwgb3B0aW9ucyk6CiAgICBjZmYgPSBzZWxmLmNmZgogICAgZm9yIGZvbnRuYW1lIGluIGNmZi5rZXlzKCk6CiAgICAgICAgZm9udCA9IGNmZltmb250bmFtZV0KICAgICAgICBjcyA9IGZvbnQuQ2hhclN0cmluZ3MKCiAgICAgICAgIyBEcm9wIHVudXNlZCBGb250RGljdGlvbmFyaWVzCiAgICAgICAgaWYgaGFzYXR0cihmb250LCAiRkRTZWxlY3QiKToKICAgICAgICAgICAgc2VsID0gZm9udC5GRFNlbGVjdAogICAgICAgICAgICBpbmRpY2VzID0gX3VuaXFfc29ydChzZWwuZ2lkQXJyYXkpCiAgICAgICAgICAgIHNlbC5naWRBcnJheSA9IFtpbmRpY2VzLmluZGV4KHNzKSBmb3Igc3MgaW4gc2VsLmdpZEFycmF5XQogICAgICAgICAgICBhcnIgPSBmb250LkZEQXJyYXkKICAgICAgICAgICAgYXJyLml0ZW1zID0gW2FycltpXSBmb3IgaSBpbiBpbmRpY2VzXQogICAgICAgICAgICBkZWwgYXJyLmZpbGUsIGFyci5vZmZzZXRzCgogICAgIyBEZXN1YnJvdXRpbml6ZSBpZiBhc2tlZCBmb3IKICAgIGlmIG9wdGlvbnMuZGVzdWJyb3V0aW5pemU6CiAgICAgICAgY2ZmLmRlc3Vicm91dGluaXplKCkKCiAgICAjIERyb3AgaGludHMgaWYgbm90IG5lZWRlZAogICAgaWYgbm90IG9wdGlvbnMuaGludGluZzoKICAgICAgICBzZWxmLnJlbW92ZV9oaW50cygpCiAgICBlbGlmIG5vdCBvcHRpb25zLmRlc3Vicm91dGluaXplOgogICAgICAgIHNlbGYucmVtb3ZlX3VudXNlZF9zdWJyb3V0aW5lcygpCiAgICByZXR1cm4gVHJ1ZQoKCkBkZXByZWNhdGVGdW5jdGlvbigKICAgICJ1c2UgJ0NGRkZvbnRTZXQuZGVzdWJyb3V0aW5pemUoKScgaW5zdGVhZCIsIGNhdGVnb3J5PURlcHJlY2F0aW9uV2FybmluZwopCkBfYWRkX21ldGhvZCh0dExpYi5nZXRUYWJsZUNsYXNzKCJDRkYgIikpCmRlZiBkZXN1YnJvdXRpbml6ZShzZWxmKToKICAgIHNlbGYuY2ZmLmRlc3Vicm91dGluaXplKCkKCgpAZGVwcmVjYXRlRnVuY3Rpb24oCiAgICAidXNlICdDRkZGb250U2V0LnJlbW92ZV9oaW50cygpJyBpbnN0ZWFkIiwgY2F0ZWdvcnk9RGVwcmVjYXRpb25XYXJuaW5nCikKQF9hZGRfbWV0aG9kKHR0TGliLmdldFRhYmxlQ2xhc3MoIkNGRiAiKSkKZGVmIHJlbW92ZV9oaW50cyhzZWxmKToKICAgIHNlbGYuY2ZmLnJlbW92ZV9oaW50cygpCgoKQGRlcHJlY2F0ZUZ1bmN0aW9uKAogICAgInVzZSAnQ0ZGRm9udFNldC5yZW1vdmVfdW51c2VkX3N1YnJvdXRpbmVzJyBpbnN0ZWFkIiwgY2F0ZWdvcnk9RGVwcmVjYXRpb25XYXJuaW5nCikKQF9hZGRfbWV0aG9kKHR0TGliLmdldFRhYmxlQ2xhc3MoIkNGRiAiKSkKZGVmIHJlbW92ZV91bnVzZWRfc3Vicm91dGluZXMoc2VsZik6CiAgICBzZWxmLmNmZi5yZW1vdmVfdW51c2VkX3N1YnJvdXRpbmVzKCkK
+from fontTools.misc import psCharStrings
+from fontTools import ttLib
+from fontTools.pens.basePen import NullPen
+from fontTools.misc.roundTools import otRound
+from fontTools.misc.loggingTools import deprecateFunction
+from fontTools.subset.util import _add_method, _uniq_sort
+
+
+class _ClosureGlyphsT2Decompiler(psCharStrings.SimpleT2Decompiler):
+    def __init__(self, components, localSubrs, globalSubrs):
+        psCharStrings.SimpleT2Decompiler.__init__(self, localSubrs, globalSubrs)
+        self.components = components
+
+    def op_endchar(self, index):
+        args = self.popall()
+        if len(args) >= 4:
+            from fontTools.encodings.StandardEncoding import StandardEncoding
+
+            # endchar can do seac accent bulding; The T2 spec says it's deprecated,
+            # but recent software that shall remain nameless does output it.
+            adx, ady, bchar, achar = args[-4:]
+            baseGlyph = StandardEncoding[bchar]
+            accentGlyph = StandardEncoding[achar]
+            self.components.add(baseGlyph)
+            self.components.add(accentGlyph)
+
+
+@_add_method(ttLib.getTableClass("CFF "))
+def closure_glyphs(self, s):
+    cff = self.cff
+    assert len(cff) == 1
+    font = cff[cff.keys()[0]]
+    glyphSet = font.CharStrings
+
+    decompose = s.glyphs
+    while decompose:
+        components = set()
+        for g in decompose:
+            if g not in glyphSet:
+                continue
+            gl = glyphSet[g]
+
+            subrs = getattr(gl.private, "Subrs", [])
+            decompiler = _ClosureGlyphsT2Decompiler(components, subrs, gl.globalSubrs)
+            decompiler.execute(gl)
+        components -= s.glyphs
+        s.glyphs.update(components)
+        decompose = components
+
+
+def _empty_charstring(font, glyphName, isCFF2, ignoreWidth=False):
+    c, fdSelectIndex = font.CharStrings.getItemAndSelector(glyphName)
+    if isCFF2 or ignoreWidth:
+        # CFF2 charstrings have no widths nor 'endchar' operators
+        c.setProgram([] if isCFF2 else ["endchar"])
+    else:
+        if hasattr(font, "FDArray") and font.FDArray is not None:
+            private = font.FDArray[fdSelectIndex].Private
+        else:
+            private = font.Private
+        dfltWdX = private.defaultWidthX
+        nmnlWdX = private.nominalWidthX
+        pen = NullPen()
+        c.draw(pen)  # this will set the charstring's width
+        if c.width != dfltWdX:
+            c.program = [c.width - nmnlWdX, "endchar"]
+        else:
+            c.program = ["endchar"]
+
+
+@_add_method(ttLib.getTableClass("CFF "))
+def prune_pre_subset(self, font, options):
+    cff = self.cff
+    # CFF table must have one font only
+    cff.fontNames = cff.fontNames[:1]
+
+    if options.notdef_glyph and not options.notdef_outline:
+        isCFF2 = cff.major > 1
+        for fontname in cff.keys():
+            font = cff[fontname]
+            _empty_charstring(font, ".notdef", isCFF2=isCFF2)
+
+    # Clear useless Encoding
+    for fontname in cff.keys():
+        font = cff[fontname]
+        # https://github.com/fonttools/fonttools/issues/620
+        font.Encoding = "StandardEncoding"
+
+    return True  # bool(cff.fontNames)
+
+
+@_add_method(ttLib.getTableClass("CFF "))
+def subset_glyphs(self, s):
+    cff = self.cff
+    for fontname in cff.keys():
+        font = cff[fontname]
+        cs = font.CharStrings
+
+        glyphs = s.glyphs.union(s.glyphs_emptied)
+
+        # Load all glyphs
+        for g in font.charset:
+            if g not in glyphs:
+                continue
+            c, _ = cs.getItemAndSelector(g)
+
+        if cs.charStringsAreIndexed:
+            indices = [i for i, g in enumerate(font.charset) if g in glyphs]
+            csi = cs.charStringsIndex
+            csi.items = [csi.items[i] for i in indices]
+            del csi.file, csi.offsets
+            newCharStrings = {}
+            for indicesIdx, charsetIdx in enumerate(indices):
+                g = font.charset[charsetIdx]
+                if g in cs.charStrings:
+                    newCharStrings[g] = indicesIdx
+            cs.charStrings = newCharStrings
+        else:
+            cs.charStrings = {g: v for g, v in cs.charStrings.items() if g in glyphs}
+        if hasattr(font, "FDSelect"):
+            sel = font.FDSelect
+            sel.format = None
+            # FDSelect may also map VARC-only glyphs beyond the CFF2 charset.
+            sel.gidArray = [
+                sel.gidArray[i]
+                for i, g in enumerate(s.orig_glyph_order)
+                if g in glyphs and i < len(sel.gidArray)
+            ]
+        font.charset = [g for g in font.charset if g in glyphs]
+        font.numGlyphs = len(font.charset)
+
+        if s.options.retain_gids:
+            isCFF2 = cff.major > 1
+            for g in s.glyphs_emptied:
+                if g not in cs:
+                    continue
+                _empty_charstring(font, g, isCFF2=isCFF2, ignoreWidth=True)
+
+    return True  # any(cff[fontname].numGlyphs for fontname in cff.keys())
+
+
+@_add_method(ttLib.getTableClass("CFF "))
+def prune_post_subset(self, ttfFont, options):
+    cff = self.cff
+    for fontname in cff.keys():
+        font = cff[fontname]
+        cs = font.CharStrings
+
+        # Drop unused FontDictionaries
+        if hasattr(font, "FDSelect"):
+            sel = font.FDSelect
+            indices = _uniq_sort(sel.gidArray)
+            sel.gidArray = [indices.index(ss) for ss in sel.gidArray]
+            arr = font.FDArray
+            arr.items = [arr[i] for i in indices]
+            del arr.file, arr.offsets
+
+    # Desubroutinize if asked for
+    if options.desubroutinize:
+        cff.desubroutinize()
+
+    # Drop hints if not needed
+    if not options.hinting:
+        self.remove_hints()
+    elif not options.desubroutinize:
+        self.remove_unused_subroutines()
+    return True
+
+
+@deprecateFunction(
+    "use 'CFFFontSet.desubroutinize()' instead", category=DeprecationWarning
+)
+@_add_method(ttLib.getTableClass("CFF "))
+def desubroutinize(self):
+    self.cff.desubroutinize()
+
+
+@deprecateFunction(
+    "use 'CFFFontSet.remove_hints()' instead", category=DeprecationWarning
+)
+@_add_method(ttLib.getTableClass("CFF "))
+def remove_hints(self):
+    self.cff.remove_hints()
+
+
+@deprecateFunction(
+    "use 'CFFFontSet.remove_unused_subroutines' instead", category=DeprecationWarning
+)
+@_add_method(ttLib.getTableClass("CFF "))
+def remove_unused_subroutines(self):
+    self.cff.remove_unused_subroutines()

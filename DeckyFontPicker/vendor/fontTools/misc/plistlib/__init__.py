@@ -1,1 +1,680 @@
-aW1wb3J0IGNvbGxlY3Rpb25zLmFiYwppbXBvcnQgcmUKZnJvbSB0eXBpbmcgaW1wb3J0ICgKICAgIEFueSwKICAgIENhbGxhYmxlLAogICAgRGljdCwKICAgIExpc3QsCiAgICBNYXBwaW5nLAogICAgTXV0YWJsZU1hcHBpbmcsCiAgICBPcHRpb25hbCwKICAgIFNlcXVlbmNlLAogICAgVHlwZSwKICAgIFVuaW9uLAogICAgSU8sCikKaW1wb3J0IHdhcm5pbmdzCmZyb20gaW8gaW1wb3J0IEJ5dGVzSU8KZnJvbSBkYXRldGltZSBpbXBvcnQgZGF0ZXRpbWUKZnJvbSBiYXNlNjQgaW1wb3J0IGI2NGVuY29kZSwgYjY0ZGVjb2RlCmZyb20gbnVtYmVycyBpbXBvcnQgSW50ZWdyYWwKZnJvbSB0eXBlcyBpbXBvcnQgU2ltcGxlTmFtZXNwYWNlCmZyb20gZnVuY3Rvb2xzIGltcG9ydCBzaW5nbGVkaXNwYXRjaAoKZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgZXRyZWUKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCB0b3N0cgoKIyBCeSBkZWZhdWx0LCB3ZQojICAtIGRlc2VyaWFsaXplIDxkYXRhPiBlbGVtZW50cyBhcyBieXRlcyBhbmQKIyAgLSBzZXJpYWxpemUgYnl0ZXMgYXMgPGRhdGE+IGVsZW1lbnRzLgojIEJlZm9yZSwgb24gUHl0aG9uIDIsIHdlCiMgIC0gZGVzZXJpYWxpemVkIDxkYXRhPiBlbGVtZW50cyBhcyBwbGlzdGxpYi5EYXRhIG9iamVjdHMsIGluIG9yZGVyIHRvCiMgICAgZGlzdGluZ3Vpc2ggdGhlbSBmcm9tIHRoZSBidWlsdC1pbiBzdHIgdHlwZSAod2hpY2ggaXMgYnl0ZXMgb24gcHl0aG9uMikKIyAgLSBzZXJpYWxpemVkIGJ5dGVzIGFzIDxzdHJpbmc+IGVsZW1lbnRzICh0aGV5IG11c3QgaGF2ZSBvbmx5IGNvbnRhaW5lZAojICAgIEFTQ0lJIGNoYXJhY3RlcnMgaW4gdGhpcyBjYXNlKQojIFlvdSBjYW4gcGFzcyB1c2VfYnVpbHRpbl90eXBlcz1bVHJ1ZXxGYWxzZV0gdG8gdGhlIGxvYWQvZHVtcCBldGMuIGZ1bmN0aW9ucwojIHRvIGVuZm9yY2UgYSBzcGVjaWZpYyB0cmVhdG1lbnQuCiMgTk9URSB0aGF0IHVuaWNvZGUgdHlwZSBhbHdheXMgbWFwcyB0byA8c3RyaW5nPiBlbGVtZW50LCBhbmQgcGxpc3RsaWIuRGF0YQojIGFsd2F5cyBtYXBzIHRvIDxkYXRhPiBlbGVtZW50LCByZWdhcmRsZXNzIG9mIHVzZV9idWlsdGluX3R5cGVzLgpVU0VfQlVJTFRJTl9UWVBFUyA9IFRydWUKClhNTF9ERUNMQVJBVElPTiA9IGIiIiI8P3htbCB2ZXJzaW9uPScxLjAnIGVuY29kaW5nPSdVVEYtOCc/PiIiIgoKUExJU1RfRE9DVFlQRSA9ICgKICAgIGInPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAnCiAgICBiJyJodHRwOi8vd3d3LmFwcGxlLmNvbS9EVERzL1Byb3BlcnR5TGlzdC0xLjAuZHRkIj4nCikKCgojIERhdGUgc2hvdWxkIGNvbmZvcm0gdG8gYSBzdWJzZXQgb2YgSVNPIDg2MDE6CiMgWVlZWSAnLScgTU0gJy0nIEREICdUJyBISCAnOicgTU0gJzonIFNTICdaJwpfZGF0ZV9wYXJzZXIgPSByZS5jb21waWxlKAogICAgciIoP1A8eWVhcj5cZFxkXGRcZCkiCiAgICByIig/Oi0oP1A8bW9udGg+XGRcZCkiCiAgICByIig/Oi0oP1A8ZGF5PlxkXGQpIgogICAgciIoPzpUKD9QPGhvdXI+XGRcZCkiCiAgICByIig/OjooP1A8bWludXRlPlxkXGQpIgogICAgciIoPzo6KD9QPHNlY29uZD5cZFxkKSkiCiAgICByIj8pPyk/KT8pP1oiLAogICAgcmUuQVNDSUksCikKCgpkZWYgX2RhdGVfZnJvbV9zdHJpbmcoczogc3RyKSAtPiBkYXRldGltZToKICAgIG9yZGVyID0gKCJ5ZWFyIiwgIm1vbnRoIiwgImRheSIsICJob3VyIiwgIm1pbnV0ZSIsICJzZWNvbmQiKQogICAgbSA9IF9kYXRlX3BhcnNlci5tYXRjaChzKQogICAgaWYgbSBpcyBOb25lOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJFeHBlY3RlZCBJU08gODYwMSBkYXRlIHN0cmluZywgYnV0IGdvdCAne3M6cn0nLiIpCiAgICBnZCA9IG0uZ3JvdXBkaWN0KCkKICAgIGxzdCA9IFtdCiAgICBmb3Iga2V5IGluIG9yZGVyOgogICAgICAgIHZhbCA9IGdkW2tleV0KICAgICAgICBpZiB2YWwgaXMgTm9uZToKICAgICAgICAgICAgYnJlYWsKICAgICAgICBsc3QuYXBwZW5kKGludCh2YWwpKQogICAgIyBOT1RFOiBteXB5IGRvZXNuJ3Qga25vdyB0aGF0IGxzdCBpcyA2IGVsZW1lbnRzIGxvbmcuCiAgICByZXR1cm4gZGF0ZXRpbWUoKmxzdCkgICMgdHlwZTogaWdub3JlCgoKZGVmIF9kYXRlX3RvX3N0cmluZyhkOiBkYXRldGltZSkgLT4gc3RyOgogICAgcmV0dXJuICIlMDRkLSUwMmQtJTAyZFQlMDJkOiUwMmQ6JTAyZFoiICUgKAogICAgICAgIGQueWVhciwKICAgICAgICBkLm1vbnRoLAogICAgICAgIGQuZGF5LAogICAgICAgIGQuaG91ciwKICAgICAgICBkLm1pbnV0ZSwKICAgICAgICBkLnNlY29uZCwKICAgICkKCgpjbGFzcyBEYXRhOgogICAgIiIiUmVwcmVzZW50cyBiaW5hcnkgZGF0YSB3aGVuIGBgdXNlX2J1aWx0aW5fdHlwZXM9RmFsc2UuYGAKCiAgICBUaGlzIGNsYXNzIHdyYXBzIGJpbmFyeSBkYXRhIGxvYWRlZCBmcm9tIGEgcGxpc3QgZmlsZSB3aGVuIHRoZQogICAgYGB1c2VfYnVpbHRpbl90eXBlc2BgIGFyZ3VtZW50IHRvIHRoZSBsb2FkaW5nIGZ1bmN0aW9uICg6cHk6ZnVuYzpgZnJvbXRyZWVgLAogICAgOnB5OmZ1bmM6YGxvYWRgLCA6cHk6ZnVuYzpgbG9hZHNgKSBpcyBmYWxzZS4KCiAgICBUaGUgYWN0dWFsIGJpbmFyeSBkYXRhIGlzIHJldHJpZXZlZCB1c2luZyB0aGUgYGBkYXRhYGAgYXR0cmlidXRlLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGRhdGE6IGJ5dGVzKSAtPiBOb25lOgogICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKGRhdGEsIGJ5dGVzKToKICAgICAgICAgICAgcmFpc2UgVHlwZUVycm9yKCJFeHBlY3RlZCBieXRlcywgZm91bmQgJXMiICUgdHlwZShkYXRhKS5fX25hbWVfXykKICAgICAgICBzZWxmLmRhdGEgPSBkYXRhCgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgZnJvbUJhc2U2NChjbHMsIGRhdGE6IFVuaW9uW2J5dGVzLCBzdHJdKSAtPiAiRGF0YSI6CiAgICAgICAgcmV0dXJuIGNscyhiNjRkZWNvZGUoZGF0YSkpCgogICAgZGVmIGFzQmFzZTY0KHNlbGYsIG1heGxpbmVsZW5ndGg6IGludCA9IDc2LCBpbmRlbnRfbGV2ZWw6IGludCA9IDEpIC0+IGJ5dGVzOgogICAgICAgIHJldHVybiBfZW5jb2RlX2Jhc2U2NCgKICAgICAgICAgICAgc2VsZi5kYXRhLCBtYXhsaW5lbGVuZ3RoPW1heGxpbmVsZW5ndGgsIGluZGVudF9sZXZlbD1pbmRlbnRfbGV2ZWwKICAgICAgICApCgogICAgZGVmIF9fZXFfXyhzZWxmLCBvdGhlcjogQW55KSAtPiBib29sOgogICAgICAgIGlmIGlzaW5zdGFuY2Uob3RoZXIsIHNlbGYuX19jbGFzc19fKToKICAgICAgICAgICAgcmV0dXJuIHNlbGYuZGF0YSA9PSBvdGhlci5kYXRhCiAgICAgICAgZWxpZiBpc2luc3RhbmNlKG90aGVyLCBieXRlcyk6CiAgICAgICAgICAgIHJldHVybiBzZWxmLmRhdGEgPT0gb3RoZXIKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gTm90SW1wbGVtZW50ZWQKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiAiJXMoJXMpIiAlIChzZWxmLl9fY2xhc3NfXy5fX25hbWVfXywgcmVwcihzZWxmLmRhdGEpKQoKCmRlZiBfZW5jb2RlX2Jhc2U2NCgKICAgIGRhdGE6IGJ5dGVzLCBtYXhsaW5lbGVuZ3RoOiBPcHRpb25hbFtpbnRdID0gNzYsIGluZGVudF9sZXZlbDogaW50ID0gMQopIC0+IGJ5dGVzOgogICAgZGF0YSA9IGI2NGVuY29kZShkYXRhKQogICAgaWYgZGF0YSBhbmQgbWF4bGluZWxlbmd0aDoKICAgICAgICAjIHNwbGl0IGludG8gbXVsdGlwbGUgbGluZXMgcmlnaHQtanVzdGlmaWVkIHRvICdtYXhsaW5lbGVuZ3RoJyBjaGFycwogICAgICAgIGluZGVudCA9IGIiXG4iICsgYiIgICIgKiBpbmRlbnRfbGV2ZWwKICAgICAgICBtYXhfbGVuZ3RoID0gbWF4KDE2LCBtYXhsaW5lbGVuZ3RoIC0gbGVuKGluZGVudCkpCiAgICAgICAgY2h1bmtzID0gW10KICAgICAgICBmb3IgaSBpbiByYW5nZSgwLCBsZW4oZGF0YSksIG1heF9sZW5ndGgpOgogICAgICAgICAgICBjaHVua3MuYXBwZW5kKGluZGVudCkKICAgICAgICAgICAgY2h1bmtzLmFwcGVuZChkYXRhW2kgOiBpICsgbWF4X2xlbmd0aF0pCiAgICAgICAgY2h1bmtzLmFwcGVuZChpbmRlbnQpCiAgICAgICAgZGF0YSA9IGIiIi5qb2luKGNodW5rcykKICAgIHJldHVybiBkYXRhCgoKIyBNeXB5IGRvZXMgbm90IHN1cHBvcnQgcmVjdXJzaXZlIHR5cGUgYWxpYXNlcyBhcyBvZiAwLjc4MiwgUHlsYW5jZSBkb2VzLgojIGh0dHBzOi8vZ2l0aHViLmNvbS9weXRob24vbXlweS9pc3N1ZXMvNzMxCiMgaHR0cHM6Ly9kZXZibG9ncy5taWNyb3NvZnQuY29tL3B5dGhvbi9weWxhbmNlLWludHJvZHVjZXMtZml2ZS1uZXctZmVhdHVyZXMtdGhhdC1lbmFibGUtdHlwZS1tYWdpYy1mb3ItcHl0aG9uLWRldmVsb3BlcnMvIzEtc3VwcG9ydC1mb3ItcmVjdXJzaXZlLXR5cGUtYWxpYXNlcwpQbGlzdEVuY29kYWJsZSA9IFVuaW9uWwogICAgYm9vbCwKICAgIGJ5dGVzLAogICAgRGF0YSwKICAgIGRhdGV0aW1lLAogICAgZmxvYXQsCiAgICBJbnRlZ3JhbCwKICAgIE1hcHBpbmdbc3RyLCBBbnldLAogICAgU2VxdWVuY2VbQW55XSwKICAgIHN0ciwKXQoKCmNsYXNzIFBsaXN0VGFyZ2V0OgogICAgIiIiRXZlbnQgaGFuZGxlciB1c2luZyB0aGUgRWxlbWVudFRyZWUgVGFyZ2V0IEFQSSB0aGF0IGNhbiBiZQogICAgcGFzc2VkIHRvIGEgWE1MUGFyc2VyIHRvIHByb2R1Y2UgcHJvcGVydHkgbGlzdCBvYmplY3RzIGZyb20gWE1MLgogICAgSXQgaXMgYmFzZWQgb24gdGhlIENQeXRob24gcGxpc3RsaWIgbW9kdWxlJ3MgX1BsaXN0UGFyc2VyIGNsYXNzLAogICAgYnV0IGRvZXMgbm90IHVzZSB0aGUgZXhwYXQgcGFyc2VyLgoKICAgID4+PiBmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBldHJlZQogICAgPj4+IHBhcnNlciA9IGV0cmVlLlhNTFBhcnNlcih0YXJnZXQ9UGxpc3RUYXJnZXQoKSkKICAgID4+PiByZXN1bHQgPSBldHJlZS5YTUwoCiAgICAuLi4gICAgICI8ZGljdD4iCiAgICAuLi4gICAgICIgICAgPGtleT5zb21ldGhpbmc8L2tleT4iCiAgICAuLi4gICAgICIgICAgPHN0cmluZz5ibGFoPC9zdHJpbmc+IgogICAgLi4uICAgICAiPC9kaWN0PiIsCiAgICAuLi4gICAgIHBhcnNlcj1wYXJzZXIpCiAgICA+Pj4gcmVzdWx0ID09IHsic29tZXRoaW5nIjogImJsYWgifQogICAgVHJ1ZQoKICAgIExpbmtzOgogICAgaHR0cHM6Ly9naXRodWIuY29tL3B5dGhvbi9jcHl0aG9uL2Jsb2IvbWFpbi9MaWIvcGxpc3RsaWIucHkKICAgIGh0dHA6Ly9seG1sLmRlL3BhcnNpbmcuaHRtbCN0aGUtdGFyZ2V0LXBhcnNlci1pbnRlcmZhY2UKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXygKICAgICAgICBzZWxmLAogICAgICAgIHVzZV9idWlsdGluX3R5cGVzOiBPcHRpb25hbFtib29sXSA9IE5vbmUsCiAgICAgICAgZGljdF90eXBlOiBUeXBlW011dGFibGVNYXBwaW5nW3N0ciwgQW55XV0gPSBkaWN0LAogICAgKSAtPiBOb25lOgogICAgICAgIHNlbGYuc3RhY2s6IExpc3RbUGxpc3RFbmNvZGFibGVdID0gW10KICAgICAgICBzZWxmLmN1cnJlbnRfa2V5OiBPcHRpb25hbFtzdHJdID0gTm9uZQogICAgICAgIHNlbGYucm9vdDogT3B0aW9uYWxbUGxpc3RFbmNvZGFibGVdID0gTm9uZQogICAgICAgIGlmIHVzZV9idWlsdGluX3R5cGVzIGlzIE5vbmU6CiAgICAgICAgICAgIHNlbGYuX3VzZV9idWlsdGluX3R5cGVzID0gVVNFX0JVSUxUSU5fVFlQRVMKICAgICAgICBlbHNlOgogICAgICAgICAgICBpZiB1c2VfYnVpbHRpbl90eXBlcyBpcyBGYWxzZToKICAgICAgICAgICAgICAgIHdhcm5pbmdzLndhcm4oCiAgICAgICAgICAgICAgICAgICAgIlNldHRpbmcgdXNlX2J1aWx0aW5fdHlwZXMgdG8gRmFsc2UgaXMgZGVwcmVjYXRlZCBhbmQgd2lsbCBiZSAiCiAgICAgICAgICAgICAgICAgICAgInJlbW92ZWQgc29vbi4iLAogICAgICAgICAgICAgICAgICAgIERlcHJlY2F0aW9uV2FybmluZywKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgc2VsZi5fdXNlX2J1aWx0aW5fdHlwZXMgPSB1c2VfYnVpbHRpbl90eXBlcwogICAgICAgIHNlbGYuX2RpY3RfdHlwZSA9IGRpY3RfdHlwZQoKICAgIGRlZiBzdGFydChzZWxmLCB0YWc6IHN0ciwgYXR0cmliOiBNYXBwaW5nW3N0ciwgc3RyXSkgLT4gTm9uZToKICAgICAgICBzZWxmLl9kYXRhOiBMaXN0W3N0cl0gPSBbXQogICAgICAgIGhhbmRsZXIgPSBfVEFSR0VUX1NUQVJUX0hBTkRMRVJTLmdldCh0YWcpCiAgICAgICAgaWYgaGFuZGxlciBpcyBub3QgTm9uZToKICAgICAgICAgICAgaGFuZGxlcihzZWxmKQoKICAgIGRlZiBlbmQoc2VsZiwgdGFnOiBzdHIpIC0+IE5vbmU6CiAgICAgICAgaGFuZGxlciA9IF9UQVJHRVRfRU5EX0hBTkRMRVJTLmdldCh0YWcpCiAgICAgICAgaWYgaGFuZGxlciBpcyBub3QgTm9uZToKICAgICAgICAgICAgaGFuZGxlcihzZWxmKQoKICAgIGRlZiBkYXRhKHNlbGYsIGRhdGE6IHN0cikgLT4gTm9uZToKICAgICAgICBzZWxmLl9kYXRhLmFwcGVuZChkYXRhKQoKICAgIGRlZiBjbG9zZShzZWxmKSAtPiBQbGlzdEVuY29kYWJsZToKICAgICAgICBpZiBzZWxmLnJvb3QgaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiTm8gcm9vdCBzZXQuIikKICAgICAgICByZXR1cm4gc2VsZi5yb290CgogICAgIyBoZWxwZXJzCgogICAgZGVmIGFkZF9vYmplY3Qoc2VsZiwgdmFsdWU6IFBsaXN0RW5jb2RhYmxlKSAtPiBOb25lOgogICAgICAgIGlmIHNlbGYuY3VycmVudF9rZXkgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHN0YWNrX3RvcCA9IHNlbGYuc3RhY2tbLTFdCiAgICAgICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKHN0YWNrX3RvcCwgY29sbGVjdGlvbnMuYWJjLk11dGFibGVNYXBwaW5nKToKICAgICAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoInVuZXhwZWN0ZWQgZWxlbWVudDogJXIiICUgc3RhY2tfdG9wKQogICAgICAgICAgICBzdGFja190b3Bbc2VsZi5jdXJyZW50X2tleV0gPSB2YWx1ZQogICAgICAgICAgICBzZWxmLmN1cnJlbnRfa2V5ID0gTm9uZQogICAgICAgIGVsaWYgbm90IHNlbGYuc3RhY2s6CiAgICAgICAgICAgICMgdGhpcyBpcyB0aGUgcm9vdCBvYmplY3QKICAgICAgICAgICAgc2VsZi5yb290ID0gdmFsdWUKICAgICAgICBlbHNlOgogICAgICAgICAgICBzdGFja190b3AgPSBzZWxmLnN0YWNrWy0xXQogICAgICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShzdGFja190b3AsIGxpc3QpOgogICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigidW5leHBlY3RlZCBlbGVtZW50OiAlciIgJSBzdGFja190b3ApCiAgICAgICAgICAgIHN0YWNrX3RvcC5hcHBlbmQodmFsdWUpCgogICAgZGVmIGdldF9kYXRhKHNlbGYpIC0+IHN0cjoKICAgICAgICBkYXRhID0gIiIuam9pbihzZWxmLl9kYXRhKQogICAgICAgIHNlbGYuX2RhdGEgPSBbXQogICAgICAgIHJldHVybiBkYXRhCgoKIyBldmVudCBoYW5kbGVycwoKCmRlZiBzdGFydF9kaWN0KHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgZCA9IHNlbGYuX2RpY3RfdHlwZSgpCiAgICBzZWxmLmFkZF9vYmplY3QoZCkKICAgIHNlbGYuc3RhY2suYXBwZW5kKGQpCgoKZGVmIGVuZF9kaWN0KHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgaWYgc2VsZi5jdXJyZW50X2tleToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJtaXNzaW5nIHZhbHVlIGZvciBrZXkgJyVzJyIgJSBzZWxmLmN1cnJlbnRfa2V5KQogICAgc2VsZi5zdGFjay5wb3AoKQoKCmRlZiBlbmRfa2V5KHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgaWYgc2VsZi5jdXJyZW50X2tleSBvciBub3QgaXNpbnN0YW5jZShzZWxmLnN0YWNrWy0xXSwgY29sbGVjdGlvbnMuYWJjLk1hcHBpbmcpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoInVuZXhwZWN0ZWQga2V5IikKICAgIHNlbGYuY3VycmVudF9rZXkgPSBzZWxmLmdldF9kYXRhKCkKCgpkZWYgc3RhcnRfYXJyYXkoc2VsZjogUGxpc3RUYXJnZXQpIC0+IE5vbmU6CiAgICBhOiBMaXN0W1BsaXN0RW5jb2RhYmxlXSA9IFtdCiAgICBzZWxmLmFkZF9vYmplY3QoYSkKICAgIHNlbGYuc3RhY2suYXBwZW5kKGEpCgoKZGVmIGVuZF9hcnJheShzZWxmOiBQbGlzdFRhcmdldCkgLT4gTm9uZToKICAgIHNlbGYuc3RhY2sucG9wKCkKCgpkZWYgZW5kX3RydWUoc2VsZjogUGxpc3RUYXJnZXQpIC0+IE5vbmU6CiAgICBzZWxmLmFkZF9vYmplY3QoVHJ1ZSkKCgpkZWYgZW5kX2ZhbHNlKHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgc2VsZi5hZGRfb2JqZWN0KEZhbHNlKQoKCmRlZiBlbmRfaW50ZWdlcihzZWxmOiBQbGlzdFRhcmdldCkgLT4gTm9uZToKICAgIHNlbGYuYWRkX29iamVjdChpbnQoc2VsZi5nZXRfZGF0YSgpKSkKCgpkZWYgZW5kX3JlYWwoc2VsZjogUGxpc3RUYXJnZXQpIC0+IE5vbmU6CiAgICBzZWxmLmFkZF9vYmplY3QoZmxvYXQoc2VsZi5nZXRfZGF0YSgpKSkKCgpkZWYgZW5kX3N0cmluZyhzZWxmOiBQbGlzdFRhcmdldCkgLT4gTm9uZToKICAgIHNlbGYuYWRkX29iamVjdChzZWxmLmdldF9kYXRhKCkpCgoKZGVmIGVuZF9kYXRhKHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgaWYgc2VsZi5fdXNlX2J1aWx0aW5fdHlwZXM6CiAgICAgICAgc2VsZi5hZGRfb2JqZWN0KGI2NGRlY29kZShzZWxmLmdldF9kYXRhKCkpKQogICAgZWxzZToKICAgICAgICBzZWxmLmFkZF9vYmplY3QoRGF0YS5mcm9tQmFzZTY0KHNlbGYuZ2V0X2RhdGEoKSkpCgoKZGVmIGVuZF9kYXRlKHNlbGY6IFBsaXN0VGFyZ2V0KSAtPiBOb25lOgogICAgc2VsZi5hZGRfb2JqZWN0KF9kYXRlX2Zyb21fc3RyaW5nKHNlbGYuZ2V0X2RhdGEoKSkpCgoKX1RBUkdFVF9TVEFSVF9IQU5ETEVSUzogRGljdFtzdHIsIENhbGxhYmxlW1tQbGlzdFRhcmdldF0sIE5vbmVdXSA9IHsKICAgICJkaWN0Ijogc3RhcnRfZGljdCwKICAgICJhcnJheSI6IHN0YXJ0X2FycmF5LAp9CgpfVEFSR0VUX0VORF9IQU5ETEVSUzogRGljdFtzdHIsIENhbGxhYmxlW1tQbGlzdFRhcmdldF0sIE5vbmVdXSA9IHsKICAgICJkaWN0IjogZW5kX2RpY3QsCiAgICAiYXJyYXkiOiBlbmRfYXJyYXksCiAgICAia2V5IjogZW5kX2tleSwKICAgICJ0cnVlIjogZW5kX3RydWUsCiAgICAiZmFsc2UiOiBlbmRfZmFsc2UsCiAgICAiaW50ZWdlciI6IGVuZF9pbnRlZ2VyLAogICAgInJlYWwiOiBlbmRfcmVhbCwKICAgICJzdHJpbmciOiBlbmRfc3RyaW5nLAogICAgImRhdGEiOiBlbmRfZGF0YSwKICAgICJkYXRlIjogZW5kX2RhdGUsCn0KCgojIGZ1bmN0aW9ucyB0byBidWlsZCBlbGVtZW50IHRyZWUgZnJvbSBwbGlzdCBkYXRhCgoKZGVmIF9zdHJpbmdfZWxlbWVudCh2YWx1ZTogc3RyLCBjdHg6IFNpbXBsZU5hbWVzcGFjZSkgLT4gZXRyZWUuRWxlbWVudDoKICAgIGVsID0gZXRyZWUuRWxlbWVudCgic3RyaW5nIikKICAgIGVsLnRleHQgPSB2YWx1ZQogICAgcmV0dXJuIGVsCgoKZGVmIF9ib29sX2VsZW1lbnQodmFsdWU6IGJvb2wsIGN0eDogU2ltcGxlTmFtZXNwYWNlKSAtPiBldHJlZS5FbGVtZW50OgogICAgaWYgdmFsdWU6CiAgICAgICAgcmV0dXJuIGV0cmVlLkVsZW1lbnQoInRydWUiKQogICAgcmV0dXJuIGV0cmVlLkVsZW1lbnQoImZhbHNlIikKCgpkZWYgX2ludGVnZXJfZWxlbWVudCh2YWx1ZTogaW50LCBjdHg6IFNpbXBsZU5hbWVzcGFjZSkgLT4gZXRyZWUuRWxlbWVudDoKICAgIGlmIC0xIDw8IDYzIDw9IHZhbHVlIDwgMSA8PCA2NDoKICAgICAgICBlbCA9IGV0cmVlLkVsZW1lbnQoImludGVnZXIiKQogICAgICAgIGVsLnRleHQgPSAiJWQiICUgdmFsdWUKICAgICAgICByZXR1cm4gZWwKICAgIHJhaXNlIE92ZXJmbG93RXJyb3IodmFsdWUpCgoKZGVmIF9yZWFsX2VsZW1lbnQodmFsdWU6IGZsb2F0LCBjdHg6IFNpbXBsZU5hbWVzcGFjZSkgLT4gZXRyZWUuRWxlbWVudDoKICAgIGVsID0gZXRyZWUuRWxlbWVudCgicmVhbCIpCiAgICBlbC50ZXh0ID0gcmVwcih2YWx1ZSkKICAgIHJldHVybiBlbAoKCmRlZiBfZGljdF9lbGVtZW50KAogICAgZDogTWFwcGluZ1tzdHIsIFBsaXN0RW5jb2RhYmxlXSwgY3R4OiBTaW1wbGVOYW1lc3BhY2UKKSAtPiBldHJlZS5FbGVtZW50OgogICAgZWwgPSBldHJlZS5FbGVtZW50KCJkaWN0IikKICAgIGl0ZW1zID0gZC5pdGVtcygpCiAgICBpZiBjdHguc29ydF9rZXlzOgogICAgICAgIGl0ZW1zID0gc29ydGVkKGl0ZW1zKSAgIyB0eXBlOiBpZ25vcmUKICAgIGN0eC5pbmRlbnRfbGV2ZWwgKz0gMQogICAgZm9yIGtleSwgdmFsdWUgaW4gaXRlbXM6CiAgICAgICAgaWYgbm90IGlzaW5zdGFuY2Uoa2V5LCBzdHIpOgogICAgICAgICAgICBpZiBjdHguc2tpcGtleXM6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICByYWlzZSBUeXBlRXJyb3IoImtleXMgbXVzdCBiZSBzdHJpbmdzIikKICAgICAgICBrID0gZXRyZWUuU3ViRWxlbWVudChlbCwgImtleSIpCiAgICAgICAgay50ZXh0ID0gdG9zdHIoa2V5LCAidXRmLTgiKQogICAgICAgIGVsLmFwcGVuZChfbWFrZV9lbGVtZW50KHZhbHVlLCBjdHgpKQogICAgY3R4LmluZGVudF9sZXZlbCAtPSAxCiAgICByZXR1cm4gZWwKCgpkZWYgX2FycmF5X2VsZW1lbnQoCiAgICBhcnJheTogU2VxdWVuY2VbUGxpc3RFbmNvZGFibGVdLCBjdHg6IFNpbXBsZU5hbWVzcGFjZQopIC0+IGV0cmVlLkVsZW1lbnQ6CiAgICBlbCA9IGV0cmVlLkVsZW1lbnQoImFycmF5IikKICAgIGlmIGxlbihhcnJheSkgPT0gMDoKICAgICAgICByZXR1cm4gZWwKICAgIGN0eC5pbmRlbnRfbGV2ZWwgKz0gMQogICAgZm9yIHZhbHVlIGluIGFycmF5OgogICAgICAgIGVsLmFwcGVuZChfbWFrZV9lbGVtZW50KHZhbHVlLCBjdHgpKQogICAgY3R4LmluZGVudF9sZXZlbCAtPSAxCiAgICByZXR1cm4gZWwKCgpkZWYgX2RhdGVfZWxlbWVudChkYXRlOiBkYXRldGltZSwgY3R4OiBTaW1wbGVOYW1lc3BhY2UpIC0+IGV0cmVlLkVsZW1lbnQ6CiAgICBlbCA9IGV0cmVlLkVsZW1lbnQoImRhdGUiKQogICAgZWwudGV4dCA9IF9kYXRlX3RvX3N0cmluZyhkYXRlKQogICAgcmV0dXJuIGVsCgoKZGVmIF9kYXRhX2VsZW1lbnQoZGF0YTogYnl0ZXMsIGN0eDogU2ltcGxlTmFtZXNwYWNlKSAtPiBldHJlZS5FbGVtZW50OgogICAgZWwgPSBldHJlZS5FbGVtZW50KCJkYXRhIikKICAgICMgTk9URTogbXlweSBpcyBjb25mdXNlZCBhYm91dCB3aGV0aGVyIGVsLnRleHQgc2hvdWxkIGJlIHN0ciBvciBieXRlcy4KICAgIGVsLnRleHQgPSBfZW5jb2RlX2Jhc2U2NCggICMgdHlwZTogaWdub3JlCiAgICAgICAgZGF0YSwKICAgICAgICBtYXhsaW5lbGVuZ3RoPSg3NiBpZiBjdHgucHJldHR5X3ByaW50IGVsc2UgTm9uZSksCiAgICAgICAgaW5kZW50X2xldmVsPWN0eC5pbmRlbnRfbGV2ZWwsCiAgICApCiAgICByZXR1cm4gZWwKCgpkZWYgX3N0cmluZ19vcl9kYXRhX2VsZW1lbnQocmF3X2J5dGVzOiBieXRlcywgY3R4OiBTaW1wbGVOYW1lc3BhY2UpIC0+IGV0cmVlLkVsZW1lbnQ6CiAgICBpZiBjdHgudXNlX2J1aWx0aW5fdHlwZXM6CiAgICAgICAgcmV0dXJuIF9kYXRhX2VsZW1lbnQocmF3X2J5dGVzLCBjdHgpCiAgICBlbHNlOgogICAgICAgIHRyeToKICAgICAgICAgICAgc3RyaW5nID0gcmF3X2J5dGVzLmRlY29kZShlbmNvZGluZz0iYXNjaWkiLCBlcnJvcnM9InN0cmljdCIpCiAgICAgICAgZXhjZXB0IFVuaWNvZGVEZWNvZGVFcnJvcjoKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgICAgICJpbnZhbGlkIG5vbi1BU0NJSSBieXRlczsgdXNlIHVuaWNvZGUgc3RyaW5nIGluc3RlYWQ6ICVyIiAlIHJhd19ieXRlcwogICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIF9zdHJpbmdfZWxlbWVudChzdHJpbmcsIGN0eCkKCgojIFRoZSBmb2xsb3dpbmcgaXMgcHJvYmFibHkgbm90IGVudGlyZWx5IGNvcnJlY3QuIFRoZSBzaWduYXR1cmUgc2hvdWxkIHRha2UgYEFueWAKIyBhbmQgcmV0dXJuIGBOb1JldHVybmAuIEF0IHRoZSB0aW1lIG9mIHRoaXMgd3JpdGluZywgbmVpdGhlciBteXB5IG5vciBQeXJpZ2h0CiMgY2FuIGRlYWwgd2l0aCBzaW5nbGVkaXNwYXRjaCBwcm9wZXJseSBhbmQgd2lsbCBhcHBseSB0aGUgc2lnbmF0dXJlIG9mIHRoZSBiYXNlCiMgZnVuY3Rpb24gdG8gYWxsIG90aGVycy4gQmVpbmcgc2xpZ2h0bHkgZGlzaG9uZXN0IG1ha2VzIGl0IHR5cGUtY2hlY2sgYW5kIHJldHVybgojIHVzYWJsZSB0eXBpbmcgaW5mb3JtYXRpb24gZm9yIHRoZSBvcHRpbWlzdGljIGNhc2UuCkBzaW5nbGVkaXNwYXRjaApkZWYgX21ha2VfZWxlbWVudCh2YWx1ZTogUGxpc3RFbmNvZGFibGUsIGN0eDogU2ltcGxlTmFtZXNwYWNlKSAtPiBldHJlZS5FbGVtZW50OgogICAgcmFpc2UgVHlwZUVycm9yKCJ1bnN1cHBvcnRlZCB0eXBlOiAlcyIgJSB0eXBlKHZhbHVlKSkKCgpfbWFrZV9lbGVtZW50LnJlZ2lzdGVyKHN0cikoX3N0cmluZ19lbGVtZW50KQpfbWFrZV9lbGVtZW50LnJlZ2lzdGVyKGJvb2wpKF9ib29sX2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIoSW50ZWdyYWwpKF9pbnRlZ2VyX2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIoZmxvYXQpKF9yZWFsX2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIoY29sbGVjdGlvbnMuYWJjLk1hcHBpbmcpKF9kaWN0X2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIobGlzdCkoX2FycmF5X2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIodHVwbGUpKF9hcnJheV9lbGVtZW50KQpfbWFrZV9lbGVtZW50LnJlZ2lzdGVyKGRhdGV0aW1lKShfZGF0ZV9lbGVtZW50KQpfbWFrZV9lbGVtZW50LnJlZ2lzdGVyKGJ5dGVzKShfc3RyaW5nX29yX2RhdGFfZWxlbWVudCkKX21ha2VfZWxlbWVudC5yZWdpc3RlcihieXRlYXJyYXkpKF9kYXRhX2VsZW1lbnQpCl9tYWtlX2VsZW1lbnQucmVnaXN0ZXIoRGF0YSkobGFtYmRhIHYsIGN0eDogX2RhdGFfZWxlbWVudCh2LmRhdGEsIGN0eCkpCgoKIyBQdWJsaWMgZnVuY3Rpb25zIHRvIGNyZWF0ZSBlbGVtZW50IHRyZWUgZnJvbSBwbGlzdC1jb21wYXRpYmxlIHB5dGhvbgojIGRhdGEgc3RydWN0dXJlcyBhbmQgdmljZXZlcnNhLCBmb3IgdXNlIHdoZW4gKGRlKXNlcmlhbGl6aW5nIEdMSUYgeG1sLgoKCmRlZiB0b3RyZWUoCiAgICB2YWx1ZTogUGxpc3RFbmNvZGFibGUsCiAgICBzb3J0X2tleXM6IGJvb2wgPSBUcnVlLAogICAgc2tpcGtleXM6IGJvb2wgPSBGYWxzZSwKICAgIHVzZV9idWlsdGluX3R5cGVzOiBPcHRpb25hbFtib29sXSA9IE5vbmUsCiAgICBwcmV0dHlfcHJpbnQ6IGJvb2wgPSBUcnVlLAogICAgaW5kZW50X2xldmVsOiBpbnQgPSAxLAopIC0+IGV0cmVlLkVsZW1lbnQ6CiAgICAiIiJDb252ZXJ0IGEgdmFsdWUgZGVyaXZlZCBmcm9tIGEgcGxpc3QgaW50byBhbiBYTUwgdHJlZS4KCiAgICBBcmdzOgogICAgICAgIHZhbHVlOiBBbnkga2luZCBvZiB2YWx1ZSB0byBiZSBzZXJpYWxpemVkIHRvIFhNTC4KICAgICAgICBzb3J0X2tleXM6IFdoZXRoZXIga2V5cyBvZiBkaWN0aW9uYXJpZXMgc2hvdWxkIGJlIHNvcnRlZC4KICAgICAgICBza2lwa2V5cyAoYm9vbCk6IFdoZXRoZXIgdG8gc2lsZW50bHkgc2tpcCBub24tc3RyaW5nIGRpY3Rpb25hcnkKICAgICAgICAgICAga2V5cy4KICAgICAgICB1c2VfYnVpbHRpbl90eXBlcyAoYm9vbCk6IElmIHRydWUsIGJ5dGUgc3RyaW5ncyB3aWxsIGJlCiAgICAgICAgICAgIGVuY29kZWQgaW4gQmFzZS02NCBhbmQgd3JhcHBlZCBpbiBhIGBgZGF0YWBgIHRhZzsgaWYKICAgICAgICAgICAgZmFsc2UsIHRoZXkgd2lsbCBiZSBlaXRoZXIgc3RvcmVkIGFzIEFTQ0lJIHN0cmluZ3Mgb3IgYW4KICAgICAgICAgICAgZXhjZXB0aW9uIHJhaXNlZCBpZiB0aGV5IGNhbm5vdCBiZSBkZWNvZGVkIGFzIHN1Y2guIERlZmF1bHRzCiAgICAgICAgICAgIHRvIGBgVHJ1ZWBgIGlmIG5vdCBwcmVzZW50LiBEZXByZWNhdGVkLgogICAgICAgIHByZXR0eV9wcmludCAoYm9vbCk6IFdoZXRoZXIgdG8gaW5kZW50IHRoZSBvdXRwdXQuCiAgICAgICAgaW5kZW50X2xldmVsIChpbnQpOiBMZXZlbCBvZiBpbmRlbnRhdGlvbiB3aGVuIHNlcmlhbGl6aW5nLgoKICAgIFJldHVybnM6IGFuIGBgZXRyZWVgYCBgYEVsZW1lbnRgYCBvYmplY3QuCgogICAgUmFpc2VzOgogICAgICAgIGBgVHlwZUVycm9yYGAKICAgICAgICAgICAgaWYgbm9uLXN0cmluZyBkaWN0aW9uYXJ5IGtleXMgYXJlIHNlcmlhbGl6ZWQKICAgICAgICAgICAgYW5kIGBgc2tpcGtleXNgYCBpcyBmYWxzZS4KICAgICAgICBgYFZhbHVlRXJyb3JgYAogICAgICAgICAgICBpZiBub24tQVNDSUkgYmluYXJ5IGRhdGEgaXMgcHJlc2VudAogICAgICAgICAgICBhbmQgYHVzZV9idWlsdGluX3R5cGVzYCBpcyBmYWxzZS4KICAgICIiIgogICAgaWYgdXNlX2J1aWx0aW5fdHlwZXMgaXMgTm9uZToKICAgICAgICB1c2VfYnVpbHRpbl90eXBlcyA9IFVTRV9CVUlMVElOX1RZUEVTCiAgICBlbHNlOgogICAgICAgIHVzZV9idWlsdGluX3R5cGVzID0gdXNlX2J1aWx0aW5fdHlwZXMKICAgIGNvbnRleHQgPSBTaW1wbGVOYW1lc3BhY2UoCiAgICAgICAgc29ydF9rZXlzPXNvcnRfa2V5cywKICAgICAgICBza2lwa2V5cz1za2lwa2V5cywKICAgICAgICB1c2VfYnVpbHRpbl90eXBlcz11c2VfYnVpbHRpbl90eXBlcywKICAgICAgICBwcmV0dHlfcHJpbnQ9cHJldHR5X3ByaW50LAogICAgICAgIGluZGVudF9sZXZlbD1pbmRlbnRfbGV2ZWwsCiAgICApCiAgICByZXR1cm4gX21ha2VfZWxlbWVudCh2YWx1ZSwgY29udGV4dCkKCgpkZWYgZnJvbXRyZWUoCiAgICB0cmVlOiBldHJlZS5FbGVtZW50LAogICAgdXNlX2J1aWx0aW5fdHlwZXM6IE9wdGlvbmFsW2Jvb2xdID0gTm9uZSwKICAgIGRpY3RfdHlwZTogVHlwZVtNdXRhYmxlTWFwcGluZ1tzdHIsIEFueV1dID0gZGljdCwKKSAtPiBBbnk6CiAgICAiIiJDb252ZXJ0IGFuIFhNTCB0cmVlIHRvIGEgcGxpc3Qgc3RydWN0dXJlLgoKICAgIEFyZ3M6CiAgICAgICAgdHJlZTogQW4gYGBldHJlZWBgIGBgRWxlbWVudGBgLgogICAgICAgIHVzZV9idWlsdGluX3R5cGVzOiBJZiBUcnVlLCBiaW5hcnkgZGF0YSBpcyBkZXNlcmlhbGl6ZWQgdG8KICAgICAgICAgICAgYnl0ZXMgc3RyaW5ncy4gSWYgRmFsc2UsIGl0IGlzIHdyYXBwZWQgaW4gOnB5OmNsYXNzOmBEYXRhYAogICAgICAgICAgICBvYmplY3RzLiBEZWZhdWx0cyB0byBUcnVlIGlmIG5vdCBwcm92aWRlZC4gRGVwcmVjYXRlZC4KICAgICAgICBkaWN0X3R5cGU6IFdoYXQgdHlwZSB0byB1c2UgZm9yIGRpY3Rpb25hcmllcy4KCiAgICBSZXR1cm5zOiBBbiBvYmplY3QgKHVzdWFsbHkgYSBkaWN0aW9uYXJ5KS4KICAgICIiIgogICAgdGFyZ2V0ID0gUGxpc3RUYXJnZXQodXNlX2J1aWx0aW5fdHlwZXM9dXNlX2J1aWx0aW5fdHlwZXMsIGRpY3RfdHlwZT1kaWN0X3R5cGUpCiAgICBmb3IgYWN0aW9uLCBlbGVtZW50IGluIGV0cmVlLml0ZXJ3YWxrKHRyZWUsIGV2ZW50cz0oInN0YXJ0IiwgImVuZCIpKToKICAgICAgICBpZiBhY3Rpb24gPT0gInN0YXJ0IjoKICAgICAgICAgICAgdGFyZ2V0LnN0YXJ0KGVsZW1lbnQudGFnLCBlbGVtZW50LmF0dHJpYikKICAgICAgICBlbGlmIGFjdGlvbiA9PSAiZW5kIjoKICAgICAgICAgICAgIyBpZiB0aGVyZSBhcmUgbm8gY2hpbGRyZW4sIHBhcnNlIHRoZSBsZWFmJ3MgZGF0YQogICAgICAgICAgICBpZiBub3QgbGVuKGVsZW1lbnQpOgogICAgICAgICAgICAgICAgIyBhbHdheXMgcGFzcyBzdHIsIG5vdCBOb25lCiAgICAgICAgICAgICAgICB0YXJnZXQuZGF0YShlbGVtZW50LnRleHQgb3IgIiIpCiAgICAgICAgICAgIHRhcmdldC5lbmQoZWxlbWVudC50YWcpCiAgICByZXR1cm4gdGFyZ2V0LmNsb3NlKCkKCgojIHB5dGhvbjMgcGxpc3RsaWIgQVBJCgoKZGVmIGxvYWQoCiAgICBmcDogSU9bYnl0ZXNdLAogICAgdXNlX2J1aWx0aW5fdHlwZXM6IE9wdGlvbmFsW2Jvb2xdID0gTm9uZSwKICAgIGRpY3RfdHlwZTogVHlwZVtNdXRhYmxlTWFwcGluZ1tzdHIsIEFueV1dID0gZGljdCwKKSAtPiBBbnk6CiAgICAiIiJMb2FkIGEgcGxpc3QgZmlsZSBpbnRvIGFuIG9iamVjdC4KCiAgICBBcmdzOgogICAgICAgIGZwOiBBbiBvcGVuZWQgZmlsZS4KICAgICAgICB1c2VfYnVpbHRpbl90eXBlczogSWYgVHJ1ZSwgYmluYXJ5IGRhdGEgaXMgZGVzZXJpYWxpemVkIHRvCiAgICAgICAgICAgIGJ5dGVzIHN0cmluZ3MuIElmIEZhbHNlLCBpdCBpcyB3cmFwcGVkIGluIDpweTpjbGFzczpgRGF0YWAKICAgICAgICAgICAgb2JqZWN0cy4gRGVmYXVsdHMgdG8gVHJ1ZSBpZiBub3QgcHJvdmlkZWQuIERlcHJlY2F0ZWQuCiAgICAgICAgZGljdF90eXBlOiBXaGF0IHR5cGUgdG8gdXNlIGZvciBkaWN0aW9uYXJpZXMuCgogICAgUmV0dXJuczoKICAgICAgICBBbiBvYmplY3QgKHVzdWFsbHkgYSBkaWN0aW9uYXJ5KSByZXByZXNlbnRpbmcgdGhlIHRvcCBsZXZlbCBvZgogICAgICAgIHRoZSBwbGlzdCBmaWxlLgogICAgIiIiCgogICAgaWYgbm90IGhhc2F0dHIoZnAsICJyZWFkIik6CiAgICAgICAgcmFpc2UgQXR0cmlidXRlRXJyb3IoIiclcycgb2JqZWN0IGhhcyBubyBhdHRyaWJ1dGUgJ3JlYWQnIiAlIHR5cGUoZnApLl9fbmFtZV9fKQogICAgdGFyZ2V0ID0gUGxpc3RUYXJnZXQodXNlX2J1aWx0aW5fdHlwZXM9dXNlX2J1aWx0aW5fdHlwZXMsIGRpY3RfdHlwZT1kaWN0X3R5cGUpCiAgICBwYXJzZXIgPSBldHJlZS5YTUxQYXJzZXIodGFyZ2V0PXRhcmdldCkKICAgIHJlc3VsdCA9IGV0cmVlLnBhcnNlKGZwLCBwYXJzZXI9cGFyc2VyKQogICAgIyBseG1sIHJldHVybnMgdGhlIHRhcmdldCBvYmplY3QgZGlyZWN0bHksIHdoaWxlIEVsZW1lbnRUcmVlIHdyYXBzCiAgICAjIGl0IGFzIHRoZSByb290IG9mIGFuIEVsZW1lbnRUcmVlIG9iamVjdAogICAgdHJ5OgogICAgICAgIHJldHVybiByZXN1bHQuZ2V0cm9vdCgpCiAgICBleGNlcHQgQXR0cmlidXRlRXJyb3I6CiAgICAgICAgcmV0dXJuIHJlc3VsdAoKCmRlZiBsb2FkcygKICAgIHZhbHVlOiBieXRlcywKICAgIHVzZV9idWlsdGluX3R5cGVzOiBPcHRpb25hbFtib29sXSA9IE5vbmUsCiAgICBkaWN0X3R5cGU6IFR5cGVbTXV0YWJsZU1hcHBpbmdbc3RyLCBBbnldXSA9IGRpY3QsCikgLT4gQW55OgogICAgIiIiTG9hZCBhIHBsaXN0IGZpbGUgZnJvbSBhIHN0cmluZyBpbnRvIGFuIG9iamVjdC4KCiAgICBBcmdzOgogICAgICAgIHZhbHVlOiBBIGJ5dGVzIHN0cmluZyBjb250YWluaW5nIGEgcGxpc3QuCiAgICAgICAgdXNlX2J1aWx0aW5fdHlwZXM6IElmIFRydWUsIGJpbmFyeSBkYXRhIGlzIGRlc2VyaWFsaXplZCB0bwogICAgICAgICAgICBieXRlcyBzdHJpbmdzLiBJZiBGYWxzZSwgaXQgaXMgd3JhcHBlZCBpbiA6cHk6Y2xhc3M6YERhdGFgCiAgICAgICAgICAgIG9iamVjdHMuIERlZmF1bHRzIHRvIFRydWUgaWYgbm90IHByb3ZpZGVkLiBEZXByZWNhdGVkLgogICAgICAgIGRpY3RfdHlwZTogV2hhdCB0eXBlIHRvIHVzZSBmb3IgZGljdGlvbmFyaWVzLgoKICAgIFJldHVybnM6CiAgICAgICAgQW4gb2JqZWN0ICh1c3VhbGx5IGEgZGljdGlvbmFyeSkgcmVwcmVzZW50aW5nIHRoZSB0b3AgbGV2ZWwgb2YKICAgICAgICB0aGUgcGxpc3QgZmlsZS4KICAgICIiIgoKICAgIGZwID0gQnl0ZXNJTyh2YWx1ZSkKICAgIHJldHVybiBsb2FkKGZwLCB1c2VfYnVpbHRpbl90eXBlcz11c2VfYnVpbHRpbl90eXBlcywgZGljdF90eXBlPWRpY3RfdHlwZSkKCgpkZWYgZHVtcCgKICAgIHZhbHVlOiBQbGlzdEVuY29kYWJsZSwKICAgIGZwOiBJT1tieXRlc10sCiAgICBzb3J0X2tleXM6IGJvb2wgPSBUcnVlLAogICAgc2tpcGtleXM6IGJvb2wgPSBGYWxzZSwKICAgIHVzZV9idWlsdGluX3R5cGVzOiBPcHRpb25hbFtib29sXSA9IE5vbmUsCiAgICBwcmV0dHlfcHJpbnQ6IGJvb2wgPSBUcnVlLAopIC0+IE5vbmU6CiAgICAiIiJXcml0ZSBhIFB5dGhvbiBvYmplY3QgdG8gYSBwbGlzdCBmaWxlLgoKICAgIEFyZ3M6CiAgICAgICAgdmFsdWU6IEFuIG9iamVjdCB0byB3cml0ZS4KICAgICAgICBmcDogQSBmaWxlIG9wZW5lZCBmb3Igd3JpdGluZy4KICAgICAgICBzb3J0X2tleXMgKGJvb2wpOiBXaGV0aGVyIGtleXMgb2YgZGljdGlvbmFyaWVzIHNob3VsZCBiZSBzb3J0ZWQuCiAgICAgICAgc2tpcGtleXMgKGJvb2wpOiBXaGV0aGVyIHRvIHNpbGVudGx5IHNraXAgbm9uLXN0cmluZyBkaWN0aW9uYXJ5CiAgICAgICAgICAgIGtleXMuCiAgICAgICAgdXNlX2J1aWx0aW5fdHlwZXMgKGJvb2wpOiBJZiB0cnVlLCBieXRlIHN0cmluZ3Mgd2lsbCBiZQogICAgICAgICAgICBlbmNvZGVkIGluIEJhc2UtNjQgYW5kIHdyYXBwZWQgaW4gYSBgYGRhdGFgYCB0YWc7IGlmCiAgICAgICAgICAgIGZhbHNlLCB0aGV5IHdpbGwgYmUgZWl0aGVyIHN0b3JlZCBhcyBBU0NJSSBzdHJpbmdzIG9yIGFuCiAgICAgICAgICAgIGV4Y2VwdGlvbiByYWlzZWQgaWYgdGhleSBjYW5ub3QgYmUgcmVwcmVzZW50ZWQuIERlZmF1bHRzCiAgICAgICAgcHJldHR5X3ByaW50IChib29sKTogV2hldGhlciB0byBpbmRlbnQgdGhlIG91dHB1dC4KICAgICAgICBpbmRlbnRfbGV2ZWwgKGludCk6IExldmVsIG9mIGluZGVudGF0aW9uIHdoZW4gc2VyaWFsaXppbmcuCgogICAgUmFpc2VzOgogICAgICAgIGBgVHlwZUVycm9yYGAKICAgICAgICAgICAgaWYgbm9uLXN0cmluZyBkaWN0aW9uYXJ5IGtleXMgYXJlIHNlcmlhbGl6ZWQKICAgICAgICAgICAgYW5kIGBgc2tpcGtleXNgYCBpcyBmYWxzZS4KICAgICAgICBgYFZhbHVlRXJyb3JgYAogICAgICAgICAgICBpZiBub24tcmVwcmVzZW50YWJsZSBiaW5hcnkgZGF0YSBpcyBwcmVzZW50CiAgICAgICAgICAgIGFuZCBgdXNlX2J1aWx0aW5fdHlwZXNgIGlzIGZhbHNlLgogICAgIiIiCgogICAgaWYgbm90IGhhc2F0dHIoZnAsICJ3cml0ZSIpOgogICAgICAgIHJhaXNlIEF0dHJpYnV0ZUVycm9yKCInJXMnIG9iamVjdCBoYXMgbm8gYXR0cmlidXRlICd3cml0ZSciICUgdHlwZShmcCkuX19uYW1lX18pCiAgICByb290ID0gZXRyZWUuRWxlbWVudCgicGxpc3QiLCB2ZXJzaW9uPSIxLjAiKQogICAgZWwgPSB0b3RyZWUoCiAgICAgICAgdmFsdWUsCiAgICAgICAgc29ydF9rZXlzPXNvcnRfa2V5cywKICAgICAgICBza2lwa2V5cz1za2lwa2V5cywKICAgICAgICB1c2VfYnVpbHRpbl90eXBlcz11c2VfYnVpbHRpbl90eXBlcywKICAgICAgICBwcmV0dHlfcHJpbnQ9cHJldHR5X3ByaW50LAogICAgKQogICAgcm9vdC5hcHBlbmQoZWwpCiAgICB0cmVlID0gZXRyZWUuRWxlbWVudFRyZWUocm9vdCkKICAgICMgd2Ugd3JpdGUgdGhlIGRvY3R5cGUgb3Vyc2VsdmVzIGluc3RlYWQgb2YgdXNpbmcgdGhlICdkb2N0eXBlJyBhcmd1bWVudAogICAgIyBvZiAnd3JpdGUnIG1ldGhvZCwgYmVjdXNlIGx4bWwgd2lsbCBmb3JjZSBhZGRpbmcgYSAnXG4nIGV2ZW4gd2hlbgogICAgIyBwcmV0dHlfcHJpbnQgaXMgRmFsc2UuCiAgICBpZiBwcmV0dHlfcHJpbnQ6CiAgICAgICAgaGVhZGVyID0gYiJcbiIuam9pbigoWE1MX0RFQ0xBUkFUSU9OLCBQTElTVF9ET0NUWVBFLCBiIiIpKQogICAgZWxzZToKICAgICAgICBoZWFkZXIgPSBYTUxfREVDTEFSQVRJT04gKyBQTElTVF9ET0NUWVBFCiAgICBmcC53cml0ZShoZWFkZXIpCiAgICB0cmVlLndyaXRlKCAgIyB0eXBlOiBpZ25vcmUKICAgICAgICBmcCwKICAgICAgICBlbmNvZGluZz0idXRmLTgiLAogICAgICAgIHByZXR0eV9wcmludD1wcmV0dHlfcHJpbnQsCiAgICAgICAgeG1sX2RlY2xhcmF0aW9uPUZhbHNlLAogICAgKQoKCmRlZiBkdW1wcygKICAgIHZhbHVlOiBQbGlzdEVuY29kYWJsZSwKICAgIHNvcnRfa2V5czogYm9vbCA9IFRydWUsCiAgICBza2lwa2V5czogYm9vbCA9IEZhbHNlLAogICAgdXNlX2J1aWx0aW5fdHlwZXM6IE9wdGlvbmFsW2Jvb2xdID0gTm9uZSwKICAgIHByZXR0eV9wcmludDogYm9vbCA9IFRydWUsCikgLT4gYnl0ZXM6CiAgICAiIiJXcml0ZSBhIFB5dGhvbiBvYmplY3QgdG8gYSBzdHJpbmcgaW4gcGxpc3QgZm9ybWF0LgoKICAgIEFyZ3M6CiAgICAgICAgdmFsdWU6IEFuIG9iamVjdCB0byB3cml0ZS4KICAgICAgICBzb3J0X2tleXMgKGJvb2wpOiBXaGV0aGVyIGtleXMgb2YgZGljdGlvbmFyaWVzIHNob3VsZCBiZSBzb3J0ZWQuCiAgICAgICAgc2tpcGtleXMgKGJvb2wpOiBXaGV0aGVyIHRvIHNpbGVudGx5IHNraXAgbm9uLXN0cmluZyBkaWN0aW9uYXJ5CiAgICAgICAgICAgIGtleXMuCiAgICAgICAgdXNlX2J1aWx0aW5fdHlwZXMgKGJvb2wpOiBJZiB0cnVlLCBieXRlIHN0cmluZ3Mgd2lsbCBiZQogICAgICAgICAgICBlbmNvZGVkIGluIEJhc2UtNjQgYW5kIHdyYXBwZWQgaW4gYSBgYGRhdGFgYCB0YWc7IGlmCiAgICAgICAgICAgIGZhbHNlLCB0aGV5IHdpbGwgYmUgZWl0aGVyIHN0b3JlZCBhcyBzdHJpbmdzIG9yIGFuCiAgICAgICAgICAgIGV4Y2VwdGlvbiByYWlzZWQgaWYgdGhleSBjYW5ub3QgYmUgcmVwcmVzZW50ZWQuIERlZmF1bHRzCiAgICAgICAgcHJldHR5X3ByaW50IChib29sKTogV2hldGhlciB0byBpbmRlbnQgdGhlIG91dHB1dC4KICAgICAgICBpbmRlbnRfbGV2ZWwgKGludCk6IExldmVsIG9mIGluZGVudGF0aW9uIHdoZW4gc2VyaWFsaXppbmcuCgogICAgUmV0dXJuczoKICAgICAgICBzdHJpbmc6IEEgcGxpc3QgcmVwcmVzZW50YXRpb24gb2YgdGhlIFB5dGhvbiBvYmplY3QuCgogICAgUmFpc2VzOgogICAgICAgIGBgVHlwZUVycm9yYGAKICAgICAgICAgICAgaWYgbm9uLXN0cmluZyBkaWN0aW9uYXJ5IGtleXMgYXJlIHNlcmlhbGl6ZWQKICAgICAgICAgICAgYW5kIGBgc2tpcGtleXNgYCBpcyBmYWxzZS4KICAgICAgICBgYFZhbHVlRXJyb3JgYAogICAgICAgICAgICBpZiBub24tcmVwcmVzZW50YWJsZSBiaW5hcnkgZGF0YSBpcyBwcmVzZW50CiAgICAgICAgICAgIGFuZCBgdXNlX2J1aWx0aW5fdHlwZXNgIGlzIGZhbHNlLgogICAgIiIiCiAgICBmcCA9IEJ5dGVzSU8oKQogICAgZHVtcCgKICAgICAgICB2YWx1ZSwKICAgICAgICBmcCwKICAgICAgICBzb3J0X2tleXM9c29ydF9rZXlzLAogICAgICAgIHNraXBrZXlzPXNraXBrZXlzLAogICAgICAgIHVzZV9idWlsdGluX3R5cGVzPXVzZV9idWlsdGluX3R5cGVzLAogICAgICAgIHByZXR0eV9wcmludD1wcmV0dHlfcHJpbnQsCiAgICApCiAgICByZXR1cm4gZnAuZ2V0dmFsdWUoKQo=
+import collections.abc
+import re
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    List,
+    Mapping,
+    MutableMapping,
+    Optional,
+    Sequence,
+    Type,
+    Union,
+    IO,
+)
+import warnings
+from io import BytesIO
+from datetime import datetime
+from base64 import b64encode, b64decode
+from numbers import Integral
+from types import SimpleNamespace
+from functools import singledispatch
+
+from fontTools.misc import etree
+
+from fontTools.misc.textTools import tostr
+
+# By default, we
+#  - deserialize <data> elements as bytes and
+#  - serialize bytes as <data> elements.
+# Before, on Python 2, we
+#  - deserialized <data> elements as plistlib.Data objects, in order to
+#    distinguish them from the built-in str type (which is bytes on python2)
+#  - serialized bytes as <string> elements (they must have only contained
+#    ASCII characters in this case)
+# You can pass use_builtin_types=[True|False] to the load/dump etc. functions
+# to enforce a specific treatment.
+# NOTE that unicode type always maps to <string> element, and plistlib.Data
+# always maps to <data> element, regardless of use_builtin_types.
+USE_BUILTIN_TYPES = True
+
+XML_DECLARATION = b"""<?xml version='1.0' encoding='UTF-8'?>"""
+
+PLIST_DOCTYPE = (
+    b'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" '
+    b'"http://www.apple.com/DTDs/PropertyList-1.0.dtd">'
+)
+
+
+# Date should conform to a subset of ISO 8601:
+# YYYY '-' MM '-' DD 'T' HH ':' MM ':' SS 'Z'
+_date_parser = re.compile(
+    r"(?P<year>\d\d\d\d)"
+    r"(?:-(?P<month>\d\d)"
+    r"(?:-(?P<day>\d\d)"
+    r"(?:T(?P<hour>\d\d)"
+    r"(?::(?P<minute>\d\d)"
+    r"(?::(?P<second>\d\d))"
+    r"?)?)?)?)?Z",
+    re.ASCII,
+)
+
+
+def _date_from_string(s: str) -> datetime:
+    order = ("year", "month", "day", "hour", "minute", "second")
+    m = _date_parser.match(s)
+    if m is None:
+        raise ValueError(f"Expected ISO 8601 date string, but got '{s:r}'.")
+    gd = m.groupdict()
+    lst = []
+    for key in order:
+        val = gd[key]
+        if val is None:
+            break
+        lst.append(int(val))
+    # NOTE: mypy doesn't know that lst is 6 elements long.
+    return datetime(*lst)  # type: ignore
+
+
+def _date_to_string(d: datetime) -> str:
+    return "%04d-%02d-%02dT%02d:%02d:%02dZ" % (
+        d.year,
+        d.month,
+        d.day,
+        d.hour,
+        d.minute,
+        d.second,
+    )
+
+
+class Data:
+    """Represents binary data when ``use_builtin_types=False.``
+
+    This class wraps binary data loaded from a plist file when the
+    ``use_builtin_types`` argument to the loading function (:py:func:`fromtree`,
+    :py:func:`load`, :py:func:`loads`) is false.
+
+    The actual binary data is retrieved using the ``data`` attribute.
+    """
+
+    def __init__(self, data: bytes) -> None:
+        if not isinstance(data, bytes):
+            raise TypeError("Expected bytes, found %s" % type(data).__name__)
+        self.data = data
+
+    @classmethod
+    def fromBase64(cls, data: Union[bytes, str]) -> "Data":
+        return cls(b64decode(data))
+
+    def asBase64(self, maxlinelength: int = 76, indent_level: int = 1) -> bytes:
+        return _encode_base64(
+            self.data, maxlinelength=maxlinelength, indent_level=indent_level
+        )
+
+    def __eq__(self, other: Any) -> bool:
+        if isinstance(other, self.__class__):
+            return self.data == other.data
+        elif isinstance(other, bytes):
+            return self.data == other
+        else:
+            return NotImplemented
+
+    def __repr__(self) -> str:
+        return "%s(%s)" % (self.__class__.__name__, repr(self.data))
+
+
+def _encode_base64(
+    data: bytes, maxlinelength: Optional[int] = 76, indent_level: int = 1
+) -> bytes:
+    data = b64encode(data)
+    if data and maxlinelength:
+        # split into multiple lines right-justified to 'maxlinelength' chars
+        indent = b"\n" + b"  " * indent_level
+        max_length = max(16, maxlinelength - len(indent))
+        chunks = []
+        for i in range(0, len(data), max_length):
+            chunks.append(indent)
+            chunks.append(data[i : i + max_length])
+        chunks.append(indent)
+        data = b"".join(chunks)
+    return data
+
+
+# Mypy does not support recursive type aliases as of 0.782, Pylance does.
+# https://github.com/python/mypy/issues/731
+# https://devblogs.microsoft.com/python/pylance-introduces-five-new-features-that-enable-type-magic-for-python-developers/#1-support-for-recursive-type-aliases
+PlistEncodable = Union[
+    bool,
+    bytes,
+    Data,
+    datetime,
+    float,
+    Integral,
+    Mapping[str, Any],
+    Sequence[Any],
+    str,
+]
+
+
+class PlistTarget:
+    """Event handler using the ElementTree Target API that can be
+    passed to a XMLParser to produce property list objects from XML.
+    It is based on the CPython plistlib module's _PlistParser class,
+    but does not use the expat parser.
+
+    >>> from fontTools.misc import etree
+    >>> parser = etree.XMLParser(target=PlistTarget())
+    >>> result = etree.XML(
+    ...     "<dict>"
+    ...     "    <key>something</key>"
+    ...     "    <string>blah</string>"
+    ...     "</dict>",
+    ...     parser=parser)
+    >>> result == {"something": "blah"}
+    True
+
+    Links:
+    https://github.com/python/cpython/blob/main/Lib/plistlib.py
+    http://lxml.de/parsing.html#the-target-parser-interface
+    """
+
+    def __init__(
+        self,
+        use_builtin_types: Optional[bool] = None,
+        dict_type: Type[MutableMapping[str, Any]] = dict,
+    ) -> None:
+        self.stack: List[PlistEncodable] = []
+        self.current_key: Optional[str] = None
+        self.root: Optional[PlistEncodable] = None
+        if use_builtin_types is None:
+            self._use_builtin_types = USE_BUILTIN_TYPES
+        else:
+            if use_builtin_types is False:
+                warnings.warn(
+                    "Setting use_builtin_types to False is deprecated and will be "
+                    "removed soon.",
+                    DeprecationWarning,
+                )
+            self._use_builtin_types = use_builtin_types
+        self._dict_type = dict_type
+
+    def start(self, tag: str, attrib: Mapping[str, str]) -> None:
+        self._data: List[str] = []
+        handler = _TARGET_START_HANDLERS.get(tag)
+        if handler is not None:
+            handler(self)
+
+    def end(self, tag: str) -> None:
+        handler = _TARGET_END_HANDLERS.get(tag)
+        if handler is not None:
+            handler(self)
+
+    def data(self, data: str) -> None:
+        self._data.append(data)
+
+    def close(self) -> PlistEncodable:
+        if self.root is None:
+            raise ValueError("No root set.")
+        return self.root
+
+    # helpers
+
+    def add_object(self, value: PlistEncodable) -> None:
+        if self.current_key is not None:
+            stack_top = self.stack[-1]
+            if not isinstance(stack_top, collections.abc.MutableMapping):
+                raise ValueError("unexpected element: %r" % stack_top)
+            stack_top[self.current_key] = value
+            self.current_key = None
+        elif not self.stack:
+            # this is the root object
+            self.root = value
+        else:
+            stack_top = self.stack[-1]
+            if not isinstance(stack_top, list):
+                raise ValueError("unexpected element: %r" % stack_top)
+            stack_top.append(value)
+
+    def get_data(self) -> str:
+        data = "".join(self._data)
+        self._data = []
+        return data
+
+
+# event handlers
+
+
+def start_dict(self: PlistTarget) -> None:
+    d = self._dict_type()
+    self.add_object(d)
+    self.stack.append(d)
+
+
+def end_dict(self: PlistTarget) -> None:
+    if self.current_key:
+        raise ValueError("missing value for key '%s'" % self.current_key)
+    self.stack.pop()
+
+
+def end_key(self: PlistTarget) -> None:
+    if self.current_key or not isinstance(self.stack[-1], collections.abc.Mapping):
+        raise ValueError("unexpected key")
+    self.current_key = self.get_data()
+
+
+def start_array(self: PlistTarget) -> None:
+    a: List[PlistEncodable] = []
+    self.add_object(a)
+    self.stack.append(a)
+
+
+def end_array(self: PlistTarget) -> None:
+    self.stack.pop()
+
+
+def end_true(self: PlistTarget) -> None:
+    self.add_object(True)
+
+
+def end_false(self: PlistTarget) -> None:
+    self.add_object(False)
+
+
+def end_integer(self: PlistTarget) -> None:
+    self.add_object(int(self.get_data()))
+
+
+def end_real(self: PlistTarget) -> None:
+    self.add_object(float(self.get_data()))
+
+
+def end_string(self: PlistTarget) -> None:
+    self.add_object(self.get_data())
+
+
+def end_data(self: PlistTarget) -> None:
+    if self._use_builtin_types:
+        self.add_object(b64decode(self.get_data()))
+    else:
+        self.add_object(Data.fromBase64(self.get_data()))
+
+
+def end_date(self: PlistTarget) -> None:
+    self.add_object(_date_from_string(self.get_data()))
+
+
+_TARGET_START_HANDLERS: Dict[str, Callable[[PlistTarget], None]] = {
+    "dict": start_dict,
+    "array": start_array,
+}
+
+_TARGET_END_HANDLERS: Dict[str, Callable[[PlistTarget], None]] = {
+    "dict": end_dict,
+    "array": end_array,
+    "key": end_key,
+    "true": end_true,
+    "false": end_false,
+    "integer": end_integer,
+    "real": end_real,
+    "string": end_string,
+    "data": end_data,
+    "date": end_date,
+}
+
+
+# functions to build element tree from plist data
+
+
+def _string_element(value: str, ctx: SimpleNamespace) -> etree.Element:
+    el = etree.Element("string")
+    el.text = value
+    return el
+
+
+def _bool_element(value: bool, ctx: SimpleNamespace) -> etree.Element:
+    if value:
+        return etree.Element("true")
+    return etree.Element("false")
+
+
+def _integer_element(value: int, ctx: SimpleNamespace) -> etree.Element:
+    if -1 << 63 <= value < 1 << 64:
+        el = etree.Element("integer")
+        el.text = "%d" % value
+        return el
+    raise OverflowError(value)
+
+
+def _real_element(value: float, ctx: SimpleNamespace) -> etree.Element:
+    el = etree.Element("real")
+    el.text = repr(value)
+    return el
+
+
+def _dict_element(
+    d: Mapping[str, PlistEncodable], ctx: SimpleNamespace
+) -> etree.Element:
+    el = etree.Element("dict")
+    items = d.items()
+    if ctx.sort_keys:
+        items = sorted(items)  # type: ignore
+    ctx.indent_level += 1
+    for key, value in items:
+        if not isinstance(key, str):
+            if ctx.skipkeys:
+                continue
+            raise TypeError("keys must be strings")
+        k = etree.SubElement(el, "key")
+        k.text = tostr(key, "utf-8")
+        el.append(_make_element(value, ctx))
+    ctx.indent_level -= 1
+    return el
+
+
+def _array_element(
+    array: Sequence[PlistEncodable], ctx: SimpleNamespace
+) -> etree.Element:
+    el = etree.Element("array")
+    if len(array) == 0:
+        return el
+    ctx.indent_level += 1
+    for value in array:
+        el.append(_make_element(value, ctx))
+    ctx.indent_level -= 1
+    return el
+
+
+def _date_element(date: datetime, ctx: SimpleNamespace) -> etree.Element:
+    el = etree.Element("date")
+    el.text = _date_to_string(date)
+    return el
+
+
+def _data_element(data: bytes, ctx: SimpleNamespace) -> etree.Element:
+    el = etree.Element("data")
+    # NOTE: mypy is confused about whether el.text should be str or bytes.
+    el.text = _encode_base64(  # type: ignore
+        data,
+        maxlinelength=(76 if ctx.pretty_print else None),
+        indent_level=ctx.indent_level,
+    )
+    return el
+
+
+def _string_or_data_element(raw_bytes: bytes, ctx: SimpleNamespace) -> etree.Element:
+    if ctx.use_builtin_types:
+        return _data_element(raw_bytes, ctx)
+    else:
+        try:
+            string = raw_bytes.decode(encoding="ascii", errors="strict")
+        except UnicodeDecodeError:
+            raise ValueError(
+                "invalid non-ASCII bytes; use unicode string instead: %r" % raw_bytes
+            )
+        return _string_element(string, ctx)
+
+
+# The following is probably not entirely correct. The signature should take `Any`
+# and return `NoReturn`. At the time of this writing, neither mypy nor Pyright
+# can deal with singledispatch properly and will apply the signature of the base
+# function to all others. Being slightly dishonest makes it type-check and return
+# usable typing information for the optimistic case.
+@singledispatch
+def _make_element(value: PlistEncodable, ctx: SimpleNamespace) -> etree.Element:
+    raise TypeError("unsupported type: %s" % type(value))
+
+
+_make_element.register(str)(_string_element)
+_make_element.register(bool)(_bool_element)
+_make_element.register(Integral)(_integer_element)
+_make_element.register(float)(_real_element)
+_make_element.register(collections.abc.Mapping)(_dict_element)
+_make_element.register(list)(_array_element)
+_make_element.register(tuple)(_array_element)
+_make_element.register(datetime)(_date_element)
+_make_element.register(bytes)(_string_or_data_element)
+_make_element.register(bytearray)(_data_element)
+_make_element.register(Data)(lambda v, ctx: _data_element(v.data, ctx))
+
+
+# Public functions to create element tree from plist-compatible python
+# data structures and viceversa, for use when (de)serializing GLIF xml.
+
+
+def totree(
+    value: PlistEncodable,
+    sort_keys: bool = True,
+    skipkeys: bool = False,
+    use_builtin_types: Optional[bool] = None,
+    pretty_print: bool = True,
+    indent_level: int = 1,
+) -> etree.Element:
+    """Convert a value derived from a plist into an XML tree.
+
+    Args:
+        value: Any kind of value to be serialized to XML.
+        sort_keys: Whether keys of dictionaries should be sorted.
+        skipkeys (bool): Whether to silently skip non-string dictionary
+            keys.
+        use_builtin_types (bool): If true, byte strings will be
+            encoded in Base-64 and wrapped in a ``data`` tag; if
+            false, they will be either stored as ASCII strings or an
+            exception raised if they cannot be decoded as such. Defaults
+            to ``True`` if not present. Deprecated.
+        pretty_print (bool): Whether to indent the output.
+        indent_level (int): Level of indentation when serializing.
+
+    Returns: an ``etree`` ``Element`` object.
+
+    Raises:
+        ``TypeError``
+            if non-string dictionary keys are serialized
+            and ``skipkeys`` is false.
+        ``ValueError``
+            if non-ASCII binary data is present
+            and `use_builtin_types` is false.
+    """
+    if use_builtin_types is None:
+        use_builtin_types = USE_BUILTIN_TYPES
+    else:
+        use_builtin_types = use_builtin_types
+    context = SimpleNamespace(
+        sort_keys=sort_keys,
+        skipkeys=skipkeys,
+        use_builtin_types=use_builtin_types,
+        pretty_print=pretty_print,
+        indent_level=indent_level,
+    )
+    return _make_element(value, context)
+
+
+def fromtree(
+    tree: etree.Element,
+    use_builtin_types: Optional[bool] = None,
+    dict_type: Type[MutableMapping[str, Any]] = dict,
+) -> Any:
+    """Convert an XML tree to a plist structure.
+
+    Args:
+        tree: An ``etree`` ``Element``.
+        use_builtin_types: If True, binary data is deserialized to
+            bytes strings. If False, it is wrapped in :py:class:`Data`
+            objects. Defaults to True if not provided. Deprecated.
+        dict_type: What type to use for dictionaries.
+
+    Returns: An object (usually a dictionary).
+    """
+    target = PlistTarget(use_builtin_types=use_builtin_types, dict_type=dict_type)
+    for action, element in etree.iterwalk(tree, events=("start", "end")):
+        if action == "start":
+            target.start(element.tag, element.attrib)
+        elif action == "end":
+            # if there are no children, parse the leaf's data
+            if not len(element):
+                # always pass str, not None
+                target.data(element.text or "")
+            target.end(element.tag)
+    return target.close()
+
+
+# python3 plistlib API
+
+
+def load(
+    fp: IO[bytes],
+    use_builtin_types: Optional[bool] = None,
+    dict_type: Type[MutableMapping[str, Any]] = dict,
+) -> Any:
+    """Load a plist file into an object.
+
+    Args:
+        fp: An opened file.
+        use_builtin_types: If True, binary data is deserialized to
+            bytes strings. If False, it is wrapped in :py:class:`Data`
+            objects. Defaults to True if not provided. Deprecated.
+        dict_type: What type to use for dictionaries.
+
+    Returns:
+        An object (usually a dictionary) representing the top level of
+        the plist file.
+    """
+
+    if not hasattr(fp, "read"):
+        raise AttributeError("'%s' object has no attribute 'read'" % type(fp).__name__)
+    target = PlistTarget(use_builtin_types=use_builtin_types, dict_type=dict_type)
+    parser = etree.XMLParser(target=target)
+    result = etree.parse(fp, parser=parser)
+    # lxml returns the target object directly, while ElementTree wraps
+    # it as the root of an ElementTree object
+    try:
+        return result.getroot()
+    except AttributeError:
+        return result
+
+
+def loads(
+    value: bytes,
+    use_builtin_types: Optional[bool] = None,
+    dict_type: Type[MutableMapping[str, Any]] = dict,
+) -> Any:
+    """Load a plist file from a string into an object.
+
+    Args:
+        value: A bytes string containing a plist.
+        use_builtin_types: If True, binary data is deserialized to
+            bytes strings. If False, it is wrapped in :py:class:`Data`
+            objects. Defaults to True if not provided. Deprecated.
+        dict_type: What type to use for dictionaries.
+
+    Returns:
+        An object (usually a dictionary) representing the top level of
+        the plist file.
+    """
+
+    fp = BytesIO(value)
+    return load(fp, use_builtin_types=use_builtin_types, dict_type=dict_type)
+
+
+def dump(
+    value: PlistEncodable,
+    fp: IO[bytes],
+    sort_keys: bool = True,
+    skipkeys: bool = False,
+    use_builtin_types: Optional[bool] = None,
+    pretty_print: bool = True,
+) -> None:
+    """Write a Python object to a plist file.
+
+    Args:
+        value: An object to write.
+        fp: A file opened for writing.
+        sort_keys (bool): Whether keys of dictionaries should be sorted.
+        skipkeys (bool): Whether to silently skip non-string dictionary
+            keys.
+        use_builtin_types (bool): If true, byte strings will be
+            encoded in Base-64 and wrapped in a ``data`` tag; if
+            false, they will be either stored as ASCII strings or an
+            exception raised if they cannot be represented. Defaults
+        pretty_print (bool): Whether to indent the output.
+        indent_level (int): Level of indentation when serializing.
+
+    Raises:
+        ``TypeError``
+            if non-string dictionary keys are serialized
+            and ``skipkeys`` is false.
+        ``ValueError``
+            if non-representable binary data is present
+            and `use_builtin_types` is false.
+    """
+
+    if not hasattr(fp, "write"):
+        raise AttributeError("'%s' object has no attribute 'write'" % type(fp).__name__)
+    root = etree.Element("plist", version="1.0")
+    el = totree(
+        value,
+        sort_keys=sort_keys,
+        skipkeys=skipkeys,
+        use_builtin_types=use_builtin_types,
+        pretty_print=pretty_print,
+    )
+    root.append(el)
+    tree = etree.ElementTree(root)
+    # we write the doctype ourselves instead of using the 'doctype' argument
+    # of 'write' method, becuse lxml will force adding a '\n' even when
+    # pretty_print is False.
+    if pretty_print:
+        header = b"\n".join((XML_DECLARATION, PLIST_DOCTYPE, b""))
+    else:
+        header = XML_DECLARATION + PLIST_DOCTYPE
+    fp.write(header)
+    tree.write(  # type: ignore
+        fp,
+        encoding="utf-8",
+        pretty_print=pretty_print,
+        xml_declaration=False,
+    )
+
+
+def dumps(
+    value: PlistEncodable,
+    sort_keys: bool = True,
+    skipkeys: bool = False,
+    use_builtin_types: Optional[bool] = None,
+    pretty_print: bool = True,
+) -> bytes:
+    """Write a Python object to a string in plist format.
+
+    Args:
+        value: An object to write.
+        sort_keys (bool): Whether keys of dictionaries should be sorted.
+        skipkeys (bool): Whether to silently skip non-string dictionary
+            keys.
+        use_builtin_types (bool): If true, byte strings will be
+            encoded in Base-64 and wrapped in a ``data`` tag; if
+            false, they will be either stored as strings or an
+            exception raised if they cannot be represented. Defaults
+        pretty_print (bool): Whether to indent the output.
+        indent_level (int): Level of indentation when serializing.
+
+    Returns:
+        string: A plist representation of the Python object.
+
+    Raises:
+        ``TypeError``
+            if non-string dictionary keys are serialized
+            and ``skipkeys`` is false.
+        ``ValueError``
+            if non-representable binary data is present
+            and `use_builtin_types` is false.
+    """
+    fp = BytesIO()
+    dump(
+        value,
+        fp,
+        sort_keys=sort_keys,
+        skipkeys=skipkeys,
+        use_builtin_types=use_builtin_types,
+        pretty_print=pretty_print,
+    )
+    return fp.getvalue()

@@ -1,1 +1,475 @@
-IiIiQ2hhbmdlIHRoZSB1bml0cy1wZXItRU0gb2YgYSBmb250LgoKQUFUIGFuZCBHcmFwaGl0ZSB0YWJsZXMgYXJlIG5vdCBzdXBwb3J0ZWQuIENGRi9DRkYyIGZvbnRzCmFyZSBkZS1zdWJyb3V0aW5pemVkLiIiIgoKZnJvbSBmb250VG9vbHMudHRMaWIudHRWaXNpdG9yIGltcG9ydCBUVFZpc2l0b3IKaW1wb3J0IGZvbnRUb29scy50dExpYiBhcyB0dExpYgppbXBvcnQgZm9udFRvb2xzLnR0TGliLnRhYmxlcy5vdEJhc2UgYXMgb3RCYXNlCmltcG9ydCBmb250VG9vbHMudHRMaWIudGFibGVzLm90VGFibGVzIGFzIG90VGFibGVzCmZyb20gZm9udFRvb2xzLmNmZkxpYiBpbXBvcnQgVmFyU3RvcmVEYXRhCmltcG9ydCBmb250VG9vbHMuY2ZmTGliLnNwZWNpYWxpemVyIGFzIGNmZlNwZWNpYWxpemVyCmZyb20gZm9udFRvb2xzLnZhckxpYiBpbXBvcnQgYnVpbGRlciAgIyBmb3IgVmFyRGF0YS5jYWxjdWxhdGVOdW1TaG9ydHMKZnJvbSBmb250VG9vbHMubWlzYy5maXhlZFRvb2xzIGltcG9ydCBvdFJvdW5kCmZyb20gZm9udFRvb2xzLnZhckxpYi5tdWx0aVZhclN0b3JlIGltcG9ydCBPbmxpbmVNdWx0aVZhclN0b3JlQnVpbGRlcgpmcm9tIGZvbnRUb29scy5taXNjLnZlY3RvciBpbXBvcnQgVmVjdG9yCmZyb20gZm9udFRvb2xzLm1pc2MuaXRlclRvb2xzIGltcG9ydCBiYXRjaGVkCgpfX2FsbF9fID0gWyJzY2FsZV91cGVtIiwgIlNjYWxlclZpc2l0b3IiXQoKCmNsYXNzIFNjYWxlclZpc2l0b3IoVFRWaXNpdG9yKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBzY2FsZUZhY3Rvcik6CiAgICAgICAgc2VsZi5zY2FsZUZhY3RvciA9IHNjYWxlRmFjdG9yCgogICAgZGVmIHNjYWxlKHNlbGYsIHYpOgogICAgICAgIHJldHVybiBvdFJvdW5kKHYgKiBzZWxmLnNjYWxlRmFjdG9yKQoKCkBTY2FsZXJWaXNpdG9yLnJlZ2lzdGVyX2F0dHJzKAogICAgKAogICAgICAgICh0dExpYi5nZXRUYWJsZUNsYXNzKCJoZWFkIiksICgidW5pdHNQZXJFbSIsICJ4TWluIiwgInlNaW4iLCAieE1heCIsICJ5TWF4IikpLAogICAgICAgICh0dExpYi5nZXRUYWJsZUNsYXNzKCJwb3N0IiksICgidW5kZXJsaW5lUG9zaXRpb24iLCAidW5kZXJsaW5lVGhpY2tuZXNzIikpLAogICAgICAgICh0dExpYi5nZXRUYWJsZUNsYXNzKCJWT1JHIiksICgiZGVmYXVsdFZlcnRPcmlnaW5ZIikpLAogICAgICAgICgKICAgICAgICAgICAgKHR0TGliLmdldFRhYmxlQ2xhc3MoImhoZWEiKSwgdHRMaWIuZ2V0VGFibGVDbGFzcygiSEhFQSIpKSwKICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgImFzY2VudCIsCiAgICAgICAgICAgICAgICAiZGVzY2VudCIsCiAgICAgICAgICAgICAgICAibGluZUdhcCIsCiAgICAgICAgICAgICAgICAiYWR2YW5jZVdpZHRoTWF4IiwKICAgICAgICAgICAgICAgICJtaW5MZWZ0U2lkZUJlYXJpbmciLAogICAgICAgICAgICAgICAgIm1pblJpZ2h0U2lkZUJlYXJpbmciLAogICAgICAgICAgICAgICAgInhNYXhFeHRlbnQiLAogICAgICAgICAgICAgICAgImNhcmV0T2Zmc2V0IiwKICAgICAgICAgICAgKSwKICAgICAgICApLAogICAgICAgICgKICAgICAgICAgICAgKHR0TGliLmdldFRhYmxlQ2xhc3MoInZoZWEiKSwgdHRMaWIuZ2V0VGFibGVDbGFzcygiVkhFQSIpKSwKICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgImFzY2VudCIsCiAgICAgICAgICAgICAgICAiZGVzY2VudCIsCiAgICAgICAgICAgICAgICAibGluZUdhcCIsCiAgICAgICAgICAgICAgICAiYWR2YW5jZUhlaWdodE1heCIsCiAgICAgICAgICAgICAgICAibWluVG9wU2lkZUJlYXJpbmciLAogICAgICAgICAgICAgICAgIm1pbkJvdHRvbVNpZGVCZWFyaW5nIiwKICAgICAgICAgICAgICAgICJ5TWF4RXh0ZW50IiwKICAgICAgICAgICAgICAgICJjYXJldE9mZnNldCIsCiAgICAgICAgICAgICksCiAgICAgICAgKSwKICAgICAgICAoCiAgICAgICAgICAgIHR0TGliLmdldFRhYmxlQ2xhc3MoIk9TLzIiKSwKICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgInhBdmdDaGFyV2lkdGgiLAogICAgICAgICAgICAgICAgInlTdWJzY3JpcHRYU2l6ZSIsCiAgICAgICAgICAgICAgICAieVN1YnNjcmlwdFlTaXplIiwKICAgICAgICAgICAgICAgICJ5U3Vic2NyaXB0WE9mZnNldCIsCiAgICAgICAgICAgICAgICAieVN1YnNjcmlwdFlPZmZzZXQiLAogICAgICAgICAgICAgICAgInlTdXBlcnNjcmlwdFhTaXplIiwKICAgICAgICAgICAgICAgICJ5U3VwZXJzY3JpcHRZU2l6ZSIsCiAgICAgICAgICAgICAgICAieVN1cGVyc2NyaXB0WE9mZnNldCIsCiAgICAgICAgICAgICAgICAieVN1cGVyc2NyaXB0WU9mZnNldCIsCiAgICAgICAgICAgICAgICAieVN0cmlrZW91dFNpemUiLAogICAgICAgICAgICAgICAgInlTdHJpa2VvdXRQb3NpdGlvbiIsCiAgICAgICAgICAgICAgICAic1R5cG9Bc2NlbmRlciIsCiAgICAgICAgICAgICAgICAic1R5cG9EZXNjZW5kZXIiLAogICAgICAgICAgICAgICAgInNUeXBvTGluZUdhcCIsCiAgICAgICAgICAgICAgICAidXNXaW5Bc2NlbnQiLAogICAgICAgICAgICAgICAgInVzV2luRGVzY2VudCIsCiAgICAgICAgICAgICAgICAic3hIZWlnaHQiLAogICAgICAgICAgICAgICAgInNDYXBIZWlnaHQiLAogICAgICAgICAgICApLAogICAgICAgICksCiAgICAgICAgKAogICAgICAgICAgICBvdFRhYmxlcy5WYWx1ZVJlY29yZCwKICAgICAgICAgICAgKCJYQWR2YW5jZSIsICJZQWR2YW5jZSIsICJYUGxhY2VtZW50IiwgIllQbGFjZW1lbnQiKSwKICAgICAgICApLCAgIyBHUE9TCiAgICAgICAgKG90VGFibGVzLkFuY2hvciwgKCJYQ29vcmRpbmF0ZSIsICJZQ29vcmRpbmF0ZSIpKSwgICMgR1BPUwogICAgICAgIChvdFRhYmxlcy5DYXJldFZhbHVlLCAoIkNvb3JkaW5hdGUiKSksICAjIEdERUYKICAgICAgICAob3RUYWJsZXMuQmFzZUNvb3JkLCAoIkNvb3JkaW5hdGUiKSksICAjIEJBU0UKICAgICAgICAob3RUYWJsZXMuTWF0aFZhbHVlUmVjb3JkLCAoIlZhbHVlIikpLCAgIyBNQVRICiAgICAgICAgKAogICAgICAgICAgICBvdFRhYmxlcy5NYXRoQ29uc3RhbnRzLAogICAgICAgICAgICAoIkRlbGltaXRlZFN1YkZvcm11bGFNaW5IZWlnaHQiLCAiRGlzcGxheU9wZXJhdG9yTWluSGVpZ2h0IiksCiAgICAgICAgKSwgICMgTUFUSAogICAgICAgIChvdFRhYmxlcy5NYXRoVmFyaWFudHMsICgiTWluQ29ubmVjdG9yT3ZlcmxhcCIpKSwgICMgTUFUSAogICAgICAgIChvdFRhYmxlcy5NYXRoR2x5cGhWYXJpYW50UmVjb3JkLCAoIkFkdmFuY2VNZWFzdXJlbWVudCIpKSwgICMgTUFUSAogICAgICAgICgKICAgICAgICAgICAgb3RUYWJsZXMuR2x5cGhQYXJ0UmVjb3JkLAogICAgICAgICAgICAoIlN0YXJ0Q29ubmVjdG9yTGVuZ3RoIiwgIkVuZENvbm5lY3Rvckxlbmd0aCIsICJGdWxsQWR2YW5jZSIpLAogICAgICAgICksICAjIE1BVEgKICAgICAgICAob3RUYWJsZXMuQ2xpcEJveCwgKCJ4TWluIiwgInlNaW4iLCAieE1heCIsICJ5TWF4IikpLCAgIyBDT0xSCiAgICApCikKZGVmIHZpc2l0KHZpc2l0b3IsIG9iaiwgYXR0ciwgdmFsdWUpOgogICAgc2V0YXR0cihvYmosIGF0dHIsIHZpc2l0b3Iuc2NhbGUodmFsdWUpKQoKCkBTY2FsZXJWaXNpdG9yLnJlZ2lzdGVyX2F0dHIoCiAgICAoCiAgICAgICAgdHRMaWIuZ2V0VGFibGVDbGFzcygiaG10eCIpLAogICAgICAgIHR0TGliLmdldFRhYmxlQ2xhc3MoIkhNVFgiKSwKICAgICAgICB0dExpYi5nZXRUYWJsZUNsYXNzKCJ2bXR4IiksCiAgICAgICAgdHRMaWIuZ2V0VGFibGVDbGFzcygiVk1UWCIpLAogICAgKSwKICAgICJtZXRyaWNzIiwKKQpkZWYgdmlzaXQodmlzaXRvciwgb2JqLCBhdHRyLCBtZXRyaWNzKToKICAgIGZvciBnIGluIG1ldHJpY3M6CiAgICAgICAgYWR2YW5jZSwgbHNiID0gbWV0cmljc1tnXQogICAgICAgIG1ldHJpY3NbZ10gPSB2aXNpdG9yLnNjYWxlKGFkdmFuY2UpLCB2aXNpdG9yLnNjYWxlKGxzYikKCgpAU2NhbGVyVmlzaXRvci5yZWdpc3Rlcl9hdHRyKHR0TGliLmdldFRhYmxlQ2xhc3MoIlZPUkciKSwgIlZPcmlnaW5SZWNvcmRzIikKZGVmIHZpc2l0KHZpc2l0b3IsIG9iaiwgYXR0ciwgVk9yaWdpblJlY29yZHMpOgogICAgZm9yIGcgaW4gVk9yaWdpblJlY29yZHM6CiAgICAgICAgVk9yaWdpblJlY29yZHNbZ10gPSB2aXNpdG9yLnNjYWxlKFZPcmlnaW5SZWNvcmRzW2ddKQoKCkBTY2FsZXJWaXNpdG9yLnJlZ2lzdGVyX2F0dHIoCiAgICAodHRMaWIuZ2V0VGFibGVDbGFzcygiZ2x5ZiIpLCB0dExpYi5nZXRUYWJsZUNsYXNzKCJHTFlGIikpLCAiZ2x5cGhzIgopCmRlZiB2aXNpdCh2aXNpdG9yLCBvYmosIGF0dHIsIGdseXBocyk6CiAgICBmb3IgZyBpbiBnbHlwaHMudmFsdWVzKCk6CiAgICAgICAgZm9yIGF0dHIgaW4gKCJ4TWluIiwgInhNYXgiLCAieU1pbiIsICJ5TWF4Iik6CiAgICAgICAgICAgIHYgPSBnZXRhdHRyKGcsIGF0dHIsIE5vbmUpCiAgICAgICAgICAgIGlmIHYgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBzZXRhdHRyKGcsIGF0dHIsIHZpc2l0b3Iuc2NhbGUodikpCgogICAgICAgIGlmIGcuaXNDb21wb3NpdGUoKToKICAgICAgICAgICAgZm9yIGNvbXBvbmVudCBpbiBnLmNvbXBvbmVudHM6CiAgICAgICAgICAgICAgICBjb21wb25lbnQueCA9IHZpc2l0b3Iuc2NhbGUoY29tcG9uZW50LngpCiAgICAgICAgICAgICAgICBjb21wb25lbnQueSA9IHZpc2l0b3Iuc2NhbGUoY29tcG9uZW50LnkpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIGlmIGhhc2F0dHIoZywgImNvb3JkaW5hdGVzIik6CiAgICAgICAgICAgIGNvb3JkaW5hdGVzID0gZy5jb29yZGluYXRlcwogICAgICAgICAgICBmb3IgaSwgKHgsIHkpIGluIGVudW1lcmF0ZShjb29yZGluYXRlcyk6CiAgICAgICAgICAgICAgICBjb29yZGluYXRlc1tpXSA9IHZpc2l0b3Iuc2NhbGUoeCksIHZpc2l0b3Iuc2NhbGUoeSkKCgpAU2NhbGVyVmlzaXRvci5yZWdpc3Rlcl9hdHRyKAogICAgKHR0TGliLmdldFRhYmxlQ2xhc3MoImd2YXIiKSwgdHRMaWIuZ2V0VGFibGVDbGFzcygiR1ZBUiIpKSwgInZhcmlhdGlvbnMiCikKZGVmIHZpc2l0KHZpc2l0b3IsIG9iaiwgYXR0ciwgdmFyaWF0aW9ucyk6CiAgICBnbHlmVGFibGUgPSB2aXNpdG9yLmZvbnRbb2JqLmdseXBoVGFibGVUYWddCgogICAgZm9yIGdseXBoTmFtZSwgdmFybGlzdCBpbiB2YXJpYXRpb25zLml0ZW1zKCk6CiAgICAgICAgZ2x5cGggPSBnbHlmVGFibGVbZ2x5cGhOYW1lXQogICAgICAgIGZvciB2YXIgaW4gdmFybGlzdDoKICAgICAgICAgICAgY29vcmRpbmF0ZXMgPSB2YXIuY29vcmRpbmF0ZXMKICAgICAgICAgICAgZm9yIGksIHh5IGluIGVudW1lcmF0ZShjb29yZGluYXRlcyk6CiAgICAgICAgICAgICAgICBpZiB4eSBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBjb29yZGluYXRlc1tpXSA9IHZpc2l0b3Iuc2NhbGUoeHlbMF0pLCB2aXNpdG9yLnNjYWxlKHh5WzFdKQoKCkBTY2FsZXJWaXNpdG9yLnJlZ2lzdGVyX2F0dHIodHRMaWIuZ2V0VGFibGVDbGFzcygiVkFSQyIpLCAidGFibGUiKQpkZWYgdmlzaXQodmlzaXRvciwgb2JqLCBhdHRyLCB2YXJjKToKICAgIGZ2YXIgPSB2aXNpdG9yLmZvbnQuZ2V0KCJmdmFyIikKICAgIGF4ZXMgPSBmdmFyLmF4ZXMgaWYgZnZhciBpcyBub3QgTm9uZSBlbHNlIFtdCiAgICBmdmFyQXhlcyA9IFthLmF4aXNUYWcgZm9yIGEgaW4gYXhlc10KCiAgICBzdG9yZSA9IHZhcmMuTXVsdGlWYXJTdG9yZQogICAgc3RvcmVCdWlsZGVyID0gT25saW5lTXVsdGlWYXJTdG9yZUJ1aWxkZXIoZnZhckF4ZXMpCgogICAgZm9yIGcgaW4gdmFyYy5WYXJDb21wb3NpdGVHbHlwaHMuVmFyQ29tcG9zaXRlR2x5cGg6CiAgICAgICAgZm9yIGNvbXBvbmVudCBpbiBnLmNvbXBvbmVudHM6CiAgICAgICAgICAgIHQgPSBjb21wb25lbnQudHJhbnNmb3JtCiAgICAgICAgICAgIHQudHJhbnNsYXRlWCA9IHZpc2l0b3Iuc2NhbGUodC50cmFuc2xhdGVYKQogICAgICAgICAgICB0LnRyYW5zbGF0ZVkgPSB2aXNpdG9yLnNjYWxlKHQudHJhbnNsYXRlWSkKICAgICAgICAgICAgdC50Q2VudGVyWCA9IHZpc2l0b3Iuc2NhbGUodC50Q2VudGVyWCkKICAgICAgICAgICAgdC50Q2VudGVyWSA9IHZpc2l0b3Iuc2NhbGUodC50Q2VudGVyWSkKCiAgICAgICAgICAgIGlmIGNvbXBvbmVudC5heGlzVmFsdWVzVmFySW5kZXggIT0gb3RUYWJsZXMuTk9fVkFSSUFUSU9OX0lOREVYOgogICAgICAgICAgICAgICAgdmFySWR4ID0gY29tcG9uZW50LmF4aXNWYWx1ZXNWYXJJbmRleAogICAgICAgICAgICAgICAgIyBUT0RPIE1vdmUgdGhpcyBjb2RlIGR1cGxpY2F0ZWQgYmVsb3cgdG8gTXVsdGlWYXJTdG9yZS5fX2dldGl0ZW1fXywKICAgICAgICAgICAgICAgICMgb3IgYSBnZXREZWx0YXNBbmRTdXBwb3J0cygpLgogICAgICAgICAgICAgICAgaWYgdmFySWR4ICE9IG90VGFibGVzLk5PX1ZBUklBVElPTl9JTkRFWDoKICAgICAgICAgICAgICAgICAgICBtYWpvciA9IHZhcklkeCA+PiAxNgogICAgICAgICAgICAgICAgICAgIG1pbm9yID0gdmFySWR4ICYgMHhGRkZGCiAgICAgICAgICAgICAgICAgICAgdmFyRGF0YSA9IHN0b3JlLk11bHRpVmFyRGF0YVttYWpvcl0KICAgICAgICAgICAgICAgICAgICB2ZWMgPSB2YXJEYXRhLkl0ZW1bbWlub3JdCiAgICAgICAgICAgICAgICAgICAgc3RvcmVCdWlsZGVyLnNldFN1cHBvcnRzKHN0b3JlLmdldF9zdXBwb3J0cyhtYWpvciwgYXhlcykpCiAgICAgICAgICAgICAgICAgICAgaWYgdmVjOgogICAgICAgICAgICAgICAgICAgICAgICBtID0gbGVuKHZlYykgLy8gdmFyRGF0YS5WYXJSZWdpb25Db3VudAogICAgICAgICAgICAgICAgICAgICAgICB2ZWMgPSBsaXN0KGJhdGNoZWQodmVjLCBtKSkKICAgICAgICAgICAgICAgICAgICAgICAgdmVjID0gW1ZlY3Rvcih2KSBmb3IgdiBpbiB2ZWNdCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbXBvbmVudC5heGlzVmFsdWVzVmFySW5kZXggPSBzdG9yZUJ1aWxkZXIuc3RvcmVEZWx0YXModmVjKQogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbXBvbmVudC5heGlzVmFsdWVzVmFySW5kZXggPSBvdFRhYmxlcy5OT19WQVJJQVRJT05fSU5ERVgKCiAgICAgICAgICAgIGlmIGNvbXBvbmVudC50cmFuc2Zvcm1WYXJJbmRleCAhPSBvdFRhYmxlcy5OT19WQVJJQVRJT05fSU5ERVg6CiAgICAgICAgICAgICAgICB2YXJJZHggPSBjb21wb25lbnQudHJhbnNmb3JtVmFySW5kZXgKICAgICAgICAgICAgICAgIGlmIHZhcklkeCAhPSBvdFRhYmxlcy5OT19WQVJJQVRJT05fSU5ERVg6CiAgICAgICAgICAgICAgICAgICAgbWFqb3IgPSB2YXJJZHggPj4gMTYKICAgICAgICAgICAgICAgICAgICBtaW5vciA9IHZhcklkeCAmIDB4RkZGRgogICAgICAgICAgICAgICAgICAgIHZhckRhdGEgPSBzdG9yZS5NdWx0aVZhckRhdGFbbWFqb3JdCiAgICAgICAgICAgICAgICAgICAgdmVjID0gdmFyRGF0YS5JdGVtW21pbm9yXQogICAgICAgICAgICAgICAgICAgIHN0b3JlQnVpbGRlci5zZXRTdXBwb3J0cyhzdG9yZS5nZXRfc3VwcG9ydHMobWFqb3IsIGF4ZXMpKQogICAgICAgICAgICAgICAgICAgIGlmIHZlYzoKICAgICAgICAgICAgICAgICAgICAgICAgbSA9IGxlbih2ZWMpIC8vIHZhckRhdGEuVmFyUmVnaW9uQ291bnQKICAgICAgICAgICAgICAgICAgICAgICAgZmxhZ3MgPSBjb21wb25lbnQuZmxhZ3MKICAgICAgICAgICAgICAgICAgICAgICAgdmVjID0gbGlzdChiYXRjaGVkKHZlYywgbSkpCiAgICAgICAgICAgICAgICAgICAgICAgIG5ld1ZlYyA9IFtdCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciB2IGluIHZlYzoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHYgPSBsaXN0KHYpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpID0gMAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIyMgU2NhbGUgdHJhbnNsYXRlICYgdENlbnRlcgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgZmxhZ3MgJiBvdFRhYmxlcy5WYXJDb21wb25lbnRGbGFncy5IQVZFX1RSQU5TTEFURV9YOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZbaV0gPSB2aXNpdG9yLnNjYWxlKHZbaV0pCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBmbGFncyAmIG90VGFibGVzLlZhckNvbXBvbmVudEZsYWdzLkhBVkVfVFJBTlNMQVRFX1k6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdltpXSA9IHZpc2l0b3Iuc2NhbGUodltpXSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpICs9IDEKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGZsYWdzICYgb3RUYWJsZXMuVmFyQ29tcG9uZW50RmxhZ3MuSEFWRV9ST1RBVElPTjoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpICs9IDEKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGZsYWdzICYgb3RUYWJsZXMuVmFyQ29tcG9uZW50RmxhZ3MuSEFWRV9TQ0FMRV9YOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGkgKz0gMQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgZmxhZ3MgJiBvdFRhYmxlcy5WYXJDb21wb25lbnRGbGFncy5IQVZFX1NDQUxFX1k6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBmbGFncyAmIG90VGFibGVzLlZhckNvbXBvbmVudEZsYWdzLkhBVkVfU0tFV19YOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGkgKz0gMQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgZmxhZ3MgJiBvdFRhYmxlcy5WYXJDb21wb25lbnRGbGFncy5IQVZFX1NLRVdfWToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpICs9IDEKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGZsYWdzICYgb3RUYWJsZXMuVmFyQ29tcG9uZW50RmxhZ3MuSEFWRV9UQ0VOVEVSX1g6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdltpXSA9IHZpc2l0b3Iuc2NhbGUodltpXSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpICs9IDEKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGZsYWdzICYgb3RUYWJsZXMuVmFyQ29tcG9uZW50RmxhZ3MuSEFWRV9UQ0VOVEVSX1k6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdltpXSA9IHZpc2l0b3Iuc2NhbGUodltpXSkKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpICs9IDEKCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXdWZWMuYXBwZW5kKFZlY3Rvcih2KSkKICAgICAgICAgICAgICAgICAgICAgICAgdmVjID0gbmV3VmVjCgogICAgICAgICAgICAgICAgICAgICAgICBjb21wb25lbnQudHJhbnNmb3JtVmFySW5kZXggPSBzdG9yZUJ1aWxkZXIuc3RvcmVEZWx0YXModmVjKQogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbXBvbmVudC50cmFuc2Zvcm1WYXJJbmRleCA9IG90VGFibGVzLk5PX1ZBUklBVElPTl9JTkRFWAoKICAgIGlmIHN0b3JlIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuCgogICAgIyBDb25kaXRpb24gZGVsdGFzIGFyZSBkaW1lbnNpb25sZXNzOyBwcmVzZXJ2ZSB0aGVtIHdpdGhvdXQgVVBFTSBzY2FsaW5nLgogICAgaWYgdmFyYy5Db25kaXRpb25MaXN0IGlzIG5vdCBOb25lOgogICAgICAgIHZhcklkeGVzID0gc2V0KCkKICAgICAgICBmb3IgY29uZGl0aW9uIGluIHZhcmMuQ29uZGl0aW9uTGlzdC5Db25kaXRpb25UYWJsZToKICAgICAgICAgICAgY29uZGl0aW9uLmNvbGxlY3RfdmFyaWR4ZXModmFySWR4ZXMpCiAgICAgICAgbWFwcGluZyA9IHtvdFRhYmxlcy5OT19WQVJJQVRJT05fSU5ERVg6IG90VGFibGVzLk5PX1ZBUklBVElPTl9JTkRFWH0KICAgICAgICBmb3IgdmFySWR4IGluIHNvcnRlZCh2YXJJZHhlcyAtIHtvdFRhYmxlcy5OT19WQVJJQVRJT05fSU5ERVh9KToKICAgICAgICAgICAgbWFqb3IsIG1pbm9yID0gdmFySWR4ID4+IDE2LCB2YXJJZHggJiAweEZGRkYKICAgICAgICAgICAgdmFyRGF0YSA9IHN0b3JlLk11bHRpVmFyRGF0YVttYWpvcl0KICAgICAgICAgICAgdmVjID0gdmFyRGF0YS5JdGVtW21pbm9yXQogICAgICAgICAgICBzdG9yZUJ1aWxkZXIuc2V0U3VwcG9ydHMoc3RvcmUuZ2V0X3N1cHBvcnRzKG1ham9yLCBheGVzKSkKICAgICAgICAgICAgbWFwcGluZ1t2YXJJZHhdID0gc3RvcmVCdWlsZGVyLnN0b3JlRGVsdGFzKFtWZWN0b3IoW3ZdKSBmb3IgdiBpbiB2ZWNdKQogICAgICAgIGZvciBjb25kaXRpb24gaW4gdmFyYy5Db25kaXRpb25MaXN0LkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICBjb25kaXRpb24ucmVtYXBfdmFyaWR4ZXMobWFwcGluZykKCiAgICB2YXJjLk11bHRpVmFyU3RvcmUgPSBzdG9yZUJ1aWxkZXIuZmluaXNoKCkKCgpAU2NhbGVyVmlzaXRvci5yZWdpc3Rlcl9hdHRyKHR0TGliLmdldFRhYmxlQ2xhc3MoImtlcm4iKSwgImtlcm5UYWJsZXMiKQpkZWYgdmlzaXQodmlzaXRvciwgb2JqLCBhdHRyLCBrZXJuVGFibGVzKToKICAgIGZvciB0YWJsZSBpbiBrZXJuVGFibGVzOgogICAgICAgIGtlcm5UYWJsZSA9IHRhYmxlLmtlcm5UYWJsZQogICAgICAgIGZvciBrIGluIGtlcm5UYWJsZS5rZXlzKCk6CiAgICAgICAgICAgIGtlcm5UYWJsZVtrXSA9IHZpc2l0b3Iuc2NhbGUoa2VyblRhYmxlW2tdKQoKCmRlZiBfY2ZmX3NjYWxlKHZpc2l0b3IsIGFyZ3MpOgogICAgZm9yIGksIGFyZyBpbiBlbnVtZXJhdGUoYXJncyk6CiAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoYXJnLCBsaXN0KToKICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoYXJnLCBieXRlcyk6CiAgICAgICAgICAgICAgICBhcmdzW2ldID0gdmlzaXRvci5zY2FsZShhcmcpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbnVtX2JsZW5kcyA9IGFyZ1stMV0KICAgICAgICAgICAgX2NmZl9zY2FsZSh2aXNpdG9yLCBhcmcpCiAgICAgICAgICAgIGFyZ1stMV0gPSBudW1fYmxlbmRzCgoKQFNjYWxlclZpc2l0b3IucmVnaXN0ZXJfYXR0cigKICAgICh0dExpYi5nZXRUYWJsZUNsYXNzKCJDRkYgIiksIHR0TGliLmdldFRhYmxlQ2xhc3MoIkNGRjIiKSksICJjZmYiCikKZGVmIHZpc2l0KHZpc2l0b3IsIG9iaiwgYXR0ciwgY2ZmKToKICAgIGNmZi5kZXN1YnJvdXRpbml6ZSgpCiAgICB0b3BEaWN0ID0gY2ZmLnRvcERpY3RJbmRleFswXQogICAgdmFyU3RvcmUgPSBnZXRhdHRyKHRvcERpY3QsICJWYXJTdG9yZSIsIE5vbmUpCiAgICBnZXROdW1SZWdpb25zID0gdmFyU3RvcmUuZ2V0TnVtUmVnaW9ucyBpZiB2YXJTdG9yZSBpcyBub3QgTm9uZSBlbHNlIE5vbmUKICAgIHByaXZhdGVzID0gc2V0KCkKICAgIGZvciBmb250bmFtZSBpbiBjZmYua2V5cygpOgogICAgICAgIGZvbnQgPSBjZmZbZm9udG5hbWVdCiAgICAgICAgY3MgPSBmb250LkNoYXJTdHJpbmdzCiAgICAgICAgZm9yIGcgaW4gZm9udC5jaGFyc2V0OgogICAgICAgICAgICBjLCBfID0gY3MuZ2V0SXRlbUFuZFNlbGVjdG9yKGcpCiAgICAgICAgICAgIHByaXZhdGVzLmFkZChjLnByaXZhdGUpCgogICAgICAgICAgICBjb21tYW5kcyA9IGNmZlNwZWNpYWxpemVyLnByb2dyYW1Ub0NvbW1hbmRzKAogICAgICAgICAgICAgICAgYy5wcm9ncmFtLAogICAgICAgICAgICAgICAgZ2V0TnVtUmVnaW9ucz1nZXROdW1SZWdpb25zLAogICAgICAgICAgICAgICAgdnNJbmRleD1nZXRhdHRyKGMucHJpdmF0ZSwgInZzaW5kZXgiLCAwKSwKICAgICAgICAgICAgKQogICAgICAgICAgICBmb3Igb3AsIGFyZ3MgaW4gY29tbWFuZHM6CiAgICAgICAgICAgICAgICBpZiBvcCA9PSAidnNpbmRleCI6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIF9jZmZfc2NhbGUodmlzaXRvciwgYXJncykKICAgICAgICAgICAgYy5wcm9ncmFtWzpdID0gY2ZmU3BlY2lhbGl6ZXIuY29tbWFuZHNUb1Byb2dyYW0oY29tbWFuZHMpCgogICAgICAgICMgQW5ub3lpbmcgYnVzaW5lc3Mgb2Ygc2NhbGluZyBudW1iZXJzIHRoYXQgZG8gbm90IG1hdHRlciB3aGF0c29ldmVyCgogICAgICAgIGZvciBhdHRyIGluICgKICAgICAgICAgICAgIlVuZGVybGluZVBvc2l0aW9uIiwKICAgICAgICAgICAgIlVuZGVybGluZVRoaWNrbmVzcyIsCiAgICAgICAgICAgICJGb250QkJveCIsCiAgICAgICAgICAgICJTdHJva2VXaWR0aCIsCiAgICAgICAgKToKICAgICAgICAgICAgdmFsdWUgPSBnZXRhdHRyKHRvcERpY3QsIGF0dHIsIE5vbmUpCiAgICAgICAgICAgIGlmIHZhbHVlIGlzIE5vbmU6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBpZiBpc2luc3RhbmNlKHZhbHVlLCBsaXN0KToKICAgICAgICAgICAgICAgIF9jZmZfc2NhbGUodmlzaXRvciwgdmFsdWUpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBzZXRhdHRyKHRvcERpY3QsIGF0dHIsIHZpc2l0b3Iuc2NhbGUodmFsdWUpKQoKICAgICAgICAjIEFzc2lnbiBhIG5ldyBsaXN0OiBhIFRvcCBESUNUIHdpdGhvdXQgYW4gZXhwbGljaXQgRm9udE1hdHJpeCByZXR1cm5zIHRoZQogICAgICAgICMgc2hhcmVkIGNsYXNzLWxldmVsIGRlZmF1bHQsIHdoaWNoIG11c3Qgbm90IGJlIG1vZGlmaWVkIGluIHBsYWNlLgogICAgICAgIHRvcERpY3QuRm9udE1hdHJpeCA9IFt2IC8gdmlzaXRvci5zY2FsZUZhY3RvciBmb3IgdiBpbiB0b3BEaWN0LkZvbnRNYXRyaXhdCgogICAgICAgIGZvciBwcml2YXRlIGluIHByaXZhdGVzOgogICAgICAgICAgICBmb3IgYXR0ciBpbiAoCiAgICAgICAgICAgICAgICAiQmx1ZVZhbHVlcyIsCiAgICAgICAgICAgICAgICAiT3RoZXJCbHVlcyIsCiAgICAgICAgICAgICAgICAiRmFtaWx5Qmx1ZXMiLAogICAgICAgICAgICAgICAgIkZhbWlseU90aGVyQmx1ZXMiLAogICAgICAgICAgICAgICAgIyAiQmx1ZVNjYWxlIiwKICAgICAgICAgICAgICAgICMgIkJsdWVTaGlmdCIsCiAgICAgICAgICAgICAgICAjICJCbHVlRnV6eiIsCiAgICAgICAgICAgICAgICAiU3RkSFciLAogICAgICAgICAgICAgICAgIlN0ZFZXIiwKICAgICAgICAgICAgICAgICJTdGVtU25hcEgiLAogICAgICAgICAgICAgICAgIlN0ZW1TbmFwViIsCiAgICAgICAgICAgICAgICAiZGVmYXVsdFdpZHRoWCIsCiAgICAgICAgICAgICAgICAibm9taW5hbFdpZHRoWCIsCiAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IGdldGF0dHIocHJpdmF0ZSwgYXR0ciwgTm9uZSkKICAgICAgICAgICAgICAgIGlmIHZhbHVlIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UodmFsdWUsIGxpc3QpOgogICAgICAgICAgICAgICAgICAgIF9jZmZfc2NhbGUodmlzaXRvciwgdmFsdWUpCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIHNldGF0dHIocHJpdmF0ZSwgYXR0ciwgdmlzaXRvci5zY2FsZSh2YWx1ZSkpCgoKIyBJdGVtVmFyaWF0aW9uU3RvcmUKCgpAU2NhbGVyVmlzaXRvci5yZWdpc3RlcihvdFRhYmxlcy5WYXJEYXRhKQpkZWYgdmlzaXQodmlzaXRvciwgdmFyRGF0YSk6CiAgICBmb3IgaXRlbSBpbiB2YXJEYXRhLkl0ZW06CiAgICAgICAgZm9yIGksIHYgaW4gZW51bWVyYXRlKGl0ZW0pOgogICAgICAgICAgICBpdGVtW2ldID0gdmlzaXRvci5zY2FsZSh2KQogICAgdmFyRGF0YS5jYWxjdWxhdGVOdW1TaG9ydHMoKQoKCiMgQ09MUnYxCgoKZGVmIF9zZXR1cF9zY2FsZV9wYWludChwYWludCwgc2NhbGUpOgogICAgaWYgLTIgPD0gc2NhbGUgPD0gMiAtICgxID4+IDE0KToKICAgICAgICBwYWludC5Gb3JtYXQgPSBvdFRhYmxlcy5QYWludEZvcm1hdC5QYWludFNjYWxlVW5pZm9ybQogICAgICAgIHBhaW50LnNjYWxlID0gc2NhbGUKICAgICAgICByZXR1cm4KCiAgICB0cmFuc2Zvcm0gPSBvdFRhYmxlcy5BZmZpbmUyeDMoKQogICAgdHJhbnNmb3JtLnBvcHVsYXRlRGVmYXVsdHMoKQogICAgdHJhbnNmb3JtLnh5ID0gdHJhbnNmb3JtLnl4ID0gdHJhbnNmb3JtLmR4ID0gdHJhbnNmb3JtLmR5ID0gMAogICAgdHJhbnNmb3JtLnh4ID0gdHJhbnNmb3JtLnl5ID0gc2NhbGUKCiAgICBwYWludC5Gb3JtYXQgPSBvdFRhYmxlcy5QYWludEZvcm1hdC5QYWludFRyYW5zZm9ybQogICAgcGFpbnQuVHJhbnNmb3JtID0gdHJhbnNmb3JtCgoKQFNjYWxlclZpc2l0b3IucmVnaXN0ZXIob3RUYWJsZXMuQmFzZUdseXBoUGFpbnRSZWNvcmQpCmRlZiB2aXNpdCh2aXNpdG9yLCByZWNvcmQpOgogICAgb2xkUGFpbnQgPSByZWNvcmQuUGFpbnQKCiAgICBzY2FsZSA9IG90VGFibGVzLlBhaW50KCkKICAgIF9zZXR1cF9zY2FsZV9wYWludChzY2FsZSwgdmlzaXRvci5zY2FsZUZhY3RvcikKICAgIHNjYWxlLlBhaW50ID0gb2xkUGFpbnQKCiAgICByZWNvcmQuUGFpbnQgPSBzY2FsZQoKICAgIHJldHVybiBUcnVlCgoKQFNjYWxlclZpc2l0b3IucmVnaXN0ZXIob3RUYWJsZXMuUGFpbnQpCmRlZiB2aXNpdCh2aXNpdG9yLCBwYWludCk6CiAgICBpZiBwYWludC5Gb3JtYXQgbm90IGluIHsKICAgICAgICBvdFRhYmxlcy5QYWludEZvcm1hdC5QYWludEdseXBoLAogICAgICAgIG90VGFibGVzLlBhaW50Rm9ybWF0LlBhaW50R2x5cGgyLAogICAgfToKICAgICAgICByZXR1cm4gVHJ1ZQoKICAgIG5ld1BhaW50ID0gb3RUYWJsZXMuUGFpbnQoKQogICAgbmV3UGFpbnQuRm9ybWF0ID0gcGFpbnQuRm9ybWF0CiAgICBuZXdQYWludC5QYWludCA9IHBhaW50LlBhaW50CiAgICBuZXdQYWludC5HbHlwaCA9IHBhaW50LkdseXBoCiAgICBkZWwgcGFpbnQuUGFpbnQKICAgIGRlbCBwYWludC5HbHlwaAoKICAgIF9zZXR1cF9zY2FsZV9wYWludChwYWludCwgMSAvIHZpc2l0b3Iuc2NhbGVGYWN0b3IpCiAgICBwYWludC5QYWludCA9IG5ld1BhaW50CgogICAgdmlzaXRvci52aXNpdChuZXdQYWludC5QYWludCkKCiAgICByZXR1cm4gRmFsc2UKCgpkZWYgc2NhbGVfdXBlbShmb250LCBuZXdfdXBlbSk6CiAgICAiIiJDaGFuZ2UgdGhlIHVuaXRzLXBlci1FTSBvZiBmb250IHRvIHRoZSBuZXcgdmFsdWUuIiIiCiAgICB1cGVtID0gZm9udFsiaGVhZCJdLnVuaXRzUGVyRW0KICAgIHZpc2l0b3IgPSBTY2FsZXJWaXNpdG9yKG5ld191cGVtIC8gdXBlbSkKICAgIHZpc2l0b3IudmlzaXQoZm9udCkKCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiQ2hhbmdlIHRoZSB1bml0cy1wZXItRU0gb2YgZm9udHMiIiIKCiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgaW1wb3J0IHN5cwoKICAgICAgICBhcmdzID0gc3lzLmFyZ3ZbMTpdCgogICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAogICAgZnJvbSBmb250VG9vbHMubWlzYy5jbGlUb29scyBpbXBvcnQgbWFrZU91dHB1dEZpbGVOYW1lCiAgICBpbXBvcnQgYXJncGFyc2UKCiAgICBwYXJzZXIgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigKICAgICAgICAiZm9udHRvb2xzIHR0TGliLnNjYWxlVXBlbSIsIGRlc2NyaXB0aW9uPSJDaGFuZ2UgdGhlIHVuaXRzLXBlci1FTSBvZiBmb250cyIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoImZvbnQiLCBtZXRhdmFyPSJmb250IiwgaGVscD0iRm9udCBmaWxlLiIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJuZXdfdXBlbSIsIG1ldGF2YXI9Im5ldy11cGVtIiwgaGVscD0iTmV3IHVuaXRzLXBlci1FTSBpbnRlZ2VyIHZhbHVlLiIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tb3V0cHV0LWZpbGUiLCBtZXRhdmFyPSJwYXRoIiwgZGVmYXVsdD1Ob25lLCBoZWxwPSJPdXRwdXQgZmlsZS4iCiAgICApCgogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgZm9udCA9IFRURm9udChvcHRpb25zLmZvbnQpCiAgICBuZXdfdXBlbSA9IGludChvcHRpb25zLm5ld191cGVtKQogICAgb3V0cHV0X2ZpbGUgPSAoCiAgICAgICAgb3B0aW9ucy5vdXRwdXRfZmlsZQogICAgICAgIGlmIG9wdGlvbnMub3V0cHV0X2ZpbGUgaXMgbm90IE5vbmUKICAgICAgICBlbHNlIG1ha2VPdXRwdXRGaWxlTmFtZShvcHRpb25zLmZvbnQsIG92ZXJXcml0ZT1UcnVlLCBzdWZmaXg9Ii1zY2FsZWQiKQogICAgKQoKICAgIHNjYWxlX3VwZW0oZm9udCwgbmV3X3VwZW0pCgogICAgcHJpbnQoIldyaXRpbmcgJXMiICUgb3V0cHV0X2ZpbGUpCiAgICBmb250LnNhdmUob3V0cHV0X2ZpbGUpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGltcG9ydCBzeXMKCiAgICBzeXMuZXhpdChtYWluKCkpCg==
+"""Change the units-per-EM of a font.
+
+AAT and Graphite tables are not supported. CFF/CFF2 fonts
+are de-subroutinized."""
+
+from fontTools.ttLib.ttVisitor import TTVisitor
+import fontTools.ttLib as ttLib
+import fontTools.ttLib.tables.otBase as otBase
+import fontTools.ttLib.tables.otTables as otTables
+from fontTools.cffLib import VarStoreData
+import fontTools.cffLib.specializer as cffSpecializer
+from fontTools.varLib import builder  # for VarData.calculateNumShorts
+from fontTools.misc.fixedTools import otRound
+from fontTools.varLib.multiVarStore import OnlineMultiVarStoreBuilder
+from fontTools.misc.vector import Vector
+from fontTools.misc.iterTools import batched
+
+__all__ = ["scale_upem", "ScalerVisitor"]
+
+
+class ScalerVisitor(TTVisitor):
+    def __init__(self, scaleFactor):
+        self.scaleFactor = scaleFactor
+
+    def scale(self, v):
+        return otRound(v * self.scaleFactor)
+
+
+@ScalerVisitor.register_attrs(
+    (
+        (ttLib.getTableClass("head"), ("unitsPerEm", "xMin", "yMin", "xMax", "yMax")),
+        (ttLib.getTableClass("post"), ("underlinePosition", "underlineThickness")),
+        (ttLib.getTableClass("VORG"), ("defaultVertOriginY")),
+        (
+            (ttLib.getTableClass("hhea"), ttLib.getTableClass("HHEA")),
+            (
+                "ascent",
+                "descent",
+                "lineGap",
+                "advanceWidthMax",
+                "minLeftSideBearing",
+                "minRightSideBearing",
+                "xMaxExtent",
+                "caretOffset",
+            ),
+        ),
+        (
+            (ttLib.getTableClass("vhea"), ttLib.getTableClass("VHEA")),
+            (
+                "ascent",
+                "descent",
+                "lineGap",
+                "advanceHeightMax",
+                "minTopSideBearing",
+                "minBottomSideBearing",
+                "yMaxExtent",
+                "caretOffset",
+            ),
+        ),
+        (
+            ttLib.getTableClass("OS/2"),
+            (
+                "xAvgCharWidth",
+                "ySubscriptXSize",
+                "ySubscriptYSize",
+                "ySubscriptXOffset",
+                "ySubscriptYOffset",
+                "ySuperscriptXSize",
+                "ySuperscriptYSize",
+                "ySuperscriptXOffset",
+                "ySuperscriptYOffset",
+                "yStrikeoutSize",
+                "yStrikeoutPosition",
+                "sTypoAscender",
+                "sTypoDescender",
+                "sTypoLineGap",
+                "usWinAscent",
+                "usWinDescent",
+                "sxHeight",
+                "sCapHeight",
+            ),
+        ),
+        (
+            otTables.ValueRecord,
+            ("XAdvance", "YAdvance", "XPlacement", "YPlacement"),
+        ),  # GPOS
+        (otTables.Anchor, ("XCoordinate", "YCoordinate")),  # GPOS
+        (otTables.CaretValue, ("Coordinate")),  # GDEF
+        (otTables.BaseCoord, ("Coordinate")),  # BASE
+        (otTables.MathValueRecord, ("Value")),  # MATH
+        (
+            otTables.MathConstants,
+            ("DelimitedSubFormulaMinHeight", "DisplayOperatorMinHeight"),
+        ),  # MATH
+        (otTables.MathVariants, ("MinConnectorOverlap")),  # MATH
+        (otTables.MathGlyphVariantRecord, ("AdvanceMeasurement")),  # MATH
+        (
+            otTables.GlyphPartRecord,
+            ("StartConnectorLength", "EndConnectorLength", "FullAdvance"),
+        ),  # MATH
+        (otTables.ClipBox, ("xMin", "yMin", "xMax", "yMax")),  # COLR
+    )
+)
+def visit(visitor, obj, attr, value):
+    setattr(obj, attr, visitor.scale(value))
+
+
+@ScalerVisitor.register_attr(
+    (
+        ttLib.getTableClass("hmtx"),
+        ttLib.getTableClass("HMTX"),
+        ttLib.getTableClass("vmtx"),
+        ttLib.getTableClass("VMTX"),
+    ),
+    "metrics",
+)
+def visit(visitor, obj, attr, metrics):
+    for g in metrics:
+        advance, lsb = metrics[g]
+        metrics[g] = visitor.scale(advance), visitor.scale(lsb)
+
+
+@ScalerVisitor.register_attr(ttLib.getTableClass("VORG"), "VOriginRecords")
+def visit(visitor, obj, attr, VOriginRecords):
+    for g in VOriginRecords:
+        VOriginRecords[g] = visitor.scale(VOriginRecords[g])
+
+
+@ScalerVisitor.register_attr(
+    (ttLib.getTableClass("glyf"), ttLib.getTableClass("GLYF")), "glyphs"
+)
+def visit(visitor, obj, attr, glyphs):
+    for g in glyphs.values():
+        for attr in ("xMin", "xMax", "yMin", "yMax"):
+            v = getattr(g, attr, None)
+            if v is not None:
+                setattr(g, attr, visitor.scale(v))
+
+        if g.isComposite():
+            for component in g.components:
+                component.x = visitor.scale(component.x)
+                component.y = visitor.scale(component.y)
+            continue
+
+        if hasattr(g, "coordinates"):
+            coordinates = g.coordinates
+            for i, (x, y) in enumerate(coordinates):
+                coordinates[i] = visitor.scale(x), visitor.scale(y)
+
+
+@ScalerVisitor.register_attr(
+    (ttLib.getTableClass("gvar"), ttLib.getTableClass("GVAR")), "variations"
+)
+def visit(visitor, obj, attr, variations):
+    glyfTable = visitor.font[obj.glyphTableTag]
+
+    for glyphName, varlist in variations.items():
+        glyph = glyfTable[glyphName]
+        for var in varlist:
+            coordinates = var.coordinates
+            for i, xy in enumerate(coordinates):
+                if xy is None:
+                    continue
+                coordinates[i] = visitor.scale(xy[0]), visitor.scale(xy[1])
+
+
+@ScalerVisitor.register_attr(ttLib.getTableClass("VARC"), "table")
+def visit(visitor, obj, attr, varc):
+    fvar = visitor.font.get("fvar")
+    axes = fvar.axes if fvar is not None else []
+    fvarAxes = [a.axisTag for a in axes]
+
+    store = varc.MultiVarStore
+    storeBuilder = OnlineMultiVarStoreBuilder(fvarAxes)
+
+    for g in varc.VarCompositeGlyphs.VarCompositeGlyph:
+        for component in g.components:
+            t = component.transform
+            t.translateX = visitor.scale(t.translateX)
+            t.translateY = visitor.scale(t.translateY)
+            t.tCenterX = visitor.scale(t.tCenterX)
+            t.tCenterY = visitor.scale(t.tCenterY)
+
+            if component.axisValuesVarIndex != otTables.NO_VARIATION_INDEX:
+                varIdx = component.axisValuesVarIndex
+                # TODO Move this code duplicated below to MultiVarStore.__getitem__,
+                # or a getDeltasAndSupports().
+                if varIdx != otTables.NO_VARIATION_INDEX:
+                    major = varIdx >> 16
+                    minor = varIdx & 0xFFFF
+                    varData = store.MultiVarData[major]
+                    vec = varData.Item[minor]
+                    storeBuilder.setSupports(store.get_supports(major, axes))
+                    if vec:
+                        m = len(vec) // varData.VarRegionCount
+                        vec = list(batched(vec, m))
+                        vec = [Vector(v) for v in vec]
+                        component.axisValuesVarIndex = storeBuilder.storeDeltas(vec)
+                    else:
+                        component.axisValuesVarIndex = otTables.NO_VARIATION_INDEX
+
+            if component.transformVarIndex != otTables.NO_VARIATION_INDEX:
+                varIdx = component.transformVarIndex
+                if varIdx != otTables.NO_VARIATION_INDEX:
+                    major = varIdx >> 16
+                    minor = varIdx & 0xFFFF
+                    varData = store.MultiVarData[major]
+                    vec = varData.Item[minor]
+                    storeBuilder.setSupports(store.get_supports(major, axes))
+                    if vec:
+                        m = len(vec) // varData.VarRegionCount
+                        flags = component.flags
+                        vec = list(batched(vec, m))
+                        newVec = []
+                        for v in vec:
+                            v = list(v)
+                            i = 0
+                            ## Scale translate & tCenter
+                            if flags & otTables.VarComponentFlags.HAVE_TRANSLATE_X:
+                                v[i] = visitor.scale(v[i])
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_TRANSLATE_Y:
+                                v[i] = visitor.scale(v[i])
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_ROTATION:
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_SCALE_X:
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_SCALE_Y:
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_SKEW_X:
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_SKEW_Y:
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_TCENTER_X:
+                                v[i] = visitor.scale(v[i])
+                                i += 1
+                            if flags & otTables.VarComponentFlags.HAVE_TCENTER_Y:
+                                v[i] = visitor.scale(v[i])
+                                i += 1
+
+                            newVec.append(Vector(v))
+                        vec = newVec
+
+                        component.transformVarIndex = storeBuilder.storeDeltas(vec)
+                    else:
+                        component.transformVarIndex = otTables.NO_VARIATION_INDEX
+
+    if store is None:
+        return
+
+    # Condition deltas are dimensionless; preserve them without UPEM scaling.
+    if varc.ConditionList is not None:
+        varIdxes = set()
+        for condition in varc.ConditionList.ConditionTable:
+            condition.collect_varidxes(varIdxes)
+        mapping = {otTables.NO_VARIATION_INDEX: otTables.NO_VARIATION_INDEX}
+        for varIdx in sorted(varIdxes - {otTables.NO_VARIATION_INDEX}):
+            major, minor = varIdx >> 16, varIdx & 0xFFFF
+            varData = store.MultiVarData[major]
+            vec = varData.Item[minor]
+            storeBuilder.setSupports(store.get_supports(major, axes))
+            mapping[varIdx] = storeBuilder.storeDeltas([Vector([v]) for v in vec])
+        for condition in varc.ConditionList.ConditionTable:
+            condition.remap_varidxes(mapping)
+
+    varc.MultiVarStore = storeBuilder.finish()
+
+
+@ScalerVisitor.register_attr(ttLib.getTableClass("kern"), "kernTables")
+def visit(visitor, obj, attr, kernTables):
+    for table in kernTables:
+        kernTable = table.kernTable
+        for k in kernTable.keys():
+            kernTable[k] = visitor.scale(kernTable[k])
+
+
+def _cff_scale(visitor, args):
+    for i, arg in enumerate(args):
+        if not isinstance(arg, list):
+            if not isinstance(arg, bytes):
+                args[i] = visitor.scale(arg)
+        else:
+            num_blends = arg[-1]
+            _cff_scale(visitor, arg)
+            arg[-1] = num_blends
+
+
+@ScalerVisitor.register_attr(
+    (ttLib.getTableClass("CFF "), ttLib.getTableClass("CFF2")), "cff"
+)
+def visit(visitor, obj, attr, cff):
+    cff.desubroutinize()
+    topDict = cff.topDictIndex[0]
+    varStore = getattr(topDict, "VarStore", None)
+    getNumRegions = varStore.getNumRegions if varStore is not None else None
+    privates = set()
+    for fontname in cff.keys():
+        font = cff[fontname]
+        cs = font.CharStrings
+        for g in font.charset:
+            c, _ = cs.getItemAndSelector(g)
+            privates.add(c.private)
+
+            commands = cffSpecializer.programToCommands(
+                c.program,
+                getNumRegions=getNumRegions,
+                vsIndex=getattr(c.private, "vsindex", 0),
+            )
+            for op, args in commands:
+                if op == "vsindex":
+                    continue
+                _cff_scale(visitor, args)
+            c.program[:] = cffSpecializer.commandsToProgram(commands)
+
+        # Annoying business of scaling numbers that do not matter whatsoever
+
+        for attr in (
+            "UnderlinePosition",
+            "UnderlineThickness",
+            "FontBBox",
+            "StrokeWidth",
+        ):
+            value = getattr(topDict, attr, None)
+            if value is None:
+                continue
+            if isinstance(value, list):
+                _cff_scale(visitor, value)
+            else:
+                setattr(topDict, attr, visitor.scale(value))
+
+        # Assign a new list: a Top DICT without an explicit FontMatrix returns the
+        # shared class-level default, which must not be modified in place.
+        topDict.FontMatrix = [v / visitor.scaleFactor for v in topDict.FontMatrix]
+
+        for private in privates:
+            for attr in (
+                "BlueValues",
+                "OtherBlues",
+                "FamilyBlues",
+                "FamilyOtherBlues",
+                # "BlueScale",
+                # "BlueShift",
+                # "BlueFuzz",
+                "StdHW",
+                "StdVW",
+                "StemSnapH",
+                "StemSnapV",
+                "defaultWidthX",
+                "nominalWidthX",
+            ):
+                value = getattr(private, attr, None)
+                if value is None:
+                    continue
+                if isinstance(value, list):
+                    _cff_scale(visitor, value)
+                else:
+                    setattr(private, attr, visitor.scale(value))
+
+
+# ItemVariationStore
+
+
+@ScalerVisitor.register(otTables.VarData)
+def visit(visitor, varData):
+    for item in varData.Item:
+        for i, v in enumerate(item):
+            item[i] = visitor.scale(v)
+    varData.calculateNumShorts()
+
+
+# COLRv1
+
+
+def _setup_scale_paint(paint, scale):
+    if -2 <= scale <= 2 - (1 >> 14):
+        paint.Format = otTables.PaintFormat.PaintScaleUniform
+        paint.scale = scale
+        return
+
+    transform = otTables.Affine2x3()
+    transform.populateDefaults()
+    transform.xy = transform.yx = transform.dx = transform.dy = 0
+    transform.xx = transform.yy = scale
+
+    paint.Format = otTables.PaintFormat.PaintTransform
+    paint.Transform = transform
+
+
+@ScalerVisitor.register(otTables.BaseGlyphPaintRecord)
+def visit(visitor, record):
+    oldPaint = record.Paint
+
+    scale = otTables.Paint()
+    _setup_scale_paint(scale, visitor.scaleFactor)
+    scale.Paint = oldPaint
+
+    record.Paint = scale
+
+    return True
+
+
+@ScalerVisitor.register(otTables.Paint)
+def visit(visitor, paint):
+    if paint.Format not in {
+        otTables.PaintFormat.PaintGlyph,
+        otTables.PaintFormat.PaintGlyph2,
+    }:
+        return True
+
+    newPaint = otTables.Paint()
+    newPaint.Format = paint.Format
+    newPaint.Paint = paint.Paint
+    newPaint.Glyph = paint.Glyph
+    del paint.Paint
+    del paint.Glyph
+
+    _setup_scale_paint(paint, 1 / visitor.scaleFactor)
+    paint.Paint = newPaint
+
+    visitor.visit(newPaint.Paint)
+
+    return False
+
+
+def scale_upem(font, new_upem):
+    """Change the units-per-EM of font to the new value."""
+    upem = font["head"].unitsPerEm
+    visitor = ScalerVisitor(new_upem / upem)
+    visitor.visit(font)
+
+
+def main(args=None):
+    """Change the units-per-EM of fonts"""
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    from fontTools.ttLib import TTFont
+    from fontTools.misc.cliTools import makeOutputFileName
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools ttLib.scaleUpem", description="Change the units-per-EM of fonts"
+    )
+    parser.add_argument("font", metavar="font", help="Font file.")
+    parser.add_argument(
+        "new_upem", metavar="new-upem", help="New units-per-EM integer value."
+    )
+    parser.add_argument(
+        "--output-file", metavar="path", default=None, help="Output file."
+    )
+
+    options = parser.parse_args(args)
+
+    font = TTFont(options.font)
+    new_upem = int(options.new_upem)
+    output_file = (
+        options.output_file
+        if options.output_file is not None
+        else makeOutputFileName(options.font, overWrite=True, suffix="-scaled")
+    )
+
+    scale_upem(font, new_upem)
+
+    print("Writing %s" % output_file)
+    font.save(output_file)
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

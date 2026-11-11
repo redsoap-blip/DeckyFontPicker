@@ -1,1 +1,84 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IGFycmF5CmltcG9ydCBzeXMKCkdsb2NfaGVhZGVyID0gIiIiCiAgICA+ICAgICAgICAjIGJpZyBlbmRpYW4KICAgIHZlcnNpb246IDE2LjE2RiAgICAjIFRhYmxlIHZlcnNpb24KICAgIGZsYWdzOiAgICAgICAgSCAgICAjIGJpdCAwOiAxPWxvbmcgZm9ybWF0LCAwPXNob3J0IGZvcm1hdAogICAgICAgICAgICAgICAgICAgICAgICMgYml0IDE6IDE9YXR0cmlidXRlIG5hbWVzLCAwPW5vIG5hbWVzCiAgICBudW1BdHRyaWJzOiAgIEggICAgIyBOVW1iZXIgb2YgYXR0cmlidXRlcwoiIiIKCgpjbGFzcyB0YWJsZV9HX19sX29fYyhEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkdyYXBoaXRlIEluZGV4IHRvIEdseXBoIEF0dHRyaWJ1dGVzIHRhYmxlCgogICAgU2VlIGFsc28gaHR0cHM6Ly9ncmFwaGl0ZS5zaWwub3JnL2dyYXBoaXRlX3RlY2hBYm91dCNncmFwaGl0ZS1mb250LXRhYmxlcwogICAgIiIiCgogICAgZGVwZW5kZW5jaWVzID0gWyJHbGF0Il0KCiAgICBkZWYgX19pbml0X18oc2VsZiwgdGFnPU5vbmUpOgogICAgICAgIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUuX19pbml0X18oc2VsZiwgdGFnKQogICAgICAgIHNlbGYuYXR0cmliSWRzID0gTm9uZQogICAgICAgIHNlbGYubnVtQXR0cmlicyA9IDAKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgXywgZGF0YSA9IHNzdHJ1Y3QudW5wYWNrMihHbG9jX2hlYWRlciwgZGF0YSwgc2VsZikKICAgICAgICBmbGFncyA9IHNlbGYuZmxhZ3MKICAgICAgICBkZWwgc2VsZi5mbGFncwogICAgICAgIHNlbGYubG9jYXRpb25zID0gYXJyYXkuYXJyYXkoIkkiIGlmIGZsYWdzICYgMSBlbHNlICJIIikKICAgICAgICBzZWxmLmxvY2F0aW9ucy5mcm9tYnl0ZXMoZGF0YVs6IGxlbihkYXRhKSAtIHNlbGYubnVtQXR0cmlicyAqIChmbGFncyAmIDIpXSkKICAgICAgICBpZiBzeXMuYnl0ZW9yZGVyICE9ICJiaWciOgogICAgICAgICAgICBzZWxmLmxvY2F0aW9ucy5ieXRlc3dhcCgpCiAgICAgICAgc2VsZi5hdHRyaWJJZHMgPSBhcnJheS5hcnJheSgiSCIpCiAgICAgICAgaWYgZmxhZ3MgJiAyOgogICAgICAgICAgICBzZWxmLmF0dHJpYklkcy5mcm9tYnl0ZXMoZGF0YVstc2VsZi5udW1BdHRyaWJzICogMiA6XSkKICAgICAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgICAgIHNlbGYuYXR0cmliSWRzLmJ5dGVzd2FwKCkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGRhdGEgPSBzc3RydWN0LnBhY2soCiAgICAgICAgICAgIEdsb2NfaGVhZGVyLAogICAgICAgICAgICBkaWN0KAogICAgICAgICAgICAgICAgdmVyc2lvbj0xLjAsCiAgICAgICAgICAgICAgICBmbGFncz0oYm9vbChzZWxmLmF0dHJpYklkcykgPDwgMSkgKyAoc2VsZi5sb2NhdGlvbnMudHlwZWNvZGUgPT0gIkkiKSwKICAgICAgICAgICAgICAgIG51bUF0dHJpYnM9c2VsZi5udW1BdHRyaWJzLAogICAgICAgICAgICApLAogICAgICAgICkKICAgICAgICBpZiBzeXMuYnl0ZW9yZGVyICE9ICJiaWciOgogICAgICAgICAgICBzZWxmLmxvY2F0aW9ucy5ieXRlc3dhcCgpCiAgICAgICAgZGF0YSArPSBzZWxmLmxvY2F0aW9ucy50b2J5dGVzKCkKICAgICAgICBpZiBzeXMuYnl0ZW9yZGVyICE9ICJiaWciOgogICAgICAgICAgICBzZWxmLmxvY2F0aW9ucy5ieXRlc3dhcCgpCiAgICAgICAgaWYgc2VsZi5hdHRyaWJJZHM6CiAgICAgICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgICAgICBzZWxmLmF0dHJpYklkcy5ieXRlc3dhcCgpCiAgICAgICAgICAgIGRhdGEgKz0gc2VsZi5hdHRyaWJJZHMudG9ieXRlcygpCiAgICAgICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgICAgICBzZWxmLmF0dHJpYklkcy5ieXRlc3dhcCgpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgc2V0KHNlbGYsIGxvY2F0aW9ucyk6CiAgICAgICAgbG9uZ19mb3JtYXQgPSBtYXgobG9jYXRpb25zKSA+PSA2NTUzNgogICAgICAgIHNlbGYubG9jYXRpb25zID0gYXJyYXkuYXJyYXkoIkkiIGlmIGxvbmdfZm9ybWF0IGVsc2UgIkgiLCBsb2NhdGlvbnMpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJhdHRyaWJ1dGVzIiwgbnVtYmVyPXNlbGYubnVtQXR0cmlicykKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAiYXR0cmlidXRlcyI6CiAgICAgICAgICAgIHNlbGYubnVtQXR0cmlicyA9IGludChzYWZlRXZhbChhdHRyc1sibnVtYmVyIl0pKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBpbmRleCk6CiAgICAgICAgcmV0dXJuIHNlbGYubG9jYXRpb25zW2luZGV4XQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5sb2NhdGlvbnMpCgogICAgZGVmIF9faXRlcl9fKHNlbGYpOgogICAgICAgIHJldHVybiBpdGVyKHNlbGYubG9jYXRpb25zKQo=
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+import array
+import sys
+
+Gloc_header = """
+    >        # big endian
+    version: 16.16F    # Table version
+    flags:        H    # bit 0: 1=long format, 0=short format
+                       # bit 1: 1=attribute names, 0=no names
+    numAttribs:   H    # NUmber of attributes
+"""
+
+
+class table_G__l_o_c(DefaultTable.DefaultTable):
+    """Graphite Index to Glyph Atttributes table
+
+    See also https://graphite.sil.org/graphite_techAbout#graphite-font-tables
+    """
+
+    dependencies = ["Glat"]
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.attribIds = None
+        self.numAttribs = 0
+
+    def decompile(self, data, ttFont):
+        _, data = sstruct.unpack2(Gloc_header, data, self)
+        flags = self.flags
+        del self.flags
+        self.locations = array.array("I" if flags & 1 else "H")
+        self.locations.frombytes(data[: len(data) - self.numAttribs * (flags & 2)])
+        if sys.byteorder != "big":
+            self.locations.byteswap()
+        self.attribIds = array.array("H")
+        if flags & 2:
+            self.attribIds.frombytes(data[-self.numAttribs * 2 :])
+            if sys.byteorder != "big":
+                self.attribIds.byteswap()
+
+    def compile(self, ttFont):
+        data = sstruct.pack(
+            Gloc_header,
+            dict(
+                version=1.0,
+                flags=(bool(self.attribIds) << 1) + (self.locations.typecode == "I"),
+                numAttribs=self.numAttribs,
+            ),
+        )
+        if sys.byteorder != "big":
+            self.locations.byteswap()
+        data += self.locations.tobytes()
+        if sys.byteorder != "big":
+            self.locations.byteswap()
+        if self.attribIds:
+            if sys.byteorder != "big":
+                self.attribIds.byteswap()
+            data += self.attribIds.tobytes()
+            if sys.byteorder != "big":
+                self.attribIds.byteswap()
+        return data
+
+    def set(self, locations):
+        long_format = max(locations) >= 65536
+        self.locations = array.array("I" if long_format else "H", locations)
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("attributes", number=self.numAttribs)
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "attributes":
+            self.numAttribs = int(safeEval(attrs["number"]))
+
+    def __getitem__(self, index):
+        return self.locations[index]
+
+    def __len__(self):
+        return len(self.locations)
+
+    def __iter__(self):
+        return iter(self.locations)

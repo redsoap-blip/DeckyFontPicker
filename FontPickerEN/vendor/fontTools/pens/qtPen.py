@@ -1,1 +1,28 @@
-ZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCgpfX2FsbF9fID0gWyJRdFBlbiJdCgoKY2xhc3MgUXRQZW4oQmFzZVBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhTZXQsIHBhdGg9Tm9uZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBpZiBwYXRoIGlzIE5vbmU6CiAgICAgICAgICAgIGZyb20gUHlRdDUuUXRHdWkgaW1wb3J0IFFQYWludGVyUGF0aAoKICAgICAgICAgICAgcGF0aCA9IFFQYWludGVyUGF0aCgpCiAgICAgICAgc2VsZi5wYXRoID0gcGF0aAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHApOgogICAgICAgIHNlbGYucGF0aC5tb3ZlVG8oKnApCgogICAgZGVmIF9saW5lVG8oc2VsZiwgcCk6CiAgICAgICAgc2VsZi5wYXRoLmxpbmVUbygqcCkKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgcDEsIHAyLCBwMyk6CiAgICAgICAgc2VsZi5wYXRoLmN1YmljVG8oKnAxLCAqcDIsICpwMykKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMik6CiAgICAgICAgc2VsZi5wYXRoLnF1YWRUbygqcDEsICpwMikKCiAgICBkZWYgX2Nsb3NlUGF0aChzZWxmKToKICAgICAgICBzZWxmLnBhdGguY2xvc2VTdWJwYXRoKCkK
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["QtPen"]
+
+
+class QtPen(BasePen):
+    def __init__(self, glyphSet, path=None):
+        BasePen.__init__(self, glyphSet)
+        if path is None:
+            from PyQt5.QtGui import QPainterPath
+
+            path = QPainterPath()
+        self.path = path
+
+    def _moveTo(self, p):
+        self.path.moveTo(*p)
+
+    def _lineTo(self, p):
+        self.path.lineTo(*p)
+
+    def _curveToOne(self, p1, p2, p3):
+        self.path.cubicTo(*p1, *p2, *p3)
+
+    def _qCurveToOne(self, p1, p2):
+        self.path.quadTo(*p1, *p2)
+
+    def _closePath(self):
+        self.path.closeSubpath()

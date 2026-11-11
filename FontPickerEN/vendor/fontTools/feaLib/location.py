@@ -1,1 +1,12 @@
-ZnJvbSB0eXBpbmcgaW1wb3J0IE5hbWVkVHVwbGUKCgpjbGFzcyBGZWF0dXJlTGliTG9jYXRpb24oTmFtZWRUdXBsZSk6CiAgICAiIiJBIGxvY2F0aW9uIGluIGEgZmVhdHVyZSBmaWxlIiIiCgogICAgZmlsZTogc3RyCiAgICBsaW5lOiBpbnQKICAgIGNvbHVtbjogaW50CgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIGYie3NlbGYuZmlsZX06e3NlbGYubGluZX06e3NlbGYuY29sdW1ufSIK
+from typing import NamedTuple
+
+
+class FeatureLibLocation(NamedTuple):
+    """A location in a feature file"""
+
+    file: str
+    line: int
+    column: int
+
+    def __str__(self):
+        return f"{self.file}:{self.line}:{self.column}"

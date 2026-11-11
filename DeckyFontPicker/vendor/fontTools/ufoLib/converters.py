@@ -1,1 +1,407 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IE1hcHBpbmcsIEFueQpmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgQ29udGFpbmVyCgpmcm9tIGZvbnRUb29scy5hbm5vdGF0aW9ucyBpbXBvcnQgS2VybmluZ05lc3RlZAoKIiIiCkZ1bmN0aW9ucyBmb3IgY29udmVydGluZyBVRk8xIG9yIFVGTzIgZmlsZXMgaW50byBVRk8zIGZvcm1hdC4KCkN1cnJlbnRseSBwcm92aWRlcyBmdW5jdGlvbmFsaXR5IGZvciBjb252ZXJ0aW5nIGtlcm5pbmcgcnVsZXMKYW5kIGtlcm5pbmcgZ3JvdXBzLiBDb252ZXJzaW9uIGlzIG9ubHkgc3VwcG9ydGVkIF9mcm9tXyBVRk8xCm9yIFVGTzIsIGFuZCBfdG9fIFVGTzMuCiIiIgoKIyBhZGFwdGVkIGZyb20gdGhlIFVGTyBzcGVjCgoKZGVmIGNvbnZlcnRVRk8xT3JVRk8yS2VybmluZ1RvVUZPM0tlcm5pbmcoCiAgICBrZXJuaW5nOiBLZXJuaW5nTmVzdGVkLCBncm91cHM6IGRpY3Rbc3RyLCBsaXN0W3N0cl1dLCBnbHlwaFNldDogQ29udGFpbmVyW3N0cl0gPSAoKQopIC0+IHR1cGxlW0tlcm5pbmdOZXN0ZWQsIGRpY3Rbc3RyLCBsaXN0W3N0cl1dLCBkaWN0W3N0ciwgZGljdFtzdHIsIHN0cl1dXToKICAgICIiIkNvbnZlcnQga2VybmluZyBkYXRhIGluIFVGTzEgb3IgVUZPMiBzeW50YXggaW50byBVRk8zIHN5bnRheC4KCiAgICBBcmdzOgogICAgICBrZXJuaW5nOgogICAgICAgICAgQSBkaWN0aW9uYXJ5IGNvbnRhaW5pbmcgdGhlIGtlcm5pbmcgcnVsZXMgZGVmaW5lZCBpbgogICAgICAgICAgdGhlIFVGTyBmb250LCBhcyB1c2VkIGluIDpjbGFzczpgLlVGT1JlYWRlcmAgb2JqZWN0cy4KICAgICAgZ3JvdXBzOgogICAgICAgICAgQSBkaWN0aW9uYXJ5IGNvbnRhaW5pbmcgdGhlIGdyb3VwcyBkZWZpbmVkIGluIHRoZSBVRk8KICAgICAgICAgIGZvbnQsIGFzIHVzZWQgaW4gOmNsYXNzOmAuVUZPUmVhZGVyYCBvYmplY3RzLgogICAgICBnbHlwaFNldDoKICAgICAgICBPcHRpb25hbDsgYSBzZXQgb2YgZ2x5cGggb2JqZWN0cyB0byBza2lwIChkZWZhdWx0OiBOb25lKS4KCiAgICBSZXR1cm5zOgogICAgICAxLiBBIGRpY3Rpb25hcnkgcmVwcmVzZW50aW5nIHRoZSBjb252ZXJ0ZWQga2VybmluZyBkYXRhLgogICAgICAyLiBBIGNvcHkgb2YgdGhlIGdyb3VwcyBkaWN0aW9uYXJ5LCB3aXRoIGFsbCBncm91cHMgcmVuYW1lZCB0byBVRk8zIHN5bnRheC4KICAgICAgMy4gQSBkaWN0aW9uYXJ5IGNvbnRhaW5pbmcgdGhlIG1hcHBpbmcgb2Ygb2xkIGdyb3VwIG5hbWVzIHRvIG5ldyBncm91cCBuYW1lcy4KCiAgICAiIiIKICAgICMgZ2F0aGVyIGtub3duIGtlcm5pbmcgZ3JvdXBzIGJhc2VkIG9uIHRoZSBwcmVmaXhlcwogICAgZmlyc3RSZWZlcmVuY2VkR3JvdXBzLCBzZWNvbmRSZWZlcmVuY2VkR3JvdXBzID0gZmluZEtub3duS2VybmluZ0dyb3Vwcyhncm91cHMpCiAgICAjIE1ha2UgbGlzdHMgb2YgZ3JvdXBzIHJlZmVyZW5jZWQgaW4ga2VybmluZyBwYWlycy4KICAgIGZvciBmaXJzdCwgc2Vjb25kcyBpbiBsaXN0KGtlcm5pbmcuaXRlbXMoKSk6CiAgICAgICAgaWYgZmlyc3QgaW4gZ3JvdXBzIGFuZCBmaXJzdCBub3QgaW4gZ2x5cGhTZXQ6CiAgICAgICAgICAgIGlmIG5vdCBmaXJzdC5zdGFydHN3aXRoKCJwdWJsaWMua2VybjEuIik6CiAgICAgICAgICAgICAgICBmaXJzdFJlZmVyZW5jZWRHcm91cHMuYWRkKGZpcnN0KQogICAgICAgIGZvciBzZWNvbmQgaW4gbGlzdChzZWNvbmRzLmtleXMoKSk6CiAgICAgICAgICAgIGlmIHNlY29uZCBpbiBncm91cHMgYW5kIHNlY29uZCBub3QgaW4gZ2x5cGhTZXQ6CiAgICAgICAgICAgICAgICBpZiBub3Qgc2Vjb25kLnN0YXJ0c3dpdGgoInB1YmxpYy5rZXJuMi4iKToKICAgICAgICAgICAgICAgICAgICBzZWNvbmRSZWZlcmVuY2VkR3JvdXBzLmFkZChzZWNvbmQpCiAgICAjIENyZWF0ZSBuZXcgbmFtZXMgZm9yIHRoZXNlIGdyb3Vwcy4KICAgIGZpcnN0UmVuYW1lZEdyb3VwczogZGljdFtzdHIsIHN0cl0gPSB7fQogICAgZm9yIGZpcnN0IGluIGZpcnN0UmVmZXJlbmNlZEdyb3VwczoKICAgICAgICAjIE1ha2UgYSBsaXN0IG9mIGV4aXN0aW5nIGdyb3VwIG5hbWVzLgogICAgICAgIGV4aXN0aW5nR3JvdXBOYW1lcyA9IGxpc3QoZ3JvdXBzLmtleXMoKSkgKyBsaXN0KGZpcnN0UmVuYW1lZEdyb3Vwcy5rZXlzKCkpCiAgICAgICAgIyBSZW1vdmUgdGhlIG9sZCBwcmVmaXggZnJvbSB0aGUgbmFtZQogICAgICAgIG5ld05hbWUgPSBmaXJzdC5yZXBsYWNlKCJATU1LX0xfIiwgIiIpCiAgICAgICAgIyBBZGQgdGhlIG5ldyBwcmVmaXggdG8gdGhlIG5hbWUuCiAgICAgICAgbmV3TmFtZSA9ICJwdWJsaWMua2VybjEuIiArIG5ld05hbWUKICAgICAgICAjIE1ha2UgYSB1bmlxdWUgZ3JvdXAgbmFtZS4KICAgICAgICBuZXdOYW1lID0gbWFrZVVuaXF1ZUdyb3VwTmFtZShuZXdOYW1lLCBleGlzdGluZ0dyb3VwTmFtZXMpCiAgICAgICAgIyBTdG9yZSBmb3IgdXNlIGxhdGVyLgogICAgICAgIGZpcnN0UmVuYW1lZEdyb3Vwc1tmaXJzdF0gPSBuZXdOYW1lCiAgICBzZWNvbmRSZW5hbWVkR3JvdXBzOiBkaWN0W3N0ciwgc3RyXSA9IHt9CiAgICBmb3Igc2Vjb25kIGluIHNlY29uZFJlZmVyZW5jZWRHcm91cHM6CiAgICAgICAgIyBNYWtlIGEgbGlzdCBvZiBleGlzdGluZyBncm91cCBuYW1lcy4KICAgICAgICBleGlzdGluZ0dyb3VwTmFtZXMgPSBsaXN0KGdyb3Vwcy5rZXlzKCkpICsgbGlzdChzZWNvbmRSZW5hbWVkR3JvdXBzLmtleXMoKSkKICAgICAgICAjIFJlbW92ZSB0aGUgb2xkIHByZWZpeCBmcm9tIHRoZSBuYW1lCiAgICAgICAgbmV3TmFtZSA9IHNlY29uZC5yZXBsYWNlKCJATU1LX1JfIiwgIiIpCiAgICAgICAgIyBBZGQgdGhlIG5ldyBwcmVmaXggdG8gdGhlIG5hbWUuCiAgICAgICAgbmV3TmFtZSA9ICJwdWJsaWMua2VybjIuIiArIG5ld05hbWUKICAgICAgICAjIE1ha2UgYSB1bmlxdWUgZ3JvdXAgbmFtZS4KICAgICAgICBuZXdOYW1lID0gbWFrZVVuaXF1ZUdyb3VwTmFtZShuZXdOYW1lLCBleGlzdGluZ0dyb3VwTmFtZXMpCiAgICAgICAgIyBTdG9yZSBmb3IgdXNlIGxhdGVyLgogICAgICAgIHNlY29uZFJlbmFtZWRHcm91cHNbc2Vjb25kXSA9IG5ld05hbWUKICAgICMgUG9wdWxhdGUgdGhlIG5ldyBncm91cCBuYW1lcyBpbnRvIHRoZSBrZXJuaW5nIGRpY3Rpb25hcnkgYXMgbmVlZGVkLgogICAgbmV3S2VybmluZyA9IHt9CiAgICBmb3IgZmlyc3QsIHNlY29uZHMgaW4gbGlzdChrZXJuaW5nLml0ZW1zKCkpOgogICAgICAgIGZpcnN0ID0gZmlyc3RSZW5hbWVkR3JvdXBzLmdldChmaXJzdCwgZmlyc3QpCiAgICAgICAgbmV3U2Vjb25kcyA9IHt9CiAgICAgICAgZm9yIHNlY29uZCwgdmFsdWUgaW4gbGlzdChzZWNvbmRzLml0ZW1zKCkpOgogICAgICAgICAgICBzZWNvbmQgPSBzZWNvbmRSZW5hbWVkR3JvdXBzLmdldChzZWNvbmQsIHNlY29uZCkKICAgICAgICAgICAgbmV3U2Vjb25kc1tzZWNvbmRdID0gdmFsdWUKICAgICAgICBuZXdLZXJuaW5nW2ZpcnN0XSA9IG5ld1NlY29uZHMKICAgICMgTWFrZSBjb3BpZXMgb2YgdGhlIHJlZmVyZW5jZWQgZ3JvdXBzIGFuZCBzdG9yZSB0aGVtCiAgICAjIHVuZGVyIHRoZSBuZXcgbmFtZXMgaW4gdGhlIG92ZXJhbGwgZ3JvdXBzIGRpY3Rpb25hcnkuCiAgICBhbGxSZW5hbWVkR3JvdXBzID0gbGlzdChmaXJzdFJlbmFtZWRHcm91cHMuaXRlbXMoKSkKICAgIGFsbFJlbmFtZWRHcm91cHMgKz0gbGlzdChzZWNvbmRSZW5hbWVkR3JvdXBzLml0ZW1zKCkpCiAgICBmb3Igb2xkTmFtZSwgbmV3TmFtZSBpbiBhbGxSZW5hbWVkR3JvdXBzOgogICAgICAgIGdyb3VwID0gbGlzdChncm91cHNbb2xkTmFtZV0pCiAgICAgICAgZ3JvdXBzW25ld05hbWVdID0gZ3JvdXAKICAgICMgUmV0dXJuIHRoZSBrZXJuaW5nIGFuZCB0aGUgZ3JvdXBzLgogICAgcmV0dXJuIG5ld0tlcm5pbmcsIGdyb3VwcywgZGljdChzaWRlMT1maXJzdFJlbmFtZWRHcm91cHMsIHNpZGUyPXNlY29uZFJlbmFtZWRHcm91cHMpCgoKZGVmIGZpbmRLbm93bktlcm5pbmdHcm91cHMoZ3JvdXBzOiBNYXBwaW5nW3N0ciwgQW55XSkgLT4gdHVwbGVbc2V0W3N0cl0sIHNldFtzdHJdXToKICAgICIiIkZpbmQgYWxsIGtlcm5pbmcgZ3JvdXBzIGluIGEgVUZPMSBvciBVRk8yIGZvbnQgdGhhdCB1c2Uga25vd24gcHJlZml4ZXMuCgogICAgSW4gc29tZSBjYXNlcywgbm90IGFsbCBrZXJuaW5nIGdyb3VwcyB3aWxsIGJlIHJlZmVyZW5jZWQKICAgIGJ5IHRoZSBrZXJuaW5nIHBhaXJzIGluIGEgVUZPLiBUaGUgYWxnb3JpdGhtIGZvciBsb2NhdGluZwogICAgZ3JvdXBzIGluIDpmdW5jOmBjb252ZXJ0VUZPMU9yVUZPMktlcm5pbmdUb1VGTzNLZXJuaW5nYCB3aWxsCiAgICBtaXNzIHRoZXNlIHVucmVmZXJlbmNlZCBncm91cHMuIEJ5IHNjYW5uaW5nIGZvciBrbm93biBwcmVmaXhlcywKICAgIHRoaXMgZnVuY3Rpb24gd2lsbCBjYXRjaCBhbGwgb2YgdGhlIHByZWZpeGVkIGdyb3Vwcy4KCiAgICBUaGUgcHJlZml4ZXMgYW5kIHNpZGVzIGJ5IHRoaXMgZnVuY3Rpb24gYXJlOgoKICAgIEBNTUtfTF8gLSBzaWRlIDEKICAgIEBNTUtfUl8gLSBzaWRlIDIKCiAgICBhcyBkZWZpbmVkIGluIHRoZSBVRk8xIHNwZWNpZmljYXRpb24uCgogICAgQXJnczoKICAgICAgICBncm91cHM6CiAgICAgICAgICBBIGRpY3Rpb25hcnkgY29udGFpbmluZyB0aGUgZ3JvdXBzIGRlZmluZWQgaW4gdGhlIFVGTwogICAgICAgICAgZm9udCwgYXMgcmVhZCBieSA6Y2xhc3M6YC5VRk9SZWFkZXJgLgoKICAgIFJldHVybnM6CiAgICAgICAgVHdvIHNldHM7IHRoZSBmaXJzdCBjb250YWluaW5nIHRoZSBuYW1lcyBvZiBhbGwKICAgICAgICBmaXJzdC1zaWRlIGtlcm5pbmcgZ3JvdXBzIGlkZW50aWZpZWQgaW4gdGhlIGBgZ3JvdXBzYGAKICAgICAgICBkaWN0aW9uYXJ5LCBhbmQgdGhlIHNlY29uZCBjb250YWluaW5nIHRoZSBuYW1lcyBvZiBhbGwKICAgICAgICBzZWNvbmQtc2lkZSBrZXJuaW5nIGdyb3VwcyBpZGVudGlmaWVkLgoKICAgICAgICAiRmlyc3Qtc2lkZSIgYW5kICJzZWNvbmQtc2lkZSIgYXJlIHdpdGggcmVzcGVjdCB0byB0aGUKICAgICAgICB3cml0aW5nIGRpcmVjdGlvbiBvZiB0aGUgc2NyaXB0LgoKICAgICAgICBFeGFtcGxlOjoKCiAgICAgICAgICA+Pj4gdGVzdEdyb3VwcyA9IHsKICAgICAgICAgIC4uLiAgICAgIkBNTUtfTF8xIiA6IE5vbmUsCiAgICAgICAgICAuLi4gICAgICJATU1LX0xfMiIgOiBOb25lLAogICAgICAgICAgLi4uICAgICAiQE1NS19MXzMiIDogTm9uZSwKICAgICAgICAgIC4uLiAgICAgIkBNTUtfUl8xIiA6IE5vbmUsCiAgICAgICAgICAuLi4gICAgICJATU1LX1JfMiIgOiBOb25lLAogICAgICAgICAgLi4uICAgICAiQE1NS19SXzMiIDogTm9uZSwKICAgICAgICAgIC4uLiAgICAgIkBNTUtfbF8xIiA6IE5vbmUsCiAgICAgICAgICAuLi4gICAgICJATU1LX3JfMSIgOiBOb25lLAogICAgICAgICAgLi4uICAgICAiQE1NS19YXzEiIDogTm9uZSwKICAgICAgICAgIC4uLiAgICAgImZvbyIgOiBOb25lLAogICAgICAgICAgLi4uIH0KICAgICAgICAgID4+PiBmaXJzdCwgc2Vjb25kID0gZmluZEtub3duS2VybmluZ0dyb3Vwcyh0ZXN0R3JvdXBzKQogICAgICAgICAgPj4+IHNvcnRlZChmaXJzdCkgPT0gWydATU1LX0xfMScsICdATU1LX0xfMicsICdATU1LX0xfMyddCiAgICAgICAgICBUcnVlCiAgICAgICAgICA+Pj4gc29ydGVkKHNlY29uZCkgPT0gWydATU1LX1JfMScsICdATU1LX1JfMicsICdATU1LX1JfMyddCiAgICAgICAgICBUcnVlCiAgICAiIiIKICAgIGtub3duRmlyc3RHcm91cFByZWZpeGVzID0gWyJATU1LX0xfIl0KICAgIGtub3duU2Vjb25kR3JvdXBQcmVmaXhlcyA9IFsiQE1NS19SXyJdCiAgICBmaXJzdEdyb3VwcyA9IHNldCgpCiAgICBzZWNvbmRHcm91cHMgPSBzZXQoKQogICAgZm9yIGdyb3VwTmFtZSBpbiBsaXN0KGdyb3Vwcy5rZXlzKCkpOgogICAgICAgIGZvciBmaXJzdFByZWZpeCBpbiBrbm93bkZpcnN0R3JvdXBQcmVmaXhlczoKICAgICAgICAgICAgaWYgZ3JvdXBOYW1lLnN0YXJ0c3dpdGgoZmlyc3RQcmVmaXgpOgogICAgICAgICAgICAgICAgZmlyc3RHcm91cHMuYWRkKGdyb3VwTmFtZSkKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgZm9yIHNlY29uZFByZWZpeCBpbiBrbm93blNlY29uZEdyb3VwUHJlZml4ZXM6CiAgICAgICAgICAgIGlmIGdyb3VwTmFtZS5zdGFydHN3aXRoKHNlY29uZFByZWZpeCk6CiAgICAgICAgICAgICAgICBzZWNvbmRHcm91cHMuYWRkKGdyb3VwTmFtZSkKICAgICAgICAgICAgICAgIGJyZWFrCiAgICByZXR1cm4gZmlyc3RHcm91cHMsIHNlY29uZEdyb3VwcwoKCmRlZiBtYWtlVW5pcXVlR3JvdXBOYW1lKG5hbWU6IHN0ciwgZ3JvdXBOYW1lczogbGlzdFtzdHJdLCBjb3VudGVyOiBpbnQgPSAwKSAtPiBzdHI6CiAgICAiIiJNYWtlIGEga2VybmluZyBncm91cCBuYW1lIHRoYXQgd2lsbCBiZSB1bmlxdWUgd2l0aGluIHRoZSBzZXQgb2YgZ3JvdXAgbmFtZXMuCgogICAgSWYgdGhlIHJlcXVlc3RlZCBrZXJuaW5nIGdyb3VwIG5hbWUgYWxyZWFkeSBleGlzdHMgd2l0aGluIHRoZSBzZXQsIHRoaXMKICAgIHdpbGwgcmV0dXJuIGEgbmV3IG5hbWUgYnkgYWRkaW5nIGFuIGluY3JlbWVudGVkIGNvdW50ZXIgdG8gdGhlIGVuZAogICAgb2YgdGhlIHJlcXVlc3RlZCBuYW1lLgoKICAgIEFyZ3M6CiAgICAgICAgbmFtZToKICAgICAgICAgIFRoZSByZXF1ZXN0ZWQga2VybmluZyBncm91cCBuYW1lLgogICAgICAgIGdyb3VwTmFtZXM6CiAgICAgICAgICBBIGxpc3Qgb2YgdGhlIGV4aXN0aW5nIGtlcm5pbmcgZ3JvdXAgbmFtZXMuCiAgICAgICAgY291bnRlcjoKICAgICAgICAgIE9wdGlvbmFsOyBhIGNvdW50ZXIgb2YgZ3JvdXAgbmFtZXMgYWxyZWFkeSBzZWVuIChkZWZhdWx0OiAwKS4gSWYKICAgICAgICAgIDphdHRyOmAuY291bnRlcmAgaXMgbm90IHByb3ZpZGVkLCB0aGUgZnVuY3Rpb24gd2lsbCByZWN1cnNlLAogICAgICAgICAgaW5jcmVtZW50aW5nIHRoZSB2YWx1ZSBvZiA6YXR0cjpgLmNvdW50ZXJgIHVudGlsIGl0IGZpbmRzIHRoZQogICAgICAgICAgZmlyc3QgdW51c2VkIGBgbmFtZStjb3VudGVyYGAgY29tYmluYXRpb24sIGFuZCByZXR1cm4gdGhhdCByZXN1bHQuCgogICAgUmV0dXJuczoKICAgICAgICBBIHVuaXF1ZSBrZXJuaW5nIGdyb3VwIG5hbWUgY29tcG9zZWQgb2YgdGhlIHJlcXVlc3RlZCBuYW1lIHN1ZmZpeGVkCiAgICAgICAgYnkgdGhlIHNtYWxsZXN0IGF2YWlsYWJsZSBpbnRlZ2VyIGNvdW50ZXIuCiAgICAiIiIKICAgICMgQWRkIGEgbnVtYmVyIHRvIHRoZSBuYW1lIGlmIHRoZSBjb3VudGVyIGlzIGhpZ2hlciB0aGFuIHplcm8uCiAgICBuZXdOYW1lID0gbmFtZQogICAgaWYgY291bnRlciA+IDA6CiAgICAgICAgbmV3TmFtZSA9ICIlcyVkIiAlIChuZXdOYW1lLCBjb3VudGVyKQogICAgIyBJZiB0aGUgbmV3IG5hbWUgaXMgaW4gdGhlIGV4aXN0aW5nIGdyb3VwIG5hbWVzLCByZWN1cnNlLgogICAgaWYgbmV3TmFtZSBpbiBncm91cE5hbWVzOgogICAgICAgIHJldHVybiBtYWtlVW5pcXVlR3JvdXBOYW1lKG5hbWUsIGdyb3VwTmFtZXMsIGNvdW50ZXIgKyAxKQogICAgIyBPdGhlcndpc2Ugc2VuZCBiYWNrIHRoZSBuZXcgbmFtZS4KICAgIHJldHVybiBuZXdOYW1lCgoKZGVmIHRlc3QoKToKICAgICIiIgogICAgVGVzdHMgZm9yIDpmdW5jOmAuY29udmVydFVGTzFPclVGTzJLZXJuaW5nVG9VRk8zS2VybmluZ2AuCgogICAgTm8ga25vd24gcHJlZml4ZXMuCgogICAgPj4+IHRlc3RLZXJuaW5nID0gewogICAgLi4uICAgICAiQSIgOiB7CiAgICAuLi4gICAgICAgICAiQSIgOiAxLAogICAgLi4uICAgICAgICAgIkIiIDogMiwKICAgIC4uLiAgICAgICAgICJDR3JvdXAiIDogMywKICAgIC4uLiAgICAgICAgICJER3JvdXAiIDogNAogICAgLi4uICAgICB9LAogICAgLi4uICAgICAiQkdyb3VwIiA6IHsKICAgIC4uLiAgICAgICAgICJBIiA6IDUsCiAgICAuLi4gICAgICAgICAiQiIgOiA2LAogICAgLi4uICAgICAgICAgIkNHcm91cCIgOiA3LAogICAgLi4uICAgICAgICAgIkRHcm91cCIgOiA4CiAgICAuLi4gICAgIH0sCiAgICAuLi4gICAgICJDR3JvdXAiIDogewogICAgLi4uICAgICAgICAgIkEiIDogOSwKICAgIC4uLiAgICAgICAgICJCIiA6IDEwLAogICAgLi4uICAgICAgICAgIkNHcm91cCIgOiAxMSwKICAgIC4uLiAgICAgICAgICJER3JvdXAiIDogMTIKICAgIC4uLiAgICAgfSwKICAgIC4uLiB9CiAgICA+Pj4gdGVzdEdyb3VwcyA9IHsKICAgIC4uLiAgICAgIkJHcm91cCIgOiBbIkIiXSwKICAgIC4uLiAgICAgIkNHcm91cCIgOiBbIkMiXSwKICAgIC4uLiAgICAgIkRHcm91cCIgOiBbIkQiXSwKICAgIC4uLiB9CiAgICA+Pj4ga2VybmluZywgZ3JvdXBzLCBtYXBzID0gY29udmVydFVGTzFPclVGTzJLZXJuaW5nVG9VRk8zS2VybmluZygKICAgIC4uLiAgICAgdGVzdEtlcm5pbmcsIHRlc3RHcm91cHMsIFtdKQogICAgPj4+IGV4cGVjdGVkID0gewogICAgLi4uICAgICAiQSIgOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDEsCiAgICAuLi4gICAgICAgICAiQiI6IDIsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDMsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDQKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5CR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDUsCiAgICAuLi4gICAgICAgICAiQiI6IDYsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDcsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDgKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5DR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDksCiAgICAuLi4gICAgICAgICAiQiI6IDEwLAogICAgLi4uICAgICAgICAgInB1YmxpYy5rZXJuMi5DR3JvdXAiOiAxMSwKICAgIC4uLiAgICAgICAgICJwdWJsaWMua2VybjIuREdyb3VwIjogMTIKICAgIC4uLiAgICAgfQogICAgLi4uIH0KICAgID4+PiBrZXJuaW5nID09IGV4cGVjdGVkCiAgICBUcnVlCiAgICA+Pj4gZXhwZWN0ZWQgPSB7CiAgICAuLi4gICAgICJCR3JvdXAiOiBbIkIiXSwKICAgIC4uLiAgICAgIkNHcm91cCI6IFsiQyJdLAogICAgLi4uICAgICAiREdyb3VwIjogWyJEIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjEuQkdyb3VwIjogWyJCIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjEuQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjIuQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjIuREdyb3VwIjogWyJEIl0sCiAgICAuLi4gfQogICAgPj4+IGdyb3VwcyA9PSBleHBlY3RlZAogICAgVHJ1ZQoKICAgIEtub3duIHByZWZpeGVzLgoKICAgID4+PiB0ZXN0S2VybmluZyA9IHsKICAgIC4uLiAgICAgIkEiIDogewogICAgLi4uICAgICAgICAgIkEiIDogMSwKICAgIC4uLiAgICAgICAgICJCIiA6IDIsCiAgICAuLi4gICAgICAgICAiQE1NS19SX0NHcm91cCIgOiAzLAogICAgLi4uICAgICAgICAgIkBNTUtfUl9ER3JvdXAiIDogNAogICAgLi4uICAgICB9LAogICAgLi4uICAgICAiQE1NS19MX0JHcm91cCIgOiB7CiAgICAuLi4gICAgICAgICAiQSIgOiA1LAogICAgLi4uICAgICAgICAgIkIiIDogNiwKICAgIC4uLiAgICAgICAgICJATU1LX1JfQ0dyb3VwIiA6IDcsCiAgICAuLi4gICAgICAgICAiQE1NS19SX0RHcm91cCIgOiA4CiAgICAuLi4gICAgIH0sCiAgICAuLi4gICAgICJATU1LX0xfQ0dyb3VwIiA6IHsKICAgIC4uLiAgICAgICAgICJBIiA6IDksCiAgICAuLi4gICAgICAgICAiQiIgOiAxMCwKICAgIC4uLiAgICAgICAgICJATU1LX1JfQ0dyb3VwIiA6IDExLAogICAgLi4uICAgICAgICAgIkBNTUtfUl9ER3JvdXAiIDogMTIKICAgIC4uLiAgICAgfSwKICAgIC4uLiB9CiAgICA+Pj4gdGVzdEdyb3VwcyA9IHsKICAgIC4uLiAgICAgIkBNTUtfTF9CR3JvdXAiIDogWyJCIl0sCiAgICAuLi4gICAgICJATU1LX0xfQ0dyb3VwIiA6IFsiQyJdLAogICAgLi4uICAgICAiQE1NS19MX1hHcm91cCIgOiBbIlgiXSwKICAgIC4uLiAgICAgIkBNTUtfUl9DR3JvdXAiIDogWyJDIl0sCiAgICAuLi4gICAgICJATU1LX1JfREdyb3VwIiA6IFsiRCJdLAogICAgLi4uICAgICAiQE1NS19SX1hHcm91cCIgOiBbIlgiXSwKICAgIC4uLiB9CiAgICA+Pj4ga2VybmluZywgZ3JvdXBzLCBtYXBzID0gY29udmVydFVGTzFPclVGTzJLZXJuaW5nVG9VRk8zS2VybmluZygKICAgIC4uLiAgICAgdGVzdEtlcm5pbmcsIHRlc3RHcm91cHMsIFtdKQogICAgPj4+IGV4cGVjdGVkID0gewogICAgLi4uICAgICAiQSIgOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDEsCiAgICAuLi4gICAgICAgICAiQiI6IDIsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDMsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDQKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5CR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDUsCiAgICAuLi4gICAgICAgICAiQiI6IDYsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDcsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDgKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5DR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDksCiAgICAuLi4gICAgICAgICAiQiI6IDEwLAogICAgLi4uICAgICAgICAgInB1YmxpYy5rZXJuMi5DR3JvdXAiOiAxMSwKICAgIC4uLiAgICAgICAgICJwdWJsaWMua2VybjIuREdyb3VwIjogMTIKICAgIC4uLiAgICAgfQogICAgLi4uIH0KICAgID4+PiBrZXJuaW5nID09IGV4cGVjdGVkCiAgICBUcnVlCiAgICA+Pj4gZXhwZWN0ZWQgPSB7CiAgICAuLi4gICAgICJATU1LX0xfQkdyb3VwIjogWyJCIl0sCiAgICAuLi4gICAgICJATU1LX0xfQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJATU1LX0xfWEdyb3VwIjogWyJYIl0sCiAgICAuLi4gICAgICJATU1LX1JfQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJATU1LX1JfREdyb3VwIjogWyJEIl0sCiAgICAuLi4gICAgICJATU1LX1JfWEdyb3VwIjogWyJYIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjEuQkdyb3VwIjogWyJCIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjEuQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjEuWEdyb3VwIjogWyJYIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjIuQ0dyb3VwIjogWyJDIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjIuREdyb3VwIjogWyJEIl0sCiAgICAuLi4gICAgICJwdWJsaWMua2VybjIuWEdyb3VwIjogWyJYIl0sCiAgICAuLi4gfQogICAgPj4+IGdyb3VwcyA9PSBleHBlY3RlZAogICAgVHJ1ZQoKICAgID4+PiBmcm9tIC52YWxpZGF0b3JzIGltcG9ydCBrZXJuaW5nVmFsaWRhdG9yCiAgICA+Pj4ga2VybmluZ1ZhbGlkYXRvcihrZXJuaW5nKQogICAgKFRydWUsIE5vbmUpCgogICAgTWl4dHVyZSBvZiBrbm93biBwcmVmaXhlcyBhbmQgZ3JvdXBzIHdpdGhvdXQgcHJlZml4ZXMuCgogICAgPj4+IHRlc3RLZXJuaW5nID0gewogICAgLi4uICAgICAiQSIgOiB7CiAgICAuLi4gICAgICAgICAiQSIgOiAxLAogICAgLi4uICAgICAgICAgIkIiIDogMiwKICAgIC4uLiAgICAgICAgICJATU1LX1JfQ0dyb3VwIiA6IDMsCiAgICAuLi4gICAgICAgICAiREdyb3VwIiA6IDQKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgIkJHcm91cCIgOiB7CiAgICAuLi4gICAgICAgICAiQSIgOiA1LAogICAgLi4uICAgICAgICAgIkIiIDogNiwKICAgIC4uLiAgICAgICAgICJATU1LX1JfQ0dyb3VwIiA6IDcsCiAgICAuLi4gICAgICAgICAiREdyb3VwIiA6IDgKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgIkBNTUtfTF9DR3JvdXAiIDogewogICAgLi4uICAgICAgICAgIkEiIDogOSwKICAgIC4uLiAgICAgICAgICJCIiA6IDEwLAogICAgLi4uICAgICAgICAgIkBNTUtfUl9DR3JvdXAiIDogMTEsCiAgICAuLi4gICAgICAgICAiREdyb3VwIiA6IDEyCiAgICAuLi4gICAgIH0sCiAgICAuLi4gfQogICAgPj4+IHRlc3RHcm91cHMgPSB7CiAgICAuLi4gICAgICJCR3JvdXAiIDogWyJCIl0sCiAgICAuLi4gICAgICJATU1LX0xfQ0dyb3VwIiA6IFsiQyJdLAogICAgLi4uICAgICAiQE1NS19SX0NHcm91cCIgOiBbIkMiXSwKICAgIC4uLiAgICAgIkRHcm91cCIgOiBbIkQiXSwKICAgIC4uLiB9CiAgICA+Pj4ga2VybmluZywgZ3JvdXBzLCBtYXBzID0gY29udmVydFVGTzFPclVGTzJLZXJuaW5nVG9VRk8zS2VybmluZygKICAgIC4uLiAgICAgdGVzdEtlcm5pbmcsIHRlc3RHcm91cHMsIFtdKQogICAgPj4+IGV4cGVjdGVkID0gewogICAgLi4uICAgICAiQSIgOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDEsCiAgICAuLi4gICAgICAgICAiQiI6IDIsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDMsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDQKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5CR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDUsCiAgICAuLi4gICAgICAgICAiQiI6IDYsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IDcsCiAgICAuLi4gICAgICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IDgKICAgIC4uLiAgICAgfSwKICAgIC4uLiAgICAgInB1YmxpYy5rZXJuMS5DR3JvdXAiOiB7CiAgICAuLi4gICAgICAgICAiQSI6IDksCiAgICAuLi4gICAgICAgICAiQiI6IDEwLAogICAgLi4uICAgICAgICAgInB1YmxpYy5rZXJuMi5DR3JvdXAiOiAxMSwKICAgIC4uLiAgICAgICAgICJwdWJsaWMua2VybjIuREdyb3VwIjogMTIKICAgIC4uLiAgICAgfQogICAgLi4uIH0KICAgID4+PiBrZXJuaW5nID09IGV4cGVjdGVkCiAgICBUcnVlCiAgICA+Pj4gZXhwZWN0ZWQgPSB7CiAgICAuLi4gICAgICJCR3JvdXAiOiBbIkIiXSwKICAgIC4uLiAgICAgIkBNTUtfTF9DR3JvdXAiOiBbIkMiXSwKICAgIC4uLiAgICAgIkBNTUtfUl9DR3JvdXAiOiBbIkMiXSwKICAgIC4uLiAgICAgIkRHcm91cCI6IFsiRCJdLAogICAgLi4uICAgICAicHVibGljLmtlcm4xLkJHcm91cCI6IFsiQiJdLAogICAgLi4uICAgICAicHVibGljLmtlcm4xLkNHcm91cCI6IFsiQyJdLAogICAgLi4uICAgICAicHVibGljLmtlcm4yLkNHcm91cCI6IFsiQyJdLAogICAgLi4uICAgICAicHVibGljLmtlcm4yLkRHcm91cCI6IFsiRCJdLAogICAgLi4uIH0KICAgID4+PiBncm91cHMgPT0gZXhwZWN0ZWQKICAgIFRydWUKICAgICIiIgoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgZG9jdGVzdAoKICAgIGRvY3Rlc3QudGVzdG1vZCgpCg==
+from __future__ import annotations
+
+from typing import Mapping, Any
+from collections.abc import Container
+
+from fontTools.annotations import KerningNested
+
+"""
+Functions for converting UFO1 or UFO2 files into UFO3 format.
+
+Currently provides functionality for converting kerning rules
+and kerning groups. Conversion is only supported _from_ UFO1
+or UFO2, and _to_ UFO3.
+"""
+
+# adapted from the UFO spec
+
+
+def convertUFO1OrUFO2KerningToUFO3Kerning(
+    kerning: KerningNested, groups: dict[str, list[str]], glyphSet: Container[str] = ()
+) -> tuple[KerningNested, dict[str, list[str]], dict[str, dict[str, str]]]:
+    """Convert kerning data in UFO1 or UFO2 syntax into UFO3 syntax.
+
+    Args:
+      kerning:
+          A dictionary containing the kerning rules defined in
+          the UFO font, as used in :class:`.UFOReader` objects.
+      groups:
+          A dictionary containing the groups defined in the UFO
+          font, as used in :class:`.UFOReader` objects.
+      glyphSet:
+        Optional; a set of glyph objects to skip (default: None).
+
+    Returns:
+      1. A dictionary representing the converted kerning data.
+      2. A copy of the groups dictionary, with all groups renamed to UFO3 syntax.
+      3. A dictionary containing the mapping of old group names to new group names.
+
+    """
+    # gather known kerning groups based on the prefixes
+    firstReferencedGroups, secondReferencedGroups = findKnownKerningGroups(groups)
+    # Make lists of groups referenced in kerning pairs.
+    for first, seconds in list(kerning.items()):
+        if first in groups and first not in glyphSet:
+            if not first.startswith("public.kern1."):
+                firstReferencedGroups.add(first)
+        for second in list(seconds.keys()):
+            if second in groups and second not in glyphSet:
+                if not second.startswith("public.kern2."):
+                    secondReferencedGroups.add(second)
+    # Create new names for these groups.
+    firstRenamedGroups: dict[str, str] = {}
+    for first in firstReferencedGroups:
+        # Make a list of existing group names.
+        existingGroupNames = list(groups.keys()) + list(firstRenamedGroups.keys())
+        # Remove the old prefix from the name
+        newName = first.replace("@MMK_L_", "")
+        # Add the new prefix to the name.
+        newName = "public.kern1." + newName
+        # Make a unique group name.
+        newName = makeUniqueGroupName(newName, existingGroupNames)
+        # Store for use later.
+        firstRenamedGroups[first] = newName
+    secondRenamedGroups: dict[str, str] = {}
+    for second in secondReferencedGroups:
+        # Make a list of existing group names.
+        existingGroupNames = list(groups.keys()) + list(secondRenamedGroups.keys())
+        # Remove the old prefix from the name
+        newName = second.replace("@MMK_R_", "")
+        # Add the new prefix to the name.
+        newName = "public.kern2." + newName
+        # Make a unique group name.
+        newName = makeUniqueGroupName(newName, existingGroupNames)
+        # Store for use later.
+        secondRenamedGroups[second] = newName
+    # Populate the new group names into the kerning dictionary as needed.
+    newKerning = {}
+    for first, seconds in list(kerning.items()):
+        first = firstRenamedGroups.get(first, first)
+        newSeconds = {}
+        for second, value in list(seconds.items()):
+            second = secondRenamedGroups.get(second, second)
+            newSeconds[second] = value
+        newKerning[first] = newSeconds
+    # Make copies of the referenced groups and store them
+    # under the new names in the overall groups dictionary.
+    allRenamedGroups = list(firstRenamedGroups.items())
+    allRenamedGroups += list(secondRenamedGroups.items())
+    for oldName, newName in allRenamedGroups:
+        group = list(groups[oldName])
+        groups[newName] = group
+    # Return the kerning and the groups.
+    return newKerning, groups, dict(side1=firstRenamedGroups, side2=secondRenamedGroups)
+
+
+def findKnownKerningGroups(groups: Mapping[str, Any]) -> tuple[set[str], set[str]]:
+    """Find all kerning groups in a UFO1 or UFO2 font that use known prefixes.
+
+    In some cases, not all kerning groups will be referenced
+    by the kerning pairs in a UFO. The algorithm for locating
+    groups in :func:`convertUFO1OrUFO2KerningToUFO3Kerning` will
+    miss these unreferenced groups. By scanning for known prefixes,
+    this function will catch all of the prefixed groups.
+
+    The prefixes and sides by this function are:
+
+    @MMK_L_ - side 1
+    @MMK_R_ - side 2
+
+    as defined in the UFO1 specification.
+
+    Args:
+        groups:
+          A dictionary containing the groups defined in the UFO
+          font, as read by :class:`.UFOReader`.
+
+    Returns:
+        Two sets; the first containing the names of all
+        first-side kerning groups identified in the ``groups``
+        dictionary, and the second containing the names of all
+        second-side kerning groups identified.
+
+        "First-side" and "second-side" are with respect to the
+        writing direction of the script.
+
+        Example::
+
+          >>> testGroups = {
+          ...     "@MMK_L_1" : None,
+          ...     "@MMK_L_2" : None,
+          ...     "@MMK_L_3" : None,
+          ...     "@MMK_R_1" : None,
+          ...     "@MMK_R_2" : None,
+          ...     "@MMK_R_3" : None,
+          ...     "@MMK_l_1" : None,
+          ...     "@MMK_r_1" : None,
+          ...     "@MMK_X_1" : None,
+          ...     "foo" : None,
+          ... }
+          >>> first, second = findKnownKerningGroups(testGroups)
+          >>> sorted(first) == ['@MMK_L_1', '@MMK_L_2', '@MMK_L_3']
+          True
+          >>> sorted(second) == ['@MMK_R_1', '@MMK_R_2', '@MMK_R_3']
+          True
+    """
+    knownFirstGroupPrefixes = ["@MMK_L_"]
+    knownSecondGroupPrefixes = ["@MMK_R_"]
+    firstGroups = set()
+    secondGroups = set()
+    for groupName in list(groups.keys()):
+        for firstPrefix in knownFirstGroupPrefixes:
+            if groupName.startswith(firstPrefix):
+                firstGroups.add(groupName)
+                break
+        for secondPrefix in knownSecondGroupPrefixes:
+            if groupName.startswith(secondPrefix):
+                secondGroups.add(groupName)
+                break
+    return firstGroups, secondGroups
+
+
+def makeUniqueGroupName(name: str, groupNames: list[str], counter: int = 0) -> str:
+    """Make a kerning group name that will be unique within the set of group names.
+
+    If the requested kerning group name already exists within the set, this
+    will return a new name by adding an incremented counter to the end
+    of the requested name.
+
+    Args:
+        name:
+          The requested kerning group name.
+        groupNames:
+          A list of the existing kerning group names.
+        counter:
+          Optional; a counter of group names already seen (default: 0). If
+          :attr:`.counter` is not provided, the function will recurse,
+          incrementing the value of :attr:`.counter` until it finds the
+          first unused ``name+counter`` combination, and return that result.
+
+    Returns:
+        A unique kerning group name composed of the requested name suffixed
+        by the smallest available integer counter.
+    """
+    # Add a number to the name if the counter is higher than zero.
+    newName = name
+    if counter > 0:
+        newName = "%s%d" % (newName, counter)
+    # If the new name is in the existing group names, recurse.
+    if newName in groupNames:
+        return makeUniqueGroupName(name, groupNames, counter + 1)
+    # Otherwise send back the new name.
+    return newName
+
+
+def test():
+    """
+    Tests for :func:`.convertUFO1OrUFO2KerningToUFO3Kerning`.
+
+    No known prefixes.
+
+    >>> testKerning = {
+    ...     "A" : {
+    ...         "A" : 1,
+    ...         "B" : 2,
+    ...         "CGroup" : 3,
+    ...         "DGroup" : 4
+    ...     },
+    ...     "BGroup" : {
+    ...         "A" : 5,
+    ...         "B" : 6,
+    ...         "CGroup" : 7,
+    ...         "DGroup" : 8
+    ...     },
+    ...     "CGroup" : {
+    ...         "A" : 9,
+    ...         "B" : 10,
+    ...         "CGroup" : 11,
+    ...         "DGroup" : 12
+    ...     },
+    ... }
+    >>> testGroups = {
+    ...     "BGroup" : ["B"],
+    ...     "CGroup" : ["C"],
+    ...     "DGroup" : ["D"],
+    ... }
+    >>> kerning, groups, maps = convertUFO1OrUFO2KerningToUFO3Kerning(
+    ...     testKerning, testGroups, [])
+    >>> expected = {
+    ...     "A" : {
+    ...         "A": 1,
+    ...         "B": 2,
+    ...         "public.kern2.CGroup": 3,
+    ...         "public.kern2.DGroup": 4
+    ...     },
+    ...     "public.kern1.BGroup": {
+    ...         "A": 5,
+    ...         "B": 6,
+    ...         "public.kern2.CGroup": 7,
+    ...         "public.kern2.DGroup": 8
+    ...     },
+    ...     "public.kern1.CGroup": {
+    ...         "A": 9,
+    ...         "B": 10,
+    ...         "public.kern2.CGroup": 11,
+    ...         "public.kern2.DGroup": 12
+    ...     }
+    ... }
+    >>> kerning == expected
+    True
+    >>> expected = {
+    ...     "BGroup": ["B"],
+    ...     "CGroup": ["C"],
+    ...     "DGroup": ["D"],
+    ...     "public.kern1.BGroup": ["B"],
+    ...     "public.kern1.CGroup": ["C"],
+    ...     "public.kern2.CGroup": ["C"],
+    ...     "public.kern2.DGroup": ["D"],
+    ... }
+    >>> groups == expected
+    True
+
+    Known prefixes.
+
+    >>> testKerning = {
+    ...     "A" : {
+    ...         "A" : 1,
+    ...         "B" : 2,
+    ...         "@MMK_R_CGroup" : 3,
+    ...         "@MMK_R_DGroup" : 4
+    ...     },
+    ...     "@MMK_L_BGroup" : {
+    ...         "A" : 5,
+    ...         "B" : 6,
+    ...         "@MMK_R_CGroup" : 7,
+    ...         "@MMK_R_DGroup" : 8
+    ...     },
+    ...     "@MMK_L_CGroup" : {
+    ...         "A" : 9,
+    ...         "B" : 10,
+    ...         "@MMK_R_CGroup" : 11,
+    ...         "@MMK_R_DGroup" : 12
+    ...     },
+    ... }
+    >>> testGroups = {
+    ...     "@MMK_L_BGroup" : ["B"],
+    ...     "@MMK_L_CGroup" : ["C"],
+    ...     "@MMK_L_XGroup" : ["X"],
+    ...     "@MMK_R_CGroup" : ["C"],
+    ...     "@MMK_R_DGroup" : ["D"],
+    ...     "@MMK_R_XGroup" : ["X"],
+    ... }
+    >>> kerning, groups, maps = convertUFO1OrUFO2KerningToUFO3Kerning(
+    ...     testKerning, testGroups, [])
+    >>> expected = {
+    ...     "A" : {
+    ...         "A": 1,
+    ...         "B": 2,
+    ...         "public.kern2.CGroup": 3,
+    ...         "public.kern2.DGroup": 4
+    ...     },
+    ...     "public.kern1.BGroup": {
+    ...         "A": 5,
+    ...         "B": 6,
+    ...         "public.kern2.CGroup": 7,
+    ...         "public.kern2.DGroup": 8
+    ...     },
+    ...     "public.kern1.CGroup": {
+    ...         "A": 9,
+    ...         "B": 10,
+    ...         "public.kern2.CGroup": 11,
+    ...         "public.kern2.DGroup": 12
+    ...     }
+    ... }
+    >>> kerning == expected
+    True
+    >>> expected = {
+    ...     "@MMK_L_BGroup": ["B"],
+    ...     "@MMK_L_CGroup": ["C"],
+    ...     "@MMK_L_XGroup": ["X"],
+    ...     "@MMK_R_CGroup": ["C"],
+    ...     "@MMK_R_DGroup": ["D"],
+    ...     "@MMK_R_XGroup": ["X"],
+    ...     "public.kern1.BGroup": ["B"],
+    ...     "public.kern1.CGroup": ["C"],
+    ...     "public.kern1.XGroup": ["X"],
+    ...     "public.kern2.CGroup": ["C"],
+    ...     "public.kern2.DGroup": ["D"],
+    ...     "public.kern2.XGroup": ["X"],
+    ... }
+    >>> groups == expected
+    True
+
+    >>> from .validators import kerningValidator
+    >>> kerningValidator(kerning)
+    (True, None)
+
+    Mixture of known prefixes and groups without prefixes.
+
+    >>> testKerning = {
+    ...     "A" : {
+    ...         "A" : 1,
+    ...         "B" : 2,
+    ...         "@MMK_R_CGroup" : 3,
+    ...         "DGroup" : 4
+    ...     },
+    ...     "BGroup" : {
+    ...         "A" : 5,
+    ...         "B" : 6,
+    ...         "@MMK_R_CGroup" : 7,
+    ...         "DGroup" : 8
+    ...     },
+    ...     "@MMK_L_CGroup" : {
+    ...         "A" : 9,
+    ...         "B" : 10,
+    ...         "@MMK_R_CGroup" : 11,
+    ...         "DGroup" : 12
+    ...     },
+    ... }
+    >>> testGroups = {
+    ...     "BGroup" : ["B"],
+    ...     "@MMK_L_CGroup" : ["C"],
+    ...     "@MMK_R_CGroup" : ["C"],
+    ...     "DGroup" : ["D"],
+    ... }
+    >>> kerning, groups, maps = convertUFO1OrUFO2KerningToUFO3Kerning(
+    ...     testKerning, testGroups, [])
+    >>> expected = {
+    ...     "A" : {
+    ...         "A": 1,
+    ...         "B": 2,
+    ...         "public.kern2.CGroup": 3,
+    ...         "public.kern2.DGroup": 4
+    ...     },
+    ...     "public.kern1.BGroup": {
+    ...         "A": 5,
+    ...         "B": 6,
+    ...         "public.kern2.CGroup": 7,
+    ...         "public.kern2.DGroup": 8
+    ...     },
+    ...     "public.kern1.CGroup": {
+    ...         "A": 9,
+    ...         "B": 10,
+    ...         "public.kern2.CGroup": 11,
+    ...         "public.kern2.DGroup": 12
+    ...     }
+    ... }
+    >>> kerning == expected
+    True
+    >>> expected = {
+    ...     "BGroup": ["B"],
+    ...     "@MMK_L_CGroup": ["C"],
+    ...     "@MMK_R_CGroup": ["C"],
+    ...     "DGroup": ["D"],
+    ...     "public.kern1.BGroup": ["B"],
+    ...     "public.kern1.CGroup": ["C"],
+    ...     "public.kern2.CGroup": ["C"],
+    ...     "public.kern2.DGroup": ["D"],
+    ... }
+    >>> groups == expected
+    True
+    """
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()

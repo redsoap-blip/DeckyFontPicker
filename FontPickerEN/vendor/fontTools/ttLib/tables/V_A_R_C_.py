@@ -1,1 +1,12 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfVl9BX1JfQ18oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJWYXJpYWJsZSBDb21wb25lbnRzIHRhYmxlCgogICAgVGhlIGBgVkFSQ2BgIHRhYmxlIGNvbnRhaW5zIHZhcmlhdGlvbiBpbmZvcm1hdGlvbiBmb3IgY29tcG9zaXRlIGdseXBocy4KCiAgICBTZWUgYWxzbyBodHRwczovL2dpdGh1Yi5jb20vaGFyZmJ1enovYm9yaW5nLWV4cGFuc2lvbi1zcGVjL2Jsb2IvbWFpbi9WQVJDLm1kCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+class table_V_A_R_C_(BaseTTXConverter):
+    """Variable Components table
+
+    The ``VARC`` table contains variation information for composite glyphs.
+
+    See also https://github.com/harfbuzz/boring-expansion-spec/blob/main/VARC.md
+    """
+
+    pass

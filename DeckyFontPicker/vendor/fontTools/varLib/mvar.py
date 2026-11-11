@@ -1,1 +1,52 @@
-TVZBUl9FTlRSSUVTID0gewogICAgImhhc2MiOiAoIk9TLzIiLCAic1R5cG9Bc2NlbmRlciIpLCAgIyBob3Jpem9udGFsIGFzY2VuZGVyCiAgICAiaGRzYyI6ICgiT1MvMiIsICJzVHlwb0Rlc2NlbmRlciIpLCAgIyBob3Jpem9udGFsIGRlc2NlbmRlcgogICAgImhsZ3AiOiAoIk9TLzIiLCAic1R5cG9MaW5lR2FwIiksICAjIGhvcml6b250YWwgbGluZSBnYXAKICAgICJoY2xhIjogKCJPUy8yIiwgInVzV2luQXNjZW50IiksICAjIGhvcml6b250YWwgY2xpcHBpbmcgYXNjZW50CiAgICAiaGNsZCI6ICgiT1MvMiIsICJ1c1dpbkRlc2NlbnQiKSwgICMgaG9yaXpvbnRhbCBjbGlwcGluZyBkZXNjZW50CiAgICAidmFzYyI6ICgidmhlYSIsICJhc2NlbnQiKSwgICMgdmVydGljYWwgYXNjZW5kZXIKICAgICJ2ZHNjIjogKCJ2aGVhIiwgImRlc2NlbnQiKSwgICMgdmVydGljYWwgZGVzY2VuZGVyCiAgICAidmxncCI6ICgidmhlYSIsICJsaW5lR2FwIiksICAjIHZlcnRpY2FsIGxpbmUgZ2FwCiAgICAiaGNycyI6ICgiaGhlYSIsICJjYXJldFNsb3BlUmlzZSIpLCAgIyBob3Jpem9udGFsIGNhcmV0IHJpc2UKICAgICJoY3JuIjogKCJoaGVhIiwgImNhcmV0U2xvcGVSdW4iKSwgICMgaG9yaXpvbnRhbCBjYXJldCBydW4KICAgICJoY29mIjogKCJoaGVhIiwgImNhcmV0T2Zmc2V0IiksICAjIGhvcml6b250YWwgY2FyZXQgb2Zmc2V0CiAgICAidmNycyI6ICgidmhlYSIsICJjYXJldFNsb3BlUmlzZSIpLCAgIyB2ZXJ0aWNhbCBjYXJldCByaXNlCiAgICAidmNybiI6ICgidmhlYSIsICJjYXJldFNsb3BlUnVuIiksICAjIHZlcnRpY2FsIGNhcmV0IHJ1bgogICAgInZjb2YiOiAoInZoZWEiLCAiY2FyZXRPZmZzZXQiKSwgICMgdmVydGljYWwgY2FyZXQgb2Zmc2V0CiAgICAieGhndCI6ICgiT1MvMiIsICJzeEhlaWdodCIpLCAgIyB4IGhlaWdodAogICAgImNwaHQiOiAoIk9TLzIiLCAic0NhcEhlaWdodCIpLCAgIyBjYXAgaGVpZ2h0CiAgICAic2J4cyI6ICgiT1MvMiIsICJ5U3Vic2NyaXB0WFNpemUiKSwgICMgc3Vic2NyaXB0IGVtIHggc2l6ZQogICAgInNieXMiOiAoIk9TLzIiLCAieVN1YnNjcmlwdFlTaXplIiksICAjIHN1YnNjcmlwdCBlbSB5IHNpemUKICAgICJzYnhvIjogKCJPUy8yIiwgInlTdWJzY3JpcHRYT2Zmc2V0IiksICAjIHN1YnNjcmlwdCBlbSB4IG9mZnNldAogICAgInNieW8iOiAoIk9TLzIiLCAieVN1YnNjcmlwdFlPZmZzZXQiKSwgICMgc3Vic2NyaXB0IGVtIHkgb2Zmc2V0CiAgICAic3B4cyI6ICgiT1MvMiIsICJ5U3VwZXJzY3JpcHRYU2l6ZSIpLCAgIyBzdXBlcnNjcmlwdCBlbSB4IHNpemUKICAgICJzcHlzIjogKCJPUy8yIiwgInlTdXBlcnNjcmlwdFlTaXplIiksICAjIHN1cGVyc2NyaXB0IGVtIHkgc2l6ZQogICAgInNweG8iOiAoIk9TLzIiLCAieVN1cGVyc2NyaXB0WE9mZnNldCIpLCAgIyBzdXBlcnNjcmlwdCBlbSB4IG9mZnNldAogICAgInNweW8iOiAoIk9TLzIiLCAieVN1cGVyc2NyaXB0WU9mZnNldCIpLCAgIyBzdXBlcnNjcmlwdCBlbSB5IG9mZnNldAogICAgInN0cnMiOiAoIk9TLzIiLCAieVN0cmlrZW91dFNpemUiKSwgICMgc3RyaWtlb3V0IHNpemUKICAgICJzdHJvIjogKCJPUy8yIiwgInlTdHJpa2VvdXRQb3NpdGlvbiIpLCAgIyBzdHJpa2VvdXQgb2Zmc2V0CiAgICAidW5kcyI6ICgicG9zdCIsICJ1bmRlcmxpbmVUaGlja25lc3MiKSwgICMgdW5kZXJsaW5lIHNpemUKICAgICJ1bmRvIjogKCJwb3N0IiwgInVuZGVybGluZVBvc2l0aW9uIiksICAjIHVuZGVybGluZSBvZmZzZXQKICAgICMnZ3NwMCc6ICgnZ2FzcCcsICdnYXNwUmFuZ2VbMF0ucmFuZ2VNYXhQUEVNJyksCSAjIGdhc3BSYW5nZVswXQogICAgIydnc3AxJzogKCdnYXNwJywgJ2dhc3BSYW5nZVsxXS5yYW5nZU1heFBQRU0nKSwJICMgZ2FzcFJhbmdlWzFdCiAgICAjJ2dzcDInOiAoJ2dhc3AnLCAnZ2FzcFJhbmdlWzJdLnJhbmdlTWF4UFBFTScpLAkgIyBnYXNwUmFuZ2VbMl0KICAgICMnZ3NwMyc6ICgnZ2FzcCcsICdnYXNwUmFuZ2VbM10ucmFuZ2VNYXhQUEVNJyksCSAjIGdhc3BSYW5nZVszXQogICAgIydnc3A0JzogKCdnYXNwJywgJ2dhc3BSYW5nZVs0XS5yYW5nZU1heFBQRU0nKSwJICMgZ2FzcFJhbmdlWzRdCiAgICAjJ2dzcDUnOiAoJ2dhc3AnLCAnZ2FzcFJhbmdlWzVdLnJhbmdlTWF4UFBFTScpLAkgIyBnYXNwUmFuZ2VbNV0KICAgICMnZ3NwNic6ICgnZ2FzcCcsICdnYXNwUmFuZ2VbNl0ucmFuZ2VNYXhQUEVNJyksCSAjIGdhc3BSYW5nZVs2XQogICAgIydnc3A3JzogKCdnYXNwJywgJ2dhc3BSYW5nZVs3XS5yYW5nZU1heFBQRU0nKSwJICMgZ2FzcFJhbmdlWzddCiAgICAjJ2dzcDgnOiAoJ2dhc3AnLCAnZ2FzcFJhbmdlWzhdLnJhbmdlTWF4UFBFTScpLAkgIyBnYXNwUmFuZ2VbOF0KICAgICMnZ3NwOSc6ICgnZ2FzcCcsICdnYXNwUmFuZ2VbOV0ucmFuZ2VNYXhQUEVNJyksCSAjIGdhc3BSYW5nZVs5XQp9CgpNVkFSX0NPTVBBTklPTl9UQUJMRVMgPSB7CiAgICAiaGhlYSI6ICJISEVBIiwKICAgICJ2aGVhIjogIlZIRUEiLAp9CgoKZGVmIGdldE1WQVJUYWJsZVRhZyhmb250LCB0YWJsZVRhZyk6CiAgICBjb21wYW5pb25UYWcgPSBNVkFSX0NPTVBBTklPTl9UQUJMRVMuZ2V0KHRhYmxlVGFnKQogICAgaWYgY29tcGFuaW9uVGFnIGlzIG5vdCBOb25lIGFuZCBjb21wYW5pb25UYWcgaW4gZm9udDoKICAgICAgICByZXR1cm4gY29tcGFuaW9uVGFnCiAgICByZXR1cm4gdGFibGVUYWcK
+MVAR_ENTRIES = {
+    "hasc": ("OS/2", "sTypoAscender"),  # horizontal ascender
+    "hdsc": ("OS/2", "sTypoDescender"),  # horizontal descender
+    "hlgp": ("OS/2", "sTypoLineGap"),  # horizontal line gap
+    "hcla": ("OS/2", "usWinAscent"),  # horizontal clipping ascent
+    "hcld": ("OS/2", "usWinDescent"),  # horizontal clipping descent
+    "vasc": ("vhea", "ascent"),  # vertical ascender
+    "vdsc": ("vhea", "descent"),  # vertical descender
+    "vlgp": ("vhea", "lineGap"),  # vertical line gap
+    "hcrs": ("hhea", "caretSlopeRise"),  # horizontal caret rise
+    "hcrn": ("hhea", "caretSlopeRun"),  # horizontal caret run
+    "hcof": ("hhea", "caretOffset"),  # horizontal caret offset
+    "vcrs": ("vhea", "caretSlopeRise"),  # vertical caret rise
+    "vcrn": ("vhea", "caretSlopeRun"),  # vertical caret run
+    "vcof": ("vhea", "caretOffset"),  # vertical caret offset
+    "xhgt": ("OS/2", "sxHeight"),  # x height
+    "cpht": ("OS/2", "sCapHeight"),  # cap height
+    "sbxs": ("OS/2", "ySubscriptXSize"),  # subscript em x size
+    "sbys": ("OS/2", "ySubscriptYSize"),  # subscript em y size
+    "sbxo": ("OS/2", "ySubscriptXOffset"),  # subscript em x offset
+    "sbyo": ("OS/2", "ySubscriptYOffset"),  # subscript em y offset
+    "spxs": ("OS/2", "ySuperscriptXSize"),  # superscript em x size
+    "spys": ("OS/2", "ySuperscriptYSize"),  # superscript em y size
+    "spxo": ("OS/2", "ySuperscriptXOffset"),  # superscript em x offset
+    "spyo": ("OS/2", "ySuperscriptYOffset"),  # superscript em y offset
+    "strs": ("OS/2", "yStrikeoutSize"),  # strikeout size
+    "stro": ("OS/2", "yStrikeoutPosition"),  # strikeout offset
+    "unds": ("post", "underlineThickness"),  # underline size
+    "undo": ("post", "underlinePosition"),  # underline offset
+    #'gsp0': ('gasp', 'gaspRange[0].rangeMaxPPEM'),	 # gaspRange[0]
+    #'gsp1': ('gasp', 'gaspRange[1].rangeMaxPPEM'),	 # gaspRange[1]
+    #'gsp2': ('gasp', 'gaspRange[2].rangeMaxPPEM'),	 # gaspRange[2]
+    #'gsp3': ('gasp', 'gaspRange[3].rangeMaxPPEM'),	 # gaspRange[3]
+    #'gsp4': ('gasp', 'gaspRange[4].rangeMaxPPEM'),	 # gaspRange[4]
+    #'gsp5': ('gasp', 'gaspRange[5].rangeMaxPPEM'),	 # gaspRange[5]
+    #'gsp6': ('gasp', 'gaspRange[6].rangeMaxPPEM'),	 # gaspRange[6]
+    #'gsp7': ('gasp', 'gaspRange[7].rangeMaxPPEM'),	 # gaspRange[7]
+    #'gsp8': ('gasp', 'gaspRange[8].rangeMaxPPEM'),	 # gaspRange[8]
+    #'gsp9': ('gasp', 'gaspRange[9].rangeMaxPPEM'),	 # gaspRange[9]
+}
+
+MVAR_COMPANION_TABLES = {
+    "hhea": "HHEA",
+    "vhea": "VHEA",
+}
+
+
+def getMVARTableTag(font, tableTag):
+    companionTag = MVAR_COMPANION_TABLES.get(tableTag)
+    if companionTag is not None and companionTag in font:
+        return companionTag
+    return tableTag

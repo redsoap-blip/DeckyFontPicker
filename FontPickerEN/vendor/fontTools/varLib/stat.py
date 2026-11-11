@@ -1,1 +1,149 @@
-IiIiRXh0cmEgbWV0aG9kcyBmb3IgRGVzaWduU3BhY2VEb2N1bWVudCB0byBnZW5lcmF0ZSBpdHMgU1RBVCB0YWJsZSBkYXRhLiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IERpY3QsIExpc3QsIFVuaW9uCgppbXBvcnQgZm9udFRvb2xzLm90bExpYi5idWlsZGVyCmZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliIGltcG9ydCAoCiAgICBBeGlzTGFiZWxEZXNjcmlwdG9yLAogICAgRGVzaWduU3BhY2VEb2N1bWVudCwKICAgIERlc2lnblNwYWNlRG9jdW1lbnRFcnJvciwKICAgIExvY2F0aW9uTGFiZWxEZXNjcmlwdG9yLAopCmZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliLnR5cGVzIGltcG9ydCBSZWdpb24sIGdldFZGVXNlclJlZ2lvbiwgbG9jYXRpb25JblJlZ2lvbgpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250CgoKZGVmIGJ1aWxkVkZTdGF0VGFibGUodHRGb250OiBUVEZvbnQsIGRvYzogRGVzaWduU3BhY2VEb2N1bWVudCwgdmZOYW1lOiBzdHIpIC0+IE5vbmU6CiAgICAiIiJCdWlsZCB0aGUgU1RBVCB0YWJsZSBmb3IgdGhlIHZhcmlhYmxlIGZvbnQgaWRlbnRpZmllZCBieSBpdHMgbmFtZSBpbgogICAgdGhlIGdpdmVuIGRvY3VtZW50LgoKICAgIEtub3dpbmcgd2hpY2ggdmFyaWFibGUgd2UncmUgYnVpbGRpbmcgU1RBVCBkYXRhIGZvciBpcyBuZWVkZWQgdG8gc3Vic2V0CiAgICB0aGUgU1RBVCBsb2NhdGlvbnMgdG8gb25seSBpbmNsdWRlIHdoYXQgdGhlIHZhcmlhYmxlIGZvbnQgYWN0dWFsbHkgc2hpcHMuCgogICAgLi4gdmVyc2lvbmFkZGVkOjogNS4wCgogICAgLi4gc2VlYWxzbzo6CiAgICAgICAgLSA6ZnVuYzpgZ2V0U3RhdEF4ZXMoKWAKICAgICAgICAtIDpmdW5jOmBnZXRTdGF0TG9jYXRpb25zKClgCiAgICAgICAgLSA6ZnVuYzpgZm9udFRvb2xzLm90bExpYi5idWlsZGVyLmJ1aWxkU3RhdFRhYmxlKClgCiAgICAiIiIKICAgIGZvciB2ZiBpbiBkb2MuZ2V0VmFyaWFibGVGb250cygpOgogICAgICAgIGlmIHZmLm5hbWUgPT0gdmZOYW1lOgogICAgICAgICAgICBicmVhawogICAgZWxzZToKICAgICAgICByYWlzZSBEZXNpZ25TcGFjZURvY3VtZW50RXJyb3IoCiAgICAgICAgICAgIGYiQ2Fubm90IGZpbmQgdGhlIHZhcmlhYmxlIGZvbnQgYnkgbmFtZSB7dmZOYW1lfSIKICAgICAgICApCgogICAgcmVnaW9uID0gZ2V0VkZVc2VyUmVnaW9uKGRvYywgdmYpCgogICAgIyBpZiB0aGVyZSBhcmUgbm90IGN1cnJlbnRseSBhbnkgbWFjIG5hbWVzIGRvbid0IGFkZCB0aGVtIGhlcmUsIHRoYXQncyBpbmNvbnNpc3RlbnQKICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvaXNzdWVzLzY4MwogICAgbWFjTmFtZXMgPSBhbnkoCiAgICAgICAgbnIucGxhdGZvcm1JRCA9PSAxIGZvciBuciBpbiBnZXRhdHRyKHR0Rm9udC5nZXQoIm5hbWUiKSwgIm5hbWVzIiwgKCkpCiAgICApCgogICAgcmV0dXJuIGZvbnRUb29scy5vdGxMaWIuYnVpbGRlci5idWlsZFN0YXRUYWJsZSgKICAgICAgICB0dEZvbnQsCiAgICAgICAgZ2V0U3RhdEF4ZXMoZG9jLCByZWdpb24pLAogICAgICAgIGdldFN0YXRMb2NhdGlvbnMoZG9jLCByZWdpb24pLAogICAgICAgIGRvYy5lbGlkZWRGYWxsYmFja05hbWUgaWYgZG9jLmVsaWRlZEZhbGxiYWNrTmFtZSBpcyBub3QgTm9uZSBlbHNlIDIsCiAgICAgICAgbWFjTmFtZXM9bWFjTmFtZXMsCiAgICApCgoKZGVmIGdldFN0YXRBeGVzKGRvYzogRGVzaWduU3BhY2VEb2N1bWVudCwgdXNlclJlZ2lvbjogUmVnaW9uKSAtPiBMaXN0W0RpY3RdOgogICAgIiIiUmV0dXJuIGEgbGlzdCBvZiBheGlzIGRpY3RzIHN1aXRhYmxlIGZvciB1c2UgYXMgdGhlIGBgYXhlc2BgCiAgICBhcmd1bWVudCB0byA6ZnVuYzpgZm9udFRvb2xzLm90bExpYi5idWlsZGVyLmJ1aWxkU3RhdFRhYmxlKClgLgoKICAgIC4uIHZlcnNpb25hZGRlZDo6IDUuMAogICAgIiIiCiAgICAjIEZpcnN0LCBnZXQgdGhlIGF4aXMgbGFiZWxzIHdpdGggZXhwbGljaXQgb3JkZXJpbmcKICAgICMgdGhlbiBhcHBlbmQgdGhlIG90aGVycyBpbiB0aGUgb3JkZXIgdGhleSBhcHBlYXIuCiAgICBtYXhPcmRlcmluZyA9IG1heCgKICAgICAgICAoYXhpcy5heGlzT3JkZXJpbmcgZm9yIGF4aXMgaW4gZG9jLmF4ZXMgaWYgYXhpcy5heGlzT3JkZXJpbmcgaXMgbm90IE5vbmUpLAogICAgICAgIGRlZmF1bHQ9LTEsCiAgICApCiAgICBheGlzT3JkZXJpbmdzID0gW10KICAgIGZvciBheGlzIGluIGRvYy5heGVzOgogICAgICAgIGlmIGF4aXMuYXhpc09yZGVyaW5nIGlzIG5vdCBOb25lOgogICAgICAgICAgICBheGlzT3JkZXJpbmdzLmFwcGVuZChheGlzLmF4aXNPcmRlcmluZykKICAgICAgICBlbHNlOgogICAgICAgICAgICBtYXhPcmRlcmluZyArPSAxCiAgICAgICAgICAgIGF4aXNPcmRlcmluZ3MuYXBwZW5kKG1heE9yZGVyaW5nKQogICAgcmV0dXJuIFsKICAgICAgICBkaWN0KAogICAgICAgICAgICB0YWc9YXhpcy50YWcsCiAgICAgICAgICAgIG5hbWU9eyJlbiI6IGF4aXMubmFtZSwgKipheGlzLmxhYmVsTmFtZXN9LAogICAgICAgICAgICBvcmRlcmluZz1vcmRlcmluZywKICAgICAgICAgICAgdmFsdWVzPVsKICAgICAgICAgICAgICAgIF9heGlzTGFiZWxUb1N0YXRMb2NhdGlvbihsYWJlbCkKICAgICAgICAgICAgICAgIGZvciBsYWJlbCBpbiBheGlzLmF4aXNMYWJlbHMKICAgICAgICAgICAgICAgIGlmIGxvY2F0aW9uSW5SZWdpb24oe2F4aXMubmFtZTogbGFiZWwudXNlclZhbHVlfSwgdXNlclJlZ2lvbikKICAgICAgICAgICAgXSwKICAgICAgICApCiAgICAgICAgZm9yIGF4aXMsIG9yZGVyaW5nIGluIHppcChkb2MuYXhlcywgYXhpc09yZGVyaW5ncykKICAgIF0KCgpkZWYgZ2V0U3RhdExvY2F0aW9ucyhkb2M6IERlc2lnblNwYWNlRG9jdW1lbnQsIHVzZXJSZWdpb246IFJlZ2lvbikgLT4gTGlzdFtEaWN0XToKICAgICIiIlJldHVybiBhIGxpc3Qgb2YgbG9jYXRpb24gZGljdHMgc3VpdGFibGUgZm9yIHVzZSBhcyB0aGUgYGBsb2NhdGlvbnNgYAogICAgYXJndW1lbnQgdG8gOmZ1bmM6YGZvbnRUb29scy5vdGxMaWIuYnVpbGRlci5idWlsZFN0YXRUYWJsZSgpYC4KCiAgICAuLiB2ZXJzaW9uYWRkZWQ6OiA1LjAKICAgICIiIgogICAgYXhlc0J5TmFtZSA9IHtheGlzLm5hbWU6IGF4aXMgZm9yIGF4aXMgaW4gZG9jLmF4ZXN9CiAgICByZXR1cm4gWwogICAgICAgIGRpY3QoCiAgICAgICAgICAgIG5hbWU9eyJlbiI6IGxhYmVsLm5hbWUsICoqbGFiZWwubGFiZWxOYW1lc30sCiAgICAgICAgICAgICMgTG9jYXRpb24gaW4gdGhlIGRlc2lnbnNwYWNlIGlzIGtleWVkIGJ5IGF4aXMgbmFtZQogICAgICAgICAgICAjIExvY2F0aW9uIGluIGJ1aWxkU3RhdFRhYmxlIGJ5IGF4aXMgdGFnCiAgICAgICAgICAgIGxvY2F0aW9uPXsKICAgICAgICAgICAgICAgIGF4ZXNCeU5hbWVbbmFtZV0udGFnOiB2YWx1ZQogICAgICAgICAgICAgICAgZm9yIG5hbWUsIHZhbHVlIGluIGxhYmVsLmdldEZ1bGxVc2VyTG9jYXRpb24oZG9jKS5pdGVtcygpCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIGZsYWdzPV9sYWJlbFRvRmxhZ3MobGFiZWwpLAogICAgICAgICkKICAgICAgICBmb3IgbGFiZWwgaW4gZG9jLmxvY2F0aW9uTGFiZWxzCiAgICAgICAgaWYgbG9jYXRpb25JblJlZ2lvbihsYWJlbC5nZXRGdWxsVXNlckxvY2F0aW9uKGRvYyksIHVzZXJSZWdpb24pCiAgICBdCgoKZGVmIF9sYWJlbFRvRmxhZ3MobGFiZWw6IFVuaW9uW0F4aXNMYWJlbERlc2NyaXB0b3IsIExvY2F0aW9uTGFiZWxEZXNjcmlwdG9yXSkgLT4gaW50OgogICAgZmxhZ3MgPSAwCiAgICBpZiBsYWJlbC5vbGRlclNpYmxpbmc6CiAgICAgICAgZmxhZ3MgfD0gMQogICAgaWYgbGFiZWwuZWxpZGFibGU6CiAgICAgICAgZmxhZ3MgfD0gMgogICAgcmV0dXJuIGZsYWdzCgoKZGVmIF9heGlzTGFiZWxUb1N0YXRMb2NhdGlvbigKICAgIGxhYmVsOiBBeGlzTGFiZWxEZXNjcmlwdG9yLAopIC0+IERpY3Q6CiAgICBsYWJlbF9mb3JtYXQgPSBsYWJlbC5nZXRGb3JtYXQoKQogICAgbmFtZSA9IHsiZW4iOiBsYWJlbC5uYW1lLCAqKmxhYmVsLmxhYmVsTmFtZXN9CiAgICBmbGFncyA9IF9sYWJlbFRvRmxhZ3MobGFiZWwpCiAgICBpZiBsYWJlbF9mb3JtYXQgPT0gMToKICAgICAgICByZXR1cm4gZGljdChuYW1lPW5hbWUsIHZhbHVlPWxhYmVsLnVzZXJWYWx1ZSwgZmxhZ3M9ZmxhZ3MpCiAgICBpZiBsYWJlbF9mb3JtYXQgPT0gMzoKICAgICAgICByZXR1cm4gZGljdCgKICAgICAgICAgICAgbmFtZT1uYW1lLAogICAgICAgICAgICB2YWx1ZT1sYWJlbC51c2VyVmFsdWUsCiAgICAgICAgICAgIGxpbmtlZFZhbHVlPWxhYmVsLmxpbmtlZFVzZXJWYWx1ZSwKICAgICAgICAgICAgZmxhZ3M9ZmxhZ3MsCiAgICAgICAgKQogICAgaWYgbGFiZWxfZm9ybWF0ID09IDI6CiAgICAgICAgcmVzID0gZGljdCgKICAgICAgICAgICAgbmFtZT1uYW1lLAogICAgICAgICAgICBub21pbmFsVmFsdWU9bGFiZWwudXNlclZhbHVlLAogICAgICAgICAgICBmbGFncz1mbGFncywKICAgICAgICApCiAgICAgICAgaWYgbGFiZWwudXNlck1pbmltdW0gaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHJlc1sicmFuZ2VNaW5WYWx1ZSJdID0gbGFiZWwudXNlck1pbmltdW0KICAgICAgICBpZiBsYWJlbC51c2VyTWF4aW11bSBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmVzWyJyYW5nZU1heFZhbHVlIl0gPSBsYWJlbC51c2VyTWF4aW11bQogICAgICAgIHJldHVybiByZXMKICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoIlVua25vd24gU1RBVCBsYWJlbCBmb3JtYXQiKQo=
+"""Extra methods for DesignSpaceDocument to generate its STAT table data."""
+
+from __future__ import annotations
+
+from typing import Dict, List, Union
+
+import fontTools.otlLib.builder
+from fontTools.designspaceLib import (
+    AxisLabelDescriptor,
+    DesignSpaceDocument,
+    DesignSpaceDocumentError,
+    LocationLabelDescriptor,
+)
+from fontTools.designspaceLib.types import Region, getVFUserRegion, locationInRegion
+from fontTools.ttLib import TTFont
+
+
+def buildVFStatTable(ttFont: TTFont, doc: DesignSpaceDocument, vfName: str) -> None:
+    """Build the STAT table for the variable font identified by its name in
+    the given document.
+
+    Knowing which variable we're building STAT data for is needed to subset
+    the STAT locations to only include what the variable font actually ships.
+
+    .. versionadded:: 5.0
+
+    .. seealso::
+        - :func:`getStatAxes()`
+        - :func:`getStatLocations()`
+        - :func:`fontTools.otlLib.builder.buildStatTable()`
+    """
+    for vf in doc.getVariableFonts():
+        if vf.name == vfName:
+            break
+    else:
+        raise DesignSpaceDocumentError(
+            f"Cannot find the variable font by name {vfName}"
+        )
+
+    region = getVFUserRegion(doc, vf)
+
+    # if there are not currently any mac names don't add them here, that's inconsistent
+    # https://github.com/fonttools/fonttools/issues/683
+    macNames = any(
+        nr.platformID == 1 for nr in getattr(ttFont.get("name"), "names", ())
+    )
+
+    return fontTools.otlLib.builder.buildStatTable(
+        ttFont,
+        getStatAxes(doc, region),
+        getStatLocations(doc, region),
+        doc.elidedFallbackName if doc.elidedFallbackName is not None else 2,
+        macNames=macNames,
+    )
+
+
+def getStatAxes(doc: DesignSpaceDocument, userRegion: Region) -> List[Dict]:
+    """Return a list of axis dicts suitable for use as the ``axes``
+    argument to :func:`fontTools.otlLib.builder.buildStatTable()`.
+
+    .. versionadded:: 5.0
+    """
+    # First, get the axis labels with explicit ordering
+    # then append the others in the order they appear.
+    maxOrdering = max(
+        (axis.axisOrdering for axis in doc.axes if axis.axisOrdering is not None),
+        default=-1,
+    )
+    axisOrderings = []
+    for axis in doc.axes:
+        if axis.axisOrdering is not None:
+            axisOrderings.append(axis.axisOrdering)
+        else:
+            maxOrdering += 1
+            axisOrderings.append(maxOrdering)
+    return [
+        dict(
+            tag=axis.tag,
+            name={"en": axis.name, **axis.labelNames},
+            ordering=ordering,
+            values=[
+                _axisLabelToStatLocation(label)
+                for label in axis.axisLabels
+                if locationInRegion({axis.name: label.userValue}, userRegion)
+            ],
+        )
+        for axis, ordering in zip(doc.axes, axisOrderings)
+    ]
+
+
+def getStatLocations(doc: DesignSpaceDocument, userRegion: Region) -> List[Dict]:
+    """Return a list of location dicts suitable for use as the ``locations``
+    argument to :func:`fontTools.otlLib.builder.buildStatTable()`.
+
+    .. versionadded:: 5.0
+    """
+    axesByName = {axis.name: axis for axis in doc.axes}
+    return [
+        dict(
+            name={"en": label.name, **label.labelNames},
+            # Location in the designspace is keyed by axis name
+            # Location in buildStatTable by axis tag
+            location={
+                axesByName[name].tag: value
+                for name, value in label.getFullUserLocation(doc).items()
+            },
+            flags=_labelToFlags(label),
+        )
+        for label in doc.locationLabels
+        if locationInRegion(label.getFullUserLocation(doc), userRegion)
+    ]
+
+
+def _labelToFlags(label: Union[AxisLabelDescriptor, LocationLabelDescriptor]) -> int:
+    flags = 0
+    if label.olderSibling:
+        flags |= 1
+    if label.elidable:
+        flags |= 2
+    return flags
+
+
+def _axisLabelToStatLocation(
+    label: AxisLabelDescriptor,
+) -> Dict:
+    label_format = label.getFormat()
+    name = {"en": label.name, **label.labelNames}
+    flags = _labelToFlags(label)
+    if label_format == 1:
+        return dict(name=name, value=label.userValue, flags=flags)
+    if label_format == 3:
+        return dict(
+            name=name,
+            value=label.userValue,
+            linkedValue=label.linkedUserValue,
+            flags=flags,
+        )
+    if label_format == 2:
+        res = dict(
+            name=name,
+            nominalValue=label.userValue,
+            flags=flags,
+        )
+        if label.userMinimum is not None:
+            res["rangeMinValue"] = label.userMinimum
+        if label.userMaximum is not None:
+            res["rangeMaxValue"] = label.userMaximum
+        return res
+    raise NotImplementedError("Unknown STAT label format")

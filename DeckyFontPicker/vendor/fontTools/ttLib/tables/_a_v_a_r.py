@@ -1,1 +1,231 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IE1hcHBpbmcsIFRZUEVfQ0hFQ0tJTkcKZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0ICgKICAgIGZpeGVkVG9GbG9hdCBhcyBmaTJmbCwKICAgIGZsb2F0VG9GaXhlZCBhcyBmbDJmaSwKICAgIGZsb2F0VG9GaXhlZFRvU3RyIGFzIGZsMnN0ciwKICAgIHN0clRvRml4ZWRUb0Zsb2F0IGFzIHN0cjJmbCwKKQpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luLCBzYWZlRXZhbApmcm9tIGZvbnRUb29scy5taXNjLnJvdW5kVG9vbHMgaW1wb3J0IG90Um91bmQKZnJvbSBmb250VG9vbHMudmFyTGliLm1vZGVscyBpbXBvcnQgcGllY2V3aXNlTGluZWFyTWFwCmZyb20gZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSBpbXBvcnQgVmFyU3RvcmVJbnN0YW5jZXIsIE5PX1ZBUklBVElPTl9JTkRFWApmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRMaWJFcnJvcgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQpmcm9tIC4gaW1wb3J0IG90VGFibGVzCmltcG9ydCBzdHJ1Y3QKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgppZiBUWVBFX0NIRUNLSU5HOgogICAgZnJvbSAuLnR0Rm9udCBpbXBvcnQgVFRGb250CgoKY2xhc3MgdGFibGVfX2Ffdl9hX3IoQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJBeGlzIFZhcmlhdGlvbnMgdGFibGUKCiAgICBUaGlzIGNsYXNzIHJlcHJlc2VudHMgdGhlIGBgYXZhcmBgIHRhYmxlIG9mIGEgdmFyaWFibGUgZm9udC4gVGhlIG9iamVjdCBoYXMgb25lCiAgICBzdWJzdGFudGl2ZSBhdHRyaWJ1dGUsIGBgc2VnbWVudHNgYCwgd2hpY2ggbWFwcyBheGlzIHRhZ3MgdG8gYSBzZWdtZW50cyBkaWN0aW9uYXJ5OjoKCiAgICAgICAgPj4+IGZvbnRbImF2YXIiXS5zZWdtZW50cyAgICMgZG9jdGVzdDogK1NLSVAKICAgICAgICB7J3dnaHQnOiB7LTEuMDogLTEuMCwKICAgICAgICAgIDAuMDogMC4wLAogICAgICAgICAgMC4xMjU6IDAuMTE0NDQwOTE3OTY4NzUsCiAgICAgICAgICAwLjI1OiAwLjIzNDkyNDMxNjQwNjI1LAogICAgICAgICAgMC41OiAwLjM1NTQwNzcxNDg0Mzc1LAogICAgICAgICAgMC42MjU6IDAuNSwKICAgICAgICAgIDAuNzU6IDAuNjU2NjE2MjEwOTM3NSwKICAgICAgICAgIDAuODc1OiAwLjgxOTI3NDkwMjM0Mzc1LAogICAgICAgICAgMS4wOiAxLjB9LAogICAgICAgICAnaXRhbCc6IHstMS4wOiAtMS4wLCAwLjA6IDAuMCwgMS4wOiAxLjB9fQoKICAgIE5vdGljZSB0aGF0IHRoZSBzZWdtZW50cyBkaWN0aW9uYXJ5IGlzIG1hZGUgdXAgb2Ygbm9ybWFsaXplZCB2YWx1ZXMuIEEgdmFsaWQKICAgIGBgYXZhcmBgIHNlZ21lbnQgbWFwcGluZyBtdXN0IGNvbnRhaW4gdGhlIGVudHJpZXMgYGAtMS4wOiAtMS4wLCAwLjA6IDAuMCwgMS4wOiAxLjBgYC4KICAgIGZvbnRUb29scyBkb2VzIG5vdCBlbmZvcmNlIHRoaXMsIHNvIGl0IGlzIHlvdXIgcmVzcG9uc2liaWxpdHkgdG8gZW5zdXJlIHRoYXQKICAgIG1hcHBpbmdzIGFyZSB2YWxpZC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2F2YXIKICAgICIiIgoKICAgIGRlcGVuZGVuY2llcyA9IFsiZnZhciJdCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHRhZz1Ob25lKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKHRhZykKICAgICAgICBzZWxmLnNlZ21lbnRzID0ge30KCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGF4aXNUYWdzID0gW2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiB0dEZvbnRbImZ2YXIiXS5heGVzXQogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJ0YWJsZSIpOgogICAgICAgICAgICBzZWxmLnRhYmxlID0gb3RUYWJsZXMuYXZhcigpCiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZi50YWJsZSwgIlJlc2VydmVkIik6CiAgICAgICAgICAgIHNlbGYudGFibGUuUmVzZXJ2ZWQgPSAwCiAgICAgICAgc2VsZi50YWJsZS5WZXJzaW9uID0gKGdldGF0dHIoc2VsZiwgIm1ham9yVmVyc2lvbiIsIDEpIDw8IDE2KSB8IGdldGF0dHIoCiAgICAgICAgICAgIHNlbGYsICJtaW5vclZlcnNpb24iLCAwCiAgICAgICAgKQogICAgICAgIHNlbGYudGFibGUuQXhpc0NvdW50ID0gbGVuKGF4aXNUYWdzKQogICAgICAgIHNlbGYudGFibGUuQXhpc1NlZ21lbnRNYXAgPSBbXQogICAgICAgIGZvciBheGlzIGluIGF4aXNUYWdzOgogICAgICAgICAgICBtYXBwaW5ncyA9IHNlbGYuc2VnbWVudHNbYXhpc10KICAgICAgICAgICAgc2VnbWVudE1hcCA9IG90VGFibGVzLkF4aXNTZWdtZW50TWFwKCkKICAgICAgICAgICAgc2VnbWVudE1hcC5Qb3NpdGlvbk1hcENvdW50ID0gbGVuKG1hcHBpbmdzKQogICAgICAgICAgICBzZWdtZW50TWFwLkF4aXNWYWx1ZU1hcCA9IFtdCiAgICAgICAgICAgIGZvciBrZXksIHZhbHVlIGluIHNvcnRlZChtYXBwaW5ncy5pdGVtcygpKToKICAgICAgICAgICAgICAgIHZhbHVlTWFwID0gb3RUYWJsZXMuQXhpc1ZhbHVlTWFwKCkKICAgICAgICAgICAgICAgIHZhbHVlTWFwLkZyb21Db29yZGluYXRlID0ga2V5CiAgICAgICAgICAgICAgICB2YWx1ZU1hcC5Ub0Nvb3JkaW5hdGUgPSB2YWx1ZQogICAgICAgICAgICAgICAgc2VnbWVudE1hcC5BeGlzVmFsdWVNYXAuYXBwZW5kKHZhbHVlTWFwKQogICAgICAgICAgICBzZWxmLnRhYmxlLkF4aXNTZWdtZW50TWFwLmFwcGVuZChzZWdtZW50TWFwKQogICAgICAgIHJldHVybiBzdXBlcigpLmNvbXBpbGUodHRGb250KQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBzdXBlcigpLmRlY29tcGlsZShkYXRhLCB0dEZvbnQpCiAgICAgICAgc2VsZi5tYWpvclZlcnNpb24gPSBzZWxmLnRhYmxlLlZlcnNpb24gPj4gMTYKICAgICAgICBzZWxmLm1pbm9yVmVyc2lvbiA9IHNlbGYudGFibGUuVmVyc2lvbiAmIDB4RkZGRgogICAgICAgIGlmIHNlbGYubWFqb3JWZXJzaW9uIG5vdCBpbiAoMSwgMik6CiAgICAgICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoIlVua25vd24gYXZhciB0YWJsZSB2ZXJzaW9uIikKICAgICAgICBheGlzVGFncyA9IFtheGlzLmF4aXNUYWcgZm9yIGF4aXMgaW4gdHRGb250WyJmdmFyIl0uYXhlc10KICAgICAgICBmb3IgYXhpcyBpbiBheGlzVGFnczoKICAgICAgICAgICAgc2VsZi5zZWdtZW50c1theGlzXSA9IHt9CiAgICAgICAgZm9yIGF4aXMsIHNlZ21lbnRNYXAgaW4gemlwKGF4aXNUYWdzLCBzZWxmLnRhYmxlLkF4aXNTZWdtZW50TWFwKToKICAgICAgICAgICAgc2VnbWVudHMgPSBzZWxmLnNlZ21lbnRzW2F4aXNdID0ge30KICAgICAgICAgICAgZm9yIHNlZ21lbnQgaW4gc2VnbWVudE1hcC5BeGlzVmFsdWVNYXA6CiAgICAgICAgICAgICAgICBzZWdtZW50c1tzZWdtZW50LkZyb21Db29yZGluYXRlXSA9IHNlZ21lbnQuVG9Db29yZGluYXRlCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKAogICAgICAgICAgICAidmVyc2lvbiIsCiAgICAgICAgICAgIG1ham9yPWdldGF0dHIoc2VsZiwgIm1ham9yVmVyc2lvbiIsIDEpLAogICAgICAgICAgICBtaW5vcj1nZXRhdHRyKHNlbGYsICJtaW5vclZlcnNpb24iLCAwKSwKICAgICAgICApCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGF4aXNUYWdzID0gW2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiB0dEZvbnRbImZ2YXIiXS5heGVzXQogICAgICAgIGZvciBheGlzIGluIGF4aXNUYWdzOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoInNlZ21lbnQiLCBheGlzPWF4aXMpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIGtleSwgdmFsdWUgaW4gc29ydGVkKHNlbGYuc2VnbWVudHNbYXhpc10uaXRlbXMoKSk6CiAgICAgICAgICAgICAgICBrZXkgPSBmbDJzdHIoa2V5LCAxNCkKICAgICAgICAgICAgICAgIHZhbHVlID0gZmwyc3RyKHZhbHVlLCAxNCkKICAgICAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoIm1hcHBpbmciLCAqKnsiZnJvbSI6IGtleSwgInRvIjogdmFsdWV9KQogICAgICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJzZWdtZW50IikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGlmIGdldGF0dHIoc2VsZiwgIm1ham9yVmVyc2lvbiIsIDEpID49IDI6CiAgICAgICAgICAgIGlmIHNlbGYudGFibGUuVmFySWR4TWFwOgogICAgICAgICAgICAgICAgc2VsZi50YWJsZS5WYXJJZHhNYXAudG9YTUwod3JpdGVyLCB0dEZvbnQsIG5hbWU9IlZhcklkeE1hcCIpCiAgICAgICAgICAgIGlmIHNlbGYudGFibGUuVmFyU3RvcmU6CiAgICAgICAgICAgICAgICBzZWxmLnRhYmxlLlZhclN0b3JlLnRvWE1MKHdyaXRlciwgdHRGb250KQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJ0YWJsZSIpOgogICAgICAgICAgICBzZWxmLnRhYmxlID0gb3RUYWJsZXMuYXZhcigpCiAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZi50YWJsZSwgIlJlc2VydmVkIik6CiAgICAgICAgICAgIHNlbGYudGFibGUuUmVzZXJ2ZWQgPSAwCiAgICAgICAgaWYgbmFtZSA9PSAidmVyc2lvbiI6CiAgICAgICAgICAgIHNlbGYubWFqb3JWZXJzaW9uID0gc2FmZUV2YWwoYXR0cnNbIm1ham9yIl0pCiAgICAgICAgICAgIHNlbGYubWlub3JWZXJzaW9uID0gc2FmZUV2YWwoYXR0cnNbIm1pbm9yIl0pCiAgICAgICAgICAgIHNlbGYudGFibGUuVmVyc2lvbiA9IChnZXRhdHRyKHNlbGYsICJtYWpvclZlcnNpb24iLCAxKSA8PCAxNikgfCBnZXRhdHRyKAogICAgICAgICAgICAgICAgc2VsZiwgIm1pbm9yVmVyc2lvbiIsIDAKICAgICAgICAgICAgKQogICAgICAgIGVsaWYgbmFtZSA9PSAic2VnbWVudCI6CiAgICAgICAgICAgIGF4aXMgPSBhdHRyc1siYXhpcyJdCiAgICAgICAgICAgIHNlZ21lbnQgPSBzZWxmLnNlZ21lbnRzW2F4aXNdID0ge30KICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIGVsZW1lbnROYW1lLCBlbGVtZW50QXR0cnMsIF8gPSBlbGVtZW50CiAgICAgICAgICAgICAgICAgICAgaWYgZWxlbWVudE5hbWUgPT0gIm1hcHBpbmciOgogICAgICAgICAgICAgICAgICAgICAgICBmcm9tVmFsdWUgPSBzdHIyZmwoZWxlbWVudEF0dHJzWyJmcm9tIl0sIDE0KQogICAgICAgICAgICAgICAgICAgICAgICB0b1ZhbHVlID0gc3RyMmZsKGVsZW1lbnRBdHRyc1sidG8iXSwgMTQpCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGZyb21WYWx1ZSBpbiBzZWdtZW50OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgbG9nLndhcm5pbmcoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImR1cGxpY2F0ZSBlbnRyeSBmb3IgJXMgaW4gYXhpcyAnJXMnIiwgZnJvbVZhbHVlLCBheGlzCiAgICAgICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgICAgIHNlZ21lbnRbZnJvbVZhbHVlXSA9IHRvVmFsdWUKICAgICAgICBlbHNlOgogICAgICAgICAgICBzdXBlcigpLmZyb21YTUwobmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCkKCiAgICBkZWYgcmVub3JtYWxpemVMb2NhdGlvbigKICAgICAgICBzZWxmLCBsb2NhdGlvbjogTWFwcGluZ1tzdHIsIGZsb2F0XSwgZm9udDogVFRGb250LCBkcm9wWmVyb2VzOiBib29sID0gVHJ1ZQogICAgKSAtPiBkaWN0W3N0ciwgZmxvYXRdOgogICAgICAgIG1ham9yVmVyc2lvbiA9IGdldGF0dHIoc2VsZiwgIm1ham9yVmVyc2lvbiIsIDEpCgogICAgICAgIGlmIG1ham9yVmVyc2lvbiBub3QgaW4gKDEsIDIpOgogICAgICAgICAgICByYWlzZSBOb3RJbXBsZW1lbnRlZEVycm9yKCJVbmtub3duIGF2YXIgdGFibGUgdmVyc2lvbiIpCgogICAgICAgIGF2YXJTZWdtZW50cyA9IHNlbGYuc2VnbWVudHMKICAgICAgICBtYXBwZWRMb2NhdGlvbiA9IHt9CiAgICAgICAgZm9yIGF4aXNUYWcsIHZhbHVlIGluIGxvY2F0aW9uLml0ZW1zKCk6CiAgICAgICAgICAgIGF2YXJNYXBwaW5nID0gYXZhclNlZ21lbnRzLmdldChheGlzVGFnLCBOb25lKQogICAgICAgICAgICBpZiBhdmFyTWFwcGluZyBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHZhbHVlID0gcGllY2V3aXNlTGluZWFyTWFwKHZhbHVlLCBhdmFyTWFwcGluZykKICAgICAgICAgICAgbWFwcGVkTG9jYXRpb25bYXhpc1RhZ10gPSB2YWx1ZQoKICAgICAgICBpZiBtYWpvclZlcnNpb24gPCAyOgogICAgICAgICAgICByZXR1cm4gbWFwcGVkTG9jYXRpb24KCiAgICAgICAgIyBWZXJzaW9uIDIKCiAgICAgICAgdmFySWR4TWFwID0gc2VsZi50YWJsZS5WYXJJZHhNYXAKICAgICAgICB2YXJTdG9yZSA9IHNlbGYudGFibGUuVmFyU3RvcmUKICAgICAgICBheGVzID0gZm9udFsiZnZhciJdLmF4ZXMKICAgICAgICBpZiB2YXJTdG9yZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgdmFyU3RvcmVJbnN0YW5jZXIgPSBWYXJTdG9yZUluc3RhbmNlcih2YXJTdG9yZSwgYXhlcywgbWFwcGVkTG9jYXRpb24pCgogICAgICAgIGNvb3JkcyA9IGxpc3QoZmwyZmkobWFwcGVkTG9jYXRpb24uZ2V0KGF4aXMuYXhpc1RhZywgMCksIDE0KSBmb3IgYXhpcyBpbiBheGVzKQoKICAgICAgICBvdXQgPSBbXQogICAgICAgIGZvciB2YXJJZHgsIHYgaW4gZW51bWVyYXRlKGNvb3Jkcyk6CiAgICAgICAgICAgIGlmIHZhcklkeE1hcCBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHZhcklkeCA9IHZhcklkeE1hcFt2YXJJZHhdCgogICAgICAgICAgICBpZiB2YXJTdG9yZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIGRlbHRhID0gdmFyU3RvcmVJbnN0YW5jZXJbdmFySWR4XQogICAgICAgICAgICAgICAgdiArPSBvdFJvdW5kKGRlbHRhKQogICAgICAgICAgICAgICAgdiA9IG1pbihtYXgodiwgLSgxIDw8IDE0KSksICsoMSA8PCAxNCkpCgogICAgICAgICAgICBvdXQuYXBwZW5kKHYpCgogICAgICAgIG1hcHBlZExvY2F0aW9uID0gewogICAgICAgICAgICBheGlzLmF4aXNUYWc6IGZpMmZsKHYsIDE0KQogICAgICAgICAgICBmb3IgdiwgYXhpcyBpbiB6aXAob3V0LCBheGVzKQogICAgICAgICAgICBpZiB2ICE9IDAgb3Igbm90IGRyb3BaZXJvZXMKICAgICAgICB9CgogICAgICAgIHJldHVybiBtYXBwZWRMb2NhdGlvbgoKICAgIGRlZiByZW5vcm1hbGl6ZUF4aXNMaW1pdHMoc2VsZiwgYXhpc0xpbWl0cywgZm9udD1Ob25lKToKICAgICAgICAiIiJBcHBseSB0aGUgYXZhciB2MSBzZWdtZW50IG1hcHMgdG8gbm9ybWFsaXplZCBheGlzIGxpbWl0cy4KCiAgICAgICAgVGhlIHZhbHVlcyBvZiBgYGF4aXNMaW1pdHNgYCBtYXkgYmUgKG1pbiwgZGVmYXVsdCwgbWF4KSB0cmlwbGVzIG9yCiAgICAgICAgbG9uZ2VyIHNlcXVlbmNlcyB3aG9zZSB0cmFpbGluZyBlbGVtZW50cyBhcmUgdXNlci1zcGFjZSBkaXN0YW5jZXMKICAgICAgICAoYXMgaW4gTm9ybWFsaXplZEF4aXNUcmlwbGVBbmREaXN0YW5jZXMpOyBvbmx5IHRoZSBmaXJzdCB0aHJlZQogICAgICAgIGVsZW1lbnRzIGFyZSBjb29yZGluYXRlcywgc28gb25seSB0aG9zZSBhcmUgbWFwcGVkIOKAlCB0aGUgZGlzdGFuY2VzCiAgICAgICAgcGFzcyB0aHJvdWdoIHVudG91Y2hlZC4gVGhlIG1hcHBlZCBjb29yZGluYXRlcyBhcmUgcXVhbnRpemVkIHRvCiAgICAgICAgRjJEb3QxNCwgdG8gYXZvaWQgc3VycHJpc2UgaW50ZXJwb2xhdGlvbnMuCgogICAgICAgIFJldHVybnMgYSBkaWN0IG1hcHBpbmcgYXhpcyB0YWdzIHRvIHR1cGxlcyBvZiB0aGUgc2FtZSBsZW5ndGggYXMKICAgICAgICB0aGUgaW5wdXQgdmFsdWVzLiBhdmFyIHZlcnNpb24gMiBtYXBwaW5ncyBhcmUgTk9UIGFwcGxpZWQg4oCUIHRoZQogICAgICAgIFZhclN0b3JlLWRyaXZlbiBwYXJ0IG9mIGFuIGF2YXIgMiB0YWJsZSBpcyBoYW5kbGVkIHNlcGFyYXRlbHkgYnkKICAgICAgICB0aGUgaW5zdGFuY2VyIChzZWUgZm9udFRvb2xzLnZhckxpYi5pbnN0YW5jZXIpLgogICAgICAgICIiIgogICAgICAgIGlmIGdldGF0dHIoc2VsZiwgIm1ham9yVmVyc2lvbiIsIDEpIG5vdCBpbiAoMSwgMik6CiAgICAgICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoIlVua25vd24gYXZhciB0YWJsZSB2ZXJzaW9uIikKCiAgICAgICAgYXZhclNlZ21lbnRzID0gc2VsZi5zZWdtZW50cwogICAgICAgIG1hcHBlZEF4aXNMaW1pdHMgPSB7fQogICAgICAgIGZvciBheGlzVGFnLCB0cmlwbGUgaW4gYXhpc0xpbWl0cy5pdGVtcygpOgogICAgICAgICAgICBjb29yZHMgPSB0dXBsZSh0cmlwbGUpWzozXQogICAgICAgICAgICBkaXN0YW5jZXMgPSB0dXBsZSh0cmlwbGUpWzM6XQogICAgICAgICAgICBhdmFyTWFwcGluZyA9IGF2YXJTZWdtZW50cy5nZXQoYXhpc1RhZywgTm9uZSkKICAgICAgICAgICAgaWYgYXZhck1hcHBpbmcgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb29yZHMgPSB0dXBsZSgKICAgICAgICAgICAgICAgICAgICBwaWVjZXdpc2VMaW5lYXJNYXAodmFsdWUsIGF2YXJNYXBwaW5nKSBmb3IgdmFsdWUgaW4gY29vcmRzCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICMgUXVhbnRpemUgdG8gRjJEb3QxNCwgdG8gYXZvaWQgc3VycHJpc2UgaW50ZXJwb2xhdGlvbnMuCiAgICAgICAgICAgIGNvb3JkcyA9IHR1cGxlKGZpMmZsKGZsMmZpKHZhbHVlLCAxNCksIDE0KSBmb3IgdmFsdWUgaW4gY29vcmRzKQogICAgICAgICAgICBtYXBwZWRBeGlzTGltaXRzW2F4aXNUYWddID0gY29vcmRzICsgZGlzdGFuY2VzCiAgICAgICAgcmV0dXJuIG1hcHBlZEF4aXNMaW1pdHMK
+from __future__ import annotations
+
+from typing import Mapping, TYPE_CHECKING
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import (
+    fixedToFloat as fi2fl,
+    floatToFixed as fl2fi,
+    floatToFixedToStr as fl2str,
+    strToFixedToFloat as str2fl,
+)
+from fontTools.misc.textTools import bytesjoin, safeEval
+from fontTools.misc.roundTools import otRound
+from fontTools.varLib.models import piecewiseLinearMap
+from fontTools.varLib.varStore import VarStoreInstancer, NO_VARIATION_INDEX
+from fontTools.ttLib import TTLibError
+from . import DefaultTable
+from . import otTables
+import struct
+import logging
+
+log = logging.getLogger(__name__)
+
+from .otBase import BaseTTXConverter
+
+if TYPE_CHECKING:
+    from ..ttFont import TTFont
+
+
+class table__a_v_a_r(BaseTTXConverter):
+    """Axis Variations table
+
+    This class represents the ``avar`` table of a variable font. The object has one
+    substantive attribute, ``segments``, which maps axis tags to a segments dictionary::
+
+        >>> font["avar"].segments   # doctest: +SKIP
+        {'wght': {-1.0: -1.0,
+          0.0: 0.0,
+          0.125: 0.11444091796875,
+          0.25: 0.23492431640625,
+          0.5: 0.35540771484375,
+          0.625: 0.5,
+          0.75: 0.6566162109375,
+          0.875: 0.81927490234375,
+          1.0: 1.0},
+         'ital': {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0}}
+
+    Notice that the segments dictionary is made up of normalized values. A valid
+    ``avar`` segment mapping must contain the entries ``-1.0: -1.0, 0.0: 0.0, 1.0: 1.0``.
+    fontTools does not enforce this, so it is your responsibility to ensure that
+    mappings are valid.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/avar
+    """
+
+    dependencies = ["fvar"]
+
+    def __init__(self, tag=None):
+        super().__init__(tag)
+        self.segments = {}
+
+    def compile(self, ttFont):
+        axisTags = [axis.axisTag for axis in ttFont["fvar"].axes]
+        if not hasattr(self, "table"):
+            self.table = otTables.avar()
+        if not hasattr(self.table, "Reserved"):
+            self.table.Reserved = 0
+        self.table.Version = (getattr(self, "majorVersion", 1) << 16) | getattr(
+            self, "minorVersion", 0
+        )
+        self.table.AxisCount = len(axisTags)
+        self.table.AxisSegmentMap = []
+        for axis in axisTags:
+            mappings = self.segments[axis]
+            segmentMap = otTables.AxisSegmentMap()
+            segmentMap.PositionMapCount = len(mappings)
+            segmentMap.AxisValueMap = []
+            for key, value in sorted(mappings.items()):
+                valueMap = otTables.AxisValueMap()
+                valueMap.FromCoordinate = key
+                valueMap.ToCoordinate = value
+                segmentMap.AxisValueMap.append(valueMap)
+            self.table.AxisSegmentMap.append(segmentMap)
+        return super().compile(ttFont)
+
+    def decompile(self, data, ttFont):
+        super().decompile(data, ttFont)
+        self.majorVersion = self.table.Version >> 16
+        self.minorVersion = self.table.Version & 0xFFFF
+        if self.majorVersion not in (1, 2):
+            raise NotImplementedError("Unknown avar table version")
+        axisTags = [axis.axisTag for axis in ttFont["fvar"].axes]
+        for axis in axisTags:
+            self.segments[axis] = {}
+        for axis, segmentMap in zip(axisTags, self.table.AxisSegmentMap):
+            segments = self.segments[axis] = {}
+            for segment in segmentMap.AxisValueMap:
+                segments[segment.FromCoordinate] = segment.ToCoordinate
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag(
+            "version",
+            major=getattr(self, "majorVersion", 1),
+            minor=getattr(self, "minorVersion", 0),
+        )
+        writer.newline()
+        axisTags = [axis.axisTag for axis in ttFont["fvar"].axes]
+        for axis in axisTags:
+            writer.begintag("segment", axis=axis)
+            writer.newline()
+            for key, value in sorted(self.segments[axis].items()):
+                key = fl2str(key, 14)
+                value = fl2str(value, 14)
+                writer.simpletag("mapping", **{"from": key, "to": value})
+                writer.newline()
+            writer.endtag("segment")
+            writer.newline()
+        if getattr(self, "majorVersion", 1) >= 2:
+            if self.table.VarIdxMap:
+                self.table.VarIdxMap.toXML(writer, ttFont, name="VarIdxMap")
+            if self.table.VarStore:
+                self.table.VarStore.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "table"):
+            self.table = otTables.avar()
+        if not hasattr(self.table, "Reserved"):
+            self.table.Reserved = 0
+        if name == "version":
+            self.majorVersion = safeEval(attrs["major"])
+            self.minorVersion = safeEval(attrs["minor"])
+            self.table.Version = (getattr(self, "majorVersion", 1) << 16) | getattr(
+                self, "minorVersion", 0
+            )
+        elif name == "segment":
+            axis = attrs["axis"]
+            segment = self.segments[axis] = {}
+            for element in content:
+                if isinstance(element, tuple):
+                    elementName, elementAttrs, _ = element
+                    if elementName == "mapping":
+                        fromValue = str2fl(elementAttrs["from"], 14)
+                        toValue = str2fl(elementAttrs["to"], 14)
+                        if fromValue in segment:
+                            log.warning(
+                                "duplicate entry for %s in axis '%s'", fromValue, axis
+                            )
+                        segment[fromValue] = toValue
+        else:
+            super().fromXML(name, attrs, content, ttFont)
+
+    def renormalizeLocation(
+        self, location: Mapping[str, float], font: TTFont, dropZeroes: bool = True
+    ) -> dict[str, float]:
+        majorVersion = getattr(self, "majorVersion", 1)
+
+        if majorVersion not in (1, 2):
+            raise NotImplementedError("Unknown avar table version")
+
+        avarSegments = self.segments
+        mappedLocation = {}
+        for axisTag, value in location.items():
+            avarMapping = avarSegments.get(axisTag, None)
+            if avarMapping is not None:
+                value = piecewiseLinearMap(value, avarMapping)
+            mappedLocation[axisTag] = value
+
+        if majorVersion < 2:
+            return mappedLocation
+
+        # Version 2
+
+        varIdxMap = self.table.VarIdxMap
+        varStore = self.table.VarStore
+        axes = font["fvar"].axes
+        if varStore is not None:
+            varStoreInstancer = VarStoreInstancer(varStore, axes, mappedLocation)
+
+        coords = list(fl2fi(mappedLocation.get(axis.axisTag, 0), 14) for axis in axes)
+
+        out = []
+        for varIdx, v in enumerate(coords):
+            if varIdxMap is not None:
+                varIdx = varIdxMap[varIdx]
+
+            if varStore is not None:
+                delta = varStoreInstancer[varIdx]
+                v += otRound(delta)
+                v = min(max(v, -(1 << 14)), +(1 << 14))
+
+            out.append(v)
+
+        mappedLocation = {
+            axis.axisTag: fi2fl(v, 14)
+            for v, axis in zip(out, axes)
+            if v != 0 or not dropZeroes
+        }
+
+        return mappedLocation
+
+    def renormalizeAxisLimits(self, axisLimits, font=None):
+        """Apply the avar v1 segment maps to normalized axis limits.
+
+        The values of ``axisLimits`` may be (min, default, max) triples or
+        longer sequences whose trailing elements are user-space distances
+        (as in NormalizedAxisTripleAndDistances); only the first three
+        elements are coordinates, so only those are mapped — the distances
+        pass through untouched. The mapped coordinates are quantized to
+        F2Dot14, to avoid surprise interpolations.
+
+        Returns a dict mapping axis tags to tuples of the same length as
+        the input values. avar version 2 mappings are NOT applied — the
+        VarStore-driven part of an avar 2 table is handled separately by
+        the instancer (see fontTools.varLib.instancer).
+        """
+        if getattr(self, "majorVersion", 1) not in (1, 2):
+            raise NotImplementedError("Unknown avar table version")
+
+        avarSegments = self.segments
+        mappedAxisLimits = {}
+        for axisTag, triple in axisLimits.items():
+            coords = tuple(triple)[:3]
+            distances = tuple(triple)[3:]
+            avarMapping = avarSegments.get(axisTag, None)
+            if avarMapping is not None:
+                coords = tuple(
+                    piecewiseLinearMap(value, avarMapping) for value in coords
+                )
+            # Quantize to F2Dot14, to avoid surprise interpolations.
+            coords = tuple(fi2fl(fl2fi(value, 14), 14) for value in coords)
+            mappedAxisLimits[axisTag] = coords + distances
+        return mappedAxisLimits

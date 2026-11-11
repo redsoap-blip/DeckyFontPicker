@@ -1,1 +1,15 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfX2ZfZV9hX3QoQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJGZWF0dXJlIG5hbWUgdGFibGUKCiAgICBUaGUgZmVhdHVyZSBuYW1lIHRhYmxlIGlzIGFuIEFBVCAoQXBwbGUgQWR2YW5jZWQgVHlwb2dyYXBoeSkgdGFibGUgZm9yCiAgICBzdG9yaW5nIGZvbnQgZmVhdHVyZXMsIHNldHRpbmdzLCBhbmQgdGhlaXIgaHVtYW4tcmVhZGFibGUgbmFtZXMuIEl0IHNob3VsZAogICAgbm90IGJlIGNvbmZ1c2VkIHdpdGggdGhlIGBgRmVhdGBgIHRhYmxlIG9yIHRoZSBPcGVuVHlwZSBMYXlvdXQgYGBHU1VCYGAvYGBHUE9TYGAKICAgIHRhYmxlcy4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2ZmVhdC5odG1sCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+class table__f_e_a_t(BaseTTXConverter):
+    """Feature name table
+
+    The feature name table is an AAT (Apple Advanced Typography) table for
+    storing font features, settings, and their human-readable names. It should
+    not be confused with the ``Feat`` table or the OpenType Layout ``GSUB``/``GPOS``
+    tables.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6feat.html
+    """
+
+    pass

@@ -1,1 +1,12 @@
-ZnJvbSBpdGVydG9vbHMgaW1wb3J0ICoKCiMgUHl0aG9uIDMuMTI6CmlmICJiYXRjaGVkIiBub3QgaW4gZ2xvYmFscygpOgogICAgIyBodHRwczovL2RvY3MucHl0aG9uLm9yZy8zL2xpYnJhcnkvaXRlcnRvb2xzLmh0bWwjaXRlcnRvb2xzLmJhdGNoZWQKICAgIGRlZiBiYXRjaGVkKGl0ZXJhYmxlLCBuKToKICAgICAgICAjIGJhdGNoZWQoJ0FCQ0RFRkcnLCAzKSAtLT4gQUJDIERFRiBHCiAgICAgICAgaWYgbiA8IDE6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIm4gbXVzdCBiZSBhdCBsZWFzdCBvbmUiKQogICAgICAgIGl0ID0gaXRlcihpdGVyYWJsZSkKICAgICAgICB3aGlsZSBiYXRjaCA6PSB0dXBsZShpc2xpY2UoaXQsIG4pKToKICAgICAgICAgICAgeWllbGQgYmF0Y2gK
+from itertools import *
+
+# Python 3.12:
+if "batched" not in globals():
+    # https://docs.python.org/3/library/itertools.html#itertools.batched
+    def batched(iterable, n):
+        # batched('ABCDEFG', 3) --> ABC DEF G
+        if n < 1:
+            raise ValueError("n must be at least one")
+        it = iter(iterable)
+        while batch := tuple(islice(it, n)):
+            yield batch

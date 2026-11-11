@@ -1,1 +1,60 @@
-IiIiVFNJezAsMSwyLDMsNX0gYXJlIHByaXZhdGUgdGFibGVzIHVzZWQgYnkgTWljcm9zb2Z0IFZpc3VhbCBUcnVlVHlwZSAoVlRUKQp0b29sIHRvIHN0b3JlIGl0cyBoaW50aW5nIHNvdXJjZSBkYXRhLgoKVFNJNSBjb250YWlucyB0aGUgVlRUIGNoYXJhY3RlciBncm91cHMuCgpTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS90b29scy92dHQvdHNpLXRhYmxlcwoiIiIKCmltcG9ydCBhcnJheQppbXBvcnQgbG9nZ2luZwppbXBvcnQgc3lzCgpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCgpjbGFzcyB0YWJsZV9UX1NfSV9fNShEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBudW1HbHlwaHMgPSB0dEZvbnRbIm1heHAiXS5udW1HbHlwaHMKICAgICAgICBhID0gYXJyYXkuYXJyYXkoIkgiKQogICAgICAgIGEuZnJvbWJ5dGVzKGRhdGEpCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgYS5ieXRlc3dhcCgpCiAgICAgICAgc2VsZi5nbHlwaEdyb3VwaW5nID0ge30KICAgICAgICBudW1FbnRyaWVzID0gbGVuKGRhdGEpIC8vIDIKICAgICAgICBpZiBudW1FbnRyaWVzICE9IG51bUdseXBoczoKICAgICAgICAgICAgZGlmZiA9IG51bUVudHJpZXMgLSBudW1HbHlwaHMKICAgICAgICAgICAgbG9nLndhcm5pbmcoCiAgICAgICAgICAgICAgICAiTnVtYmVyIG9mIGVudHJpZXMgZGlmZmVycyBmcm9tIHRoZSBudW1iZXIgb2YgZ2x5cGhzIGluIHRoZSBmb250ICIKICAgICAgICAgICAgICAgIGYiYnkge2FicyhkaWZmKX0gKHtudW1FbnRyaWVzfSBlbnRyaWVzIHZzLiB7bnVtR2x5cGhzfSBnbHlwaHMpLiIKICAgICAgICAgICAgKQogICAgICAgIGZvciBpIGluIHJhbmdlKG51bUVudHJpZXMpOgogICAgICAgICAgICBzZWxmLmdseXBoR3JvdXBpbmdbdHRGb250LmdldEdseXBoTmFtZShpKV0gPSBhW2ldCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBnbHlwaE5hbWVzID0gdHRGb250LmdldEdseXBoT3JkZXIoKQogICAgICAgIGEgPSBhcnJheS5hcnJheSgiSCIpCiAgICAgICAgZm9yIGdseXBoTmFtZSBpbiBnbHlwaE5hbWVzOgogICAgICAgICAgICBhLmFwcGVuZChzZWxmLmdseXBoR3JvdXBpbmcuZ2V0KGdseXBoTmFtZSwgMCkpCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgYS5ieXRlc3dhcCgpCiAgICAgICAgcmV0dXJuIGEudG9ieXRlcygpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBuYW1lcyA9IHNvcnRlZChzZWxmLmdseXBoR3JvdXBpbmcua2V5cygpKQogICAgICAgIGZvciBnbHlwaE5hbWUgaW4gbmFtZXM6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoCiAgICAgICAgICAgICAgICAiZ2x5cGhncm91cCIsIG5hbWU9Z2x5cGhOYW1lLCB2YWx1ZT1zZWxmLmdseXBoR3JvdXBpbmdbZ2x5cGhOYW1lXQogICAgICAgICAgICApCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAiZ2x5cGhHcm91cGluZyIpOgogICAgICAgICAgICBzZWxmLmdseXBoR3JvdXBpbmcgPSB7fQogICAgICAgIGlmIG5hbWUgIT0gImdseXBoZ3JvdXAiOgogICAgICAgICAgICByZXR1cm4KICAgICAgICBzZWxmLmdseXBoR3JvdXBpbmdbYXR0cnNbIm5hbWUiXV0gPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkK
+"""TSI{0,1,2,3,5} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its hinting source data.
+
+TSI5 contains the VTT character groups.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+import array
+import logging
+import sys
+
+from fontTools.misc.textTools import safeEval
+
+from . import DefaultTable
+
+log = logging.getLogger(__name__)
+
+
+class table_T_S_I__5(DefaultTable.DefaultTable):
+    def decompile(self, data, ttFont):
+        numGlyphs = ttFont["maxp"].numGlyphs
+        a = array.array("H")
+        a.frombytes(data)
+        if sys.byteorder != "big":
+            a.byteswap()
+        self.glyphGrouping = {}
+        numEntries = len(data) // 2
+        if numEntries != numGlyphs:
+            diff = numEntries - numGlyphs
+            log.warning(
+                "Number of entries differs from the number of glyphs in the font "
+                f"by {abs(diff)} ({numEntries} entries vs. {numGlyphs} glyphs)."
+            )
+        for i in range(numEntries):
+            self.glyphGrouping[ttFont.getGlyphName(i)] = a[i]
+
+    def compile(self, ttFont):
+        glyphNames = ttFont.getGlyphOrder()
+        a = array.array("H")
+        for glyphName in glyphNames:
+            a.append(self.glyphGrouping.get(glyphName, 0))
+        if sys.byteorder != "big":
+            a.byteswap()
+        return a.tobytes()
+
+    def toXML(self, writer, ttFont):
+        names = sorted(self.glyphGrouping.keys())
+        for glyphName in names:
+            writer.simpletag(
+                "glyphgroup", name=glyphName, value=self.glyphGrouping[glyphName]
+            )
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "glyphGrouping"):
+            self.glyphGrouping = {}
+        if name != "glyphgroup":
+            return
+        self.glyphGrouping[attrs["name"]] = safeEval(attrs["value"])

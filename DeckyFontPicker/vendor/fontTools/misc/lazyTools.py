@@ -1,1 +1,42 @@
-ZnJvbSBjb2xsZWN0aW9ucyBpbXBvcnQgVXNlckRpY3QsIFVzZXJMaXN0CgpfX2FsbF9fID0gWyJMYXp5RGljdCIsICJMYXp5TGlzdCJdCgoKY2xhc3MgTGF6eURpY3QoVXNlckRpY3QpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGRhdGEpOgogICAgICAgIHN1cGVyKCkuX19pbml0X18oKQogICAgICAgIHNlbGYuZGF0YSA9IGRhdGEKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgayk6CiAgICAgICAgdiA9IHNlbGYuZGF0YVtrXQogICAgICAgIGlmIGNhbGxhYmxlKHYpOgogICAgICAgICAgICB2ID0gdihrKQogICAgICAgICAgICBzZWxmLmRhdGFba10gPSB2CiAgICAgICAgcmV0dXJuIHYKCgpjbGFzcyBMYXp5TGlzdChVc2VyTGlzdCk6CiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgayk6CiAgICAgICAgaWYgaXNpbnN0YW5jZShrLCBzbGljZSk6CiAgICAgICAgICAgIGluZGljZXMgPSByYW5nZSgqay5pbmRpY2VzKGxlbihzZWxmKSkpCiAgICAgICAgICAgIHJldHVybiBbc2VsZltpXSBmb3IgaSBpbiBpbmRpY2VzXQogICAgICAgIHYgPSBzZWxmLmRhdGFba10KICAgICAgICBpZiBjYWxsYWJsZSh2KToKICAgICAgICAgICAgdiA9IHYoaykKICAgICAgICAgICAgc2VsZi5kYXRhW2tdID0gdgogICAgICAgIHJldHVybiB2CgogICAgZGVmIF9fYWRkX18oc2VsZiwgb3RoZXIpOgogICAgICAgIGlmIGlzaW5zdGFuY2Uob3RoZXIsIExhenlMaXN0KToKICAgICAgICAgICAgb3RoZXIgPSBsaXN0KG90aGVyKQogICAgICAgIGVsaWYgaXNpbnN0YW5jZShvdGhlciwgbGlzdCk6CiAgICAgICAgICAgIHBhc3MKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gTm90SW1wbGVtZW50ZWQKICAgICAgICByZXR1cm4gbGlzdChzZWxmKSArIG90aGVyCgogICAgZGVmIF9fcmFkZF9fKHNlbGYsIG90aGVyKToKICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShvdGhlciwgbGlzdCk6CiAgICAgICAgICAgIHJldHVybiBOb3RJbXBsZW1lbnRlZAogICAgICAgIHJldHVybiBvdGhlciArIGxpc3Qoc2VsZikK
+from collections import UserDict, UserList
+
+__all__ = ["LazyDict", "LazyList"]
+
+
+class LazyDict(UserDict):
+    def __init__(self, data):
+        super().__init__()
+        self.data = data
+
+    def __getitem__(self, k):
+        v = self.data[k]
+        if callable(v):
+            v = v(k)
+            self.data[k] = v
+        return v
+
+
+class LazyList(UserList):
+    def __getitem__(self, k):
+        if isinstance(k, slice):
+            indices = range(*k.indices(len(self)))
+            return [self[i] for i in indices]
+        v = self.data[k]
+        if callable(v):
+            v = v(k)
+            self.data[k] = v
+        return v
+
+    def __add__(self, other):
+        if isinstance(other, LazyList):
+            other = list(other)
+        elif isinstance(other, list):
+            pass
+        else:
+            return NotImplemented
+        return list(self) + other
+
+    def __radd__(self, other):
+        if not isinstance(other, list):
+            return NotImplemented
+        return other + list(self)

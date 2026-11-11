@@ -1,1 +1,34 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHNodXRpbAppbXBvcnQgdGVtcGZpbGUKCmZyb20gLl9lcnJvcnMgaW1wb3J0IE9wZXJhdGlvbkZhaWxlZApmcm9tIC5fb3NmcyBpbXBvcnQgT1NGUwoKCmNsYXNzIFRlbXBGUyhPU0ZTKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBhdXRvX2NsZWFuOiBib29sID0gVHJ1ZSwgaWdub3JlX2NsZWFuX2Vycm9yczogYm9vbCA9IFRydWUpOgogICAgICAgIHNlbGYuYXV0b19jbGVhbiA9IGF1dG9fY2xlYW4KICAgICAgICBzZWxmLmlnbm9yZV9jbGVhbl9lcnJvcnMgPSBpZ25vcmVfY2xlYW5fZXJyb3JzCiAgICAgICAgc2VsZi5fdGVtcF9kaXIgPSB0ZW1wZmlsZS5ta2R0ZW1wKCJfX3RlbXBfZnNfXyIpCiAgICAgICAgc2VsZi5fY2xlYW5lZCA9IEZhbHNlCiAgICAgICAgc3VwZXIoKS5fX2luaXRfXyhzZWxmLl90ZW1wX2RpcikKCiAgICBkZWYgY2xvc2Uoc2VsZik6CiAgICAgICAgaWYgc2VsZi5hdXRvX2NsZWFuOgogICAgICAgICAgICBzZWxmLmNsZWFuKCkKICAgICAgICBzdXBlcigpLmNsb3NlKCkKCiAgICBkZWYgY2xlYW4oc2VsZik6CiAgICAgICAgaWYgc2VsZi5fY2xlYW5lZDoKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgIHRyeToKICAgICAgICAgICAgc2h1dGlsLnJtdHJlZShzZWxmLl90ZW1wX2RpcikKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIGlmIG5vdCBzZWxmLmlnbm9yZV9jbGVhbl9lcnJvcnM6CiAgICAgICAgICAgICAgICByYWlzZSBPcGVyYXRpb25GYWlsZWQoCiAgICAgICAgICAgICAgICAgICAgZiJmYWlsZWQgdG8gcmVtb3ZlIHRlbXBvcmFyeSBkaXJlY3Rvcnk6IHtzZWxmLl90ZW1wX2RpciFyfSIKICAgICAgICAgICAgICAgICkgZnJvbSBlCiAgICAgICAgc2VsZi5fY2xlYW5lZCA9IFRydWUK
+from __future__ import annotations
+
+import shutil
+import tempfile
+
+from ._errors import OperationFailed
+from ._osfs import OSFS
+
+
+class TempFS(OSFS):
+    def __init__(self, auto_clean: bool = True, ignore_clean_errors: bool = True):
+        self.auto_clean = auto_clean
+        self.ignore_clean_errors = ignore_clean_errors
+        self._temp_dir = tempfile.mkdtemp("__temp_fs__")
+        self._cleaned = False
+        super().__init__(self._temp_dir)
+
+    def close(self):
+        if self.auto_clean:
+            self.clean()
+        super().close()
+
+    def clean(self):
+        if self._cleaned:
+            return
+
+        try:
+            shutil.rmtree(self._temp_dir)
+        except Exception as e:
+            if not self.ignore_clean_errors:
+                raise OperationFailed(
+                    f"failed to remove temporary directory: {self._temp_dir!r}"
+                ) from e
+        self._cleaned = True

@@ -1,1 +1,9 @@
-ZnJvbSAuX3ZfaF9lX2EgaW1wb3J0IHRhYmxlX192X2hfZV9hLCB2aGVhRm9ybWF0CgoKY2xhc3MgdGFibGVfVl9IX0VfQV8odGFibGVfX3ZfaF9lX2EpOgogICAgZGVwZW5kZW5jaWVzID0gWyJWTVRYIiwgIkdMWUYiLCAiQ0ZGICIsICJDRkYyIl0KICAgIHRhYmxlRm9ybWF0ID0gdmhlYUZvcm1hdC5yZXBsYWNlKCJudW1iZXJPZlZNZXRyaWNzOlx0SCIsICJudW1iZXJPZlZNZXRyaWNzOlx0TCIpCiAgICBnbHlwaFRhYmxlVGFnID0gIkdMWUYiCiAgICBtZXRyaWNzVGFibGVUYWcgPSAiVk1UWCIKICAgIG91dGxpbmVUYWdzID0gKCJHTFlGIiwgIkNGRiAiLCAiQ0ZGMiIpCg==
+from ._v_h_e_a import table__v_h_e_a, vheaFormat
+
+
+class table_V_H_E_A_(table__v_h_e_a):
+    dependencies = ["VMTX", "GLYF", "CFF ", "CFF2"]
+    tableFormat = vheaFormat.replace("numberOfVMetrics:\tH", "numberOfVMetrics:\tL")
+    glyphTableTag = "GLYF"
+    metricsTableTag = "VMTX"
+    outlineTags = ("GLYF", "CFF ", "CFF2")

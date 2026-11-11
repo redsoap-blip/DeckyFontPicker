@@ -1,1 +1,78 @@
-ZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCmZyb20gcmVwb3J0bGFiLmdyYXBoaWNzLnNoYXBlcyBpbXBvcnQgUGF0aAoKX19hbGxfXyA9IFsiUmVwb3J0TGFiUGVuIl0KCgpjbGFzcyBSZXBvcnRMYWJQZW4oQmFzZVBlbik6CiAgICAiIiJBIHBlbiBmb3IgZHJhd2luZyBvbnRvIGEgYGByZXBvcnRsYWIuZ3JhcGhpY3Muc2hhcGVzLlBhdGhgYCBvYmplY3QuIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGdseXBoU2V0LCBwYXRoPU5vbmUpOgogICAgICAgIEJhc2VQZW4uX19pbml0X18oc2VsZiwgZ2x5cGhTZXQpCiAgICAgICAgaWYgcGF0aCBpcyBOb25lOgogICAgICAgICAgICBwYXRoID0gUGF0aCgpCiAgICAgICAgc2VsZi5wYXRoID0gcGF0aAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHApOgogICAgICAgIHgsIHkgPSBwCiAgICAgICAgc2VsZi5wYXRoLm1vdmVUbyh4LCB5KQoKICAgIGRlZiBfbGluZVRvKHNlbGYsIHApOgogICAgICAgIHgsIHkgPSBwCiAgICAgICAgc2VsZi5wYXRoLmxpbmVUbyh4LCB5KQoKICAgIGRlZiBfY3VydmVUb09uZShzZWxmLCBwMSwgcDIsIHAzKToKICAgICAgICB4MSwgeTEgPSBwMQogICAgICAgIHgyLCB5MiA9IHAyCiAgICAgICAgeDMsIHkzID0gcDMKICAgICAgICBzZWxmLnBhdGguY3VydmVUbyh4MSwgeTEsIHgyLCB5MiwgeDMsIHkzKQoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIHNlbGYucGF0aC5jbG9zZVBhdGgoKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgaWYgbGVuKHN5cy5hcmd2KSA8IDM6CiAgICAgICAgcHJpbnQoCiAgICAgICAgICAgICJVc2FnZTogcmVwb3J0TGFiUGVuLnB5IDxPVEYvVFRGIGZvbnQ+IDxnbHlwaG5hbWU+IFs8aW1hZ2UgZmlsZSB0byBjcmVhdGU+XSIKICAgICAgICApCiAgICAgICAgcHJpbnQoCiAgICAgICAgICAgICIgIElmIG5vIGltYWdlIGZpbGUgbmFtZSBpcyBjcmVhdGVkLCBieSBkZWZhdWx0IDxnbHlwaG5hbWU+LnBuZyBpcyBjcmVhdGVkLiIKICAgICAgICApCiAgICAgICAgcHJpbnQoIiAgZXhhbXBsZTogcmVwb3J0TGFiUGVuLnB5IEFyaWFsLlRURiBSIHRlc3QucG5nIikKICAgICAgICBwcmludCgKICAgICAgICAgICAgIiAgKFRoZSBmaWxlIGZvcm1hdCB3aWxsIGJlIFBORywgcmVnYXJkbGVzcyBvZiB0aGUgaW1hZ2UgZmlsZSBuYW1lIHN1cHBsaWVkKSIKICAgICAgICApCiAgICAgICAgc3lzLmV4aXQoMCkKCiAgICBmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250CiAgICBmcm9tIHJlcG9ydGxhYi5saWIgaW1wb3J0IGNvbG9ycwoKICAgIHBhdGggPSBzeXMuYXJndlsxXQogICAgZ2x5cGhOYW1lID0gc3lzLmFyZ3ZbMl0KICAgIGlmIGxlbihzeXMuYXJndikgPiAzOgogICAgICAgIGltYWdlRmlsZSA9IHN5cy5hcmd2WzNdCiAgICBlbHNlOgogICAgICAgIGltYWdlRmlsZSA9ICIlcy5wbmciICUgZ2x5cGhOYW1lCgogICAgZm9udCA9IFRURm9udChwYXRoKSAgIyBpdCB3b3VsZCB3b3JrIGp1c3QgYXMgd2VsbCB3aXRoIGZvbnRUb29scy50MUxpYi5UMUZvbnQKICAgIGdzID0gZm9udC5nZXRHbHlwaFNldCgpCiAgICBwZW4gPSBSZXBvcnRMYWJQZW4oZ3MsIFBhdGgoZmlsbENvbG9yPWNvbG9ycy5yZWQsIHN0cm9rZVdpZHRoPTUpKQogICAgZyA9IGdzW2dseXBoTmFtZV0KICAgIGcuZHJhdyhwZW4pCgogICAgdywgaCA9IGcud2lkdGgsIDEwMDAKICAgIGZyb20gcmVwb3J0bGFiLmdyYXBoaWNzIGltcG9ydCByZW5kZXJQTQogICAgZnJvbSByZXBvcnRsYWIuZ3JhcGhpY3Muc2hhcGVzIGltcG9ydCBHcm91cCwgRHJhd2luZywgc2NhbGUKCiAgICAjIEV2ZXJ5dGhpbmcgaXMgd3JhcHBlZCBpbiBhIGdyb3VwIHRvIGFsbG93IHRyYW5zZm9ybWF0aW9ucy4KICAgIGcgPSBHcm91cChwZW4ucGF0aCkKICAgIGcudHJhbnNsYXRlKDAsIDIwMCkKICAgIGcuc2NhbGUoMC4zLCAwLjMpCgogICAgZCA9IERyYXdpbmcodywgaCkKICAgIGQuYWRkKGcpCgogICAgcmVuZGVyUE0uZHJhd1RvRmlsZShkLCBpbWFnZUZpbGUsIGZtdD0iUE5HIikK
+from fontTools.pens.basePen import BasePen
+from reportlab.graphics.shapes import Path
+
+__all__ = ["ReportLabPen"]
+
+
+class ReportLabPen(BasePen):
+    """A pen for drawing onto a ``reportlab.graphics.shapes.Path`` object."""
+
+    def __init__(self, glyphSet, path=None):
+        BasePen.__init__(self, glyphSet)
+        if path is None:
+            path = Path()
+        self.path = path
+
+    def _moveTo(self, p):
+        x, y = p
+        self.path.moveTo(x, y)
+
+    def _lineTo(self, p):
+        x, y = p
+        self.path.lineTo(x, y)
+
+    def _curveToOne(self, p1, p2, p3):
+        x1, y1 = p1
+        x2, y2 = p2
+        x3, y3 = p3
+        self.path.curveTo(x1, y1, x2, y2, x3, y3)
+
+    def _closePath(self):
+        self.path.closePath()
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) < 3:
+        print(
+            "Usage: reportLabPen.py <OTF/TTF font> <glyphname> [<image file to create>]"
+        )
+        print(
+            "  If no image file name is created, by default <glyphname>.png is created."
+        )
+        print("  example: reportLabPen.py Arial.TTF R test.png")
+        print(
+            "  (The file format will be PNG, regardless of the image file name supplied)"
+        )
+        sys.exit(0)
+
+    from fontTools.ttLib import TTFont
+    from reportlab.lib import colors
+
+    path = sys.argv[1]
+    glyphName = sys.argv[2]
+    if len(sys.argv) > 3:
+        imageFile = sys.argv[3]
+    else:
+        imageFile = "%s.png" % glyphName
+
+    font = TTFont(path)  # it would work just as well with fontTools.t1Lib.T1Font
+    gs = font.getGlyphSet()
+    pen = ReportLabPen(gs, Path(fillColor=colors.red, strokeWidth=5))
+    g = gs[glyphName]
+    g.draw(pen)
+
+    w, h = g.width, 1000
+    from reportlab.graphics import renderPM
+    from reportlab.graphics.shapes import Group, Drawing, scale
+
+    # Everything is wrapped in a group to allow transformations.
+    g = Group(pen.path)
+    g.translate(0, 200)
+    g.scale(0.3, 0.3)
+
+    d = Drawing(w, h)
+    d.add(g)
+
+    renderPM.drawToFile(d, imageFile, fmt="PNG")

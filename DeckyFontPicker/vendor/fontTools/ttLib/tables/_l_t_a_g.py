@@ -1,1 +1,72 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVzam9pbiwgdG9ieXRlcywgc2FmZUV2YWwKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IHN0cnVjdAoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2bHRhZy5odG1sCgoKY2xhc3MgdGFibGVfX2xfdF9hX2coRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJMYW5ndWFnZSBUYWcgdGFibGUKCiAgICBUaGUgQUFUIGBgbHRhZ2BgIHRhYmxlIGNvbnRhaW5zIG1hcHBpbmdzIGJldHdlZW4gdGhlIG51bWVyaWMgY29kZXMgdXNlZAogICAgaW4gdGhlIGxhbmd1YWdlIGZpZWxkIG9mIHRoZSBgYG5hbWVgYCB0YWJsZSBhbmQgSUVURiBsYW5ndWFnZSB0YWdzLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZsdGFnLmh0bWwKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi52ZXJzaW9uLCBzZWxmLmZsYWdzID0gMSwgMAogICAgICAgIHNlbGYudGFncyA9IFtdCgogICAgZGVmIGFkZFRhZyhzZWxmLCB0YWcpOgogICAgICAgICIiIkFkZCAndGFnJyB0byB0aGUgbGlzdCBvZiBsYW5nYXVnZSB0YWdzIGlmIG5vdCBhbHJlYWR5IHRoZXJlLgoKICAgICAgICBSZXR1cm5zIHRoZSBpbnRlZ2VyIGluZGV4IG9mICd0YWcnIGluIHRoZSBsaXN0IG9mIGFsbCB0YWdzLgogICAgICAgICIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgcmV0dXJuIHNlbGYudGFncy5pbmRleCh0YWcpCiAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHNlbGYudGFncy5hcHBlbmQodGFnKQogICAgICAgICAgICByZXR1cm4gbGVuKHNlbGYudGFncykgLSAxCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIHNlbGYudmVyc2lvbiwgc2VsZi5mbGFncywgbnVtVGFncyA9IHN0cnVjdC51bnBhY2soIj5MTEwiLCBkYXRhWzoxMl0pCiAgICAgICAgYXNzZXJ0IHNlbGYudmVyc2lvbiA9PSAxCiAgICAgICAgc2VsZi50YWdzID0gW10KICAgICAgICBmb3IgaSBpbiByYW5nZShudW1UYWdzKToKICAgICAgICAgICAgcG9zID0gMTIgKyBpICogNAogICAgICAgICAgICBvZmZzZXQsIGxlbmd0aCA9IHN0cnVjdC51bnBhY2soIj5ISCIsIGRhdGFbcG9zIDogcG9zICsgNF0pCiAgICAgICAgICAgIHRhZyA9IGRhdGFbb2Zmc2V0IDogb2Zmc2V0ICsgbGVuZ3RoXS5kZWNvZGUoImFzY2lpIikKICAgICAgICAgICAgc2VsZi50YWdzLmFwcGVuZCh0YWcpCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBkYXRhTGlzdCA9IFtzdHJ1Y3QucGFjaygiPkxMTCIsIHNlbGYudmVyc2lvbiwgc2VsZi5mbGFncywgbGVuKHNlbGYudGFncykpXQogICAgICAgIHN0cmluZ1Bvb2wgPSAiIgogICAgICAgIGZvciB0YWcgaW4gc2VsZi50YWdzOgogICAgICAgICAgICBvZmZzZXQgPSBzdHJpbmdQb29sLmZpbmQodGFnKQogICAgICAgICAgICBpZiBvZmZzZXQgPCAwOgogICAgICAgICAgICAgICAgb2Zmc2V0ID0gbGVuKHN0cmluZ1Bvb2wpCiAgICAgICAgICAgICAgICBzdHJpbmdQb29sID0gc3RyaW5nUG9vbCArIHRhZwogICAgICAgICAgICBvZmZzZXQgPSBvZmZzZXQgKyAxMiArIGxlbihzZWxmLnRhZ3MpICogNAogICAgICAgICAgICBkYXRhTGlzdC5hcHBlbmQoc3RydWN0LnBhY2soIj5ISCIsIG9mZnNldCwgbGVuKHRhZykpKQogICAgICAgIGRhdGFMaXN0LmFwcGVuZCh0b2J5dGVzKHN0cmluZ1Bvb2wpKQogICAgICAgIHJldHVybiBieXRlc2pvaW4oZGF0YUxpc3QpCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJ2ZXJzaW9uIiwgdmFsdWU9c2VsZi52ZXJzaW9uKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJmbGFncyIsIHZhbHVlPXNlbGYuZmxhZ3MpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciB0YWcgaW4gc2VsZi50YWdzOgogICAgICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJMYW5ndWFnZVRhZyIsIHRhZz10YWcpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAidGFncyIpOgogICAgICAgICAgICBzZWxmLnRhZ3MgPSBbXQogICAgICAgIGlmIG5hbWUgPT0gIkxhbmd1YWdlVGFnIjoKICAgICAgICAgICAgc2VsZi50YWdzLmFwcGVuZChhdHRyc1sidGFnIl0pCiAgICAgICAgZWxpZiAidmFsdWUiIGluIGF0dHJzOgogICAgICAgICAgICB2YWx1ZSA9IHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKQogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHZhbHVlKQo=
+from fontTools.misc.textTools import bytesjoin, tobytes, safeEval
+from . import DefaultTable
+import struct
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6ltag.html
+
+
+class table__l_t_a_g(DefaultTable.DefaultTable):
+    """Language Tag table
+
+    The AAT ``ltag`` table contains mappings between the numeric codes used
+    in the language field of the ``name`` table and IETF language tags.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6ltag.html
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.version, self.flags = 1, 0
+        self.tags = []
+
+    def addTag(self, tag):
+        """Add 'tag' to the list of langauge tags if not already there.
+
+        Returns the integer index of 'tag' in the list of all tags.
+        """
+        try:
+            return self.tags.index(tag)
+        except ValueError:
+            self.tags.append(tag)
+            return len(self.tags) - 1
+
+    def decompile(self, data, ttFont):
+        self.version, self.flags, numTags = struct.unpack(">LLL", data[:12])
+        assert self.version == 1
+        self.tags = []
+        for i in range(numTags):
+            pos = 12 + i * 4
+            offset, length = struct.unpack(">HH", data[pos : pos + 4])
+            tag = data[offset : offset + length].decode("ascii")
+            self.tags.append(tag)
+
+    def compile(self, ttFont):
+        dataList = [struct.pack(">LLL", self.version, self.flags, len(self.tags))]
+        stringPool = ""
+        for tag in self.tags:
+            offset = stringPool.find(tag)
+            if offset < 0:
+                offset = len(stringPool)
+                stringPool = stringPool + tag
+            offset = offset + 12 + len(self.tags) * 4
+            dataList.append(struct.pack(">HH", offset, len(tag)))
+        dataList.append(tobytes(stringPool))
+        return bytesjoin(dataList)
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", value=self.version)
+        writer.newline()
+        writer.simpletag("flags", value=self.flags)
+        writer.newline()
+        for tag in self.tags:
+            writer.simpletag("LanguageTag", tag=tag)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "tags"):
+            self.tags = []
+        if name == "LanguageTag":
+            self.tags.append(attrs["tag"])
+        elif "value" in attrs:
+            value = safeEval(attrs["value"])
+            setattr(self, name, value)

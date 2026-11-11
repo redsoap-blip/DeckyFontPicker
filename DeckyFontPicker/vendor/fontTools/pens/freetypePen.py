@@ -1,1 +1,462 @@
-IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0KCiIiIlBlbiB0byByYXN0ZXJpemUgcGF0aHMgd2l0aCBGcmVlVHlwZS4iIiIKCl9fYWxsX18gPSBbIkZyZWVUeXBlUGVuIl0KCmltcG9ydCBvcwppbXBvcnQgY3R5cGVzCmltcG9ydCBwbGF0Zm9ybQppbXBvcnQgc3VicHJvY2VzcwppbXBvcnQgY29sbGVjdGlvbnMKaW1wb3J0IG1hdGgKCmltcG9ydCBmcmVldHlwZQpmcm9tIGZyZWV0eXBlLnJhdyBpbXBvcnQgRlRfT3V0bGluZV9HZXRfQml0bWFwLCBGVF9PdXRsaW5lX0dldF9CQm94LCBGVF9PdXRsaW5lX0dldF9DQm94CmZyb20gZnJlZXR5cGUuZnRfdHlwZXMgaW1wb3J0IEZUX1Bvcwpmcm9tIGZyZWV0eXBlLmZ0X3N0cnVjdHMgaW1wb3J0IEZUX1ZlY3RvciwgRlRfQkJveCwgRlRfQml0bWFwLCBGVF9PdXRsaW5lCmZyb20gZnJlZXR5cGUuZnRfZW51bXMgaW1wb3J0ICgKICAgIEZUX09VVExJTkVfTk9ORSwKICAgIEZUX09VVExJTkVfRVZFTl9PRERfRklMTCwKICAgIEZUX1BJWEVMX01PREVfR1JBWSwKICAgIEZUX0NVUlZFX1RBR19PTiwKICAgIEZUX0NVUlZFX1RBR19DT05JQywKICAgIEZUX0NVUlZFX1RBR19DVUJJQywKKQpmcm9tIGZyZWV0eXBlLmZ0X2Vycm9ycyBpbXBvcnQgRlRfRXhjZXB0aW9uCgpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IEJhc2VQZW4sIFBlbkVycm9yCmZyb20gZm9udFRvb2xzLm1pc2Mucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZApmcm9tIGZvbnRUb29scy5taXNjLnRyYW5zZm9ybSBpbXBvcnQgVHJhbnNmb3JtCgpDb250b3VyID0gY29sbGVjdGlvbnMubmFtZWR0dXBsZSgiQ29udG91ciIsICgicG9pbnRzIiwgInRhZ3MiKSkKCgpjbGFzcyBGcmVlVHlwZVBlbihCYXNlUGVuKToKICAgICIiIlBlbiB0byByYXN0ZXJpemUgcGF0aHMgd2l0aCBGcmVlVHlwZS4gUmVxdWlyZXMgYGZyZWV0eXBlLXB5YCBtb2R1bGUuCgogICAgQ29uc3RydWN0cyBgYEZUX091dGxpbmVgYCBmcm9tIHRoZSBwYXRocywgYW5kIHJlbmRlcnMgaXQgd2l0aGluIGEgYml0bWFwCiAgICBidWZmZXIuCgogICAgRm9yIGBgYXJyYXkoKWBgIGFuZCBgYHNob3coKWBgLCBgbnVtcHlgIGFuZCBgbWF0cGxvdGxpYmAgbXVzdCBiZSBpbnN0YWxsZWQuCiAgICBGb3IgYGBpbWFnZSgpYGAsIGBQaWxsb3dgIGlzIHJlcXVpcmVkLiBFYWNoIG1vZHVsZSBpcyBsYXppbHkgbG9hZGVkIHdoZW4gdGhlCiAgICBjb3JyZXNwb25kaW5nIG1ldGhvZCBpcyBjYWxsZWQuCgogICAgQXJnczoKICAgICAgICBnbHlwaFNldDogYSBkaWN0aW9uYXJ5IG9mIGRyYXdhYmxlIGdseXBoIG9iamVjdHMga2V5ZWQgYnkgbmFtZQogICAgICAgICAgICB1c2VkIHRvIHJlc29sdmUgY29tcG9uZW50IHJlZmVyZW5jZXMgaW4gY29tcG9zaXRlIGdseXBocy4KCiAgICBFeGFtcGxlczoKICAgICAgICBJZiBgbnVtcHlgIGFuZCBgbWF0cGxvdGxpYmAgaXMgYXZhaWxhYmxlLCB0aGUgZm9sbG93aW5nIGNvZGUgd2lsbAogICAgICAgIHNob3cgdGhlIGdseXBoIGltYWdlIG9mIGBmaWAgaW4gYSBuZXcgd2luZG93OjoKCiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMucGVucy5mcmVldHlwZVBlbiBpbXBvcnQgRnJlZVR5cGVQZW4KICAgICAgICAgICAgZnJvbSBmb250VG9vbHMubWlzYy50cmFuc2Zvcm0gaW1wb3J0IE9mZnNldAogICAgICAgICAgICBwZW4gPSBGcmVlVHlwZVBlbihOb25lKQogICAgICAgICAgICBmb250ID0gVFRGb250KCdTb3VyY2VTYW5zUHJvLVJlZ3VsYXIub3RmJykKICAgICAgICAgICAgZ2x5cGggPSBmb250LmdldEdseXBoU2V0KClbJ2ZpJ10KICAgICAgICAgICAgZ2x5cGguZHJhdyhwZW4pCiAgICAgICAgICAgIHdpZHRoLCBhc2NlbmRlciwgZGVzY2VuZGVyID0gZ2x5cGgud2lkdGgsIGZvbnRbJ09TLzInXS51c1dpbkFzY2VudCwgLWZvbnRbJ09TLzInXS51c1dpbkRlc2NlbnQKICAgICAgICAgICAgaGVpZ2h0ID0gYXNjZW5kZXIgLSBkZXNjZW5kZXIKICAgICAgICAgICAgcGVuLnNob3cod2lkdGg9d2lkdGgsIGhlaWdodD1oZWlnaHQsIHRyYW5zZm9ybT1PZmZzZXQoMCwgLWRlc2NlbmRlcikpCgogICAgICAgIENvbWJpbmluZyB3aXRoIGB1aGFyZmJ1enpgLCB5b3UgY2FuIHR5cGVzZXQgYSBjaHVuayBvZiBnbHlwaHMgaW4gYSBwZW46OgoKICAgICAgICAgICAgaW1wb3J0IHVoYXJmYnV6eiBhcyBoYgogICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLmZyZWV0eXBlUGVuIGltcG9ydCBGcmVlVHlwZVBlbgogICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLnRyYW5zZm9ybVBlbiBpbXBvcnQgVHJhbnNmb3JtUGVuCiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzLm1pc2MudHJhbnNmb3JtIGltcG9ydCBPZmZzZXQKCiAgICAgICAgICAgIGVuMSwgZW4yLCBhciwgamEgPSAnVHlwZXNldHRpbmcnLCAnSmVmZicsICfYtdmBINin2YTYrdix2YjZgScsICfjgZ/jgYTjgbfjgZvjgaPjgagnCiAgICAgICAgICAgIGZvciB0ZXh0LCBmb250X3BhdGgsIGRpcmVjdGlvbiwgdHlwb19hc2NlbmRlciwgdHlwb19kZXNjZW5kZXIsIHZoZWFfYXNjZW5kZXIsIHZoZWFfZGVzY2VuZGVyLCBjb250YWluLCBmZWF0dXJlcyBpbiAoCiAgICAgICAgICAgICAgICAoZW4xLCAnTm90b1NhbnMtUmVndWxhci50dGYnLCAgICAgICAnbHRyJywgMjE4OSwgLTYwMCwgTm9uZSwgTm9uZSwgRmFsc2UsIHsia2VybiI6IFRydWUsICJsaWdhIjogVHJ1ZX0pLAogICAgICAgICAgICAgICAgKGVuMiwgJ05vdG9TYW5zLVJlZ3VsYXIudHRmJywgICAgICAgJ2x0cicsIDIxODksIC02MDAsIE5vbmUsIE5vbmUsIFRydWUsICB7Imtlcm4iOiBUcnVlLCAibGlnYSI6IFRydWV9KSwKICAgICAgICAgICAgICAgIChhciwgICdOb3RvU2Fuc0FyYWJpYy1SZWd1bGFyLnR0ZicsICdydGwnLCAxMzc0LCAtNzM4LCBOb25lLCBOb25lLCBGYWxzZSwgeyJrZXJuIjogVHJ1ZSwgImxpZ2EiOiBUcnVlfSksCiAgICAgICAgICAgICAgICAoamEsICAnTm90b1NhbnNKUC1SZWd1bGFyLm90ZicsICAgICAnbHRyJywgODgwLCAgLTEyMCwgNTAwLCAgLTUwMCwgRmFsc2UsIHsicGFsdCI6IFRydWUsICJrZXJuIjogVHJ1ZX0pLAogICAgICAgICAgICAgICAgKGphLCAgJ05vdG9TYW5zSlAtUmVndWxhci5vdGYnLCAgICAgJ3R0YicsIDg4MCwgIC0xMjAsIDUwMCwgIC01MDAsIEZhbHNlLCB7InZlcnQiOiBUcnVlLCAidnBhbCI6IFRydWUsICJ2a3JuIjogVHJ1ZX0pCiAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICBibG9iID0gaGIuQmxvYi5mcm9tX2ZpbGVfcGF0aChmb250X3BhdGgpCiAgICAgICAgICAgICAgICBmYWNlID0gaGIuRmFjZShibG9iKQogICAgICAgICAgICAgICAgZm9udCA9IGhiLkZvbnQoZmFjZSkKICAgICAgICAgICAgICAgIGJ1ZiA9IGhiLkJ1ZmZlcigpCiAgICAgICAgICAgICAgICBidWYuZGlyZWN0aW9uID0gZGlyZWN0aW9uCiAgICAgICAgICAgICAgICBidWYuYWRkX3N0cih0ZXh0KQogICAgICAgICAgICAgICAgYnVmLmd1ZXNzX3NlZ21lbnRfcHJvcGVydGllcygpCiAgICAgICAgICAgICAgICBoYi5zaGFwZShmb250LCBidWYsIGZlYXR1cmVzKQoKICAgICAgICAgICAgICAgIHgsIHkgPSAwLCAwCiAgICAgICAgICAgICAgICBwZW4gPSBGcmVlVHlwZVBlbihOb25lKQogICAgICAgICAgICAgICAgZm9yIGluZm8sIHBvcyBpbiB6aXAoYnVmLmdseXBoX2luZm9zLCBidWYuZ2x5cGhfcG9zaXRpb25zKToKICAgICAgICAgICAgICAgICAgICBnaWQgPSBpbmZvLmNvZGVwb2ludAogICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybWVkID0gVHJhbnNmb3JtUGVuKHBlbiwgT2Zmc2V0KHggKyBwb3MueF9vZmZzZXQsIHkgKyBwb3MueV9vZmZzZXQpKQogICAgICAgICAgICAgICAgICAgIGZvbnQuZHJhd19nbHlwaF93aXRoX3BlbihnaWQsIHRyYW5zZm9ybWVkKQogICAgICAgICAgICAgICAgICAgIHggKz0gcG9zLnhfYWR2YW5jZQogICAgICAgICAgICAgICAgICAgIHkgKz0gcG9zLnlfYWR2YW5jZQoKICAgICAgICAgICAgICAgIG9mZnNldCwgd2lkdGgsIGhlaWdodCA9IE5vbmUsIE5vbmUsIE5vbmUKICAgICAgICAgICAgICAgIGlmIGRpcmVjdGlvbiBpbiAoJ2x0cicsICdydGwnKToKICAgICAgICAgICAgICAgICAgICBvZmZzZXQgPSAoMCwgLXR5cG9fZGVzY2VuZGVyKQogICAgICAgICAgICAgICAgICAgIHdpZHRoICA9IHgKICAgICAgICAgICAgICAgICAgICBoZWlnaHQgPSB0eXBvX2FzY2VuZGVyIC0gdHlwb19kZXNjZW5kZXIKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgb2Zmc2V0ID0gKC12aGVhX2Rlc2NlbmRlciwgLXkpCiAgICAgICAgICAgICAgICAgICAgd2lkdGggID0gdmhlYV9hc2NlbmRlciAtIHZoZWFfZGVzY2VuZGVyCiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0ID0gLXkKICAgICAgICAgICAgICAgIHBlbi5zaG93KHdpZHRoPXdpZHRoLCBoZWlnaHQ9aGVpZ2h0LCB0cmFuc2Zvcm09T2Zmc2V0KCpvZmZzZXQpLCBjb250YWluPWNvbnRhaW4pCgogICAgICAgIEZvciBKdXB5dGVyIE5vdGVib29rLCB0aGUgcmVuZGVyZWQgaW1hZ2Ugd2lsbCBiZSBkaXNwbGF5ZWQgaW4gYSBjZWxsIGlmCiAgICAgICAgeW91IHJlcGxhY2UgYGBzaG93KClgYCB3aXRoIGBgaW1hZ2UoKWBgIGluIHRoZSBleGFtcGxlcy4KICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaFNldCk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBzZWxmLmNvbnRvdXJzID0gW10KCiAgICBkZWYgb3V0bGluZShzZWxmLCB0cmFuc2Zvcm09Tm9uZSwgZXZlbk9kZD1GYWxzZSk6CiAgICAgICAgIiIiQ29udmVydHMgdGhlIGN1cnJlbnQgY29udG91cnMgdG8gYGBGVF9PdXRsaW5lYGAuCgogICAgICAgIEFyZ3M6CiAgICAgICAgICAgIHRyYW5zZm9ybTogQW4gb3B0aW9uYWwgNi10dXBsZSBjb250YWluaW5nIGFuIGFmZmluZSB0cmFuc2Zvcm1hdGlvbiwKICAgICAgICAgICAgICAgIG9yIGEgYGBUcmFuc2Zvcm1gYCBvYmplY3QgZnJvbSB0aGUgYGBmb250VG9vbHMubWlzYy50cmFuc2Zvcm1gYAogICAgICAgICAgICAgICAgbW9kdWxlLgogICAgICAgICAgICBldmVuT2RkOiBQYXNzIGBgVHJ1ZWBgIGZvciBldmVuLW9kZCBmaWxsIGluc3RlYWQgb2Ygbm9uLXplcm8uCiAgICAgICAgIiIiCiAgICAgICAgdHJhbnNmb3JtID0gdHJhbnNmb3JtIG9yIFRyYW5zZm9ybSgpCiAgICAgICAgaWYgbm90IGhhc2F0dHIodHJhbnNmb3JtLCAidHJhbnNmb3JtUG9pbnQiKToKICAgICAgICAgICAgdHJhbnNmb3JtID0gVHJhbnNmb3JtKCp0cmFuc2Zvcm0pCiAgICAgICAgbl9jb250b3VycyA9IGxlbihzZWxmLmNvbnRvdXJzKQogICAgICAgIG5fcG9pbnRzID0gc3VtKChsZW4oY29udG91ci5wb2ludHMpIGZvciBjb250b3VyIGluIHNlbGYuY29udG91cnMpKQogICAgICAgIHBvaW50cyA9IFtdCiAgICAgICAgZm9yIGNvbnRvdXIgaW4gc2VsZi5jb250b3VyczoKICAgICAgICAgICAgZm9yIHBvaW50IGluIGNvbnRvdXIucG9pbnRzOgogICAgICAgICAgICAgICAgcG9pbnQgPSB0cmFuc2Zvcm0udHJhbnNmb3JtUG9pbnQocG9pbnQpCiAgICAgICAgICAgICAgICBwb2ludHMuYXBwZW5kKAogICAgICAgICAgICAgICAgICAgIEZUX1ZlY3RvcigKICAgICAgICAgICAgICAgICAgICAgICAgRlRfUG9zKG90Um91bmQocG9pbnRbMF0gKiA2NCkpLCBGVF9Qb3Mob3RSb3VuZChwb2ludFsxXSAqIDY0KSkKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICApCiAgICAgICAgdGFncyA9IFtdCiAgICAgICAgZm9yIGNvbnRvdXIgaW4gc2VsZi5jb250b3VyczoKICAgICAgICAgICAgZm9yIHRhZyBpbiBjb250b3VyLnRhZ3M6CiAgICAgICAgICAgICAgICB0YWdzLmFwcGVuZCh0YWcpCiAgICAgICAgY29udG91cnMgPSBbXQogICAgICAgIGNvbnRvdXJzX3N1bSA9IDAKICAgICAgICBmb3IgY29udG91ciBpbiBzZWxmLmNvbnRvdXJzOgogICAgICAgICAgICBjb250b3Vyc19zdW0gKz0gbGVuKGNvbnRvdXIucG9pbnRzKQogICAgICAgICAgICBjb250b3Vycy5hcHBlbmQoY29udG91cnNfc3VtIC0gMSkKICAgICAgICBmbGFncyA9IEZUX09VVExJTkVfRVZFTl9PRERfRklMTCBpZiBldmVuT2RkIGVsc2UgRlRfT1VUTElORV9OT05FCiAgICAgICAgcmV0dXJuIEZUX091dGxpbmUoCiAgICAgICAgICAgIChjdHlwZXMuY19zaG9ydCkobl9jb250b3VycyksCiAgICAgICAgICAgIChjdHlwZXMuY19zaG9ydCkobl9wb2ludHMpLAogICAgICAgICAgICAoRlRfVmVjdG9yICogbl9wb2ludHMpKCpwb2ludHMpLAogICAgICAgICAgICAoY3R5cGVzLmNfdWJ5dGUgKiBuX3BvaW50cykoKnRhZ3MpLAogICAgICAgICAgICAoY3R5cGVzLmNfc2hvcnQgKiBuX2NvbnRvdXJzKSgqY29udG91cnMpLAogICAgICAgICAgICAoY3R5cGVzLmNfaW50KShmbGFncyksCiAgICAgICAgKQoKICAgIGRlZiBidWZmZXIoCiAgICAgICAgc2VsZiwgd2lkdGg9Tm9uZSwgaGVpZ2h0PU5vbmUsIHRyYW5zZm9ybT1Ob25lLCBjb250YWluPUZhbHNlLCBldmVuT2RkPUZhbHNlCiAgICApOgogICAgICAgICIiIlJlbmRlcnMgdGhlIGN1cnJlbnQgY29udG91cnMgd2l0aGluIGEgYml0bWFwIGJ1ZmZlci4KCiAgICAgICAgQXJnczoKICAgICAgICAgICAgd2lkdGg6IEltYWdlIHdpZHRoIG9mIHRoZSBiaXRtYXAgaW4gcGl4ZWxzLiBJZiBvbWl0dGVkLCBpdAogICAgICAgICAgICAgICAgYXV0b21hdGljYWxseSBmaXRzIHRvIHRoZSBib3VuZGluZyBib3ggb2YgdGhlIGNvbnRvdXJzLgogICAgICAgICAgICBoZWlnaHQ6IEltYWdlIGhlaWdodCBvZiB0aGUgYml0bWFwIGluIHBpeGVscy4gSWYgb21pdHRlZCwgaXQKICAgICAgICAgICAgICAgIGF1dG9tYXRpY2FsbHkgZml0cyB0byB0aGUgYm91bmRpbmcgYm94IG9mIHRoZSBjb250b3Vycy4KICAgICAgICAgICAgdHJhbnNmb3JtOiBBbiBvcHRpb25hbCA2LXR1cGxlIGNvbnRhaW5pbmcgYW4gYWZmaW5lIHRyYW5zZm9ybWF0aW9uLAogICAgICAgICAgICAgICAgb3IgYSBgYFRyYW5zZm9ybWBgIG9iamVjdCBmcm9tIHRoZSBgYGZvbnRUb29scy5taXNjLnRyYW5zZm9ybWBgCiAgICAgICAgICAgICAgICBtb2R1bGUuIFRoZSBiaXRtYXAgc2l6ZSBpcyBub3QgYWZmZWN0ZWQgYnkgdGhpcyBtYXRyaXguCiAgICAgICAgICAgIGNvbnRhaW46IElmIGBgVHJ1ZWBgLCB0aGUgaW1hZ2Ugc2l6ZSB3aWxsIGJlIGF1dG9tYXRpY2FsbHkgZXhwYW5kZWQKICAgICAgICAgICAgICAgIHNvIHRoYXQgaXQgZml0cyB0byB0aGUgYm91bmRpbmcgYm94IG9mIHRoZSBwYXRocy4gVXNlZnVsIGZvcgogICAgICAgICAgICAgICAgcmVuZGVyaW5nIGdseXBocyB3aXRoIG5lZ2F0aXZlIHNpZGViZWFyaW5ncyB3aXRob3V0IGNsaXBwaW5nLgogICAgICAgICAgICBldmVuT2RkOiBQYXNzIGBgVHJ1ZWBgIGZvciBldmVuLW9kZCBmaWxsIGluc3RlYWQgb2Ygbm9uLXplcm8uCgogICAgICAgIFJldHVybnM6CiAgICAgICAgICAgIEEgdHVwbGUgb2YgYGAoYnVmZmVyLCBzaXplKWBgLCB3aGVyZSBgYGJ1ZmZlcmBgIGlzIGEgYGBieXRlc2BgCiAgICAgICAgICAgIG9iamVjdCBvZiB0aGUgcmVzdWx0ZWQgYml0bWFwIGFuZCBgYHNpemVgYCBpcyBhIDItdHVwbGUgb2YgaXRzCiAgICAgICAgICAgIGRpbWVuc2lvbi4KCiAgICAgICAgTm90ZXM6CiAgICAgICAgICAgIFRoZSBpbWFnZSBzaXplIHNob3VsZCBhbHdheXMgYmUgZ2l2ZW4gZXhwbGljaXRseSBpZiB5b3UgbmVlZCB0byBnZXQKICAgICAgICAgICAgYSBwcm9wZXIgZ2x5cGggaW1hZ2UuIFdoZW4gYGB3aWR0aGBgIGFuZCBgYGhlaWdodGBgIGFyZSBvbWl0dGVkLCBpdAogICAgICAgICAgICBmb3JjaWZ1bGx5IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBhbmQgdGhlIHNpZGUgYmVhcmluZ3MgZ2V0CiAgICAgICAgICAgIGNyb3BwZWQuIElmIHlvdSBwYXNzIGBgMGBgIHRvIGJvdGggYGB3aWR0aGBgIGFuZCBgYGhlaWdodGBgIGFuZCBzZXQKICAgICAgICAgICAgYGBjb250YWluYGAgdG8gYGBUcnVlYGAsIGl0IGV4cGFuZHMgdG8gdGhlIGJvdW5kaW5nIGJveCB3aGlsZQogICAgICAgICAgICBtYWludGFpbmluZyB0aGUgb3JpZ2luIG9mIHRoZSBjb250b3VycywgbWVhbmluZyB0aGF0IExTQiB3aWxsIGJlCiAgICAgICAgICAgIG1haW50YWluZWQgYnV0IFJTQiB3b27igJl0LiBUaGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSB0d28gYmVjb21lcwogICAgICAgICAgICBtb3JlIG9idmlvdXMgd2hlbiByb3RhdGUgb3Igc2tldyB0cmFuc2Zvcm1hdGlvbiBpcyBhcHBsaWVkLgoKICAgICAgICBFeGFtcGxlOgogICAgICAgICAgICAuLiBjb2RlLWJsb2NrOjogcHljb24KCiAgICAgICAgICAgICAgICA+Pj4KICAgICAgICAgICAgICAgID4+IHBlbiA9IEZyZWVUeXBlUGVuKE5vbmUpCiAgICAgICAgICAgICAgICA+PiBnbHlwaC5kcmF3KHBlbikKICAgICAgICAgICAgICAgID4+IGJ1Ziwgc2l6ZSA9IHBlbi5idWZmZXIod2lkdGg9NTAwLCBoZWlnaHQ9MTAwMCkKICAgICAgICAgICAgICAgID4+IHR5cGUoYnVmKSwgbGVuKGJ1ZiksIHNpemUKICAgICAgICAgICAgICAgICg8Y2xhc3MgJ2J5dGVzJz4sIDUwMDAwMCwgKDUwMCwgMTAwMCkpCiAgICAgICAgIiIiCiAgICAgICAgdHJhbnNmb3JtID0gdHJhbnNmb3JtIG9yIFRyYW5zZm9ybSgpCiAgICAgICAgaWYgbm90IGhhc2F0dHIodHJhbnNmb3JtLCAidHJhbnNmb3JtUG9pbnQiKToKICAgICAgICAgICAgdHJhbnNmb3JtID0gVHJhbnNmb3JtKCp0cmFuc2Zvcm0pCiAgICAgICAgY29udGFpbl94LCBjb250YWluX3kgPSBjb250YWluIG9yIHdpZHRoIGlzIE5vbmUsIGNvbnRhaW4gb3IgaGVpZ2h0IGlzIE5vbmUKICAgICAgICBpZiBjb250YWluX3ggb3IgY29udGFpbl95OgogICAgICAgICAgICBkeCwgZHkgPSB0cmFuc2Zvcm0uZHgsIHRyYW5zZm9ybS5keQogICAgICAgICAgICBiYm94ID0gc2VsZi5iYm94CiAgICAgICAgICAgIHAxLCBwMiwgcDMsIHA0ID0gKAogICAgICAgICAgICAgICAgdHJhbnNmb3JtLnRyYW5zZm9ybVBvaW50KChiYm94WzBdLCBiYm94WzFdKSksCiAgICAgICAgICAgICAgICB0cmFuc2Zvcm0udHJhbnNmb3JtUG9pbnQoKGJib3hbMl0sIGJib3hbMV0pKSwKICAgICAgICAgICAgICAgIHRyYW5zZm9ybS50cmFuc2Zvcm1Qb2ludCgoYmJveFswXSwgYmJveFszXSkpLAogICAgICAgICAgICAgICAgdHJhbnNmb3JtLnRyYW5zZm9ybVBvaW50KChiYm94WzJdLCBiYm94WzNdKSksCiAgICAgICAgICAgICkKICAgICAgICAgICAgcHgsIHB5ID0gKHAxWzBdLCBwMlswXSwgcDNbMF0sIHA0WzBdKSwgKHAxWzFdLCBwMlsxXSwgcDNbMV0sIHA0WzFdKQogICAgICAgICAgICBpZiBjb250YWluX3g6CiAgICAgICAgICAgICAgICBpZiB3aWR0aCBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgIGR4ID0gZHggLSBtaW4oKnB4KQogICAgICAgICAgICAgICAgICAgIHdpZHRoID0gbWF4KCpweCkgLSBtaW4oKnB4KQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBkeCA9IGR4IC0gbWluKG1pbigqcHgpLCAwLjApCiAgICAgICAgICAgICAgICAgICAgd2lkdGggPSBtYXgod2lkdGgsIG1heCgqcHgpIC0gbWluKG1pbigqcHgpLCAwLjApKQogICAgICAgICAgICBpZiBjb250YWluX3k6CiAgICAgICAgICAgICAgICBpZiBoZWlnaHQgaXMgTm9uZToKICAgICAgICAgICAgICAgICAgICBkeSA9IGR5IC0gbWluKCpweSkKICAgICAgICAgICAgICAgICAgICBoZWlnaHQgPSBtYXgoKnB5KSAtIG1pbigqcHkpCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIGR5ID0gZHkgLSBtaW4obWluKCpweSksIDAuMCkKICAgICAgICAgICAgICAgICAgICBoZWlnaHQgPSBtYXgoaGVpZ2h0LCBtYXgoKnB5KSAtIG1pbihtaW4oKnB5KSwgMC4wKSkKICAgICAgICAgICAgdHJhbnNmb3JtID0gVHJhbnNmb3JtKCp0cmFuc2Zvcm1bOjRdLCBkeCwgZHkpCiAgICAgICAgd2lkdGgsIGhlaWdodCA9IG1hdGguY2VpbCh3aWR0aCksIG1hdGguY2VpbChoZWlnaHQpCiAgICAgICAgYnVmID0gY3R5cGVzLmNyZWF0ZV9zdHJpbmdfYnVmZmVyKHdpZHRoICogaGVpZ2h0KQogICAgICAgIGJpdG1hcCA9IEZUX0JpdG1hcCgKICAgICAgICAgICAgKGN0eXBlcy5jX2ludCkoaGVpZ2h0KSwKICAgICAgICAgICAgKGN0eXBlcy5jX2ludCkod2lkdGgpLAogICAgICAgICAgICAoY3R5cGVzLmNfaW50KSh3aWR0aCksCiAgICAgICAgICAgIChjdHlwZXMuUE9JTlRFUihjdHlwZXMuY191Ynl0ZSkpKGJ1ZiksCiAgICAgICAgICAgIChjdHlwZXMuY19zaG9ydCkoMjU2KSwKICAgICAgICAgICAgKGN0eXBlcy5jX3VieXRlKShGVF9QSVhFTF9NT0RFX0dSQVkpLAogICAgICAgICAgICAoY3R5cGVzLmNfY2hhcikoMCksCiAgICAgICAgICAgIChjdHlwZXMuY192b2lkX3ApKE5vbmUpLAogICAgICAgICkKICAgICAgICBvdXRsaW5lID0gc2VsZi5vdXRsaW5lKHRyYW5zZm9ybT10cmFuc2Zvcm0sIGV2ZW5PZGQ9ZXZlbk9kZCkKICAgICAgICBlcnIgPSBGVF9PdXRsaW5lX0dldF9CaXRtYXAoCiAgICAgICAgICAgIGZyZWV0eXBlLmdldF9oYW5kbGUoKSwgY3R5cGVzLmJ5cmVmKG91dGxpbmUpLCBjdHlwZXMuYnlyZWYoYml0bWFwKQogICAgICAgICkKICAgICAgICBpZiBlcnIgIT0gMDoKICAgICAgICAgICAgcmFpc2UgRlRfRXhjZXB0aW9uKGVycikKICAgICAgICByZXR1cm4gYnVmLnJhdywgKHdpZHRoLCBoZWlnaHQpCgogICAgZGVmIGFycmF5KAogICAgICAgIHNlbGYsIHdpZHRoPU5vbmUsIGhlaWdodD1Ob25lLCB0cmFuc2Zvcm09Tm9uZSwgY29udGFpbj1GYWxzZSwgZXZlbk9kZD1GYWxzZQogICAgKToKICAgICAgICAiIiJSZXR1cm5zIHRoZSByZW5kZXJlZCBjb250b3VycyBhcyBhIG51bXB5IGFycmF5LiBSZXF1aXJlcyBgbnVtcHlgLgoKICAgICAgICBBcmdzOgogICAgICAgICAgICB3aWR0aDogSW1hZ2Ugd2lkdGggb2YgdGhlIGJpdG1hcCBpbiBwaXhlbHMuIElmIG9taXR0ZWQsIGl0CiAgICAgICAgICAgICAgICBhdXRvbWF0aWNhbGx5IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBvZiB0aGUgY29udG91cnMuCiAgICAgICAgICAgIGhlaWdodDogSW1hZ2UgaGVpZ2h0IG9mIHRoZSBiaXRtYXAgaW4gcGl4ZWxzLiBJZiBvbWl0dGVkLCBpdAogICAgICAgICAgICAgICAgYXV0b21hdGljYWxseSBmaXRzIHRvIHRoZSBib3VuZGluZyBib3ggb2YgdGhlIGNvbnRvdXJzLgogICAgICAgICAgICB0cmFuc2Zvcm06IEFuIG9wdGlvbmFsIDYtdHVwbGUgY29udGFpbmluZyBhbiBhZmZpbmUgdHJhbnNmb3JtYXRpb24sCiAgICAgICAgICAgICAgICBvciBhIGBgVHJhbnNmb3JtYGAgb2JqZWN0IGZyb20gdGhlIGBgZm9udFRvb2xzLm1pc2MudHJhbnNmb3JtYGAKICAgICAgICAgICAgICAgIG1vZHVsZS4gVGhlIGJpdG1hcCBzaXplIGlzIG5vdCBhZmZlY3RlZCBieSB0aGlzIG1hdHJpeC4KICAgICAgICAgICAgY29udGFpbjogSWYgYGBUcnVlYGAsIHRoZSBpbWFnZSBzaXplIHdpbGwgYmUgYXV0b21hdGljYWxseSBleHBhbmRlZAogICAgICAgICAgICAgICAgc28gdGhhdCBpdCBmaXRzIHRvIHRoZSBib3VuZGluZyBib3ggb2YgdGhlIHBhdGhzLiBVc2VmdWwgZm9yCiAgICAgICAgICAgICAgICByZW5kZXJpbmcgZ2x5cGhzIHdpdGggbmVnYXRpdmUgc2lkZWJlYXJpbmdzIHdpdGhvdXQgY2xpcHBpbmcuCiAgICAgICAgICAgIGV2ZW5PZGQ6IFBhc3MgYGBUcnVlYGAgZm9yIGV2ZW4tb2RkIGZpbGwgaW5zdGVhZCBvZiBub24temVyby4KCiAgICAgICAgUmV0dXJuczoKICAgICAgICAgICAgQSBgYG51bXB5Lm5kYXJyYXlgYCBvYmplY3Qgd2l0aCBhIHNoYXBlIG9mIGBgKGhlaWdodCwgd2lkdGgpYGAuCiAgICAgICAgICAgIEVhY2ggZWxlbWVudCB0YWtlcyBhIHZhbHVlIGluIHRoZSByYW5nZSBvZiBgYFswLjAsIDEuMF1gYC4KCiAgICAgICAgTm90ZXM6CiAgICAgICAgICAgIFRoZSBpbWFnZSBzaXplIHNob3VsZCBhbHdheXMgYmUgZ2l2ZW4gZXhwbGljaXRseSBpZiB5b3UgbmVlZCB0byBnZXQKICAgICAgICAgICAgYSBwcm9wZXIgZ2x5cGggaW1hZ2UuIFdoZW4gYGB3aWR0aGBgIGFuZCBgYGhlaWdodGBgIGFyZSBvbWl0dGVkLCBpdAogICAgICAgICAgICBmb3JjaWZ1bGx5IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBhbmQgdGhlIHNpZGUgYmVhcmluZ3MgZ2V0CiAgICAgICAgICAgIGNyb3BwZWQuIElmIHlvdSBwYXNzIGBgMGBgIHRvIGJvdGggYGB3aWR0aGBgIGFuZCBgYGhlaWdodGBgIGFuZCBzZXQKICAgICAgICAgICAgYGBjb250YWluYGAgdG8gYGBUcnVlYGAsIGl0IGV4cGFuZHMgdG8gdGhlIGJvdW5kaW5nIGJveCB3aGlsZQogICAgICAgICAgICBtYWludGFpbmluZyB0aGUgb3JpZ2luIG9mIHRoZSBjb250b3VycywgbWVhbmluZyB0aGF0IExTQiB3aWxsIGJlCiAgICAgICAgICAgIG1haW50YWluZWQgYnV0IFJTQiB3b27igJl0LiBUaGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSB0d28gYmVjb21lcwogICAgICAgICAgICBtb3JlIG9idmlvdXMgd2hlbiByb3RhdGUgb3Igc2tldyB0cmFuc2Zvcm1hdGlvbiBpcyBhcHBsaWVkLgoKICAgICAgICBFeGFtcGxlOgogICAgICAgICAgICAuLiBjb2RlLWJsb2NrOjogcHljb24KCiAgICAgICAgICAgICAgICA+Pj4KICAgICAgICAgICAgICAgID4+IHBlbiA9IEZyZWVUeXBlUGVuKE5vbmUpCiAgICAgICAgICAgICAgICA+PiBnbHlwaC5kcmF3KHBlbikKICAgICAgICAgICAgICAgID4+IGFyciA9IHBlbi5hcnJheSh3aWR0aD01MDAsIGhlaWdodD0xMDAwKQogICAgICAgICAgICAgICAgPj4gdHlwZShhKSwgYS5zaGFwZQogICAgICAgICAgICAgICAgKDxjbGFzcyAnbnVtcHkubmRhcnJheSc+LCAoMTAwMCwgNTAwKSkKICAgICAgICAiIiIKCiAgICAgICAgaW1wb3J0IG51bXB5IGFzIG5wCgogICAgICAgIGJ1Ziwgc2l6ZSA9IHNlbGYuYnVmZmVyKAogICAgICAgICAgICB3aWR0aD13aWR0aCwKICAgICAgICAgICAgaGVpZ2h0PWhlaWdodCwKICAgICAgICAgICAgdHJhbnNmb3JtPXRyYW5zZm9ybSwKICAgICAgICAgICAgY29udGFpbj1jb250YWluLAogICAgICAgICAgICBldmVuT2RkPWV2ZW5PZGQsCiAgICAgICAgKQogICAgICAgIHJldHVybiBucC5mcm9tYnVmZmVyKGJ1ZiwgIkIiKS5yZXNoYXBlKChzaXplWzFdLCBzaXplWzBdKSkgLyAyNTUuMAoKICAgIGRlZiBzaG93KAogICAgICAgIHNlbGYsIHdpZHRoPU5vbmUsIGhlaWdodD1Ob25lLCB0cmFuc2Zvcm09Tm9uZSwgY29udGFpbj1GYWxzZSwgZXZlbk9kZD1GYWxzZQogICAgKToKICAgICAgICAiIiJQbG90cyB0aGUgcmVuZGVyZWQgY29udG91cnMgd2l0aCBgcHlwbG90YC4gUmVxdWlyZXMgYG51bXB5YCBhbmQKICAgICAgICBgbWF0cGxvdGxpYmAuCgogICAgICAgIEFyZ3M6CiAgICAgICAgICAgIHdpZHRoOiBJbWFnZSB3aWR0aCBvZiB0aGUgYml0bWFwIGluIHBpeGVscy4gSWYgb21pdHRlZCwgaXQKICAgICAgICAgICAgICAgIGF1dG9tYXRpY2FsbHkgZml0cyB0byB0aGUgYm91bmRpbmcgYm94IG9mIHRoZSBjb250b3Vycy4KICAgICAgICAgICAgaGVpZ2h0OiBJbWFnZSBoZWlnaHQgb2YgdGhlIGJpdG1hcCBpbiBwaXhlbHMuIElmIG9taXR0ZWQsIGl0CiAgICAgICAgICAgICAgICBhdXRvbWF0aWNhbGx5IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBvZiB0aGUgY29udG91cnMuCiAgICAgICAgICAgIHRyYW5zZm9ybTogQW4gb3B0aW9uYWwgNi10dXBsZSBjb250YWluaW5nIGFuIGFmZmluZSB0cmFuc2Zvcm1hdGlvbiwKICAgICAgICAgICAgICAgIG9yIGEgYGBUcmFuc2Zvcm1gYCBvYmplY3QgZnJvbSB0aGUgYGBmb250VG9vbHMubWlzYy50cmFuc2Zvcm1gYAogICAgICAgICAgICAgICAgbW9kdWxlLiBUaGUgYml0bWFwIHNpemUgaXMgbm90IGFmZmVjdGVkIGJ5IHRoaXMgbWF0cml4LgogICAgICAgICAgICBjb250YWluOiBJZiBgYFRydWVgYCwgdGhlIGltYWdlIHNpemUgd2lsbCBiZSBhdXRvbWF0aWNhbGx5IGV4cGFuZGVkCiAgICAgICAgICAgICAgICBzbyB0aGF0IGl0IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBvZiB0aGUgcGF0aHMuIFVzZWZ1bCBmb3IKICAgICAgICAgICAgICAgIHJlbmRlcmluZyBnbHlwaHMgd2l0aCBuZWdhdGl2ZSBzaWRlYmVhcmluZ3Mgd2l0aG91dCBjbGlwcGluZy4KICAgICAgICAgICAgZXZlbk9kZDogUGFzcyBgYFRydWVgYCBmb3IgZXZlbi1vZGQgZmlsbCBpbnN0ZWFkIG9mIG5vbi16ZXJvLgoKICAgICAgICBOb3RlczoKICAgICAgICAgICAgVGhlIGltYWdlIHNpemUgc2hvdWxkIGFsd2F5cyBiZSBnaXZlbiBleHBsaWNpdGx5IGlmIHlvdSBuZWVkIHRvIGdldAogICAgICAgICAgICBhIHByb3BlciBnbHlwaCBpbWFnZS4gV2hlbiBgYHdpZHRoYGAgYW5kIGBgaGVpZ2h0YGAgYXJlIG9taXR0ZWQsIGl0CiAgICAgICAgICAgIGZvcmNpZnVsbHkgZml0cyB0byB0aGUgYm91bmRpbmcgYm94IGFuZCB0aGUgc2lkZSBiZWFyaW5ncyBnZXQKICAgICAgICAgICAgY3JvcHBlZC4gSWYgeW91IHBhc3MgYGAwYGAgdG8gYm90aCBgYHdpZHRoYGAgYW5kIGBgaGVpZ2h0YGAgYW5kIHNldAogICAgICAgICAgICBgYGNvbnRhaW5gYCB0byBgYFRydWVgYCwgaXQgZXhwYW5kcyB0byB0aGUgYm91bmRpbmcgYm94IHdoaWxlCiAgICAgICAgICAgIG1haW50YWluaW5nIHRoZSBvcmlnaW4gb2YgdGhlIGNvbnRvdXJzLCBtZWFuaW5nIHRoYXQgTFNCIHdpbGwgYmUKICAgICAgICAgICAgbWFpbnRhaW5lZCBidXQgUlNCIHdvbuKAmXQuIFRoZSBkaWZmZXJlbmNlIGJldHdlZW4gdGhlIHR3byBiZWNvbWVzCiAgICAgICAgICAgIG1vcmUgb2J2aW91cyB3aGVuIHJvdGF0ZSBvciBza2V3IHRyYW5zZm9ybWF0aW9uIGlzIGFwcGxpZWQuCgogICAgICAgIEV4YW1wbGU6CiAgICAgICAgICAgIC4uIGNvZGUtYmxvY2s6OiBweWNvbgoKICAgICAgICAgICAgICAgID4+PgogICAgICAgICAgICAgICAgPj4gcGVuID0gRnJlZVR5cGVQZW4oTm9uZSkKICAgICAgICAgICAgICAgID4+IGdseXBoLmRyYXcocGVuKQogICAgICAgICAgICAgICAgPj4gcGVuLnNob3cod2lkdGg9NTAwLCBoZWlnaHQ9MTAwMCkKICAgICAgICAiIiIKICAgICAgICBmcm9tIG1hdHBsb3RsaWIgaW1wb3J0IHB5cGxvdCBhcyBwbHQKCiAgICAgICAgYSA9IHNlbGYuYXJyYXkoCiAgICAgICAgICAgIHdpZHRoPXdpZHRoLAogICAgICAgICAgICBoZWlnaHQ9aGVpZ2h0LAogICAgICAgICAgICB0cmFuc2Zvcm09dHJhbnNmb3JtLAogICAgICAgICAgICBjb250YWluPWNvbnRhaW4sCiAgICAgICAgICAgIGV2ZW5PZGQ9ZXZlbk9kZCwKICAgICAgICApCiAgICAgICAgcGx0Lmltc2hvdyhhLCBjbWFwPSJncmF5X3IiLCB2bWluPTAsIHZtYXg9MSkKICAgICAgICBwbHQuc2hvdygpCgogICAgZGVmIGltYWdlKAogICAgICAgIHNlbGYsIHdpZHRoPU5vbmUsIGhlaWdodD1Ob25lLCB0cmFuc2Zvcm09Tm9uZSwgY29udGFpbj1GYWxzZSwgZXZlbk9kZD1GYWxzZQogICAgKToKICAgICAgICAiIiJSZXR1cm5zIHRoZSByZW5kZXJlZCBjb250b3VycyBhcyBhIFBJTCBpbWFnZS4gUmVxdWlyZXMgYFBpbGxvd2AuCiAgICAgICAgQ2FuIGJlIHVzZWQgdG8gZGlzcGxheSBhIGdseXBoIGltYWdlIGluIEp1cHl0ZXIgTm90ZWJvb2suCgogICAgICAgIEFyZ3M6CiAgICAgICAgICAgIHdpZHRoOiBJbWFnZSB3aWR0aCBvZiB0aGUgYml0bWFwIGluIHBpeGVscy4gSWYgb21pdHRlZCwgaXQKICAgICAgICAgICAgICAgIGF1dG9tYXRpY2FsbHkgZml0cyB0byB0aGUgYm91bmRpbmcgYm94IG9mIHRoZSBjb250b3Vycy4KICAgICAgICAgICAgaGVpZ2h0OiBJbWFnZSBoZWlnaHQgb2YgdGhlIGJpdG1hcCBpbiBwaXhlbHMuIElmIG9taXR0ZWQsIGl0CiAgICAgICAgICAgICAgICBhdXRvbWF0aWNhbGx5IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBvZiB0aGUgY29udG91cnMuCiAgICAgICAgICAgIHRyYW5zZm9ybTogQW4gb3B0aW9uYWwgNi10dXBsZSBjb250YWluaW5nIGFuIGFmZmluZSB0cmFuc2Zvcm1hdGlvbiwKICAgICAgICAgICAgICAgIG9yIGEgYGBUcmFuc2Zvcm1gYCBvYmplY3QgZnJvbSB0aGUgYGBmb250VG9vbHMubWlzYy50cmFuc2Zvcm1gYAogICAgICAgICAgICAgICAgbW9kdWxlLiBUaGUgYml0bWFwIHNpemUgaXMgbm90IGFmZmVjdGVkIGJ5IHRoaXMgbWF0cml4LgogICAgICAgICAgICBjb250YWluOiBJZiBgYFRydWVgYCwgdGhlIGltYWdlIHNpemUgd2lsbCBiZSBhdXRvbWF0aWNhbGx5IGV4cGFuZGVkCiAgICAgICAgICAgICAgICBzbyB0aGF0IGl0IGZpdHMgdG8gdGhlIGJvdW5kaW5nIGJveCBvZiB0aGUgcGF0aHMuIFVzZWZ1bCBmb3IKICAgICAgICAgICAgICAgIHJlbmRlcmluZyBnbHlwaHMgd2l0aCBuZWdhdGl2ZSBzaWRlYmVhcmluZ3Mgd2l0aG91dCBjbGlwcGluZy4KICAgICAgICAgICAgZXZlbk9kZDogUGFzcyBgYFRydWVgYCBmb3IgZXZlbi1vZGQgZmlsbCBpbnN0ZWFkIG9mIG5vbi16ZXJvLgoKICAgICAgICBSZXR1cm5zOgogICAgICAgICAgICBBIGBgUElMLmltYWdlYGAgb2JqZWN0LiBUaGUgaW1hZ2UgaXMgZmlsbGVkIGluIGJsYWNrIHdpdGggYWxwaGEKICAgICAgICAgICAgY2hhbm5lbCBvYnRhaW5lZCBmcm9tIHRoZSByZW5kZXJlZCBiaXRtYXAuCgogICAgICAgIE5vdGVzOgogICAgICAgICAgICBUaGUgaW1hZ2Ugc2l6ZSBzaG91bGQgYWx3YXlzIGJlIGdpdmVuIGV4cGxpY2l0bHkgaWYgeW91IG5lZWQgdG8gZ2V0CiAgICAgICAgICAgIGEgcHJvcGVyIGdseXBoIGltYWdlLiBXaGVuIGBgd2lkdGhgYCBhbmQgYGBoZWlnaHRgYCBhcmUgb21pdHRlZCwgaXQKICAgICAgICAgICAgZm9yY2lmdWxseSBmaXRzIHRvIHRoZSBib3VuZGluZyBib3ggYW5kIHRoZSBzaWRlIGJlYXJpbmdzIGdldAogICAgICAgICAgICBjcm9wcGVkLiBJZiB5b3UgcGFzcyBgYDBgYCB0byBib3RoIGBgd2lkdGhgYCBhbmQgYGBoZWlnaHRgYCBhbmQgc2V0CiAgICAgICAgICAgIGBgY29udGFpbmBgIHRvIGBgVHJ1ZWBgLCBpdCBleHBhbmRzIHRvIHRoZSBib3VuZGluZyBib3ggd2hpbGUKICAgICAgICAgICAgbWFpbnRhaW5pbmcgdGhlIG9yaWdpbiBvZiB0aGUgY29udG91cnMsIG1lYW5pbmcgdGhhdCBMU0Igd2lsbCBiZQogICAgICAgICAgICBtYWludGFpbmVkIGJ1dCBSU0Igd29u4oCZdC4gVGhlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgdHdvIGJlY29tZXMKICAgICAgICAgICAgbW9yZSBvYnZpb3VzIHdoZW4gcm90YXRlIG9yIHNrZXcgdHJhbnNmb3JtYXRpb24gaXMgYXBwbGllZC4KCiAgICAgICAgRXhhbXBsZToKICAgICAgICAgICAgLi4gY29kZS1ibG9jazo6IHB5Y29uCgogICAgICAgICAgICAgICAgPj4+CiAgICAgICAgICAgICAgICA+PiBwZW4gPSBGcmVlVHlwZVBlbihOb25lKQogICAgICAgICAgICAgICAgPj4gZ2x5cGguZHJhdyhwZW4pCiAgICAgICAgICAgICAgICA+PiBpbWcgPSBwZW4uaW1hZ2Uod2lkdGg9NTAwLCBoZWlnaHQ9MTAwMCkKICAgICAgICAgICAgICAgID4+IHR5cGUoaW1nKSwgaW1nLnNpemUKICAgICAgICAgICAgICAgICg8Y2xhc3MgJ1BJTC5JbWFnZS5JbWFnZSc+LCAoNTAwLCAxMDAwKSkKICAgICAgICAiIiIKICAgICAgICBmcm9tIFBJTCBpbXBvcnQgSW1hZ2UKCiAgICAgICAgYnVmLCBzaXplID0gc2VsZi5idWZmZXIoCiAgICAgICAgICAgIHdpZHRoPXdpZHRoLAogICAgICAgICAgICBoZWlnaHQ9aGVpZ2h0LAogICAgICAgICAgICB0cmFuc2Zvcm09dHJhbnNmb3JtLAogICAgICAgICAgICBjb250YWluPWNvbnRhaW4sCiAgICAgICAgICAgIGV2ZW5PZGQ9ZXZlbk9kZCwKICAgICAgICApCiAgICAgICAgaW1nID0gSW1hZ2UubmV3KCJMIiwgc2l6ZSwgMCkKICAgICAgICBpbWcucHV0YWxwaGEoSW1hZ2UuZnJvbWJ1ZmZlcigiTCIsIHNpemUsIGJ1ZikpCiAgICAgICAgcmV0dXJuIGltZwoKICAgIEBwcm9wZXJ0eQogICAgZGVmIGJib3goc2VsZik6CiAgICAgICAgIiIiQ29tcHV0ZXMgdGhlIGV4YWN0IGJvdW5kaW5nIGJveCBvZiBhbiBvdXRsaW5lLgoKICAgICAgICBSZXR1cm5zOgogICAgICAgICAgICBBIHR1cGxlIG9mIGBgKHhNaW4sIHlNaW4sIHhNYXgsIHlNYXgpYGAuCiAgICAgICAgIiIiCiAgICAgICAgYmJveCA9IEZUX0JCb3goKQogICAgICAgIG91dGxpbmUgPSBzZWxmLm91dGxpbmUoKQogICAgICAgIEZUX091dGxpbmVfR2V0X0JCb3goY3R5cGVzLmJ5cmVmKG91dGxpbmUpLCBjdHlwZXMuYnlyZWYoYmJveCkpCiAgICAgICAgcmV0dXJuIChiYm94LnhNaW4gLyA2NC4wLCBiYm94LnlNaW4gLyA2NC4wLCBiYm94LnhNYXggLyA2NC4wLCBiYm94LnlNYXggLyA2NC4wKQoKICAgIEBwcm9wZXJ0eQogICAgZGVmIGNib3goc2VsZik6CiAgICAgICAgIiIiUmV0dXJucyBhbiBvdXRsaW5lJ3Mg4oCYY29udHJvbCBib3jigJkuCgogICAgICAgIFJldHVybnM6CiAgICAgICAgICAgIEEgdHVwbGUgb2YgYGAoeE1pbiwgeU1pbiwgeE1heCwgeU1heClgYC4KICAgICAgICAiIiIKICAgICAgICBjYm94ID0gRlRfQkJveCgpCiAgICAgICAgb3V0bGluZSA9IHNlbGYub3V0bGluZSgpCiAgICAgICAgRlRfT3V0bGluZV9HZXRfQ0JveChjdHlwZXMuYnlyZWYob3V0bGluZSksIGN0eXBlcy5ieXJlZihjYm94KSkKICAgICAgICByZXR1cm4gKGNib3gueE1pbiAvIDY0LjAsIGNib3gueU1pbiAvIDY0LjAsIGNib3gueE1heCAvIDY0LjAsIGNib3gueU1heCAvIDY0LjApCgogICAgZGVmIF9tb3ZlVG8oc2VsZiwgcHQpOgogICAgICAgIGNvbnRvdXIgPSBDb250b3VyKFtdLCBbXSkKICAgICAgICBzZWxmLmNvbnRvdXJzLmFwcGVuZChjb250b3VyKQogICAgICAgIGNvbnRvdXIucG9pbnRzLmFwcGVuZChwdCkKICAgICAgICBjb250b3VyLnRhZ3MuYXBwZW5kKEZUX0NVUlZFX1RBR19PTikKCiAgICBkZWYgX2xpbmVUbyhzZWxmLCBwdCk6CiAgICAgICAgaWYgbm90IChzZWxmLmNvbnRvdXJzIGFuZCBsZW4oc2VsZi5jb250b3Vyc1stMV0ucG9pbnRzKSA+IDApOgogICAgICAgICAgICByYWlzZSBQZW5FcnJvcigiQ29udG91ciBtaXNzaW5nIHJlcXVpcmVkIGluaXRpYWwgbW92ZVRvIikKICAgICAgICBjb250b3VyID0gc2VsZi5jb250b3Vyc1stMV0KICAgICAgICBjb250b3VyLnBvaW50cy5hcHBlbmQocHQpCiAgICAgICAgY29udG91ci50YWdzLmFwcGVuZChGVF9DVVJWRV9UQUdfT04pCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIGlmIG5vdCAoc2VsZi5jb250b3VycyBhbmQgbGVuKHNlbGYuY29udG91cnNbLTFdLnBvaW50cykgPiAwKToKICAgICAgICAgICAgcmFpc2UgUGVuRXJyb3IoIkNvbnRvdXIgbWlzc2luZyByZXF1aXJlZCBpbml0aWFsIG1vdmVUbyIpCiAgICAgICAgdDEsIHQyLCB0MyA9IEZUX0NVUlZFX1RBR19DVUJJQywgRlRfQ1VSVkVfVEFHX0NVQklDLCBGVF9DVVJWRV9UQUdfT04KICAgICAgICBjb250b3VyID0gc2VsZi5jb250b3Vyc1stMV0KICAgICAgICBmb3IgcCwgdCBpbiAoKHAxLCB0MSksIChwMiwgdDIpLCAocDMsIHQzKSk6CiAgICAgICAgICAgIGNvbnRvdXIucG9pbnRzLmFwcGVuZChwKQogICAgICAgICAgICBjb250b3VyLnRhZ3MuYXBwZW5kKHQpCgogICAgZGVmIF9xQ3VydmVUb09uZShzZWxmLCBwMSwgcDIpOgogICAgICAgIGlmIG5vdCAoc2VsZi5jb250b3VycyBhbmQgbGVuKHNlbGYuY29udG91cnNbLTFdLnBvaW50cykgPiAwKToKICAgICAgICAgICAgcmFpc2UgUGVuRXJyb3IoIkNvbnRvdXIgbWlzc2luZyByZXF1aXJlZCBpbml0aWFsIG1vdmVUbyIpCiAgICAgICAgdDEsIHQyID0gRlRfQ1VSVkVfVEFHX0NPTklDLCBGVF9DVVJWRV9UQUdfT04KICAgICAgICBjb250b3VyID0gc2VsZi5jb250b3Vyc1stMV0KICAgICAgICBmb3IgcCwgdCBpbiAoKHAxLCB0MSksIChwMiwgdDIpKToKICAgICAgICAgICAgY29udG91ci5wb2ludHMuYXBwZW5kKHApCiAgICAgICAgICAgIGNvbnRvdXIudGFncy5hcHBlbmQodCkK
+# -*- coding: utf-8 -*-
+
+"""Pen to rasterize paths with FreeType."""
+
+__all__ = ["FreeTypePen"]
+
+import os
+import ctypes
+import platform
+import subprocess
+import collections
+import math
+
+import freetype
+from freetype.raw import FT_Outline_Get_Bitmap, FT_Outline_Get_BBox, FT_Outline_Get_CBox
+from freetype.ft_types import FT_Pos
+from freetype.ft_structs import FT_Vector, FT_BBox, FT_Bitmap, FT_Outline
+from freetype.ft_enums import (
+    FT_OUTLINE_NONE,
+    FT_OUTLINE_EVEN_ODD_FILL,
+    FT_PIXEL_MODE_GRAY,
+    FT_CURVE_TAG_ON,
+    FT_CURVE_TAG_CONIC,
+    FT_CURVE_TAG_CUBIC,
+)
+from freetype.ft_errors import FT_Exception
+
+from fontTools.pens.basePen import BasePen, PenError
+from fontTools.misc.roundTools import otRound
+from fontTools.misc.transform import Transform
+
+Contour = collections.namedtuple("Contour", ("points", "tags"))
+
+
+class FreeTypePen(BasePen):
+    """Pen to rasterize paths with FreeType. Requires `freetype-py` module.
+
+    Constructs ``FT_Outline`` from the paths, and renders it within a bitmap
+    buffer.
+
+    For ``array()`` and ``show()``, `numpy` and `matplotlib` must be installed.
+    For ``image()``, `Pillow` is required. Each module is lazily loaded when the
+    corresponding method is called.
+
+    Args:
+        glyphSet: a dictionary of drawable glyph objects keyed by name
+            used to resolve component references in composite glyphs.
+
+    Examples:
+        If `numpy` and `matplotlib` is available, the following code will
+        show the glyph image of `fi` in a new window::
+
+            from fontTools.ttLib import TTFont
+            from fontTools.pens.freetypePen import FreeTypePen
+            from fontTools.misc.transform import Offset
+            pen = FreeTypePen(None)
+            font = TTFont('SourceSansPro-Regular.otf')
+            glyph = font.getGlyphSet()['fi']
+            glyph.draw(pen)
+            width, ascender, descender = glyph.width, font['OS/2'].usWinAscent, -font['OS/2'].usWinDescent
+            height = ascender - descender
+            pen.show(width=width, height=height, transform=Offset(0, -descender))
+
+        Combining with `uharfbuzz`, you can typeset a chunk of glyphs in a pen::
+
+            import uharfbuzz as hb
+            from fontTools.pens.freetypePen import FreeTypePen
+            from fontTools.pens.transformPen import TransformPen
+            from fontTools.misc.transform import Offset
+
+            en1, en2, ar, ja = 'Typesetting', 'Jeff', 'صف الحروف', 'たいぷせっと'
+            for text, font_path, direction, typo_ascender, typo_descender, vhea_ascender, vhea_descender, contain, features in (
+                (en1, 'NotoSans-Regular.ttf',       'ltr', 2189, -600, None, None, False, {"kern": True, "liga": True}),
+                (en2, 'NotoSans-Regular.ttf',       'ltr', 2189, -600, None, None, True,  {"kern": True, "liga": True}),
+                (ar,  'NotoSansArabic-Regular.ttf', 'rtl', 1374, -738, None, None, False, {"kern": True, "liga": True}),
+                (ja,  'NotoSansJP-Regular.otf',     'ltr', 880,  -120, 500,  -500, False, {"palt": True, "kern": True}),
+                (ja,  'NotoSansJP-Regular.otf',     'ttb', 880,  -120, 500,  -500, False, {"vert": True, "vpal": True, "vkrn": True})
+            ):
+                blob = hb.Blob.from_file_path(font_path)
+                face = hb.Face(blob)
+                font = hb.Font(face)
+                buf = hb.Buffer()
+                buf.direction = direction
+                buf.add_str(text)
+                buf.guess_segment_properties()
+                hb.shape(font, buf, features)
+
+                x, y = 0, 0
+                pen = FreeTypePen(None)
+                for info, pos in zip(buf.glyph_infos, buf.glyph_positions):
+                    gid = info.codepoint
+                    transformed = TransformPen(pen, Offset(x + pos.x_offset, y + pos.y_offset))
+                    font.draw_glyph_with_pen(gid, transformed)
+                    x += pos.x_advance
+                    y += pos.y_advance
+
+                offset, width, height = None, None, None
+                if direction in ('ltr', 'rtl'):
+                    offset = (0, -typo_descender)
+                    width  = x
+                    height = typo_ascender - typo_descender
+                else:
+                    offset = (-vhea_descender, -y)
+                    width  = vhea_ascender - vhea_descender
+                    height = -y
+                pen.show(width=width, height=height, transform=Offset(*offset), contain=contain)
+
+        For Jupyter Notebook, the rendered image will be displayed in a cell if
+        you replace ``show()`` with ``image()`` in the examples.
+    """
+
+    def __init__(self, glyphSet):
+        BasePen.__init__(self, glyphSet)
+        self.contours = []
+
+    def outline(self, transform=None, evenOdd=False):
+        """Converts the current contours to ``FT_Outline``.
+
+        Args:
+            transform: An optional 6-tuple containing an affine transformation,
+                or a ``Transform`` object from the ``fontTools.misc.transform``
+                module.
+            evenOdd: Pass ``True`` for even-odd fill instead of non-zero.
+        """
+        transform = transform or Transform()
+        if not hasattr(transform, "transformPoint"):
+            transform = Transform(*transform)
+        n_contours = len(self.contours)
+        n_points = sum((len(contour.points) for contour in self.contours))
+        points = []
+        for contour in self.contours:
+            for point in contour.points:
+                point = transform.transformPoint(point)
+                points.append(
+                    FT_Vector(
+                        FT_Pos(otRound(point[0] * 64)), FT_Pos(otRound(point[1] * 64))
+                    )
+                )
+        tags = []
+        for contour in self.contours:
+            for tag in contour.tags:
+                tags.append(tag)
+        contours = []
+        contours_sum = 0
+        for contour in self.contours:
+            contours_sum += len(contour.points)
+            contours.append(contours_sum - 1)
+        flags = FT_OUTLINE_EVEN_ODD_FILL if evenOdd else FT_OUTLINE_NONE
+        return FT_Outline(
+            (ctypes.c_short)(n_contours),
+            (ctypes.c_short)(n_points),
+            (FT_Vector * n_points)(*points),
+            (ctypes.c_ubyte * n_points)(*tags),
+            (ctypes.c_short * n_contours)(*contours),
+            (ctypes.c_int)(flags),
+        )
+
+    def buffer(
+        self, width=None, height=None, transform=None, contain=False, evenOdd=False
+    ):
+        """Renders the current contours within a bitmap buffer.
+
+        Args:
+            width: Image width of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            height: Image height of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            transform: An optional 6-tuple containing an affine transformation,
+                or a ``Transform`` object from the ``fontTools.misc.transform``
+                module. The bitmap size is not affected by this matrix.
+            contain: If ``True``, the image size will be automatically expanded
+                so that it fits to the bounding box of the paths. Useful for
+                rendering glyphs with negative sidebearings without clipping.
+            evenOdd: Pass ``True`` for even-odd fill instead of non-zero.
+
+        Returns:
+            A tuple of ``(buffer, size)``, where ``buffer`` is a ``bytes``
+            object of the resulted bitmap and ``size`` is a 2-tuple of its
+            dimension.
+
+        Notes:
+            The image size should always be given explicitly if you need to get
+            a proper glyph image. When ``width`` and ``height`` are omitted, it
+            forcifully fits to the bounding box and the side bearings get
+            cropped. If you pass ``0`` to both ``width`` and ``height`` and set
+            ``contain`` to ``True``, it expands to the bounding box while
+            maintaining the origin of the contours, meaning that LSB will be
+            maintained but RSB won’t. The difference between the two becomes
+            more obvious when rotate or skew transformation is applied.
+
+        Example:
+            .. code-block:: pycon
+
+                >>>
+                >> pen = FreeTypePen(None)
+                >> glyph.draw(pen)
+                >> buf, size = pen.buffer(width=500, height=1000)
+                >> type(buf), len(buf), size
+                (<class 'bytes'>, 500000, (500, 1000))
+        """
+        transform = transform or Transform()
+        if not hasattr(transform, "transformPoint"):
+            transform = Transform(*transform)
+        contain_x, contain_y = contain or width is None, contain or height is None
+        if contain_x or contain_y:
+            dx, dy = transform.dx, transform.dy
+            bbox = self.bbox
+            p1, p2, p3, p4 = (
+                transform.transformPoint((bbox[0], bbox[1])),
+                transform.transformPoint((bbox[2], bbox[1])),
+                transform.transformPoint((bbox[0], bbox[3])),
+                transform.transformPoint((bbox[2], bbox[3])),
+            )
+            px, py = (p1[0], p2[0], p3[0], p4[0]), (p1[1], p2[1], p3[1], p4[1])
+            if contain_x:
+                if width is None:
+                    dx = dx - min(*px)
+                    width = max(*px) - min(*px)
+                else:
+                    dx = dx - min(min(*px), 0.0)
+                    width = max(width, max(*px) - min(min(*px), 0.0))
+            if contain_y:
+                if height is None:
+                    dy = dy - min(*py)
+                    height = max(*py) - min(*py)
+                else:
+                    dy = dy - min(min(*py), 0.0)
+                    height = max(height, max(*py) - min(min(*py), 0.0))
+            transform = Transform(*transform[:4], dx, dy)
+        width, height = math.ceil(width), math.ceil(height)
+        buf = ctypes.create_string_buffer(width * height)
+        bitmap = FT_Bitmap(
+            (ctypes.c_int)(height),
+            (ctypes.c_int)(width),
+            (ctypes.c_int)(width),
+            (ctypes.POINTER(ctypes.c_ubyte))(buf),
+            (ctypes.c_short)(256),
+            (ctypes.c_ubyte)(FT_PIXEL_MODE_GRAY),
+            (ctypes.c_char)(0),
+            (ctypes.c_void_p)(None),
+        )
+        outline = self.outline(transform=transform, evenOdd=evenOdd)
+        err = FT_Outline_Get_Bitmap(
+            freetype.get_handle(), ctypes.byref(outline), ctypes.byref(bitmap)
+        )
+        if err != 0:
+            raise FT_Exception(err)
+        return buf.raw, (width, height)
+
+    def array(
+        self, width=None, height=None, transform=None, contain=False, evenOdd=False
+    ):
+        """Returns the rendered contours as a numpy array. Requires `numpy`.
+
+        Args:
+            width: Image width of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            height: Image height of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            transform: An optional 6-tuple containing an affine transformation,
+                or a ``Transform`` object from the ``fontTools.misc.transform``
+                module. The bitmap size is not affected by this matrix.
+            contain: If ``True``, the image size will be automatically expanded
+                so that it fits to the bounding box of the paths. Useful for
+                rendering glyphs with negative sidebearings without clipping.
+            evenOdd: Pass ``True`` for even-odd fill instead of non-zero.
+
+        Returns:
+            A ``numpy.ndarray`` object with a shape of ``(height, width)``.
+            Each element takes a value in the range of ``[0.0, 1.0]``.
+
+        Notes:
+            The image size should always be given explicitly if you need to get
+            a proper glyph image. When ``width`` and ``height`` are omitted, it
+            forcifully fits to the bounding box and the side bearings get
+            cropped. If you pass ``0`` to both ``width`` and ``height`` and set
+            ``contain`` to ``True``, it expands to the bounding box while
+            maintaining the origin of the contours, meaning that LSB will be
+            maintained but RSB won’t. The difference between the two becomes
+            more obvious when rotate or skew transformation is applied.
+
+        Example:
+            .. code-block:: pycon
+
+                >>>
+                >> pen = FreeTypePen(None)
+                >> glyph.draw(pen)
+                >> arr = pen.array(width=500, height=1000)
+                >> type(a), a.shape
+                (<class 'numpy.ndarray'>, (1000, 500))
+        """
+
+        import numpy as np
+
+        buf, size = self.buffer(
+            width=width,
+            height=height,
+            transform=transform,
+            contain=contain,
+            evenOdd=evenOdd,
+        )
+        return np.frombuffer(buf, "B").reshape((size[1], size[0])) / 255.0
+
+    def show(
+        self, width=None, height=None, transform=None, contain=False, evenOdd=False
+    ):
+        """Plots the rendered contours with `pyplot`. Requires `numpy` and
+        `matplotlib`.
+
+        Args:
+            width: Image width of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            height: Image height of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            transform: An optional 6-tuple containing an affine transformation,
+                or a ``Transform`` object from the ``fontTools.misc.transform``
+                module. The bitmap size is not affected by this matrix.
+            contain: If ``True``, the image size will be automatically expanded
+                so that it fits to the bounding box of the paths. Useful for
+                rendering glyphs with negative sidebearings without clipping.
+            evenOdd: Pass ``True`` for even-odd fill instead of non-zero.
+
+        Notes:
+            The image size should always be given explicitly if you need to get
+            a proper glyph image. When ``width`` and ``height`` are omitted, it
+            forcifully fits to the bounding box and the side bearings get
+            cropped. If you pass ``0`` to both ``width`` and ``height`` and set
+            ``contain`` to ``True``, it expands to the bounding box while
+            maintaining the origin of the contours, meaning that LSB will be
+            maintained but RSB won’t. The difference between the two becomes
+            more obvious when rotate or skew transformation is applied.
+
+        Example:
+            .. code-block:: pycon
+
+                >>>
+                >> pen = FreeTypePen(None)
+                >> glyph.draw(pen)
+                >> pen.show(width=500, height=1000)
+        """
+        from matplotlib import pyplot as plt
+
+        a = self.array(
+            width=width,
+            height=height,
+            transform=transform,
+            contain=contain,
+            evenOdd=evenOdd,
+        )
+        plt.imshow(a, cmap="gray_r", vmin=0, vmax=1)
+        plt.show()
+
+    def image(
+        self, width=None, height=None, transform=None, contain=False, evenOdd=False
+    ):
+        """Returns the rendered contours as a PIL image. Requires `Pillow`.
+        Can be used to display a glyph image in Jupyter Notebook.
+
+        Args:
+            width: Image width of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            height: Image height of the bitmap in pixels. If omitted, it
+                automatically fits to the bounding box of the contours.
+            transform: An optional 6-tuple containing an affine transformation,
+                or a ``Transform`` object from the ``fontTools.misc.transform``
+                module. The bitmap size is not affected by this matrix.
+            contain: If ``True``, the image size will be automatically expanded
+                so that it fits to the bounding box of the paths. Useful for
+                rendering glyphs with negative sidebearings without clipping.
+            evenOdd: Pass ``True`` for even-odd fill instead of non-zero.
+
+        Returns:
+            A ``PIL.image`` object. The image is filled in black with alpha
+            channel obtained from the rendered bitmap.
+
+        Notes:
+            The image size should always be given explicitly if you need to get
+            a proper glyph image. When ``width`` and ``height`` are omitted, it
+            forcifully fits to the bounding box and the side bearings get
+            cropped. If you pass ``0`` to both ``width`` and ``height`` and set
+            ``contain`` to ``True``, it expands to the bounding box while
+            maintaining the origin of the contours, meaning that LSB will be
+            maintained but RSB won’t. The difference between the two becomes
+            more obvious when rotate or skew transformation is applied.
+
+        Example:
+            .. code-block:: pycon
+
+                >>>
+                >> pen = FreeTypePen(None)
+                >> glyph.draw(pen)
+                >> img = pen.image(width=500, height=1000)
+                >> type(img), img.size
+                (<class 'PIL.Image.Image'>, (500, 1000))
+        """
+        from PIL import Image
+
+        buf, size = self.buffer(
+            width=width,
+            height=height,
+            transform=transform,
+            contain=contain,
+            evenOdd=evenOdd,
+        )
+        img = Image.new("L", size, 0)
+        img.putalpha(Image.frombuffer("L", size, buf))
+        return img
+
+    @property
+    def bbox(self):
+        """Computes the exact bounding box of an outline.
+
+        Returns:
+            A tuple of ``(xMin, yMin, xMax, yMax)``.
+        """
+        bbox = FT_BBox()
+        outline = self.outline()
+        FT_Outline_Get_BBox(ctypes.byref(outline), ctypes.byref(bbox))
+        return (bbox.xMin / 64.0, bbox.yMin / 64.0, bbox.xMax / 64.0, bbox.yMax / 64.0)
+
+    @property
+    def cbox(self):
+        """Returns an outline's ‘control box’.
+
+        Returns:
+            A tuple of ``(xMin, yMin, xMax, yMax)``.
+        """
+        cbox = FT_BBox()
+        outline = self.outline()
+        FT_Outline_Get_CBox(ctypes.byref(outline), ctypes.byref(cbox))
+        return (cbox.xMin / 64.0, cbox.yMin / 64.0, cbox.xMax / 64.0, cbox.yMax / 64.0)
+
+    def _moveTo(self, pt):
+        contour = Contour([], [])
+        self.contours.append(contour)
+        contour.points.append(pt)
+        contour.tags.append(FT_CURVE_TAG_ON)
+
+    def _lineTo(self, pt):
+        if not (self.contours and len(self.contours[-1].points) > 0):
+            raise PenError("Contour missing required initial moveTo")
+        contour = self.contours[-1]
+        contour.points.append(pt)
+        contour.tags.append(FT_CURVE_TAG_ON)
+
+    def _curveToOne(self, p1, p2, p3):
+        if not (self.contours and len(self.contours[-1].points) > 0):
+            raise PenError("Contour missing required initial moveTo")
+        t1, t2, t3 = FT_CURVE_TAG_CUBIC, FT_CURVE_TAG_CUBIC, FT_CURVE_TAG_ON
+        contour = self.contours[-1]
+        for p, t in ((p1, t1), (p2, t2), (p3, t3)):
+            contour.points.append(p)
+            contour.tags.append(t)
+
+    def _qCurveToOne(self, p1, p2):
+        if not (self.contours and len(self.contours[-1].points) > 0):
+            raise PenError("Contour missing required initial moveTo")
+        t1, t2 = FT_CURVE_TAG_CONIC, FT_CURVE_TAG_ON
+        contour = self.contours[-1]
+        for p, t in ((p1, t1), (p2, t2)):
+            contour.points.append(p)
+            contour.tags.append(t)

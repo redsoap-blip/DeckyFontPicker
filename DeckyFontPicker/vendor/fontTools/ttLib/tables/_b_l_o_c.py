@@ -1,1 +1,5 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLkVfQl9MX0NfIGltcG9ydCB0YWJsZV9FX0JfTF9DXwoKCmNsYXNzIHRhYmxlX19iX2xfb19jKHRhYmxlX0VfQl9MX0NfKToKICAgIGRlcGVuZGVuY2llcyA9IFsiYmRhdCJdCg==
+from fontTools.ttLib.tables.E_B_L_C_ import table_E_B_L_C_
+
+
+class table__b_l_o_c(table_E_B_L_C_):
+    dependencies = ["bdat"]

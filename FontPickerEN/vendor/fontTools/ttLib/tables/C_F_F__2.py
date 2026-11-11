@@ -1,1 +1,26 @@
-ZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuQ19GX0ZfIGltcG9ydCB0YWJsZV9DX0ZfRl8KCgpjbGFzcyB0YWJsZV9DX0ZfRl9fMih0YWJsZV9DX0ZfRl8pOgogICAgIiIiQ29tcGFjdCBGb250IEZvcm1hdCB2ZXJzaW9uIDIgdGFibGUKCiAgICBUaGUgYGBDRkYyYGAgdGFibGUgY29udGFpbnMgZ2x5cGggZGF0YSBmb3IgYSBDRkYyLWZsYXZvcmVkIE9wZW5UeXBlCiAgICBmb250LgoKICAgIC4uIG5vdGU6OgogICAgICAgYGBDRkYyYGAgaXMgdGhlIHN1Y2Nlc3NvciB0byBgYENGRmBgLCBhbmQgZWxpbWluYXRlcyBtdWNoIG9mCiAgICAgICB0aGUgcmVkdW5kYW5jeSBpbmN1cnJlZCBieSBlbWJlZGRpbmcgQ0ZGIHZlcnNpb24gMSBpbiBhbiBPcGVuVHlwZQogICAgICAgZm9udC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2NmZjIKICAgICIiIgoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgb3RGb250KToKICAgICAgICBzZWxmLmNmZi5kZWNvbXBpbGUoQnl0ZXNJTyhkYXRhKSwgb3RGb250LCBpc0NGRjI9VHJ1ZSkKICAgICAgICBhc3NlcnQgbGVuKHNlbGYuY2ZmKSA9PSAxLCAiY2FuJ3QgZGVhbCB3aXRoIG11bHRpLWZvbnQgQ0ZGIHRhYmxlcy4iCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgb3RGb250KToKICAgICAgICBmID0gQnl0ZXNJTygpCiAgICAgICAgc2VsZi5jZmYuY29tcGlsZShmLCBvdEZvbnQsIGlzQ0ZGMj1UcnVlKQogICAgICAgIHJldHVybiBmLmdldHZhbHVlKCkK
+from io import BytesIO
+from fontTools.ttLib.tables.C_F_F_ import table_C_F_F_
+
+
+class table_C_F_F__2(table_C_F_F_):
+    """Compact Font Format version 2 table
+
+    The ``CFF2`` table contains glyph data for a CFF2-flavored OpenType
+    font.
+
+    .. note::
+       ``CFF2`` is the successor to ``CFF``, and eliminates much of
+       the redundancy incurred by embedding CFF version 1 in an OpenType
+       font.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cff2
+    """
+
+    def decompile(self, data, otFont):
+        self.cff.decompile(BytesIO(data), otFont, isCFF2=True)
+        assert len(self.cff) == 1, "can't deal with multi-font CFF tables."
+
+    def compile(self, otFont):
+        f = BytesIO()
+        self.cff.compile(f, otFont, isCFF2=True)
+        return f.getvalue()

@@ -1,1 +1,136 @@
-IiIiU3VwcG9ydCBmb3IgdGhlIGBiZ2NsYCAoQXBwbGUgQ29sb3IgRW1vamkgYmFja2dyb3VuZCkgdGFibGUuCgpUaGlzIHRhYmxlIHN0b3JlcyBhIEpTT04gYmxvYi4gV2UgZGVjb2RlIGl0IHRvIGEgUHl0aG9uIG9iamVjdCBvbgpkZWNvbXBpbGUgYW5kIGVtaXQgaHVtYW4gcmVhZGFibGUgSlNPTiBpbiB0aGUgVFRYIHZpYSBhIDxqc29uPiBlbGVtZW50LgpPbiBjb21waWxlIHdlIHJlLWVuY29kZSB0aGUgSlNPTiB0byBVVEYtOCBieXRlcyB3aGljaCBpcyB3aGF0IEFwcGxlIGNvZGUKcmVhZHMgdmlhIENURm9udENvcHlUYWJsZSB0aGVuIEpTT05EZWNvZGVyLgoKT24gaU9TIDE2IGFuZCBsYXRlciB0aGUgYGJnY2xgIHBheWxvYWQgaXMgdXNlZCBhcyB0aGUgd2FsbHBhcGVyCmJhY2tncm91bmQgd2hlbiB0aGUgdXNlciBzZWxlY3RzIGFuIGVtb2ppIHdhbGxwYXBlci4KCkZpZWxkczoKCi0gYGBjb2xvcnNgYDogbGlzdCBvZiBwYWxldHRlIGVudHJpZXMuIEVhY2ggZW50cnkgaXMgYW4gYXJyYXkgb2YgZm91cgogICAgaW50ZWdlcnMgYGBbUiwgRywgQiwgQV1gYC4gUi9HL0IgYXJlIDAtMjU1LiBBIGlzIDAtMS4KCi0gYGBlbW9qaWNvbG9yc2BgOiBsaXN0IG9mIHBlci1lbW9qaSBwYWxldHRlcy4gRWFjaCBpdGVtIGlzIGFuIGFycmF5IG9mCiAgICB0aHJlZSBzdWJsaXN0czogcHJpbWFyeS9kb21pbmFudCwgYWNjZW50LCBjb250ZXh0dWFsCiAgICAobmFtZXMgaW5mZXJyZWQpLiBFYWNoIHN1Ymxpc3QgY29udGFpbnMgaW50ZWdlciBpbmRleGVzIHJlZmVyZW5jaW5nCiAgICBlbnRyaWVzIGluIGBgY29sb3JzYGA7IHRoZSBydW50aW1lIHVzZXMgdGhlc2UgdG8gYXNzZW1ibGUgbGF5ZXJlZAogICAgYmFja2dyb3VuZCB0aW50cyBmb3IgYW4gZW1vamkuCgotIGBgaW5kZXhtYXBgYDogbWFwcGluZyAoZ2x5cGggaWRlbnRpZmllciDihpIgcGFsZXR0ZSBpbmRleCkuIFRoZSBtYXAKICAgIG1hcHMgYSBnbHlwaCBpZGVudGl0eSB0byBhbiBpbnRlZ2VyIGluZGV4IHNlbGVjdGluZyBhbiBlbnRyeSBpbgogICAgYGBlbW9qaWNvbG9yc2BgLiBUaGUgZm9udC9VSSB1c2VzIHRoaXMgdG8gcGljayB0aGUgY29ycmVjdCBwYWxldHRlCiAgICBmb3IgYSBnbHlwaCB3aGVuIHJlbmRlcmluZyB3YWxscGFwZXIgYmFja2dyb3VuZHMuCgotIGBgdmVyc2lvbmBgOiBpbnRlZ2VyIHRhYmxlIHZlcnNpb24gdXNlZCBmb3IgcGFyc2luZy9jb21wYXRpYmlsaXR5LgoKUnVudGltZSB1c2FnZSBzdW1tYXJ5OgoKLSBUaGUgc3lzdGVtIGZldGNoZXMgdGhlIHRhYmxlIGJ5dGVzIHdpdGggYGBDVEZvbnRDb3B5VGFibGUoJ2JnY2wnKWBgLAogICAgZGVjb2RlcyB0aGUgYnl0ZXMgYXMgVVRG4oCROCBKU09OIGFuZCBydW5zIHRoZSBKU09OIHRocm91Z2ggdGhlIGFwcCdzCiAgICBkZWNvZGVyIGludG8gYW4gaW50ZXJuYWwgYGBCZ2NsVGFibGVgYCBzdHJ1Y3R1cmUuIFRoZSBhcHAgbG9va3MgdXAgYQogICAgZ2x5cGgncyBlbnRyeSBpbiBgYGluZGV4bWFwYGAsIHJldHJpZXZlcyB0aGUgY29ycmVzcG9uZGluZwogICAgYGBlbW9qaWNvbG9yc2BgIHBhbGV0dGUsIHRoZW4gY29udmVydHMgdGhlIHJlZmVyZW5jZWQgYGBjb2xvcnNgYAogICAgZW50cmllcyBpbnRvIGNvbG9yIG9iamVjdHMgKG5vcm1hbGl6aW5nIGNoYW5uZWxzL2FscGhhIGFzIG5lZWRlZCkuCiAgICBUaGlzIHJlc3VsdGluZyBjb2xvcihzKSBkcml2ZSB0aGUgd2FsbHBhcGVyIGJhY2tncm91bmQgYXBwZWFyYW5jZSBmb3IKICAgIGVtb2ppIHdhbGxwYXBlcnMgb24gc3VwcG9ydGVkIGlPUyB2ZXJzaW9ucy4KClRoaXMgaW1wbGVtZW50YXRpb24gcHJlc2VydmVzIHRoZSBKU09OIHBheWxvYWQgYW5kIGV4cG9zZXMgY29udmVuaWVuY2UKYXR0cmlidXRlcyBgYGNvbG9yc2BgLCBgYGVtb2ppY29sb3JzYGAsIGBgaW5kZXhtYXBgYCBhbmQgYGB2ZXJzaW9uYGAKd2hlbiBhdmFpbGFibGUuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSB0eXBpbmcgaW1wb3J0IFRZUEVfQ0hFQ0tJTkcKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCB0b3N0ciwgc3Ryam9pbgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQppbXBvcnQganNvbgoKaWYgVFlQRV9DSEVDS0lORzoKICAgIGZyb20gZm9udFRvb2xzLm1pc2MueG1sV3JpdGVyIGltcG9ydCBYTUxXcml0ZXIKICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKCgpjbGFzcyB0YWJsZV9fYl9nX2NfbChEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiImJnY2wgdGFibGU6IHN0b3JlcyBhIEpTT04gYmxvYiBkZXNjcmliaW5nIGJhY2tncm91bmQgcGFsZXR0ZXMuCgogICAgVGhlIEpTT04gc3RydWN0dXJlIHR5cGljYWxseSBjb250YWlucyB0aGUgdG9wLWxldmVsIGtleXM6CiAgICAgIC0gY29sb3JzOiBbW1IsRyxCLEFdLCAuLi5dCiAgICAgIC0gZW1vamljb2xvcnM6IFtbW2RvbWluYW50Li4uXSxbYWNjZW50Li4uXSxbY29udGV4dHVhbC4uLl1dLCAuLi5dCiAgICAgIC0gaW5kZXhtYXA6IHsiZ2x5cGhJbmRleCI6IGVtb2ppY29sb3JzX2luZGV4LCAuLi59CiAgICAgIC0gdmVyc2lvbjogaW50CiAgICAiIiIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGE6IGJ5dGVzLCB0dEZvbnQ6IFRURm9udCkgLT4gTm9uZToKICAgICAgICAiIiJTdG9yZSByYXcgYnl0ZXMgYW5kIGF0dGVtcHQgdG8gcGFyc2UgSlNPTi4KCiAgICAgICAgVGhlIEpTT04gY29tbW9ubHkgaW5jbHVkZXMgcGFsZXR0ZS9sb29rdXAgZGF0YSB1c2VkIGF0IHJ1bnRpbWUgdG8KICAgICAgICBjb25zdHJ1Y3Qgd2FsbHBhcGVyL2JhY2tncm91bmQgY29sb3JzIGZvciBlbW9qaSB3YWxscGFwZXJzIG9uCiAgICAgICAgcmVjZW50IGlPUyByZWxlYXNlcy4KICAgICAgICAiIiIKICAgICAgICBzZWxmLmRhdGEgPSBkYXRhCiAgICAgICAgdHJ5OgogICAgICAgICAgICB0ZXh0ID0gdG9zdHIoZGF0YSwgInV0Zl84IikKICAgICAgICAgICAgc2VsZi5qc29uID0ganNvbi5sb2Fkcyh0ZXh0KQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZTogICMga2VlcCB0YWJsZSBkZWNvbXBpbGF0aW9uIHJvYnVzdAogICAgICAgICAgICBzZWxmLmpzb24gPSBOb25lCiAgICAgICAgICAgIHNlbGYuRVJST1IgPSBmImJnY2wgSlNPTiBwYXJzZSBlcnJvcjoge2Uhcn0iCiAgICAgICAgICAgIHJldHVybgogICAgICAgICMgY29udmVuaWVudCBhdHRyaWJ1dGVzCiAgICAgICAgc2VsZi5jb2xvcnMgPSBzZWxmLmpzb24uZ2V0KCJjb2xvcnMiKQogICAgICAgIHNlbGYuZW1vamljb2xvcnMgPSBzZWxmLmpzb24uZ2V0KCJlbW9qaWNvbG9ycyIpCiAgICAgICAgc2VsZi5pbmRleG1hcCA9IHNlbGYuanNvbi5nZXQoImluZGV4bWFwIikKICAgICAgICBzZWxmLnZlcnNpb24gPSBzZWxmLmpzb24uZ2V0KCJ2ZXJzaW9uIikKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQ6IFRURm9udCkgLT4gYnl0ZXM6CiAgICAgICAgIiIiRW5jb2RlIHRoZSBKU09OIG9iamVjdCB0byBVVEYtOCBieXRlcyBmb3IgZm9udCBiaW5hcnkgc3RvcmFnZS4iIiIKICAgICAgICBpZiBnZXRhdHRyKHNlbGYsICJqc29uIiwgTm9uZSkgaXMgTm9uZToKICAgICAgICAgICAgIyBmYWxsYmFjayB0byByYXcgYnl0ZXMgaWYgcGFyc2luZyBmYWlsZWQgZWFybGllcgogICAgICAgICAgICByZXR1cm4gZ2V0YXR0cihzZWxmLCAiZGF0YSIsIGIiIikKICAgICAgICAjIHVzZSBjb21wYWN0IHJlcHJlc2VudGF0aW9uIGZvciBiaW5hcnkgdGFibGUKICAgICAgICByZXR1cm4ganNvbi5kdW1wcyhzZWxmLmpzb24sIHNlcGFyYXRvcnM9KCIsIiwgIjoiKSwgZW5zdXJlX2FzY2lpPUZhbHNlKS5lbmNvZGUoCiAgICAgICAgICAgICJ1dGZfOCIKICAgICAgICApCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlcjogWE1MV3JpdGVyLCB0dEZvbnQ6IFRURm9udCkgLT4gTm9uZToKICAgICAgICAiIiJFbWl0IHByZXR0eS1wcmludGVkIEpTT04gaW5zaWRlIGEgPGpzb24+IGVsZW1lbnQgZm9yIGh1bWFuIGluc3BlY3Rpb24uIiIiCiAgICAgICAgaWYgZ2V0YXR0cihzZWxmLCAianNvbiIsIE5vbmUpIGlzIE5vbmU6CiAgICAgICAgICAgICMgZmFsbGJhY2sgdG8gZGVmYXVsdCBoZXggb3V0cHV0CiAgICAgICAgICAgIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUudG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIHdyaXRlci5iZWdpbnRhZygianNvbiIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHByZXR0eSA9IGpzb24uZHVtcHMoc2VsZi5qc29uLCBpbmRlbnQ9MiwgZW5zdXJlX2FzY2lpPUZhbHNlKQogICAgICAgIHdyaXRlci53cml0ZWNkYXRhKHByZXR0eSkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLmVuZHRhZygianNvbiIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKAogICAgICAgIHNlbGYsIG5hbWU6IHN0ciwgYXR0cnM6IGRpY3Rbc3RyLCBzdHJdLCBjb250ZW50LCB0dEZvbnQ6IFRURm9udAogICAgKSAtPiBOb25lOgogICAgICAgICIiIlJlYWQgSlNPTiBmcm9tIHRoZSA8anNvbj4gZWxlbWVudC4gYGNvbnRlbnRgIG1heSBiZSBhIGxpc3QuCgogICAgICAgIFRoaXMgbWlycm9ycyBTVkcvb3RoZXIgdGFibGUgYGZyb21YTUxgIGhhbmRsZXJzIHdoaWNoIGFjY2VwdCBhCiAgICAgICAgbGlzdCBvZiBjb250ZW50IGNodW5rcy4KICAgICAgICAiIiIKICAgICAgICBpZiBuYW1lICE9ICJqc29uIjoKICAgICAgICAgICAgIyBmYWxsIGJhY2sgdG8gRGVmYXVsdFRhYmxlIGJlaGF2aW9yIGZvciB1bmtub3duIGVsZW1lbnRzCiAgICAgICAgICAgIHJldHVybiBEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlLmZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCkKICAgICAgICB0ZXh0ID0gc3Ryam9pbihjb250ZW50KS5zdHJpcCgpCiAgICAgICAgdHJ5OgogICAgICAgICAgICBzZWxmLmpzb24gPSBqc29uLmxvYWRzKHRleHQpCiAgICAgICAgICAgICMga2VlcCByYXcgYnl0ZXMgaW4gc3luYwogICAgICAgICAgICBzZWxmLmRhdGEgPSB0ZXh0LmVuY29kZSgidXRmXzgiKQogICAgICAgICAgICBzZWxmLmNvbG9ycyA9IHNlbGYuanNvbi5nZXQoImNvbG9ycyIpCiAgICAgICAgICAgIHNlbGYuZW1vamljb2xvcnMgPSBzZWxmLmpzb24uZ2V0KCJlbW9qaWNvbG9ycyIpCiAgICAgICAgICAgIHNlbGYuaW5kZXhtYXAgPSBzZWxmLmpzb24uZ2V0KCJpbmRleG1hcCIpCiAgICAgICAgICAgIHNlbGYudmVyc2lvbiA9IHNlbGYuanNvbi5nZXQoInZlcnNpb24iKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgIyBzdG9yZSBlcnJvciBhbmQgZmFsbCBiYWNrIHRvIHJhdwogICAgICAgICAgICBzZWxmLmpzb24gPSBOb25lCiAgICAgICAgICAgIHNlbGYuRVJST1IgPSBmImJnY2wgSlNPTiBwYXJzZSBlcnJvciBpbiBmcm9tWE1MOiB7ZSFyfSIK
+"""Support for the `bgcl` (Apple Color Emoji background) table.
+
+This table stores a JSON blob. We decode it to a Python object on
+decompile and emit human readable JSON in the TTX via a <json> element.
+On compile we re-encode the JSON to UTF-8 bytes which is what Apple code
+reads via CTFontCopyTable then JSONDecoder.
+
+On iOS 16 and later the `bgcl` payload is used as the wallpaper
+background when the user selects an emoji wallpaper.
+
+Fields:
+
+- ``colors``: list of palette entries. Each entry is an array of four
+    integers ``[R, G, B, A]``. R/G/B are 0-255. A is 0-1.
+
+- ``emojicolors``: list of per-emoji palettes. Each item is an array of
+    three sublists: primary/dominant, accent, contextual
+    (names inferred). Each sublist contains integer indexes referencing
+    entries in ``colors``; the runtime uses these to assemble layered
+    background tints for an emoji.
+
+- ``indexmap``: mapping (glyph identifier → palette index). The map
+    maps a glyph identity to an integer index selecting an entry in
+    ``emojicolors``. The font/UI uses this to pick the correct palette
+    for a glyph when rendering wallpaper backgrounds.
+
+- ``version``: integer table version used for parsing/compatibility.
+
+Runtime usage summary:
+
+- The system fetches the table bytes with ``CTFontCopyTable('bgcl')``,
+    decodes the bytes as UTF‑8 JSON and runs the JSON through the app's
+    decoder into an internal ``BgclTable`` structure. The app looks up a
+    glyph's entry in ``indexmap``, retrieves the corresponding
+    ``emojicolors`` palette, then converts the referenced ``colors``
+    entries into color objects (normalizing channels/alpha as needed).
+    This resulting color(s) drive the wallpaper background appearance for
+    emoji wallpapers on supported iOS versions.
+
+This implementation preserves the JSON payload and exposes convenience
+attributes ``colors``, ``emojicolors``, ``indexmap`` and ``version``
+when available.
+"""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from fontTools.misc.textTools import tostr, strjoin
+from . import DefaultTable
+import json
+
+if TYPE_CHECKING:
+    from fontTools.misc.xmlWriter import XMLWriter
+    from fontTools.ttLib import TTFont
+
+
+class table__b_g_c_l(DefaultTable.DefaultTable):
+    """bgcl table: stores a JSON blob describing background palettes.
+
+    The JSON structure typically contains the top-level keys:
+      - colors: [[R,G,B,A], ...]
+      - emojicolors: [[[dominant...],[accent...],[contextual...]], ...]
+      - indexmap: {"glyphIndex": emojicolors_index, ...}
+      - version: int
+    """
+
+    def decompile(self, data: bytes, ttFont: TTFont) -> None:
+        """Store raw bytes and attempt to parse JSON.
+
+        The JSON commonly includes palette/lookup data used at runtime to
+        construct wallpaper/background colors for emoji wallpapers on
+        recent iOS releases.
+        """
+        self.data = data
+        try:
+            text = tostr(data, "utf_8")
+            self.json = json.loads(text)
+        except Exception as e:  # keep table decompilation robust
+            self.json = None
+            self.ERROR = f"bgcl JSON parse error: {e!r}"
+            return
+        # convenient attributes
+        self.colors = self.json.get("colors")
+        self.emojicolors = self.json.get("emojicolors")
+        self.indexmap = self.json.get("indexmap")
+        self.version = self.json.get("version")
+
+    def compile(self, ttFont: TTFont) -> bytes:
+        """Encode the JSON object to UTF-8 bytes for font binary storage."""
+        if getattr(self, "json", None) is None:
+            # fallback to raw bytes if parsing failed earlier
+            return getattr(self, "data", b"")
+        # use compact representation for binary table
+        return json.dumps(self.json, separators=(",", ":"), ensure_ascii=False).encode(
+            "utf_8"
+        )
+
+    def toXML(self, writer: XMLWriter, ttFont: TTFont) -> None:
+        """Emit pretty-printed JSON inside a <json> element for human inspection."""
+        if getattr(self, "json", None) is None:
+            # fallback to default hex output
+            DefaultTable.DefaultTable.toXML(self, writer, ttFont)
+            return
+        writer.begintag("json")
+        writer.newline()
+        pretty = json.dumps(self.json, indent=2, ensure_ascii=False)
+        writer.writecdata(pretty)
+        writer.newline()
+        writer.endtag("json")
+        writer.newline()
+
+    def fromXML(
+        self, name: str, attrs: dict[str, str], content, ttFont: TTFont
+    ) -> None:
+        """Read JSON from the <json> element. `content` may be a list.
+
+        This mirrors SVG/other table `fromXML` handlers which accept a
+        list of content chunks.
+        """
+        if name != "json":
+            # fall back to DefaultTable behavior for unknown elements
+            return DefaultTable.DefaultTable.fromXML(self, name, attrs, content, ttFont)
+        text = strjoin(content).strip()
+        try:
+            self.json = json.loads(text)
+            # keep raw bytes in sync
+            self.data = text.encode("utf_8")
+            self.colors = self.json.get("colors")
+            self.emojicolors = self.json.get("emojicolors")
+            self.indexmap = self.json.get("indexmap")
+            self.version = self.json.get("version")
+        except Exception as e:
+            # store error and fall back to raw
+            self.json = None
+            self.ERROR = f"bgcl JSON parse error in fromXML: {e!r}"

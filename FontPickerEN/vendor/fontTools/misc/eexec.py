@@ -1,1 +1,119 @@
-IiIiClBvc3RTY3JpcHQgVHlwZSAxIGZvbnRzIG1ha2UgdXNlIG9mIHR3byB0eXBlcyBvZiBlbmNyeXB0aW9uOiBjaGFyc3RyaW5nCmVuY3J5cHRpb24gYW5kIGBgZWV4ZWNgYCBlbmNyeXB0aW9uLiBDaGFyc3RyaW5nIGVuY3J5cHRpb24gaXMgdXNlZCBmb3IKdGhlIGNoYXJzdHJpbmdzIHRoZW1zZWx2ZXMsIHdoaWxlIGBgZWV4ZWNgYCBpcyB1c2VkIHRvIGVuY3J5cHQgbGFyZ2VyCnNlY3Rpb25zIG9mIHRoZSBmb250IHByb2dyYW0sIHN1Y2ggYXMgdGhlIGBgUHJpdmF0ZWBgIGFuZCBgYENoYXJTdHJpbmdzYGAKZGljdGlvbmFyaWVzLiBEZXNwaXRlIHRoZSBkaWZmZXJlbnQgbmFtZXMsIHRoZSBhbGdvcml0aG0gaXMgdGhlIHNhbWUsCmFsdGhvdWdoIGBgZWV4ZWNgYCBlbmNyeXB0aW9uIHVzZXMgYSBmaXhlZCBpbml0aWFsIGtleSBSPTU1NjY1LgoKVGhlIGFsZ29yaXRobSB1c2VzIGNpcGhlciBmZWVkYmFjaywgbWVhbmluZyB0aGF0IHRoZSBjaXBoZXJ0ZXh0IGlzIHVzZWQKdG8gbW9kaWZ5IHRoZSBrZXkuIEJlY2F1c2Ugb2YgdGhpcywgdGhlIHJvdXRpbmVzIGluIHRoaXMgbW9kdWxlIHJldHVybgp0aGUgbmV3IGtleSBhdCB0aGUgZW5kIG9mIHRoZSBvcGVyYXRpb24uCgoiIiIKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBieXRlY2hyLCBieXRlc2pvaW4sIGJ5dGVvcmQKCgpkZWYgX2RlY3J5cHRDaGFyKGNpcGhlciwgUik6CiAgICBjaXBoZXIgPSBieXRlb3JkKGNpcGhlcikKICAgIHBsYWluID0gKChjaXBoZXIgXiAoUiA+PiA4KSkpICYgMHhGRgogICAgUiA9ICgoY2lwaGVyICsgUikgKiA1Mjg0NSArIDIyNzE5KSAmIDB4RkZGRgogICAgcmV0dXJuIGJ5dGVjaHIocGxhaW4pLCBSCgoKZGVmIF9lbmNyeXB0Q2hhcihwbGFpbiwgUik6CiAgICBwbGFpbiA9IGJ5dGVvcmQocGxhaW4pCiAgICBjaXBoZXIgPSAoKHBsYWluIF4gKFIgPj4gOCkpKSAmIDB4RkYKICAgIFIgPSAoKGNpcGhlciArIFIpICogNTI4NDUgKyAyMjcxOSkgJiAweEZGRkYKICAgIHJldHVybiBieXRlY2hyKGNpcGhlciksIFIKCgpkZWYgZGVjcnlwdChjaXBoZXJzdHJpbmcsIFIpOgogICAgciIiIgogICAgRGVjcnlwdHMgYSBzdHJpbmcgdXNpbmcgdGhlIFR5cGUgMSBlbmNyeXB0aW9uIGFsZ29yaXRobS4KCiAgICBBcmdzOgogICAgICAgICAgICBjaXBoZXJzdHJpbmc6IFN0cmluZyBvZiBjaXBoZXJ0ZXh0LgogICAgICAgICAgICBSOiBJbml0aWFsIGtleS4KCiAgICBSZXR1cm5zOgogICAgICAgICAgICBkZWNyeXB0ZWRTdHI6IFBsYWludGV4dCBzdHJpbmcuCiAgICAgICAgICAgIFI6IE91dHB1dCBrZXkgZm9yIHN1YnNlcXVlbnQgZGVjcnlwdGlvbnMuCgogICAgRXhhbXBsZXM6OgoKICAgICAgICAgICAgPj4+IHRlc3RTdHIgPSBiIlwwXDBhc2RhZGFkcyBhc2RzXDI2NSIKICAgICAgICAgICAgPj4+IGRlY3J5cHRlZFN0ciwgUiA9IGRlY3J5cHQodGVzdFN0ciwgMTIzMjEpCiAgICAgICAgICAgID4+PiBkZWNyeXB0ZWRTdHIgPT0gYicwZFxuaFx4MTVceGU4XHhjNFx4YjJceDE1XHgxZFx4MTA4XHgxYTw2XHhhMScKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gUiA9PSAzNjE0MgogICAgICAgICAgICBUcnVlCiAgICAiIiIKICAgIHBsYWluTGlzdCA9IFtdCiAgICBmb3IgY2lwaGVyIGluIGNpcGhlcnN0cmluZzoKICAgICAgICBwbGFpbiwgUiA9IF9kZWNyeXB0Q2hhcihjaXBoZXIsIFIpCiAgICAgICAgcGxhaW5MaXN0LmFwcGVuZChwbGFpbikKICAgIHBsYWluc3RyaW5nID0gYnl0ZXNqb2luKHBsYWluTGlzdCkKICAgIHJldHVybiBwbGFpbnN0cmluZywgaW50KFIpCgoKZGVmIGVuY3J5cHQocGxhaW5zdHJpbmcsIFIpOgogICAgciIiIgogICAgRW5jcnlwdHMgYSBzdHJpbmcgdXNpbmcgdGhlIFR5cGUgMSBlbmNyeXB0aW9uIGFsZ29yaXRobS4KCiAgICBOb3RlIHRoYXQgdGhlIGFsZ29yaXRobSBhcyBkZXNjcmliZWQgaW4gdGhlIFR5cGUgMSBzcGVjaWZpY2F0aW9uIHJlcXVpcmVzIHRoZQogICAgcGxhaW50ZXh0IHRvIGJlIHByZWZpeGVkIHdpdGggYSBudW1iZXIgb2YgcmFuZG9tIGJ5dGVzLiAoRm9yIGBgZWV4ZWNgYCB0aGUKICAgIG51bWJlciBvZiByYW5kb20gYnl0ZXMgaXMgc2V0IHRvIDQuKSBUaGlzIHJvdXRpbmUgZG9lcyAqbm90KiBhZGQgdGhlIHJhbmRvbQogICAgcHJlZml4IHRvIGl0cyBpbnB1dC4KCiAgICBBcmdzOgogICAgICAgICAgICBwbGFpbnN0cmluZzogU3RyaW5nIG9mIHBsYWludGV4dC4KICAgICAgICAgICAgUjogSW5pdGlhbCBrZXkuCgogICAgUmV0dXJuczoKICAgICAgICAgICAgY2lwaGVyc3RyaW5nOiBDaXBoZXJ0ZXh0IHN0cmluZy4KICAgICAgICAgICAgUjogT3V0cHV0IGtleSBmb3Igc3Vic2VxdWVudCBlbmNyeXB0aW9ucy4KCiAgICBFeGFtcGxlczo6CgogICAgICAgICAgICA+Pj4gdGVzdFN0ciA9IGIiXDBcMGFzZGFkYWRzIGFzZHNcMjY1IgogICAgICAgICAgICA+Pj4gZGVjcnlwdGVkU3RyLCBSID0gZGVjcnlwdCh0ZXN0U3RyLCAxMjMyMSkKICAgICAgICAgICAgPj4+IGRlY3J5cHRlZFN0ciA9PSBiJzBkXG5oXHgxNVx4ZThceGM0XHhiMlx4MTVceDFkXHgxMDhceDFhPDZceGExJwogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiBSID09IDM2MTQyCiAgICAgICAgICAgIFRydWUKCiAgICA+Pj4gdGVzdFN0ciA9IGInMGRcbmhceDE1XHhlOFx4YzRceGIyXHgxNVx4MWRceDEwOFx4MWE8Nlx4YTEnCiAgICA+Pj4gZW5jcnlwdGVkU3RyLCBSID0gZW5jcnlwdCh0ZXN0U3RyLCAxMjMyMSkKICAgID4+PiBlbmNyeXB0ZWRTdHIgPT0gYiJcMFwwYXNkYWRhZHMgYXNkc1wyNjUiCiAgICBUcnVlCiAgICA+Pj4gUiA9PSAzNjE0MgogICAgVHJ1ZQogICAgIiIiCiAgICBjaXBoZXJMaXN0ID0gW10KICAgIGZvciBwbGFpbiBpbiBwbGFpbnN0cmluZzoKICAgICAgICBjaXBoZXIsIFIgPSBfZW5jcnlwdENoYXIocGxhaW4sIFIpCiAgICAgICAgY2lwaGVyTGlzdC5hcHBlbmQoY2lwaGVyKQogICAgY2lwaGVyc3RyaW5nID0gYnl0ZXNqb2luKGNpcGhlckxpc3QpCiAgICByZXR1cm4gY2lwaGVyc3RyaW5nLCBpbnQoUikKCgpkZWYgaGV4U3RyaW5nKHMpOgogICAgaW1wb3J0IGJpbmFzY2lpCgogICAgcmV0dXJuIGJpbmFzY2lpLmhleGxpZnkocykKCgpkZWYgZGVIZXhTdHJpbmcoaCk6CiAgICBpbXBvcnQgYmluYXNjaWkKCiAgICBoID0gYnl0ZXNqb2luKGguc3BsaXQoKSkKICAgIHJldHVybiBiaW5hc2NpaS51bmhleGxpZnkoaCkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwogICAgaW1wb3J0IGRvY3Rlc3QKCiAgICBzeXMuZXhpdChkb2N0ZXN0LnRlc3Rtb2QoKS5mYWlsZWQpCg==
+"""
+PostScript Type 1 fonts make use of two types of encryption: charstring
+encryption and ``eexec`` encryption. Charstring encryption is used for
+the charstrings themselves, while ``eexec`` is used to encrypt larger
+sections of the font program, such as the ``Private`` and ``CharStrings``
+dictionaries. Despite the different names, the algorithm is the same,
+although ``eexec`` encryption uses a fixed initial key R=55665.
+
+The algorithm uses cipher feedback, meaning that the ciphertext is used
+to modify the key. Because of this, the routines in this module return
+the new key at the end of the operation.
+
+"""
+
+from fontTools.misc.textTools import bytechr, bytesjoin, byteord
+
+
+def _decryptChar(cipher, R):
+    cipher = byteord(cipher)
+    plain = ((cipher ^ (R >> 8))) & 0xFF
+    R = ((cipher + R) * 52845 + 22719) & 0xFFFF
+    return bytechr(plain), R
+
+
+def _encryptChar(plain, R):
+    plain = byteord(plain)
+    cipher = ((plain ^ (R >> 8))) & 0xFF
+    R = ((cipher + R) * 52845 + 22719) & 0xFFFF
+    return bytechr(cipher), R
+
+
+def decrypt(cipherstring, R):
+    r"""
+    Decrypts a string using the Type 1 encryption algorithm.
+
+    Args:
+            cipherstring: String of ciphertext.
+            R: Initial key.
+
+    Returns:
+            decryptedStr: Plaintext string.
+            R: Output key for subsequent decryptions.
+
+    Examples::
+
+            >>> testStr = b"\0\0asdadads asds\265"
+            >>> decryptedStr, R = decrypt(testStr, 12321)
+            >>> decryptedStr == b'0d\nh\x15\xe8\xc4\xb2\x15\x1d\x108\x1a<6\xa1'
+            True
+            >>> R == 36142
+            True
+    """
+    plainList = []
+    for cipher in cipherstring:
+        plain, R = _decryptChar(cipher, R)
+        plainList.append(plain)
+    plainstring = bytesjoin(plainList)
+    return plainstring, int(R)
+
+
+def encrypt(plainstring, R):
+    r"""
+    Encrypts a string using the Type 1 encryption algorithm.
+
+    Note that the algorithm as described in the Type 1 specification requires the
+    plaintext to be prefixed with a number of random bytes. (For ``eexec`` the
+    number of random bytes is set to 4.) This routine does *not* add the random
+    prefix to its input.
+
+    Args:
+            plainstring: String of plaintext.
+            R: Initial key.
+
+    Returns:
+            cipherstring: Ciphertext string.
+            R: Output key for subsequent encryptions.
+
+    Examples::
+
+            >>> testStr = b"\0\0asdadads asds\265"
+            >>> decryptedStr, R = decrypt(testStr, 12321)
+            >>> decryptedStr == b'0d\nh\x15\xe8\xc4\xb2\x15\x1d\x108\x1a<6\xa1'
+            True
+            >>> R == 36142
+            True
+
+    >>> testStr = b'0d\nh\x15\xe8\xc4\xb2\x15\x1d\x108\x1a<6\xa1'
+    >>> encryptedStr, R = encrypt(testStr, 12321)
+    >>> encryptedStr == b"\0\0asdadads asds\265"
+    True
+    >>> R == 36142
+    True
+    """
+    cipherList = []
+    for plain in plainstring:
+        cipher, R = _encryptChar(plain, R)
+        cipherList.append(cipher)
+    cipherstring = bytesjoin(cipherList)
+    return cipherstring, int(R)
+
+
+def hexString(s):
+    import binascii
+
+    return binascii.hexlify(s)
+
+
+def deHexString(h):
+    import binascii
+
+    h = bytesjoin(h.split())
+    return binascii.unhexlify(h)
+
+
+if __name__ == "__main__":
+    import sys
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

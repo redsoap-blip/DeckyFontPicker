@@ -1,1 +1,82 @@
-IiIiCkRlZmluZSBhbGwgY29uZmlndXJhdGlvbiBvcHRpb25zIHRoYXQgY2FuIGFmZmVjdCB0aGUgd29ya2luZyBvZiBmb250VG9vbHMKbW9kdWxlcy4gRS5nLiBvcHRpbWl6YXRpb24gbGV2ZWxzIG9mIHZhckxpYiBJVVAsIG90bExpYiBHUE9TIGNvbXByZXNzaW9uIGxldmVsLApldGMuIElmIHRoaXMgZmlsZSBnZXRzIHRvbyBiaWcsIHNwbGl0IGl0IGludG8gc21hbGxlciBmaWxlcyBwZXItbW9kdWxlLgoKQW4gaW5zdGFuY2Ugb2YgdGhlIENvbmZpZyBjbGFzcyBjYW4gYmUgYXR0YWNoZWQgdG8gYSBUVEZvbnQgb2JqZWN0LCBzbyB0aGF0CnRoZSB2YXJpb3VzIG1vZHVsZXMgY2FuIGFjY2VzcyB0aGVpciBjb25maWd1cmF0aW9uIG9wdGlvbnMgZnJvbSBpdC4KIiIiCgpmcm9tIHRleHR3cmFwIGltcG9ydCBkZWRlbnQKCmZyb20gZm9udFRvb2xzLm1pc2MuY29uZmlnVG9vbHMgaW1wb3J0ICoKCgpjbGFzcyBDb25maWcoQWJzdHJhY3RDb25maWcpOgogICAgb3B0aW9ucyA9IE9wdGlvbnMoKQoKCk9QVElPTlMgPSBDb25maWcub3B0aW9ucwoKCkNvbmZpZy5yZWdpc3Rlcl9vcHRpb24oCiAgICBuYW1lPSJmb250VG9vbHMub3RsTGliLm9wdGltaXplLmdwb3M6Q09NUFJFU1NJT05fTEVWRUwiLAogICAgaGVscD1kZWRlbnQoIiIiXAogICAgICAgIEdQT1MgTG9va3VwIHR5cGUgMiAoUGFpclBvcykgY29tcHJlc3Npb24gbGV2ZWw6CiAgICAgICAgICAgIDAgPSBkbyBub3QgYXR0ZW1wdCB0byBjb21wYWN0IFBhaXJQb3MgbG9va3VwczsKICAgICAgICAgICAgMSB0byA4ID0gY3JlYXRlIGF0IG1vc3QgMSB0byA4IG5ldyBzdWJ0YWJsZXMgZm9yIGVhY2ggZXhpc3RpbmcKICAgICAgICAgICAgICAgIHN1YnRhYmxlLCBwcm92aWRlZCB0aGF0IGl0IHdvdWxkIHlpZWxkIGEgNTAlJSBmaWxlIHNpemUgc2F2aW5nOwogICAgICAgICAgICA5ID0gY3JlYXRlIGFzIG1hbnkgbmV3IHN1YnRhYmxlcyBhcyBuZWVkZWQgdG8geWllbGQgYSBmaWxlIHNpemUgc2F2aW5nLgogICAgICAgIERlZmF1bHQ6IDAuCgogICAgICAgIFRoaXMgY29tcGFjdGlvbiBhaW1zIHRvIHNhdmUgZmlsZSBzaXplLCBieSBzcGxpdHRpbmcgbGFyZ2UgY2xhc3MKICAgICAgICBrZXJuaW5nIHN1YnRhYmxlcyAoRm9ybWF0IDIpIHRoYXQgY29udGFpbiBtYW55IHplcm8gdmFsdWVzIGludG8KICAgICAgICBzbWFsbGVyIGFuZCBkZW5zZXIgc3VidGFibGVzLiBJdCdzIGEgdHJhZGUtb2ZmIGJldHdlZW4gdGhlIG92ZXJoZWFkCiAgICAgICAgb2Ygc2V2ZXJhbCBzdWJ0YWJsZXMgdmVyc3VzIHRoZSBzcGFyc2VuZXNzIG9mIG9uZSBiaWcgc3VidGFibGUuCgogICAgICAgIFNlZSB0aGUgcHVsbCByZXF1ZXN0OiBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9wdWxsLzIzMjYKICAgICAgICAiIiIpLAogICAgZGVmYXVsdD0wLAogICAgcGFyc2U9aW50LAogICAgdmFsaWRhdGU9bGFtYmRhIHY6IHYgaW4gcmFuZ2UoMTApLAopCgpDb25maWcucmVnaXN0ZXJfb3B0aW9uKAogICAgbmFtZT0iZm9udFRvb2xzLnR0TGliLnRhYmxlcy5vdEJhc2U6VVNFX0hBUkZCVVpaX1JFUEFDS0VSIiwKICAgIGhlbHA9ZGVkZW50KCIiIlwKICAgICAgICBGb250VG9vbHMgdHJpZXMgdG8gdXNlIHRoZSBIYXJmQnV6eiBSZXBhY2tlciB0byBzZXJpYWxpemUgR1BPUy9HU1VCIHRhYmxlcwogICAgICAgIGlmIHRoZSB1aGFyZmJ1enogcHl0aG9uIGJpbmRpbmdzIGFyZSBpbXBvcnRhYmxlLCBvdGhlcndpc2UgZmFsbHMgYmFjayB0byBpdHMKICAgICAgICBzbG93ZXIsIGxlc3MgZWZmaWNpZW50IHNlcmlhbGl6ZXIuIFNldCB0byBGYWxzZSB0byBhbHdheXMgdXNlIHRoZSBsYXR0ZXIuCiAgICAgICAgU2V0IHRvIFRydWUgdG8gZXhwbGljaXRseSByZXF1ZXN0IHRoZSBIYXJmQnV6eiBSZXBhY2tlciAod2lsbCByYWlzZSBhbgogICAgICAgIGVycm9yIGlmIHVoYXJmYnV6eiBjYW5ub3QgYmUgaW1wb3J0ZWQpLgogICAgICAgICIiIiksCiAgICBkZWZhdWx0PU5vbmUsCiAgICBwYXJzZT1PcHRpb24ucGFyc2Vfb3B0aW9uYWxfYm9vbCwKICAgIHZhbGlkYXRlPU9wdGlvbi52YWxpZGF0ZV9vcHRpb25hbF9ib29sLAopCgpDb25maWcucmVnaXN0ZXJfb3B0aW9uKAogICAgbmFtZT0iZm9udFRvb2xzLm90bExpYi5idWlsZGVyOldSSVRFX0dQT1M3IiwKICAgIGhlbHA9ZGVkZW50KCIiIlwKICAgICAgICBtYWNPUyBiZWZvcmUgMTMuMiBkaWRu4oCZdCBzdXBwb3J0IEdQT1MgTG9va3VwVHlwZSA3IChub24tY2hhaW5pbmcKICAgICAgICBDb250ZXh0UG9zIGxvb2t1cHMpLCBzbyBGb250VG9vbHMub3RsTGliLmJ1aWxkZXIgZGlzYWJsZXMgYSBmaWxlIHNpemUKICAgICAgICBvcHRpbWlzYXRpb24gdGhhdCB3b3VsZCB1c2UgTG9va3VwVHlwZSA3IGluc3RlYWQgb2YgOCB3aGVuIHRoZXJlIGlzIG5vCiAgICAgICAgY2hhaW5pbmcgKG5vIHByZWZpeCBvciBzdWZmaXgpLiBTZXQgdG8gVHJ1ZSB0byBlbmFibGUgdGhlIG9wdGltaXphdGlvbi4KICAgICAgICAiIiIpLAogICAgZGVmYXVsdD1GYWxzZSwKICAgIHBhcnNlPU9wdGlvbi5wYXJzZV9vcHRpb25hbF9ib29sLAogICAgdmFsaWRhdGU9T3B0aW9uLnZhbGlkYXRlX29wdGlvbmFsX2Jvb2wsCikKCkNvbmZpZy5yZWdpc3Rlcl9vcHRpb24oCiAgICBuYW1lPSJmb250VG9vbHMudHRMaWI6T1BUSU1JWkVfRk9OVF9TUEVFRCIsCiAgICBoZWxwPWRlZGVudCgiIiJcCiAgICAgICAgRW5hYmxlIG9wdGltaXphdGlvbnMgdGhhdCBwcmlvcml0aXplIHNwZWVkIG92ZXIgZmlsZSBzaXplLiBUaGlzCiAgICAgICAgbWFpbmx5IGFmZmVjdHMgaG93IGdseWYgdGFibGUgYW5kIGd2YXIgLyBWQVJDIHRhYmxlcyBhcmUgY29tcGlsZWQuCiAgICAgICAgVGhlIHByb2R1Y2VkIGZvbnRzIHdpbGwgYmUgbGFyZ2VyLCBidXQgcmVuZGVyaW5nIHBlcmZvcm1hbmNlIHdpbGwKICAgICAgICBiZSBpbXByb3ZlZCB3aXRoIEhhcmZCdXp6IGFuZCBvdGhlciB0ZXh0IGxheW91dCBlbmdpbmVzLgogICAgICAgICIiIiksCiAgICBkZWZhdWx0PUZhbHNlLAogICAgcGFyc2U9T3B0aW9uLnBhcnNlX29wdGlvbmFsX2Jvb2wsCiAgICB2YWxpZGF0ZT1PcHRpb24udmFsaWRhdGVfb3B0aW9uYWxfYm9vbCwKKQo=
+"""
+Define all configuration options that can affect the working of fontTools
+modules. E.g. optimization levels of varLib IUP, otlLib GPOS compression level,
+etc. If this file gets too big, split it into smaller files per-module.
+
+An instance of the Config class can be attached to a TTFont object, so that
+the various modules can access their configuration options from it.
+"""
+
+from textwrap import dedent
+
+from fontTools.misc.configTools import *
+
+
+class Config(AbstractConfig):
+    options = Options()
+
+
+OPTIONS = Config.options
+
+
+Config.register_option(
+    name="fontTools.otlLib.optimize.gpos:COMPRESSION_LEVEL",
+    help=dedent("""\
+        GPOS Lookup type 2 (PairPos) compression level:
+            0 = do not attempt to compact PairPos lookups;
+            1 to 8 = create at most 1 to 8 new subtables for each existing
+                subtable, provided that it would yield a 50%% file size saving;
+            9 = create as many new subtables as needed to yield a file size saving.
+        Default: 0.
+
+        This compaction aims to save file size, by splitting large class
+        kerning subtables (Format 2) that contain many zero values into
+        smaller and denser subtables. It's a trade-off between the overhead
+        of several subtables versus the sparseness of one big subtable.
+
+        See the pull request: https://github.com/fonttools/fonttools/pull/2326
+        """),
+    default=0,
+    parse=int,
+    validate=lambda v: v in range(10),
+)
+
+Config.register_option(
+    name="fontTools.ttLib.tables.otBase:USE_HARFBUZZ_REPACKER",
+    help=dedent("""\
+        FontTools tries to use the HarfBuzz Repacker to serialize GPOS/GSUB tables
+        if the uharfbuzz python bindings are importable, otherwise falls back to its
+        slower, less efficient serializer. Set to False to always use the latter.
+        Set to True to explicitly request the HarfBuzz Repacker (will raise an
+        error if uharfbuzz cannot be imported).
+        """),
+    default=None,
+    parse=Option.parse_optional_bool,
+    validate=Option.validate_optional_bool,
+)
+
+Config.register_option(
+    name="fontTools.otlLib.builder:WRITE_GPOS7",
+    help=dedent("""\
+        macOS before 13.2 didn’t support GPOS LookupType 7 (non-chaining
+        ContextPos lookups), so FontTools.otlLib.builder disables a file size
+        optimisation that would use LookupType 7 instead of 8 when there is no
+        chaining (no prefix or suffix). Set to True to enable the optimization.
+        """),
+    default=False,
+    parse=Option.parse_optional_bool,
+    validate=Option.validate_optional_bool,
+)
+
+Config.register_option(
+    name="fontTools.ttLib:OPTIMIZE_FONT_SPEED",
+    help=dedent("""\
+        Enable optimizations that prioritize speed over file size. This
+        mainly affects how glyf table and gvar / VARC tables are compiled.
+        The produced fonts will be larger, but rendering performance will
+        be improved with HarfBuzz and other text layout engines.
+        """),
+    default=False,
+    parse=Option.parse_optional_bool,
+    validate=Option.validate_optional_bool,
+)

@@ -1,1 +1,45 @@
-IiIiR2VuZXJpYyB0b29scyBmb3Igd29ya2luZyB3aXRoIHRyZWVzLiIiIgoKZnJvbSBtYXRoIGltcG9ydCBjZWlsLCBsb2cKCgpkZWYgYnVpbGRfbl9hcnlfdHJlZShsZWF2ZXMsIG4pOgogICAgIiIiQnVpbGQgTi1hcnkgdHJlZSBmcm9tIHNlcXVlbmNlIG9mIGxlYWYgbm9kZXMuCgogICAgUmV0dXJuIGEgbGlzdCBvZiBsaXN0cyB3aGVyZSBlYWNoIG5vbi1sZWFmIG5vZGUgaXMgYSBsaXN0IGNvbnRhaW5pbmcKICAgIG1heCBuIG5vZGVzLgogICAgIiIiCiAgICBpZiBub3QgbGVhdmVzOgogICAgICAgIHJldHVybiBbXQoKICAgIGFzc2VydCBuID4gMQoKICAgIGRlcHRoID0gY2VpbChsb2cobGVuKGxlYXZlcyksIG4pKQoKICAgIGlmIGRlcHRoIDw9IDE6CiAgICAgICAgcmV0dXJuIGxpc3QobGVhdmVzKQoKICAgICMgRnVsbHkgcG9wdWxhdGUgY29tcGxldGUgc3VidHJlZXMgb2Ygcm9vdCB1bnRpbCB3ZSBoYXZlIGVub3VnaCBsZWF2ZXMgbGVmdAogICAgcm9vdCA9IFtdCiAgICB1bmFzc2lnbmVkID0gTm9uZQogICAgZnVsbF9zdGVwID0gbiAqKiAoZGVwdGggLSAxKQogICAgZm9yIGkgaW4gcmFuZ2UoMCwgbGVuKGxlYXZlcyksIGZ1bGxfc3RlcCk6CiAgICAgICAgc3VidHJlZSA9IGxlYXZlc1tpIDogaSArIGZ1bGxfc3RlcF0KICAgICAgICBpZiBsZW4oc3VidHJlZSkgPCBmdWxsX3N0ZXA6CiAgICAgICAgICAgIHVuYXNzaWduZWQgPSBzdWJ0cmVlCiAgICAgICAgICAgIGJyZWFrCiAgICAgICAgd2hpbGUgbGVuKHN1YnRyZWUpID4gbjoKICAgICAgICAgICAgc3VidHJlZSA9IFtzdWJ0cmVlW2sgOiBrICsgbl0gZm9yIGsgaW4gcmFuZ2UoMCwgbGVuKHN1YnRyZWUpLCBuKV0KICAgICAgICByb290LmFwcGVuZChzdWJ0cmVlKQoKICAgIGlmIHVuYXNzaWduZWQ6CiAgICAgICAgIyBSZWN1cnNlIHRvIGZpbGwgdGhlIGxhc3Qgc3VidHJlZSwgd2hpY2ggaXMgdGhlIG9ubHkgcGFydGlhbGx5IHBvcHVsYXRlZCBvbmUKICAgICAgICBzdWJ0cmVlID0gYnVpbGRfbl9hcnlfdHJlZSh1bmFzc2lnbmVkLCBuKQogICAgICAgIGlmIGxlbihzdWJ0cmVlKSA8PSBuIC0gbGVuKHJvb3QpOgogICAgICAgICAgICAjIHJlcGxhY2UgbGFzdCBzdWJ0cmVlIHdpdGggaXRzIGNoaWxkcmVuIGlmIHRoZXkgY2FuIHN0aWxsIGZpdAogICAgICAgICAgICByb290LmV4dGVuZChzdWJ0cmVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJvb3QuYXBwZW5kKHN1YnRyZWUpCiAgICAgICAgYXNzZXJ0IGxlbihyb290KSA8PSBuCgogICAgcmV0dXJuIHJvb3QK
+"""Generic tools for working with trees."""
+
+from math import ceil, log
+
+
+def build_n_ary_tree(leaves, n):
+    """Build N-ary tree from sequence of leaf nodes.
+
+    Return a list of lists where each non-leaf node is a list containing
+    max n nodes.
+    """
+    if not leaves:
+        return []
+
+    assert n > 1
+
+    depth = ceil(log(len(leaves), n))
+
+    if depth <= 1:
+        return list(leaves)
+
+    # Fully populate complete subtrees of root until we have enough leaves left
+    root = []
+    unassigned = None
+    full_step = n ** (depth - 1)
+    for i in range(0, len(leaves), full_step):
+        subtree = leaves[i : i + full_step]
+        if len(subtree) < full_step:
+            unassigned = subtree
+            break
+        while len(subtree) > n:
+            subtree = [subtree[k : k + n] for k in range(0, len(subtree), n)]
+        root.append(subtree)
+
+    if unassigned:
+        # Recurse to fill the last subtree, which is the only partially populated one
+        subtree = build_n_ary_tree(unassigned, n)
+        if len(subtree) <= n - len(root):
+            # replace last subtree with its children if they can still fit
+            root.extend(subtree)
+        else:
+            root.append(subtree)
+        assert len(root) <= n
+
+    return root

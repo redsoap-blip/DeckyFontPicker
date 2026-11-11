@@ -1,1 +1,240 @@
-ZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCmZyb20gZnVuY3Rvb2xzIGltcG9ydCBwYXJ0aWFsCmZyb20gaXRlcnRvb2xzIGltcG9ydCBjb3VudAppbXBvcnQgc3ltcHkgYXMgc3AKaW1wb3J0IHN5cwoKbiA9IDMgICMgTWF4IEJlemllciBkZWdyZWU7IDMgZm9yIGN1YmljLCAyIGZvciBxdWFkcmF0aWMKCnQsIHgsIHkgPSBzcC5zeW1ib2xzKCJ0IHggeSIsIHJlYWw9VHJ1ZSkKYyA9IHNwLnN5bWJvbHMoImMiLCByZWFsPUZhbHNlKSAgIyBDb21wbGV4IHJlcHJlc2VudGF0aW9uIGluc3RlYWQgb2YgeC95CgpYID0gdHVwbGUoc3Auc3ltYm9scygieDolZCIgJSAobiArIDEpLCByZWFsPVRydWUpKQpZID0gdHVwbGUoc3Auc3ltYm9scygieTolZCIgJSAobiArIDEpLCByZWFsPVRydWUpKQpQID0gdHVwbGUoemlwKCooc3Auc3ltYm9scygicDolZFslc10iICUgKG4gKyAxLCB3KSwgcmVhbD1UcnVlKSBmb3IgdyBpbiAiMDEiKSkpCkMgPSB0dXBsZShzcC5zeW1ib2xzKCJjOiVkIiAlIChuICsgMSksIHJlYWw9RmFsc2UpKQoKIyBDdWJpYyBCZXJuc3RlaW4gYmFzaXMgZnVuY3Rpb25zCkJpbm9taWFsQ29lZmZpY2llbnQgPSBbKDEsIDApXQpmb3IgaSBpbiByYW5nZSgxLCBuICsgMSk6CiAgICBsYXN0ID0gQmlub21pYWxDb2VmZmljaWVudFstMV0KICAgIHRoaXMgPSB0dXBsZShsYXN0W2ogLSAxXSArIGxhc3Rbal0gZm9yIGogaW4gcmFuZ2UobGVuKGxhc3QpKSkgKyAoMCwpCiAgICBCaW5vbWlhbENvZWZmaWNpZW50LmFwcGVuZCh0aGlzKQpCaW5vbWlhbENvZWZmaWNpZW50ID0gdHVwbGUodHVwbGUoaXRlbVs6LTFdKSBmb3IgaXRlbSBpbiBCaW5vbWlhbENvZWZmaWNpZW50KQpkZWwgbGFzdCwgdGhpcwoKQmVybnN0ZWluUG9seW5vbWlhbCA9IHR1cGxlKAogICAgdHVwbGUoYyAqIHQqKmkgKiAoMSAtIHQpICoqIChuIC0gaSkgZm9yIGksIGMgaW4gZW51bWVyYXRlKGNvZWZmcykpCiAgICBmb3IgbiwgY29lZmZzIGluIGVudW1lcmF0ZShCaW5vbWlhbENvZWZmaWNpZW50KQopCgpCZXppZXJDdXJ2ZSA9IHR1cGxlKAogICAgdHVwbGUoCiAgICAgICAgc3VtKFBbaV1bal0gKiBiZXJuc3RlaW4gZm9yIGksIGJlcm5zdGVpbiBpbiBlbnVtZXJhdGUoYmVybnN0ZWlucykpCiAgICAgICAgZm9yIGogaW4gcmFuZ2UoMikKICAgICkKICAgIGZvciBuLCBiZXJuc3RlaW5zIGluIGVudW1lcmF0ZShCZXJuc3RlaW5Qb2x5bm9taWFsKQopCkJlemllckN1cnZlQyA9IHR1cGxlKAogICAgc3VtKENbaV0gKiBiZXJuc3RlaW4gZm9yIGksIGJlcm5zdGVpbiBpbiBlbnVtZXJhdGUoYmVybnN0ZWlucykpCiAgICBmb3IgbiwgYmVybnN0ZWlucyBpbiBlbnVtZXJhdGUoQmVybnN0ZWluUG9seW5vbWlhbCkKKQoKCmRlZiBncmVlbihmLCBjdXJ2ZVhZKToKICAgIGYgPSAtc3AuaW50ZWdyYXRlKHNwLnN5bXBpZnkoZiksIHkpCiAgICBmID0gZi5zdWJzKHt4OiBjdXJ2ZVhZWzBdLCB5OiBjdXJ2ZVhZWzFdfSkKICAgIGYgPSBzcC5pbnRlZ3JhdGUoZiAqIHNwLmRpZmYoY3VydmVYWVswXSwgdCksICh0LCAwLCAxKSkKICAgIHJldHVybiBmCgoKY2xhc3MgX0JlemllckZ1bmNzTGF6eShkaWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBzeW1mdW5jKToKICAgICAgICBzZWxmLl9zeW1mdW5jID0gc3ltZnVuYwogICAgICAgIHNlbGYuX2JlemZ1bmNzID0ge30KCiAgICBkZWYgX19taXNzaW5nX18oc2VsZiwgaSk6CiAgICAgICAgYXJncyA9IFsicCVkIiAlIGQgZm9yIGQgaW4gcmFuZ2UoaSArIDEpXQogICAgICAgIGYgPSBncmVlbihzZWxmLl9zeW1mdW5jLCBCZXppZXJDdXJ2ZVtpXSkKICAgICAgICBmID0gc3AuZ2NkX3Rlcm1zKGYuY29sbGVjdChzdW0oUCwgKCkpKSkgICMgT3B0aW1pemUKICAgICAgICByZXR1cm4gc3AubGFtYmRpZnkoYXJncywgZikKCgpjbGFzcyBHcmVlblBlbihCYXNlUGVuKToKICAgIF9CZXppZXJGdW5jcyA9IHt9CgogICAgQGNsYXNzbWV0aG9kCiAgICBkZWYgX2dldEdyZWVuQmV6aWVyRnVuY3MoY2VsZiwgZnVuYyk6CiAgICAgICAgZnVuY3N0ciA9IHN0cihmdW5jKQogICAgICAgIGlmIG5vdCBmdW5jc3RyIGluIGNlbGYuX0JlemllckZ1bmNzOgogICAgICAgICAgICBjZWxmLl9CZXppZXJGdW5jc1tmdW5jc3RyXSA9IF9CZXppZXJGdW5jc0xhenkoZnVuYykKICAgICAgICByZXR1cm4gY2VsZi5fQmV6aWVyRnVuY3NbZnVuY3N0cl0KCiAgICBkZWYgX19pbml0X18oc2VsZiwgZnVuYywgZ2x5cGhzZXQ9Tm9uZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaHNldCkKICAgICAgICBzZWxmLl9mdW5jcyA9IHNlbGYuX2dldEdyZWVuQmV6aWVyRnVuY3MoZnVuYykKICAgICAgICBzZWxmLnZhbHVlID0gMAoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHAwKToKICAgICAgICBzZWxmLl9zdGFydFBvaW50ID0gcDAKCiAgICBkZWYgX2Nsb3NlUGF0aChzZWxmKToKICAgICAgICBwMCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgaWYgcDAgIT0gc2VsZi5fc3RhcnRQb2ludDoKICAgICAgICAgICAgc2VsZi5fbGluZVRvKHNlbGYuX3N0YXJ0UG9pbnQpCgogICAgZGVmIF9lbmRQYXRoKHNlbGYpOgogICAgICAgIHAwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKICAgICAgICBpZiBwMCAhPSBzZWxmLl9zdGFydFBvaW50OgogICAgICAgICAgICAjIEdyZWVuIHRoZW9yZW0gaXMgbm90IGRlZmluZWQgb24gb3BlbiBjb250b3Vycy4KICAgICAgICAgICAgcmFpc2UgTm90SW1wbGVtZW50ZWRFcnJvcgoKICAgIGRlZiBfbGluZVRvKHNlbGYsIHAxKToKICAgICAgICBwMCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgc2VsZi52YWx1ZSArPSBzZWxmLl9mdW5jc1sxXShwMCwgcDEpCgogICAgZGVmIF9xQ3VydmVUb09uZShzZWxmLCBwMSwgcDIpOgogICAgICAgIHAwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKICAgICAgICBzZWxmLnZhbHVlICs9IHNlbGYuX2Z1bmNzWzJdKHAwLCBwMSwgcDIpCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIHAwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKICAgICAgICBzZWxmLnZhbHVlICs9IHNlbGYuX2Z1bmNzWzNdKHAwLCBwMSwgcDIsIHAzKQoKCiMgU2FtcGxlIHBlbnMuCiMgRG8gbm90IHVzZSB0aGlzIGluIHJlYWwgY29kZS4KIyBVc2UgZm9udFRvb2xzLnBlbnMubW9tZW50c1Blbi5Nb21lbnRzUGVuIGluc3RlYWQuCkFyZWFQZW4gPSBwYXJ0aWFsKEdyZWVuUGVuLCBmdW5jPTEpCk1vbWVudFhQZW4gPSBwYXJ0aWFsKEdyZWVuUGVuLCBmdW5jPXgpCk1vbWVudFlQZW4gPSBwYXJ0aWFsKEdyZWVuUGVuLCBmdW5jPXkpCk1vbWVudFhYUGVuID0gcGFydGlhbChHcmVlblBlbiwgZnVuYz14ICogeCkKTW9tZW50WVlQZW4gPSBwYXJ0aWFsKEdyZWVuUGVuLCBmdW5jPXkgKiB5KQpNb21lbnRYWVBlbiA9IHBhcnRpYWwoR3JlZW5QZW4sIGZ1bmM9eCAqIHkpCgoKZGVmIHByaW50R3JlZW5QZW4ocGVuTmFtZSwgZnVuY3MsIGZpbGU9c3lzLnN0ZG91dCwgZG9jc3RyaW5nPU5vbmUpOgogICAgaWYgZG9jc3RyaW5nIGlzIG5vdCBOb25lOgogICAgICAgIHByaW50KCciIiIlcyIiIicgJSBkb2NzdHJpbmcpCgogICAgcHJpbnQoCiAgICAgICAgIiIiZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuLCBPcGVuQ29udG91ckVycm9yCnRyeToKCWltcG9ydCBjeXRob24KZXhjZXB0IChBdHRyaWJ1dGVFcnJvciwgSW1wb3J0RXJyb3IpOgoJIyBpZiBjeXRob24gbm90IGluc3RhbGxlZCwgdXNlIG1vY2sgbW9kdWxlIHdpdGggbm8tb3AgZGVjb3JhdG9ycyBhbmQgdHlwZXMKCWZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IGN5dGhvbgpDT01QSUxFRCA9IGN5dGhvbi5jb21waWxlZAoKCl9fYWxsX18gPSBbIiVzIl0KCmNsYXNzICVzKEJhc2VQZW4pOgoKCWRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaHNldD1Ob25lKToKCQlCYXNlUGVuLl9faW5pdF9fKHNlbGYsIGdseXBoc2V0KQoiIiIgJSAocGVuTmFtZSwgcGVuTmFtZSksCiAgICAgICAgZmlsZT1maWxlLAogICAgKQogICAgZm9yIG5hbWUsIGYgaW4gZnVuY3M6CiAgICAgICAgcHJpbnQoIgkJc2VsZi4lcyA9IDAiICUgbmFtZSwgZmlsZT1maWxlKQogICAgcHJpbnQoCiAgICAgICAgIiIiCglkZWYgX21vdmVUbyhzZWxmLCBwMCk6CgkJc2VsZi5fc3RhcnRQb2ludCA9IHAwCgoJZGVmIF9jbG9zZVBhdGgoc2VsZik6CgkJcDAgPSBzZWxmLl9nZXRDdXJyZW50UG9pbnQoKQoJCWlmIHAwICE9IHNlbGYuX3N0YXJ0UG9pbnQ6CgkJCXNlbGYuX2xpbmVUbyhzZWxmLl9zdGFydFBvaW50KQoKCWRlZiBfZW5kUGF0aChzZWxmKToKCQlwMCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCgkJaWYgcDAgIT0gc2VsZi5fc3RhcnRQb2ludDoKCQkJcmFpc2UgT3BlbkNvbnRvdXJFcnJvcigKCQkJCQkJCSJHbHlwaCBzdGF0aXN0aWNzIGlzIG5vdCBkZWZpbmVkIG9uIG9wZW4gY29udG91cnMuIgoJCQkpCiIiIiwKICAgICAgICBlbmQ9IiIsCiAgICAgICAgZmlsZT1maWxlLAogICAgKQoKICAgIGZvciBuIGluICgxLCAyLCAzKToKICAgICAgICBzdWJzID0ge1BbaV1bal06IFtYLCBZXVtqXVtpXSBmb3IgaSBpbiByYW5nZShuICsgMSkgZm9yIGogaW4gcmFuZ2UoMil9CiAgICAgICAgZ3JlZW5zID0gW2dyZWVuKGYsIEJlemllckN1cnZlW25dKSBmb3IgbmFtZSwgZiBpbiBmdW5jc10KICAgICAgICBncmVlbnMgPSBbc3AuZ2NkX3Rlcm1zKGYuY29sbGVjdChzdW0oUCwgKCkpKSkgZm9yIGYgaW4gZ3JlZW5zXSAgIyBPcHRpbWl6ZQogICAgICAgIGdyZWVucyA9IFtmLnN1YnMoc3VicykgZm9yIGYgaW4gZ3JlZW5zXSAgIyBDb252ZXJ0IHRvIHAgdG8geC95CiAgICAgICAgZGVmcywgZXhwcnMgPSBzcC5jc2UoCiAgICAgICAgICAgIGdyZWVucywKICAgICAgICAgICAgb3B0aW1pemF0aW9ucz0iYmFzaWMiLAogICAgICAgICAgICBzeW1ib2xzPShzcC5TeW1ib2woInIlZCIgJSBpKSBmb3IgaSBpbiBjb3VudCgpKSwKICAgICAgICApCgogICAgICAgIHByaW50KCkKICAgICAgICBmb3IgbmFtZSwgdmFsdWUgaW4gZGVmczoKICAgICAgICAgICAgcHJpbnQoIglAY3l0aG9uLmxvY2Fscyglcz1jeXRob24uZG91YmxlKSIgJSBuYW1lLCBmaWxlPWZpbGUpCiAgICAgICAgaWYgbiA9PSAxOgogICAgICAgICAgICBwcmludCgKICAgICAgICAgICAgICAgICIiIlwKCUBjeXRob24ubG9jYWxzKHgwPWN5dGhvbi5kb3VibGUsIHkwPWN5dGhvbi5kb3VibGUpCglAY3l0aG9uLmxvY2Fscyh4MT1jeXRob24uZG91YmxlLCB5MT1jeXRob24uZG91YmxlKQoJZGVmIF9saW5lVG8oc2VsZiwgcDEpOgoJCXgwLHkwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKCQl4MSx5MSA9IHAxCiIiIiwKICAgICAgICAgICAgICAgIGZpbGU9ZmlsZSwKICAgICAgICAgICAgKQogICAgICAgIGVsaWYgbiA9PSAyOgogICAgICAgICAgICBwcmludCgKICAgICAgICAgICAgICAgICIiIlwKCUBjeXRob24ubG9jYWxzKHgwPWN5dGhvbi5kb3VibGUsIHkwPWN5dGhvbi5kb3VibGUpCglAY3l0aG9uLmxvY2Fscyh4MT1jeXRob24uZG91YmxlLCB5MT1jeXRob24uZG91YmxlKQoJQGN5dGhvbi5sb2NhbHMoeDI9Y3l0aG9uLmRvdWJsZSwgeTI9Y3l0aG9uLmRvdWJsZSkKCWRlZiBfcUN1cnZlVG9PbmUoc2VsZiwgcDEsIHAyKToKCQl4MCx5MCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCgkJeDEseTEgPSBwMQoJCXgyLHkyID0gcDIKIiIiLAogICAgICAgICAgICAgICAgZmlsZT1maWxlLAogICAgICAgICAgICApCiAgICAgICAgZWxpZiBuID09IDM6CiAgICAgICAgICAgIHByaW50KAogICAgICAgICAgICAgICAgIiIiXAoJQGN5dGhvbi5sb2NhbHMoeDA9Y3l0aG9uLmRvdWJsZSwgeTA9Y3l0aG9uLmRvdWJsZSkKCUBjeXRob24ubG9jYWxzKHgxPWN5dGhvbi5kb3VibGUsIHkxPWN5dGhvbi5kb3VibGUpCglAY3l0aG9uLmxvY2Fscyh4Mj1jeXRob24uZG91YmxlLCB5Mj1jeXRob24uZG91YmxlKQoJQGN5dGhvbi5sb2NhbHMoeDM9Y3l0aG9uLmRvdWJsZSwgeTM9Y3l0aG9uLmRvdWJsZSkKCWRlZiBfY3VydmVUb09uZShzZWxmLCBwMSwgcDIsIHAzKToKCQl4MCx5MCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCgkJeDEseTEgPSBwMQoJCXgyLHkyID0gcDIKCQl4Myx5MyA9IHAzCiIiIiwKICAgICAgICAgICAgICAgIGZpbGU9ZmlsZSwKICAgICAgICAgICAgKQogICAgICAgIGZvciBuYW1lLCB2YWx1ZSBpbiBkZWZzOgogICAgICAgICAgICBwcmludCgiCQklcyA9ICVzIiAlIChuYW1lLCB2YWx1ZSksIGZpbGU9ZmlsZSkKCiAgICAgICAgcHJpbnQoZmlsZT1maWxlKQogICAgICAgIGZvciBuYW1lLCB2YWx1ZSBpbiB6aXAoW2ZbMF0gZm9yIGYgaW4gZnVuY3NdLCBleHBycyk6CiAgICAgICAgICAgIHByaW50KCIJCXNlbGYuJXMgKz0gJXMiICUgKG5hbWUsIHZhbHVlKSwgZmlsZT1maWxlKQoKICAgIHByaW50KAogICAgICAgICIiIgppZiBfX25hbWVfXyA9PSAnX19tYWluX18nOgoJZnJvbSBmb250VG9vbHMubWlzYy5zeW1mb250IGltcG9ydCB4LCB5LCBwcmludEdyZWVuUGVuCglwcmludEdyZWVuUGVuKCclcycsIFsiIiIgJSBwZW5OYW1lLAogICAgICAgIGZpbGU9ZmlsZSwKICAgICkKICAgIGZvciBuYW1lLCBmIGluIGZ1bmNzOgogICAgICAgIHByaW50KCIJCSAgICAgICgnJXMnLCAlcyksIiAlIChuYW1lLCBzdHIoZikpLCBmaWxlPWZpbGUpCiAgICBwcmludCgiCQkgICAgIF0pIiwgZmlsZT1maWxlKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgaWYgc3lzLmFyZ3ZbMTpdOgogICAgICAgIHBlbk5hbWUgPSBzeXMuYXJndlsxXQogICAgICAgIGZ1bmNzID0gWyhuYW1lLCBldmFsKGYpKSBmb3IgbmFtZSwgZiBpbiB6aXAoc3lzLmFyZ3ZbMjo6Ml0sIHN5cy5hcmd2WzM6OjJdKV0KICAgICAgICBwcmludEdyZWVuUGVuKHBlbk5hbWUsIGZ1bmNzLCBmaWxlPXN5cy5zdGRvdXQpCg==
+from fontTools.pens.basePen import BasePen
+from functools import partial
+from itertools import count
+import sympy as sp
+import sys
+
+n = 3  # Max Bezier degree; 3 for cubic, 2 for quadratic
+
+t, x, y = sp.symbols("t x y", real=True)
+c = sp.symbols("c", real=False)  # Complex representation instead of x/y
+
+X = tuple(sp.symbols("x:%d" % (n + 1), real=True))
+Y = tuple(sp.symbols("y:%d" % (n + 1), real=True))
+P = tuple(zip(*(sp.symbols("p:%d[%s]" % (n + 1, w), real=True) for w in "01")))
+C = tuple(sp.symbols("c:%d" % (n + 1), real=False))
+
+# Cubic Bernstein basis functions
+BinomialCoefficient = [(1, 0)]
+for i in range(1, n + 1):
+    last = BinomialCoefficient[-1]
+    this = tuple(last[j - 1] + last[j] for j in range(len(last))) + (0,)
+    BinomialCoefficient.append(this)
+BinomialCoefficient = tuple(tuple(item[:-1]) for item in BinomialCoefficient)
+del last, this
+
+BernsteinPolynomial = tuple(
+    tuple(c * t**i * (1 - t) ** (n - i) for i, c in enumerate(coeffs))
+    for n, coeffs in enumerate(BinomialCoefficient)
+)
+
+BezierCurve = tuple(
+    tuple(
+        sum(P[i][j] * bernstein for i, bernstein in enumerate(bernsteins))
+        for j in range(2)
+    )
+    for n, bernsteins in enumerate(BernsteinPolynomial)
+)
+BezierCurveC = tuple(
+    sum(C[i] * bernstein for i, bernstein in enumerate(bernsteins))
+    for n, bernsteins in enumerate(BernsteinPolynomial)
+)
+
+
+def green(f, curveXY):
+    f = -sp.integrate(sp.sympify(f), y)
+    f = f.subs({x: curveXY[0], y: curveXY[1]})
+    f = sp.integrate(f * sp.diff(curveXY[0], t), (t, 0, 1))
+    return f
+
+
+class _BezierFuncsLazy(dict):
+    def __init__(self, symfunc):
+        self._symfunc = symfunc
+        self._bezfuncs = {}
+
+    def __missing__(self, i):
+        args = ["p%d" % d for d in range(i + 1)]
+        f = green(self._symfunc, BezierCurve[i])
+        f = sp.gcd_terms(f.collect(sum(P, ())))  # Optimize
+        return sp.lambdify(args, f)
+
+
+class GreenPen(BasePen):
+    _BezierFuncs = {}
+
+    @classmethod
+    def _getGreenBezierFuncs(celf, func):
+        funcstr = str(func)
+        if not funcstr in celf._BezierFuncs:
+            celf._BezierFuncs[funcstr] = _BezierFuncsLazy(func)
+        return celf._BezierFuncs[funcstr]
+
+    def __init__(self, func, glyphset=None):
+        BasePen.__init__(self, glyphset)
+        self._funcs = self._getGreenBezierFuncs(func)
+        self.value = 0
+
+    def _moveTo(self, p0):
+        self._startPoint = p0
+
+    def _closePath(self):
+        p0 = self._getCurrentPoint()
+        if p0 != self._startPoint:
+            self._lineTo(self._startPoint)
+
+    def _endPath(self):
+        p0 = self._getCurrentPoint()
+        if p0 != self._startPoint:
+            # Green theorem is not defined on open contours.
+            raise NotImplementedError
+
+    def _lineTo(self, p1):
+        p0 = self._getCurrentPoint()
+        self.value += self._funcs[1](p0, p1)
+
+    def _qCurveToOne(self, p1, p2):
+        p0 = self._getCurrentPoint()
+        self.value += self._funcs[2](p0, p1, p2)
+
+    def _curveToOne(self, p1, p2, p3):
+        p0 = self._getCurrentPoint()
+        self.value += self._funcs[3](p0, p1, p2, p3)
+
+
+# Sample pens.
+# Do not use this in real code.
+# Use fontTools.pens.momentsPen.MomentsPen instead.
+AreaPen = partial(GreenPen, func=1)
+MomentXPen = partial(GreenPen, func=x)
+MomentYPen = partial(GreenPen, func=y)
+MomentXXPen = partial(GreenPen, func=x * x)
+MomentYYPen = partial(GreenPen, func=y * y)
+MomentXYPen = partial(GreenPen, func=x * y)
+
+
+def printGreenPen(penName, funcs, file=sys.stdout, docstring=None):
+    if docstring is not None:
+        print('"""%s"""' % docstring)
+
+    print(
+        """from fontTools.pens.basePen import BasePen, OpenContourError
+try:
+	import cython
+except (AttributeError, ImportError):
+	# if cython not installed, use mock module with no-op decorators and types
+	from fontTools.misc import cython
+COMPILED = cython.compiled
+
+
+__all__ = ["%s"]
+
+class %s(BasePen):
+
+	def __init__(self, glyphset=None):
+		BasePen.__init__(self, glyphset)
+""" % (penName, penName),
+        file=file,
+    )
+    for name, f in funcs:
+        print("		self.%s = 0" % name, file=file)
+    print(
+        """
+	def _moveTo(self, p0):
+		self._startPoint = p0
+
+	def _closePath(self):
+		p0 = self._getCurrentPoint()
+		if p0 != self._startPoint:
+			self._lineTo(self._startPoint)
+
+	def _endPath(self):
+		p0 = self._getCurrentPoint()
+		if p0 != self._startPoint:
+			raise OpenContourError(
+							"Glyph statistics is not defined on open contours."
+			)
+""",
+        end="",
+        file=file,
+    )
+
+    for n in (1, 2, 3):
+        subs = {P[i][j]: [X, Y][j][i] for i in range(n + 1) for j in range(2)}
+        greens = [green(f, BezierCurve[n]) for name, f in funcs]
+        greens = [sp.gcd_terms(f.collect(sum(P, ()))) for f in greens]  # Optimize
+        greens = [f.subs(subs) for f in greens]  # Convert to p to x/y
+        defs, exprs = sp.cse(
+            greens,
+            optimizations="basic",
+            symbols=(sp.Symbol("r%d" % i) for i in count()),
+        )
+
+        print()
+        for name, value in defs:
+            print("	@cython.locals(%s=cython.double)" % name, file=file)
+        if n == 1:
+            print(
+                """\
+	@cython.locals(x0=cython.double, y0=cython.double)
+	@cython.locals(x1=cython.double, y1=cython.double)
+	def _lineTo(self, p1):
+		x0,y0 = self._getCurrentPoint()
+		x1,y1 = p1
+""",
+                file=file,
+            )
+        elif n == 2:
+            print(
+                """\
+	@cython.locals(x0=cython.double, y0=cython.double)
+	@cython.locals(x1=cython.double, y1=cython.double)
+	@cython.locals(x2=cython.double, y2=cython.double)
+	def _qCurveToOne(self, p1, p2):
+		x0,y0 = self._getCurrentPoint()
+		x1,y1 = p1
+		x2,y2 = p2
+""",
+                file=file,
+            )
+        elif n == 3:
+            print(
+                """\
+	@cython.locals(x0=cython.double, y0=cython.double)
+	@cython.locals(x1=cython.double, y1=cython.double)
+	@cython.locals(x2=cython.double, y2=cython.double)
+	@cython.locals(x3=cython.double, y3=cython.double)
+	def _curveToOne(self, p1, p2, p3):
+		x0,y0 = self._getCurrentPoint()
+		x1,y1 = p1
+		x2,y2 = p2
+		x3,y3 = p3
+""",
+                file=file,
+            )
+        for name, value in defs:
+            print("		%s = %s" % (name, value), file=file)
+
+        print(file=file)
+        for name, value in zip([f[0] for f in funcs], exprs):
+            print("		self.%s += %s" % (name, value), file=file)
+
+    print(
+        """
+if __name__ == '__main__':
+	from fontTools.misc.symfont import x, y, printGreenPen
+	printGreenPen('%s', [""" % penName,
+        file=file,
+    )
+    for name, f in funcs:
+        print("		      ('%s', %s)," % (name, str(f)), file=file)
+    print("		     ])", file=file)
+
+
+if __name__ == "__main__":
+    import sys
+
+    if sys.argv[1:]:
+        penName = sys.argv[1]
+        funcs = [(name, eval(f)) for name, f in zip(sys.argv[2::2], sys.argv[3::2])]
+        printGreenPen(penName, funcs, file=sys.stdout)

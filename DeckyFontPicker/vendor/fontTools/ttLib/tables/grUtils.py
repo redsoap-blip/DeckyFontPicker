@@ -1,1 +1,92 @@
-aW1wb3J0IHN0cnVjdCwgd2FybmluZ3MKCnRyeToKICAgIGltcG9ydCBsejQKZXhjZXB0IEltcG9ydEVycm9yOgogICAgbHo0ID0gTm9uZQplbHNlOgogICAgaW1wb3J0IGx6NC5ibG9jawoKIyBvbGQgc2NoZW1lIGZvciBWRVJTSU9OIDwgMC45IG90aGVyd2lzZSB1c2UgbHo0LmJsb2NrCgoKZGVmIGRlY29tcHJlc3MoZGF0YSk6CiAgICAoY29tcHJlc3Npb24sKSA9IHN0cnVjdC51bnBhY2soIj5MIiwgZGF0YVs0OjhdKQogICAgc2NoZW1lID0gY29tcHJlc3Npb24gPj4gMjcKICAgIHNpemUgPSBjb21wcmVzc2lvbiAmIDB4MDdGRkZGRkYKICAgIGlmIHNjaGVtZSA9PSAwOgogICAgICAgIHBhc3MKICAgIGVsaWYgc2NoZW1lID09IDEgYW5kIGx6NDoKICAgICAgICByZXMgPSBsejQuYmxvY2suZGVjb21wcmVzcyhzdHJ1Y3QucGFjaygiPEwiLCBzaXplKSArIGRhdGFbODpdKQogICAgICAgIGlmIGxlbihyZXMpICE9IHNpemU6CiAgICAgICAgICAgIHdhcm5pbmdzLndhcm4oIlRhYmxlIGRlY29tcHJlc3Npb24gZmFpbGVkLiIpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZGF0YSA9IHJlcwogICAgZWxzZToKICAgICAgICB3YXJuaW5ncy53YXJuKCJUYWJsZSBpcyBjb21wcmVzc2VkIHdpdGggYW4gdW5zdXBwb3J0ZWQgY29tcHJlc3Npb24gc2NoZW1lIikKICAgIHJldHVybiAoZGF0YSwgc2NoZW1lKQoKCmRlZiBjb21wcmVzcyhzY2hlbWUsIGRhdGEpOgogICAgaGRyID0gZGF0YVs6NF0gKyBzdHJ1Y3QucGFjaygiPkwiLCAoc2NoZW1lIDw8IDI3KSArIChsZW4oZGF0YSkgJiAweDA3RkZGRkZGKSkKICAgIGlmIHNjaGVtZSA9PSAwOgogICAgICAgIHJldHVybiBkYXRhCiAgICBlbGlmIHNjaGVtZSA9PSAxIGFuZCBsejQ6CiAgICAgICAgcmVzID0gbHo0LmJsb2NrLmNvbXByZXNzKAogICAgICAgICAgICBkYXRhLCBtb2RlPSJoaWdoX2NvbXByZXNzaW9uIiwgY29tcHJlc3Npb249MTYsIHN0b3JlX3NpemU9RmFsc2UKICAgICAgICApCiAgICAgICAgcmV0dXJuIGhkciArIHJlcwogICAgZWxzZToKICAgICAgICB3YXJuaW5ncy53YXJuKCJUYWJsZSBmYWlsZWQgdG8gY29tcHJlc3MgYnkgdW5zdXBwb3J0ZWQgY29tcHJlc3Npb24gc2NoZW1lIikKICAgIHJldHVybiBkYXRhCgoKZGVmIF9lbnRyaWVzKGF0dHJzLCBzYW1ldmFsKToKICAgIGFrID0gMAogICAgdmFscyA9IFtdCiAgICBsYXN0diA9IDAKICAgIGZvciBrLCB2IGluIGF0dHJzOgogICAgICAgIGlmIGxlbih2YWxzKSBhbmQgKGsgIT0gYWsgKyAxIG9yIChzYW1ldmFsIGFuZCB2ICE9IGxhc3R2KSk6CiAgICAgICAgICAgIHlpZWxkIChhayAtIGxlbih2YWxzKSArIDEsIGxlbih2YWxzKSwgdmFscykKICAgICAgICAgICAgdmFscyA9IFtdCiAgICAgICAgYWsgPSBrCiAgICAgICAgdmFscy5hcHBlbmQodikKICAgICAgICBsYXN0diA9IHYKICAgIHlpZWxkIChhayAtIGxlbih2YWxzKSArIDEsIGxlbih2YWxzKSwgdmFscykKCgpkZWYgZW50cmllcyhhdHRyaWJ1dGVzLCBzYW1ldmFsPUZhbHNlKToKICAgIGcgPSBfZW50cmllcyhzb3J0ZWQoYXR0cmlidXRlcy5pdGVtcygpLCBrZXk9bGFtYmRhIHg6IGludCh4WzBdKSksIHNhbWV2YWwpCiAgICByZXR1cm4gZwoKCmRlZiBiaW5pbmZvKG51bSwgc2l6ZT0xKToKICAgIGlmIG51bSA9PSAwOgogICAgICAgIHJldHVybiBzdHJ1Y3QucGFjaygiPjRIIiwgMCwgMCwgMCwgMCkKICAgIHNyYW5nZSA9IDEKICAgIHNlbGVjdCA9IDAKICAgIHdoaWxlIHNyYW5nZSA8PSBudW06CiAgICAgICAgc3JhbmdlICo9IDIKICAgICAgICBzZWxlY3QgKz0gMQogICAgc2VsZWN0IC09IDEKICAgIHNyYW5nZSAvLz0gMgogICAgc3JhbmdlICo9IHNpemUKICAgIHNoaWZ0ID0gbnVtICogc2l6ZSAtIHNyYW5nZQogICAgcmV0dXJuIHN0cnVjdC5wYWNrKCI+NEgiLCBudW0sIHNyYW5nZSwgc2VsZWN0LCBzaGlmdCkKCgpkZWYgbnVtMnRhZyhuKToKICAgIGlmIG4gPCAweDIwMDAwMDoKICAgICAgICByZXR1cm4gc3RyKG4pCiAgICBlbHNlOgogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgIHN0cnVjdC51bnBhY2soIjRzIiwgc3RydWN0LnBhY2soIj5MIiwgbikpWzBdLnJlcGxhY2UoYiJcMDAwIiwgYiIiKS5kZWNvZGUoKQogICAgICAgICkKCgpkZWYgdGFnMm51bShuKToKICAgIHRyeToKICAgICAgICByZXR1cm4gaW50KG4pCiAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICBuID0gKG4gKyAiICAgICIpWzo0XQogICAgICAgIHJldHVybiBzdHJ1Y3QudW5wYWNrKCI+TCIsIG4uZW5jb2RlKCJhc2NpaSIpKVswXQo=
+import struct, warnings
+
+try:
+    import lz4
+except ImportError:
+    lz4 = None
+else:
+    import lz4.block
+
+# old scheme for VERSION < 0.9 otherwise use lz4.block
+
+
+def decompress(data):
+    (compression,) = struct.unpack(">L", data[4:8])
+    scheme = compression >> 27
+    size = compression & 0x07FFFFFF
+    if scheme == 0:
+        pass
+    elif scheme == 1 and lz4:
+        res = lz4.block.decompress(struct.pack("<L", size) + data[8:])
+        if len(res) != size:
+            warnings.warn("Table decompression failed.")
+        else:
+            data = res
+    else:
+        warnings.warn("Table is compressed with an unsupported compression scheme")
+    return (data, scheme)
+
+
+def compress(scheme, data):
+    hdr = data[:4] + struct.pack(">L", (scheme << 27) + (len(data) & 0x07FFFFFF))
+    if scheme == 0:
+        return data
+    elif scheme == 1 and lz4:
+        res = lz4.block.compress(
+            data, mode="high_compression", compression=16, store_size=False
+        )
+        return hdr + res
+    else:
+        warnings.warn("Table failed to compress by unsupported compression scheme")
+    return data
+
+
+def _entries(attrs, sameval):
+    ak = 0
+    vals = []
+    lastv = 0
+    for k, v in attrs:
+        if len(vals) and (k != ak + 1 or (sameval and v != lastv)):
+            yield (ak - len(vals) + 1, len(vals), vals)
+            vals = []
+        ak = k
+        vals.append(v)
+        lastv = v
+    yield (ak - len(vals) + 1, len(vals), vals)
+
+
+def entries(attributes, sameval=False):
+    g = _entries(sorted(attributes.items(), key=lambda x: int(x[0])), sameval)
+    return g
+
+
+def bininfo(num, size=1):
+    if num == 0:
+        return struct.pack(">4H", 0, 0, 0, 0)
+    srange = 1
+    select = 0
+    while srange <= num:
+        srange *= 2
+        select += 1
+    select -= 1
+    srange //= 2
+    srange *= size
+    shift = num * size - srange
+    return struct.pack(">4H", num, srange, select, shift)
+
+
+def num2tag(n):
+    if n < 0x200000:
+        return str(n)
+    else:
+        return (
+            struct.unpack("4s", struct.pack(">L", n))[0].replace(b"\000", b"").decode()
+        )
+
+
+def tag2num(n):
+    try:
+        return int(n)
+    except ValueError:
+        n = (n + "    ")[:4]
+        return struct.unpack(">L", n.encode("ascii"))[0]

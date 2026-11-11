@@ -1,1 +1,35 @@
-aW1wb3J0IHN5cwoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgICMgVE9ETyBIYW5kbGUgbGlicmFyeS13aWRlIG9wdGlvbnMuIEVnLjoKICAgICMgLS11bmljb2RlZGF0YQogICAgIyAtLXZlcmJvc2UgLyBvdGhlciBsb2dnaW5nIHN0dWZmCgogICAgIyBUT0RPIEFsbG93IGEgd2F5IHRvIHJ1biBhcmJpdHJhcnkgbW9kdWxlcz8gVXNlZnVsIGZvciBzZXR0aW5nCiAgICAjIGxpYnJhcnktd2lkZSBvcHRpb25zIGFuZCBjYWxsaW5nIGFub3RoZXIgbGlicmFyeS4gRWcuOgogICAgIwogICAgIyAgICQgZm9udHRvb2xzIC0tdW5pY29kZWRhdGE9Li4uIGZvbnRtYWtlIC4uLgogICAgIwogICAgIyBUaGlzIGFsbG93cyBmb3IgYSBnaXQtbGlrZSBjb21tYW5kIHdoZXJlIHRoaXJkcGFydHkgY29tbWFuZHMKICAgICMgY2FuIGJlIGFkZGVkLiAgU2hvdWxkIHdlIGp1c3QgdHJ5IGltcG9ydGluZyB0aGUgZm9udHRvb2xzCiAgICAjIG1vZHVsZSBmaXJzdCBhbmQgdHJ5IHdpdGhvdXQgaWYgaXQgZmFpbHM/CgogICAgaWYgbGVuKHN5cy5hcmd2KSA8IDI6CiAgICAgICAgc3lzLmFyZ3YuYXBwZW5kKCJoZWxwIikKICAgIGlmIHN5cy5hcmd2WzFdID09ICItaCIgb3Igc3lzLmFyZ3ZbMV0gPT0gIi0taGVscCI6CiAgICAgICAgc3lzLmFyZ3ZbMV0gPSAiaGVscCIKICAgIG1vZCA9ICJmb250VG9vbHMuIiArIHN5cy5hcmd2WzFdCiAgICBzeXMuYXJndlsxXSA9IHN5cy5hcmd2WzBdICsgIiAiICsgc3lzLmFyZ3ZbMV0KICAgIGRlbCBzeXMuYXJndlswXQoKICAgIGltcG9ydCBydW5weQoKICAgIHJ1bnB5LnJ1bl9tb2R1bGUobW9kLCBydW5fbmFtZT0iX19tYWluX18iKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzeXMuZXhpdChtYWluKCkpCg==
+import sys
+
+
+def main(args=None):
+    if args is None:
+        args = sys.argv[1:]
+
+    # TODO Handle library-wide options. Eg.:
+    # --unicodedata
+    # --verbose / other logging stuff
+
+    # TODO Allow a way to run arbitrary modules? Useful for setting
+    # library-wide options and calling another library. Eg.:
+    #
+    #   $ fonttools --unicodedata=... fontmake ...
+    #
+    # This allows for a git-like command where thirdparty commands
+    # can be added.  Should we just try importing the fonttools
+    # module first and try without if it fails?
+
+    if len(sys.argv) < 2:
+        sys.argv.append("help")
+    if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+        sys.argv[1] = "help"
+    mod = "fontTools." + sys.argv[1]
+    sys.argv[1] = sys.argv[0] + " " + sys.argv[1]
+    del sys.argv[0]
+
+    import runpy
+
+    runpy.run_module(mod, run_name="__main__")
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,1 +1,251 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHJlCmZyb20gZnVuY3Rvb2xzIGltcG9ydCBjYWNoZQpmcm9tIGl0ZXJ0b29scyBpbXBvcnQgY2hhaW4sIGNvdW50CmZyb20gdHlwaW5nIGltcG9ydCBEaWN0LCBJdGVyYWJsZSwgSXRlcmF0b3IsIExpc3QsIE9wdGlvbmFsLCBTZXQsIFR1cGxlCgp0cnk6CiAgICBmcm9tIGx4bWwgaW1wb3J0IGV0cmVlCmV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgICMgbHhtbCBpcyByZXF1aXJlZCBmb3Igc3Vic2V0dGluZyBTVkcsIGJ1dCB3ZSBwcmVmZXIgdG8gZGVsYXkgdGhlIGltcG9ydCBlcnJvcgogICAgIyB1bnRpbCBzdWJzZXRfZ2x5cGhzKCkgaXMgY2FsbGVkIChpLmUuIGlmIGZvbnQgdG8gc3Vic2V0IGhhcyBhbiAnU1ZHICcgdGFibGUpCiAgICBldHJlZSA9IE5vbmUKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgpmcm9tIGZvbnRUb29scy5zdWJzZXQudXRpbCBpbXBvcnQgX2FkZF9tZXRob2QKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLlNfVl9HXyBpbXBvcnQgU1ZHRG9jdW1lbnQKCl9fYWxsX18gPSBbInN1YnNldF9nbHlwaHMiXQoKCkdJRF9SRSA9IHJlLmNvbXBpbGUociJeZ2x5cGgoXGQrKSQiKQoKTkFNRVNQQUNFUyA9IHsKICAgICJzdmciOiAiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLAogICAgInhsaW5rIjogImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiLAp9ClhMSU5LX0hSRUYgPSBmJ3t7e05BTUVTUEFDRVNbInhsaW5rIl19fX1ocmVmJwoKCkBjYWNoZQpkZWYgeHBhdGgocGF0aCk6CiAgICAjIGNvbXBpbGUgWFBhdGggdXBmcm9udCwgY2FjaGluZyByZXN1bHQgdG8gcmV1c2Ugb24gbXVsdGlwbGUgZWxlbWVudHMKICAgIHJldHVybiBldHJlZS5YUGF0aChwYXRoLCBuYW1lc3BhY2VzPU5BTUVTUEFDRVMpCgoKZGVmIGdyb3VwX2VsZW1lbnRzX2J5X2lkKHRyZWU6IGV0cmVlLkVsZW1lbnQpIC0+IERpY3Rbc3RyLCBldHJlZS5FbGVtZW50XToKICAgICMgc2VsZWN0IGFsbCBzdmcgZWxlbWVudHMgd2l0aCAnaWQnIGF0dHJpYnV0ZSBubyBtYXR0ZXIgd2hlcmUgdGhleSBhcmUKICAgICMgaW5jbHVkaW5nIHRoZSByb290IGVsZW1lbnQgaXRzZWxmOgogICAgIyBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvMjU0OAogICAgcmV0dXJuIHtlbC5hdHRyaWJbImlkIl06IGVsIGZvciBlbCBpbiB4cGF0aCgiLy9zdmc6KltAaWRdIikodHJlZSl9CgoKZGVmIHBhcnNlX2Nzc19kZWNsYXJhdGlvbnMoc3R5bGVfYXR0cjogc3RyKSAtPiBEaWN0W3N0ciwgc3RyXToKICAgICMgaHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvU1ZHL0F0dHJpYnV0ZS9zdHlsZQogICAgIyBodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9DU1MvU3ludGF4I2Nzc19kZWNsYXJhdGlvbnMKICAgIHJlc3VsdCA9IHt9CiAgICBmb3IgZGVjbGFyYXRpb24gaW4gc3R5bGVfYXR0ci5zcGxpdCgiOyIpOgogICAgICAgIGlmIGRlY2xhcmF0aW9uLmNvdW50KCI6IikgPT0gMToKICAgICAgICAgICAgcHJvcGVydHlfbmFtZSwgdmFsdWUgPSBkZWNsYXJhdGlvbi5zcGxpdCgiOiIpCiAgICAgICAgICAgIHByb3BlcnR5X25hbWUgPSBwcm9wZXJ0eV9uYW1lLnN0cmlwKCkKICAgICAgICAgICAgcmVzdWx0W3Byb3BlcnR5X25hbWVdID0gdmFsdWUuc3RyaXAoKQogICAgICAgIGVsaWYgZGVjbGFyYXRpb24uc3RyaXAoKToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIkludmFsaWQgQ1NTIGRlY2xhcmF0aW9uIHN5bnRheDoge2RlY2xhcmF0aW9ufSIpCiAgICByZXR1cm4gcmVzdWx0CgoKZGVmIGl0ZXJfcmVmZXJlbmNlZF9pZHModHJlZTogZXRyZWUuRWxlbWVudCkgLT4gSXRlcmF0b3Jbc3RyXToKICAgICMgWWllbGQgYWxsIHRoZSBpZHMgdGhhdCBjYW4gYmUgcmVhY2hlZCB2aWEgcmVmZXJlbmNlcyBmcm9tIHRoaXMgZWxlbWVudCB0cmVlLgogICAgIyBXZSBjdXJyZW50bHkgc3VwcG9ydCB4bGluazpocmVmIChhcyB1c2VkIGJ5IDx1c2U+IGFuZCBncmFkaWVudCB0ZW1wbGF0ZXMpLAogICAgIyBhbmQgbG9jYWwgdXJsKCMuLi4pIGxpbmtzIGZvdW5kIGluIGZpbGwgb3IgY2xpcC1wYXRoIGF0dHJpYnV0ZXMKICAgICMgVE9ETyhhbnRocm90eXBlKTogQ2hlY2sgd2UgYXJlbid0IG1pc3Npbmcgb3RoZXIgc3VwcG9ydGVkIGtpbmRzIG9mIHJlZmVyZW5jZQogICAgZmluZF9zdmdfZWxlbWVudHNfd2l0aF9yZWZlcmVuY2VzID0geHBhdGgoCiAgICAgICAgIi4vL3N2ZzoqWyAiCiAgICAgICAgInN0YXJ0cy13aXRoKEB4bGluazpocmVmLCAnIycpICIKICAgICAgICAib3Igc3RhcnRzLXdpdGgoQGZpbGwsICd1cmwoIycpICIKICAgICAgICAib3Igc3RhcnRzLXdpdGgoQGNsaXAtcGF0aCwgJ3VybCgjJykgIgogICAgICAgICJvciBjb250YWlucyhAc3R5bGUsICc6dXJsKCMnKSAiCiAgICAgICAgIl0iLAogICAgKQogICAgZm9yIGVsIGluIGNoYWluKFt0cmVlXSwgZmluZF9zdmdfZWxlbWVudHNfd2l0aF9yZWZlcmVuY2VzKHRyZWUpKToKICAgICAgICByZWZfaWQgPSBocmVmX2xvY2FsX3RhcmdldChlbCkKICAgICAgICBpZiByZWZfaWQgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHlpZWxkIHJlZl9pZAoKICAgICAgICBhdHRycyA9IGVsLmF0dHJpYgogICAgICAgIGlmICJzdHlsZSIgaW4gYXR0cnM6CiAgICAgICAgICAgIGF0dHJzID0geyoqZGljdChhdHRycyksICoqcGFyc2VfY3NzX2RlY2xhcmF0aW9ucyhlbC5hdHRyaWJbInN0eWxlIl0pfQogICAgICAgIGZvciBhdHRyIGluICgiZmlsbCIsICJjbGlwLXBhdGgiKToKICAgICAgICAgICAgaWYgYXR0ciBpbiBhdHRyczoKICAgICAgICAgICAgICAgIHZhbHVlID0gYXR0cnNbYXR0cl0KICAgICAgICAgICAgICAgIGlmIHZhbHVlLnN0YXJ0c3dpdGgoInVybCgjIikgYW5kIHZhbHVlLmVuZHN3aXRoKCIpIik6CiAgICAgICAgICAgICAgICAgICAgcmVmX2lkID0gdmFsdWVbNTotMV0KICAgICAgICAgICAgICAgICAgICBhc3NlcnQgcmVmX2lkCiAgICAgICAgICAgICAgICAgICAgeWllbGQgcmVmX2lkCgoKZGVmIGNsb3N1cmVfZWxlbWVudF9pZHMoCiAgICBlbGVtZW50czogRGljdFtzdHIsIGV0cmVlLkVsZW1lbnRdLCBlbGVtZW50X2lkczogU2V0W3N0cl0KKSAtPiBOb25lOgogICAgIyBFeHBhbmQgdGhlIGluaXRpYWwgc3Vic2V0IG9mIGVsZW1lbnQgaWRzIHRvIGluY2x1ZGUgaWRzIHRoYXQgY2FuIGJlIHJlYWNoZWQKICAgICMgdmlhIHJlZmVyZW5jZXMgZnJvbSB0aGUgaW5pdGlhbCBzZXQuCiAgICB1bnZpc2l0ZWQgPSBlbGVtZW50X2lkcwogICAgd2hpbGUgdW52aXNpdGVkOgogICAgICAgIHJlZmVyZW5jZWQ6IFNldFtzdHJdID0gc2V0KCkKICAgICAgICBmb3IgZWxfaWQgaW4gdW52aXNpdGVkOgogICAgICAgICAgICBpZiBlbF9pZCBub3QgaW4gZWxlbWVudHM6CiAgICAgICAgICAgICAgICAjIGlnbm9yZSBkYW5nbGluZyByZWZlcmVuY2U7IG5vdCBvdXIgam9iIHRvIHZhbGlkYXRlIHN2ZwogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgcmVmZXJlbmNlZC51cGRhdGUoaXRlcl9yZWZlcmVuY2VkX2lkcyhlbGVtZW50c1tlbF9pZF0pKQogICAgICAgIHJlZmVyZW5jZWQgLT0gZWxlbWVudF9pZHMKICAgICAgICBlbGVtZW50X2lkcy51cGRhdGUocmVmZXJlbmNlZCkKICAgICAgICB1bnZpc2l0ZWQgPSByZWZlcmVuY2VkCgoKZGVmIHN1YnNldF9lbGVtZW50cyhlbDogZXRyZWUuRWxlbWVudCwgcmV0YWluZWRfaWRzOiBTZXRbc3RyXSkgLT4gYm9vbDoKICAgICMgS2VlcCBlbGVtZW50cyBpZiB0aGVpciBpZCBpcyBpbiB0aGUgc3Vic2V0LCBvciBhbnkgb2YgdGhlaXIgY2hpbGRyZW4ncyBpZCBpcy4KICAgICMgRHJvcCBlbGVtZW50cyB3aG9zZSBpZCBpcyBub3QgaW4gdGhlIHN1YnNldCwgYW5kIGVpdGhlciBoYXZlIG5vIGNoaWxkcmVuLAogICAgIyBvciBhbGwgdGhlaXIgY2hpbGRyZW4gYXJlIGJlaW5nIGRyb3BwZWQuCiAgICBpZiBlbC5hdHRyaWIuZ2V0KCJpZCIpIGluIHJldGFpbmVkX2lkczoKICAgICAgICAjIGlmIGlkIGlzIGluIHRoZSBzZXQsIGRvbid0IHJlY3Vyc2U7IGtlZXAgd2hvbGUgc3VidHJlZQogICAgICAgIHJldHVybiBUcnVlCiAgICAjIHJlY3Vyc2l2ZWx5IHN1YnNldCBhbGwgdGhlIGNoaWxkcmVuOyB3ZSB1c2UgYSBsaXN0IGNvbXByZWhlbnNpb24gaW5zdGVhZAogICAgIyBvZiBhIHBhcmVudGhlc2VzLWxlc3MgZ2VuZXJhdG9yIGV4cHJlc3Npb24gYmVjYXVzZSB3ZSBkb24ndCB3YW50IGFueSgpIHRvCiAgICAjIHNob3J0LWNpcmN1aXQsIGFzIG91ciBmdW5jdGlvbiBoYXMgYSBzaWRlIGVmZmVjdCBvZiBkcm9wcGluZyBlbXB0eSBlbGVtZW50cy4KICAgIGlmIGFueShbc3Vic2V0X2VsZW1lbnRzKGUsIHJldGFpbmVkX2lkcykgZm9yIGUgaW4gZWxdKToKICAgICAgICByZXR1cm4gVHJ1ZQogICAgYXNzZXJ0IGxlbihlbCkgPT0gMAogICAgcGFyZW50ID0gZWwuZ2V0cGFyZW50KCkKICAgIGlmIHBhcmVudCBpcyBub3QgTm9uZToKICAgICAgICBwYXJlbnQucmVtb3ZlKGVsKQogICAgcmV0dXJuIEZhbHNlCgoKZGVmIHJlbWFwX2dseXBoX2lkcygKICAgIHN2ZzogZXRyZWUuRWxlbWVudCwgZ2x5cGhfaW5kZXhfbWFwOiBEaWN0W2ludCwgaW50XQopIC0+IERpY3Rbc3RyLCBzdHJdOgogICAgIyBHaXZlbiB7b2xkX2dpZDogbmV3X2dpZH0gbWFwLCByZW5hbWUgYWxsIGVsZW1lbnRzIGNvbnRhaW5pbmcgaWQ9ImdseXBoe2dpZH0iCiAgICAjIHNwZWNpYWwgYXR0cmlidXRlcwogICAgZWxlbWVudHMgPSBncm91cF9lbGVtZW50c19ieV9pZChzdmcpCiAgICBpZF9tYXAgPSB7fQogICAgZm9yIGVsX2lkLCBlbCBpbiBlbGVtZW50cy5pdGVtcygpOgogICAgICAgIG0gPSBHSURfUkUubWF0Y2goZWxfaWQpCiAgICAgICAgaWYgbm90IG06CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgb2xkX2luZGV4ID0gaW50KG0uZ3JvdXAoMSkpCiAgICAgICAgbmV3X2luZGV4ID0gZ2x5cGhfaW5kZXhfbWFwLmdldChvbGRfaW5kZXgpCiAgICAgICAgaWYgbmV3X2luZGV4IGlzIG5vdCBOb25lOgogICAgICAgICAgICBpZiBvbGRfaW5kZXggPT0gbmV3X2luZGV4OgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbmV3X2lkID0gZiJnbHlwaHtuZXdfaW5kZXh9IgogICAgICAgIGVsc2U6CiAgICAgICAgICAgICMgSWYgdGhlIG9sZCBpbmRleCBpcyBtaXNzaW5nLCB0aGUgZWxlbWVudCBjb3JyZXNwb25kIHRvIGEgZ2x5cGggdGhhdCB3YXMKICAgICAgICAgICAgIyBleGNsdWRlZCBmcm9tIHRoZSBmb250J3Mgc3Vic2V0LgogICAgICAgICAgICAjIFdlIHJlbmFtZSBpdCB0byBhdm9pZCBjbGFzaGVzIHdpdGggdGhlIG5ldyBHSURzIG9yIG90aGVyIGVsZW1lbnQgaWRzLgogICAgICAgICAgICBuZXdfaWQgPSBmIi57ZWxfaWR9IgogICAgICAgICAgICBuID0gY291bnQoMSkKICAgICAgICAgICAgd2hpbGUgbmV3X2lkIGluIGVsZW1lbnRzOgogICAgICAgICAgICAgICAgbmV3X2lkID0gZiJ7bmV3X2lkfS57bmV4dChuKX0iCgogICAgICAgIGlkX21hcFtlbF9pZF0gPSBuZXdfaWQKICAgICAgICBlbC5hdHRyaWJbImlkIl0gPSBuZXdfaWQKCiAgICByZXR1cm4gaWRfbWFwCgoKZGVmIGhyZWZfbG9jYWxfdGFyZ2V0KGVsOiBldHJlZS5FbGVtZW50KSAtPiBPcHRpb25hbFtzdHJdOgogICAgaWYgWExJTktfSFJFRiBpbiBlbC5hdHRyaWI6CiAgICAgICAgaHJlZiA9IGVsLmF0dHJpYltYTElOS19IUkVGXQogICAgICAgIGlmIGhyZWYuc3RhcnRzd2l0aCgiIyIpIGFuZCBsZW4oaHJlZikgPiAxOgogICAgICAgICAgICByZXR1cm4gaHJlZlsxOl0gICMgZHJvcCB0aGUgbGVhZGluZyAjCiAgICByZXR1cm4gTm9uZQoKCmRlZiB1cGRhdGVfZ2x5cGhfaHJlZl9saW5rcyhzdmc6IGV0cmVlLkVsZW1lbnQsIGlkX21hcDogRGljdFtzdHIsIHN0cl0pIC0+IE5vbmU6CiAgICAjIHVwZGF0ZSBhbGwgeGxpbms6aHJlZj0iI2dseXBoLi4uIiBhdHRyaWJ1dGVzIHRvIHBvaW50IHRvIHRoZSBuZXcgZ2x5cGggaWRzCiAgICBmb3IgZWwgaW4geHBhdGgoIi4vL3N2ZzoqW3N0YXJ0cy13aXRoKEB4bGluazpocmVmLCAnI2dseXBoJyldIikoc3ZnKToKICAgICAgICBvbGRfaWQgPSBocmVmX2xvY2FsX3RhcmdldChlbCkKICAgICAgICBhc3NlcnQgb2xkX2lkIGlzIG5vdCBOb25lCiAgICAgICAgaWYgb2xkX2lkIGluIGlkX21hcDoKICAgICAgICAgICAgbmV3X2lkID0gaWRfbWFwW29sZF9pZF0KICAgICAgICAgICAgZWwuYXR0cmliW1hMSU5LX0hSRUZdID0gZiIje25ld19pZH0iCgoKZGVmIHJhbmdlcyhpbnRzOiBJdGVyYWJsZVtpbnRdKSAtPiBJdGVyYXRvcltUdXBsZVtpbnQsIGludF1dOgogICAgIyBZaWVsZCBzb3J0ZWQsIG5vbi1vdmVybGFwcGluZyAobWluLCBtYXgpIHJhbmdlcyBvZiBjb25zZWN1dGl2ZSBpbnRlZ2VycwogICAgc29ydGVkX2ludHMgPSBpdGVyKHNvcnRlZChzZXQoaW50cykpKQogICAgdHJ5OgogICAgICAgIHN0YXJ0ID0gZW5kID0gbmV4dChzb3J0ZWRfaW50cykKICAgIGV4Y2VwdCBTdG9wSXRlcmF0aW9uOgogICAgICAgIHJldHVybgogICAgZm9yIHYgaW4gc29ydGVkX2ludHM6CiAgICAgICAgaWYgdiAtIDEgPT0gZW5kOgogICAgICAgICAgICBlbmQgPSB2CiAgICAgICAgZWxzZToKICAgICAgICAgICAgeWllbGQgKHN0YXJ0LCBlbmQpCiAgICAgICAgICAgIHN0YXJ0ID0gZW5kID0gdgogICAgeWllbGQgKHN0YXJ0LCBlbmQpCgoKQF9hZGRfbWV0aG9kKHR0TGliLmdldFRhYmxlQ2xhc3MoIlNWRyAiKSkKZGVmIHN1YnNldF9nbHlwaHMoc2VsZiwgcykgLT4gYm9vbDoKICAgIGlmIGV0cmVlIGlzIE5vbmU6CiAgICAgICAgcmFpc2UgSW1wb3J0RXJyb3IoIk5vIG1vZHVsZSBuYW1lZCAnbHhtbCcsIHJlcXVpcmVkIHRvIHN1YnNldCBTVkciKQoKICAgICMgZ2x5cGggbmFtZXMgKGJlZm9yZSBzdWJzZXR0aW5nKQogICAgZ2x5cGhfb3JkZXI6IExpc3Rbc3RyXSA9IHMub3JpZ19nbHlwaF9vcmRlcgogICAgIyBtYXAgZnJvbSBnbHlwaCBuYW1lcyB0byBvcmlnaW5hbCBnbHlwaCBpbmRpY2VzCiAgICByZXZfb3JpZ19nbHlwaF9tYXA6IERpY3Rbc3RyLCBpbnRdID0gcy5yZXZlcnNlT3JpZ0dseXBoTWFwCiAgICAjIG1hcCBmcm9tIG9yaWdpbmFsIHRvIG5ldyBnbHlwaCBpbmRpY2VzIChhZnRlciBzdWJzZXR0aW5nKQogICAgZ2x5cGhfaW5kZXhfbWFwOiBEaWN0W2ludCwgaW50XSA9IHMuZ2x5cGhfaW5kZXhfbWFwCgogICAgbmV3X2RvY3M6IExpc3RbU1ZHRG9jdW1lbnRdID0gW10KICAgIGZvciBkb2MgaW4gc2VsZi5kb2NMaXN0OgogICAgICAgIGdseXBocyA9IHsKICAgICAgICAgICAgZ2x5cGhfb3JkZXJbaV0gZm9yIGkgaW4gcmFuZ2UoZG9jLnN0YXJ0R2x5cGhJRCwgZG9jLmVuZEdseXBoSUQgKyAxKQogICAgICAgIH0uaW50ZXJzZWN0aW9uKHMuZ2x5cGhzKQogICAgICAgIGlmIG5vdCBnbHlwaHM6CiAgICAgICAgICAgICMgbm8gaW50ZXJzZWN0aW9uOiB3ZSBjYW4gZHJvcCB0aGUgd2hvbGUgcmVjb3JkCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIHN2ZyA9IGV0cmVlLmZyb21zdHJpbmcoCiAgICAgICAgICAgICMgZW5jb2RlIGJlY2F1c2UgZnJvbXN0cmluZyBkaXNsaWtlcyB4bWwgZW5jb2RpbmcgZGVjbCBpZiBpbnB1dCBpcyBzdHIuCiAgICAgICAgICAgICMgU1ZHIHhtbCBlbmNvZGluZyBtdXN0IGJlIHV0Zi04IGFzIHBlciBPVCBzcGVjLgogICAgICAgICAgICBkb2MuZGF0YS5lbmNvZGUoInV0Zi04IiksCiAgICAgICAgICAgIHBhcnNlcj1ldHJlZS5YTUxQYXJzZXIoCiAgICAgICAgICAgICAgICAjIERpc2FibGUgbGlieG1sMiBzZWN1cml0eSByZXN0cmljdGlvbnMgdG8gc3VwcG9ydCB2ZXJ5IGRlZXAgdHJlZXMuCiAgICAgICAgICAgICAgICAjIFdpdGhvdXQgdGhpcyB3ZSB3b3VsZCBnZXQgYW4gZXJyb3IgbGlrZSB0aGlzOgogICAgICAgICAgICAgICAgIyBgbHhtbC5ldHJlZS5YTUxTeW50YXhFcnJvcjogaW50ZXJuYWwgZXJyb3I6IEh1Z2UgaW5wdXQgbG9va3VwYAogICAgICAgICAgICAgICAgIyB3aGVuIHBhcnNpbmcgYmlnIGZvbnRzIGUuZy4gbm90by1lbW9qaS1waWNvc3ZnLnR0Zi4KICAgICAgICAgICAgICAgIGh1Z2VfdHJlZT1UcnVlLAogICAgICAgICAgICAgICAgIyBpZ25vcmUgYmxhbmsgdGV4dCBhcyBpdCdzIG5vdCBtZWFuaW5nZnVsIGluIE9ULVNWRzsgaXQgYWxzbyBwcmV2ZW50cwogICAgICAgICAgICAgICAgIyBkYW5nbGluZyB0YWlsIHRleHQgYWZ0ZXIgcmVtb3ZpbmcgYW4gZWxlbWVudCB3aGVuIHByZXR0eV9wcmludD1UcnVlCiAgICAgICAgICAgICAgICByZW1vdmVfYmxhbmtfdGV4dD1UcnVlLAogICAgICAgICAgICAgICAgIyBkb24ndCByZXBsYWNlIGVudGl0aWVzOyB3ZSBkb24ndCBleHBlY3QgYW55IGluIE9ULVNWRyBhbmQgdGhleSBtYXkKICAgICAgICAgICAgICAgICMgYmUgYWJ1c2VkIGZvciBYWEUgYXR0YWNrcwogICAgICAgICAgICAgICAgcmVzb2x2ZV9lbnRpdGllcz1GYWxzZSwKICAgICAgICAgICAgKSwKICAgICAgICApCgogICAgICAgIGVsZW1lbnRzID0gZ3JvdXBfZWxlbWVudHNfYnlfaWQoc3ZnKQogICAgICAgIGdpZHMgPSB7cmV2X29yaWdfZ2x5cGhfbWFwW2ddIGZvciBnIGluIGdseXBoc30KICAgICAgICBlbGVtZW50X2lkcyA9IHtmImdseXBoe2l9IiBmb3IgaSBpbiBnaWRzfQogICAgICAgIGNsb3N1cmVfZWxlbWVudF9pZHMoZWxlbWVudHMsIGVsZW1lbnRfaWRzKQoKICAgICAgICBpZiBub3Qgc3Vic2V0X2VsZW1lbnRzKHN2ZywgZWxlbWVudF9pZHMpOgogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBpZiBub3Qgcy5vcHRpb25zLnJldGFpbl9naWRzOgogICAgICAgICAgICBpZF9tYXAgPSByZW1hcF9nbHlwaF9pZHMoc3ZnLCBnbHlwaF9pbmRleF9tYXApCiAgICAgICAgICAgIHVwZGF0ZV9nbHlwaF9ocmVmX2xpbmtzKHN2ZywgaWRfbWFwKQoKICAgICAgICBuZXdfZG9jID0gZXRyZWUudG9zdHJpbmcoc3ZnLCBwcmV0dHlfcHJpbnQ9cy5vcHRpb25zLnByZXR0eV9zdmcpLmRlY29kZSgidXRmLTgiKQoKICAgICAgICBuZXdfZ2lkcyA9IChnbHlwaF9pbmRleF9tYXBbaV0gZm9yIGkgaW4gZ2lkcykKICAgICAgICBmb3Igc3RhcnQsIGVuZCBpbiByYW5nZXMobmV3X2dpZHMpOgogICAgICAgICAgICBuZXdfZG9jcy5hcHBlbmQoU1ZHRG9jdW1lbnQobmV3X2RvYywgc3RhcnQsIGVuZCwgZG9jLmNvbXByZXNzZWQpKQoKICAgIHNlbGYuZG9jTGlzdCA9IG5ld19kb2NzCgogICAgcmV0dXJuIGJvb2woc2VsZi5kb2NMaXN0KQo=
+from __future__ import annotations
+
+import re
+from functools import cache
+from itertools import chain, count
+from typing import Dict, Iterable, Iterator, List, Optional, Set, Tuple
+
+try:
+    from lxml import etree
+except ImportError:
+    # lxml is required for subsetting SVG, but we prefer to delay the import error
+    # until subset_glyphs() is called (i.e. if font to subset has an 'SVG ' table)
+    etree = None
+
+from fontTools import ttLib
+from fontTools.subset.util import _add_method
+from fontTools.ttLib.tables.S_V_G_ import SVGDocument
+
+__all__ = ["subset_glyphs"]
+
+
+GID_RE = re.compile(r"^glyph(\d+)$")
+
+NAMESPACES = {
+    "svg": "http://www.w3.org/2000/svg",
+    "xlink": "http://www.w3.org/1999/xlink",
+}
+XLINK_HREF = f'{{{NAMESPACES["xlink"]}}}href'
+
+
+@cache
+def xpath(path):
+    # compile XPath upfront, caching result to reuse on multiple elements
+    return etree.XPath(path, namespaces=NAMESPACES)
+
+
+def group_elements_by_id(tree: etree.Element) -> Dict[str, etree.Element]:
+    # select all svg elements with 'id' attribute no matter where they are
+    # including the root element itself:
+    # https://github.com/fonttools/fonttools/issues/2548
+    return {el.attrib["id"]: el for el in xpath("//svg:*[@id]")(tree)}
+
+
+def parse_css_declarations(style_attr: str) -> Dict[str, str]:
+    # https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/style
+    # https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax#css_declarations
+    result = {}
+    for declaration in style_attr.split(";"):
+        if declaration.count(":") == 1:
+            property_name, value = declaration.split(":")
+            property_name = property_name.strip()
+            result[property_name] = value.strip()
+        elif declaration.strip():
+            raise ValueError(f"Invalid CSS declaration syntax: {declaration}")
+    return result
+
+
+def iter_referenced_ids(tree: etree.Element) -> Iterator[str]:
+    # Yield all the ids that can be reached via references from this element tree.
+    # We currently support xlink:href (as used by <use> and gradient templates),
+    # and local url(#...) links found in fill or clip-path attributes
+    # TODO(anthrotype): Check we aren't missing other supported kinds of reference
+    find_svg_elements_with_references = xpath(
+        ".//svg:*[ "
+        "starts-with(@xlink:href, '#') "
+        "or starts-with(@fill, 'url(#') "
+        "or starts-with(@clip-path, 'url(#') "
+        "or contains(@style, ':url(#') "
+        "]",
+    )
+    for el in chain([tree], find_svg_elements_with_references(tree)):
+        ref_id = href_local_target(el)
+        if ref_id is not None:
+            yield ref_id
+
+        attrs = el.attrib
+        if "style" in attrs:
+            attrs = {**dict(attrs), **parse_css_declarations(el.attrib["style"])}
+        for attr in ("fill", "clip-path"):
+            if attr in attrs:
+                value = attrs[attr]
+                if value.startswith("url(#") and value.endswith(")"):
+                    ref_id = value[5:-1]
+                    assert ref_id
+                    yield ref_id
+
+
+def closure_element_ids(
+    elements: Dict[str, etree.Element], element_ids: Set[str]
+) -> None:
+    # Expand the initial subset of element ids to include ids that can be reached
+    # via references from the initial set.
+    unvisited = element_ids
+    while unvisited:
+        referenced: Set[str] = set()
+        for el_id in unvisited:
+            if el_id not in elements:
+                # ignore dangling reference; not our job to validate svg
+                continue
+            referenced.update(iter_referenced_ids(elements[el_id]))
+        referenced -= element_ids
+        element_ids.update(referenced)
+        unvisited = referenced
+
+
+def subset_elements(el: etree.Element, retained_ids: Set[str]) -> bool:
+    # Keep elements if their id is in the subset, or any of their children's id is.
+    # Drop elements whose id is not in the subset, and either have no children,
+    # or all their children are being dropped.
+    if el.attrib.get("id") in retained_ids:
+        # if id is in the set, don't recurse; keep whole subtree
+        return True
+    # recursively subset all the children; we use a list comprehension instead
+    # of a parentheses-less generator expression because we don't want any() to
+    # short-circuit, as our function has a side effect of dropping empty elements.
+    if any([subset_elements(e, retained_ids) for e in el]):
+        return True
+    assert len(el) == 0
+    parent = el.getparent()
+    if parent is not None:
+        parent.remove(el)
+    return False
+
+
+def remap_glyph_ids(
+    svg: etree.Element, glyph_index_map: Dict[int, int]
+) -> Dict[str, str]:
+    # Given {old_gid: new_gid} map, rename all elements containing id="glyph{gid}"
+    # special attributes
+    elements = group_elements_by_id(svg)
+    id_map = {}
+    for el_id, el in elements.items():
+        m = GID_RE.match(el_id)
+        if not m:
+            continue
+        old_index = int(m.group(1))
+        new_index = glyph_index_map.get(old_index)
+        if new_index is not None:
+            if old_index == new_index:
+                continue
+            new_id = f"glyph{new_index}"
+        else:
+            # If the old index is missing, the element correspond to a glyph that was
+            # excluded from the font's subset.
+            # We rename it to avoid clashes with the new GIDs or other element ids.
+            new_id = f".{el_id}"
+            n = count(1)
+            while new_id in elements:
+                new_id = f"{new_id}.{next(n)}"
+
+        id_map[el_id] = new_id
+        el.attrib["id"] = new_id
+
+    return id_map
+
+
+def href_local_target(el: etree.Element) -> Optional[str]:
+    if XLINK_HREF in el.attrib:
+        href = el.attrib[XLINK_HREF]
+        if href.startswith("#") and len(href) > 1:
+            return href[1:]  # drop the leading #
+    return None
+
+
+def update_glyph_href_links(svg: etree.Element, id_map: Dict[str, str]) -> None:
+    # update all xlink:href="#glyph..." attributes to point to the new glyph ids
+    for el in xpath(".//svg:*[starts-with(@xlink:href, '#glyph')]")(svg):
+        old_id = href_local_target(el)
+        assert old_id is not None
+        if old_id in id_map:
+            new_id = id_map[old_id]
+            el.attrib[XLINK_HREF] = f"#{new_id}"
+
+
+def ranges(ints: Iterable[int]) -> Iterator[Tuple[int, int]]:
+    # Yield sorted, non-overlapping (min, max) ranges of consecutive integers
+    sorted_ints = iter(sorted(set(ints)))
+    try:
+        start = end = next(sorted_ints)
+    except StopIteration:
+        return
+    for v in sorted_ints:
+        if v - 1 == end:
+            end = v
+        else:
+            yield (start, end)
+            start = end = v
+    yield (start, end)
+
+
+@_add_method(ttLib.getTableClass("SVG "))
+def subset_glyphs(self, s) -> bool:
+    if etree is None:
+        raise ImportError("No module named 'lxml', required to subset SVG")
+
+    # glyph names (before subsetting)
+    glyph_order: List[str] = s.orig_glyph_order
+    # map from glyph names to original glyph indices
+    rev_orig_glyph_map: Dict[str, int] = s.reverseOrigGlyphMap
+    # map from original to new glyph indices (after subsetting)
+    glyph_index_map: Dict[int, int] = s.glyph_index_map
+
+    new_docs: List[SVGDocument] = []
+    for doc in self.docList:
+        glyphs = {
+            glyph_order[i] for i in range(doc.startGlyphID, doc.endGlyphID + 1)
+        }.intersection(s.glyphs)
+        if not glyphs:
+            # no intersection: we can drop the whole record
+            continue
+
+        svg = etree.fromstring(
+            # encode because fromstring dislikes xml encoding decl if input is str.
+            # SVG xml encoding must be utf-8 as per OT spec.
+            doc.data.encode("utf-8"),
+            parser=etree.XMLParser(
+                # Disable libxml2 security restrictions to support very deep trees.
+                # Without this we would get an error like this:
+                # `lxml.etree.XMLSyntaxError: internal error: Huge input lookup`
+                # when parsing big fonts e.g. noto-emoji-picosvg.ttf.
+                huge_tree=True,
+                # ignore blank text as it's not meaningful in OT-SVG; it also prevents
+                # dangling tail text after removing an element when pretty_print=True
+                remove_blank_text=True,
+                # don't replace entities; we don't expect any in OT-SVG and they may
+                # be abused for XXE attacks
+                resolve_entities=False,
+            ),
+        )
+
+        elements = group_elements_by_id(svg)
+        gids = {rev_orig_glyph_map[g] for g in glyphs}
+        element_ids = {f"glyph{i}" for i in gids}
+        closure_element_ids(elements, element_ids)
+
+        if not subset_elements(svg, element_ids):
+            continue
+
+        if not s.options.retain_gids:
+            id_map = remap_glyph_ids(svg, glyph_index_map)
+            update_glyph_href_links(svg, id_map)
+
+        new_doc = etree.tostring(svg, pretty_print=s.options.pretty_svg).decode("utf-8")
+
+        new_gids = (glyph_index_map[i] for i in gids)
+        for start, end in ranges(new_gids):
+            new_docs.append(SVGDocument(new_doc, start, end, doc.compressed))
+
+    self.docList = new_docs
+
+    return bool(self.docList)

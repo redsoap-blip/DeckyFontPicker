@@ -1,1 +1,20 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHN0cmpvaW4sIHRvYnl0ZXMsIHRvc3RyCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCgoKY2xhc3MgYXNjaWlUYWJsZShEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgZGF0YSA9IHRvc3RyKHNlbGYuZGF0YSkKICAgICAgICAjIHJlbW92aW5nIG51bGwgYnl0ZXMuIFhYWCBuZWVkZWQ/PwogICAgICAgIGRhdGEgPSBkYXRhLnNwbGl0KCJcMCIpCiAgICAgICAgZGF0YSA9IHN0cmpvaW4oZGF0YSkKICAgICAgICB3cml0ZXIuYmVnaW50YWcoInNvdXJjZSIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci53cml0ZV9ub2luZGVudChkYXRhKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuZW5kdGFnKCJzb3VyY2UiKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBsaW5lcyA9IHN0cmpvaW4oY29udGVudCkuc3BsaXQoIlxuIikKICAgICAgICBzZWxmLmRhdGEgPSB0b2J5dGVzKCJcbiIuam9pbihsaW5lc1sxOi0xXSkpCg==
+from fontTools.misc.textTools import strjoin, tobytes, tostr
+from . import DefaultTable
+
+
+class asciiTable(DefaultTable.DefaultTable):
+    def toXML(self, writer, ttFont):
+        data = tostr(self.data)
+        # removing null bytes. XXX needed??
+        data = data.split("\0")
+        data = strjoin(data)
+        writer.begintag("source")
+        writer.newline()
+        writer.write_noindent(data)
+        writer.newline()
+        writer.endtag("source")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        lines = strjoin(content).split("\n")
+        self.data = tobytes("\n".join(lines[1:-1]))

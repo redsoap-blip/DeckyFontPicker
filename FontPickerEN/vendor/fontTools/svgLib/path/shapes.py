@@ -1,1 +1,185 @@
-aW1wb3J0IHJlCgoKZGVmIF9wcmVmZXJfbm9uX3plcm8oKmFyZ3MpOgogICAgZm9yIGFyZyBpbiBhcmdzOgogICAgICAgIGlmIGFyZyAhPSAwOgogICAgICAgICAgICByZXR1cm4gYXJnCiAgICByZXR1cm4gMC4wCgoKZGVmIF9udG9zKG4pOgogICAgIyAlZiBsaWtlcyB0byBhZGQgdW5uZWNlc3NhcnkgMCdzLCAlZyBpc24ndCBjb25zaXN0ZW50IGFib3V0ICMgZGVjaW1hbHMKICAgIHJldHVybiAoIiUuM2YiICUgbikucnN0cmlwKCIwIikucnN0cmlwKCIuIikKCgpkZWYgX3N0cmlwX3htbF9ucyh0YWcpOgogICAgIyBFbGVtZW50VHJlZSBBUEkgZG9lc24ndCBwcm92aWRlIGEgd2F5IHRvIGlnbm9yZSBYTUwgbmFtZXNwYWNlcyBpbiB0YWdzCiAgICAjIHNvIHdlIGhlcmUgc3RyaXAgdGhlbSBvdXJzZWx2ZXM6IGNmLiBodHRwczovL2J1Z3MucHl0aG9uLm9yZy9pc3N1ZTE4MzA0CiAgICByZXR1cm4gdGFnLnNwbGl0KCJ9IiwgMSlbMV0gaWYgIn0iIGluIHRhZyBlbHNlIHRhZwoKCmRlZiBfdHJhbnNmb3JtKHJhd192YWx1ZSk6CiAgICAjIFRPRE8gYXNzdW1lcyBhICdtYXRyaXgnIHRyYW5zZm9ybS4KICAgICMgTm8gb3RoZXIgdHJhbnNmb3JtIGZ1bmN0aW9ucyBhcmUgc3VwcG9ydGVkIGF0IHRoZSBtb21lbnQuCiAgICAjIGh0dHBzOi8vZGV2ZWxvcGVyLm1vemlsbGEub3JnL2VuLVVTL2RvY3MvV2ViL1NWRy9BdHRyaWJ1dGUvdHJhbnNmb3JtCiAgICAjIHN0YXJ0IHNpbXBsZTogaWYgeW91IGFyZW4ndCBleGFjdGx5IG1hdHJpeCguLi4pIHRoZW4gbm8gbG92ZQogICAgbWF0Y2ggPSByZS5tYXRjaChyIm1hdHJpeFwoKC4qKVwpIiwgcmF3X3ZhbHVlKQogICAgaWYgbm90IG1hdGNoOgogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IKICAgIG1hdHJpeCA9IHR1cGxlKGZsb2F0KHApIGZvciBwIGluIHJlLnNwbGl0KHIiXHMrfCwiLCBtYXRjaC5ncm91cCgxKSkpCiAgICBpZiBsZW4obWF0cml4KSAhPSA2OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIndyb25nICMgb2YgdGVybXMgaW4gJXMiICUgcmF3X3ZhbHVlKQogICAgcmV0dXJuIG1hdHJpeAoKCmNsYXNzIFBhdGhCdWlsZGVyKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5wYXRocyA9IFtdCiAgICAgICAgc2VsZi50cmFuc2Zvcm1zID0gW10KCiAgICBkZWYgX3N0YXJ0X3BhdGgoc2VsZiwgaW5pdGlhbF9wYXRoPSIiKToKICAgICAgICBzZWxmLnBhdGhzLmFwcGVuZChpbml0aWFsX3BhdGgpCiAgICAgICAgc2VsZi50cmFuc2Zvcm1zLmFwcGVuZChOb25lKQoKICAgIGRlZiBfZW5kX3BhdGgoc2VsZik6CiAgICAgICAgc2VsZi5fYWRkKCJ6IikKCiAgICBkZWYgX2FkZChzZWxmLCBwYXRoX3NuaXBwZXQpOgogICAgICAgIHBhdGggPSBzZWxmLnBhdGhzWy0xXQogICAgICAgIGlmIHBhdGg6CiAgICAgICAgICAgIHBhdGggKz0gIiAiICsgcGF0aF9zbmlwcGV0CiAgICAgICAgZWxzZToKICAgICAgICAgICAgcGF0aCA9IHBhdGhfc25pcHBldAogICAgICAgIHNlbGYucGF0aHNbLTFdID0gcGF0aAoKICAgIGRlZiBfbW92ZShzZWxmLCBjLCB4LCB5KToKICAgICAgICBzZWxmLl9hZGQoIiVzJXMsJXMiICUgKGMsIF9udG9zKHgpLCBfbnRvcyh5KSkpCgogICAgZGVmIE0oc2VsZiwgeCwgeSk6CiAgICAgICAgc2VsZi5fbW92ZSgiTSIsIHgsIHkpCgogICAgZGVmIG0oc2VsZiwgeCwgeSk6CiAgICAgICAgc2VsZi5fbW92ZSgibSIsIHgsIHkpCgogICAgZGVmIF9hcmMoc2VsZiwgYywgcngsIHJ5LCB4LCB5LCBsYXJnZV9hcmMpOgogICAgICAgIHNlbGYuX2FkZCgKICAgICAgICAgICAgIiVzJXMsJXMgMCAlZCAxICVzLCVzIgogICAgICAgICAgICAlIChjLCBfbnRvcyhyeCksIF9udG9zKHJ5KSwgbGFyZ2VfYXJjLCBfbnRvcyh4KSwgX250b3MoeSkpCiAgICAgICAgKQoKICAgIGRlZiBBKHNlbGYsIHJ4LCByeSwgeCwgeSwgbGFyZ2VfYXJjPTApOgogICAgICAgIHNlbGYuX2FyYygiQSIsIHJ4LCByeSwgeCwgeSwgbGFyZ2VfYXJjKQoKICAgIGRlZiBhKHNlbGYsIHJ4LCByeSwgeCwgeSwgbGFyZ2VfYXJjPTApOgogICAgICAgIHNlbGYuX2FyYygiYSIsIHJ4LCByeSwgeCwgeSwgbGFyZ2VfYXJjKQoKICAgIGRlZiBfdmhsaW5lKHNlbGYsIGMsIHgpOgogICAgICAgIHNlbGYuX2FkZCgiJXMlcyIgJSAoYywgX250b3MoeCkpKQoKICAgIGRlZiBIKHNlbGYsIHgpOgogICAgICAgIHNlbGYuX3ZobGluZSgiSCIsIHgpCgogICAgZGVmIGgoc2VsZiwgeCk6CiAgICAgICAgc2VsZi5fdmhsaW5lKCJoIiwgeCkKCiAgICBkZWYgVihzZWxmLCB5KToKICAgICAgICBzZWxmLl92aGxpbmUoIlYiLCB5KQoKICAgIGRlZiB2KHNlbGYsIHkpOgogICAgICAgIHNlbGYuX3ZobGluZSgidiIsIHkpCgogICAgZGVmIF9saW5lKHNlbGYsIGMsIHgsIHkpOgogICAgICAgIHNlbGYuX2FkZCgiJXMlcywlcyIgJSAoYywgX250b3MoeCksIF9udG9zKHkpKSkKCiAgICBkZWYgTChzZWxmLCB4LCB5KToKICAgICAgICBzZWxmLl9saW5lKCJMIiwgeCwgeSkKCiAgICBkZWYgbChzZWxmLCB4LCB5KToKICAgICAgICBzZWxmLl9saW5lKCJsIiwgeCwgeSkKCiAgICBkZWYgX3BhcnNlX2xpbmUoc2VsZiwgbGluZSk6CiAgICAgICAgeDEgPSBmbG9hdChsaW5lLmF0dHJpYi5nZXQoIngxIiwgMCkpCiAgICAgICAgeTEgPSBmbG9hdChsaW5lLmF0dHJpYi5nZXQoInkxIiwgMCkpCiAgICAgICAgeDIgPSBmbG9hdChsaW5lLmF0dHJpYi5nZXQoIngyIiwgMCkpCiAgICAgICAgeTIgPSBmbG9hdChsaW5lLmF0dHJpYi5nZXQoInkyIiwgMCkpCgogICAgICAgIHNlbGYuX3N0YXJ0X3BhdGgoKQogICAgICAgIHNlbGYuTSh4MSwgeTEpCiAgICAgICAgc2VsZi5MKHgyLCB5MikKCiAgICBkZWYgX3BhcnNlX3JlY3Qoc2VsZiwgcmVjdCk6CiAgICAgICAgeCA9IGZsb2F0KHJlY3QuYXR0cmliLmdldCgieCIsIDApKQogICAgICAgIHkgPSBmbG9hdChyZWN0LmF0dHJpYi5nZXQoInkiLCAwKSkKICAgICAgICB3ID0gZmxvYXQocmVjdC5hdHRyaWIuZ2V0KCJ3aWR0aCIpKQogICAgICAgIGggPSBmbG9hdChyZWN0LmF0dHJpYi5nZXQoImhlaWdodCIpKQogICAgICAgIHJ4ID0gZmxvYXQocmVjdC5hdHRyaWIuZ2V0KCJyeCIsIDApKQogICAgICAgIHJ5ID0gZmxvYXQocmVjdC5hdHRyaWIuZ2V0KCJyeSIsIDApKQoKICAgICAgICByeCA9IF9wcmVmZXJfbm9uX3plcm8ocngsIHJ5KQogICAgICAgIHJ5ID0gX3ByZWZlcl9ub25femVybyhyeSwgcngpCiAgICAgICAgIyBUT0RPIHRoZXJlIGFyZSBtb3JlIHJ1bGVzIGZvciBhZGp1c3RpbmcgcngsIHJ5CgogICAgICAgIHNlbGYuX3N0YXJ0X3BhdGgoKQogICAgICAgIHNlbGYuTSh4ICsgcngsIHkpCiAgICAgICAgc2VsZi5IKHggKyB3IC0gcngpCiAgICAgICAgaWYgcnggPiAwOgogICAgICAgICAgICBzZWxmLkEocngsIHJ5LCB4ICsgdywgeSArIHJ5KQogICAgICAgIHNlbGYuVih5ICsgaCAtIHJ5KQogICAgICAgIGlmIHJ4ID4gMDoKICAgICAgICAgICAgc2VsZi5BKHJ4LCByeSwgeCArIHcgLSByeCwgeSArIGgpCiAgICAgICAgc2VsZi5IKHggKyByeCkKICAgICAgICBpZiByeCA+IDA6CiAgICAgICAgICAgIHNlbGYuQShyeCwgcnksIHgsIHkgKyBoIC0gcnkpCiAgICAgICAgc2VsZi5WKHkgKyByeSkKICAgICAgICBpZiByeCA+IDA6CiAgICAgICAgICAgIHNlbGYuQShyeCwgcnksIHggKyByeCwgeSkKICAgICAgICBzZWxmLl9lbmRfcGF0aCgpCgogICAgZGVmIF9wYXJzZV9wYXRoKHNlbGYsIHBhdGgpOgogICAgICAgIGlmICJkIiBpbiBwYXRoLmF0dHJpYjoKICAgICAgICAgICAgc2VsZi5fc3RhcnRfcGF0aChpbml0aWFsX3BhdGg9cGF0aC5hdHRyaWJbImQiXSkKCiAgICBkZWYgX3BhcnNlX3BvbHlnb24oc2VsZiwgcG9seSk6CiAgICAgICAgaWYgInBvaW50cyIgaW4gcG9seS5hdHRyaWI6CiAgICAgICAgICAgIHNlbGYuX3N0YXJ0X3BhdGgoIk0iICsgcG9seS5hdHRyaWJbInBvaW50cyJdKQogICAgICAgICAgICBzZWxmLl9lbmRfcGF0aCgpCgogICAgZGVmIF9wYXJzZV9wb2x5bGluZShzZWxmLCBwb2x5KToKICAgICAgICBpZiAicG9pbnRzIiBpbiBwb2x5LmF0dHJpYjoKICAgICAgICAgICAgc2VsZi5fc3RhcnRfcGF0aCgiTSIgKyBwb2x5LmF0dHJpYlsicG9pbnRzIl0pCgogICAgZGVmIF9wYXJzZV9jaXJjbGUoc2VsZiwgY2lyY2xlKToKICAgICAgICBjeCA9IGZsb2F0KGNpcmNsZS5hdHRyaWIuZ2V0KCJjeCIsIDApKQogICAgICAgIGN5ID0gZmxvYXQoY2lyY2xlLmF0dHJpYi5nZXQoImN5IiwgMCkpCiAgICAgICAgciA9IGZsb2F0KGNpcmNsZS5hdHRyaWIuZ2V0KCJyIikpCgogICAgICAgICMgYXJjIGRvZXNuJ3Qgc2VlbSB0byBsaWtlIGJlaW5nIGEgY29tcGxldGUgc2hhcGUsIGRyYXcgdHdvIGhhbHZlcwogICAgICAgIHNlbGYuX3N0YXJ0X3BhdGgoKQogICAgICAgIHNlbGYuTShjeCAtIHIsIGN5KQogICAgICAgIHNlbGYuQShyLCByLCBjeCArIHIsIGN5LCBsYXJnZV9hcmM9MSkKICAgICAgICBzZWxmLkEociwgciwgY3ggLSByLCBjeSwgbGFyZ2VfYXJjPTEpCgogICAgZGVmIF9wYXJzZV9lbGxpcHNlKHNlbGYsIGVsbGlwc2UpOgogICAgICAgIGN4ID0gZmxvYXQoZWxsaXBzZS5hdHRyaWIuZ2V0KCJjeCIsIDApKQogICAgICAgIGN5ID0gZmxvYXQoZWxsaXBzZS5hdHRyaWIuZ2V0KCJjeSIsIDApKQogICAgICAgIHJ4ID0gZmxvYXQoZWxsaXBzZS5hdHRyaWIuZ2V0KCJyeCIpKQogICAgICAgIHJ5ID0gZmxvYXQoZWxsaXBzZS5hdHRyaWIuZ2V0KCJyeSIpKQoKICAgICAgICAjIGFyYyBkb2Vzbid0IHNlZW0gdG8gbGlrZSBiZWluZyBhIGNvbXBsZXRlIHNoYXBlLCBkcmF3IHR3byBoYWx2ZXMKICAgICAgICBzZWxmLl9zdGFydF9wYXRoKCkKICAgICAgICBzZWxmLk0oY3ggLSByeCwgY3kpCiAgICAgICAgc2VsZi5BKHJ4LCByeSwgY3ggKyByeCwgY3ksIGxhcmdlX2FyYz0xKQogICAgICAgIHNlbGYuQShyeCwgcnksIGN4IC0gcngsIGN5LCBsYXJnZV9hcmM9MSkKCiAgICBkZWYgYWRkX3BhdGhfZnJvbV9lbGVtZW50KHNlbGYsIGVsKToKICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShlbC50YWcsIHN0cik6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIHRhZyA9IF9zdHJpcF94bWxfbnMoZWwudGFnKQogICAgICAgIHBhcnNlX2ZuID0gZ2V0YXR0cihzZWxmLCAiX3BhcnNlXyVzIiAlIHRhZy5sb3dlcigpLCBOb25lKQogICAgICAgIGlmIG5vdCBjYWxsYWJsZShwYXJzZV9mbik6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIHBhcnNlX2ZuKGVsKQogICAgICAgIGlmICJ0cmFuc2Zvcm0iIGluIGVsLmF0dHJpYjoKICAgICAgICAgICAgc2VsZi50cmFuc2Zvcm1zWy0xXSA9IF90cmFuc2Zvcm0oZWwuYXR0cmliWyJ0cmFuc2Zvcm0iXSkKICAgICAgICByZXR1cm4gVHJ1ZQo=
+import re
+
+
+def _prefer_non_zero(*args):
+    for arg in args:
+        if arg != 0:
+            return arg
+    return 0.0
+
+
+def _ntos(n):
+    # %f likes to add unnecessary 0's, %g isn't consistent about # decimals
+    return ("%.3f" % n).rstrip("0").rstrip(".")
+
+
+def _strip_xml_ns(tag):
+    # ElementTree API doesn't provide a way to ignore XML namespaces in tags
+    # so we here strip them ourselves: cf. https://bugs.python.org/issue18304
+    return tag.split("}", 1)[1] if "}" in tag else tag
+
+
+def _transform(raw_value):
+    # TODO assumes a 'matrix' transform.
+    # No other transform functions are supported at the moment.
+    # https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform
+    # start simple: if you aren't exactly matrix(...) then no love
+    match = re.match(r"matrix\((.*)\)", raw_value)
+    if not match:
+        raise NotImplementedError
+    matrix = tuple(float(p) for p in re.split(r"\s+|,", match.group(1)))
+    if len(matrix) != 6:
+        raise ValueError("wrong # of terms in %s" % raw_value)
+    return matrix
+
+
+class PathBuilder(object):
+    def __init__(self):
+        self.paths = []
+        self.transforms = []
+
+    def _start_path(self, initial_path=""):
+        self.paths.append(initial_path)
+        self.transforms.append(None)
+
+    def _end_path(self):
+        self._add("z")
+
+    def _add(self, path_snippet):
+        path = self.paths[-1]
+        if path:
+            path += " " + path_snippet
+        else:
+            path = path_snippet
+        self.paths[-1] = path
+
+    def _move(self, c, x, y):
+        self._add("%s%s,%s" % (c, _ntos(x), _ntos(y)))
+
+    def M(self, x, y):
+        self._move("M", x, y)
+
+    def m(self, x, y):
+        self._move("m", x, y)
+
+    def _arc(self, c, rx, ry, x, y, large_arc):
+        self._add(
+            "%s%s,%s 0 %d 1 %s,%s"
+            % (c, _ntos(rx), _ntos(ry), large_arc, _ntos(x), _ntos(y))
+        )
+
+    def A(self, rx, ry, x, y, large_arc=0):
+        self._arc("A", rx, ry, x, y, large_arc)
+
+    def a(self, rx, ry, x, y, large_arc=0):
+        self._arc("a", rx, ry, x, y, large_arc)
+
+    def _vhline(self, c, x):
+        self._add("%s%s" % (c, _ntos(x)))
+
+    def H(self, x):
+        self._vhline("H", x)
+
+    def h(self, x):
+        self._vhline("h", x)
+
+    def V(self, y):
+        self._vhline("V", y)
+
+    def v(self, y):
+        self._vhline("v", y)
+
+    def _line(self, c, x, y):
+        self._add("%s%s,%s" % (c, _ntos(x), _ntos(y)))
+
+    def L(self, x, y):
+        self._line("L", x, y)
+
+    def l(self, x, y):
+        self._line("l", x, y)
+
+    def _parse_line(self, line):
+        x1 = float(line.attrib.get("x1", 0))
+        y1 = float(line.attrib.get("y1", 0))
+        x2 = float(line.attrib.get("x2", 0))
+        y2 = float(line.attrib.get("y2", 0))
+
+        self._start_path()
+        self.M(x1, y1)
+        self.L(x2, y2)
+
+    def _parse_rect(self, rect):
+        x = float(rect.attrib.get("x", 0))
+        y = float(rect.attrib.get("y", 0))
+        w = float(rect.attrib.get("width"))
+        h = float(rect.attrib.get("height"))
+        rx = float(rect.attrib.get("rx", 0))
+        ry = float(rect.attrib.get("ry", 0))
+
+        rx = _prefer_non_zero(rx, ry)
+        ry = _prefer_non_zero(ry, rx)
+        # TODO there are more rules for adjusting rx, ry
+
+        self._start_path()
+        self.M(x + rx, y)
+        self.H(x + w - rx)
+        if rx > 0:
+            self.A(rx, ry, x + w, y + ry)
+        self.V(y + h - ry)
+        if rx > 0:
+            self.A(rx, ry, x + w - rx, y + h)
+        self.H(x + rx)
+        if rx > 0:
+            self.A(rx, ry, x, y + h - ry)
+        self.V(y + ry)
+        if rx > 0:
+            self.A(rx, ry, x + rx, y)
+        self._end_path()
+
+    def _parse_path(self, path):
+        if "d" in path.attrib:
+            self._start_path(initial_path=path.attrib["d"])
+
+    def _parse_polygon(self, poly):
+        if "points" in poly.attrib:
+            self._start_path("M" + poly.attrib["points"])
+            self._end_path()
+
+    def _parse_polyline(self, poly):
+        if "points" in poly.attrib:
+            self._start_path("M" + poly.attrib["points"])
+
+    def _parse_circle(self, circle):
+        cx = float(circle.attrib.get("cx", 0))
+        cy = float(circle.attrib.get("cy", 0))
+        r = float(circle.attrib.get("r"))
+
+        # arc doesn't seem to like being a complete shape, draw two halves
+        self._start_path()
+        self.M(cx - r, cy)
+        self.A(r, r, cx + r, cy, large_arc=1)
+        self.A(r, r, cx - r, cy, large_arc=1)
+
+    def _parse_ellipse(self, ellipse):
+        cx = float(ellipse.attrib.get("cx", 0))
+        cy = float(ellipse.attrib.get("cy", 0))
+        rx = float(ellipse.attrib.get("rx"))
+        ry = float(ellipse.attrib.get("ry"))
+
+        # arc doesn't seem to like being a complete shape, draw two halves
+        self._start_path()
+        self.M(cx - rx, cy)
+        self.A(rx, ry, cx + rx, cy, large_arc=1)
+        self.A(rx, ry, cx - rx, cy, large_arc=1)
+
+    def add_path_from_element(self, el):
+        if not isinstance(el.tag, str):
+            return False
+        tag = _strip_xml_ns(el.tag)
+        parse_fn = getattr(self, "_parse_%s" % tag.lower(), None)
+        if not callable(parse_fn):
+            return False
+        parse_fn(el)
+        if "transform" in el.attrib:
+            self.transforms[-1] = _transform(el.attrib["transform"])
+        return True

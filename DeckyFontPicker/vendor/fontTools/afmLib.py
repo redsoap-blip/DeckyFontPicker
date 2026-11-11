@@ -1,1 +1,439 @@
-IiIiTW9kdWxlIGZvciByZWFkaW5nIGFuZCB3cml0aW5nIEFGTSAoQWRvYmUgRm9udCBNZXRyaWNzKSBmaWxlcy4KCk5vdGUgdGhhdCB0aGlzIGhhcyBiZWVuIGRlc2lnbmVkIHRvIHJlYWQgaW4gQUZNIGZpbGVzIGdlbmVyYXRlZCBieSBGb250b2dyYXBoZXIKYW5kIGhhcyBub3QgYmVlbiB0ZXN0ZWQgb24gbWFueSBvdGhlciBmaWxlcy4gSW4gcGFydGljdWxhciwgaXQgZG9lcyBub3QKaW1wbGVtZW50IHRoZSB3aG9sZSBBZG9iZSBBRk0gc3BlY2lmaWNhdGlvbiBbI2YxXV8gYnV0LCBpdCBzaG91bGQgcmVhZCBtb3N0CiJjb21tb24iIEFGTSBmaWxlcy4KCkhlcmUgaXMgYW4gZXhhbXBsZSBvZiB1c2luZyBgYWZtTGliYCB0byByZWFkLCBtb2RpZnkgYW5kIHdyaXRlIGFuIEFGTSBmaWxlOgoKICAgICAgICA+Pj4gZnJvbSBmb250VG9vbHMuYWZtTGliIGltcG9ydCBBRk0KICAgICAgICA+Pj4gZiA9IEFGTSgiVGVzdHMvYWZtTGliL2RhdGEvVGVzdEFGTS5hZm0iKQogICAgICAgID4+PgogICAgICAgID4+PiAjIEFjY2Vzc2luZyBhIHBhaXIgZ2V0cyB5b3UgdGhlIGtlcm4gdmFsdWUKICAgICAgICA+Pj4gZlsoIlYiLCJBIildCiAgICAgICAgLTYwCiAgICAgICAgPj4+CiAgICAgICAgPj4+ICMgQWNjZXNzaW5nIGEgZ2x5cGggbmFtZSBnZXRzIHlvdSBtZXRyaWNzCiAgICAgICAgPj4+IGZbIkEiXQogICAgICAgICg2NSwgNjY4LCAoOCwgLTI1LCA2NjAsIDY2NikpCiAgICAgICAgPj4+ICMgKGNoYXJudW0sIHdpZHRoLCBib3VuZGluZyBib3gpCiAgICAgICAgPj4+CiAgICAgICAgPj4+ICMgQWNjZXNzaW5nIGFuIGF0dHJpYnV0ZSBnZXRzIHlvdSBtZXRhZGF0YQogICAgICAgID4+PiBmLkZvbnROYW1lCiAgICAgICAgJ1Rlc3RGb250LVJlZ3VsYXInCiAgICAgICAgPj4+IGYuRmFtaWx5TmFtZQogICAgICAgICdUZXN0Rm9udCcKICAgICAgICA+Pj4gZi5XZWlnaHQKICAgICAgICAnUmVndWxhcicKICAgICAgICA+Pj4gZi5YSGVpZ2h0CiAgICAgICAgNTAwCiAgICAgICAgPj4+IGYuQXNjZW5kZXIKICAgICAgICA3NTAKICAgICAgICA+Pj4KICAgICAgICA+Pj4gIyBBdHRyaWJ1dGVzIGFuZCBpdGVtcyBjYW4gYWxzbyBiZSBzZXQKICAgICAgICA+Pj4gZlsoIkEiLCJWIildID0gLTE1MCAjIFRpZ2h0ZW4ga2VybmluZwogICAgICAgID4+PiBmLkZvbnROYW1lID0gIlRlc3RGb250IFNxdWlzaGVkIgogICAgICAgID4+PgogICAgICAgID4+PiAjIEFuZCB0aGUgZm9udCB3cml0dGVuIG91dCBhZ2FpbiAocmVtb3ZlIHRoZSAjIGluIGZyb250KQogICAgICAgID4+PiAjZi53cml0ZSgidGVzdGZvbnQtc3F1aXNoZWQuYWZtIikKCi4uIHJ1YnJpYzo6IEZvb3Rub3RlcwoKLi4gWyNmMV0gYEFkb2JlIFRlY2hub3RlIDUwMDQgPGh0dHBzOi8vd3d3LmFkb2JlLmNvbS9jb250ZW50L2RhbS9hY29tL2VuL2Rldm5ldC9mb250L3BkZnMvNTAwNC5BRk1fU3BlYy5wZGY+YF8sCiAgIEFkb2JlIEZvbnQgTWV0cmljcyBGaWxlIEZvcm1hdCBTcGVjaWZpY2F0aW9uLgoKIiIiCgppbXBvcnQgcmUKCiMgZXZlcnkgc2luZ2xlIGxpbmUgc3RhcnRzIHdpdGggYSAid29yZCIKaWRlbnRpZmllclJFID0gcmUuY29tcGlsZShyIl4oW0EtWmEtel0rKS4qIikKCiMgcmVndWxhciBleHByZXNzaW9uIHRvIHBhcnNlIGNoYXIgbGluZXMKY2hhclJFID0gcmUuY29tcGlsZSgKICAgIHIiKC0/XGQrKSIgICMgY2hhcm51bQogICAgciJccyo7XHMqV1hccysiICAjIDsgV1gKICAgIHIiKC0/XGQrKSIgICMgd2lkdGgKICAgIHIiXHMqO1xzKk5ccysiICAjIDsgTgogICAgciIoWy5BLVphLXowLTlfXSspIiAgIyBjaGFybmFtZQogICAgciJccyo7XHMqQlxzKyIgICMgOyBCCiAgICByIigtP1xkKykiICAjIGxlZnQKICAgIHIiXHMrIgogICAgciIoLT9cZCspIiAgIyBib3R0b20KICAgIHIiXHMrIgogICAgciIoLT9cZCspIiAgIyByaWdodAogICAgciJccysiCiAgICByIigtP1xkKykiICAjIHRvcAogICAgciJccyo7XHMqIiAgIyA7CikKCiMgcmVndWxhciBleHByZXNzaW9uIHRvIHBhcnNlIGtlcm5pbmcgbGluZXMKa2VyblJFID0gcmUuY29tcGlsZSgKICAgIHIiKFsuQS1aYS16MC05X10rKSIgICMgbGVmdGNoYXIKICAgIHIiXHMrIgogICAgciIoWy5BLVphLXowLTlfXSspIiAgIyByaWdodGNoYXIKICAgIHIiXHMrIgogICAgciIoLT9cZCspIiAgIyB2YWx1ZQogICAgciJccyoiCikKCiMgcmVndWxhciBleHByZXNzaW9ucyB0byBwYXJzZSBjb21wb3NpdGUgaW5mbyBsaW5lcyBvZiB0aGUgZm9ybToKIyBBYWN1dGUgMiA7IFBDQyBBIDAgMCA7IFBDQyBhY3V0ZSAxODIgMjExIDsKY29tcG9zaXRlUkUgPSByZS5jb21waWxlKAogICAgciIoWy5BLVphLXowLTlfXSspIiAgIyBjaGFyIG5hbWUKICAgIHIiXHMrIgogICAgciIoXGQrKSIgICMgbnVtYmVyIG9mIHBhcnRzCiAgICByIlxzKjtccyoiCikKY29tcG9uZW50UkUgPSByZS5jb21waWxlKAogICAgciJQQ0NccysiICAjIFBQQwogICAgciIoWy5BLVphLXowLTlfXSspIiAgIyBiYXNlIGNoYXIgbmFtZQogICAgciJccysiCiAgICByIigtP1xkKykiICAjIHggb2Zmc2V0CiAgICByIlxzKyIKICAgIHIiKC0/XGQrKSIgICMgeSBvZmZzZXQKICAgIHIiXHMqO1xzKiIKKQoKcHJlZmVycmVkQXR0cmlidXRlT3JkZXIgPSBbCiAgICAiRm9udE5hbWUiLAogICAgIkZ1bGxOYW1lIiwKICAgICJGYW1pbHlOYW1lIiwKICAgICJXZWlnaHQiLAogICAgIkl0YWxpY0FuZ2xlIiwKICAgICJJc0ZpeGVkUGl0Y2giLAogICAgIkZvbnRCQm94IiwKICAgICJVbmRlcmxpbmVQb3NpdGlvbiIsCiAgICAiVW5kZXJsaW5lVGhpY2tuZXNzIiwKICAgICJWZXJzaW9uIiwKICAgICJOb3RpY2UiLAogICAgIkVuY29kaW5nU2NoZW1lIiwKICAgICJDYXBIZWlnaHQiLAogICAgIlhIZWlnaHQiLAogICAgIkFzY2VuZGVyIiwKICAgICJEZXNjZW5kZXIiLApdCgoKY2xhc3MgZXJyb3IoRXhjZXB0aW9uKToKICAgIHBhc3MKCgpjbGFzcyBBRk0ob2JqZWN0KToKICAgIF9hdHRycyA9IE5vbmUKCiAgICBfa2V5d29yZHMgPSBbCiAgICAgICAgIlN0YXJ0Rm9udE1ldHJpY3MiLAogICAgICAgICJFbmRGb250TWV0cmljcyIsCiAgICAgICAgIlN0YXJ0Q2hhck1ldHJpY3MiLAogICAgICAgICJFbmRDaGFyTWV0cmljcyIsCiAgICAgICAgIlN0YXJ0S2VybkRhdGEiLAogICAgICAgICJTdGFydEtlcm5QYWlycyIsCiAgICAgICAgIkVuZEtlcm5QYWlycyIsCiAgICAgICAgIkVuZEtlcm5EYXRhIiwKICAgICAgICAiU3RhcnRDb21wb3NpdGVzIiwKICAgICAgICAiRW5kQ29tcG9zaXRlcyIsCiAgICBdCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHBhdGg9Tm9uZSk6CiAgICAgICAgIiIiQUZNIGZpbGUgcmVhZGVyLgoKICAgICAgICBJbnN0YW50aWF0aW5nIGFuIG9iamVjdCB3aXRoIGEgcGF0aCBuYW1lIHdpbGwgY2F1c2UgdGhlIGZpbGUgdG8gYmUgb3BlbmVkLAogICAgICAgIHJlYWQsIGFuZCBwYXJzZWQuIEFsdGVybmF0aXZlbHkgdGhlIHBhdGggY2FuIGJlIGxlZnQgdW5zcGVjaWZpZWQsIGFuZCBhCiAgICAgICAgZmlsZSBjYW4gYmUgcGFyc2VkIGxhdGVyIHdpdGggdGhlIDptZXRoOmByZWFkYCBtZXRob2QuIiIiCiAgICAgICAgc2VsZi5fYXR0cnMgPSB7fQogICAgICAgIHNlbGYuX2NoYXJzID0ge30KICAgICAgICBzZWxmLl9rZXJuaW5nID0ge30KICAgICAgICBzZWxmLl9pbmRleCA9IHt9CiAgICAgICAgc2VsZi5fY29tbWVudHMgPSBbXQogICAgICAgIHNlbGYuX2NvbXBvc2l0ZXMgPSB7fQogICAgICAgIGlmIHBhdGggaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHNlbGYucmVhZChwYXRoKQoKICAgIGRlZiByZWFkKHNlbGYsIHBhdGgpOgogICAgICAgICIiIk9wZW5zLCByZWFkcyBhbmQgcGFyc2VzIGEgZmlsZS4iIiIKICAgICAgICBsaW5lcyA9IHJlYWRsaW5lcyhwYXRoKQogICAgICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgICAgICBpZiBub3QgbGluZS5zdHJpcCgpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbSA9IGlkZW50aWZpZXJSRS5tYXRjaChsaW5lKQogICAgICAgICAgICBpZiBtIGlzIE5vbmU6CiAgICAgICAgICAgICAgICByYWlzZSBlcnJvcigic3ludGF4IGVycm9yIGluIEFGTSBmaWxlOiAiICsgcmVwcihsaW5lKSkKCiAgICAgICAgICAgIHBvcyA9IG0ucmVnc1sxXVsxXQogICAgICAgICAgICB3b3JkID0gbGluZVs6cG9zXQogICAgICAgICAgICByZXN0ID0gbGluZVtwb3M6XS5zdHJpcCgpCiAgICAgICAgICAgIGlmIHdvcmQgaW4gc2VsZi5fa2V5d29yZHM6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBpZiB3b3JkID09ICJDIjoKICAgICAgICAgICAgICAgIHNlbGYucGFyc2VjaGFyKHJlc3QpCiAgICAgICAgICAgIGVsaWYgd29yZCA9PSAiS1BYIjoKICAgICAgICAgICAgICAgIHNlbGYucGFyc2VrZXJucGFpcihyZXN0KQogICAgICAgICAgICBlbGlmIHdvcmQgPT0gIkNDIjoKICAgICAgICAgICAgICAgIHNlbGYucGFyc2Vjb21wb3NpdGUocmVzdCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHNlbGYucGFyc2VhdHRyKHdvcmQsIHJlc3QpCgogICAgZGVmIHBhcnNlY2hhcihzZWxmLCByZXN0KToKICAgICAgICBtID0gY2hhclJFLm1hdGNoKHJlc3QpCiAgICAgICAgaWYgbSBpcyBOb25lOgogICAgICAgICAgICByYWlzZSBlcnJvcigic3ludGF4IGVycm9yIGluIEFGTSBmaWxlOiAiICsgcmVwcihyZXN0KSkKICAgICAgICB0aGluZ3MgPSBbXQogICAgICAgIGZvciBmciwgdG8gaW4gbS5yZWdzWzE6XToKICAgICAgICAgICAgdGhpbmdzLmFwcGVuZChyZXN0W2ZyOnRvXSkKICAgICAgICBjaGFybmFtZSA9IHRoaW5nc1syXQogICAgICAgIGRlbCB0aGluZ3NbMl0KICAgICAgICBjaGFybnVtLCB3aWR0aCwgbCwgYiwgciwgdCA9IChpbnQodGhpbmcpIGZvciB0aGluZyBpbiB0aGluZ3MpCiAgICAgICAgc2VsZi5fY2hhcnNbY2hhcm5hbWVdID0gY2hhcm51bSwgd2lkdGgsIChsLCBiLCByLCB0KQoKICAgIGRlZiBwYXJzZWtlcm5wYWlyKHNlbGYsIHJlc3QpOgogICAgICAgIG0gPSBrZXJuUkUubWF0Y2gocmVzdCkKICAgICAgICBpZiBtIGlzIE5vbmU6CiAgICAgICAgICAgIHJhaXNlIGVycm9yKCJzeW50YXggZXJyb3IgaW4gQUZNIGZpbGU6ICIgKyByZXByKHJlc3QpKQogICAgICAgIHRoaW5ncyA9IFtdCiAgICAgICAgZm9yIGZyLCB0byBpbiBtLnJlZ3NbMTpdOgogICAgICAgICAgICB0aGluZ3MuYXBwZW5kKHJlc3RbZnI6dG9dKQogICAgICAgIGxlZnRjaGFyLCByaWdodGNoYXIsIHZhbHVlID0gdGhpbmdzCiAgICAgICAgdmFsdWUgPSBpbnQodmFsdWUpCiAgICAgICAgc2VsZi5fa2VybmluZ1sobGVmdGNoYXIsIHJpZ2h0Y2hhcildID0gdmFsdWUKCiAgICBkZWYgcGFyc2VhdHRyKHNlbGYsIHdvcmQsIHJlc3QpOgogICAgICAgIGlmIHdvcmQgPT0gIkZvbnRCQm94IjoKICAgICAgICAgICAgbCwgYiwgciwgdCA9IFtpbnQodGhpbmcpIGZvciB0aGluZyBpbiByZXN0LnNwbGl0KCldCiAgICAgICAgICAgIHNlbGYuX2F0dHJzW3dvcmRdID0gbCwgYiwgciwgdAogICAgICAgIGVsaWYgd29yZCA9PSAiQ29tbWVudCI6CiAgICAgICAgICAgIHNlbGYuX2NvbW1lbnRzLmFwcGVuZChyZXN0KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHZhbHVlID0gaW50KHJlc3QpCiAgICAgICAgICAgIGV4Y2VwdCAoVmFsdWVFcnJvciwgT3ZlcmZsb3dFcnJvcik6CiAgICAgICAgICAgICAgICBzZWxmLl9hdHRyc1t3b3JkXSA9IHJlc3QKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHNlbGYuX2F0dHJzW3dvcmRdID0gdmFsdWUKCiAgICBkZWYgcGFyc2Vjb21wb3NpdGUoc2VsZiwgcmVzdCk6CiAgICAgICAgbSA9IGNvbXBvc2l0ZVJFLm1hdGNoKHJlc3QpCiAgICAgICAgaWYgbSBpcyBOb25lOgogICAgICAgICAgICByYWlzZSBlcnJvcigic3ludGF4IGVycm9yIGluIEFGTSBmaWxlOiAiICsgcmVwcihyZXN0KSkKICAgICAgICBjaGFybmFtZSA9IG0uZ3JvdXAoMSkKICAgICAgICBuY29tcG9uZW50cyA9IGludChtLmdyb3VwKDIpKQogICAgICAgIHJlc3QgPSByZXN0W20ucmVnc1swXVsxXSA6XQogICAgICAgIGNvbXBvbmVudHMgPSBbXQogICAgICAgIHdoaWxlIFRydWU6CiAgICAgICAgICAgIG0gPSBjb21wb25lbnRSRS5tYXRjaChyZXN0KQogICAgICAgICAgICBpZiBtIGlzIE5vbmU6CiAgICAgICAgICAgICAgICByYWlzZSBlcnJvcigic3ludGF4IGVycm9yIGluIEFGTSBmaWxlOiAiICsgcmVwcihyZXN0KSkKICAgICAgICAgICAgYmFzZWNoYXIgPSBtLmdyb3VwKDEpCiAgICAgICAgICAgIHhvZmZzZXQgPSBpbnQobS5ncm91cCgyKSkKICAgICAgICAgICAgeW9mZnNldCA9IGludChtLmdyb3VwKDMpKQogICAgICAgICAgICBjb21wb25lbnRzLmFwcGVuZCgoYmFzZWNoYXIsIHhvZmZzZXQsIHlvZmZzZXQpKQogICAgICAgICAgICByZXN0ID0gcmVzdFttLnJlZ3NbMF1bMV0gOl0KICAgICAgICAgICAgaWYgbm90IHJlc3Q6CiAgICAgICAgICAgICAgICBicmVhawogICAgICAgIGFzc2VydCBsZW4oY29tcG9uZW50cykgPT0gbmNvbXBvbmVudHMKICAgICAgICBzZWxmLl9jb21wb3NpdGVzW2NoYXJuYW1lXSA9IGNvbXBvbmVudHMKCiAgICBkZWYgd3JpdGUoc2VsZiwgcGF0aCwgc2VwPSJcciIpOgogICAgICAgICIiIldyaXRlcyBvdXQgYW4gQUZNIGZvbnQgdG8gdGhlIGdpdmVuIHBhdGguIiIiCiAgICAgICAgaW1wb3J0IHRpbWUKCiAgICAgICAgbGluZXMgPSBbCiAgICAgICAgICAgICJTdGFydEZvbnRNZXRyaWNzIDIuMCIsCiAgICAgICAgICAgICJDb21tZW50IEdlbmVyYXRlZCBieSBhZm1MaWI7IGF0ICVzIgogICAgICAgICAgICAlICh0aW1lLnN0cmZ0aW1lKCIlbS8lZC8lWSAlSDolTTolUyIsIHRpbWUubG9jYWx0aW1lKHRpbWUudGltZSgpKSkpLAogICAgICAgIF0KCiAgICAgICAgIyB3cml0ZSBjb21tZW50cywgYXNzdW1pbmcgKHBvc3NpYmx5IHdyb25nbHkhKSB0aGV5IHNob3VsZAogICAgICAgICMgYWxsIGFwcGVhciBhdCB0aGUgdG9wCiAgICAgICAgZm9yIGNvbW1lbnQgaW4gc2VsZi5fY29tbWVudHM6CiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgiQ29tbWVudCAiICsgY29tbWVudCkKCiAgICAgICAgIyB3cml0ZSBhdHRyaWJ1dGVzLCBmaXJzdCB0aGUgb25lcyB3ZSBrbm93IGFib3V0LCBpbgogICAgICAgICMgYSBwcmVmZXJyZWQgb3JkZXIKICAgICAgICBhdHRycyA9IHNlbGYuX2F0dHJzCiAgICAgICAgZm9yIGF0dHIgaW4gcHJlZmVycmVkQXR0cmlidXRlT3JkZXI6CiAgICAgICAgICAgIGlmIGF0dHIgaW4gYXR0cnM6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IGF0dHJzW2F0dHJdCiAgICAgICAgICAgICAgICBpZiBhdHRyID09ICJGb250QkJveCI6CiAgICAgICAgICAgICAgICAgICAgdmFsdWUgPSAiJXMgJXMgJXMgJXMiICUgdmFsdWUKICAgICAgICAgICAgICAgIGxpbmVzLmFwcGVuZChhdHRyICsgIiAiICsgc3RyKHZhbHVlKSkKICAgICAgICAjIHRoZW4gd3JpdGUgdGhlIGF0dHJpYnV0ZXMgd2UgZG9uJ3Qga25vdyBhYm91dCwKICAgICAgICAjIGluIGFscGhhYmV0aWNhbCBvcmRlcgogICAgICAgIGl0ZW1zID0gc29ydGVkKGF0dHJzLml0ZW1zKCkpCiAgICAgICAgZm9yIGF0dHIsIHZhbHVlIGluIGl0ZW1zOgogICAgICAgICAgICBpZiBhdHRyIGluIHByZWZlcnJlZEF0dHJpYnV0ZU9yZGVyOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbGluZXMuYXBwZW5kKGF0dHIgKyAiICIgKyBzdHIodmFsdWUpKQoKICAgICAgICAjIHdyaXRlIGNoYXIgbWV0cmljcwogICAgICAgIGxpbmVzLmFwcGVuZCgiU3RhcnRDaGFyTWV0cmljcyAiICsgcmVwcihsZW4oc2VsZi5fY2hhcnMpKSkKICAgICAgICBpdGVtcyA9IFsKICAgICAgICAgICAgKGNoYXJudW0sIChjaGFybmFtZSwgd2lkdGgsIGJveCkpCiAgICAgICAgICAgIGZvciBjaGFybmFtZSwgKGNoYXJudW0sIHdpZHRoLCBib3gpIGluIHNlbGYuX2NoYXJzLml0ZW1zKCkKICAgICAgICBdCgogICAgICAgIGRlZiBteUtleShhKToKICAgICAgICAgICAgIiIiQ3VzdG9tIGtleSBmdW5jdGlvbiB0byBtYWtlIHN1cmUgdW5lbmNvZGVkIGNoYXJzICgtMSkKICAgICAgICAgICAgZW5kIHVwIGF0IHRoZSBlbmQgb2YgdGhlIGxpc3QgYWZ0ZXIgc29ydGluZy4iIiIKICAgICAgICAgICAgaWYgYVswXSA9PSAtMToKICAgICAgICAgICAgICAgIGEgPSAoMHhGRkZGLCkgKyBhWzE6XSAgIyAweGZmZmYgaXMgYW4gYXJiaXRyYXJ5IGxhcmdlIG51bWJlcgogICAgICAgICAgICByZXR1cm4gYQoKICAgICAgICBpdGVtcy5zb3J0KGtleT1teUtleSkKCiAgICAgICAgZm9yIGNoYXJudW0sIChjaGFybmFtZSwgd2lkdGgsIChsLCBiLCByLCB0KSkgaW4gaXRlbXM6CiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgKICAgICAgICAgICAgICAgICJDICVkIDsgV1ggJWQgOyBOICVzIDsgQiAlZCAlZCAlZCAlZCA7IgogICAgICAgICAgICAgICAgJSAoY2hhcm51bSwgd2lkdGgsIGNoYXJuYW1lLCBsLCBiLCByLCB0KQogICAgICAgICAgICApCiAgICAgICAgbGluZXMuYXBwZW5kKCJFbmRDaGFyTWV0cmljcyIpCgogICAgICAgICMgd3JpdGUga2VybmluZyBpbmZvCiAgICAgICAgbGluZXMuYXBwZW5kKCJTdGFydEtlcm5EYXRhIikKICAgICAgICBsaW5lcy5hcHBlbmQoIlN0YXJ0S2VyblBhaXJzICIgKyByZXByKGxlbihzZWxmLl9rZXJuaW5nKSkpCiAgICAgICAgaXRlbXMgPSBzb3J0ZWQoc2VsZi5fa2VybmluZy5pdGVtcygpKQogICAgICAgIGZvciAobGVmdGNoYXIsIHJpZ2h0Y2hhciksIHZhbHVlIGluIGl0ZW1zOgogICAgICAgICAgICBsaW5lcy5hcHBlbmQoIktQWCAlcyAlcyAlZCIgJSAobGVmdGNoYXIsIHJpZ2h0Y2hhciwgdmFsdWUpKQogICAgICAgIGxpbmVzLmFwcGVuZCgiRW5kS2VyblBhaXJzIikKICAgICAgICBsaW5lcy5hcHBlbmQoIkVuZEtlcm5EYXRhIikKCiAgICAgICAgaWYgc2VsZi5fY29tcG9zaXRlczoKICAgICAgICAgICAgY29tcG9zaXRlcyA9IHNvcnRlZChzZWxmLl9jb21wb3NpdGVzLml0ZW1zKCkpCiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgiU3RhcnRDb21wb3NpdGVzICVzIiAlIGxlbihzZWxmLl9jb21wb3NpdGVzKSkKICAgICAgICAgICAgZm9yIGNoYXJuYW1lLCBjb21wb25lbnRzIGluIGNvbXBvc2l0ZXM6CiAgICAgICAgICAgICAgICBsaW5lID0gIkNDICVzICVzIDsiICUgKGNoYXJuYW1lLCBsZW4oY29tcG9uZW50cykpCiAgICAgICAgICAgICAgICBmb3IgYmFzZWNoYXIsIHhvZmZzZXQsIHlvZmZzZXQgaW4gY29tcG9uZW50czoKICAgICAgICAgICAgICAgICAgICBsaW5lID0gbGluZSArICIgUENDICVzICVzICVzIDsiICUgKGJhc2VjaGFyLCB4b2Zmc2V0LCB5b2Zmc2V0KQogICAgICAgICAgICAgICAgbGluZXMuYXBwZW5kKGxpbmUpCiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgiRW5kQ29tcG9zaXRlcyIpCgogICAgICAgIGxpbmVzLmFwcGVuZCgiRW5kRm9udE1ldHJpY3MiKQoKICAgICAgICB3cml0ZWxpbmVzKHBhdGgsIGxpbmVzLCBzZXApCgogICAgZGVmIGhhc19rZXJucGFpcihzZWxmLCBwYWlyKToKICAgICAgICAiIiJSZXR1cm5zIGBUcnVlYCBpZiB0aGUgZ2l2ZW4gZ2x5cGggcGFpciAoc3BlY2lmaWVkIGFzIGEgdHVwbGUpIGV4aXN0cwogICAgICAgIGluIHRoZSBrZXJuaW5nIGRpY3Rpb25hcnkuIiIiCiAgICAgICAgcmV0dXJuIHBhaXIgaW4gc2VsZi5fa2VybmluZwoKICAgIGRlZiBrZXJucGFpcnMoc2VsZik6CiAgICAgICAgIiIiUmV0dXJucyBhIGxpc3Qgb2YgYWxsIGtlcm4gcGFpcnMgaW4gdGhlIGtlcm5pbmcgZGljdGlvbmFyeS4iIiIKICAgICAgICByZXR1cm4gbGlzdChzZWxmLl9rZXJuaW5nLmtleXMoKSkKCiAgICBkZWYgaGFzX2NoYXIoc2VsZiwgY2hhcik6CiAgICAgICAgIiIiUmV0dXJucyBgVHJ1ZWAgaWYgdGhlIGdpdmVuIGdseXBoIGV4aXN0cyBpbiB0aGUgZm9udC4iIiIKICAgICAgICByZXR1cm4gY2hhciBpbiBzZWxmLl9jaGFycwoKICAgIGRlZiBjaGFycyhzZWxmKToKICAgICAgICAiIiJSZXR1cm5zIGEgbGlzdCBvZiBhbGwgZ2x5cGggbmFtZXMgaW4gdGhlIGZvbnQuIiIiCiAgICAgICAgcmV0dXJuIGxpc3Qoc2VsZi5fY2hhcnMua2V5cygpKQoKICAgIGRlZiBjb21tZW50cyhzZWxmKToKICAgICAgICAiIiJSZXR1cm5zIGFsbCBjb21tZW50cyBmcm9tIHRoZSBmaWxlLiIiIgogICAgICAgIHJldHVybiBzZWxmLl9jb21tZW50cwoKICAgIGRlZiBhZGRDb21tZW50KHNlbGYsIGNvbW1lbnQpOgogICAgICAgICIiIkFkZHMgYSBuZXcgY29tbWVudCB0byB0aGUgZmlsZS4iIiIKICAgICAgICBzZWxmLl9jb21tZW50cy5hcHBlbmQoY29tbWVudCkKCiAgICBkZWYgYWRkQ29tcG9zaXRlKHNlbGYsIGdseXBoTmFtZSwgY29tcG9uZW50cyk6CiAgICAgICAgIiIiU3BlY2lmaWVzIHRoYXQgdGhlIGdseXBoIGBnbHlwaE5hbWVgIGlzIG1hZGUgdXAgb2YgdGhlIGdpdmVuIGNvbXBvbmVudHMuCiAgICAgICAgVGhlIGNvbXBvbmVudHMgbGlzdCBzaG91bGQgYmUgb2YgdGhlIGZvbGxvd2luZyBmb3JtOjoKCiAgICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAgICAgICAgIChnbHlwaG5hbWUsIHhPZmZzZXQsIHlPZmZzZXQpLAogICAgICAgICAgICAgICAgICAgICAgICAuLi4KICAgICAgICAgICAgICAgIF0KCiAgICAgICAgIiIiCiAgICAgICAgc2VsZi5fY29tcG9zaXRlc1tnbHlwaE5hbWVdID0gY29tcG9uZW50cwoKICAgIGRlZiBfX2dldGF0dHJfXyhzZWxmLCBhdHRyKToKICAgICAgICBpZiBhdHRyIGluIHNlbGYuX2F0dHJzOgogICAgICAgICAgICByZXR1cm4gc2VsZi5fYXR0cnNbYXR0cl0KICAgICAgICBlbHNlOgogICAgICAgICAgICByYWlzZSBBdHRyaWJ1dGVFcnJvcihhdHRyKQoKICAgIGRlZiBfX3NldGF0dHJfXyhzZWxmLCBhdHRyLCB2YWx1ZSk6CiAgICAgICAgIyBhbGwgYXR0cnMgKm5vdCogc3RhcnRpbmcgd2l0aCAiXyIgYXJlIGNvbnNpZGVyIHRvIGJlIEFGTSBrZXl3b3JkcwogICAgICAgIGlmIGF0dHJbOjFdID09ICJfIjoKICAgICAgICAgICAgc2VsZi5fX2RpY3RfX1thdHRyXSA9IHZhbHVlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5fYXR0cnNbYXR0cl0gPSB2YWx1ZQoKICAgIGRlZiBfX2RlbGF0dHJfXyhzZWxmLCBhdHRyKToKICAgICAgICAjIGFsbCBhdHRycyAqbm90KiBzdGFydGluZyB3aXRoICJfIiBhcmUgY29uc2lkZXIgdG8gYmUgQUZNIGtleXdvcmRzCiAgICAgICAgaWYgYXR0cls6MV0gPT0gIl8iOgogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBkZWwgc2VsZi5fX2RpY3RfX1thdHRyXQogICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICByYWlzZSBBdHRyaWJ1dGVFcnJvcihhdHRyKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGRlbCBzZWxmLl9hdHRyc1thdHRyXQogICAgICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgICAgICByYWlzZSBBdHRyaWJ1dGVFcnJvcihhdHRyKQoKICAgIGRlZiBfX2dldGl0ZW1fXyhzZWxmLCBrZXkpOgogICAgICAgIGlmIGlzaW5zdGFuY2Uoa2V5LCB0dXBsZSk6CiAgICAgICAgICAgICMga2V5IGlzIGEgdHVwbGUsIHJldHVybiB0aGUga2VybnBhaXIKICAgICAgICAgICAgcmV0dXJuIHNlbGYuX2tlcm5pbmdba2V5XQogICAgICAgIGVsc2U6CiAgICAgICAgICAgICMgcmV0dXJuIHRoZSBtZXRyaWNzIGluc3RlYWQKICAgICAgICAgICAgcmV0dXJuIHNlbGYuX2NoYXJzW2tleV0KCiAgICBkZWYgX19zZXRpdGVtX18oc2VsZiwga2V5LCB2YWx1ZSk6CiAgICAgICAgaWYgaXNpbnN0YW5jZShrZXksIHR1cGxlKToKICAgICAgICAgICAgIyBrZXkgaXMgYSB0dXBsZSwgc2V0IGtlcm5wYWlyCiAgICAgICAgICAgIHNlbGYuX2tlcm5pbmdba2V5XSA9IHZhbHVlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBzZXQgY2hhciBtZXRyaWNzCiAgICAgICAgICAgIHNlbGYuX2NoYXJzW2tleV0gPSB2YWx1ZQoKICAgIGRlZiBfX2RlbGl0ZW1fXyhzZWxmLCBrZXkpOgogICAgICAgIGlmIGlzaW5zdGFuY2Uoa2V5LCB0dXBsZSk6CiAgICAgICAgICAgICMga2V5IGlzIGEgdHVwbGUsIGRlbCBrZXJucGFpcgogICAgICAgICAgICBkZWwgc2VsZi5fa2VybmluZ1trZXldCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBkZWwgY2hhciBtZXRyaWNzCiAgICAgICAgICAgIGRlbCBzZWxmLl9jaGFyc1trZXldCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIGlmIGhhc2F0dHIoc2VsZiwgIkZ1bGxOYW1lIik6CiAgICAgICAgICAgIHJldHVybiAiPEFGTSBvYmplY3QgZm9yICVzPiIgJSBzZWxmLkZ1bGxOYW1lCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuICI8QUZNIG9iamVjdCBhdCAleD4iICUgaWQoc2VsZikKCgpkZWYgcmVhZGxpbmVzKHBhdGgpOgogICAgd2l0aCBvcGVuKHBhdGgsICJyIiwgZW5jb2Rpbmc9ImFzY2lpIikgYXMgZjoKICAgICAgICBkYXRhID0gZi5yZWFkKCkKICAgIHJldHVybiBkYXRhLnNwbGl0bGluZXMoKQoKCmRlZiB3cml0ZWxpbmVzKHBhdGgsIGxpbmVzLCBzZXA9IlxyIik6CiAgICB3aXRoIG9wZW4ocGF0aCwgInciLCBlbmNvZGluZz0iYXNjaWkiLCBuZXdsaW5lPXNlcCkgYXMgZjoKICAgICAgICBmLndyaXRlKCJcbiIuam9pbihsaW5lcykgKyAiXG4iKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgRWFzeURpYWxvZ3MKCiAgICBwYXRoID0gRWFzeURpYWxvZ3MuQXNrRmlsZUZvck9wZW4oKQogICAgaWYgcGF0aDoKICAgICAgICBhZm0gPSBBRk0ocGF0aCkKICAgICAgICBjaGFyID0gIkEiCiAgICAgICAgaWYgYWZtLmhhc19jaGFyKGNoYXIpOgogICAgICAgICAgICBwcmludChhZm1bY2hhcl0pICAjIHByaW50IGNoYXJudW0sIHdpZHRoIGFuZCBib3VuZGluZ2JveAogICAgICAgIHBhaXIgPSAoIkEiLCAiViIpCiAgICAgICAgaWYgYWZtLmhhc19rZXJucGFpcihwYWlyKToKICAgICAgICAgICAgcHJpbnQoYWZtW3BhaXJdKSAgIyBwcmludCBrZXJuaW5nIHZhbHVlIGZvciBwYWlyCiAgICAgICAgcHJpbnQoYWZtLlZlcnNpb24pICAjIHZhcmlvdXMgb3RoZXIgYWZtIGVudHJpZXMgaGF2ZSBiZWNvbWUgYXR0cmlidXRlcwogICAgICAgIHByaW50KGFmbS5XZWlnaHQpCiAgICAgICAgIyBhZm0uY29tbWVudHMoKSByZXR1cm5zIGEgbGlzdCBvZiBhbGwgQ29tbWVudCBsaW5lcyBmb3VuZCBpbiB0aGUgQUZNCiAgICAgICAgcHJpbnQoYWZtLmNvbW1lbnRzKCkpCiAgICAgICAgIyBwcmludCBhZm0uY2hhcnMoKQogICAgICAgICMgcHJpbnQgYWZtLmtlcm5wYWlycygpCiAgICAgICAgcHJpbnQoYWZtKQogICAgICAgIGFmbS53cml0ZShwYXRoICsgIi5tdWNrIikK
+"""Module for reading and writing AFM (Adobe Font Metrics) files.
+
+Note that this has been designed to read in AFM files generated by Fontographer
+and has not been tested on many other files. In particular, it does not
+implement the whole Adobe AFM specification [#f1]_ but, it should read most
+"common" AFM files.
+
+Here is an example of using `afmLib` to read, modify and write an AFM file:
+
+        >>> from fontTools.afmLib import AFM
+        >>> f = AFM("Tests/afmLib/data/TestAFM.afm")
+        >>>
+        >>> # Accessing a pair gets you the kern value
+        >>> f[("V","A")]
+        -60
+        >>>
+        >>> # Accessing a glyph name gets you metrics
+        >>> f["A"]
+        (65, 668, (8, -25, 660, 666))
+        >>> # (charnum, width, bounding box)
+        >>>
+        >>> # Accessing an attribute gets you metadata
+        >>> f.FontName
+        'TestFont-Regular'
+        >>> f.FamilyName
+        'TestFont'
+        >>> f.Weight
+        'Regular'
+        >>> f.XHeight
+        500
+        >>> f.Ascender
+        750
+        >>>
+        >>> # Attributes and items can also be set
+        >>> f[("A","V")] = -150 # Tighten kerning
+        >>> f.FontName = "TestFont Squished"
+        >>>
+        >>> # And the font written out again (remove the # in front)
+        >>> #f.write("testfont-squished.afm")
+
+.. rubric:: Footnotes
+
+.. [#f1] `Adobe Technote 5004 <https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/5004.AFM_Spec.pdf>`_,
+   Adobe Font Metrics File Format Specification.
+
+"""
+
+import re
+
+# every single line starts with a "word"
+identifierRE = re.compile(r"^([A-Za-z]+).*")
+
+# regular expression to parse char lines
+charRE = re.compile(
+    r"(-?\d+)"  # charnum
+    r"\s*;\s*WX\s+"  # ; WX
+    r"(-?\d+)"  # width
+    r"\s*;\s*N\s+"  # ; N
+    r"([.A-Za-z0-9_]+)"  # charname
+    r"\s*;\s*B\s+"  # ; B
+    r"(-?\d+)"  # left
+    r"\s+"
+    r"(-?\d+)"  # bottom
+    r"\s+"
+    r"(-?\d+)"  # right
+    r"\s+"
+    r"(-?\d+)"  # top
+    r"\s*;\s*"  # ;
+)
+
+# regular expression to parse kerning lines
+kernRE = re.compile(
+    r"([.A-Za-z0-9_]+)"  # leftchar
+    r"\s+"
+    r"([.A-Za-z0-9_]+)"  # rightchar
+    r"\s+"
+    r"(-?\d+)"  # value
+    r"\s*"
+)
+
+# regular expressions to parse composite info lines of the form:
+# Aacute 2 ; PCC A 0 0 ; PCC acute 182 211 ;
+compositeRE = re.compile(
+    r"([.A-Za-z0-9_]+)"  # char name
+    r"\s+"
+    r"(\d+)"  # number of parts
+    r"\s*;\s*"
+)
+componentRE = re.compile(
+    r"PCC\s+"  # PPC
+    r"([.A-Za-z0-9_]+)"  # base char name
+    r"\s+"
+    r"(-?\d+)"  # x offset
+    r"\s+"
+    r"(-?\d+)"  # y offset
+    r"\s*;\s*"
+)
+
+preferredAttributeOrder = [
+    "FontName",
+    "FullName",
+    "FamilyName",
+    "Weight",
+    "ItalicAngle",
+    "IsFixedPitch",
+    "FontBBox",
+    "UnderlinePosition",
+    "UnderlineThickness",
+    "Version",
+    "Notice",
+    "EncodingScheme",
+    "CapHeight",
+    "XHeight",
+    "Ascender",
+    "Descender",
+]
+
+
+class error(Exception):
+    pass
+
+
+class AFM(object):
+    _attrs = None
+
+    _keywords = [
+        "StartFontMetrics",
+        "EndFontMetrics",
+        "StartCharMetrics",
+        "EndCharMetrics",
+        "StartKernData",
+        "StartKernPairs",
+        "EndKernPairs",
+        "EndKernData",
+        "StartComposites",
+        "EndComposites",
+    ]
+
+    def __init__(self, path=None):
+        """AFM file reader.
+
+        Instantiating an object with a path name will cause the file to be opened,
+        read, and parsed. Alternatively the path can be left unspecified, and a
+        file can be parsed later with the :meth:`read` method."""
+        self._attrs = {}
+        self._chars = {}
+        self._kerning = {}
+        self._index = {}
+        self._comments = []
+        self._composites = {}
+        if path is not None:
+            self.read(path)
+
+    def read(self, path):
+        """Opens, reads and parses a file."""
+        lines = readlines(path)
+        for line in lines:
+            if not line.strip():
+                continue
+            m = identifierRE.match(line)
+            if m is None:
+                raise error("syntax error in AFM file: " + repr(line))
+
+            pos = m.regs[1][1]
+            word = line[:pos]
+            rest = line[pos:].strip()
+            if word in self._keywords:
+                continue
+            if word == "C":
+                self.parsechar(rest)
+            elif word == "KPX":
+                self.parsekernpair(rest)
+            elif word == "CC":
+                self.parsecomposite(rest)
+            else:
+                self.parseattr(word, rest)
+
+    def parsechar(self, rest):
+        m = charRE.match(rest)
+        if m is None:
+            raise error("syntax error in AFM file: " + repr(rest))
+        things = []
+        for fr, to in m.regs[1:]:
+            things.append(rest[fr:to])
+        charname = things[2]
+        del things[2]
+        charnum, width, l, b, r, t = (int(thing) for thing in things)
+        self._chars[charname] = charnum, width, (l, b, r, t)
+
+    def parsekernpair(self, rest):
+        m = kernRE.match(rest)
+        if m is None:
+            raise error("syntax error in AFM file: " + repr(rest))
+        things = []
+        for fr, to in m.regs[1:]:
+            things.append(rest[fr:to])
+        leftchar, rightchar, value = things
+        value = int(value)
+        self._kerning[(leftchar, rightchar)] = value
+
+    def parseattr(self, word, rest):
+        if word == "FontBBox":
+            l, b, r, t = [int(thing) for thing in rest.split()]
+            self._attrs[word] = l, b, r, t
+        elif word == "Comment":
+            self._comments.append(rest)
+        else:
+            try:
+                value = int(rest)
+            except (ValueError, OverflowError):
+                self._attrs[word] = rest
+            else:
+                self._attrs[word] = value
+
+    def parsecomposite(self, rest):
+        m = compositeRE.match(rest)
+        if m is None:
+            raise error("syntax error in AFM file: " + repr(rest))
+        charname = m.group(1)
+        ncomponents = int(m.group(2))
+        rest = rest[m.regs[0][1] :]
+        components = []
+        while True:
+            m = componentRE.match(rest)
+            if m is None:
+                raise error("syntax error in AFM file: " + repr(rest))
+            basechar = m.group(1)
+            xoffset = int(m.group(2))
+            yoffset = int(m.group(3))
+            components.append((basechar, xoffset, yoffset))
+            rest = rest[m.regs[0][1] :]
+            if not rest:
+                break
+        assert len(components) == ncomponents
+        self._composites[charname] = components
+
+    def write(self, path, sep="\r"):
+        """Writes out an AFM font to the given path."""
+        import time
+
+        lines = [
+            "StartFontMetrics 2.0",
+            "Comment Generated by afmLib; at %s"
+            % (time.strftime("%m/%d/%Y %H:%M:%S", time.localtime(time.time()))),
+        ]
+
+        # write comments, assuming (possibly wrongly!) they should
+        # all appear at the top
+        for comment in self._comments:
+            lines.append("Comment " + comment)
+
+        # write attributes, first the ones we know about, in
+        # a preferred order
+        attrs = self._attrs
+        for attr in preferredAttributeOrder:
+            if attr in attrs:
+                value = attrs[attr]
+                if attr == "FontBBox":
+                    value = "%s %s %s %s" % value
+                lines.append(attr + " " + str(value))
+        # then write the attributes we don't know about,
+        # in alphabetical order
+        items = sorted(attrs.items())
+        for attr, value in items:
+            if attr in preferredAttributeOrder:
+                continue
+            lines.append(attr + " " + str(value))
+
+        # write char metrics
+        lines.append("StartCharMetrics " + repr(len(self._chars)))
+        items = [
+            (charnum, (charname, width, box))
+            for charname, (charnum, width, box) in self._chars.items()
+        ]
+
+        def myKey(a):
+            """Custom key function to make sure unencoded chars (-1)
+            end up at the end of the list after sorting."""
+            if a[0] == -1:
+                a = (0xFFFF,) + a[1:]  # 0xffff is an arbitrary large number
+            return a
+
+        items.sort(key=myKey)
+
+        for charnum, (charname, width, (l, b, r, t)) in items:
+            lines.append(
+                "C %d ; WX %d ; N %s ; B %d %d %d %d ;"
+                % (charnum, width, charname, l, b, r, t)
+            )
+        lines.append("EndCharMetrics")
+
+        # write kerning info
+        lines.append("StartKernData")
+        lines.append("StartKernPairs " + repr(len(self._kerning)))
+        items = sorted(self._kerning.items())
+        for (leftchar, rightchar), value in items:
+            lines.append("KPX %s %s %d" % (leftchar, rightchar, value))
+        lines.append("EndKernPairs")
+        lines.append("EndKernData")
+
+        if self._composites:
+            composites = sorted(self._composites.items())
+            lines.append("StartComposites %s" % len(self._composites))
+            for charname, components in composites:
+                line = "CC %s %s ;" % (charname, len(components))
+                for basechar, xoffset, yoffset in components:
+                    line = line + " PCC %s %s %s ;" % (basechar, xoffset, yoffset)
+                lines.append(line)
+            lines.append("EndComposites")
+
+        lines.append("EndFontMetrics")
+
+        writelines(path, lines, sep)
+
+    def has_kernpair(self, pair):
+        """Returns `True` if the given glyph pair (specified as a tuple) exists
+        in the kerning dictionary."""
+        return pair in self._kerning
+
+    def kernpairs(self):
+        """Returns a list of all kern pairs in the kerning dictionary."""
+        return list(self._kerning.keys())
+
+    def has_char(self, char):
+        """Returns `True` if the given glyph exists in the font."""
+        return char in self._chars
+
+    def chars(self):
+        """Returns a list of all glyph names in the font."""
+        return list(self._chars.keys())
+
+    def comments(self):
+        """Returns all comments from the file."""
+        return self._comments
+
+    def addComment(self, comment):
+        """Adds a new comment to the file."""
+        self._comments.append(comment)
+
+    def addComposite(self, glyphName, components):
+        """Specifies that the glyph `glyphName` is made up of the given components.
+        The components list should be of the following form::
+
+                [
+                        (glyphname, xOffset, yOffset),
+                        ...
+                ]
+
+        """
+        self._composites[glyphName] = components
+
+    def __getattr__(self, attr):
+        if attr in self._attrs:
+            return self._attrs[attr]
+        else:
+            raise AttributeError(attr)
+
+    def __setattr__(self, attr, value):
+        # all attrs *not* starting with "_" are consider to be AFM keywords
+        if attr[:1] == "_":
+            self.__dict__[attr] = value
+        else:
+            self._attrs[attr] = value
+
+    def __delattr__(self, attr):
+        # all attrs *not* starting with "_" are consider to be AFM keywords
+        if attr[:1] == "_":
+            try:
+                del self.__dict__[attr]
+            except KeyError:
+                raise AttributeError(attr)
+        else:
+            try:
+                del self._attrs[attr]
+            except KeyError:
+                raise AttributeError(attr)
+
+    def __getitem__(self, key):
+        if isinstance(key, tuple):
+            # key is a tuple, return the kernpair
+            return self._kerning[key]
+        else:
+            # return the metrics instead
+            return self._chars[key]
+
+    def __setitem__(self, key, value):
+        if isinstance(key, tuple):
+            # key is a tuple, set kernpair
+            self._kerning[key] = value
+        else:
+            # set char metrics
+            self._chars[key] = value
+
+    def __delitem__(self, key):
+        if isinstance(key, tuple):
+            # key is a tuple, del kernpair
+            del self._kerning[key]
+        else:
+            # del char metrics
+            del self._chars[key]
+
+    def __repr__(self):
+        if hasattr(self, "FullName"):
+            return "<AFM object for %s>" % self.FullName
+        else:
+            return "<AFM object at %x>" % id(self)
+
+
+def readlines(path):
+    with open(path, "r", encoding="ascii") as f:
+        data = f.read()
+    return data.splitlines()
+
+
+def writelines(path, lines, sep="\r"):
+    with open(path, "w", encoding="ascii", newline=sep) as f:
+        f.write("\n".join(lines) + "\n")
+
+
+if __name__ == "__main__":
+    import EasyDialogs
+
+    path = EasyDialogs.AskFileForOpen()
+    if path:
+        afm = AFM(path)
+        char = "A"
+        if afm.has_char(char):
+            print(afm[char])  # print charnum, width and boundingbox
+        pair = ("A", "V")
+        if afm.has_kernpair(pair):
+            print(afm[pair])  # print kerning value for pair
+        print(afm.Version)  # various other afm entries have become attributes
+        print(afm.Weight)
+        # afm.comments() returns a list of all Comment lines found in the AFM
+        print(afm.comments())
+        # print afm.chars()
+        # print afm.kernpairs()
+        print(afm)
+        afm.write(path + ".muck")

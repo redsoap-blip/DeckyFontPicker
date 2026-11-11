@@ -1,1 +1,63 @@
-IyBTaW5jZSBiaXRtYXAgZ2x5cGggbWV0cmljcyBhcmUgc2hhcmVkIGJldHdlZW4gRUJMQyBhbmQgRUJEVAojIHRoaXMgY2xhc3MgZ2V0cyBpdHMgb3duIHB5dGhvbiBmaWxlLgpmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBzc3RydWN0CmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbAppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgpiaWdHbHlwaE1ldHJpY3NGb3JtYXQgPSAiIiIKICA+ICMgYmlnIGVuZGlhbgogIGhlaWdodDogICAgICAgQgogIHdpZHRoOiAgICAgICAgQgogIGhvcmlCZWFyaW5nWDogYgogIGhvcmlCZWFyaW5nWTogYgogIGhvcmlBZHZhbmNlOiAgQgogIHZlcnRCZWFyaW5nWDogYgogIHZlcnRCZWFyaW5nWTogYgogIHZlcnRBZHZhbmNlOiAgQgoiIiIKCnNtYWxsR2x5cGhNZXRyaWNzRm9ybWF0ID0gIiIiCiAgPiAjIGJpZyBlbmRpYW4KICBoZWlnaHQ6ICAgQgogIHdpZHRoOiAgICBCCiAgQmVhcmluZ1g6IGIKICBCZWFyaW5nWTogYgogIEFkdmFuY2U6ICBCCiIiIgoKCmNsYXNzIEJpdG1hcEdseXBoTWV0cmljcyhvYmplY3QpOgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICB3cml0ZXIuYmVnaW50YWcoc2VsZi5fX2NsYXNzX18uX19uYW1lX18pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciBtZXRyaWNOYW1lIGluIHNzdHJ1Y3QuZ2V0Zm9ybWF0KHNlbGYuX19jbGFzc19fLmJpbmFyeUZvcm1hdClbMV06CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcobWV0cmljTmFtZSwgdmFsdWU9Z2V0YXR0cihzZWxmLCBtZXRyaWNOYW1lKSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5lbmR0YWcoc2VsZi5fX2NsYXNzX18uX19uYW1lX18pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIG1ldHJpY05hbWVzID0gc2V0KHNzdHJ1Y3QuZ2V0Zm9ybWF0KHNlbGYuX19jbGFzc19fLmJpbmFyeUZvcm1hdClbMV0pCiAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgICMgTWFrZSBzdXJlIHRoaXMgaXMgYSBtZXRyaWMgdGhhdCBpcyBuZWVkZWQgYnkgR2x5cGhNZXRyaWNzLgogICAgICAgICAgICBpZiBuYW1lIGluIG1ldHJpY05hbWVzOgogICAgICAgICAgICAgICAgdmFycyhzZWxmKVtuYW1lXSA9IHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgbG9nLndhcm5pbmcoCiAgICAgICAgICAgICAgICAgICAgInVua25vd24gbmFtZSAnJXMnIGJlaW5nIGlnbm9yZWQgaW4gJXMuIiwKICAgICAgICAgICAgICAgICAgICBuYW1lLAogICAgICAgICAgICAgICAgICAgIHNlbGYuX19jbGFzc19fLl9fbmFtZV9fLAogICAgICAgICAgICAgICAgKQoKCmNsYXNzIEJpZ0dseXBoTWV0cmljcyhCaXRtYXBHbHlwaE1ldHJpY3MpOgogICAgYmluYXJ5Rm9ybWF0ID0gYmlnR2x5cGhNZXRyaWNzRm9ybWF0CgoKY2xhc3MgU21hbGxHbHlwaE1ldHJpY3MoQml0bWFwR2x5cGhNZXRyaWNzKToKICAgIGJpbmFyeUZvcm1hdCA9IHNtYWxsR2x5cGhNZXRyaWNzRm9ybWF0Cg==
+# Since bitmap glyph metrics are shared between EBLC and EBDT
+# this class gets its own python file.
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+import logging
+
+log = logging.getLogger(__name__)
+
+bigGlyphMetricsFormat = """
+  > # big endian
+  height:       B
+  width:        B
+  horiBearingX: b
+  horiBearingY: b
+  horiAdvance:  B
+  vertBearingX: b
+  vertBearingY: b
+  vertAdvance:  B
+"""
+
+smallGlyphMetricsFormat = """
+  > # big endian
+  height:   B
+  width:    B
+  BearingX: b
+  BearingY: b
+  Advance:  B
+"""
+
+
+class BitmapGlyphMetrics(object):
+    def toXML(self, writer, ttFont):
+        writer.begintag(self.__class__.__name__)
+        writer.newline()
+        for metricName in sstruct.getformat(self.__class__.binaryFormat)[1]:
+            writer.simpletag(metricName, value=getattr(self, metricName))
+            writer.newline()
+        writer.endtag(self.__class__.__name__)
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        metricNames = set(sstruct.getformat(self.__class__.binaryFormat)[1])
+        for element in content:
+            if not isinstance(element, tuple):
+                continue
+            name, attrs, content = element
+            # Make sure this is a metric that is needed by GlyphMetrics.
+            if name in metricNames:
+                vars(self)[name] = safeEval(attrs["value"])
+            else:
+                log.warning(
+                    "unknown name '%s' being ignored in %s.",
+                    name,
+                    self.__class__.__name__,
+                )
+
+
+class BigGlyphMetrics(BitmapGlyphMetrics):
+    binaryFormat = bigGlyphMetricsFormat
+
+
+class SmallGlyphMetrics(BitmapGlyphMetrics):
+    binaryFormat = smallGlyphMetricsFormat

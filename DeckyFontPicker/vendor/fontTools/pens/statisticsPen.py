@@ -1,1 +1,312 @@
-IiIiUGVuIGNhbGN1bGF0aW5nIGFyZWEsIGNlbnRlciBvZiBtYXNzLCB2YXJpYW5jZSBhbmQgc3RhbmRhcmQtZGV2aWF0aW9uLApjb3ZhcmlhbmNlIGFuZCBjb3JyZWxhdGlvbiwgYW5kIHNsYW50LCBvZiBnbHlwaCBzaGFwZXMuIiIiCgpmcm9tIG1hdGggaW1wb3J0IHNxcnQsIGRlZ3JlZXMsIGF0YW4KZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuLCBPcGVuQ29udG91ckVycm9yCmZyb20gZm9udFRvb2xzLnBlbnMubW9tZW50c1BlbiBpbXBvcnQgTW9tZW50c1BlbgoKX19hbGxfXyA9IFsiU3RhdGlzdGljc1BlbiIsICJTdGF0aXN0aWNzQ29udHJvbFBlbiJdCgoKY2xhc3MgU3RhdGlzdGljc0Jhc2U6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5femVybygpCgogICAgZGVmIF96ZXJvKHNlbGYpOgogICAgICAgIHNlbGYuYXJlYSA9IDAKICAgICAgICBzZWxmLm1lYW5YID0gMAogICAgICAgIHNlbGYubWVhblkgPSAwCiAgICAgICAgc2VsZi52YXJpYW5jZVggPSAwCiAgICAgICAgc2VsZi52YXJpYW5jZVkgPSAwCiAgICAgICAgc2VsZi5zdGRkZXZYID0gMAogICAgICAgIHNlbGYuc3RkZGV2WSA9IDAKICAgICAgICBzZWxmLmNvdmFyaWFuY2UgPSAwCiAgICAgICAgc2VsZi5jb3JyZWxhdGlvbiA9IDAKICAgICAgICBzZWxmLnNsYW50ID0gMAoKICAgIGRlZiBfdXBkYXRlKHNlbGYpOgogICAgICAgICMgWFhYIFRoZSB2YXJpYW5jZSBmb3JtdWxhcyBzaG91bGQgbmV2ZXIgcHJvZHVjZSBhIG5lZ2F0aXZlIHZhbHVlLAogICAgICAgICMgYnV0IGR1ZSB0byByZWFzb25zIEkgZG9uJ3QgdW5kZXJzdGFuZCwgYm90aCBvZiBvdXIgcGVucyBkby4KICAgICAgICAjIFNvIHdlIHRha2UgdGhlIGFic29sdXRlIHZhbHVlIGhlcmUuCiAgICAgICAgc2VsZi52YXJpYW5jZVggPSBhYnMoc2VsZi52YXJpYW5jZVgpCiAgICAgICAgc2VsZi52YXJpYW5jZVkgPSBhYnMoc2VsZi52YXJpYW5jZVkpCgogICAgICAgIHNlbGYuc3RkZGV2WCA9IHN0ZGRldlggPSBzcXJ0KHNlbGYudmFyaWFuY2VYKQogICAgICAgIHNlbGYuc3RkZGV2WSA9IHN0ZGRldlkgPSBzcXJ0KHNlbGYudmFyaWFuY2VZKQoKICAgICAgICAjIENvcnJlbGF0aW9uKFgsWSkgPSBDb3ZhcmlhbmNlKFgsWSkgLyAoIHN0ZGRldihYKSAqIHN0ZGRldihZKSApCiAgICAgICAgIyBodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9QZWFyc29uX3Byb2R1Y3QtbW9tZW50X2NvcnJlbGF0aW9uX2NvZWZmaWNpZW50CiAgICAgICAgaWYgc3RkZGV2WCAqIHN0ZGRldlkgPT0gMDoKICAgICAgICAgICAgY29ycmVsYXRpb24gPSBmbG9hdCgiTmFOIikKICAgICAgICBlbHNlOgogICAgICAgICAgICAjIFhYWCBUaGUgYWJvdmUgZm9ybXVsYSBzaG91bGQgbmV2ZXIgcHJvZHVjZSBhIHZhbHVlIG91dHNpZGUKICAgICAgICAgICAgIyB0aGUgcmFuZ2UgWy0xLCAxXSwgYnV0IGR1ZSB0byByZWFzb25zIEkgZG9uJ3QgdW5kZXJzdGFuZCwKICAgICAgICAgICAgIyAocHJvYmFibHkgdGhlIHNhbWUgaXNzdWUgYXMgYWJvdmUpLCBpdCBkb2VzLiBTbyB3ZSBjbGFtcC4KICAgICAgICAgICAgY29ycmVsYXRpb24gPSBzZWxmLmNvdmFyaWFuY2UgLyAoc3RkZGV2WCAqIHN0ZGRldlkpCiAgICAgICAgICAgIGNvcnJlbGF0aW9uID0gbWF4KC0xLCBtaW4oMSwgY29ycmVsYXRpb24pKQogICAgICAgIHNlbGYuY29ycmVsYXRpb24gPSBjb3JyZWxhdGlvbiBpZiBhYnMoY29ycmVsYXRpb24pID4gMWUtMyBlbHNlIDAKCiAgICAgICAgc2xhbnQgPSAoCiAgICAgICAgICAgIHNlbGYuY292YXJpYW5jZSAvIHNlbGYudmFyaWFuY2VZIGlmIHNlbGYudmFyaWFuY2VZICE9IDAgZWxzZSBmbG9hdCgiTmFOIikKICAgICAgICApCiAgICAgICAgc2VsZi5zbGFudCA9IHNsYW50IGlmIGFicyhzbGFudCkgPiAxZS0zIGVsc2UgMAoKCmNsYXNzIFN0YXRpc3RpY3NQZW4oU3RhdGlzdGljc0Jhc2UsIE1vbWVudHNQZW4pOgogICAgIiIiUGVuIGNhbGN1bGF0aW5nIGFyZWEsIGNlbnRlciBvZiBtYXNzLCB2YXJpYW5jZSBhbmQKICAgIHN0YW5kYXJkLWRldmlhdGlvbiwgY292YXJpYW5jZSBhbmQgY29ycmVsYXRpb24sIGFuZCBzbGFudCwKICAgIG9mIGdseXBoIHNoYXBlcy4KCiAgICBOb3RlIHRoYXQgaWYgdGhlIGdseXBoIHNoYXBlIGlzIHNlbGYtaW50ZXJzZWN0aW5nLCB0aGUgdmFsdWVzCiAgICBhcmUgbm90IGNvcnJlY3QgKGJ1dCB3ZWxsLWRlZmluZWQpLiBNb3Jlb3ZlciwgYXJlYSB3aWxsIGJlCiAgICBuZWdhdGl2ZSBpZiBjb250b3VyIGRpcmVjdGlvbnMgYXJlIGNsb2Nrd2lzZS4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhzZXQ9Tm9uZSk6CiAgICAgICAgTW9tZW50c1Blbi5fX2luaXRfXyhzZWxmLCBnbHlwaHNldD1nbHlwaHNldCkKICAgICAgICBTdGF0aXN0aWNzQmFzZS5fX2luaXRfXyhzZWxmKQoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIE1vbWVudHNQZW4uX2Nsb3NlUGF0aChzZWxmKQogICAgICAgIHNlbGYuX3VwZGF0ZSgpCgogICAgZGVmIF91cGRhdGUoc2VsZik6CiAgICAgICAgYXJlYSA9IHNlbGYuYXJlYQogICAgICAgIGlmIG5vdCBhcmVhOgogICAgICAgICAgICBzZWxmLl96ZXJvKCkKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgICMgQ2VudGVyIG9mIG1hc3MKICAgICAgICAjIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0NlbnRlcl9vZl9tYXNzI0FfY29udGludW91c192b2x1bWUKICAgICAgICBzZWxmLm1lYW5YID0gbWVhblggPSBzZWxmLm1vbWVudFggLyBhcmVhCiAgICAgICAgc2VsZi5tZWFuWSA9IG1lYW5ZID0gc2VsZi5tb21lbnRZIC8gYXJlYQoKICAgICAgICAjIFZhcihYKSA9IEVbWF4yXSAtIEVbWF1eMgogICAgICAgIHNlbGYudmFyaWFuY2VYID0gc2VsZi5tb21lbnRYWCAvIGFyZWEgLSBtZWFuWCAqIG1lYW5YCiAgICAgICAgc2VsZi52YXJpYW5jZVkgPSBzZWxmLm1vbWVudFlZIC8gYXJlYSAtIG1lYW5ZICogbWVhblkKCiAgICAgICAgIyBDb3ZhcmlhbmNlKFgsWSkgPSAoRVtYLlldIC0gRVtYXUVbWV0pCiAgICAgICAgc2VsZi5jb3ZhcmlhbmNlID0gc2VsZi5tb21lbnRYWSAvIGFyZWEgLSBtZWFuWCAqIG1lYW5ZCgogICAgICAgIFN0YXRpc3RpY3NCYXNlLl91cGRhdGUoc2VsZikKCgpjbGFzcyBTdGF0aXN0aWNzQ29udHJvbFBlbihTdGF0aXN0aWNzQmFzZSwgQmFzZVBlbik6CiAgICAiIiJQZW4gY2FsY3VsYXRpbmcgYXJlYSwgY2VudGVyIG9mIG1hc3MsIHZhcmlhbmNlIGFuZAogICAgc3RhbmRhcmQtZGV2aWF0aW9uLCBjb3ZhcmlhbmNlIGFuZCBjb3JyZWxhdGlvbiwgYW5kIHNsYW50LAogICAgb2YgZ2x5cGggc2hhcGVzLCB1c2luZyB0aGUgY29udHJvbCBwb2x5Z29uIG9ubHkuCgogICAgTm90ZSB0aGF0IGlmIHRoZSBnbHlwaCBzaGFwZSBpcyBzZWxmLWludGVyc2VjdGluZywgdGhlIHZhbHVlcwogICAgYXJlIG5vdCBjb3JyZWN0IChidXQgd2VsbC1kZWZpbmVkKS4gTW9yZW92ZXIsIGFyZWEgd2lsbCBiZQogICAgbmVnYXRpdmUgaWYgY29udG91ciBkaXJlY3Rpb25zIGFyZSBjbG9ja3dpc2UuIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGdseXBoc2V0PU5vbmUpOgogICAgICAgIEJhc2VQZW4uX19pbml0X18oc2VsZiwgZ2x5cGhzZXQpCiAgICAgICAgU3RhdGlzdGljc0Jhc2UuX19pbml0X18oc2VsZikKICAgICAgICBzZWxmLl9ub2RlcyA9IFtdCgogICAgZGVmIF9tb3ZlVG8oc2VsZiwgcHQpOgogICAgICAgIHNlbGYuX25vZGVzLmFwcGVuZChjb21wbGV4KCpwdCkpCiAgICAgICAgc2VsZi5fc3RhcnRQb2ludCA9IHB0CgogICAgZGVmIF9saW5lVG8oc2VsZiwgcHQpOgogICAgICAgIHNlbGYuX25vZGVzLmFwcGVuZChjb21wbGV4KCpwdCkpCgogICAgZGVmIF9xQ3VydmVUb09uZShzZWxmLCBwdDEsIHB0Mik6CiAgICAgICAgZm9yIHB0IGluIChwdDEsIHB0Mik6CiAgICAgICAgICAgIHNlbGYuX25vZGVzLmFwcGVuZChjb21wbGV4KCpwdCkpCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHB0MSwgcHQyLCBwdDMpOgogICAgICAgIGZvciBwdCBpbiAocHQxLCBwdDIsIHB0Myk6CiAgICAgICAgICAgIHNlbGYuX25vZGVzLmFwcGVuZChjb21wbGV4KCpwdCkpCgogICAgZGVmIF9jbG9zZVBhdGgoc2VsZik6CiAgICAgICAgcDAgPSBzZWxmLl9nZXRDdXJyZW50UG9pbnQoKQogICAgICAgIGlmIHAwICE9IHNlbGYuX3N0YXJ0UG9pbnQ6CiAgICAgICAgICAgIHNlbGYuX2xpbmVUbyhzZWxmLl9zdGFydFBvaW50KQogICAgICAgIHNlbGYuX3VwZGF0ZSgpCgogICAgZGVmIF9lbmRQYXRoKHNlbGYpOgogICAgICAgIHAwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKICAgICAgICBpZiBwMCAhPSBzZWxmLl9zdGFydFBvaW50OgogICAgICAgICAgICByYWlzZSBPcGVuQ29udG91ckVycm9yKCJHbHlwaCBzdGF0aXN0aWNzIG5vdCBkZWZpbmVkIG9uIG9wZW4gY29udG91cnMuIikKICAgICAgICBzZWxmLl91cGRhdGUoKQoKICAgIGRlZiBfdXBkYXRlKHNlbGYpOgogICAgICAgIG5vZGVzID0gc2VsZi5fbm9kZXMKICAgICAgICBuID0gbGVuKG5vZGVzKQoKICAgICAgICAjIFRyaWFuZ2xlIGZvcm11bGEKICAgICAgICBzZWxmLmFyZWEgPSAoCiAgICAgICAgICAgIHN1bSgKICAgICAgICAgICAgICAgIChwMC5yZWFsICogcDEuaW1hZyAtIHAxLnJlYWwgKiBwMC5pbWFnKQogICAgICAgICAgICAgICAgZm9yIHAwLCBwMSBpbiB6aXAobm9kZXMsIG5vZGVzWzE6XSArIG5vZGVzWzoxXSkKICAgICAgICAgICAgKQogICAgICAgICAgICAvIDIKICAgICAgICApCgogICAgICAgICMgQ2VudGVyIG9mIG1hc3MKICAgICAgICAjIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0NlbnRlcl9vZl9tYXNzI0Ffc3lzdGVtX29mX3BhcnRpY2xlcwogICAgICAgIHN1bU5vZGVzID0gc3VtKG5vZGVzKQogICAgICAgIHNlbGYubWVhblggPSBtZWFuWCA9IHN1bU5vZGVzLnJlYWwgLyBuCiAgICAgICAgc2VsZi5tZWFuWSA9IG1lYW5ZID0gc3VtTm9kZXMuaW1hZyAvIG4KCiAgICAgICAgaWYgbiA+IDE6CiAgICAgICAgICAgICMgVmFyKFgpID0gKHN1bVtYXjJdIC0gc3VtW1hdXjIgLyBuKSAvIChuIC0gMSkKICAgICAgICAgICAgIyBodHRwczovL3d3dy5zdGF0aXN0aWNzaG93dG8uY29tL3Byb2JhYmlsaXR5LWFuZC1zdGF0aXN0aWNzL2Rlc2NyaXB0aXZlLXN0YXRpc3RpY3Mvc2FtcGxlLXZhcmlhbmNlLwogICAgICAgICAgICBzZWxmLnZhcmlhbmNlWCA9IHZhcmlhbmNlWCA9ICgKICAgICAgICAgICAgICAgIHN1bShwLnJlYWwgKiBwLnJlYWwgZm9yIHAgaW4gbm9kZXMpCiAgICAgICAgICAgICAgICAtIChzdW1Ob2Rlcy5yZWFsICogc3VtTm9kZXMucmVhbCkgLyBuCiAgICAgICAgICAgICkgLyAobiAtIDEpCiAgICAgICAgICAgIHNlbGYudmFyaWFuY2VZID0gdmFyaWFuY2VZID0gKAogICAgICAgICAgICAgICAgc3VtKHAuaW1hZyAqIHAuaW1hZyBmb3IgcCBpbiBub2RlcykKICAgICAgICAgICAgICAgIC0gKHN1bU5vZGVzLmltYWcgKiBzdW1Ob2Rlcy5pbWFnKSAvIG4KICAgICAgICAgICAgKSAvIChuIC0gMSkKCiAgICAgICAgICAgICMgQ292YXJpYW5jZShYLFkpID0gKHN1bVtYLlldIC0gc3VtW1hdLnN1bVtZXSAvIG4pIC8gKG4gLSAxKQogICAgICAgICAgICBzZWxmLmNvdmFyaWFuY2UgPSBjb3ZhcmlhbmNlID0gKAogICAgICAgICAgICAgICAgc3VtKHAucmVhbCAqIHAuaW1hZyBmb3IgcCBpbiBub2RlcykKICAgICAgICAgICAgICAgIC0gKHN1bU5vZGVzLnJlYWwgKiBzdW1Ob2Rlcy5pbWFnKSAvIG4KICAgICAgICAgICAgKSAvIChuIC0gMSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLnZhcmlhbmNlWCA9IHZhcmlhbmNlWCA9IDAKICAgICAgICAgICAgc2VsZi52YXJpYW5jZVkgPSB2YXJpYW5jZVkgPSAwCiAgICAgICAgICAgIHNlbGYuY292YXJpYW5jZSA9IGNvdmFyaWFuY2UgPSAwCgogICAgICAgIFN0YXRpc3RpY3NCYXNlLl91cGRhdGUoc2VsZikKCgpkZWYgX3Rlc3QoZ2x5cGhzZXQsIHVwZW0sIGdseXBocywgcXVpZXQ9RmFsc2UsICosIGNvbnRyb2w9RmFsc2UpOgogICAgZnJvbSBmb250VG9vbHMucGVucy50cmFuc2Zvcm1QZW4gaW1wb3J0IFRyYW5zZm9ybVBlbgogICAgZnJvbSBmb250VG9vbHMubWlzYy50cmFuc2Zvcm0gaW1wb3J0IFNjYWxlCgogICAgd2dodF9zdW0gPSAwCiAgICB3Z2h0X3N1bV9wZXJjZXB0dWFsID0gMAogICAgd2R0aF9zdW0gPSAwCiAgICBzbG50X3N1bSA9IDAKICAgIHNsbnRfc3VtX3BlcmNlcHR1YWwgPSAwCiAgICBmb3IgZ2x5cGhfbmFtZSBpbiBnbHlwaHM6CiAgICAgICAgZ2x5cGggPSBnbHlwaHNldFtnbHlwaF9uYW1lXQogICAgICAgIGlmIGNvbnRyb2w6CiAgICAgICAgICAgIHBlbiA9IFN0YXRpc3RpY3NDb250cm9sUGVuKGdseXBoc2V0PWdseXBoc2V0KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHBlbiA9IFN0YXRpc3RpY3NQZW4oZ2x5cGhzZXQ9Z2x5cGhzZXQpCiAgICAgICAgdHJhbnNmb3JtZXIgPSBUcmFuc2Zvcm1QZW4ocGVuLCBTY2FsZSgxLjAgLyB1cGVtKSkKICAgICAgICBnbHlwaC5kcmF3KHRyYW5zZm9ybWVyKQoKICAgICAgICBhcmVhID0gYWJzKHBlbi5hcmVhKQogICAgICAgIHdpZHRoID0gZ2x5cGgud2lkdGgKICAgICAgICB3Z2h0X3N1bSArPSBhcmVhCiAgICAgICAgd2dodF9zdW1fcGVyY2VwdHVhbCArPSBwZW4uYXJlYSAqIHdpZHRoCiAgICAgICAgd2R0aF9zdW0gKz0gd2lkdGgKICAgICAgICBzbG50X3N1bSArPSBwZW4uc2xhbnQKICAgICAgICBzbG50X3N1bV9wZXJjZXB0dWFsICs9IHBlbi5zbGFudCAqIHdpZHRoCgogICAgICAgIGlmIHF1aWV0OgogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBwcmludCgpCiAgICAgICAgcHJpbnQoImdseXBoOiIsIGdseXBoX25hbWUpCgogICAgICAgIGZvciBpdGVtIGluIFsKICAgICAgICAgICAgImFyZWEiLAogICAgICAgICAgICAibW9tZW50WCIsCiAgICAgICAgICAgICJtb21lbnRZIiwKICAgICAgICAgICAgIm1vbWVudFhYIiwKICAgICAgICAgICAgIm1vbWVudFlZIiwKICAgICAgICAgICAgIm1vbWVudFhZIiwKICAgICAgICAgICAgIm1lYW5YIiwKICAgICAgICAgICAgIm1lYW5ZIiwKICAgICAgICAgICAgInZhcmlhbmNlWCIsCiAgICAgICAgICAgICJ2YXJpYW5jZVkiLAogICAgICAgICAgICAic3RkZGV2WCIsCiAgICAgICAgICAgICJzdGRkZXZZIiwKICAgICAgICAgICAgImNvdmFyaWFuY2UiLAogICAgICAgICAgICAiY29ycmVsYXRpb24iLAogICAgICAgICAgICAic2xhbnQiLAogICAgICAgIF06CiAgICAgICAgICAgIHByaW50KCIlczogJWciICUgKGl0ZW0sIGdldGF0dHIocGVuLCBpdGVtKSkpCgogICAgaWYgbm90IHF1aWV0OgogICAgICAgIHByaW50KCkKICAgICAgICBwcmludCgiZm9udDoiKQoKICAgIHByaW50KCJ3ZWlnaHQ6ICVnIiAlICh3Z2h0X3N1bSAqIHVwZW0gLyB3ZHRoX3N1bSkpCiAgICBwcmludCgid2VpZ2h0IChwZXJjZXB0dWFsKTogJWciICUgKHdnaHRfc3VtX3BlcmNlcHR1YWwgLyB3ZHRoX3N1bSkpCiAgICBwcmludCgid2lkdGg6ICAlZyIgJSAod2R0aF9zdW0gLyB1cGVtIC8gbGVuKGdseXBocykpKQogICAgc2xhbnQgPSBzbG50X3N1bSAvIGxlbihnbHlwaHMpCiAgICBwcmludCgic2xhbnQ6ICAlZyIgJSBzbGFudCkKICAgIHByaW50KCJzbGFudCBhbmdsZTogICVnIiAlIC1kZWdyZWVzKGF0YW4oc2xhbnQpKSkKICAgIHNsYW50X3BlcmNlcHR1YWwgPSBzbG50X3N1bV9wZXJjZXB0dWFsIC8gd2R0aF9zdW0KICAgIHByaW50KCJzbGFudCAocGVyY2VwdHVhbCk6ICAlZyIgJSBzbGFudF9wZXJjZXB0dWFsKQogICAgcHJpbnQoInNsYW50IChwZXJjZXB0dWFsKSBhbmdsZTogICVnIiAlIC1kZWdyZWVzKGF0YW4oc2xhbnRfcGVyY2VwdHVhbCkpKQoKCmRlZiBtYWluKGFyZ3MpOgogICAgIiIiUmVwb3J0IGZvbnQgZ2x5cGggc2hhcGUgZ2VvbWV0cmljc2wgc3RhdGlzdGljcyIiIgoKICAgIGlmIGFyZ3MgaXMgTm9uZToKICAgICAgICBpbXBvcnQgc3lzCgogICAgICAgIGFyZ3MgPSBzeXMuYXJndlsxOl0KCiAgICBpbXBvcnQgYXJncGFyc2UKCiAgICBwYXJzZXIgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigKICAgICAgICAiZm9udHRvb2xzIHBlbnMuc3RhdGlzdGljc1BlbiIsCiAgICAgICAgZGVzY3JpcHRpb249IlJlcG9ydCBmb250IGdseXBoIHNoYXBlIGdlb21ldHJpY3NsIHN0YXRpc3RpY3MiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgiZm9udCIsIG1ldGF2YXI9ImZvbnQudHRmIiwgaGVscD0iRm9udCBmaWxlLiIpCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KCJnbHlwaHMiLCBtZXRhdmFyPSJnbHlwaC1uYW1lIiwgaGVscD0iR2x5cGggbmFtZXMuIiwgbmFyZ3M9IioiKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXkiLAogICAgICAgIG1ldGF2YXI9IjxudW1iZXI+IiwKICAgICAgICBoZWxwPSJGYWNlIGluZGV4IGludG8gYSBjb2xsZWN0aW9uIHRvIG9wZW4uIFplcm8gYmFzZWQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1jIiwKICAgICAgICAiLS1jb250cm9sIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgICAgIGhlbHA9IlVzZSB0aGUgY29udHJvbC1ib3ggcGVuIGluc3RlYWQgb2YgdGhlIEdyZWVuIHRoZXJlbS4iLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXEiLCAiLS1xdWlldCIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsIGhlbHA9Ik9ubHkgcmVwb3J0IGZvbnQtd2lkZSBzdGF0aXN0aWNzLiIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi0tdmFyaWF0aW9ucyIsCiAgICAgICAgbWV0YXZhcj0iQVhJUz1MT0MiLAogICAgICAgIGRlZmF1bHQ9IiIsCiAgICAgICAgaGVscD0iTGlzdCBvZiBzcGFjZSBzZXBhcmF0ZWQgbG9jYXRpb25zLiBBIGxvY2F0aW9uIGNvbnNpc3QgaW4gIgogICAgICAgICJ0aGUgbmFtZSBvZiBhIHZhcmlhdGlvbiBheGlzLCBmb2xsb3dlZCBieSAnPScgYW5kIGEgbnVtYmVyLiBFLmcuOiAiCiAgICAgICAgIndnaHQ9NzAwIHdkdGg9ODAuIFRoZSBkZWZhdWx0IGlzIHRoZSBsb2NhdGlvbiBvZiB0aGUgYmFzZSBtYXN0ZXIuIiwKICAgICkKCiAgICBvcHRpb25zID0gcGFyc2VyLnBhcnNlX2FyZ3MoYXJncykKCiAgICBnbHlwaHMgPSBvcHRpb25zLmdseXBocwogICAgZm9udE51bWJlciA9IGludChvcHRpb25zLnkpIGlmIG9wdGlvbnMueSBpcyBub3QgTm9uZSBlbHNlIDAKCiAgICBsb2NhdGlvbiA9IHt9CiAgICBmb3IgdGFnX3YgaW4gb3B0aW9ucy52YXJpYXRpb25zLnNwbGl0KCk6CiAgICAgICAgZmllbGRzID0gdGFnX3Yuc3BsaXQoIj0iKQogICAgICAgIHRhZyA9IGZpZWxkc1swXS5zdHJpcCgpCiAgICAgICAgdiA9IGludChmaWVsZHNbMV0pCiAgICAgICAgbG9jYXRpb25bdGFnXSA9IHYKCiAgICBmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250CgogICAgZm9udCA9IFRURm9udChvcHRpb25zLmZvbnQsIGZvbnROdW1iZXI9Zm9udE51bWJlcikKICAgIGlmIG5vdCBnbHlwaHM6CiAgICAgICAgZ2x5cGhzID0gZm9udC5nZXRHbHlwaE9yZGVyKCkKICAgIF90ZXN0KAogICAgICAgIGZvbnQuZ2V0R2x5cGhTZXQobG9jYXRpb249bG9jYXRpb24pLAogICAgICAgIGZvbnRbImhlYWQiXS51bml0c1BlckVtLAogICAgICAgIGdseXBocywKICAgICAgICBxdWlldD1vcHRpb25zLnF1aWV0LAogICAgICAgIGNvbnRyb2w9b3B0aW9ucy5jb250cm9sLAogICAgKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgc3lzCgogICAgbWFpbihzeXMuYXJndlsxOl0pCg==
+"""Pen calculating area, center of mass, variance and standard-deviation,
+covariance and correlation, and slant, of glyph shapes."""
+
+from math import sqrt, degrees, atan
+from fontTools.pens.basePen import BasePen, OpenContourError
+from fontTools.pens.momentsPen import MomentsPen
+
+__all__ = ["StatisticsPen", "StatisticsControlPen"]
+
+
+class StatisticsBase:
+    def __init__(self):
+        self._zero()
+
+    def _zero(self):
+        self.area = 0
+        self.meanX = 0
+        self.meanY = 0
+        self.varianceX = 0
+        self.varianceY = 0
+        self.stddevX = 0
+        self.stddevY = 0
+        self.covariance = 0
+        self.correlation = 0
+        self.slant = 0
+
+    def _update(self):
+        # XXX The variance formulas should never produce a negative value,
+        # but due to reasons I don't understand, both of our pens do.
+        # So we take the absolute value here.
+        self.varianceX = abs(self.varianceX)
+        self.varianceY = abs(self.varianceY)
+
+        self.stddevX = stddevX = sqrt(self.varianceX)
+        self.stddevY = stddevY = sqrt(self.varianceY)
+
+        # Correlation(X,Y) = Covariance(X,Y) / ( stddev(X) * stddev(Y) )
+        # https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient
+        if stddevX * stddevY == 0:
+            correlation = float("NaN")
+        else:
+            # XXX The above formula should never produce a value outside
+            # the range [-1, 1], but due to reasons I don't understand,
+            # (probably the same issue as above), it does. So we clamp.
+            correlation = self.covariance / (stddevX * stddevY)
+            correlation = max(-1, min(1, correlation))
+        self.correlation = correlation if abs(correlation) > 1e-3 else 0
+
+        slant = (
+            self.covariance / self.varianceY if self.varianceY != 0 else float("NaN")
+        )
+        self.slant = slant if abs(slant) > 1e-3 else 0
+
+
+class StatisticsPen(StatisticsBase, MomentsPen):
+    """Pen calculating area, center of mass, variance and
+    standard-deviation, covariance and correlation, and slant,
+    of glyph shapes.
+
+    Note that if the glyph shape is self-intersecting, the values
+    are not correct (but well-defined). Moreover, area will be
+    negative if contour directions are clockwise."""
+
+    def __init__(self, glyphset=None):
+        MomentsPen.__init__(self, glyphset=glyphset)
+        StatisticsBase.__init__(self)
+
+    def _closePath(self):
+        MomentsPen._closePath(self)
+        self._update()
+
+    def _update(self):
+        area = self.area
+        if not area:
+            self._zero()
+            return
+
+        # Center of mass
+        # https://en.wikipedia.org/wiki/Center_of_mass#A_continuous_volume
+        self.meanX = meanX = self.momentX / area
+        self.meanY = meanY = self.momentY / area
+
+        # Var(X) = E[X^2] - E[X]^2
+        self.varianceX = self.momentXX / area - meanX * meanX
+        self.varianceY = self.momentYY / area - meanY * meanY
+
+        # Covariance(X,Y) = (E[X.Y] - E[X]E[Y])
+        self.covariance = self.momentXY / area - meanX * meanY
+
+        StatisticsBase._update(self)
+
+
+class StatisticsControlPen(StatisticsBase, BasePen):
+    """Pen calculating area, center of mass, variance and
+    standard-deviation, covariance and correlation, and slant,
+    of glyph shapes, using the control polygon only.
+
+    Note that if the glyph shape is self-intersecting, the values
+    are not correct (but well-defined). Moreover, area will be
+    negative if contour directions are clockwise."""
+
+    def __init__(self, glyphset=None):
+        BasePen.__init__(self, glyphset)
+        StatisticsBase.__init__(self)
+        self._nodes = []
+
+    def _moveTo(self, pt):
+        self._nodes.append(complex(*pt))
+        self._startPoint = pt
+
+    def _lineTo(self, pt):
+        self._nodes.append(complex(*pt))
+
+    def _qCurveToOne(self, pt1, pt2):
+        for pt in (pt1, pt2):
+            self._nodes.append(complex(*pt))
+
+    def _curveToOne(self, pt1, pt2, pt3):
+        for pt in (pt1, pt2, pt3):
+            self._nodes.append(complex(*pt))
+
+    def _closePath(self):
+        p0 = self._getCurrentPoint()
+        if p0 != self._startPoint:
+            self._lineTo(self._startPoint)
+        self._update()
+
+    def _endPath(self):
+        p0 = self._getCurrentPoint()
+        if p0 != self._startPoint:
+            raise OpenContourError("Glyph statistics not defined on open contours.")
+        self._update()
+
+    def _update(self):
+        nodes = self._nodes
+        n = len(nodes)
+
+        # Triangle formula
+        self.area = (
+            sum(
+                (p0.real * p1.imag - p1.real * p0.imag)
+                for p0, p1 in zip(nodes, nodes[1:] + nodes[:1])
+            )
+            / 2
+        )
+
+        # Center of mass
+        # https://en.wikipedia.org/wiki/Center_of_mass#A_system_of_particles
+        sumNodes = sum(nodes)
+        self.meanX = meanX = sumNodes.real / n
+        self.meanY = meanY = sumNodes.imag / n
+
+        if n > 1:
+            # Var(X) = (sum[X^2] - sum[X]^2 / n) / (n - 1)
+            # https://www.statisticshowto.com/probability-and-statistics/descriptive-statistics/sample-variance/
+            self.varianceX = varianceX = (
+                sum(p.real * p.real for p in nodes)
+                - (sumNodes.real * sumNodes.real) / n
+            ) / (n - 1)
+            self.varianceY = varianceY = (
+                sum(p.imag * p.imag for p in nodes)
+                - (sumNodes.imag * sumNodes.imag) / n
+            ) / (n - 1)
+
+            # Covariance(X,Y) = (sum[X.Y] - sum[X].sum[Y] / n) / (n - 1)
+            self.covariance = covariance = (
+                sum(p.real * p.imag for p in nodes)
+                - (sumNodes.real * sumNodes.imag) / n
+            ) / (n - 1)
+        else:
+            self.varianceX = varianceX = 0
+            self.varianceY = varianceY = 0
+            self.covariance = covariance = 0
+
+        StatisticsBase._update(self)
+
+
+def _test(glyphset, upem, glyphs, quiet=False, *, control=False):
+    from fontTools.pens.transformPen import TransformPen
+    from fontTools.misc.transform import Scale
+
+    wght_sum = 0
+    wght_sum_perceptual = 0
+    wdth_sum = 0
+    slnt_sum = 0
+    slnt_sum_perceptual = 0
+    for glyph_name in glyphs:
+        glyph = glyphset[glyph_name]
+        if control:
+            pen = StatisticsControlPen(glyphset=glyphset)
+        else:
+            pen = StatisticsPen(glyphset=glyphset)
+        transformer = TransformPen(pen, Scale(1.0 / upem))
+        glyph.draw(transformer)
+
+        area = abs(pen.area)
+        width = glyph.width
+        wght_sum += area
+        wght_sum_perceptual += pen.area * width
+        wdth_sum += width
+        slnt_sum += pen.slant
+        slnt_sum_perceptual += pen.slant * width
+
+        if quiet:
+            continue
+
+        print()
+        print("glyph:", glyph_name)
+
+        for item in [
+            "area",
+            "momentX",
+            "momentY",
+            "momentXX",
+            "momentYY",
+            "momentXY",
+            "meanX",
+            "meanY",
+            "varianceX",
+            "varianceY",
+            "stddevX",
+            "stddevY",
+            "covariance",
+            "correlation",
+            "slant",
+        ]:
+            print("%s: %g" % (item, getattr(pen, item)))
+
+    if not quiet:
+        print()
+        print("font:")
+
+    print("weight: %g" % (wght_sum * upem / wdth_sum))
+    print("weight (perceptual): %g" % (wght_sum_perceptual / wdth_sum))
+    print("width:  %g" % (wdth_sum / upem / len(glyphs)))
+    slant = slnt_sum / len(glyphs)
+    print("slant:  %g" % slant)
+    print("slant angle:  %g" % -degrees(atan(slant)))
+    slant_perceptual = slnt_sum_perceptual / wdth_sum
+    print("slant (perceptual):  %g" % slant_perceptual)
+    print("slant (perceptual) angle:  %g" % -degrees(atan(slant_perceptual)))
+
+
+def main(args):
+    """Report font glyph shape geometricsl statistics"""
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools pens.statisticsPen",
+        description="Report font glyph shape geometricsl statistics",
+    )
+    parser.add_argument("font", metavar="font.ttf", help="Font file.")
+    parser.add_argument("glyphs", metavar="glyph-name", help="Glyph names.", nargs="*")
+    parser.add_argument(
+        "-y",
+        metavar="<number>",
+        help="Face index into a collection to open. Zero based.",
+    )
+    parser.add_argument(
+        "-c",
+        "--control",
+        action="store_true",
+        help="Use the control-box pen instead of the Green therem.",
+    )
+    parser.add_argument(
+        "-q", "--quiet", action="store_true", help="Only report font-wide statistics."
+    )
+    parser.add_argument(
+        "--variations",
+        metavar="AXIS=LOC",
+        default="",
+        help="List of space separated locations. A location consist in "
+        "the name of a variation axis, followed by '=' and a number. E.g.: "
+        "wght=700 wdth=80. The default is the location of the base master.",
+    )
+
+    options = parser.parse_args(args)
+
+    glyphs = options.glyphs
+    fontNumber = int(options.y) if options.y is not None else 0
+
+    location = {}
+    for tag_v in options.variations.split():
+        fields = tag_v.split("=")
+        tag = fields[0].strip()
+        v = int(fields[1])
+        location[tag] = v
+
+    from fontTools.ttLib import TTFont
+
+    font = TTFont(options.font, fontNumber=fontNumber)
+    if not glyphs:
+        glyphs = font.getGlyphOrder()
+    _test(
+        font.getGlyphSet(location=location),
+        font["head"].unitsPerEm,
+        glyphs,
+        quiet=options.quiet,
+        control=options.control,
+    )
+
+
+if __name__ == "__main__":
+    import sys
+
+    main(sys.argv[1:])

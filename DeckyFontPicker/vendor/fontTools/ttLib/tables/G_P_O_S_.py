@@ -1,1 +1,14 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfR19QX09fU18oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJHbHlwaCBQb3NpdGlvbmluZyB0YWJsZQoKICAgIFRoZSBgYEdQT1NgYCB0YWJsZSBzdG9yZXMgYWR2YW5jZWQgZ2x5cGgtcG9zaXRpb25pbmcgZGF0YQogICAgdXNlZCBpbiBPcGVuVHlwZSBMYXlvdXQgZmVhdHVyZXMsIHN1Y2ggYXMgbWFyayBhdHRhY2htZW50LAogICAgY3Vyc2l2ZSBhdHRhY2htZW50LCBrZXJuaW5nLCBhbmQgb3RoZXIgcG9zaXRpb24gYWRqdXN0bWVudHMuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9ncG9zCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+class table_G_P_O_S_(BaseTTXConverter):
+    """Glyph Positioning table
+
+    The ``GPOS`` table stores advanced glyph-positioning data
+    used in OpenType Layout features, such as mark attachment,
+    cursive attachment, kerning, and other position adjustments.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/gpos
+    """
+
+    pass

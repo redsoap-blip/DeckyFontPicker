@@ -1,1 +1,11 @@
-ZnJvbSAuX2hfaF9lX2EgaW1wb3J0IGhoZWFGb3JtYXQsIHRhYmxlX19oX2hfZV9hCgoKY2xhc3MgdGFibGVfSF9IX0VfQV8odGFibGVfX2hfaF9lX2EpOgogICAgZGVwZW5kZW5jaWVzID0gWyJITVRYIiwgIkdMWUYiLCAiQ0ZGICIsICJDRkYyIl0KICAgIHRhYmxlRm9ybWF0ID0gaGhlYUZvcm1hdC5yZXBsYWNlKAogICAgICAgICJudW1iZXJPZkhNZXRyaWNzOiAgICAgICBIIiwgIm51bWJlck9mSE1ldHJpY3M6ICAgICAgIEwiCiAgICApCiAgICBnbHlwaFRhYmxlVGFnID0gIkdMWUYiCiAgICBtZXRyaWNzVGFibGVUYWcgPSAiSE1UWCIKICAgIG91dGxpbmVUYWdzID0gKCJHTFlGIiwgIkNGRiAiLCAiQ0ZGMiIpCg==
+from ._h_h_e_a import hheaFormat, table__h_h_e_a
+
+
+class table_H_H_E_A_(table__h_h_e_a):
+    dependencies = ["HMTX", "GLYF", "CFF ", "CFF2"]
+    tableFormat = hheaFormat.replace(
+        "numberOfHMetrics:       H", "numberOfHMetrics:       L"
+    )
+    glyphTableTag = "GLYF"
+    metricsTableTag = "HMTX"
+    outlineTags = ("GLYF", "CFF ", "CFF2")

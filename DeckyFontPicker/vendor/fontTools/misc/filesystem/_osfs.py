@@ -1,1 +1,174 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGVycm5vCmltcG9ydCBwbGF0Zm9ybQppbXBvcnQgc2h1dGlsCmltcG9ydCBzdGF0CmltcG9ydCB0eXBpbmcKZnJvbSBvcyBpbXBvcnQgUGF0aExpa2UKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIC5fYmFzZSBpbXBvcnQgRlMKZnJvbSAuX2Vycm9ycyBpbXBvcnQgKAogICAgQ3JlYXRlRmFpbGVkLAogICAgRGlyZWN0b3J5RXhwZWN0ZWQsCiAgICBEaXJlY3RvcnlOb3RFbXB0eSwKICAgIEZpbGVFeHBlY3RlZCwKICAgIElsbGVnYWxCYWNrUmVmZXJlbmNlLAogICAgSWxsZWdhbERlc3RpbmF0aW9uLAogICAgUmVzb3VyY2VFcnJvciwKICAgIFJlc291cmNlTm90Rm91bmQsCikKZnJvbSAuX2luZm8gaW1wb3J0IEluZm8KZnJvbSAuX3BhdGggaW1wb3J0IGlzYmFzZQoKaWYgdHlwaW5nLlRZUEVfQ0hFQ0tJTkc6CiAgICBmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgQ29sbGVjdGlvbgogICAgZnJvbSB0eXBpbmcgaW1wb3J0IElPLCBBbnkKCiAgICBmcm9tIC5fc3ViZnMgaW1wb3J0IFN1YkZTCgoKX1dJTkRPV1NfUExBVEZPUk0gPSBwbGF0Zm9ybS5zeXN0ZW0oKSA9PSAiV2luZG93cyIKCgpjbGFzcyBPU0ZTKEZTKToKICAgICIiIkZpbGVzeXN0ZW0gZm9yIGEgZGlyZWN0b3J5IG9uIHRoZSBsb2NhbCBkaXNrLgoKICAgIEEgdGhpbiBsYXllciBvbiB0b3Agb2YgYHBhdGhsaWIuUGF0aGAuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgcm9vdDogc3RyIHwgUGF0aExpa2UsIGNyZWF0ZTogYm9vbCA9IEZhbHNlKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKCkKICAgICAgICBzZWxmLl9yb290ID0gUGF0aChyb290KS5yZXNvbHZlKCkKICAgICAgICBpZiBjcmVhdGU6CiAgICAgICAgICAgIHNlbGYuX3Jvb3QubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGlmIG5vdCBzZWxmLl9yb290LmlzX2RpcigpOgogICAgICAgICAgICAgICAgcmFpc2UgQ3JlYXRlRmFpbGVkKAogICAgICAgICAgICAgICAgICAgIGYidW5hYmxlIHRvIGNyZWF0ZSBPU0ZTOiB7cm9vdCFyfSBkb2VzIG5vdCBleGlzdCBvciBpcyBub3QgYSBkaXJlY3RvcnkiCiAgICAgICAgICAgICAgICApCgogICAgZGVmIF9hYnMoc2VsZiwgcmVsX3BhdGg6IHN0cikgLT4gUGF0aDoKICAgICAgICBzZWxmLmNoZWNrKCkKICAgICAgICBhYnNfcGF0aCA9IChzZWxmLl9yb290IC8gcmVsX3BhdGguc3RyaXAoIi8iKSkucmVzb2x2ZSgpCiAgICAgICAgIyByZXNvbHZlKCkgZXhwYW5kcyBzeW1saW5rcyBhcyB3ZWxsIGFzIGJhY2stcmVmZXJlbmNlcywgc28gYSBzeW1saW5rCiAgICAgICAgIyBpbnNpZGUgdGhlIHJvb3QgdGhhdCBwb2ludHMgb3V0c2lkZSBpdCBpcyByZWplY3RlZCB0b28uIFRoYXQgaXMKICAgICAgICAjIHN0cmljdGVyIHRoYW4gcHlmaWxlc3lzdGVtMiwgd2hvc2UgT1NGUyBub3JtYWxpemVzIHRleHR1YWxseSBhbmQKICAgICAgICAjIGZvbGxvd3Mgc3ltbGlua3Mgb3V0IG9mIHRoZSByb290LCBhbmQgZGVsaWJlcmF0ZWx5IHNvOiBwYXRocyByZWFjaGluZwogICAgICAgICMgaGVyZSBjYW4gY29tZSBmcm9tIHVudHJ1c3RlZCBkYXRhLCBlLmcuIGEgZ2x5cGggZmlsZSBuYW1lIHJlYWQgZnJvbSBhCiAgICAgICAgIyB0aGlyZC1wYXJ0eSBVRk8ncyBjb250ZW50cy5wbGlzdC4KICAgICAgICBpZiBub3QgYWJzX3BhdGguaXNfcmVsYXRpdmVfdG8oc2VsZi5fcm9vdCk6CiAgICAgICAgICAgIHJhaXNlIElsbGVnYWxCYWNrUmVmZXJlbmNlKHJlbF9wYXRoKQogICAgICAgIHJldHVybiBhYnNfcGF0aAoKICAgIGRlZiBvcGVuKHNlbGYsIHBhdGg6IHN0ciwgbW9kZTogc3RyID0gInJiIiwgKiprd2FyZ3MpIC0+IElPW0FueV06CiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXR1cm4gc2VsZi5fYWJzKHBhdGgpLm9wZW4obW9kZSwgKiprd2FyZ3MpCiAgICAgICAgZXhjZXB0IEZpbGVOb3RGb3VuZEVycm9yOgogICAgICAgICAgICByYWlzZSBSZXNvdXJjZU5vdEZvdW5kKGYiTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeToge3BhdGghcn0iKQoKICAgIGRlZiBleGlzdHMoc2VsZiwgcGF0aDogc3RyKSAtPiBib29sOgogICAgICAgIHJldHVybiBzZWxmLl9hYnMocGF0aCkuZXhpc3RzKCkKCiAgICBkZWYgaXNkaXIoc2VsZiwgcGF0aDogc3RyKSAtPiBib29sOgogICAgICAgIHJldHVybiBzZWxmLl9hYnMocGF0aCkuaXNfZGlyKCkKCiAgICBkZWYgaXNmaWxlKHNlbGYsIHBhdGg6IHN0cikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gc2VsZi5fYWJzKHBhdGgpLmlzX2ZpbGUoKQoKICAgIGRlZiBsaXN0ZGlyKHNlbGYsIHBhdGg6IHN0cikgLT4gbGlzdFtzdHJdOgogICAgICAgIHJldHVybiBbcC5uYW1lIGZvciBwIGluIHNlbGYuX2FicyhwYXRoKS5pdGVyZGlyKCldCgogICAgZGVmIF9ta2RpcihzZWxmLCBwYXRoOiBzdHIsIHBhcmVudHM6IGJvb2wgPSBGYWxzZSwgZXhpc3Rfb2s6IGJvb2wgPSBGYWxzZSkgLT4gU3ViRlM6CiAgICAgICAgc2VsZi5fYWJzKHBhdGgpLm1rZGlyKHBhcmVudHM9cGFyZW50cywgZXhpc3Rfb2s9ZXhpc3Rfb2spCiAgICAgICAgcmV0dXJuIHNlbGYub3BlbmRpcihwYXRoKQoKICAgIGRlZiBtYWtlZGlyKHNlbGYsIHBhdGg6IHN0ciwgcmVjcmVhdGU6IGJvb2wgPSBGYWxzZSkgLT4gU3ViRlM6CiAgICAgICAgcmV0dXJuIHNlbGYuX21rZGlyKHBhdGgsIHBhcmVudHM9RmFsc2UsIGV4aXN0X29rPXJlY3JlYXRlKQoKICAgIGRlZiBtYWtlZGlycyhzZWxmLCBwYXRoOiBzdHIsIHJlY3JlYXRlOiBib29sID0gRmFsc2UpIC0+IFN1YkZTOgogICAgICAgIHJldHVybiBzZWxmLl9ta2RpcihwYXRoLCBwYXJlbnRzPVRydWUsIGV4aXN0X29rPXJlY3JlYXRlKQoKICAgIGRlZiBnZXRpbmZvKHNlbGYsIHBhdGg6IHN0ciwgbmFtZXNwYWNlczogQ29sbGVjdGlvbltzdHJdIHwgTm9uZSA9IE5vbmUpIC0+IEluZm86CiAgICAgICAgcGF0aCA9IHNlbGYuX2FicyhwYXRoKQogICAgICAgIGlmIG5vdCBwYXRoLmV4aXN0cygpOgogICAgICAgICAgICByYWlzZSBSZXNvdXJjZU5vdEZvdW5kKGYiTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeToge3N0cihwYXRoKSFyfSIpCiAgICAgICAgaW5mbyA9IHsKICAgICAgICAgICAgImJhc2ljIjogewogICAgICAgICAgICAgICAgIm5hbWUiOiBwYXRoLm5hbWUsCiAgICAgICAgICAgICAgICAiaXNfZGlyIjogcGF0aC5pc19kaXIoKSwKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBuYW1lc3BhY2VzID0gbmFtZXNwYWNlcyBvciAoKQogICAgICAgIGlmICJkZXRhaWxzIiBpbiBuYW1lc3BhY2VzOgogICAgICAgICAgICBzdGF0X3Jlc3VsdCA9IHBhdGguc3RhdCgpCiAgICAgICAgICAgIGRldGFpbHMgPSBpbmZvWyJkZXRhaWxzIl0gPSB7CiAgICAgICAgICAgICAgICAiYWNjZXNzZWQiOiBzdGF0X3Jlc3VsdC5zdF9hdGltZSwKICAgICAgICAgICAgICAgICJtb2RpZmllZCI6IHN0YXRfcmVzdWx0LnN0X210aW1lLAogICAgICAgICAgICAgICAgInNpemUiOiBzdGF0X3Jlc3VsdC5zdF9zaXplLAogICAgICAgICAgICAgICAgInR5cGUiOiBzdGF0LlNfSUZNVChzdGF0X3Jlc3VsdC5zdF9tb2RlKSwKICAgICAgICAgICAgICAgICJjcmVhdGVkIjogZ2V0YXR0cihzdGF0X3Jlc3VsdCwgInN0X2JpcnRodGltZSIsIE5vbmUpLAogICAgICAgICAgICB9CiAgICAgICAgICAgIGN0aW1lX2tleSA9ICJjcmVhdGVkIiBpZiBfV0lORE9XU19QTEFURk9STSBlbHNlICJtZXRhZGF0YV9jaGFuZ2VkIgogICAgICAgICAgICBkZXRhaWxzW2N0aW1lX2tleV0gPSBzdGF0X3Jlc3VsdC5zdF9jdGltZQogICAgICAgIHJldHVybiBJbmZvKGluZm8pCgogICAgZGVmIHJlbW92ZShzZWxmLCBwYXRoOiBzdHIpOgogICAgICAgIHBhdGggPSBzZWxmLl9hYnMocGF0aCkKICAgICAgICB0cnk6CiAgICAgICAgICAgIHBhdGgudW5saW5rKCkKICAgICAgICBleGNlcHQgRmlsZU5vdEZvdW5kRXJyb3I6CiAgICAgICAgICAgIHJhaXNlIFJlc291cmNlTm90Rm91bmQoZiJObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5OiB7c3RyKHBhdGgpIXJ9IikKICAgICAgICBleGNlcHQgT1NFcnJvciBhcyBlOgogICAgICAgICAgICBpZiBwYXRoLmlzX2RpcigpOgogICAgICAgICAgICAgICAgcmFpc2UgRmlsZUV4cGVjdGVkKGYicGF0aCB7c3RyKHBhdGgpIXJ9IHNob3VsZCBiZSBhIGZpbGUiKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmFpc2UgUmVzb3VyY2VFcnJvcihmInVuYWJsZSB0byByZW1vdmUge3N0cihwYXRoKSFyfToge2V9IikKCiAgICBkZWYgcmVtb3ZlZGlyKHNlbGYsIHBhdGg6IHN0cik6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBzZWxmLl9hYnMocGF0aCkucm1kaXIoKQogICAgICAgIGV4Y2VwdCBOb3RBRGlyZWN0b3J5RXJyb3I6CiAgICAgICAgICAgIHJhaXNlIERpcmVjdG9yeUV4cGVjdGVkKGYicGF0aCB7cGF0aCFyfSBzaG91bGQgYmUgYSBkaXJlY3RvcnkiKQogICAgICAgIGV4Y2VwdCBPU0Vycm9yIGFzIGU6CiAgICAgICAgICAgIGlmIGUuZXJybm8gPT0gZXJybm8uRU5PVEVNUFRZOgogICAgICAgICAgICAgICAgcmFpc2UgRGlyZWN0b3J5Tm90RW1wdHkoZiJEaXJlY3Rvcnkgbm90IGVtcHR5OiB7cGF0aCFyfSIpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICByYWlzZSBSZXNvdXJjZUVycm9yKGYidW5hYmxlIHRvIHJlbW92ZSB7cGF0aCFyfToge2V9IikKCiAgICBkZWYgcmVtb3ZldHJlZShzZWxmLCBwYXRoOiBzdHIpOgogICAgICAgIHNodXRpbC5ybXRyZWUoc2VsZi5fYWJzKHBhdGgpKQoKICAgIGRlZiBtb3ZlZGlyKHNlbGYsIHNyY19kaXI6IHN0ciwgZHN0X2Rpcjogc3RyLCBjcmVhdGU6IGJvb2wgPSBGYWxzZSk6CiAgICAgICAgaWYgaXNiYXNlKHNyY19kaXIsIGRzdF9kaXIpOgogICAgICAgICAgICByYWlzZSBJbGxlZ2FsRGVzdGluYXRpb24oZiJjYW5ub3QgbW92ZSB7c3JjX2RpciFyfSB0byB7ZHN0X2RpciFyfSIpCiAgICAgICAgc3JjX3BhdGggPSBzZWxmLl9hYnMoc3JjX2RpcikKICAgICAgICBpZiBub3Qgc3JjX3BhdGguZXhpc3RzKCk6CiAgICAgICAgICAgIHJhaXNlIFJlc291cmNlTm90Rm91bmQoZiJTb3VyY2Uge3NyY19kaXIhcn0gZG9lcyBub3QgZXhpc3QiKQogICAgICAgIGVsaWYgbm90IHNyY19wYXRoLmlzX2RpcigpOgogICAgICAgICAgICByYWlzZSBEaXJlY3RvcnlFeHBlY3RlZChmIlNvdXJjZSB7c3JjX2RpciFyfSBzaG91bGQgYmUgYSBkaXJlY3RvcnkiKQogICAgICAgIGRzdF9wYXRoID0gc2VsZi5fYWJzKGRzdF9kaXIpCiAgICAgICAgaWYgbm90IGNyZWF0ZSBhbmQgbm90IGRzdF9wYXRoLmV4aXN0cygpOgogICAgICAgICAgICByYWlzZSBSZXNvdXJjZU5vdEZvdW5kKGYiRGVzdGluYXRpb24ge2RzdF9kaXIhcn0gZG9lcyBub3QgZXhpc3QiKQogICAgICAgIGlmIGRzdF9wYXRoLmlzX2ZpbGUoKToKICAgICAgICAgICAgcmFpc2UgRGlyZWN0b3J5RXhwZWN0ZWQoZiJEZXN0aW5hdGlvbiB7ZHN0X2RpciFyfSBzaG91bGQgYmUgYSBkaXJlY3RvcnkiKQogICAgICAgIGlmIGNyZWF0ZToKICAgICAgICAgICAgZHN0X3BhdGgucGFyZW50Lm1rZGlyKHBhcmVudHM9VHJ1ZSwgZXhpc3Rfb2s9VHJ1ZSkKICAgICAgICBpZiBkc3RfcGF0aC5leGlzdHMoKToKICAgICAgICAgICAgaWYgbGlzdChkc3RfcGF0aC5pdGVyZGlyKCkpOgogICAgICAgICAgICAgICAgcmFpc2UgRGlyZWN0b3J5Tm90RW1wdHkoZiJEZXN0aW5hdGlvbiB7ZHN0X2RpciFyfSBpcyBub3QgZW1wdHkiKQogICAgICAgICAgICBlbGlmIF9XSU5ET1dTX1BMQVRGT1JNOgogICAgICAgICAgICAgICAgIyBvbiBVbml4IG9zLnJlbmFtZSBzaWxlbnRseSByZXBsYWNlcyBhbiBlbXB0eSBkc3RfZGlyIHdoZXJlYXMgb24KICAgICAgICAgICAgICAgICMgV2luZG93cyBpdCBhbHdheXMgcmFpc2VzIEZpbGVFeGlzdHNFcnJvciwgZW1wdHkgb3Igbm90LgogICAgICAgICAgICAgICAgZHN0X3BhdGgucm1kaXIoKQogICAgICAgIHNyY19wYXRoLnJlbmFtZShkc3RfcGF0aCkKCiAgICBkZWYgZ2V0c3lzcGF0aChzZWxmLCBwYXRoOiBzdHIpIC0+IHN0cjoKICAgICAgICByZXR1cm4gc3RyKHNlbGYuX2FicyhwYXRoKSkKCiAgICBkZWYgX19yZXByX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiBmIntzZWxmLl9fY2xhc3NfXy5fX25hbWVfX30oe3N0cihzZWxmLl9yb290KSFyfSkiCgogICAgZGVmIF9fc3RyX18oc2VsZikgLT4gc3RyOgogICAgICAgIHJldHVybiBmIjx7c2VsZi5fX2NsYXNzX18uX19uYW1lX18ubG93ZXIoKX0gJ3tzZWxmLl9yb290fSc+Igo=
+from __future__ import annotations
+
+import errno
+import platform
+import shutil
+import stat
+import typing
+from os import PathLike
+from pathlib import Path
+
+from ._base import FS
+from ._errors import (
+    CreateFailed,
+    DirectoryExpected,
+    DirectoryNotEmpty,
+    FileExpected,
+    IllegalBackReference,
+    IllegalDestination,
+    ResourceError,
+    ResourceNotFound,
+)
+from ._info import Info
+from ._path import isbase
+
+if typing.TYPE_CHECKING:
+    from collections.abc import Collection
+    from typing import IO, Any
+
+    from ._subfs import SubFS
+
+
+_WINDOWS_PLATFORM = platform.system() == "Windows"
+
+
+class OSFS(FS):
+    """Filesystem for a directory on the local disk.
+
+    A thin layer on top of `pathlib.Path`.
+    """
+
+    def __init__(self, root: str | PathLike, create: bool = False):
+        super().__init__()
+        self._root = Path(root).resolve()
+        if create:
+            self._root.mkdir(parents=True, exist_ok=True)
+        else:
+            if not self._root.is_dir():
+                raise CreateFailed(
+                    f"unable to create OSFS: {root!r} does not exist or is not a directory"
+                )
+
+    def _abs(self, rel_path: str) -> Path:
+        self.check()
+        abs_path = (self._root / rel_path.strip("/")).resolve()
+        # resolve() expands symlinks as well as back-references, so a symlink
+        # inside the root that points outside it is rejected too. That is
+        # stricter than pyfilesystem2, whose OSFS normalizes textually and
+        # follows symlinks out of the root, and deliberately so: paths reaching
+        # here can come from untrusted data, e.g. a glyph file name read from a
+        # third-party UFO's contents.plist.
+        if not abs_path.is_relative_to(self._root):
+            raise IllegalBackReference(rel_path)
+        return abs_path
+
+    def open(self, path: str, mode: str = "rb", **kwargs) -> IO[Any]:
+        try:
+            return self._abs(path).open(mode, **kwargs)
+        except FileNotFoundError:
+            raise ResourceNotFound(f"No such file or directory: {path!r}")
+
+    def exists(self, path: str) -> bool:
+        return self._abs(path).exists()
+
+    def isdir(self, path: str) -> bool:
+        return self._abs(path).is_dir()
+
+    def isfile(self, path: str) -> bool:
+        return self._abs(path).is_file()
+
+    def listdir(self, path: str) -> list[str]:
+        return [p.name for p in self._abs(path).iterdir()]
+
+    def _mkdir(self, path: str, parents: bool = False, exist_ok: bool = False) -> SubFS:
+        self._abs(path).mkdir(parents=parents, exist_ok=exist_ok)
+        return self.opendir(path)
+
+    def makedir(self, path: str, recreate: bool = False) -> SubFS:
+        return self._mkdir(path, parents=False, exist_ok=recreate)
+
+    def makedirs(self, path: str, recreate: bool = False) -> SubFS:
+        return self._mkdir(path, parents=True, exist_ok=recreate)
+
+    def getinfo(self, path: str, namespaces: Collection[str] | None = None) -> Info:
+        path = self._abs(path)
+        if not path.exists():
+            raise ResourceNotFound(f"No such file or directory: {str(path)!r}")
+        info = {
+            "basic": {
+                "name": path.name,
+                "is_dir": path.is_dir(),
+            }
+        }
+        namespaces = namespaces or ()
+        if "details" in namespaces:
+            stat_result = path.stat()
+            details = info["details"] = {
+                "accessed": stat_result.st_atime,
+                "modified": stat_result.st_mtime,
+                "size": stat_result.st_size,
+                "type": stat.S_IFMT(stat_result.st_mode),
+                "created": getattr(stat_result, "st_birthtime", None),
+            }
+            ctime_key = "created" if _WINDOWS_PLATFORM else "metadata_changed"
+            details[ctime_key] = stat_result.st_ctime
+        return Info(info)
+
+    def remove(self, path: str):
+        path = self._abs(path)
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            raise ResourceNotFound(f"No such file or directory: {str(path)!r}")
+        except OSError as e:
+            if path.is_dir():
+                raise FileExpected(f"path {str(path)!r} should be a file")
+            else:
+                raise ResourceError(f"unable to remove {str(path)!r}: {e}")
+
+    def removedir(self, path: str):
+        try:
+            self._abs(path).rmdir()
+        except NotADirectoryError:
+            raise DirectoryExpected(f"path {path!r} should be a directory")
+        except OSError as e:
+            if e.errno == errno.ENOTEMPTY:
+                raise DirectoryNotEmpty(f"Directory not empty: {path!r}")
+            else:
+                raise ResourceError(f"unable to remove {path!r}: {e}")
+
+    def removetree(self, path: str):
+        shutil.rmtree(self._abs(path))
+
+    def movedir(self, src_dir: str, dst_dir: str, create: bool = False):
+        if isbase(src_dir, dst_dir):
+            raise IllegalDestination(f"cannot move {src_dir!r} to {dst_dir!r}")
+        src_path = self._abs(src_dir)
+        if not src_path.exists():
+            raise ResourceNotFound(f"Source {src_dir!r} does not exist")
+        elif not src_path.is_dir():
+            raise DirectoryExpected(f"Source {src_dir!r} should be a directory")
+        dst_path = self._abs(dst_dir)
+        if not create and not dst_path.exists():
+            raise ResourceNotFound(f"Destination {dst_dir!r} does not exist")
+        if dst_path.is_file():
+            raise DirectoryExpected(f"Destination {dst_dir!r} should be a directory")
+        if create:
+            dst_path.parent.mkdir(parents=True, exist_ok=True)
+        if dst_path.exists():
+            if list(dst_path.iterdir()):
+                raise DirectoryNotEmpty(f"Destination {dst_dir!r} is not empty")
+            elif _WINDOWS_PLATFORM:
+                # on Unix os.rename silently replaces an empty dst_dir whereas on
+                # Windows it always raises FileExistsError, empty or not.
+                dst_path.rmdir()
+        src_path.rename(dst_path)
+
+    def getsyspath(self, path: str) -> str:
+        return str(self._abs(path))
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({str(self._root)!r})"
+
+    def __str__(self) -> str:
+        return f"<{self.__class__.__name__.lower()} '{self._root}'>"

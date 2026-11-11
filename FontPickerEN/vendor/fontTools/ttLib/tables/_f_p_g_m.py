@@ -1,1 +1,62 @@
-ZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSAuIGltcG9ydCB0dFByb2dyYW0KCgpjbGFzcyB0YWJsZV9fZl9wX2dfbShEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkZvbnQgUHJvZ3JhbSB0YWJsZQoKICAgIFRoZSBgYGZwZ21gYCB0YWJsZSB0eXBpY2FsbHkgY29udGFpbnMgZnVuY3Rpb24gZGVmaW50aW9ucyB0aGF0IGFyZQogICAgdXNlZCBieSBmb250IGluc3RydWN0aW9ucy4gVGhpcyBGb250IFByb2dyYW0gaXMgc2ltaWxhciB0byB0aGUgQ29udHJvbAogICAgVmFsdWUgUHJvZ3JhbSB0aGF0IGlzIHN0b3JlZCBpbiB0aGUgYGBwcmVwYGAgdGFibGUsIGJ1dAogICAgdGhlIGBgZnBnbWBgIHRhYmxlIGlzIG9ubHkgZXhlY3V0ZWQgb25lIHRpbWUsIHdoZW4gdGhlIGZvbnQgaXMgZmlyc3QKICAgIHVzZWQuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9mcGdtCiAgICAiIiIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgcHJvZ3JhbSA9IHR0UHJvZ3JhbS5Qcm9ncmFtKCkKICAgICAgICBwcm9ncmFtLmZyb21CeXRlY29kZShkYXRhKQogICAgICAgIHNlbGYucHJvZ3JhbSA9IHByb2dyYW0KCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGlmIGhhc2F0dHIoc2VsZiwgInByb2dyYW0iKToKICAgICAgICAgICAgcmV0dXJuIHNlbGYucHJvZ3JhbS5nZXRCeXRlY29kZSgpCiAgICAgICAgcmV0dXJuIGIiIgoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgc2VsZi5wcm9ncmFtLnRvWE1MKHdyaXRlciwgdHRGb250KQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIHByb2dyYW0gPSB0dFByb2dyYW0uUHJvZ3JhbSgpCiAgICAgICAgcHJvZ3JhbS5mcm9tWE1MKG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpCiAgICAgICAgc2VsZi5wcm9ncmFtID0gcHJvZ3JhbQoKICAgIGRlZiBfX2Jvb2xfXyhzZWxmKToKICAgICAgICAiIiIKICAgICAgICA+Pj4gZnBnbSA9IHRhYmxlX19mX3BfZ19tKCkKICAgICAgICA+Pj4gYm9vbChmcGdtKQogICAgICAgIEZhbHNlCiAgICAgICAgPj4+IHAgPSB0dFByb2dyYW0uUHJvZ3JhbSgpCiAgICAgICAgPj4+IGZwZ20ucHJvZ3JhbSA9IHAKICAgICAgICA+Pj4gYm9vbChmcGdtKQogICAgICAgIEZhbHNlCiAgICAgICAgPj4+IGJjID0gYnl0ZWFycmF5KFswXSkKICAgICAgICA+Pj4gcC5mcm9tQnl0ZWNvZGUoYmMpCiAgICAgICAgPj4+IGJvb2woZnBnbSkKICAgICAgICBUcnVlCiAgICAgICAgPj4+IHAuYnl0ZWNvZGUucG9wKCkKICAgICAgICAwCiAgICAgICAgPj4+IGJvb2woZnBnbSkKICAgICAgICBGYWxzZQogICAgICAgICIiIgogICAgICAgIHJldHVybiBoYXNhdHRyKHNlbGYsICJwcm9ncmFtIikgYW5kIGJvb2woc2VsZi5wcm9ncmFtKQoKICAgIF9fbm9uemVyb19fID0gX19ib29sX18KCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwogICAgaW1wb3J0IGRvY3Rlc3QKCiAgICBzeXMuZXhpdChkb2N0ZXN0LnRlc3Rtb2QoKS5mYWlsZWQpCg==
+from . import DefaultTable
+from . import ttProgram
+
+
+class table__f_p_g_m(DefaultTable.DefaultTable):
+    """Font Program table
+
+    The ``fpgm`` table typically contains function defintions that are
+    used by font instructions. This Font Program is similar to the Control
+    Value Program that is stored in the ``prep`` table, but
+    the ``fpgm`` table is only executed one time, when the font is first
+    used.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/fpgm
+    """
+
+    def decompile(self, data, ttFont):
+        program = ttProgram.Program()
+        program.fromBytecode(data)
+        self.program = program
+
+    def compile(self, ttFont):
+        if hasattr(self, "program"):
+            return self.program.getBytecode()
+        return b""
+
+    def toXML(self, writer, ttFont):
+        self.program.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        program = ttProgram.Program()
+        program.fromXML(name, attrs, content, ttFont)
+        self.program = program
+
+    def __bool__(self):
+        """
+        >>> fpgm = table__f_p_g_m()
+        >>> bool(fpgm)
+        False
+        >>> p = ttProgram.Program()
+        >>> fpgm.program = p
+        >>> bool(fpgm)
+        False
+        >>> bc = bytearray([0])
+        >>> p.fromBytecode(bc)
+        >>> bool(fpgm)
+        True
+        >>> p.bytecode.pop()
+        0
+        >>> bool(fpgm)
+        False
+        """
+        return hasattr(self, "program") and bool(self.program)
+
+    __nonzero__ = __bool__
+
+
+if __name__ == "__main__":
+    import sys
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

@@ -1,1 +1,7 @@
-ZnJvbSAuX2dfdl9hX3IgaW1wb3J0IHRhYmxlX19nX3ZfYV9yCgoKY2xhc3MgdGFibGVfR19WX0FfUl8odGFibGVfX2dfdl9hX3IpOgogICAgZGVwZW5kZW5jaWVzID0gWyJmdmFyIiwgIkdMWUYiXQogICAgZ2lkX3NpemUgPSAzCiAgICBnbHlwaFRhYmxlVGFnID0gIkdMWUYiCg==
+from ._g_v_a_r import table__g_v_a_r
+
+
+class table_G_V_A_R_(table__g_v_a_r):
+    dependencies = ["fvar", "GLYF"]
+    gid_size = 3
+    glyphTableTag = "GLYF"

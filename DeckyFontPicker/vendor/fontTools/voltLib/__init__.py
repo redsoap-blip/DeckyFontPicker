@@ -1,1 +1,5 @@
-IiIiZm9udFRvb2xzLnZvbHRMaWIgLS0gYSBwYWNrYWdlIGZvciBkZWFsaW5nIHdpdGggVmlzdWFsIE9wZW5UeXBlIExheW91dCBUb29sCihWT0xUKSBmaWxlcy4iIiIKCiMgU2VlCiMgaHR0cDovL3d3dy5taWNyb3NvZnQuY29tL3R5cG9ncmFwaHkvVk9MVC5tc3B4Cg==
+"""fontTools.voltLib -- a package for dealing with Visual OpenType Layout Tool
+(VOLT) files."""
+
+# See
+# http://www.microsoft.com/typography/VOLT.mspx

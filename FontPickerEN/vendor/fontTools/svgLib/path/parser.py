@@ -1,1 +1,362 @@
-IyBTVkcgUGF0aCBzcGVjaWZpY2F0aW9uIHBhcnNlci4KIyBUaGlzIGlzIGFuIGFkYXB0YXRpb24gZnJvbSAnc3ZnLnBhdGgnIGJ5IExlbm5hcnQgUmVnZWJybyAoQHJlZ2Vicm8pLAojIG1vZGlmaWVkIHNvIHRoYXQgdGhlIHBhcnNlciB0YWtlcyBhIEZvbnRUb29scyBQZW4gb2JqZWN0IGluc3RlYWQgb2YKIyByZXR1cm5pbmcgYSBsaXN0IG9mIHN2Zy5wYXRoIFBhdGggb2JqZWN0cy4KIyBUaGUgb3JpZ2luYWwgY29kZSBjYW4gYmUgZm91bmQgYXQ6CiMgaHR0cHM6Ly9naXRodWIuY29tL3JlZ2Vicm8vc3ZnLnBhdGgvYmxvYi80ZjliNmUzL3NyYy9zdmcvcGF0aC9wYXJzZXIucHkKIyBDb3B5cmlnaHQgKGMpIDIwMTMtMjAxNCBMZW5uYXJ0IFJlZ2Vicm8KIyBMaWNlbnNlOiBNSVQKCmZyb20gLmFyYyBpbXBvcnQgRWxsaXB0aWNhbEFyYwppbXBvcnQgY21hdGgKaW1wb3J0IHJlCgpDT01NQU5EUyA9IHNldCgiTW1aekxsSGhWdkNjU3NRcVR0QWEiKQpBUkNfQ09NTUFORFMgPSBzZXQoIkFhIikKVVBQRVJDQVNFID0gc2V0KCJNWkxIVkNTUVRBIikKCkNPTU1BTkRfUkUgPSByZS5jb21waWxlKCIoW01tWnpMbEhoVnZDY1NzUXFUdEFhXSkiKQoKIyBodHRwczovL3d3dy53My5vcmcvVFIvY3NzLXN5bnRheC0zLyNudW1iZXItdG9rZW4tZGlhZ3JhbQojICAgYnV0IC02LmUtNSB3aWxsIGJlIHRva2VuaXplZCBhcyAiLTYiIHRoZW4gIi01IiBhbmQgY29uZnVzZSBwYXJzaW5nCkZMT0FUX1JFID0gcmUuY29tcGlsZSgKICAgIHIiWy0rXT8iICAjIG9wdGlvbmFsIHNpZ24KICAgIHIiKD86IgogICAgciIoPzowfFsxLTldWzAtOV0qKSg/OlwuWzAtOV0rKT8oPzpbZUVdWy0rXT9bMC05XSspPyIgICMgaW50L2Zsb2F0CiAgICByInwiCiAgICByIig/OlwuWzAtOV0rKD86W2VFXVstK10/WzAtOV0rKT8pIiAgIyBmbG9hdCB3aXRoIGxlYWRpbmcgZG90IChlLmcuICcuNDInKQogICAgciIpIgopCkJPT0xfUkUgPSByZS5jb21waWxlKCJeWzAxXSIpClNFUEFSQVRPUl9SRSA9IHJlLmNvbXBpbGUoZiJbLCBcdF0iKQoKCmRlZiBfdG9rZW5pemVfcGF0aChwYXRoZGVmKToKICAgIGFyY19jbWQgPSBOb25lCiAgICBmb3IgeCBpbiBDT01NQU5EX1JFLnNwbGl0KHBhdGhkZWYpOgogICAgICAgIGlmIHggaW4gQ09NTUFORFM6CiAgICAgICAgICAgIGFyY19jbWQgPSB4IGlmIHggaW4gQVJDX0NPTU1BTkRTIGVsc2UgTm9uZQogICAgICAgICAgICB5aWVsZCB4CiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIGlmIGFyY19jbWQ6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHlpZWxkIGZyb20gX3Rva2VuaXplX2FyY19hcmd1bWVudHMoeCkKICAgICAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3IgYXMgZToKICAgICAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJJbnZhbGlkIGFyYyBjb21tYW5kOiAne2FyY19jbWR9e3h9JyIpIGZyb20gZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZvciB0b2tlbiBpbiBGTE9BVF9SRS5maW5kYWxsKHgpOgogICAgICAgICAgICAgICAgeWllbGQgdG9rZW4KCgpBUkNfQVJHVU1FTlRfVFlQRVMgPSAoCiAgICAoInJ4IiwgRkxPQVRfUkUpLAogICAgKCJyeSIsIEZMT0FUX1JFKSwKICAgICgieC1heGlzLXJvdGF0aW9uIiwgRkxPQVRfUkUpLAogICAgKCJsYXJnZS1hcmMtZmxhZyIsIEJPT0xfUkUpLAogICAgKCJzd2VlcC1mbGFnIiwgQk9PTF9SRSksCiAgICAoIngiLCBGTE9BVF9SRSksCiAgICAoInkiLCBGTE9BVF9SRSksCikKCgpkZWYgX3Rva2VuaXplX2FyY19hcmd1bWVudHMoYXJjZGVmKToKICAgIHJhd19hcmdzID0gW3MgZm9yIHMgaW4gU0VQQVJBVE9SX1JFLnNwbGl0KGFyY2RlZikgaWYgc10KICAgIGlmIG5vdCByYXdfYXJnczoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiTm90IGVub3VnaCBhcmd1bWVudHM6ICd7YXJjZGVmfSciKQogICAgcmF3X2FyZ3MucmV2ZXJzZSgpCgogICAgaSA9IDAKICAgIHdoaWxlIHJhd19hcmdzOgogICAgICAgIGFyZyA9IHJhd19hcmdzLnBvcCgpCgogICAgICAgIG5hbWUsIHBhdHRlcm4gPSBBUkNfQVJHVU1FTlRfVFlQRVNbaV0KICAgICAgICBtYXRjaCA9IHBhdHRlcm4uc2VhcmNoKGFyZykKICAgICAgICBpZiBub3QgbWF0Y2g6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJJbnZhbGlkIGFyZ3VtZW50IGZvciAne25hbWV9JyBwYXJhbWV0ZXI6IHthcmchcn0iKQoKICAgICAgICBqLCBrID0gbWF0Y2guc3BhbigpCiAgICAgICAgeWllbGQgYXJnW2o6a10KICAgICAgICBhcmcgPSBhcmdbazpdCgogICAgICAgIGlmIGFyZzoKICAgICAgICAgICAgcmF3X2FyZ3MuYXBwZW5kKGFyZykKCiAgICAgICAgIyB3cmFwIGFyb3VuZCBldmVyeSA3IGNvbnNlY3V0aXZlIGFyZ3VtZW50cwogICAgICAgIGlmIGkgPT0gNjoKICAgICAgICAgICAgaSA9IDAKICAgICAgICBlbHNlOgogICAgICAgICAgICBpICs9IDEKCiAgICBpZiBpICE9IDA6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIk5vdCBlbm91Z2ggYXJndW1lbnRzOiAne2FyY2RlZn0nIikKCgpkZWYgcGFyc2VfcGF0aChwYXRoZGVmLCBwZW4sIGN1cnJlbnRfcG9zPSgwLCAwKSwgYXJjX2NsYXNzPUVsbGlwdGljYWxBcmMpOgogICAgIiIiUGFyc2UgU1ZHIHBhdGggZGVmaW5pdGlvbiAoaS5lLiAiZCIgYXR0cmlidXRlIG9mIDxwYXRoPiBlbGVtZW50cykKICAgIGFuZCBjYWxsIGEgJ3Blbicgb2JqZWN0J3MgbW92ZVRvLCBsaW5lVG8sIGN1cnZlVG8sIHFDdXJ2ZVRvIGFuZCBjbG9zZVBhdGgKICAgIG1ldGhvZHMuCgogICAgSWYgJ2N1cnJlbnRfcG9zJyAoMi1mbG9hdCB0dXBsZSkgaXMgcHJvdmlkZWQsIHRoZSBpbml0aWFsIG1vdmVUbyB3aWxsCiAgICBiZSByZWxhdGl2ZSB0byB0aGF0IGluc3RlYWQgYmVpbmcgYWJzb2x1dGUuCgogICAgSWYgdGhlIHBlbiBoYXMgYW4gImFyY1RvIiBtZXRob2QsIGl0IGlzIGNhbGxlZCB3aXRoIHRoZSBvcmlnaW5hbCB2YWx1ZXMKICAgIG9mIHRoZSBlbGxpcHRpY2FsIGFyYyBjdXJ2ZSBjb21tYW5kczoKCiAgICAuLiBjb2RlLWJsb2NrOjoKCiAgICAgICAgcGVuLmFyY1RvKHJ4LCByeSwgcm90YXRpb24sIGFyY19sYXJnZSwgYXJjX3N3ZWVwLCAoeCwgeSkpCgogICAgT3RoZXJ3aXNlLCB0aGUgYXJjcyBhcmUgYXBwcm94aW1hdGVkIGJ5IHNlcmllcyBvZiBjdWJpYyBCZXppZXIgc2VnbWVudHMKICAgICgiY3VydmVUbyIpLCBvbmUgZXZlcnkgOTAgZGVncmVlcy4KICAgICIiIgogICAgIyBJbiB0aGUgU1ZHIHNwZWNzLCBpbml0aWFsIG1vdmV0b3MgYXJlIGFic29sdXRlLCBldmVuIGlmCiAgICAjIHNwZWNpZmllZCBhcyAnbScuIFRoaXMgaXMgdGhlIGRlZmF1bHQgYmVoYXZpb3IgaGVyZSBhcyB3ZWxsLgogICAgIyBCdXQgaWYgeW91IHBhc3MgaW4gYSBjdXJyZW50X3BvcyB2YXJpYWJsZSwgdGhlIGluaXRpYWwgbW92ZXRvCiAgICAjIHdpbGwgYmUgcmVsYXRpdmUgdG8gdGhhdCBjdXJyZW50X3Bvcy4gVGhpcyBpcyB1c2VmdWwuCiAgICBjdXJyZW50X3BvcyA9IGNvbXBsZXgoKmN1cnJlbnRfcG9zKQoKICAgIGVsZW1lbnRzID0gbGlzdChfdG9rZW5pemVfcGF0aChwYXRoZGVmKSkKICAgICMgUmV2ZXJzZSBmb3IgZWFzeSB1c2Ugb2YgLnBvcCgpCiAgICBlbGVtZW50cy5yZXZlcnNlKCkKCiAgICAjIEEgcGF0aCBkYXRhIHNlZ21lbnQgKGlmIHRoZXJlIGlzIG9uZSkgbXVzdCBiZWdpbiB3aXRoIGEgbW92ZXRvCiAgICAjIGNvbW1hbmQgKGh0dHBzOi8vd3d3LnczLm9yZy9UUi9TVkcxMS9wYXRocy5odG1sI1BhdGhEYXRhTW92ZXRvQ29tbWFuZHMpOwogICAgIyByYWlzZSBiZWZvcmUgYW55IHBlbiBjYWxsIGluc3RlYWQgb2YgaW52ZW50aW5nIGEgc3RhcnQgcG9pbnQuCiAgICBpZiBlbGVtZW50cyBhbmQgZWxlbWVudHNbLTFdIG5vdCBpbiAoIk0iLCAibSIpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIlBhdGggbXVzdCBzdGFydCB3aXRoIGEgbW92ZXRvIGNvbW1hbmQ6ICVyIiAlIHBhdGhkZWYpCgogICAgIyBzdGFydF9wb3MgaXMgdGhlIGluaXRpYWwgcG9pbnQgb2YgdGhlIGN1cnJlbnQgc3VicGF0aDsgaXQgaXMgcmV0YWluZWQKICAgICMgYWZ0ZXIgYSBjbG9zZXBhdGggc28gdGhhdCBhIGRyYXd0byBjb21tYW5kIGZvbGxvd2luZyBaIGNhbiBzdGFydCBhIG5ldwogICAgIyBzdWJwYXRoIGF0IHRoYXQgc2FtZSBwb2ludCwgd2hpbGUgc3VicGF0aF9vcGVuIHRyYWNrcyB3aGV0aGVyIHRoZXJlIGlzCiAgICAjIGEgc3VicGF0aCBpbiBwcm9ncmVzcyB0aGF0IHN0aWxsIG5lZWRzIGNsb3NlUGF0aC9lbmRQYXRoLgogICAgc3RhcnRfcG9zID0gTm9uZQogICAgc3VicGF0aF9vcGVuID0gRmFsc2UKICAgIGNvbW1hbmQgPSBOb25lCiAgICBsYXN0X2NvbnRyb2wgPSBOb25lCgogICAgaGF2ZV9hcmNUbyA9IGhhc2F0dHIocGVuLCAiYXJjVG8iKQoKICAgIGRlZiBwb3BfY29vcmQoKToKICAgICAgICAjIEEgZHJhd3RvIGNvbW1hbmQgY29uc3VtZXMgYSBmaXhlZCBudW1iZXIgb2YgY29vcmRpbmF0ZSB0b2tlbnMuIEEKICAgICAgICAjIG1hbGZvcm1lZCBwYXRoIChhIGNvbW1hbmQgd2l0aCB0b28gZmV3IG51bWJlcnMpIGNhbiBydW4gdGhlIHRva2VuCiAgICAgICAgIyBsaXN0IGRyeTsgdHVybiB0aGUgcmVzdWx0aW5nIEluZGV4RXJyb3IgaW50byBhIGNsZWFyIFZhbHVlRXJyb3IsIGxpa2UKICAgICAgICAjIHRoZSBwYXJzZXIncyBvdGhlciBlcnJvcnMsIGluc3RlYWQgb2YgYSBiYXJlICJwb3AgZnJvbSBlbXB0eSBsaXN0Ii4KICAgICAgICB0cnk6CiAgICAgICAgICAgIHJldHVybiBlbGVtZW50cy5wb3AoKQogICAgICAgIGV4Y2VwdCBJbmRleEVycm9yOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgIk5vdCBlbm91Z2ggY29vcmRpbmF0ZXMgZm9yIGNvbW1hbmQgJXIgaW4gcGF0aDogJXIiICUgKGNvbW1hbmQsIHBhdGhkZWYpCiAgICAgICAgICAgICkgZnJvbSBOb25lCgogICAgd2hpbGUgZWxlbWVudHM6CiAgICAgICAgaWYgZWxlbWVudHNbLTFdIGluIENPTU1BTkRTOgogICAgICAgICAgICAjIE5ldyBjb21tYW5kLgogICAgICAgICAgICBsYXN0X2NvbW1hbmQgPSBjb21tYW5kICAjIFVzZWQgYnkgUyBhbmQgVAogICAgICAgICAgICBjb21tYW5kID0gZWxlbWVudHMucG9wKCkKICAgICAgICAgICAgYWJzb2x1dGUgPSBjb21tYW5kIGluIFVQUEVSQ0FTRQogICAgICAgICAgICBjb21tYW5kID0gY29tbWFuZC51cHBlcigpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBJZiB0aGlzIGVsZW1lbnQgc3RhcnRzIHdpdGggbnVtYmVycywgaXQgaXMgYW4gaW1wbGljaXQgY29tbWFuZAogICAgICAgICAgICAjIGFuZCB3ZSBkb24ndCBjaGFuZ2UgdGhlIGNvbW1hbmQuIENoZWNrIHRoYXQgaXQncyBhbGxvd2VkOgogICAgICAgICAgICBpZiBjb21tYW5kIGlzIE5vbmU6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgICAgICJVbmFsbG93ZWQgaW1wbGljaXQgY29tbWFuZCBpbiAlcywgcG9zaXRpb24gJXMiCiAgICAgICAgICAgICAgICAgICAgJSAocGF0aGRlZiwgbGVuKHBhdGhkZWYuc3BsaXQoKSkgLSBsZW4oZWxlbWVudHMpKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBsYXN0X2NvbW1hbmQgPSBjb21tYW5kICAjIFVzZWQgYnkgUyBhbmQgVAoKICAgICAgICBpZiBjb21tYW5kIG5vdCBpbiAoIk0iLCAiWiIpIGFuZCBub3Qgc3VicGF0aF9vcGVuIGFuZCBzdGFydF9wb3MgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICMgSWYgYSBjbG9zZXBhdGggaXMgZm9sbG93ZWQgaW1tZWRpYXRlbHkgYnkgYW55IG90aGVyIGNvbW1hbmQsCiAgICAgICAgICAgICMgdGhlIG5leHQgc3VicGF0aCBzdGFydHMgYXQgdGhlIHNhbWUgaW5pdGlhbCBwb2ludCBhcyB0aGUKICAgICAgICAgICAgIyBjdXJyZW50IHN1YnBhdGg6CiAgICAgICAgICAgICMgaHR0cHM6Ly93d3cudzMub3JnL1RSL1NWRzExL3BhdGhzLmh0bWwjUGF0aERhdGFDbG9zZVBhdGhDb21tYW5kCiAgICAgICAgICAgIHBlbi5tb3ZlVG8oKHN0YXJ0X3Bvcy5yZWFsLCBzdGFydF9wb3MuaW1hZykpCiAgICAgICAgICAgIHN1YnBhdGhfb3BlbiA9IFRydWUKCiAgICAgICAgaWYgY29tbWFuZCA9PSAiTSI6CiAgICAgICAgICAgICMgTW92ZXRvIGNvbW1hbmQuCiAgICAgICAgICAgIHggPSBwb3BfY29vcmQoKQogICAgICAgICAgICB5ID0gcG9wX2Nvb3JkKCkKICAgICAgICAgICAgcG9zID0gZmxvYXQoeCkgKyBmbG9hdCh5KSAqIDFqCiAgICAgICAgICAgIGlmIGFic29sdXRlOgogICAgICAgICAgICAgICAgY3VycmVudF9wb3MgPSBwb3MKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGN1cnJlbnRfcG9zICs9IHBvcwoKICAgICAgICAgICAgIyBNIGlzIG5vdCBwcmVjZWRlZCBieSBaOyBpdCdzIGFuIG9wZW4gc3VicGF0aAogICAgICAgICAgICBpZiBzdWJwYXRoX29wZW46CiAgICAgICAgICAgICAgICBwZW4uZW5kUGF0aCgpCgogICAgICAgICAgICBwZW4ubW92ZVRvKChjdXJyZW50X3Bvcy5yZWFsLCBjdXJyZW50X3Bvcy5pbWFnKSkKCiAgICAgICAgICAgICMgd2hlbiBNIGlzIGNhbGxlZCwgcmVzZXQgc3RhcnRfcG9zCiAgICAgICAgICAgICMgVGhpcyBiZWhhdmlvciBvZiBaIGlzIGRlZmluZWQgaW4gc3ZnIHNwZWM6CiAgICAgICAgICAgICMgaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHL3BhdGhzLmh0bWwjUGF0aERhdGFDbG9zZVBhdGhDb21tYW5kCiAgICAgICAgICAgIHN0YXJ0X3BvcyA9IGN1cnJlbnRfcG9zCiAgICAgICAgICAgIHN1YnBhdGhfb3BlbiA9IFRydWUKCiAgICAgICAgICAgICMgSW1wbGljaXQgbW92ZXRvIGNvbW1hbmRzIGFyZSB0cmVhdGVkIGFzIGxpbmV0byBjb21tYW5kcy4KICAgICAgICAgICAgIyBTbyB3ZSBzZXQgY29tbWFuZCB0byBsaW5ldG8gaGVyZSwgaW4gY2FzZSB0aGVyZSBhcmUKICAgICAgICAgICAgIyBmdXJ0aGVyIGltcGxpY2l0IGNvbW1hbmRzIGFmdGVyIHRoaXMgbW92ZXRvLgogICAgICAgICAgICBjb21tYW5kID0gIkwiCgogICAgICAgIGVsaWYgY29tbWFuZCA9PSAiWiI6CiAgICAgICAgICAgICMgQ2xvc2UgcGF0aAogICAgICAgICAgICAjIEEgcmVkdW5kYW50IFogd2l0aCBubyBvcGVuIHN1YnBhdGggKGUuZy4gIk0wLDAgWiBaIikgaXMgdmFsaWQKICAgICAgICAgICAgIyBwZXIgdGhlIFNWRyBwYXRoIGdyYW1tYXIgYW5kIGhhcyBubyBlZmZlY3Q7IGlnbm9yZSBpdCBpbnN0ZWFkCiAgICAgICAgICAgICMgb2YgZW1pdHRpbmcgYSBzZWNvbmQgY2xvc2VQYXRoLgogICAgICAgICAgICBpZiBzdWJwYXRoX29wZW46CiAgICAgICAgICAgICAgICBpZiBub3QgY21hdGguaXNjbG9zZSgKICAgICAgICAgICAgICAgICAgICBjdXJyZW50X3Bvcywgc3RhcnRfcG9zLCByZWxfdG9sPTFlLTE1LCBhYnNfdG9sPTFlLTE1CiAgICAgICAgICAgICAgICApOgogICAgICAgICAgICAgICAgICAgIHBlbi5saW5lVG8oKHN0YXJ0X3Bvcy5yZWFsLCBzdGFydF9wb3MuaW1hZykpCiAgICAgICAgICAgICAgICBwZW4uY2xvc2VQYXRoKCkKICAgICAgICAgICAgICAgIGN1cnJlbnRfcG9zID0gc3RhcnRfcG9zCiAgICAgICAgICAgICAgICBzdWJwYXRoX29wZW4gPSBGYWxzZQogICAgICAgICAgICBjb21tYW5kID0gTm9uZSAgIyBZb3UgY2FuJ3QgaGF2ZSBpbXBsaWNpdCBjb21tYW5kcyBhZnRlciBjbG9zaW5nLgoKICAgICAgICBlbGlmIGNvbW1hbmQgPT0gIkwiOgogICAgICAgICAgICB4ID0gcG9wX2Nvb3JkKCkKICAgICAgICAgICAgeSA9IHBvcF9jb29yZCgpCiAgICAgICAgICAgIHBvcyA9IGZsb2F0KHgpICsgZmxvYXQoeSkgKiAxagogICAgICAgICAgICBpZiBub3QgYWJzb2x1dGU6CiAgICAgICAgICAgICAgICBwb3MgKz0gY3VycmVudF9wb3MKICAgICAgICAgICAgcGVuLmxpbmVUbygocG9zLnJlYWwsIHBvcy5pbWFnKSkKICAgICAgICAgICAgY3VycmVudF9wb3MgPSBwb3MKCiAgICAgICAgZWxpZiBjb21tYW5kID09ICJIIjoKICAgICAgICAgICAgeCA9IHBvcF9jb29yZCgpCiAgICAgICAgICAgIHBvcyA9IGZsb2F0KHgpICsgY3VycmVudF9wb3MuaW1hZyAqIDFqCiAgICAgICAgICAgIGlmIG5vdCBhYnNvbHV0ZToKICAgICAgICAgICAgICAgIHBvcyArPSBjdXJyZW50X3Bvcy5yZWFsCiAgICAgICAgICAgIHBlbi5saW5lVG8oKHBvcy5yZWFsLCBwb3MuaW1hZykpCiAgICAgICAgICAgIGN1cnJlbnRfcG9zID0gcG9zCgogICAgICAgIGVsaWYgY29tbWFuZCA9PSAiViI6CiAgICAgICAgICAgIHkgPSBwb3BfY29vcmQoKQogICAgICAgICAgICBwb3MgPSBjdXJyZW50X3Bvcy5yZWFsICsgZmxvYXQoeSkgKiAxagogICAgICAgICAgICBpZiBub3QgYWJzb2x1dGU6CiAgICAgICAgICAgICAgICBwb3MgKz0gY3VycmVudF9wb3MuaW1hZyAqIDFqCiAgICAgICAgICAgIHBlbi5saW5lVG8oKHBvcy5yZWFsLCBwb3MuaW1hZykpCiAgICAgICAgICAgIGN1cnJlbnRfcG9zID0gcG9zCgogICAgICAgIGVsaWYgY29tbWFuZCA9PSAiQyI6CiAgICAgICAgICAgIGNvbnRyb2wxID0gZmxvYXQocG9wX2Nvb3JkKCkpICsgZmxvYXQocG9wX2Nvb3JkKCkpICogMWoKICAgICAgICAgICAgY29udHJvbDIgPSBmbG9hdChwb3BfY29vcmQoKSkgKyBmbG9hdChwb3BfY29vcmQoKSkgKiAxagogICAgICAgICAgICBlbmQgPSBmbG9hdChwb3BfY29vcmQoKSkgKyBmbG9hdChwb3BfY29vcmQoKSkgKiAxagoKICAgICAgICAgICAgaWYgbm90IGFic29sdXRlOgogICAgICAgICAgICAgICAgY29udHJvbDEgKz0gY3VycmVudF9wb3MKICAgICAgICAgICAgICAgIGNvbnRyb2wyICs9IGN1cnJlbnRfcG9zCiAgICAgICAgICAgICAgICBlbmQgKz0gY3VycmVudF9wb3MKCiAgICAgICAgICAgIHBlbi5jdXJ2ZVRvKAogICAgICAgICAgICAgICAgKGNvbnRyb2wxLnJlYWwsIGNvbnRyb2wxLmltYWcpLAogICAgICAgICAgICAgICAgKGNvbnRyb2wyLnJlYWwsIGNvbnRyb2wyLmltYWcpLAogICAgICAgICAgICAgICAgKGVuZC5yZWFsLCBlbmQuaW1hZyksCiAgICAgICAgICAgICkKICAgICAgICAgICAgY3VycmVudF9wb3MgPSBlbmQKICAgICAgICAgICAgbGFzdF9jb250cm9sID0gY29udHJvbDIKCiAgICAgICAgZWxpZiBjb21tYW5kID09ICJTIjoKICAgICAgICAgICAgIyBTbW9vdGggY3VydmUuIEZpcnN0IGNvbnRyb2wgcG9pbnQgaXMgdGhlICJyZWZsZWN0aW9uIiBvZgogICAgICAgICAgICAjIHRoZSBzZWNvbmQgY29udHJvbCBwb2ludCBpbiB0aGUgcHJldmlvdXMgcGF0aC4KCiAgICAgICAgICAgICMgbGFzdF9jb21tYW5kIGlzIE5vbmUgcmlnaHQgYWZ0ZXIgYSBjbG9zZXBhdGggKFogaXMgbm90IEMvUykKICAgICAgICAgICAgaWYgbGFzdF9jb21tYW5kIG5vdCBpbiAoIkMiLCAiUyIpOgogICAgICAgICAgICAgICAgIyBJZiB0aGVyZSBpcyBubyBwcmV2aW91cyBjb21tYW5kIG9yIGlmIHRoZSBwcmV2aW91cyBjb21tYW5kCiAgICAgICAgICAgICAgICAjIHdhcyBub3QgYW4gQywgYywgUyBvciBzLCBhc3N1bWUgdGhlIGZpcnN0IGNvbnRyb2wgcG9pbnQgaXMKICAgICAgICAgICAgICAgICMgY29pbmNpZGVudCB3aXRoIHRoZSBjdXJyZW50IHBvaW50LgogICAgICAgICAgICAgICAgY29udHJvbDEgPSBjdXJyZW50X3BvcwogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBUaGUgZmlyc3QgY29udHJvbCBwb2ludCBpcyBhc3N1bWVkIHRvIGJlIHRoZSByZWZsZWN0aW9uIG9mCiAgICAgICAgICAgICAgICAjIHRoZSBzZWNvbmQgY29udHJvbCBwb2ludCBvbiB0aGUgcHJldmlvdXMgY29tbWFuZCByZWxhdGl2ZQogICAgICAgICAgICAgICAgIyB0byB0aGUgY3VycmVudCBwb2ludC4KICAgICAgICAgICAgICAgIGNvbnRyb2wxID0gY3VycmVudF9wb3MgKyBjdXJyZW50X3BvcyAtIGxhc3RfY29udHJvbAoKICAgICAgICAgICAgY29udHJvbDIgPSBmbG9hdChwb3BfY29vcmQoKSkgKyBmbG9hdChwb3BfY29vcmQoKSkgKiAxagogICAgICAgICAgICBlbmQgPSBmbG9hdChwb3BfY29vcmQoKSkgKyBmbG9hdChwb3BfY29vcmQoKSkgKiAxagoKICAgICAgICAgICAgaWYgbm90IGFic29sdXRlOgogICAgICAgICAgICAgICAgY29udHJvbDIgKz0gY3VycmVudF9wb3MKICAgICAgICAgICAgICAgIGVuZCArPSBjdXJyZW50X3BvcwoKICAgICAgICAgICAgcGVuLmN1cnZlVG8oCiAgICAgICAgICAgICAgICAoY29udHJvbDEucmVhbCwgY29udHJvbDEuaW1hZyksCiAgICAgICAgICAgICAgICAoY29udHJvbDIucmVhbCwgY29udHJvbDIuaW1hZyksCiAgICAgICAgICAgICAgICAoZW5kLnJlYWwsIGVuZC5pbWFnKSwKICAgICAgICAgICAgKQogICAgICAgICAgICBjdXJyZW50X3BvcyA9IGVuZAogICAgICAgICAgICBsYXN0X2NvbnRyb2wgPSBjb250cm9sMgoKICAgICAgICBlbGlmIGNvbW1hbmQgPT0gIlEiOgogICAgICAgICAgICBjb250cm9sID0gZmxvYXQocG9wX2Nvb3JkKCkpICsgZmxvYXQocG9wX2Nvb3JkKCkpICogMWoKICAgICAgICAgICAgZW5kID0gZmxvYXQocG9wX2Nvb3JkKCkpICsgZmxvYXQocG9wX2Nvb3JkKCkpICogMWoKCiAgICAgICAgICAgIGlmIG5vdCBhYnNvbHV0ZToKICAgICAgICAgICAgICAgIGNvbnRyb2wgKz0gY3VycmVudF9wb3MKICAgICAgICAgICAgICAgIGVuZCArPSBjdXJyZW50X3BvcwoKICAgICAgICAgICAgcGVuLnFDdXJ2ZVRvKChjb250cm9sLnJlYWwsIGNvbnRyb2wuaW1hZyksIChlbmQucmVhbCwgZW5kLmltYWcpKQogICAgICAgICAgICBjdXJyZW50X3BvcyA9IGVuZAogICAgICAgICAgICBsYXN0X2NvbnRyb2wgPSBjb250cm9sCgogICAgICAgIGVsaWYgY29tbWFuZCA9PSAiVCI6CiAgICAgICAgICAgICMgU21vb3RoIGN1cnZlLiBDb250cm9sIHBvaW50IGlzIHRoZSAicmVmbGVjdGlvbiIgb2YKICAgICAgICAgICAgIyB0aGUgc2Vjb25kIGNvbnRyb2wgcG9pbnQgaW4gdGhlIHByZXZpb3VzIHBhdGguCgogICAgICAgICAgICAjIGxhc3RfY29tbWFuZCBpcyBOb25lIHJpZ2h0IGFmdGVyIGEgY2xvc2VwYXRoIChaIGlzIG5vdCBRL1QpCiAgICAgICAgICAgIGlmIGxhc3RfY29tbWFuZCBub3QgaW4gKCJRIiwgIlQiKToKICAgICAgICAgICAgICAgICMgSWYgdGhlcmUgaXMgbm8gcHJldmlvdXMgY29tbWFuZCBvciBpZiB0aGUgcHJldmlvdXMgY29tbWFuZAogICAgICAgICAgICAgICAgIyB3YXMgbm90IGFuIFEsIHEsIFQgb3IgdCwgYXNzdW1lIHRoZSBmaXJzdCBjb250cm9sIHBvaW50IGlzCiAgICAgICAgICAgICAgICAjIGNvaW5jaWRlbnQgd2l0aCB0aGUgY3VycmVudCBwb2ludC4KICAgICAgICAgICAgICAgIGNvbnRyb2wgPSBjdXJyZW50X3BvcwogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBUaGUgY29udHJvbCBwb2ludCBpcyBhc3N1bWVkIHRvIGJlIHRoZSByZWZsZWN0aW9uIG9mCiAgICAgICAgICAgICAgICAjIHRoZSBjb250cm9sIHBvaW50IG9uIHRoZSBwcmV2aW91cyBjb21tYW5kIHJlbGF0aXZlCiAgICAgICAgICAgICAgICAjIHRvIHRoZSBjdXJyZW50IHBvaW50LgogICAgICAgICAgICAgICAgY29udHJvbCA9IGN1cnJlbnRfcG9zICsgY3VycmVudF9wb3MgLSBsYXN0X2NvbnRyb2wKCiAgICAgICAgICAgIGVuZCA9IGZsb2F0KHBvcF9jb29yZCgpKSArIGZsb2F0KHBvcF9jb29yZCgpKSAqIDFqCgogICAgICAgICAgICBpZiBub3QgYWJzb2x1dGU6CiAgICAgICAgICAgICAgICBlbmQgKz0gY3VycmVudF9wb3MKCiAgICAgICAgICAgIHBlbi5xQ3VydmVUbygoY29udHJvbC5yZWFsLCBjb250cm9sLmltYWcpLCAoZW5kLnJlYWwsIGVuZC5pbWFnKSkKICAgICAgICAgICAgY3VycmVudF9wb3MgPSBlbmQKICAgICAgICAgICAgbGFzdF9jb250cm9sID0gY29udHJvbAoKICAgICAgICBlbGlmIGNvbW1hbmQgPT0gIkEiOgogICAgICAgICAgICByeCA9IGFicyhmbG9hdChlbGVtZW50cy5wb3AoKSkpCiAgICAgICAgICAgIHJ5ID0gYWJzKGZsb2F0KGVsZW1lbnRzLnBvcCgpKSkKICAgICAgICAgICAgcm90YXRpb24gPSBmbG9hdChlbGVtZW50cy5wb3AoKSkKICAgICAgICAgICAgYXJjX2xhcmdlID0gYm9vbChpbnQoZWxlbWVudHMucG9wKCkpKQogICAgICAgICAgICBhcmNfc3dlZXAgPSBib29sKGludChlbGVtZW50cy5wb3AoKSkpCiAgICAgICAgICAgIGVuZCA9IGZsb2F0KGVsZW1lbnRzLnBvcCgpKSArIGZsb2F0KGVsZW1lbnRzLnBvcCgpKSAqIDFqCgogICAgICAgICAgICBpZiBub3QgYWJzb2x1dGU6CiAgICAgICAgICAgICAgICBlbmQgKz0gY3VycmVudF9wb3MKCiAgICAgICAgICAgICMgaWYgdGhlIHBlbiBzdXBwb3J0cyBhcmNzLCBwYXNzIHRoZSB2YWx1ZXMgdW5jaGFuZ2VkLCBvdGhlcndpc2UKICAgICAgICAgICAgIyBhcHByb3hpbWF0ZSB0aGUgYXJjIHdpdGggYSBzZXJpZXMgb2YgY3ViaWMgYmV6aWVyIGN1cnZlcwogICAgICAgICAgICBpZiBoYXZlX2FyY1RvOgogICAgICAgICAgICAgICAgcGVuLmFyY1RvKAogICAgICAgICAgICAgICAgICAgIHJ4LAogICAgICAgICAgICAgICAgICAgIHJ5LAogICAgICAgICAgICAgICAgICAgIHJvdGF0aW9uLAogICAgICAgICAgICAgICAgICAgIGFyY19sYXJnZSwKICAgICAgICAgICAgICAgICAgICBhcmNfc3dlZXAsCiAgICAgICAgICAgICAgICAgICAgKGVuZC5yZWFsLCBlbmQuaW1hZyksCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBhcmMgPSBhcmNfY2xhc3MoCiAgICAgICAgICAgICAgICAgICAgY3VycmVudF9wb3MsIHJ4LCByeSwgcm90YXRpb24sIGFyY19sYXJnZSwgYXJjX3N3ZWVwLCBlbmQKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGFyYy5kcmF3KHBlbikKCiAgICAgICAgICAgIGN1cnJlbnRfcG9zID0gZW5kCgogICAgIyBubyBmaW5hbCBaIGNvbW1hbmQsIGl0J3MgYW4gb3BlbiBwYXRoCiAgICBpZiBzdWJwYXRoX29wZW46CiAgICAgICAgcGVuLmVuZFBhdGgoKQo=
+# SVG Path specification parser.
+# This is an adaptation from 'svg.path' by Lennart Regebro (@regebro),
+# modified so that the parser takes a FontTools Pen object instead of
+# returning a list of svg.path Path objects.
+# The original code can be found at:
+# https://github.com/regebro/svg.path/blob/4f9b6e3/src/svg/path/parser.py
+# Copyright (c) 2013-2014 Lennart Regebro
+# License: MIT
+
+from .arc import EllipticalArc
+import cmath
+import re
+
+COMMANDS = set("MmZzLlHhVvCcSsQqTtAa")
+ARC_COMMANDS = set("Aa")
+UPPERCASE = set("MZLHVCSQTA")
+
+COMMAND_RE = re.compile("([MmZzLlHhVvCcSsQqTtAa])")
+
+# https://www.w3.org/TR/css-syntax-3/#number-token-diagram
+#   but -6.e-5 will be tokenized as "-6" then "-5" and confuse parsing
+FLOAT_RE = re.compile(
+    r"[-+]?"  # optional sign
+    r"(?:"
+    r"(?:0|[1-9][0-9]*)(?:\.[0-9]+)?(?:[eE][-+]?[0-9]+)?"  # int/float
+    r"|"
+    r"(?:\.[0-9]+(?:[eE][-+]?[0-9]+)?)"  # float with leading dot (e.g. '.42')
+    r")"
+)
+BOOL_RE = re.compile("^[01]")
+SEPARATOR_RE = re.compile(f"[, \t]")
+
+
+def _tokenize_path(pathdef):
+    arc_cmd = None
+    for x in COMMAND_RE.split(pathdef):
+        if x in COMMANDS:
+            arc_cmd = x if x in ARC_COMMANDS else None
+            yield x
+            continue
+
+        if arc_cmd:
+            try:
+                yield from _tokenize_arc_arguments(x)
+            except ValueError as e:
+                raise ValueError(f"Invalid arc command: '{arc_cmd}{x}'") from e
+        else:
+            for token in FLOAT_RE.findall(x):
+                yield token
+
+
+ARC_ARGUMENT_TYPES = (
+    ("rx", FLOAT_RE),
+    ("ry", FLOAT_RE),
+    ("x-axis-rotation", FLOAT_RE),
+    ("large-arc-flag", BOOL_RE),
+    ("sweep-flag", BOOL_RE),
+    ("x", FLOAT_RE),
+    ("y", FLOAT_RE),
+)
+
+
+def _tokenize_arc_arguments(arcdef):
+    raw_args = [s for s in SEPARATOR_RE.split(arcdef) if s]
+    if not raw_args:
+        raise ValueError(f"Not enough arguments: '{arcdef}'")
+    raw_args.reverse()
+
+    i = 0
+    while raw_args:
+        arg = raw_args.pop()
+
+        name, pattern = ARC_ARGUMENT_TYPES[i]
+        match = pattern.search(arg)
+        if not match:
+            raise ValueError(f"Invalid argument for '{name}' parameter: {arg!r}")
+
+        j, k = match.span()
+        yield arg[j:k]
+        arg = arg[k:]
+
+        if arg:
+            raw_args.append(arg)
+
+        # wrap around every 7 consecutive arguments
+        if i == 6:
+            i = 0
+        else:
+            i += 1
+
+    if i != 0:
+        raise ValueError(f"Not enough arguments: '{arcdef}'")
+
+
+def parse_path(pathdef, pen, current_pos=(0, 0), arc_class=EllipticalArc):
+    """Parse SVG path definition (i.e. "d" attribute of <path> elements)
+    and call a 'pen' object's moveTo, lineTo, curveTo, qCurveTo and closePath
+    methods.
+
+    If 'current_pos' (2-float tuple) is provided, the initial moveTo will
+    be relative to that instead being absolute.
+
+    If the pen has an "arcTo" method, it is called with the original values
+    of the elliptical arc curve commands:
+
+    .. code-block::
+
+        pen.arcTo(rx, ry, rotation, arc_large, arc_sweep, (x, y))
+
+    Otherwise, the arcs are approximated by series of cubic Bezier segments
+    ("curveTo"), one every 90 degrees.
+    """
+    # In the SVG specs, initial movetos are absolute, even if
+    # specified as 'm'. This is the default behavior here as well.
+    # But if you pass in a current_pos variable, the initial moveto
+    # will be relative to that current_pos. This is useful.
+    current_pos = complex(*current_pos)
+
+    elements = list(_tokenize_path(pathdef))
+    # Reverse for easy use of .pop()
+    elements.reverse()
+
+    # A path data segment (if there is one) must begin with a moveto
+    # command (https://www.w3.org/TR/SVG11/paths.html#PathDataMovetoCommands);
+    # raise before any pen call instead of inventing a start point.
+    if elements and elements[-1] not in ("M", "m"):
+        raise ValueError("Path must start with a moveto command: %r" % pathdef)
+
+    # start_pos is the initial point of the current subpath; it is retained
+    # after a closepath so that a drawto command following Z can start a new
+    # subpath at that same point, while subpath_open tracks whether there is
+    # a subpath in progress that still needs closePath/endPath.
+    start_pos = None
+    subpath_open = False
+    command = None
+    last_control = None
+
+    have_arcTo = hasattr(pen, "arcTo")
+
+    def pop_coord():
+        # A drawto command consumes a fixed number of coordinate tokens. A
+        # malformed path (a command with too few numbers) can run the token
+        # list dry; turn the resulting IndexError into a clear ValueError, like
+        # the parser's other errors, instead of a bare "pop from empty list".
+        try:
+            return elements.pop()
+        except IndexError:
+            raise ValueError(
+                "Not enough coordinates for command %r in path: %r" % (command, pathdef)
+            ) from None
+
+    while elements:
+        if elements[-1] in COMMANDS:
+            # New command.
+            last_command = command  # Used by S and T
+            command = elements.pop()
+            absolute = command in UPPERCASE
+            command = command.upper()
+        else:
+            # If this element starts with numbers, it is an implicit command
+            # and we don't change the command. Check that it's allowed:
+            if command is None:
+                raise ValueError(
+                    "Unallowed implicit command in %s, position %s"
+                    % (pathdef, len(pathdef.split()) - len(elements))
+                )
+            last_command = command  # Used by S and T
+
+        if command not in ("M", "Z") and not subpath_open and start_pos is not None:
+            # If a closepath is followed immediately by any other command,
+            # the next subpath starts at the same initial point as the
+            # current subpath:
+            # https://www.w3.org/TR/SVG11/paths.html#PathDataClosePathCommand
+            pen.moveTo((start_pos.real, start_pos.imag))
+            subpath_open = True
+
+        if command == "M":
+            # Moveto command.
+            x = pop_coord()
+            y = pop_coord()
+            pos = float(x) + float(y) * 1j
+            if absolute:
+                current_pos = pos
+            else:
+                current_pos += pos
+
+            # M is not preceded by Z; it's an open subpath
+            if subpath_open:
+                pen.endPath()
+
+            pen.moveTo((current_pos.real, current_pos.imag))
+
+            # when M is called, reset start_pos
+            # This behavior of Z is defined in svg spec:
+            # http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand
+            start_pos = current_pos
+            subpath_open = True
+
+            # Implicit moveto commands are treated as lineto commands.
+            # So we set command to lineto here, in case there are
+            # further implicit commands after this moveto.
+            command = "L"
+
+        elif command == "Z":
+            # Close path
+            # A redundant Z with no open subpath (e.g. "M0,0 Z Z") is valid
+            # per the SVG path grammar and has no effect; ignore it instead
+            # of emitting a second closePath.
+            if subpath_open:
+                if not cmath.isclose(
+                    current_pos, start_pos, rel_tol=1e-15, abs_tol=1e-15
+                ):
+                    pen.lineTo((start_pos.real, start_pos.imag))
+                pen.closePath()
+                current_pos = start_pos
+                subpath_open = False
+            command = None  # You can't have implicit commands after closing.
+
+        elif command == "L":
+            x = pop_coord()
+            y = pop_coord()
+            pos = float(x) + float(y) * 1j
+            if not absolute:
+                pos += current_pos
+            pen.lineTo((pos.real, pos.imag))
+            current_pos = pos
+
+        elif command == "H":
+            x = pop_coord()
+            pos = float(x) + current_pos.imag * 1j
+            if not absolute:
+                pos += current_pos.real
+            pen.lineTo((pos.real, pos.imag))
+            current_pos = pos
+
+        elif command == "V":
+            y = pop_coord()
+            pos = current_pos.real + float(y) * 1j
+            if not absolute:
+                pos += current_pos.imag * 1j
+            pen.lineTo((pos.real, pos.imag))
+            current_pos = pos
+
+        elif command == "C":
+            control1 = float(pop_coord()) + float(pop_coord()) * 1j
+            control2 = float(pop_coord()) + float(pop_coord()) * 1j
+            end = float(pop_coord()) + float(pop_coord()) * 1j
+
+            if not absolute:
+                control1 += current_pos
+                control2 += current_pos
+                end += current_pos
+
+            pen.curveTo(
+                (control1.real, control1.imag),
+                (control2.real, control2.imag),
+                (end.real, end.imag),
+            )
+            current_pos = end
+            last_control = control2
+
+        elif command == "S":
+            # Smooth curve. First control point is the "reflection" of
+            # the second control point in the previous path.
+
+            # last_command is None right after a closepath (Z is not C/S)
+            if last_command not in ("C", "S"):
+                # If there is no previous command or if the previous command
+                # was not an C, c, S or s, assume the first control point is
+                # coincident with the current point.
+                control1 = current_pos
+            else:
+                # The first control point is assumed to be the reflection of
+                # the second control point on the previous command relative
+                # to the current point.
+                control1 = current_pos + current_pos - last_control
+
+            control2 = float(pop_coord()) + float(pop_coord()) * 1j
+            end = float(pop_coord()) + float(pop_coord()) * 1j
+
+            if not absolute:
+                control2 += current_pos
+                end += current_pos
+
+            pen.curveTo(
+                (control1.real, control1.imag),
+                (control2.real, control2.imag),
+                (end.real, end.imag),
+            )
+            current_pos = end
+            last_control = control2
+
+        elif command == "Q":
+            control = float(pop_coord()) + float(pop_coord()) * 1j
+            end = float(pop_coord()) + float(pop_coord()) * 1j
+
+            if not absolute:
+                control += current_pos
+                end += current_pos
+
+            pen.qCurveTo((control.real, control.imag), (end.real, end.imag))
+            current_pos = end
+            last_control = control
+
+        elif command == "T":
+            # Smooth curve. Control point is the "reflection" of
+            # the second control point in the previous path.
+
+            # last_command is None right after a closepath (Z is not Q/T)
+            if last_command not in ("Q", "T"):
+                # If there is no previous command or if the previous command
+                # was not an Q, q, T or t, assume the first control point is
+                # coincident with the current point.
+                control = current_pos
+            else:
+                # The control point is assumed to be the reflection of
+                # the control point on the previous command relative
+                # to the current point.
+                control = current_pos + current_pos - last_control
+
+            end = float(pop_coord()) + float(pop_coord()) * 1j
+
+            if not absolute:
+                end += current_pos
+
+            pen.qCurveTo((control.real, control.imag), (end.real, end.imag))
+            current_pos = end
+            last_control = control
+
+        elif command == "A":
+            rx = abs(float(elements.pop()))
+            ry = abs(float(elements.pop()))
+            rotation = float(elements.pop())
+            arc_large = bool(int(elements.pop()))
+            arc_sweep = bool(int(elements.pop()))
+            end = float(elements.pop()) + float(elements.pop()) * 1j
+
+            if not absolute:
+                end += current_pos
+
+            # if the pen supports arcs, pass the values unchanged, otherwise
+            # approximate the arc with a series of cubic bezier curves
+            if have_arcTo:
+                pen.arcTo(
+                    rx,
+                    ry,
+                    rotation,
+                    arc_large,
+                    arc_sweep,
+                    (end.real, end.imag),
+                )
+            else:
+                arc = arc_class(
+                    current_pos, rx, ry, rotation, arc_large, arc_sweep, end
+                )
+                arc.draw(pen)
+
+            current_pos = end
+
+    # no final Z command, it's an open path
+    if subpath_open:
+        pen.endPath()

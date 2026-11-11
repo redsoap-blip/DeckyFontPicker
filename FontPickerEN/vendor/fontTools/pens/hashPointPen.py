@@ -1,1 +1,89 @@
-IyBNb2RpZmllZCBmcm9tIGh0dHBzOi8vZ2l0aHViLmNvbS9hZG9iZS10eXBlLXRvb2xzL3BzYXV0b2hpbnQvYmxvYi8wOGIzNDY4NjU3MTBlZDNjMTcyZjFlYjU4MWQ2ZWYyNDNiMjAzZjk5L3B5dGhvbi9wc2F1dG9oaW50L3Vmb0ZvbnQucHkjTDgwMC1MODM4CmltcG9ydCBoYXNobGliCgpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IE1pc3NpbmdDb21wb25lbnRFcnJvcgpmcm9tIGZvbnRUb29scy5wZW5zLnBvaW50UGVuIGltcG9ydCBBYnN0cmFjdFBvaW50UGVuCgoKY2xhc3MgSGFzaFBvaW50UGVuKEFic3RyYWN0UG9pbnRQZW4pOgogICAgIiIiCiAgICBUaGlzIHBlbiBjYW4gYmUgdXNlZCB0byBjaGVjayBpZiBhIGdseXBoJ3MgY29udGVudHMgKG91dGxpbmVzIHBsdXMKICAgIGNvbXBvbmVudHMpIGhhdmUgY2hhbmdlZC4KCiAgICBDb21wb25lbnRzIGFyZSBhZGRlZCBhcyB0aGUgb3JpZ2luYWwgb3V0bGluZSBwbHVzIGVhY2ggY29tcG9zaXRlJ3MKICAgIHRyYW5zZm9ybWF0aW9uLgoKICAgIEV4YW1wbGU6IFlvdSBoYXZlIHNvbWUgVHJ1ZVR5cGUgaGludGluZyBjb2RlIGZvciBhIGdseXBoIHdoaWNoIHlvdSB3YW50IHRvCiAgICBjb21waWxlLiBUaGUgaGludGluZyBjb2RlIHNwZWNpZmllcyBhIGhhc2ggdmFsdWUgY29tcHV0ZWQgd2l0aCBIYXNoUG9pbnRQZW4KICAgIHRoYXQgd2FzIHZhbGlkIGZvciB0aGUgZ2x5cGgncyBvdXRsaW5lcyBhdCB0aGUgdGltZSB0aGUgaGludGluZyBjb2RlIHdhcwogICAgd3JpdHRlbi4gTm93IHlvdSBjYW4gY2FsY3VsYXRlIHRoZSBoYXNoIGZvciB0aGUgZ2x5cGgncyBjdXJyZW50IG91dGxpbmVzIHRvCiAgICBjaGVjayBpZiB0aGUgb3V0bGluZXMgaGF2ZSBjaGFuZ2VkLCB3aGljaCB3b3VsZCBwcm9iYWJseSBtYWtlIHRoZSBoaW50aW5nCiAgICBjb2RlIGludmFsaWQuCgogICAgPiBnbHlwaCA9IHVmb1tuYW1lXQogICAgPiBoYXNoX3BlbiA9IEhhc2hQb2ludFBlbihnbHlwaC53aWR0aCwgdWZvKQogICAgPiBnbHlwaC5kcmF3UG9pbnRzKGhhc2hfcGVuKQogICAgPiB0dGRhdGEgPSBnbHlwaC5saWIuZ2V0KCJwdWJsaWMudHJ1ZXR5cGUuaW5zdHJ1Y3Rpb25zIiwgTm9uZSkKICAgID4gc3RvcmVkX2hhc2ggPSB0dGRhdGEuZ2V0KCJpZCIsIE5vbmUpICAjIFRoZSBoYXNoIGlzIHN0b3JlZCBpbiB0aGUgImlkIiBrZXkKICAgID4gaWYgc3RvcmVkX2hhc2ggaXMgTm9uZSBvciBzdG9yZWRfaGFzaCAhPSBoYXNoX3Blbi5oYXNoOgogICAgPiAgICBsb2dnZXIuZXJyb3IoZiJHbHlwaCBoYXNoIG1pc21hdGNoLCBnbHlwaCAne25hbWV9JyB3aWxsIGhhdmUgbm8gaW5zdHJ1Y3Rpb25zIGluIGZvbnQuIikKICAgID4gZWxzZToKICAgID4gICAgIyBUaGUgaGFzaCB2YWx1ZXMgYXJlIGlkZW50aWNhbCwgdGhlIG91dGxpbmUgaGFzIG5vdCBjaGFuZ2VkLgogICAgPiAgICAjIENvbXBpbGUgdGhlIGhpbnRpbmcgY29kZSAuLi4KICAgID4gICAgcGFzcwoKICAgIElmIHlvdSB3YW50IHRvIGNvbXBhcmUgYSBnbHlwaCBmcm9tIGEgc291cmNlIGZvcm1hdCB3aGljaCBzdXBwb3J0cyBmbG9hdGluZyBwb2ludAogICAgY29vcmRpbmF0ZXMgYW5kIHRyYW5zZm9ybWF0aW9ucyBhZ2FpbnN0IGEgZ2x5cGggZnJvbSBhIGZvcm1hdCB3aGljaCBoYXMgcmVzdHJpY3Rpb25zCiAgICBvbiB0aGUgcHJlY2lzaW9uIG9mIGZsb2F0cywgZS5nLiBVRk8gdnMuIFRURiwgeW91IG11c3QgdXNlIGFuIGFwcHJvcHJpYXRlIHJvdW5kaW5nCiAgICBmdW5jdGlvbiB0byBtYWtlIHRoZSB2YWx1ZXMgY29tcGFyYWJsZS4gRm9yIFRURiBmb250cyB3aXRoIGNvbXBvc2l0ZXMsIHRoaXMKICAgIGNvbnN0cnVjdCBjYW4gYmUgdXNlZCB0byBtYWtlIHRoZSB0cmFuc2Zvcm0gdmFsdWVzIGNvbmZvcm0gdG8gRjJEb3QxNDoKCiAgICA+IHR0Zl9oYXNoX3BlbiA9IEhhc2hQb2ludFBlbih0dGZfZ2x5cGhfd2lkdGgsIHR0Rm9udC5nZXRHbHlwaFNldCgpKQogICAgPiB0dGZfcm91bmRfcGVuID0gUm91bmRpbmdQb2ludFBlbih0dGZfaGFzaF9wZW4sIHRyYW5zZm9ybVJvdW5kRnVuYz1wYXJ0aWFsKGZsb2F0VG9GaXhlZFRvRmxvYXQsIHByZWNpc2lvbkJpdHM9MTQpKQogICAgPiB1Zm9faGFzaF9wZW4gPSBIYXNoUG9pbnRQZW4odWZvX2dseXBoLndpZHRoLCB1Zm8pCiAgICA+IHR0Zl9nbHlwaC5kcmF3UG9pbnRzKHR0Zl9yb3VuZF9wZW4sIHR0Rm9udFsiZ2x5ZiJdKQogICAgPiB1Zm9fcm91bmRfcGVuID0gUm91bmRpbmdQb2ludFBlbih1Zm9faGFzaF9wZW4sIHRyYW5zZm9ybVJvdW5kRnVuYz1wYXJ0aWFsKGZsb2F0VG9GaXhlZFRvRmxvYXQsIHByZWNpc2lvbkJpdHM9MTQpKQogICAgPiB1Zm9fZ2x5cGguZHJhd1BvaW50cyh1Zm9fcm91bmRfcGVuKQogICAgPiBhc3NlcnQgdHRmX2hhc2hfcGVuLmhhc2ggPT0gdWZvX2hhc2hfcGVuLmhhc2gKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaFdpZHRoPTAsIGdseXBoU2V0PU5vbmUpOgogICAgICAgIHNlbGYuZ2x5cGhzZXQgPSBnbHlwaFNldAogICAgICAgIHNlbGYuZGF0YSA9IFsidyVzIiAlIHJvdW5kKGdseXBoV2lkdGgsIDkpXQoKICAgIEBwcm9wZXJ0eQogICAgZGVmIGhhc2goc2VsZik6CiAgICAgICAgZGF0YSA9ICIiLmpvaW4oc2VsZi5kYXRhKQogICAgICAgIGlmIGxlbihkYXRhKSA+PSAxMjg6CiAgICAgICAgICAgIGRhdGEgPSBoYXNobGliLnNoYTUxMihkYXRhLmVuY29kZSgiYXNjaWkiKSkuaGV4ZGlnZXN0KCkKICAgICAgICByZXR1cm4gZGF0YQoKICAgIGRlZiBiZWdpblBhdGgoc2VsZiwgaWRlbnRpZmllcj1Ob25lLCAqKmt3YXJncyk6CiAgICAgICAgcGFzcwoKICAgIGRlZiBlbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYuZGF0YS5hcHBlbmQoInwiKQoKICAgIGRlZiBhZGRQb2ludCgKICAgICAgICBzZWxmLAogICAgICAgIHB0LAogICAgICAgIHNlZ21lbnRUeXBlPU5vbmUsCiAgICAgICAgc21vb3RoPUZhbHNlLAogICAgICAgIG5hbWU9Tm9uZSwKICAgICAgICBpZGVudGlmaWVyPU5vbmUsCiAgICAgICAgKiprd2FyZ3MsCiAgICApOgogICAgICAgIGlmIHNlZ21lbnRUeXBlIGlzIE5vbmU6CiAgICAgICAgICAgIHB0X3R5cGUgPSAibyIgICMgb2ZmY3VydmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBwdF90eXBlID0gc2VnbWVudFR5cGVbMF0KICAgICAgICBzZWxmLmRhdGEuYXBwZW5kKGYie3B0X3R5cGV9e3B0WzBdOmd9e3B0WzFdOitnfSIpCgogICAgZGVmIGFkZENvbXBvbmVudChzZWxmLCBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgaWRlbnRpZmllcj1Ob25lLCAqKmt3YXJncyk6CiAgICAgICAgdHIgPSAiIi5qb2luKFtmInt0Oit9IiBmb3IgdCBpbiB0cmFuc2Zvcm1hdGlvbl0pCiAgICAgICAgc2VsZi5kYXRhLmFwcGVuZCgiWyIpCiAgICAgICAgdHJ5OgogICAgICAgICAgICBzZWxmLmdseXBoc2V0W2Jhc2VHbHlwaE5hbWVdLmRyYXdQb2ludHMoc2VsZikKICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgIHJhaXNlIE1pc3NpbmdDb21wb25lbnRFcnJvcihiYXNlR2x5cGhOYW1lKQogICAgICAgIHNlbGYuZGF0YS5hcHBlbmQoZiIoe3RyfSldIikK
+# Modified from https://github.com/adobe-type-tools/psautohint/blob/08b346865710ed3c172f1eb581d6ef243b203f99/python/psautohint/ufoFont.py#L800-L838
+import hashlib
+
+from fontTools.pens.basePen import MissingComponentError
+from fontTools.pens.pointPen import AbstractPointPen
+
+
+class HashPointPen(AbstractPointPen):
+    """
+    This pen can be used to check if a glyph's contents (outlines plus
+    components) have changed.
+
+    Components are added as the original outline plus each composite's
+    transformation.
+
+    Example: You have some TrueType hinting code for a glyph which you want to
+    compile. The hinting code specifies a hash value computed with HashPointPen
+    that was valid for the glyph's outlines at the time the hinting code was
+    written. Now you can calculate the hash for the glyph's current outlines to
+    check if the outlines have changed, which would probably make the hinting
+    code invalid.
+
+    > glyph = ufo[name]
+    > hash_pen = HashPointPen(glyph.width, ufo)
+    > glyph.drawPoints(hash_pen)
+    > ttdata = glyph.lib.get("public.truetype.instructions", None)
+    > stored_hash = ttdata.get("id", None)  # The hash is stored in the "id" key
+    > if stored_hash is None or stored_hash != hash_pen.hash:
+    >    logger.error(f"Glyph hash mismatch, glyph '{name}' will have no instructions in font.")
+    > else:
+    >    # The hash values are identical, the outline has not changed.
+    >    # Compile the hinting code ...
+    >    pass
+
+    If you want to compare a glyph from a source format which supports floating point
+    coordinates and transformations against a glyph from a format which has restrictions
+    on the precision of floats, e.g. UFO vs. TTF, you must use an appropriate rounding
+    function to make the values comparable. For TTF fonts with composites, this
+    construct can be used to make the transform values conform to F2Dot14:
+
+    > ttf_hash_pen = HashPointPen(ttf_glyph_width, ttFont.getGlyphSet())
+    > ttf_round_pen = RoundingPointPen(ttf_hash_pen, transformRoundFunc=partial(floatToFixedToFloat, precisionBits=14))
+    > ufo_hash_pen = HashPointPen(ufo_glyph.width, ufo)
+    > ttf_glyph.drawPoints(ttf_round_pen, ttFont["glyf"])
+    > ufo_round_pen = RoundingPointPen(ufo_hash_pen, transformRoundFunc=partial(floatToFixedToFloat, precisionBits=14))
+    > ufo_glyph.drawPoints(ufo_round_pen)
+    > assert ttf_hash_pen.hash == ufo_hash_pen.hash
+    """
+
+    def __init__(self, glyphWidth=0, glyphSet=None):
+        self.glyphset = glyphSet
+        self.data = ["w%s" % round(glyphWidth, 9)]
+
+    @property
+    def hash(self):
+        data = "".join(self.data)
+        if len(data) >= 128:
+            data = hashlib.sha512(data.encode("ascii")).hexdigest()
+        return data
+
+    def beginPath(self, identifier=None, **kwargs):
+        pass
+
+    def endPath(self):
+        self.data.append("|")
+
+    def addPoint(
+        self,
+        pt,
+        segmentType=None,
+        smooth=False,
+        name=None,
+        identifier=None,
+        **kwargs,
+    ):
+        if segmentType is None:
+            pt_type = "o"  # offcurve
+        else:
+            pt_type = segmentType[0]
+        self.data.append(f"{pt_type}{pt[0]:g}{pt[1]:+g}")
+
+    def addComponent(self, baseGlyphName, transformation, identifier=None, **kwargs):
+        tr = "".join([f"{t:+}" for t in transformation])
+        self.data.append("[")
+        try:
+            self.glyphset[baseGlyphName].drawPoints(self)
+        except KeyError:
+            raise MissingComponentError(baseGlyphName)
+        self.data.append(f"({tr})]")

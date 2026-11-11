@@ -1,1 +1,287 @@
-ZnJvbSBmb250VG9vbHMuZmVhTGliLmVycm9yIGltcG9ydCBGZWF0dXJlTGliRXJyb3IsIEluY2x1ZGVkRmVhTm90Rm91bmQKZnJvbSBmb250VG9vbHMuZmVhTGliLmxvY2F0aW9uIGltcG9ydCBGZWF0dXJlTGliTG9jYXRpb24KaW1wb3J0IHJlCmltcG9ydCBvcwoKdHJ5OgogICAgaW1wb3J0IGN5dGhvbgpleGNlcHQgSW1wb3J0RXJyb3I6CiAgICAjIGlmIGN5dGhvbiBub3QgaW5zdGFsbGVkLCB1c2UgbW9jayBtb2R1bGUgd2l0aCBuby1vcCBkZWNvcmF0b3JzIGFuZCB0eXBlcwogICAgZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgY3l0aG9uCgoKY2xhc3MgTGV4ZXIob2JqZWN0KToKICAgIE5VTUJFUiA9ICJOVU1CRVIiCiAgICBIRVhBREVDSU1BTCA9ICJIRVhBREVDSU1BTCIKICAgIE9DVEFMID0gIk9DVEFMIgogICAgTlVNQkVSUyA9IChOVU1CRVIsIEhFWEFERUNJTUFMLCBPQ1RBTCkKICAgIEZMT0FUID0gIkZMT0FUIgogICAgU1RSSU5HID0gIlNUUklORyIKICAgIE5BTUUgPSAiTkFNRSIKICAgIEZJTEVOQU1FID0gIkZJTEVOQU1FIgogICAgR0xZUEhDTEFTUyA9ICJHTFlQSENMQVNTIgogICAgQ0lEID0gIkNJRCIKICAgIFNZTUJPTCA9ICJTWU1CT0wiCiAgICBDT01NRU5UID0gIkNPTU1FTlQiCiAgICBORVdMSU5FID0gIk5FV0xJTkUiCiAgICBBTk9OWU1PVVNfQkxPQ0sgPSAiQU5PTllNT1VTX0JMT0NLIgoKICAgIENIQVJfV0hJVEVTUEFDRV8gPSAiIFx0IgogICAgQ0hBUl9ORVdMSU5FXyA9ICJcclxuIgogICAgQ0hBUl9TWU1CT0xfID0gIiw7Oi0rJ3t9W108PigpPSIKICAgIENIQVJfRElHSVRfID0gIjAxMjM0NTY3ODkiCiAgICBDSEFSX0hFWERJR0lUXyA9ICIwMTIzNDU2Nzg5QUJDREVGYWJjZGVmIgogICAgQ0hBUl9MRVRURVJfID0gIkFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoiCiAgICBDSEFSX05BTUVfU1RBUlRfID0gQ0hBUl9MRVRURVJfICsgIl8rKjouXn4hXFwiCiAgICBDSEFSX05BTUVfQ09OVElOVUFUSU9OXyA9IENIQVJfTEVUVEVSXyArIENIQVJfRElHSVRfICsgIl8uKyo6Xn4hLy0iCgogICAgUkVfR0xZUEhDTEFTUyA9IHJlLmNvbXBpbGUociJeW0EtWmEtel8wLTkuXC1dKyQiKQoKICAgIE1PREVfTk9STUFMXyA9ICJOT1JNQUwiCiAgICBNT0RFX0ZJTEVOQU1FXyA9ICJGSUxFTkFNRSIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgdGV4dCwgZmlsZW5hbWUpOgogICAgICAgIHNlbGYuZmlsZW5hbWVfID0gZmlsZW5hbWUKICAgICAgICBzZWxmLmxpbmVfID0gMQogICAgICAgIHNlbGYucG9zXyA9IDAKICAgICAgICBzZWxmLmxpbmVfc3RhcnRfID0gMAogICAgICAgIHNlbGYudGV4dF8gPSB0ZXh0CiAgICAgICAgc2VsZi50ZXh0X2xlbmd0aF8gPSBsZW4odGV4dCkKICAgICAgICBzZWxmLm1vZGVfID0gTGV4ZXIuTU9ERV9OT1JNQUxfCgogICAgZGVmIF9faXRlcl9fKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIG5leHQoc2VsZik6ICAjIFB5dGhvbiAyCiAgICAgICAgcmV0dXJuIHNlbGYuX19uZXh0X18oKQoKICAgIGRlZiBfX25leHRfXyhzZWxmKTogICMgUHl0aG9uIDMKICAgICAgICB3aGlsZSBUcnVlOgogICAgICAgICAgICB0b2tlbl90eXBlLCB0b2tlbiwgbG9jYXRpb24gPSBzZWxmLm5leHRfKCkKICAgICAgICAgICAgaWYgdG9rZW5fdHlwZSAhPSBMZXhlci5ORVdMSU5FOgogICAgICAgICAgICAgICAgcmV0dXJuICh0b2tlbl90eXBlLCB0b2tlbiwgbG9jYXRpb24pCgogICAgZGVmIGxvY2F0aW9uXyhzZWxmKToKICAgICAgICBjb2x1bW4gPSBzZWxmLnBvc18gLSBzZWxmLmxpbmVfc3RhcnRfICsgMQogICAgICAgIHJldHVybiBGZWF0dXJlTGliTG9jYXRpb24oc2VsZi5maWxlbmFtZV8gb3IgIjxmZWF0dXJlcz4iLCBzZWxmLmxpbmVfLCBjb2x1bW4pCgogICAgZGVmIG5leHRfKHNlbGYpOgogICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX1dISVRFU1BBQ0VfKQogICAgICAgIGxvY2F0aW9uID0gc2VsZi5sb2NhdGlvbl8oKQogICAgICAgIHN0YXJ0ID0gc2VsZi5wb3NfCiAgICAgICAgdGV4dCA9IHNlbGYudGV4dF8KICAgICAgICBsaW1pdCA9IGxlbih0ZXh0KQogICAgICAgIGlmIHN0YXJ0ID49IGxpbWl0OgogICAgICAgICAgICByYWlzZSBTdG9wSXRlcmF0aW9uKCkKICAgICAgICBjdXJfY2hhciA9IHRleHRbc3RhcnRdCiAgICAgICAgbmV4dF9jaGFyID0gdGV4dFtzdGFydCArIDFdIGlmIHN0YXJ0ICsgMSA8IGxpbWl0IGVsc2UgTm9uZQoKICAgICAgICBpZiBjdXJfY2hhciA9PSAiXG4iOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLmxpbmVfICs9IDEKICAgICAgICAgICAgc2VsZi5saW5lX3N0YXJ0XyA9IHNlbGYucG9zXwogICAgICAgICAgICByZXR1cm4gKExleGVyLk5FV0xJTkUsIE5vbmUsIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICJcciI6CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAyIGlmIG5leHRfY2hhciA9PSAiXG4iIGVsc2UgMQogICAgICAgICAgICBzZWxmLmxpbmVfICs9IDEKICAgICAgICAgICAgc2VsZi5saW5lX3N0YXJ0XyA9IHNlbGYucG9zXwogICAgICAgICAgICByZXR1cm4gKExleGVyLk5FV0xJTkUsIE5vbmUsIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICIjIjoKICAgICAgICAgICAgc2VsZi5zY2FuX3VudGlsXyhMZXhlci5DSEFSX05FV0xJTkVfKQogICAgICAgICAgICByZXR1cm4gKExleGVyLkNPTU1FTlQsIHRleHRbc3RhcnQgOiBzZWxmLnBvc19dLCBsb2NhdGlvbikKCiAgICAgICAgaWYgc2VsZi5tb2RlXyBpcyBMZXhlci5NT0RFX0ZJTEVOQU1FXzoKICAgICAgICAgICAgaWYgY3VyX2NoYXIgIT0gIigiOgogICAgICAgICAgICAgICAgcmFpc2UgRmVhdHVyZUxpYkVycm9yKCJFeHBlY3RlZCAnKCcgYmVmb3JlIGZpbGUgbmFtZSIsIGxvY2F0aW9uKQogICAgICAgICAgICBzZWxmLnNjYW5fdW50aWxfKCIpIikKICAgICAgICAgICAgY3VyX2NoYXIgPSB0ZXh0W3NlbGYucG9zX10gaWYgc2VsZi5wb3NfIDwgbGltaXQgZWxzZSBOb25lCiAgICAgICAgICAgIGlmIGN1cl9jaGFyICE9ICIpIjoKICAgICAgICAgICAgICAgIHJhaXNlIEZlYXR1cmVMaWJFcnJvcigiRXhwZWN0ZWQgJyknIGFmdGVyIGZpbGUgbmFtZSIsIGxvY2F0aW9uKQogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLm1vZGVfID0gTGV4ZXIuTU9ERV9OT1JNQUxfCiAgICAgICAgICAgIHJldHVybiAoTGV4ZXIuRklMRU5BTUUsIHRleHRbc3RhcnQgKyAxIDogc2VsZi5wb3NfIC0gMV0sIGxvY2F0aW9uKQoKICAgICAgICBpZiBjdXJfY2hhciA9PSAiXFwiIGFuZCBuZXh0X2NoYXIgaW4gTGV4ZXIuQ0hBUl9ESUdJVF86CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAxCiAgICAgICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX0RJR0lUXykKICAgICAgICAgICAgcmV0dXJuIChMZXhlci5DSUQsIGludCh0ZXh0W3N0YXJ0ICsgMSA6IHNlbGYucG9zX10sIDEwKSwgbG9jYXRpb24pCiAgICAgICAgaWYgY3VyX2NoYXIgPT0gIkAiOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9OQU1FX0NPTlRJTlVBVElPTl8pCiAgICAgICAgICAgIGdseXBoY2xhc3MgPSB0ZXh0W3N0YXJ0ICsgMSA6IHNlbGYucG9zX10KICAgICAgICAgICAgaWYgbGVuKGdseXBoY2xhc3MpIDwgMToKICAgICAgICAgICAgICAgIHJhaXNlIEZlYXR1cmVMaWJFcnJvcigiRXhwZWN0ZWQgZ2x5cGggY2xhc3MgbmFtZSIsIGxvY2F0aW9uKQogICAgICAgICAgICBpZiBub3QgTGV4ZXIuUkVfR0xZUEhDTEFTUy5tYXRjaChnbHlwaGNsYXNzKToKICAgICAgICAgICAgICAgIHJhaXNlIEZlYXR1cmVMaWJFcnJvcigKICAgICAgICAgICAgICAgICAgICAiR2x5cGggY2xhc3MgbmFtZXMgbXVzdCBjb25zaXN0IG9mIGxldHRlcnMsIGRpZ2l0cywgIgogICAgICAgICAgICAgICAgICAgICJ1bmRlcnNjb3JlLCBwZXJpb2Qgb3IgaHlwaGVuIiwKICAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgcmV0dXJuIChMZXhlci5HTFlQSENMQVNTLCBnbHlwaGNsYXNzLCBsb2NhdGlvbikKICAgICAgICBpZiBjdXJfY2hhciBpbiBMZXhlci5DSEFSX05BTUVfU1RBUlRfOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9OQU1FX0NPTlRJTlVBVElPTl8pCiAgICAgICAgICAgIHRva2VuID0gdGV4dFtzdGFydCA6IHNlbGYucG9zX10KICAgICAgICAgICAgaWYgdG9rZW4gPT0gImluY2x1ZGUiOgogICAgICAgICAgICAgICAgc2VsZi5tb2RlXyA9IExleGVyLk1PREVfRklMRU5BTUVfCiAgICAgICAgICAgIHJldHVybiAoTGV4ZXIuTkFNRSwgdG9rZW4sIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICIwIiBhbmQgbmV4dF9jaGFyIGluICJ4WCI6CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAyCiAgICAgICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX0hFWERJR0lUXykKICAgICAgICAgICAgcmV0dXJuIChMZXhlci5IRVhBREVDSU1BTCwgaW50KHRleHRbc3RhcnQgOiBzZWxmLnBvc19dLCAxNiksIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICIwIiBhbmQgbmV4dF9jaGFyIGluIExleGVyLkNIQVJfRElHSVRfOgogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9ESUdJVF8pCiAgICAgICAgICAgIHJldHVybiAoTGV4ZXIuT0NUQUwsIGludCh0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXSwgOCksIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyIGluIExleGVyLkNIQVJfRElHSVRfOgogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9ESUdJVF8pCiAgICAgICAgICAgIGlmIHNlbGYucG9zXyA+PSBsaW1pdCBvciB0ZXh0W3NlbGYucG9zX10gIT0gIi4iOgogICAgICAgICAgICAgICAgcmV0dXJuIChMZXhlci5OVU1CRVIsIGludCh0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXSwgMTApLCBsb2NhdGlvbikKICAgICAgICAgICAgc2VsZi5zY2FuX292ZXJfKCIuIikKICAgICAgICAgICAgc2VsZi5zY2FuX292ZXJfKExleGVyLkNIQVJfRElHSVRfKQogICAgICAgICAgICByZXR1cm4gKExleGVyLkZMT0FULCBmbG9hdCh0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXSksIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyID09ICItIiBhbmQgbmV4dF9jaGFyIGluIExleGVyLkNIQVJfRElHSVRfOgogICAgICAgICAgICBzZWxmLnBvc18gKz0gMQogICAgICAgICAgICBzZWxmLnNjYW5fb3Zlcl8oTGV4ZXIuQ0hBUl9ESUdJVF8pCiAgICAgICAgICAgIGlmIHNlbGYucG9zXyA+PSBsaW1pdCBvciB0ZXh0W3NlbGYucG9zX10gIT0gIi4iOgogICAgICAgICAgICAgICAgcmV0dXJuIChMZXhlci5OVU1CRVIsIGludCh0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXSwgMTApLCBsb2NhdGlvbikKICAgICAgICAgICAgc2VsZi5zY2FuX292ZXJfKCIuIikKICAgICAgICAgICAgc2VsZi5zY2FuX292ZXJfKExleGVyLkNIQVJfRElHSVRfKQogICAgICAgICAgICByZXR1cm4gKExleGVyLkZMT0FULCBmbG9hdCh0ZXh0W3N0YXJ0IDogc2VsZi5wb3NfXSksIGxvY2F0aW9uKQogICAgICAgIGlmIGN1cl9jaGFyIGluIExleGVyLkNIQVJfU1lNQk9MXzoKICAgICAgICAgICAgc2VsZi5wb3NfICs9IDEKICAgICAgICAgICAgcmV0dXJuIChMZXhlci5TWU1CT0wsIGN1cl9jaGFyLCBsb2NhdGlvbikKICAgICAgICBpZiBjdXJfY2hhciA9PSAnIic6CiAgICAgICAgICAgIHNlbGYucG9zXyArPSAxCiAgICAgICAgICAgIHNlbGYuc2Nhbl91bnRpbF8oJyInKQogICAgICAgICAgICBpZiBzZWxmLnBvc18gPCBzZWxmLnRleHRfbGVuZ3RoXyBhbmQgc2VsZi50ZXh0X1tzZWxmLnBvc19dID09ICciJzoKICAgICAgICAgICAgICAgIHNlbGYucG9zXyArPSAxCiAgICAgICAgICAgICAgICAjIHN0cmlwIG5ld2xpbmVzIGVtYmVkZGVkIHdpdGhpbiBhIHN0cmluZwogICAgICAgICAgICAgICAgc3RyaW5nID0gcmUuc3ViKCJbXHJcbl0iLCAiIiwgdGV4dFtzdGFydCArIDEgOiBzZWxmLnBvc18gLSAxXSkKICAgICAgICAgICAgICAgIHJldHVybiAoTGV4ZXIuU1RSSU5HLCBzdHJpbmcsIGxvY2F0aW9uKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmFpc2UgRmVhdHVyZUxpYkVycm9yKCJFeHBlY3RlZCAnXCInIHRvIHRlcm1pbmF0ZSBzdHJpbmciLCBsb2NhdGlvbikKICAgICAgICByYWlzZSBGZWF0dXJlTGliRXJyb3IoIlVuZXhwZWN0ZWQgY2hhcmFjdGVyOiAlciIgJSBjdXJfY2hhciwgbG9jYXRpb24pCgogICAgZGVmIHNjYW5fb3Zlcl8oc2VsZiwgdmFsaWQpOgogICAgICAgIHAgPSBzZWxmLnBvc18KICAgICAgICB3aGlsZSBwIDwgc2VsZi50ZXh0X2xlbmd0aF8gYW5kIHNlbGYudGV4dF9bcF0gaW4gdmFsaWQ6CiAgICAgICAgICAgIHAgKz0gMQogICAgICAgIHNlbGYucG9zXyA9IHAKCiAgICBkZWYgc2Nhbl91bnRpbF8oc2VsZiwgc3RvcF9hdCk6CiAgICAgICAgcCA9IHNlbGYucG9zXwogICAgICAgIHdoaWxlIHAgPCBzZWxmLnRleHRfbGVuZ3RoXyBhbmQgc2VsZi50ZXh0X1twXSBub3QgaW4gc3RvcF9hdDoKICAgICAgICAgICAgcCArPSAxCiAgICAgICAgc2VsZi5wb3NfID0gcAoKICAgIGRlZiBzY2FuX2Fub255bW91c19ibG9jayhzZWxmLCB0YWcpOgogICAgICAgIGxvY2F0aW9uID0gc2VsZi5sb2NhdGlvbl8oKQogICAgICAgIHRhZyA9IHRhZy5zdHJpcCgpCiAgICAgICAgc2VsZi5zY2FuX3VudGlsXyhMZXhlci5DSEFSX05FV0xJTkVfKQogICAgICAgIHNlbGYuc2Nhbl9vdmVyXyhMZXhlci5DSEFSX05FV0xJTkVfKQogICAgICAgIHJlZ2V4cCA9IHIifVxzKiIgKyByZS5lc2NhcGUodGFnKSArIHIiXHMqOyIKICAgICAgICBzcGxpdCA9IHJlLnNwbGl0KHJlZ2V4cCwgc2VsZi50ZXh0X1tzZWxmLnBvc18gOl0sIG1heHNwbGl0PTEpCiAgICAgICAgaWYgbGVuKHNwbGl0KSAhPSAyOgogICAgICAgICAgICByYWlzZSBGZWF0dXJlTGliRXJyb3IoCiAgICAgICAgICAgICAgICAiRXhwZWN0ZWQgJ30gJXM7JyB0byB0ZXJtaW5hdGUgYW5vbnltb3VzIGJsb2NrIiAlIHRhZywgbG9jYXRpb24KICAgICAgICAgICAgKQogICAgICAgIHNlbGYucG9zXyArPSBsZW4oc3BsaXRbMF0pCiAgICAgICAgcmV0dXJuIChMZXhlci5BTk9OWU1PVVNfQkxPQ0ssIHNwbGl0WzBdLCBsb2NhdGlvbikKCgpjbGFzcyBJbmNsdWRpbmdMZXhlcihvYmplY3QpOgogICAgIiIiQSBMZXhlciB0aGF0IGZvbGxvd3MgaW5jbHVkZSBzdGF0ZW1lbnRzLgoKICAgIFRoZSBPcGVuVHlwZSBmZWF0dXJlIGZpbGUgc3BlY2lmaWNhdGlvbiBzdGF0ZXMgdGhhdCBkdWUgdG8KICAgIGhpc3RvcmljYWwgcmVhc29ucywgcmVsYXRpdmUgaW1wb3J0cyBzaG91bGQgYmUgcmVzb2x2ZWQgaW4gdGhpcwogICAgb3JkZXI6CgogICAgMS4gSWYgdGhlIHNvdXJjZSBmb250IGlzIFVGTyBmb3JtYXQsIHRoZW4gcmVsYXRpdmUgdG8gdGhlIFVGTydzCiAgICAgICBmb250IGRpcmVjdG9yeQogICAgMi4gcmVsYXRpdmUgdG8gdGhlIHRvcC1sZXZlbCBpbmNsdWRlIGZpbGUKICAgIDMuIHJlbGF0aXZlIHRvIHRoZSBwYXJlbnQgaW5jbHVkZSBmaWxlCgogICAgV2Ugb25seSBzdXBwb3J0IDEgKHZpYSBpbmNsdWRlRGlyKSBhbmQgMi4KICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmZWF0dXJlZmlsZSwgKiwgaW5jbHVkZURpcj1Ob25lKToKICAgICAgICAiIiJJbml0aWFsaXplcyBhbiBJbmNsdWRpbmdMZXhlci4KCiAgICAgICAgQmVoYXZpb3I6CiAgICAgICAgICAgIElmIGluY2x1ZGVEaXIgaXMgcGFzc2VkLCBpdCB3aWxsIGJlIHVzZWQgdG8gZGV0ZXJtaW5lIHRoZSB0b3AtbGV2ZWwKICAgICAgICAgICAgaW5jbHVkZSBkaXJlY3RvcnkgdG8gdXNlIGZvciBhbGwgZW5jb3VudGVyZWQgaW5jbHVkZSBzdGF0ZW1lbnRzLiBJZiBpdCBpcwogICAgICAgICAgICBub3QgcGFzc2VkLCBgYG9zLnBhdGguZGlybmFtZShmZWF0dXJlZmlsZSlgYCB3aWxsIGJlIGNvbnNpZGVyZWQgdGhlCiAgICAgICAgICAgIGluY2x1ZGUgZGlyZWN0b3J5LgogICAgICAgICIiIgoKICAgICAgICBzZWxmLmxleGVyc18gPSBbc2VsZi5tYWtlX2xleGVyXyhmZWF0dXJlZmlsZSldCiAgICAgICAgc2VsZi5mZWF0dXJlZmlsZXBhdGggPSBzZWxmLmxleGVyc19bMF0uZmlsZW5hbWVfCiAgICAgICAgc2VsZi5pbmNsdWRlRGlyID0gaW5jbHVkZURpcgoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gc2VsZgoKICAgIGRlZiBuZXh0KHNlbGYpOiAgIyBQeXRob24gMgogICAgICAgIHJldHVybiBzZWxmLl9fbmV4dF9fKCkKCiAgICBkZWYgX19uZXh0X18oc2VsZik6ICAjIFB5dGhvbiAzCiAgICAgICAgd2hpbGUgc2VsZi5sZXhlcnNfOgogICAgICAgICAgICBsZXhlciA9IHNlbGYubGV4ZXJzX1stMV0KICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgdG9rZW5fdHlwZSwgdG9rZW4sIGxvY2F0aW9uID0gbmV4dChsZXhlcikKICAgICAgICAgICAgZXhjZXB0IFN0b3BJdGVyYXRpb246CiAgICAgICAgICAgICAgICBzZWxmLmxleGVyc18ucG9wKCkKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGlmIHRva2VuX3R5cGUgaXMgTGV4ZXIuTkFNRSBhbmQgdG9rZW4gPT0gImluY2x1ZGUiOgogICAgICAgICAgICAgICAgZm5hbWVfdHlwZSwgZm5hbWVfdG9rZW4sIGZuYW1lX2xvY2F0aW9uID0gbGV4ZXIubmV4dCgpCiAgICAgICAgICAgICAgICBpZiBmbmFtZV90eXBlIGlzIG5vdCBMZXhlci5GSUxFTkFNRToKICAgICAgICAgICAgICAgICAgICByYWlzZSBGZWF0dXJlTGliRXJyb3IoIkV4cGVjdGVkIGZpbGUgbmFtZSIsIGZuYW1lX2xvY2F0aW9uKQogICAgICAgICAgICAgICAgIyBzZW1pX3R5cGUsIHNlbWlfdG9rZW4sIHNlbWlfbG9jYXRpb24gPSBsZXhlci5uZXh0KCkKICAgICAgICAgICAgICAgICMgaWYgc2VtaV90eXBlIGlzIG5vdCBMZXhlci5TWU1CT0wgb3Igc2VtaV90b2tlbiAhPSAiOyI6CiAgICAgICAgICAgICAgICAjICAgIHJhaXNlIEZlYXR1cmVMaWJFcnJvcigiRXhwZWN0ZWQgJzsnIiwgc2VtaV9sb2NhdGlvbikKICAgICAgICAgICAgICAgIGlmIG9zLnBhdGguaXNhYnMoZm5hbWVfdG9rZW4pOgogICAgICAgICAgICAgICAgICAgIHBhdGggPSBmbmFtZV90b2tlbgogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBpZiBzZWxmLmluY2x1ZGVEaXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIGN1cnBhdGggPSBzZWxmLmluY2x1ZGVEaXIKICAgICAgICAgICAgICAgICAgICBlbGlmIHNlbGYuZmVhdHVyZWZpbGVwYXRoIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICBjdXJwYXRoID0gb3MucGF0aC5kaXJuYW1lKHNlbGYuZmVhdHVyZWZpbGVwYXRoKQogICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgICMgaWYgdGhlIEluY2x1ZGluZ0xleGVyIHdhcyBpbml0aWFsaXplZCBmcm9tIGFuIGluLW1lbW9yeQogICAgICAgICAgICAgICAgICAgICAgICAjIGZpbGUtbGlrZSBzdHJlYW0sIGl0IGRvZXNuJ3QgaGF2ZSBhICduYW1lJyBwb2ludGluZyB0bwogICAgICAgICAgICAgICAgICAgICAgICAjIGl0cyBmaWxlc3lzdGVtIHBhdGgsIHRoZXJlZm9yZSB3ZSBmYWxsIGJhY2sgdG8gdXNpbmcgdGhlCiAgICAgICAgICAgICAgICAgICAgICAgICMgY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeSB0byByZXNvbHZlIHJlbGF0aXZlIGluY2x1ZGVzCiAgICAgICAgICAgICAgICAgICAgICAgIGN1cnBhdGggPSBvcy5nZXRjd2QoKQogICAgICAgICAgICAgICAgICAgIHBhdGggPSBvcy5wYXRoLmpvaW4oY3VycGF0aCwgZm5hbWVfdG9rZW4pCiAgICAgICAgICAgICAgICBpZiBsZW4oc2VsZi5sZXhlcnNfKSA+PSA1OgogICAgICAgICAgICAgICAgICAgIHJhaXNlIEZlYXR1cmVMaWJFcnJvcigiVG9vIG1hbnkgcmVjdXJzaXZlIGluY2x1ZGVzIiwgZm5hbWVfbG9jYXRpb24pCiAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5sZXhlcnNfLmFwcGVuZChzZWxmLm1ha2VfbGV4ZXJfKHBhdGgpKQogICAgICAgICAgICAgICAgZXhjZXB0IEZpbGVOb3RGb3VuZEVycm9yIGFzIGVycjoKICAgICAgICAgICAgICAgICAgICByYWlzZSBJbmNsdWRlZEZlYU5vdEZvdW5kKGZuYW1lX3Rva2VuLCBmbmFtZV9sb2NhdGlvbikgZnJvbSBlcnIKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJldHVybiAodG9rZW5fdHlwZSwgdG9rZW4sIGxvY2F0aW9uKQogICAgICAgIHJhaXNlIFN0b3BJdGVyYXRpb24oKQoKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiBtYWtlX2xleGVyXyhmaWxlX29yX3BhdGgpOgogICAgICAgIGlmIGhhc2F0dHIoZmlsZV9vcl9wYXRoLCAicmVhZCIpOgogICAgICAgICAgICBmaWxlb2JqLCBjbG9zaW5nID0gZmlsZV9vcl9wYXRoLCBGYWxzZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZpbGVuYW1lLCBjbG9zaW5nID0gZmlsZV9vcl9wYXRoLCBUcnVlCiAgICAgICAgICAgIGZpbGVvYmogPSBvcGVuKGZpbGVuYW1lLCAiciIsIGVuY29kaW5nPSJ1dGYtOC1zaWciKQogICAgICAgIGRhdGEgPSBmaWxlb2JqLnJlYWQoKQogICAgICAgIGZpbGVuYW1lID0gZ2V0YXR0cihmaWxlb2JqLCAibmFtZSIsIE5vbmUpCiAgICAgICAgaWYgY2xvc2luZzoKICAgICAgICAgICAgZmlsZW9iai5jbG9zZSgpCiAgICAgICAgcmV0dXJuIExleGVyKGRhdGEsIGZpbGVuYW1lKQoKICAgIGRlZiBzY2FuX2Fub255bW91c19ibG9jayhzZWxmLCB0YWcpOgogICAgICAgIHJldHVybiBzZWxmLmxleGVyc19bLTFdLnNjYW5fYW5vbnltb3VzX2Jsb2NrKHRhZykKCgpjbGFzcyBOb25JbmNsdWRpbmdMZXhlcihJbmNsdWRpbmdMZXhlcik6CiAgICAiIiJMZXhlciB0aGF0IGRvZXMgbm90IGZvbGxvdyBgaW5jbHVkZWAgc3RhdGVtZW50cywgZW1pdHMgdGhlbSBhcy1pcy4iIiIKCiAgICBkZWYgX19uZXh0X18oc2VsZik6ICAjIFB5dGhvbiAzCiAgICAgICAgcmV0dXJuIG5leHQoc2VsZi5sZXhlcnNfWzBdKQo=
+from fontTools.feaLib.error import FeatureLibError, IncludedFeaNotFound
+from fontTools.feaLib.location import FeatureLibLocation
+import re
+import os
+
+try:
+    import cython
+except ImportError:
+    # if cython not installed, use mock module with no-op decorators and types
+    from fontTools.misc import cython
+
+
+class Lexer(object):
+    NUMBER = "NUMBER"
+    HEXADECIMAL = "HEXADECIMAL"
+    OCTAL = "OCTAL"
+    NUMBERS = (NUMBER, HEXADECIMAL, OCTAL)
+    FLOAT = "FLOAT"
+    STRING = "STRING"
+    NAME = "NAME"
+    FILENAME = "FILENAME"
+    GLYPHCLASS = "GLYPHCLASS"
+    CID = "CID"
+    SYMBOL = "SYMBOL"
+    COMMENT = "COMMENT"
+    NEWLINE = "NEWLINE"
+    ANONYMOUS_BLOCK = "ANONYMOUS_BLOCK"
+
+    CHAR_WHITESPACE_ = " \t"
+    CHAR_NEWLINE_ = "\r\n"
+    CHAR_SYMBOL_ = ",;:-+'{}[]<>()="
+    CHAR_DIGIT_ = "0123456789"
+    CHAR_HEXDIGIT_ = "0123456789ABCDEFabcdef"
+    CHAR_LETTER_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    CHAR_NAME_START_ = CHAR_LETTER_ + "_+*:.^~!\\"
+    CHAR_NAME_CONTINUATION_ = CHAR_LETTER_ + CHAR_DIGIT_ + "_.+*:^~!/-"
+
+    RE_GLYPHCLASS = re.compile(r"^[A-Za-z_0-9.\-]+$")
+
+    MODE_NORMAL_ = "NORMAL"
+    MODE_FILENAME_ = "FILENAME"
+
+    def __init__(self, text, filename):
+        self.filename_ = filename
+        self.line_ = 1
+        self.pos_ = 0
+        self.line_start_ = 0
+        self.text_ = text
+        self.text_length_ = len(text)
+        self.mode_ = Lexer.MODE_NORMAL_
+
+    def __iter__(self):
+        return self
+
+    def next(self):  # Python 2
+        return self.__next__()
+
+    def __next__(self):  # Python 3
+        while True:
+            token_type, token, location = self.next_()
+            if token_type != Lexer.NEWLINE:
+                return (token_type, token, location)
+
+    def location_(self):
+        column = self.pos_ - self.line_start_ + 1
+        return FeatureLibLocation(self.filename_ or "<features>", self.line_, column)
+
+    def next_(self):
+        self.scan_over_(Lexer.CHAR_WHITESPACE_)
+        location = self.location_()
+        start = self.pos_
+        text = self.text_
+        limit = len(text)
+        if start >= limit:
+            raise StopIteration()
+        cur_char = text[start]
+        next_char = text[start + 1] if start + 1 < limit else None
+
+        if cur_char == "\n":
+            self.pos_ += 1
+            self.line_ += 1
+            self.line_start_ = self.pos_
+            return (Lexer.NEWLINE, None, location)
+        if cur_char == "\r":
+            self.pos_ += 2 if next_char == "\n" else 1
+            self.line_ += 1
+            self.line_start_ = self.pos_
+            return (Lexer.NEWLINE, None, location)
+        if cur_char == "#":
+            self.scan_until_(Lexer.CHAR_NEWLINE_)
+            return (Lexer.COMMENT, text[start : self.pos_], location)
+
+        if self.mode_ is Lexer.MODE_FILENAME_:
+            if cur_char != "(":
+                raise FeatureLibError("Expected '(' before file name", location)
+            self.scan_until_(")")
+            cur_char = text[self.pos_] if self.pos_ < limit else None
+            if cur_char != ")":
+                raise FeatureLibError("Expected ')' after file name", location)
+            self.pos_ += 1
+            self.mode_ = Lexer.MODE_NORMAL_
+            return (Lexer.FILENAME, text[start + 1 : self.pos_ - 1], location)
+
+        if cur_char == "\\" and next_char in Lexer.CHAR_DIGIT_:
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.CID, int(text[start + 1 : self.pos_], 10), location)
+        if cur_char == "@":
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_NAME_CONTINUATION_)
+            glyphclass = text[start + 1 : self.pos_]
+            if len(glyphclass) < 1:
+                raise FeatureLibError("Expected glyph class name", location)
+            if not Lexer.RE_GLYPHCLASS.match(glyphclass):
+                raise FeatureLibError(
+                    "Glyph class names must consist of letters, digits, "
+                    "underscore, period or hyphen",
+                    location,
+                )
+            return (Lexer.GLYPHCLASS, glyphclass, location)
+        if cur_char in Lexer.CHAR_NAME_START_:
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_NAME_CONTINUATION_)
+            token = text[start : self.pos_]
+            if token == "include":
+                self.mode_ = Lexer.MODE_FILENAME_
+            return (Lexer.NAME, token, location)
+        if cur_char == "0" and next_char in "xX":
+            self.pos_ += 2
+            self.scan_over_(Lexer.CHAR_HEXDIGIT_)
+            return (Lexer.HEXADECIMAL, int(text[start : self.pos_], 16), location)
+        if cur_char == "0" and next_char in Lexer.CHAR_DIGIT_:
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.OCTAL, int(text[start : self.pos_], 8), location)
+        if cur_char in Lexer.CHAR_DIGIT_:
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            if self.pos_ >= limit or text[self.pos_] != ".":
+                return (Lexer.NUMBER, int(text[start : self.pos_], 10), location)
+            self.scan_over_(".")
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.FLOAT, float(text[start : self.pos_]), location)
+        if cur_char == "-" and next_char in Lexer.CHAR_DIGIT_:
+            self.pos_ += 1
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            if self.pos_ >= limit or text[self.pos_] != ".":
+                return (Lexer.NUMBER, int(text[start : self.pos_], 10), location)
+            self.scan_over_(".")
+            self.scan_over_(Lexer.CHAR_DIGIT_)
+            return (Lexer.FLOAT, float(text[start : self.pos_]), location)
+        if cur_char in Lexer.CHAR_SYMBOL_:
+            self.pos_ += 1
+            return (Lexer.SYMBOL, cur_char, location)
+        if cur_char == '"':
+            self.pos_ += 1
+            self.scan_until_('"')
+            if self.pos_ < self.text_length_ and self.text_[self.pos_] == '"':
+                self.pos_ += 1
+                # strip newlines embedded within a string
+                string = re.sub("[\r\n]", "", text[start + 1 : self.pos_ - 1])
+                return (Lexer.STRING, string, location)
+            else:
+                raise FeatureLibError("Expected '\"' to terminate string", location)
+        raise FeatureLibError("Unexpected character: %r" % cur_char, location)
+
+    def scan_over_(self, valid):
+        p = self.pos_
+        while p < self.text_length_ and self.text_[p] in valid:
+            p += 1
+        self.pos_ = p
+
+    def scan_until_(self, stop_at):
+        p = self.pos_
+        while p < self.text_length_ and self.text_[p] not in stop_at:
+            p += 1
+        self.pos_ = p
+
+    def scan_anonymous_block(self, tag):
+        location = self.location_()
+        tag = tag.strip()
+        self.scan_until_(Lexer.CHAR_NEWLINE_)
+        self.scan_over_(Lexer.CHAR_NEWLINE_)
+        regexp = r"}\s*" + re.escape(tag) + r"\s*;"
+        split = re.split(regexp, self.text_[self.pos_ :], maxsplit=1)
+        if len(split) != 2:
+            raise FeatureLibError(
+                "Expected '} %s;' to terminate anonymous block" % tag, location
+            )
+        self.pos_ += len(split[0])
+        return (Lexer.ANONYMOUS_BLOCK, split[0], location)
+
+
+class IncludingLexer(object):
+    """A Lexer that follows include statements.
+
+    The OpenType feature file specification states that due to
+    historical reasons, relative imports should be resolved in this
+    order:
+
+    1. If the source font is UFO format, then relative to the UFO's
+       font directory
+    2. relative to the top-level include file
+    3. relative to the parent include file
+
+    We only support 1 (via includeDir) and 2.
+    """
+
+    def __init__(self, featurefile, *, includeDir=None):
+        """Initializes an IncludingLexer.
+
+        Behavior:
+            If includeDir is passed, it will be used to determine the top-level
+            include directory to use for all encountered include statements. If it is
+            not passed, ``os.path.dirname(featurefile)`` will be considered the
+            include directory.
+        """
+
+        self.lexers_ = [self.make_lexer_(featurefile)]
+        self.featurefilepath = self.lexers_[0].filename_
+        self.includeDir = includeDir
+
+    def __iter__(self):
+        return self
+
+    def next(self):  # Python 2
+        return self.__next__()
+
+    def __next__(self):  # Python 3
+        while self.lexers_:
+            lexer = self.lexers_[-1]
+            try:
+                token_type, token, location = next(lexer)
+            except StopIteration:
+                self.lexers_.pop()
+                continue
+            if token_type is Lexer.NAME and token == "include":
+                fname_type, fname_token, fname_location = lexer.next()
+                if fname_type is not Lexer.FILENAME:
+                    raise FeatureLibError("Expected file name", fname_location)
+                # semi_type, semi_token, semi_location = lexer.next()
+                # if semi_type is not Lexer.SYMBOL or semi_token != ";":
+                #    raise FeatureLibError("Expected ';'", semi_location)
+                if os.path.isabs(fname_token):
+                    path = fname_token
+                else:
+                    if self.includeDir is not None:
+                        curpath = self.includeDir
+                    elif self.featurefilepath is not None:
+                        curpath = os.path.dirname(self.featurefilepath)
+                    else:
+                        # if the IncludingLexer was initialized from an in-memory
+                        # file-like stream, it doesn't have a 'name' pointing to
+                        # its filesystem path, therefore we fall back to using the
+                        # current working directory to resolve relative includes
+                        curpath = os.getcwd()
+                    path = os.path.join(curpath, fname_token)
+                if len(self.lexers_) >= 5:
+                    raise FeatureLibError("Too many recursive includes", fname_location)
+                try:
+                    self.lexers_.append(self.make_lexer_(path))
+                except FileNotFoundError as err:
+                    raise IncludedFeaNotFound(fname_token, fname_location) from err
+            else:
+                return (token_type, token, location)
+        raise StopIteration()
+
+    @staticmethod
+    def make_lexer_(file_or_path):
+        if hasattr(file_or_path, "read"):
+            fileobj, closing = file_or_path, False
+        else:
+            filename, closing = file_or_path, True
+            fileobj = open(filename, "r", encoding="utf-8-sig")
+        data = fileobj.read()
+        filename = getattr(fileobj, "name", None)
+        if closing:
+            fileobj.close()
+        return Lexer(data, filename)
+
+    def scan_anonymous_block(self, tag):
+        return self.lexers_[-1].scan_anonymous_block(tag)
+
+
+class NonIncludingLexer(IncludingLexer):
+    """Lexer that does not follow `include` statements, emits them as-is."""
+
+    def __next__(self):  # Python 3
+        return next(self.lexers_[0])

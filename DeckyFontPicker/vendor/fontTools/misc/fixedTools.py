@@ -1,1 +1,253 @@
-IiIiClRoZSBgT3BlblR5cGUgc3BlY2lmaWNhdGlvbiA8aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL290ZmYjZGF0YS10eXBlcz5gXwpkZWZpbmVzIHR3byBmaXhlZC1wb2ludCBkYXRhIHR5cGVzOgoKYGBGaXhlZGBgCiAgICAgICAgQSAzMi1iaXQgc2lnbmVkIGZpeGVkLXBvaW50IG51bWJlciB3aXRoIGEgMTYgYml0IHR3b3MtY29tcGxlbWVudAogICAgICAgIG1hZ25pdHVkZSBjb21wb25lbnQgYW5kIDE2IGZyYWN0aW9uYWwgYml0cy4KYGBGMkRPVDE0YGAKICAgICAgICBBIDE2LWJpdCBzaWduZWQgZml4ZWQtcG9pbnQgbnVtYmVyIHdpdGggYSAyIGJpdCB0d29zLWNvbXBsZW1lbnQKICAgICAgICBtYWduaXR1ZGUgY29tcG9uZW50IGFuZCAxNCBmcmFjdGlvbmFsIGJpdHMuCgpUbyBzdXBwb3J0IHJlYWRpbmcgYW5kIHdyaXRpbmcgZGF0YSB3aXRoIHRoZXNlIGRhdGEgdHlwZXMsIHRoaXMgbW9kdWxlIHByb3ZpZGVzCmZ1bmN0aW9ucyBmb3IgY29udmVydGluZyBiZXR3ZWVuIGZpeGVkLXBvaW50LCBmbG9hdCBhbmQgc3RyaW5nIHJlcHJlc2VudGF0aW9ucy4KCi4uIGRhdGE6OiBNQVhfRjJET1QxNAoKICAgICAgICBUaGUgbWF4aW11bSB2YWx1ZSB0aGF0IGNhbiBzdGlsbCBmaXQgaW4gYW4gRjJEb3QxNC4gKDEuOTk5OTM4OTY0ODQzNzUpCiIiIgoKZnJvbSAucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZCwgbmVhcmVzdE11bHRpcGxlU2hvcnRlc3RSZXByCmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCl9fYWxsX18gPSBbCiAgICAiTUFYX0YyRE9UMTQiLAogICAgImZpeGVkVG9GbG9hdCIsCiAgICAiZmxvYXRUb0ZpeGVkIiwKICAgICJmbG9hdFRvRml4ZWRUb0Zsb2F0IiwKICAgICJmbG9hdFRvRml4ZWRUb1N0ciIsCiAgICAiZml4ZWRUb1N0ciIsCiAgICAic3RyVG9GaXhlZCIsCiAgICAic3RyVG9GaXhlZFRvRmxvYXQiLAogICAgImVuc3VyZVZlcnNpb25Jc0xvbmciLAogICAgInZlcnNpb25Ub0ZpeGVkIiwKXQoKCk1BWF9GMkRPVDE0ID0gMHg3RkZGIC8gKDEgPDwgMTQpCgoKZGVmIGZpeGVkVG9GbG9hdCh2YWx1ZTogZmxvYXQsIHByZWNpc2lvbkJpdHM6IGludCkgLT4gZmxvYXQ6CiAgICAiIiJDb252ZXJ0cyBhIGZpeGVkLXBvaW50IG51bWJlciB0byBhIGZsb2F0IGdpdmVuIHRoZSBudW1iZXIgb2YKICAgIHByZWNpc2lvbiBiaXRzLgoKICAgIEFyZ3M6CiAgICAgICAgICAgIHZhbHVlIChpbnQpOiBOdW1iZXIgaW4gZml4ZWQtcG9pbnQgZm9ybWF0LgogICAgICAgICAgICBwcmVjaXNpb25CaXRzIChpbnQpOiBOdW1iZXIgb2YgcHJlY2lzaW9uIGJpdHMuCgogICAgUmV0dXJuczoKICAgICAgICAgICAgRmxvYXRpbmcgcG9pbnQgdmFsdWUuCgogICAgRXhhbXBsZXM6OgoKICAgICAgICAgICAgPj4+IGltcG9ydCBtYXRoCiAgICAgICAgICAgID4+PiBmID0gZml4ZWRUb0Zsb2F0KC0xMDEzOSwgcHJlY2lzaW9uQml0cz0xNCkKICAgICAgICAgICAgPj4+IG1hdGguaXNjbG9zZShmLCAtMC42MTg4MzU0NDkyMTg3NSkKICAgICAgICAgICAgVHJ1ZQogICAgIiIiCiAgICByZXR1cm4gdmFsdWUgLyAoMSA8PCBwcmVjaXNpb25CaXRzKQoKCmRlZiBmbG9hdFRvRml4ZWQodmFsdWUsIHByZWNpc2lvbkJpdHMpOgogICAgIiIiQ29udmVydHMgYSBmbG9hdCB0byBhIGZpeGVkLXBvaW50IG51bWJlciBnaXZlbiB0aGUgbnVtYmVyIG9mCiAgICBwcmVjaXNpb24gYml0cy4KCiAgICBBcmdzOgogICAgICAgICAgICB2YWx1ZSAoZmxvYXQpOiBGbG9hdGluZyBwb2ludCB2YWx1ZS4KICAgICAgICAgICAgcHJlY2lzaW9uQml0cyAoaW50KTogTnVtYmVyIG9mIHByZWNpc2lvbiBiaXRzLgoKICAgIFJldHVybnM6CiAgICAgICAgICAgIGludDogRml4ZWQtcG9pbnQgcmVwcmVzZW50YXRpb24uCgogICAgRXhhbXBsZXM6OgoKICAgICAgICAgICAgPj4+IGZsb2F0VG9GaXhlZCgtMC42MTg4MzU0NDkyMTg3NSwgcHJlY2lzaW9uQml0cz0xNCkKICAgICAgICAgICAgLTEwMTM5CiAgICAgICAgICAgID4+PiBmbG9hdFRvRml4ZWQoLTAuNjE4ODQsIHByZWNpc2lvbkJpdHM9MTQpCiAgICAgICAgICAgIC0xMDEzOQogICAgIiIiCiAgICByZXR1cm4gb3RSb3VuZCh2YWx1ZSAqICgxIDw8IHByZWNpc2lvbkJpdHMpKQoKCmRlZiBmbG9hdFRvRml4ZWRUb0Zsb2F0KHZhbHVlLCBwcmVjaXNpb25CaXRzKToKICAgICIiIkNvbnZlcnRzIGEgZmxvYXQgdG8gYSBmaXhlZC1wb2ludCBudW1iZXIgYW5kIGJhY2sgYWdhaW4uCgogICAgQnkgY29udmVydGluZyB0aGUgZmxvYXQgdG8gZml4ZWQsIHJvdW5kaW5nIGl0LCBhbmQgY29udmVydGluZyBpdCBiYWNrCiAgICB0byBmbG9hdCBhZ2FpbiwgdGhpcyByZXR1cm5zIGEgZmxvYXRpbmcgcG9pbnQgdmFsdWVzIHdoaWNoIGlzIGV4YWN0bHkKICAgIHJlcHJlc2VudGFibGUgaW4gZml4ZWQtcG9pbnQgZm9ybWF0LgoKICAgIE5vdGU6IHRoaXMgKippcyoqIGVxdWl2YWxlbnQgdG8gYGBmaXhlZFRvRmxvYXQoZmxvYXRUb0ZpeGVkKHZhbHVlKSlgYC4KCiAgICBBcmdzOgogICAgICAgICAgICB2YWx1ZSAoZmxvYXQpOiBUaGUgaW5wdXQgZmxvYXRpbmcgcG9pbnQgdmFsdWUuCiAgICAgICAgICAgIHByZWNpc2lvbkJpdHMgKGludCk6IE51bWJlciBvZiBwcmVjaXNpb24gYml0cy4KCiAgICBSZXR1cm5zOgogICAgICAgICAgICBmbG9hdDogVGhlIHRyYW5zZm9ybWVkIGFuZCByb3VuZGVkIHZhbHVlLgoKICAgIEV4YW1wbGVzOjoKICAgICAgICAgICAgPj4+IGltcG9ydCBtYXRoCiAgICAgICAgICAgID4+PiBmMSA9IC0wLjYxODg0CiAgICAgICAgICAgID4+PiBmMiA9IGZsb2F0VG9GaXhlZFRvRmxvYXQoLTAuNjE4ODQsIHByZWNpc2lvbkJpdHM9MTQpCiAgICAgICAgICAgID4+PiBmMSAhPSBmMgogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiBtYXRoLmlzY2xvc2UoZjIsIC0wLjYxODgzNTQ0OTIxODc1KQogICAgICAgICAgICBUcnVlCiAgICAiIiIKICAgIHNjYWxlID0gMSA8PCBwcmVjaXNpb25CaXRzCiAgICByZXR1cm4gb3RSb3VuZCh2YWx1ZSAqIHNjYWxlKSAvIHNjYWxlCgoKZGVmIGZpeGVkVG9TdHIodmFsdWUsIHByZWNpc2lvbkJpdHMpOgogICAgIiIiQ29udmVydHMgYSBmaXhlZC1wb2ludCBudW1iZXIgdG8gYSBzdHJpbmcgcmVwcmVzZW50aW5nIGEgZGVjaW1hbCBmbG9hdC4KCiAgICBUaGlzIGNob29zZXMgdGhlIGZsb2F0IHRoYXQgaGFzIHRoZSBzaG9ydGVzdCBkZWNpbWFsIHJlcHJlc2VudGF0aW9uICh0aGUgbGVhc3QKICAgIG51bWJlciBvZiBmcmFjdGlvbmFsIGRlY2ltYWwgZGlnaXRzKS4KCiAgICBGb3IgZXhhbXBsZSwgdG8gY29udmVydCBhIGZpeGVkLXBvaW50IG51bWJlciBpbiBhIDIuMTQgZm9ybWF0LCB1c2UKICAgIGBgcHJlY2lzaW9uQml0cz0xNGBgOjoKCiAgICAgICAgICAgID4+PiBmaXhlZFRvU3RyKC0xMDEzOSwgcHJlY2lzaW9uQml0cz0xNCkKICAgICAgICAgICAgJy0wLjYxODg0JwoKICAgIFRoaXMgaXMgcHJldHR5IHNsb3cgY29tcGFyZWQgdG8gdGhlIHNpbXBsZSBkaXZpc2lvbiB1c2VkIGluIGBgZml4ZWRUb0Zsb2F0YGAuCiAgICBVc2Ugc3BvcmFkaWNhbGx5IHdoZW4geW91IG5lZWQgdG8gc2VyaWFsaXplIG9yIHByaW50IHRoZSBmaXhlZC1wb2ludCBudW1iZXIgaW4KICAgIGEgaHVtYW4tcmVhZGFibGUgZm9ybS4KICAgIEl0IHVzZXMgbmVhcmVzdE11bHRpcGxlU2hvcnRlc3RSZXByIHVuZGVyIHRoZSBob29kLgoKICAgIEFyZ3M6CiAgICAgICAgICAgIHZhbHVlIChpbnQpOiBUaGUgZml4ZWQtcG9pbnQgdmFsdWUgdG8gY29udmVydC4KICAgICAgICAgICAgcHJlY2lzaW9uQml0cyAoaW50KTogTnVtYmVyIG9mIHByZWNpc2lvbiBiaXRzLCAqdXAgdG8gYSBtYXhpbXVtIG9mIDE2Ki4KCiAgICBSZXR1cm5zOgogICAgICAgICAgICBzdHI6IEEgc3RyaW5nIHJlcHJlc2VudGF0aW9uIG9mIHRoZSB2YWx1ZS4KICAgICIiIgogICAgc2NhbGUgPSAxIDw8IHByZWNpc2lvbkJpdHMKICAgIHJldHVybiBuZWFyZXN0TXVsdGlwbGVTaG9ydGVzdFJlcHIodmFsdWUgLyBzY2FsZSwgZmFjdG9yPTEuMCAvIHNjYWxlKQoKCmRlZiBzdHJUb0ZpeGVkKHN0cmluZywgcHJlY2lzaW9uQml0cyk6CiAgICAiIiJDb252ZXJ0cyBhIHN0cmluZyByZXByZXNlbnRpbmcgYSBkZWNpbWFsIGZsb2F0IHRvIGEgZml4ZWQtcG9pbnQgbnVtYmVyLgoKICAgIEFyZ3M6CiAgICAgICAgICAgIHN0cmluZyAoc3RyKTogQSBzdHJpbmcgcmVwcmVzZW50aW5nIGEgZGVjaW1hbCBmbG9hdC4KICAgICAgICAgICAgcHJlY2lzaW9uQml0cyAoaW50KTogTnVtYmVyIG9mIHByZWNpc2lvbiBiaXRzLCAqdXAgdG8gYSBtYXhpbXVtIG9mIDE2Ki4KCiAgICBSZXR1cm5zOgogICAgICAgICAgICBpbnQ6IEZpeGVkLXBvaW50IHJlcHJlc2VudGF0aW9uLgoKICAgIEV4YW1wbGVzOjoKCiAgICAgICAgICAgID4+PiAjIyB0byBjb252ZXJ0IGEgZmxvYXQgc3RyaW5nIHRvIGEgMi4xNCBmaXhlZC1wb2ludCBudW1iZXI6CiAgICAgICAgICAgID4+PiBzdHJUb0ZpeGVkKCctMC42MTg4NCcsIHByZWNpc2lvbkJpdHM9MTQpCiAgICAgICAgICAgIC0xMDEzOQogICAgIiIiCiAgICB2YWx1ZSA9IGZsb2F0KHN0cmluZykKICAgIHJldHVybiBvdFJvdW5kKHZhbHVlICogKDEgPDwgcHJlY2lzaW9uQml0cykpCgoKZGVmIHN0clRvRml4ZWRUb0Zsb2F0KHN0cmluZywgcHJlY2lzaW9uQml0cyk6CiAgICAiIiJDb252ZXJ0IGEgc3RyaW5nIHRvIGEgZGVjaW1hbCBmbG9hdCB3aXRoIGZpeGVkLXBvaW50IHJvdW5kaW5nLgoKICAgIFRoaXMgZmlyc3QgY29udmVydHMgc3RyaW5nIHRvIGEgZmxvYXQsIHRoZW4gdHVybnMgaXQgaW50byBhIGZpeGVkLXBvaW50CiAgICBudW1iZXIgd2l0aCBgYHByZWNpc2lvbkJpdHNgYCBmcmFjdGlvbmFsIGJpbmFyeSBkaWdpdHMsIHRoZW4gYmFjayB0byBhCiAgICBmbG9hdCBhZ2Fpbi4KCiAgICBUaGlzIGlzIHNpbXBseSBhIHNob3J0aGFuZCBmb3IgZml4ZWRUb0Zsb2F0KGZsb2F0VG9GaXhlZChmbG9hdChzKSkpLgoKICAgIEFyZ3M6CiAgICAgICAgICAgIHN0cmluZyAoc3RyKTogQSBzdHJpbmcgcmVwcmVzZW50aW5nIGEgZGVjaW1hbCBmbG9hdC4KICAgICAgICAgICAgcHJlY2lzaW9uQml0cyAoaW50KTogTnVtYmVyIG9mIHByZWNpc2lvbiBiaXRzLgoKICAgIFJldHVybnM6CiAgICAgICAgICAgIGZsb2F0OiBUaGUgdHJhbnNmb3JtZWQgYW5kIHJvdW5kZWQgdmFsdWUuCgogICAgRXhhbXBsZXM6OgoKICAgICAgICAgICAgPj4+IGltcG9ydCBtYXRoCiAgICAgICAgICAgID4+PiBzID0gJy0wLjYxODg0JwogICAgICAgICAgICA+Pj4gYml0cyA9IDE0CiAgICAgICAgICAgID4+PiBmID0gc3RyVG9GaXhlZFRvRmxvYXQocywgcHJlY2lzaW9uQml0cz1iaXRzKQogICAgICAgICAgICA+Pj4gbWF0aC5pc2Nsb3NlKGYsIC0wLjYxODgzNTQ0OTIxODc1KQogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiBmID09IGZpeGVkVG9GbG9hdChmbG9hdFRvRml4ZWQoZmxvYXQocyksIHByZWNpc2lvbkJpdHM9Yml0cyksIHByZWNpc2lvbkJpdHM9Yml0cykKICAgICAgICAgICAgVHJ1ZQogICAgIiIiCiAgICB2YWx1ZSA9IGZsb2F0KHN0cmluZykKICAgIHNjYWxlID0gMSA8PCBwcmVjaXNpb25CaXRzCiAgICByZXR1cm4gb3RSb3VuZCh2YWx1ZSAqIHNjYWxlKSAvIHNjYWxlCgoKZGVmIGZsb2F0VG9GaXhlZFRvU3RyKHZhbHVlLCBwcmVjaXNpb25CaXRzKToKICAgICIiIkNvbnZlcnQgZmxvYXQgdG8gc3RyaW5nIHdpdGggZml4ZWQtcG9pbnQgcm91bmRpbmcuCgogICAgVGhpcyB1c2VzIHRoZSBzaG9ydGVzdCBkZWNpbWFsIHJlcHJlc2VudGF0aW9uIChpZS4gdGhlIGxlYXN0CiAgICBudW1iZXIgb2YgZnJhY3Rpb25hbCBkZWNpbWFsIGRpZ2l0cykgdG8gcmVwcmVzZW50IHRoZSBlcXVpdmFsZW50CiAgICBmaXhlZC1wb2ludCBudW1iZXIgd2l0aCBgYHByZWNpc2lvbkJpdHNgYCBmcmFjdGlvbmFsIGJpbmFyeSBkaWdpdHMuCiAgICBJdCB1c2VzIG5lYXJlc3RNdWx0aXBsZVNob3J0ZXN0UmVwciB1bmRlciB0aGUgaG9vZC4KCiAgICA+Pj4gZmxvYXRUb0ZpeGVkVG9TdHIoLTAuNjE4ODM1NDQ5MjE4NzUsIHByZWNpc2lvbkJpdHM9MTQpCiAgICAnLTAuNjE4ODQnCgogICAgQXJnczoKICAgICAgICAgICAgdmFsdWUgKGZsb2F0KTogVGhlIGZsb2F0IHZhbHVlIHRvIGNvbnZlcnQuCiAgICAgICAgICAgIHByZWNpc2lvbkJpdHMgKGludCk6IE51bWJlciBvZiBwcmVjaXNpb24gYml0cywgKnVwIHRvIGEgbWF4aW11bSBvZiAxNiouCgogICAgUmV0dXJuczoKICAgICAgICAgICAgc3RyOiBBIHN0cmluZyByZXByZXNlbnRhdGlvbiBvZiB0aGUgdmFsdWUuCgogICAgIiIiCiAgICBzY2FsZSA9IDEgPDwgcHJlY2lzaW9uQml0cwogICAgcmV0dXJuIG5lYXJlc3RNdWx0aXBsZVNob3J0ZXN0UmVwcih2YWx1ZSwgZmFjdG9yPTEuMCAvIHNjYWxlKQoKCmRlZiBlbnN1cmVWZXJzaW9uSXNMb25nKHZhbHVlKToKICAgICIiIkVuc3VyZSBhIHRhYmxlIHZlcnNpb24gaXMgYW4gdW5zaWduZWQgbG9uZy4KCiAgICBPcGVuVHlwZSB0YWJsZSB2ZXJzaW9uIG51bWJlcnMgYXJlIGV4cHJlc3NlZCBhcyBhIHNpbmdsZSB1bnNpZ25lZCBsb25nCiAgICBjb21wcmlzaW5nIG9mIGFuIHVuc2lnbmVkIHNob3J0IG1ham9yIHZlcnNpb24gYW5kIHVuc2lnbmVkIHNob3J0IG1pbm9yCiAgICB2ZXJzaW9uLiBUaGlzIGZ1bmN0aW9uIGRldGVjdHMgaWYgdGhlIHZhbHVlIHRvIGJlIHVzZWQgYXMgYSB2ZXJzaW9uIG51bWJlcgogICAgbG9va3MgdG9vIHNtYWxsIChpLmUuIGlzIGxlc3MgdGhhbiBgYDB4MTAwMDBgYCksIGFuZCBjb252ZXJ0cyBpdCB0bwogICAgZml4ZWQtcG9pbnQgdXNpbmcgOmZ1bmM6YGZsb2F0VG9GaXhlZGAgaWYgc28uCgogICAgQXJnczoKICAgICAgICAgICAgdmFsdWUgKE51bWJlcik6IGEgY2FuZGlkYXRlIHRhYmxlIHZlcnNpb24gbnVtYmVyLgoKICAgIFJldHVybnM6CiAgICAgICAgICAgIGludDogQSB0YWJsZSB2ZXJzaW9uIG51bWJlciwgcG9zc2libHkgY29ycmVjdGVkIHRvIGZpeGVkLXBvaW50LgogICAgIiIiCiAgICBpZiB2YWx1ZSA8IDB4MTAwMDA6CiAgICAgICAgbmV3VmFsdWUgPSBmbG9hdFRvRml4ZWQodmFsdWUsIDE2KQogICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAiVGFibGUgdmVyc2lvbiB2YWx1ZSBpcyBhIGZsb2F0OiAlLjRmOyAiICJmaXggdG8gdXNlIGhleCBpbnN0ZWFkOiAweCUwOHgiLAogICAgICAgICAgICB2YWx1ZSwKICAgICAgICAgICAgbmV3VmFsdWUsCiAgICAgICAgKQogICAgICAgIHZhbHVlID0gbmV3VmFsdWUKICAgIHJldHVybiB2YWx1ZQoKCmRlZiB2ZXJzaW9uVG9GaXhlZCh2YWx1ZSk6CiAgICAiIiJFbnN1cmUgYSB0YWJsZSB2ZXJzaW9uIG51bWJlciBpcyBmaXhlZC1wb2ludC4KCiAgICBBcmdzOgogICAgICAgICAgICB2YWx1ZSAoc3RyKTogYSBjYW5kaWRhdGUgdGFibGUgdmVyc2lvbiBudW1iZXIuCgogICAgUmV0dXJuczoKICAgICAgICAgICAgaW50OiBBIHRhYmxlIHZlcnNpb24gbnVtYmVyLCBwb3NzaWJseSBjb3JyZWN0ZWQgdG8gZml4ZWQtcG9pbnQuCiAgICAiIiIKICAgIHZhbHVlID0gaW50KHZhbHVlLCAwKSBpZiB2YWx1ZS5zdGFydHN3aXRoKCIwIikgZWxzZSBmbG9hdCh2YWx1ZSkKICAgIHZhbHVlID0gZW5zdXJlVmVyc2lvbklzTG9uZyh2YWx1ZSkKICAgIHJldHVybiB2YWx1ZQo=
+"""
+The `OpenType specification <https://docs.microsoft.com/en-us/typography/opentype/spec/otff#data-types>`_
+defines two fixed-point data types:
+
+``Fixed``
+        A 32-bit signed fixed-point number with a 16 bit twos-complement
+        magnitude component and 16 fractional bits.
+``F2DOT14``
+        A 16-bit signed fixed-point number with a 2 bit twos-complement
+        magnitude component and 14 fractional bits.
+
+To support reading and writing data with these data types, this module provides
+functions for converting between fixed-point, float and string representations.
+
+.. data:: MAX_F2DOT14
+
+        The maximum value that can still fit in an F2Dot14. (1.99993896484375)
+"""
+
+from .roundTools import otRound, nearestMultipleShortestRepr
+import logging
+
+log = logging.getLogger(__name__)
+
+__all__ = [
+    "MAX_F2DOT14",
+    "fixedToFloat",
+    "floatToFixed",
+    "floatToFixedToFloat",
+    "floatToFixedToStr",
+    "fixedToStr",
+    "strToFixed",
+    "strToFixedToFloat",
+    "ensureVersionIsLong",
+    "versionToFixed",
+]
+
+
+MAX_F2DOT14 = 0x7FFF / (1 << 14)
+
+
+def fixedToFloat(value: float, precisionBits: int) -> float:
+    """Converts a fixed-point number to a float given the number of
+    precision bits.
+
+    Args:
+            value (int): Number in fixed-point format.
+            precisionBits (int): Number of precision bits.
+
+    Returns:
+            Floating point value.
+
+    Examples::
+
+            >>> import math
+            >>> f = fixedToFloat(-10139, precisionBits=14)
+            >>> math.isclose(f, -0.61883544921875)
+            True
+    """
+    return value / (1 << precisionBits)
+
+
+def floatToFixed(value, precisionBits):
+    """Converts a float to a fixed-point number given the number of
+    precision bits.
+
+    Args:
+            value (float): Floating point value.
+            precisionBits (int): Number of precision bits.
+
+    Returns:
+            int: Fixed-point representation.
+
+    Examples::
+
+            >>> floatToFixed(-0.61883544921875, precisionBits=14)
+            -10139
+            >>> floatToFixed(-0.61884, precisionBits=14)
+            -10139
+    """
+    return otRound(value * (1 << precisionBits))
+
+
+def floatToFixedToFloat(value, precisionBits):
+    """Converts a float to a fixed-point number and back again.
+
+    By converting the float to fixed, rounding it, and converting it back
+    to float again, this returns a floating point values which is exactly
+    representable in fixed-point format.
+
+    Note: this **is** equivalent to ``fixedToFloat(floatToFixed(value))``.
+
+    Args:
+            value (float): The input floating point value.
+            precisionBits (int): Number of precision bits.
+
+    Returns:
+            float: The transformed and rounded value.
+
+    Examples::
+            >>> import math
+            >>> f1 = -0.61884
+            >>> f2 = floatToFixedToFloat(-0.61884, precisionBits=14)
+            >>> f1 != f2
+            True
+            >>> math.isclose(f2, -0.61883544921875)
+            True
+    """
+    scale = 1 << precisionBits
+    return otRound(value * scale) / scale
+
+
+def fixedToStr(value, precisionBits):
+    """Converts a fixed-point number to a string representing a decimal float.
+
+    This chooses the float that has the shortest decimal representation (the least
+    number of fractional decimal digits).
+
+    For example, to convert a fixed-point number in a 2.14 format, use
+    ``precisionBits=14``::
+
+            >>> fixedToStr(-10139, precisionBits=14)
+            '-0.61884'
+
+    This is pretty slow compared to the simple division used in ``fixedToFloat``.
+    Use sporadically when you need to serialize or print the fixed-point number in
+    a human-readable form.
+    It uses nearestMultipleShortestRepr under the hood.
+
+    Args:
+            value (int): The fixed-point value to convert.
+            precisionBits (int): Number of precision bits, *up to a maximum of 16*.
+
+    Returns:
+            str: A string representation of the value.
+    """
+    scale = 1 << precisionBits
+    return nearestMultipleShortestRepr(value / scale, factor=1.0 / scale)
+
+
+def strToFixed(string, precisionBits):
+    """Converts a string representing a decimal float to a fixed-point number.
+
+    Args:
+            string (str): A string representing a decimal float.
+            precisionBits (int): Number of precision bits, *up to a maximum of 16*.
+
+    Returns:
+            int: Fixed-point representation.
+
+    Examples::
+
+            >>> ## to convert a float string to a 2.14 fixed-point number:
+            >>> strToFixed('-0.61884', precisionBits=14)
+            -10139
+    """
+    value = float(string)
+    return otRound(value * (1 << precisionBits))
+
+
+def strToFixedToFloat(string, precisionBits):
+    """Convert a string to a decimal float with fixed-point rounding.
+
+    This first converts string to a float, then turns it into a fixed-point
+    number with ``precisionBits`` fractional binary digits, then back to a
+    float again.
+
+    This is simply a shorthand for fixedToFloat(floatToFixed(float(s))).
+
+    Args:
+            string (str): A string representing a decimal float.
+            precisionBits (int): Number of precision bits.
+
+    Returns:
+            float: The transformed and rounded value.
+
+    Examples::
+
+            >>> import math
+            >>> s = '-0.61884'
+            >>> bits = 14
+            >>> f = strToFixedToFloat(s, precisionBits=bits)
+            >>> math.isclose(f, -0.61883544921875)
+            True
+            >>> f == fixedToFloat(floatToFixed(float(s), precisionBits=bits), precisionBits=bits)
+            True
+    """
+    value = float(string)
+    scale = 1 << precisionBits
+    return otRound(value * scale) / scale
+
+
+def floatToFixedToStr(value, precisionBits):
+    """Convert float to string with fixed-point rounding.
+
+    This uses the shortest decimal representation (ie. the least
+    number of fractional decimal digits) to represent the equivalent
+    fixed-point number with ``precisionBits`` fractional binary digits.
+    It uses nearestMultipleShortestRepr under the hood.
+
+    >>> floatToFixedToStr(-0.61883544921875, precisionBits=14)
+    '-0.61884'
+
+    Args:
+            value (float): The float value to convert.
+            precisionBits (int): Number of precision bits, *up to a maximum of 16*.
+
+    Returns:
+            str: A string representation of the value.
+
+    """
+    scale = 1 << precisionBits
+    return nearestMultipleShortestRepr(value, factor=1.0 / scale)
+
+
+def ensureVersionIsLong(value):
+    """Ensure a table version is an unsigned long.
+
+    OpenType table version numbers are expressed as a single unsigned long
+    comprising of an unsigned short major version and unsigned short minor
+    version. This function detects if the value to be used as a version number
+    looks too small (i.e. is less than ``0x10000``), and converts it to
+    fixed-point using :func:`floatToFixed` if so.
+
+    Args:
+            value (Number): a candidate table version number.
+
+    Returns:
+            int: A table version number, possibly corrected to fixed-point.
+    """
+    if value < 0x10000:
+        newValue = floatToFixed(value, 16)
+        log.warning(
+            "Table version value is a float: %.4f; " "fix to use hex instead: 0x%08x",
+            value,
+            newValue,
+        )
+        value = newValue
+    return value
+
+
+def versionToFixed(value):
+    """Ensure a table version number is fixed-point.
+
+    Args:
+            value (str): a candidate table version number.
+
+    Returns:
+            int: A table version number, possibly corrected to fixed-point.
+    """
+    value = int(value, 0) if value.startswith("0") else float(value)
+    value = ensureVersionIsLong(value)
+    return value

@@ -1,1 +1,5 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLkVfQl9EX1RfIGltcG9ydCB0YWJsZV9FX0JfRF9UXwoKCmNsYXNzIHRhYmxlX19iX2RfYV90KHRhYmxlX0VfQl9EX1RfKToKICAgIGxvY2F0b3JOYW1lID0gImJsb2MiCg==
+from fontTools.ttLib.tables.E_B_D_T_ import table_E_B_D_T_
+
+
+class table__b_d_a_t(table_E_B_D_T_):
+    locatorName = "bloc"

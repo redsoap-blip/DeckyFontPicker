@@ -1,1 +1,191 @@
-IiIiZm9udFRvb2xzLnBlbnMucG9pbnRJbnNpZGVQZW4gLS0gUGVuIGltcGxlbWVudGluZyAicG9pbnQgaW5zaWRlIiB0ZXN0aW5nCmZvciBzaGFwZXMuCiIiIgoKZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBCYXNlUGVuCmZyb20gZm9udFRvb2xzLm1pc2MuYmV6aWVyVG9vbHMgaW1wb3J0IHNvbHZlUXVhZHJhdGljLCBzb2x2ZUN1YmljCgpfX2FsbF9fID0gWyJQb2ludEluc2lkZVBlbiJdCgoKY2xhc3MgUG9pbnRJbnNpZGVQZW4oQmFzZVBlbik6CiAgICAiIiJUaGlzIHBlbiBpbXBsZW1lbnRzICJwb2ludCBpbnNpZGUiIHRlc3Rpbmc6IHRvIHRlc3Qgd2hldGhlcgogICAgYSBnaXZlbiBwb2ludCBsaWVzIGluc2lkZSB0aGUgc2hhcGUgKGJsYWNrKSBvciBvdXRzaWRlICh3aGl0ZSkuCiAgICBJbnN0YW5jZXMgb2YgdGhpcyBjbGFzcyBjYW4gYmUgcmVjeWNsZWQsIGFzIGxvbmcgYXMgdGhlCiAgICBzZXRUZXN0UG9pbnQoKSBtZXRob2QgaXMgdXNlZCB0byBzZXQgdGhlIG5ldyBwb2ludCB0byB0ZXN0LgoKICAgIDpFeGFtcGxlOgogICAgICAgIC4uIGNvZGUtYmxvY2s6OgoKICAgICAgICAgICAgcGVuID0gUG9pbnRJbnNpZGVQZW4oZ2x5cGhTZXQsICgxMDAsIDIwMCkpCiAgICAgICAgICAgIG91dGxpbmUuZHJhdyhwZW4pCiAgICAgICAgICAgIGlzSW5zaWRlID0gcGVuLmdldFJlc3VsdCgpCgogICAgQm90aCB0aGUgZXZlbi1vZGQgYWxnb3JpdGhtIGFuZCB0aGUgbm9uLXplcm8td2luZGluZy1ydWxlCiAgICBhbGdvcml0aG0gYXJlIGltcGxlbWVudGVkLiBUaGUgbGF0dGVyIGlzIHRoZSBkZWZhdWx0LCBzcGVjaWZ5CiAgICBUcnVlIGZvciB0aGUgZXZlbk9kZCBhcmd1bWVudCBvZiBfX2luaXRfXyBvciBzZXRUZXN0UG9pbnQKICAgIHRvIHVzZSB0aGUgZXZlbi1vZGQgYWxnb3JpdGhtLgogICAgIiIiCgogICAgIyBUaGlzIGNsYXNzIGltcGxlbWVudHMgdGhlIGNsYXNzaWNhbCAic2hvb3QgYSByYXkgZnJvbSB0aGUgdGVzdCBwb2ludAogICAgIyB0byBpbmZpbml0eSBhbmQgY291bnQgaG93IG1hbnkgdGltZXMgaXQgaW50ZXJzZWN0cyB0aGUgb3V0bGluZSIgKGFzIHdlbGwKICAgICMgYXMgdGhlIG5vbi16ZXJvIHZhcmlhbnQsIHdoZXJlIHRoZSBjb3VudGVyIGlzIGluY3JlbWVudGVkIGlmIHRoZSBvdXRsaW5lCiAgICAjIGludGVyc2VjdHMgdGhlIHJheSBpbiBvbmUgZGlyZWN0aW9uIGFuZCBkZWNyZW1lbnRlZCBpZiBpdCBpbnRlcnNlY3RzIGluCiAgICAjIHRoZSBvdGhlciBkaXJlY3Rpb24pLgogICAgIyBJIGZvdW5kIGFuIGFtYXppbmdseSBjbGVhciBleHBsYW5hdGlvbiBvZiB0aGUgc3VidGxldGllcyBpbnZvbHZlZCBpbgogICAgIyBpbXBsZW1lbnRpbmcgdGhpcyBjb3JyZWN0bHkgZm9yIHBvbHlnb25zIGhlcmU6CiAgICAjICAgaHR0cDovL2dyYXBoaWNzLmNzLnVjZGF2aXMuZWR1L35va3JleWxvcy9UQXNoaXAvU3ByaW5nMjAwMC9Qb2ludEluUG9seWdvbi5odG1sCiAgICAjIEkgZXh0ZW5kZWQgdGhlIHByaW5jaXBsZXMgb3V0bGluZWQgb24gdGhhdCBwYWdlIHRvIGN1cnZlcy4KCiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhTZXQsIHRlc3RQb2ludCwgZXZlbk9kZD1GYWxzZSk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBzZWxmLnNldFRlc3RQb2ludCh0ZXN0UG9pbnQsIGV2ZW5PZGQpCgogICAgZGVmIHNldFRlc3RQb2ludChzZWxmLCB0ZXN0UG9pbnQsIGV2ZW5PZGQ9RmFsc2UpOgogICAgICAgICIiIlNldCB0aGUgcG9pbnQgdG8gdGVzdC4gQ2FsbCB0aGlzIF9iZWZvcmVfIHRoZSBvdXRsaW5lIGdldHMgZHJhd24uIiIiCiAgICAgICAgc2VsZi50ZXN0UG9pbnQgPSB0ZXN0UG9pbnQKICAgICAgICBzZWxmLmV2ZW5PZGQgPSBldmVuT2RkCiAgICAgICAgc2VsZi5maXJzdFBvaW50ID0gTm9uZQogICAgICAgIHNlbGYuaW50ZXJzZWN0aW9uQ291bnQgPSAwCgogICAgZGVmIGdldFdpbmRpbmcoc2VsZik6CiAgICAgICAgaWYgc2VsZi5maXJzdFBvaW50IGlzIG5vdCBOb25lOgogICAgICAgICAgICAjIGFsd2F5cyBtYWtlIHN1cmUgdGhlIHN1YiBwYXRocyBhcmUgY2xvc2VkOyB0aGUgYWxnb3JpdGhtIG9ubHkgd29ya3MKICAgICAgICAgICAgIyBmb3IgY2xvc2VkIHBhdGhzLgogICAgICAgICAgICBzZWxmLmNsb3NlUGF0aCgpCiAgICAgICAgcmV0dXJuIHNlbGYuaW50ZXJzZWN0aW9uQ291bnQKCiAgICBkZWYgZ2V0UmVzdWx0KHNlbGYpOgogICAgICAgICIiIkFmdGVyIHRoZSBzaGFwZSBoYXMgYmVlbiBkcmF3biwgZ2V0UmVzdWx0KCkgcmV0dXJucyBUcnVlIGlmIHRoZSB0ZXN0CiAgICAgICAgcG9pbnQgbGllcyB3aXRoaW4gdGhlIChibGFjaykgc2hhcGUsIGFuZCBGYWxzZSBpZiBpdCBkb2Vzbid0LgogICAgICAgICIiIgogICAgICAgIHdpbmRpbmcgPSBzZWxmLmdldFdpbmRpbmcoKQogICAgICAgIGlmIHNlbGYuZXZlbk9kZDoKICAgICAgICAgICAgcmVzdWx0ID0gd2luZGluZyAlIDIKICAgICAgICBlbHNlOiAgIyBub24temVybwogICAgICAgICAgICByZXN1bHQgPSBzZWxmLmludGVyc2VjdGlvbkNvdW50ICE9IDAKICAgICAgICByZXR1cm4gbm90IG5vdCByZXN1bHQKCiAgICBkZWYgX2FkZEludGVyc2VjdGlvbihzZWxmLCBnb2luZ1VwKToKICAgICAgICBpZiBzZWxmLmV2ZW5PZGQgb3IgZ29pbmdVcDoKICAgICAgICAgICAgc2VsZi5pbnRlcnNlY3Rpb25Db3VudCArPSAxCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5pbnRlcnNlY3Rpb25Db3VudCAtPSAxCgogICAgZGVmIF9tb3ZlVG8oc2VsZiwgcG9pbnQpOgogICAgICAgIGlmIHNlbGYuZmlyc3RQb2ludCBpcyBub3QgTm9uZToKICAgICAgICAgICAgIyBhbHdheXMgbWFrZSBzdXJlIHRoZSBzdWIgcGF0aHMgYXJlIGNsb3NlZDsgdGhlIGFsZ29yaXRobSBvbmx5IHdvcmtzCiAgICAgICAgICAgICMgZm9yIGNsb3NlZCBwYXRocy4KICAgICAgICAgICAgc2VsZi5jbG9zZVBhdGgoKQogICAgICAgIHNlbGYuZmlyc3RQb2ludCA9IHBvaW50CgogICAgZGVmIF9saW5lVG8oc2VsZiwgcG9pbnQpOgogICAgICAgIHgsIHkgPSBzZWxmLnRlc3RQb2ludAogICAgICAgIHgxLCB5MSA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgeDIsIHkyID0gcG9pbnQKCiAgICAgICAgaWYgeDEgPCB4IGFuZCB4MiA8IHg6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIGlmIHkxIDwgeSBhbmQgeTIgPCB5OgogICAgICAgICAgICByZXR1cm4KICAgICAgICBpZiB5MSA+PSB5IGFuZCB5MiA+PSB5OgogICAgICAgICAgICByZXR1cm4KCiAgICAgICAgZHggPSB4MiAtIHgxCiAgICAgICAgZHkgPSB5MiAtIHkxCiAgICAgICAgdCA9ICh5IC0geTEpIC8gZHkKICAgICAgICBpeCA9IGR4ICogdCArIHgxCiAgICAgICAgaWYgaXggPCB4OgogICAgICAgICAgICByZXR1cm4KICAgICAgICBzZWxmLl9hZGRJbnRlcnNlY3Rpb24oeTIgPiB5MSkKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgYmNwMSwgYmNwMiwgcG9pbnQpOgogICAgICAgIHgsIHkgPSBzZWxmLnRlc3RQb2ludAogICAgICAgIHgxLCB5MSA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgeDIsIHkyID0gYmNwMQogICAgICAgIHgzLCB5MyA9IGJjcDIKICAgICAgICB4NCwgeTQgPSBwb2ludAoKICAgICAgICBpZiB4MSA8IHggYW5kIHgyIDwgeCBhbmQgeDMgPCB4IGFuZCB4NCA8IHg6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIGlmIHkxIDwgeSBhbmQgeTIgPCB5IGFuZCB5MyA8IHkgYW5kIHk0IDwgeToKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgaWYgeTEgPj0geSBhbmQgeTIgPj0geSBhbmQgeTMgPj0geSBhbmQgeTQgPj0geToKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgIGR5ID0geTEKICAgICAgICBjeSA9ICh5MiAtIGR5KSAqIDMuMAogICAgICAgIGJ5ID0gKHkzIC0geTIpICogMy4wIC0gY3kKICAgICAgICBheSA9IHk0IC0gZHkgLSBjeSAtIGJ5CiAgICAgICAgc29sdXRpb25zID0gc29ydGVkKHNvbHZlQ3ViaWMoYXksIGJ5LCBjeSwgZHkgLSB5KSkKICAgICAgICBzb2x1dGlvbnMgPSBbdCBmb3IgdCBpbiBzb2x1dGlvbnMgaWYgLTAuMCA8PSB0IDw9IDEuMF0KICAgICAgICBpZiBub3Qgc29sdXRpb25zOgogICAgICAgICAgICByZXR1cm4KCiAgICAgICAgZHggPSB4MQogICAgICAgIGN4ID0gKHgyIC0gZHgpICogMy4wCiAgICAgICAgYnggPSAoeDMgLSB4MikgKiAzLjAgLSBjeAogICAgICAgIGF4ID0geDQgLSBkeCAtIGN4IC0gYngKCiAgICAgICAgYWJvdmUgPSB5MSA+PSB5CiAgICAgICAgbGFzdFQgPSBOb25lCiAgICAgICAgZm9yIHQgaW4gc29sdXRpb25zOgogICAgICAgICAgICBpZiB0ID09IGxhc3RUOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbGFzdFQgPSB0CiAgICAgICAgICAgIHQyID0gdCAqIHQKICAgICAgICAgICAgdDMgPSB0MiAqIHQKCiAgICAgICAgICAgIGRpcmVjdGlvbiA9IDMgKiBheSAqIHQyICsgMiAqIGJ5ICogdCArIGN5CiAgICAgICAgICAgIGluY29taW5nR29pbmdVcCA9IG91dGdvaW5nR29pbmdVcCA9IGRpcmVjdGlvbiA+IDAuMAogICAgICAgICAgICBpZiBkaXJlY3Rpb24gPT0gMC4wOgogICAgICAgICAgICAgICAgZGlyZWN0aW9uID0gNiAqIGF5ICogdCArIDIgKiBieQogICAgICAgICAgICAgICAgb3V0Z29pbmdHb2luZ1VwID0gZGlyZWN0aW9uID4gMC4wCiAgICAgICAgICAgICAgICBpbmNvbWluZ0dvaW5nVXAgPSBub3Qgb3V0Z29pbmdHb2luZ1VwCiAgICAgICAgICAgICAgICBpZiBkaXJlY3Rpb24gPT0gMC4wOgogICAgICAgICAgICAgICAgICAgIGRpcmVjdGlvbiA9IGF5CiAgICAgICAgICAgICAgICAgICAgaW5jb21pbmdHb2luZ1VwID0gb3V0Z29pbmdHb2luZ1VwID0gZGlyZWN0aW9uID4gMC4wCgogICAgICAgICAgICB4dCA9IGF4ICogdDMgKyBieCAqIHQyICsgY3ggKiB0ICsgZHgKICAgICAgICAgICAgaWYgeHQgPCB4OgogICAgICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgICAgIGlmIHQgaW4gKDAuMCwgLTAuMCk6CiAgICAgICAgICAgICAgICBpZiBub3Qgb3V0Z29pbmdHb2luZ1VwOgogICAgICAgICAgICAgICAgICAgIHNlbGYuX2FkZEludGVyc2VjdGlvbihvdXRnb2luZ0dvaW5nVXApCiAgICAgICAgICAgIGVsaWYgdCA9PSAxLjA6CiAgICAgICAgICAgICAgICBpZiBpbmNvbWluZ0dvaW5nVXA6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5fYWRkSW50ZXJzZWN0aW9uKGluY29taW5nR29pbmdVcCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGlmIGluY29taW5nR29pbmdVcCA9PSBvdXRnb2luZ0dvaW5nVXA6CiAgICAgICAgICAgICAgICAgICAgc2VsZi5fYWRkSW50ZXJzZWN0aW9uKG91dGdvaW5nR29pbmdVcCkKICAgICAgICAgICAgICAgICMgZWxzZToKICAgICAgICAgICAgICAgICMgICB3ZSdyZSBub3QgcmVhbGx5IGludGVyc2VjdGluZywgbWVyZWx5IHRvdWNoaW5nCgogICAgZGVmIF9xQ3VydmVUb09uZV91bmZpbmlzaGVkKHNlbGYsIGJjcCwgcG9pbnQpOgogICAgICAgICMgWFhYIG5lZWQgdG8gZmluaXNoIHRoaXMsIGZvciBub3cgZG9pbmcgaXQgdGhyb3VnaCBhIGN1YmljCiAgICAgICAgIyAoQmFzZVBlbiBpbXBsZW1lbnRzIF9xQ3VydmVUbyBpbiB0ZXJtcyBvZiBhIGN1YmljKSB3aWxsCiAgICAgICAgIyBoYXZlIHRvIGRvLgogICAgICAgIHgsIHkgPSBzZWxmLnRlc3RQb2ludAogICAgICAgIHgxLCB5MSA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgeDIsIHkyID0gYmNwCiAgICAgICAgeDMsIHkzID0gcG9pbnQKICAgICAgICBjID0geTEKICAgICAgICBiID0gKHkyIC0gYykgKiAyLjAKICAgICAgICBhID0geTMgLSBjIC0gYgogICAgICAgIHNvbHV0aW9ucyA9IHNvcnRlZChzb2x2ZVF1YWRyYXRpYyhhLCBiLCBjIC0geSkpCiAgICAgICAgc29sdXRpb25zID0gWwogICAgICAgICAgICB0IGZvciB0IGluIHNvbHV0aW9ucyBpZiBaRVJPX01JTlVTX0VQU0lMT04gPD0gdCA8PSBPTkVfUExVU19FUFNJTE9OCiAgICAgICAgXQogICAgICAgIGlmIG5vdCBzb2x1dGlvbnM6CiAgICAgICAgICAgIHJldHVybgogICAgICAgICMgWFhYCgogICAgZGVmIF9jbG9zZVBhdGgoc2VsZik6CiAgICAgICAgaWYgc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkgIT0gc2VsZi5maXJzdFBvaW50OgogICAgICAgICAgICBzZWxmLmxpbmVUbyhzZWxmLmZpcnN0UG9pbnQpCiAgICAgICAgc2VsZi5maXJzdFBvaW50ID0gTm9uZQoKICAgIGRlZiBfZW5kUGF0aChzZWxmKToKICAgICAgICAiIiJJbnNpZGVuZXNzIGlzIG5vdCBkZWZpbmVkIGZvciBvcGVuIGNvbnRvdXJzLiIiIgogICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IK
+"""fontTools.pens.pointInsidePen -- Pen implementing "point inside" testing
+for shapes.
+"""
+
+from fontTools.pens.basePen import BasePen
+from fontTools.misc.bezierTools import solveQuadratic, solveCubic
+
+__all__ = ["PointInsidePen"]
+
+
+class PointInsidePen(BasePen):
+    """This pen implements "point inside" testing: to test whether
+    a given point lies inside the shape (black) or outside (white).
+    Instances of this class can be recycled, as long as the
+    setTestPoint() method is used to set the new point to test.
+
+    :Example:
+        .. code-block::
+
+            pen = PointInsidePen(glyphSet, (100, 200))
+            outline.draw(pen)
+            isInside = pen.getResult()
+
+    Both the even-odd algorithm and the non-zero-winding-rule
+    algorithm are implemented. The latter is the default, specify
+    True for the evenOdd argument of __init__ or setTestPoint
+    to use the even-odd algorithm.
+    """
+
+    # This class implements the classical "shoot a ray from the test point
+    # to infinity and count how many times it intersects the outline" (as well
+    # as the non-zero variant, where the counter is incremented if the outline
+    # intersects the ray in one direction and decremented if it intersects in
+    # the other direction).
+    # I found an amazingly clear explanation of the subtleties involved in
+    # implementing this correctly for polygons here:
+    #   http://graphics.cs.ucdavis.edu/~okreylos/TAship/Spring2000/PointInPolygon.html
+    # I extended the principles outlined on that page to curves.
+
+    def __init__(self, glyphSet, testPoint, evenOdd=False):
+        BasePen.__init__(self, glyphSet)
+        self.setTestPoint(testPoint, evenOdd)
+
+    def setTestPoint(self, testPoint, evenOdd=False):
+        """Set the point to test. Call this _before_ the outline gets drawn."""
+        self.testPoint = testPoint
+        self.evenOdd = evenOdd
+        self.firstPoint = None
+        self.intersectionCount = 0
+
+    def getWinding(self):
+        if self.firstPoint is not None:
+            # always make sure the sub paths are closed; the algorithm only works
+            # for closed paths.
+            self.closePath()
+        return self.intersectionCount
+
+    def getResult(self):
+        """After the shape has been drawn, getResult() returns True if the test
+        point lies within the (black) shape, and False if it doesn't.
+        """
+        winding = self.getWinding()
+        if self.evenOdd:
+            result = winding % 2
+        else:  # non-zero
+            result = self.intersectionCount != 0
+        return not not result
+
+    def _addIntersection(self, goingUp):
+        if self.evenOdd or goingUp:
+            self.intersectionCount += 1
+        else:
+            self.intersectionCount -= 1
+
+    def _moveTo(self, point):
+        if self.firstPoint is not None:
+            # always make sure the sub paths are closed; the algorithm only works
+            # for closed paths.
+            self.closePath()
+        self.firstPoint = point
+
+    def _lineTo(self, point):
+        x, y = self.testPoint
+        x1, y1 = self._getCurrentPoint()
+        x2, y2 = point
+
+        if x1 < x and x2 < x:
+            return
+        if y1 < y and y2 < y:
+            return
+        if y1 >= y and y2 >= y:
+            return
+
+        dx = x2 - x1
+        dy = y2 - y1
+        t = (y - y1) / dy
+        ix = dx * t + x1
+        if ix < x:
+            return
+        self._addIntersection(y2 > y1)
+
+    def _curveToOne(self, bcp1, bcp2, point):
+        x, y = self.testPoint
+        x1, y1 = self._getCurrentPoint()
+        x2, y2 = bcp1
+        x3, y3 = bcp2
+        x4, y4 = point
+
+        if x1 < x and x2 < x and x3 < x and x4 < x:
+            return
+        if y1 < y and y2 < y and y3 < y and y4 < y:
+            return
+        if y1 >= y and y2 >= y and y3 >= y and y4 >= y:
+            return
+
+        dy = y1
+        cy = (y2 - dy) * 3.0
+        by = (y3 - y2) * 3.0 - cy
+        ay = y4 - dy - cy - by
+        solutions = sorted(solveCubic(ay, by, cy, dy - y))
+        solutions = [t for t in solutions if -0.0 <= t <= 1.0]
+        if not solutions:
+            return
+
+        dx = x1
+        cx = (x2 - dx) * 3.0
+        bx = (x3 - x2) * 3.0 - cx
+        ax = x4 - dx - cx - bx
+
+        above = y1 >= y
+        lastT = None
+        for t in solutions:
+            if t == lastT:
+                continue
+            lastT = t
+            t2 = t * t
+            t3 = t2 * t
+
+            direction = 3 * ay * t2 + 2 * by * t + cy
+            incomingGoingUp = outgoingGoingUp = direction > 0.0
+            if direction == 0.0:
+                direction = 6 * ay * t + 2 * by
+                outgoingGoingUp = direction > 0.0
+                incomingGoingUp = not outgoingGoingUp
+                if direction == 0.0:
+                    direction = ay
+                    incomingGoingUp = outgoingGoingUp = direction > 0.0
+
+            xt = ax * t3 + bx * t2 + cx * t + dx
+            if xt < x:
+                continue
+
+            if t in (0.0, -0.0):
+                if not outgoingGoingUp:
+                    self._addIntersection(outgoingGoingUp)
+            elif t == 1.0:
+                if incomingGoingUp:
+                    self._addIntersection(incomingGoingUp)
+            else:
+                if incomingGoingUp == outgoingGoingUp:
+                    self._addIntersection(outgoingGoingUp)
+                # else:
+                #   we're not really intersecting, merely touching
+
+    def _qCurveToOne_unfinished(self, bcp, point):
+        # XXX need to finish this, for now doing it through a cubic
+        # (BasePen implements _qCurveTo in terms of a cubic) will
+        # have to do.
+        x, y = self.testPoint
+        x1, y1 = self._getCurrentPoint()
+        x2, y2 = bcp
+        x3, y3 = point
+        c = y1
+        b = (y2 - c) * 2.0
+        a = y3 - c - b
+        solutions = sorted(solveQuadratic(a, b, c - y))
+        solutions = [
+            t for t in solutions if ZERO_MINUS_EPSILON <= t <= ONE_PLUS_EPSILON
+        ]
+        if not solutions:
+            return
+        # XXX
+
+    def _closePath(self):
+        if self._getCurrentPoint() != self.firstPoint:
+            self.lineTo(self.firstPoint)
+        self.firstPoint = None
+
+    def _endPath(self):
+        """Insideness is not defined for open contours."""
+        raise NotImplementedError

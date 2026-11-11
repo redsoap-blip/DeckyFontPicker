@@ -1,1 +1,105 @@
-IyBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLgojIENvcHlyaWdodCAyMDIzIEJlaGRhZCBFc2ZhaGJvZC4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIExpY2Vuc2VkIHVuZGVyIHRoZSBBcGFjaGUgTGljZW5zZSwgVmVyc2lvbiAyLjAgKHRoZSAiTGljZW5zZSIpOwojIHlvdSBtYXkgbm90IHVzZSB0aGlzIGZpbGUgZXhjZXB0IGluIGNvbXBsaWFuY2Ugd2l0aCB0aGUgTGljZW5zZS4KIyBZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXQKIwojICAgICBodHRwOi8vd3d3LmFwYWNoZS5vcmcvbGljZW5zZXMvTElDRU5TRS0yLjAKIwojIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc29mdHdhcmUKIyBkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhbiAiQVMgSVMiIEJBU0lTLAojIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXIgZXhwcmVzcyBvciBpbXBsaWVkLgojIFNlZSB0aGUgTGljZW5zZSBmb3IgdGhlIHNwZWNpZmljIGxhbmd1YWdlIGdvdmVybmluZyBwZXJtaXNzaW9ucyBhbmQKIyBsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS4KCmZyb20gZm9udFRvb2xzLnF1MmN1IGltcG9ydCBxdWFkcmF0aWNfdG9fY3VydmVzCmZyb20gZm9udFRvb2xzLnBlbnMuZmlsdGVyUGVuIGltcG9ydCBDb250b3VyRmlsdGVyUGVuCmZyb20gZm9udFRvb2xzLnBlbnMucmV2ZXJzZUNvbnRvdXJQZW4gaW1wb3J0IFJldmVyc2VDb250b3VyUGVuCmltcG9ydCBtYXRoCgoKY2xhc3MgUXUyQ3VQZW4oQ29udG91ckZpbHRlclBlbik6CiAgICAiIiJBIGZpbHRlciBwZW4gdG8gY29udmVydCBxdWFkcmF0aWMgYmV6aWVyIHNwbGluZXMgdG8gY3ViaWMgY3VydmVzCiAgICB1c2luZyB0aGUgRm9udFRvb2xzIFNlZ21lbnRQZW4gcHJvdG9jb2wuCgogICAgQXJnczoKCiAgICAgICAgb3RoZXJfcGVuOiBhbm90aGVyIFNlZ21lbnRQZW4gdXNlZCB0byBkcmF3IHRoZSB0cmFuc2Zvcm1lZCBvdXRsaW5lLgogICAgICAgIG1heF9lcnI6IG1heGltdW0gYXBwcm94aW1hdGlvbiBlcnJvciBpbiBmb250IHVuaXRzLiBGb3Igb3B0aW1hbCByZXN1bHRzLAogICAgICAgICAgICBpZiB5b3Uga25vdyB0aGUgVVBFTSBvZiB0aGUgZm9udCwgd2UgcmVjb21tZW5kIHNldHRpbmcgdGhpcyB0byBhCiAgICAgICAgICAgIHZhbHVlIGVxdWFsLCBvciBjbG9zZSB0byBVUEVNIC8gMTAwMC4KICAgICAgICByZXZlcnNlX2RpcmVjdGlvbjogZmxpcCB0aGUgY29udG91cnMnIGRpcmVjdGlvbiBidXQga2VlcCBzdGFydGluZyBwb2ludC4KICAgICAgICBzdGF0czogYSBkaWN0aW9uYXJ5IGNvdW50aW5nIHRoZSBwb2ludCBudW1iZXJzIG9mIGN1YmljIHNlZ21lbnRzLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgb3RoZXJfcGVuLAogICAgICAgIG1heF9lcnIsCiAgICAgICAgYWxsX2N1YmljPUZhbHNlLAogICAgICAgIHJldmVyc2VfZGlyZWN0aW9uPUZhbHNlLAogICAgICAgIHN0YXRzPU5vbmUsCiAgICApOgogICAgICAgIGlmIHJldmVyc2VfZGlyZWN0aW9uOgogICAgICAgICAgICBvdGhlcl9wZW4gPSBSZXZlcnNlQ29udG91clBlbihvdGhlcl9wZW4pCiAgICAgICAgc3VwZXIoKS5fX2luaXRfXyhvdGhlcl9wZW4pCiAgICAgICAgc2VsZi5hbGxfY3ViaWMgPSBhbGxfY3ViaWMKICAgICAgICBzZWxmLm1heF9lcnIgPSBtYXhfZXJyCiAgICAgICAgc2VsZi5zdGF0cyA9IHN0YXRzCgogICAgZGVmIF9xdWFkcmF0aWNzX3RvX2N1cnZlKHNlbGYsIHEpOgogICAgICAgIGN1cnZlcyA9IHF1YWRyYXRpY190b19jdXJ2ZXMocSwgc2VsZi5tYXhfZXJyLCBhbGxfY3ViaWM9c2VsZi5hbGxfY3ViaWMpCiAgICAgICAgaWYgc2VsZi5zdGF0cyBpcyBub3QgTm9uZToKICAgICAgICAgICAgZm9yIGN1cnZlIGluIGN1cnZlczoKICAgICAgICAgICAgICAgIG4gPSBzdHIobGVuKGN1cnZlKSAtIDIpCiAgICAgICAgICAgICAgICBzZWxmLnN0YXRzW25dID0gc2VsZi5zdGF0cy5nZXQobiwgMCkgKyAxCiAgICAgICAgZm9yIGN1cnZlIGluIGN1cnZlczoKICAgICAgICAgICAgaWYgbGVuKGN1cnZlKSA9PSA0OgogICAgICAgICAgICAgICAgeWllbGQgKCJjdXJ2ZVRvIiwgY3VydmVbMTpdKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgeWllbGQgKCJxQ3VydmVUbyIsIGN1cnZlWzE6XSkKCiAgICBkZWYgZmlsdGVyQ29udG91cihzZWxmLCBjb250b3VyKToKICAgICAgICBxdWFkcmF0aWNzID0gW10KICAgICAgICBjdXJyZW50UHQgPSBOb25lCiAgICAgICAgbmV3Q29udG91ciA9IFtdCiAgICAgICAgZm9yIG9wLCBhcmdzIGluIGNvbnRvdXI6CiAgICAgICAgICAgIGlmIG9wID09ICJxQ3VydmVUbyIgYW5kICgKICAgICAgICAgICAgICAgIHNlbGYuYWxsX2N1YmljIG9yIChsZW4oYXJncykgPiAyIGFuZCBhcmdzWy0xXSBpcyBub3QgTm9uZSkKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIGlmIGFyZ3NbLTFdIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgcmFpc2UgTm90SW1wbGVtZW50ZWRFcnJvcigKICAgICAgICAgICAgICAgICAgICAgICAgIm9uY3VydmUtbGVzcyBjb250b3VycyB3aXRoIGFsbF9jdWJpYyBub3QgaW1wbGVtZW50ZWQiCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgcXVhZHJhdGljcy5hcHBlbmQoKGN1cnJlbnRQdCwpICsgYXJncykKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGlmIHF1YWRyYXRpY3M6CiAgICAgICAgICAgICAgICAgICAgbmV3Q29udG91ci5leHRlbmQoc2VsZi5fcXVhZHJhdGljc190b19jdXJ2ZShxdWFkcmF0aWNzKSkKICAgICAgICAgICAgICAgICAgICBxdWFkcmF0aWNzID0gW10KICAgICAgICAgICAgICAgIG5ld0NvbnRvdXIuYXBwZW5kKChvcCwgYXJncykpCiAgICAgICAgICAgIGN1cnJlbnRQdCA9IGFyZ3NbLTFdIGlmIGFyZ3MgZWxzZSBOb25lCiAgICAgICAgaWYgcXVhZHJhdGljczoKICAgICAgICAgICAgbmV3Q29udG91ci5leHRlbmQoc2VsZi5fcXVhZHJhdGljc190b19jdXJ2ZShxdWFkcmF0aWNzKSkKCiAgICAgICAgaWYgbm90IHNlbGYuYWxsX2N1YmljOgogICAgICAgICAgICAjIEFkZCBiYWNrIGltcGxpY2l0IG9uY3VydmUgcG9pbnRzCiAgICAgICAgICAgIGNvbnRvdXIgPSBuZXdDb250b3VyCiAgICAgICAgICAgIG5ld0NvbnRvdXIgPSBbXQogICAgICAgICAgICBmb3Igb3AsIGFyZ3MgaW4gY29udG91cjoKICAgICAgICAgICAgICAgIGlmIG9wID09ICJxQ3VydmVUbyIgYW5kIG5ld0NvbnRvdXIgYW5kIG5ld0NvbnRvdXJbLTFdWzBdID09ICJxQ3VydmVUbyI6CiAgICAgICAgICAgICAgICAgICAgcHQwID0gbmV3Q29udG91clstMV1bMV1bLTJdCiAgICAgICAgICAgICAgICAgICAgcHQxID0gbmV3Q29udG91clstMV1bMV1bLTFdCiAgICAgICAgICAgICAgICAgICAgcHQyID0gYXJnc1swXQogICAgICAgICAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgICAgICAgICAgcHQxIGlzIG5vdCBOb25lCiAgICAgICAgICAgICAgICAgICAgICAgIGFuZCBtYXRoLmlzY2xvc2UocHQyWzBdIC0gcHQxWzBdLCBwdDFbMF0gLSBwdDBbMF0pCiAgICAgICAgICAgICAgICAgICAgICAgIGFuZCBtYXRoLmlzY2xvc2UocHQyWzFdIC0gcHQxWzFdLCBwdDFbMV0gLSBwdDBbMV0pCiAgICAgICAgICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgICAgICAgICAgbmV3QXJncyA9IG5ld0NvbnRvdXJbLTFdWzFdWzotMV0gKyBhcmdzCiAgICAgICAgICAgICAgICAgICAgICAgIG5ld0NvbnRvdXJbLTFdID0gKG9wLCBuZXdBcmdzKQogICAgICAgICAgICAgICAgICAgICAgICBjb250aW51ZQoKICAgICAgICAgICAgICAgIG5ld0NvbnRvdXIuYXBwZW5kKChvcCwgYXJncykpCgogICAgICAgIHJldHVybiBuZXdDb250b3VyCg==
+# Copyright 2016 Google Inc. All Rights Reserved.
+# Copyright 2023 Behdad Esfahbod. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from fontTools.qu2cu import quadratic_to_curves
+from fontTools.pens.filterPen import ContourFilterPen
+from fontTools.pens.reverseContourPen import ReverseContourPen
+import math
+
+
+class Qu2CuPen(ContourFilterPen):
+    """A filter pen to convert quadratic bezier splines to cubic curves
+    using the FontTools SegmentPen protocol.
+
+    Args:
+
+        other_pen: another SegmentPen used to draw the transformed outline.
+        max_err: maximum approximation error in font units. For optimal results,
+            if you know the UPEM of the font, we recommend setting this to a
+            value equal, or close to UPEM / 1000.
+        reverse_direction: flip the contours' direction but keep starting point.
+        stats: a dictionary counting the point numbers of cubic segments.
+    """
+
+    def __init__(
+        self,
+        other_pen,
+        max_err,
+        all_cubic=False,
+        reverse_direction=False,
+        stats=None,
+    ):
+        if reverse_direction:
+            other_pen = ReverseContourPen(other_pen)
+        super().__init__(other_pen)
+        self.all_cubic = all_cubic
+        self.max_err = max_err
+        self.stats = stats
+
+    def _quadratics_to_curve(self, q):
+        curves = quadratic_to_curves(q, self.max_err, all_cubic=self.all_cubic)
+        if self.stats is not None:
+            for curve in curves:
+                n = str(len(curve) - 2)
+                self.stats[n] = self.stats.get(n, 0) + 1
+        for curve in curves:
+            if len(curve) == 4:
+                yield ("curveTo", curve[1:])
+            else:
+                yield ("qCurveTo", curve[1:])
+
+    def filterContour(self, contour):
+        quadratics = []
+        currentPt = None
+        newContour = []
+        for op, args in contour:
+            if op == "qCurveTo" and (
+                self.all_cubic or (len(args) > 2 and args[-1] is not None)
+            ):
+                if args[-1] is None:
+                    raise NotImplementedError(
+                        "oncurve-less contours with all_cubic not implemented"
+                    )
+                quadratics.append((currentPt,) + args)
+            else:
+                if quadratics:
+                    newContour.extend(self._quadratics_to_curve(quadratics))
+                    quadratics = []
+                newContour.append((op, args))
+            currentPt = args[-1] if args else None
+        if quadratics:
+            newContour.extend(self._quadratics_to_curve(quadratics))
+
+        if not self.all_cubic:
+            # Add back implicit oncurve points
+            contour = newContour
+            newContour = []
+            for op, args in contour:
+                if op == "qCurveTo" and newContour and newContour[-1][0] == "qCurveTo":
+                    pt0 = newContour[-1][1][-2]
+                    pt1 = newContour[-1][1][-1]
+                    pt2 = args[0]
+                    if (
+                        pt1 is not None
+                        and math.isclose(pt2[0] - pt1[0], pt1[0] - pt0[0])
+                        and math.isclose(pt2[1] - pt1[1], pt1[1] - pt0[1])
+                    ):
+                        newArgs = newContour[-1][1][:-1] + args
+                        newContour[-1] = (op, newArgs)
+                        continue
+
+                newContour.append((op, args))
+
+        return newContour

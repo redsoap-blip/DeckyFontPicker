@@ -1,1 +1,8 @@
-ZGVmIG1haW4oYXJncz1Ob25lKToKICAgIGZyb20gLmF2YXIucGxhbiBpbXBvcnQgbWFpbgoKICAgIG1haW4oYXJncykKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgbWFpbigpCg==
+def main(args=None):
+    from .avar.plan import main
+
+    main(args)
+
+
+if __name__ == "__main__":
+    main()

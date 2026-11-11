@@ -1,1 +1,169 @@
-IiIiZm9udFRvb2xzLm1pc2MuY2xhc3NpZnlUb29scy5weSAtLSB0b29scyBmb3IgY2xhc3NpZnlpbmcgdGhpbmdzLiIiIgoKCmNsYXNzIENsYXNzaWZpZXIob2JqZWN0KToKICAgICIiIgogICAgTWFpbiBDbGFzc2lmaWVyIG9iamVjdCwgdXNlZCB0byBjbGFzc2lmeSB0aGluZ3MgaW50byBzaW1pbGFyIHNldHMuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgc29ydD1UcnVlKToKICAgICAgICBzZWxmLl90aGluZ3MgPSBzZXQoKSAgIyBzZXQgb2YgYWxsIHRoaW5ncyBrbm93biBzbyBmYXIKICAgICAgICBzZWxmLl9zZXRzID0gW10gICMgbGlzdCBvZiBjbGFzcyBzZXRzIHByb2R1Y2VkIHNvIGZhcgogICAgICAgIHNlbGYuX21hcHBpbmcgPSB7fSAgIyBtYXAgZnJvbSB0aGluZ3MgdG8gdGhlaXIgY2xhc3Mgc2V0CiAgICAgICAgc2VsZi5fZGlydHkgPSBGYWxzZQogICAgICAgIHNlbGYuX3NvcnQgPSBzb3J0CgogICAgZGVmIGFkZChzZWxmLCBzZXRfb2ZfdGhpbmdzKToKICAgICAgICAiIiIKICAgICAgICBBZGQgYSBzZXQgdG8gdGhlIGNsYXNzaWZpZXIuICBBbnkgaXRlcmFibGUgaXMgYWNjZXB0ZWQuCiAgICAgICAgIiIiCiAgICAgICAgaWYgbm90IHNldF9vZl90aGluZ3M6CiAgICAgICAgICAgIHJldHVybgoKICAgICAgICBzZWxmLl9kaXJ0eSA9IFRydWUKCiAgICAgICAgdGhpbmdzLCBzZXRzLCBtYXBwaW5nID0gc2VsZi5fdGhpbmdzLCBzZWxmLl9zZXRzLCBzZWxmLl9tYXBwaW5nCgogICAgICAgIHMgPSBzZXQoc2V0X29mX3RoaW5ncykKICAgICAgICBpbnRlcnNlY3Rpb24gPSBzLmludGVyc2VjdGlvbih0aGluZ3MpICAjIGV4aXN0aW5nIHRoaW5ncwogICAgICAgIHMuZGlmZmVyZW5jZV91cGRhdGUoaW50ZXJzZWN0aW9uKSAgIyBuZXcgdGhpbmdzCiAgICAgICAgZGlmZmVyZW5jZSA9IHMKICAgICAgICBkZWwgcwoKICAgICAgICAjIEFkZCBuZXcgY2xhc3MgZm9yIG5ldyB0aGluZ3MKICAgICAgICBpZiBkaWZmZXJlbmNlOgogICAgICAgICAgICB0aGluZ3MudXBkYXRlKGRpZmZlcmVuY2UpCiAgICAgICAgICAgIHNldHMuYXBwZW5kKGRpZmZlcmVuY2UpCiAgICAgICAgICAgIGZvciB0aGluZyBpbiBkaWZmZXJlbmNlOgogICAgICAgICAgICAgICAgbWFwcGluZ1t0aGluZ10gPSBkaWZmZXJlbmNlCiAgICAgICAgZGVsIGRpZmZlcmVuY2UKCiAgICAgICAgd2hpbGUgaW50ZXJzZWN0aW9uOgogICAgICAgICAgICAjIFRha2Ugb25lIGl0ZW0gYW5kIHByb2Nlc3MgdGhlIG9sZCBjbGFzcyBpdCBiZWxvbmdzIHRvCiAgICAgICAgICAgIG9sZF9jbGFzcyA9IG1hcHBpbmdbbmV4dChpdGVyKGludGVyc2VjdGlvbikpXQogICAgICAgICAgICBvbGRfY2xhc3NfaW50ZXJzZWN0aW9uID0gb2xkX2NsYXNzLmludGVyc2VjdGlvbihpbnRlcnNlY3Rpb24pCgogICAgICAgICAgICAjIFVwZGF0ZSBvbGQgY2xhc3MgdG8gcmVtb3ZlIGl0ZW1zIGZyb20gbmV3IHNldAogICAgICAgICAgICBvbGRfY2xhc3MuZGlmZmVyZW5jZV91cGRhdGUob2xkX2NsYXNzX2ludGVyc2VjdGlvbikKCiAgICAgICAgICAgICMgUmVtb3ZlIHByb2Nlc3NlZCBpdGVtcyBmcm9tIHRvZG8gbGlzdAogICAgICAgICAgICBpbnRlcnNlY3Rpb24uZGlmZmVyZW5jZV91cGRhdGUob2xkX2NsYXNzX2ludGVyc2VjdGlvbikKCiAgICAgICAgICAgICMgQWRkIG5ldyBjbGFzcyBmb3IgdGhlIGludGVyc2VjdGlvbiB3aXRoIG9sZCBjbGFzcwogICAgICAgICAgICBzZXRzLmFwcGVuZChvbGRfY2xhc3NfaW50ZXJzZWN0aW9uKQogICAgICAgICAgICBmb3IgdGhpbmcgaW4gb2xkX2NsYXNzX2ludGVyc2VjdGlvbjoKICAgICAgICAgICAgICAgIG1hcHBpbmdbdGhpbmddID0gb2xkX2NsYXNzX2ludGVyc2VjdGlvbgogICAgICAgICAgICBkZWwgb2xkX2NsYXNzX2ludGVyc2VjdGlvbgoKICAgIGRlZiB1cGRhdGUoc2VsZiwgbGlzdF9vZl9zZXRzKToKICAgICAgICAiIiIKICAgICAgICBBZGQgYSBhIGxpc3Qgb2Ygc2V0cyB0byB0aGUgY2xhc3NpZmllci4gIEFueSBpdGVyYWJsZSBvZiBpdGVyYWJsZXMgaXMgYWNjZXB0ZWQuCiAgICAgICAgIiIiCiAgICAgICAgZm9yIHMgaW4gbGlzdF9vZl9zZXRzOgogICAgICAgICAgICBzZWxmLmFkZChzKQoKICAgIGRlZiBfcHJvY2VzcyhzZWxmKToKICAgICAgICBpZiBub3Qgc2VsZi5fZGlydHk6CiAgICAgICAgICAgIHJldHVybgoKICAgICAgICAjIERvIGFueSBkZWZlcnJlZCBwcm9jZXNzaW5nCiAgICAgICAgc2V0cyA9IHNlbGYuX3NldHMKICAgICAgICBzZWxmLl9zZXRzID0gW3MgZm9yIHMgaW4gc2V0cyBpZiBzXQoKICAgICAgICBpZiBzZWxmLl9zb3J0OgogICAgICAgICAgICBzZWxmLl9zZXRzID0gc29ydGVkKHNlbGYuX3NldHMsIGtleT1sYW1iZGEgczogKC1sZW4ocyksIHNvcnRlZChzKSkpCgogICAgICAgIHNlbGYuX2RpcnR5ID0gRmFsc2UKCiAgICAjIE91dHB1dCBtZXRob2RzCgogICAgZGVmIGdldFRoaW5ncyhzZWxmKToKICAgICAgICAiIiJSZXR1cm5zIHRoZSBzZXQgb2YgYWxsIHRoaW5ncyBrbm93biBzbyBmYXIuCgogICAgICAgIFRoZSByZXR1cm4gdmFsdWUgYmVsb25ncyB0byB0aGUgQ2xhc3NpZmllciBvYmplY3QgYW5kIHNob3VsZCBOT1QKICAgICAgICBiZSBtb2RpZmllZCB3aGlsZSB0aGUgY2xhc3NpZmllciBpcyBzdGlsbCBpbiB1c2UuCiAgICAgICAgIiIiCiAgICAgICAgc2VsZi5fcHJvY2VzcygpCiAgICAgICAgcmV0dXJuIHNlbGYuX3RoaW5ncwoKICAgIGRlZiBnZXRNYXBwaW5nKHNlbGYpOgogICAgICAgICIiIlJldHVybnMgdGhlIG1hcHBpbmcgZnJvbSB0aGluZ3MgdG8gdGhlaXIgY2xhc3Mgc2V0LgoKICAgICAgICBUaGUgcmV0dXJuIHZhbHVlIGJlbG9uZ3MgdG8gdGhlIENsYXNzaWZpZXIgb2JqZWN0IGFuZCBzaG91bGQgTk9UCiAgICAgICAgYmUgbW9kaWZpZWQgd2hpbGUgdGhlIGNsYXNzaWZpZXIgaXMgc3RpbGwgaW4gdXNlLgogICAgICAgICIiIgogICAgICAgIHNlbGYuX3Byb2Nlc3MoKQogICAgICAgIHJldHVybiBzZWxmLl9tYXBwaW5nCgogICAgZGVmIGdldENsYXNzZXMoc2VsZik6CiAgICAgICAgIiIiUmV0dXJucyB0aGUgbGlzdCBvZiBjbGFzcyBzZXRzLgoKICAgICAgICBUaGUgcmV0dXJuIHZhbHVlIGJlbG9uZ3MgdG8gdGhlIENsYXNzaWZpZXIgb2JqZWN0IGFuZCBzaG91bGQgTk9UCiAgICAgICAgYmUgbW9kaWZpZWQgd2hpbGUgdGhlIGNsYXNzaWZpZXIgaXMgc3RpbGwgaW4gdXNlLgogICAgICAgICIiIgogICAgICAgIHNlbGYuX3Byb2Nlc3MoKQogICAgICAgIHJldHVybiBzZWxmLl9zZXRzCgoKZGVmIGNsYXNzaWZ5KGxpc3Rfb2Zfc2V0cywgc29ydD1UcnVlKToKICAgICIiIgogICAgVGFrZXMgYSBpdGVyYWJsZSBvZiBpdGVyYWJsZXMgKGxpc3Qgb2Ygc2V0cyBmcm9tIGhlcmUgb247IGJ1dCBhbnkKICAgIGl0ZXJhYmxlIHdvcmtzLiksIGFuZCByZXR1cm5zIHRoZSBzbWFsbGVzdCBsaXN0IG9mIHNldHMgc3VjaCB0aGF0CiAgICBlYWNoIHNldCwgaXMgZWl0aGVyIGEgc3Vic2V0LCBvciBpcyBkaXNqb2ludCBmcm9tLCBlYWNoIG9mIHRoZSBpbnB1dAogICAgc2V0cy4KCiAgICBJbiBvdGhlciB3b3JkcywgdGhpcyBmdW5jdGlvbiBjbGFzc2lmaWVzIGFsbCB0aGUgdGhpbmdzIHByZXNlbnQgaW4KICAgIGFueSBvZiB0aGUgaW5wdXQgc2V0cywgaW50byBzaW1pbGFyIGNsYXNzZXMsIGJhc2VkIG9uIHdoaWNoIHNldHMKICAgIHRoaW5ncyBhcmUgYSBtZW1iZXIgb2YuCgogICAgSWYgc29ydD1UcnVlLCByZXR1cm4gY2xhc3Mgc2V0cyBhcmUgc29ydGVkIGJ5IGRlY3JlYXNpbmcgc2l6ZSBhbmQKICAgIHRoZWlyIG5hdHVyYWwgc29ydCBvcmRlciB3aXRoaW4gZWFjaCBjbGFzcyBzaXplLiAgT3RoZXJ3aXNlLCBjbGFzcwogICAgc2V0cyBhcmUgcmV0dXJuZWQgaW4gdGhlIG9yZGVyIHRoYXQgdGhleSB3ZXJlIGlkZW50aWZpZWQsIHdoaWNoIGlzCiAgICBnZW5lcmFsbHkgbm90IHNpZ25pZmljYW50LgoKICAgID4+PiBjbGFzc2lmeShbXSkgPT0gKFtdLCB7fSkKICAgIFRydWUKICAgID4+PiBjbGFzc2lmeShbW11dKSA9PSAoW10sIHt9KQogICAgVHJ1ZQogICAgPj4+IGNsYXNzaWZ5KFtbXSwgW11dKSA9PSAoW10sIHt9KQogICAgVHJ1ZQogICAgPj4+IGNsYXNzaWZ5KFtbMV1dKSA9PSAoW3sxfV0sIHsxOiB7MX19KQogICAgVHJ1ZQogICAgPj4+IGNsYXNzaWZ5KFtbMSwyXV0pID09IChbezEsIDJ9XSwgezE6IHsxLCAyfSwgMjogezEsIDJ9fSkKICAgIFRydWUKICAgID4+PiBjbGFzc2lmeShbWzFdLFsyXV0pID09IChbezF9LCB7Mn1dLCB7MTogezF9LCAyOiB7Mn19KQogICAgVHJ1ZQogICAgPj4+IGNsYXNzaWZ5KFtbMSwyXSxbMl1dKSA9PSAoW3sxfSwgezJ9XSwgezE6IHsxfSwgMjogezJ9fSkKICAgIFRydWUKICAgID4+PiBjbGFzc2lmeShbWzEsMl0sWzIsNF1dKSA9PSAoW3sxfSwgezJ9LCB7NH1dLCB7MTogezF9LCAyOiB7Mn0sIDQ6IHs0fX0pCiAgICBUcnVlCiAgICA+Pj4gY2xhc3NpZnkoW1sxLDJdLFsyLDQsNV1dKSA9PSAoCiAgICAuLi4gICAgIFt7NCwgNX0sIHsxfSwgezJ9XSwgezE6IHsxfSwgMjogezJ9LCA0OiB7NCwgNX0sIDU6IHs0LCA1fX0pCiAgICBUcnVlCiAgICA+Pj4gY2xhc3NpZnkoW1sxLDJdLFsyLDQsNV1dLCBzb3J0PUZhbHNlKSA9PSAoCiAgICAuLi4gICAgIFt7MX0sIHs0LCA1fSwgezJ9XSwgezE6IHsxfSwgMjogezJ9LCA0OiB7NCwgNX0sIDU6IHs0LCA1fX0pCiAgICBUcnVlCiAgICA+Pj4gY2xhc3NpZnkoW1sxLDIsOV0sWzIsNCw1XV0sIHNvcnQ9RmFsc2UpID09ICgKICAgIC4uLiAgICAgW3sxLCA5fSwgezQsIDV9LCB7Mn1dLCB7MTogezEsIDl9LCAyOiB7Mn0sIDQ6IHs0LCA1fSwgNTogezQsIDV9LAogICAgLi4uICAgICA5OiB7MSwgOX19KQogICAgVHJ1ZQogICAgPj4+IGNsYXNzaWZ5KFtbMSwyLDksMTVdLFsyLDQsNV1dLCBzb3J0PUZhbHNlKSA9PSAoCiAgICAuLi4gICAgIFt7MSwgOSwgMTV9LCB7NCwgNX0sIHsyfV0sIHsxOiB7MSwgOSwgMTV9LCAyOiB7Mn0sIDQ6IHs0LCA1fSwKICAgIC4uLiAgICAgNTogezQsIDV9LCA5OiB7MSwgOSwgMTV9LCAxNTogezEsIDksIDE1fX0pCiAgICBUcnVlCiAgICA+Pj4gY2xhc3NlcywgbWFwcGluZyA9IGNsYXNzaWZ5KFtbMSwyLDksMTVdLFsyLDQsNV0sWzE1LDVdXSwgc29ydD1GYWxzZSkKICAgID4+PiBzZXQoW2Zyb3plbnNldChjKSBmb3IgYyBpbiBjbGFzc2VzXSkgPT0gc2V0KAogICAgLi4uICAgICBbZnJvemVuc2V0KHMpIGZvciBzIGluICh7MSwgOX0sIHs0fSwgezJ9LCB7NX0sIHsxNX0pXSkKICAgIFRydWUKICAgID4+PiBtYXBwaW5nID09IHsxOiB7MSwgOX0sIDI6IHsyfSwgNDogezR9LCA1OiB7NX0sIDk6IHsxLCA5fSwgMTU6IHsxNX19CiAgICBUcnVlCiAgICAiIiIKICAgIGNsYXNzaWZpZXIgPSBDbGFzc2lmaWVyKHNvcnQ9c29ydCkKICAgIGNsYXNzaWZpZXIudXBkYXRlKGxpc3Rfb2Zfc2V0cykKICAgIHJldHVybiBjbGFzc2lmaWVyLmdldENsYXNzZXMoKSwgY2xhc3NpZmllci5nZXRNYXBwaW5nKCkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cywgZG9jdGVzdAoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZChvcHRpb25mbGFncz1kb2N0ZXN0LkVMTElQU0lTKS5mYWlsZWQpCg==
+"""fontTools.misc.classifyTools.py -- tools for classifying things."""
+
+
+class Classifier(object):
+    """
+    Main Classifier object, used to classify things into similar sets.
+    """
+
+    def __init__(self, sort=True):
+        self._things = set()  # set of all things known so far
+        self._sets = []  # list of class sets produced so far
+        self._mapping = {}  # map from things to their class set
+        self._dirty = False
+        self._sort = sort
+
+    def add(self, set_of_things):
+        """
+        Add a set to the classifier.  Any iterable is accepted.
+        """
+        if not set_of_things:
+            return
+
+        self._dirty = True
+
+        things, sets, mapping = self._things, self._sets, self._mapping
+
+        s = set(set_of_things)
+        intersection = s.intersection(things)  # existing things
+        s.difference_update(intersection)  # new things
+        difference = s
+        del s
+
+        # Add new class for new things
+        if difference:
+            things.update(difference)
+            sets.append(difference)
+            for thing in difference:
+                mapping[thing] = difference
+        del difference
+
+        while intersection:
+            # Take one item and process the old class it belongs to
+            old_class = mapping[next(iter(intersection))]
+            old_class_intersection = old_class.intersection(intersection)
+
+            # Update old class to remove items from new set
+            old_class.difference_update(old_class_intersection)
+
+            # Remove processed items from todo list
+            intersection.difference_update(old_class_intersection)
+
+            # Add new class for the intersection with old class
+            sets.append(old_class_intersection)
+            for thing in old_class_intersection:
+                mapping[thing] = old_class_intersection
+            del old_class_intersection
+
+    def update(self, list_of_sets):
+        """
+        Add a a list of sets to the classifier.  Any iterable of iterables is accepted.
+        """
+        for s in list_of_sets:
+            self.add(s)
+
+    def _process(self):
+        if not self._dirty:
+            return
+
+        # Do any deferred processing
+        sets = self._sets
+        self._sets = [s for s in sets if s]
+
+        if self._sort:
+            self._sets = sorted(self._sets, key=lambda s: (-len(s), sorted(s)))
+
+        self._dirty = False
+
+    # Output methods
+
+    def getThings(self):
+        """Returns the set of all things known so far.
+
+        The return value belongs to the Classifier object and should NOT
+        be modified while the classifier is still in use.
+        """
+        self._process()
+        return self._things
+
+    def getMapping(self):
+        """Returns the mapping from things to their class set.
+
+        The return value belongs to the Classifier object and should NOT
+        be modified while the classifier is still in use.
+        """
+        self._process()
+        return self._mapping
+
+    def getClasses(self):
+        """Returns the list of class sets.
+
+        The return value belongs to the Classifier object and should NOT
+        be modified while the classifier is still in use.
+        """
+        self._process()
+        return self._sets
+
+
+def classify(list_of_sets, sort=True):
+    """
+    Takes a iterable of iterables (list of sets from here on; but any
+    iterable works.), and returns the smallest list of sets such that
+    each set, is either a subset, or is disjoint from, each of the input
+    sets.
+
+    In other words, this function classifies all the things present in
+    any of the input sets, into similar classes, based on which sets
+    things are a member of.
+
+    If sort=True, return class sets are sorted by decreasing size and
+    their natural sort order within each class size.  Otherwise, class
+    sets are returned in the order that they were identified, which is
+    generally not significant.
+
+    >>> classify([]) == ([], {})
+    True
+    >>> classify([[]]) == ([], {})
+    True
+    >>> classify([[], []]) == ([], {})
+    True
+    >>> classify([[1]]) == ([{1}], {1: {1}})
+    True
+    >>> classify([[1,2]]) == ([{1, 2}], {1: {1, 2}, 2: {1, 2}})
+    True
+    >>> classify([[1],[2]]) == ([{1}, {2}], {1: {1}, 2: {2}})
+    True
+    >>> classify([[1,2],[2]]) == ([{1}, {2}], {1: {1}, 2: {2}})
+    True
+    >>> classify([[1,2],[2,4]]) == ([{1}, {2}, {4}], {1: {1}, 2: {2}, 4: {4}})
+    True
+    >>> classify([[1,2],[2,4,5]]) == (
+    ...     [{4, 5}, {1}, {2}], {1: {1}, 2: {2}, 4: {4, 5}, 5: {4, 5}})
+    True
+    >>> classify([[1,2],[2,4,5]], sort=False) == (
+    ...     [{1}, {4, 5}, {2}], {1: {1}, 2: {2}, 4: {4, 5}, 5: {4, 5}})
+    True
+    >>> classify([[1,2,9],[2,4,5]], sort=False) == (
+    ...     [{1, 9}, {4, 5}, {2}], {1: {1, 9}, 2: {2}, 4: {4, 5}, 5: {4, 5},
+    ...     9: {1, 9}})
+    True
+    >>> classify([[1,2,9,15],[2,4,5]], sort=False) == (
+    ...     [{1, 9, 15}, {4, 5}, {2}], {1: {1, 9, 15}, 2: {2}, 4: {4, 5},
+    ...     5: {4, 5}, 9: {1, 9, 15}, 15: {1, 9, 15}})
+    True
+    >>> classes, mapping = classify([[1,2,9,15],[2,4,5],[15,5]], sort=False)
+    >>> set([frozenset(c) for c in classes]) == set(
+    ...     [frozenset(s) for s in ({1, 9}, {4}, {2}, {5}, {15})])
+    True
+    >>> mapping == {1: {1, 9}, 2: {2}, 4: {4}, 5: {5}, 9: {1, 9}, 15: {15}}
+    True
+    """
+    classifier = Classifier(sort=sort)
+    classifier.update(list_of_sets)
+    return classifier.getClasses(), classifier.getMapping()
+
+
+if __name__ == "__main__":
+    import sys, doctest
+
+    sys.exit(doctest.testmod(optionflags=doctest.ELLIPSIS).failed)

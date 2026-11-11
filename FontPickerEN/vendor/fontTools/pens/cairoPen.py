@@ -1,1 +1,25 @@
-IiIiUGVuIHRvIGRyYXcgdG8gYSBDYWlybyBncmFwaGljcyBsaWJyYXJ5IGNvbnRleHQuIiIiCgpmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IEJhc2VQZW4KCl9fYWxsX18gPSBbIkNhaXJvUGVuIl0KCgpjbGFzcyBDYWlyb1BlbihCYXNlUGVuKToKICAgICIiIlBlbiB0byBkcmF3IHRvIGEgQ2Fpcm8gZ3JhcGhpY3MgbGlicmFyeSBjb250ZXh0LiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaFNldCwgY29udGV4dCk6CiAgICAgICAgQmFzZVBlbi5fX2luaXRfXyhzZWxmLCBnbHlwaFNldCkKICAgICAgICBzZWxmLmNvbnRleHQgPSBjb250ZXh0CgogICAgZGVmIF9tb3ZlVG8oc2VsZiwgcCk6CiAgICAgICAgc2VsZi5jb250ZXh0Lm1vdmVfdG8oKnApCgogICAgZGVmIF9saW5lVG8oc2VsZiwgcCk6CiAgICAgICAgc2VsZi5jb250ZXh0LmxpbmVfdG8oKnApCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIHNlbGYuY29udGV4dC5jdXJ2ZV90bygqcDEsICpwMiwgKnAzKQoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpOgogICAgICAgIHNlbGYuY29udGV4dC5jbG9zZV9wYXRoKCkK
+"""Pen to draw to a Cairo graphics library context."""
+
+from fontTools.pens.basePen import BasePen
+
+__all__ = ["CairoPen"]
+
+
+class CairoPen(BasePen):
+    """Pen to draw to a Cairo graphics library context."""
+
+    def __init__(self, glyphSet, context):
+        BasePen.__init__(self, glyphSet)
+        self.context = context
+
+    def _moveTo(self, p):
+        self.context.move_to(*p)
+
+    def _lineTo(self, p):
+        self.context.line_to(*p)
+
+    def _curveToOne(self, p1, p2, p3):
+        self.context.curve_to(*p1, *p2, *p3)
+
+    def _closePath(self):
+        self.context.close_path()

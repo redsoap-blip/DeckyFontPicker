@@ -1,1 +1,96 @@
-IiIiUHl0aG9uIDIvMyBjb21wYXQgbGF5ZXIgbGVmdG92ZXJzLiIiIgoKaW1wb3J0IGRlY2ltYWwgYXMgX2RlY2ltYWwKaW1wb3J0IG1hdGggYXMgX21hdGgKaW1wb3J0IHdhcm5pbmdzCmZyb20gY29udGV4dGxpYiBpbXBvcnQgcmVkaXJlY3Rfc3RkZXJyLCByZWRpcmVjdF9zdGRvdXQKZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwpmcm9tIGlvIGltcG9ydCBTdHJpbmdJTyBhcyBVbmljb2RlSU8KZnJvbSB0eXBlcyBpbXBvcnQgU2ltcGxlTmFtZXNwYWNlCgpmcm9tIC50ZXh0VG9vbHMgaW1wb3J0IFRhZywgYnl0ZWNociwgYnl0ZW9yZCwgYnl0ZXNqb2luLCBzdHJqb2luLCB0b2J5dGVzLCB0b3N0cgoKd2FybmluZ3Mud2FybigKICAgICJUaGUgcHkyMyBtb2R1bGUgaGFzIGJlZW4gZGVwcmVjYXRlZCBhbmQgd2lsbCBiZSByZW1vdmVkIGluIGEgZnV0dXJlIHJlbGVhc2UuICIKICAgICJQbGVhc2UgdXBkYXRlIHlvdXIgY29kZS4iLAogICAgRGVwcmVjYXRpb25XYXJuaW5nLAopCgpfX2FsbF9fID0gWwogICAgImJhc2VzdHJpbmciLAogICAgImJ5dGVjaHIiLAogICAgImJ5dGVvcmQiLAogICAgIkJ5dGVzSU8iLAogICAgImJ5dGVzam9pbiIsCiAgICAib3BlbiIsCiAgICAiUHkyM0Vycm9yIiwKICAgICJyYW5nZSIsCiAgICAiUmVjdXJzaW9uRXJyb3IiLAogICAgInJvdW5kIiwKICAgICJTaW1wbGVOYW1lc3BhY2UiLAogICAgIlN0cmluZ0lPIiwKICAgICJzdHJqb2luIiwKICAgICJUYWciLAogICAgInRvYnl0ZXMiLAogICAgInRvc3RyIiwKICAgICJ0b3VuaWNvZGUiLAogICAgInVuaWNociIsCiAgICAidW5pY29kZSIsCiAgICAiVW5pY29kZUlPIiwKICAgICJ4cmFuZ2UiLAogICAgInppcCIsCl0KCgpjbGFzcyBQeTIzRXJyb3IoTm90SW1wbGVtZW50ZWRFcnJvcik6CiAgICBwYXNzCgoKUmVjdXJzaW9uRXJyb3IgPSBSZWN1cnNpb25FcnJvcgpTdHJpbmdJTyA9IFVuaWNvZGVJTwoKYmFzZXN0cmluZyA9IHN0cgppc2Nsb3NlID0gX21hdGguaXNjbG9zZQppc2Zpbml0ZSA9IF9tYXRoLmlzZmluaXRlCm9wZW4gPSBvcGVuCnJhbmdlID0gcmFuZ2UKcm91bmQgPSByb3VuZDMgPSByb3VuZAp1bmljaHIgPSBjaHIKdW5pY29kZSA9IHN0cgp6aXAgPSB6aXAKCnRvdW5pY29kZSA9IHRvc3RyCgoKZGVmIHhyYW5nZSgqYXJncywgKiprd2FyZ3MpOgogICAgcmFpc2UgUHkyM0Vycm9yKCIneHJhbmdlJyBpcyBub3QgZGVmaW5lZC4gVXNlICdyYW5nZScgaW5zdGVhZC4iKQoKCmRlZiByb3VuZDIobnVtYmVyLCBuZGlnaXRzPU5vbmUpOgogICAgIiIiCiAgICBJbXBsZW1lbnRhdGlvbiBvZiBQeXRob24gMiBidWlsdC1pbiByb3VuZCgpIGZ1bmN0aW9uLgogICAgUm91bmRzIGEgbnVtYmVyIHRvIGEgZ2l2ZW4gcHJlY2lzaW9uIGluIGRlY2ltYWwgZGlnaXRzIChkZWZhdWx0CiAgICAwIGRpZ2l0cykuIFRoZSByZXN1bHQgaXMgYSBmbG9hdGluZyBwb2ludCBudW1iZXIuIFZhbHVlcyBhcmUgcm91bmRlZAogICAgdG8gdGhlIGNsb3Nlc3QgbXVsdGlwbGUgb2YgMTAgdG8gdGhlIHBvd2VyIG1pbnVzIG5kaWdpdHM7IGlmIHR3bwogICAgbXVsdGlwbGVzIGFyZSBlcXVhbGx5IGNsb3NlLCByb3VuZGluZyBpcyBkb25lIGF3YXkgZnJvbSAwLgogICAgbmRpZ2l0cyBtYXkgYmUgbmVnYXRpdmUuCiAgICBTZWUgUHl0aG9uIDIgZG9jdW1lbnRhdGlvbjoKICAgIGh0dHBzOi8vZG9jcy5weXRob24ub3JnLzIvbGlicmFyeS9mdW5jdGlvbnMuaHRtbD9oaWdobGlnaHQ9cm91bmQjcm91bmQKICAgICIiIgogICAgaWYgbmRpZ2l0cyBpcyBOb25lOgogICAgICAgIG5kaWdpdHMgPSAwCgogICAgaWYgbmRpZ2l0cyA8IDA6CiAgICAgICAgZXhwb25lbnQgPSAxMCAqKiAoLW5kaWdpdHMpCiAgICAgICAgcXVvdGllbnQsIHJlbWFpbmRlciA9IGRpdm1vZChudW1iZXIsIGV4cG9uZW50KQogICAgICAgIGlmIHJlbWFpbmRlciA+PSBleHBvbmVudCAvLyAyIGFuZCBudW1iZXIgPj0gMDoKICAgICAgICAgICAgcXVvdGllbnQgKz0gMQogICAgICAgIHJldHVybiBmbG9hdChxdW90aWVudCAqIGV4cG9uZW50KQogICAgZWxzZToKICAgICAgICBleHBvbmVudCA9IF9kZWNpbWFsLkRlY2ltYWwoIjEwIikgKiogKC1uZGlnaXRzKQoKICAgICAgICBkID0gX2RlY2ltYWwuRGVjaW1hbC5mcm9tX2Zsb2F0KG51bWJlcikucXVhbnRpemUoCiAgICAgICAgICAgIGV4cG9uZW50LCByb3VuZGluZz1fZGVjaW1hbC5ST1VORF9IQUxGX1VQCiAgICAgICAgKQoKICAgICAgICByZXR1cm4gZmxvYXQoZCkK
+"""Python 2/3 compat layer leftovers."""
+
+import decimal as _decimal
+import math as _math
+import warnings
+from contextlib import redirect_stderr, redirect_stdout
+from io import BytesIO
+from io import StringIO as UnicodeIO
+from types import SimpleNamespace
+
+from .textTools import Tag, bytechr, byteord, bytesjoin, strjoin, tobytes, tostr
+
+warnings.warn(
+    "The py23 module has been deprecated and will be removed in a future release. "
+    "Please update your code.",
+    DeprecationWarning,
+)
+
+__all__ = [
+    "basestring",
+    "bytechr",
+    "byteord",
+    "BytesIO",
+    "bytesjoin",
+    "open",
+    "Py23Error",
+    "range",
+    "RecursionError",
+    "round",
+    "SimpleNamespace",
+    "StringIO",
+    "strjoin",
+    "Tag",
+    "tobytes",
+    "tostr",
+    "tounicode",
+    "unichr",
+    "unicode",
+    "UnicodeIO",
+    "xrange",
+    "zip",
+]
+
+
+class Py23Error(NotImplementedError):
+    pass
+
+
+RecursionError = RecursionError
+StringIO = UnicodeIO
+
+basestring = str
+isclose = _math.isclose
+isfinite = _math.isfinite
+open = open
+range = range
+round = round3 = round
+unichr = chr
+unicode = str
+zip = zip
+
+tounicode = tostr
+
+
+def xrange(*args, **kwargs):
+    raise Py23Error("'xrange' is not defined. Use 'range' instead.")
+
+
+def round2(number, ndigits=None):
+    """
+    Implementation of Python 2 built-in round() function.
+    Rounds a number to a given precision in decimal digits (default
+    0 digits). The result is a floating point number. Values are rounded
+    to the closest multiple of 10 to the power minus ndigits; if two
+    multiples are equally close, rounding is done away from 0.
+    ndigits may be negative.
+    See Python 2 documentation:
+    https://docs.python.org/2/library/functions.html?highlight=round#round
+    """
+    if ndigits is None:
+        ndigits = 0
+
+    if ndigits < 0:
+        exponent = 10 ** (-ndigits)
+        quotient, remainder = divmod(number, exponent)
+        if remainder >= exponent // 2 and number >= 0:
+            quotient += 1
+        return float(quotient * exponent)
+    else:
+        exponent = _decimal.Decimal("10") ** (-ndigits)
+
+        d = _decimal.Decimal.from_float(number).quantize(
+            exponent, rounding=_decimal.ROUND_HALF_UP
+        )
+
+        return float(d)

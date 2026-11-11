@@ -1,1 +1,24 @@
-IyBjb2Rpbmc6IHV0Zi04CmZyb20gLm90QmFzZSBpbXBvcnQgQmFzZVRUWENvbnZlcnRlcgoKCmNsYXNzIHRhYmxlX19jX2lfZF9nKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiQ0lEIHRvIEdseXBoIElEIHRhYmxlCgogICAgVGhlIEFBVCBgYGNpZGdgYCB0YWJsZSBoYXMgYWxtb3N0IHRoZSBzYW1lIHN0cnVjdHVyZSBhcyBgYGdpZGNgYCwKICAgIGp1c3QgbWFwcGluZyBDSURzIHRvIEdseXBoSURzIGluc3RlYWQgb2YgdGhlIHJldmVyc2UgZGlyZWN0aW9uLgoKICAgIEl0IGlzIHVzZWZ1bCBmb3IgZm9udHMgdGhhdCBtYXkgYmUgdXNlZCBieSBhIFBERiByZW5kZXJlciBpbiBsaWV1IG9mCiAgICBhIGZvbnQgcmVmZXJlbmNlIHdpdGggYSBrbm93biBnbHlwaCBjb2xsZWN0aW9uIGJ1dCBubyBzdWJzZXR0ZWQKICAgIGdseXBocy4gIEZvciBpbnN0YW5jZSwgYSBQREYgY2FuIHNheSDigJxwbGVhc2UgdXNlIGEgZm9udCBjb25mb3JtaW5nCiAgICB0byBBZG9iZS1KYXBhbi0x4oCdOyB0aGUgYGBjaWRnYGAgbWFwcGluZyBpcyBuZWNlc3NhcnkgaWYgdGhlIGZvbnQgaXMsCiAgICBzYXksIGEgVHJ1ZVR5cGUgZm9udC4gIGBgZ2lkY2BgIGlzIGxvc3N5IGZvciB0aGlzIHB1cnBvc2UgYW5kIGlzCiAgICBvYnNvbGV0ZWQgYnkgYGBjaWRnYGAuCgogICAgRm9yIGV4YW1wbGUsIHRoZSBmaXJzdCBmb250IGluIGBgL1N5c3RlbS9MaWJyYXJ5L0ZvbnRzL1BpbmdGYW5nLnR0Y2BgCiAgICAod2hpY2ggQXBwbGUgc2hpcHMgcHJlLWluc3RhbGxlZCBvbiBNYWNPUyAxMC4xMi42KSBoYXMgYSBgYGNpZGdgYCB0YWJsZS4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2Z2NpZC5odG1sCiAgICAiIiIKCiAgICBwYXNzCg==
+# coding: utf-8
+from .otBase import BaseTTXConverter
+
+
+class table__c_i_d_g(BaseTTXConverter):
+    """CID to Glyph ID table
+
+    The AAT ``cidg`` table has almost the same structure as ``gidc``,
+    just mapping CIDs to GlyphIDs instead of the reverse direction.
+
+    It is useful for fonts that may be used by a PDF renderer in lieu of
+    a font reference with a known glyph collection but no subsetted
+    glyphs.  For instance, a PDF can say “please use a font conforming
+    to Adobe-Japan-1”; the ``cidg`` mapping is necessary if the font is,
+    say, a TrueType font.  ``gidc`` is lossy for this purpose and is
+    obsoleted by ``cidg``.
+
+    For example, the first font in ``/System/Library/Fonts/PingFang.ttc``
+    (which Apple ships pre-installed on MacOS 10.12.6) has a ``cidg`` table.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6gcid.html
+    """
+
+    pass

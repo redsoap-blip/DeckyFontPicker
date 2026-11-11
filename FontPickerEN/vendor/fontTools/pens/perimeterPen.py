@@ -1,1 +1,68 @@
-IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0KIiIiQ2FsY3VsYXRlIHRoZSBwZXJpbWV0ZXIgb2YgYSBnbHlwaC4iIiIKCmZyb20gZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBpbXBvcnQgQmFzZVBlbgpmcm9tIGZvbnRUb29scy5taXNjLmJlemllclRvb2xzIGltcG9ydCAoCiAgICBhcHByb3hpbWF0ZVF1YWRyYXRpY0FyY0xlbmd0aEMsCiAgICBjYWxjUXVhZHJhdGljQXJjTGVuZ3RoQywKICAgIGFwcHJveGltYXRlQ3ViaWNBcmNMZW5ndGhDLAogICAgY2FsY0N1YmljQXJjTGVuZ3RoQywKKQppbXBvcnQgbWF0aAoKX19hbGxfXyA9IFsiUGVyaW1ldGVyUGVuIl0KCgpkZWYgX2Rpc3RhbmNlKHAwLCBwMSk6CiAgICByZXR1cm4gbWF0aC5oeXBvdChwMFswXSAtIHAxWzBdLCBwMFsxXSAtIHAxWzFdKQoKCmNsYXNzIFBlcmltZXRlclBlbihCYXNlUGVuKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaHNldD1Ob25lLCB0b2xlcmFuY2U9MC4wMDUpOgogICAgICAgIEJhc2VQZW4uX19pbml0X18oc2VsZiwgZ2x5cGhzZXQpCiAgICAgICAgc2VsZi52YWx1ZSA9IDAKICAgICAgICBzZWxmLnRvbGVyYW5jZSA9IHRvbGVyYW5jZQoKICAgICAgICAjIENob29zZSB3aGljaCBhbGdvcml0aG0gdG8gdXNlIGZvciBxdWFkcmF0aWMgYW5kIGZvciBjdWJpYy4KICAgICAgICAjIFF1YWRyYXR1cmUgaXMgZmFzdGVyIGJ1dCBoYXMgZml4ZWQgZXJyb3IgY2hhcmFjdGVyaXN0aWMgd2l0aCBubyBzdHJvbmcKICAgICAgICAjIGVycm9yIGJvdW5kLiAgVGhlIGN1dG9mZiBwb2ludHMgYXJlIGRlcml2ZWQgZW1waXJpY2FsbHkuCiAgICAgICAgc2VsZi5fYWRkQ3ViaWMgPSAoCiAgICAgICAgICAgIHNlbGYuX2FkZEN1YmljUXVhZHJhdHVyZSBpZiB0b2xlcmFuY2UgPj0gMC4wMDE1IGVsc2Ugc2VsZi5fYWRkQ3ViaWNSZWN1cnNpdmUKICAgICAgICApCiAgICAgICAgc2VsZi5fYWRkUXVhZHJhdGljID0gKAogICAgICAgICAgICBzZWxmLl9hZGRRdWFkcmF0aWNRdWFkcmF0dXJlCiAgICAgICAgICAgIGlmIHRvbGVyYW5jZSA+PSAwLjAwMDc1CiAgICAgICAgICAgIGVsc2Ugc2VsZi5fYWRkUXVhZHJhdGljRXhhY3QKICAgICAgICApCgogICAgZGVmIF9tb3ZlVG8oc2VsZiwgcDApOgogICAgICAgIHNlbGYuX19zdGFydFBvaW50ID0gcDAKCiAgICBkZWYgX2Nsb3NlUGF0aChzZWxmKToKICAgICAgICBwMCA9IHNlbGYuX2dldEN1cnJlbnRQb2ludCgpCiAgICAgICAgaWYgcDAgIT0gc2VsZi5fX3N0YXJ0UG9pbnQ6CiAgICAgICAgICAgIHNlbGYuX2xpbmVUbyhzZWxmLl9fc3RhcnRQb2ludCkKCiAgICBkZWYgX2xpbmVUbyhzZWxmLCBwMSk6CiAgICAgICAgcDAgPSBzZWxmLl9nZXRDdXJyZW50UG9pbnQoKQogICAgICAgIHNlbGYudmFsdWUgKz0gX2Rpc3RhbmNlKHAwLCBwMSkKCiAgICBkZWYgX2FkZFF1YWRyYXRpY0V4YWN0KHNlbGYsIGMwLCBjMSwgYzIpOgogICAgICAgIHNlbGYudmFsdWUgKz0gY2FsY1F1YWRyYXRpY0FyY0xlbmd0aEMoYzAsIGMxLCBjMikKCiAgICBkZWYgX2FkZFF1YWRyYXRpY1F1YWRyYXR1cmUoc2VsZiwgYzAsIGMxLCBjMik6CiAgICAgICAgc2VsZi52YWx1ZSArPSBhcHByb3hpbWF0ZVF1YWRyYXRpY0FyY0xlbmd0aEMoYzAsIGMxLCBjMikKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMik6CiAgICAgICAgcDAgPSBzZWxmLl9nZXRDdXJyZW50UG9pbnQoKQogICAgICAgIHNlbGYuX2FkZFF1YWRyYXRpYyhjb21wbGV4KCpwMCksIGNvbXBsZXgoKnAxKSwgY29tcGxleCgqcDIpKQoKICAgIGRlZiBfYWRkQ3ViaWNSZWN1cnNpdmUoc2VsZiwgYzAsIGMxLCBjMiwgYzMpOgogICAgICAgIHNlbGYudmFsdWUgKz0gY2FsY0N1YmljQXJjTGVuZ3RoQyhjMCwgYzEsIGMyLCBjMywgc2VsZi50b2xlcmFuY2UpCgogICAgZGVmIF9hZGRDdWJpY1F1YWRyYXR1cmUoc2VsZiwgYzAsIGMxLCBjMiwgYzMpOgogICAgICAgIHNlbGYudmFsdWUgKz0gYXBwcm94aW1hdGVDdWJpY0FyY0xlbmd0aEMoYzAsIGMxLCBjMiwgYzMpCgogICAgZGVmIF9jdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMiwgcDMpOgogICAgICAgIHAwID0gc2VsZi5fZ2V0Q3VycmVudFBvaW50KCkKICAgICAgICBzZWxmLl9hZGRDdWJpYyhjb21wbGV4KCpwMCksIGNvbXBsZXgoKnAxKSwgY29tcGxleCgqcDIpLCBjb21wbGV4KCpwMykpCg==
+# -*- coding: utf-8 -*-
+"""Calculate the perimeter of a glyph."""
+
+from fontTools.pens.basePen import BasePen
+from fontTools.misc.bezierTools import (
+    approximateQuadraticArcLengthC,
+    calcQuadraticArcLengthC,
+    approximateCubicArcLengthC,
+    calcCubicArcLengthC,
+)
+import math
+
+__all__ = ["PerimeterPen"]
+
+
+def _distance(p0, p1):
+    return math.hypot(p0[0] - p1[0], p0[1] - p1[1])
+
+
+class PerimeterPen(BasePen):
+    def __init__(self, glyphset=None, tolerance=0.005):
+        BasePen.__init__(self, glyphset)
+        self.value = 0
+        self.tolerance = tolerance
+
+        # Choose which algorithm to use for quadratic and for cubic.
+        # Quadrature is faster but has fixed error characteristic with no strong
+        # error bound.  The cutoff points are derived empirically.
+        self._addCubic = (
+            self._addCubicQuadrature if tolerance >= 0.0015 else self._addCubicRecursive
+        )
+        self._addQuadratic = (
+            self._addQuadraticQuadrature
+            if tolerance >= 0.00075
+            else self._addQuadraticExact
+        )
+
+    def _moveTo(self, p0):
+        self.__startPoint = p0
+
+    def _closePath(self):
+        p0 = self._getCurrentPoint()
+        if p0 != self.__startPoint:
+            self._lineTo(self.__startPoint)
+
+    def _lineTo(self, p1):
+        p0 = self._getCurrentPoint()
+        self.value += _distance(p0, p1)
+
+    def _addQuadraticExact(self, c0, c1, c2):
+        self.value += calcQuadraticArcLengthC(c0, c1, c2)
+
+    def _addQuadraticQuadrature(self, c0, c1, c2):
+        self.value += approximateQuadraticArcLengthC(c0, c1, c2)
+
+    def _qCurveToOne(self, p1, p2):
+        p0 = self._getCurrentPoint()
+        self._addQuadratic(complex(*p0), complex(*p1), complex(*p2))
+
+    def _addCubicRecursive(self, c0, c1, c2, c3):
+        self.value += calcCubicArcLengthC(c0, c1, c2, c3, self.tolerance)
+
+    def _addCubicQuadrature(self, c0, c1, c2, c3):
+        self.value += approximateCubicArcLengthC(c0, c1, c2, c3)
+
+    def _curveToOne(self, p1, p2, p3):
+        p0 = self._getCurrentPoint()
+        self._addCubic(complex(*p0), complex(*p1), complex(*p2), complex(*p3))

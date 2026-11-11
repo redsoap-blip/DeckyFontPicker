@@ -1,1 +1,311 @@
-IiIiU3BhcnNlIEJpdCBTZXQgZW5jb2RpbmcvZGVjb2RpbmcgZm9yIElGVCAoSW5jcmVtZW50YWwgRm9udCBUcmFuc2ZlcikuCgpJbXBsZW1lbnRzIHRoZSBzcGFyc2UgYml0IHNldCBmb3JtYXQgZGVmaW5lZCBpbiB0aGUgVzNDIElGVCBzcGVjaWZpY2F0aW9uOgpodHRwczovL3czYy5naXRodWIuaW8vSUZUL092ZXJ2aWV3Lmh0bWwjc3BhcnNlLWJpdC1zZXQtZGVjb2RpbmcKIiIiCgojIFJlZmVyZW5jZTogaHR0cHM6Ly9naXRodWIuY29tL2dvb2dsZWZvbnRzL2ZvbnRhdGlvbnMvYmxvYi9tYWluL3JlYWQtZm9udHMvc3JjL2NvbGxlY3Rpb25zL2ludF9zZXQvc3BhcnNlX2JpdF9zZXQucnMKCgppbXBvcnQgYmlzZWN0CmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlcXVlCmZyb20gdHlwaW5nIGltcG9ydCBEaWN0LCBJdGVyYWJsZSwgT3B0aW9uYWwsIFNldCwgVHVwbGUKCiMgTWF4aW11bSB0cmVlIGhlaWdodCB0aGF0IGZpdHMgd2l0aGluIGEgMzItYml0IGxlYWYgbm9kZSBmb3IgZWFjaCBicmFuY2hpbmcgZmFjdG9yLgpfQkZfTUFYX0hFSUdIVDogRGljdFtpbnQsIGludF0gPSB7MjogMzEsIDQ6IDE2LCA4OiAxMSwgMzI6IDd9CgoKY2xhc3MgU3BhcnNlQml0U2V0RGVjb2RlRXJyb3IoRXhjZXB0aW9uKToKICAgIHBhc3MKCgpkZWYgZGVjb2RlKAogICAgZGF0YTogYnl0ZXMsIGJpYXM6IGludCA9IDAsIG1heFZhbHVlOiBpbnQgPSAweEZGRkZGRkZGCikgLT4gVHVwbGVbU2V0W2ludF0sIGludF06CiAgICAiIiJEZWNvZGUgYSBzcGFyc2UgYml0IHNldCBmcm9tIGJpbmFyeSBkYXRhLgoKICAgIEFyZ3M6CiAgICAgICAgZGF0YTogYnl0ZXMtbGlrZSBvYmplY3QgY29udGFpbmluZyB0aGUgc3BhcnNlIGJpdCBzZXQgZW5jb2RpbmcuCiAgICAgICAgYmlhczogaW50ZWdlciBhZGRlZCB0byBlYWNoIGRlY29kZWQgdmFsdWUuCgogICAgUmV0dXJuczoKICAgICAgICBBIHR1cGxlICh2YWx1ZXMsIGJ5dGVzQ29uc3VtZWQpIHdoZXJlIHZhbHVlcyBpcyBhIHNldCBvZiBpbnRlZ2VycwogICAgICAgIGFuZCBieXRlc0NvbnN1bWVkIGlzIHRoZSBudW1iZXIgb2YgYnl0ZXMgcmVhZCBmcm9tIGRhdGEuCiAgICAiIiIKICAgIGlmIG5vdCBkYXRhOgogICAgICAgIHJhaXNlIFNwYXJzZUJpdFNldERlY29kZUVycm9yKCJFbXB0eSBkYXRhIikKCiAgICBicmFuY2hGYWN0b3IsIGhlaWdodCA9IF9kZWNvZGVIZWFkZXIoZGF0YVswXSkKCiAgICBtYXhIZWlnaHQgPSBfQkZfTUFYX0hFSUdIVFticmFuY2hGYWN0b3JdCiAgICBpZiBoZWlnaHQgPiBtYXhIZWlnaHQ6CiAgICAgICAgcmFpc2UgU3BhcnNlQml0U2V0RGVjb2RlRXJyb3IoCiAgICAgICAgICAgIGYiSGVpZ2h0IHtoZWlnaHR9IGV4Y2VlZHMgbWF4IHttYXhIZWlnaHR9IGZvciBicmFuY2ggZmFjdG9yIHticmFuY2hGYWN0b3J9IgogICAgICAgICkKCiAgICByZXR1cm4gX2RlY29kZUltcGwoZGF0YSwgYnJhbmNoRmFjdG9yLCBoZWlnaHQsIGJpYXMsIG1heFZhbHVlKQoKCmRlZiBfZGVjb2RlSW1wbCgKICAgIGRhdGE6IGJ5dGVzLCBicmFuY2hGYWN0b3I6IGludCwgaGVpZ2h0OiBpbnQsIGJpYXM6IGludCwgbWF4VmFsdWU6IGludAopIC0+IFR1cGxlW1NldFtpbnRdLCBpbnRdOgogICAgaWYgaGVpZ2h0ID09IDA6CiAgICAgICAgIyAxIGJ5dGUgd2FzIHVzZWQgZm9yIHRoZSBoZWFkZXIuCiAgICAgICAgcmV0dXJuIChzZXQoKSwgMSkKCiAgICBiaXRTdHJlYW0gPSBfSW5wdXRCaXRTdHJlYW0oZGF0YSwgYnJhbmNoRmFjdG9yKQogICAgcmVzdWx0OiBTZXRbaW50XSA9IHNldCgpCiAgICAjIFF1ZXVlIGVudHJpZXMgYXJlIChzdGFydFZhbHVlLCBkZXB0aCksIHdoZXJlIHN0YXJ0VmFsdWUgaXMgdGhlIGZpcnN0CiAgICAjIGludGVnZXIgdGhhdCBjb3VsZCBiZSBjb3ZlcmVkIGJ5IHRoaXMgbm9kZS4KICAgIHF1ZXVlOiBkZXF1ZVtUdXBsZVtpbnQsIGludF1dID0gZGVxdWUoKQogICAgcXVldWUuYXBwZW5kKCgwLCAxKSkKCiAgICB3aGlsZSBxdWV1ZToKICAgICAgICBzdGFydCwgZGVwdGggPSBxdWV1ZS5wb3BsZWZ0KCkKICAgICAgICBiaXRzID0gYml0U3RyZWFtLm5leHQoKQogICAgICAgIGlmIGJpdHMgaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgU3BhcnNlQml0U2V0RGVjb2RlRXJyb3IoIlVuZXhwZWN0ZWQgZW5kIG9mIGRhdGEiKQoKICAgICAgICAjIGFsbCBiaXRzIHdlcmUgd2VyZSB6ZXJvIHdoaWNoIGlzIGEgc3BlY2lhbCBjb21tYW5kIHRvIGNvbXBsZXRlbHkgZmlsbAogICAgICAgICMgaW4gYWxsIGludGVnZXJzIGNvdmVyZWQgYnkgdGhpcyBub2RlLgogICAgICAgIGlmIGJpdHMgPT0gMDoKICAgICAgICAgICAgZXhwID0gaGVpZ2h0IC0gZGVwdGggKyAxCiAgICAgICAgICAgIG5vZGVTaXplID0gYnJhbmNoRmFjdG9yKipleHAKICAgICAgICAgICAgZmlsbFN0YXJ0ID0gc3RhcnQgKyBiaWFzCiAgICAgICAgICAgIGlmIGZpbGxTdGFydCA+IG1heFZhbHVlOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgZmlsbEVuZCA9IG1pbihtYXhWYWx1ZSwgc3RhcnQgKyBub2RlU2l6ZSAtIDEgKyBiaWFzKQogICAgICAgICAgICBpZiBmaWxsU3RhcnQgPCAwOgogICAgICAgICAgICAgICAgZmlsbFN0YXJ0ID0gMAogICAgICAgICAgICBpZiBmaWxsU3RhcnQgPD0gZmlsbEVuZDoKICAgICAgICAgICAgICAgIHJlc3VsdC51cGRhdGUocmFuZ2UoZmlsbFN0YXJ0LCBmaWxsRW5kICsgMSkpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgICMgTm9uLXplcm8gbm9kZTogZWFjaCBzZXQgYml0IGlkZW50aWZpZXMgYSBjaGlsZC92YWx1ZS4KICAgICAgICBleHAgPSBoZWlnaHQgLSBkZXB0aAogICAgICAgIG5leHROb2RlU2l6ZSA9IGJyYW5jaEZhY3RvcioqZXhwCiAgICAgICAgd2hpbGUgVHJ1ZToKICAgICAgICAgICAgYml0SW5kZXggPSBfdHJhaWxpbmdaZXJvcyhiaXRzLCAzMikKICAgICAgICAgICAgaWYgYml0SW5kZXggPT0gMzI6CiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICBpZiBkZXB0aCA9PSBoZWlnaHQ6CiAgICAgICAgICAgICAgICB2YWwgPSBzdGFydCArIGJpdEluZGV4ICsgYmlhcwogICAgICAgICAgICAgICAgaWYgdmFsID4gbWF4VmFsdWU6CiAgICAgICAgICAgICAgICAgICAgcXVldWUuY2xlYXIoKQogICAgICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICBpZiB2YWwgPj0gMDoKICAgICAgICAgICAgICAgICAgICByZXN1bHQuYWRkKHZhbCkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHN0YXJ0RGVsdGEgPSBiaXRJbmRleCAqIG5leHROb2RlU2l6ZQogICAgICAgICAgICAgICAgcXVldWUuYXBwZW5kKChzdGFydCArIHN0YXJ0RGVsdGEsIGRlcHRoICsgMSkpCiAgICAgICAgICAgIGJpdHMgJj0gfigxIDw8IGJpdEluZGV4KQoKICAgIHJldHVybiAocmVzdWx0LCBiaXRTdHJlYW0uYnl0ZXNDb25zdW1lZCgpKQoKCmRlZiBlbmNvZGUodmFsdWVzOiBJdGVyYWJsZVtpbnRdKSAtPiBieXRlczoKICAgICIiIkVuY29kZSBhIHNldCBvZiBpbnRlZ2VycyBhcyBhIHNwYXJzZSBiaXQgc2V0LgoKICAgIFRyaWVzIGFsbCBicmFuY2hpbmcgZmFjdG9ycyBhbmQgcmV0dXJucyB0aGUgc2hvcnRlc3QgZW5jb2RpbmcuCgogICAgQXJnczoKICAgICAgICB2YWx1ZXM6IGl0ZXJhYmxlIG9mIG5vbi1uZWdhdGl2ZSBpbnRlZ2Vycy4KCiAgICBSZXR1cm5zOgogICAgICAgIGJ5dGVzIGNvbnRhaW5pbmcgdGhlIHNwYXJzZSBiaXQgc2V0IGVuY29kaW5nLgogICAgIiIiCiAgICB2YWx1ZXNTb3J0ZWQgPSBzb3J0ZWQoc2V0KHZhbHVlcykpCiAgICBpZiBub3QgdmFsdWVzU29ydGVkOgogICAgICAgIHJldHVybiBfZW5jb2RlSGVhZGVyKDIsIDApCgogICAgbWF4VmFsdWUgPSB2YWx1ZXNTb3J0ZWRbLTFdCiAgICB2YWx1ZVNldCA9IHNldCh2YWx1ZXNTb3J0ZWQpCgogICAgYmVzdDogT3B0aW9uYWxbYnl0ZXNdID0gTm9uZQogICAgZm9yIGJyYW5jaEZhY3RvciBpbiAoMiwgNCwgOCwgMzIpOgogICAgICAgIGhlaWdodCA9IF90cmVlSGVpZ2h0KGJyYW5jaEZhY3RvciwgbWF4VmFsdWUpCiAgICAgICAgaWYgaGVpZ2h0ID4gX0JGX01BWF9IRUlHSFRbYnJhbmNoRmFjdG9yXToKICAgICAgICAgICAgY29udGludWUKICAgICAgICBlbmNvZGVkID0gX2VuY29kZVdpdGhCZih2YWx1ZVNldCwgYnJhbmNoRmFjdG9yLCBoZWlnaHQpCiAgICAgICAgaWYgYmVzdCBpcyBOb25lIG9yIGxlbihlbmNvZGVkKSA8IGxlbihiZXN0KToKICAgICAgICAgICAgYmVzdCA9IGVuY29kZWQKCiAgICBpZiBiZXN0IGlzIE5vbmU6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIkNhbm5vdCBlbmNvZGUgbWF4IHZhbHVlIHttYXhWYWx1ZX0iKQogICAgcmV0dXJuIGJlc3QKCgpkZWYgX2VuY29kZUhlYWRlcihicmFuY2hGYWN0b3I6IGludCwgaGVpZ2h0OiBpbnQpIC0+IGJ5dGVzOgogICAgYnJhbmNoRmFjdG9yVG9JZCA9IHsyOiAwLCA0OiAxLCA4OiAyLCAzMjogM30KICAgIHJldHVybiBieXRlcyhbKGhlaWdodCA8PCAyKSB8IGJyYW5jaEZhY3RvclRvSWRbYnJhbmNoRmFjdG9yXV0pCgoKZGVmIF9kZWNvZGVIZWFkZXIoaGVhZGVyQnl0ZTogaW50KSAtPiBUdXBsZVtpbnQsIGludF06CiAgICBpZCA9IGhlYWRlckJ5dGUgJiAweDAzCiAgICBpZFRvQnJhbmNoRmFjdG9yID0gezA6IDIsIDE6IDQsIDI6IDgsIDM6IDMyfQogICAgaGVpZ2h0ID0gKGhlYWRlckJ5dGUgPj4gMikgJiAweDFGCiAgICByZXR1cm4gaWRUb0JyYW5jaEZhY3RvcltpZF0sIGhlaWdodAoKCmRlZiBfdHJlZUhlaWdodChicmFuY2hGYWN0b3I6IGludCwgbWF4VmFsdWU6IGludCkgLT4gaW50OgogICAgIiIiUmV0dXJuIHRoZSBtaW5pbXVtIHRyZWUgaGVpZ2h0IG5lZWRlZCB0byByZXByZXNlbnQgbWF4VmFsdWUuIiIiCiAgICBoZWlnaHQgPSAxCiAgICBjYXBhY2l0eSA9IGJyYW5jaEZhY3RvcgogICAgd2hpbGUgY2FwYWNpdHkgPD0gbWF4VmFsdWU6CiAgICAgICAgY2FwYWNpdHkgKj0gYnJhbmNoRmFjdG9yCiAgICAgICAgaGVpZ2h0ICs9IDEKICAgIHJldHVybiBoZWlnaHQKCgpkZWYgX2VuY29kZVdpdGhCZih2YWx1ZVNldDogU2V0W2ludF0sIGJyYW5jaEZhY3RvcjogaW50LCBoZWlnaHQ6IGludCkgLT4gYnl0ZXM6CiAgICBpZiBoZWlnaHQgPT0gMDoKICAgICAgICByZXR1cm4gX2VuY29kZUhlYWRlcihicmFuY2hGYWN0b3IsIDApCgogICAgIyBCdWlsZCBsYXllcnMgYm90dG9tLXVwOiBsYXllciAwID0gbGVhdmVzIChpbmRpdmlkdWFsIHZhbHVlcyksCiAgICAjIGVhY2ggaGlnaGVyIGxheWVyIGdyb3VwcyBiZiBjaGlsZHJlbiBpbnRvIG9uZSBwYXJlbnQgYml0bWFzay4KICAgIGxheWVyczogbGlzdFtEaWN0W2ludCwgaW50XV0gPSBbe31dICAjIGxpc3Qgb2YgZGljdHM6IG5vZGVJbmRleCAtPiBiaXRtYXNrCgogICAgZm9yIHYgaW4gdmFsdWVTZXQ6CiAgICAgICAgbm9kZUluZGV4ID0gdiAvLyBicmFuY2hGYWN0b3IKICAgICAgICBiaXRQb3MgPSB2ICUgYnJhbmNoRmFjdG9yCiAgICAgICAgaWYgbm9kZUluZGV4IG5vdCBpbiBsYXllcnNbMF06CiAgICAgICAgICAgIGxheWVyc1swXVtub2RlSW5kZXhdID0gMAogICAgICAgIGxheWVyc1swXVtub2RlSW5kZXhdIHw9IDEgPDwgYml0UG9zCgogICAgZm9yIF8gaW4gcmFuZ2UoMSwgaGVpZ2h0KToKICAgICAgICBwcmV2TGF5ZXIgPSBsYXllcnNbLTFdCiAgICAgICAgbmV3TGF5ZXI6IERpY3RbaW50LCBpbnRdID0ge30KICAgICAgICBmb3Igbm9kZUluZGV4LCBiaXRtYXNrIGluIHByZXZMYXllci5pdGVtcygpOgogICAgICAgICAgICBwYXJlbnRJbmRleCA9IG5vZGVJbmRleCAvLyBicmFuY2hGYWN0b3IKICAgICAgICAgICAgYml0UG9zID0gbm9kZUluZGV4ICUgYnJhbmNoRmFjdG9yCiAgICAgICAgICAgIGlmIHBhcmVudEluZGV4IG5vdCBpbiBuZXdMYXllcjoKICAgICAgICAgICAgICAgIG5ld0xheWVyW3BhcmVudEluZGV4XSA9IDAKICAgICAgICAgICAgbmV3TGF5ZXJbcGFyZW50SW5kZXhdIHw9IDEgPDwgYml0UG9zCiAgICAgICAgbGF5ZXJzLmFwcGVuZChuZXdMYXllcikKCiAgICAjIEZvciB6ZXJvLW5vZGUgb3B0aW1pemF0aW9uOiB0cmFjayBjb3VudCBvZiB2YWx1ZXMgaW4gc29ydGVkIGxpc3QuCiAgICB2YWx1ZXNTb3J0ZWQgPSBzb3J0ZWQodmFsdWVTZXQpCgogICAgZGVmIHJhbmdlQ291bnQobG86IGludCwgaGk6IGludCkgLT4gaW50OgogICAgICAgIHJldHVybiBiaXNlY3QuYmlzZWN0X3JpZ2h0KHZhbHVlc1NvcnRlZCwgaGkpIC0gYmlzZWN0LmJpc2VjdF9sZWZ0KAogICAgICAgICAgICB2YWx1ZXNTb3J0ZWQsIGxvCiAgICAgICAgKQoKICAgICMgRW1pdCBub2RlcyBCRlMgb3JkZXIgKHJvb3QgdG8gbGVhdmVzKS4KICAgICMgUXVldWUgZW50cmllczogKG5vZGVJbmRleCwgZGVwdGhGcm9tUm9vdCwgcmFuZ2VTdGFydCwgcmFuZ2VFbmQpCiAgICBzdHJlYW0gPSBfT3V0cHV0Qml0U3RyZWFtKGJyYW5jaEZhY3RvcikKICAgIHN1YnRyZWVTaXplID0gYnJhbmNoRmFjdG9yKipoZWlnaHQKICAgIHF1ZXVlOiBkZXF1ZVtUdXBsZVtpbnQsIGludCwgaW50LCBpbnRdXSA9IGRlcXVlKFsoMCwgMCwgMCwgc3VidHJlZVNpemUgLSAxKV0pCgogICAgd2hpbGUgcXVldWU6CiAgICAgICAgbm9kZUluZGV4LCBkZXB0aCwgcmFuZ2VTdGFydCwgcmFuZ2VFbmQgPSBxdWV1ZS5wb3BsZWZ0KCkKICAgICAgICBsYXllcklkeCA9IGhlaWdodCAtIDEgLSBkZXB0aCAgIyBsYXllcnNbMF09bGVhdmVzLCBsYXllcnNbaGVpZ2h0LTFdPXJvb3QKCiAgICAgICAgYml0bWFzayA9ICgKICAgICAgICAgICAgbGF5ZXJzW2xheWVySWR4XS5nZXQobm9kZUluZGV4LCAwKSBpZiAwIDw9IGxheWVySWR4IDwgbGVuKGxheWVycykgZWxzZSAwCiAgICAgICAgKQoKICAgICAgICAjIFplcm8tbm9kZSBvcHRpbWl6YXRpb246IGlmIGVudGlyZSByYW5nZSBpcyBmaWxsZWQgb24gYW4gSU5URVJOQUwgbm9kZSwKICAgICAgICAjIHdyaXRlIDAgYW5kIHNraXAgY2hpbGRyZW4uICBBdCBsZWFmIGxldmVsIHdlIGFsd2F5cyB3cml0ZSB0aGUgZXhwbGljaXQKICAgICAgICAjIGJpdG1hc2sgc28gdGhlIGVuY29kaW5nIG1hdGNoZXMgdGhlIHJlZmVyZW5jZS4KICAgICAgICBpZiAoCiAgICAgICAgICAgIGRlcHRoIDwgaGVpZ2h0IC0gMQogICAgICAgICAgICBhbmQgcmFuZ2VDb3VudChyYW5nZVN0YXJ0LCByYW5nZUVuZCkgPT0gcmFuZ2VFbmQgLSByYW5nZVN0YXJ0ICsgMQogICAgICAgICk6CiAgICAgICAgICAgIHN0cmVhbS53cml0ZSgwKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBzdHJlYW0ud3JpdGUoYml0bWFzaykKCiAgICAgICAgaWYgYml0bWFzayAhPSAwIGFuZCBkZXB0aCA8IGhlaWdodCAtIDE6CiAgICAgICAgICAgIGNoaWxkU2l6ZSA9IChyYW5nZUVuZCAtIHJhbmdlU3RhcnQgKyAxKSAvLyBicmFuY2hGYWN0b3IKICAgICAgICAgICAgYml0cyA9IGJpdG1hc2sKICAgICAgICAgICAgd2hpbGUgYml0czoKICAgICAgICAgICAgICAgIGJpdEluZGV4ID0gX3RyYWlsaW5nWmVyb3MoYml0cywgMzIpCiAgICAgICAgICAgICAgICBjaGlsZEluZGV4ID0gbm9kZUluZGV4ICogYnJhbmNoRmFjdG9yICsgYml0SW5kZXgKICAgICAgICAgICAgICAgIGNoaWxkU3RhcnQgPSByYW5nZVN0YXJ0ICsgYml0SW5kZXggKiBjaGlsZFNpemUKICAgICAgICAgICAgICAgIGNoaWxkRW5kID0gY2hpbGRTdGFydCArIGNoaWxkU2l6ZSAtIDEKICAgICAgICAgICAgICAgIHF1ZXVlLmFwcGVuZCgoY2hpbGRJbmRleCwgZGVwdGggKyAxLCBjaGlsZFN0YXJ0LCBjaGlsZEVuZCkpCiAgICAgICAgICAgICAgICBiaXRzICY9IH4oMSA8PCBiaXRJbmRleCkKCiAgICByZXR1cm4gX2VuY29kZUhlYWRlcihicmFuY2hGYWN0b3IsIGhlaWdodCkgKyBzdHJlYW0udG9CeXRlcygpCgoKZGVmIF90cmFpbGluZ1plcm9zKHZhbDogaW50LCBtYXhCaXRzOiBpbnQpIC0+IGludDoKICAgIGlmIHZhbCA9PSAwOgogICAgICAgIHJldHVybiBtYXhCaXRzCiAgICBjb3VudCA9IDAKICAgIHdoaWxlICh2YWwgJiAxKSA9PSAwOgogICAgICAgIHZhbCA+Pj0gMQogICAgICAgIGNvdW50ICs9IDEKICAgIHJldHVybiBjb3VudAoKCmNsYXNzIF9JbnB1dEJpdFN0cmVhbToKICAgICIiIlJlYWRzIGJpdCBub2RlcyBmcm9tIGEgYnl0ZSBhcnJheSwgc3RhcnRpbmcgYWZ0ZXIgdGhlIGhlYWRlciBieXRlLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBkYXRhOiBieXRlcywgYnJhbmNoRmFjdG9yOiBpbnQpOgogICAgICAgIHNlbGYuZGF0YSA9IGRhdGEKICAgICAgICBzZWxmLmJyYW5jaEZhY3RvciA9IGJyYW5jaEZhY3RvcgogICAgICAgIHNlbGYuYnl0ZUluZGV4ID0gMSAgIyBza2lwIHRoZSBoZWFkZXIgYnl0ZQogICAgICAgIHNlbGYuc3ViSW5kZXggPSAwICAjIGJpdCBvZmZzZXQgd2l0aGluIGN1cnJlbnQgYnl0ZSAoZm9yIGJmPTIsNCkKCiAgICBkZWYgbmV4dChzZWxmKSAtPiBPcHRpb25hbFtpbnRdOgogICAgICAgIGlmIHNlbGYuYnJhbmNoRmFjdG9yIGluICgyLCA0KToKICAgICAgICAgICAgaWYgc2VsZi5ieXRlSW5kZXggPj0gbGVuKHNlbGYuZGF0YSk6CiAgICAgICAgICAgICAgICByZXR1cm4gTm9uZQogICAgICAgICAgICBtYXNrID0gKDEgPDwgc2VsZi5icmFuY2hGYWN0b3IpIC0gMQogICAgICAgICAgICB2YWwgPSAoc2VsZi5kYXRhW3NlbGYuYnl0ZUluZGV4XSA+PiBzZWxmLnN1YkluZGV4KSAmIG1hc2sKICAgICAgICAgICAgc2VsZi5zdWJJbmRleCArPSBzZWxmLmJyYW5jaEZhY3RvcgogICAgICAgICAgICBpZiBzZWxmLnN1YkluZGV4ID49IDg6CiAgICAgICAgICAgICAgICBzZWxmLnN1YkluZGV4ID0gMAogICAgICAgICAgICAgICAgc2VsZi5ieXRlSW5kZXggKz0gMQogICAgICAgICAgICByZXR1cm4gdmFsCiAgICAgICAgZWxpZiBzZWxmLmJyYW5jaEZhY3RvciA9PSA4OgogICAgICAgICAgICBpZiBzZWxmLmJ5dGVJbmRleCA+PSBsZW4oc2VsZi5kYXRhKToKICAgICAgICAgICAgICAgIHJldHVybiBOb25lCiAgICAgICAgICAgIHZhbCA9IHNlbGYuZGF0YVtzZWxmLmJ5dGVJbmRleF0KICAgICAgICAgICAgc2VsZi5ieXRlSW5kZXggKz0gMQogICAgICAgICAgICByZXR1cm4gdmFsCiAgICAgICAgZWxpZiBzZWxmLmJyYW5jaEZhY3RvciA9PSAzMjoKICAgICAgICAgICAgaWYgc2VsZi5ieXRlSW5kZXggKyAzID49IGxlbihzZWxmLmRhdGEpOgogICAgICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICAgICAgYiA9IHNlbGYuZGF0YQogICAgICAgICAgICBpID0gc2VsZi5ieXRlSW5kZXgKICAgICAgICAgICAgdmFsID0gYltpXSB8IChiW2kgKyAxXSA8PCA4KSB8IChiW2kgKyAyXSA8PCAxNikgfCAoYltpICsgM10gPDwgMjQpCiAgICAgICAgICAgIHNlbGYuYnl0ZUluZGV4ICs9IDQKICAgICAgICAgICAgcmV0dXJuIHZhbAogICAgICAgIHJldHVybiBOb25lCgogICAgZGVmIGJ5dGVzQ29uc3VtZWQoc2VsZikgLT4gaW50OgogICAgICAgIHJldHVybiBzZWxmLmJ5dGVJbmRleCArICgxIGlmIHNlbGYuc3ViSW5kZXggPiAwIGVsc2UgMCkKCgpjbGFzcyBfT3V0cHV0Qml0U3RyZWFtOgogICAgIiIiV3JpdGVzIGJpdCBub2RlcyBpbnRvIGEgYnl0ZSBhcnJheS4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgYnJhbmNoRmFjdG9yOiBpbnQpOgogICAgICAgIHNlbGYuYnJhbmNoRmFjdG9yID0gYnJhbmNoRmFjdG9yCiAgICAgICAgc2VsZi5kYXRhID0gYnl0ZWFycmF5KCkKICAgICAgICBzZWxmLnN1YkluZGV4ID0gMCAgIyBiaXQgb2Zmc2V0IHdpdGhpbiBjdXJyZW50IGJ5dGUgKGZvciBiZj0yLDQpCgogICAgZGVmIHdyaXRlKHNlbGYsIHZhbHVlOiBpbnQpIC0+IE5vbmU6CiAgICAgICAgaWYgc2VsZi5icmFuY2hGYWN0b3IgaW4gKDIsIDQpOgogICAgICAgICAgICBtYXNrID0gKDEgPDwgc2VsZi5icmFuY2hGYWN0b3IpIC0gMQogICAgICAgICAgICB2YWx1ZSAmPSBtYXNrCiAgICAgICAgICAgIGlmIHNlbGYuc3ViSW5kZXggPT0gMDoKICAgICAgICAgICAgICAgIHNlbGYuZGF0YS5hcHBlbmQoMCkKICAgICAgICAgICAgc2VsZi5kYXRhWy0xXSB8PSB2YWx1ZSA8PCBzZWxmLnN1YkluZGV4CiAgICAgICAgICAgIHNlbGYuc3ViSW5kZXggKz0gc2VsZi5icmFuY2hGYWN0b3IKICAgICAgICAgICAgaWYgc2VsZi5zdWJJbmRleCA+PSA4OgogICAgICAgICAgICAgICAgc2VsZi5zdWJJbmRleCA9IDAKICAgICAgICBlbGlmIHNlbGYuYnJhbmNoRmFjdG9yID09IDg6CiAgICAgICAgICAgIHNlbGYuZGF0YS5hcHBlbmQodmFsdWUgJiAweEZGKQogICAgICAgIGVsaWYgc2VsZi5icmFuY2hGYWN0b3IgPT0gMzI6CiAgICAgICAgICAgIHNlbGYuZGF0YS5hcHBlbmQodmFsdWUgJiAweEZGKQogICAgICAgICAgICBzZWxmLmRhdGEuYXBwZW5kKCh2YWx1ZSA+PiA4KSAmIDB4RkYpCiAgICAgICAgICAgIHNlbGYuZGF0YS5hcHBlbmQoKHZhbHVlID4+IDE2KSAmIDB4RkYpCiAgICAgICAgICAgIHNlbGYuZGF0YS5hcHBlbmQoKHZhbHVlID4+IDI0KSAmIDB4RkYpCgogICAgZGVmIHRvQnl0ZXMoc2VsZikgLT4gYnl0ZXM6CiAgICAgICAgcmV0dXJuIGJ5dGVzKHNlbGYuZGF0YSkK
+"""Sparse Bit Set encoding/decoding for IFT (Incremental Font Transfer).
+
+Implements the sparse bit set format defined in the W3C IFT specification:
+https://w3c.github.io/IFT/Overview.html#sparse-bit-set-decoding
+"""
+
+# Reference: https://github.com/googlefonts/fontations/blob/main/read-fonts/src/collections/int_set/sparse_bit_set.rs
+
+
+import bisect
+from collections import deque
+from typing import Dict, Iterable, Optional, Set, Tuple
+
+# Maximum tree height that fits within a 32-bit leaf node for each branching factor.
+_BF_MAX_HEIGHT: Dict[int, int] = {2: 31, 4: 16, 8: 11, 32: 7}
+
+
+class SparseBitSetDecodeError(Exception):
+    pass
+
+
+def decode(
+    data: bytes, bias: int = 0, maxValue: int = 0xFFFFFFFF
+) -> Tuple[Set[int], int]:
+    """Decode a sparse bit set from binary data.
+
+    Args:
+        data: bytes-like object containing the sparse bit set encoding.
+        bias: integer added to each decoded value.
+
+    Returns:
+        A tuple (values, bytesConsumed) where values is a set of integers
+        and bytesConsumed is the number of bytes read from data.
+    """
+    if not data:
+        raise SparseBitSetDecodeError("Empty data")
+
+    branchFactor, height = _decodeHeader(data[0])
+
+    maxHeight = _BF_MAX_HEIGHT[branchFactor]
+    if height > maxHeight:
+        raise SparseBitSetDecodeError(
+            f"Height {height} exceeds max {maxHeight} for branch factor {branchFactor}"
+        )
+
+    return _decodeImpl(data, branchFactor, height, bias, maxValue)
+
+
+def _decodeImpl(
+    data: bytes, branchFactor: int, height: int, bias: int, maxValue: int
+) -> Tuple[Set[int], int]:
+    if height == 0:
+        # 1 byte was used for the header.
+        return (set(), 1)
+
+    bitStream = _InputBitStream(data, branchFactor)
+    result: Set[int] = set()
+    # Queue entries are (startValue, depth), where startValue is the first
+    # integer that could be covered by this node.
+    queue: deque[Tuple[int, int]] = deque()
+    queue.append((0, 1))
+
+    while queue:
+        start, depth = queue.popleft()
+        bits = bitStream.next()
+        if bits is None:
+            raise SparseBitSetDecodeError("Unexpected end of data")
+
+        # all bits were were zero which is a special command to completely fill
+        # in all integers covered by this node.
+        if bits == 0:
+            exp = height - depth + 1
+            nodeSize = branchFactor**exp
+            fillStart = start + bias
+            if fillStart > maxValue:
+                continue
+            fillEnd = min(maxValue, start + nodeSize - 1 + bias)
+            if fillStart < 0:
+                fillStart = 0
+            if fillStart <= fillEnd:
+                result.update(range(fillStart, fillEnd + 1))
+            continue
+
+        # Non-zero node: each set bit identifies a child/value.
+        exp = height - depth
+        nextNodeSize = branchFactor**exp
+        while True:
+            bitIndex = _trailingZeros(bits, 32)
+            if bitIndex == 32:
+                break
+            if depth == height:
+                val = start + bitIndex + bias
+                if val > maxValue:
+                    queue.clear()
+                    break
+                if val >= 0:
+                    result.add(val)
+            else:
+                startDelta = bitIndex * nextNodeSize
+                queue.append((start + startDelta, depth + 1))
+            bits &= ~(1 << bitIndex)
+
+    return (result, bitStream.bytesConsumed())
+
+
+def encode(values: Iterable[int]) -> bytes:
+    """Encode a set of integers as a sparse bit set.
+
+    Tries all branching factors and returns the shortest encoding.
+
+    Args:
+        values: iterable of non-negative integers.
+
+    Returns:
+        bytes containing the sparse bit set encoding.
+    """
+    valuesSorted = sorted(set(values))
+    if not valuesSorted:
+        return _encodeHeader(2, 0)
+
+    maxValue = valuesSorted[-1]
+    valueSet = set(valuesSorted)
+
+    best: Optional[bytes] = None
+    for branchFactor in (2, 4, 8, 32):
+        height = _treeHeight(branchFactor, maxValue)
+        if height > _BF_MAX_HEIGHT[branchFactor]:
+            continue
+        encoded = _encodeWithBf(valueSet, branchFactor, height)
+        if best is None or len(encoded) < len(best):
+            best = encoded
+
+    if best is None:
+        raise ValueError(f"Cannot encode max value {maxValue}")
+    return best
+
+
+def _encodeHeader(branchFactor: int, height: int) -> bytes:
+    branchFactorToId = {2: 0, 4: 1, 8: 2, 32: 3}
+    return bytes([(height << 2) | branchFactorToId[branchFactor]])
+
+
+def _decodeHeader(headerByte: int) -> Tuple[int, int]:
+    id = headerByte & 0x03
+    idToBranchFactor = {0: 2, 1: 4, 2: 8, 3: 32}
+    height = (headerByte >> 2) & 0x1F
+    return idToBranchFactor[id], height
+
+
+def _treeHeight(branchFactor: int, maxValue: int) -> int:
+    """Return the minimum tree height needed to represent maxValue."""
+    height = 1
+    capacity = branchFactor
+    while capacity <= maxValue:
+        capacity *= branchFactor
+        height += 1
+    return height
+
+
+def _encodeWithBf(valueSet: Set[int], branchFactor: int, height: int) -> bytes:
+    if height == 0:
+        return _encodeHeader(branchFactor, 0)
+
+    # Build layers bottom-up: layer 0 = leaves (individual values),
+    # each higher layer groups bf children into one parent bitmask.
+    layers: list[Dict[int, int]] = [{}]  # list of dicts: nodeIndex -> bitmask
+
+    for v in valueSet:
+        nodeIndex = v // branchFactor
+        bitPos = v % branchFactor
+        if nodeIndex not in layers[0]:
+            layers[0][nodeIndex] = 0
+        layers[0][nodeIndex] |= 1 << bitPos
+
+    for _ in range(1, height):
+        prevLayer = layers[-1]
+        newLayer: Dict[int, int] = {}
+        for nodeIndex, bitmask in prevLayer.items():
+            parentIndex = nodeIndex // branchFactor
+            bitPos = nodeIndex % branchFactor
+            if parentIndex not in newLayer:
+                newLayer[parentIndex] = 0
+            newLayer[parentIndex] |= 1 << bitPos
+        layers.append(newLayer)
+
+    # For zero-node optimization: track count of values in sorted list.
+    valuesSorted = sorted(valueSet)
+
+    def rangeCount(lo: int, hi: int) -> int:
+        return bisect.bisect_right(valuesSorted, hi) - bisect.bisect_left(
+            valuesSorted, lo
+        )
+
+    # Emit nodes BFS order (root to leaves).
+    # Queue entries: (nodeIndex, depthFromRoot, rangeStart, rangeEnd)
+    stream = _OutputBitStream(branchFactor)
+    subtreeSize = branchFactor**height
+    queue: deque[Tuple[int, int, int, int]] = deque([(0, 0, 0, subtreeSize - 1)])
+
+    while queue:
+        nodeIndex, depth, rangeStart, rangeEnd = queue.popleft()
+        layerIdx = height - 1 - depth  # layers[0]=leaves, layers[height-1]=root
+
+        bitmask = (
+            layers[layerIdx].get(nodeIndex, 0) if 0 <= layerIdx < len(layers) else 0
+        )
+
+        # Zero-node optimization: if entire range is filled on an INTERNAL node,
+        # write 0 and skip children.  At leaf level we always write the explicit
+        # bitmask so the encoding matches the reference.
+        if (
+            depth < height - 1
+            and rangeCount(rangeStart, rangeEnd) == rangeEnd - rangeStart + 1
+        ):
+            stream.write(0)
+            continue
+
+        stream.write(bitmask)
+
+        if bitmask != 0 and depth < height - 1:
+            childSize = (rangeEnd - rangeStart + 1) // branchFactor
+            bits = bitmask
+            while bits:
+                bitIndex = _trailingZeros(bits, 32)
+                childIndex = nodeIndex * branchFactor + bitIndex
+                childStart = rangeStart + bitIndex * childSize
+                childEnd = childStart + childSize - 1
+                queue.append((childIndex, depth + 1, childStart, childEnd))
+                bits &= ~(1 << bitIndex)
+
+    return _encodeHeader(branchFactor, height) + stream.toBytes()
+
+
+def _trailingZeros(val: int, maxBits: int) -> int:
+    if val == 0:
+        return maxBits
+    count = 0
+    while (val & 1) == 0:
+        val >>= 1
+        count += 1
+    return count
+
+
+class _InputBitStream:
+    """Reads bit nodes from a byte array, starting after the header byte."""
+
+    def __init__(self, data: bytes, branchFactor: int):
+        self.data = data
+        self.branchFactor = branchFactor
+        self.byteIndex = 1  # skip the header byte
+        self.subIndex = 0  # bit offset within current byte (for bf=2,4)
+
+    def next(self) -> Optional[int]:
+        if self.branchFactor in (2, 4):
+            if self.byteIndex >= len(self.data):
+                return None
+            mask = (1 << self.branchFactor) - 1
+            val = (self.data[self.byteIndex] >> self.subIndex) & mask
+            self.subIndex += self.branchFactor
+            if self.subIndex >= 8:
+                self.subIndex = 0
+                self.byteIndex += 1
+            return val
+        elif self.branchFactor == 8:
+            if self.byteIndex >= len(self.data):
+                return None
+            val = self.data[self.byteIndex]
+            self.byteIndex += 1
+            return val
+        elif self.branchFactor == 32:
+            if self.byteIndex + 3 >= len(self.data):
+                return None
+            b = self.data
+            i = self.byteIndex
+            val = b[i] | (b[i + 1] << 8) | (b[i + 2] << 16) | (b[i + 3] << 24)
+            self.byteIndex += 4
+            return val
+        return None
+
+    def bytesConsumed(self) -> int:
+        return self.byteIndex + (1 if self.subIndex > 0 else 0)
+
+
+class _OutputBitStream:
+    """Writes bit nodes into a byte array."""
+
+    def __init__(self, branchFactor: int):
+        self.branchFactor = branchFactor
+        self.data = bytearray()
+        self.subIndex = 0  # bit offset within current byte (for bf=2,4)
+
+    def write(self, value: int) -> None:
+        if self.branchFactor in (2, 4):
+            mask = (1 << self.branchFactor) - 1
+            value &= mask
+            if self.subIndex == 0:
+                self.data.append(0)
+            self.data[-1] |= value << self.subIndex
+            self.subIndex += self.branchFactor
+            if self.subIndex >= 8:
+                self.subIndex = 0
+        elif self.branchFactor == 8:
+            self.data.append(value & 0xFF)
+        elif self.branchFactor == 32:
+            self.data.append(value & 0xFF)
+            self.data.append((value >> 8) & 0xFF)
+            self.data.append((value >> 16) & 0xFF)
+            self.data.append((value >> 24) & 0xFF)
+
+    def toBytes(self) -> bytes:
+        return bytes(self.data)

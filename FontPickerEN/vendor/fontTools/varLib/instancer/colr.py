@@ -1,1 +1,203 @@
-IiIiSW5zdGFudGlhdGUgQ09MUnYxIHBhaW50IHZhbHVlcyBhbmQgdGhlaXIgaXRlbSB2YXJpYXRpb24gc3RvcmUuIiIiCgpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMgaW1wb3J0IG90VGFibGVzIGFzIG90CmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5vdENvbnZlcnRlcnMgaW1wb3J0IEJhc2VGaXhlZFZhbHVlLCBBbmdsZQpmcm9tIGZvbnRUb29scy5taXNjLnJvdW5kVG9vbHMgaW1wb3J0IG90Um91bmQKZnJvbSBtYXRoIGltcG9ydCBjZWlsLCBmbG9vciwgZ2NkCmZyb20gY29weSBpbXBvcnQgY29weQoKCmRlZiBfaW5zdGFudGlhdGVSYWRpYWxHcmFkaWVudChwYWludCk6CiAgICBpZiBwYWludC5Gb3JtYXQgIT0gb3QuUGFpbnRGb3JtYXQuUGFpbnRWYXJSYWRpYWxHcmFkaWVudDoKICAgICAgICByZXR1cm4KICAgIHIwLCByMSA9IHBhaW50LnIwLCBwYWludC5yMQogICAgaWYgcjAgPj0gMCBhbmQgcjEgPj0gMDoKICAgICAgICByZXR1cm4KICAgIGxpbmUgPSBwYWludC5Db2xvckxpbmUKICAgIGlmIHIwID09IHIxIG9yIG5vdCBsaW5lLkNvbG9yU3RvcDoKICAgICAgICAjIEVxdWFsIG5lZ2F0aXZlIHJhZGlpIGhhdmUgbm8gbm9ubmVnYXRpdmUtcmFkaXVzIGludGVyc2VjdGlvbi4KICAgICAgICBwYWludC5fX2RpY3RfXy5jbGVhcigpCiAgICAgICAgcGFpbnQuRm9ybWF0ID0gb3QuUGFpbnRGb3JtYXQuUGFpbnRTb2xpZAogICAgICAgIHBhaW50LlBhbGV0dGVJbmRleCwgcGFpbnQuQWxwaGEgPSAweEZGRkYsIDAKICAgICAgICByZXR1cm4KICAgIGRyID0gcjEgLSByMAogICAgb3JkZXJlZCA9IHNvcnRlZChsaW5lLkNvbG9yU3RvcCwga2V5PWxhbWJkYSBzdG9wOiBzdG9wLlN0b3BPZmZzZXQpCiAgICBmaXJzdCA9IG9yZGVyZWRbMF0uU3RvcE9mZnNldAogICAgbGFzdCA9IG9yZGVyZWRbLTFdLlN0b3BPZmZzZXQKICAgICMgRnJhY3Rpb25hbCBzaGlmdHMgbXVzdCBwcmVzZXJ2ZSBib3RoIGludGVnZXIgY2lyY2xlcyBhbmQgRjJEb3QxNCBzdG9wcy4KICAgIGxhdHRpY2UgPSBnY2QoMTYzODQsIHBhaW50LngxIC0gcGFpbnQueDAsIHBhaW50LnkxIC0gcGFpbnQueTAsIGRyKQogICAgZm9yIHNoaWZ0IGluIHJhbmdlKDE2KToKICAgICAgICBiID0gMSA8PCBzaGlmdAogICAgICAgIGNvYXJzZSA9IGNlaWwoLXIwIC8gZHIpIGlmIGRyID4gMCBlbHNlIGZsb29yKHIwIC8gLWRyKSAtIGIKICAgICAgICBmaW5lID0gKAogICAgICAgICAgICBjZWlsKC1yMCAvIGRyICogbGF0dGljZSkgLyBsYXR0aWNlCiAgICAgICAgICAgIGlmIGRyID4gMAogICAgICAgICAgICBlbHNlIGZsb29yKHIwIC8gLWRyICogbGF0dGljZSkgLyBsYXR0aWNlIC0gYgogICAgICAgICkKICAgICAgICBmb3IgYSBpbiAoY29hcnNlLCBmaW5lKToKICAgICAgICAgICAgIyBvbWVnYSA9IGEgKyBiKnEsIHdpdGggcG9zaXRpdmUgYiwgcHJlc2VydmVzIHRoZSBsYXJnZXN0IHZhbGlkIHJvb3QuCiAgICAgICAgICAgIGdlb21ldHJ5ID0gKAogICAgICAgICAgICAgICAgcGFpbnQueDAgKyBhICogKHBhaW50LngxIC0gcGFpbnQueDApLAogICAgICAgICAgICAgICAgcGFpbnQueTAgKyBhICogKHBhaW50LnkxIC0gcGFpbnQueTApLAogICAgICAgICAgICAgICAgcjAgKyBhICogZHIsCiAgICAgICAgICAgICAgICBwYWludC54MCArIChhICsgYikgKiAocGFpbnQueDEgLSBwYWludC54MCksCiAgICAgICAgICAgICAgICBwYWludC55MCArIChhICsgYikgKiAocGFpbnQueTEgLSBwYWludC55MCksCiAgICAgICAgICAgICAgICByMCArIChhICsgYikgKiBkciwKICAgICAgICAgICAgKQogICAgICAgICAgICBpZiBhbnkobm90IC0zMjc2OCA8PSBnZW9tZXRyeVtpXSA8PSAzMjc2NyBmb3IgaSBpbiAoMCwgMSwgMywgNCkpIG9yIGFueSgKICAgICAgICAgICAgICAgIG5vdCAwIDw9IGdlb21ldHJ5W2ldIDw9IDY1NTM1IGZvciBpIGluICgyLCA1KQogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgc3RvcHMgPSBvcmRlcmVkCiAgICAgICAgICAgIG9mZnNldHMgPSBbKHN0b3AuU3RvcE9mZnNldCAtIGEpIC8gYiBmb3Igc3RvcCBpbiBzdG9wc10KICAgICAgICAgICAgdGlwID0gLWdlb21ldHJ5WzJdIC8gKGIgKiBkcikKICAgICAgICAgICAgaWYgbGluZS5FeHRlbmQgPT0gb3QuRXh0ZW5kTW9kZS5QQUQ6CiAgICAgICAgICAgICAgICBpZiBkciA+IDAgYW5kIG9mZnNldHNbLTFdIDw9IHRpcDoKICAgICAgICAgICAgICAgICAgICBzdG9wcywgb2Zmc2V0cyA9IFtzdG9wc1stMV1dLCBbMF0KICAgICAgICAgICAgICAgIGVsaWYgZHIgPCAwIGFuZCBvZmZzZXRzWzBdID4gdGlwOgogICAgICAgICAgICAgICAgICAgIHN0b3BzLCBvZmZzZXRzID0gW3N0b3BzWzBdXSwgWzBdCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBwZXJpb2QgPSAobGFzdCAtIGZpcnN0KSAvIGIKICAgICAgICAgICAgICAgIGlmIGxpbmUuRXh0ZW5kID09IG90LkV4dGVuZE1vZGUuUkVGTEVDVDoKICAgICAgICAgICAgICAgICAgICBwZXJpb2QgKj0gMgogICAgICAgICAgICAgICAgaWYgcGVyaW9kIDw9IDA6CiAgICAgICAgICAgICAgICAgICAgcGFpbnQuX19kaWN0X18uY2xlYXIoKQogICAgICAgICAgICAgICAgICAgIHBhaW50LkZvcm1hdCA9IG90LlBhaW50Rm9ybWF0LlBhaW50U29saWQKICAgICAgICAgICAgICAgICAgICBwYWludC5QYWxldHRlSW5kZXgsIHBhaW50LkFscGhhID0gMHhGRkZGLCAwCiAgICAgICAgICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgICAgICAgICAjIE1vdmluZyBhIHJlcGVhdGluZyBjb2xvciBsaW5lIGJ5IHdob2xlIHBlcmlvZHMgY2hhbmdlcyBubyBjb2xvcnMuCiAgICAgICAgICAgICAgICBuID0gY2VpbCgoLTIgLSBvZmZzZXRzWzBdKSAvIHBlcmlvZCkKICAgICAgICAgICAgICAgIGlmIG4gPiBmbG9vcigoKDMyNzY3IC8gMTYzODQpIC0gb2Zmc2V0c1stMV0pIC8gcGVyaW9kKToKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgb2Zmc2V0cyA9IFtvZmZzZXQgKyBuICogcGVyaW9kIGZvciBvZmZzZXQgaW4gb2Zmc2V0c10KICAgICAgICAgICAgaWYgYW55KAogICAgICAgICAgICAgICAgbm90IC0zMjc2OCA8PSBvZmZzZXQgKiAxNjM4NCA8PSAzMjc2NwogICAgICAgICAgICAgICAgb3Igb2Zmc2V0ICogMTYzODQgIT0gb3RSb3VuZChvZmZzZXQgKiAxNjM4NCkKICAgICAgICAgICAgICAgIGZvciBvZmZzZXQgaW4gb2Zmc2V0cwogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgcGFpbnQueDAsIHBhaW50LnkwLCBwYWludC5yMCwgcGFpbnQueDEsIHBhaW50LnkxLCBwYWludC5yMSA9IG1hcCgKICAgICAgICAgICAgICAgIGludCwgZ2VvbWV0cnkKICAgICAgICAgICAgKQogICAgICAgICAgICAjIENvbG9yIGxpbmVzIGNhbiBiZSBzaGFyZWQgYnkgZ3JhZGllbnRzIHdpdGggZGlmZmVyZW50IGdlb21ldHJpZXMuCiAgICAgICAgICAgIHBhaW50LkNvbG9yTGluZSA9IGNvcHkobGluZSkKICAgICAgICAgICAgcGFpbnQuQ29sb3JMaW5lLkNvbG9yU3RvcCA9IFtjb3B5KHN0b3ApIGZvciBzdG9wIGluIHN0b3BzXQogICAgICAgICAgICBwYWludC5Db2xvckxpbmUuU3RvcENvdW50ID0gbGVuKHN0b3BzKQogICAgICAgICAgICBmb3Igc3RvcCwgb2Zmc2V0IGluIHppcChwYWludC5Db2xvckxpbmUuQ29sb3JTdG9wLCBvZmZzZXRzKToKICAgICAgICAgICAgICAgIHN0b3AuU3RvcE9mZnNldCA9IG9mZnNldAogICAgICAgICAgICByZXR1cm4KICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgIkNPTFIgcmFkaWFsIGdyYWRpZW50IHdpdGggbmVnYXRpdmUgcmFkaWkgY2Fubm90IGJlIHJlcHJlc2VudGVkIHdpdGhvdXQgcm91bmRpbmciCiAgICApCgoKZGVmIF9pbnN0YW50aWF0ZVNjYWxlKHBhaW50KToKICAgICIiIlVzZSBhbiBhZmZpbmUgdHJhbnNmb3JtIHdoZW4gYSBzdGF0aWMgc2NhbGUgbm8gbG9uZ2VyIGZpdHMgRjJEb3QxNC4iIiIKICAgIGlmIHBhaW50LkZvcm1hdCBub3QgaW4gKAogICAgICAgIG90LlBhaW50Rm9ybWF0LlBhaW50VmFyU2NhbGUsCiAgICAgICAgb3QuUGFpbnRGb3JtYXQuUGFpbnRWYXJTY2FsZUFyb3VuZENlbnRlciwKICAgICAgICBvdC5QYWludEZvcm1hdC5QYWludFZhclNjYWxlVW5pZm9ybSwKICAgICAgICBvdC5QYWludEZvcm1hdC5QYWludFZhclNjYWxlVW5pZm9ybUFyb3VuZENlbnRlciwKICAgICk6CiAgICAgICAgcmV0dXJuCiAgICBpZiBoYXNhdHRyKHBhaW50LCAic2NhbGUiKToKICAgICAgICBzeCA9IHN5ID0gcGFpbnQuc2NhbGUKICAgIGVsc2U6CiAgICAgICAgc3gsIHN5ID0gcGFpbnQuc2NhbGVYLCBwYWludC5zY2FsZVkKICAgIGlmIC0yIDw9IHN4IDwgMiBhbmQgLTIgPD0gc3kgPCAyOgogICAgICAgIHJldHVybgogICAgY3gsIGN5ID0gZ2V0YXR0cihwYWludCwgImNlbnRlclgiLCAwKSwgZ2V0YXR0cihwYWludCwgImNlbnRlclkiLCAwKQogICAgdHJhbnNmb3JtID0gb3QuQWZmaW5lMngzKCkKICAgIHRyYW5zZm9ybS54eCwgdHJhbnNmb3JtLnl4ID0gc3gsIDAKICAgIHRyYW5zZm9ybS54eSwgdHJhbnNmb3JtLnl5ID0gMCwgc3kKICAgIHRyYW5zZm9ybS5keCwgdHJhbnNmb3JtLmR5ID0gY3ggKiAoMSAtIHN4KSwgY3kgKiAoMSAtIHN5KQogICAgZm9yIG5hbWUgaW4gKCJzY2FsZSIsICJzY2FsZVgiLCAic2NhbGVZIiwgImNlbnRlclgiLCAiY2VudGVyWSIpOgogICAgICAgIGlmIGhhc2F0dHIocGFpbnQsIG5hbWUpOgogICAgICAgICAgICBkZWxhdHRyKHBhaW50LCBuYW1lKQogICAgcGFpbnQuRm9ybWF0ID0gb3QuUGFpbnRGb3JtYXQuUGFpbnRUcmFuc2Zvcm0KICAgIHBhaW50LlRyYW5zZm9ybSA9IHRyYW5zZm9ybQoKCmRlZiBpbnN0YW50aWF0ZUNPTFIodmFyZm9udCwgYXhpc0xpbWl0cyk6CiAgICBmcm9tIC4gaW1wb3J0IGluc3RhbnRpYXRlSXRlbVZhcmlhdGlvblN0b3JlCgogICAgaWYgIkNPTFIiIG5vdCBpbiB2YXJmb250IG9yIHZhcmZvbnRbIkNPTFIiXS52ZXJzaW9uIDwgMToKICAgICAgICByZXR1cm4KICAgIGNvbHIgPSB2YXJmb250WyJDT0xSIl0udGFibGUKICAgIGlmIGNvbHIuVmFyU3RvcmUgaXMgTm9uZToKICAgICAgICByZXR1cm4KICAgIGRlbHRhcyA9IGluc3RhbnRpYXRlSXRlbVZhcmlhdGlvblN0b3JlKAogICAgICAgIGNvbHIuVmFyU3RvcmUsIHZhcmZvbnRbImZ2YXIiXS5heGVzLCBheGlzTGltaXRzCiAgICApCiAgICBzdGF0aWMgPSBub3QgYW55KGFueShyb3cpIGZvciBkYXRhIGluIGNvbHIuVmFyU3RvcmUuVmFyRGF0YSBmb3Igcm93IGluIGRhdGEuSXRlbSkKICAgIG1hcHBpbmcgPSBjb2xyLlZhckluZGV4TWFwLm1hcHBpbmcgaWYgY29sci5WYXJJbmRleE1hcCBpcyBub3QgTm9uZSBlbHNlIFtdCiAgICB2aXNpdGVkID0gc2V0KCkKCiAgICBkZWYgdmlzaXQodGFibGUpOgogICAgICAgIGlmIGlkKHRhYmxlKSBpbiB2aXNpdGVkOgogICAgICAgICAgICByZXR1cm4KICAgICAgICB2aXNpdGVkLmFkZChpZCh0YWJsZSkpCiAgICAgICAgdGFibGUuZW5zdXJlRGVjb21waWxlZCgpCiAgICAgICAgZm9yIGVudHJ5IGluIHRhYmxlLml0ZXJTdWJUYWJsZXMoKToKICAgICAgICAgICAgdmlzaXQoZW50cnkudmFsdWUpCgogICAgICAgIGZvciBuYW1lIGluIHRhYmxlLmdldFZhcmlhYmxlQXR0cnMoKToKICAgICAgICAgICAgY29udiA9IHRhYmxlLmdldENvbnZlcnRlckJ5TmFtZShuYW1lKQogICAgICAgICAgICBiYXNlID0gdGFibGUuVmFySW5kZXhCYXNlCiAgICAgICAgICAgIGlmIGJhc2UgPT0gb3QuTk9fVkFSSUFUSU9OX0lOREVYOgogICAgICAgICAgICAgICAgZGVsdGEgPSAwCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBpbmRleCA9IGJhc2UgKyBjb252LmdldFZhckluZGV4T2Zmc2V0KCkKICAgICAgICAgICAgICAgIGlmIG1hcHBpbmc6CiAgICAgICAgICAgICAgICAgICAgaW5kZXggPSBtYXBwaW5nW21pbihpbmRleCwgbGVuKG1hcHBpbmcpIC0gMSldCiAgICAgICAgICAgICAgICBkZWx0YSA9IGRlbHRhc1tpbmRleF0KICAgICAgICAgICAgdmFsdWUgPSBnZXRhdHRyKHRhYmxlLCBuYW1lKQogICAgICAgICAgICBpZiBpc2luc3RhbmNlKGNvbnYsIEJhc2VGaXhlZFZhbHVlKToKICAgICAgICAgICAgICAgIGJpdHMgPSBvdFJvdW5kKGNvbnYudG9JbnQodmFsdWUpICsgZGVsdGEpCiAgICAgICAgICAgICAgICBpZiBuYW1lID09ICJBbHBoYSIgYW5kIHN0YXRpYzoKICAgICAgICAgICAgICAgICAgICBiaXRzID0gbWluKDEgPDwgMTQsIG1heCgwLCBiaXRzKSkKICAgICAgICAgICAgICAgIGVsaWYgaXNpbnN0YW5jZShjb252LCBBbmdsZSkgYW5kIGlzaW5zdGFuY2UodGFibGUsIG90LlBhaW50KToKICAgICAgICAgICAgICAgICAgICAjIFJvdGF0aW9uIGFuZCBza2V3IGFyZSBwZXJpb2RpYzsgc3dlZXAgYW5nbGVzIGFyZSBub3QuCiAgICAgICAgICAgICAgICAgICAgaWYgdGFibGUuRm9ybWF0IG5vdCBpbiAob3QuUGFpbnRGb3JtYXQuUGFpbnRWYXJTd2VlcEdyYWRpZW50LCk6CiAgICAgICAgICAgICAgICAgICAgICAgIGJpdHMgPSAoYml0cyArIDMyNzY4KSAlIDY1NTM2IC0gMzI3NjgKICAgICAgICAgICAgICAgIHZhbHVlID0gY29udi5mcm9tSW50KGJpdHMpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKHRhYmxlLCBvdC5DbGlwQm94KToKICAgICAgICAgICAgICAgICAgICBkZWx0YSA9IGZsb29yKGRlbHRhKSBpZiBuYW1lIGluICgieE1pbiIsICJ5TWluIikgZWxzZSBjZWlsKGRlbHRhKQogICAgICAgICAgICAgICAgdmFsdWUgKz0gb3RSb3VuZChkZWx0YSkKICAgICAgICAgICAgICAgIGlmIG5hbWUgaW4gKCJyMCIsICJyMSIpIGFuZCBub3Qgc3RhdGljOgogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gbWluKDY1NTM1LCBtYXgoMCwgdmFsdWUpKQogICAgICAgICAgICBzZXRhdHRyKHRhYmxlLCBuYW1lLCB2YWx1ZSkKCiAgICAgICAgaWYgc3RhdGljOgogICAgICAgICAgICBpZiBpc2luc3RhbmNlKHRhYmxlLCBvdC5QYWludCk6CiAgICAgICAgICAgICAgICBfaW5zdGFudGlhdGVTY2FsZSh0YWJsZSkKICAgICAgICAgICAgICAgIF9pbnN0YW50aWF0ZVJhZGlhbEdyYWRpZW50KHRhYmxlKQogICAgICAgICAgICBpZiBoYXNhdHRyKHRhYmxlLCAiVmFySW5kZXhCYXNlIik6CiAgICAgICAgICAgICAgICBkZWwgdGFibGUuVmFySW5kZXhCYXNlCiAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgIGlzaW5zdGFuY2UodGFibGUsIG90LlBhaW50KQogICAgICAgICAgICAgICAgYW5kIG90LlBhaW50Rm9ybWF0KHRhYmxlLkZvcm1hdCkuaXNfdmFyaWFibGUoKQogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgdGFibGUuRm9ybWF0IC09IDEKICAgICAgICAgICAgZWxpZiBpc2luc3RhbmNlKHRhYmxlLCBvdC5DbGlwQm94KSBhbmQgdGFibGUuRm9ybWF0ID09IDI6CiAgICAgICAgICAgICAgICB0YWJsZS5Gb3JtYXQgPSAxCiAgICAgICAgICAgIGVsaWYgaGFzYXR0cih0eXBlKHRhYmxlKSwgIk5vVmFyVHlwZSIpOgogICAgICAgICAgICAgICAgdGFibGUuX19jbGFzc19fID0gdHlwZSh0YWJsZSkuTm9WYXJUeXBlCgogICAgaWYgY29sci5CYXNlR2x5cGhMaXN0IGlzIG5vdCBOb25lOgogICAgICAgIGZvciByZWNvcmQgaW4gY29sci5CYXNlR2x5cGhMaXN0LkJhc2VHbHlwaFBhaW50UmVjb3JkOgogICAgICAgICAgICB2aXNpdChyZWNvcmQuUGFpbnQpCiAgICBpZiBjb2xyLkxheWVyTGlzdCBpcyBub3QgTm9uZToKICAgICAgICBmb3IgcGFpbnQgaW4gY29sci5MYXllckxpc3QuUGFpbnQ6CiAgICAgICAgICAgIHZpc2l0KHBhaW50KQogICAgaWYgY29sci5DbGlwTGlzdCBpcyBub3QgTm9uZToKICAgICAgICBmb3IgY2xpcCBpbiBjb2xyLkNsaXBMaXN0LmNsaXBzLnZhbHVlcygpOgogICAgICAgICAgICB2aXNpdChjbGlwKQogICAgaWYgc3RhdGljOgogICAgICAgIGNvbHIuVmFyU3RvcmUgPSBOb25lCiAgICAgICAgY29sci5WYXJJbmRleE1hcCA9IE5vbmUKICAgIGVsaWYgbWFwcGluZzoKICAgICAgICAjIEFuIGV4cGxpY2l0IG1hcCBrZWVwcyBWYXJJbmRleEJhc2Ugc2VxdWVuY2VzIHZhbGlkIHdoZW4gcm93cyBtb3ZlLgogICAgICAgIHZhckluZGV4TWFwcGluZyA9IGNvbHIuVmFyU3RvcmUub3B0aW1pemUoKQogICAgICAgIGNvbHIuVmFySW5kZXhNYXAubWFwcGluZyA9IFt2YXJJbmRleE1hcHBpbmdbaW5kZXhdIGZvciBpbmRleCBpbiBtYXBwaW5nXQo=
+"""Instantiate COLRv1 paint values and their item variation store."""
+
+from fontTools.ttLib.tables import otTables as ot
+from fontTools.ttLib.tables.otConverters import BaseFixedValue, Angle
+from fontTools.misc.roundTools import otRound
+from math import ceil, floor, gcd
+from copy import copy
+
+
+def _instantiateRadialGradient(paint):
+    if paint.Format != ot.PaintFormat.PaintVarRadialGradient:
+        return
+    r0, r1 = paint.r0, paint.r1
+    if r0 >= 0 and r1 >= 0:
+        return
+    line = paint.ColorLine
+    if r0 == r1 or not line.ColorStop:
+        # Equal negative radii have no nonnegative-radius intersection.
+        paint.__dict__.clear()
+        paint.Format = ot.PaintFormat.PaintSolid
+        paint.PaletteIndex, paint.Alpha = 0xFFFF, 0
+        return
+    dr = r1 - r0
+    ordered = sorted(line.ColorStop, key=lambda stop: stop.StopOffset)
+    first = ordered[0].StopOffset
+    last = ordered[-1].StopOffset
+    # Fractional shifts must preserve both integer circles and F2Dot14 stops.
+    lattice = gcd(16384, paint.x1 - paint.x0, paint.y1 - paint.y0, dr)
+    for shift in range(16):
+        b = 1 << shift
+        coarse = ceil(-r0 / dr) if dr > 0 else floor(r0 / -dr) - b
+        fine = (
+            ceil(-r0 / dr * lattice) / lattice
+            if dr > 0
+            else floor(r0 / -dr * lattice) / lattice - b
+        )
+        for a in (coarse, fine):
+            # omega = a + b*q, with positive b, preserves the largest valid root.
+            geometry = (
+                paint.x0 + a * (paint.x1 - paint.x0),
+                paint.y0 + a * (paint.y1 - paint.y0),
+                r0 + a * dr,
+                paint.x0 + (a + b) * (paint.x1 - paint.x0),
+                paint.y0 + (a + b) * (paint.y1 - paint.y0),
+                r0 + (a + b) * dr,
+            )
+            if any(not -32768 <= geometry[i] <= 32767 for i in (0, 1, 3, 4)) or any(
+                not 0 <= geometry[i] <= 65535 for i in (2, 5)
+            ):
+                continue
+            stops = ordered
+            offsets = [(stop.StopOffset - a) / b for stop in stops]
+            tip = -geometry[2] / (b * dr)
+            if line.Extend == ot.ExtendMode.PAD:
+                if dr > 0 and offsets[-1] <= tip:
+                    stops, offsets = [stops[-1]], [0]
+                elif dr < 0 and offsets[0] > tip:
+                    stops, offsets = [stops[0]], [0]
+            else:
+                period = (last - first) / b
+                if line.Extend == ot.ExtendMode.REFLECT:
+                    period *= 2
+                if period <= 0:
+                    paint.__dict__.clear()
+                    paint.Format = ot.PaintFormat.PaintSolid
+                    paint.PaletteIndex, paint.Alpha = 0xFFFF, 0
+                    return
+                # Moving a repeating color line by whole periods changes no colors.
+                n = ceil((-2 - offsets[0]) / period)
+                if n > floor(((32767 / 16384) - offsets[-1]) / period):
+                    continue
+                offsets = [offset + n * period for offset in offsets]
+            if any(
+                not -32768 <= offset * 16384 <= 32767
+                or offset * 16384 != otRound(offset * 16384)
+                for offset in offsets
+            ):
+                continue
+            paint.x0, paint.y0, paint.r0, paint.x1, paint.y1, paint.r1 = map(
+                int, geometry
+            )
+            # Color lines can be shared by gradients with different geometries.
+            paint.ColorLine = copy(line)
+            paint.ColorLine.ColorStop = [copy(stop) for stop in stops]
+            paint.ColorLine.StopCount = len(stops)
+            for stop, offset in zip(paint.ColorLine.ColorStop, offsets):
+                stop.StopOffset = offset
+            return
+    raise ValueError(
+        "COLR radial gradient with negative radii cannot be represented without rounding"
+    )
+
+
+def _instantiateScale(paint):
+    """Use an affine transform when a static scale no longer fits F2Dot14."""
+    if paint.Format not in (
+        ot.PaintFormat.PaintVarScale,
+        ot.PaintFormat.PaintVarScaleAroundCenter,
+        ot.PaintFormat.PaintVarScaleUniform,
+        ot.PaintFormat.PaintVarScaleUniformAroundCenter,
+    ):
+        return
+    if hasattr(paint, "scale"):
+        sx = sy = paint.scale
+    else:
+        sx, sy = paint.scaleX, paint.scaleY
+    if -2 <= sx < 2 and -2 <= sy < 2:
+        return
+    cx, cy = getattr(paint, "centerX", 0), getattr(paint, "centerY", 0)
+    transform = ot.Affine2x3()
+    transform.xx, transform.yx = sx, 0
+    transform.xy, transform.yy = 0, sy
+    transform.dx, transform.dy = cx * (1 - sx), cy * (1 - sy)
+    for name in ("scale", "scaleX", "scaleY", "centerX", "centerY"):
+        if hasattr(paint, name):
+            delattr(paint, name)
+    paint.Format = ot.PaintFormat.PaintTransform
+    paint.Transform = transform
+
+
+def instantiateCOLR(varfont, axisLimits):
+    from . import instantiateItemVariationStore
+
+    if "COLR" not in varfont or varfont["COLR"].version < 1:
+        return
+    colr = varfont["COLR"].table
+    if colr.VarStore is None:
+        return
+    deltas = instantiateItemVariationStore(
+        colr.VarStore, varfont["fvar"].axes, axisLimits
+    )
+    static = not any(any(row) for data in colr.VarStore.VarData for row in data.Item)
+    mapping = colr.VarIndexMap.mapping if colr.VarIndexMap is not None else []
+    visited = set()
+
+    def visit(table):
+        if id(table) in visited:
+            return
+        visited.add(id(table))
+        table.ensureDecompiled()
+        for entry in table.iterSubTables():
+            visit(entry.value)
+
+        for name in table.getVariableAttrs():
+            conv = table.getConverterByName(name)
+            base = table.VarIndexBase
+            if base == ot.NO_VARIATION_INDEX:
+                delta = 0
+            else:
+                index = base + conv.getVarIndexOffset()
+                if mapping:
+                    index = mapping[min(index, len(mapping) - 1)]
+                delta = deltas[index]
+            value = getattr(table, name)
+            if isinstance(conv, BaseFixedValue):
+                bits = otRound(conv.toInt(value) + delta)
+                if name == "Alpha" and static:
+                    bits = min(1 << 14, max(0, bits))
+                elif isinstance(conv, Angle) and isinstance(table, ot.Paint):
+                    # Rotation and skew are periodic; sweep angles are not.
+                    if table.Format not in (ot.PaintFormat.PaintVarSweepGradient,):
+                        bits = (bits + 32768) % 65536 - 32768
+                value = conv.fromInt(bits)
+            else:
+                if isinstance(table, ot.ClipBox):
+                    delta = floor(delta) if name in ("xMin", "yMin") else ceil(delta)
+                value += otRound(delta)
+                if name in ("r0", "r1") and not static:
+                    value = min(65535, max(0, value))
+            setattr(table, name, value)
+
+        if static:
+            if isinstance(table, ot.Paint):
+                _instantiateScale(table)
+                _instantiateRadialGradient(table)
+            if hasattr(table, "VarIndexBase"):
+                del table.VarIndexBase
+            if (
+                isinstance(table, ot.Paint)
+                and ot.PaintFormat(table.Format).is_variable()
+            ):
+                table.Format -= 1
+            elif isinstance(table, ot.ClipBox) and table.Format == 2:
+                table.Format = 1
+            elif hasattr(type(table), "NoVarType"):
+                table.__class__ = type(table).NoVarType
+
+    if colr.BaseGlyphList is not None:
+        for record in colr.BaseGlyphList.BaseGlyphPaintRecord:
+            visit(record.Paint)
+    if colr.LayerList is not None:
+        for paint in colr.LayerList.Paint:
+            visit(paint)
+    if colr.ClipList is not None:
+        for clip in colr.ClipList.clips.values():
+            visit(clip)
+    if static:
+        colr.VarStore = None
+        colr.VarIndexMap = None
+    elif mapping:
+        # An explicit map keeps VarIndexBase sequences valid when rows move.
+        varIndexMapping = colr.VarStore.optimize()
+        colr.VarIndexMap.mapping = [varIndexMapping[index] for index in mapping]

@@ -1,1 +1,113 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IE1hdHQgRm9udGFpbmUKCgpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luCmZyb20gZm9udFRvb2xzLm1pc2MgaW1wb3J0IHNzdHJ1Y3QKZnJvbSAuIGltcG9ydCBFX0JfRF9UXwpmcm9tIC5CaXRtYXBHbHlwaE1ldHJpY3MgaW1wb3J0ICgKICAgIEJpZ0dseXBoTWV0cmljcywKICAgIGJpZ0dseXBoTWV0cmljc0Zvcm1hdCwKICAgIFNtYWxsR2x5cGhNZXRyaWNzLAogICAgc21hbGxHbHlwaE1ldHJpY3NGb3JtYXQsCikKZnJvbSAuRV9CX0RfVF8gaW1wb3J0ICgKICAgIEJpdG1hcEdseXBoLAogICAgQml0bWFwUGx1c1NtYWxsTWV0cmljc01peGluLAogICAgQml0bWFwUGx1c0JpZ01ldHJpY3NNaXhpbiwKKQppbXBvcnQgc3RydWN0CgoKY2xhc3MgdGFibGVfQ19CX0RfVF8oRV9CX0RfVF8udGFibGVfRV9CX0RfVF8pOgogICAgIiIiQ29sb3IgQml0bWFwIERhdGEgdGFibGUKCiAgICBUaGUgYGBDQkRUYGAgdGFibGUgY29udGFpbnMgY29sb3IgYml0bWFwIGRhdGEgZm9yIGdseXBocy4gSXQgbXVzdAogICAgYmUgdXNlZCBpbiBjb25jZXJ0IHdpdGggdGhlIGBgQ0JMQ2BgIHRhYmxlLgoKICAgIEl0IGlzIGJhY2t3YXJkcy1jb21wYXRpYmxlIHdpdGggdGhlIG1vbm9jaHJvbWUvZ3JheXNjYWxlIGBgRUJEVGBgIHRhYmxlLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvY2JkdAogICAgIiIiCgogICAgIyBDaGFuZ2UgdGhlIGRhdGEgbG9jYXRvciB0YWJsZSBiZWluZyByZWZlcmVuY2VkLgogICAgbG9jYXRvck5hbWUgPSAiQ0JMQyIKCiAgICAjIE1vZGlmeSB0aGUgZm9ybWF0IGNsYXNzIGFjY2Vzc29yIGZvciBjb2xvciBiaXRtYXAgdXNlLgogICAgZGVmIGdldEltYWdlRm9ybWF0Q2xhc3Moc2VsZiwgaW1hZ2VGb3JtYXQpOgogICAgICAgIHRyeToKICAgICAgICAgICAgcmV0dXJuIEVfQl9EX1RfLnRhYmxlX0VfQl9EX1RfLmdldEltYWdlRm9ybWF0Q2xhc3Moc2VsZiwgaW1hZ2VGb3JtYXQpCiAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICByZXR1cm4gY2JkdF9iaXRtYXBfY2xhc3Nlc1tpbWFnZUZvcm1hdF0KCgojIEhlbHBlciBtZXRob2QgZm9yIHJlbW92aW5nIGV4cG9ydCBmZWF0dXJlcyBub3Qgc3VwcG9ydGVkIGJ5IGNvbG9yIGJpdG1hcHMuCiMgV3JpdGUgZGF0YSBpbiB0aGUgcGFyZW50IGNsYXNzIHdpbGwgZGVmYXVsdCB0byByYXcgaWYgYW4gb3B0aW9uIGlzIHVuc3VwcG9ydGVkLgpkZWYgX3JlbW92ZVVuc3VwcG9ydGVkRm9yQ29sb3IoZGF0YUZ1bmN0aW9ucyk6CiAgICBkYXRhRnVuY3Rpb25zID0gZGljdChkYXRhRnVuY3Rpb25zKQogICAgZGVsIGRhdGFGdW5jdGlvbnNbInJvdyJdCiAgICByZXR1cm4gZGF0YUZ1bmN0aW9ucwoKCmNsYXNzIENvbG9yQml0bWFwR2x5cGgoQml0bWFwR2x5cGgpOgogICAgZmlsZUV4dGVuc2lvbiA9ICIucG5nIgogICAgeG1sRGF0YUZ1bmN0aW9ucyA9IF9yZW1vdmVVbnN1cHBvcnRlZEZvckNvbG9yKEJpdG1hcEdseXBoLnhtbERhdGFGdW5jdGlvbnMpCgoKY2xhc3MgY2JkdF9iaXRtYXBfZm9ybWF0XzE3KEJpdG1hcFBsdXNTbWFsbE1ldHJpY3NNaXhpbiwgQ29sb3JCaXRtYXBHbHlwaCk6CiAgICBkZWYgZGVjb21waWxlKHNlbGYpOgogICAgICAgIHNlbGYubWV0cmljcyA9IFNtYWxsR2x5cGhNZXRyaWNzKCkKICAgICAgICBkdW1teSwgZGF0YSA9IHNzdHJ1Y3QudW5wYWNrMihzbWFsbEdseXBoTWV0cmljc0Zvcm1hdCwgc2VsZi5kYXRhLCBzZWxmLm1ldHJpY3MpCiAgICAgICAgKGRhdGFMZW4sKSA9IHN0cnVjdC51bnBhY2soIj5MIiwgZGF0YVs6NF0pCiAgICAgICAgZGF0YSA9IGRhdGFbNDpdCgogICAgICAgICMgRm9yIHRoZSBpbWFnZSBkYXRhIGN1dCBpdCB0byB0aGUgc2l6ZSBzcGVjaWZpZWQgYnkgZGF0YUxlbi4KICAgICAgICBhc3NlcnQgZGF0YUxlbiA8PSBsZW4oZGF0YSksICJEYXRhIG92ZXJ1biBpbiBmb3JtYXQgMTciCiAgICAgICAgc2VsZi5pbWFnZURhdGEgPSBkYXRhWzpkYXRhTGVuXQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgZGF0YUxpc3QgPSBbXQogICAgICAgIGRhdGFMaXN0LmFwcGVuZChzc3RydWN0LnBhY2soc21hbGxHbHlwaE1ldHJpY3NGb3JtYXQsIHNlbGYubWV0cmljcykpCiAgICAgICAgZGF0YUxpc3QuYXBwZW5kKHN0cnVjdC5wYWNrKCI+TCIsIGxlbihzZWxmLmltYWdlRGF0YSkpKQogICAgICAgIGRhdGFMaXN0LmFwcGVuZChzZWxmLmltYWdlRGF0YSkKICAgICAgICByZXR1cm4gYnl0ZXNqb2luKGRhdGFMaXN0KQoKCmNsYXNzIGNiZHRfYml0bWFwX2Zvcm1hdF8xOChCaXRtYXBQbHVzQmlnTWV0cmljc01peGluLCBDb2xvckJpdG1hcEdseXBoKToKICAgIGRlZiBkZWNvbXBpbGUoc2VsZik6CiAgICAgICAgc2VsZi5tZXRyaWNzID0gQmlnR2x5cGhNZXRyaWNzKCkKICAgICAgICBkdW1teSwgZGF0YSA9IHNzdHJ1Y3QudW5wYWNrMihiaWdHbHlwaE1ldHJpY3NGb3JtYXQsIHNlbGYuZGF0YSwgc2VsZi5tZXRyaWNzKQogICAgICAgIChkYXRhTGVuLCkgPSBzdHJ1Y3QudW5wYWNrKCI+TCIsIGRhdGFbOjRdKQogICAgICAgIGRhdGEgPSBkYXRhWzQ6XQoKICAgICAgICAjIEZvciB0aGUgaW1hZ2UgZGF0YSBjdXQgaXQgdG8gdGhlIHNpemUgc3BlY2lmaWVkIGJ5IGRhdGFMZW4uCiAgICAgICAgYXNzZXJ0IGRhdGFMZW4gPD0gbGVuKGRhdGEpLCAiRGF0YSBvdmVydW4gaW4gZm9ybWF0IDE4IgogICAgICAgIHNlbGYuaW1hZ2VEYXRhID0gZGF0YVs6ZGF0YUxlbl0KCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGRhdGFMaXN0ID0gW10KICAgICAgICBkYXRhTGlzdC5hcHBlbmQoc3N0cnVjdC5wYWNrKGJpZ0dseXBoTWV0cmljc0Zvcm1hdCwgc2VsZi5tZXRyaWNzKSkKICAgICAgICBkYXRhTGlzdC5hcHBlbmQoc3RydWN0LnBhY2soIj5MIiwgbGVuKHNlbGYuaW1hZ2VEYXRhKSkpCiAgICAgICAgZGF0YUxpc3QuYXBwZW5kKHNlbGYuaW1hZ2VEYXRhKQogICAgICAgIHJldHVybiBieXRlc2pvaW4oZGF0YUxpc3QpCgoKY2xhc3MgY2JkdF9iaXRtYXBfZm9ybWF0XzE5KENvbG9yQml0bWFwR2x5cGgpOgogICAgZGVmIGRlY29tcGlsZShzZWxmKToKICAgICAgICAoZGF0YUxlbiwpID0gc3RydWN0LnVucGFjaygiPkwiLCBzZWxmLmRhdGFbOjRdKQogICAgICAgIGRhdGEgPSBzZWxmLmRhdGFbNDpdCgogICAgICAgIGFzc2VydCBkYXRhTGVuIDw9IGxlbihkYXRhKSwgIkRhdGEgb3ZlcnVuIGluIGZvcm1hdCAxOSIKICAgICAgICBzZWxmLmltYWdlRGF0YSA9IGRhdGFbOmRhdGFMZW5dCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICByZXR1cm4gc3RydWN0LnBhY2soIj5MIiwgbGVuKHNlbGYuaW1hZ2VEYXRhKSkgKyBzZWxmLmltYWdlRGF0YQoKCiMgRGljdCBmb3IgQ0JEVCBleHRlbmRlZCBmb3JtYXRzLgpjYmR0X2JpdG1hcF9jbGFzc2VzID0gewogICAgMTc6IGNiZHRfYml0bWFwX2Zvcm1hdF8xNywKICAgIDE4OiBjYmR0X2JpdG1hcF9mb3JtYXRfMTgsCiAgICAxOTogY2JkdF9iaXRtYXBfZm9ybWF0XzE5LAp9Cg==
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Matt Fontaine
+
+
+from fontTools.misc.textTools import bytesjoin
+from fontTools.misc import sstruct
+from . import E_B_D_T_
+from .BitmapGlyphMetrics import (
+    BigGlyphMetrics,
+    bigGlyphMetricsFormat,
+    SmallGlyphMetrics,
+    smallGlyphMetricsFormat,
+)
+from .E_B_D_T_ import (
+    BitmapGlyph,
+    BitmapPlusSmallMetricsMixin,
+    BitmapPlusBigMetricsMixin,
+)
+import struct
+
+
+class table_C_B_D_T_(E_B_D_T_.table_E_B_D_T_):
+    """Color Bitmap Data table
+
+    The ``CBDT`` table contains color bitmap data for glyphs. It must
+    be used in concert with the ``CBLC`` table.
+
+    It is backwards-compatible with the monochrome/grayscale ``EBDT`` table.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cbdt
+    """
+
+    # Change the data locator table being referenced.
+    locatorName = "CBLC"
+
+    # Modify the format class accessor for color bitmap use.
+    def getImageFormatClass(self, imageFormat):
+        try:
+            return E_B_D_T_.table_E_B_D_T_.getImageFormatClass(self, imageFormat)
+        except KeyError:
+            return cbdt_bitmap_classes[imageFormat]
+
+
+# Helper method for removing export features not supported by color bitmaps.
+# Write data in the parent class will default to raw if an option is unsupported.
+def _removeUnsupportedForColor(dataFunctions):
+    dataFunctions = dict(dataFunctions)
+    del dataFunctions["row"]
+    return dataFunctions
+
+
+class ColorBitmapGlyph(BitmapGlyph):
+    fileExtension = ".png"
+    xmlDataFunctions = _removeUnsupportedForColor(BitmapGlyph.xmlDataFunctions)
+
+
+class cbdt_bitmap_format_17(BitmapPlusSmallMetricsMixin, ColorBitmapGlyph):
+    def decompile(self):
+        self.metrics = SmallGlyphMetrics()
+        dummy, data = sstruct.unpack2(smallGlyphMetricsFormat, self.data, self.metrics)
+        (dataLen,) = struct.unpack(">L", data[:4])
+        data = data[4:]
+
+        # For the image data cut it to the size specified by dataLen.
+        assert dataLen <= len(data), "Data overun in format 17"
+        self.imageData = data[:dataLen]
+
+    def compile(self, ttFont):
+        dataList = []
+        dataList.append(sstruct.pack(smallGlyphMetricsFormat, self.metrics))
+        dataList.append(struct.pack(">L", len(self.imageData)))
+        dataList.append(self.imageData)
+        return bytesjoin(dataList)
+
+
+class cbdt_bitmap_format_18(BitmapPlusBigMetricsMixin, ColorBitmapGlyph):
+    def decompile(self):
+        self.metrics = BigGlyphMetrics()
+        dummy, data = sstruct.unpack2(bigGlyphMetricsFormat, self.data, self.metrics)
+        (dataLen,) = struct.unpack(">L", data[:4])
+        data = data[4:]
+
+        # For the image data cut it to the size specified by dataLen.
+        assert dataLen <= len(data), "Data overun in format 18"
+        self.imageData = data[:dataLen]
+
+    def compile(self, ttFont):
+        dataList = []
+        dataList.append(sstruct.pack(bigGlyphMetricsFormat, self.metrics))
+        dataList.append(struct.pack(">L", len(self.imageData)))
+        dataList.append(self.imageData)
+        return bytesjoin(dataList)
+
+
+class cbdt_bitmap_format_19(ColorBitmapGlyph):
+    def decompile(self):
+        (dataLen,) = struct.unpack(">L", self.data[:4])
+        data = self.data[4:]
+
+        assert dataLen <= len(data), "Data overun in format 19"
+        self.imageData = data[:dataLen]
+
+    def compile(self, ttFont):
+        return struct.pack(">L", len(self.imageData)) + self.imageData
+
+
+# Dict for CBDT extended formats.
+cbdt_bitmap_classes = {
+    17: cbdt_bitmap_format_17,
+    18: cbdt_bitmap_format_18,
+    19: cbdt_bitmap_format_19,
+}

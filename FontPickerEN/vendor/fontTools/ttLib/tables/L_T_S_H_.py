@@ -1,1 +1,58 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IHNhZmVFdmFsCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmltcG9ydCBzdHJ1Y3QKaW1wb3J0IGFycmF5CgojIFhYWCBJJ3ZlIGxvd2VyZWQgdGhlIHN0cmljdG5lc3MsIHRvIG1ha2Ugc3VyZSBBcHBsZSdzIG93biBDaGljYWdvCiMgWFhYIGdldHMgdGhyb3VnaC4gVGhleSdyZSBsb29raW5nIGludG8gaXQsIEkgaG9wZSB0byByYWlzZSB0aGUgc3RhbmRhcmRzCiMgWFhYIGJhY2sgdG8gbm9ybWFsIGV2ZW50dWFsbHkuCgoKY2xhc3MgdGFibGVfTF9UX1NfSF8oRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJMaW5lYXIgVGhyZXNob2xkIHRhYmxlCgogICAgVGhlIGBgTFRTSGBgIHRhYmxlIGNvbnRhaW5zIHBlci1nbHlwaCBzZXR0aW5ncyBpbmRpY2F0aW5nIHRoZSBwcGVtIHNpemVzCiAgICBhdCB3aGljaCB0aGUgYWR2YW5jZSB3aWR0aCBtZXRyaWMgc2hvdWxkIGJlIHNjYWxlZCBsaW5lYXJseSwgZGVzcGl0ZSB0aGUKICAgIGVmZmVjdHMgb2YgYW55IFRydWVUeXBlIGluc3RydWN0aW9ucyB0aGF0IG1pZ2h0IG90aGVyd2lzZSBhbHRlciB0aGUKICAgIGFkdmFuY2Ugd2lkdGguCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9sdHNoCiAgICAiIiIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgdmVyc2lvbiwgbnVtR2x5cGhzID0gc3RydWN0LnVucGFjaygiPkhIIiwgZGF0YVs6NF0pCiAgICAgICAgZGF0YSA9IGRhdGFbNDpdCiAgICAgICAgYXNzZXJ0IHZlcnNpb24gPT0gMCwgInVua25vd24gdmVyc2lvbjogJXMiICUgdmVyc2lvbgogICAgICAgIGFzc2VydCAobGVuKGRhdGEpICUgbnVtR2x5cGhzKSA8IDQsICJudW1HbHlwaHMgZG9lc24ndCBtYXRjaCBkYXRhIGxlbmd0aCIKICAgICAgICAjIG91Y2g6IHRoZSBhc3NlcnRpb24gaXMgbm90IHRydWUgaW4gQ2hpY2FnbyEKICAgICAgICAjIGFzc2VydCBudW1HbHlwaHMgPT0gdHRGb250WydtYXhwJ10ubnVtR2x5cGhzCiAgICAgICAgeVBlbHMgPSBhcnJheS5hcnJheSgiQiIpCiAgICAgICAgeVBlbHMuZnJvbWJ5dGVzKGRhdGEpCiAgICAgICAgc2VsZi55UGVscyA9IHt9CiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobnVtR2x5cGhzKToKICAgICAgICAgICAgc2VsZi55UGVsc1t0dEZvbnQuZ2V0R2x5cGhOYW1lKGkpXSA9IHlQZWxzW2ldCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICB2ZXJzaW9uID0gMAogICAgICAgIG5hbWVzID0gbGlzdChzZWxmLnlQZWxzLmtleXMoKSkKICAgICAgICBudW1HbHlwaHMgPSBsZW4obmFtZXMpCiAgICAgICAgeVBlbHMgPSBbMF0gKiBudW1HbHlwaHMKICAgICAgICAjIG91Y2g6IHRoZSBhc3NlcnRpb24gaXMgbm90IHRydWUgaW4gQ2hpY2FnbyEKICAgICAgICAjIGFzc2VydCBsZW4oc2VsZi55UGVscykgPT0gdHRGb250WydtYXhwJ10ubnVtR2x5cGhzID09IG51bUdseXBocwogICAgICAgIGZvciBuYW1lIGluIG5hbWVzOgogICAgICAgICAgICB5UGVsc1t0dEZvbnQuZ2V0R2x5cGhJRChuYW1lKV0gPSBzZWxmLnlQZWxzW25hbWVdCiAgICAgICAgeVBlbHMgPSBhcnJheS5hcnJheSgiQiIsIHlQZWxzKQogICAgICAgIHJldHVybiBzdHJ1Y3QucGFjaygiPkhIIiwgdmVyc2lvbiwgbnVtR2x5cGhzKSArIHlQZWxzLnRvYnl0ZXMoKQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgbmFtZXMgPSBzb3J0ZWQoc2VsZi55UGVscy5rZXlzKCkpCiAgICAgICAgZm9yIG5hbWUgaW4gbmFtZXM6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInlQZWwiLCBuYW1lPW5hbWUsIHZhbHVlPXNlbGYueVBlbHNbbmFtZV0pCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAieVBlbHMiKToKICAgICAgICAgICAgc2VsZi55UGVscyA9IHt9CiAgICAgICAgaWYgbmFtZSAhPSAieVBlbCI6CiAgICAgICAgICAgIHJldHVybiAgIyBpZ25vcmUgdW5rbm93biB0YWdzCiAgICAgICAgc2VsZi55UGVsc1thdHRyc1sibmFtZSJdXSA9IHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKQo=
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+import struct
+import array
+
+# XXX I've lowered the strictness, to make sure Apple's own Chicago
+# XXX gets through. They're looking into it, I hope to raise the standards
+# XXX back to normal eventually.
+
+
+class table_L_T_S_H_(DefaultTable.DefaultTable):
+    """Linear Threshold table
+
+    The ``LTSH`` table contains per-glyph settings indicating the ppem sizes
+    at which the advance width metric should be scaled linearly, despite the
+    effects of any TrueType instructions that might otherwise alter the
+    advance width.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/ltsh
+    """
+
+    def decompile(self, data, ttFont):
+        version, numGlyphs = struct.unpack(">HH", data[:4])
+        data = data[4:]
+        assert version == 0, "unknown version: %s" % version
+        assert (len(data) % numGlyphs) < 4, "numGlyphs doesn't match data length"
+        # ouch: the assertion is not true in Chicago!
+        # assert numGlyphs == ttFont['maxp'].numGlyphs
+        yPels = array.array("B")
+        yPels.frombytes(data)
+        self.yPels = {}
+        for i in range(numGlyphs):
+            self.yPels[ttFont.getGlyphName(i)] = yPels[i]
+
+    def compile(self, ttFont):
+        version = 0
+        names = list(self.yPels.keys())
+        numGlyphs = len(names)
+        yPels = [0] * numGlyphs
+        # ouch: the assertion is not true in Chicago!
+        # assert len(self.yPels) == ttFont['maxp'].numGlyphs == numGlyphs
+        for name in names:
+            yPels[ttFont.getGlyphID(name)] = self.yPels[name]
+        yPels = array.array("B", yPels)
+        return struct.pack(">HH", version, numGlyphs) + yPels.tobytes()
+
+    def toXML(self, writer, ttFont):
+        names = sorted(self.yPels.keys())
+        for name in names:
+            writer.simpletag("yPel", name=name, value=self.yPels[name])
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "yPels"):
+            self.yPels = {}
+        if name != "yPel":
+            return  # ignore unknown tags
+        self.yPels[attrs["name"]] = safeEval(attrs["value"])

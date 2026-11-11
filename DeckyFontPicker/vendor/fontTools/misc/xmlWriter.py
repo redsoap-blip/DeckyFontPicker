@@ -1,1 +1,243 @@
-IiIieG1sV3JpdGVyLnB5IC0tIFNpbXBsZSBYTUwgYXV0aG9yaW5nIGNsYXNzIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgpmcm9tIHR5cGluZyBpbXBvcnQgQmluYXJ5SU8sIENhbGxhYmxlLCBUZXh0SU8KZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVvcmQsIHN0cmpvaW4sIHRvYnl0ZXMsIHRvc3RyCmltcG9ydCBzeXMKaW1wb3J0IG9zCmltcG9ydCBzdHJpbmcKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IGl0ZXJ0b29scwoKSU5ERU5UID0gIiAgIgpUVFhfTE9HID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy50dHgiKQpSRVBMQUNFTUVOVCA9ICI/IgpJTExFR0FMX1hNTF9DSEFSUyA9IGRpY3QuZnJvbWtleXMoCiAgICBpdGVydG9vbHMuY2hhaW4oCiAgICAgICAgcmFuZ2UoMHgwMCwgMHgwOSksCiAgICAgICAgKDB4MEIsIDB4MEMpLAogICAgICAgIHJhbmdlKDB4MEUsIDB4MjApLAogICAgICAgIHJhbmdlKDB4RDgwMCwgMHhFMDAwKSwKICAgICAgICAoMHhGRkZFLCAweEZGRkYpLAogICAgKSwKICAgIFJFUExBQ0VNRU5ULAopCgoKY2xhc3MgWE1MV3JpdGVyKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwKICAgICAgICBmaWxlT3JQYXRoOiBzdHIgfCBvcy5QYXRoTGlrZVtzdHJdIHwgQmluYXJ5SU8gfCBUZXh0SU8sCiAgICAgICAgaW5kZW50d2hpdGU6IHN0ciA9IElOREVOVCwKICAgICAgICBpZGxlZnVuYzogQ2FsbGFibGVbW10sIE5vbmVdIHwgTm9uZSA9IE5vbmUsCiAgICAgICAgZW5jb2Rpbmc6IHN0ciA9ICJ1dGZfOCIsCiAgICAgICAgbmV3bGluZXN0cjogc3RyIHwgYnl0ZXMgPSAiXG4iLAogICAgKSAtPiBOb25lOgogICAgICAgIGlmIGVuY29kaW5nLmxvd2VyKCkucmVwbGFjZSgiLSIsICIiKS5yZXBsYWNlKCJfIiwgIiIpICE9ICJ1dGY4IjoKICAgICAgICAgICAgcmFpc2UgRXhjZXB0aW9uKCJPbmx5IFVURi04IGVuY29kaW5nIGlzIHN1cHBvcnRlZC4iKQogICAgICAgIGlmIGZpbGVPclBhdGggPT0gIi0iOgogICAgICAgICAgICBmaWxlT3JQYXRoID0gc3lzLnN0ZG91dAogICAgICAgIHNlbGYuZmlsZW5hbWU6IHN0ciB8IG9zLlBhdGhMaWtlW3N0cl0gfCBOb25lCiAgICAgICAgaWYgbm90IGhhc2F0dHIoZmlsZU9yUGF0aCwgIndyaXRlIik6CiAgICAgICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKGZpbGVPclBhdGgsIChzdHIsIG9zLlBhdGhMaWtlKSk6CiAgICAgICAgICAgICAgICByYWlzZSBUeXBlRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgImZpbGVPclBhdGggbXVzdCBiZSBhIGZpbGUgcGF0aCAoc3RyIG9yIFBhdGhMaWtlKSBpZiBpdCBpc24ndCBhbiBvYmplY3Qgd2l0aCBhIGB3cml0ZWAgbWV0aG9kLiIKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgc2VsZi5maWxlbmFtZSA9IGZpbGVPclBhdGgKICAgICAgICAgICAgc2VsZi5maWxlID0gb3BlbihmaWxlT3JQYXRoLCAid2IiKQogICAgICAgICAgICBzZWxmLl9jbG9zZVN0cmVhbSA9IFRydWUKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmZpbGVuYW1lID0gTm9uZQogICAgICAgICAgICAjIGFzc3VtZSB3cml0YWJsZSBmaWxlIG9iamVjdAogICAgICAgICAgICBzZWxmLmZpbGUgPSBmaWxlT3JQYXRoCiAgICAgICAgICAgIHNlbGYuX2Nsb3NlU3RyZWFtID0gRmFsc2UKCiAgICAgICAgIyBGaWd1cmUgb3V0IGlmIHdyaXRlciBleHBlY3RzIGJ5dGVzIG9yIHVuaWNvZGVzCiAgICAgICAgdHJ5OgogICAgICAgICAgICAjIFRoZSBieXRlcyBjaGVjayBzaG91bGQgYmUgZmlyc3QuICBTZWU6CiAgICAgICAgICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvcHVsbC8yMzMKICAgICAgICAgICAgc2VsZi5maWxlLndyaXRlKGIiIikKICAgICAgICAgICAgc2VsZi50b3R5cGUgPSB0b2J5dGVzCiAgICAgICAgZXhjZXB0IFR5cGVFcnJvcjoKICAgICAgICAgICAgIyBUaGlzIGJldHRlciBub3QgZmFpbC4KICAgICAgICAgICAgc2VsZi5maWxlLndyaXRlKCIiKQogICAgICAgICAgICBzZWxmLnRvdHlwZSA9IHRvc3RyCiAgICAgICAgc2VsZi5pbmRlbnR3aGl0ZSA9IHNlbGYudG90eXBlKGluZGVudHdoaXRlKQogICAgICAgIGlmIG5ld2xpbmVzdHIgaXMgTm9uZToKICAgICAgICAgICAgc2VsZi5uZXdsaW5lc3RyID0gc2VsZi50b3R5cGUob3MubGluZXNlcCkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLm5ld2xpbmVzdHIgPSBzZWxmLnRvdHlwZShuZXdsaW5lc3RyKQogICAgICAgIHNlbGYuaW5kZW50bGV2ZWwgPSAwCiAgICAgICAgc2VsZi5zdGFjayA9IFtdCiAgICAgICAgc2VsZi5uZWVkaW5kZW50ID0gMQogICAgICAgIHNlbGYuaWRsZWZ1bmMgPSBpZGxlZnVuYwogICAgICAgIHNlbGYuaWRsZWNvdW50ZXIgPSAwCiAgICAgICAgc2VsZi5fd3JpdGVyYXcoJzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi04Ij8+JykKICAgICAgICBzZWxmLm5ld2xpbmUoKQoKICAgIGRlZiBfX2VudGVyX18oc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYKCiAgICBkZWYgX19leGl0X18oc2VsZiwgZXhjZXB0aW9uX3R5cGUsIGV4Y2VwdGlvbl92YWx1ZSwgdHJhY2ViYWNrKToKICAgICAgICBzZWxmLmNsb3NlKCkKCiAgICBkZWYgY2xvc2Uoc2VsZikgLT4gTm9uZToKICAgICAgICBpZiBzZWxmLl9jbG9zZVN0cmVhbToKICAgICAgICAgICAgYXNzZXJ0IG5vdCBpc2luc3RhbmNlKHNlbGYuZmlsZSwgKHN0ciwgb3MuUGF0aExpa2UpKQogICAgICAgICAgICBzZWxmLmZpbGUuY2xvc2UoKQoKICAgIGRlZiB3cml0ZShzZWxmLCBzdHJpbmcsIGluZGVudD1UcnVlKToKICAgICAgICAiIiJXcml0ZXMgdGV4dC4iIiIKICAgICAgICBzZWxmLl93cml0ZXJhdyhlc2NhcGUoc3RyaW5nKSwgaW5kZW50PWluZGVudCkKCiAgICBkZWYgd3JpdGVjZGF0YShzZWxmLCBzdHJpbmcpOgogICAgICAgICIiIldyaXRlcyB0ZXh0IGluIGEgQ0RBVEEgc2VjdGlvbi4iIiIKICAgICAgICAjIGEgQ0RBVEEgc2VjdGlvbiBjYW4ndCBob2xkICJdXT4iLCBzbyBjbG9zZSBpdCBhbmQgb3BlbiBhIG5ldyBvbmUgYXJvdW5kCiAgICAgICAgIyB0aGUgIj4iOyB0aGUgdHdvIHNlY3Rpb25zIHJlYWQgYmFjayBhcyB0aGUgb3JpZ2luYWwgdGV4dAogICAgICAgIHN0cmluZyA9IHN0cmluZy5yZXBsYWNlKCJdXT4iLCAiXV1dXT48IVtDREFUQVs+IikKICAgICAgICBzZWxmLl93cml0ZXJhdygiPCFbQ0RBVEFbIiArIHN0cmluZyArICJdXT4iKQoKICAgIGRlZiB3cml0ZThiaXQoc2VsZiwgZGF0YSwgc3RyaXA9RmFsc2UpOgogICAgICAgICIiIldyaXRlcyBhIGJ5dGVzKCkgc2VxdWVuY2UgaW50byB0aGUgWE1MLCBlc2NhcGluZwogICAgICAgIG5vbi1BU0NJSSBieXRlcy4gIFdoZW4gdGhpcyBpcyByZWFkIGluIHhtbFJlYWRlciwKICAgICAgICB0aGUgb3JpZ2luYWwgYnl0ZXMgY2FuIGJlIHJlY292ZXJlZCBieSBlbmNvZGluZyB0bwogICAgICAgICdsYXRpbi0xJy4iIiIKICAgICAgICBzZWxmLl93cml0ZXJhdyhlc2NhcGU4Yml0KGRhdGEpLCBzdHJpcD1zdHJpcCkKCiAgICBkZWYgd3JpdGVfbm9pbmRlbnQoc2VsZiwgc3RyaW5nKToKICAgICAgICAiIiJXcml0ZXMgdGV4dCB3aXRob3V0IGluZGVudGF0aW9uLiIiIgogICAgICAgIHNlbGYuX3dyaXRlcmF3KGVzY2FwZShzdHJpbmcpLCBpbmRlbnQ9RmFsc2UpCgogICAgZGVmIF93cml0ZXJhdyhzZWxmLCBkYXRhLCBpbmRlbnQ9VHJ1ZSwgc3RyaXA9RmFsc2UpOgogICAgICAgICIiIldyaXRlcyBieXRlcywgcG9zc2libHkgaW5kZW50ZWQuIiIiCiAgICAgICAgaWYgaW5kZW50IGFuZCBzZWxmLm5lZWRpbmRlbnQ6CiAgICAgICAgICAgIHNlbGYuZmlsZS53cml0ZShzZWxmLmluZGVudGxldmVsICogc2VsZi5pbmRlbnR3aGl0ZSkKICAgICAgICAgICAgc2VsZi5uZWVkaW5kZW50ID0gMAogICAgICAgIHMgPSBzZWxmLnRvdHlwZShkYXRhLCBlbmNvZGluZz0idXRmXzgiKQogICAgICAgIGlmIHN0cmlwOgogICAgICAgICAgICBzID0gcy5zdHJpcCgpCiAgICAgICAgc2VsZi5maWxlLndyaXRlKHMpCgogICAgZGVmIG5ld2xpbmUoc2VsZik6CiAgICAgICAgc2VsZi5maWxlLndyaXRlKHNlbGYubmV3bGluZXN0cikKICAgICAgICBzZWxmLm5lZWRpbmRlbnQgPSAxCiAgICAgICAgaWRsZWNvdW50ZXIgPSBzZWxmLmlkbGVjb3VudGVyCiAgICAgICAgaWYgbm90IGlkbGVjb3VudGVyICUgMTAwIGFuZCBzZWxmLmlkbGVmdW5jIGlzIG5vdCBOb25lOgogICAgICAgICAgICBzZWxmLmlkbGVmdW5jKCkKICAgICAgICBzZWxmLmlkbGVjb3VudGVyID0gaWRsZWNvdW50ZXIgKyAxCgogICAgZGVmIGNvbW1lbnQoc2VsZiwgZGF0YSk6CiAgICAgICAgZGF0YSA9IGVzY2FwZShkYXRhKQogICAgICAgIGxpbmVzID0gZGF0YS5zcGxpdCgiXG4iKQogICAgICAgIHNlbGYuX3dyaXRlcmF3KCI8IS0tICIgKyBsaW5lc1swXSkKICAgICAgICBmb3IgbGluZSBpbiBsaW5lc1sxOl06CiAgICAgICAgICAgIHNlbGYubmV3bGluZSgpCiAgICAgICAgICAgIHNlbGYuX3dyaXRlcmF3KCIgICAgICIgKyBsaW5lKQogICAgICAgIHNlbGYuX3dyaXRlcmF3KCIgLS0+IikKCiAgICBkZWYgc2ltcGxldGFnKHNlbGYsIF9UQUdfLCAqYXJncywgKiprd2FyZ3MpOgogICAgICAgIGF0dHJkYXRhID0gc2VsZi5zdHJpbmdpZnlhdHRycygqYXJncywgKiprd2FyZ3MpCiAgICAgICAgZGF0YSA9ICI8JXMlcy8+IiAlIChfVEFHXywgYXR0cmRhdGEpCiAgICAgICAgc2VsZi5fd3JpdGVyYXcoZGF0YSkKCiAgICBkZWYgYmVnaW50YWcoc2VsZiwgX1RBR18sICphcmdzLCAqKmt3YXJncyk6CiAgICAgICAgYXR0cmRhdGEgPSBzZWxmLnN0cmluZ2lmeWF0dHJzKCphcmdzLCAqKmt3YXJncykKICAgICAgICBkYXRhID0gIjwlcyVzPiIgJSAoX1RBR18sIGF0dHJkYXRhKQogICAgICAgIHNlbGYuX3dyaXRlcmF3KGRhdGEpCiAgICAgICAgc2VsZi5zdGFjay5hcHBlbmQoX1RBR18pCiAgICAgICAgc2VsZi5pbmRlbnQoKQoKICAgIGRlZiBlbmR0YWcoc2VsZiwgX1RBR18pOgogICAgICAgIGFzc2VydCBzZWxmLnN0YWNrIGFuZCBzZWxmLnN0YWNrWy0xXSA9PSBfVEFHXywgIm5vbm1hdGNoaW5nIGVuZHRhZyIKICAgICAgICBkZWwgc2VsZi5zdGFja1stMV0KICAgICAgICBzZWxmLmRlZGVudCgpCiAgICAgICAgZGF0YSA9ICI8LyVzPiIgJSBfVEFHXwogICAgICAgIHNlbGYuX3dyaXRlcmF3KGRhdGEpCgogICAgZGVmIGR1bXBoZXgoc2VsZiwgZGF0YSk6CiAgICAgICAgbGluZWxlbmd0aCA9IDE2CiAgICAgICAgaGV4bGluZWxlbmd0aCA9IGxpbmVsZW5ndGggKiAyCiAgICAgICAgY2h1bmtzaXplID0gOAogICAgICAgIGZvciBpIGluIHJhbmdlKDAsIGxlbihkYXRhKSwgbGluZWxlbmd0aCk6CiAgICAgICAgICAgIGhleGxpbmUgPSBoZXhTdHIoZGF0YVtpIDogaSArIGxpbmVsZW5ndGhdKQogICAgICAgICAgICBsaW5lID0gIiIKICAgICAgICAgICAgd2hpdGUgPSAiIgogICAgICAgICAgICBmb3IgaiBpbiByYW5nZSgwLCBoZXhsaW5lbGVuZ3RoLCBjaHVua3NpemUpOgogICAgICAgICAgICAgICAgbGluZSA9IGxpbmUgKyB3aGl0ZSArIGhleGxpbmVbaiA6IGogKyBjaHVua3NpemVdCiAgICAgICAgICAgICAgICB3aGl0ZSA9ICIgIgogICAgICAgICAgICBzZWxmLl93cml0ZXJhdyhsaW5lKQogICAgICAgICAgICBzZWxmLm5ld2xpbmUoKQoKICAgIGRlZiBpbmRlbnQoc2VsZik6CiAgICAgICAgc2VsZi5pbmRlbnRsZXZlbCA9IHNlbGYuaW5kZW50bGV2ZWwgKyAxCgogICAgZGVmIGRlZGVudChzZWxmKToKICAgICAgICBhc3NlcnQgc2VsZi5pbmRlbnRsZXZlbCA+IDAKICAgICAgICBzZWxmLmluZGVudGxldmVsID0gc2VsZi5pbmRlbnRsZXZlbCAtIDEKCiAgICBkZWYgc3RyaW5naWZ5YXR0cnMoc2VsZiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICBpZiBrd2FyZ3M6CiAgICAgICAgICAgIGFzc2VydCBub3QgYXJncwogICAgICAgICAgICBhdHRyaWJ1dGVzID0gc29ydGVkKGt3YXJncy5pdGVtcygpKQogICAgICAgIGVsaWYgYXJnczoKICAgICAgICAgICAgYXNzZXJ0IGxlbihhcmdzKSA9PSAxCiAgICAgICAgICAgIGF0dHJpYnV0ZXMgPSBhcmdzWzBdCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuICIiCiAgICAgICAgZGF0YSA9ICIiCiAgICAgICAgZm9yIGF0dHIsIHZhbHVlIGluIGF0dHJpYnV0ZXM6CiAgICAgICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKHZhbHVlLCAoYnl0ZXMsIHN0cikpOgogICAgICAgICAgICAgICAgdmFsdWUgPSBzdHIodmFsdWUpCiAgICAgICAgICAgIGRhdGEgPSBkYXRhICsgJyAlcz0iJXMiJyAlIChhdHRyLCBlc2NhcGVhdHRyKHZhbHVlKSkKICAgICAgICByZXR1cm4gZGF0YQoKCmRlZiBlc2NhcGUoZGF0YSk6CiAgICAiIiJFc2NhcGUgY2hhcmFjdGVycyBub3QgYWxsb3dlZCBpbiBgWE1MIDEuMCA8aHR0cHM6Ly93d3cudzMub3JnL1RSL3htbC8jTlQtQ2hhcj5gXy4iIiIKICAgIGRhdGEgPSB0b3N0cihkYXRhLCAidXRmXzgiKQogICAgZGF0YSA9IGRhdGEucmVwbGFjZSgiJiIsICImYW1wOyIpCiAgICBkYXRhID0gZGF0YS5yZXBsYWNlKCI8IiwgIiZsdDsiKQogICAgZGF0YSA9IGRhdGEucmVwbGFjZSgiPiIsICImZ3Q7IikKICAgIGRhdGEgPSBkYXRhLnJlcGxhY2UoIlxyIiwgIiYjMTM7IikKCiAgICBuZXdEYXRhID0gZGF0YS50cmFuc2xhdGUoSUxMRUdBTF9YTUxfQ0hBUlMpCiAgICBpZiBuZXdEYXRhICE9IGRhdGE6CiAgICAgICAgbWF4TGVuID0gMTAKICAgICAgICBwcmV2aWV3ID0gcmVwcihkYXRhKQogICAgICAgIGlmIGxlbihkYXRhKSA+IG1heExlbjoKICAgICAgICAgICAgcHJldmlldyA9IHJlcHIoZGF0YVs6bWF4TGVuXSlbMTotMV0gKyAiLi4uIgogICAgICAgIFRUWF9MT0cud2FybmluZygKICAgICAgICAgICAgIklsbGVnYWwgWE1MIGNoYXJhY3RlcihzKSBmb3VuZDsgcmVwbGFjaW5nIG9mZmVuZGluZyBzdHJpbmcgJXIgd2l0aCAlciIsCiAgICAgICAgICAgIHByZXZpZXcsCiAgICAgICAgICAgIFJFUExBQ0VNRU5ULAogICAgICAgICkKICAgIHJldHVybiBuZXdEYXRhCgoKZGVmIGVzY2FwZWF0dHIoZGF0YSk6CiAgICBkYXRhID0gZXNjYXBlKGRhdGEpCiAgICBkYXRhID0gZGF0YS5yZXBsYWNlKCciJywgIiZxdW90OyIpCiAgICByZXR1cm4gZGF0YQoKCmRlZiBlc2NhcGU4Yml0KGRhdGEpOgogICAgIiIiSW5wdXQgaXMgVW5pY29kZSBzdHJpbmcuIiIiCgogICAgZGVmIGVzY2FwZWNoYXIoYyk6CiAgICAgICAgbiA9IG9yZChjKQogICAgICAgIGlmIDMyIDw9IG4gPD0gMTI3IGFuZCBjIG5vdCBpbiAiPCY+IjoKICAgICAgICAgICAgcmV0dXJuIGMKICAgICAgICBlbHNlOgogICAgICAgICAgICByZXR1cm4gIiYjIiArIHJlcHIobikgKyAiOyIKCiAgICByZXR1cm4gc3Ryam9pbihtYXAoZXNjYXBlY2hhciwgZGF0YS5kZWNvZGUoImxhdGluLTEiKSkpCgoKZGVmIGhleFN0cihzKToKICAgIGggPSBzdHJpbmcuaGV4ZGlnaXRzCiAgICByID0gIiIKICAgIGZvciBjIGluIHM6CiAgICAgICAgaSA9IGJ5dGVvcmQoYykKICAgICAgICByID0gciArIGhbKGkgPj4gNCkgJiAweEZdICsgaFtpICYgMHhGXQogICAgcmV0dXJuIHIK
+"""xmlWriter.py -- Simple XML authoring class"""
+
+from __future__ import annotations
+
+from typing import BinaryIO, Callable, TextIO
+from fontTools.misc.textTools import byteord, strjoin, tobytes, tostr
+import sys
+import os
+import string
+import logging
+import itertools
+
+INDENT = "  "
+TTX_LOG = logging.getLogger("fontTools.ttx")
+REPLACEMENT = "?"
+ILLEGAL_XML_CHARS = dict.fromkeys(
+    itertools.chain(
+        range(0x00, 0x09),
+        (0x0B, 0x0C),
+        range(0x0E, 0x20),
+        range(0xD800, 0xE000),
+        (0xFFFE, 0xFFFF),
+    ),
+    REPLACEMENT,
+)
+
+
+class XMLWriter(object):
+    def __init__(
+        self,
+        fileOrPath: str | os.PathLike[str] | BinaryIO | TextIO,
+        indentwhite: str = INDENT,
+        idlefunc: Callable[[], None] | None = None,
+        encoding: str = "utf_8",
+        newlinestr: str | bytes = "\n",
+    ) -> None:
+        if encoding.lower().replace("-", "").replace("_", "") != "utf8":
+            raise Exception("Only UTF-8 encoding is supported.")
+        if fileOrPath == "-":
+            fileOrPath = sys.stdout
+        self.filename: str | os.PathLike[str] | None
+        if not hasattr(fileOrPath, "write"):
+            if not isinstance(fileOrPath, (str, os.PathLike)):
+                raise TypeError(
+                    "fileOrPath must be a file path (str or PathLike) if it isn't an object with a `write` method."
+                )
+            self.filename = fileOrPath
+            self.file = open(fileOrPath, "wb")
+            self._closeStream = True
+        else:
+            self.filename = None
+            # assume writable file object
+            self.file = fileOrPath
+            self._closeStream = False
+
+        # Figure out if writer expects bytes or unicodes
+        try:
+            # The bytes check should be first.  See:
+            # https://github.com/fonttools/fonttools/pull/233
+            self.file.write(b"")
+            self.totype = tobytes
+        except TypeError:
+            # This better not fail.
+            self.file.write("")
+            self.totype = tostr
+        self.indentwhite = self.totype(indentwhite)
+        if newlinestr is None:
+            self.newlinestr = self.totype(os.linesep)
+        else:
+            self.newlinestr = self.totype(newlinestr)
+        self.indentlevel = 0
+        self.stack = []
+        self.needindent = 1
+        self.idlefunc = idlefunc
+        self.idlecounter = 0
+        self._writeraw('<?xml version="1.0" encoding="UTF-8"?>')
+        self.newline()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exception_type, exception_value, traceback):
+        self.close()
+
+    def close(self) -> None:
+        if self._closeStream:
+            assert not isinstance(self.file, (str, os.PathLike))
+            self.file.close()
+
+    def write(self, string, indent=True):
+        """Writes text."""
+        self._writeraw(escape(string), indent=indent)
+
+    def writecdata(self, string):
+        """Writes text in a CDATA section."""
+        # a CDATA section can't hold "]]>", so close it and open a new one around
+        # the ">"; the two sections read back as the original text
+        string = string.replace("]]>", "]]]]><![CDATA[>")
+        self._writeraw("<![CDATA[" + string + "]]>")
+
+    def write8bit(self, data, strip=False):
+        """Writes a bytes() sequence into the XML, escaping
+        non-ASCII bytes.  When this is read in xmlReader,
+        the original bytes can be recovered by encoding to
+        'latin-1'."""
+        self._writeraw(escape8bit(data), strip=strip)
+
+    def write_noindent(self, string):
+        """Writes text without indentation."""
+        self._writeraw(escape(string), indent=False)
+
+    def _writeraw(self, data, indent=True, strip=False):
+        """Writes bytes, possibly indented."""
+        if indent and self.needindent:
+            self.file.write(self.indentlevel * self.indentwhite)
+            self.needindent = 0
+        s = self.totype(data, encoding="utf_8")
+        if strip:
+            s = s.strip()
+        self.file.write(s)
+
+    def newline(self):
+        self.file.write(self.newlinestr)
+        self.needindent = 1
+        idlecounter = self.idlecounter
+        if not idlecounter % 100 and self.idlefunc is not None:
+            self.idlefunc()
+        self.idlecounter = idlecounter + 1
+
+    def comment(self, data):
+        data = escape(data)
+        lines = data.split("\n")
+        self._writeraw("<!-- " + lines[0])
+        for line in lines[1:]:
+            self.newline()
+            self._writeraw("     " + line)
+        self._writeraw(" -->")
+
+    def simpletag(self, _TAG_, *args, **kwargs):
+        attrdata = self.stringifyattrs(*args, **kwargs)
+        data = "<%s%s/>" % (_TAG_, attrdata)
+        self._writeraw(data)
+
+    def begintag(self, _TAG_, *args, **kwargs):
+        attrdata = self.stringifyattrs(*args, **kwargs)
+        data = "<%s%s>" % (_TAG_, attrdata)
+        self._writeraw(data)
+        self.stack.append(_TAG_)
+        self.indent()
+
+    def endtag(self, _TAG_):
+        assert self.stack and self.stack[-1] == _TAG_, "nonmatching endtag"
+        del self.stack[-1]
+        self.dedent()
+        data = "</%s>" % _TAG_
+        self._writeraw(data)
+
+    def dumphex(self, data):
+        linelength = 16
+        hexlinelength = linelength * 2
+        chunksize = 8
+        for i in range(0, len(data), linelength):
+            hexline = hexStr(data[i : i + linelength])
+            line = ""
+            white = ""
+            for j in range(0, hexlinelength, chunksize):
+                line = line + white + hexline[j : j + chunksize]
+                white = " "
+            self._writeraw(line)
+            self.newline()
+
+    def indent(self):
+        self.indentlevel = self.indentlevel + 1
+
+    def dedent(self):
+        assert self.indentlevel > 0
+        self.indentlevel = self.indentlevel - 1
+
+    def stringifyattrs(self, *args, **kwargs):
+        if kwargs:
+            assert not args
+            attributes = sorted(kwargs.items())
+        elif args:
+            assert len(args) == 1
+            attributes = args[0]
+        else:
+            return ""
+        data = ""
+        for attr, value in attributes:
+            if not isinstance(value, (bytes, str)):
+                value = str(value)
+            data = data + ' %s="%s"' % (attr, escapeattr(value))
+        return data
+
+
+def escape(data):
+    """Escape characters not allowed in `XML 1.0 <https://www.w3.org/TR/xml/#NT-Char>`_."""
+    data = tostr(data, "utf_8")
+    data = data.replace("&", "&amp;")
+    data = data.replace("<", "&lt;")
+    data = data.replace(">", "&gt;")
+    data = data.replace("\r", "&#13;")
+
+    newData = data.translate(ILLEGAL_XML_CHARS)
+    if newData != data:
+        maxLen = 10
+        preview = repr(data)
+        if len(data) > maxLen:
+            preview = repr(data[:maxLen])[1:-1] + "..."
+        TTX_LOG.warning(
+            "Illegal XML character(s) found; replacing offending string %r with %r",
+            preview,
+            REPLACEMENT,
+        )
+    return newData
+
+
+def escapeattr(data):
+    data = escape(data)
+    data = data.replace('"', "&quot;")
+    return data
+
+
+def escape8bit(data):
+    """Input is Unicode string."""
+
+    def escapechar(c):
+        n = ord(c)
+        if 32 <= n <= 127 and c not in "<&>":
+            return c
+        else:
+            return "&#" + repr(n) + ";"
+
+    return strjoin(map(escapechar, data.decode("latin-1")))
+
+
+def hexStr(s):
+    h = string.hexdigits
+    r = ""
+    for c in s:
+        i = byteord(c)
+        r = r + h[(i >> 4) & 0xF] + h[i & 0xF]
+    return r

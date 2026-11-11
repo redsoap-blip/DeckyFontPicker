@@ -1,1 +1,213 @@
-IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0KCiIiIlQyQ2hhclN0cmluZyBnbHlwaCB3aWR0aCBvcHRpbWl6ZXIuCgpDRkYgZ2x5cGhzIHdob3NlIHdpZHRoIGVxdWFscyB0aGUgQ0ZGIFByaXZhdGUgZGljdGlvbmFyeSdzIGBgZGVmYXVsdFdpZHRoWGBgCnZhbHVlIGRvIG5vdCBuZWVkIHRvIHNwZWNpZnkgdGhlaXIgd2lkdGggaW4gdGhlaXIgY2hhcnN0cmluZywgc2F2aW5nIGJ5dGVzLgpUaGlzIG1vZHVsZSBkZXRlcm1pbmVzIHRoZSBvcHRpbXVtIGBgZGVmYXVsdFdpZHRoWGBgIGFuZCBgYG5vbWluYWxXaWR0aFhgYAp2YWx1ZXMgZm9yIGEgZm9udCwgd2hlbiBwcm92aWRlZCB3aXRoIGEgbGlzdCBvZiBnbHlwaCB3aWR0aHMuIiIiCgpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250CmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlZmF1bHRkaWN0CmZyb20gb3BlcmF0b3IgaW1wb3J0IGFkZApmcm9tIGZ1bmN0b29scyBpbXBvcnQgcmVkdWNlCgpfX2FsbF9fID0gWyJvcHRpbWl6ZVdpZHRocyIsICJtYWluIl0KCgpkZWYgX2dldF9obXR4KGZvbnQpOgogICAgcmV0dXJuIGZvbnRbIkhNVFgiXSBpZiAiSE1UWCIgaW4gZm9udCBlbHNlIGZvbnRbImhtdHgiXQoKCmNsYXNzIG1pc3NpbmdkaWN0KGRpY3QpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG1pc3NpbmdfZnVuYyk6CiAgICAgICAgc2VsZi5taXNzaW5nX2Z1bmMgPSBtaXNzaW5nX2Z1bmMKCiAgICBkZWYgX19taXNzaW5nX18oc2VsZiwgdik6CiAgICAgICAgcmV0dXJuIHNlbGYubWlzc2luZ19mdW5jKHYpCgoKZGVmIGN1bVN1bShmLCBvcD1hZGQsIHN0YXJ0PTAsIGRlY3JlYXNpbmc9RmFsc2UpOgogICAga2V5cyA9IHNvcnRlZChmLmtleXMoKSkKICAgIG1pbngsIG1heHggPSBrZXlzWzBdLCBrZXlzWy0xXQoKICAgIHRvdGFsID0gcmVkdWNlKG9wLCBmLnZhbHVlcygpLCBzdGFydCkKCiAgICBpZiBkZWNyZWFzaW5nOgogICAgICAgIG1pc3NpbmcgPSBsYW1iZGEgeDogc3RhcnQgaWYgeCA+IG1heHggZWxzZSB0b3RhbAogICAgICAgIGRvbWFpbiA9IHJhbmdlKG1heHgsIG1pbnggLSAxLCAtMSkKICAgIGVsc2U6CiAgICAgICAgbWlzc2luZyA9IGxhbWJkYSB4OiBzdGFydCBpZiB4IDwgbWlueCBlbHNlIHRvdGFsCiAgICAgICAgZG9tYWluID0gcmFuZ2UobWlueCwgbWF4eCArIDEpCgogICAgb3V0ID0gbWlzc2luZ2RpY3QobWlzc2luZykKCiAgICB2ID0gc3RhcnQKICAgIGZvciB4IGluIGRvbWFpbjoKICAgICAgICB2ID0gb3AodiwgZlt4XSkKICAgICAgICBvdXRbeF0gPSB2CgogICAgcmV0dXJuIG91dAoKCmRlZiBieXRlQ29zdCh3aWR0aHMsIGRlZmF1bHQsIG5vbWluYWwpOgogICAgaWYgbm90IGhhc2F0dHIod2lkdGhzLCAiaXRlbXMiKToKICAgICAgICBkID0gZGVmYXVsdGRpY3QoaW50KQogICAgICAgIGZvciB3IGluIHdpZHRoczoKICAgICAgICAgICAgZFt3XSArPSAxCiAgICAgICAgd2lkdGhzID0gZAoKICAgIGNvc3QgPSAwCiAgICBmb3IgdywgZnJlcSBpbiB3aWR0aHMuaXRlbXMoKToKICAgICAgICBpZiB3ID09IGRlZmF1bHQ6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZGlmZiA9IGFicyh3IC0gbm9taW5hbCkKICAgICAgICBpZiBkaWZmIDw9IDEwNzoKICAgICAgICAgICAgY29zdCArPSBmcmVxCiAgICAgICAgZWxpZiBkaWZmIDw9IDExMzE6CiAgICAgICAgICAgIGNvc3QgKz0gZnJlcSAqIDIKICAgICAgICBlbHNlOgogICAgICAgICAgICBjb3N0ICs9IGZyZXEgKiA1CiAgICByZXR1cm4gY29zdAoKCmRlZiBvcHRpbWl6ZVdpZHRoc0JydXRlZm9yY2Uod2lkdGhzKToKICAgICIiIkJydXRlZm9yY2UgdmVyc2lvbi4gIFZlZWVlZWVlZWVlZWVlZWVlZXJ5IHNsb3cuICBPbmx5IHdvcmtzIGZvciBzbWFsbGVzdHMgb2YgZm9udHMuIiIiCgogICAgZCA9IGRlZmF1bHRkaWN0KGludCkKICAgIGZvciB3IGluIHdpZHRoczoKICAgICAgICBkW3ddICs9IDEKCiAgICAjIE1heGltdW0gbnVtYmVyIG9mIGJ5dGVzIHVzaW5nIGRlZmF1bHQgY2FuIHBvc3NpYmx5IHNhdmUKICAgIG1heERlZmF1bHRBZHZhbnRhZ2UgPSA1ICogbWF4KGQudmFsdWVzKCkpCgogICAgbWludywgbWF4dyA9IG1pbih3aWR0aHMpLCBtYXgod2lkdGhzKQogICAgZG9tYWluID0gbGlzdChyYW5nZShtaW53LCBtYXh3ICsgMSkpCgogICAgYmVzdENvc3RXaXRob3V0RGVmYXVsdCA9IG1pbihieXRlQ29zdCh3aWR0aHMsIE5vbmUsIG5vbWluYWwpIGZvciBub21pbmFsIGluIGRvbWFpbikKCiAgICBiZXN0Q29zdCA9IGxlbih3aWR0aHMpICogNSArIDEKICAgIGZvciBub21pbmFsIGluIGRvbWFpbjoKICAgICAgICBpZiBieXRlQ29zdCh3aWR0aHMsIE5vbmUsIG5vbWluYWwpID4gYmVzdENvc3QgKyBtYXhEZWZhdWx0QWR2YW50YWdlOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGZvciBkZWZhdWx0IGluIGRvbWFpbjoKICAgICAgICAgICAgY29zdCA9IGJ5dGVDb3N0KHdpZHRocywgZGVmYXVsdCwgbm9taW5hbCkKICAgICAgICAgICAgaWYgY29zdCA8IGJlc3RDb3N0OgogICAgICAgICAgICAgICAgYmVzdENvc3QgPSBjb3N0CiAgICAgICAgICAgICAgICBiZXN0RGVmYXVsdCA9IGRlZmF1bHQKICAgICAgICAgICAgICAgIGJlc3ROb21pbmFsID0gbm9taW5hbAoKICAgIHJldHVybiBiZXN0RGVmYXVsdCwgYmVzdE5vbWluYWwKCgpkZWYgb3B0aW1pemVXaWR0aHMod2lkdGhzKToKICAgICIiIkdpdmVuIGEgbGlzdCBvZiBnbHlwaCB3aWR0aHMsIG9yIGRpY3Rpb25hcnkgbWFwcGluZyBnbHlwaCB3aWR0aCB0byBudW1iZXIgb2YKICAgIGdseXBocyBoYXZpbmcgdGhhdCwgcmV0dXJucyBhIHR1cGxlIG9mIGJlc3QgQ0ZGIGRlZmF1bHQgYW5kIG5vbWluYWwgZ2x5cGggd2lkdGhzLgoKICAgIFRoaXMgYWxnb3JpdGhtIGlzIGxpbmVhciBpbiBVUEVNK251bUdseXBocy4iIiIKCiAgICBpZiBub3QgaGFzYXR0cih3aWR0aHMsICJpdGVtcyIpOgogICAgICAgIGQgPSBkZWZhdWx0ZGljdChpbnQpCiAgICAgICAgZm9yIHcgaW4gd2lkdGhzOgogICAgICAgICAgICBkW3ddICs9IDEKICAgICAgICB3aWR0aHMgPSBkCgogICAga2V5cyA9IHNvcnRlZCh3aWR0aHMua2V5cygpKQogICAgbWludywgbWF4dyA9IGtleXNbMF0sIGtleXNbLTFdCiAgICBkb21haW4gPSBsaXN0KHJhbmdlKG1pbncsIG1heHcgKyAxKSkKCiAgICAjIEN1bXVsYXRpdmUgc3VtL21heCBmb3J3YXJkL2JhY2t3YXJkLgogICAgY3VtRnJxVSA9IGN1bVN1bSh3aWR0aHMsIG9wPWFkZCkKICAgIGN1bU1heFUgPSBjdW1TdW0od2lkdGhzLCBvcD1tYXgpCiAgICBjdW1GcnFEID0gY3VtU3VtKHdpZHRocywgb3A9YWRkLCBkZWNyZWFzaW5nPVRydWUpCiAgICBjdW1NYXhEID0gY3VtU3VtKHdpZHRocywgb3A9bWF4LCBkZWNyZWFzaW5nPVRydWUpCgogICAgIyBDb3N0IHBlciBub21pbmFsIGNob2ljZSwgd2l0aG91dCBkZWZhdWx0IGNvbnNpZGVyYXRpb24uCiAgICBub21uQ29zdFUgPSBtaXNzaW5nZGljdCgKICAgICAgICBsYW1iZGEgeDogY3VtRnJxVVt4XSArIGN1bUZycVVbeCAtIDEwOF0gKyBjdW1GcnFVW3ggLSAxMTMyXSAqIDMKICAgICkKICAgIG5vbW5Db3N0RCA9IG1pc3NpbmdkaWN0KAogICAgICAgIGxhbWJkYSB4OiBjdW1GcnFEW3hdICsgY3VtRnJxRFt4ICsgMTA4XSArIGN1bUZycURbeCArIDExMzJdICogMwogICAgKQogICAgbm9tbkNvc3QgPSBtaXNzaW5nZGljdChsYW1iZGEgeDogbm9tbkNvc3RVW3hdICsgbm9tbkNvc3REW3hdIC0gd2lkdGhzW3hdKQoKICAgICMgQ29zdC1zYXZpbmcgcGVyIG5vbWluYWwgY2hvaWNlLCBieSBiZXN0IGRlZmF1bHQgY2hvaWNlLgogICAgZGZsdENvc3RVID0gbWlzc2luZ2RpY3QoCiAgICAgICAgbGFtYmRhIHg6IG1heChjdW1NYXhVW3hdLCBjdW1NYXhVW3ggLSAxMDhdICogMiwgY3VtTWF4VVt4IC0gMTEzMl0gKiA1KQogICAgKQogICAgZGZsdENvc3REID0gbWlzc2luZ2RpY3QoCiAgICAgICAgbGFtYmRhIHg6IG1heChjdW1NYXhEW3hdLCBjdW1NYXhEW3ggKyAxMDhdICogMiwgY3VtTWF4RFt4ICsgMTEzMl0gKiA1KQogICAgKQogICAgZGZsdENvc3QgPSBtaXNzaW5nZGljdChsYW1iZGEgeDogbWF4KGRmbHRDb3N0VVt4XSwgZGZsdENvc3REW3hdKSkKCiAgICAjIENvbWJpbmVkIGNvc3QgcGVyIG5vbWluYWwgY2hvaWNlLgogICAgYmVzdENvc3QgPSBtaXNzaW5nZGljdChsYW1iZGEgeDogbm9tbkNvc3RbeF0gLSBkZmx0Q29zdFt4XSkKCiAgICAjIEJlc3Qgbm9taW5hbC4KICAgIG5vbWluYWwgPSBtaW4oZG9tYWluLCBrZXk9bGFtYmRhIHg6IGJlc3RDb3N0W3hdKQoKICAgICMgV29yayBiYWNrIHRoZSBiZXN0IGRlZmF1bHQuCiAgICBiZXN0QyA9IGJlc3RDb3N0W25vbWluYWxdCiAgICBkZmx0QyA9IG5vbW5Db3N0W25vbWluYWxdIC0gYmVzdENvc3Rbbm9taW5hbF0KICAgIGVuZHMgPSBbXQogICAgaWYgZGZsdEMgPT0gZGZsdENvc3RVW25vbWluYWxdOgogICAgICAgIHN0YXJ0cyA9IFtub21pbmFsLCBub21pbmFsIC0gMTA4LCBub21pbmFsIC0gMTEzMl0KICAgICAgICBmb3Igc3RhcnQgaW4gc3RhcnRzOgogICAgICAgICAgICB3aGlsZSBjdW1NYXhVW3N0YXJ0XSBhbmQgY3VtTWF4VVtzdGFydF0gPT0gY3VtTWF4VVtzdGFydCAtIDFdOgogICAgICAgICAgICAgICAgc3RhcnQgLT0gMQogICAgICAgICAgICBlbmRzLmFwcGVuZChzdGFydCkKICAgIGVsc2U6CiAgICAgICAgc3RhcnRzID0gW25vbWluYWwsIG5vbWluYWwgKyAxMDgsIG5vbWluYWwgKyAxMTMyXQogICAgICAgIGZvciBzdGFydCBpbiBzdGFydHM6CiAgICAgICAgICAgIHdoaWxlIGN1bU1heERbc3RhcnRdIGFuZCBjdW1NYXhEW3N0YXJ0XSA9PSBjdW1NYXhEW3N0YXJ0ICsgMV06CiAgICAgICAgICAgICAgICBzdGFydCArPSAxCiAgICAgICAgICAgIGVuZHMuYXBwZW5kKHN0YXJ0KQogICAgZGVmYXVsdCA9IG1pbihlbmRzLCBrZXk9bGFtYmRhIGRlZmF1bHQ6IGJ5dGVDb3N0KHdpZHRocywgZGVmYXVsdCwgbm9taW5hbCkpCgogICAgcmV0dXJuIGRlZmF1bHQsIG5vbWluYWwKCgpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiQ2FsY3VsYXRlIG9wdGltdW0gZGVmYXVsdFdpZHRoWC9ub21pbmFsV2lkdGhYIHZhbHVlcyIiIgoKICAgIGltcG9ydCBhcmdwYXJzZQoKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgICJmb250dG9vbHMgY2ZmTGliLndpZHRoIiwKICAgICAgICBkZXNjcmlwdGlvbj1tYWluLl9fZG9jX18sCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJpbnB1dHMiLCBtZXRhdmFyPSJGSUxFIiwgdHlwZT1zdHIsIG5hcmdzPSIrIiwgaGVscD0iSW5wdXQgVFRGIGZpbGVzIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWIiLAogICAgICAgICItLWJydXRlLWZvcmNlIiwKICAgICAgICBkZXN0PSJicnV0ZSIsCiAgICAgICAgYWN0aW9uPSJzdG9yZV90cnVlIiwKICAgICAgICBoZWxwPSJVc2UgYnJ1dGUtZm9yY2UgYXBwcm9hY2ggKFZFUlkgc2xvdykiLAogICAgKQoKICAgIGFyZ3MgPSBwYXJzZXIucGFyc2VfYXJncyhhcmdzKQoKICAgIGZvciBmb250ZmlsZSBpbiBhcmdzLmlucHV0czoKICAgICAgICBmb250ID0gVFRGb250KGZvbnRmaWxlKQogICAgICAgIGhtdHggPSBfZ2V0X2htdHgoZm9udCkKICAgICAgICB3aWR0aHMgPSBbbVswXSBmb3IgbSBpbiBobXR4Lm1ldHJpY3MudmFsdWVzKCldCiAgICAgICAgaWYgYXJncy5icnV0ZToKICAgICAgICAgICAgZGVmYXVsdCwgbm9taW5hbCA9IG9wdGltaXplV2lkdGhzQnJ1dGVmb3JjZSh3aWR0aHMpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZGVmYXVsdCwgbm9taW5hbCA9IG9wdGltaXplV2lkdGhzKHdpZHRocykKICAgICAgICBwcmludCgKICAgICAgICAgICAgImdseXBocz0lZCBkZWZhdWx0PSVkIG5vbWluYWw9JWQgYnl0ZUNvc3Q9JWQiCiAgICAgICAgICAgICUgKGxlbih3aWR0aHMpLCBkZWZhdWx0LCBub21pbmFsLCBieXRlQ29zdCh3aWR0aHMsIGRlZmF1bHQsIG5vbWluYWwpKQogICAgICAgICkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwoKICAgIGlmIGxlbihzeXMuYXJndikgPT0gMToKICAgICAgICBpbXBvcnQgZG9jdGVzdAoKICAgICAgICBzeXMuZXhpdChkb2N0ZXN0LnRlc3Rtb2QoKS5mYWlsZWQpCiAgICBtYWluKCkK
+# -*- coding: utf-8 -*-
+
+"""T2CharString glyph width optimizer.
+
+CFF glyphs whose width equals the CFF Private dictionary's ``defaultWidthX``
+value do not need to specify their width in their charstring, saving bytes.
+This module determines the optimum ``defaultWidthX`` and ``nominalWidthX``
+values for a font, when provided with a list of glyph widths."""
+
+from fontTools.ttLib import TTFont
+from collections import defaultdict
+from operator import add
+from functools import reduce
+
+__all__ = ["optimizeWidths", "main"]
+
+
+def _get_hmtx(font):
+    return font["HMTX"] if "HMTX" in font else font["hmtx"]
+
+
+class missingdict(dict):
+    def __init__(self, missing_func):
+        self.missing_func = missing_func
+
+    def __missing__(self, v):
+        return self.missing_func(v)
+
+
+def cumSum(f, op=add, start=0, decreasing=False):
+    keys = sorted(f.keys())
+    minx, maxx = keys[0], keys[-1]
+
+    total = reduce(op, f.values(), start)
+
+    if decreasing:
+        missing = lambda x: start if x > maxx else total
+        domain = range(maxx, minx - 1, -1)
+    else:
+        missing = lambda x: start if x < minx else total
+        domain = range(minx, maxx + 1)
+
+    out = missingdict(missing)
+
+    v = start
+    for x in domain:
+        v = op(v, f[x])
+        out[x] = v
+
+    return out
+
+
+def byteCost(widths, default, nominal):
+    if not hasattr(widths, "items"):
+        d = defaultdict(int)
+        for w in widths:
+            d[w] += 1
+        widths = d
+
+    cost = 0
+    for w, freq in widths.items():
+        if w == default:
+            continue
+        diff = abs(w - nominal)
+        if diff <= 107:
+            cost += freq
+        elif diff <= 1131:
+            cost += freq * 2
+        else:
+            cost += freq * 5
+    return cost
+
+
+def optimizeWidthsBruteforce(widths):
+    """Bruteforce version.  Veeeeeeeeeeeeeeeeery slow.  Only works for smallests of fonts."""
+
+    d = defaultdict(int)
+    for w in widths:
+        d[w] += 1
+
+    # Maximum number of bytes using default can possibly save
+    maxDefaultAdvantage = 5 * max(d.values())
+
+    minw, maxw = min(widths), max(widths)
+    domain = list(range(minw, maxw + 1))
+
+    bestCostWithoutDefault = min(byteCost(widths, None, nominal) for nominal in domain)
+
+    bestCost = len(widths) * 5 + 1
+    for nominal in domain:
+        if byteCost(widths, None, nominal) > bestCost + maxDefaultAdvantage:
+            continue
+        for default in domain:
+            cost = byteCost(widths, default, nominal)
+            if cost < bestCost:
+                bestCost = cost
+                bestDefault = default
+                bestNominal = nominal
+
+    return bestDefault, bestNominal
+
+
+def optimizeWidths(widths):
+    """Given a list of glyph widths, or dictionary mapping glyph width to number of
+    glyphs having that, returns a tuple of best CFF default and nominal glyph widths.
+
+    This algorithm is linear in UPEM+numGlyphs."""
+
+    if not hasattr(widths, "items"):
+        d = defaultdict(int)
+        for w in widths:
+            d[w] += 1
+        widths = d
+
+    keys = sorted(widths.keys())
+    minw, maxw = keys[0], keys[-1]
+    domain = list(range(minw, maxw + 1))
+
+    # Cumulative sum/max forward/backward.
+    cumFrqU = cumSum(widths, op=add)
+    cumMaxU = cumSum(widths, op=max)
+    cumFrqD = cumSum(widths, op=add, decreasing=True)
+    cumMaxD = cumSum(widths, op=max, decreasing=True)
+
+    # Cost per nominal choice, without default consideration.
+    nomnCostU = missingdict(
+        lambda x: cumFrqU[x] + cumFrqU[x - 108] + cumFrqU[x - 1132] * 3
+    )
+    nomnCostD = missingdict(
+        lambda x: cumFrqD[x] + cumFrqD[x + 108] + cumFrqD[x + 1132] * 3
+    )
+    nomnCost = missingdict(lambda x: nomnCostU[x] + nomnCostD[x] - widths[x])
+
+    # Cost-saving per nominal choice, by best default choice.
+    dfltCostU = missingdict(
+        lambda x: max(cumMaxU[x], cumMaxU[x - 108] * 2, cumMaxU[x - 1132] * 5)
+    )
+    dfltCostD = missingdict(
+        lambda x: max(cumMaxD[x], cumMaxD[x + 108] * 2, cumMaxD[x + 1132] * 5)
+    )
+    dfltCost = missingdict(lambda x: max(dfltCostU[x], dfltCostD[x]))
+
+    # Combined cost per nominal choice.
+    bestCost = missingdict(lambda x: nomnCost[x] - dfltCost[x])
+
+    # Best nominal.
+    nominal = min(domain, key=lambda x: bestCost[x])
+
+    # Work back the best default.
+    bestC = bestCost[nominal]
+    dfltC = nomnCost[nominal] - bestCost[nominal]
+    ends = []
+    if dfltC == dfltCostU[nominal]:
+        starts = [nominal, nominal - 108, nominal - 1132]
+        for start in starts:
+            while cumMaxU[start] and cumMaxU[start] == cumMaxU[start - 1]:
+                start -= 1
+            ends.append(start)
+    else:
+        starts = [nominal, nominal + 108, nominal + 1132]
+        for start in starts:
+            while cumMaxD[start] and cumMaxD[start] == cumMaxD[start + 1]:
+                start += 1
+            ends.append(start)
+    default = min(ends, key=lambda default: byteCost(widths, default, nominal))
+
+    return default, nominal
+
+
+def main(args=None):
+    """Calculate optimum defaultWidthX/nominalWidthX values"""
+
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools cffLib.width",
+        description=main.__doc__,
+    )
+    parser.add_argument(
+        "inputs", metavar="FILE", type=str, nargs="+", help="Input TTF files"
+    )
+    parser.add_argument(
+        "-b",
+        "--brute-force",
+        dest="brute",
+        action="store_true",
+        help="Use brute-force approach (VERY slow)",
+    )
+
+    args = parser.parse_args(args)
+
+    for fontfile in args.inputs:
+        font = TTFont(fontfile)
+        hmtx = _get_hmtx(font)
+        widths = [m[0] for m in hmtx.metrics.values()]
+        if args.brute:
+            default, nominal = optimizeWidthsBruteforce(widths)
+        else:
+            default, nominal = optimizeWidths(widths)
+        print(
+            "glyphs=%d default=%d nominal=%d byteCost=%d"
+            % (len(widths), default, nominal, byteCost(widths, default, nominal))
+        )
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) == 1:
+        import doctest
+
+        sys.exit(doctest.testmod().failed)
+    main()

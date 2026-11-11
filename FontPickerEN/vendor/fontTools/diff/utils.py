@@ -1,1 +1,28 @@
-aW1wb3J0IG9zCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lLCB0aW1lem9uZQpmcm9tIHR5cGluZyBpbXBvcnQgTGlzdCwgT3B0aW9uYWwsIFRleHQsIFVuaW9uCgoKZGVmIGZpbGVfZXhpc3RzKHBhdGg6IFVuaW9uW2J5dGVzLCBzdHIsICJvcy5QYXRoTGlrZVtUZXh0XSJdKSAtPiBib29sOgogICAgIiIiVmFsaWRhdGVzIGZpbGUgcGF0aCBhcyBleGlzdGluZyBsb2NhbCBmaWxlIiIiCiAgICByZXR1cm4gb3MucGF0aC5pc2ZpbGUocGF0aCkKCgpkZWYgZ2V0X2ZpbGVfbW9kdGltZShwYXRoOiBVbmlvbltieXRlcywgc3RyLCAib3MuUGF0aExpa2VbVGV4dF0iXSkgLT4gVGV4dDoKICAgICIiIlJldHVybnMgSVNPIGZvcm1hdHRlZCBmaWxlIG1vZGlmaWNhdGlvbiB0aW1lIGluIGxvY2FsIHN5c3RlbSB0aW1lem9uZSIiIgogICAgcmV0dXJuICgKICAgICAgICBkYXRldGltZS5mcm9tdGltZXN0YW1wKG9zLnN0YXQocGF0aCkuc3RfbXRpbWUsIHRpbWV6b25lLnV0YykKICAgICAgICAuYXN0aW1lem9uZSgpCiAgICAgICAgLmlzb2Zvcm1hdCgpCiAgICApCgoKZGVmIGdldF90YWJsZXNfYXJndW1lbnRfbGlzdCh0YWJsZV9saXN0OiBPcHRpb25hbFtMaXN0W1RleHRdXSkgLT4gT3B0aW9uYWxbTGlzdFtUZXh0XV06CiAgICAiIiJDb252ZXJ0cyBhIGxpc3Qgb2YgT3BlblR5cGUgdGFibGUgc3RyaW5nIGludG8gYSBQeXRob24gbGlzdCBvcgogICAgcmV0dXJuIE5vbmUgaWYgdGhlIHRhYmxlX2xpc3Qgd2FzIG5vdCBkZWZpbmVkIChpLmUuLCBpdCB3YXMgbm90IGluY2x1ZGVkCiAgICBpbiBhbiBvcHRpb24gb24gdGhlIGNvbW1hbmQgbGluZSkuIFRhYmxlcyB0aGF0IGFyZSBjb21wb3NlZCBvZiB0aHJlZQogICAgY2hhcmFjdGVycyBtdXN0IGJlIHJpZ2h0IHBhZGRlZCB3aXRoIGEgc3BhY2UuIiIiCiAgICBpZiB0YWJsZV9saXN0IGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIFt0YWJsZS5sanVzdCg0KSBmb3IgdGFibGUgaW4gdGFibGVfbGlzdF0K
+import os
+from datetime import datetime, timezone
+from typing import List, Optional, Text, Union
+
+
+def file_exists(path: Union[bytes, str, "os.PathLike[Text]"]) -> bool:
+    """Validates file path as existing local file"""
+    return os.path.isfile(path)
+
+
+def get_file_modtime(path: Union[bytes, str, "os.PathLike[Text]"]) -> Text:
+    """Returns ISO formatted file modification time in local system timezone"""
+    return (
+        datetime.fromtimestamp(os.stat(path).st_mtime, timezone.utc)
+        .astimezone()
+        .isoformat()
+    )
+
+
+def get_tables_argument_list(table_list: Optional[List[Text]]) -> Optional[List[Text]]:
+    """Converts a list of OpenType table string into a Python list or
+    return None if the table_list was not defined (i.e., it was not included
+    in an option on the command line). Tables that are composed of three
+    characters must be right padded with a space."""
+    if table_list is None:
+        return None
+    else:
+        return [table.ljust(4) for table in table_list]

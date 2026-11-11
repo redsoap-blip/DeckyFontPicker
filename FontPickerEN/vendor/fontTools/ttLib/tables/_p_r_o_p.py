@@ -1,1 +1,12 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2cHJvcC5odG1sCmNsYXNzIHRhYmxlX19wX3Jfb19wKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiVGhlIEFBVCBgYHByb3BgYCB0YWJsZSBjYW4gc3RvcmUgYSB2YXJpZXR5IG9mIHBlci1nbHlwaCBwcm9wZXJ0aWVzLCBzdWNoIGFzCiAgICAgICBVbmljb2RlIGRpcmVjdGlvbmFsaXR5IG9yIHdoZXRoZXIgZ2x5cGhzIGFyZSBub24tc3BhY2luZyBtYXJrcy4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2cHJvcC5odG1sCiAgICAiIiIKCiAgICBwYXNzCg==
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6prop.html
+class table__p_r_o_p(BaseTTXConverter):
+    """The AAT ``prop`` table can store a variety of per-glyph properties, such as
+       Unicode directionality or whether glyphs are non-spacing marks.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6prop.html
+    """
+
+    pass

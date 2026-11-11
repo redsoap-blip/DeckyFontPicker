@@ -1,1 +1,6 @@
-IiIiREVQUkVDQVRFRCAtIFRoaXMgbW9kdWxlIGlzIGtlcHQgaGVyZSBvbmx5IGFzIGEgYmFja3dhcmQgY29tcGF0aWJpbGl0eSBzaGltCmZvciB0aGUgb2xkIGB1Zm9MaWIucG9pbnRQZW5gIG1vZHVsZSwgd2hpY2ggd2FzIG1vdmVkIHRvIDpjbGFzczpgZm9udFRvb2xzLnBlbnMucG9pbnRQZW5gLgpQbGVhc2UgdXNlIHRoZSBsYXR0ZXIgaW5zdGVhZC4KIiIiCgpmcm9tIGZvbnRUb29scy5wZW5zLnBvaW50UGVuIGltcG9ydCAqCg==
+"""DEPRECATED - This module is kept here only as a backward compatibility shim
+for the old `ufoLib.pointPen` module, which was moved to :class:`fontTools.pens.pointPen`.
+Please use the latter instead.
+"""
+
+from fontTools.pens.pointPen import *

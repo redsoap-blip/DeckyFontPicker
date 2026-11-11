@@ -1,1 +1,258 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0ICgKICAgIGZpeGVkVG9GbG9hdCBhcyBmaTJmbCwKICAgIGZsb2F0VG9GaXhlZCBhcyBmbDJmaSwKICAgIGZsb2F0VG9GaXhlZFRvU3RyIGFzIGZsMnN0ciwKICAgIHN0clRvRml4ZWRUb0Zsb2F0IGFzIHN0cjJmbCwKKQpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgVGFnLCBieXRlc2pvaW4sIHNhZmVFdmFsCmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVExpYkVycm9yCmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmltcG9ydCBzdHJ1Y3QKCiMgQXBwbGUncyBkb2N1bWVudGF0aW9uIG9mICdmdmFyJzoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2ZnZhci5odG1sCgpGVkFSX0hFQURFUl9GT1JNQVQgPSAiIiIKICAgID4gIyBiaWcgZW5kaWFuCiAgICB2ZXJzaW9uOiAgICAgICAgTAogICAgb2Zmc2V0VG9EYXRhOiAgIEgKICAgIGNvdW50U2l6ZVBhaXJzOiBICiAgICBheGlzQ291bnQ6ICAgICAgSAogICAgYXhpc1NpemU6ICAgICAgIEgKICAgIGluc3RhbmNlQ291bnQ6ICBICiAgICBpbnN0YW5jZVNpemU6ICAgSAoiIiIKCkZWQVJfQVhJU19GT1JNQVQgPSAiIiIKICAgID4gIyBiaWcgZW5kaWFuCiAgICBheGlzVGFnOiAgICAgICAgNHMKICAgIG1pblZhbHVlOiAgICAgICAxNi4xNkYKICAgIGRlZmF1bHRWYWx1ZTogICAxNi4xNkYKICAgIG1heFZhbHVlOiAgICAgICAxNi4xNkYKICAgIGZsYWdzOiAgICAgICAgICBICiAgICBheGlzTmFtZUlEOiAgICAgICAgIEgKIiIiCgpGVkFSX0lOU1RBTkNFX0ZPUk1BVCA9ICIiIgogICAgPiAjIGJpZyBlbmRpYW4KICAgIHN1YmZhbWlseU5hbWVJRDogICAgIEgKICAgIGZsYWdzOiAgICAgIEgKIiIiCgoKY2xhc3MgdGFibGVfX2Zfdl9hX3IoRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJGb25UIFZhcmlhdGlvbnMgdGFibGUKCiAgICBUaGUgYGBmdmFyYGAgdGFibGUgY29udGFpbnMgcmVjb3JkcyBvZiB0aGUgdmFyaWF0aW9uIGF4ZXMgYW5kIG9mIHRoZQogICAgbmFtZWQgaW5zdGFuY2VzIGluIGEgdmFyaWFibGUgZm9udC4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2ZnZhci5odG1sCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgdGFnPU5vbmUpOgogICAgICAgIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUuX19pbml0X18oc2VsZiwgdGFnKQogICAgICAgIHNlbGYuYXhlcyA9IFtdCiAgICAgICAgc2VsZi5pbnN0YW5jZXMgPSBbXQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaW5zdGFuY2VTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShGVkFSX0lOU1RBTkNFX0ZPUk1BVCkgKyAobGVuKHNlbGYuYXhlcykgKiA0KQogICAgICAgIGluY2x1ZGVQb3N0U2NyaXB0TmFtZXMgPSBhbnkoCiAgICAgICAgICAgIGluc3RhbmNlLnBvc3RzY3JpcHROYW1lSUQgIT0gMHhGRkZGIGZvciBpbnN0YW5jZSBpbiBzZWxmLmluc3RhbmNlcwogICAgICAgICkKICAgICAgICBpZiBpbmNsdWRlUG9zdFNjcmlwdE5hbWVzOgogICAgICAgICAgICBpbnN0YW5jZVNpemUgKz0gMgogICAgICAgIGhlYWRlciA9IHsKICAgICAgICAgICAgInZlcnNpb24iOiAweDAwMDEwMDAwLAogICAgICAgICAgICAib2Zmc2V0VG9EYXRhIjogc3N0cnVjdC5jYWxjc2l6ZShGVkFSX0hFQURFUl9GT1JNQVQpLAogICAgICAgICAgICAiY291bnRTaXplUGFpcnMiOiAyLAogICAgICAgICAgICAiYXhpc0NvdW50IjogbGVuKHNlbGYuYXhlcyksCiAgICAgICAgICAgICJheGlzU2l6ZSI6IHNzdHJ1Y3QuY2FsY3NpemUoRlZBUl9BWElTX0ZPUk1BVCksCiAgICAgICAgICAgICJpbnN0YW5jZUNvdW50IjogbGVuKHNlbGYuaW5zdGFuY2VzKSwKICAgICAgICAgICAgImluc3RhbmNlU2l6ZSI6IGluc3RhbmNlU2l6ZSwKICAgICAgICB9CiAgICAgICAgcmVzdWx0ID0gW3NzdHJ1Y3QucGFjayhGVkFSX0hFQURFUl9GT1JNQVQsIGhlYWRlcildCiAgICAgICAgcmVzdWx0LmV4dGVuZChbYXhpcy5jb21waWxlKCkgZm9yIGF4aXMgaW4gc2VsZi5heGVzXSkKICAgICAgICBheGlzVGFncyA9IFtheGlzLmF4aXNUYWcgZm9yIGF4aXMgaW4gc2VsZi5heGVzXQogICAgICAgIGZvciBpbnN0YW5jZSBpbiBzZWxmLmluc3RhbmNlczoKICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChpbnN0YW5jZS5jb21waWxlKGF4aXNUYWdzLCBpbmNsdWRlUG9zdFNjcmlwdE5hbWVzKSkKICAgICAgICByZXR1cm4gYnl0ZXNqb2luKHJlc3VsdCkKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgaGVhZGVyID0ge30KICAgICAgICBoZWFkZXJTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShGVkFSX0hFQURFUl9GT1JNQVQpCiAgICAgICAgaGVhZGVyID0gc3N0cnVjdC51bnBhY2soRlZBUl9IRUFERVJfRk9STUFULCBkYXRhWzA6aGVhZGVyU2l6ZV0pCiAgICAgICAgaWYgaGVhZGVyWyJ2ZXJzaW9uIl0gIT0gMHgwMDAxMDAwMDoKICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigidW5zdXBwb3J0ZWQgJ2Z2YXInIHZlcnNpb24gJTA0eCIgJSBoZWFkZXJbInZlcnNpb24iXSkKICAgICAgICBwb3MgPSBoZWFkZXJbIm9mZnNldFRvRGF0YSJdCiAgICAgICAgYXhpc1NpemUgPSBoZWFkZXJbImF4aXNTaXplIl0KICAgICAgICBmb3IgXyBpbiByYW5nZShoZWFkZXJbImF4aXNDb3VudCJdKToKICAgICAgICAgICAgYXhpcyA9IEF4aXMoKQogICAgICAgICAgICBheGlzLmRlY29tcGlsZShkYXRhW3BvcyA6IHBvcyArIGF4aXNTaXplXSkKICAgICAgICAgICAgc2VsZi5heGVzLmFwcGVuZChheGlzKQogICAgICAgICAgICBwb3MgKz0gYXhpc1NpemUKICAgICAgICBpbnN0YW5jZVNpemUgPSBoZWFkZXJbImluc3RhbmNlU2l6ZSJdCiAgICAgICAgYXhpc1RhZ3MgPSBbYXhpcy5heGlzVGFnIGZvciBheGlzIGluIHNlbGYuYXhlc10KICAgICAgICBmb3IgXyBpbiByYW5nZShoZWFkZXJbImluc3RhbmNlQ291bnQiXSk6CiAgICAgICAgICAgIGluc3RhbmNlID0gTmFtZWRJbnN0YW5jZSgpCiAgICAgICAgICAgIGluc3RhbmNlLmRlY29tcGlsZShkYXRhW3BvcyA6IHBvcyArIGluc3RhbmNlU2l6ZV0sIGF4aXNUYWdzKQogICAgICAgICAgICBzZWxmLmluc3RhbmNlcy5hcHBlbmQoaW5zdGFuY2UpCiAgICAgICAgICAgIHBvcyArPSBpbnN0YW5jZVNpemUKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIGZvciBheGlzIGluIHNlbGYuYXhlczoKICAgICAgICAgICAgYXhpcy50b1hNTCh3cml0ZXIsIHR0Rm9udCkKICAgICAgICBmb3IgaW5zdGFuY2UgaW4gc2VsZi5pbnN0YW5jZXM6CiAgICAgICAgICAgIGluc3RhbmNlLnRvWE1MKHdyaXRlciwgdHRGb250KQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gIkF4aXMiOgogICAgICAgICAgICBheGlzID0gQXhpcygpCiAgICAgICAgICAgIGF4aXMuZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KQogICAgICAgICAgICBzZWxmLmF4ZXMuYXBwZW5kKGF4aXMpCiAgICAgICAgZWxpZiBuYW1lID09ICJOYW1lZEluc3RhbmNlIjoKICAgICAgICAgICAgaW5zdGFuY2UgPSBOYW1lZEluc3RhbmNlKCkKICAgICAgICAgICAgaW5zdGFuY2UuZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KQogICAgICAgICAgICBzZWxmLmluc3RhbmNlcy5hcHBlbmQoaW5zdGFuY2UpCgogICAgZGVmIGdldEF4ZXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHthLmF4aXNUYWc6IChhLm1pblZhbHVlLCBhLmRlZmF1bHRWYWx1ZSwgYS5tYXhWYWx1ZSkgZm9yIGEgaW4gc2VsZi5heGVzfQoKCmNsYXNzIEF4aXMob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICAgICBzZWxmLmF4aXNUYWcgPSBOb25lCiAgICAgICAgc2VsZi5heGlzTmFtZUlEID0gMAogICAgICAgIHNlbGYuZmxhZ3MgPSAwCiAgICAgICAgc2VsZi5taW5WYWx1ZSA9IC0xLjAKICAgICAgICBzZWxmLmRlZmF1bHRWYWx1ZSA9IDAuMAogICAgICAgIHNlbGYubWF4VmFsdWUgPSAxLjAKCiAgICBkZWYgY29tcGlsZShzZWxmKToKICAgICAgICByZXR1cm4gc3N0cnVjdC5wYWNrKEZWQVJfQVhJU19GT1JNQVQsIHNlbGYpCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhKToKICAgICAgICBzc3RydWN0LnVucGFjazIoRlZBUl9BWElTX0ZPUk1BVCwgZGF0YSwgc2VsZikKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIG5hbWUgPSAoCiAgICAgICAgICAgIHR0Rm9udFsibmFtZSJdLmdldERlYnVnTmFtZShzZWxmLmF4aXNOYW1lSUQpIGlmICJuYW1lIiBpbiB0dEZvbnQgZWxzZSBOb25lCiAgICAgICAgKQogICAgICAgIGlmIG5hbWUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQobmFtZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5iZWdpbnRhZygiQXhpcyIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciB0YWcsIHZhbHVlIGluIFsKICAgICAgICAgICAgKCJBeGlzVGFnIiwgc2VsZi5heGlzVGFnKSwKICAgICAgICAgICAgKCJGbGFncyIsICIweCVYIiAlIHNlbGYuZmxhZ3MpLAogICAgICAgICAgICAoIk1pblZhbHVlIiwgZmwyc3RyKHNlbGYubWluVmFsdWUsIDE2KSksCiAgICAgICAgICAgICgiRGVmYXVsdFZhbHVlIiwgZmwyc3RyKHNlbGYuZGVmYXVsdFZhbHVlLCAxNikpLAogICAgICAgICAgICAoIk1heFZhbHVlIiwgZmwyc3RyKHNlbGYubWF4VmFsdWUsIDE2KSksCiAgICAgICAgICAgICgiQXhpc05hbWVJRCIsIHN0cihzZWxmLmF4aXNOYW1lSUQpKSwKICAgICAgICBdOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcodGFnKQogICAgICAgICAgICB3cml0ZXIud3JpdGUodmFsdWUpCiAgICAgICAgICAgIHdyaXRlci5lbmR0YWcodGFnKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLmVuZHRhZygiQXhpcyIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIF9hdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBhc3NlcnQgbmFtZSA9PSAiQXhpcyIKICAgICAgICBmb3IgdGFnLCBfLCB2YWx1ZSBpbiBmaWx0ZXIobGFtYmRhIHQ6IHR5cGUodCkgaXMgdHVwbGUsIGNvbnRlbnQpOgogICAgICAgICAgICB2YWx1ZSA9ICIiLmpvaW4odmFsdWUpCiAgICAgICAgICAgIGlmIHRhZyA9PSAiQXhpc1RhZyI6CiAgICAgICAgICAgICAgICBzZWxmLmF4aXNUYWcgPSBUYWcodmFsdWUpCiAgICAgICAgICAgIGVsaWYgdGFnIGluIHsiRmxhZ3MiLCAiTWluVmFsdWUiLCAiRGVmYXVsdFZhbHVlIiwgIk1heFZhbHVlIiwgIkF4aXNOYW1lSUQifToKICAgICAgICAgICAgICAgIHNldGF0dHIoCiAgICAgICAgICAgICAgICAgICAgc2VsZiwKICAgICAgICAgICAgICAgICAgICB0YWdbMF0ubG93ZXIoKSArIHRhZ1sxOl0sCiAgICAgICAgICAgICAgICAgICAgc3RyMmZsKHZhbHVlLCAxNikgaWYgdGFnLmVuZHN3aXRoKCJWYWx1ZSIpIGVsc2Ugc2FmZUV2YWwodmFsdWUpLAogICAgICAgICAgICAgICAgKQoKCmNsYXNzIE5hbWVkSW5zdGFuY2Uob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICAgICBzZWxmLnN1YmZhbWlseU5hbWVJRCA9IDAKICAgICAgICBzZWxmLnBvc3RzY3JpcHROYW1lSUQgPSAweEZGRkYKICAgICAgICBzZWxmLmZsYWdzID0gMAogICAgICAgIHNlbGYuY29vcmRpbmF0ZXMgPSB7fQoKICAgIGRlZiBjb21waWxlKHNlbGYsIGF4aXNUYWdzLCBpbmNsdWRlUG9zdFNjcmlwdE5hbWUpOgogICAgICAgIHJlc3VsdCA9IFtzc3RydWN0LnBhY2soRlZBUl9JTlNUQU5DRV9GT1JNQVQsIHNlbGYpXQogICAgICAgIGZvciBheGlzIGluIGF4aXNUYWdzOgogICAgICAgICAgICBmaXhlZENvb3JkID0gZmwyZmkoc2VsZi5jb29yZGluYXRlc1theGlzXSwgMTYpCiAgICAgICAgICAgIHJlc3VsdC5hcHBlbmQoc3RydWN0LnBhY2soIj5sIiwgZml4ZWRDb29yZCkpCiAgICAgICAgaWYgaW5jbHVkZVBvc3RTY3JpcHROYW1lOgogICAgICAgICAgICByZXN1bHQuYXBwZW5kKHN0cnVjdC5wYWNrKCI+SCIsIHNlbGYucG9zdHNjcmlwdE5hbWVJRCkpCiAgICAgICAgcmV0dXJuIGJ5dGVzam9pbihyZXN1bHQpCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCBheGlzVGFncyk6CiAgICAgICAgc3N0cnVjdC51bnBhY2syKEZWQVJfSU5TVEFOQ0VfRk9STUFULCBkYXRhLCBzZWxmKQogICAgICAgIHBvcyA9IHNzdHJ1Y3QuY2FsY3NpemUoRlZBUl9JTlNUQU5DRV9GT1JNQVQpCiAgICAgICAgZm9yIGF4aXMgaW4gYXhpc1RhZ3M6CiAgICAgICAgICAgIHZhbHVlID0gc3RydWN0LnVucGFjaygiPmwiLCBkYXRhW3BvcyA6IHBvcyArIDRdKVswXQogICAgICAgICAgICBzZWxmLmNvb3JkaW5hdGVzW2F4aXNdID0gZmkyZmwodmFsdWUsIDE2KQogICAgICAgICAgICBwb3MgKz0gNAogICAgICAgIGlmIHBvcyArIDIgPD0gbGVuKGRhdGEpOgogICAgICAgICAgICBzZWxmLnBvc3RzY3JpcHROYW1lSUQgPSBzdHJ1Y3QudW5wYWNrKCI+SCIsIGRhdGFbcG9zIDogcG9zICsgMl0pWzBdCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2VsZi5wb3N0c2NyaXB0TmFtZUlEID0gMHhGRkZGCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBuYW1lID0gKAogICAgICAgICAgICB0dEZvbnRbIm5hbWUiXS5nZXREZWJ1Z05hbWUoc2VsZi5zdWJmYW1pbHlOYW1lSUQpCiAgICAgICAgICAgIGlmICJuYW1lIiBpbiB0dEZvbnQKICAgICAgICAgICAgZWxzZSBOb25lCiAgICAgICAgKQogICAgICAgIGlmIG5hbWUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQobmFtZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHBzbmFtZSA9ICgKICAgICAgICAgICAgdHRGb250WyJuYW1lIl0uZ2V0RGVidWdOYW1lKHNlbGYucG9zdHNjcmlwdE5hbWVJRCkKICAgICAgICAgICAgaWYgIm5hbWUiIGluIHR0Rm9udAogICAgICAgICAgICBlbHNlIE5vbmUKICAgICAgICApCiAgICAgICAgaWYgcHNuYW1lIGlzIG5vdCBOb25lOgogICAgICAgICAgICB3cml0ZXIuY29tbWVudCgiUG9zdFNjcmlwdDogIiArIHBzbmFtZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGlmIHNlbGYucG9zdHNjcmlwdE5hbWVJRCA9PSAweEZGRkY6CiAgICAgICAgICAgIHdyaXRlci5iZWdpbnRhZygKICAgICAgICAgICAgICAgICJOYW1lZEluc3RhbmNlIiwKICAgICAgICAgICAgICAgIGZsYWdzPSgiMHglWCIgJSBzZWxmLmZsYWdzKSwKICAgICAgICAgICAgICAgIHN1YmZhbWlseU5hbWVJRD1zZWxmLnN1YmZhbWlseU5hbWVJRCwKICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHdyaXRlci5iZWdpbnRhZygKICAgICAgICAgICAgICAgICJOYW1lZEluc3RhbmNlIiwKICAgICAgICAgICAgICAgIGZsYWdzPSgiMHglWCIgJSBzZWxmLmZsYWdzKSwKICAgICAgICAgICAgICAgIHN1YmZhbWlseU5hbWVJRD1zZWxmLnN1YmZhbWlseU5hbWVJRCwKICAgICAgICAgICAgICAgIHBvc3RzY3JpcHROYW1lSUQ9c2VsZi5wb3N0c2NyaXB0TmFtZUlELAogICAgICAgICAgICApCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciBheGlzIGluIHR0Rm9udFsiZnZhciJdLmF4ZXM6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoCiAgICAgICAgICAgICAgICAiY29vcmQiLAogICAgICAgICAgICAgICAgYXhpcz1heGlzLmF4aXNUYWcsCiAgICAgICAgICAgICAgICB2YWx1ZT1mbDJzdHIoc2VsZi5jb29yZGluYXRlc1theGlzLmF4aXNUYWddLCAxNiksCiAgICAgICAgICAgICkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5lbmR0YWcoIk5hbWVkSW5zdGFuY2UiKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBhc3NlcnQgbmFtZSA9PSAiTmFtZWRJbnN0YW5jZSIKICAgICAgICBzZWxmLnN1YmZhbWlseU5hbWVJRCA9IHNhZmVFdmFsKGF0dHJzWyJzdWJmYW1pbHlOYW1lSUQiXSkKICAgICAgICBzZWxmLmZsYWdzID0gc2FmZUV2YWwoYXR0cnMuZ2V0KCJmbGFncyIsICIwIikpCiAgICAgICAgaWYgInBvc3RzY3JpcHROYW1lSUQiIGluIGF0dHJzOgogICAgICAgICAgICBzZWxmLnBvc3RzY3JpcHROYW1lSUQgPSBzYWZlRXZhbChhdHRyc1sicG9zdHNjcmlwdE5hbWVJRCJdKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYucG9zdHNjcmlwdE5hbWVJRCA9IDB4RkZGRgoKICAgICAgICBmb3IgdGFnLCBlbGVtZW50QXR0cnMsIF8gaW4gZmlsdGVyKGxhbWJkYSB0OiB0eXBlKHQpIGlzIHR1cGxlLCBjb250ZW50KToKICAgICAgICAgICAgaWYgdGFnID09ICJjb29yZCI6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IHN0cjJmbChlbGVtZW50QXR0cnNbInZhbHVlIl0sIDE2KQogICAgICAgICAgICAgICAgc2VsZi5jb29yZGluYXRlc1tlbGVtZW50QXR0cnNbImF4aXMiXV0gPSB2YWx1ZQo=
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import (
+    fixedToFloat as fi2fl,
+    floatToFixed as fl2fi,
+    floatToFixedToStr as fl2str,
+    strToFixedToFloat as str2fl,
+)
+from fontTools.misc.textTools import Tag, bytesjoin, safeEval
+from fontTools.ttLib import TTLibError
+from . import DefaultTable
+import struct
+
+# Apple's documentation of 'fvar':
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6fvar.html
+
+FVAR_HEADER_FORMAT = """
+    > # big endian
+    version:        L
+    offsetToData:   H
+    countSizePairs: H
+    axisCount:      H
+    axisSize:       H
+    instanceCount:  H
+    instanceSize:   H
+"""
+
+FVAR_AXIS_FORMAT = """
+    > # big endian
+    axisTag:        4s
+    minValue:       16.16F
+    defaultValue:   16.16F
+    maxValue:       16.16F
+    flags:          H
+    axisNameID:         H
+"""
+
+FVAR_INSTANCE_FORMAT = """
+    > # big endian
+    subfamilyNameID:     H
+    flags:      H
+"""
+
+
+class table__f_v_a_r(DefaultTable.DefaultTable):
+    """FonT Variations table
+
+    The ``fvar`` table contains records of the variation axes and of the
+    named instances in a variable font.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6fvar.html
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.axes = []
+        self.instances = []
+
+    def compile(self, ttFont):
+        instanceSize = sstruct.calcsize(FVAR_INSTANCE_FORMAT) + (len(self.axes) * 4)
+        includePostScriptNames = any(
+            instance.postscriptNameID != 0xFFFF for instance in self.instances
+        )
+        if includePostScriptNames:
+            instanceSize += 2
+        header = {
+            "version": 0x00010000,
+            "offsetToData": sstruct.calcsize(FVAR_HEADER_FORMAT),
+            "countSizePairs": 2,
+            "axisCount": len(self.axes),
+            "axisSize": sstruct.calcsize(FVAR_AXIS_FORMAT),
+            "instanceCount": len(self.instances),
+            "instanceSize": instanceSize,
+        }
+        result = [sstruct.pack(FVAR_HEADER_FORMAT, header)]
+        result.extend([axis.compile() for axis in self.axes])
+        axisTags = [axis.axisTag for axis in self.axes]
+        for instance in self.instances:
+            result.append(instance.compile(axisTags, includePostScriptNames))
+        return bytesjoin(result)
+
+    def decompile(self, data, ttFont):
+        header = {}
+        headerSize = sstruct.calcsize(FVAR_HEADER_FORMAT)
+        header = sstruct.unpack(FVAR_HEADER_FORMAT, data[0:headerSize])
+        if header["version"] != 0x00010000:
+            raise TTLibError("unsupported 'fvar' version %04x" % header["version"])
+        pos = header["offsetToData"]
+        axisSize = header["axisSize"]
+        for _ in range(header["axisCount"]):
+            axis = Axis()
+            axis.decompile(data[pos : pos + axisSize])
+            self.axes.append(axis)
+            pos += axisSize
+        instanceSize = header["instanceSize"]
+        axisTags = [axis.axisTag for axis in self.axes]
+        for _ in range(header["instanceCount"]):
+            instance = NamedInstance()
+            instance.decompile(data[pos : pos + instanceSize], axisTags)
+            self.instances.append(instance)
+            pos += instanceSize
+
+    def toXML(self, writer, ttFont):
+        for axis in self.axes:
+            axis.toXML(writer, ttFont)
+        for instance in self.instances:
+            instance.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "Axis":
+            axis = Axis()
+            axis.fromXML(name, attrs, content, ttFont)
+            self.axes.append(axis)
+        elif name == "NamedInstance":
+            instance = NamedInstance()
+            instance.fromXML(name, attrs, content, ttFont)
+            self.instances.append(instance)
+
+    def getAxes(self):
+        return {a.axisTag: (a.minValue, a.defaultValue, a.maxValue) for a in self.axes}
+
+
+class Axis(object):
+    def __init__(self):
+        self.axisTag = None
+        self.axisNameID = 0
+        self.flags = 0
+        self.minValue = -1.0
+        self.defaultValue = 0.0
+        self.maxValue = 1.0
+
+    def compile(self):
+        return sstruct.pack(FVAR_AXIS_FORMAT, self)
+
+    def decompile(self, data):
+        sstruct.unpack2(FVAR_AXIS_FORMAT, data, self)
+
+    def toXML(self, writer, ttFont):
+        name = (
+            ttFont["name"].getDebugName(self.axisNameID) if "name" in ttFont else None
+        )
+        if name is not None:
+            writer.newline()
+            writer.comment(name)
+            writer.newline()
+        writer.begintag("Axis")
+        writer.newline()
+        for tag, value in [
+            ("AxisTag", self.axisTag),
+            ("Flags", "0x%X" % self.flags),
+            ("MinValue", fl2str(self.minValue, 16)),
+            ("DefaultValue", fl2str(self.defaultValue, 16)),
+            ("MaxValue", fl2str(self.maxValue, 16)),
+            ("AxisNameID", str(self.axisNameID)),
+        ]:
+            writer.begintag(tag)
+            writer.write(value)
+            writer.endtag(tag)
+            writer.newline()
+        writer.endtag("Axis")
+        writer.newline()
+
+    def fromXML(self, name, _attrs, content, ttFont):
+        assert name == "Axis"
+        for tag, _, value in filter(lambda t: type(t) is tuple, content):
+            value = "".join(value)
+            if tag == "AxisTag":
+                self.axisTag = Tag(value)
+            elif tag in {"Flags", "MinValue", "DefaultValue", "MaxValue", "AxisNameID"}:
+                setattr(
+                    self,
+                    tag[0].lower() + tag[1:],
+                    str2fl(value, 16) if tag.endswith("Value") else safeEval(value),
+                )
+
+
+class NamedInstance(object):
+    def __init__(self):
+        self.subfamilyNameID = 0
+        self.postscriptNameID = 0xFFFF
+        self.flags = 0
+        self.coordinates = {}
+
+    def compile(self, axisTags, includePostScriptName):
+        result = [sstruct.pack(FVAR_INSTANCE_FORMAT, self)]
+        for axis in axisTags:
+            fixedCoord = fl2fi(self.coordinates[axis], 16)
+            result.append(struct.pack(">l", fixedCoord))
+        if includePostScriptName:
+            result.append(struct.pack(">H", self.postscriptNameID))
+        return bytesjoin(result)
+
+    def decompile(self, data, axisTags):
+        sstruct.unpack2(FVAR_INSTANCE_FORMAT, data, self)
+        pos = sstruct.calcsize(FVAR_INSTANCE_FORMAT)
+        for axis in axisTags:
+            value = struct.unpack(">l", data[pos : pos + 4])[0]
+            self.coordinates[axis] = fi2fl(value, 16)
+            pos += 4
+        if pos + 2 <= len(data):
+            self.postscriptNameID = struct.unpack(">H", data[pos : pos + 2])[0]
+        else:
+            self.postscriptNameID = 0xFFFF
+
+    def toXML(self, writer, ttFont):
+        name = (
+            ttFont["name"].getDebugName(self.subfamilyNameID)
+            if "name" in ttFont
+            else None
+        )
+        if name is not None:
+            writer.newline()
+            writer.comment(name)
+            writer.newline()
+        psname = (
+            ttFont["name"].getDebugName(self.postscriptNameID)
+            if "name" in ttFont
+            else None
+        )
+        if psname is not None:
+            writer.comment("PostScript: " + psname)
+            writer.newline()
+        if self.postscriptNameID == 0xFFFF:
+            writer.begintag(
+                "NamedInstance",
+                flags=("0x%X" % self.flags),
+                subfamilyNameID=self.subfamilyNameID,
+            )
+        else:
+            writer.begintag(
+                "NamedInstance",
+                flags=("0x%X" % self.flags),
+                subfamilyNameID=self.subfamilyNameID,
+                postscriptNameID=self.postscriptNameID,
+            )
+        writer.newline()
+        for axis in ttFont["fvar"].axes:
+            writer.simpletag(
+                "coord",
+                axis=axis.axisTag,
+                value=fl2str(self.coordinates[axis.axisTag], 16),
+            )
+            writer.newline()
+        writer.endtag("NamedInstance")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        assert name == "NamedInstance"
+        self.subfamilyNameID = safeEval(attrs["subfamilyNameID"])
+        self.flags = safeEval(attrs.get("flags", "0"))
+        if "postscriptNameID" in attrs:
+            self.postscriptNameID = safeEval(attrs["postscriptNameID"])
+        else:
+            self.postscriptNameID = 0xFFFF
+
+        for tag, elementAttrs, _ in filter(lambda t: type(t) is tuple, content):
+            if tag == "coord":
+                value = str2fl(elementAttrs["value"], 16)
+                self.coordinates[elementAttrs["axis"]] = value

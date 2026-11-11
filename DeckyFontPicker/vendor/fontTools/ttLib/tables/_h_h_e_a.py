@@ -1,1 +1,159 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSBmb250VG9vbHMubWlzYy5maXhlZFRvb2xzIGltcG9ydCAoCiAgICBlbnN1cmVWZXJzaW9uSXNMb25nIGFzIGZpMnZlLAogICAgdmVyc2lvblRvRml4ZWQgYXMgdmUyZmksCikKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IG1hdGgKCmhoZWFGb3JtYXQgPSAiIiIKCQk+ICAjIGJpZyBlbmRpYW4KCQl0YWJsZVZlcnNpb246ICAgICAgICAgICBMCgkJYXNjZW50OiAgICAgICAgICAgICAgICAgaAoJCWRlc2NlbnQ6ICAgICAgICAgICAgICAgIGgKCQlsaW5lR2FwOiAgICAgICAgICAgICAgICBoCgkJYWR2YW5jZVdpZHRoTWF4OiAgICAgICAgSAoJCW1pbkxlZnRTaWRlQmVhcmluZzogICAgIGgKCQltaW5SaWdodFNpZGVCZWFyaW5nOiAgICBoCgkJeE1heEV4dGVudDogICAgICAgICAgICAgaAoJCWNhcmV0U2xvcGVSaXNlOiAgICAgICAgIGgKCQljYXJldFNsb3BlUnVuOiAgICAgICAgICBoCgkJY2FyZXRPZmZzZXQ6ICAgICAgICAgICAgaAoJCXJlc2VydmVkMDogICAgICAgICAgICAgIGgKCQlyZXNlcnZlZDE6ICAgICAgICAgICAgICBoCgkJcmVzZXJ2ZWQyOiAgICAgICAgICAgICAgaAoJCXJlc2VydmVkMzogICAgICAgICAgICAgIGgKCQltZXRyaWNEYXRhRm9ybWF0OiAgICAgICBoCgkJbnVtYmVyT2ZITWV0cmljczogICAgICAgSAoiIiIKCgpjbGFzcyB0YWJsZV9faF9oX2VfYShEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIkhvcml6b250YWwgSGVhZGVyIHRhYmxlCgogICAgVGhlIGBgaGhlYWBgIHRhYmxlIGNvbnRhaW5zIGluZm9ybWF0aW9uIG5lZWRlZCBkdXJpbmcgaG9yaXpvbnRhbAogICAgdGV4dCBsYXlvdXQuCgogICAgLi4gbm90ZTo6CiAgICAgICBUaGlzIGNvbnZlcnRlciBjbGFzcyBpcyBrZXB0IGluIHN5bmMgd2l0aCB0aGUgOmNsYXNzOmAuX3ZfaF9lX2EudGFibGVfX3ZfaF9lX2FgCiAgICAgICB0YWJsZSBjb25zdHJ1Y3Rvci4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2hoZWEKICAgICIiIgoKICAgICMgTm90ZTogS2VlcCBpbiBzeW5jIHdpdGggdGFibGVfX3ZfaF9lX2EKCiAgICBkZXBlbmRlbmNpZXMgPSBbImhtdHgiLCAiZ2x5ZiIsICJDRkYgIiwgIkNGRjIiXQogICAgdGFibGVGb3JtYXQgPSBoaGVhRm9ybWF0CiAgICBnbHlwaFRhYmxlVGFnID0gImdseWYiCiAgICBtZXRyaWNzVGFibGVUYWcgPSAiaG10eCIKICAgIG91dGxpbmVUYWdzID0gKCJnbHlmIiwgIkNGRiAiLCAiQ0ZGMiIpCgogICAgIyBPcGVuVHlwZSBzcGVjIHJlbmFtZWQgdGhlc2UsIGFkZCBhbGlhc2VzIGZvciBjb21wYXRpYmlsaXR5CiAgICBAcHJvcGVydHkKICAgIGRlZiBhc2NlbmRlcihzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5hc2NlbnQKCiAgICBAYXNjZW5kZXIuc2V0dGVyCiAgICBkZWYgYXNjZW5kZXIoc2VsZiwgdmFsdWUpOgogICAgICAgIHNlbGYuYXNjZW50ID0gdmFsdWUKCiAgICBAcHJvcGVydHkKICAgIGRlZiBkZXNjZW5kZXIoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuZGVzY2VudAoKICAgIEBkZXNjZW5kZXIuc2V0dGVyCiAgICBkZWYgZGVzY2VuZGVyKHNlbGYsIHZhbHVlKToKICAgICAgICBzZWxmLmRlc2NlbnQgPSB2YWx1ZQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICBzc3RydWN0LnVucGFjayhzZWxmLnRhYmxlRm9ybWF0LCBkYXRhLCBzZWxmKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaWYgdHRGb250LnJlY2FsY0JCb3hlcyBhbmQgKAogICAgICAgICAgICBhbnkodHRGb250LmlzTG9hZGVkKHRhZykgZm9yIHRhZyBpbiBzZWxmLm91dGxpbmVUYWdzKQogICAgICAgICk6CiAgICAgICAgICAgIHNlbGYucmVjYWxjKHR0Rm9udCkKICAgICAgICBzZWxmLnRhYmxlVmVyc2lvbiA9IGZpMnZlKHNlbGYudGFibGVWZXJzaW9uKQogICAgICAgIHJldHVybiBzc3RydWN0LnBhY2soc2VsZi50YWJsZUZvcm1hdCwgc2VsZikKCiAgICBkZWYgcmVjYWxjKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgaWYgc2VsZi5tZXRyaWNzVGFibGVUYWcgbm90IGluIHR0Rm9udDoKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgIGhtdHhUYWJsZSA9IHR0Rm9udFtzZWxmLm1ldHJpY3NUYWJsZVRhZ10KICAgICAgICBzZWxmLmFkdmFuY2VXaWR0aE1heCA9IG1heChhZHYgZm9yIGFkdiwgXyBpbiBobXR4VGFibGUubWV0cmljcy52YWx1ZXMoKSkKCiAgICAgICAgYm91bmRzV2lkdGhEaWN0ID0ge30KICAgICAgICBpZiAiVkFSQyIgaW4gdHRGb250OgogICAgICAgICAgICBmcm9tIGZvbnRUb29scy5wZW5zLmJvdW5kc1BlbiBpbXBvcnQgQm91bmRzUGVuCgogICAgICAgICAgICBnbHlwaFNldCA9IHR0Rm9udC5nZXRHbHlwaFNldCgpCiAgICAgICAgICAgIGZvciBuYW1lIGluIHR0Rm9udC5nZXRHbHlwaE9yZGVyKCk6CiAgICAgICAgICAgICAgICBwZW4gPSBCb3VuZHNQZW4oZ2x5cGhTZXQpCiAgICAgICAgICAgICAgICBnbHlwaFNldFtuYW1lXS5kcmF3KHBlbikKICAgICAgICAgICAgICAgIGlmIHBlbi5ib3VuZHMgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgYm91bmRzV2lkdGhEaWN0W25hbWVdID0gaW50KAogICAgICAgICAgICAgICAgICAgICAgICBtYXRoLmNlaWwocGVuLmJvdW5kc1syXSkgLSBtYXRoLmZsb29yKHBlbi5ib3VuZHNbMF0pCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgIGVsaWYgc2VsZi5nbHlwaFRhYmxlVGFnIGluIHR0Rm9udDoKICAgICAgICAgICAgZ2x5ZlRhYmxlID0gdHRGb250W3NlbGYuZ2x5cGhUYWJsZVRhZ10KICAgICAgICAgICAgZm9yIG5hbWUgaW4gdHRGb250LmdldEdseXBoT3JkZXIoKToKICAgICAgICAgICAgICAgIGcgPSBnbHlmVGFibGVbbmFtZV0KICAgICAgICAgICAgICAgIGlmIGcubnVtYmVyT2ZDb250b3VycyA9PSAwOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBpZiBnLm51bWJlck9mQ29udG91cnMgPCAwIGFuZCBub3QgaGFzYXR0cihnLCAieE1heCIpOgogICAgICAgICAgICAgICAgICAgICMgQ29tcG9zaXRlIGdseXBoIHdpdGhvdXQgZXh0ZW50cyBzZXQuCiAgICAgICAgICAgICAgICAgICAgIyBDYWxjdWxhdGUgdGhvc2UuCiAgICAgICAgICAgICAgICAgICAgZy5yZWNhbGNCb3VuZHMoZ2x5ZlRhYmxlKQogICAgICAgICAgICAgICAgYm91bmRzV2lkdGhEaWN0W25hbWVdID0gZy54TWF4IC0gZy54TWluCiAgICAgICAgZWxpZiAiQ0ZGICIgaW4gdHRGb250IG9yICJDRkYyIiBpbiB0dEZvbnQ6CiAgICAgICAgICAgIGlmICJDRkYgIiBpbiB0dEZvbnQ6CiAgICAgICAgICAgICAgICB0b3BEaWN0ID0gdHRGb250WyJDRkYgIl0uY2ZmLnRvcERpY3RJbmRleFswXQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgdG9wRGljdCA9IHR0Rm9udFsiQ0ZGMiJdLmNmZi50b3BEaWN0SW5kZXhbMF0KICAgICAgICAgICAgY2hhclN0cmluZ3MgPSB0b3BEaWN0LkNoYXJTdHJpbmdzCiAgICAgICAgICAgIGZvciBuYW1lIGluIHR0Rm9udC5nZXRHbHlwaE9yZGVyKCk6CiAgICAgICAgICAgICAgICBjcyA9IGNoYXJTdHJpbmdzW25hbWVdCiAgICAgICAgICAgICAgICBib3VuZHMgPSBjcy5jYWxjQm91bmRzKGNoYXJTdHJpbmdzKQogICAgICAgICAgICAgICAgaWYgYm91bmRzIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgICAgIGJvdW5kc1dpZHRoRGljdFtuYW1lXSA9IGludCgKICAgICAgICAgICAgICAgICAgICAgICAgbWF0aC5jZWlsKGJvdW5kc1syXSkgLSBtYXRoLmZsb29yKGJvdW5kc1swXSkKICAgICAgICAgICAgICAgICAgICApCgogICAgICAgIGlmIGJvdW5kc1dpZHRoRGljdDoKICAgICAgICAgICAgbWluTGVmdFNpZGVCZWFyaW5nID0gZmxvYXQoImluZiIpCiAgICAgICAgICAgIG1pblJpZ2h0U2lkZUJlYXJpbmcgPSBmbG9hdCgiaW5mIikKICAgICAgICAgICAgeE1heEV4dGVudCA9IC1mbG9hdCgiaW5mIikKICAgICAgICAgICAgZm9yIG5hbWUsIGJvdW5kc1dpZHRoIGluIGJvdW5kc1dpZHRoRGljdC5pdGVtcygpOgogICAgICAgICAgICAgICAgYWR2YW5jZVdpZHRoLCBsc2IgPSBobXR4VGFibGVbbmFtZV0KICAgICAgICAgICAgICAgIHJzYiA9IGFkdmFuY2VXaWR0aCAtIGxzYiAtIGJvdW5kc1dpZHRoCiAgICAgICAgICAgICAgICBleHRlbnQgPSBsc2IgKyBib3VuZHNXaWR0aAogICAgICAgICAgICAgICAgbWluTGVmdFNpZGVCZWFyaW5nID0gbWluKG1pbkxlZnRTaWRlQmVhcmluZywgbHNiKQogICAgICAgICAgICAgICAgbWluUmlnaHRTaWRlQmVhcmluZyA9IG1pbihtaW5SaWdodFNpZGVCZWFyaW5nLCByc2IpCiAgICAgICAgICAgICAgICB4TWF4RXh0ZW50ID0gbWF4KHhNYXhFeHRlbnQsIGV4dGVudCkKICAgICAgICAgICAgc2VsZi5taW5MZWZ0U2lkZUJlYXJpbmcgPSBtaW5MZWZ0U2lkZUJlYXJpbmcKICAgICAgICAgICAgc2VsZi5taW5SaWdodFNpZGVCZWFyaW5nID0gbWluUmlnaHRTaWRlQmVhcmluZwogICAgICAgICAgICBzZWxmLnhNYXhFeHRlbnQgPSB4TWF4RXh0ZW50CgogICAgICAgIGVsc2U6ICAjIE5vIGdseXBoIGhhcyBvdXRsaW5lcy4KICAgICAgICAgICAgc2VsZi5taW5MZWZ0U2lkZUJlYXJpbmcgPSAwCiAgICAgICAgICAgIHNlbGYubWluUmlnaHRTaWRlQmVhcmluZyA9IDAKICAgICAgICAgICAgc2VsZi54TWF4RXh0ZW50ID0gMAoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgZm9ybWF0c3RyaW5nLCBuYW1lcywgZml4ZXMgPSBzc3RydWN0LmdldGZvcm1hdChzZWxmLnRhYmxlRm9ybWF0KQogICAgICAgIGZvciBuYW1lIGluIG5hbWVzOgogICAgICAgICAgICB2YWx1ZSA9IGdldGF0dHIoc2VsZiwgbmFtZSkKICAgICAgICAgICAgaWYgbmFtZSA9PSAidGFibGVWZXJzaW9uIjoKICAgICAgICAgICAgICAgIHZhbHVlID0gZmkydmUodmFsdWUpCiAgICAgICAgICAgICAgICB2YWx1ZSA9ICIweCUwOHgiICUgdmFsdWUKICAgICAgICAgICAgd3JpdGVyLnNpbXBsZXRhZyhuYW1lLCB2YWx1ZT12YWx1ZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gInRhYmxlVmVyc2lvbiI6CiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgbmFtZSwgdmUyZmkoYXR0cnNbInZhbHVlIl0pKQogICAgICAgICAgICByZXR1cm4KICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKSkK
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+from fontTools.misc.fixedTools import (
+    ensureVersionIsLong as fi2ve,
+    versionToFixed as ve2fi,
+)
+from . import DefaultTable
+import math
+
+hheaFormat = """
+		>  # big endian
+		tableVersion:           L
+		ascent:                 h
+		descent:                h
+		lineGap:                h
+		advanceWidthMax:        H
+		minLeftSideBearing:     h
+		minRightSideBearing:    h
+		xMaxExtent:             h
+		caretSlopeRise:         h
+		caretSlopeRun:          h
+		caretOffset:            h
+		reserved0:              h
+		reserved1:              h
+		reserved2:              h
+		reserved3:              h
+		metricDataFormat:       h
+		numberOfHMetrics:       H
+"""
+
+
+class table__h_h_e_a(DefaultTable.DefaultTable):
+    """Horizontal Header table
+
+    The ``hhea`` table contains information needed during horizontal
+    text layout.
+
+    .. note::
+       This converter class is kept in sync with the :class:`._v_h_e_a.table__v_h_e_a`
+       table constructor.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/hhea
+    """
+
+    # Note: Keep in sync with table__v_h_e_a
+
+    dependencies = ["hmtx", "glyf", "CFF ", "CFF2"]
+    tableFormat = hheaFormat
+    glyphTableTag = "glyf"
+    metricsTableTag = "hmtx"
+    outlineTags = ("glyf", "CFF ", "CFF2")
+
+    # OpenType spec renamed these, add aliases for compatibility
+    @property
+    def ascender(self):
+        return self.ascent
+
+    @ascender.setter
+    def ascender(self, value):
+        self.ascent = value
+
+    @property
+    def descender(self):
+        return self.descent
+
+    @descender.setter
+    def descender(self, value):
+        self.descent = value
+
+    def decompile(self, data, ttFont):
+        sstruct.unpack(self.tableFormat, data, self)
+
+    def compile(self, ttFont):
+        if ttFont.recalcBBoxes and (
+            any(ttFont.isLoaded(tag) for tag in self.outlineTags)
+        ):
+            self.recalc(ttFont)
+        self.tableVersion = fi2ve(self.tableVersion)
+        return sstruct.pack(self.tableFormat, self)
+
+    def recalc(self, ttFont):
+        if self.metricsTableTag not in ttFont:
+            return
+
+        hmtxTable = ttFont[self.metricsTableTag]
+        self.advanceWidthMax = max(adv for adv, _ in hmtxTable.metrics.values())
+
+        boundsWidthDict = {}
+        if "VARC" in ttFont:
+            from fontTools.pens.boundsPen import BoundsPen
+
+            glyphSet = ttFont.getGlyphSet()
+            for name in ttFont.getGlyphOrder():
+                pen = BoundsPen(glyphSet)
+                glyphSet[name].draw(pen)
+                if pen.bounds is not None:
+                    boundsWidthDict[name] = int(
+                        math.ceil(pen.bounds[2]) - math.floor(pen.bounds[0])
+                    )
+        elif self.glyphTableTag in ttFont:
+            glyfTable = ttFont[self.glyphTableTag]
+            for name in ttFont.getGlyphOrder():
+                g = glyfTable[name]
+                if g.numberOfContours == 0:
+                    continue
+                if g.numberOfContours < 0 and not hasattr(g, "xMax"):
+                    # Composite glyph without extents set.
+                    # Calculate those.
+                    g.recalcBounds(glyfTable)
+                boundsWidthDict[name] = g.xMax - g.xMin
+        elif "CFF " in ttFont or "CFF2" in ttFont:
+            if "CFF " in ttFont:
+                topDict = ttFont["CFF "].cff.topDictIndex[0]
+            else:
+                topDict = ttFont["CFF2"].cff.topDictIndex[0]
+            charStrings = topDict.CharStrings
+            for name in ttFont.getGlyphOrder():
+                cs = charStrings[name]
+                bounds = cs.calcBounds(charStrings)
+                if bounds is not None:
+                    boundsWidthDict[name] = int(
+                        math.ceil(bounds[2]) - math.floor(bounds[0])
+                    )
+
+        if boundsWidthDict:
+            minLeftSideBearing = float("inf")
+            minRightSideBearing = float("inf")
+            xMaxExtent = -float("inf")
+            for name, boundsWidth in boundsWidthDict.items():
+                advanceWidth, lsb = hmtxTable[name]
+                rsb = advanceWidth - lsb - boundsWidth
+                extent = lsb + boundsWidth
+                minLeftSideBearing = min(minLeftSideBearing, lsb)
+                minRightSideBearing = min(minRightSideBearing, rsb)
+                xMaxExtent = max(xMaxExtent, extent)
+            self.minLeftSideBearing = minLeftSideBearing
+            self.minRightSideBearing = minRightSideBearing
+            self.xMaxExtent = xMaxExtent
+
+        else:  # No glyph has outlines.
+            self.minLeftSideBearing = 0
+            self.minRightSideBearing = 0
+            self.xMaxExtent = 0
+
+    def toXML(self, writer, ttFont):
+        formatstring, names, fixes = sstruct.getformat(self.tableFormat)
+        for name in names:
+            value = getattr(self, name)
+            if name == "tableVersion":
+                value = fi2ve(value)
+                value = "0x%08x" % value
+            writer.simpletag(name, value=value)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "tableVersion":
+            setattr(self, name, ve2fi(attrs["value"]))
+            return
+        setattr(self, name, safeEval(attrs["value"]))

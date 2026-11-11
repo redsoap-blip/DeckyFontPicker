@@ -1,1 +1,10 @@
-ewogICJuYW1lIjogIuWtl+S9k+mAieaLqeWZqCIsCiAgImF1dGhvciI6ICJIb25jaGFuZSIsCiAgInZlcnNpb24iOiAiMS4wLjIiLAogICJmbGFncyI6IFtdLAogICJwdWJsaXNoIjogewogICAgInRhZ3MiOiBbInN0eWxlIiwgImZvbnQiXSwKICAgICJkZXNjcmlwdGlvbiI6ICLor7vlj5bns7vnu5/lt7Llronoo4XlrZfkvZPvvIznlKggRGVja3kg6Ieq6Lqr5rOo5YWl5oqK5omA6YCJ5a2X5L2T5bqU55So5Yiw5Li755WM6Z2iIC8gTWFpbk1lbnUgLyBRdWlja0FjY2Vzc++8m+e8uuWtl+aXtuiHquWKqOWbnumAgOWIsOezu+e7n+S4reaWh+Wtl+S9k+OAgiIKICB9Cn0K
+{
+  "name": "字体选择器",
+  "author": "Honchane",
+  "version": "1.2.0",
+  "flags": [],
+  "publish": {
+    "tags": ["style", "font"],
+    "description": "读取系统已安装字体，用 Decky 自身注入应用到主界面 / MainMenu / QuickAccess。同一插件支持 local() 与 face 抽取两种投递方式，可随时切换；local 未命中会明确提示，缺中文字形时自动回退。"
+  }
+}

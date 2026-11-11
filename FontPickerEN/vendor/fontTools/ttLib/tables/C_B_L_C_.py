@@ -1,1 +1,19 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IE1hdHQgRm9udGFpbmUKCmZyb20gLiBpbXBvcnQgRV9CX0xfQ18KCgpjbGFzcyB0YWJsZV9DX0JfTF9DXyhFX0JfTF9DXy50YWJsZV9FX0JfTF9DXyk6CiAgICAiIiJDb2xvciBCaXRtYXAgTG9jYXRpb24gdGFibGUKCiAgICBUaGUgYGBDQkxDYGAgdGFibGUgY29udGFpbnMgdGhlIGxvY2F0aW9ucyBvZiBjb2xvciBiaXRtYXBzIGZvciBnbHlwaHMuIEl0IG11c3QKICAgIGJlIHVzZWQgaW4gY29uY2VydCB3aXRoIHRoZSBgYENCRFRgYCB0YWJsZS4KCiAgICBJdCBpcyBiYWNrd2FyZHMtY29tcGF0aWJsZSB3aXRoIHRoZSBtb25vY2hyb21lL2dyYXlzY2FsZSBgYEVCTENgYCB0YWJsZS4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2NibGMKICAgICIiIgoKICAgIGRlcGVuZGVuY2llcyA9IFsiQ0JEVCJdCg==
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Matt Fontaine
+
+from . import E_B_L_C_
+
+
+class table_C_B_L_C_(E_B_L_C_.table_E_B_L_C_):
+    """Color Bitmap Location table
+
+    The ``CBLC`` table contains the locations of color bitmaps for glyphs. It must
+    be used in concert with the ``CBDT`` table.
+
+    It is backwards-compatible with the monochrome/grayscale ``EBLC`` table.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cblc
+    """
+
+    dependencies = ["CBDT"]

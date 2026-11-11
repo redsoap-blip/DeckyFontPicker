@@ -1,1 +1,164 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBvdFJvdW5kCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IHN5cwppbXBvcnQgc3RydWN0CmltcG9ydCBhcnJheQppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgoKY2xhc3MgdGFibGVfX2hfbV90X3goRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJIb3Jpem9udGFsIE1ldHJpY3MgdGFibGUKCiAgICBUaGUgYGBobXR4YGAgdGFibGUgY29udGFpbnMgcGVyLWdseXBoIG1ldHJpY3MgZm9yIHRoZSBnbHlwaHMgaW4gYQogICAgYGBnbHlmYGAsIGBgQ0ZGIGBgLCBvciBgYENGRjJgYCB0YWJsZSwgYXMgbmVlZGVkIGZvciBob3Jpem9udGFsIHRleHQKICAgIGxheW91dC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2htdHgKICAgICIiIgoKICAgIGhlYWRlclRhZyA9ICJoaGVhIgogICAgbWF4cFRhZyA9ICJtYXhwIgogICAgYWR2YW5jZU5hbWUgPSAid2lkdGgiCiAgICBzaWRlQmVhcmluZ05hbWUgPSAibHNiIgogICAgbnVtYmVyT2ZNZXRyaWNzTmFtZSA9ICJudW1iZXJPZkhNZXRyaWNzIgogICAgbG9uZ01ldHJpY0Zvcm1hdCA9ICJIaCIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgbnVtR2x5cGhzID0gdHRGb250W3NlbGYubWF4cFRhZ10ubnVtR2x5cGhzCiAgICAgICAgaGVhZGVyVGFibGUgPSB0dEZvbnQuZ2V0KHNlbGYuaGVhZGVyVGFnKQogICAgICAgIGlmIGhlYWRlclRhYmxlIGlzIG5vdCBOb25lOgogICAgICAgICAgICBudW1iZXJPZk1ldHJpY3MgPSBpbnQoZ2V0YXR0cihoZWFkZXJUYWJsZSwgc2VsZi5udW1iZXJPZk1ldHJpY3NOYW1lKSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBudW1iZXJPZk1ldHJpY3MgPSBudW1HbHlwaHMKICAgICAgICBpZiBudW1iZXJPZk1ldHJpY3MgPiBudW1HbHlwaHM6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgIlRoZSAlcy4lcyBleGNlZWRzIHRoZSBtYXhwLm51bUdseXBocyIKICAgICAgICAgICAgICAgICUgKHNlbGYuaGVhZGVyVGFnLCBzZWxmLm51bWJlck9mTWV0cmljc05hbWUpCiAgICAgICAgICAgICkKICAgICAgICAgICAgbnVtYmVyT2ZNZXRyaWNzID0gbnVtR2x5cGhzCiAgICAgICAgbnVtYmVyT2ZTaWRlQmVhcmluZ3MgPSBudW1HbHlwaHMgLSBudW1iZXJPZk1ldHJpY3MKICAgICAgICB0YWJsZVNpemUgPSA0ICogbnVtYmVyT2ZNZXRyaWNzICsgMiAqIG51bWJlck9mU2lkZUJlYXJpbmdzCiAgICAgICAgaWYgbGVuKGRhdGEpIDwgdGFibGVTaXplOgogICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKAogICAgICAgICAgICAgICAgZiJub3QgZW5vdWdoICd7c2VsZi50YWJsZVRhZ30nIHRhYmxlIGRhdGE6ICIKICAgICAgICAgICAgICAgIGYiZXhwZWN0ZWQge3RhYmxlU2l6ZX0gYnl0ZXMsIGdvdCB7bGVuKGRhdGEpfSIKICAgICAgICAgICAgKQogICAgICAgICMgTm90ZTogYWR2YW5jZVdpZHRoIGlzIHVuc2lnbmVkLCBidXQgc29tZSBmb250IGVkaXRvcnMgbWlnaHQKICAgICAgICAjIHJlYWQvd3JpdGUgYXMgc2lnbmVkLiBXZSBjYW4ndCBiZSBzdXJlIHdoZXRoZXIgaXQgd2FzIGEgbWlzdGFrZQogICAgICAgICMgb3Igbm90LCBzbyB3ZSByZWFkIGFzIHVuc2lnbmVkIGJ1dCBhbHNvIGlzc3VlIGEgd2FybmluZy4uLgogICAgICAgIG1ldHJpY3NGbXQgPSAiPiIgKyBzZWxmLmxvbmdNZXRyaWNGb3JtYXQgKiBudW1iZXJPZk1ldHJpY3MKICAgICAgICBtZXRyaWNzID0gc3RydWN0LnVucGFjayhtZXRyaWNzRm10LCBkYXRhWzogNCAqIG51bWJlck9mTWV0cmljc10pCiAgICAgICAgZGF0YSA9IGRhdGFbNCAqIG51bWJlck9mTWV0cmljcyA6XQogICAgICAgIHNpZGVCZWFyaW5ncyA9IGFycmF5LmFycmF5KCJoIiwgZGF0YVs6IDIgKiBudW1iZXJPZlNpZGVCZWFyaW5nc10pCiAgICAgICAgZGF0YSA9IGRhdGFbMiAqIG51bWJlck9mU2lkZUJlYXJpbmdzIDpdCgogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIHNpZGVCZWFyaW5ncy5ieXRlc3dhcCgpCiAgICAgICAgaWYgZGF0YToKICAgICAgICAgICAgbG9nLndhcm5pbmcoInRvbyBtdWNoICclcycgdGFibGUgZGF0YSIgJSBzZWxmLnRhYmxlVGFnKQogICAgICAgIHNlbGYubWV0cmljcyA9IHt9CiAgICAgICAgZ2x5cGhPcmRlciA9IHR0Rm9udC5nZXRHbHlwaE9yZGVyKCkKICAgICAgICBmb3IgaSBpbiByYW5nZShudW1iZXJPZk1ldHJpY3MpOgogICAgICAgICAgICBnbHlwaE5hbWUgPSBnbHlwaE9yZGVyW2ldCiAgICAgICAgICAgIGFkdmFuY2VXaWR0aCwgbHNiID0gbWV0cmljc1tpICogMiA6IGkgKiAyICsgMl0KICAgICAgICAgICAgaWYgYWR2YW5jZVdpZHRoID4gMzI3Njc6CiAgICAgICAgICAgICAgICBsb2cud2FybmluZygKICAgICAgICAgICAgICAgICAgICAiR2x5cGggJXIgaGFzIGEgaHVnZSBhZHZhbmNlICVzICglZCk7IGlzIGl0IGludGVudGlvbmFsIG9yICIKICAgICAgICAgICAgICAgICAgICAiYW4gKGludmFsaWQpIG5lZ2F0aXZlIHZhbHVlPyIsCiAgICAgICAgICAgICAgICAgICAgZ2x5cGhOYW1lLAogICAgICAgICAgICAgICAgICAgIHNlbGYuYWR2YW5jZU5hbWUsCiAgICAgICAgICAgICAgICAgICAgYWR2YW5jZVdpZHRoLAogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBzZWxmLm1ldHJpY3NbZ2x5cGhOYW1lXSA9IChhZHZhbmNlV2lkdGgsIGxzYikKICAgICAgICBsYXN0QWR2YW5jZSA9IG1ldHJpY3NbLTJdCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobnVtYmVyT2ZTaWRlQmVhcmluZ3MpOgogICAgICAgICAgICBnbHlwaE5hbWUgPSBnbHlwaE9yZGVyW2kgKyBudW1iZXJPZk1ldHJpY3NdCiAgICAgICAgICAgIHNlbGYubWV0cmljc1tnbHlwaE5hbWVdID0gKGxhc3RBZHZhbmNlLCBzaWRlQmVhcmluZ3NbaV0pCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBtZXRyaWNzID0gW10KICAgICAgICBoYXNOZWdhdGl2ZUFkdmFuY2VzID0gRmFsc2UKICAgICAgICBmb3IgZ2x5cGhOYW1lIGluIHR0Rm9udC5nZXRHbHlwaE9yZGVyKCk6CiAgICAgICAgICAgIGFkdmFuY2VXaWR0aCwgc2lkZUJlYXJpbmcgPSBzZWxmLm1ldHJpY3NbZ2x5cGhOYW1lXQogICAgICAgICAgICBpZiBhZHZhbmNlV2lkdGggPCAwOgogICAgICAgICAgICAgICAgbG9nLmVycm9yKAogICAgICAgICAgICAgICAgICAgICJHbHlwaCAlciBoYXMgbmVnYXRpdmUgYWR2YW5jZSAlcyIgJSAoZ2x5cGhOYW1lLCBzZWxmLmFkdmFuY2VOYW1lKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgaGFzTmVnYXRpdmVBZHZhbmNlcyA9IFRydWUKICAgICAgICAgICAgbWV0cmljcy5hcHBlbmQoW2FkdmFuY2VXaWR0aCwgc2lkZUJlYXJpbmddKQoKICAgICAgICBoZWFkZXJUYWJsZSA9IHR0Rm9udC5nZXQoc2VsZi5oZWFkZXJUYWcpCiAgICAgICAgaWYgaGVhZGVyVGFibGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGxhc3RBZHZhbmNlID0gbWV0cmljc1stMV1bMF0KICAgICAgICAgICAgbGFzdEluZGV4ID0gbGVuKG1ldHJpY3MpCiAgICAgICAgICAgIHdoaWxlIG1ldHJpY3NbbGFzdEluZGV4IC0gMl1bMF0gPT0gbGFzdEFkdmFuY2U6CiAgICAgICAgICAgICAgICBsYXN0SW5kZXggLT0gMQogICAgICAgICAgICAgICAgaWYgbGFzdEluZGV4IDw9IDE6CiAgICAgICAgICAgICAgICAgICAgIyBhbGwgYWR2YW5jZXMgYXJlIGVxdWFsCiAgICAgICAgICAgICAgICAgICAgbGFzdEluZGV4ID0gMQogICAgICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGFkZGl0aW9uYWxNZXRyaWNzID0gbWV0cmljc1tsYXN0SW5kZXg6XQogICAgICAgICAgICBhZGRpdGlvbmFsTWV0cmljcyA9IFtvdFJvdW5kKHNiKSBmb3IgXywgc2IgaW4gYWRkaXRpb25hbE1ldHJpY3NdCiAgICAgICAgICAgIG1ldHJpY3MgPSBtZXRyaWNzWzpsYXN0SW5kZXhdCiAgICAgICAgICAgIG51bWJlck9mTWV0cmljcyA9IGxlbihtZXRyaWNzKQogICAgICAgICAgICBzZXRhdHRyKGhlYWRlclRhYmxlLCBzZWxmLm51bWJlck9mTWV0cmljc05hbWUsIG51bWJlck9mTWV0cmljcykKICAgICAgICBlbHNlOgogICAgICAgICAgICAjIG5vIGhoZWEvdmhlYSwgY2FuJ3Qgc3RvcmUgbnVtYmVyT2ZNZXRyaWNzOyBhc3N1bWUgPT0gbnVtR2x5cGhzCiAgICAgICAgICAgIG51bWJlck9mTWV0cmljcyA9IHR0Rm9udFtzZWxmLm1heHBUYWddLm51bUdseXBocwogICAgICAgICAgICBhZGRpdGlvbmFsTWV0cmljcyA9IFtdCgogICAgICAgIGFsbE1ldHJpY3MgPSBbXQogICAgICAgIGZvciBhZHZhbmNlLCBzYiBpbiBtZXRyaWNzOgogICAgICAgICAgICBhbGxNZXRyaWNzLmV4dGVuZChbb3RSb3VuZChhZHZhbmNlKSwgb3RSb3VuZChzYildKQogICAgICAgIG1ldHJpY3NGbXQgPSAiPiIgKyBzZWxmLmxvbmdNZXRyaWNGb3JtYXQgKiBudW1iZXJPZk1ldHJpY3MKICAgICAgICB0cnk6CiAgICAgICAgICAgIGRhdGEgPSBzdHJ1Y3QucGFjayhtZXRyaWNzRm10LCAqYWxsTWV0cmljcykKICAgICAgICBleGNlcHQgc3RydWN0LmVycm9yIGFzIGU6CiAgICAgICAgICAgIGlmICJvdXQgb2YgcmFuZ2UiIGluIHN0cihlKSBhbmQgaGFzTmVnYXRpdmVBZHZhbmNlczoKICAgICAgICAgICAgICAgIHJhaXNlIHR0TGliLlRUTGliRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgIiclcycgdGFibGUgY2FuJ3QgY29udGFpbiBuZWdhdGl2ZSBhZHZhbmNlICVzcyIKICAgICAgICAgICAgICAgICAgICAlIChzZWxmLnRhYmxlVGFnLCBzZWxmLmFkdmFuY2VOYW1lKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmFpc2UKICAgICAgICBhZGRpdGlvbmFsTWV0cmljcyA9IGFycmF5LmFycmF5KCJoIiwgYWRkaXRpb25hbE1ldHJpY3MpCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgYWRkaXRpb25hbE1ldHJpY3MuYnl0ZXN3YXAoKQogICAgICAgIGRhdGEgPSBkYXRhICsgYWRkaXRpb25hbE1ldHJpY3MudG9ieXRlcygpCiAgICAgICAgcmV0dXJuIGRhdGEKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIG5hbWVzID0gc29ydGVkKHNlbGYubWV0cmljcy5rZXlzKCkpCiAgICAgICAgZm9yIGdseXBoTmFtZSBpbiBuYW1lczoKICAgICAgICAgICAgYWR2YW5jZSwgc2IgPSBzZWxmLm1ldHJpY3NbZ2x5cGhOYW1lXQogICAgICAgICAgICB3cml0ZXIuc2ltcGxldGFnKAogICAgICAgICAgICAgICAgIm10eCIsCiAgICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAgICAgKCJuYW1lIiwgZ2x5cGhOYW1lKSwKICAgICAgICAgICAgICAgICAgICAoc2VsZi5hZHZhbmNlTmFtZSwgYWR2YW5jZSksCiAgICAgICAgICAgICAgICAgICAgKHNlbGYuc2lkZUJlYXJpbmdOYW1lLCBzYiksCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICApCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBub3QgaGFzYXR0cihzZWxmLCAibWV0cmljcyIpOgogICAgICAgICAgICBzZWxmLm1ldHJpY3MgPSB7fQogICAgICAgIGlmIG5hbWUgPT0gIm10eCI6CiAgICAgICAgICAgIHNlbGYubWV0cmljc1thdHRyc1sibmFtZSJdXSA9ICgKICAgICAgICAgICAgICAgIHNhZmVFdmFsKGF0dHJzW3NlbGYuYWR2YW5jZU5hbWVdKSwKICAgICAgICAgICAgICAgIHNhZmVFdmFsKGF0dHJzW3NlbGYuc2lkZUJlYXJpbmdOYW1lXSksCiAgICAgICAgICAgICkKCiAgICBkZWYgX19kZWxpdGVtX18oc2VsZiwgZ2x5cGhOYW1lKToKICAgICAgICBkZWwgc2VsZi5tZXRyaWNzW2dseXBoTmFtZV0KCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgZ2x5cGhOYW1lKToKICAgICAgICByZXR1cm4gc2VsZi5tZXRyaWNzW2dseXBoTmFtZV0KCiAgICBkZWYgX19zZXRpdGVtX18oc2VsZiwgZ2x5cGhOYW1lLCBhZHZhbmNlX3NiX3BhaXIpOgogICAgICAgIHNlbGYubWV0cmljc1tnbHlwaE5hbWVdID0gdHVwbGUoYWR2YW5jZV9zYl9wYWlyKQo=
+from fontTools.misc.roundTools import otRound
+from fontTools import ttLib
+from fontTools.misc.textTools import safeEval
+from . import DefaultTable
+import sys
+import struct
+import array
+import logging
+
+log = logging.getLogger(__name__)
+
+
+class table__h_m_t_x(DefaultTable.DefaultTable):
+    """Horizontal Metrics table
+
+    The ``hmtx`` table contains per-glyph metrics for the glyphs in a
+    ``glyf``, ``CFF ``, or ``CFF2`` table, as needed for horizontal text
+    layout.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/hmtx
+    """
+
+    headerTag = "hhea"
+    maxpTag = "maxp"
+    advanceName = "width"
+    sideBearingName = "lsb"
+    numberOfMetricsName = "numberOfHMetrics"
+    longMetricFormat = "Hh"
+
+    def decompile(self, data, ttFont):
+        numGlyphs = ttFont[self.maxpTag].numGlyphs
+        headerTable = ttFont.get(self.headerTag)
+        if headerTable is not None:
+            numberOfMetrics = int(getattr(headerTable, self.numberOfMetricsName))
+        else:
+            numberOfMetrics = numGlyphs
+        if numberOfMetrics > numGlyphs:
+            log.warning(
+                "The %s.%s exceeds the maxp.numGlyphs"
+                % (self.headerTag, self.numberOfMetricsName)
+            )
+            numberOfMetrics = numGlyphs
+        numberOfSideBearings = numGlyphs - numberOfMetrics
+        tableSize = 4 * numberOfMetrics + 2 * numberOfSideBearings
+        if len(data) < tableSize:
+            raise ttLib.TTLibError(
+                f"not enough '{self.tableTag}' table data: "
+                f"expected {tableSize} bytes, got {len(data)}"
+            )
+        # Note: advanceWidth is unsigned, but some font editors might
+        # read/write as signed. We can't be sure whether it was a mistake
+        # or not, so we read as unsigned but also issue a warning...
+        metricsFmt = ">" + self.longMetricFormat * numberOfMetrics
+        metrics = struct.unpack(metricsFmt, data[: 4 * numberOfMetrics])
+        data = data[4 * numberOfMetrics :]
+        sideBearings = array.array("h", data[: 2 * numberOfSideBearings])
+        data = data[2 * numberOfSideBearings :]
+
+        if sys.byteorder != "big":
+            sideBearings.byteswap()
+        if data:
+            log.warning("too much '%s' table data" % self.tableTag)
+        self.metrics = {}
+        glyphOrder = ttFont.getGlyphOrder()
+        for i in range(numberOfMetrics):
+            glyphName = glyphOrder[i]
+            advanceWidth, lsb = metrics[i * 2 : i * 2 + 2]
+            if advanceWidth > 32767:
+                log.warning(
+                    "Glyph %r has a huge advance %s (%d); is it intentional or "
+                    "an (invalid) negative value?",
+                    glyphName,
+                    self.advanceName,
+                    advanceWidth,
+                )
+            self.metrics[glyphName] = (advanceWidth, lsb)
+        lastAdvance = metrics[-2]
+        for i in range(numberOfSideBearings):
+            glyphName = glyphOrder[i + numberOfMetrics]
+            self.metrics[glyphName] = (lastAdvance, sideBearings[i])
+
+    def compile(self, ttFont):
+        metrics = []
+        hasNegativeAdvances = False
+        for glyphName in ttFont.getGlyphOrder():
+            advanceWidth, sideBearing = self.metrics[glyphName]
+            if advanceWidth < 0:
+                log.error(
+                    "Glyph %r has negative advance %s" % (glyphName, self.advanceName)
+                )
+                hasNegativeAdvances = True
+            metrics.append([advanceWidth, sideBearing])
+
+        headerTable = ttFont.get(self.headerTag)
+        if headerTable is not None:
+            lastAdvance = metrics[-1][0]
+            lastIndex = len(metrics)
+            while metrics[lastIndex - 2][0] == lastAdvance:
+                lastIndex -= 1
+                if lastIndex <= 1:
+                    # all advances are equal
+                    lastIndex = 1
+                    break
+            additionalMetrics = metrics[lastIndex:]
+            additionalMetrics = [otRound(sb) for _, sb in additionalMetrics]
+            metrics = metrics[:lastIndex]
+            numberOfMetrics = len(metrics)
+            setattr(headerTable, self.numberOfMetricsName, numberOfMetrics)
+        else:
+            # no hhea/vhea, can't store numberOfMetrics; assume == numGlyphs
+            numberOfMetrics = ttFont[self.maxpTag].numGlyphs
+            additionalMetrics = []
+
+        allMetrics = []
+        for advance, sb in metrics:
+            allMetrics.extend([otRound(advance), otRound(sb)])
+        metricsFmt = ">" + self.longMetricFormat * numberOfMetrics
+        try:
+            data = struct.pack(metricsFmt, *allMetrics)
+        except struct.error as e:
+            if "out of range" in str(e) and hasNegativeAdvances:
+                raise ttLib.TTLibError(
+                    "'%s' table can't contain negative advance %ss"
+                    % (self.tableTag, self.advanceName)
+                )
+            else:
+                raise
+        additionalMetrics = array.array("h", additionalMetrics)
+        if sys.byteorder != "big":
+            additionalMetrics.byteswap()
+        data = data + additionalMetrics.tobytes()
+        return data
+
+    def toXML(self, writer, ttFont):
+        names = sorted(self.metrics.keys())
+        for glyphName in names:
+            advance, sb = self.metrics[glyphName]
+            writer.simpletag(
+                "mtx",
+                [
+                    ("name", glyphName),
+                    (self.advanceName, advance),
+                    (self.sideBearingName, sb),
+                ],
+            )
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "metrics"):
+            self.metrics = {}
+        if name == "mtx":
+            self.metrics[attrs["name"]] = (
+                safeEval(attrs[self.advanceName]),
+                safeEval(attrs[self.sideBearingName]),
+            )
+
+    def __delitem__(self, glyphName):
+        del self.metrics[glyphName]
+
+    def __getitem__(self, glyphName):
+        return self.metrics[glyphName]
+
+    def __setitem__(self, glyphName, advance_sb_pair):
+        self.metrics[glyphName] = tuple(advance_sb_pair)

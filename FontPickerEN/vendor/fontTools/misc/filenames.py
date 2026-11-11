@@ -1,1 +1,245 @@
-IiIiClRoaXMgbW9kdWxlIGltcGxlbWVudHMgdGhlIGFsZ29yaXRobSBmb3IgY29udmVydGluZyBiZXR3ZWVuIGEgInVzZXIgbmFtZSIgLQpzb21ldGhpbmcgdGhhdCBhIHVzZXIgY2FuIGNob29zZSBhcmJpdHJhcmlseSBpbnNpZGUgYSBmb250IGVkaXRvciAtIGFuZCBhIGZpbGUKbmFtZSBzdWl0YWJsZSBmb3IgdXNlIGluIGEgd2lkZSByYW5nZSBvZiBvcGVyYXRpbmcgc3lzdGVtcyBhbmQgZmlsZXN5c3RlbXMuCgpUaGUgYFVGTyAzIHNwZWNpZmljYXRpb24gPGh0dHA6Ly91bmlmaWVkZm9udG9iamVjdC5vcmcvdmVyc2lvbnMvdWZvMy9jb252ZW50aW9ucy8+YF8KcHJvdmlkZXMgYW4gZXhhbXBsZSBvZiBhbiBhbGdvcml0aG0gZm9yIHN1Y2ggY29udmVyc2lvbiwgd2hpY2ggYXZvaWRzIGlsbGVnYWwKY2hhcmFjdGVycywgcmVzZXJ2ZWQgZmlsZSBuYW1lcywgYW1iaWd1aXR5IGJldHdlZW4gdXBwZXItIGFuZCBsb3dlci1jYXNlCmNoYXJhY3RlcnMsIGFuZCBjbGFzaGVzIHdpdGggZXhpc3RpbmcgZmlsZXMuCgpUaGlzIGNvZGUgd2FzIG9yaWdpbmFsbHkgY29waWVkIGZyb20KYHVmb0xpYiA8aHR0cHM6Ly9naXRodWIuY29tL3VuaWZpZWQtZm9udC1vYmplY3QvdWZvTGliL2Jsb2IvODc0N2RhNy9MaWIvdWZvTGliL2ZpbGVuYW1lcy5weT5gXwpieSBUYWwgTGVtaW5nIGFuZCBpcyBjb3B5cmlnaHQgKGMpIDIwMDUtMjAxNiwgVGhlIFJvYm9GYWIgRGV2ZWxvcGVyczoKCi0JRXJpayB2YW4gQmxva2xhbmQKLQlUYWwgTGVtaW5nCi0JSnVzdCB2YW4gUm9zc3VtCiIiIgoKaWxsZWdhbENoYXJhY3RlcnMgPSByIlwiICogKyAvIDogPCA+ID8gWyBcIF0gfCBcMCIuc3BsaXQoIiAiKQppbGxlZ2FsQ2hhcmFjdGVycyArPSBbY2hyKGkpIGZvciBpIGluIHJhbmdlKDEsIDMyKV0KaWxsZWdhbENoYXJhY3RlcnMgKz0gW2NocigweDdGKV0KcmVzZXJ2ZWRGaWxlTmFtZXMgPSAiQ09OIFBSTiBBVVggQ0xPQ0skIE5VTCBBOi1aOiBDT00xIi5sb3dlcigpLnNwbGl0KCIgIikKcmVzZXJ2ZWRGaWxlTmFtZXMgKz0gIkxQVDEgTFBUMiBMUFQzIENPTTIgQ09NMyBDT000Ii5sb3dlcigpLnNwbGl0KCIgIikKbWF4RmlsZU5hbWVMZW5ndGggPSAyNTUKCgpjbGFzcyBOYW1lVHJhbnNsYXRpb25FcnJvcihFeGNlcHRpb24pOgogICAgcGFzcwoKCmRlZiB1c2VyTmFtZVRvRmlsZU5hbWUodXNlck5hbWUsIGV4aXN0aW5nPVtdLCBwcmVmaXg9IiIsIHN1ZmZpeD0iIik6CiAgICAiIiJDb252ZXJ0cyBmcm9tIGEgdXNlciBuYW1lIHRvIGEgZmlsZSBuYW1lLgoKICAgIFRha2VzIGNhcmUgdG8gYXZvaWQgaWxsZWdhbCBjaGFyYWN0ZXJzLCByZXNlcnZlZCBmaWxlIG5hbWVzLCBhbWJpZ3VpdHkgYmV0d2VlbgogICAgdXBwZXItIGFuZCBsb3dlci1jYXNlIGNoYXJhY3RlcnMsIGFuZCBjbGFzaGVzIHdpdGggZXhpc3RpbmcgZmlsZXMuCgogICAgQXJnczoKICAgICAgICAgICAgdXNlck5hbWUgKHN0cik6IFRoZSBpbnB1dCBmaWxlIG5hbWUuCiAgICAgICAgICAgIGV4aXN0aW5nOiBBIGNhc2UtaW5zZW5zaXRpdmUgbGlzdCBvZiBhbGwgZXhpc3RpbmcgZmlsZSBuYW1lcy4KICAgICAgICAgICAgcHJlZml4OiBQcmVmaXggdG8gYmUgcHJlcGVuZGVkIHRvIHRoZSBmaWxlIG5hbWUuCiAgICAgICAgICAgIHN1ZmZpeDogU3VmZml4IHRvIGJlIGFwcGVuZGVkIHRvIHRoZSBmaWxlIG5hbWUuCgogICAgUmV0dXJuczoKICAgICAgICAgICAgQSBzdWl0YWJsZSBmaWxlbmFtZS4KCiAgICBSYWlzZXM6CiAgICAgICAgICAgIE5hbWVUcmFuc2xhdGlvbkVycm9yOiBJZiBubyBzdWl0YWJsZSBuYW1lIGNvdWxkIGJlIGdlbmVyYXRlZC4KCiAgICBFeGFtcGxlczo6CgogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJhIikgPT0gImEiCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiQSIpID09ICJBXyIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJBRSIpID09ICJBX0VfIgogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiB1c2VyTmFtZVRvRmlsZU5hbWUoIkFlIikgPT0gIkFfZSIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJhZSIpID09ICJhZSIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJhRSIpID09ICJhRV8iCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiYS5hbHQiKSA9PSAiYS5hbHQiCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiQS5hbHQiKSA9PSAiQV8uYWx0IgogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiB1c2VyTmFtZVRvRmlsZU5hbWUoIkEuQWx0IikgPT0gIkFfLkFfbHQiCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiQS5hTHQiKSA9PSAiQV8uYUxfdCIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKHUiQS5hbFQiKSA9PSAiQV8uYWxUXyIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJUX0giKSA9PSAiVF9fSF8iCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiVF9oIikgPT0gIlRfX2giCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgidF9oIikgPT0gInRfaCIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJGX0ZfSSIpID09ICJGX19GX19JXyIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJmX2ZfaSIpID09ICJmX2ZfaSIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJBYWN1dGVfVi5zd2FzaCIpID09ICJBX2FjdXRlX1ZfLnN3YXNoIgogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiB1c2VyTmFtZVRvRmlsZU5hbWUoIi5ub3RkZWYiKSA9PSAiX25vdGRlZiIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJjb24iKSA9PSAiX2NvbiIKICAgICAgICAgICAgVHJ1ZQogICAgICAgICAgICA+Pj4gdXNlck5hbWVUb0ZpbGVOYW1lKCJDT04iKSA9PSAiQ19PX05fIgogICAgICAgICAgICBUcnVlCiAgICAgICAgICAgID4+PiB1c2VyTmFtZVRvRmlsZU5hbWUoImNvbi5hbHQiKSA9PSAiX2Nvbi5hbHQiCiAgICAgICAgICAgIFRydWUKICAgICAgICAgICAgPj4+IHVzZXJOYW1lVG9GaWxlTmFtZSgiYWx0LmNvbiIpID09ICJhbHQuX2NvbiIKICAgICAgICAgICAgVHJ1ZQogICAgIiIiCiAgICAjIHRoZSBpbmNvbWluZyBuYW1lIG11c3QgYmUgYSBzdHIKICAgIGlmIG5vdCBpc2luc3RhbmNlKHVzZXJOYW1lLCBzdHIpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIlRoZSB2YWx1ZSBmb3IgdXNlck5hbWUgbXVzdCBiZSBhIHN0cmluZy4iKQogICAgIyBlc3RhYmxpc2ggdGhlIHByZWZpeCBhbmQgc3VmZml4IGxlbmd0aHMKICAgIHByZWZpeExlbmd0aCA9IGxlbihwcmVmaXgpCiAgICBzdWZmaXhMZW5ndGggPSBsZW4oc3VmZml4KQogICAgIyByZXBsYWNlIGFuIGluaXRpYWwgcGVyaW9kIHdpdGggYW4gXwogICAgIyBpZiBubyBwcmVmaXggaXMgdG8gYmUgYWRkZWQKICAgIGlmIG5vdCBwcmVmaXggYW5kIHVzZXJOYW1lWzBdID09ICIuIjoKICAgICAgICB1c2VyTmFtZSA9ICJfIiArIHVzZXJOYW1lWzE6XQogICAgIyBmaWx0ZXIgdGhlIHVzZXIgbmFtZQogICAgZmlsdGVyZWRVc2VyTmFtZSA9IFtdCiAgICBmb3IgY2hhcmFjdGVyIGluIHVzZXJOYW1lOgogICAgICAgICMgcmVwbGFjZSBpbGxlZ2FsIGNoYXJhY3RlcnMgd2l0aCBfCiAgICAgICAgaWYgY2hhcmFjdGVyIGluIGlsbGVnYWxDaGFyYWN0ZXJzOgogICAgICAgICAgICBjaGFyYWN0ZXIgPSAiXyIKICAgICAgICAjIGFkZCBfIHRvIGFsbCBub24tbG93ZXIgY2hhcmFjdGVycwogICAgICAgIGVsaWYgY2hhcmFjdGVyICE9IGNoYXJhY3Rlci5sb3dlcigpOgogICAgICAgICAgICBjaGFyYWN0ZXIgKz0gIl8iCiAgICAgICAgZmlsdGVyZWRVc2VyTmFtZS5hcHBlbmQoY2hhcmFjdGVyKQogICAgdXNlck5hbWUgPSAiIi5qb2luKGZpbHRlcmVkVXNlck5hbWUpCiAgICAjIGNsaXAgdG8gMjU1CiAgICBzbGljZUxlbmd0aCA9IG1heEZpbGVOYW1lTGVuZ3RoIC0gcHJlZml4TGVuZ3RoIC0gc3VmZml4TGVuZ3RoCiAgICB1c2VyTmFtZSA9IHVzZXJOYW1lWzpzbGljZUxlbmd0aF0KICAgICMgdGVzdCBmb3IgaWxsZWdhbCBmaWxlcyBuYW1lcwogICAgcGFydHMgPSBbXQogICAgZm9yIHBhcnQgaW4gdXNlck5hbWUuc3BsaXQoIi4iKToKICAgICAgICBpZiBwYXJ0Lmxvd2VyKCkgaW4gcmVzZXJ2ZWRGaWxlTmFtZXM6CiAgICAgICAgICAgIHBhcnQgPSAiXyIgKyBwYXJ0CiAgICAgICAgcGFydHMuYXBwZW5kKHBhcnQpCiAgICB1c2VyTmFtZSA9ICIuIi5qb2luKHBhcnRzKQogICAgIyB0ZXN0IGZvciBjbGFzaAogICAgZnVsbE5hbWUgPSBwcmVmaXggKyB1c2VyTmFtZSArIHN1ZmZpeAogICAgaWYgZnVsbE5hbWUubG93ZXIoKSBpbiBleGlzdGluZzoKICAgICAgICBmdWxsTmFtZSA9IGhhbmRsZUNsYXNoMSh1c2VyTmFtZSwgZXhpc3RpbmcsIHByZWZpeCwgc3VmZml4KQogICAgIyBmaW5pc2hlZAogICAgcmV0dXJuIGZ1bGxOYW1lCgoKZGVmIGhhbmRsZUNsYXNoMSh1c2VyTmFtZSwgZXhpc3Rpbmc9W10sIHByZWZpeD0iIiwgc3VmZml4PSIiKToKICAgICIiIgogICAgZXhpc3Rpbmcgc2hvdWxkIGJlIGEgY2FzZS1pbnNlbnNpdGl2ZSBsaXN0CiAgICBvZiBhbGwgZXhpc3RpbmcgZmlsZSBuYW1lcy4KCiAgICA+Pj4gcHJlZml4ID0gKCIwIiAqIDUpICsgIi4iCiAgICA+Pj4gc3VmZml4ID0gIi4iICsgKCIwIiAqIDEwKQogICAgPj4+IGV4aXN0aW5nID0gWyJhIiAqIDVdCgogICAgPj4+IGUgPSBsaXN0KGV4aXN0aW5nKQogICAgPj4+IGhhbmRsZUNsYXNoMSh1c2VyTmFtZT0iQSIgKiA1LCBleGlzdGluZz1lLAogICAgLi4uCQlwcmVmaXg9cHJlZml4LCBzdWZmaXg9c3VmZml4KSA9PSAoCiAgICAuLi4gCScwMDAwMC5BQUFBQTAwMDAwMDAwMDAwMDAwMS4wMDAwMDAwMDAwJykKICAgIFRydWUKCiAgICA+Pj4gZSA9IGxpc3QoZXhpc3RpbmcpCiAgICA+Pj4gZS5hcHBlbmQocHJlZml4ICsgImFhYWFhIiArICIxIi56ZmlsbCgxNSkgKyBzdWZmaXgpCiAgICA+Pj4gaGFuZGxlQ2xhc2gxKHVzZXJOYW1lPSJBIiAqIDUsIGV4aXN0aW5nPWUsCiAgICAuLi4JCXByZWZpeD1wcmVmaXgsIHN1ZmZpeD1zdWZmaXgpID09ICgKICAgIC4uLiAJJzAwMDAwLkFBQUFBMDAwMDAwMDAwMDAwMDAyLjAwMDAwMDAwMDAnKQogICAgVHJ1ZQoKICAgID4+PiBlID0gbGlzdChleGlzdGluZykKICAgID4+PiBlLmFwcGVuZChwcmVmaXggKyAiQUFBQUEiICsgIjIiLnpmaWxsKDE1KSArIHN1ZmZpeCkKICAgID4+PiBoYW5kbGVDbGFzaDEodXNlck5hbWU9IkEiICogNSwgZXhpc3Rpbmc9ZSwKICAgIC4uLgkJcHJlZml4PXByZWZpeCwgc3VmZml4PXN1ZmZpeCkgPT0gKAogICAgLi4uIAknMDAwMDAuQUFBQUEwMDAwMDAwMDAwMDAwMDEuMDAwMDAwMDAwMCcpCiAgICBUcnVlCiAgICAiIiIKICAgICMgaWYgdGhlIHByZWZpeCBsZW5ndGggKyB1c2VyIG5hbWUgbGVuZ3RoICsgc3VmZml4IGxlbmd0aCArIDE1IGlzIGF0CiAgICAjIG9yIHBhc3QgdGhlIG1heGltdW0gbGVuZ3RoLCBzaWxjZSAxNSBjaGFyYWN0ZXJzIG9mZiBvZiB0aGUgdXNlciBuYW1lCiAgICBwcmVmaXhMZW5ndGggPSBsZW4ocHJlZml4KQogICAgc3VmZml4TGVuZ3RoID0gbGVuKHN1ZmZpeCkKICAgIGlmIHByZWZpeExlbmd0aCArIGxlbih1c2VyTmFtZSkgKyBzdWZmaXhMZW5ndGggKyAxNSA+IG1heEZpbGVOYW1lTGVuZ3RoOgogICAgICAgIGwgPSBwcmVmaXhMZW5ndGggKyBsZW4odXNlck5hbWUpICsgc3VmZml4TGVuZ3RoICsgMTUKICAgICAgICBzbGljZUxlbmd0aCA9IG1heEZpbGVOYW1lTGVuZ3RoIC0gbAogICAgICAgIHVzZXJOYW1lID0gdXNlck5hbWVbOnNsaWNlTGVuZ3RoXQogICAgZmluYWxOYW1lID0gTm9uZQogICAgIyB0cnkgdG8gYWRkIG51bWJlcnMgdG8gY3JlYXRlIGEgdW5pcXVlIG5hbWUKICAgIGNvdW50ZXIgPSAxCiAgICB3aGlsZSBmaW5hbE5hbWUgaXMgTm9uZToKICAgICAgICBuYW1lID0gdXNlck5hbWUgKyBzdHIoY291bnRlcikuemZpbGwoMTUpCiAgICAgICAgZnVsbE5hbWUgPSBwcmVmaXggKyBuYW1lICsgc3VmZml4CiAgICAgICAgaWYgZnVsbE5hbWUubG93ZXIoKSBub3QgaW4gZXhpc3Rpbmc6CiAgICAgICAgICAgIGZpbmFsTmFtZSA9IGZ1bGxOYW1lCiAgICAgICAgICAgIGJyZWFrCiAgICAgICAgZWxzZToKICAgICAgICAgICAgY291bnRlciArPSAxCiAgICAgICAgaWYgY291bnRlciA+PSA5OTk5OTk5OTk5OTk5OTk6CiAgICAgICAgICAgIGJyZWFrCiAgICAjIGlmIHRoZXJlIGlzIGEgY2xhc2gsIGdvIHRvIHRoZSBuZXh0IGZhbGxiYWNrCiAgICBpZiBmaW5hbE5hbWUgaXMgTm9uZToKICAgICAgICBmaW5hbE5hbWUgPSBoYW5kbGVDbGFzaDIoZXhpc3RpbmcsIHByZWZpeCwgc3VmZml4KQogICAgIyBmaW5pc2hlZAogICAgcmV0dXJuIGZpbmFsTmFtZQoKCmRlZiBoYW5kbGVDbGFzaDIoZXhpc3Rpbmc9W10sIHByZWZpeD0iIiwgc3VmZml4PSIiKToKICAgICIiIgogICAgZXhpc3Rpbmcgc2hvdWxkIGJlIGEgY2FzZS1pbnNlbnNpdGl2ZSBsaXN0CiAgICBvZiBhbGwgZXhpc3RpbmcgZmlsZSBuYW1lcy4KCiAgICA+Pj4gcHJlZml4ID0gKCIwIiAqIDUpICsgIi4iCiAgICA+Pj4gc3VmZml4ID0gIi4iICsgKCIwIiAqIDEwKQogICAgPj4+IGV4aXN0aW5nID0gW3ByZWZpeCArIHN0cihpKSArIHN1ZmZpeCBmb3IgaSBpbiByYW5nZSgxMDApXQoKICAgID4+PiBlID0gbGlzdChleGlzdGluZykKICAgID4+PiBoYW5kbGVDbGFzaDIoZXhpc3Rpbmc9ZSwgcHJlZml4PXByZWZpeCwgc3VmZml4PXN1ZmZpeCkgPT0gKAogICAgLi4uIAknMDAwMDAuMTAwLjAwMDAwMDAwMDAnKQogICAgVHJ1ZQoKICAgID4+PiBlID0gbGlzdChleGlzdGluZykKICAgID4+PiBlLnJlbW92ZShwcmVmaXggKyAiMSIgKyBzdWZmaXgpCiAgICA+Pj4gaGFuZGxlQ2xhc2gyKGV4aXN0aW5nPWUsIHByZWZpeD1wcmVmaXgsIHN1ZmZpeD1zdWZmaXgpID09ICgKICAgIC4uLiAJJzAwMDAwLjEuMDAwMDAwMDAwMCcpCiAgICBUcnVlCgogICAgPj4+IGUgPSBsaXN0KGV4aXN0aW5nKQogICAgPj4+IGUucmVtb3ZlKHByZWZpeCArICIyIiArIHN1ZmZpeCkKICAgID4+PiBoYW5kbGVDbGFzaDIoZXhpc3Rpbmc9ZSwgcHJlZml4PXByZWZpeCwgc3VmZml4PXN1ZmZpeCkgPT0gKAogICAgLi4uIAknMDAwMDAuMi4wMDAwMDAwMDAwJykKICAgIFRydWUKICAgICIiIgogICAgIyBjYWxjdWxhdGUgdGhlIGxvbmdlc3QgcG9zc2libGUgc3RyaW5nCiAgICBtYXhMZW5ndGggPSBtYXhGaWxlTmFtZUxlbmd0aCAtIGxlbihwcmVmaXgpIC0gbGVuKHN1ZmZpeCkKICAgIG1heFZhbHVlID0gaW50KCI5IiAqIG1heExlbmd0aCkKICAgICMgdHJ5IHRvIGZpbmQgYSBudW1iZXIKICAgIGZpbmFsTmFtZSA9IE5vbmUKICAgIGNvdW50ZXIgPSAxCiAgICB3aGlsZSBmaW5hbE5hbWUgaXMgTm9uZToKICAgICAgICBmdWxsTmFtZSA9IHByZWZpeCArIHN0cihjb3VudGVyKSArIHN1ZmZpeAogICAgICAgIGlmIGZ1bGxOYW1lLmxvd2VyKCkgbm90IGluIGV4aXN0aW5nOgogICAgICAgICAgICBmaW5hbE5hbWUgPSBmdWxsTmFtZQogICAgICAgICAgICBicmVhawogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGNvdW50ZXIgKz0gMQogICAgICAgIGlmIGNvdW50ZXIgPj0gbWF4VmFsdWU6CiAgICAgICAgICAgIGJyZWFrCiAgICAjIHJhaXNlIGFuIGVycm9yIGlmIG5vdGhpbmcgaGFzIGJlZW4gZm91bmQKICAgIGlmIGZpbmFsTmFtZSBpcyBOb25lOgogICAgICAgIHJhaXNlIE5hbWVUcmFuc2xhdGlvbkVycm9yKCJObyB1bmlxdWUgbmFtZSBjb3VsZCBiZSBmb3VuZC4iKQogICAgIyBmaW5pc2hlZAogICAgcmV0dXJuIGZpbmFsTmFtZQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBpbXBvcnQgZG9jdGVzdAogICAgaW1wb3J0IHN5cwoKICAgIHN5cy5leGl0KGRvY3Rlc3QudGVzdG1vZCgpLmZhaWxlZCkK
+"""
+This module implements the algorithm for converting between a "user name" -
+something that a user can choose arbitrarily inside a font editor - and a file
+name suitable for use in a wide range of operating systems and filesystems.
+
+The `UFO 3 specification <http://unifiedfontobject.org/versions/ufo3/conventions/>`_
+provides an example of an algorithm for such conversion, which avoids illegal
+characters, reserved file names, ambiguity between upper- and lower-case
+characters, and clashes with existing files.
+
+This code was originally copied from
+`ufoLib <https://github.com/unified-font-object/ufoLib/blob/8747da7/Lib/ufoLib/filenames.py>`_
+by Tal Leming and is copyright (c) 2005-2016, The RoboFab Developers:
+
+-	Erik van Blokland
+-	Tal Leming
+-	Just van Rossum
+"""
+
+illegalCharacters = r"\" * + / : < > ? [ \ ] | \0".split(" ")
+illegalCharacters += [chr(i) for i in range(1, 32)]
+illegalCharacters += [chr(0x7F)]
+reservedFileNames = "CON PRN AUX CLOCK$ NUL A:-Z: COM1".lower().split(" ")
+reservedFileNames += "LPT1 LPT2 LPT3 COM2 COM3 COM4".lower().split(" ")
+maxFileNameLength = 255
+
+
+class NameTranslationError(Exception):
+    pass
+
+
+def userNameToFileName(userName, existing=[], prefix="", suffix=""):
+    """Converts from a user name to a file name.
+
+    Takes care to avoid illegal characters, reserved file names, ambiguity between
+    upper- and lower-case characters, and clashes with existing files.
+
+    Args:
+            userName (str): The input file name.
+            existing: A case-insensitive list of all existing file names.
+            prefix: Prefix to be prepended to the file name.
+            suffix: Suffix to be appended to the file name.
+
+    Returns:
+            A suitable filename.
+
+    Raises:
+            NameTranslationError: If no suitable name could be generated.
+
+    Examples::
+
+            >>> userNameToFileName("a") == "a"
+            True
+            >>> userNameToFileName("A") == "A_"
+            True
+            >>> userNameToFileName("AE") == "A_E_"
+            True
+            >>> userNameToFileName("Ae") == "A_e"
+            True
+            >>> userNameToFileName("ae") == "ae"
+            True
+            >>> userNameToFileName("aE") == "aE_"
+            True
+            >>> userNameToFileName("a.alt") == "a.alt"
+            True
+            >>> userNameToFileName("A.alt") == "A_.alt"
+            True
+            >>> userNameToFileName("A.Alt") == "A_.A_lt"
+            True
+            >>> userNameToFileName("A.aLt") == "A_.aL_t"
+            True
+            >>> userNameToFileName(u"A.alT") == "A_.alT_"
+            True
+            >>> userNameToFileName("T_H") == "T__H_"
+            True
+            >>> userNameToFileName("T_h") == "T__h"
+            True
+            >>> userNameToFileName("t_h") == "t_h"
+            True
+            >>> userNameToFileName("F_F_I") == "F__F__I_"
+            True
+            >>> userNameToFileName("f_f_i") == "f_f_i"
+            True
+            >>> userNameToFileName("Aacute_V.swash") == "A_acute_V_.swash"
+            True
+            >>> userNameToFileName(".notdef") == "_notdef"
+            True
+            >>> userNameToFileName("con") == "_con"
+            True
+            >>> userNameToFileName("CON") == "C_O_N_"
+            True
+            >>> userNameToFileName("con.alt") == "_con.alt"
+            True
+            >>> userNameToFileName("alt.con") == "alt._con"
+            True
+    """
+    # the incoming name must be a str
+    if not isinstance(userName, str):
+        raise ValueError("The value for userName must be a string.")
+    # establish the prefix and suffix lengths
+    prefixLength = len(prefix)
+    suffixLength = len(suffix)
+    # replace an initial period with an _
+    # if no prefix is to be added
+    if not prefix and userName[0] == ".":
+        userName = "_" + userName[1:]
+    # filter the user name
+    filteredUserName = []
+    for character in userName:
+        # replace illegal characters with _
+        if character in illegalCharacters:
+            character = "_"
+        # add _ to all non-lower characters
+        elif character != character.lower():
+            character += "_"
+        filteredUserName.append(character)
+    userName = "".join(filteredUserName)
+    # clip to 255
+    sliceLength = maxFileNameLength - prefixLength - suffixLength
+    userName = userName[:sliceLength]
+    # test for illegal files names
+    parts = []
+    for part in userName.split("."):
+        if part.lower() in reservedFileNames:
+            part = "_" + part
+        parts.append(part)
+    userName = ".".join(parts)
+    # test for clash
+    fullName = prefix + userName + suffix
+    if fullName.lower() in existing:
+        fullName = handleClash1(userName, existing, prefix, suffix)
+    # finished
+    return fullName
+
+
+def handleClash1(userName, existing=[], prefix="", suffix=""):
+    """
+    existing should be a case-insensitive list
+    of all existing file names.
+
+    >>> prefix = ("0" * 5) + "."
+    >>> suffix = "." + ("0" * 10)
+    >>> existing = ["a" * 5]
+
+    >>> e = list(existing)
+    >>> handleClash1(userName="A" * 5, existing=e,
+    ...		prefix=prefix, suffix=suffix) == (
+    ... 	'00000.AAAAA000000000000001.0000000000')
+    True
+
+    >>> e = list(existing)
+    >>> e.append(prefix + "aaaaa" + "1".zfill(15) + suffix)
+    >>> handleClash1(userName="A" * 5, existing=e,
+    ...		prefix=prefix, suffix=suffix) == (
+    ... 	'00000.AAAAA000000000000002.0000000000')
+    True
+
+    >>> e = list(existing)
+    >>> e.append(prefix + "AAAAA" + "2".zfill(15) + suffix)
+    >>> handleClash1(userName="A" * 5, existing=e,
+    ...		prefix=prefix, suffix=suffix) == (
+    ... 	'00000.AAAAA000000000000001.0000000000')
+    True
+    """
+    # if the prefix length + user name length + suffix length + 15 is at
+    # or past the maximum length, silce 15 characters off of the user name
+    prefixLength = len(prefix)
+    suffixLength = len(suffix)
+    if prefixLength + len(userName) + suffixLength + 15 > maxFileNameLength:
+        l = prefixLength + len(userName) + suffixLength + 15
+        sliceLength = maxFileNameLength - l
+        userName = userName[:sliceLength]
+    finalName = None
+    # try to add numbers to create a unique name
+    counter = 1
+    while finalName is None:
+        name = userName + str(counter).zfill(15)
+        fullName = prefix + name + suffix
+        if fullName.lower() not in existing:
+            finalName = fullName
+            break
+        else:
+            counter += 1
+        if counter >= 999999999999999:
+            break
+    # if there is a clash, go to the next fallback
+    if finalName is None:
+        finalName = handleClash2(existing, prefix, suffix)
+    # finished
+    return finalName
+
+
+def handleClash2(existing=[], prefix="", suffix=""):
+    """
+    existing should be a case-insensitive list
+    of all existing file names.
+
+    >>> prefix = ("0" * 5) + "."
+    >>> suffix = "." + ("0" * 10)
+    >>> existing = [prefix + str(i) + suffix for i in range(100)]
+
+    >>> e = list(existing)
+    >>> handleClash2(existing=e, prefix=prefix, suffix=suffix) == (
+    ... 	'00000.100.0000000000')
+    True
+
+    >>> e = list(existing)
+    >>> e.remove(prefix + "1" + suffix)
+    >>> handleClash2(existing=e, prefix=prefix, suffix=suffix) == (
+    ... 	'00000.1.0000000000')
+    True
+
+    >>> e = list(existing)
+    >>> e.remove(prefix + "2" + suffix)
+    >>> handleClash2(existing=e, prefix=prefix, suffix=suffix) == (
+    ... 	'00000.2.0000000000')
+    True
+    """
+    # calculate the longest possible string
+    maxLength = maxFileNameLength - len(prefix) - len(suffix)
+    maxValue = int("9" * maxLength)
+    # try to find a number
+    finalName = None
+    counter = 1
+    while finalName is None:
+        fullName = prefix + str(counter) + suffix
+        if fullName.lower() not in existing:
+            finalName = fullName
+            break
+        else:
+            counter += 1
+        if counter >= maxValue:
+            break
+    # raise an error if nothing has been found
+    if finalName is None:
+        raise NameTranslationError("No unique name could be found.")
+    # finished
+    return finalName
+
+
+if __name__ == "__main__":
+    import doctest
+    import sys
+
+    sys.exit(doctest.testmod().failed)

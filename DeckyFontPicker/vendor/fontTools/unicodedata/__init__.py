@@ -1,1 +1,305 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVvcmQsIHRvc3RyCgppbXBvcnQgcmUKZnJvbSBiaXNlY3QgaW1wb3J0IGJpc2VjdF9yaWdodApmcm9tIHR5cGluZyBpbXBvcnQgTGl0ZXJhbCwgVHlwZVZhciwgb3ZlcmxvYWQKCnRyeToKICAgICMgdXNlIHVuaWNvZGVkYXRhIGJhY2twb3J0IGNvbXBhdGlibGUgd2l0aCBweXRob24yOgogICAgIyBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL3VuaWNvZGVkYXRhMgogICAgZnJvbSB1bmljb2RlZGF0YTIgaW1wb3J0ICoKZXhjZXB0IEltcG9ydEVycm9yOiAgIyBwcmFnbWE6IG5vIGNvdmVyCiAgICAjIGZhbGwgYmFjayB0byBidWlsdC1pbiB1bmljb2RlZGF0YSAocG9zc2libHkgb3V0ZGF0ZWQpCiAgICBmcm9tIHVuaWNvZGVkYXRhIGltcG9ydCAqCgpmcm9tIC4gaW1wb3J0IEJsb2NrcywgTWlycm9yZWQsIFNjcmlwdHMsIFNjcmlwdEV4dGVuc2lvbnMsIE9UVGFncwoKX19hbGxfXyA9IFsKICAgICMgbmFtZXMgZnJvbSBidWlsdC1pbiB1bmljb2RlZGF0YSBtb2R1bGUKICAgICJsb29rdXAiLAogICAgIm5hbWUiLAogICAgImRlY2ltYWwiLAogICAgImRpZ2l0IiwKICAgICJudW1lcmljIiwKICAgICJjYXRlZ29yeSIsCiAgICAiYmlkaXJlY3Rpb25hbCIsCiAgICAiY29tYmluaW5nIiwKICAgICJlYXN0X2FzaWFuX3dpZHRoIiwKICAgICJtaXJyb3JlZCIsCiAgICAiZGVjb21wb3NpdGlvbiIsCiAgICAibm9ybWFsaXplIiwKICAgICJ1bmlkYXRhX3ZlcnNpb24iLAogICAgInVjZF8zXzJfMCIsCiAgICAjIGFkZGl0b25hbCBmdW5jdGlvbnMKICAgICJibG9jayIsCiAgICAic2NyaXB0IiwKICAgICJzY3JpcHRfZXh0ZW5zaW9uIiwKICAgICJzY3JpcHRfbmFtZSIsCiAgICAic2NyaXB0X2NvZGUiLAogICAgInNjcmlwdF9ob3Jpem9udGFsX2RpcmVjdGlvbiIsCiAgICAib3RfdGFnc19mcm9tX3NjcmlwdCIsCiAgICAib3RfdGFnX3RvX3NjcmlwdCIsCl0KCgpkZWYgbWlycm9yZWQoY29kZSk6CiAgICAiIiJJZiBjb2RlICh1bmljb2RlIGNvZGVwb2ludCkgaGFzIGEgbWlycm9yZWQgdmVyc2lvbiByZXR1cm5zIGl0LCBvdGhlcndpc2UgTm9uZS4iIiIKICAgIHJldHVybiBNaXJyb3JlZC5NSVJST1JFRC5nZXQoY29kZSkKCgpkZWYgc2NyaXB0KGNoYXIpOgogICAgIiIiUmV0dXJuIHRoZSBmb3VyLWxldHRlciBzY3JpcHQgY29kZSBhc3NpZ25lZCB0byB0aGUgVW5pY29kZSBjaGFyYWN0ZXIKICAgICdjaGFyJyBhcyBzdHJpbmcuCgogICAgPj4+IHNjcmlwdCgiYSIpCiAgICAnTGF0bicKICAgID4+PiBzY3JpcHQoIiwiKQogICAgJ1p5eXknCiAgICA+Pj4gc2NyaXB0KGNocigweDEwRkZGRikpCiAgICAnWnp6eicKICAgICIiIgogICAgY29kZSA9IGJ5dGVvcmQoY2hhcikKICAgICMgJ2Jpc2VjdF9yaWdodChhLCB4LCBsbz0wLCBoaT1sZW4oYSkpJyByZXR1cm5zIGFuIGluc2VydGlvbiBwb2ludCB3aGljaAogICAgIyBjb21lcyBhZnRlciAodG8gdGhlIHJpZ2h0IG9mKSBhbnkgZXhpc3RpbmcgZW50cmllcyBvZiB4IGluIGEsIGFuZCBpdAogICAgIyBwYXJ0aXRpb25zIGFycmF5IGEgaW50byB0d28gaGFsdmVzIHNvIHRoYXQsIGZvciB0aGUgbGVmdCBzaWRlCiAgICAjIGFsbCh2YWwgPD0geCBmb3IgdmFsIGluIGFbbG86aV0pLCBhbmQgZm9yIHRoZSByaWdodCBzaWRlCiAgICAjIGFsbCh2YWwgPiB4IGZvciB2YWwgaW4gYVtpOmhpXSkuCiAgICAjIE91ciAnU0NSSVBUX1JBTkdFUycgaXMgYSBzb3J0ZWQgbGlzdCBvZiByYW5nZXMgKG9ubHkgdGhlaXIgc3RhcnRpbmcKICAgICMgYnJlYWtwb2ludHMpOyB3ZSB3YW50IHRvIHVzZSBgYmlzZWN0X3JpZ2h0YCB0byBsb29rIHVwIHRoZSByYW5nZSB0aGF0CiAgICAjIGNvbnRhaW5zIHRoZSBnaXZlbiBjb2RlcG9pbnQ6IGkuZS4gd2hvc2Ugc3RhcnQgaXMgbGVzcyB0aGFuIG9yIGVxdWFsCiAgICAjIHRvIHRoZSBjb2RlcG9pbnQuIFRodXMsIHdlIHN1YnRyYWN0IC0xIGZyb20gdGhlIGluZGV4IHJldHVybmVkLgogICAgaSA9IGJpc2VjdF9yaWdodChTY3JpcHRzLlJBTkdFUywgY29kZSkKICAgIHJldHVybiBTY3JpcHRzLlZBTFVFU1tpIC0gMV0KCgpkZWYgc2NyaXB0X2V4dGVuc2lvbihjaGFyKToKICAgICIiIlJldHVybiB0aGUgc2NyaXB0IGV4dGVuc2lvbiBwcm9wZXJ0eSBhc3NpZ25lZCB0byB0aGUgVW5pY29kZSBjaGFyYWN0ZXIKICAgICdjaGFyJyBhcyBhIHNldCBvZiBzdHJpbmcuCgogICAgPj4+IHNjcmlwdF9leHRlbnNpb24oImEiKSA9PSB7J0xhdG4nfQogICAgVHJ1ZQogICAgPj4+IHNjcmlwdF9leHRlbnNpb24oY2hyKDB4MDYwQykpID09IHsnTmtvbycsICdBcmFiJywgJ1JvaGcnLCAnVGhhYScsICdTeXJjJywgJ0dhcmEnLCAnWWV6aSd9CiAgICBUcnVlCiAgICA+Pj4gc2NyaXB0X2V4dGVuc2lvbihjaHIoMHgxMEZGRkYpKSA9PSB7J1p6enonfQogICAgVHJ1ZQogICAgIiIiCiAgICBjb2RlID0gYnl0ZW9yZChjaGFyKQogICAgaSA9IGJpc2VjdF9yaWdodChTY3JpcHRFeHRlbnNpb25zLlJBTkdFUywgY29kZSkKICAgIHZhbHVlID0gU2NyaXB0RXh0ZW5zaW9ucy5WQUxVRVNbaSAtIDFdCiAgICBpZiB2YWx1ZSBpcyBOb25lOgogICAgICAgICMgY29kZSBwb2ludHMgbm90IGV4cGxpY2l0bHkgbGlzdGVkIGZvciBTY3JpcHQgRXh0ZW5zaW9ucwogICAgICAgICMgaGF2ZSBhcyB0aGVpciB2YWx1ZSB0aGUgY29ycmVzcG9uZGluZyBTY3JpcHQgcHJvcGVydHkgdmFsdWUKICAgICAgICByZXR1cm4ge3NjcmlwdChjaGFyKX0KICAgIHJldHVybiB2YWx1ZQoKCmRlZiBzY3JpcHRfbmFtZShjb2RlLCBkZWZhdWx0PUtleUVycm9yKToKICAgICIiIlJldHVybiB0aGUgbG9uZywgaHVtYW4tcmVhZGFibGUgc2NyaXB0IG5hbWUgZ2l2ZW4gYSBmb3VyLWxldHRlcgogICAgVW5pY29kZSBzY3JpcHQgY29kZS4KCiAgICBJZiBubyBtYXRjaGluZyBuYW1lIGlzIGZvdW5kLCBhIEtleUVycm9yIGlzIHJhaXNlZCBieSBkZWZhdWx0LgoKICAgIFlvdSBjYW4gdXNlIHRoZSAnZGVmYXVsdCcgYXJndW1lbnQgdG8gcmV0dXJuIGEgZmFsbGJhY2sgdmFsdWUgKGUuZy4KICAgICdVbmtub3duJyBvciBOb25lKSBpbnN0ZWFkIG9mIHRocm93aW5nIGFuIGVycm9yLgogICAgIiIiCiAgICB0cnk6CiAgICAgICAgcmV0dXJuIHN0cihTY3JpcHRzLk5BTUVTW2NvZGVdLnJlcGxhY2UoIl8iLCAiICIpKQogICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgIGlmIGlzaW5zdGFuY2UoZGVmYXVsdCwgdHlwZSkgYW5kIGlzc3ViY2xhc3MoZGVmYXVsdCwgS2V5RXJyb3IpOgogICAgICAgICAgICByYWlzZQogICAgICAgIHJldHVybiBkZWZhdWx0CgoKX25vcm1hbGl6ZV9yZSA9IHJlLmNvbXBpbGUociJbLV8gXSsiKQoKCmRlZiBfbm9ybWFsaXplX3Byb3BlcnR5X25hbWUoc3RyaW5nKToKICAgICIiIlJlbW92ZSBjYXNlLCBzdHJpcCBzcGFjZSwgJy0nIGFuZCAnXycgZm9yIGxvb3NlIG1hdGNoaW5nLiIiIgogICAgcmV0dXJuIF9ub3JtYWxpemVfcmUuc3ViKCIiLCBzdHJpbmcpLmxvd2VyKCkKCgpfU0NSSVBUX0NPREVTID0ge19ub3JtYWxpemVfcHJvcGVydHlfbmFtZSh2KTogayBmb3IgaywgdiBpbiBTY3JpcHRzLk5BTUVTLml0ZW1zKCl9CgoKZGVmIHNjcmlwdF9jb2RlKHNjcmlwdF9uYW1lLCBkZWZhdWx0PUtleUVycm9yKToKICAgICIiIlJldHVybnMgdGhlIGZvdXItbGV0dGVyIFVuaWNvZGUgc2NyaXB0IGNvZGUgZnJvbSBpdHMgbG9uZyBuYW1lCgogICAgSWYgbm8gbWF0Y2hpbmcgc2NyaXB0IGNvZGUgaXMgZm91bmQsIGEgS2V5RXJyb3IgaXMgcmFpc2VkIGJ5IGRlZmF1bHQuCgogICAgWW91IGNhbiB1c2UgdGhlICdkZWZhdWx0JyBhcmd1bWVudCB0byByZXR1cm4gYSBmYWxsYmFjayBzdHJpbmcgKGUuZy4KICAgICdaenp6JyBvciBOb25lKSBpbnN0ZWFkIG9mIHRocm93aW5nIGFuIGVycm9yLgogICAgIiIiCiAgICBub3JtYWxpemVkX25hbWUgPSBfbm9ybWFsaXplX3Byb3BlcnR5X25hbWUoc2NyaXB0X25hbWUpCiAgICB0cnk6CiAgICAgICAgcmV0dXJuIF9TQ1JJUFRfQ09ERVNbbm9ybWFsaXplZF9uYW1lXQogICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgIGlmIGlzaW5zdGFuY2UoZGVmYXVsdCwgdHlwZSkgYW5kIGlzc3ViY2xhc3MoZGVmYXVsdCwgS2V5RXJyb3IpOgogICAgICAgICAgICByYWlzZQogICAgICAgIHJldHVybiBkZWZhdWx0CgoKIyBUaGUgZGF0YSBvbiBzY3JpcHQgZGlyZWN0aW9uIGlzIHRha2VuIGZyb20gSGFyZmJ1enogc291cmNlIGNvZGU6CiMgaHR0cHM6Ly9naXRodWIuY29tL2hhcmZidXp6L2hhcmZidXp6L2Jsb2IvMy4yLjAvc3JjL2hiLWNvbW1vbi5jYyNMNTE0LUw2MTMKIyBUaGlzIGluIHR1cm4gcmVmZXJlbmNlcyB0aGUgZm9sbG93aW5nICJTY3JpcHRfTWV0YWRhdGEiIGRvY3VtZW50OgojIGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL3NwcmVhZHNoZWV0cy9kLzFZOTBNMEllM01VSjZVVkNSRE95cE90aWpsTURMTk55eUxrMzZUNmlNdTBvClJUTF9TQ1JJUFRTID0gewogICAgIyBVbmljb2RlLTEuMSBhZGRpdGlvbnMKICAgICJBcmFiIiwgICMgQXJhYmljCiAgICAiSGViciIsICAjIEhlYnJldwogICAgIyBVbmljb2RlLTMuMCBhZGRpdGlvbnMKICAgICJTeXJjIiwgICMgU3lyaWFjCiAgICAiVGhhYSIsICAjIFRoYWFuYQogICAgIyBVbmljb2RlLTQuMCBhZGRpdGlvbnMKICAgICJDcHJ0IiwgICMgQ3lwcmlvdAogICAgIyBVbmljb2RlLTQuMSBhZGRpdGlvbnMKICAgICJLaGFyIiwgICMgS2hhcm9zaHRoaQogICAgIyBVbmljb2RlLTUuMCBhZGRpdGlvbnMKICAgICJQaG54IiwgICMgUGhvZW5pY2lhbgogICAgIk5rb28iLCAgIyBOa28KICAgICMgVW5pY29kZS01LjEgYWRkaXRpb25zCiAgICAiTHlkaSIsICAjIEx5ZGlhbgogICAgIyBVbmljb2RlLTUuMiBhZGRpdGlvbnMKICAgICJBdnN0IiwgICMgQXZlc3RhbgogICAgIkFybWkiLCAgIyBJbXBlcmlhbCBBcmFtYWljCiAgICAiUGhsaSIsICAjIEluc2NyaXB0aW9uYWwgUGFobGF2aQogICAgIlBydGkiLCAgIyBJbnNjcmlwdGlvbmFsIFBhcnRoaWFuCiAgICAiU2FyYiIsICAjIE9sZCBTb3V0aCBBcmFiaWFuCiAgICAiT3JraCIsICAjIE9sZCBUdXJraWMKICAgICJTYW1yIiwgICMgU2FtYXJpdGFuCiAgICAjIFVuaWNvZGUtNi4wIGFkZGl0aW9ucwogICAgIk1hbmQiLCAgIyBNYW5kYWljCiAgICAjIFVuaWNvZGUtNi4xIGFkZGl0aW9ucwogICAgIk1lcmMiLCAgIyBNZXJvaXRpYyBDdXJzaXZlCiAgICAiTWVybyIsICAjIE1lcm9pdGljIEhpZXJvZ2x5cGhzCiAgICAjIFVuaWNvZGUtNy4wIGFkZGl0aW9ucwogICAgIk1hbmkiLCAgIyBNYW5pY2hhZWFuCiAgICAiTWVuZCIsICAjIE1lbmRlIEtpa2FrdWkKICAgICJOYmF0IiwgICMgTmFiYXRhZWFuCiAgICAiTmFyYiIsICAjIE9sZCBOb3J0aCBBcmFiaWFuCiAgICAiUGFsbSIsICAjIFBhbG15cmVuZQogICAgIlBobHAiLCAgIyBQc2FsdGVyIFBhaGxhdmkKICAgICMgVW5pY29kZS04LjAgYWRkaXRpb25zCiAgICAiSGF0ciIsICAjIEhhdHJhbgogICAgIkh1bmciLCAgIyBPbGQgSHVuZ2FyaWFuCiAgICAjIFVuaWNvZGUtOS4wIGFkZGl0aW9ucwogICAgIkFkbG0iLCAgIyBBZGxhbQogICAgIyBVbmljb2RlLTExLjAgYWRkaXRpb25zCiAgICAiUm9oZyIsICAjIEhhbmlmaSBSb2hpbmd5YQogICAgIlNvZ28iLCAgIyBPbGQgU29nZGlhbgogICAgIlNvZ2QiLCAgIyBTb2dkaWFuCiAgICAjIFVuaWNvZGUtMTIuMCBhZGRpdGlvbnMKICAgICJFbHltIiwgICMgRWx5bWFpYwogICAgIyBVbmljb2RlLTEzLjAgYWRkaXRpb25zCiAgICAiQ2hycyIsICAjIENob3Jhc21pYW4KICAgICJZZXppIiwgICMgWWV6aWRpCiAgICAjIFVuaWNvZGUtMTQuMCBhZGRpdGlvbnMKICAgICJPdWdyIiwgICMgT2xkIFV5Z2h1cgogICAgIyBVbmljb2RlLTE2LjAgYWRkaXRpb25zCiAgICAiR2FyYSIsICAjIEdhcmF5CiAgICAjIFVuaWNvZGUtMTcuMCBhZGRpdGlvbnMKICAgICJTaWR0IiwgICMgU2lkZXRpYwp9CgoKSG9yaXpEaXJlY3Rpb24gPSBMaXRlcmFsWyJSVEwiLCAiTFRSIl0KVCA9IFR5cGVWYXIoIlQiKQoKCkBvdmVybG9hZApkZWYgc2NyaXB0X2hvcml6b250YWxfZGlyZWN0aW9uKHNjcmlwdF9jb2RlOiBzdHIsIGRlZmF1bHQ6IFQpIC0+IEhvcml6RGlyZWN0aW9uIHwgVDogLi4uCgoKQG92ZXJsb2FkCmRlZiBzY3JpcHRfaG9yaXpvbnRhbF9kaXJlY3Rpb24oCiAgICBzY3JpcHRfY29kZTogc3RyLCBkZWZhdWx0OiB0eXBlW0tleUVycm9yXSA9IEtleUVycm9yCikgLT4gSG9yaXpEaXJlY3Rpb246IC4uLgoKCmRlZiBzY3JpcHRfaG9yaXpvbnRhbF9kaXJlY3Rpb24oCiAgICBzY3JpcHRfY29kZTogc3RyLCBkZWZhdWx0OiBUIHwgdHlwZVtLZXlFcnJvcl0gPSBLZXlFcnJvcgopIC0+IEhvcml6RGlyZWN0aW9uIHwgVDoKICAgICIiIlJldHVybiAiUlRMIiBmb3Igc2NyaXB0cyB0aGF0IGNvbnRhaW4gcmlnaHQtdG8tbGVmdCBjaGFyYWN0ZXJzCiAgICBhY2NvcmRpbmcgdG8gdGhlIEJpZGlfQ2xhc3MgcHJvcGVydHkuIE90aGVyd2lzZSByZXR1cm4gIkxUUiIuCiAgICAiIiIKICAgIGlmIHNjcmlwdF9jb2RlIG5vdCBpbiBTY3JpcHRzLk5BTUVTOgogICAgICAgIGlmIGlzaW5zdGFuY2UoZGVmYXVsdCwgdHlwZSkgYW5kIGlzc3ViY2xhc3MoZGVmYXVsdCwgS2V5RXJyb3IpOgogICAgICAgICAgICByYWlzZSBkZWZhdWx0KHNjcmlwdF9jb2RlKQogICAgICAgIHJldHVybiBkZWZhdWx0CiAgICByZXR1cm4gIlJUTCIgaWYgc2NyaXB0X2NvZGUgaW4gUlRMX1NDUklQVFMgZWxzZSAiTFRSIgoKCmRlZiBibG9jayhjaGFyKToKICAgICIiIlJldHVybiB0aGUgYmxvY2sgcHJvcGVydHkgYXNzaWduZWQgdG8gdGhlIFVuaWNvZGUgY2hhcmFjdGVyICdjaGFyJwogICAgYXMgYSBzdHJpbmcuCgogICAgPj4+IGJsb2NrKCJhIikKICAgICdCYXNpYyBMYXRpbicKICAgID4+PiBibG9jayhjaHIoMHgwNjBDKSkKICAgICdBcmFiaWMnCiAgICA+Pj4gYmxvY2soY2hyKDB4RUZGRkYpKQogICAgJ05vX0Jsb2NrJwogICAgIiIiCiAgICBjb2RlID0gYnl0ZW9yZChjaGFyKQogICAgaSA9IGJpc2VjdF9yaWdodChCbG9ja3MuUkFOR0VTLCBjb2RlKQogICAgcmV0dXJuIEJsb2Nrcy5WQUxVRVNbaSAtIDFdCgoKZGVmIG90X3RhZ3NfZnJvbV9zY3JpcHQoc2NyaXB0X2NvZGUpOgogICAgIiIiUmV0dXJuIGEgbGlzdCBvZiBPcGVuVHlwZSBzY3JpcHQgdGFncyBhc3NvY2lhdGVkIHdpdGggYSBnaXZlbgogICAgVW5pY29kZSBzY3JpcHQgY29kZS4KICAgIFJldHVybiBbJ0RGTFQnXSBzY3JpcHQgdGFnIGZvciBpbnZhbGlkL3Vua25vd24gc2NyaXB0IGNvZGVzLgogICAgIiIiCiAgICBpZiBzY3JpcHRfY29kZSBpbiBPVFRhZ3MuU0NSSVBUX0VYQ0VQVElPTlM6CiAgICAgICAgcmV0dXJuIFtPVFRhZ3MuU0NSSVBUX0VYQ0VQVElPTlNbc2NyaXB0X2NvZGVdXQoKICAgIGlmIHNjcmlwdF9jb2RlIG5vdCBpbiBTY3JpcHRzLk5BTUVTOgogICAgICAgIHJldHVybiBbT1RUYWdzLkRFRkFVTFRfU0NSSVBUXQoKICAgIHNjcmlwdF90YWdzID0gW3NjcmlwdF9jb2RlWzBdLmxvd2VyKCkgKyBzY3JpcHRfY29kZVsxOl1dCiAgICBpZiBzY3JpcHRfY29kZSBpbiBPVFRhZ3MuTkVXX1NDUklQVF9UQUdTOgogICAgICAgIHNjcmlwdF90YWdzLmV4dGVuZChPVFRhZ3MuTkVXX1NDUklQVF9UQUdTW3NjcmlwdF9jb2RlXSkKICAgICAgICBzY3JpcHRfdGFncy5yZXZlcnNlKCkgICMgbGFzdCBpbiwgZmlyc3Qgb3V0CgogICAgcmV0dXJuIHNjcmlwdF90YWdzCgoKZGVmIG90X3RhZ190b19zY3JpcHQodGFnKToKICAgICIiIlJldHVybiB0aGUgVW5pY29kZSBzY3JpcHQgY29kZSBmb3IgdGhlIGdpdmVuIE9wZW5UeXBlIHNjcmlwdCB0YWcsIG9yCiAgICBOb25lIGZvciAiREZMVCIgdGFnIG9yIGlmIHRoZXJlIGlzIG5vIFVuaWNvZGUgc2NyaXB0IGFzc29jaWF0ZWQgd2l0aCBpdC4KICAgIFJhaXNlcyBWYWx1ZUVycm9yIGlmIHRoZSB0YWcgaXMgaW52YWxpZC4KICAgICIiIgogICAgdGFnID0gdG9zdHIodGFnKS5zdHJpcCgpCiAgICBpZiBub3QgdGFnIG9yICIgIiBpbiB0YWcgb3IgbGVuKHRhZykgPiA0OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoImludmFsaWQgT3BlblR5cGUgdGFnOiAlciIgJSB0YWcpCgogICAgaWYgdGFnIGluIE9UVGFncy5TQ1JJUFRfQUxJQVNFUzoKICAgICAgICB0YWcgPSBPVFRhZ3MuU0NSSVBUX0FMSUFTRVNbdGFnXQoKICAgIHdoaWxlIGxlbih0YWcpICE9IDQ6CiAgICAgICAgdGFnICs9IHN0cigiICIpICAjIHBhZCB3aXRoIHNwYWNlcwoKICAgIGlmIHRhZyA9PSBPVFRhZ3MuREVGQVVMVF9TQ1JJUFQ6CiAgICAgICAgIyBpdCdzIHVuY2xlYXIgd2hpY2ggVW5pY29kZSBzY3JpcHQgdGhlICJERkxUIiBPcGVuVHlwZSB0YWcgbWFwcyB0bywKICAgICAgICAjIHNvIGhlcmUgd2UgcmV0dXJuIE5vbmUKICAgICAgICByZXR1cm4gTm9uZQoKICAgIGlmIHRhZyBpbiBPVFRhZ3MuTkVXX1NDUklQVF9UQUdTX1JFVkVSU0VEOgogICAgICAgIHJldHVybiBPVFRhZ3MuTkVXX1NDUklQVF9UQUdTX1JFVkVSU0VEW3RhZ10KCiAgICBpZiB0YWcgaW4gT1RUYWdzLlNDUklQVF9FWENFUFRJT05TX1JFVkVSU0VEOgogICAgICAgIHJldHVybiBPVFRhZ3MuU0NSSVBUX0VYQ0VQVElPTlNfUkVWRVJTRURbdGFnXQoKICAgICMgVGhpcyBzaWRlIG9mIHRoZSBjb252ZXJzaW9uIGlzIGZ1bGx5IGFsZ29yaXRobWljCgogICAgIyBBbnkgc3BhY2VzIGF0IHRoZSBlbmQgb2YgdGhlIHRhZyBhcmUgcmVwbGFjZWQgYnkgcmVwZWF0aW5nIHRoZSBsYXN0CiAgICAjIGxldHRlci4gRWcgJ25rbyAnIC0+ICdOa29vJy4KICAgICMgQ2hhbmdlIGZpcnN0IGNoYXIgdG8gdXBwZXJjYXNlCiAgICBzY3JpcHRfY29kZSA9IHRhZ1swXS51cHBlcigpICsgdGFnWzFdCiAgICBmb3IgaSBpbiByYW5nZSgyLCA0KToKICAgICAgICBzY3JpcHRfY29kZSArPSBzY3JpcHRfY29kZVtpIC0gMV0gaWYgdGFnW2ldID09ICIgIiBlbHNlIHRhZ1tpXQoKICAgIGlmIHNjcmlwdF9jb2RlIG5vdCBpbiBTY3JpcHRzLk5BTUVTOgogICAgICAgIHJldHVybiBOb25lCiAgICByZXR1cm4gc2NyaXB0X2NvZGUK
+from __future__ import annotations
+
+from fontTools.misc.textTools import byteord, tostr
+
+import re
+from bisect import bisect_right
+from typing import Literal, TypeVar, overload
+
+try:
+    # use unicodedata backport compatible with python2:
+    # https://github.com/fonttools/unicodedata2
+    from unicodedata2 import *
+except ImportError:  # pragma: no cover
+    # fall back to built-in unicodedata (possibly outdated)
+    from unicodedata import *
+
+from . import Blocks, Mirrored, Scripts, ScriptExtensions, OTTags
+
+__all__ = [
+    # names from built-in unicodedata module
+    "lookup",
+    "name",
+    "decimal",
+    "digit",
+    "numeric",
+    "category",
+    "bidirectional",
+    "combining",
+    "east_asian_width",
+    "mirrored",
+    "decomposition",
+    "normalize",
+    "unidata_version",
+    "ucd_3_2_0",
+    # additonal functions
+    "block",
+    "script",
+    "script_extension",
+    "script_name",
+    "script_code",
+    "script_horizontal_direction",
+    "ot_tags_from_script",
+    "ot_tag_to_script",
+]
+
+
+def mirrored(code):
+    """If code (unicode codepoint) has a mirrored version returns it, otherwise None."""
+    return Mirrored.MIRRORED.get(code)
+
+
+def script(char):
+    """Return the four-letter script code assigned to the Unicode character
+    'char' as string.
+
+    >>> script("a")
+    'Latn'
+    >>> script(",")
+    'Zyyy'
+    >>> script(chr(0x10FFFF))
+    'Zzzz'
+    """
+    code = byteord(char)
+    # 'bisect_right(a, x, lo=0, hi=len(a))' returns an insertion point which
+    # comes after (to the right of) any existing entries of x in a, and it
+    # partitions array a into two halves so that, for the left side
+    # all(val <= x for val in a[lo:i]), and for the right side
+    # all(val > x for val in a[i:hi]).
+    # Our 'SCRIPT_RANGES' is a sorted list of ranges (only their starting
+    # breakpoints); we want to use `bisect_right` to look up the range that
+    # contains the given codepoint: i.e. whose start is less than or equal
+    # to the codepoint. Thus, we subtract -1 from the index returned.
+    i = bisect_right(Scripts.RANGES, code)
+    return Scripts.VALUES[i - 1]
+
+
+def script_extension(char):
+    """Return the script extension property assigned to the Unicode character
+    'char' as a set of string.
+
+    >>> script_extension("a") == {'Latn'}
+    True
+    >>> script_extension(chr(0x060C)) == {'Nkoo', 'Arab', 'Rohg', 'Thaa', 'Syrc', 'Gara', 'Yezi'}
+    True
+    >>> script_extension(chr(0x10FFFF)) == {'Zzzz'}
+    True
+    """
+    code = byteord(char)
+    i = bisect_right(ScriptExtensions.RANGES, code)
+    value = ScriptExtensions.VALUES[i - 1]
+    if value is None:
+        # code points not explicitly listed for Script Extensions
+        # have as their value the corresponding Script property value
+        return {script(char)}
+    return value
+
+
+def script_name(code, default=KeyError):
+    """Return the long, human-readable script name given a four-letter
+    Unicode script code.
+
+    If no matching name is found, a KeyError is raised by default.
+
+    You can use the 'default' argument to return a fallback value (e.g.
+    'Unknown' or None) instead of throwing an error.
+    """
+    try:
+        return str(Scripts.NAMES[code].replace("_", " "))
+    except KeyError:
+        if isinstance(default, type) and issubclass(default, KeyError):
+            raise
+        return default
+
+
+_normalize_re = re.compile(r"[-_ ]+")
+
+
+def _normalize_property_name(string):
+    """Remove case, strip space, '-' and '_' for loose matching."""
+    return _normalize_re.sub("", string).lower()
+
+
+_SCRIPT_CODES = {_normalize_property_name(v): k for k, v in Scripts.NAMES.items()}
+
+
+def script_code(script_name, default=KeyError):
+    """Returns the four-letter Unicode script code from its long name
+
+    If no matching script code is found, a KeyError is raised by default.
+
+    You can use the 'default' argument to return a fallback string (e.g.
+    'Zzzz' or None) instead of throwing an error.
+    """
+    normalized_name = _normalize_property_name(script_name)
+    try:
+        return _SCRIPT_CODES[normalized_name]
+    except KeyError:
+        if isinstance(default, type) and issubclass(default, KeyError):
+            raise
+        return default
+
+
+# The data on script direction is taken from Harfbuzz source code:
+# https://github.com/harfbuzz/harfbuzz/blob/3.2.0/src/hb-common.cc#L514-L613
+# This in turn references the following "Script_Metadata" document:
+# https://docs.google.com/spreadsheets/d/1Y90M0Ie3MUJ6UVCRDOypOtijlMDLNNyyLk36T6iMu0o
+RTL_SCRIPTS = {
+    # Unicode-1.1 additions
+    "Arab",  # Arabic
+    "Hebr",  # Hebrew
+    # Unicode-3.0 additions
+    "Syrc",  # Syriac
+    "Thaa",  # Thaana
+    # Unicode-4.0 additions
+    "Cprt",  # Cypriot
+    # Unicode-4.1 additions
+    "Khar",  # Kharoshthi
+    # Unicode-5.0 additions
+    "Phnx",  # Phoenician
+    "Nkoo",  # Nko
+    # Unicode-5.1 additions
+    "Lydi",  # Lydian
+    # Unicode-5.2 additions
+    "Avst",  # Avestan
+    "Armi",  # Imperial Aramaic
+    "Phli",  # Inscriptional Pahlavi
+    "Prti",  # Inscriptional Parthian
+    "Sarb",  # Old South Arabian
+    "Orkh",  # Old Turkic
+    "Samr",  # Samaritan
+    # Unicode-6.0 additions
+    "Mand",  # Mandaic
+    # Unicode-6.1 additions
+    "Merc",  # Meroitic Cursive
+    "Mero",  # Meroitic Hieroglyphs
+    # Unicode-7.0 additions
+    "Mani",  # Manichaean
+    "Mend",  # Mende Kikakui
+    "Nbat",  # Nabataean
+    "Narb",  # Old North Arabian
+    "Palm",  # Palmyrene
+    "Phlp",  # Psalter Pahlavi
+    # Unicode-8.0 additions
+    "Hatr",  # Hatran
+    "Hung",  # Old Hungarian
+    # Unicode-9.0 additions
+    "Adlm",  # Adlam
+    # Unicode-11.0 additions
+    "Rohg",  # Hanifi Rohingya
+    "Sogo",  # Old Sogdian
+    "Sogd",  # Sogdian
+    # Unicode-12.0 additions
+    "Elym",  # Elymaic
+    # Unicode-13.0 additions
+    "Chrs",  # Chorasmian
+    "Yezi",  # Yezidi
+    # Unicode-14.0 additions
+    "Ougr",  # Old Uyghur
+    # Unicode-16.0 additions
+    "Gara",  # Garay
+    # Unicode-17.0 additions
+    "Sidt",  # Sidetic
+}
+
+
+HorizDirection = Literal["RTL", "LTR"]
+T = TypeVar("T")
+
+
+@overload
+def script_horizontal_direction(script_code: str, default: T) -> HorizDirection | T: ...
+
+
+@overload
+def script_horizontal_direction(
+    script_code: str, default: type[KeyError] = KeyError
+) -> HorizDirection: ...
+
+
+def script_horizontal_direction(
+    script_code: str, default: T | type[KeyError] = KeyError
+) -> HorizDirection | T:
+    """Return "RTL" for scripts that contain right-to-left characters
+    according to the Bidi_Class property. Otherwise return "LTR".
+    """
+    if script_code not in Scripts.NAMES:
+        if isinstance(default, type) and issubclass(default, KeyError):
+            raise default(script_code)
+        return default
+    return "RTL" if script_code in RTL_SCRIPTS else "LTR"
+
+
+def block(char):
+    """Return the block property assigned to the Unicode character 'char'
+    as a string.
+
+    >>> block("a")
+    'Basic Latin'
+    >>> block(chr(0x060C))
+    'Arabic'
+    >>> block(chr(0xEFFFF))
+    'No_Block'
+    """
+    code = byteord(char)
+    i = bisect_right(Blocks.RANGES, code)
+    return Blocks.VALUES[i - 1]
+
+
+def ot_tags_from_script(script_code):
+    """Return a list of OpenType script tags associated with a given
+    Unicode script code.
+    Return ['DFLT'] script tag for invalid/unknown script codes.
+    """
+    if script_code in OTTags.SCRIPT_EXCEPTIONS:
+        return [OTTags.SCRIPT_EXCEPTIONS[script_code]]
+
+    if script_code not in Scripts.NAMES:
+        return [OTTags.DEFAULT_SCRIPT]
+
+    script_tags = [script_code[0].lower() + script_code[1:]]
+    if script_code in OTTags.NEW_SCRIPT_TAGS:
+        script_tags.extend(OTTags.NEW_SCRIPT_TAGS[script_code])
+        script_tags.reverse()  # last in, first out
+
+    return script_tags
+
+
+def ot_tag_to_script(tag):
+    """Return the Unicode script code for the given OpenType script tag, or
+    None for "DFLT" tag or if there is no Unicode script associated with it.
+    Raises ValueError if the tag is invalid.
+    """
+    tag = tostr(tag).strip()
+    if not tag or " " in tag or len(tag) > 4:
+        raise ValueError("invalid OpenType tag: %r" % tag)
+
+    if tag in OTTags.SCRIPT_ALIASES:
+        tag = OTTags.SCRIPT_ALIASES[tag]
+
+    while len(tag) != 4:
+        tag += str(" ")  # pad with spaces
+
+    if tag == OTTags.DEFAULT_SCRIPT:
+        # it's unclear which Unicode script the "DFLT" OpenType tag maps to,
+        # so here we return None
+        return None
+
+    if tag in OTTags.NEW_SCRIPT_TAGS_REVERSED:
+        return OTTags.NEW_SCRIPT_TAGS_REVERSED[tag]
+
+    if tag in OTTags.SCRIPT_EXCEPTIONS_REVERSED:
+        return OTTags.SCRIPT_EXCEPTIONS_REVERSED[tag]
+
+    # This side of the conversion is fully algorithmic
+
+    # Any spaces at the end of the tag are replaced by repeating the last
+    # letter. Eg 'nko ' -> 'Nkoo'.
+    # Change first char to uppercase
+    script_code = tag[0].upper() + tag[1]
+    for i in range(2, 4):
+        script_code += script_code[i - 1] if tag[i] == " " else tag[i]
+
+    if script_code not in Scripts.NAMES:
+        return None
+    return script_code

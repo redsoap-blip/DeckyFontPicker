@@ -1,1 +1,206 @@
-aW1wb3J0IGFyZ3BhcnNlCmltcG9ydCBsb2dnaW5nCmltcG9ydCBzeXMKZnJvbSBpbyBpbXBvcnQgU3RyaW5nSU8KZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCmZyb20gZm9udFRvb2xzLmZlYUxpYi5idWlsZGVyIGltcG9ydCBhZGRPcGVuVHlwZUZlYXR1cmVzRnJvbVN0cmluZwpmcm9tIGZvbnRUb29scy5mZWFMaWIuZXJyb3IgaW1wb3J0IEZlYXR1cmVMaWJFcnJvcgpmcm9tIGZvbnRUb29scy5mZWFMaWIubGV4ZXIgaW1wb3J0IExleGVyCmZyb20gZm9udFRvb2xzLm1pc2MuY2xpVG9vbHMgaW1wb3J0IG1ha2VPdXRwdXRGaWxlTmFtZQpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRGb250LCBUVExpYkVycm9yCmZyb20gZm9udFRvb2xzLnZvbHRMaWIucGFyc2VyIGltcG9ydCBQYXJzZXIKZnJvbSBmb250VG9vbHMudm9sdExpYi52b2x0VG9GZWEgaW1wb3J0IFRBQkxFUywgVm9sdFRvRmVhCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcigiZm9udFRvb2xzLmZlYUxpYiIpCgpTVVBQT1JURURfVEFCTEVTID0gVEFCTEVTICsgWyJjbWFwIl0KCgpkZWYgaW52YWxpZF9mZWFfZ2x5cGhfbmFtZShuYW1lKToKICAgICIiIkNoZWNrIGlmIHRoZSBnbHlwaCBuYW1lIGlzIHZhbGlkIGFjY29yZGluZyB0byBGRUEgc3ludGF4LiIiIgogICAgaWYgbmFtZVswXSBub3QgaW4gTGV4ZXIuQ0hBUl9OQU1FX1NUQVJUXzoKICAgICAgICByZXR1cm4gVHJ1ZQogICAgaWYgYW55KGMgbm90IGluIExleGVyLkNIQVJfTkFNRV9DT05USU5VQVRJT05fIGZvciBjIGluIG5hbWVbMTpdKToKICAgICAgICByZXR1cm4gVHJ1ZQogICAgcmV0dXJuIEZhbHNlCgoKZGVmIHNhbml0aXplX2dseXBoX25hbWUobmFtZSk6CiAgICAiIiJTYW5pdGl6ZSB0aGUgZ2x5cGggbmFtZSB0byBlbnN1cmUgaXQgaXMgdmFsaWQgYWNjb3JkaW5nIHRvIEZFQSBzeW50YXguIiIiCiAgICBzYW5pdGl6ZWQgPSAiIgogICAgZm9yIGksIGMgaW4gZW51bWVyYXRlKG5hbWUpOgogICAgICAgIGlmIGkgPT0gMCBhbmQgYyBub3QgaW4gTGV4ZXIuQ0hBUl9OQU1FX1NUQVJUXzoKICAgICAgICAgICAgc2FuaXRpemVkICs9ICJhIiArIGMKICAgICAgICBlbGlmIGMgbm90IGluIExleGVyLkNIQVJfTkFNRV9DT05USU5VQVRJT05fOgogICAgICAgICAgICBzYW5pdGl6ZWQgKz0gIl8iCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2FuaXRpemVkICs9IGMKCiAgICByZXR1cm4gc2FuaXRpemVkCgoKZGVmIG1haW4oYXJncz1Ob25lKToKICAgICIiIkJ1aWxkIHRhYmxlcyBmcm9tIGEgTVMgVk9MVCBwcm9qZWN0IGludG8gYW4gT1RGIGZvbnQiIiIKICAgIHBhcnNlciA9IGFyZ3BhcnNlLkFyZ3VtZW50UGFyc2VyKAogICAgICAgIGRlc2NyaXB0aW9uPSJVc2UgZm9udFRvb2xzIHRvIGNvbXBpbGUgTVMgVk9MVCBwcm9qZWN0cy4iCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJpbnB1dCIsCiAgICAgICAgbWV0YXZhcj0iSU5QVVQiLAogICAgICAgIGhlbHA9IlBhdGggdG8gdGhlIGlucHV0IGZvbnQvVlRQIGZpbGUgdG8gcHJvY2VzcyIsCiAgICAgICAgdHlwZT1QYXRoLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLWYiLAogICAgICAgICItLWZvbnQiLAogICAgICAgIG1ldGF2YXI9IklOUFVUX0ZPTlQiLAogICAgICAgIGhlbHA9IlBhdGggdG8gdGhlIGlucHV0IGZvbnQgKGlmIElOUFVUIGlzIGEgVlRQIGZpbGUpIiwKICAgICAgICB0eXBlPVBhdGgsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItbyIsCiAgICAgICAgIi0tb3V0cHV0IiwKICAgICAgICBkZXN0PSJvdXRwdXQiLAogICAgICAgIG1ldGF2YXI9Ik9VVFBVVCIsCiAgICAgICAgaGVscD0iUGF0aCB0byB0aGUgb3V0cHV0IGZvbnQuIiwKICAgICAgICB0eXBlPVBhdGgsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItdCIsCiAgICAgICAgIi0tdGFibGVzIiwKICAgICAgICBtZXRhdmFyPSJUQUJMRV9UQUciLAogICAgICAgIGNob2ljZXM9U1VQUE9SVEVEX1RBQkxFUywKICAgICAgICBuYXJncz0iKyIsCiAgICAgICAgaGVscD0iU3BlY2lmeSB0aGUgdGFibGUocykgdG8gYmUgYnVpbHQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1GIiwKICAgICAgICAiLS1kZWJ1Zy1mZWF0dXJlLWZpbGUiLAogICAgICAgIGhlbHA9IldyaXRlIHRoZSBnZW5lcmF0ZWQgZmVhdHVyZSBmaWxlIHRvIGRpc2suIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS1zaGlwIiwKICAgICAgICBoZWxwPSJSZW1vdmUgc291cmNlIFZPTFQgdGFibGVzIGZyb20gb3V0cHV0IGZvbnQuIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXYiLAogICAgICAgICItLXZlcmJvc2UiLAogICAgICAgIGhlbHA9IkluY3JlYXNlIHRoZSBsb2dnZXIgdmVyYm9zaXR5LiBNdWx0aXBsZSAtdiBvcHRpb25zIGFyZSBhbGxvd2VkLiIsCiAgICAgICAgYWN0aW9uPSJjb3VudCIsCiAgICAgICAgZGVmYXVsdD0wLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLVQiLAogICAgICAgICItLXRyYWNlYmFjayIsCiAgICAgICAgaGVscD0ic2hvdyB0cmFjZWJhY2sgZm9yIGV4Y2VwdGlvbnMuIiwKICAgICAgICBhY3Rpb249InN0b3JlX3RydWUiLAogICAgKQogICAgb3B0aW9ucyA9IHBhcnNlci5wYXJzZV9hcmdzKGFyZ3MpCgogICAgbGV2ZWxzID0gWyJXQVJOSU5HIiwgIklORk8iLCAiREVCVUciXQogICAgY29uZmlnTG9nZ2VyKGxldmVsPWxldmVsc1ttaW4obGVuKGxldmVscykgLSAxLCBvcHRpb25zLnZlcmJvc2UpXSkKCiAgICBvdXRwdXRfZm9udCA9IG9wdGlvbnMub3V0cHV0IG9yIFBhdGgoCiAgICAgICAgbWFrZU91dHB1dEZpbGVOYW1lKG9wdGlvbnMuZm9udCBvciBvcHRpb25zLmlucHV0KQogICAgKQogICAgbG9nLmluZm8oZiJDb21waWxpbmcgTVMgVk9MVCB0byAne291dHB1dF9mb250fSciKQoKICAgIGZpbGVfb3JfcGF0aCA9IG9wdGlvbnMuaW5wdXQKICAgIGZvbnQgPSBOb25lCgogICAgIyBJZiB0aGUgaW5wdXQgaXMgYSBmb250IGZpbGUsIGV4dHJhY3QgdGhlIFZPTFQgZGF0YSBmcm9tIHRoZSAiVFNJViIgdGFibGUKICAgIHRyeToKICAgICAgICBmb250ID0gVFRGb250KGZpbGVfb3JfcGF0aCkKICAgICAgICBpZiAiVFNJViIgaW4gZm9udDoKICAgICAgICAgICAgZmlsZV9vcl9wYXRoID0gU3RyaW5nSU8oZm9udFsiVFNJViJdLmRhdGEuZGVjb2RlKCJ1dGYtOCIpKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxvZy5lcnJvcignIlRTSVYiIHRhYmxlIGlzIG1pc3NpbmcnKQogICAgICAgICAgICByZXR1cm4gMQogICAgZXhjZXB0IFRUTGliRXJyb3I6CiAgICAgICAgcGFzcwoKICAgICMgSWYgaW5wdXQgaXMgbm90IGEgZm9udCBmaWxlLCB0aGUgZm9udCBtdXN0IGJlIHByb3ZpZGVkCiAgICBpZiBmb250IGlzIE5vbmU6CiAgICAgICAgaWYgbm90IG9wdGlvbnMuZm9udDoKICAgICAgICAgICAgbG9nLmVycm9yKCJQbGVhc2UgcHJvdmlkZSBhbiBpbnB1dCBmb250IikKICAgICAgICAgICAgcmV0dXJuIDEKICAgICAgICBmb250ID0gVFRGb250KG9wdGlvbnMuZm9udCkKCiAgICAjIEZFQSBzeW50YXggZG9lcyBub3QgYWxsb3cgc29tZSBnbHlwaCBuYW1lcyB0aGF0IFZPTFQgYWNjZXB0cywgc28gaWYgd2UKICAgICMgZm91bmQgc3VjaCBnbHlwaCBuYW1lIHdlIHdpbGwgdGVtcG9yYXJpbHkgcmVuYW1lIHN1Y2ggZ2x5cGhzLgogICAgZ2x5cGhPcmRlciA9IGZvbnQuZ2V0R2x5cGhPcmRlcigpCiAgICB0ZW1wR2x5cGhPcmRlciA9IE5vbmUKICAgIGlmIGFueShpbnZhbGlkX2ZlYV9nbHlwaF9uYW1lKG4pIGZvciBuIGluIGdseXBoT3JkZXIpOgogICAgICAgIHRlbXBHbHlwaE9yZGVyID0gW10KICAgICAgICBmb3IgbiBpbiBnbHlwaE9yZGVyOgogICAgICAgICAgICBpZiBpbnZhbGlkX2ZlYV9nbHlwaF9uYW1lKG4pOgogICAgICAgICAgICAgICAgbiA9IHNhbml0aXplX2dseXBoX25hbWUobikKICAgICAgICAgICAgICAgIGV4aXN0aW5nID0gc2V0KHRlbXBHbHlwaE9yZGVyKSB8IHNldChnbHlwaE9yZGVyKQogICAgICAgICAgICAgICAgd2hpbGUgbiBpbiBleGlzdGluZzoKICAgICAgICAgICAgICAgICAgICBuID0gImEiICsgbgogICAgICAgICAgICB0ZW1wR2x5cGhPcmRlci5hcHBlbmQobikKICAgICAgICBmb250LnNldEdseXBoT3JkZXIodGVtcEdseXBoT3JkZXIpCgogICAgZG9jID0gUGFyc2VyKGZpbGVfb3JfcGF0aCkucGFyc2UoKQoKICAgIGxvZy5pbmZvKCJDb252ZXJ0aW5nIFZUUCBkYXRhIHRvIEZFQSIpCiAgICBjb252ZXJ0ZXIgPSBWb2x0VG9GZWEoZG9jLCBmb250KQogICAgdHJ5OgogICAgICAgIGZlYSA9IGNvbnZlcnRlci5jb252ZXJ0KG9wdGlvbnMudGFibGVzLCBpZ25vcmVfdW5zdXBwb3J0ZWRfc2V0dGluZ3M9VHJ1ZSkKICAgIGV4Y2VwdCBOb3RJbXBsZW1lbnRlZEVycm9yIGFzIGU6CiAgICAgICAgaWYgb3B0aW9ucy50cmFjZWJhY2s6CiAgICAgICAgICAgIHJhaXNlCiAgICAgICAgbG9jYXRpb24gPSBnZXRhdHRyKGUuYXJnc1swXSwgImxvY2F0aW9uIiwgTm9uZSkKICAgICAgICBtZXNzYWdlID0gZicie2V9IiBpcyBub3Qgc3VwcG9ydGVkJwogICAgICAgIGlmIGxvY2F0aW9uOgogICAgICAgICAgICBwYXRoLCBsaW5lLCBjb2x1bW4gPSBsb2NhdGlvbgogICAgICAgICAgICBsb2cuZXJyb3IoZiJ7cGF0aH06e2xpbmV9Ontjb2x1bW59OiB7bWVzc2FnZX0iKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxvZy5lcnJvcihtZXNzYWdlKQogICAgICAgIHJldHVybiAxCgogICAgZmVhX2ZpbGVuYW1lID0gb3B0aW9ucy5pbnB1dAogICAgaWYgb3B0aW9ucy5kZWJ1Z19mZWF0dXJlX2ZpbGU6CiAgICAgICAgZmVhX2ZpbGVuYW1lID0gb3V0cHV0X2ZvbnQud2l0aF9zdWZmaXgoIi5mZWEiKQogICAgICAgIGxvZy5pbmZvKGYiV3JpdGluZyBGRUEgdG8gJ3tmZWFfZmlsZW5hbWV9JyIpCiAgICAgICAgd2l0aCBvcGVuKGZlYV9maWxlbmFtZSwgInciKSBhcyBmcDoKICAgICAgICAgICAgZnAud3JpdGUoZmVhKQoKICAgIGxvZy5pbmZvKCJDb21waWxpbmcgRkVBIHRvIE9wZW5UeXBlIHRhYmxlcyIpCiAgICB0cnk6CiAgICAgICAgYWRkT3BlblR5cGVGZWF0dXJlc0Zyb21TdHJpbmcoCiAgICAgICAgICAgIGZvbnQsCiAgICAgICAgICAgIGZlYSwKICAgICAgICAgICAgZmlsZW5hbWU9ZmVhX2ZpbGVuYW1lLAogICAgICAgICAgICB0YWJsZXM9b3B0aW9ucy50YWJsZXMsCiAgICAgICAgKQogICAgZXhjZXB0IEZlYXR1cmVMaWJFcnJvciBhcyBlOgogICAgICAgIGlmIG9wdGlvbnMudHJhY2ViYWNrOgogICAgICAgICAgICByYWlzZQogICAgICAgIGxvZy5lcnJvcihlKQogICAgICAgIHJldHVybiAxCgogICAgaWYgb3B0aW9ucy5zaGlwOgogICAgICAgIGZvciB0YWcgaW4gWyJUU0lWIiwgIlRTSVMiLCAiVFNJUCIsICJUU0lEIl06CiAgICAgICAgICAgIGlmIHRhZyBpbiBmb250OgogICAgICAgICAgICAgICAgZGVsIGZvbnRbdGFnXQoKICAgICMgUmVzdG9yZSBvcmlnaW5hbCBnbHlwaCBuYW1lcy4KICAgIGlmIHRlbXBHbHlwaE9yZGVyOgogICAgICAgIGltcG9ydCBpbwoKICAgICAgICBmID0gaW8uQnl0ZXNJTygpCiAgICAgICAgZm9udC5zYXZlKGYpCiAgICAgICAgZm9udCA9IFRURm9udChmKQogICAgICAgIGZvbnQuc2V0R2x5cGhPcmRlcihnbHlwaE9yZGVyKQogICAgICAgIGZvbnRbInBvc3QiXS5leHRyYU5hbWVzID0gW10KCiAgICBmb250LnNhdmUob3V0cHV0X2ZvbnQpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIHN5cy5leGl0KG1haW4oKSkK
+import argparse
+import logging
+import sys
+from io import StringIO
+from pathlib import Path
+
+from fontTools import configLogger
+from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
+from fontTools.feaLib.error import FeatureLibError
+from fontTools.feaLib.lexer import Lexer
+from fontTools.misc.cliTools import makeOutputFileName
+from fontTools.ttLib import TTFont, TTLibError
+from fontTools.voltLib.parser import Parser
+from fontTools.voltLib.voltToFea import TABLES, VoltToFea
+
+log = logging.getLogger("fontTools.feaLib")
+
+SUPPORTED_TABLES = TABLES + ["cmap"]
+
+
+def invalid_fea_glyph_name(name):
+    """Check if the glyph name is valid according to FEA syntax."""
+    if name[0] not in Lexer.CHAR_NAME_START_:
+        return True
+    if any(c not in Lexer.CHAR_NAME_CONTINUATION_ for c in name[1:]):
+        return True
+    return False
+
+
+def sanitize_glyph_name(name):
+    """Sanitize the glyph name to ensure it is valid according to FEA syntax."""
+    sanitized = ""
+    for i, c in enumerate(name):
+        if i == 0 and c not in Lexer.CHAR_NAME_START_:
+            sanitized += "a" + c
+        elif c not in Lexer.CHAR_NAME_CONTINUATION_:
+            sanitized += "_"
+        else:
+            sanitized += c
+
+    return sanitized
+
+
+def main(args=None):
+    """Build tables from a MS VOLT project into an OTF font"""
+    parser = argparse.ArgumentParser(
+        description="Use fontTools to compile MS VOLT projects."
+    )
+    parser.add_argument(
+        "input",
+        metavar="INPUT",
+        help="Path to the input font/VTP file to process",
+        type=Path,
+    )
+    parser.add_argument(
+        "-f",
+        "--font",
+        metavar="INPUT_FONT",
+        help="Path to the input font (if INPUT is a VTP file)",
+        type=Path,
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        dest="output",
+        metavar="OUTPUT",
+        help="Path to the output font.",
+        type=Path,
+    )
+    parser.add_argument(
+        "-t",
+        "--tables",
+        metavar="TABLE_TAG",
+        choices=SUPPORTED_TABLES,
+        nargs="+",
+        help="Specify the table(s) to be built.",
+    )
+    parser.add_argument(
+        "-F",
+        "--debug-feature-file",
+        help="Write the generated feature file to disk.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--ship",
+        help="Remove source VOLT tables from output font.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        help="Increase the logger verbosity. Multiple -v options are allowed.",
+        action="count",
+        default=0,
+    )
+    parser.add_argument(
+        "-T",
+        "--traceback",
+        help="show traceback for exceptions.",
+        action="store_true",
+    )
+    options = parser.parse_args(args)
+
+    levels = ["WARNING", "INFO", "DEBUG"]
+    configLogger(level=levels[min(len(levels) - 1, options.verbose)])
+
+    output_font = options.output or Path(
+        makeOutputFileName(options.font or options.input)
+    )
+    log.info(f"Compiling MS VOLT to '{output_font}'")
+
+    file_or_path = options.input
+    font = None
+
+    # If the input is a font file, extract the VOLT data from the "TSIV" table
+    try:
+        font = TTFont(file_or_path)
+        if "TSIV" in font:
+            file_or_path = StringIO(font["TSIV"].data.decode("utf-8"))
+        else:
+            log.error('"TSIV" table is missing')
+            return 1
+    except TTLibError:
+        pass
+
+    # If input is not a font file, the font must be provided
+    if font is None:
+        if not options.font:
+            log.error("Please provide an input font")
+            return 1
+        font = TTFont(options.font)
+
+    # FEA syntax does not allow some glyph names that VOLT accepts, so if we
+    # found such glyph name we will temporarily rename such glyphs.
+    glyphOrder = font.getGlyphOrder()
+    tempGlyphOrder = None
+    if any(invalid_fea_glyph_name(n) for n in glyphOrder):
+        tempGlyphOrder = []
+        for n in glyphOrder:
+            if invalid_fea_glyph_name(n):
+                n = sanitize_glyph_name(n)
+                existing = set(tempGlyphOrder) | set(glyphOrder)
+                while n in existing:
+                    n = "a" + n
+            tempGlyphOrder.append(n)
+        font.setGlyphOrder(tempGlyphOrder)
+
+    doc = Parser(file_or_path).parse()
+
+    log.info("Converting VTP data to FEA")
+    converter = VoltToFea(doc, font)
+    try:
+        fea = converter.convert(options.tables, ignore_unsupported_settings=True)
+    except NotImplementedError as e:
+        if options.traceback:
+            raise
+        location = getattr(e.args[0], "location", None)
+        message = f'"{e}" is not supported'
+        if location:
+            path, line, column = location
+            log.error(f"{path}:{line}:{column}: {message}")
+        else:
+            log.error(message)
+        return 1
+
+    fea_filename = options.input
+    if options.debug_feature_file:
+        fea_filename = output_font.with_suffix(".fea")
+        log.info(f"Writing FEA to '{fea_filename}'")
+        with open(fea_filename, "w") as fp:
+            fp.write(fea)
+
+    log.info("Compiling FEA to OpenType tables")
+    try:
+        addOpenTypeFeaturesFromString(
+            font,
+            fea,
+            filename=fea_filename,
+            tables=options.tables,
+        )
+    except FeatureLibError as e:
+        if options.traceback:
+            raise
+        log.error(e)
+        return 1
+
+    if options.ship:
+        for tag in ["TSIV", "TSIS", "TSIP", "TSID"]:
+            if tag in font:
+                del font[tag]
+
+    # Restore original glyph names.
+    if tempGlyphOrder:
+        import io
+
+        f = io.BytesIO()
+        font.save(f)
+        font = TTFont(f)
+        font.setGlyphOrder(glyphOrder)
+        font["post"].extraNames = []
+
+    font.save(output_font)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

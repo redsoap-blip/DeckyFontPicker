@@ -1,1 +1,238 @@
-IiIiVmlzdWFsaXplIERlc2lnblNwYWNlRG9jdW1lbnQgYW5kIHJlc3VsdGluZyBWYXJpYXRpb25Nb2RlbC4iIiIKCmZyb20gZm9udFRvb2xzLnZhckxpYi5tb2RlbHMgaW1wb3J0IFZhcmlhdGlvbk1vZGVsLCBzdXBwb3J0U2NhbGFyCmZyb20gZm9udFRvb2xzLmRlc2lnbnNwYWNlTGliIGltcG9ydCBEZXNpZ25TcGFjZURvY3VtZW50CmZyb20gbWF0cGxvdGxpYiBpbXBvcnQgcHlwbG90CmZyb20gbXBsX3Rvb2xraXRzLm1wbG90M2QgaW1wb3J0IGF4ZXMzZApmcm9tIGl0ZXJ0b29scyBpbXBvcnQgY3ljbGUKaW1wb3J0IG1hdGgKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IHN5cwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgoKZGVmIHN0b3BzKHN1cHBvcnQsIGNvdW50PTEwKToKICAgIGEsIGIsIGMgPSBzdXBwb3J0CgogICAgcmV0dXJuICgKICAgICAgICBbYSArIChiIC0gYSkgKiBpIC8gY291bnQgZm9yIGkgaW4gcmFuZ2UoY291bnQpXQogICAgICAgICsgW2IgKyAoYyAtIGIpICogaSAvIGNvdW50IGZvciBpIGluIHJhbmdlKGNvdW50KV0KICAgICAgICArIFtjXQogICAgKQoKCmRlZiBfcGxvdExvY2F0aW9uc0RvdHMobG9jYXRpb25zLCBheGVzLCBzdWJwbG90LCAqKmt3YXJncyk6CiAgICBmb3IgbG9jLCBjb2xvciBpbiB6aXAobG9jYXRpb25zLCBjeWNsZShweXBsb3QuY20uU2V0MS5jb2xvcnMpKToKICAgICAgICBpZiBsZW4oYXhlcykgPT0gMToKICAgICAgICAgICAgc3VicGxvdC5wbG90KFtsb2MuZ2V0KGF4ZXNbMF0sIDApXSwgWzEuMF0sICJvIiwgY29sb3I9Y29sb3IsICoqa3dhcmdzKQogICAgICAgIGVsaWYgbGVuKGF4ZXMpID09IDI6CiAgICAgICAgICAgIHN1YnBsb3QucGxvdCgKICAgICAgICAgICAgICAgIFtsb2MuZ2V0KGF4ZXNbMF0sIDApXSwKICAgICAgICAgICAgICAgIFtsb2MuZ2V0KGF4ZXNbMV0sIDApXSwKICAgICAgICAgICAgICAgIFsxLjBdLAogICAgICAgICAgICAgICAgIm8iLAogICAgICAgICAgICAgICAgY29sb3I9Y29sb3IsCiAgICAgICAgICAgICAgICAqKmt3YXJncywKICAgICAgICAgICAgKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIEFzc2VydGlvbkVycm9yKGxlbihheGVzKSkKCgpkZWYgcGxvdExvY2F0aW9ucyhsb2NhdGlvbnMsIGZpZywgbmFtZXM9Tm9uZSwgKiprd2FyZ3MpOgogICAgbiA9IGxlbihsb2NhdGlvbnMpCiAgICBjb2xzID0gbWF0aC5jZWlsKG4qKjAuNSkKICAgIHJvd3MgPSBtYXRoLmNlaWwobiAvIGNvbHMpCgogICAgaWYgbmFtZXMgaXMgTm9uZToKICAgICAgICBuYW1lcyA9IFtOb25lXSAqIGxlbihsb2NhdGlvbnMpCgogICAgbW9kZWwgPSBWYXJpYXRpb25Nb2RlbChsb2NhdGlvbnMpCiAgICBuYW1lcyA9IFtuYW1lc1ttb2RlbC5yZXZlcnNlTWFwcGluZ1tpXV0gZm9yIGkgaW4gcmFuZ2UobGVuKG5hbWVzKSldCgogICAgYXhlcyA9IHNvcnRlZChsb2NhdGlvbnNbMF0ua2V5cygpKQogICAgaWYgbGVuKGF4ZXMpID09IDE6CiAgICAgICAgX3Bsb3RMb2NhdGlvbnMyRChtb2RlbCwgYXhlc1swXSwgZmlnLCBjb2xzLCByb3dzLCBuYW1lcz1uYW1lcywgKiprd2FyZ3MpCiAgICBlbGlmIGxlbihheGVzKSA9PSAyOgogICAgICAgIF9wbG90TG9jYXRpb25zM0QobW9kZWwsIGF4ZXMsIGZpZywgY29scywgcm93cywgbmFtZXM9bmFtZXMsICoqa3dhcmdzKQogICAgZWxzZToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJPbmx5IDEgb3IgMiBheGVzIGFyZSBzdXBwb3J0ZWQiKQoKCmRlZiBfcGxvdExvY2F0aW9uczJEKG1vZGVsLCBheGlzLCBmaWcsIGNvbHMsIHJvd3MsIG5hbWVzLCAqKmt3YXJncyk6CiAgICBzdWJwbG90ID0gZmlnLmFkZF9zdWJwbG90KDExMSkKICAgIGZvciBpLCAoc3VwcG9ydCwgY29sb3IsIG5hbWUpIGluIGVudW1lcmF0ZSgKICAgICAgICB6aXAobW9kZWwuc3VwcG9ydHMsIGN5Y2xlKHB5cGxvdC5jbS5TZXQxLmNvbG9ycyksIGN5Y2xlKG5hbWVzKSkKICAgICk6CiAgICAgICAgaWYgbmFtZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgc3VicGxvdC5zZXRfdGl0bGUobmFtZSkKICAgICAgICBzdWJwbG90LnNldF94bGFiZWwoYXhpcykKICAgICAgICBweXBsb3QueGxpbSgtMS4wLCArMS4wKQoKICAgICAgICBYcyA9IHN1cHBvcnQuZ2V0KGF4aXMsICgtMS4wLCAwLjAsICsxLjApKQogICAgICAgIFgsIFkgPSBbXSwgW10KICAgICAgICBmb3IgeCBpbiBzdG9wcyhYcyk6CiAgICAgICAgICAgIHkgPSBzdXBwb3J0U2NhbGFyKHtheGlzOiB4fSwgc3VwcG9ydCkKICAgICAgICAgICAgWC5hcHBlbmQoeCkKICAgICAgICAgICAgWS5hcHBlbmQoeSkKICAgICAgICBzdWJwbG90LnBsb3QoWCwgWSwgY29sb3I9Y29sb3IsICoqa3dhcmdzKQoKICAgICAgICBfcGxvdExvY2F0aW9uc0RvdHMobW9kZWwubG9jYXRpb25zLCBbYXhpc10sIHN1YnBsb3QpCgoKZGVmIF9wbG90TG9jYXRpb25zM0QobW9kZWwsIGF4ZXMsIGZpZywgcm93cywgY29scywgbmFtZXMsICoqa3dhcmdzKToKICAgIGF4MSwgYXgyID0gYXhlcwoKICAgIGF4aXMzRCA9IGZpZy5hZGRfc3VicGxvdCgxMTEsIHByb2plY3Rpb249IjNkIikKICAgIGZvciBpLCAoc3VwcG9ydCwgY29sb3IsIG5hbWUpIGluIGVudW1lcmF0ZSgKICAgICAgICB6aXAobW9kZWwuc3VwcG9ydHMsIGN5Y2xlKHB5cGxvdC5jbS5TZXQxLmNvbG9ycyksIGN5Y2xlKG5hbWVzKSkKICAgICk6CiAgICAgICAgaWYgbmFtZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgYXhpczNELnNldF90aXRsZShuYW1lKQogICAgICAgIGF4aXMzRC5zZXRfeGxhYmVsKGF4MSkKICAgICAgICBheGlzM0Quc2V0X3lsYWJlbChheDIpCiAgICAgICAgcHlwbG90LnhsaW0oLTEuMCwgKzEuMCkKICAgICAgICBweXBsb3QueWxpbSgtMS4wLCArMS4wKQoKICAgICAgICBYcyA9IHN1cHBvcnQuZ2V0KGF4MSwgKC0xLjAsIDAuMCwgKzEuMCkpCiAgICAgICAgWXMgPSBzdXBwb3J0LmdldChheDIsICgtMS4wLCAwLjAsICsxLjApKQogICAgICAgIGZvciB4IGluIHN0b3BzKFhzKToKICAgICAgICAgICAgWCwgWSwgWiA9IFtdLCBbXSwgW10KICAgICAgICAgICAgZm9yIHkgaW4gWXM6CiAgICAgICAgICAgICAgICB6ID0gc3VwcG9ydFNjYWxhcih7YXgxOiB4LCBheDI6IHl9LCBzdXBwb3J0KQogICAgICAgICAgICAgICAgWC5hcHBlbmQoeCkKICAgICAgICAgICAgICAgIFkuYXBwZW5kKHkpCiAgICAgICAgICAgICAgICBaLmFwcGVuZCh6KQogICAgICAgICAgICBheGlzM0QucGxvdChYLCBZLCBaLCBjb2xvcj1jb2xvciwgKiprd2FyZ3MpCiAgICAgICAgZm9yIHkgaW4gc3RvcHMoWXMpOgogICAgICAgICAgICBYLCBZLCBaID0gW10sIFtdLCBbXQogICAgICAgICAgICBmb3IgeCBpbiBYczoKICAgICAgICAgICAgICAgIHogPSBzdXBwb3J0U2NhbGFyKHtheDE6IHgsIGF4MjogeX0sIHN1cHBvcnQpCiAgICAgICAgICAgICAgICBYLmFwcGVuZCh4KQogICAgICAgICAgICAgICAgWS5hcHBlbmQoeSkKICAgICAgICAgICAgICAgIFouYXBwZW5kKHopCiAgICAgICAgICAgIGF4aXMzRC5wbG90KFgsIFksIFosIGNvbG9yPWNvbG9yLCAqKmt3YXJncykKCiAgICAgICAgX3Bsb3RMb2NhdGlvbnNEb3RzKG1vZGVsLmxvY2F0aW9ucywgW2F4MSwgYXgyXSwgYXhpczNEKQoKCmRlZiBwbG90RG9jdW1lbnQoZG9jLCBmaWcsICoqa3dhcmdzKToKICAgIGRvYy5ub3JtYWxpemUoKQogICAgbG9jYXRpb25zID0gW3MubG9jYXRpb24gZm9yIHMgaW4gZG9jLnNvdXJjZXNdCiAgICBuYW1lcyA9IFtzLm5hbWUgZm9yIHMgaW4gZG9jLnNvdXJjZXNdCiAgICBwbG90TG9jYXRpb25zKGxvY2F0aW9ucywgZmlnLCBuYW1lcywgKiprd2FyZ3MpCgoKZGVmIF9wbG90TW9kZWxGcm9tTWFzdGVyczJEKG1vZGVsLCBtYXN0ZXJWYWx1ZXMsIGZpZywgKiprd2FyZ3MpOgogICAgYXNzZXJ0IGxlbihtb2RlbC5heGlzT3JkZXIpID09IDEKICAgIGF4aXMgPSBtb2RlbC5heGlzT3JkZXJbMF0KCiAgICBheGlzX21pbiA9IG1pbihsb2MuZ2V0KGF4aXMsIDApIGZvciBsb2MgaW4gbW9kZWwubG9jYXRpb25zKQogICAgYXhpc19tYXggPSBtYXgobG9jLmdldChheGlzLCAwKSBmb3IgbG9jIGluIG1vZGVsLmxvY2F0aW9ucykKCiAgICBpbXBvcnQgbnVtcHkgYXMgbnAKCiAgICBYID0gbnAuYXJhbmdlKGF4aXNfbWluLCBheGlzX21heCwgKGF4aXNfbWF4IC0gYXhpc19taW4pIC8gMTAwKQogICAgWSA9IFtdCgogICAgZm9yIHggaW4gWDoKICAgICAgICBsb2MgPSB7YXhpczogeH0KICAgICAgICB2ID0gbW9kZWwuaW50ZXJwb2xhdGVGcm9tTWFzdGVycyhsb2MsIG1hc3RlclZhbHVlcykKICAgICAgICBZLmFwcGVuZCh2KQoKICAgIHN1YnBsb3QgPSBmaWcuYWRkX3N1YnBsb3QoMTExKQogICAgc3VicGxvdC5wbG90KFgsIFksICItIiwgKiprd2FyZ3MpCgoKZGVmIF9wbG90TW9kZWxGcm9tTWFzdGVyczNEKG1vZGVsLCBtYXN0ZXJWYWx1ZXMsIGZpZywgKiprd2FyZ3MpOgogICAgYXNzZXJ0IGxlbihtb2RlbC5heGlzT3JkZXIpID09IDIKICAgIGF4aXMxLCBheGlzMiA9IG1vZGVsLmF4aXNPcmRlclswXSwgbW9kZWwuYXhpc09yZGVyWzFdCgogICAgYXhpczFfbWluID0gbWluKGxvYy5nZXQoYXhpczEsIDApIGZvciBsb2MgaW4gbW9kZWwubG9jYXRpb25zKQogICAgYXhpczFfbWF4ID0gbWF4KGxvYy5nZXQoYXhpczEsIDApIGZvciBsb2MgaW4gbW9kZWwubG9jYXRpb25zKQogICAgYXhpczJfbWluID0gbWluKGxvYy5nZXQoYXhpczIsIDApIGZvciBsb2MgaW4gbW9kZWwubG9jYXRpb25zKQogICAgYXhpczJfbWF4ID0gbWF4KGxvYy5nZXQoYXhpczIsIDApIGZvciBsb2MgaW4gbW9kZWwubG9jYXRpb25zKQoKICAgIGltcG9ydCBudW1weSBhcyBucAoKICAgIFggPSBucC5hcmFuZ2UoYXhpczFfbWluLCBheGlzMV9tYXgsIChheGlzMV9tYXggLSBheGlzMV9taW4pIC8gMTAwKQogICAgWSA9IG5wLmFyYW5nZShheGlzMl9taW4sIGF4aXMyX21heCwgKGF4aXMyX21heCAtIGF4aXMyX21pbikgLyAxMDApCiAgICBYLCBZID0gbnAubWVzaGdyaWQoWCwgWSkKICAgIFogPSBbXQoKICAgIGZvciByb3dfeCwgcm93X3kgaW4gemlwKFgsIFkpOgogICAgICAgIHpfcm93ID0gW10KICAgICAgICBaLmFwcGVuZCh6X3JvdykKICAgICAgICBmb3IgeCwgeSBpbiB6aXAocm93X3gsIHJvd195KToKICAgICAgICAgICAgbG9jID0ge2F4aXMxOiB4LCBheGlzMjogeX0KICAgICAgICAgICAgdiA9IG1vZGVsLmludGVycG9sYXRlRnJvbU1hc3RlcnMobG9jLCBtYXN0ZXJWYWx1ZXMpCiAgICAgICAgICAgIHpfcm93LmFwcGVuZCh2KQogICAgWiA9IG5wLmFycmF5KFopCgogICAgYXhpczNEID0gZmlnLmFkZF9zdWJwbG90KDExMSwgcHJvamVjdGlvbj0iM2QiKQogICAgYXhpczNELnBsb3Rfc3VyZmFjZShYLCBZLCBaLCAqKmt3YXJncykKCgpkZWYgcGxvdE1vZGVsRnJvbU1hc3RlcnMobW9kZWwsIG1hc3RlclZhbHVlcywgZmlnLCAqKmt3YXJncyk6CiAgICAiIiJQbG90IGEgdmFyaWF0aW9uIG1vZGVsIGFuZCBzZXQgb2YgbWFzdGVyIHZhbHVlcyBjb3JyZXNwb25kaW5nCiAgICB0byB0aGUgbG9jYXRpb25zIHRvIHRoZSBtb2RlbCBpbnRvIGEgcHlwbG90IGZpZ3VyZS4gIFZhcmlhdGlvbgogICAgbW9kZWwgbXVzdCBoYXZlIGF4aXNPcmRlciBvZiBzaXplIDEgb3IgMi4iIiIKICAgIGlmIGxlbihtb2RlbC5heGlzT3JkZXIpID09IDE6CiAgICAgICAgX3Bsb3RNb2RlbEZyb21NYXN0ZXJzMkQobW9kZWwsIG1hc3RlclZhbHVlcywgZmlnLCAqKmt3YXJncykKICAgIGVsaWYgbGVuKG1vZGVsLmF4aXNPcmRlcikgPT0gMjoKICAgICAgICBfcGxvdE1vZGVsRnJvbU1hc3RlcnMzRChtb2RlbCwgbWFzdGVyVmFsdWVzLCBmaWcsICoqa3dhcmdzKQogICAgZWxzZToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJPbmx5IDEgb3IgMiBheGVzIGFyZSBzdXBwb3J0ZWQiKQoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCgogICAgaWYgYXJncyBpcyBOb25lOgogICAgICAgIGFyZ3MgPSBzeXMuYXJndlsxOl0KCiAgICAjIGNvbmZpZ3VyZSB0aGUgbGlicmFyeSBsb2dnZXIgKGZvciA+PSBXQVJOSU5HKQogICAgY29uZmlnTG9nZ2VyKCkKICAgICMgY29tbWVudCB0aGlzIG91dCB0byBlbmFibGUgZGVidWcgbWVzc2FnZXMgZnJvbSBsb2dnZXIKICAgICMgbG9nLnNldExldmVsKGxvZ2dpbmcuREVCVUcpCgogICAgaWYgbGVuKGFyZ3MpIDwgMToKICAgICAgICBwcmludCgidXNhZ2U6IGZvbnR0b29scyB2YXJMaWIucGxvdCBzb3VyY2UuZGVzaWduc3BhY2UiLCBmaWxlPXN5cy5zdGRlcnIpCiAgICAgICAgcHJpbnQoIiAgb3IiKQogICAgICAgIHByaW50KCJ1c2FnZTogZm9udHRvb2xzIHZhckxpYi5wbG90IGxvY2F0aW9uMSBsb2NhdGlvbjIgLi4uIiwgZmlsZT1zeXMuc3RkZXJyKQogICAgICAgIHByaW50KCIgIG9yIikKICAgICAgICBwcmludCgKICAgICAgICAgICAgInVzYWdlOiBmb250dG9vbHMgdmFyTGliLnBsb3QgbG9jYXRpb24xPXZhbHVlMSBsb2NhdGlvbjI9dmFsdWUyIC4uLiIsCiAgICAgICAgICAgIGZpbGU9c3lzLnN0ZGVyciwKICAgICAgICApCiAgICAgICAgc3lzLmV4aXQoMSkKCiAgICBmaWcgPSBweXBsb3QuZmlndXJlKCkKICAgIGZpZy5zZXRfdGlnaHRfbGF5b3V0KFRydWUpCgogICAgaWYgbGVuKGFyZ3MpID09IDEgYW5kIGFyZ3NbMF0uZW5kc3dpdGgoIi5kZXNpZ25zcGFjZSIpOgogICAgICAgIGRvYyA9IERlc2lnblNwYWNlRG9jdW1lbnQoKQogICAgICAgIGRvYy5yZWFkKGFyZ3NbMF0pCiAgICAgICAgcGxvdERvY3VtZW50KGRvYywgZmlnKQogICAgZWxzZToKICAgICAgICBheGVzID0gW2NocihjKSBmb3IgYyBpbiByYW5nZShvcmQoIkEiKSwgb3JkKCJaIikgKyAxKV0KICAgICAgICBpZiAiPSIgbm90IGluIGFyZ3NbMF06CiAgICAgICAgICAgIGxvY3MgPSBbZGljdCh6aXAoYXhlcywgKGZsb2F0KHYpIGZvciB2IGluIHMuc3BsaXQoIiwiKSkpKSBmb3IgcyBpbiBhcmdzXQogICAgICAgICAgICBwbG90TG9jYXRpb25zKGxvY3MsIGZpZykKICAgICAgICBlbHNlOgogICAgICAgICAgICBsb2NhdGlvbnMgPSBbXQogICAgICAgICAgICBtYXN0ZXJWYWx1ZXMgPSBbXQogICAgICAgICAgICBmb3IgYXJnIGluIGFyZ3M6CiAgICAgICAgICAgICAgICBsb2MsIHYgPSBhcmcuc3BsaXQoIj0iKQogICAgICAgICAgICAgICAgbG9jYXRpb25zLmFwcGVuZChkaWN0KHppcChheGVzLCAoZmxvYXQodikgZm9yIHYgaW4gbG9jLnNwbGl0KCIsIikpKSkpCiAgICAgICAgICAgICAgICBtYXN0ZXJWYWx1ZXMuYXBwZW5kKGZsb2F0KHYpKQogICAgICAgICAgICBtb2RlbCA9IFZhcmlhdGlvbk1vZGVsKGxvY2F0aW9ucywgYXhlc1s6IGxlbihsb2NhdGlvbnNbMF0pXSkKICAgICAgICAgICAgcGxvdE1vZGVsRnJvbU1hc3RlcnMobW9kZWwsIG1hc3RlclZhbHVlcywgZmlnKQoKICAgIHB5cGxvdC5zaG93KCkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwoKICAgIHN5cy5leGl0KG1haW4oKSkK
+"""Visualize DesignSpaceDocument and resulting VariationModel."""
+
+from fontTools.varLib.models import VariationModel, supportScalar
+from fontTools.designspaceLib import DesignSpaceDocument
+from matplotlib import pyplot
+from mpl_toolkits.mplot3d import axes3d
+from itertools import cycle
+import math
+import logging
+import sys
+
+log = logging.getLogger(__name__)
+
+
+def stops(support, count=10):
+    a, b, c = support
+
+    return (
+        [a + (b - a) * i / count for i in range(count)]
+        + [b + (c - b) * i / count for i in range(count)]
+        + [c]
+    )
+
+
+def _plotLocationsDots(locations, axes, subplot, **kwargs):
+    for loc, color in zip(locations, cycle(pyplot.cm.Set1.colors)):
+        if len(axes) == 1:
+            subplot.plot([loc.get(axes[0], 0)], [1.0], "o", color=color, **kwargs)
+        elif len(axes) == 2:
+            subplot.plot(
+                [loc.get(axes[0], 0)],
+                [loc.get(axes[1], 0)],
+                [1.0],
+                "o",
+                color=color,
+                **kwargs,
+            )
+        else:
+            raise AssertionError(len(axes))
+
+
+def plotLocations(locations, fig, names=None, **kwargs):
+    n = len(locations)
+    cols = math.ceil(n**0.5)
+    rows = math.ceil(n / cols)
+
+    if names is None:
+        names = [None] * len(locations)
+
+    model = VariationModel(locations)
+    names = [names[model.reverseMapping[i]] for i in range(len(names))]
+
+    axes = sorted(locations[0].keys())
+    if len(axes) == 1:
+        _plotLocations2D(model, axes[0], fig, cols, rows, names=names, **kwargs)
+    elif len(axes) == 2:
+        _plotLocations3D(model, axes, fig, cols, rows, names=names, **kwargs)
+    else:
+        raise ValueError("Only 1 or 2 axes are supported")
+
+
+def _plotLocations2D(model, axis, fig, cols, rows, names, **kwargs):
+    subplot = fig.add_subplot(111)
+    for i, (support, color, name) in enumerate(
+        zip(model.supports, cycle(pyplot.cm.Set1.colors), cycle(names))
+    ):
+        if name is not None:
+            subplot.set_title(name)
+        subplot.set_xlabel(axis)
+        pyplot.xlim(-1.0, +1.0)
+
+        Xs = support.get(axis, (-1.0, 0.0, +1.0))
+        X, Y = [], []
+        for x in stops(Xs):
+            y = supportScalar({axis: x}, support)
+            X.append(x)
+            Y.append(y)
+        subplot.plot(X, Y, color=color, **kwargs)
+
+        _plotLocationsDots(model.locations, [axis], subplot)
+
+
+def _plotLocations3D(model, axes, fig, rows, cols, names, **kwargs):
+    ax1, ax2 = axes
+
+    axis3D = fig.add_subplot(111, projection="3d")
+    for i, (support, color, name) in enumerate(
+        zip(model.supports, cycle(pyplot.cm.Set1.colors), cycle(names))
+    ):
+        if name is not None:
+            axis3D.set_title(name)
+        axis3D.set_xlabel(ax1)
+        axis3D.set_ylabel(ax2)
+        pyplot.xlim(-1.0, +1.0)
+        pyplot.ylim(-1.0, +1.0)
+
+        Xs = support.get(ax1, (-1.0, 0.0, +1.0))
+        Ys = support.get(ax2, (-1.0, 0.0, +1.0))
+        for x in stops(Xs):
+            X, Y, Z = [], [], []
+            for y in Ys:
+                z = supportScalar({ax1: x, ax2: y}, support)
+                X.append(x)
+                Y.append(y)
+                Z.append(z)
+            axis3D.plot(X, Y, Z, color=color, **kwargs)
+        for y in stops(Ys):
+            X, Y, Z = [], [], []
+            for x in Xs:
+                z = supportScalar({ax1: x, ax2: y}, support)
+                X.append(x)
+                Y.append(y)
+                Z.append(z)
+            axis3D.plot(X, Y, Z, color=color, **kwargs)
+
+        _plotLocationsDots(model.locations, [ax1, ax2], axis3D)
+
+
+def plotDocument(doc, fig, **kwargs):
+    doc.normalize()
+    locations = [s.location for s in doc.sources]
+    names = [s.name for s in doc.sources]
+    plotLocations(locations, fig, names, **kwargs)
+
+
+def _plotModelFromMasters2D(model, masterValues, fig, **kwargs):
+    assert len(model.axisOrder) == 1
+    axis = model.axisOrder[0]
+
+    axis_min = min(loc.get(axis, 0) for loc in model.locations)
+    axis_max = max(loc.get(axis, 0) for loc in model.locations)
+
+    import numpy as np
+
+    X = np.arange(axis_min, axis_max, (axis_max - axis_min) / 100)
+    Y = []
+
+    for x in X:
+        loc = {axis: x}
+        v = model.interpolateFromMasters(loc, masterValues)
+        Y.append(v)
+
+    subplot = fig.add_subplot(111)
+    subplot.plot(X, Y, "-", **kwargs)
+
+
+def _plotModelFromMasters3D(model, masterValues, fig, **kwargs):
+    assert len(model.axisOrder) == 2
+    axis1, axis2 = model.axisOrder[0], model.axisOrder[1]
+
+    axis1_min = min(loc.get(axis1, 0) for loc in model.locations)
+    axis1_max = max(loc.get(axis1, 0) for loc in model.locations)
+    axis2_min = min(loc.get(axis2, 0) for loc in model.locations)
+    axis2_max = max(loc.get(axis2, 0) for loc in model.locations)
+
+    import numpy as np
+
+    X = np.arange(axis1_min, axis1_max, (axis1_max - axis1_min) / 100)
+    Y = np.arange(axis2_min, axis2_max, (axis2_max - axis2_min) / 100)
+    X, Y = np.meshgrid(X, Y)
+    Z = []
+
+    for row_x, row_y in zip(X, Y):
+        z_row = []
+        Z.append(z_row)
+        for x, y in zip(row_x, row_y):
+            loc = {axis1: x, axis2: y}
+            v = model.interpolateFromMasters(loc, masterValues)
+            z_row.append(v)
+    Z = np.array(Z)
+
+    axis3D = fig.add_subplot(111, projection="3d")
+    axis3D.plot_surface(X, Y, Z, **kwargs)
+
+
+def plotModelFromMasters(model, masterValues, fig, **kwargs):
+    """Plot a variation model and set of master values corresponding
+    to the locations to the model into a pyplot figure.  Variation
+    model must have axisOrder of size 1 or 2."""
+    if len(model.axisOrder) == 1:
+        _plotModelFromMasters2D(model, masterValues, fig, **kwargs)
+    elif len(model.axisOrder) == 2:
+        _plotModelFromMasters3D(model, masterValues, fig, **kwargs)
+    else:
+        raise ValueError("Only 1 or 2 axes are supported")
+
+
+def main(args=None):
+    from fontTools import configLogger
+
+    if args is None:
+        args = sys.argv[1:]
+
+    # configure the library logger (for >= WARNING)
+    configLogger()
+    # comment this out to enable debug messages from logger
+    # log.setLevel(logging.DEBUG)
+
+    if len(args) < 1:
+        print("usage: fonttools varLib.plot source.designspace", file=sys.stderr)
+        print("  or")
+        print("usage: fonttools varLib.plot location1 location2 ...", file=sys.stderr)
+        print("  or")
+        print(
+            "usage: fonttools varLib.plot location1=value1 location2=value2 ...",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    fig = pyplot.figure()
+    fig.set_tight_layout(True)
+
+    if len(args) == 1 and args[0].endswith(".designspace"):
+        doc = DesignSpaceDocument()
+        doc.read(args[0])
+        plotDocument(doc, fig)
+    else:
+        axes = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
+        if "=" not in args[0]:
+            locs = [dict(zip(axes, (float(v) for v in s.split(",")))) for s in args]
+            plotLocations(locs, fig)
+        else:
+            locations = []
+            masterValues = []
+            for arg in args:
+                loc, v = arg.split("=")
+                locations.append(dict(zip(axes, (float(v) for v in loc.split(",")))))
+                masterValues.append(float(v))
+            model = VariationModel(locations, axes[: len(locations[0])])
+            plotModelFromMasters(model, masterValues, fig)
+
+    pyplot.show()
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

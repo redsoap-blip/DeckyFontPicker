@@ -1,1 +1,81 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBvdFRhYmxlcyBhcyBvdApmcm9tIC50YWJsZV9idWlsZGVyIGltcG9ydCBUYWJsZVVuYnVpbGRlcgoKCmRlZiB1bmJ1aWxkQ29sclYxKGxheWVyTGlzdCwgYmFzZUdseXBoTGlzdCk6CiAgICBsYXllcnMgPSBbXQogICAgaWYgbGF5ZXJMaXN0OgogICAgICAgIGxheWVycyA9IGxheWVyTGlzdC5QYWludAogICAgdW5idWlsZGVyID0gTGF5ZXJMaXN0VW5idWlsZGVyKGxheWVycykKICAgIHJldHVybiB7CiAgICAgICAgcmVjLkJhc2VHbHlwaDogdW5idWlsZGVyLnVuYnVpbGRQYWludChyZWMuUGFpbnQpCiAgICAgICAgZm9yIHJlYyBpbiBiYXNlR2x5cGhMaXN0LkJhc2VHbHlwaFBhaW50UmVjb3JkCiAgICB9CgoKZGVmIF9mbGF0dGVuX2xheWVycyhsc3QpOgogICAgZm9yIHBhaW50IGluIGxzdDoKICAgICAgICBpZiBwYWludFsiRm9ybWF0Il0gPT0gb3QuUGFpbnRGb3JtYXQuUGFpbnRDb2xyTGF5ZXJzOgogICAgICAgICAgICB5aWVsZCBmcm9tIF9mbGF0dGVuX2xheWVycyhwYWludFsiTGF5ZXJzIl0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgeWllbGQgcGFpbnQKCgpjbGFzcyBMYXllckxpc3RVbmJ1aWxkZXI6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbGF5ZXJzKToKICAgICAgICBzZWxmLmxheWVycyA9IGxheWVycwoKICAgICAgICBjYWxsYmFja3MgPSB7CiAgICAgICAgICAgICgKICAgICAgICAgICAgICAgIG90LlBhaW50LAogICAgICAgICAgICAgICAgb3QuUGFpbnRGb3JtYXQuUGFpbnRDb2xyTGF5ZXJzLAogICAgICAgICAgICApOiBzZWxmLl91bmJ1aWxkUGFpbnRDb2xyTGF5ZXJzLAogICAgICAgIH0KICAgICAgICBzZWxmLnRhYmxlVW5idWlsZGVyID0gVGFibGVVbmJ1aWxkZXIoY2FsbGJhY2tzKQoKICAgIGRlZiB1bmJ1aWxkUGFpbnQoc2VsZiwgcGFpbnQpOgogICAgICAgIGFzc2VydCBpc2luc3RhbmNlKHBhaW50LCBvdC5QYWludCkKICAgICAgICByZXR1cm4gc2VsZi50YWJsZVVuYnVpbGRlci51bmJ1aWxkKHBhaW50KQoKICAgIGRlZiBfdW5idWlsZFBhaW50Q29sckxheWVycyhzZWxmLCBzb3VyY2UpOgogICAgICAgIGFzc2VydCBzb3VyY2VbIkZvcm1hdCJdID09IG90LlBhaW50Rm9ybWF0LlBhaW50Q29sckxheWVycwoKICAgICAgICBsYXllcnMgPSBsaXN0KAogICAgICAgICAgICBfZmxhdHRlbl9sYXllcnMoCiAgICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICAgICAgc2VsZi51bmJ1aWxkUGFpbnQoY2hpbGRQYWludCkKICAgICAgICAgICAgICAgICAgICBmb3IgY2hpbGRQYWludCBpbiBzZWxmLmxheWVyc1sKICAgICAgICAgICAgICAgICAgICAgICAgc291cmNlWyJGaXJzdExheWVySW5kZXgiXSA6IHNvdXJjZVsiRmlyc3RMYXllckluZGV4Il0KICAgICAgICAgICAgICAgICAgICAgICAgKyBzb3VyY2VbIk51bUxheWVycyJdCiAgICAgICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgXQogICAgICAgICAgICApCiAgICAgICAgKQoKICAgICAgICBpZiBsZW4obGF5ZXJzKSA9PSAxOgogICAgICAgICAgICByZXR1cm4gbGF5ZXJzWzBdCgogICAgICAgIHJldHVybiB7IkZvcm1hdCI6IHNvdXJjZVsiRm9ybWF0Il0sICJMYXllcnMiOiBsYXllcnN9CgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGZyb20gcHByaW50IGltcG9ydCBwcHJpbnQKICAgIGltcG9ydCBzeXMKICAgIGZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBUVEZvbnQKCiAgICB0cnk6CiAgICAgICAgZm9udGZpbGUgPSBzeXMuYXJndlsxXQogICAgZXhjZXB0IEluZGV4RXJyb3I6CiAgICAgICAgc3lzLmV4aXQoInVzYWdlOiBmb250dG9vbHMgY29sb3JMaWIudW5idWlsZGVyIEZPTlRGSUxFIikKCiAgICBmb250ID0gVFRGb250KGZvbnRmaWxlKQogICAgY29sciA9IGZvbnRbIkNPTFIiXQogICAgaWYgY29sci52ZXJzaW9uIDwgMToKICAgICAgICBzeXMuZXhpdChmImVycm9yOiBObyBDT0xSIHRhYmxlIHZlcnNpb249MSBmb3VuZCBpbiB7Zm9udGZpbGV9IikKCiAgICBjb2xvckdseXBocyA9IHVuYnVpbGRDb2xyVjEoCiAgICAgICAgY29sci50YWJsZS5MYXllckxpc3QsCiAgICAgICAgY29sci50YWJsZS5CYXNlR2x5cGhMaXN0LAogICAgKQoKICAgIHBwcmludChjb2xvckdseXBocykK
+from fontTools.ttLib.tables import otTables as ot
+from .table_builder import TableUnbuilder
+
+
+def unbuildColrV1(layerList, baseGlyphList):
+    layers = []
+    if layerList:
+        layers = layerList.Paint
+    unbuilder = LayerListUnbuilder(layers)
+    return {
+        rec.BaseGlyph: unbuilder.unbuildPaint(rec.Paint)
+        for rec in baseGlyphList.BaseGlyphPaintRecord
+    }
+
+
+def _flatten_layers(lst):
+    for paint in lst:
+        if paint["Format"] == ot.PaintFormat.PaintColrLayers:
+            yield from _flatten_layers(paint["Layers"])
+        else:
+            yield paint
+
+
+class LayerListUnbuilder:
+    def __init__(self, layers):
+        self.layers = layers
+
+        callbacks = {
+            (
+                ot.Paint,
+                ot.PaintFormat.PaintColrLayers,
+            ): self._unbuildPaintColrLayers,
+        }
+        self.tableUnbuilder = TableUnbuilder(callbacks)
+
+    def unbuildPaint(self, paint):
+        assert isinstance(paint, ot.Paint)
+        return self.tableUnbuilder.unbuild(paint)
+
+    def _unbuildPaintColrLayers(self, source):
+        assert source["Format"] == ot.PaintFormat.PaintColrLayers
+
+        layers = list(
+            _flatten_layers(
+                [
+                    self.unbuildPaint(childPaint)
+                    for childPaint in self.layers[
+                        source["FirstLayerIndex"] : source["FirstLayerIndex"]
+                        + source["NumLayers"]
+                    ]
+                ]
+            )
+        )
+
+        if len(layers) == 1:
+            return layers[0]
+
+        return {"Format": source["Format"], "Layers": layers}
+
+
+if __name__ == "__main__":
+    from pprint import pprint
+    import sys
+    from fontTools.ttLib import TTFont
+
+    try:
+        fontfile = sys.argv[1]
+    except IndexError:
+        sys.exit("usage: fonttools colorLib.unbuilder FONTFILE")
+
+    font = TTFont(fontfile)
+    colr = font["COLR"]
+    if colr.version < 1:
+        sys.exit(f"error: No COLR table version=1 found in {fontfile}")
+
+    colorGlyphs = unbuildColrV1(
+        colr.table.LayerList,
+        colr.table.BaseGlyphList,
+    )
+
+    pprint(colorGlyphs)

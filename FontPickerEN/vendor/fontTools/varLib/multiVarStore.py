@@ -1,1 +1,286 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBub1JvdW5kLCBvdFJvdW5kCmZyb20gZm9udFRvb2xzLm1pc2MuaW50VG9vbHMgaW1wb3J0IGJpdF9jb3VudApmcm9tIGZvbnRUb29scy5taXNjLnZlY3RvciBpbXBvcnQgVmVjdG9yCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcyBpbXBvcnQgb3RUYWJsZXMgYXMgb3QKZnJvbSBmb250VG9vbHMudmFyTGliLm1vZGVscyBpbXBvcnQgc3VwcG9ydFNjYWxhcgppbXBvcnQgZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSAgIyBGb3IgbW9ua2V5LXBhdGNoaW5nCmZyb20gZm9udFRvb2xzLnZhckxpYi5idWlsZGVyIGltcG9ydCAoCiAgICBidWlsZFZhclJlZ2lvbkxpc3QsCiAgICBidWlsZFNwYXJzZVZhclJlZ2lvbkxpc3QsCiAgICBidWlsZFNwYXJzZVZhclJlZ2lvbiwKICAgIGJ1aWxkTXVsdGlWYXJTdG9yZSwKICAgIGJ1aWxkTXVsdGlWYXJEYXRhLAopCmZyb20gZm9udFRvb2xzLm1pc2MuaXRlclRvb2xzIGltcG9ydCBiYXRjaGVkCmZyb20gZnVuY3Rvb2xzIGltcG9ydCBwYXJ0aWFsCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IGRlZmF1bHRkaWN0CmZyb20gaGVhcHEgaW1wb3J0IGhlYXBwdXNoLCBoZWFwcG9wCgpOT19WQVJJQVRJT05fSU5ERVggPSBvdC5OT19WQVJJQVRJT05fSU5ERVgKb3QuTXVsdGlWYXJTdG9yZS5OT19WQVJJQVRJT05fSU5ERVggPSBOT19WQVJJQVRJT05fSU5ERVgKCgpkZWYgX2dldExvY2F0aW9uS2V5KGxvYyk6CiAgICByZXR1cm4gdHVwbGUoc29ydGVkKGxvYy5pdGVtcygpLCBrZXk9bGFtYmRhIGt2OiBrdlswXSkpCgoKY2xhc3MgT25saW5lTXVsdGlWYXJTdG9yZUJ1aWxkZXIob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBheGlzVGFncyk6CiAgICAgICAgc2VsZi5fYXhpc1RhZ3MgPSBheGlzVGFncwogICAgICAgIHNlbGYuX3JlZ2lvbk1hcCA9IHt9CiAgICAgICAgc2VsZi5fcmVnaW9uTGlzdCA9IGJ1aWxkU3BhcnNlVmFyUmVnaW9uTGlzdChbXSwgYXhpc1RhZ3MpCiAgICAgICAgc2VsZi5fc3RvcmUgPSBidWlsZE11bHRpVmFyU3RvcmUoc2VsZi5fcmVnaW9uTGlzdCwgW10pCiAgICAgICAgc2VsZi5fZGF0YSA9IE5vbmUKICAgICAgICBzZWxmLl9tb2RlbCA9IE5vbmUKICAgICAgICBzZWxmLl9zdXBwb3J0cyA9IE5vbmUKICAgICAgICBzZWxmLl92YXJEYXRhSW5kaWNlcyA9IHt9CiAgICAgICAgc2VsZi5fdmFyRGF0YUNhY2hlcyA9IHt9CiAgICAgICAgc2VsZi5fY2FjaGUgPSBOb25lCgogICAgZGVmIHNldE1vZGVsKHNlbGYsIG1vZGVsKToKICAgICAgICBzZWxmLnNldFN1cHBvcnRzKG1vZGVsLnN1cHBvcnRzKQogICAgICAgIHNlbGYuX21vZGVsID0gbW9kZWwKCiAgICBkZWYgc2V0U3VwcG9ydHMoc2VsZiwgc3VwcG9ydHMpOgogICAgICAgIHNlbGYuX21vZGVsID0gTm9uZQogICAgICAgIHNlbGYuX3N1cHBvcnRzID0gbGlzdChzdXBwb3J0cykKICAgICAgICBpZiBub3Qgc2VsZi5fc3VwcG9ydHNbMF06CiAgICAgICAgICAgIGRlbCBzZWxmLl9zdXBwb3J0c1swXSAgIyBEcm9wIGJhc2UgbWFzdGVyIHN1cHBvcnQKICAgICAgICBzZWxmLl9jYWNoZSA9IE5vbmUKICAgICAgICBzZWxmLl9kYXRhID0gTm9uZQoKICAgIGRlZiBmaW5pc2goc2VsZik6CiAgICAgICAgc2VsZi5fcmVnaW9uTGlzdC5SZWdpb25Db3VudCA9IGxlbihzZWxmLl9yZWdpb25MaXN0LlJlZ2lvbikKICAgICAgICBzZWxmLl9zdG9yZS5NdWx0aVZhckRhdGFDb3VudCA9IGxlbihzZWxmLl9zdG9yZS5NdWx0aVZhckRhdGEpCiAgICAgICAgcmV0dXJuIHNlbGYuX3N0b3JlCgogICAgZGVmIF9hZGRfTXVsdGlWYXJEYXRhKHNlbGYpOgogICAgICAgIHJlZ2lvbk1hcCA9IHNlbGYuX3JlZ2lvbk1hcAogICAgICAgIHJlZ2lvbkxpc3QgPSBzZWxmLl9yZWdpb25MaXN0CgogICAgICAgIHJlZ2lvbnMgPSBzZWxmLl9zdXBwb3J0cwogICAgICAgIHJlZ2lvbkluZGljZXMgPSBbXQogICAgICAgIGZvciByZWdpb24gaW4gcmVnaW9uczoKICAgICAgICAgICAga2V5ID0gX2dldExvY2F0aW9uS2V5KHJlZ2lvbikKICAgICAgICAgICAgaWR4ID0gcmVnaW9uTWFwLmdldChrZXkpCiAgICAgICAgICAgIGlmIGlkeCBpcyBOb25lOgogICAgICAgICAgICAgICAgdmFyUmVnaW9uID0gYnVpbGRTcGFyc2VWYXJSZWdpb24ocmVnaW9uLCBzZWxmLl9heGlzVGFncykKICAgICAgICAgICAgICAgIGlkeCA9IHJlZ2lvbk1hcFtrZXldID0gbGVuKHJlZ2lvbkxpc3QuUmVnaW9uKQogICAgICAgICAgICAgICAgcmVnaW9uTGlzdC5SZWdpb24uYXBwZW5kKHZhclJlZ2lvbikKICAgICAgICAgICAgcmVnaW9uSW5kaWNlcy5hcHBlbmQoaWR4KQoKICAgICAgICAjIENoZWNrIGlmIHdlIGhhdmUgb25lIGFscmVhZHkuLi4KICAgICAgICBrZXkgPSB0dXBsZShyZWdpb25JbmRpY2VzKQogICAgICAgIHZhckRhdGFJZHggPSBzZWxmLl92YXJEYXRhSW5kaWNlcy5nZXQoa2V5KQogICAgICAgIGlmIHZhckRhdGFJZHggaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHNlbGYuX291dGVyID0gdmFyRGF0YUlkeAogICAgICAgICAgICBzZWxmLl9kYXRhID0gc2VsZi5fc3RvcmUuTXVsdGlWYXJEYXRhW3ZhckRhdGFJZHhdCiAgICAgICAgICAgIHNlbGYuX2NhY2hlID0gc2VsZi5fdmFyRGF0YUNhY2hlc1trZXldCiAgICAgICAgICAgIGlmIGxlbihzZWxmLl9kYXRhLkl0ZW0pID09IDB4RkZGRjoKICAgICAgICAgICAgICAgICMgVGhpcyBpcyBmdWxsLiAgTmVlZCBuZXcgb25lLgogICAgICAgICAgICAgICAgdmFyRGF0YUlkeCA9IE5vbmUKCiAgICAgICAgaWYgdmFyRGF0YUlkeCBpcyBOb25lOgogICAgICAgICAgICBzZWxmLl9kYXRhID0gYnVpbGRNdWx0aVZhckRhdGEocmVnaW9uSW5kaWNlcywgW10pCiAgICAgICAgICAgIHNlbGYuX291dGVyID0gbGVuKHNlbGYuX3N0b3JlLk11bHRpVmFyRGF0YSkKICAgICAgICAgICAgc2VsZi5fc3RvcmUuTXVsdGlWYXJEYXRhLmFwcGVuZChzZWxmLl9kYXRhKQogICAgICAgICAgICBzZWxmLl92YXJEYXRhSW5kaWNlc1trZXldID0gc2VsZi5fb3V0ZXIKICAgICAgICAgICAgaWYga2V5IG5vdCBpbiBzZWxmLl92YXJEYXRhQ2FjaGVzOgogICAgICAgICAgICAgICAgc2VsZi5fdmFyRGF0YUNhY2hlc1trZXldID0ge30KICAgICAgICAgICAgc2VsZi5fY2FjaGUgPSBzZWxmLl92YXJEYXRhQ2FjaGVzW2tleV0KCiAgICBkZWYgc3RvcmVNYXN0ZXJzKHNlbGYsIG1hc3Rlcl92YWx1ZXMsICosIHJvdW5kPXJvdW5kKToKICAgICAgICBkZWx0YXMgPSBzZWxmLl9tb2RlbC5nZXREZWx0YXMobWFzdGVyX3ZhbHVlcywgcm91bmQ9cm91bmQpCiAgICAgICAgYmFzZSA9IGRlbHRhcy5wb3AoMCkKICAgICAgICByZXR1cm4gYmFzZSwgc2VsZi5zdG9yZURlbHRhcyhkZWx0YXMsIHJvdW5kPW5vUm91bmQpCgogICAgZGVmIHN0b3JlRGVsdGFzKHNlbGYsIGRlbHRhcywgKiwgcm91bmQ9cm91bmQpOgogICAgICAgIGRlbHRhcyA9IHR1cGxlKHJvdW5kKGQpIGZvciBkIGluIGRlbHRhcykKCiAgICAgICAgaWYgbm90IGFueShkZWx0YXMpOgogICAgICAgICAgICByZXR1cm4gTk9fVkFSSUFUSU9OX0lOREVYCgogICAgICAgIGRlbHRhc190dXBsZSA9IHR1cGxlKHR1cGxlKGQpIGZvciBkIGluIGRlbHRhcykKCiAgICAgICAgaWYgbm90IHNlbGYuX2RhdGE6CiAgICAgICAgICAgIHNlbGYuX2FkZF9NdWx0aVZhckRhdGEoKQoKICAgICAgICB2YXJJZHggPSBzZWxmLl9jYWNoZS5nZXQoZGVsdGFzX3R1cGxlKQogICAgICAgIGlmIHZhcklkeCBpcyBub3QgTm9uZToKICAgICAgICAgICAgcmV0dXJuIHZhcklkeAoKICAgICAgICBpbm5lciA9IGxlbihzZWxmLl9kYXRhLkl0ZW0pCiAgICAgICAgaWYgaW5uZXIgPT0gMHhGRkZGOgogICAgICAgICAgICAjIEZ1bGwgYXJyYXkuIFN0YXJ0IG5ldyBvbmUuCiAgICAgICAgICAgIHNlbGYuX2FkZF9NdWx0aVZhckRhdGEoKQogICAgICAgICAgICByZXR1cm4gc2VsZi5zdG9yZURlbHRhcyhkZWx0YXMsIHJvdW5kPW5vUm91bmQpCiAgICAgICAgc2VsZi5fZGF0YS5hZGRJdGVtKGRlbHRhcywgcm91bmQ9bm9Sb3VuZCkKCiAgICAgICAgdmFySWR4ID0gKHNlbGYuX291dGVyIDw8IDE2KSArIGlubmVyCiAgICAgICAgc2VsZi5fY2FjaGVbZGVsdGFzX3R1cGxlXSA9IHZhcklkeAogICAgICAgIHJldHVybiB2YXJJZHgKCgpkZWYgTXVsdGlWYXJEYXRhX2FkZEl0ZW0oc2VsZiwgZGVsdGFzLCAqLCByb3VuZD1yb3VuZCk6CiAgICBkZWx0YXMgPSB0dXBsZShyb3VuZChkKSBmb3IgZCBpbiBkZWx0YXMpCgogICAgYXNzZXJ0IGxlbihkZWx0YXMpID09IHNlbGYuVmFyUmVnaW9uQ291bnQKCiAgICB2YWx1ZXMgPSBbXQogICAgZm9yIGQgaW4gZGVsdGFzOgogICAgICAgIHZhbHVlcy5leHRlbmQoZCkKCiAgICBzZWxmLkl0ZW0uYXBwZW5kKHZhbHVlcykKICAgIHNlbGYuSXRlbUNvdW50ID0gbGVuKHNlbGYuSXRlbSkKCgpvdC5NdWx0aVZhckRhdGEuYWRkSXRlbSA9IE11bHRpVmFyRGF0YV9hZGRJdGVtCgoKZGVmIFNwYXJzZVZhclJlZ2lvbl9nZXRfc3VwcG9ydChzZWxmLCBmdmFyX2F4ZXMpOgogICAgcmV0dXJuIHsKICAgICAgICBmdmFyX2F4ZXNbcmVnLkF4aXNJbmRleF0uYXhpc1RhZzogKHJlZy5TdGFydENvb3JkLCByZWcuUGVha0Nvb3JkLCByZWcuRW5kQ29vcmQpCiAgICAgICAgZm9yIHJlZyBpbiBzZWxmLlNwYXJzZVZhclJlZ2lvbkF4aXMKICAgIH0KCgpvdC5TcGFyc2VWYXJSZWdpb24uZ2V0X3N1cHBvcnQgPSBTcGFyc2VWYXJSZWdpb25fZ2V0X3N1cHBvcnQKCgpkZWYgTXVsdGlWYXJTdG9yZV9fX2Jvb2xfXyhzZWxmKToKICAgIHJldHVybiBib29sKHNlbGYuTXVsdGlWYXJEYXRhKQoKCm90Lk11bHRpVmFyU3RvcmUuX19ib29sX18gPSBNdWx0aVZhclN0b3JlX19fYm9vbF9fCgoKY2xhc3MgTXVsdGlWYXJTdG9yZUluc3RhbmNlcihvYmplY3QpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG11bHRpdmFyc3RvcmUsIGZ2YXJfYXhlcywgbG9jYXRpb249e30pOgogICAgICAgIHNlbGYuZnZhcl9heGVzID0gZnZhcl9heGVzCiAgICAgICAgYXNzZXJ0IG11bHRpdmFyc3RvcmUgaXMgTm9uZSBvciBtdWx0aXZhcnN0b3JlLkZvcm1hdCA9PSAxCiAgICAgICAgc2VsZi5fdmFyRGF0YSA9IG11bHRpdmFyc3RvcmUuTXVsdGlWYXJEYXRhIGlmIG11bHRpdmFyc3RvcmUgZWxzZSBbXQogICAgICAgIHNlbGYuX3JlZ2lvbnMgPSAoCiAgICAgICAgICAgIG11bHRpdmFyc3RvcmUuU3BhcnNlVmFyUmVnaW9uTGlzdC5SZWdpb24gaWYgbXVsdGl2YXJzdG9yZSBlbHNlIFtdCiAgICAgICAgKQogICAgICAgIHNlbGYuc2V0TG9jYXRpb24obG9jYXRpb24pCgogICAgZGVmIHNldExvY2F0aW9uKHNlbGYsIGxvY2F0aW9uKToKICAgICAgICBzZWxmLmxvY2F0aW9uID0gZGljdChsb2NhdGlvbikKICAgICAgICBzZWxmLl9jbGVhckNhY2hlcygpCgogICAgZGVmIF9jbGVhckNhY2hlcyhzZWxmKToKICAgICAgICBzZWxmLl9zY2FsYXJzID0ge30KCiAgICBkZWYgX2dldFNjYWxhcihzZWxmLCByZWdpb25JZHgpOgogICAgICAgIHNjYWxhciA9IHNlbGYuX3NjYWxhcnMuZ2V0KHJlZ2lvbklkeCkKICAgICAgICBpZiBzY2FsYXIgaXMgTm9uZToKICAgICAgICAgICAgc3VwcG9ydCA9IHNlbGYuX3JlZ2lvbnNbcmVnaW9uSWR4XS5nZXRfc3VwcG9ydChzZWxmLmZ2YXJfYXhlcykKICAgICAgICAgICAgc2NhbGFyID0gc3VwcG9ydFNjYWxhcihzZWxmLmxvY2F0aW9uLCBzdXBwb3J0KQogICAgICAgICAgICBzZWxmLl9zY2FsYXJzW3JlZ2lvbklkeF0gPSBzY2FsYXIKICAgICAgICByZXR1cm4gc2NhbGFyCgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIGludGVycG9sYXRlRnJvbURlbHRhc0FuZFNjYWxhcnMoZGVsdGFzLCBzY2FsYXJzKToKICAgICAgICBpZiBub3QgZGVsdGFzOgogICAgICAgICAgICByZXR1cm4gVmVjdG9yKFtdKQogICAgICAgIGFzc2VydCBsZW4oZGVsdGFzKSAlIGxlbihzY2FsYXJzKSA9PSAwLCAobGVuKGRlbHRhcyksIGxlbihzY2FsYXJzKSkKICAgICAgICBtID0gbGVuKGRlbHRhcykgLy8gbGVuKHNjYWxhcnMpCiAgICAgICAgZGVsdGEgPSBWZWN0b3IoWzBdICogbSkKICAgICAgICBmb3IgZCwgcyBpbiB6aXAoYmF0Y2hlZChkZWx0YXMsIG0pLCBzY2FsYXJzKToKICAgICAgICAgICAgaWYgbm90IHM6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBkZWx0YSArPSBWZWN0b3IoZCkgKiBzCiAgICAgICAgcmV0dXJuIGRlbHRhCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIHZhcmlkeCk6CiAgICAgICAgbWFqb3IsIG1pbm9yID0gdmFyaWR4ID4+IDE2LCB2YXJpZHggJiAweEZGRkYKICAgICAgICBpZiB2YXJpZHggPT0gTk9fVkFSSUFUSU9OX0lOREVYOgogICAgICAgICAgICByZXR1cm4gVmVjdG9yKFtdKQogICAgICAgIHZhckRhdGEgPSBzZWxmLl92YXJEYXRhCiAgICAgICAgc2NhbGFycyA9IFtzZWxmLl9nZXRTY2FsYXIocmkpIGZvciByaSBpbiB2YXJEYXRhW21ham9yXS5WYXJSZWdpb25JbmRleF0KICAgICAgICBkZWx0YXMgPSB2YXJEYXRhW21ham9yXS5JdGVtW21pbm9yXQogICAgICAgIHJldHVybiBzZWxmLmludGVycG9sYXRlRnJvbURlbHRhc0FuZFNjYWxhcnMoZGVsdGFzLCBzY2FsYXJzKQoKICAgIGRlZiBpbnRlcnBvbGF0ZUZyb21EZWx0YXMoc2VsZiwgdmFyRGF0YUluZGV4LCBkZWx0YXMpOgogICAgICAgIHZhckRhdGEgPSBzZWxmLl92YXJEYXRhCiAgICAgICAgc2NhbGFycyA9IFtzZWxmLl9nZXRTY2FsYXIocmkpIGZvciByaSBpbiB2YXJEYXRhW3ZhckRhdGFJbmRleF0uVmFyUmVnaW9uSW5kZXhdCiAgICAgICAgcmV0dXJuIHNlbGYuaW50ZXJwb2xhdGVGcm9tRGVsdGFzQW5kU2NhbGFycyhkZWx0YXMsIHNjYWxhcnMpCgoKZGVmIE11bHRpVmFyU3RvcmVfc3Vic2V0X3ZhcmlkeGVzKHNlbGYsIHZhcklkeGVzKToKICAgIHJldHVybiBvdC5WYXJTdG9yZS5zdWJzZXRfdmFyaWR4ZXMoc2VsZiwgdmFySWR4ZXMsIFZhckRhdGE9Ik11bHRpVmFyRGF0YSIpCgoKZGVmIE11bHRpVmFyU3RvcmVfcHJ1bmVfcmVnaW9ucyhzZWxmKToKICAgIHJldHVybiBvdC5WYXJTdG9yZS5wcnVuZV9yZWdpb25zKAogICAgICAgIHNlbGYsIFZhckRhdGE9Ik11bHRpVmFyRGF0YSIsIFZhclJlZ2lvbkxpc3Q9IlNwYXJzZVZhclJlZ2lvbkxpc3QiCiAgICApCgoKb3QuTXVsdGlWYXJTdG9yZS5wcnVuZV9yZWdpb25zID0gTXVsdGlWYXJTdG9yZV9wcnVuZV9yZWdpb25zCm90Lk11bHRpVmFyU3RvcmUuc3Vic2V0X3ZhcmlkeGVzID0gTXVsdGlWYXJTdG9yZV9zdWJzZXRfdmFyaWR4ZXMKCgpkZWYgTXVsdGlWYXJTdG9yZV9nZXRfc3VwcG9ydHMoc2VsZiwgbWFqb3IsIGZ2YXJBeGVzKToKICAgIHN1cHBvcnRzID0gW10KICAgIHZhckRhdGEgPSBzZWxmLk11bHRpVmFyRGF0YVttYWpvcl0KICAgIGZvciByZWdpb25JZHggaW4gdmFyRGF0YS5WYXJSZWdpb25JbmRleDoKICAgICAgICByZWdpb24gPSBzZWxmLlNwYXJzZVZhclJlZ2lvbkxpc3QuUmVnaW9uW3JlZ2lvbklkeF0KICAgICAgICBzdXBwb3J0ID0gcmVnaW9uLmdldF9zdXBwb3J0KGZ2YXJBeGVzKQogICAgICAgIHN1cHBvcnRzLmFwcGVuZChzdXBwb3J0KQogICAgcmV0dXJuIHN1cHBvcnRzCgoKb3QuTXVsdGlWYXJTdG9yZS5nZXRfc3VwcG9ydHMgPSBNdWx0aVZhclN0b3JlX2dldF9zdXBwb3J0cwoKCmRlZiBDb25kaXRpb25UYWJsZV9jb2xsZWN0X3ZhcmlkeGVzKHNlbGYsIHZhcmlkeGVzKToKICAgIGlmIHNlbGYuRm9ybWF0ID09IDI6CiAgICAgICAgdmFyaWR4ZXMuYWRkKHNlbGYuVmFySWR4KQogICAgZWxpZiBzZWxmLkZvcm1hdCBpbiAoMywgNCk6CiAgICAgICAgZm9yIGNvbmRpdGlvbiBpbiBzZWxmLkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICBpZiBjb25kaXRpb24gaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24uY29sbGVjdF92YXJpZHhlcyh2YXJpZHhlcykKICAgIGVsaWYgc2VsZi5Gb3JtYXQgPT0gNSBhbmQgc2VsZi5Db25kaXRpb25UYWJsZSBpcyBub3QgTm9uZToKICAgICAgICBzZWxmLkNvbmRpdGlvblRhYmxlLmNvbGxlY3RfdmFyaWR4ZXModmFyaWR4ZXMpCgoKZGVmIENvbmRpdGlvblRhYmxlX3JlbWFwX3ZhcmlkeGVzKHNlbGYsIHZhcmlkeGVzX21hcCk6CiAgICBpZiBzZWxmLkZvcm1hdCA9PSAyOgogICAgICAgIHNlbGYuVmFySWR4ID0gdmFyaWR4ZXNfbWFwW3NlbGYuVmFySWR4XQogICAgZWxpZiBzZWxmLkZvcm1hdCBpbiAoMywgNCk6CiAgICAgICAgZm9yIGNvbmRpdGlvbiBpbiBzZWxmLkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICBpZiBjb25kaXRpb24gaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24ucmVtYXBfdmFyaWR4ZXModmFyaWR4ZXNfbWFwKQogICAgZWxpZiBzZWxmLkZvcm1hdCA9PSA1IGFuZCBzZWxmLkNvbmRpdGlvblRhYmxlIGlzIG5vdCBOb25lOgogICAgICAgIHNlbGYuQ29uZGl0aW9uVGFibGUucmVtYXBfdmFyaWR4ZXModmFyaWR4ZXNfbWFwKQoKCm90LkNvbmRpdGlvblRhYmxlLmNvbGxlY3RfdmFyaWR4ZXMgPSBDb25kaXRpb25UYWJsZV9jb2xsZWN0X3ZhcmlkeGVzCm90LkNvbmRpdGlvblRhYmxlLnJlbWFwX3ZhcmlkeGVzID0gQ29uZGl0aW9uVGFibGVfcmVtYXBfdmFyaWR4ZXMKCgpkZWYgVkFSQ19jb2xsZWN0X3ZhcmlkeGVzKHNlbGYsIHZhcmlkeGVzKToKICAgIGZvciBnbHlwaCBpbiBzZWxmLlZhckNvbXBvc2l0ZUdseXBocy5WYXJDb21wb3NpdGVHbHlwaDoKICAgICAgICBmb3IgY29tcG9uZW50IGluIGdseXBoLmNvbXBvbmVudHM6CiAgICAgICAgICAgIHZhcmlkeGVzLmFkZChjb21wb25lbnQuYXhpc1ZhbHVlc1ZhckluZGV4KQogICAgICAgICAgICB2YXJpZHhlcy5hZGQoY29tcG9uZW50LnRyYW5zZm9ybVZhckluZGV4KQogICAgaWYgc2VsZi5Db25kaXRpb25MaXN0IGlzIG5vdCBOb25lOgogICAgICAgIGZvciBjb25kaXRpb24gaW4gc2VsZi5Db25kaXRpb25MaXN0LkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICBpZiBjb25kaXRpb24gaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24uY29sbGVjdF92YXJpZHhlcyh2YXJpZHhlcykKCgpkZWYgVkFSQ19yZW1hcF92YXJpZHhlcyhzZWxmLCB2YXJpZHhlc19tYXApOgogICAgZm9yIGdseXBoIGluIHNlbGYuVmFyQ29tcG9zaXRlR2x5cGhzLlZhckNvbXBvc2l0ZUdseXBoOgogICAgICAgIGZvciBjb21wb25lbnQgaW4gZ2x5cGguY29tcG9uZW50czoKICAgICAgICAgICAgY29tcG9uZW50LmF4aXNWYWx1ZXNWYXJJbmRleCA9IHZhcmlkeGVzX21hcFtjb21wb25lbnQuYXhpc1ZhbHVlc1ZhckluZGV4XQogICAgICAgICAgICBjb21wb25lbnQudHJhbnNmb3JtVmFySW5kZXggPSB2YXJpZHhlc19tYXBbY29tcG9uZW50LnRyYW5zZm9ybVZhckluZGV4XQogICAgaWYgc2VsZi5Db25kaXRpb25MaXN0IGlzIG5vdCBOb25lOgogICAgICAgIGZvciBjb25kaXRpb24gaW4gc2VsZi5Db25kaXRpb25MaXN0LkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICBpZiBjb25kaXRpb24gaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24ucmVtYXBfdmFyaWR4ZXModmFyaWR4ZXNfbWFwKQoKCm90LlZBUkMuY29sbGVjdF92YXJpZHhlcyA9IFZBUkNfY29sbGVjdF92YXJpZHhlcwpvdC5WQVJDLnJlbWFwX3ZhcmlkeGVzID0gVkFSQ19yZW1hcF92YXJpZHhlcwo=
+from fontTools.misc.roundTools import noRound, otRound
+from fontTools.misc.intTools import bit_count
+from fontTools.misc.vector import Vector
+from fontTools.ttLib.tables import otTables as ot
+from fontTools.varLib.models import supportScalar
+import fontTools.varLib.varStore  # For monkey-patching
+from fontTools.varLib.builder import (
+    buildVarRegionList,
+    buildSparseVarRegionList,
+    buildSparseVarRegion,
+    buildMultiVarStore,
+    buildMultiVarData,
+)
+from fontTools.misc.iterTools import batched
+from functools import partial
+from collections import defaultdict
+from heapq import heappush, heappop
+
+NO_VARIATION_INDEX = ot.NO_VARIATION_INDEX
+ot.MultiVarStore.NO_VARIATION_INDEX = NO_VARIATION_INDEX
+
+
+def _getLocationKey(loc):
+    return tuple(sorted(loc.items(), key=lambda kv: kv[0]))
+
+
+class OnlineMultiVarStoreBuilder(object):
+    def __init__(self, axisTags):
+        self._axisTags = axisTags
+        self._regionMap = {}
+        self._regionList = buildSparseVarRegionList([], axisTags)
+        self._store = buildMultiVarStore(self._regionList, [])
+        self._data = None
+        self._model = None
+        self._supports = None
+        self._varDataIndices = {}
+        self._varDataCaches = {}
+        self._cache = None
+
+    def setModel(self, model):
+        self.setSupports(model.supports)
+        self._model = model
+
+    def setSupports(self, supports):
+        self._model = None
+        self._supports = list(supports)
+        if not self._supports[0]:
+            del self._supports[0]  # Drop base master support
+        self._cache = None
+        self._data = None
+
+    def finish(self):
+        self._regionList.RegionCount = len(self._regionList.Region)
+        self._store.MultiVarDataCount = len(self._store.MultiVarData)
+        return self._store
+
+    def _add_MultiVarData(self):
+        regionMap = self._regionMap
+        regionList = self._regionList
+
+        regions = self._supports
+        regionIndices = []
+        for region in regions:
+            key = _getLocationKey(region)
+            idx = regionMap.get(key)
+            if idx is None:
+                varRegion = buildSparseVarRegion(region, self._axisTags)
+                idx = regionMap[key] = len(regionList.Region)
+                regionList.Region.append(varRegion)
+            regionIndices.append(idx)
+
+        # Check if we have one already...
+        key = tuple(regionIndices)
+        varDataIdx = self._varDataIndices.get(key)
+        if varDataIdx is not None:
+            self._outer = varDataIdx
+            self._data = self._store.MultiVarData[varDataIdx]
+            self._cache = self._varDataCaches[key]
+            if len(self._data.Item) == 0xFFFF:
+                # This is full.  Need new one.
+                varDataIdx = None
+
+        if varDataIdx is None:
+            self._data = buildMultiVarData(regionIndices, [])
+            self._outer = len(self._store.MultiVarData)
+            self._store.MultiVarData.append(self._data)
+            self._varDataIndices[key] = self._outer
+            if key not in self._varDataCaches:
+                self._varDataCaches[key] = {}
+            self._cache = self._varDataCaches[key]
+
+    def storeMasters(self, master_values, *, round=round):
+        deltas = self._model.getDeltas(master_values, round=round)
+        base = deltas.pop(0)
+        return base, self.storeDeltas(deltas, round=noRound)
+
+    def storeDeltas(self, deltas, *, round=round):
+        deltas = tuple(round(d) for d in deltas)
+
+        if not any(deltas):
+            return NO_VARIATION_INDEX
+
+        deltas_tuple = tuple(tuple(d) for d in deltas)
+
+        if not self._data:
+            self._add_MultiVarData()
+
+        varIdx = self._cache.get(deltas_tuple)
+        if varIdx is not None:
+            return varIdx
+
+        inner = len(self._data.Item)
+        if inner == 0xFFFF:
+            # Full array. Start new one.
+            self._add_MultiVarData()
+            return self.storeDeltas(deltas, round=noRound)
+        self._data.addItem(deltas, round=noRound)
+
+        varIdx = (self._outer << 16) + inner
+        self._cache[deltas_tuple] = varIdx
+        return varIdx
+
+
+def MultiVarData_addItem(self, deltas, *, round=round):
+    deltas = tuple(round(d) for d in deltas)
+
+    assert len(deltas) == self.VarRegionCount
+
+    values = []
+    for d in deltas:
+        values.extend(d)
+
+    self.Item.append(values)
+    self.ItemCount = len(self.Item)
+
+
+ot.MultiVarData.addItem = MultiVarData_addItem
+
+
+def SparseVarRegion_get_support(self, fvar_axes):
+    return {
+        fvar_axes[reg.AxisIndex].axisTag: (reg.StartCoord, reg.PeakCoord, reg.EndCoord)
+        for reg in self.SparseVarRegionAxis
+    }
+
+
+ot.SparseVarRegion.get_support = SparseVarRegion_get_support
+
+
+def MultiVarStore___bool__(self):
+    return bool(self.MultiVarData)
+
+
+ot.MultiVarStore.__bool__ = MultiVarStore___bool__
+
+
+class MultiVarStoreInstancer(object):
+    def __init__(self, multivarstore, fvar_axes, location={}):
+        self.fvar_axes = fvar_axes
+        assert multivarstore is None or multivarstore.Format == 1
+        self._varData = multivarstore.MultiVarData if multivarstore else []
+        self._regions = (
+            multivarstore.SparseVarRegionList.Region if multivarstore else []
+        )
+        self.setLocation(location)
+
+    def setLocation(self, location):
+        self.location = dict(location)
+        self._clearCaches()
+
+    def _clearCaches(self):
+        self._scalars = {}
+
+    def _getScalar(self, regionIdx):
+        scalar = self._scalars.get(regionIdx)
+        if scalar is None:
+            support = self._regions[regionIdx].get_support(self.fvar_axes)
+            scalar = supportScalar(self.location, support)
+            self._scalars[regionIdx] = scalar
+        return scalar
+
+    @staticmethod
+    def interpolateFromDeltasAndScalars(deltas, scalars):
+        if not deltas:
+            return Vector([])
+        assert len(deltas) % len(scalars) == 0, (len(deltas), len(scalars))
+        m = len(deltas) // len(scalars)
+        delta = Vector([0] * m)
+        for d, s in zip(batched(deltas, m), scalars):
+            if not s:
+                continue
+            delta += Vector(d) * s
+        return delta
+
+    def __getitem__(self, varidx):
+        major, minor = varidx >> 16, varidx & 0xFFFF
+        if varidx == NO_VARIATION_INDEX:
+            return Vector([])
+        varData = self._varData
+        scalars = [self._getScalar(ri) for ri in varData[major].VarRegionIndex]
+        deltas = varData[major].Item[minor]
+        return self.interpolateFromDeltasAndScalars(deltas, scalars)
+
+    def interpolateFromDeltas(self, varDataIndex, deltas):
+        varData = self._varData
+        scalars = [self._getScalar(ri) for ri in varData[varDataIndex].VarRegionIndex]
+        return self.interpolateFromDeltasAndScalars(deltas, scalars)
+
+
+def MultiVarStore_subset_varidxes(self, varIdxes):
+    return ot.VarStore.subset_varidxes(self, varIdxes, VarData="MultiVarData")
+
+
+def MultiVarStore_prune_regions(self):
+    return ot.VarStore.prune_regions(
+        self, VarData="MultiVarData", VarRegionList="SparseVarRegionList"
+    )
+
+
+ot.MultiVarStore.prune_regions = MultiVarStore_prune_regions
+ot.MultiVarStore.subset_varidxes = MultiVarStore_subset_varidxes
+
+
+def MultiVarStore_get_supports(self, major, fvarAxes):
+    supports = []
+    varData = self.MultiVarData[major]
+    for regionIdx in varData.VarRegionIndex:
+        region = self.SparseVarRegionList.Region[regionIdx]
+        support = region.get_support(fvarAxes)
+        supports.append(support)
+    return supports
+
+
+ot.MultiVarStore.get_supports = MultiVarStore_get_supports
+
+
+def ConditionTable_collect_varidxes(self, varidxes):
+    if self.Format == 2:
+        varidxes.add(self.VarIdx)
+    elif self.Format in (3, 4):
+        for condition in self.ConditionTable:
+            if condition is not None:
+                condition.collect_varidxes(varidxes)
+    elif self.Format == 5 and self.ConditionTable is not None:
+        self.ConditionTable.collect_varidxes(varidxes)
+
+
+def ConditionTable_remap_varidxes(self, varidxes_map):
+    if self.Format == 2:
+        self.VarIdx = varidxes_map[self.VarIdx]
+    elif self.Format in (3, 4):
+        for condition in self.ConditionTable:
+            if condition is not None:
+                condition.remap_varidxes(varidxes_map)
+    elif self.Format == 5 and self.ConditionTable is not None:
+        self.ConditionTable.remap_varidxes(varidxes_map)
+
+
+ot.ConditionTable.collect_varidxes = ConditionTable_collect_varidxes
+ot.ConditionTable.remap_varidxes = ConditionTable_remap_varidxes
+
+
+def VARC_collect_varidxes(self, varidxes):
+    for glyph in self.VarCompositeGlyphs.VarCompositeGlyph:
+        for component in glyph.components:
+            varidxes.add(component.axisValuesVarIndex)
+            varidxes.add(component.transformVarIndex)
+    if self.ConditionList is not None:
+        for condition in self.ConditionList.ConditionTable:
+            if condition is not None:
+                condition.collect_varidxes(varidxes)
+
+
+def VARC_remap_varidxes(self, varidxes_map):
+    for glyph in self.VarCompositeGlyphs.VarCompositeGlyph:
+        for component in glyph.components:
+            component.axisValuesVarIndex = varidxes_map[component.axisValuesVarIndex]
+            component.transformVarIndex = varidxes_map[component.transformVarIndex]
+    if self.ConditionList is not None:
+        for condition in self.ConditionList.ConditionTable:
+            if condition is not None:
+                condition.remap_varidxes(varidxes_map)
+
+
+ot.VARC.collect_varidxes = VARC_collect_varidxes
+ot.VARC.remap_varidxes = VARC_remap_varidxes

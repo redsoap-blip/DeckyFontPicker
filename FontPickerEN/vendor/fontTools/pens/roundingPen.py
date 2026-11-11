@@ -1,1 +1,132 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBub1JvdW5kLCBvdFJvdW5kCmZyb20gZm9udFRvb2xzLm1pc2MudHJhbnNmb3JtIGltcG9ydCBUcmFuc2Zvcm0KZnJvbSBmb250VG9vbHMucGVucy5maWx0ZXJQZW4gaW1wb3J0IEZpbHRlclBlbiwgRmlsdGVyUG9pbnRQZW4KCl9fYWxsX18gPSBbIlJvdW5kaW5nUGVuIiwgIlJvdW5kaW5nUG9pbnRQZW4iXQoKCmNsYXNzIFJvdW5kaW5nUGVuKEZpbHRlclBlbik6CiAgICAiIiIKICAgIEZpbHRlciBwZW4gdGhhdCByb3VuZHMgcG9pbnQgY29vcmRpbmF0ZXMgYW5kIGNvbXBvbmVudCBYWSBvZmZzZXRzIHRvIGludGVnZXIuIEZvcgogICAgcm91bmRpbmcgdGhlIGNvbXBvbmVudCB0cmFuc2Zvcm0gdmFsdWVzLCBhIHNlcGFyYXRlIHJvdW5kIGZ1bmN0aW9uIGNhbiBiZSBwYXNzZWQgdG8KICAgIHRoZSBwZW4uCgogICAgPj4+IGZyb20gZm9udFRvb2xzLnBlbnMucmVjb3JkaW5nUGVuIGltcG9ydCBSZWNvcmRpbmdQZW4KICAgID4+PiByZWNwZW4gPSBSZWNvcmRpbmdQZW4oKQogICAgPj4+IHJvdW5kcGVuID0gUm91bmRpbmdQZW4ocmVjcGVuKQogICAgPj4+IHJvdW5kcGVuLm1vdmVUbygoMC40LCAwLjYpKQogICAgPj4+IHJvdW5kcGVuLmxpbmVUbygoMS42LCAyLjUpKQogICAgPj4+IHJvdW5kcGVuLnFDdXJ2ZVRvKCgyLjQsIDQuNiksICgzLjMsIDUuNyksICg0LjksIDYuMSkpCiAgICA+Pj4gcm91bmRwZW4uY3VydmVUbygoNi40LCA4LjYpLCAoNy4zLCA5LjcpLCAoOC45LCAxMC4xKSkKICAgID4+PiByb3VuZHBlbi5hZGRDb21wb25lbnQoImEiLCAoMS41LCAwLCAwLCAxLjUsIDEwLjUsIC0xMC41KSkKICAgID4+PiByZWNwZW4udmFsdWUgPT0gWwogICAgLi4uICAgICAoJ21vdmVUbycsICgoMCwgMSksKSksCiAgICAuLi4gICAgICgnbGluZVRvJywgKCgyLCAzKSwpKSwKICAgIC4uLiAgICAgKCdxQ3VydmVUbycsICgoMiwgNSksICgzLCA2KSwgKDUsIDYpKSksCiAgICAuLi4gICAgICgnY3VydmVUbycsICgoNiwgOSksICg3LCAxMCksICg5LCAxMCkpKSwKICAgIC4uLiAgICAgKCdhZGRDb21wb25lbnQnLCAoJ2EnLCAoMS41LCAwLCAwLCAxLjUsIDExLCAtMTApKSksCiAgICAuLi4gXQogICAgVHJ1ZQogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG91dFBlbiwgcm91bmRGdW5jPW90Um91bmQsIHRyYW5zZm9ybVJvdW5kRnVuYz1ub1JvdW5kKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKG91dFBlbikKICAgICAgICBzZWxmLnJvdW5kRnVuYyA9IHJvdW5kRnVuYwogICAgICAgIHNlbGYudHJhbnNmb3JtUm91bmRGdW5jID0gdHJhbnNmb3JtUm91bmRGdW5jCgogICAgZGVmIG1vdmVUbyhzZWxmLCBwdCk6CiAgICAgICAgc2VsZi5fb3V0UGVuLm1vdmVUbygoc2VsZi5yb3VuZEZ1bmMocHRbMF0pLCBzZWxmLnJvdW5kRnVuYyhwdFsxXSkpKQoKICAgIGRlZiBsaW5lVG8oc2VsZiwgcHQpOgogICAgICAgIHNlbGYuX291dFBlbi5saW5lVG8oKHNlbGYucm91bmRGdW5jKHB0WzBdKSwgc2VsZi5yb3VuZEZ1bmMocHRbMV0pKSkKCiAgICBkZWYgY3VydmVUbyhzZWxmLCAqcG9pbnRzKToKICAgICAgICBzZWxmLl9vdXRQZW4uY3VydmVUbygKICAgICAgICAgICAgKigoc2VsZi5yb3VuZEZ1bmMoeCksIHNlbGYucm91bmRGdW5jKHkpKSBmb3IgeCwgeSBpbiBwb2ludHMpCiAgICAgICAgKQoKICAgIGRlZiBxQ3VydmVUbyhzZWxmLCAqcG9pbnRzKToKICAgICAgICBzZWxmLl9vdXRQZW4ucUN1cnZlVG8oCiAgICAgICAgICAgICooCiAgICAgICAgICAgICAgICBOb25lIGlmIHB0IGlzIE5vbmUgZWxzZSAoc2VsZi5yb3VuZEZ1bmMocHRbMF0pLCBzZWxmLnJvdW5kRnVuYyhwdFsxXSkpCiAgICAgICAgICAgICAgICBmb3IgcHQgaW4gcG9pbnRzCiAgICAgICAgICAgICkKICAgICAgICApCgogICAgZGVmIGFkZENvbXBvbmVudChzZWxmLCBnbHlwaE5hbWUsIHRyYW5zZm9ybWF0aW9uKToKICAgICAgICB4eCwgeHksIHl4LCB5eSwgZHgsIGR5ID0gdHJhbnNmb3JtYXRpb24KICAgICAgICBzZWxmLl9vdXRQZW4uYWRkQ29tcG9uZW50KAogICAgICAgICAgICBnbHlwaE5hbWUsCiAgICAgICAgICAgIFRyYW5zZm9ybSgKICAgICAgICAgICAgICAgIHNlbGYudHJhbnNmb3JtUm91bmRGdW5jKHh4KSwKICAgICAgICAgICAgICAgIHNlbGYudHJhbnNmb3JtUm91bmRGdW5jKHh5KSwKICAgICAgICAgICAgICAgIHNlbGYudHJhbnNmb3JtUm91bmRGdW5jKHl4KSwKICAgICAgICAgICAgICAgIHNlbGYudHJhbnNmb3JtUm91bmRGdW5jKHl5KSwKICAgICAgICAgICAgICAgIHNlbGYucm91bmRGdW5jKGR4KSwKICAgICAgICAgICAgICAgIHNlbGYucm91bmRGdW5jKGR5KSwKICAgICAgICAgICAgKSwKICAgICAgICApCgoKY2xhc3MgUm91bmRpbmdQb2ludFBlbihGaWx0ZXJQb2ludFBlbik6CiAgICAiIiIKICAgIEZpbHRlciBwb2ludCBwZW4gdGhhdCByb3VuZHMgcG9pbnQgY29vcmRpbmF0ZXMgYW5kIGNvbXBvbmVudCBYWSBvZmZzZXRzIHRvIGludGVnZXIuCiAgICBGb3Igcm91bmRpbmcgdGhlIGNvbXBvbmVudCBzY2FsZSB2YWx1ZXMsIGEgc2VwYXJhdGUgcm91bmQgZnVuY3Rpb24gY2FuIGJlIHBhc3NlZCB0bwogICAgdGhlIHBlbi4KCiAgICA+Pj4gZnJvbSBmb250VG9vbHMucGVucy5yZWNvcmRpbmdQZW4gaW1wb3J0IFJlY29yZGluZ1BvaW50UGVuCiAgICA+Pj4gcmVjcGVuID0gUmVjb3JkaW5nUG9pbnRQZW4oKQogICAgPj4+IHJvdW5kcGVuID0gUm91bmRpbmdQb2ludFBlbihyZWNwZW4pCiAgICA+Pj4gcm91bmRwZW4uYmVnaW5QYXRoKCkKICAgID4+PiByb3VuZHBlbi5hZGRQb2ludCgoMC40LCAwLjYpLCAnbGluZScpCiAgICA+Pj4gcm91bmRwZW4uYWRkUG9pbnQoKDEuNiwgMi41KSwgJ2xpbmUnKQogICAgPj4+IHJvdW5kcGVuLmFkZFBvaW50KCgyLjQsIDQuNikpCiAgICA+Pj4gcm91bmRwZW4uYWRkUG9pbnQoKDMuMywgNS43KSkKICAgID4+PiByb3VuZHBlbi5hZGRQb2ludCgoNC45LCA2LjEpLCAncWN1cnZlJykKICAgID4+PiByb3VuZHBlbi5lbmRQYXRoKCkKICAgID4+PiByb3VuZHBlbi5hZGRDb21wb25lbnQoImEiLCAoMS41LCAwLCAwLCAxLjUsIDEwLjUsIC0xMC41KSkKICAgID4+PiByZWNwZW4udmFsdWUgPT0gWwogICAgLi4uICAgICAoJ2JlZ2luUGF0aCcsICgpLCB7fSksCiAgICAuLi4gICAgICgnYWRkUG9pbnQnLCAoKDAsIDEpLCAnbGluZScsIEZhbHNlLCBOb25lKSwge30pLAogICAgLi4uICAgICAoJ2FkZFBvaW50JywgKCgyLCAzKSwgJ2xpbmUnLCBGYWxzZSwgTm9uZSksIHt9KSwKICAgIC4uLiAgICAgKCdhZGRQb2ludCcsICgoMiwgNSksIE5vbmUsIEZhbHNlLCBOb25lKSwge30pLAogICAgLi4uICAgICAoJ2FkZFBvaW50JywgKCgzLCA2KSwgTm9uZSwgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAuLi4gICAgICgnYWRkUG9pbnQnLCAoKDUsIDYpLCAncWN1cnZlJywgRmFsc2UsIE5vbmUpLCB7fSksCiAgICAuLi4gICAgICgnZW5kUGF0aCcsICgpLCB7fSksCiAgICAuLi4gICAgICgnYWRkQ29tcG9uZW50JywgKCdhJywgKDEuNSwgMCwgMCwgMS41LCAxMSwgLTEwKSksIHt9KSwKICAgIC4uLiBdCiAgICBUcnVlCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgb3V0UGVuLCByb3VuZEZ1bmM9b3RSb3VuZCwgdHJhbnNmb3JtUm91bmRGdW5jPW5vUm91bmQpOgogICAgICAgIHN1cGVyKCkuX19pbml0X18ob3V0UGVuKQogICAgICAgIHNlbGYucm91bmRGdW5jID0gcm91bmRGdW5jCiAgICAgICAgc2VsZi50cmFuc2Zvcm1Sb3VuZEZ1bmMgPSB0cmFuc2Zvcm1Sb3VuZEZ1bmMKCiAgICBkZWYgYWRkUG9pbnQoCiAgICAgICAgc2VsZiwgcHQsIHNlZ21lbnRUeXBlPU5vbmUsIHNtb290aD1GYWxzZSwgbmFtZT1Ob25lLCBpZGVudGlmaWVyPU5vbmUsICoqa3dhcmdzCiAgICApOgogICAgICAgIHNlbGYuX291dFBlbi5hZGRQb2ludCgKICAgICAgICAgICAgKHNlbGYucm91bmRGdW5jKHB0WzBdKSwgc2VsZi5yb3VuZEZ1bmMocHRbMV0pKSwKICAgICAgICAgICAgc2VnbWVudFR5cGU9c2VnbWVudFR5cGUsCiAgICAgICAgICAgIHNtb290aD1zbW9vdGgsCiAgICAgICAgICAgIG5hbWU9bmFtZSwKICAgICAgICAgICAgaWRlbnRpZmllcj1pZGVudGlmaWVyLAogICAgICAgICAgICAqKmt3YXJncywKICAgICAgICApCgogICAgZGVmIGFkZENvbXBvbmVudChzZWxmLCBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiwgaWRlbnRpZmllcj1Ob25lLCAqKmt3YXJncyk6CiAgICAgICAgeHgsIHh5LCB5eCwgeXksIGR4LCBkeSA9IHRyYW5zZm9ybWF0aW9uCiAgICAgICAgc2VsZi5fb3V0UGVuLmFkZENvbXBvbmVudCgKICAgICAgICAgICAgYmFzZUdseXBoTmFtZSwKICAgICAgICAgICAgVHJhbnNmb3JtKAogICAgICAgICAgICAgICAgc2VsZi50cmFuc2Zvcm1Sb3VuZEZ1bmMoeHgpLAogICAgICAgICAgICAgICAgc2VsZi50cmFuc2Zvcm1Sb3VuZEZ1bmMoeHkpLAogICAgICAgICAgICAgICAgc2VsZi50cmFuc2Zvcm1Sb3VuZEZ1bmMoeXgpLAogICAgICAgICAgICAgICAgc2VsZi50cmFuc2Zvcm1Sb3VuZEZ1bmMoeXkpLAogICAgICAgICAgICAgICAgc2VsZi5yb3VuZEZ1bmMoZHgpLAogICAgICAgICAgICAgICAgc2VsZi5yb3VuZEZ1bmMoZHkpLAogICAgICAgICAgICApLAogICAgICAgICAgICBpZGVudGlmaWVyPWlkZW50aWZpZXIsCiAgICAgICAgICAgICoqa3dhcmdzLAogICAgICAgICkK
+from fontTools.misc.roundTools import noRound, otRound
+from fontTools.misc.transform import Transform
+from fontTools.pens.filterPen import FilterPen, FilterPointPen
+
+__all__ = ["RoundingPen", "RoundingPointPen"]
+
+
+class RoundingPen(FilterPen):
+    """
+    Filter pen that rounds point coordinates and component XY offsets to integer. For
+    rounding the component transform values, a separate round function can be passed to
+    the pen.
+
+    >>> from fontTools.pens.recordingPen import RecordingPen
+    >>> recpen = RecordingPen()
+    >>> roundpen = RoundingPen(recpen)
+    >>> roundpen.moveTo((0.4, 0.6))
+    >>> roundpen.lineTo((1.6, 2.5))
+    >>> roundpen.qCurveTo((2.4, 4.6), (3.3, 5.7), (4.9, 6.1))
+    >>> roundpen.curveTo((6.4, 8.6), (7.3, 9.7), (8.9, 10.1))
+    >>> roundpen.addComponent("a", (1.5, 0, 0, 1.5, 10.5, -10.5))
+    >>> recpen.value == [
+    ...     ('moveTo', ((0, 1),)),
+    ...     ('lineTo', ((2, 3),)),
+    ...     ('qCurveTo', ((2, 5), (3, 6), (5, 6))),
+    ...     ('curveTo', ((6, 9), (7, 10), (9, 10))),
+    ...     ('addComponent', ('a', (1.5, 0, 0, 1.5, 11, -10))),
+    ... ]
+    True
+    """
+
+    def __init__(self, outPen, roundFunc=otRound, transformRoundFunc=noRound):
+        super().__init__(outPen)
+        self.roundFunc = roundFunc
+        self.transformRoundFunc = transformRoundFunc
+
+    def moveTo(self, pt):
+        self._outPen.moveTo((self.roundFunc(pt[0]), self.roundFunc(pt[1])))
+
+    def lineTo(self, pt):
+        self._outPen.lineTo((self.roundFunc(pt[0]), self.roundFunc(pt[1])))
+
+    def curveTo(self, *points):
+        self._outPen.curveTo(
+            *((self.roundFunc(x), self.roundFunc(y)) for x, y in points)
+        )
+
+    def qCurveTo(self, *points):
+        self._outPen.qCurveTo(
+            *(
+                None if pt is None else (self.roundFunc(pt[0]), self.roundFunc(pt[1]))
+                for pt in points
+            )
+        )
+
+    def addComponent(self, glyphName, transformation):
+        xx, xy, yx, yy, dx, dy = transformation
+        self._outPen.addComponent(
+            glyphName,
+            Transform(
+                self.transformRoundFunc(xx),
+                self.transformRoundFunc(xy),
+                self.transformRoundFunc(yx),
+                self.transformRoundFunc(yy),
+                self.roundFunc(dx),
+                self.roundFunc(dy),
+            ),
+        )
+
+
+class RoundingPointPen(FilterPointPen):
+    """
+    Filter point pen that rounds point coordinates and component XY offsets to integer.
+    For rounding the component scale values, a separate round function can be passed to
+    the pen.
+
+    >>> from fontTools.pens.recordingPen import RecordingPointPen
+    >>> recpen = RecordingPointPen()
+    >>> roundpen = RoundingPointPen(recpen)
+    >>> roundpen.beginPath()
+    >>> roundpen.addPoint((0.4, 0.6), 'line')
+    >>> roundpen.addPoint((1.6, 2.5), 'line')
+    >>> roundpen.addPoint((2.4, 4.6))
+    >>> roundpen.addPoint((3.3, 5.7))
+    >>> roundpen.addPoint((4.9, 6.1), 'qcurve')
+    >>> roundpen.endPath()
+    >>> roundpen.addComponent("a", (1.5, 0, 0, 1.5, 10.5, -10.5))
+    >>> recpen.value == [
+    ...     ('beginPath', (), {}),
+    ...     ('addPoint', ((0, 1), 'line', False, None), {}),
+    ...     ('addPoint', ((2, 3), 'line', False, None), {}),
+    ...     ('addPoint', ((2, 5), None, False, None), {}),
+    ...     ('addPoint', ((3, 6), None, False, None), {}),
+    ...     ('addPoint', ((5, 6), 'qcurve', False, None), {}),
+    ...     ('endPath', (), {}),
+    ...     ('addComponent', ('a', (1.5, 0, 0, 1.5, 11, -10)), {}),
+    ... ]
+    True
+    """
+
+    def __init__(self, outPen, roundFunc=otRound, transformRoundFunc=noRound):
+        super().__init__(outPen)
+        self.roundFunc = roundFunc
+        self.transformRoundFunc = transformRoundFunc
+
+    def addPoint(
+        self, pt, segmentType=None, smooth=False, name=None, identifier=None, **kwargs
+    ):
+        self._outPen.addPoint(
+            (self.roundFunc(pt[0]), self.roundFunc(pt[1])),
+            segmentType=segmentType,
+            smooth=smooth,
+            name=name,
+            identifier=identifier,
+            **kwargs,
+        )
+
+    def addComponent(self, baseGlyphName, transformation, identifier=None, **kwargs):
+        xx, xy, yx, yy, dx, dy = transformation
+        self._outPen.addComponent(
+            baseGlyphName,
+            Transform(
+                self.transformRoundFunc(xx),
+                self.transformRoundFunc(xy),
+                self.transformRoundFunc(yx),
+                self.transformRoundFunc(yy),
+                self.roundFunc(dx),
+                self.roundFunc(dy),
+            ),
+            identifier=identifier,
+            **kwargs,
+        )

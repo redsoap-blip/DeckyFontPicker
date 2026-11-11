@@ -1,1 +1,13 @@
-IiIiVFNJe0IsQyxELEosUCxTLFZ9IGFyZSBwcml2YXRlIHRhYmxlcyB1c2VkIGJ5IE1pY3Jvc29mdCBWaXN1YWwgVHJ1ZVR5cGUgKFZUVCkKdG9vbCB0byBzdG9yZSBpdHMgdGFibGUgc291cmNlIGRhdGEuCgpUU0lQIGNvbnRhaW5zIHRoZSBzb3VyY2UgdGV4dCBmb3IgdGhlIGBgR1BPU2BgIHRhYmxlLgoKU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvdG9vbHMvdnR0L3RzaS10YWJsZXMKIiIiCgpmcm9tIC5UX1NfSV9WXyBpbXBvcnQgdGFibGVfVF9TX0lfVl8KCgpjbGFzcyB0YWJsZV9UX1NfSV9QXyh0YWJsZV9UX1NfSV9WXyk6CiAgICBwYXNzCg==
+"""TSI{B,C,D,J,P,S,V} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its table source data.
+
+TSIP contains the source text for the ``GPOS`` table.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from .T_S_I_V_ import table_T_S_I_V_
+
+
+class table_T_S_I_P_(table_T_S_I_V_):
+    pass

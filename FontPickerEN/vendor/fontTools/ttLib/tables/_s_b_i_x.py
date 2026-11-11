@@ -1,1 +1,128 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwsIG51bTJiaW5hcnksIGJpbmFyeTJudW0KZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKZnJvbSAuc2JpeFN0cmlrZSBpbXBvcnQgU3RyaWtlCgpzYml4SGVhZGVyRm9ybWF0ID0gIiIiCgk+Cgl2ZXJzaW9uOiAgICAgICBICSMgVmVyc2lvbiBudW1iZXIgKHNldCB0byAxKQoJZmxhZ3M6ICAgICAgICAgSAkjIFRoZSBvbmx5IHR3byBiaXRzIHVzZWQgaW4gdGhlIGZsYWdzIGZpZWxkIGFyZSBiaXRzIDAKCQkJCQkJIyBhbmQgMS4gRm9yIGhpc3RvcmljYWwgcmVhc29ucywgYml0IDAgbXVzdCBhbHdheXMgYmUgMS4KCQkJCQkJIyBCaXQgMSBpcyBhIHNiaXhEcmF3T3V0bGluZXMgZmxhZyBhbmQgaXMgaW50ZXJwcmV0ZWQgYXMKCQkJCQkJIyBmb2xsb3dzOgoJCQkJCQkjICAgICAwOiBEcmF3IG9ubHkgJ3NiaXgnIGJpdG1hcHMKCQkJCQkJIyAgICAgMTogRHJhdyBib3RoICdzYml4JyBiaXRtYXBzIGFuZCBvdXRsaW5lcywgaW4gdGhhdAoJCQkJCQkjICAgICAgICBvcmRlcgoJbnVtU3RyaWtlczogICAgTAkjIE51bWJlciBvZiBiaXRtYXAgc3RyaWtlcyB0byBmb2xsb3cKIiIiCnNiaXhIZWFkZXJGb3JtYXRTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShzYml4SGVhZGVyRm9ybWF0KQoKCnNiaXhTdHJpa2VPZmZzZXRGb3JtYXQgPSAiIiIKCT4KCXN0cmlrZU9mZnNldDogIEwJIyBPZmZzZXQgZnJvbSBiZWdpbmluZyBvZiB0YWJsZSB0byBkYXRhIGZvciB0aGUKCQkJCQkJIyBpbmRpdmlkdWFsIHN0cmlrZQoiIiIKc2JpeFN0cmlrZU9mZnNldEZvcm1hdFNpemUgPSBzc3RydWN0LmNhbGNzaXplKHNiaXhTdHJpa2VPZmZzZXRGb3JtYXQpCgoKY2xhc3MgdGFibGVfX3NfYl9pX3goRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJTdGFuZGFyZCBCaXRtYXAgR3JhcGhpY3MgdGFibGUKCiAgICBUaGUgYGBzYml4YGAgdGFibGUgc3RvcmVzIGJpdG1hcCBpbWFnZSBkYXRhIGluIHN0YW5kYXJkIGdyYXBoaWNzIGZvcm1hdHMKICAgIGxpa2UgSlBFRywgUE5HLCBvciBUSUZGLiBUaGUgZ2x5cGhzIGZvciB3aGljaCB0aGUgYGBzYml4YGAgdGFibGUgcHJvdmlkZXMKICAgIGRhdGEgYXJlIGluZGV4ZWQgYnkgR2x5cGggSUQuIEZvciBlYWNoIHN1Y2ggZ2x5cGgsIHRoZSBgYHNiaXhgYCB0YWJsZSBjYW4KICAgIGhvbGQgZGlmZmVyZW50IGRhdGEgZm9yIGRpZmZlcmVudCBzaXplcywgY2FsbGVkICJzdHJpa2VzLiIKCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL3NiaXgKICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi52ZXJzaW9uID0gMQogICAgICAgIHNlbGYuZmxhZ3MgPSAxCiAgICAgICAgc2VsZi5udW1TdHJpa2VzID0gMAogICAgICAgIHNlbGYuc3RyaWtlcyA9IHt9CiAgICAgICAgc2VsZi5zdHJpa2VPZmZzZXRzID0gW10KCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgIyByZWFkIHRhYmxlIGhlYWRlcgogICAgICAgIHNzdHJ1Y3QudW5wYWNrKHNiaXhIZWFkZXJGb3JtYXQsIGRhdGFbOnNiaXhIZWFkZXJGb3JtYXRTaXplXSwgc2VsZikKICAgICAgICAjIGNvbGxlY3Qgb2Zmc2V0cyB0byBpbmRpdmlkdWFsIHN0cmlrZXMgaW4gc2VsZi5zdHJpa2VPZmZzZXRzCiAgICAgICAgZm9yIGkgaW4gcmFuZ2Uoc2VsZi5udW1TdHJpa2VzKToKICAgICAgICAgICAgY3VycmVudF9vZmZzZXQgPSBzYml4SGVhZGVyRm9ybWF0U2l6ZSArIGkgKiBzYml4U3RyaWtlT2Zmc2V0Rm9ybWF0U2l6ZQogICAgICAgICAgICBvZmZzZXRfZW50cnkgPSBzYml4U3RyaWtlT2Zmc2V0KCkKICAgICAgICAgICAgc3N0cnVjdC51bnBhY2soCiAgICAgICAgICAgICAgICBzYml4U3RyaWtlT2Zmc2V0Rm9ybWF0LAogICAgICAgICAgICAgICAgZGF0YVtjdXJyZW50X29mZnNldCA6IGN1cnJlbnRfb2Zmc2V0ICsgc2JpeFN0cmlrZU9mZnNldEZvcm1hdFNpemVdLAogICAgICAgICAgICAgICAgb2Zmc2V0X2VudHJ5LAogICAgICAgICAgICApCiAgICAgICAgICAgIHNlbGYuc3RyaWtlT2Zmc2V0cy5hcHBlbmQob2Zmc2V0X2VudHJ5LnN0cmlrZU9mZnNldCkKCiAgICAgICAgIyBkZWNvbXBpbGUgU3RyaWtlcwogICAgICAgIGZvciBpIGluIHJhbmdlKHNlbGYubnVtU3RyaWtlcyAtIDEsIC0xLCAtMSk6CiAgICAgICAgICAgIGN1cnJlbnRfc3RyaWtlID0gU3RyaWtlKHJhd2RhdGE9ZGF0YVtzZWxmLnN0cmlrZU9mZnNldHNbaV0gOl0pCiAgICAgICAgICAgIGRhdGEgPSBkYXRhWzogc2VsZi5zdHJpa2VPZmZzZXRzW2ldXQogICAgICAgICAgICBjdXJyZW50X3N0cmlrZS5kZWNvbXBpbGUodHRGb250KQogICAgICAgICAgICAjIHByaW50ICIgIFN0cmlrZSBsZW5ndGg6ICV4aCIgJSBsZW4oYml0bWFwU2V0RGF0YSkKICAgICAgICAgICAgIyBwcmludCAiTnVtYmVyIG9mIEdseXBoIGVudHJpZXM6IiwgbGVuKGN1cnJlbnRfc3RyaWtlLmdseXBocykKICAgICAgICAgICAgaWYgY3VycmVudF9zdHJpa2UucHBlbSBpbiBzZWxmLnN0cmlrZXM6CiAgICAgICAgICAgICAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgdHRMaWIKCiAgICAgICAgICAgICAgICByYWlzZSB0dExpYi5UVExpYkVycm9yKCJQaXhlbCAncHBlbScgbXVzdCBiZSB1bmlxdWUgZm9yIGVhY2ggU3RyaWtlIikKICAgICAgICAgICAgc2VsZi5zdHJpa2VzW2N1cnJlbnRfc3RyaWtlLnBwZW1dID0gY3VycmVudF9zdHJpa2UKCiAgICAgICAgIyBhZnRlciB0aGUgZ2x5cGggZGF0YSByZWNvcmRzIGhhdmUgYmVlbiBleHRyYWN0ZWQsIHdlIGRvbid0IG5lZWQgdGhlIG9mZnNldHMgYW55bW9yZQogICAgICAgIGRlbCBzZWxmLnN0cmlrZU9mZnNldHMKICAgICAgICBkZWwgc2VsZi5udW1TdHJpa2VzCgogICAgZGVmIGNvbXBpbGUoc2VsZiwgdHRGb250KToKICAgICAgICBzYml4RGF0YSA9IGIiIgogICAgICAgIHNlbGYubnVtU3RyaWtlcyA9IGxlbihzZWxmLnN0cmlrZXMpCiAgICAgICAgc2JpeEhlYWRlciA9IHNzdHJ1Y3QucGFjayhzYml4SGVhZGVyRm9ybWF0LCBzZWxmKQoKICAgICAgICAjIGNhbGN1bGF0ZSBvZmZzZXQgdG8gc3RhcnQgb2YgZmlyc3Qgc3RyaWtlCiAgICAgICAgc2V0T2Zmc2V0ID0gc2JpeEhlYWRlckZvcm1hdFNpemUgKyBzYml4U3RyaWtlT2Zmc2V0Rm9ybWF0U2l6ZSAqIHNlbGYubnVtU3RyaWtlcwoKICAgICAgICBmb3Igc2kgaW4gc29ydGVkKHNlbGYuc3RyaWtlcy5rZXlzKCkpOgogICAgICAgICAgICBjdXJyZW50X3N0cmlrZSA9IHNlbGYuc3RyaWtlc1tzaV0KICAgICAgICAgICAgY3VycmVudF9zdHJpa2UuY29tcGlsZSh0dEZvbnQpCiAgICAgICAgICAgICMgYXBwZW5kIG9mZnNldCB0byB0aGlzIHN0cmlrZSB0byB0YWJsZSBoZWFkZXIKICAgICAgICAgICAgY3VycmVudF9zdHJpa2Uuc3RyaWtlT2Zmc2V0ID0gc2V0T2Zmc2V0CiAgICAgICAgICAgIHNiaXhIZWFkZXIgKz0gc3N0cnVjdC5wYWNrKHNiaXhTdHJpa2VPZmZzZXRGb3JtYXQsIGN1cnJlbnRfc3RyaWtlKQogICAgICAgICAgICBzZXRPZmZzZXQgKz0gbGVuKGN1cnJlbnRfc3RyaWtlLmRhdGEpCiAgICAgICAgICAgIHNiaXhEYXRhICs9IGN1cnJlbnRfc3RyaWtlLmRhdGEKCiAgICAgICAgcmV0dXJuIHNiaXhIZWFkZXIgKyBzYml4RGF0YQoKICAgIGRlZiB0b1hNTChzZWxmLCB4bWxXcml0ZXIsIHR0Rm9udCk6CiAgICAgICAgeG1sV3JpdGVyLnNpbXBsZXRhZygidmVyc2lvbiIsIHZhbHVlPXNlbGYudmVyc2lvbikKICAgICAgICB4bWxXcml0ZXIubmV3bGluZSgpCiAgICAgICAgeG1sV3JpdGVyLnNpbXBsZXRhZygiZmxhZ3MiLCB2YWx1ZT1udW0yYmluYXJ5KHNlbGYuZmxhZ3MsIDE2KSkKICAgICAgICB4bWxXcml0ZXIubmV3bGluZSgpCiAgICAgICAgZm9yIGkgaW4gc29ydGVkKHNlbGYuc3RyaWtlcy5rZXlzKCkpOgogICAgICAgICAgICBzZWxmLnN0cmlrZXNbaV0udG9YTUwoeG1sV3JpdGVyLCB0dEZvbnQpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAidmVyc2lvbiI6CiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgbmFtZSwgc2FmZUV2YWwoYXR0cnNbInZhbHVlIl0pKQogICAgICAgIGVsaWYgbmFtZSA9PSAiZmxhZ3MiOgogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIGJpbmFyeTJudW0oYXR0cnNbInZhbHVlIl0pKQogICAgICAgIGVsaWYgbmFtZSA9PSAic3RyaWtlIjoKICAgICAgICAgICAgY3VycmVudF9zdHJpa2UgPSBTdHJpa2UoKQogICAgICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgaWYgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgICAgICAgICAgY3VycmVudF9zdHJpa2UuZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KQogICAgICAgICAgICBzZWxmLnN0cmlrZXNbY3VycmVudF9zdHJpa2UucHBlbV0gPSBjdXJyZW50X3N0cmlrZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgoKICAgICAgICAgICAgcmFpc2UgdHRMaWIuVFRMaWJFcnJvcigiY2FuJ3QgaGFuZGxlICclcycgZWxlbWVudCIgJSBuYW1lKQoKCiMgSGVscGVyIGNsYXNzZXMKCgpjbGFzcyBzYml4U3RyaWtlT2Zmc2V0KG9iamVjdCk6CiAgICBwYXNzCg==
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval, num2binary, binary2num
+from . import DefaultTable
+from .sbixStrike import Strike
+
+sbixHeaderFormat = """
+	>
+	version:       H	# Version number (set to 1)
+	flags:         H	# The only two bits used in the flags field are bits 0
+						# and 1. For historical reasons, bit 0 must always be 1.
+						# Bit 1 is a sbixDrawOutlines flag and is interpreted as
+						# follows:
+						#     0: Draw only 'sbix' bitmaps
+						#     1: Draw both 'sbix' bitmaps and outlines, in that
+						#        order
+	numStrikes:    L	# Number of bitmap strikes to follow
+"""
+sbixHeaderFormatSize = sstruct.calcsize(sbixHeaderFormat)
+
+
+sbixStrikeOffsetFormat = """
+	>
+	strikeOffset:  L	# Offset from begining of table to data for the
+						# individual strike
+"""
+sbixStrikeOffsetFormatSize = sstruct.calcsize(sbixStrikeOffsetFormat)
+
+
+class table__s_b_i_x(DefaultTable.DefaultTable):
+    """Standard Bitmap Graphics table
+
+    The ``sbix`` table stores bitmap image data in standard graphics formats
+    like JPEG, PNG, or TIFF. The glyphs for which the ``sbix`` table provides
+    data are indexed by Glyph ID. For each such glyph, the ``sbix`` table can
+    hold different data for different sizes, called "strikes."
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/sbix
+    """
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.version = 1
+        self.flags = 1
+        self.numStrikes = 0
+        self.strikes = {}
+        self.strikeOffsets = []
+
+    def decompile(self, data, ttFont):
+        # read table header
+        sstruct.unpack(sbixHeaderFormat, data[:sbixHeaderFormatSize], self)
+        # collect offsets to individual strikes in self.strikeOffsets
+        for i in range(self.numStrikes):
+            current_offset = sbixHeaderFormatSize + i * sbixStrikeOffsetFormatSize
+            offset_entry = sbixStrikeOffset()
+            sstruct.unpack(
+                sbixStrikeOffsetFormat,
+                data[current_offset : current_offset + sbixStrikeOffsetFormatSize],
+                offset_entry,
+            )
+            self.strikeOffsets.append(offset_entry.strikeOffset)
+
+        # decompile Strikes
+        for i in range(self.numStrikes - 1, -1, -1):
+            current_strike = Strike(rawdata=data[self.strikeOffsets[i] :])
+            data = data[: self.strikeOffsets[i]]
+            current_strike.decompile(ttFont)
+            # print "  Strike length: %xh" % len(bitmapSetData)
+            # print "Number of Glyph entries:", len(current_strike.glyphs)
+            if current_strike.ppem in self.strikes:
+                from fontTools import ttLib
+
+                raise ttLib.TTLibError("Pixel 'ppem' must be unique for each Strike")
+            self.strikes[current_strike.ppem] = current_strike
+
+        # after the glyph data records have been extracted, we don't need the offsets anymore
+        del self.strikeOffsets
+        del self.numStrikes
+
+    def compile(self, ttFont):
+        sbixData = b""
+        self.numStrikes = len(self.strikes)
+        sbixHeader = sstruct.pack(sbixHeaderFormat, self)
+
+        # calculate offset to start of first strike
+        setOffset = sbixHeaderFormatSize + sbixStrikeOffsetFormatSize * self.numStrikes
+
+        for si in sorted(self.strikes.keys()):
+            current_strike = self.strikes[si]
+            current_strike.compile(ttFont)
+            # append offset to this strike to table header
+            current_strike.strikeOffset = setOffset
+            sbixHeader += sstruct.pack(sbixStrikeOffsetFormat, current_strike)
+            setOffset += len(current_strike.data)
+            sbixData += current_strike.data
+
+        return sbixHeader + sbixData
+
+    def toXML(self, xmlWriter, ttFont):
+        xmlWriter.simpletag("version", value=self.version)
+        xmlWriter.newline()
+        xmlWriter.simpletag("flags", value=num2binary(self.flags, 16))
+        xmlWriter.newline()
+        for i in sorted(self.strikes.keys()):
+            self.strikes[i].toXML(xmlWriter, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            setattr(self, name, safeEval(attrs["value"]))
+        elif name == "flags":
+            setattr(self, name, binary2num(attrs["value"]))
+        elif name == "strike":
+            current_strike = Strike()
+            for element in content:
+                if isinstance(element, tuple):
+                    name, attrs, content = element
+                    current_strike.fromXML(name, attrs, content, ttFont)
+            self.strikes[current_strike.ppem] = current_strike
+        else:
+            from fontTools import ttLib
+
+            raise ttLib.TTLibError("can't handle '%s' element" % name)
+
+
+# Helper classes
+
+
+class sbixStrikeOffset(object):
+    pass

@@ -1,1 +1,25 @@
-IiIiUHJpdmF0ZSB1dGlsaXR5IG1ldGhvZHMgdXNlZCBieSB0aGUgc3Vic2V0IG1vZHVsZXMiIiIKCgpkZWYgX2FkZF9tZXRob2QoKmNsYXp6ZXMpOgogICAgIiIiUmV0dXJucyBhIGRlY29yYXRvciBmdW5jdGlvbiB0aGF0IGFkZHMgYSBuZXcgbWV0aG9kIHRvIG9uZSBvcgogICAgbW9yZSBjbGFzc2VzLiIiIgoKICAgIGRlZiB3cmFwcGVyKG1ldGhvZCk6CiAgICAgICAgZG9uZSA9IFtdCiAgICAgICAgZm9yIGNsYXp6IGluIGNsYXp6ZXM6CiAgICAgICAgICAgIGlmIGNsYXp6IGluIGRvbmU6CiAgICAgICAgICAgICAgICBjb250aW51ZSAgIyBTdXBwb3J0IG11bHRpcGxlIG5hbWVzIG9mIGEgY2xhenoKICAgICAgICAgICAgZG9uZS5hcHBlbmQoY2xhenopCiAgICAgICAgICAgIGFzc2VydCBjbGF6ei5fX25hbWVfXyAhPSAiRGVmYXVsdFRhYmxlIiwgIk9vcHMsIHRhYmxlIGNsYXNzIG5vdCBmb3VuZC4iCiAgICAgICAgICAgIGFzc2VydCBub3QgaGFzYXR0cigKICAgICAgICAgICAgICAgIGNsYXp6LCBtZXRob2QuX19uYW1lX18KICAgICAgICAgICAgKSwgIk9vcHMsIGNsYXNzICclcycgaGFzIG1ldGhvZCAnJXMnLiIgJSAoY2xhenouX19uYW1lX18sIG1ldGhvZC5fX25hbWVfXykKICAgICAgICAgICAgc2V0YXR0cihjbGF6eiwgbWV0aG9kLl9fbmFtZV9fLCBtZXRob2QpCiAgICAgICAgcmV0dXJuIE5vbmUKCiAgICByZXR1cm4gd3JhcHBlcgoKCmRlZiBfdW5pcV9zb3J0KGwpOgogICAgcmV0dXJuIHNvcnRlZChzZXQobCkpCg==
+"""Private utility methods used by the subset modules"""
+
+
+def _add_method(*clazzes):
+    """Returns a decorator function that adds a new method to one or
+    more classes."""
+
+    def wrapper(method):
+        done = []
+        for clazz in clazzes:
+            if clazz in done:
+                continue  # Support multiple names of a clazz
+            done.append(clazz)
+            assert clazz.__name__ != "DefaultTable", "Oops, table class not found."
+            assert not hasattr(
+                clazz, method.__name__
+            ), "Oops, class '%s' has method '%s'." % (clazz.__name__, method.__name__)
+            setattr(clazz, method.__name__, method)
+        return None
+
+    return wrapper
+
+
+def _uniq_sort(l):
+    return sorted(set(l))

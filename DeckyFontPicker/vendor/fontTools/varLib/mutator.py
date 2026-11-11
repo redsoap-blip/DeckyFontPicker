@@ -1,1 +1,542 @@
-IiIiCkluc3RhbnRpYXRlIGEgdmFyaWF0aW9uIGZvbnQuICBSdW4sIGVnOgoKLi4gY29kZS1ibG9jazo6IHNoCgogICAgJCBmb250dG9vbHMgdmFyTGliLm11dGF0b3IgLi9Ob3RvU2Fuc0FyYWJpYy1WRi50dGYgd2dodD0xNDAgd2R0aD04NQoKLi4gd2FybmluZzo6CiAgIGBgZm9udFRvb2xzLnZhckxpYi5tdXRhdG9yYGAgaXMgZGVwcmVjYXRlZCBpbiBmYXZvciBvZiA6bW9kOmBmb250VG9vbHMudmFyTGliLmluc3RhbmNlcmAKICAgd2hpY2ggcHJvdmlkZXMgZXF1aXZhbGVudCBmdWxsIGluc3RhbmNpbmcgYW5kIGFsc28gc3VwcG9ydHMgcGFydGlhbCBpbnN0YW5jaW5nLgogICBQbGVhc2UgbWlncmF0ZSBDTEkgdXNhZ2UgdG8gYGBmb250dG9vbHMgdmFyTGliLmluc3RhbmNlcmBgIGFuZCBBUEkgdXNhZ2UgdG8KICAgOmZ1bmM6YGZvbnRUb29scy52YXJMaWIuaW5zdGFuY2VyLmluc3RhbnRpYXRlVmFyaWFibGVGb250YC4KIiIiCgpmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IGZsb2F0VG9GaXhlZFRvRmxvYXQsIGZsb2F0VG9GaXhlZApmcm9tIGZvbnRUb29scy5taXNjLmxvZ2dpbmdUb29scyBpbXBvcnQgZGVwcmVjYXRlRnVuY3Rpb24KZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBvdFJvdW5kCmZyb20gZm9udFRvb2xzLnBlbnMuYm91bmRzUGVuIGltcG9ydCBCb3VuZHNQZW4KZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udCwgbmV3VGFibGUKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCB0dFByb2dyYW0KZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLl9nX2xfeV9mIGltcG9ydCAoCiAgICBHbHlwaENvb3JkaW5hdGVzLAogICAgZmxhZ092ZXJsYXBTaW1wbGUsCiAgICBPVkVSTEFQX0NPTVBPVU5ELAopCmZyb20gZm9udFRvb2xzLnZhckxpYi5tb2RlbHMgaW1wb3J0ICgKICAgIHN1cHBvcnRTY2FsYXIsCiAgICBub3JtYWxpemVMb2NhdGlvbiwKICAgIHBpZWNld2lzZUxpbmVhck1hcCwKKQpmcm9tIGZvbnRUb29scy52YXJMaWIubWVyZ2VyIGltcG9ydCBNdXRhdG9yTWVyZ2VyCmZyb20gZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSBpbXBvcnQgVmFyU3RvcmVJbnN0YW5jZXIKZnJvbSBmb250VG9vbHMudmFyTGliLm12YXIgaW1wb3J0IE1WQVJfRU5UUklFUwpmcm9tIGZvbnRUb29scy52YXJMaWIuaXVwIGltcG9ydCBpdXBfZGVsdGEKaW1wb3J0IGZvbnRUb29scy5zdWJzZXQuY2ZmCmltcG9ydCBvcy5wYXRoCmltcG9ydCBsb2dnaW5nCmZyb20gaW8gaW1wb3J0IEJ5dGVzSU8KCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJmb250VG9vbHMudmFybGliLm11dGF0b3IiKQoKIyBtYXAgJ3dkdGgnIGF4aXMgKDEuLjIwMCkgdG8gT1MvMi51c1dpZHRoQ2xhc3MgKDEuLjkpLCByb3VuZGluZyB0byBjbG9zZXN0Ck9TMl9XSURUSF9DTEFTU19WQUxVRVMgPSB7fQpwZXJjZW50cyA9IFs1MC4wLCA2Mi41LCA3NS4wLCA4Ny41LCAxMDAuMCwgMTEyLjUsIDEyNS4wLCAxNTAuMCwgMjAwLjBdCmZvciBpLCAocHJldiwgY3VycikgaW4gZW51bWVyYXRlKHppcChwZXJjZW50c1s6LTFdLCBwZXJjZW50c1sxOl0pLCBzdGFydD0xKToKICAgIGhhbGYgPSAocHJldiArIGN1cnIpIC8gMgogICAgT1MyX1dJRFRIX0NMQVNTX1ZBTFVFU1toYWxmXSA9IGkKCgpkZWYgaW50ZXJwb2xhdGVfY2ZmMl9Qcml2YXRlRGljdCh0b3BEaWN0LCBpbnRlcnBvbGF0ZUZyb21EZWx0YXMpOgogICAgcGRfYmxlbmRfbGlzdHMgPSAoCiAgICAgICAgIkJsdWVWYWx1ZXMiLAogICAgICAgICJPdGhlckJsdWVzIiwKICAgICAgICAiRmFtaWx5Qmx1ZXMiLAogICAgICAgICJGYW1pbHlPdGhlckJsdWVzIiwKICAgICAgICAiU3RlbVNuYXBIIiwKICAgICAgICAiU3RlbVNuYXBWIiwKICAgICkKICAgIHBkX2JsZW5kX3ZhbHVlcyA9ICgiQmx1ZVNjYWxlIiwgIkJsdWVTaGlmdCIsICJCbHVlRnV6eiIsICJTdGRIVyIsICJTdGRWVyIpCiAgICBmb3IgZm9udERpY3QgaW4gdG9wRGljdC5GREFycmF5OgogICAgICAgIHBkID0gZm9udERpY3QuUHJpdmF0ZQogICAgICAgIHZzaW5kZXggPSBwZC52c2luZGV4IGlmIChoYXNhdHRyKHBkLCAidnNpbmRleCIpKSBlbHNlIDAKICAgICAgICBmb3Iga2V5LCB2YWx1ZSBpbiBwZC5yYXdEaWN0Lml0ZW1zKCk6CiAgICAgICAgICAgIGlmIChrZXkgaW4gcGRfYmxlbmRfdmFsdWVzKSBhbmQgaXNpbnN0YW5jZSh2YWx1ZSwgbGlzdCk6CiAgICAgICAgICAgICAgICBkZWx0YSA9IGludGVycG9sYXRlRnJvbURlbHRhcyh2c2luZGV4LCB2YWx1ZVsxOl0pCiAgICAgICAgICAgICAgICBwZC5yYXdEaWN0W2tleV0gPSBvdFJvdW5kKHZhbHVlWzBdICsgZGVsdGEpCiAgICAgICAgICAgIGVsaWYgKGtleSBpbiBwZF9ibGVuZF9saXN0cykgYW5kIGlzaW5zdGFuY2UodmFsdWVbMF0sIGxpc3QpOgogICAgICAgICAgICAgICAgIiIiSWYgYW55IGFyZ3VtZW50IGluIGEgQmx1ZVZhbHVlcyBsaXN0IGlzIGEgYmxlbmQgbGlzdCwKICAgICAgICAgICAgICAgIHRoZW4gdGhleSBhbGwgYXJlLiBUaGUgZmlyc3QgdmFsdWUgb2YgZWFjaCBsaXN0IGlzIGFuCiAgICAgICAgICAgICAgICBhYnNvbHV0ZSB2YWx1ZS4gVGhlIGRlbHRhIHR1cGxlcyBhcmUgY2FsY3VsYXRlZCBmcm9tCiAgICAgICAgICAgICAgICByZWxhdGl2ZSBtYXN0ZXIgdmFsdWVzLCBoZW5jZSB3ZSBuZWVkIHRvIGFwcGVuZCBhbGwgdGhlCiAgICAgICAgICAgICAgICBkZWx0YXMgdG8gZGF0ZSB0byBlYWNoIHN1Y2Nlc3NpdmUgYWJzb2x1dGUgdmFsdWUuIiIiCiAgICAgICAgICAgICAgICBkZWx0YSA9IDAKICAgICAgICAgICAgICAgIGZvciBpLCB2YWxfbGlzdCBpbiBlbnVtZXJhdGUodmFsdWUpOgogICAgICAgICAgICAgICAgICAgIGRlbHRhICs9IG90Um91bmQoaW50ZXJwb2xhdGVGcm9tRGVsdGFzKHZzaW5kZXgsIHZhbF9saXN0WzE6XSkpCiAgICAgICAgICAgICAgICAgICAgdmFsdWVbaV0gPSB2YWxfbGlzdFswXSArIGRlbHRhCgoKZGVmIGludGVycG9sYXRlX2NmZjJfY2hhcnN0cmluZ3ModG9wRGljdCwgaW50ZXJwb2xhdGVGcm9tRGVsdGFzLCBnbHlwaE9yZGVyKToKICAgIGNoYXJzdHJpbmdzID0gdG9wRGljdC5DaGFyU3RyaW5ncwogICAgZm9yIGduYW1lIGluIGdseXBoT3JkZXI6CiAgICAgICAgIyBJbnRlcnBvbGF0ZSBjaGFyc3RyaW5nCiAgICAgICAgIyBlLmcgcmVwbGFjZSBibGVuZCBvcCBhcmdzIHdpdGggcmVndWxhciBhcmdzLAogICAgICAgICMgYW5kIHVzZSBhbmQgZGlzY2FyZCB2c2luZGV4IG9wLgogICAgICAgIGNoYXJzdHJpbmcgPSBjaGFyc3RyaW5nc1tnbmFtZV0KICAgICAgICBuZXdfcHJvZ3JhbSA9IFtdCiAgICAgICAgdnNpbmRleCA9IDAKICAgICAgICBsYXN0X2kgPSAwCiAgICAgICAgZm9yIGksIHRva2VuIGluIGVudW1lcmF0ZShjaGFyc3RyaW5nLnByb2dyYW0pOgogICAgICAgICAgICBpZiB0b2tlbiA9PSAidnNpbmRleCI6CiAgICAgICAgICAgICAgICB2c2luZGV4ID0gY2hhcnN0cmluZy5wcm9ncmFtW2kgLSAxXQogICAgICAgICAgICAgICAgaWYgbGFzdF9pICE9IDA6CiAgICAgICAgICAgICAgICAgICAgbmV3X3Byb2dyYW0uZXh0ZW5kKGNoYXJzdHJpbmcucHJvZ3JhbVtsYXN0X2kgOiBpIC0gMV0pCiAgICAgICAgICAgICAgICBsYXN0X2kgPSBpICsgMQogICAgICAgICAgICBlbGlmIHRva2VuID09ICJibGVuZCI6CiAgICAgICAgICAgICAgICBudW1fcmVnaW9ucyA9IGNoYXJzdHJpbmcuZ2V0TnVtUmVnaW9ucyh2c2luZGV4KQogICAgICAgICAgICAgICAgbnVtTWFzdGVycyA9IDEgKyBudW1fcmVnaW9ucwogICAgICAgICAgICAgICAgbnVtX2FyZ3MgPSBjaGFyc3RyaW5nLnByb2dyYW1baSAtIDFdCiAgICAgICAgICAgICAgICAjIFRoZSBwcm9ncmFtIGxpc3Qgc3RhcnRpbmcgYXQgcHJvZ3JhbVtpXSBpcyBub3c6CiAgICAgICAgICAgICAgICAjIC4uYXJncyBmb3IgZm9sbG93aW5nIG9wZXJhdGlvbnMKICAgICAgICAgICAgICAgICMgbnVtX2FyZ3MgdmFsdWVzICBmcm9tIHRoZSBkZWZhdWx0IGZvbnQKICAgICAgICAgICAgICAgICMgbnVtX2FyZ3MgdHVwbGVzLCBlYWNoIHdpdGggbnVtTWFzdGVycy0xIGRlbHRhIHZhbHVlcwogICAgICAgICAgICAgICAgIyBudW1fYmxlbmRfYXJncwogICAgICAgICAgICAgICAgIyAnYmxlbmQnCiAgICAgICAgICAgICAgICBhcmdpID0gaSAtIChudW1fYXJncyAqIG51bU1hc3RlcnMgKyAxKQogICAgICAgICAgICAgICAgZW5kX2FyZ3MgPSB0dXBsZWkgPSBhcmdpICsgbnVtX2FyZ3MKICAgICAgICAgICAgICAgIHdoaWxlIGFyZ2kgPCBlbmRfYXJnczoKICAgICAgICAgICAgICAgICAgICBuZXh0X3RpID0gdHVwbGVpICsgbnVtX3JlZ2lvbnMKICAgICAgICAgICAgICAgICAgICBkZWx0YXMgPSBjaGFyc3RyaW5nLnByb2dyYW1bdHVwbGVpOm5leHRfdGldCiAgICAgICAgICAgICAgICAgICAgZGVsdGEgPSBpbnRlcnBvbGF0ZUZyb21EZWx0YXModnNpbmRleCwgZGVsdGFzKQogICAgICAgICAgICAgICAgICAgIGNoYXJzdHJpbmcucHJvZ3JhbVthcmdpXSArPSBvdFJvdW5kKGRlbHRhKQogICAgICAgICAgICAgICAgICAgIHR1cGxlaSA9IG5leHRfdGkKICAgICAgICAgICAgICAgICAgICBhcmdpICs9IDEKICAgICAgICAgICAgICAgIG5ld19wcm9ncmFtLmV4dGVuZChjaGFyc3RyaW5nLnByb2dyYW1bbGFzdF9pOmVuZF9hcmdzXSkKICAgICAgICAgICAgICAgIGxhc3RfaSA9IGkgKyAxCiAgICAgICAgaWYgbGFzdF9pICE9IDA6CiAgICAgICAgICAgIG5ld19wcm9ncmFtLmV4dGVuZChjaGFyc3RyaW5nLnByb2dyYW1bbGFzdF9pOl0pCiAgICAgICAgICAgIGNoYXJzdHJpbmcucHJvZ3JhbSA9IG5ld19wcm9ncmFtCgoKZGVmIGludGVycG9sYXRlX2NmZjJfbWV0cmljcyh2YXJmb250LCB0b3BEaWN0LCBnbHlwaE9yZGVyLCBsb2MpOgogICAgIiIiVW5saWtlIFRydWVUeXBlIGdseXBocywgbmVpdGhlciBhZHZhbmNlIHdpZHRoIG5vciBib3VuZGluZyBib3gKICAgIGluZm8gaXMgc3RvcmVkIGluIGEgQ0ZGMiBjaGFyc3RyaW5nLiBUaGUgd2lkdGggZGF0YSBleGlzdHMgb25seSBpbgogICAgdGhlIGhtdHggYW5kIEhWQVIgdGFibGVzLiBTaW5jZSBMU0IgZGF0YSBjYW5ub3QgYmUgaW50ZXJwb2xhdGVkCiAgICByZWxpYWJseSBmcm9tIHRoZSBtYXN0ZXIgTFNCIHZhbHVlcyBpbiB0aGUgaG10eCB0YWJsZSwgd2UgdHJhdmVyc2UKICAgIHRoZSBjaGFyc3RyaW5nIHRvIGRldGVybWluZSB0aGUgYWN0dWFsIGJvdW5kIGJveC4iIiIKCiAgICBjaGFyc3RyaW5ncyA9IHRvcERpY3QuQ2hhclN0cmluZ3MKICAgIGJvdW5kc1BlbiA9IEJvdW5kc1BlbihnbHlwaE9yZGVyKQogICAgaG10eCA9IHZhcmZvbnRbImhtdHgiXQogICAgaHZhcl90YWJsZSA9IE5vbmUKICAgIGlmICJIVkFSIiBpbiB2YXJmb250OgogICAgICAgIGh2YXJfdGFibGUgPSB2YXJmb250WyJIVkFSIl0udGFibGUKICAgICAgICBmdmFyID0gdmFyZm9udFsiZnZhciJdCiAgICAgICAgdmFyU3RvcmVJbnN0YW5jZXIgPSBWYXJTdG9yZUluc3RhbmNlcihodmFyX3RhYmxlLlZhclN0b3JlLCBmdmFyLmF4ZXMsIGxvYykKCiAgICBmb3IgZ2lkLCBnbmFtZSBpbiBlbnVtZXJhdGUoZ2x5cGhPcmRlcik6CiAgICAgICAgZW50cnkgPSBsaXN0KGhtdHhbZ25hbWVdKQogICAgICAgICMgZ2V0IHdpZHRoIGRlbHRhLgogICAgICAgIGlmIGh2YXJfdGFibGU6CiAgICAgICAgICAgIGlmIGh2YXJfdGFibGUuQWR2V2lkdGhNYXA6CiAgICAgICAgICAgICAgICB3aWR0aF9pZHggPSBodmFyX3RhYmxlLkFkdldpZHRoTWFwLm1hcHBpbmdbZ25hbWVdCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB3aWR0aF9pZHggPSBnaWQKICAgICAgICAgICAgd2lkdGhfZGVsdGEgPSBvdFJvdW5kKHZhclN0b3JlSW5zdGFuY2VyW3dpZHRoX2lkeF0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgd2lkdGhfZGVsdGEgPSAwCgogICAgICAgICMgZ2V0IExTQi4KICAgICAgICBib3VuZHNQZW4uaW5pdCgpCiAgICAgICAgY2hhcnN0cmluZyA9IGNoYXJzdHJpbmdzW2duYW1lXQogICAgICAgIGNoYXJzdHJpbmcuZHJhdyhib3VuZHNQZW4pCiAgICAgICAgaWYgYm91bmRzUGVuLmJvdW5kcyBpcyBOb25lOgogICAgICAgICAgICAjIEhhcHBlbnMgd2l0aCBub24tbWFya2luZyBnbHlwaHMKICAgICAgICAgICAgbHNiX2RlbHRhID0gMAogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxzYiA9IG90Um91bmQoYm91bmRzUGVuLmJvdW5kc1swXSkKICAgICAgICAgICAgbHNiX2RlbHRhID0gZW50cnlbMV0gLSBsc2IKCiAgICAgICAgaWYgbHNiX2RlbHRhIG9yIHdpZHRoX2RlbHRhOgogICAgICAgICAgICBpZiB3aWR0aF9kZWx0YToKICAgICAgICAgICAgICAgIGVudHJ5WzBdID0gbWF4KDAsIGVudHJ5WzBdICsgd2lkdGhfZGVsdGEpCiAgICAgICAgICAgIGlmIGxzYl9kZWx0YToKICAgICAgICAgICAgICAgIGVudHJ5WzFdID0gbHNiCiAgICAgICAgICAgIGhtdHhbZ25hbWVdID0gdHVwbGUoZW50cnkpCgoKQGRlcHJlY2F0ZUZ1bmN0aW9uKAogICAgInVzZSBmb250VG9vbHMudmFyTGliLmluc3RhbmNlci5pbnN0YW50aWF0ZVZhcmlhYmxlRm9udCBpbnN0ZWFkICIKICAgICJmb3IgZWl0aGVyIGZ1bGwgb3IgcGFydGlhbCBpbnN0YW5jaW5nIiwKKQpkZWYgaW5zdGFudGlhdGVWYXJpYWJsZUZvbnQodmFyZm9udCwgbG9jYXRpb24sIGlucGxhY2U9RmFsc2UsIG92ZXJsYXA9VHJ1ZSk6CiAgICAiIiJHZW5lcmF0ZSBhIHN0YXRpYyBpbnN0YW5jZSBmcm9tIGEgdmFyaWFibGUgVFRGb250IGFuZCBhIGRpY3Rpb25hcnkKICAgIGRlZmluaW5nIHRoZSBkZXNpcmVkIGxvY2F0aW9uIGFsb25nIHRoZSB2YXJpYWJsZSBmb250J3MgYXhlcy4KICAgIFRoZSBsb2NhdGlvbiB2YWx1ZXMgbXVzdCBiZSBzcGVjaWZpZWQgYXMgdXNlci1zcGFjZSBjb29yZGluYXRlcywgZS5nLjoKCiAgICAuLiBjb2RlLWJsb2NrOjoKCiAgICAgICAgeyd3Z2h0JzogNDAwLCAnd2R0aCc6IDEwMH0KCiAgICBCeSBkZWZhdWx0LCBhIG5ldyBUVEZvbnQgb2JqZWN0IGlzIHJldHVybmVkLiBJZiBgYGlucGxhY2VgYCBpcyBUcnVlLCB0aGUKICAgIGlucHV0IHZhcmZvbnQgaXMgbW9kaWZpZWQgYW5kIHJlZHVjZWQgdG8gYSBzdGF0aWMgZm9udC4KCiAgICBXaGVuIHRoZSBvdmVybGFwIHBhcmFtZXRlciBpcyBkZWZpbmVkIGFzIFRydWUsCiAgICBPVkVSTEFQX1NJTVBMRSBhbmQgT1ZFUkxBUF9DT01QT1VORCBiaXRzIGFyZSBzZXQgdG8gMS4gIFNlZQogICAgaHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2dseWYKICAgICIiIgogICAgaWYgImZ2YXIiIG5vdCBpbiB2YXJmb250OgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIk1pc3NpbmcgcmVxdWlyZWQgdGFibGUgZnZhciIpCgogICAgaWYgbm90IGlucGxhY2U6CiAgICAgICAgIyBtYWtlIGEgY29weSB0byBsZWF2ZSBpbnB1dCB2YXJmb250IHVubW9kaWZpZWQKICAgICAgICBzdHJlYW0gPSBCeXRlc0lPKCkKICAgICAgICB2YXJmb250LnNhdmUoc3RyZWFtKQogICAgICAgIHN0cmVhbS5zZWVrKDApCiAgICAgICAgdmFyZm9udCA9IFRURm9udChzdHJlYW0pCgogICAgZnZhciA9IHZhcmZvbnRbImZ2YXIiXQogICAgYXhlcyA9IHthLmF4aXNUYWc6IChhLm1pblZhbHVlLCBhLmRlZmF1bHRWYWx1ZSwgYS5tYXhWYWx1ZSkgZm9yIGEgaW4gZnZhci5heGVzfQogICAgbG9jID0gbm9ybWFsaXplTG9jYXRpb24obG9jYXRpb24sIGF4ZXMpCiAgICBpZiAiYXZhciIgaW4gdmFyZm9udDoKICAgICAgICBtYXBzID0gdmFyZm9udFsiYXZhciJdLnNlZ21lbnRzCiAgICAgICAgbG9jID0ge2s6IHBpZWNld2lzZUxpbmVhck1hcCh2LCBtYXBzW2tdKSBmb3IgaywgdiBpbiBsb2MuaXRlbXMoKX0KICAgICMgUXVhbnRpemUgdG8gRjJEb3QxNCwgdG8gYXZvaWQgc3VycHJpc2UgaW50ZXJwb2xhdGlvbnMuCiAgICBsb2MgPSB7azogZmxvYXRUb0ZpeGVkVG9GbG9hdCh2LCAxNCkgZm9yIGssIHYgaW4gbG9jLml0ZW1zKCl9CiAgICAjIExvY2F0aW9uIGlzIG5vcm1hbGl6ZWQgbm93CiAgICBsb2cuaW5mbygiTm9ybWFsaXplZCBsb2NhdGlvbjogJXMiLCBsb2MpCgogICAgaWYgImd2YXIiIGluIHZhcmZvbnQ6CiAgICAgICAgbG9nLmluZm8oIk11dGF0aW5nIGdseWYvZ3ZhciB0YWJsZXMiKQogICAgICAgIGd2YXIgPSB2YXJmb250WyJndmFyIl0KICAgICAgICBnbHlmID0gdmFyZm9udFsiZ2x5ZiJdCiAgICAgICAgaE1ldHJpY3MgPSB2YXJmb250WyJobXR4Il0ubWV0cmljcwogICAgICAgIHZNZXRyaWNzID0gZ2V0YXR0cih2YXJmb250LmdldCgidm10eCIpLCAibWV0cmljcyIsIE5vbmUpCiAgICAgICAgIyBnZXQgbGlzdCBvZiBnbHlwaCBuYW1lcyBpbiBndmFyIHNvcnRlZCBieSBjb21wb25lbnQgZGVwdGgKICAgICAgICBtYXhwVmFsdWVzQ2FjaGUgPSB7fQogICAgICAgIGdseXBobmFtZXMgPSBzb3J0ZWQoCiAgICAgICAgICAgIGd2YXIudmFyaWF0aW9ucy5rZXlzKCksCiAgICAgICAgICAgIGtleT1sYW1iZGEgbmFtZTogKAogICAgICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgICAgIGdseWZbbmFtZV0KICAgICAgICAgICAgICAgICAgICAuZ2V0Q29tcG9zaXRlTWF4cFZhbHVlcyhnbHlmLCBtYXhwVmFsdWVzQ2FjaGU9bWF4cFZhbHVlc0NhY2hlKQogICAgICAgICAgICAgICAgICAgIC5tYXhDb21wb25lbnREZXB0aAogICAgICAgICAgICAgICAgICAgIGlmIGdseWZbbmFtZV0uaXNDb21wb3NpdGUoKQogICAgICAgICAgICAgICAgICAgIGVsc2UgMAogICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgIG5hbWUsCiAgICAgICAgICAgICksCiAgICAgICAgKQogICAgICAgIGZvciBnbHlwaG5hbWUgaW4gZ2x5cGhuYW1lczoKICAgICAgICAgICAgdmFyaWF0aW9ucyA9IGd2YXIudmFyaWF0aW9uc1tnbHlwaG5hbWVdCiAgICAgICAgICAgIGNvb3JkaW5hdGVzLCBfID0gZ2x5Zi5fZ2V0Q29vcmRpbmF0ZXNBbmRDb250cm9scygKICAgICAgICAgICAgICAgIGdseXBobmFtZSwgaE1ldHJpY3MsIHZNZXRyaWNzCiAgICAgICAgICAgICkKICAgICAgICAgICAgb3JpZ0Nvb3JkcywgZW5kUHRzID0gTm9uZSwgTm9uZQogICAgICAgICAgICBmb3IgdmFyIGluIHZhcmlhdGlvbnM6CiAgICAgICAgICAgICAgICBzY2FsYXIgPSBzdXBwb3J0U2NhbGFyKGxvYywgdmFyLmF4ZXMpCiAgICAgICAgICAgICAgICBpZiBub3Qgc2NhbGFyOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBkZWx0YSA9IHZhci5jb29yZGluYXRlcwogICAgICAgICAgICAgICAgaWYgTm9uZSBpbiBkZWx0YToKICAgICAgICAgICAgICAgICAgICBpZiBvcmlnQ29vcmRzIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIG9yaWdDb29yZHMsIGcgPSBnbHlmLl9nZXRDb29yZGluYXRlc0FuZENvbnRyb2xzKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgZ2x5cGhuYW1lLCBoTWV0cmljcywgdk1ldHJpY3MKICAgICAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgICAgIGRlbHRhID0gaXVwX2RlbHRhKGRlbHRhLCBvcmlnQ29vcmRzLCBnLmVuZFB0cykKICAgICAgICAgICAgICAgIGNvb3JkaW5hdGVzICs9IEdseXBoQ29vcmRpbmF0ZXMoZGVsdGEpICogc2NhbGFyCiAgICAgICAgICAgIGdseWYuX3NldENvb3JkaW5hdGVzKGdseXBobmFtZSwgY29vcmRpbmF0ZXMsIGhNZXRyaWNzLCB2TWV0cmljcykKICAgIGVsc2U6CiAgICAgICAgZ2x5ZiA9IE5vbmUKCiAgICBpZiAiRFNJRyIgaW4gdmFyZm9udDoKICAgICAgICBkZWwgdmFyZm9udFsiRFNJRyJdCgogICAgaWYgImN2YXIiIGluIHZhcmZvbnQ6CiAgICAgICAgbG9nLmluZm8oIk11dGF0aW5nIGN2dC9jdmFyIHRhYmxlcyIpCiAgICAgICAgY3ZhciA9IHZhcmZvbnRbImN2YXIiXQogICAgICAgIGN2dCA9IHZhcmZvbnRbImN2dCAiXQogICAgICAgIGRlbHRhcyA9IHt9CiAgICAgICAgZm9yIHZhciBpbiBjdmFyLnZhcmlhdGlvbnM6CiAgICAgICAgICAgIHNjYWxhciA9IHN1cHBvcnRTY2FsYXIobG9jLCB2YXIuYXhlcykKICAgICAgICAgICAgaWYgbm90IHNjYWxhcjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIGZvciBpLCBjIGluIGVudW1lcmF0ZSh2YXIuY29vcmRpbmF0ZXMpOgogICAgICAgICAgICAgICAgaWYgYyBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICBkZWx0YXNbaV0gPSBkZWx0YXMuZ2V0KGksIDApICsgc2NhbGFyICogYwogICAgICAgIGZvciBpLCBkZWx0YSBpbiBkZWx0YXMuaXRlbXMoKToKICAgICAgICAgICAgY3Z0W2ldICs9IG90Um91bmQoZGVsdGEpCgogICAgaWYgIkNGRjIiIGluIHZhcmZvbnQ6CiAgICAgICAgbG9nLmluZm8oIk11dGF0aW5nIENGRjIgdGFibGUiKQogICAgICAgIGdseXBoT3JkZXIgPSB2YXJmb250LmdldEdseXBoT3JkZXIoKQogICAgICAgIENGRjIgPSB2YXJmb250WyJDRkYyIl0KICAgICAgICB0b3BEaWN0ID0gQ0ZGMi5jZmYudG9wRGljdEluZGV4WzBdCiAgICAgICAgdnNJbnN0YW5jZXIgPSBWYXJTdG9yZUluc3RhbmNlcih0b3BEaWN0LlZhclN0b3JlLm90VmFyU3RvcmUsIGZ2YXIuYXhlcywgbG9jKQogICAgICAgIGludGVycG9sYXRlRnJvbURlbHRhcyA9IHZzSW5zdGFuY2VyLmludGVycG9sYXRlRnJvbURlbHRhcwogICAgICAgIGludGVycG9sYXRlX2NmZjJfUHJpdmF0ZURpY3QodG9wRGljdCwgaW50ZXJwb2xhdGVGcm9tRGVsdGFzKQogICAgICAgIENGRjIuZGVzdWJyb3V0aW5pemUoKQogICAgICAgIGludGVycG9sYXRlX2NmZjJfY2hhcnN0cmluZ3ModG9wRGljdCwgaW50ZXJwb2xhdGVGcm9tRGVsdGFzLCBnbHlwaE9yZGVyKQogICAgICAgIGludGVycG9sYXRlX2NmZjJfbWV0cmljcyh2YXJmb250LCB0b3BEaWN0LCBnbHlwaE9yZGVyLCBsb2MpCiAgICAgICAgZGVsIHRvcERpY3QucmF3RGljdFsiVmFyU3RvcmUiXQogICAgICAgIGRlbCB0b3BEaWN0LlZhclN0b3JlCgogICAgaWYgIk1WQVIiIGluIHZhcmZvbnQ6CiAgICAgICAgbG9nLmluZm8oIk11dGF0aW5nIE1WQVIgdGFibGUiKQogICAgICAgIG12YXIgPSB2YXJmb250WyJNVkFSIl0udGFibGUKICAgICAgICB2YXJTdG9yZUluc3RhbmNlciA9IFZhclN0b3JlSW5zdGFuY2VyKG12YXIuVmFyU3RvcmUsIGZ2YXIuYXhlcywgbG9jKQogICAgICAgIHJlY29yZHMgPSBtdmFyLlZhbHVlUmVjb3JkCiAgICAgICAgZm9yIHJlYyBpbiByZWNvcmRzOgogICAgICAgICAgICBtdmFyVGFnID0gcmVjLlZhbHVlVGFnCiAgICAgICAgICAgIGlmIG12YXJUYWcgbm90IGluIE1WQVJfRU5UUklFUzoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHRhYmxlVGFnLCBpdGVtTmFtZSA9IE1WQVJfRU5UUklFU1ttdmFyVGFnXQogICAgICAgICAgICBkZWx0YSA9IG90Um91bmQodmFyU3RvcmVJbnN0YW5jZXJbcmVjLlZhcklkeF0pCiAgICAgICAgICAgIGlmIG5vdCBkZWx0YToKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHNldGF0dHIoCiAgICAgICAgICAgICAgICB2YXJmb250W3RhYmxlVGFnXSwKICAgICAgICAgICAgICAgIGl0ZW1OYW1lLAogICAgICAgICAgICAgICAgZ2V0YXR0cih2YXJmb250W3RhYmxlVGFnXSwgaXRlbU5hbWUpICsgZGVsdGEsCiAgICAgICAgICAgICkKCiAgICBsb2cuaW5mbygiTXV0YXRpbmcgRmVhdHVyZVZhcmlhdGlvbnMiKQogICAgZm9yIHRhYmxlVGFnIGluICJHU1VCIiwgIkdQT1MiOgogICAgICAgIGlmIG5vdCB0YWJsZVRhZyBpbiB2YXJmb250OgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHRhYmxlID0gdmFyZm9udFt0YWJsZVRhZ10udGFibGUKICAgICAgICBpZiBub3QgZ2V0YXR0cih0YWJsZSwgIkZlYXR1cmVWYXJpYXRpb25zIiwgTm9uZSk6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgdmFyaWF0aW9ucyA9IHRhYmxlLkZlYXR1cmVWYXJpYXRpb25zCiAgICAgICAgZm9yIHJlY29yZCBpbiB2YXJpYXRpb25zLkZlYXR1cmVWYXJpYXRpb25SZWNvcmQ6CiAgICAgICAgICAgIGFwcGxpZXMgPSBUcnVlCiAgICAgICAgICAgIGNvbmRpdGlvbnMgPSAoCiAgICAgICAgICAgICAgICByZWNvcmQuQ29uZGl0aW9uU2V0LkNvbmRpdGlvblRhYmxlCiAgICAgICAgICAgICAgICBpZiByZWNvcmQuQ29uZGl0aW9uU2V0IGlzIG5vdCBOb25lCiAgICAgICAgICAgICAgICBlbHNlIFtdCiAgICAgICAgICAgICkKICAgICAgICAgICAgZm9yIGNvbmRpdGlvbiBpbiBjb25kaXRpb25zOgogICAgICAgICAgICAgICAgaWYgY29uZGl0aW9uIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gMToKICAgICAgICAgICAgICAgICAgICBheGlzSWR4ID0gY29uZGl0aW9uLkF4aXNJbmRleAogICAgICAgICAgICAgICAgICAgIGF4aXNUYWcgPSBmdmFyLmF4ZXNbYXhpc0lkeF0uYXhpc1RhZwogICAgICAgICAgICAgICAgICAgIE1pbiA9IGNvbmRpdGlvbi5GaWx0ZXJSYW5nZU1pblZhbHVlCiAgICAgICAgICAgICAgICAgICAgTWF4ID0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWF4VmFsdWUKICAgICAgICAgICAgICAgICAgICB2ID0gbG9jW2F4aXNUYWddCiAgICAgICAgICAgICAgICAgICAgaWYgbm90IChNaW4gPD0gdiA8PSBNYXgpOgogICAgICAgICAgICAgICAgICAgICAgICBhcHBsaWVzID0gRmFsc2UKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgYXBwbGllcyA9IEZhbHNlCiAgICAgICAgICAgICAgICBpZiBub3QgYXBwbGllczoKICAgICAgICAgICAgICAgICAgICBicmVhawoKICAgICAgICAgICAgaWYgYXBwbGllczoKICAgICAgICAgICAgICAgIGlmIHJlY29yZC5GZWF0dXJlVGFibGVTdWJzdGl0dXRpb24gaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgYXNzZXJ0IHJlY29yZC5GZWF0dXJlVGFibGVTdWJzdGl0dXRpb24uVmVyc2lvbiA9PSAweDAwMDEwMDAwCiAgICAgICAgICAgICAgICAgICAgZm9yIHJlYyBpbiByZWNvcmQuRmVhdHVyZVRhYmxlU3Vic3RpdHV0aW9uLlN1YnN0aXR1dGlvblJlY29yZDoKICAgICAgICAgICAgICAgICAgICAgICAgdGFibGUuRmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZFtyZWMuRmVhdHVyZUluZGV4XS5GZWF0dXJlID0gKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVjLkZlYXR1cmUKICAgICAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICBkZWwgdGFibGUuRmVhdHVyZVZhcmlhdGlvbnMKCiAgICBpZiAiR0RFRiIgaW4gdmFyZm9udCBhbmQgdmFyZm9udFsiR0RFRiJdLnRhYmxlLlZlcnNpb24gPj0gMHgwMDAxMDAwMzoKICAgICAgICBsb2cuaW5mbygiTXV0YXRpbmcgR0RFRi9HUE9TL0dTVUIgdGFibGVzIikKICAgICAgICBnZGVmID0gdmFyZm9udFsiR0RFRiJdLnRhYmxlCiAgICAgICAgaW5zdGFuY2VyID0gVmFyU3RvcmVJbnN0YW5jZXIoZ2RlZi5WYXJTdG9yZSwgZnZhci5heGVzLCBsb2MpCgogICAgICAgIG1lcmdlciA9IE11dGF0b3JNZXJnZXIodmFyZm9udCwgaW5zdGFuY2VyKQogICAgICAgIG1lcmdlci5tZXJnZVRhYmxlcyh2YXJmb250LCBbdmFyZm9udF0sIFsiR0RFRiIsICJHUE9TIl0pCgogICAgICAgICMgRG93bmdyYWRlIEdERUYuCiAgICAgICAgZGVsIGdkZWYuVmFyU3RvcmUKICAgICAgICBnZGVmLlZlcnNpb24gPSAweDAwMDEwMDAyCiAgICAgICAgaWYgZ2RlZi5NYXJrR2x5cGhTZXRzRGVmIGlzIE5vbmU6CiAgICAgICAgICAgIGRlbCBnZGVmLk1hcmtHbHlwaFNldHNEZWYKICAgICAgICAgICAgZ2RlZi5WZXJzaW9uID0gMHgwMDAxMDAwMAoKICAgICAgICBpZiBub3QgKAogICAgICAgICAgICBnZGVmLkxpZ0NhcmV0TGlzdAogICAgICAgICAgICBvciBnZGVmLk1hcmtBdHRhY2hDbGFzc0RlZgogICAgICAgICAgICBvciBnZGVmLkdseXBoQ2xhc3NEZWYKICAgICAgICAgICAgb3IgZ2RlZi5BdHRhY2hMaXN0CiAgICAgICAgICAgIG9yIChnZGVmLlZlcnNpb24gPj0gMHgwMDAxMDAwMiBhbmQgZ2RlZi5NYXJrR2x5cGhTZXRzRGVmKQogICAgICAgICk6CiAgICAgICAgICAgIGRlbCB2YXJmb250WyJHREVGIl0KCiAgICBhZGRpZGVmID0gRmFsc2UKICAgIGlmIGdseWY6CiAgICAgICAgZm9yIGdseXBoIGluIGdseWYuZ2x5cGhzLnZhbHVlcygpOgogICAgICAgICAgICBpZiBoYXNhdHRyKGdseXBoLCAicHJvZ3JhbSIpOgogICAgICAgICAgICAgICAgaW5zdHJ1Y3Rpb25zID0gZ2x5cGgucHJvZ3JhbS5nZXRBc3NlbWJseSgpCiAgICAgICAgICAgICAgICAjIElmIEdFVFZBUklBVElPTiBvcGNvZGUgaXMgdXNlZCBpbiBieXRlY29kZSBvZiBhbnkgZ2x5cGggYWRkIElERUYKICAgICAgICAgICAgICAgIGFkZGlkZWYgPSBhbnkob3Auc3RhcnRzd2l0aCgiR0VUVkFSSUFUSU9OIikgZm9yIG9wIGluIGluc3RydWN0aW9ucykKICAgICAgICAgICAgICAgIGlmIGFkZGlkZWY6CiAgICAgICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICBpZiBvdmVybGFwOgogICAgICAgICAgICBmb3IgZ2x5cGhfbmFtZSBpbiBnbHlmLmtleXMoKToKICAgICAgICAgICAgICAgIGdseXBoID0gZ2x5ZltnbHlwaF9uYW1lXQogICAgICAgICAgICAgICAgIyBTZXQgT1ZFUkxBUF9DT01QT1VORCBiaXQgZm9yIGNvbXBvdW5kIGdseXBocwogICAgICAgICAgICAgICAgaWYgZ2x5cGguaXNDb21wb3NpdGUoKToKICAgICAgICAgICAgICAgICAgICBnbHlwaC5jb21wb25lbnRzWzBdLmZsYWdzIHw9IE9WRVJMQVBfQ09NUE9VTkQKICAgICAgICAgICAgICAgICMgU2V0IE9WRVJMQVBfU0lNUExFIGJpdCBmb3Igc2ltcGxlIGdseXBocwogICAgICAgICAgICAgICAgZWxpZiBnbHlwaC5udW1iZXJPZkNvbnRvdXJzID4gMDoKICAgICAgICAgICAgICAgICAgICBnbHlwaC5mbGFnc1swXSB8PSBmbGFnT3ZlcmxhcFNpbXBsZQogICAgaWYgYWRkaWRlZjoKICAgICAgICBsb2cuaW5mbygiQWRkaW5nIElERUYgdG8gZnBnbSB0YWJsZSBmb3IgR0VUVkFSSUFUSU9OIG9wY29kZSIpCiAgICAgICAgYXNtID0gW10KICAgICAgICBpZiAiZnBnbSIgaW4gdmFyZm9udDoKICAgICAgICAgICAgZnBnbSA9IHZhcmZvbnRbImZwZ20iXQogICAgICAgICAgICBhc20gPSBmcGdtLnByb2dyYW0uZ2V0QXNzZW1ibHkoKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGZwZ20gPSBuZXdUYWJsZSgiZnBnbSIpCiAgICAgICAgICAgIGZwZ20ucHJvZ3JhbSA9IHR0UHJvZ3JhbS5Qcm9ncmFtKCkKICAgICAgICAgICAgdmFyZm9udFsiZnBnbSJdID0gZnBnbQogICAgICAgIGFzbS5hcHBlbmQoIlBVU0hCWzAwMF0gMTQ1IikKICAgICAgICBhc20uYXBwZW5kKCJJREVGWyBdIikKICAgICAgICBhcmdzID0gW3N0cihsZW4obG9jKSldCiAgICAgICAgZm9yIGEgaW4gZnZhci5heGVzOgogICAgICAgICAgICBhcmdzLmFwcGVuZChzdHIoZmxvYXRUb0ZpeGVkKGxvY1thLmF4aXNUYWddLCAxNCkpKQogICAgICAgIGFzbS5hcHBlbmQoIk5QVVNIV1sgXSAiICsgIiAiLmpvaW4oYXJncykpCiAgICAgICAgYXNtLmFwcGVuZCgiRU5ERlsgXSIpCiAgICAgICAgZnBnbS5wcm9ncmFtLmZyb21Bc3NlbWJseShhc20pCgogICAgICAgICMgQ2hhbmdlIG1heHAgYXR0cmlidXRlcyBhcyBJREVGIGlzIGFkZGVkCiAgICAgICAgaWYgIm1heHAiIGluIHZhcmZvbnQ6CiAgICAgICAgICAgIG1heHAgPSB2YXJmb250WyJtYXhwIl0KICAgICAgICAgICAgc2V0YXR0cigKICAgICAgICAgICAgICAgIG1heHAsICJtYXhJbnN0cnVjdGlvbkRlZnMiLCAxICsgZ2V0YXR0cihtYXhwLCAibWF4SW5zdHJ1Y3Rpb25EZWZzIiwgMCkKICAgICAgICAgICAgKQogICAgICAgICAgICBzZXRhdHRyKAogICAgICAgICAgICAgICAgbWF4cCwKICAgICAgICAgICAgICAgICJtYXhTdGFja0VsZW1lbnRzIiwKICAgICAgICAgICAgICAgIG1heChsZW4obG9jKSwgZ2V0YXR0cihtYXhwLCAibWF4U3RhY2tFbGVtZW50cyIsIDApKSwKICAgICAgICAgICAgKQoKICAgIGlmICJuYW1lIiBpbiB2YXJmb250OgogICAgICAgIGxvZy5pbmZvKCJQcnVuaW5nIG5hbWUgdGFibGUiKQogICAgICAgIGV4Y2x1ZGUgPSB7YS5heGlzTmFtZUlEIGZvciBhIGluIGZ2YXIuYXhlc30KICAgICAgICBmb3IgaSBpbiBmdmFyLmluc3RhbmNlczoKICAgICAgICAgICAgZXhjbHVkZS5hZGQoaS5zdWJmYW1pbHlOYW1lSUQpCiAgICAgICAgICAgIGV4Y2x1ZGUuYWRkKGkucG9zdHNjcmlwdE5hbWVJRCkKICAgICAgICBpZiAibHRhZyIgaW4gdmFyZm9udDoKICAgICAgICAgICAgIyBEcm9wIHRoZSB3aG9sZSAnbHRhZycgdGFibGUgaWYgYWxsIGl0cyBsYW5ndWFnZSB0YWdzIGFyZSByZWZlcmVuY2VkIGJ5CiAgICAgICAgICAgICMgbmFtZSByZWNvcmRzIHRvIGJlIHBydW5lZC4KICAgICAgICAgICAgIyBUT0RPOiBwcnVuZSB1bnVzZWQgbHRhZyB0YWdzIGFuZCByZS1lbnVtZXJhdGUgbGFuZ0lEcyBhY2NvcmRpbmdseQogICAgICAgICAgICBleGNsdWRlZFVuaWNvZGVMYW5nSURzID0gWwogICAgICAgICAgICAgICAgbi5sYW5nSUQKICAgICAgICAgICAgICAgIGZvciBuIGluIHZhcmZvbnRbIm5hbWUiXS5uYW1lcwogICAgICAgICAgICAgICAgaWYgbi5uYW1lSUQgaW4gZXhjbHVkZSBhbmQgbi5wbGF0Zm9ybUlEID09IDAgYW5kIG4ubGFuZ0lEICE9IDB4RkZGRgogICAgICAgICAgICBdCiAgICAgICAgICAgIGlmIHNldChleGNsdWRlZFVuaWNvZGVMYW5nSURzKSA9PSBzZXQocmFuZ2UobGVuKCh2YXJmb250WyJsdGFnIl0udGFncykpKSk6CiAgICAgICAgICAgICAgICBkZWwgdmFyZm9udFsibHRhZyJdCiAgICAgICAgdmFyZm9udFsibmFtZSJdLm5hbWVzWzpdID0gWwogICAgICAgICAgICBuCiAgICAgICAgICAgIGZvciBuIGluIHZhcmZvbnRbIm5hbWUiXS5uYW1lcwogICAgICAgICAgICBpZiBuLm5hbWVJRCA8IDI1NiBvciBuLm5hbWVJRCBub3QgaW4gZXhjbHVkZQogICAgICAgIF0KCiAgICBpZiAid2dodCIgaW4gbG9jYXRpb24gYW5kICJPUy8yIiBpbiB2YXJmb250OgogICAgICAgIHZhcmZvbnRbIk9TLzIiXS51c1dlaWdodENsYXNzID0gb3RSb3VuZChtYXgoMSwgbWluKGxvY2F0aW9uWyJ3Z2h0Il0sIDEwMDApKSkKICAgIGlmICJ3ZHRoIiBpbiBsb2NhdGlvbjoKICAgICAgICB3ZHRoID0gbG9jYXRpb25bIndkdGgiXQogICAgICAgIGZvciBwZXJjZW50LCB3aWR0aENsYXNzIGluIHNvcnRlZChPUzJfV0lEVEhfQ0xBU1NfVkFMVUVTLml0ZW1zKCkpOgogICAgICAgICAgICBpZiB3ZHRoIDwgcGVyY2VudDoKICAgICAgICAgICAgICAgIHZhcmZvbnRbIk9TLzIiXS51c1dpZHRoQ2xhc3MgPSB3aWR0aENsYXNzCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHZhcmZvbnRbIk9TLzIiXS51c1dpZHRoQ2xhc3MgPSA5CiAgICBpZiAic2xudCIgaW4gbG9jYXRpb24gYW5kICJwb3N0IiBpbiB2YXJmb250OgogICAgICAgIHZhcmZvbnRbInBvc3QiXS5pdGFsaWNBbmdsZSA9IG1heCgtOTAsIG1pbihsb2NhdGlvblsic2xudCJdLCA5MCkpCgogICAgbG9nLmluZm8oIlJlbW92aW5nIHZhcmlhYmxlIHRhYmxlcyIpCiAgICBmb3IgdGFnIGluICgiYXZhciIsICJjdmFyIiwgImZ2YXIiLCAiZ3ZhciIsICJIVkFSIiwgIk1WQVIiLCAiVlZBUiIsICJTVEFUIik6CiAgICAgICAgaWYgdGFnIGluIHZhcmZvbnQ6CiAgICAgICAgICAgIGRlbCB2YXJmb250W3RhZ10KCiAgICByZXR1cm4gdmFyZm9udAoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICAiIiJJbnN0YW50aWF0ZSBhIHZhcmlhdGlvbiBmb250IiIiCiAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCiAgICBpbXBvcnQgYXJncGFyc2UKCiAgICBwYXJzZXIgPSBhcmdwYXJzZS5Bcmd1bWVudFBhcnNlcigKICAgICAgICAiZm9udHRvb2xzIHZhckxpYi5tdXRhdG9yIiwgZGVzY3JpcHRpb249Ikluc3RhbnRpYXRlIGEgdmFyaWFibGUgZm9udCIKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoImlucHV0IiwgbWV0YXZhcj0iSU5QVVQudHRmIiwgaGVscD0iSW5wdXQgdmFyaWFibGUgVFRGIGZpbGUuIikKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgImxvY2FyZ3MiLAogICAgICAgIG1ldGF2YXI9IkFYSVM9TE9DIiwKICAgICAgICBuYXJncz0iKiIsCiAgICAgICAgaGVscD0iTGlzdCBvZiBzcGFjZSBzZXBhcmF0ZWQgbG9jYXRpb25zLiBBIGxvY2F0aW9uIGNvbnNpc3QgaW4gIgogICAgICAgICJ0aGUgbmFtZSBvZiBhIHZhcmlhdGlvbiBheGlzLCBmb2xsb3dlZCBieSAnPScgYW5kIGEgbnVtYmVyLiBFLmcuOiAiCiAgICAgICAgIiB3Z2h0PTcwMCB3ZHRoPTgwLiBUaGUgZGVmYXVsdCBpcyB0aGUgbG9jYXRpb24gb2YgdGhlIGJhc2UgbWFzdGVyLiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItbyIsCiAgICAgICAgIi0tb3V0cHV0IiwKICAgICAgICBtZXRhdmFyPSJPVVRQVVQudHRmIiwKICAgICAgICBkZWZhdWx0PU5vbmUsCiAgICAgICAgaGVscD0iT3V0cHV0IGluc3RhbmNlIFRURiBmaWxlIChkZWZhdWx0OiBJTlBVVC1pbnN0YW5jZS50dGYpLiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLW5vLXJlY2FsYy10aW1lc3RhbXAiLAogICAgICAgIGRlc3Q9InJlY2FsY190aW1lc3RhbXAiLAogICAgICAgIGFjdGlvbj0ic3RvcmVfZmFsc2UiLAogICAgICAgIGhlbHA9IkRvbid0IHNldCB0aGUgb3V0cHV0IGZvbnQncyB0aW1lc3RhbXAgdG8gdGhlIGN1cnJlbnQgdGltZS4iLAogICAgKQogICAgbG9nZ2luZ19ncm91cCA9IHBhcnNlci5hZGRfbXV0dWFsbHlfZXhjbHVzaXZlX2dyb3VwKHJlcXVpcmVkPUZhbHNlKQogICAgbG9nZ2luZ19ncm91cC5hZGRfYXJndW1lbnQoCiAgICAgICAgIi12IiwgIi0tdmVyYm9zZSIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsIGhlbHA9IlJ1biBtb3JlIHZlcmJvc2VseS4iCiAgICApCiAgICBsb2dnaW5nX2dyb3VwLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXEiLCAiLS1xdWlldCIsIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsIGhlbHA9IlR1cm4gdmVyYm9zaXR5IG9mZi4iCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItLW5vLW92ZXJsYXAiLAogICAgICAgIGRlc3Q9Im92ZXJsYXAiLAogICAgICAgIGFjdGlvbj0ic3RvcmVfZmFsc2UiLAogICAgICAgIGhlbHA9IkRvbid0IHNldCBPVkVSTEFQX1NJTVBMRS9PVkVSTEFQX0NPTVBPVU5EIGdseWYgZmxhZ3MuIiwKICAgICkKICAgIG9wdGlvbnMgPSBwYXJzZXIucGFyc2VfYXJncyhhcmdzKQoKICAgIHZhcmZpbGVuYW1lID0gb3B0aW9ucy5pbnB1dAogICAgb3V0ZmlsZSA9ICgKICAgICAgICBvcy5wYXRoLnNwbGl0ZXh0KHZhcmZpbGVuYW1lKVswXSArICItaW5zdGFuY2UudHRmIgogICAgICAgIGlmIG5vdCBvcHRpb25zLm91dHB1dAogICAgICAgIGVsc2Ugb3B0aW9ucy5vdXRwdXQKICAgICkKICAgIGNvbmZpZ0xvZ2dlcigKICAgICAgICBsZXZlbD0oIkRFQlVHIiBpZiBvcHRpb25zLnZlcmJvc2UgZWxzZSAiRVJST1IiIGlmIG9wdGlvbnMucXVpZXQgZWxzZSAiSU5GTyIpCiAgICApCgogICAgbG9jID0ge30KICAgIGZvciBhcmcgaW4gb3B0aW9ucy5sb2NhcmdzOgogICAgICAgIHRyeToKICAgICAgICAgICAgdGFnLCB2YWwgPSBhcmcuc3BsaXQoIj0iKQogICAgICAgICAgICBhc3NlcnQgbGVuKHRhZykgPD0gNAogICAgICAgICAgICBsb2NbdGFnLmxqdXN0KDQpXSA9IGZsb2F0KHZhbCkKICAgICAgICBleGNlcHQgKFZhbHVlRXJyb3IsIEFzc2VydGlvbkVycm9yKToKICAgICAgICAgICAgcGFyc2VyLmVycm9yKCJpbnZhbGlkIGxvY2F0aW9uIGFyZ3VtZW50IGZvcm1hdDogJXIiICUgYXJnKQogICAgbG9nLmluZm8oIkxvY2F0aW9uOiAlcyIsIGxvYykKCiAgICBsb2cuaW5mbygiTG9hZGluZyB2YXJpYWJsZSBmb250IikKICAgIHZhcmZvbnQgPSBUVEZvbnQodmFyZmlsZW5hbWUsIHJlY2FsY1RpbWVzdGFtcD1vcHRpb25zLnJlY2FsY190aW1lc3RhbXApCgogICAgaW5zdGFudGlhdGVWYXJpYWJsZUZvbnQodmFyZm9udCwgbG9jLCBpbnBsYWNlPVRydWUsIG92ZXJsYXA9b3B0aW9ucy5vdmVybGFwKQoKICAgIGxvZy5pbmZvKCJTYXZpbmcgaW5zdGFuY2UgZm9udCAlcyIsIG91dGZpbGUpCiAgICB2YXJmb250LnNhdmUob3V0ZmlsZSkKCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgaW1wb3J0IHN5cwoKICAgIGlmIGxlbihzeXMuYXJndikgPiAxOgogICAgICAgIHN5cy5leGl0KG1haW4oKSkKICAgIGltcG9ydCBkb2N0ZXN0CgogICAgc3lzLmV4aXQoZG9jdGVzdC50ZXN0bW9kKCkuZmFpbGVkKQo=
+"""
+Instantiate a variation font.  Run, eg:
+
+.. code-block:: sh
+
+    $ fonttools varLib.mutator ./NotoSansArabic-VF.ttf wght=140 wdth=85
+
+.. warning::
+   ``fontTools.varLib.mutator`` is deprecated in favor of :mod:`fontTools.varLib.instancer`
+   which provides equivalent full instancing and also supports partial instancing.
+   Please migrate CLI usage to ``fonttools varLib.instancer`` and API usage to
+   :func:`fontTools.varLib.instancer.instantiateVariableFont`.
+"""
+
+from fontTools.misc.fixedTools import floatToFixedToFloat, floatToFixed
+from fontTools.misc.loggingTools import deprecateFunction
+from fontTools.misc.roundTools import otRound
+from fontTools.pens.boundsPen import BoundsPen
+from fontTools.ttLib import TTFont, newTable
+from fontTools.ttLib.tables import ttProgram
+from fontTools.ttLib.tables._g_l_y_f import (
+    GlyphCoordinates,
+    flagOverlapSimple,
+    OVERLAP_COMPOUND,
+)
+from fontTools.varLib.models import (
+    supportScalar,
+    normalizeLocation,
+    piecewiseLinearMap,
+)
+from fontTools.varLib.merger import MutatorMerger
+from fontTools.varLib.varStore import VarStoreInstancer
+from fontTools.varLib.mvar import MVAR_ENTRIES
+from fontTools.varLib.iup import iup_delta
+import fontTools.subset.cff
+import os.path
+import logging
+from io import BytesIO
+
+log = logging.getLogger("fontTools.varlib.mutator")
+
+# map 'wdth' axis (1..200) to OS/2.usWidthClass (1..9), rounding to closest
+OS2_WIDTH_CLASS_VALUES = {}
+percents = [50.0, 62.5, 75.0, 87.5, 100.0, 112.5, 125.0, 150.0, 200.0]
+for i, (prev, curr) in enumerate(zip(percents[:-1], percents[1:]), start=1):
+    half = (prev + curr) / 2
+    OS2_WIDTH_CLASS_VALUES[half] = i
+
+
+def interpolate_cff2_PrivateDict(topDict, interpolateFromDeltas):
+    pd_blend_lists = (
+        "BlueValues",
+        "OtherBlues",
+        "FamilyBlues",
+        "FamilyOtherBlues",
+        "StemSnapH",
+        "StemSnapV",
+    )
+    pd_blend_values = ("BlueScale", "BlueShift", "BlueFuzz", "StdHW", "StdVW")
+    for fontDict in topDict.FDArray:
+        pd = fontDict.Private
+        vsindex = pd.vsindex if (hasattr(pd, "vsindex")) else 0
+        for key, value in pd.rawDict.items():
+            if (key in pd_blend_values) and isinstance(value, list):
+                delta = interpolateFromDeltas(vsindex, value[1:])
+                pd.rawDict[key] = otRound(value[0] + delta)
+            elif (key in pd_blend_lists) and isinstance(value[0], list):
+                """If any argument in a BlueValues list is a blend list,
+                then they all are. The first value of each list is an
+                absolute value. The delta tuples are calculated from
+                relative master values, hence we need to append all the
+                deltas to date to each successive absolute value."""
+                delta = 0
+                for i, val_list in enumerate(value):
+                    delta += otRound(interpolateFromDeltas(vsindex, val_list[1:]))
+                    value[i] = val_list[0] + delta
+
+
+def interpolate_cff2_charstrings(topDict, interpolateFromDeltas, glyphOrder):
+    charstrings = topDict.CharStrings
+    for gname in glyphOrder:
+        # Interpolate charstring
+        # e.g replace blend op args with regular args,
+        # and use and discard vsindex op.
+        charstring = charstrings[gname]
+        new_program = []
+        vsindex = 0
+        last_i = 0
+        for i, token in enumerate(charstring.program):
+            if token == "vsindex":
+                vsindex = charstring.program[i - 1]
+                if last_i != 0:
+                    new_program.extend(charstring.program[last_i : i - 1])
+                last_i = i + 1
+            elif token == "blend":
+                num_regions = charstring.getNumRegions(vsindex)
+                numMasters = 1 + num_regions
+                num_args = charstring.program[i - 1]
+                # The program list starting at program[i] is now:
+                # ..args for following operations
+                # num_args values  from the default font
+                # num_args tuples, each with numMasters-1 delta values
+                # num_blend_args
+                # 'blend'
+                argi = i - (num_args * numMasters + 1)
+                end_args = tuplei = argi + num_args
+                while argi < end_args:
+                    next_ti = tuplei + num_regions
+                    deltas = charstring.program[tuplei:next_ti]
+                    delta = interpolateFromDeltas(vsindex, deltas)
+                    charstring.program[argi] += otRound(delta)
+                    tuplei = next_ti
+                    argi += 1
+                new_program.extend(charstring.program[last_i:end_args])
+                last_i = i + 1
+        if last_i != 0:
+            new_program.extend(charstring.program[last_i:])
+            charstring.program = new_program
+
+
+def interpolate_cff2_metrics(varfont, topDict, glyphOrder, loc):
+    """Unlike TrueType glyphs, neither advance width nor bounding box
+    info is stored in a CFF2 charstring. The width data exists only in
+    the hmtx and HVAR tables. Since LSB data cannot be interpolated
+    reliably from the master LSB values in the hmtx table, we traverse
+    the charstring to determine the actual bound box."""
+
+    charstrings = topDict.CharStrings
+    boundsPen = BoundsPen(glyphOrder)
+    hmtx = varfont["hmtx"]
+    hvar_table = None
+    if "HVAR" in varfont:
+        hvar_table = varfont["HVAR"].table
+        fvar = varfont["fvar"]
+        varStoreInstancer = VarStoreInstancer(hvar_table.VarStore, fvar.axes, loc)
+
+    for gid, gname in enumerate(glyphOrder):
+        entry = list(hmtx[gname])
+        # get width delta.
+        if hvar_table:
+            if hvar_table.AdvWidthMap:
+                width_idx = hvar_table.AdvWidthMap.mapping[gname]
+            else:
+                width_idx = gid
+            width_delta = otRound(varStoreInstancer[width_idx])
+        else:
+            width_delta = 0
+
+        # get LSB.
+        boundsPen.init()
+        charstring = charstrings[gname]
+        charstring.draw(boundsPen)
+        if boundsPen.bounds is None:
+            # Happens with non-marking glyphs
+            lsb_delta = 0
+        else:
+            lsb = otRound(boundsPen.bounds[0])
+            lsb_delta = entry[1] - lsb
+
+        if lsb_delta or width_delta:
+            if width_delta:
+                entry[0] = max(0, entry[0] + width_delta)
+            if lsb_delta:
+                entry[1] = lsb
+            hmtx[gname] = tuple(entry)
+
+
+@deprecateFunction(
+    "use fontTools.varLib.instancer.instantiateVariableFont instead "
+    "for either full or partial instancing",
+)
+def instantiateVariableFont(varfont, location, inplace=False, overlap=True):
+    """Generate a static instance from a variable TTFont and a dictionary
+    defining the desired location along the variable font's axes.
+    The location values must be specified as user-space coordinates, e.g.:
+
+    .. code-block::
+
+        {'wght': 400, 'wdth': 100}
+
+    By default, a new TTFont object is returned. If ``inplace`` is True, the
+    input varfont is modified and reduced to a static font.
+
+    When the overlap parameter is defined as True,
+    OVERLAP_SIMPLE and OVERLAP_COMPOUND bits are set to 1.  See
+    https://docs.microsoft.com/en-us/typography/opentype/spec/glyf
+    """
+    if "fvar" not in varfont:
+        raise ValueError("Missing required table fvar")
+
+    if not inplace:
+        # make a copy to leave input varfont unmodified
+        stream = BytesIO()
+        varfont.save(stream)
+        stream.seek(0)
+        varfont = TTFont(stream)
+
+    fvar = varfont["fvar"]
+    axes = {a.axisTag: (a.minValue, a.defaultValue, a.maxValue) for a in fvar.axes}
+    loc = normalizeLocation(location, axes)
+    if "avar" in varfont:
+        maps = varfont["avar"].segments
+        loc = {k: piecewiseLinearMap(v, maps[k]) for k, v in loc.items()}
+    # Quantize to F2Dot14, to avoid surprise interpolations.
+    loc = {k: floatToFixedToFloat(v, 14) for k, v in loc.items()}
+    # Location is normalized now
+    log.info("Normalized location: %s", loc)
+
+    if "gvar" in varfont:
+        log.info("Mutating glyf/gvar tables")
+        gvar = varfont["gvar"]
+        glyf = varfont["glyf"]
+        hMetrics = varfont["hmtx"].metrics
+        vMetrics = getattr(varfont.get("vmtx"), "metrics", None)
+        # get list of glyph names in gvar sorted by component depth
+        maxpValuesCache = {}
+        glyphnames = sorted(
+            gvar.variations.keys(),
+            key=lambda name: (
+                (
+                    glyf[name]
+                    .getCompositeMaxpValues(glyf, maxpValuesCache=maxpValuesCache)
+                    .maxComponentDepth
+                    if glyf[name].isComposite()
+                    else 0
+                ),
+                name,
+            ),
+        )
+        for glyphname in glyphnames:
+            variations = gvar.variations[glyphname]
+            coordinates, _ = glyf._getCoordinatesAndControls(
+                glyphname, hMetrics, vMetrics
+            )
+            origCoords, endPts = None, None
+            for var in variations:
+                scalar = supportScalar(loc, var.axes)
+                if not scalar:
+                    continue
+                delta = var.coordinates
+                if None in delta:
+                    if origCoords is None:
+                        origCoords, g = glyf._getCoordinatesAndControls(
+                            glyphname, hMetrics, vMetrics
+                        )
+                    delta = iup_delta(delta, origCoords, g.endPts)
+                coordinates += GlyphCoordinates(delta) * scalar
+            glyf._setCoordinates(glyphname, coordinates, hMetrics, vMetrics)
+    else:
+        glyf = None
+
+    if "DSIG" in varfont:
+        del varfont["DSIG"]
+
+    if "cvar" in varfont:
+        log.info("Mutating cvt/cvar tables")
+        cvar = varfont["cvar"]
+        cvt = varfont["cvt "]
+        deltas = {}
+        for var in cvar.variations:
+            scalar = supportScalar(loc, var.axes)
+            if not scalar:
+                continue
+            for i, c in enumerate(var.coordinates):
+                if c is not None:
+                    deltas[i] = deltas.get(i, 0) + scalar * c
+        for i, delta in deltas.items():
+            cvt[i] += otRound(delta)
+
+    if "CFF2" in varfont:
+        log.info("Mutating CFF2 table")
+        glyphOrder = varfont.getGlyphOrder()
+        CFF2 = varfont["CFF2"]
+        topDict = CFF2.cff.topDictIndex[0]
+        vsInstancer = VarStoreInstancer(topDict.VarStore.otVarStore, fvar.axes, loc)
+        interpolateFromDeltas = vsInstancer.interpolateFromDeltas
+        interpolate_cff2_PrivateDict(topDict, interpolateFromDeltas)
+        CFF2.desubroutinize()
+        interpolate_cff2_charstrings(topDict, interpolateFromDeltas, glyphOrder)
+        interpolate_cff2_metrics(varfont, topDict, glyphOrder, loc)
+        del topDict.rawDict["VarStore"]
+        del topDict.VarStore
+
+    if "MVAR" in varfont:
+        log.info("Mutating MVAR table")
+        mvar = varfont["MVAR"].table
+        varStoreInstancer = VarStoreInstancer(mvar.VarStore, fvar.axes, loc)
+        records = mvar.ValueRecord
+        for rec in records:
+            mvarTag = rec.ValueTag
+            if mvarTag not in MVAR_ENTRIES:
+                continue
+            tableTag, itemName = MVAR_ENTRIES[mvarTag]
+            delta = otRound(varStoreInstancer[rec.VarIdx])
+            if not delta:
+                continue
+            setattr(
+                varfont[tableTag],
+                itemName,
+                getattr(varfont[tableTag], itemName) + delta,
+            )
+
+    log.info("Mutating FeatureVariations")
+    for tableTag in "GSUB", "GPOS":
+        if not tableTag in varfont:
+            continue
+        table = varfont[tableTag].table
+        if not getattr(table, "FeatureVariations", None):
+            continue
+        variations = table.FeatureVariations
+        for record in variations.FeatureVariationRecord:
+            applies = True
+            conditions = (
+                record.ConditionSet.ConditionTable
+                if record.ConditionSet is not None
+                else []
+            )
+            for condition in conditions:
+                if condition is None:
+                    continue
+                if condition.Format == 1:
+                    axisIdx = condition.AxisIndex
+                    axisTag = fvar.axes[axisIdx].axisTag
+                    Min = condition.FilterRangeMinValue
+                    Max = condition.FilterRangeMaxValue
+                    v = loc[axisTag]
+                    if not (Min <= v <= Max):
+                        applies = False
+                else:
+                    applies = False
+                if not applies:
+                    break
+
+            if applies:
+                if record.FeatureTableSubstitution is not None:
+                    assert record.FeatureTableSubstitution.Version == 0x00010000
+                    for rec in record.FeatureTableSubstitution.SubstitutionRecord:
+                        table.FeatureList.FeatureRecord[rec.FeatureIndex].Feature = (
+                            rec.Feature
+                        )
+                break
+        del table.FeatureVariations
+
+    if "GDEF" in varfont and varfont["GDEF"].table.Version >= 0x00010003:
+        log.info("Mutating GDEF/GPOS/GSUB tables")
+        gdef = varfont["GDEF"].table
+        instancer = VarStoreInstancer(gdef.VarStore, fvar.axes, loc)
+
+        merger = MutatorMerger(varfont, instancer)
+        merger.mergeTables(varfont, [varfont], ["GDEF", "GPOS"])
+
+        # Downgrade GDEF.
+        del gdef.VarStore
+        gdef.Version = 0x00010002
+        if gdef.MarkGlyphSetsDef is None:
+            del gdef.MarkGlyphSetsDef
+            gdef.Version = 0x00010000
+
+        if not (
+            gdef.LigCaretList
+            or gdef.MarkAttachClassDef
+            or gdef.GlyphClassDef
+            or gdef.AttachList
+            or (gdef.Version >= 0x00010002 and gdef.MarkGlyphSetsDef)
+        ):
+            del varfont["GDEF"]
+
+    addidef = False
+    if glyf:
+        for glyph in glyf.glyphs.values():
+            if hasattr(glyph, "program"):
+                instructions = glyph.program.getAssembly()
+                # If GETVARIATION opcode is used in bytecode of any glyph add IDEF
+                addidef = any(op.startswith("GETVARIATION") for op in instructions)
+                if addidef:
+                    break
+        if overlap:
+            for glyph_name in glyf.keys():
+                glyph = glyf[glyph_name]
+                # Set OVERLAP_COMPOUND bit for compound glyphs
+                if glyph.isComposite():
+                    glyph.components[0].flags |= OVERLAP_COMPOUND
+                # Set OVERLAP_SIMPLE bit for simple glyphs
+                elif glyph.numberOfContours > 0:
+                    glyph.flags[0] |= flagOverlapSimple
+    if addidef:
+        log.info("Adding IDEF to fpgm table for GETVARIATION opcode")
+        asm = []
+        if "fpgm" in varfont:
+            fpgm = varfont["fpgm"]
+            asm = fpgm.program.getAssembly()
+        else:
+            fpgm = newTable("fpgm")
+            fpgm.program = ttProgram.Program()
+            varfont["fpgm"] = fpgm
+        asm.append("PUSHB[000] 145")
+        asm.append("IDEF[ ]")
+        args = [str(len(loc))]
+        for a in fvar.axes:
+            args.append(str(floatToFixed(loc[a.axisTag], 14)))
+        asm.append("NPUSHW[ ] " + " ".join(args))
+        asm.append("ENDF[ ]")
+        fpgm.program.fromAssembly(asm)
+
+        # Change maxp attributes as IDEF is added
+        if "maxp" in varfont:
+            maxp = varfont["maxp"]
+            setattr(
+                maxp, "maxInstructionDefs", 1 + getattr(maxp, "maxInstructionDefs", 0)
+            )
+            setattr(
+                maxp,
+                "maxStackElements",
+                max(len(loc), getattr(maxp, "maxStackElements", 0)),
+            )
+
+    if "name" in varfont:
+        log.info("Pruning name table")
+        exclude = {a.axisNameID for a in fvar.axes}
+        for i in fvar.instances:
+            exclude.add(i.subfamilyNameID)
+            exclude.add(i.postscriptNameID)
+        if "ltag" in varfont:
+            # Drop the whole 'ltag' table if all its language tags are referenced by
+            # name records to be pruned.
+            # TODO: prune unused ltag tags and re-enumerate langIDs accordingly
+            excludedUnicodeLangIDs = [
+                n.langID
+                for n in varfont["name"].names
+                if n.nameID in exclude and n.platformID == 0 and n.langID != 0xFFFF
+            ]
+            if set(excludedUnicodeLangIDs) == set(range(len((varfont["ltag"].tags)))):
+                del varfont["ltag"]
+        varfont["name"].names[:] = [
+            n
+            for n in varfont["name"].names
+            if n.nameID < 256 or n.nameID not in exclude
+        ]
+
+    if "wght" in location and "OS/2" in varfont:
+        varfont["OS/2"].usWeightClass = otRound(max(1, min(location["wght"], 1000)))
+    if "wdth" in location:
+        wdth = location["wdth"]
+        for percent, widthClass in sorted(OS2_WIDTH_CLASS_VALUES.items()):
+            if wdth < percent:
+                varfont["OS/2"].usWidthClass = widthClass
+                break
+        else:
+            varfont["OS/2"].usWidthClass = 9
+    if "slnt" in location and "post" in varfont:
+        varfont["post"].italicAngle = max(-90, min(location["slnt"], 90))
+
+    log.info("Removing variable tables")
+    for tag in ("avar", "cvar", "fvar", "gvar", "HVAR", "MVAR", "VVAR", "STAT"):
+        if tag in varfont:
+            del varfont[tag]
+
+    return varfont
+
+
+def main(args=None):
+    """Instantiate a variation font"""
+    from fontTools import configLogger
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        "fonttools varLib.mutator", description="Instantiate a variable font"
+    )
+    parser.add_argument("input", metavar="INPUT.ttf", help="Input variable TTF file.")
+    parser.add_argument(
+        "locargs",
+        metavar="AXIS=LOC",
+        nargs="*",
+        help="List of space separated locations. A location consist in "
+        "the name of a variation axis, followed by '=' and a number. E.g.: "
+        " wght=700 wdth=80. The default is the location of the base master.",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        metavar="OUTPUT.ttf",
+        default=None,
+        help="Output instance TTF file (default: INPUT-instance.ttf).",
+    )
+    parser.add_argument(
+        "--no-recalc-timestamp",
+        dest="recalc_timestamp",
+        action="store_false",
+        help="Don't set the output font's timestamp to the current time.",
+    )
+    logging_group = parser.add_mutually_exclusive_group(required=False)
+    logging_group.add_argument(
+        "-v", "--verbose", action="store_true", help="Run more verbosely."
+    )
+    logging_group.add_argument(
+        "-q", "--quiet", action="store_true", help="Turn verbosity off."
+    )
+    parser.add_argument(
+        "--no-overlap",
+        dest="overlap",
+        action="store_false",
+        help="Don't set OVERLAP_SIMPLE/OVERLAP_COMPOUND glyf flags.",
+    )
+    options = parser.parse_args(args)
+
+    varfilename = options.input
+    outfile = (
+        os.path.splitext(varfilename)[0] + "-instance.ttf"
+        if not options.output
+        else options.output
+    )
+    configLogger(
+        level=("DEBUG" if options.verbose else "ERROR" if options.quiet else "INFO")
+    )
+
+    loc = {}
+    for arg in options.locargs:
+        try:
+            tag, val = arg.split("=")
+            assert len(tag) <= 4
+            loc[tag.ljust(4)] = float(val)
+        except (ValueError, AssertionError):
+            parser.error("invalid location argument format: %r" % arg)
+    log.info("Location: %s", loc)
+
+    log.info("Loading variable font")
+    varfont = TTFont(varfilename, recalcTimestamp=options.recalc_timestamp)
+
+    instantiateVariableFont(varfont, loc, inplace=True, overlap=options.overlap)
+
+    log.info("Saving instance font %s", outfile)
+    varfont.save(outfile)
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1:
+        sys.exit(main())
+    import doctest
+
+    sys.exit(doctest.testmod().failed)

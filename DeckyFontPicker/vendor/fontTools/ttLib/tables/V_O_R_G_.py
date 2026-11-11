@@ -1,1 +1,174 @@
-ZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVzam9pbiwgc2FmZUV2YWwKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IHN0cnVjdAoKCmNsYXNzIHRhYmxlX1ZfT19SX0dfKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiVmVydGljYWwgT3JpZ2luIHRhYmxlCgogICAgVGhlIGBgVk9SR2BgIHRhYmxlIGNvbnRhaW5zIHRoZSB2ZXJ0aWNhbCBvcmlnaW4gb2YgZWFjaCBnbHlwaAogICAgaW4gYSBgQ0ZGYCBvciBgQ0ZGMmAgZm9udC4KCiAgICBUaGlzIHRhYmxlIGlzIHN0cnVjdHVyZWQgc28gdGhhdCB5b3UgY2FuIHRyZWF0IGl0IGxpa2UgYSBkaWN0aW9uYXJ5IGtleWVkIGJ5IGdseXBoIG5hbWUuCgogICAgYGB0dEZvbnRbJ1ZPUkcnXVs8Z2x5cGhOYW1lPl1gYCB3aWxsIHJldHVybiB0aGUgdmVydGljYWwgb3JpZ2luIGZvciBhbnkgZ2x5cGguCgogICAgYGB0dEZvbnRbJ1ZPUkcnXVs8Z2x5cGhOYW1lPl0gPSA8dmFsdWU+YGAgd2lsbCBzZXQgdGhlIHZlcnRpY2FsIG9yaWdpbiBmb3IgYW55IGdseXBoLgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvdm9yZwogICAgIiIiCgogICAgZGVmIGRlY29tcGlsZShzZWxmLCBkYXRhLCB0dEZvbnQpOgogICAgICAgIHNlbGYuZ2V0R2x5cGhOYW1lID0gKAogICAgICAgICAgICB0dEZvbnQuZ2V0R2x5cGhOYW1lCiAgICAgICAgKSAgIyBmb3IgdXNlIGluIGdldC9zZXQgaXRlbSBmdW5jdGlvbnMsIGZvciBhY2Nlc3MgYnkgR0lECiAgICAgICAgKAogICAgICAgICAgICBzZWxmLm1ham9yVmVyc2lvbiwKICAgICAgICAgICAgc2VsZi5taW5vclZlcnNpb24sCiAgICAgICAgICAgIHNlbGYuZGVmYXVsdFZlcnRPcmlnaW5ZLAogICAgICAgICkgPSBzdHJ1Y3QudW5wYWNrKCI+SEhoIiwgZGF0YVs6Nl0pCiAgICAgICAgYXNzZXJ0IHNlbGYubWFqb3JWZXJzaW9uIGluICgKICAgICAgICAgICAgMSwKICAgICAgICAgICAgMiwKICAgICAgICApLCAiVW5zdXBwb3J0ZWQgbWFqb3IgdmVyc2lvbiBvZiBWT1JHIHRhYmxlIgogICAgICAgIGdseXBoSURTaXplID0gMiBpZiBzZWxmLm1ham9yVmVyc2lvbiA9PSAxIGVsc2UgMwogICAgICAgIHNlbGYubnVtVmVydE9yaWdpbllNZXRyaWNzID0gaW50LmZyb21fYnl0ZXMoZGF0YVs2IDogNiArIGdseXBoSURTaXplXSwgImJpZyIpCiAgICAgICAgZGF0YSA9IGRhdGFbNiArIGdseXBoSURTaXplIDpdCiAgICAgICAgdmlkcyA9IFtdCiAgICAgICAgZ2lkcyA9IFtdCiAgICAgICAgcG9zID0gMAogICAgICAgIGZvciBpIGluIHJhbmdlKHNlbGYubnVtVmVydE9yaWdpbllNZXRyaWNzKToKICAgICAgICAgICAgZ2lkID0gaW50LmZyb21fYnl0ZXMoZGF0YVtwb3MgOiBwb3MgKyBnbHlwaElEU2l6ZV0sICJiaWciKQogICAgICAgICAgICAodk9yaWdpbiwpID0gc3RydWN0LnVucGFjaygKICAgICAgICAgICAgICAgICI+aCIsIGRhdGFbcG9zICsgZ2x5cGhJRFNpemUgOiBwb3MgKyBnbHlwaElEU2l6ZSArIDJdCiAgICAgICAgICAgICkKICAgICAgICAgICAgcG9zICs9IGdseXBoSURTaXplICsgMgogICAgICAgICAgICBnaWRzLmFwcGVuZChnaWQpCiAgICAgICAgICAgIHZpZHMuYXBwZW5kKHZPcmlnaW4pCgogICAgICAgIHNlbGYuVk9yaWdpblJlY29yZHMgPSB2T3JpZyA9IHt9CiAgICAgICAgZ2x5cGhPcmRlciA9IHR0Rm9udC5nZXRHbHlwaE9yZGVyKCkKICAgICAgICB0cnk6CiAgICAgICAgICAgIG5hbWVzID0gW2dseXBoT3JkZXJbZ2lkXSBmb3IgZ2lkIGluIGdpZHNdCiAgICAgICAgZXhjZXB0IEluZGV4RXJyb3I6CiAgICAgICAgICAgIGdldEdseXBoTmFtZSA9IHNlbGYuZ2V0R2x5cGhOYW1lCiAgICAgICAgICAgIG5hbWVzID0gbWFwKGdldEdseXBoTmFtZSwgZ2lkcykKCiAgICAgICAgZm9yIG5hbWUsIHZpZCBpbiB6aXAobmFtZXMsIHZpZHMpOgogICAgICAgICAgICB2T3JpZ1tuYW1lXSA9IHZpZAoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgdm9yZ3MgPSBsaXN0KHNlbGYuVk9yaWdpblJlY29yZHMudmFsdWVzKCkpCiAgICAgICAgbmFtZXMgPSBsaXN0KHNlbGYuVk9yaWdpblJlY29yZHMua2V5cygpKQogICAgICAgIG5hbWVNYXAgPSB0dEZvbnQuZ2V0UmV2ZXJzZUdseXBoTWFwKCkKICAgICAgICB0cnk6CiAgICAgICAgICAgIGdpZHMgPSBbbmFtZU1hcFtuYW1lXSBmb3IgbmFtZSBpbiBuYW1lc10KICAgICAgICBleGNlcHQgS2V5RXJyb3I6CiAgICAgICAgICAgIG5hbWVNYXAgPSB0dEZvbnQuZ2V0UmV2ZXJzZUdseXBoTWFwKHJlYnVpbGQ9VHJ1ZSkKICAgICAgICAgICAgZ2lkcyA9IFtuYW1lTWFwW25hbWVdIGZvciBuYW1lIGluIG5hbWVzXQogICAgICAgIHZPcmlnaW5UYWJsZSA9IGxpc3QoemlwKGdpZHMsIHZvcmdzKSkKICAgICAgICBzZWxmLm51bVZlcnRPcmlnaW5ZTWV0cmljcyA9IGxlbih2b3JncykKICAgICAgICB2T3JpZ2luVGFibGUuc29ydCgpICAjIG11c3QgYmUgaW4gYXNjZW5kaW5nIEdJRCBvcmRlcgogICAgICAgIGFzc2VydCBzZWxmLm1ham9yVmVyc2lvbiBpbiAoMSwgMiksICJVbnN1cHBvcnRlZCBtYWpvciB2ZXJzaW9uIG9mIFZPUkcgdGFibGUiCiAgICAgICAgZ2x5cGhJRFNpemUgPSAyIGlmIHNlbGYubWFqb3JWZXJzaW9uID09IDEgZWxzZSAzCiAgICAgICAgZGF0YUxpc3QgPSBbCiAgICAgICAgICAgIGdpZC50b19ieXRlcyhnbHlwaElEU2l6ZSwgImJpZyIpICsgc3RydWN0LnBhY2soIj5oIiwgdk9yaWdpbikKICAgICAgICAgICAgZm9yIGdpZCwgdk9yaWdpbiBpbiB2T3JpZ2luVGFibGUKICAgICAgICBdCiAgICAgICAgaGVhZGVyID0gc3RydWN0LnBhY2soCiAgICAgICAgICAgICI+SEhoIiwKICAgICAgICAgICAgc2VsZi5tYWpvclZlcnNpb24sCiAgICAgICAgICAgIHNlbGYubWlub3JWZXJzaW9uLAogICAgICAgICAgICBzZWxmLmRlZmF1bHRWZXJ0T3JpZ2luWSwKICAgICAgICApICsgc2VsZi5udW1WZXJ0T3JpZ2luWU1ldHJpY3MudG9fYnl0ZXMoZ2x5cGhJRFNpemUsICJiaWciKQogICAgICAgIGRhdGFMaXN0Lmluc2VydCgwLCBoZWFkZXIpCiAgICAgICAgZGF0YSA9IGJ5dGVzam9pbihkYXRhTGlzdCkKICAgICAgICByZXR1cm4gZGF0YQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygibWFqb3JWZXJzaW9uIiwgdmFsdWU9c2VsZi5tYWpvclZlcnNpb24pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoIm1pbm9yVmVyc2lvbiIsIHZhbHVlPXNlbGYubWlub3JWZXJzaW9uKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuc2ltcGxldGFnKCJkZWZhdWx0VmVydE9yaWdpblkiLCB2YWx1ZT1zZWxmLmRlZmF1bHRWZXJ0T3JpZ2luWSkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygibnVtVmVydE9yaWdpbllNZXRyaWNzIiwgdmFsdWU9c2VsZi5udW1WZXJ0T3JpZ2luWU1ldHJpY3MpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHZPcmlnaW5UYWJsZSA9IFtdCiAgICAgICAgZ2x5cGhOYW1lcyA9IHNlbGYuVk9yaWdpblJlY29yZHMua2V5cygpCiAgICAgICAgZm9yIGdseXBoTmFtZSBpbiBnbHlwaE5hbWVzOgogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBnaWQgPSB0dEZvbnQuZ2V0R2x5cGhJRChnbHlwaE5hbWUpCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIGFzc2VydCAwLCAoCiAgICAgICAgICAgICAgICAgICAgIlZPUkcgdGFibGUgY29udGFpbnMgYSBnbHlwaCBuYW1lIG5vdCBpbiB0dEZvbnQuZ2V0R2x5cGhOYW1lcygpOiAiCiAgICAgICAgICAgICAgICAgICAgKyBzdHIoZ2x5cGhOYW1lKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICB2T3JpZ2luVGFibGUuYXBwZW5kKFtnaWQsIGdseXBoTmFtZSwgc2VsZi5WT3JpZ2luUmVjb3Jkc1tnbHlwaE5hbWVdXSkKICAgICAgICB2T3JpZ2luVGFibGUuc29ydCgpCiAgICAgICAgZm9yIGVudHJ5IGluIHZPcmlnaW5UYWJsZToKICAgICAgICAgICAgdk9yaWdpblJlYyA9IFZPcmlnaW5SZWNvcmQoZW50cnlbMV0sIGVudHJ5WzJdKQogICAgICAgICAgICB2T3JpZ2luUmVjLnRvWE1MKHdyaXRlciwgdHRGb250KQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJWT3JpZ2luUmVjb3JkcyIpOgogICAgICAgICAgICBzZWxmLlZPcmlnaW5SZWNvcmRzID0ge30KICAgICAgICBzZWxmLmdldEdseXBoTmFtZSA9ICgKICAgICAgICAgICAgdHRGb250LmdldEdseXBoTmFtZQogICAgICAgICkgICMgZm9yIHVzZSBpbiBnZXQvc2V0IGl0ZW0gZnVuY3Rpb25zLCBmb3IgYWNjZXNzIGJ5IEdJRAogICAgICAgIGlmIG5hbWUgPT0gIlZPcmlnaW5SZWNvcmQiOgogICAgICAgICAgICB2T3JpZ2luUmVjID0gVk9yaWdpblJlY29yZCgpCiAgICAgICAgICAgIGZvciBlbGVtZW50IGluIGNvbnRlbnQ6CiAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKGVsZW1lbnQsIHN0cik6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIG5hbWUsIGF0dHJzLCBjb250ZW50ID0gZWxlbWVudAogICAgICAgICAgICAgICAgdk9yaWdpblJlYy5mcm9tWE1MKG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpCiAgICAgICAgICAgIHNlbGYuVk9yaWdpblJlY29yZHNbdk9yaWdpblJlYy5nbHlwaE5hbWVdID0gdk9yaWdpblJlYy52T3JpZ2luCiAgICAgICAgZWxpZiAidmFsdWUiIGluIGF0dHJzOgogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKSkKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgZ2x5cGhTZWxlY3Rvcik6CiAgICAgICAgaWYgaXNpbnN0YW5jZShnbHlwaFNlbGVjdG9yLCBpbnQpOgogICAgICAgICAgICAjIGl0cyBhIGdpZCwgY29udmVydCB0byBnbHlwaCBuYW1lCiAgICAgICAgICAgIGdseXBoU2VsZWN0b3IgPSBzZWxmLmdldEdseXBoTmFtZShnbHlwaFNlbGVjdG9yKQoKICAgICAgICBpZiBnbHlwaFNlbGVjdG9yIG5vdCBpbiBzZWxmLlZPcmlnaW5SZWNvcmRzOgogICAgICAgICAgICByZXR1cm4gc2VsZi5kZWZhdWx0VmVydE9yaWdpblkKCiAgICAgICAgcmV0dXJuIHNlbGYuVk9yaWdpblJlY29yZHNbZ2x5cGhTZWxlY3Rvcl0KCiAgICBkZWYgX19zZXRpdGVtX18oc2VsZiwgZ2x5cGhTZWxlY3RvciwgdmFsdWUpOgogICAgICAgIGlmIGlzaW5zdGFuY2UoZ2x5cGhTZWxlY3RvciwgaW50KToKICAgICAgICAgICAgIyBpdHMgYSBnaWQsIGNvbnZlcnQgdG8gZ2x5cGggbmFtZQogICAgICAgICAgICBnbHlwaFNlbGVjdG9yID0gc2VsZi5nZXRHbHlwaE5hbWUoZ2x5cGhTZWxlY3RvcikKCiAgICAgICAgaWYgdmFsdWUgIT0gc2VsZi5kZWZhdWx0VmVydE9yaWdpblk6CiAgICAgICAgICAgIHNlbGYuVk9yaWdpblJlY29yZHNbZ2x5cGhTZWxlY3Rvcl0gPSB2YWx1ZQogICAgICAgIGVsaWYgZ2x5cGhTZWxlY3RvciBpbiBzZWxmLlZPcmlnaW5SZWNvcmRzOgogICAgICAgICAgICBkZWwgc2VsZi5WT3JpZ2luUmVjb3Jkc1tnbHlwaFNlbGVjdG9yXQoKICAgIGRlZiBfX2RlbGl0ZW1fXyhzZWxmLCBnbHlwaFNlbGVjdG9yKToKICAgICAgICBkZWwgc2VsZi5WT3JpZ2luUmVjb3Jkc1tnbHlwaFNlbGVjdG9yXQoKCmNsYXNzIFZPcmlnaW5SZWNvcmQob2JqZWN0KToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lPU5vbmUsIHZPcmlnaW49Tm9uZSk6CiAgICAgICAgc2VsZi5nbHlwaE5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi52T3JpZ2luID0gdk9yaWdpbgoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJWT3JpZ2luUmVjb3JkIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgd3JpdGVyLnNpbXBsZXRhZygiZ2x5cGhOYW1lIiwgdmFsdWU9c2VsZi5nbHlwaE5hbWUpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInZPcmlnaW4iLCB2YWx1ZT1zZWxmLnZPcmlnaW4pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5lbmR0YWcoIlZPcmlnaW5SZWNvcmQiKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICB2YWx1ZSA9IGF0dHJzWyJ2YWx1ZSJdCiAgICAgICAgaWYgbmFtZSA9PSAiZ2x5cGhOYW1lIjoKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBuYW1lLCB2YWx1ZSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZXRhdHRyKHNlbGYsIG5hbWUsIHNhZmVFdmFsKHZhbHVlKSkK
+from fontTools.misc.textTools import bytesjoin, safeEval
+from . import DefaultTable
+import struct
+
+
+class table_V_O_R_G_(DefaultTable.DefaultTable):
+    """Vertical Origin table
+
+    The ``VORG`` table contains the vertical origin of each glyph
+    in a `CFF` or `CFF2` font.
+
+    This table is structured so that you can treat it like a dictionary keyed by glyph name.
+
+    ``ttFont['VORG'][<glyphName>]`` will return the vertical origin for any glyph.
+
+    ``ttFont['VORG'][<glyphName>] = <value>`` will set the vertical origin for any glyph.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/vorg
+    """
+
+    def decompile(self, data, ttFont):
+        self.getGlyphName = (
+            ttFont.getGlyphName
+        )  # for use in get/set item functions, for access by GID
+        (
+            self.majorVersion,
+            self.minorVersion,
+            self.defaultVertOriginY,
+        ) = struct.unpack(">HHh", data[:6])
+        assert self.majorVersion in (
+            1,
+            2,
+        ), "Unsupported major version of VORG table"
+        glyphIDSize = 2 if self.majorVersion == 1 else 3
+        self.numVertOriginYMetrics = int.from_bytes(data[6 : 6 + glyphIDSize], "big")
+        data = data[6 + glyphIDSize :]
+        vids = []
+        gids = []
+        pos = 0
+        for i in range(self.numVertOriginYMetrics):
+            gid = int.from_bytes(data[pos : pos + glyphIDSize], "big")
+            (vOrigin,) = struct.unpack(
+                ">h", data[pos + glyphIDSize : pos + glyphIDSize + 2]
+            )
+            pos += glyphIDSize + 2
+            gids.append(gid)
+            vids.append(vOrigin)
+
+        self.VOriginRecords = vOrig = {}
+        glyphOrder = ttFont.getGlyphOrder()
+        try:
+            names = [glyphOrder[gid] for gid in gids]
+        except IndexError:
+            getGlyphName = self.getGlyphName
+            names = map(getGlyphName, gids)
+
+        for name, vid in zip(names, vids):
+            vOrig[name] = vid
+
+    def compile(self, ttFont):
+        vorgs = list(self.VOriginRecords.values())
+        names = list(self.VOriginRecords.keys())
+        nameMap = ttFont.getReverseGlyphMap()
+        try:
+            gids = [nameMap[name] for name in names]
+        except KeyError:
+            nameMap = ttFont.getReverseGlyphMap(rebuild=True)
+            gids = [nameMap[name] for name in names]
+        vOriginTable = list(zip(gids, vorgs))
+        self.numVertOriginYMetrics = len(vorgs)
+        vOriginTable.sort()  # must be in ascending GID order
+        assert self.majorVersion in (1, 2), "Unsupported major version of VORG table"
+        glyphIDSize = 2 if self.majorVersion == 1 else 3
+        dataList = [
+            gid.to_bytes(glyphIDSize, "big") + struct.pack(">h", vOrigin)
+            for gid, vOrigin in vOriginTable
+        ]
+        header = struct.pack(
+            ">HHh",
+            self.majorVersion,
+            self.minorVersion,
+            self.defaultVertOriginY,
+        ) + self.numVertOriginYMetrics.to_bytes(glyphIDSize, "big")
+        dataList.insert(0, header)
+        data = bytesjoin(dataList)
+        return data
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("majorVersion", value=self.majorVersion)
+        writer.newline()
+        writer.simpletag("minorVersion", value=self.minorVersion)
+        writer.newline()
+        writer.simpletag("defaultVertOriginY", value=self.defaultVertOriginY)
+        writer.newline()
+        writer.simpletag("numVertOriginYMetrics", value=self.numVertOriginYMetrics)
+        writer.newline()
+        vOriginTable = []
+        glyphNames = self.VOriginRecords.keys()
+        for glyphName in glyphNames:
+            try:
+                gid = ttFont.getGlyphID(glyphName)
+            except:
+                assert 0, (
+                    "VORG table contains a glyph name not in ttFont.getGlyphNames(): "
+                    + str(glyphName)
+                )
+            vOriginTable.append([gid, glyphName, self.VOriginRecords[glyphName]])
+        vOriginTable.sort()
+        for entry in vOriginTable:
+            vOriginRec = VOriginRecord(entry[1], entry[2])
+            vOriginRec.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if not hasattr(self, "VOriginRecords"):
+            self.VOriginRecords = {}
+        self.getGlyphName = (
+            ttFont.getGlyphName
+        )  # for use in get/set item functions, for access by GID
+        if name == "VOriginRecord":
+            vOriginRec = VOriginRecord()
+            for element in content:
+                if isinstance(element, str):
+                    continue
+                name, attrs, content = element
+                vOriginRec.fromXML(name, attrs, content, ttFont)
+            self.VOriginRecords[vOriginRec.glyphName] = vOriginRec.vOrigin
+        elif "value" in attrs:
+            setattr(self, name, safeEval(attrs["value"]))
+
+    def __getitem__(self, glyphSelector):
+        if isinstance(glyphSelector, int):
+            # its a gid, convert to glyph name
+            glyphSelector = self.getGlyphName(glyphSelector)
+
+        if glyphSelector not in self.VOriginRecords:
+            return self.defaultVertOriginY
+
+        return self.VOriginRecords[glyphSelector]
+
+    def __setitem__(self, glyphSelector, value):
+        if isinstance(glyphSelector, int):
+            # its a gid, convert to glyph name
+            glyphSelector = self.getGlyphName(glyphSelector)
+
+        if value != self.defaultVertOriginY:
+            self.VOriginRecords[glyphSelector] = value
+        elif glyphSelector in self.VOriginRecords:
+            del self.VOriginRecords[glyphSelector]
+
+    def __delitem__(self, glyphSelector):
+        del self.VOriginRecords[glyphSelector]
+
+
+class VOriginRecord(object):
+    def __init__(self, name=None, vOrigin=None):
+        self.glyphName = name
+        self.vOrigin = vOrigin
+
+    def toXML(self, writer, ttFont):
+        writer.begintag("VOriginRecord")
+        writer.newline()
+        writer.simpletag("glyphName", value=self.glyphName)
+        writer.newline()
+        writer.simpletag("vOrigin", value=self.vOrigin)
+        writer.newline()
+        writer.endtag("VOriginRecord")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        value = attrs["value"]
+        if name == "glyphName":
+            setattr(self, name, value)
+        else:
+            setattr(self, name, safeEval(value))

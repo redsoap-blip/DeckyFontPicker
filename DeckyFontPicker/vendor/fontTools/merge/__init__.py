@@ -1,1 +1,298 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCmZyb20gZm9udFRvb2xzIGltcG9ydCB0dExpYgppbXBvcnQgZm9udFRvb2xzLm1lcmdlLmJhc2UKZnJvbSBmb250VG9vbHMubWVyZ2UuY21hcCBpbXBvcnQgKAogICAgY29tcHV0ZU1lZ2FHbHlwaE9yZGVyLAogICAgY29tcHV0ZU1lZ2FDbWFwLAogICAgcmVuYW1lQ0ZGQ2hhclN0cmluZ3MsCiAgICBfZmxhdHRlbkRtYXAsCikKZnJvbSBmb250VG9vbHMubWVyZ2UubGF5b3V0IGltcG9ydCBsYXlvdXRQcmVNZXJnZSwgbGF5b3V0UG9zdE1lcmdlCmZyb20gZm9udFRvb2xzLm1lcmdlLm9wdGlvbnMgaW1wb3J0IE9wdGlvbnMKZnJvbSBmb250VG9vbHMudHRMaWIuYmV5b25kNjRrIGltcG9ydCB1cHBlcl90YWJsZXMsIF9jb21wYWN0X2xheW91dF90YWJsZXMKaW1wb3J0IGZvbnRUb29scy5tZXJnZS50YWJsZXMKZnJvbSBmb250VG9vbHMubWlzYy5sb2dnaW5nVG9vbHMgaW1wb3J0IFRpbWVyCmZyb20gZnVuY3Rvb2xzIGltcG9ydCByZWR1Y2UKaW1wb3J0IHN5cwppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5tZXJnZSIpCnRpbWVyID0gVGltZXIobG9nZ2VyPWxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fICsgIi50aW1lciIpLCBsZXZlbD1sb2dnaW5nLklORk8pCgoKX1VQUEVSX1RBQkxFUyA9IHsiR0xZRiIsICJHVkFSIiwgIkhIRUEiLCAiSE1UWCIsICJMT0NBIiwgIk1BWFAiLCAiVkhFQSIsICJWTVRYIn0KX0NPTVBBTklPTl9UQUJMRVMgPSB7CiAgICAiZ2x5ZiIsCiAgICAiZ3ZhciIsCiAgICAiaGhlYSIsCiAgICAiaG10eCIsCiAgICAibG9jYSIsCiAgICAibWF4cCIsCiAgICAidmhlYSIsCiAgICAidm10eCIsCn0KCgpkZWYgX2ZvbnRIYXNVcHBlclRhYmxlcyhmb250KToKICAgIHJldHVybiBib29sKF9VUFBFUl9UQUJMRVMuaW50ZXJzZWN0aW9uKGZvbnQua2V5cygpKSkgb3IgYW55KAogICAgICAgIHRhZyBpbiBmb250IGFuZCBmb250W3RhZ10udGFibGUuVmVyc2lvbiA+PSB2ZXJzaW9uCiAgICAgICAgZm9yIHRhZywgdmVyc2lvbiBpbiAoCiAgICAgICAgICAgICgiR0RFRiIsIDB4MDAwMTAwMDQpLAogICAgICAgICAgICAoIkdTVUIiLCAweDAwMDEwMDAyKSwKICAgICAgICAgICAgKCJHUE9TIiwgMHgwMDAxMDAwMiksCiAgICAgICAgKQogICAgKQoKCmNsYXNzIE1lcmdlcihvYmplY3QpOgogICAgIiIiRm9udCBtZXJnZXIuCgogICAgVGhpcyBjbGFzcyBtZXJnZXMgbXVsdGlwbGUgZmlsZXMgaW50byBhIHNpbmdsZSBPcGVuVHlwZSBmb250LCB0YWtpbmcgaW50bwogICAgYWNjb3VudCBjb21wbGV4aXRpZXMgc3VjaCBhcyBPcGVuVHlwZSBsYXlvdXQgKGBgR1NVQmBgL2BgR1BPU2BgKSB0YWJsZXMgYW5kCiAgICBjcm9zcy1mb250IG1ldHJpY3MgKGZvciBleGFtcGxlIGBgaGhlYS5hc2NlbnRgYCBpcyBzZXQgdG8gdGhlIG1heGltdW0gdmFsdWUKICAgIGFjcm9zcyBhbGwgdGhlIGZvbnRzKS4KCiAgICBJZiBtdWx0aXBsZSBnbHlwaHMgbWFwIHRvIHRoZSBzYW1lIFVuaWNvZGUgdmFsdWUsIGFuZCB0aGUgZ2x5cGhzIGFyZSBjb25zaWRlcmVkCiAgICBzdWZmaWNpZW50bHkgZGlmZmVyZW50ICh0aGF0IGlzLCB0aGV5IGRpZmZlciBpbiBhbnkgb2YgcGF0aHMsIHdpZHRocywgb3IKICAgIGhlaWdodCksIHRoZW4gc3Vic2VxdWVudCBnbHlwaHMgYXJlIHJlbmFtZWQgYW5kIGEgbG9va3VwIGluIHRoZSBgYGxvY2xgYAogICAgZmVhdHVyZSB3aWxsIGJlIGNyZWF0ZWQgdG8gZGlzYW1iaWd1YXRlIHRoZW0uIEZvciBleGFtcGxlLCBpZiB0aGUgYXJndW1lbnRzCiAgICBhcmUgYW4gQXJhYmljIGZvbnQgYW5kIGEgTGF0aW4gZm9udCBhbmQgYm90aCBjb250YWluIGEgc2V0IG9mIHBhcmVudGhlc2VzLAogICAgdGhlIExhdGluIGdseXBocyB3aWxsIGJlIHJlbmFtZWQgdG8gYGBwYXJlbmxlZnQuMWBgIGFuZCBgYHBhcmVucmlnaHQuMWBgLAogICAgYW5kIGEgbG9va3VwIHdpbGwgYmUgaW5zZXJ0ZWQgaW50byB0aGUgdG8gYGBsb2NsYGAgZmVhdHVyZSAoY3JlYXRpbmcgaXQgaWYKICAgIG5lY2Vzc2FyeSkgdW5kZXIgdGhlIGBgbGF0bmBgIHNjcmlwdCB0byBzdWJzdGl0dXRlIGBgcGFyZW5sZWZ0YGAgd2l0aAogICAgYGBwYXJlbmxlZnQuMWBgIGV0Yy4KCiAgICBSZXN0cmljdGlvbnM6CgogICAgLSBBbGwgZm9udHMgbXVzdCBoYXZlIHRoZSBzYW1lIHVuaXRzIHBlciBlbS4KICAgIC0gSWYgZHVwbGljYXRlIGdseXBoIGRpc2FtYmlndWF0aW9uIHRha2VzIHBsYWNlIGFzIGRlc2NyaWJlZCBhYm92ZSB0aGVuIHRoZQogICAgICBmb250cyBtdXN0IGhhdmUgYSBgYEdTVUJgYCB0YWJsZS4KCiAgICBBdHRyaWJ1dGVzOgogICAgICAgICAgICBvcHRpb25zOiBDdXJyZW50bHkgdW51c2VkLgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG9wdGlvbnM9Tm9uZSk6CiAgICAgICAgaWYgbm90IG9wdGlvbnM6CiAgICAgICAgICAgIG9wdGlvbnMgPSBPcHRpb25zKCkKCiAgICAgICAgc2VsZi5vcHRpb25zID0gb3B0aW9ucwoKICAgIGRlZiBfb3BlbkZvbnRzKHNlbGYsIGZvbnRmaWxlcyk6CiAgICAgICAgZm9udHMgPSBbdHRMaWIuVFRGb250KGZvbnRmaWxlKSBmb3IgZm9udGZpbGUgaW4gZm9udGZpbGVzXQogICAgICAgIGZvciBmb250LCBmb250ZmlsZSBpbiB6aXAoZm9udHMsIGZvbnRmaWxlcyk6CiAgICAgICAgICAgIGZvbnQuX21lcmdlcl9fZm9udGZpbGUgPSBmb250ZmlsZQogICAgICAgICAgICBmb250Ll9tZXJnZXJfX25hbWUgPSBmb250WyJuYW1lIl0uZ2V0RGVidWdOYW1lKDQpCiAgICAgICAgcmV0dXJuIGZvbnRzCgogICAgZGVmIG1lcmdlKHNlbGYsIGZvbnRmaWxlcyk6CiAgICAgICAgIiIiTWVyZ2VzIGZvbnRzIHRvZ2V0aGVyLgoKICAgICAgICBBcmdzOgogICAgICAgICAgICAgICAgZm9udGZpbGVzOiBBIGxpc3Qgb2YgZmlsZSBuYW1lcyB0byBiZSBtZXJnZWQKCiAgICAgICAgUmV0dXJuczoKICAgICAgICAgICAgICAgIEEgOmNsYXNzOmBmb250VG9vbHMudHRMaWIuVFRGb250YCBvYmplY3QuIENhbGwgdGhlIGBgc2F2ZWBgIG1ldGhvZCBvbgogICAgICAgICAgICAgICAgdGhpcyB0byB3cml0ZSBpdCBvdXQgdG8gYW4gT1RGIGZpbGUuCgogICAgICAgIERNQVAgb3ZlcnJpZGVzIGFyZSBmb2xkZWQgaW50byB0aGUgbWVyZ2VkIGNtYXAgdGFibGUuCiAgICAgICAgIiIiCiAgICAgICAgIwogICAgICAgICMgU2V0dGxlIG9uIGEgbWVnYSBnbHlwaCBvcmRlci4KICAgICAgICAjCiAgICAgICAgZm9udHMgPSBzZWxmLl9vcGVuRm9udHMoZm9udGZpbGVzKQogICAgICAgIGdseXBoT3JkZXJzID0gW2xpc3QoZm9udC5nZXRHbHlwaE9yZGVyKCkpIGZvciBmb250IGluIGZvbnRzXQogICAgICAgIGNvbXB1dGVNZWdhR2x5cGhPcmRlcihzZWxmLCBnbHlwaE9yZGVycykKICAgICAgICAjIG1heHAubnVtR2x5cGhzIGlzIHVpbnQxNjogbmVlZHMgdXBwZXIgdGFibGVzIGFib3ZlIDB4RkZGRiwgbm90IDB4MTAwMDAuCiAgICAgICAgc2VsZi5iZXlvbmQ2NGsgPSBsZW4oc2VsZi5nbHlwaE9yZGVyKSA+IDB4RkZGRiBvciBhbnkoCiAgICAgICAgICAgIF9mb250SGFzVXBwZXJUYWJsZXMoZm9udCkgZm9yIGZvbnQgaW4gZm9udHMKICAgICAgICApCgogICAgICAgICMgVGFrZSBmaXJzdCBpbnB1dCBmaWxlIHNmbnRWZXJzaW9uCiAgICAgICAgc2ZudFZlcnNpb24gPSBmb250c1swXS5zZm50VmVyc2lvbgoKICAgICAgICAjIFJlbG9hZCBmb250cyBhbmQgc2V0IG5ldyBnbHlwaCBuYW1lcyBvbiB0aGVtLgogICAgICAgIGZvbnRzID0gc2VsZi5fb3BlbkZvbnRzKGZvbnRmaWxlcykKICAgICAgICBmb3IgZm9udCwgZ2x5cGhPcmRlciBpbiB6aXAoZm9udHMsIGdseXBoT3JkZXJzKToKICAgICAgICAgICAgZm9udC5zZXRHbHlwaE9yZGVyKGdseXBoT3JkZXIpCiAgICAgICAgICAgIGlmICJDRkYgIiBpbiBmb250OgogICAgICAgICAgICAgICAgcmVuYW1lQ0ZGQ2hhclN0cmluZ3Moc2VsZiwgZ2x5cGhPcmRlciwgZm9udFsiQ0ZGICJdKQogICAgICAgICAgICBpZiBzZWxmLmJleW9uZDY0azoKICAgICAgICAgICAgICAgIHVwcGVyX3RhYmxlcyhmb250LCB0YWJsZXM9X0NPTVBBTklPTl9UQUJMRVMpCiAgICAgICAgICAgIGlmICJETUFQIiBpbiBmb250IGFuZCAiRE1BUCIgbm90IGluIHNlbGYub3B0aW9ucy5kcm9wX3RhYmxlczoKICAgICAgICAgICAgICAgIF9mbGF0dGVuRG1hcChmb250KQoKICAgICAgICBjbWFwcyA9IFtmb250WyJjbWFwIl0gZm9yIGZvbnQgaW4gZm9udHNdCiAgICAgICAgc2VsZi5kdXBsaWNhdGVHbHlwaHNQZXJGb250ID0gW3t9IGZvciBfIGluIGZvbnRzXQogICAgICAgIGNvbXB1dGVNZWdhQ21hcChzZWxmLCBjbWFwcykKCiAgICAgICAgbWVnYSA9IHR0TGliLlRURm9udChzZm50VmVyc2lvbj1zZm50VmVyc2lvbikKICAgICAgICBtZWdhLnNldEdseXBoT3JkZXIoc2VsZi5nbHlwaE9yZGVyKQoKICAgICAgICBmb3IgZm9udCBpbiBmb250czoKICAgICAgICAgICAgIyBJbnB1dHMgYXJlIG93bmVkIGJ5IHRoZSBtZXJnZXI7IG5vcm1hbGl6ZSB3aXRob3V0IHJlc3RvcmluZyB0aGVtLgogICAgICAgICAgICAjIFRoZSBvdXRwdXQgaXMgdXBncmFkZWQgYmVmb3JlIHNlcmlhbGl6YXRpb24gd2hlbiBuZWVkZWQuCiAgICAgICAgICAgIHdpdGggX2NvbXBhY3RfbGF5b3V0X3RhYmxlcyhmb250LCByZXN0b3JlPUZhbHNlKToKICAgICAgICAgICAgICAgIHNlbGYuX3ByZU1lcmdlKGZvbnQpCgogICAgICAgIHNlbGYuZm9udHMgPSBmb250cwoKICAgICAgICBhbGxUYWdzID0gcmVkdWNlKHNldC51bmlvbiwgKGxpc3QoZm9udC5rZXlzKCkpIGZvciBmb250IGluIGZvbnRzKSwgc2V0KCkpCiAgICAgICAgYWxsVGFncy5yZW1vdmUoIkdseXBoT3JkZXIiKQoKICAgICAgICBmb3IgdGFnIGluIHNvcnRlZChhbGxUYWdzKToKICAgICAgICAgICAgaWYgdGFnIGluIHNlbGYub3B0aW9ucy5kcm9wX3RhYmxlczoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgICAgICB3aXRoIHRpbWVyKCJtZXJnZSAnJXMnIiAlIHRhZyk6CiAgICAgICAgICAgICAgICB0YWJsZXMgPSBbZm9udC5nZXQodGFnLCBOb3RJbXBsZW1lbnRlZCkgZm9yIGZvbnQgaW4gZm9udHNdCgogICAgICAgICAgICAgICAgbG9nLmluZm8oIk1lcmdpbmcgJyVzJy4iLCB0YWcpCiAgICAgICAgICAgICAgICBjbGF6eiA9IHR0TGliLmdldFRhYmxlQ2xhc3ModGFnKQogICAgICAgICAgICAgICAgdGFibGUgPSBjbGF6eih0YWcpLm1lcmdlKHNlbGYsIHRhYmxlcykKICAgICAgICAgICAgICAgICMgWFhYIENsZWFuIHRoaXMgdXAgYW5kIHVzZTogIHRhYmxlID0gbWVyZ2VPYmplY3RzKHRhYmxlcykKCiAgICAgICAgICAgICAgICBpZiB0YWJsZSBpcyBub3QgTm90SW1wbGVtZW50ZWQgYW5kIHRhYmxlIGlzIG5vdCBGYWxzZToKICAgICAgICAgICAgICAgICAgICBtZWdhW3RhZ10gPSB0YWJsZQogICAgICAgICAgICAgICAgICAgIGxvZy5pbmZvKCJNZXJnZWQgJyVzJy4iLCB0YWcpCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIGxvZy5pbmZvKCJEcm9wcGVkICclcycuIiwgdGFnKQoKICAgICAgICBkZWwgc2VsZi5kdXBsaWNhdGVHbHlwaHNQZXJGb250CiAgICAgICAgZGVsIHNlbGYuZm9udHMKCiAgICAgICAgc2VsZi5fcG9zdE1lcmdlKG1lZ2EpCiAgICAgICAgaWYgc2VsZi5iZXlvbmQ2NGs6CiAgICAgICAgICAgIHVwcGVyX3RhYmxlcyhtZWdhKQoKICAgICAgICByZXR1cm4gbWVnYQoKICAgIGRlZiBtZXJnZU9iamVjdHMoc2VsZiwgcmV0dXJuVGFibGUsIGxvZ2ljLCB0YWJsZXMpOgogICAgICAgICMgUmlnaHQgbm93IHdlIGRvbid0IHVzZSBzZWxmIGF0IGFsbC4gIFdpbGwgdXNlIGluIHRoZSBmdXR1cmUKICAgICAgICAjIGZvciBvcHRpb25zIGFuZCBsb2dnaW5nLgoKICAgICAgICBhbGxLZXlzID0gc2V0LnVuaW9uKAogICAgICAgICAgICBzZXQoKSwKICAgICAgICAgICAgKih2YXJzKHRhYmxlKS5rZXlzKCkgZm9yIHRhYmxlIGluIHRhYmxlcyBpZiB0YWJsZSBpcyBub3QgTm90SW1wbGVtZW50ZWQpLAogICAgICAgICkKICAgICAgICBmb3Iga2V5IGluIGFsbEtleXM6CiAgICAgICAgICAgIGxvZy5pbmZvKCIgJXMiLCBrZXkpCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIG1lcmdlTG9naWMgPSBsb2dpY1trZXldCiAgICAgICAgICAgIGV4Y2VwdCBLZXlFcnJvcjoKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICBtZXJnZUxvZ2ljID0gbG9naWNbIioiXQogICAgICAgICAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbigKICAgICAgICAgICAgICAgICAgICAgICAgIkRvbid0IGtub3cgaG93IHRvIG1lcmdlIGtleSAlcyBvZiBjbGFzcyAlcyIKICAgICAgICAgICAgICAgICAgICAgICAgJSAoa2V5LCByZXR1cm5UYWJsZS5fX2NsYXNzX18uX19uYW1lX18pCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICBpZiBtZXJnZUxvZ2ljIGlzIE5vdEltcGxlbWVudGVkOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgdmFsdWUgPSBtZXJnZUxvZ2ljKGdldGF0dHIodGFibGUsIGtleSwgTm90SW1wbGVtZW50ZWQpIGZvciB0YWJsZSBpbiB0YWJsZXMpCiAgICAgICAgICAgIGlmIHZhbHVlIGlzIG5vdCBOb3RJbXBsZW1lbnRlZDoKICAgICAgICAgICAgICAgIHNldGF0dHIocmV0dXJuVGFibGUsIGtleSwgdmFsdWUpCgogICAgICAgIHJldHVybiByZXR1cm5UYWJsZQoKICAgIGRlZiBfcHJlTWVyZ2Uoc2VsZiwgZm9udCk6CiAgICAgICAgbGF5b3V0UHJlTWVyZ2UoZm9udCkKCiAgICBkZWYgX3Bvc3RNZXJnZShzZWxmLCBmb250KToKICAgICAgICBsYXlvdXRQb3N0TWVyZ2UoZm9udCkKICAgICAgICBzZWxmLl9kcm9wUG9zdEdseXBoTmFtZXNJZk5lZWRlZChmb250KQoKICAgICAgICBpZiAiT1MvMiIgaW4gZm9udDoKICAgICAgICAgICAgIyBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvMjUzOAogICAgICAgICAgICAjIFRPRE86IEFkZCBhbiBvcHRpb24gdG8gZGlzYWJsZSB0aGlzPwogICAgICAgICAgICBmb250WyJPUy8yIl0ucmVjYWxjQXZnQ2hhcldpZHRoKGZvbnQpCgogICAgZGVmIF9kcm9wUG9zdEdseXBoTmFtZXNJZk5lZWRlZChzZWxmLCBmb250KToKICAgICAgICBpZiAicG9zdCIgbm90IGluIGZvbnQgb3IgbGVuKGZvbnQuZ2V0R2x5cGhPcmRlcigpKSA8PSAweEZGRkY6CiAgICAgICAgICAgIHJldHVybgogICAgICAgIHBvc3QgPSBmb250WyJwb3N0Il0KICAgICAgICBpZiBwb3N0LmZvcm1hdFR5cGUgPT0gMi4wOgogICAgICAgICAgICBwb3N0LmZvcm1hdFR5cGUgPSAzLjAKICAgICAgICAgICAgcG9zdC5leHRyYU5hbWVzID0gW10KICAgICAgICAgICAgcG9zdC5tYXBwaW5nID0ge30KCgpfX2FsbF9fID0gWyJPcHRpb25zIiwgIk1lcmdlciIsICJtYWluIl0KCgpAdGltZXIoIm1ha2Ugb25lIHdpdGggZXZlcnl0aGluZyAoVE9UQUwgVElNRSkiKQpkZWYgbWFpbihhcmdzPU5vbmUpOgogICAgIiIiTWVyZ2UgbXVsdGlwbGUgZm9udHMgaW50byBvbmUiIiIKICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCBjb25maWdMb2dnZXIKCiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgYXJncyA9IHN5cy5hcmd2WzE6XQoKICAgIG9wdGlvbnMgPSBPcHRpb25zKCkKICAgIGFyZ3MgPSBvcHRpb25zLnBhcnNlX29wdHMoYXJncykKICAgIGZvbnRmaWxlcyA9IFtdCiAgICBpZiBvcHRpb25zLmlucHV0X2ZpbGU6CiAgICAgICAgd2l0aCBvcGVuKG9wdGlvbnMuaW5wdXRfZmlsZSkgYXMgaW5wdXRmaWxlOgogICAgICAgICAgICBmb250ZmlsZXMgPSBbCiAgICAgICAgICAgICAgICBsaW5lLnN0cmlwKCkKICAgICAgICAgICAgICAgIGZvciBsaW5lIGluIGlucHV0ZmlsZS5yZWFkbGluZXMoKQogICAgICAgICAgICAgICAgaWYgbm90IGxpbmUubHN0cmlwKCkuc3RhcnRzd2l0aCgiIyIpCiAgICAgICAgICAgIF0KICAgIGZvciBnIGluIGFyZ3M6CiAgICAgICAgZm9udGZpbGVzLmFwcGVuZChnKQoKICAgIGlmIGxlbihmb250ZmlsZXMpIDwgMToKICAgICAgICBwcmludCgKICAgICAgICAgICAgInVzYWdlOiBmb250dG9vbHMgbWVyZ2UgW2ZvbnQxIC4uLiBmb250Tl0gWy0taW5wdXQtZmlsZT1maWxlbGlzdC50eHRdIFstLW91dHB1dC1maWxlPW1lcmdlZC50dGZdIFstLWltcG9ydC1maWxlPXRhYmxlcy50dHhdIiwKICAgICAgICAgICAgZmlsZT1zeXMuc3RkZXJyLAogICAgICAgICkKICAgICAgICBwcmludCgKICAgICAgICAgICAgIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWy0tZHJvcC10YWJsZXM9dGFnc10gWy0tdmVyYm9zZV0gWy0tdGltaW5nXSIsCiAgICAgICAgICAgIGZpbGU9c3lzLnN0ZGVyciwKICAgICAgICApCiAgICAgICAgcHJpbnQoIiIsIGZpbGU9c3lzLnN0ZGVycikKICAgICAgICBwcmludCgiIGZvbnQxIC4uLiBmb250TiAgICAgICAgICAgICAgRmlsZXMgdG8gbWVyZ2UuIiwgZmlsZT1zeXMuc3RkZXJyKQogICAgICAgIHByaW50KAogICAgICAgICAgICAiIC0taW5wdXQtZmlsZT08ZmlsZW5hbWU+ICAgICAgUmVhZCBmaWxlcyB0byBtZXJnZSBmcm9tIGEgdGV4dCBmaWxlLCBlYWNoIHBhdGggbmV3IGxpbmUuICMgQ29tbWVudCBsaW5lcyBhbGxvd2VkLiIsCiAgICAgICAgICAgIGZpbGU9c3lzLnN0ZGVyciwKICAgICAgICApCiAgICAgICAgcHJpbnQoCiAgICAgICAgICAgICIgLS1vdXRwdXQtZmlsZT08ZmlsZW5hbWU+ICAgICBTcGVjaWZ5IG91dHB1dCBmaWxlIG5hbWUgKGRlZmF1bHQ6IG1lcmdlZC50dGYpLiIsCiAgICAgICAgICAgIGZpbGU9c3lzLnN0ZGVyciwKICAgICAgICApCiAgICAgICAgcHJpbnQoCiAgICAgICAgICAgICIgLS1pbXBvcnQtZmlsZT08ZmlsZW5hbWU+ICAgICBUVFggZmlsZSB0byBpbXBvcnQgYWZ0ZXIgbWVyZ2luZy4gVGhpcyBjYW4gYmUgdXNlZCB0byBzZXQgbWV0YWRhdGEuIiwKICAgICAgICAgICAgZmlsZT1zeXMuc3RkZXJyLAogICAgICAgICkKICAgICAgICBwcmludCgKICAgICAgICAgICAgIiAtLWRyb3AtdGFibGVzPTx0YWJsZSB0YWdzPiAgIENvbW1hIHNlcGFyYXRlZCBsaXN0IG9mIHRhYmxlIHRhZ3MgdG8gc2tpcCwgY2FzZSBzZW5zaXRpdmUuIiwKICAgICAgICAgICAgZmlsZT1zeXMuc3RkZXJyLAogICAgICAgICkKICAgICAgICBwcmludCgKICAgICAgICAgICAgIiAtLXZlcmJvc2UgICAgICAgICAgICAgICAgICAgIE91dHB1dCBwcm9ncmVzcyBpbmZvcm1hdGlvbi4iLAogICAgICAgICAgICBmaWxlPXN5cy5zdGRlcnIsCiAgICAgICAgKQogICAgICAgIHByaW50KCIgLS10aW1pbmcgICAgICAgICAgICAgICAgICAgICBPdXRwdXQgcHJvZ3Jlc3MgdGltaW5nLiIsIGZpbGU9c3lzLnN0ZGVycikKICAgICAgICByZXR1cm4gMQoKICAgIGNvbmZpZ0xvZ2dlcihsZXZlbD1sb2dnaW5nLklORk8gaWYgb3B0aW9ucy52ZXJib3NlIGVsc2UgbG9nZ2luZy5XQVJOSU5HKQogICAgaWYgb3B0aW9ucy50aW1pbmc6CiAgICAgICAgdGltZXIubG9nZ2VyLnNldExldmVsKGxvZ2dpbmcuREVCVUcpCiAgICBlbHNlOgogICAgICAgIHRpbWVyLmxvZ2dlci5kaXNhYmxlZCA9IFRydWUKCiAgICBtZXJnZXIgPSBNZXJnZXIob3B0aW9ucz1vcHRpb25zKQogICAgZm9udCA9IG1lcmdlci5tZXJnZShmb250ZmlsZXMpCgogICAgaWYgb3B0aW9ucy5pbXBvcnRfZmlsZToKICAgICAgICBmb250LmltcG9ydFhNTChvcHRpb25zLmltcG9ydF9maWxlKQoKICAgIHdpdGggdGltZXIoImNvbXBpbGUgYW5kIHNhdmUgZm9udCIpOgogICAgICAgIGZvbnQuc2F2ZShvcHRpb25zLm91dHB1dF9maWxlKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzeXMuZXhpdChtYWluKCkpCg==
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+from fontTools import ttLib
+import fontTools.merge.base
+from fontTools.merge.cmap import (
+    computeMegaGlyphOrder,
+    computeMegaCmap,
+    renameCFFCharStrings,
+    _flattenDmap,
+)
+from fontTools.merge.layout import layoutPreMerge, layoutPostMerge
+from fontTools.merge.options import Options
+from fontTools.ttLib.beyond64k import upper_tables, _compact_layout_tables
+import fontTools.merge.tables
+from fontTools.misc.loggingTools import Timer
+from functools import reduce
+import sys
+import logging
+
+log = logging.getLogger("fontTools.merge")
+timer = Timer(logger=logging.getLogger(__name__ + ".timer"), level=logging.INFO)
+
+
+_UPPER_TABLES = {"GLYF", "GVAR", "HHEA", "HMTX", "LOCA", "MAXP", "VHEA", "VMTX"}
+_COMPANION_TABLES = {
+    "glyf",
+    "gvar",
+    "hhea",
+    "hmtx",
+    "loca",
+    "maxp",
+    "vhea",
+    "vmtx",
+}
+
+
+def _fontHasUpperTables(font):
+    return bool(_UPPER_TABLES.intersection(font.keys())) or any(
+        tag in font and font[tag].table.Version >= version
+        for tag, version in (
+            ("GDEF", 0x00010004),
+            ("GSUB", 0x00010002),
+            ("GPOS", 0x00010002),
+        )
+    )
+
+
+class Merger(object):
+    """Font merger.
+
+    This class merges multiple files into a single OpenType font, taking into
+    account complexities such as OpenType layout (``GSUB``/``GPOS``) tables and
+    cross-font metrics (for example ``hhea.ascent`` is set to the maximum value
+    across all the fonts).
+
+    If multiple glyphs map to the same Unicode value, and the glyphs are considered
+    sufficiently different (that is, they differ in any of paths, widths, or
+    height), then subsequent glyphs are renamed and a lookup in the ``locl``
+    feature will be created to disambiguate them. For example, if the arguments
+    are an Arabic font and a Latin font and both contain a set of parentheses,
+    the Latin glyphs will be renamed to ``parenleft.1`` and ``parenright.1``,
+    and a lookup will be inserted into the to ``locl`` feature (creating it if
+    necessary) under the ``latn`` script to substitute ``parenleft`` with
+    ``parenleft.1`` etc.
+
+    Restrictions:
+
+    - All fonts must have the same units per em.
+    - If duplicate glyph disambiguation takes place as described above then the
+      fonts must have a ``GSUB`` table.
+
+    Attributes:
+            options: Currently unused.
+    """
+
+    def __init__(self, options=None):
+        if not options:
+            options = Options()
+
+        self.options = options
+
+    def _openFonts(self, fontfiles):
+        fonts = [ttLib.TTFont(fontfile) for fontfile in fontfiles]
+        for font, fontfile in zip(fonts, fontfiles):
+            font._merger__fontfile = fontfile
+            font._merger__name = font["name"].getDebugName(4)
+        return fonts
+
+    def merge(self, fontfiles):
+        """Merges fonts together.
+
+        Args:
+                fontfiles: A list of file names to be merged
+
+        Returns:
+                A :class:`fontTools.ttLib.TTFont` object. Call the ``save`` method on
+                this to write it out to an OTF file.
+
+        DMAP overrides are folded into the merged cmap table.
+        """
+        #
+        # Settle on a mega glyph order.
+        #
+        fonts = self._openFonts(fontfiles)
+        glyphOrders = [list(font.getGlyphOrder()) for font in fonts]
+        computeMegaGlyphOrder(self, glyphOrders)
+        # maxp.numGlyphs is uint16: needs upper tables above 0xFFFF, not 0x10000.
+        self.beyond64k = len(self.glyphOrder) > 0xFFFF or any(
+            _fontHasUpperTables(font) for font in fonts
+        )
+
+        # Take first input file sfntVersion
+        sfntVersion = fonts[0].sfntVersion
+
+        # Reload fonts and set new glyph names on them.
+        fonts = self._openFonts(fontfiles)
+        for font, glyphOrder in zip(fonts, glyphOrders):
+            font.setGlyphOrder(glyphOrder)
+            if "CFF " in font:
+                renameCFFCharStrings(self, glyphOrder, font["CFF "])
+            if self.beyond64k:
+                upper_tables(font, tables=_COMPANION_TABLES)
+            if "DMAP" in font and "DMAP" not in self.options.drop_tables:
+                _flattenDmap(font)
+
+        cmaps = [font["cmap"] for font in fonts]
+        self.duplicateGlyphsPerFont = [{} for _ in fonts]
+        computeMegaCmap(self, cmaps)
+
+        mega = ttLib.TTFont(sfntVersion=sfntVersion)
+        mega.setGlyphOrder(self.glyphOrder)
+
+        for font in fonts:
+            # Inputs are owned by the merger; normalize without restoring them.
+            # The output is upgraded before serialization when needed.
+            with _compact_layout_tables(font, restore=False):
+                self._preMerge(font)
+
+        self.fonts = fonts
+
+        allTags = reduce(set.union, (list(font.keys()) for font in fonts), set())
+        allTags.remove("GlyphOrder")
+
+        for tag in sorted(allTags):
+            if tag in self.options.drop_tables:
+                continue
+
+            with timer("merge '%s'" % tag):
+                tables = [font.get(tag, NotImplemented) for font in fonts]
+
+                log.info("Merging '%s'.", tag)
+                clazz = ttLib.getTableClass(tag)
+                table = clazz(tag).merge(self, tables)
+                # XXX Clean this up and use:  table = mergeObjects(tables)
+
+                if table is not NotImplemented and table is not False:
+                    mega[tag] = table
+                    log.info("Merged '%s'.", tag)
+                else:
+                    log.info("Dropped '%s'.", tag)
+
+        del self.duplicateGlyphsPerFont
+        del self.fonts
+
+        self._postMerge(mega)
+        if self.beyond64k:
+            upper_tables(mega)
+
+        return mega
+
+    def mergeObjects(self, returnTable, logic, tables):
+        # Right now we don't use self at all.  Will use in the future
+        # for options and logging.
+
+        allKeys = set.union(
+            set(),
+            *(vars(table).keys() for table in tables if table is not NotImplemented),
+        )
+        for key in allKeys:
+            log.info(" %s", key)
+            try:
+                mergeLogic = logic[key]
+            except KeyError:
+                try:
+                    mergeLogic = logic["*"]
+                except KeyError:
+                    raise Exception(
+                        "Don't know how to merge key %s of class %s"
+                        % (key, returnTable.__class__.__name__)
+                    )
+            if mergeLogic is NotImplemented:
+                continue
+            value = mergeLogic(getattr(table, key, NotImplemented) for table in tables)
+            if value is not NotImplemented:
+                setattr(returnTable, key, value)
+
+        return returnTable
+
+    def _preMerge(self, font):
+        layoutPreMerge(font)
+
+    def _postMerge(self, font):
+        layoutPostMerge(font)
+        self._dropPostGlyphNamesIfNeeded(font)
+
+        if "OS/2" in font:
+            # https://github.com/fonttools/fonttools/issues/2538
+            # TODO: Add an option to disable this?
+            font["OS/2"].recalcAvgCharWidth(font)
+
+    def _dropPostGlyphNamesIfNeeded(self, font):
+        if "post" not in font or len(font.getGlyphOrder()) <= 0xFFFF:
+            return
+        post = font["post"]
+        if post.formatType == 2.0:
+            post.formatType = 3.0
+            post.extraNames = []
+            post.mapping = {}
+
+
+__all__ = ["Options", "Merger", "main"]
+
+
+@timer("make one with everything (TOTAL TIME)")
+def main(args=None):
+    """Merge multiple fonts into one"""
+    from fontTools import configLogger
+
+    if args is None:
+        args = sys.argv[1:]
+
+    options = Options()
+    args = options.parse_opts(args)
+    fontfiles = []
+    if options.input_file:
+        with open(options.input_file) as inputfile:
+            fontfiles = [
+                line.strip()
+                for line in inputfile.readlines()
+                if not line.lstrip().startswith("#")
+            ]
+    for g in args:
+        fontfiles.append(g)
+
+    if len(fontfiles) < 1:
+        print(
+            "usage: fonttools merge [font1 ... fontN] [--input-file=filelist.txt] [--output-file=merged.ttf] [--import-file=tables.ttx]",
+            file=sys.stderr,
+        )
+        print(
+            "                                   [--drop-tables=tags] [--verbose] [--timing]",
+            file=sys.stderr,
+        )
+        print("", file=sys.stderr)
+        print(" font1 ... fontN              Files to merge.", file=sys.stderr)
+        print(
+            " --input-file=<filename>      Read files to merge from a text file, each path new line. # Comment lines allowed.",
+            file=sys.stderr,
+        )
+        print(
+            " --output-file=<filename>     Specify output file name (default: merged.ttf).",
+            file=sys.stderr,
+        )
+        print(
+            " --import-file=<filename>     TTX file to import after merging. This can be used to set metadata.",
+            file=sys.stderr,
+        )
+        print(
+            " --drop-tables=<table tags>   Comma separated list of table tags to skip, case sensitive.",
+            file=sys.stderr,
+        )
+        print(
+            " --verbose                    Output progress information.",
+            file=sys.stderr,
+        )
+        print(" --timing                     Output progress timing.", file=sys.stderr)
+        return 1
+
+    configLogger(level=logging.INFO if options.verbose else logging.WARNING)
+    if options.timing:
+        timer.logger.setLevel(logging.DEBUG)
+    else:
+        timer.logger.disabled = True
+
+    merger = Merger(options=options)
+    font = merger.merge(fontfiles)
+
+    if options.import_file:
+        font.importXML(options.import_file)
+
+    with timer("compile and save font"):
+        font.save(options.output_file)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

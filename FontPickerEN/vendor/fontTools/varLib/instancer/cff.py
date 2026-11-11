@@ -1,1 +1,144 @@
-IiIiSGVscGVycyBmb3IgaW5zdGFuY2luZyBDRkYyIGNoYXJzdHJpbmdzLiIiIgoKZnJvbSBmb250VG9vbHMuY2ZmTGliLnNwZWNpYWxpemVyIGltcG9ydCBibGVuZEFyZ1ZhbHVlcywgbnVtQmxlbmRBcmdWYWx1ZXMKZnJvbSBmb250VG9vbHMubWlzYy5yb3VuZFRvb2xzIGltcG9ydCBvdFJvdW5kCmZyb20gZm9udFRvb2xzLnZhckxpYi5tb2RlbHMgaW1wb3J0IHN1cHBvcnRTY2FsYXIKCiMgR2VuZXJhbGl6ZWQgb3BlcmF0b3JzIHdpdGggcmVsYXRpdmUgeCwgeSBjb29yZGluYXRlcyAoZmxleCdzIDEzdGggaXMgZmQpLgpfUEFUSF9PUEVSQVRPUlMgPSB7InJtb3ZldG8iLCAicmxpbmV0byIsICJycmN1cnZldG8iLCAiZmxleCJ9Cl9TVEVNX09QRVJBVE9SUyA9IHsiaHN0ZW0iLCAiaHN0ZW1obSIsICJ2c3RlbSIsICJ2c3RlbWhtIn0KCgpkZWYgX2lzU3RlbUNvbW1hbmQoY29tbWFuZHMsIGkpOgogICAgb3AsIGFyZ3MgPSBjb21tYW5kc1tpXQogICAgaWYgb3AgaW4gX1NURU1fT1BFUkFUT1JTOgogICAgICAgIHJldHVybiBUcnVlCiAgICAjIEltcGxpY2l0IHZzdGVtcyBiZWZvcmUgaGludG1hc2svY250cm1hc2suCiAgICByZXR1cm4gKAogICAgICAgIG9wID09ICIiCiAgICAgICAgYW5kIGkgKyAxIDwgbGVuKGNvbW1hbmRzKQogICAgICAgIGFuZCBjb21tYW5kc1tpICsgMV1bMF0gaW4geyJoaW50bWFzayIsICJjbnRybWFzayJ9CiAgICAgICAgYW5kIG5vdCBhbnkoaXNpbnN0YW5jZShhcmcsIGJ5dGVzKSBmb3IgYXJnIGluIGFyZ3MpCiAgICApCgoKZGVmIGdldFJlZ2lvblNjYWxhclJhbmdlcyh2YXJTdG9yZSwgZnZhckF4ZXMsIHBpbm5lZExvY2F0aW9uKToKICAgICIiIlJldHVybiBlYWNoIHJlZ2lvbidzIHNjYWxhciByYW5nZSBhZnRlciBwaW5uaW5nIHRoZSBnaXZlbiBheGVzLgoKICAgIFRoZXNlIHJhbmdlcyBsZXQgZmxleDEgZ2VuZXJhbGl6YXRpb24gZGV0ZXJtaW5lIHdoZXRoZXIgaXRzIGRpcmVjdGlvbiBpcwogICAgZml4ZWQgdGhyb3VnaG91dCB0aGUgcmVtYWluaW5nIGRlc2lnbiBzcGFjZS4KICAgICIiIgogICAgcmVnaW9uU2NhbGFyUmFuZ2VzID0gW10KICAgIGZvciByZWdpb24gaW4gdmFyU3RvcmUuVmFyUmVnaW9uTGlzdC5SZWdpb246CiAgICAgICAgc3VwcG9ydCA9IHJlZ2lvbi5nZXRfc3VwcG9ydChmdmFyQXhlcykKICAgICAgICBwaW5uZWRTdXBwb3J0ID0gewogICAgICAgICAgICBheGlzOiB0cmlwbGUgZm9yIGF4aXMsIHRyaXBsZSBpbiBzdXBwb3J0Lml0ZW1zKCkgaWYgYXhpcyBpbiBwaW5uZWRMb2NhdGlvbgogICAgICAgIH0KICAgICAgICBzY2FsYXIgPSBzdXBwb3J0U2NhbGFyKHBpbm5lZExvY2F0aW9uLCBwaW5uZWRTdXBwb3J0KQogICAgICAgICMgSW52YWxpZCB0ZW50cyBhcmUgbGVmdCB1bmtub3duOiBzdXBwb3J0U2NhbGFyIGlnbm9yZXMgd2hhdCBpbnN0YW5jaW5nIHplcm9lcy4KICAgICAgICBpZiBhbnkoCiAgICAgICAgICAgIGxvd2VyID4gcGVhayBvciBwZWFrID4gdXBwZXIgb3IgbG93ZXIgPCAwIDwgdXBwZXIKICAgICAgICAgICAgZm9yIGxvd2VyLCBwZWFrLCB1cHBlciBpbiBwaW5uZWRTdXBwb3J0LnZhbHVlcygpCiAgICAgICAgKToKICAgICAgICAgICAgcmVnaW9uU2NhbGFyUmFuZ2VzLmFwcGVuZCgoMCwgMSkpCiAgICAgICAgZWxpZiBsZW4ocGlubmVkU3VwcG9ydCkgPT0gbGVuKHN1cHBvcnQpOgogICAgICAgICAgICByZWdpb25TY2FsYXJSYW5nZXMuYXBwZW5kKChzY2FsYXIsIHNjYWxhcikpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmVnaW9uU2NhbGFyUmFuZ2VzLmFwcGVuZCgoMCwgc2NhbGFyKSkKICAgIHJldHVybiByZWdpb25TY2FsYXJSYW5nZXMKCgpkZWYgY29udmVydFByaXZhdGVEaWN0RGVsdGFzKHZhbHVlcywgbnVtUmVnaW9ucywgKiwgdG9BYnNvbHV0ZSk6CiAgICAiIiJDb252ZXJ0IGEgUHJpdmF0ZSBESUNUIGRlbHRhIGFycmF5J3MgcmVnaW9uIGRlbHRhcy4KCiAgICBEZWZhdWx0cyBhcmUgYWxyZWFkeSBhYnNvbHV0ZTsgcmVnaW9uIGRlbHRhcyBhcmUgcmVsYXRpdmUgdG8gdGhlIHByZWNlZGluZwogICAgdmFsdWUuIE1ha2UgdGhvc2UgYWJzb2x1dGUgYmVmb3JlIGluc3RhbmNpbmcsIGFuZCByZWxhdGl2ZSBhZ2FpbiBhZnRlcndhcmRzLgogICAgIiIiCiAgICBwcmV2aW91cyA9IFswXSAqIG51bVJlZ2lvbnMKICAgIHJlc3VsdCA9IFtdCiAgICBmb3IgdmFsdWUgaW4gdmFsdWVzOgogICAgICAgIGlmIGlzaW5zdGFuY2UodmFsdWUsIGxpc3QpOgogICAgICAgICAgICBkZWZhdWx0LCAqZGVsdGFzID0gdmFsdWUKICAgICAgICBlbHNlOgogICAgICAgICAgICBkZWZhdWx0LCBkZWx0YXMgPSB2YWx1ZSwgWzBdICogbnVtUmVnaW9ucwogICAgICAgIGFzc2VydCBsZW4oZGVsdGFzKSA9PSBudW1SZWdpb25zCiAgICAgICAgaWYgdG9BYnNvbHV0ZToKICAgICAgICAgICAgZGVsdGFzID0gW3AgKyBkIGZvciBwLCBkIGluIHppcChwcmV2aW91cywgZGVsdGFzKV0KICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChbZGVmYXVsdF0gKyBkZWx0YXMpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChbZGVmYXVsdF0gKyBbZCAtIHAgZm9yIGQsIHAgaW4gemlwKGRlbHRhcywgcHJldmlvdXMpXSkKICAgICAgICBwcmV2aW91cyA9IGRlbHRhcwogICAgcmV0dXJuIHJlc3VsdAoKCmRlZiBjb252ZXJ0VG9BYnNvbHV0ZUNvb3JkaW5hdGVzKGNvbW1hbmRzLCB2c0luZGV4LCBnZXROdW1SZWdpb25zKToKICAgICIiIkNvbnZlcnQgZ2VuZXJhbGl6ZWQgQ0ZGMiBvdXRsaW5lIGFuZCBzdGVtIGNvb3JkaW5hdGVzIGluIHBsYWNlLgoKICAgIFJldHVybiBgYE5vbmVgYCBvbiBzdWNjZXNzLCBvciB0aGUgcmVhc29uIHRoZSBjb21tYW5kcyBjYW5ub3Qgc2FmZWx5IGJlCiAgICBjb252ZXJ0ZWQuIEFsbCBmbGV4IG9wZXJhdG9ycyBtdXN0IGFscmVhZHkgaGF2ZSBiZWVuIGdlbmVyYWxpemVkIHRvCiAgICBgYGZsZXhgYDsgYW4gYW1iaWd1b3VzIHZhcmlhYmxlIGBgZmxleDFgYCBjYW5ub3QgYmUgbWFkZSBhYnNvbHV0ZS4KICAgICIiIgogICAgc2VlbkJsZW5kID0gRmFsc2UKICAgIGZvciBvcCwgYXJncyBpbiBjb21tYW5kczoKICAgICAgICBpZiBvcCA9PSAidnNpbmRleCI6CiAgICAgICAgICAgIGlmIHNlZW5CbGVuZDoKICAgICAgICAgICAgICAgIHJldHVybiAidnNpbmRleCBhZnRlciBhIGJsZW5kIgogICAgICAgIGVsaWYgb3AgPT0gImZsZXgxIjoKICAgICAgICAgICAgcmV0dXJuICJmbGV4MSBjaGFuZ2VzIGRpcmVjdGlvbiBhY3Jvc3MgdGhlIGRlc2lnbiBzcGFjZSIKICAgICAgICBhc3NlcnQgb3Agbm90IGluIHsiaGZsZXgiLCAiaGZsZXgxIn0KICAgICAgICBzZWVuQmxlbmQgPSBzZWVuQmxlbmQgb3IgYW55KGlzaW5zdGFuY2UoYXJnLCBsaXN0KSBmb3IgYXJnIGluIGFyZ3MpCgogICAgbnVtVmFsdWVzID0gZ2V0TnVtUmVnaW9ucyh2c0luZGV4KSArIDEKICAgIG91dGxpbmUgPSBbWzBdICogbnVtVmFsdWVzLCBbMF0gKiBudW1WYWx1ZXNdCiAgICBmb3IgaSwgKG9wLCBhcmdzKSBpbiBlbnVtZXJhdGUoY29tbWFuZHMpOgogICAgICAgIGlmIG9wID09ICJ2c2luZGV4IjoKICAgICAgICAgICAgIyBCZWZvcmUgYW55IGJsZW5kLCBzbyBubyBkZWx0YXMgdG8gY2Fycnkgb3Zlci4KICAgICAgICAgICAgdnNJbmRleCA9IGFyZ3NbMF0KICAgICAgICAgICAgbnVtVmFsdWVzID0gZ2V0TnVtUmVnaW9ucyh2c0luZGV4KSArIDEKICAgICAgICAgICAgb3V0bGluZSA9IFtheGlzWzoxXSArIFswXSAqIChudW1WYWx1ZXMgLSAxKSBmb3IgYXhpcyBpbiBvdXRsaW5lXQogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIG9wIGluIF9QQVRIX09QRVJBVE9SUzoKICAgICAgICAgICAgcG9zaXRpb25zID0gb3V0bGluZQogICAgICAgICAgICBudW1Db29yZGluYXRlcyA9IDEyIGlmIG9wID09ICJmbGV4IiBlbHNlIGxlbihhcmdzKQogICAgICAgIGVsaWYgX2lzU3RlbUNvbW1hbmQoY29tbWFuZHMsIGkpOgogICAgICAgICAgICBwb3NpdGlvbnMgPSBbWzBdICogbnVtVmFsdWVzXQogICAgICAgICAgICBudW1Db29yZGluYXRlcyA9IGxlbihhcmdzKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZm9yIGogaW4gcmFuZ2UobnVtQ29vcmRpbmF0ZXMpOgogICAgICAgICAgICBrID0gaiAlIGxlbihwb3NpdGlvbnMpCiAgICAgICAgICAgIHZhbHVlcyA9IGJsZW5kQXJnVmFsdWVzKGFyZ3Nbal0sIG51bVZhbHVlcykKICAgICAgICAgICAgcG9zaXRpb24gPSBwb3NpdGlvbnNba10gPSBbcCArIHYgZm9yIHAsIHYgaW4gemlwKHBvc2l0aW9uc1trXSwgdmFsdWVzKV0KICAgICAgICAgICAgYXJnc1tqXSA9IHBvc2l0aW9uICsgWzFdIGlmIGFueShwb3NpdGlvblsxOl0pIGVsc2UgcG9zaXRpb25bMF0KICAgIHJldHVybiBOb25lCgoKZGVmIGNvbnZlcnRUb1JlbGF0aXZlQ29vcmRpbmF0ZXMoY29tbWFuZHMsIHJvdW5kPW90Um91bmQpOgogICAgIiIiUm91bmQgYWJzb2x1dGUgQ0ZGMiBjb29yZGluYXRlcyBhbmQgbWFrZSB0aGVtIHJlbGF0aXZlIGFnYWluIGluIHBsYWNlLiIiIgoKICAgIGRlZiByb3VuZEFyZyhhcmcpOgogICAgICAgIGlmIGlzaW5zdGFuY2UoYXJnLCBsaXN0KToKICAgICAgICAgICAgcmV0dXJuIFtyb3VuZChhcmdbMF0pXSArIGFyZ1sxOl0KICAgICAgICByZXR1cm4gcm91bmQoYXJnKQoKICAgIG91dGxpbmUgPSBbWzBdLCBbMF1dCiAgICBmb3IgaSwgKG9wLCBhcmdzKSBpbiBlbnVtZXJhdGUoY29tbWFuZHMpOgogICAgICAgIGlmIG9wIGluIF9QQVRIX09QRVJBVE9SUzoKICAgICAgICAgICAgcG9zaXRpb25zID0gb3V0bGluZQogICAgICAgICAgICBudW1Db29yZGluYXRlcyA9IDEyIGlmIG9wID09ICJmbGV4IiBlbHNlIGxlbihhcmdzKQogICAgICAgIGVsaWYgX2lzU3RlbUNvbW1hbmQoY29tbWFuZHMsIGkpOgogICAgICAgICAgICBwb3NpdGlvbnMgPSBbWzBdXQogICAgICAgICAgICBudW1Db29yZGluYXRlcyA9IGxlbihhcmdzKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZm9yIGogaW4gcmFuZ2UobnVtQ29vcmRpbmF0ZXMpOgogICAgICAgICAgICBrID0gaiAlIGxlbihwb3NpdGlvbnMpCiAgICAgICAgICAgIGFyZyA9IHJvdW5kQXJnKGFyZ3Nbal0pCiAgICAgICAgICAgIG51bVZhbHVlcyA9IG1heChsZW4ocG9zaXRpb25zW2tdKSwgbnVtQmxlbmRBcmdWYWx1ZXMoYXJnKSkKICAgICAgICAgICAgdmFsdWVzID0gYmxlbmRBcmdWYWx1ZXMoYXJnLCBudW1WYWx1ZXMpCiAgICAgICAgICAgIHByZXZpb3VzID0gcG9zaXRpb25zW2tdICsgWzBdICogKG51bVZhbHVlcyAtIGxlbihwb3NpdGlvbnNba10pKQogICAgICAgICAgICBkaWZmID0gW3YgLSBwIGZvciB2LCBwIGluIHppcCh2YWx1ZXMsIHByZXZpb3VzKV0KICAgICAgICAgICAgcG9zaXRpb25zW2tdID0gdmFsdWVzCiAgICAgICAgICAgIGFyZ3Nbal0gPSBkaWZmICsgWzFdIGlmIGFueShkaWZmWzE6XSkgZWxzZSBkaWZmWzBdCiAgICAgICAgaWYgb3AgPT0gImZsZXgiOgogICAgICAgICAgICBhcmdzWzEyXSA9IHJvdW5kQXJnKGFyZ3NbMTJdKQo=
+"""Helpers for instancing CFF2 charstrings."""
+
+from fontTools.cffLib.specializer import blendArgValues, numBlendArgValues
+from fontTools.misc.roundTools import otRound
+from fontTools.varLib.models import supportScalar
+
+# Generalized operators with relative x, y coordinates (flex's 13th is fd).
+_PATH_OPERATORS = {"rmoveto", "rlineto", "rrcurveto", "flex"}
+_STEM_OPERATORS = {"hstem", "hstemhm", "vstem", "vstemhm"}
+
+
+def _isStemCommand(commands, i):
+    op, args = commands[i]
+    if op in _STEM_OPERATORS:
+        return True
+    # Implicit vstems before hintmask/cntrmask.
+    return (
+        op == ""
+        and i + 1 < len(commands)
+        and commands[i + 1][0] in {"hintmask", "cntrmask"}
+        and not any(isinstance(arg, bytes) for arg in args)
+    )
+
+
+def getRegionScalarRanges(varStore, fvarAxes, pinnedLocation):
+    """Return each region's scalar range after pinning the given axes.
+
+    These ranges let flex1 generalization determine whether its direction is
+    fixed throughout the remaining design space.
+    """
+    regionScalarRanges = []
+    for region in varStore.VarRegionList.Region:
+        support = region.get_support(fvarAxes)
+        pinnedSupport = {
+            axis: triple for axis, triple in support.items() if axis in pinnedLocation
+        }
+        scalar = supportScalar(pinnedLocation, pinnedSupport)
+        # Invalid tents are left unknown: supportScalar ignores what instancing zeroes.
+        if any(
+            lower > peak or peak > upper or lower < 0 < upper
+            for lower, peak, upper in pinnedSupport.values()
+        ):
+            regionScalarRanges.append((0, 1))
+        elif len(pinnedSupport) == len(support):
+            regionScalarRanges.append((scalar, scalar))
+        else:
+            regionScalarRanges.append((0, scalar))
+    return regionScalarRanges
+
+
+def convertPrivateDictDeltas(values, numRegions, *, toAbsolute):
+    """Convert a Private DICT delta array's region deltas.
+
+    Defaults are already absolute; region deltas are relative to the preceding
+    value. Make those absolute before instancing, and relative again afterwards.
+    """
+    previous = [0] * numRegions
+    result = []
+    for value in values:
+        if isinstance(value, list):
+            default, *deltas = value
+        else:
+            default, deltas = value, [0] * numRegions
+        assert len(deltas) == numRegions
+        if toAbsolute:
+            deltas = [p + d for p, d in zip(previous, deltas)]
+            result.append([default] + deltas)
+        else:
+            result.append([default] + [d - p for d, p in zip(deltas, previous)])
+        previous = deltas
+    return result
+
+
+def convertToAbsoluteCoordinates(commands, vsIndex, getNumRegions):
+    """Convert generalized CFF2 outline and stem coordinates in place.
+
+    Return ``None`` on success, or the reason the commands cannot safely be
+    converted. All flex operators must already have been generalized to
+    ``flex``; an ambiguous variable ``flex1`` cannot be made absolute.
+    """
+    seenBlend = False
+    for op, args in commands:
+        if op == "vsindex":
+            if seenBlend:
+                return "vsindex after a blend"
+        elif op == "flex1":
+            return "flex1 changes direction across the design space"
+        assert op not in {"hflex", "hflex1"}
+        seenBlend = seenBlend or any(isinstance(arg, list) for arg in args)
+
+    numValues = getNumRegions(vsIndex) + 1
+    outline = [[0] * numValues, [0] * numValues]
+    for i, (op, args) in enumerate(commands):
+        if op == "vsindex":
+            # Before any blend, so no deltas to carry over.
+            vsIndex = args[0]
+            numValues = getNumRegions(vsIndex) + 1
+            outline = [axis[:1] + [0] * (numValues - 1) for axis in outline]
+            continue
+        if op in _PATH_OPERATORS:
+            positions = outline
+            numCoordinates = 12 if op == "flex" else len(args)
+        elif _isStemCommand(commands, i):
+            positions = [[0] * numValues]
+            numCoordinates = len(args)
+        else:
+            continue
+        for j in range(numCoordinates):
+            k = j % len(positions)
+            values = blendArgValues(args[j], numValues)
+            position = positions[k] = [p + v for p, v in zip(positions[k], values)]
+            args[j] = position + [1] if any(position[1:]) else position[0]
+    return None
+
+
+def convertToRelativeCoordinates(commands, round=otRound):
+    """Round absolute CFF2 coordinates and make them relative again in place."""
+
+    def roundArg(arg):
+        if isinstance(arg, list):
+            return [round(arg[0])] + arg[1:]
+        return round(arg)
+
+    outline = [[0], [0]]
+    for i, (op, args) in enumerate(commands):
+        if op in _PATH_OPERATORS:
+            positions = outline
+            numCoordinates = 12 if op == "flex" else len(args)
+        elif _isStemCommand(commands, i):
+            positions = [[0]]
+            numCoordinates = len(args)
+        else:
+            continue
+        for j in range(numCoordinates):
+            k = j % len(positions)
+            arg = roundArg(args[j])
+            numValues = max(len(positions[k]), numBlendArgValues(arg))
+            values = blendArgValues(arg, numValues)
+            previous = positions[k] + [0] * (numValues - len(positions[k]))
+            diff = [v - p for v, p in zip(values, previous)]
+            positions[k] = values
+            args[j] = diff + [1] if any(diff[1:]) else diff[0]
+        if op == "flex":
+            args[12] = roundArg(args[12])

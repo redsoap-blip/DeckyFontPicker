@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2Z2NpZC5odG1sCmNsYXNzIHRhYmxlX19nX2NfaV9kKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiR2x5cGggSUQgdG8gQ0lEIHRhYmxlCgogICAgVGhlIEFBVCBgYGdjaWRgYCB0YWJsZSBzdG9yZXMgZ2x5cGhJRC10by1DSUQgbWFwcGluZ3MuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9kZXZlbG9wZXIuYXBwbGUuY29tL2ZvbnRzL1RydWVUeXBlLVJlZmVyZW5jZS1NYW51YWwvUk0wNi9DaGFwNmdjaWQuaHRtbAogICAgIiIiCgogICAgcGFzcwo=
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6gcid.html
+class table__g_c_i_d(BaseTTXConverter):
+    """Glyph ID to CID table
+
+    The AAT ``gcid`` table stores glyphID-to-CID mappings.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6gcid.html
+    """
+
+    pass

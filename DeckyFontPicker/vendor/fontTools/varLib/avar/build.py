@@ -1,1 +1,79 @@
-ZnJvbSBmb250VG9vbHMudmFyTGliIGltcG9ydCBfYWRkX2Z2YXIsIF9hZGRfYXZhciwgbG9hZF9kZXNpZ25zcGFjZQpmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgbmV3VGFibGUKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJmb250VG9vbHMudmFyTGliLmF2YXIiKQoKCmRlZiBidWlsZChmb250LCBkZXNpZ25zcGFjZV9maWxlKToKICAgIGRzID0gbG9hZF9kZXNpZ25zcGFjZShkZXNpZ25zcGFjZV9maWxlLCByZXF1aXJlX3NvdXJjZXM9RmFsc2UpCgogICAgaWYgbm90ICJmdmFyIiBpbiBmb250OgogICAgICAgIGlmICJuYW1lIiBub3QgaW4gZm9udDoKICAgICAgICAgICAgZm9udFsibmFtZSJdID0gbmV3VGFibGUoIm5hbWUiKQogICAgICAgIF9hZGRfZnZhcihmb250LCBkcy5heGVzLCBkcy5pbnN0YW5jZXMpCgogICAgYXhpc1RhZ3MgPSBbYS5heGlzVGFnIGZvciBhIGluIGZvbnRbImZ2YXIiXS5heGVzXQoKICAgIGlmICJhdmFyIiBpbiBmb250OgogICAgICAgIGxvZy53YXJuaW5nKCJhdmFyIHRhYmxlIGFscmVhZHkgcHJlc2VudCwgb3ZlcndyaXRpbmcuIikKICAgICAgICBkZWwgZm9udFsiYXZhciJdCgogICAgX2FkZF9hdmFyKGZvbnQsIGRzLmF4ZXMsIGRzLmF4aXNNYXBwaW5ncywgYXhpc1RhZ3MpCgoKZGVmIG1haW4oYXJncz1Ob25lKToKICAgICIiIkFkZCBgYXZhcmAgdGFibGUgZnJvbSBkZXNpZ25zcGFjZSBmaWxlIHRvIHZhcmlhYmxlIGZvbnQuIiIiCgogICAgZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udAogICAgZnJvbSBmb250VG9vbHMubWlzYy5jbGlUb29scyBpbXBvcnQgbWFrZU91dHB1dEZpbGVOYW1lCiAgICBmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCiAgICBpbXBvcnQgYXJncGFyc2UKCiAgICBpZiBhcmdzIGlzIE5vbmU6CiAgICAgICAgaW1wb3J0IHN5cwoKICAgICAgICBhcmdzID0gc3lzLmFyZ3ZbMTpdCgogICAgcGFyc2VyID0gYXJncGFyc2UuQXJndW1lbnRQYXJzZXIoCiAgICAgICAgImZvbnR0b29scyB2YXJMaWIuYXZhci5idWlsZCIsCiAgICAgICAgZGVzY3JpcHRpb249IkFkZCBgYXZhcmAgdGFibGUgZnJvbSBkZXNpZ25zcGFjZSBmaWxlIHRvIHZhcmlhYmxlIGZvbnQuIiwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoImZvbnQiLCBtZXRhdmFyPSJ2YXJmb250LnR0ZiIsIGhlbHA9IlZhcmlhYmxlLWZvbnQgZmlsZS4iKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiZGVzaWduc3BhY2UiLAogICAgICAgIG1ldGF2YXI9ImZhbWlseS5kZXNpZ25zcGFjZSIsCiAgICAgICAgaGVscD0iRGVzaWduc3BhY2UgZmlsZS4iLAogICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICkKICAgIHBhcnNlci5hZGRfYXJndW1lbnQoCiAgICAgICAgIi1vIiwKICAgICAgICAiLS1vdXRwdXQtZmlsZSIsCiAgICAgICAgdHlwZT1zdHIsCiAgICAgICAgaGVscD0iT3V0cHV0IGZvbnQgZmlsZSBuYW1lLiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItdiIsICItLXZlcmJvc2UiLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJSdW4gbW9yZSB2ZXJib3NlbHkuIgogICAgKQoKICAgIG9wdGlvbnMgPSBwYXJzZXIucGFyc2VfYXJncyhhcmdzKQoKICAgIGNvbmZpZ0xvZ2dlcihsZXZlbD0oIklORk8iIGlmIG9wdGlvbnMudmVyYm9zZSBlbHNlICJXQVJOSU5HIikpCgogICAgZm9udCA9IFRURm9udChvcHRpb25zLmZvbnQpCgogICAgYnVpbGQoZm9udCwgb3B0aW9ucy5kZXNpZ25zcGFjZSkKCiAgICBpZiBvcHRpb25zLm91dHB1dF9maWxlIGlzIE5vbmU6CiAgICAgICAgb3V0ZmlsZSA9IG1ha2VPdXRwdXRGaWxlTmFtZShvcHRpb25zLmZvbnQsIG92ZXJXcml0ZT1UcnVlLCBzdWZmaXg9Ii5hdmFyIikKICAgIGVsc2U6CiAgICAgICAgb3V0ZmlsZSA9IG9wdGlvbnMub3V0cHV0X2ZpbGUKICAgIGlmIG91dGZpbGU6CiAgICAgICAgbG9nLmluZm8oIlNhdmluZyAlcyIsIG91dGZpbGUpCiAgICAgICAgZm9udC5zYXZlKG91dGZpbGUpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIGltcG9ydCBzeXMKCiAgICBzeXMuZXhpdChtYWluKCkpCg==
+from fontTools.varLib import _add_fvar, _add_avar, load_designspace
+from fontTools.ttLib import newTable
+import logging
+
+log = logging.getLogger("fontTools.varLib.avar")
+
+
+def build(font, designspace_file):
+    ds = load_designspace(designspace_file, require_sources=False)
+
+    if not "fvar" in font:
+        if "name" not in font:
+            font["name"] = newTable("name")
+        _add_fvar(font, ds.axes, ds.instances)
+
+    axisTags = [a.axisTag for a in font["fvar"].axes]
+
+    if "avar" in font:
+        log.warning("avar table already present, overwriting.")
+        del font["avar"]
+
+    _add_avar(font, ds.axes, ds.axisMappings, axisTags)
+
+
+def main(args=None):
+    """Add `avar` table from designspace file to variable font."""
+
+    from fontTools.ttLib import TTFont
+    from fontTools.misc.cliTools import makeOutputFileName
+    from fontTools import configLogger
+    import argparse
+
+    if args is None:
+        import sys
+
+        args = sys.argv[1:]
+
+    parser = argparse.ArgumentParser(
+        "fonttools varLib.avar.build",
+        description="Add `avar` table from designspace file to variable font.",
+    )
+    parser.add_argument("font", metavar="varfont.ttf", help="Variable-font file.")
+    parser.add_argument(
+        "designspace",
+        metavar="family.designspace",
+        help="Designspace file.",
+        default=None,
+    )
+    parser.add_argument(
+        "-o",
+        "--output-file",
+        type=str,
+        help="Output font file name.",
+    )
+    parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Run more verbosely."
+    )
+
+    options = parser.parse_args(args)
+
+    configLogger(level=("INFO" if options.verbose else "WARNING"))
+
+    font = TTFont(options.font)
+
+    build(font, options.designspace)
+
+    if options.output_file is None:
+        outfile = makeOutputFileName(options.font, overWrite=True, suffix=".avar")
+    else:
+        outfile = options.output_file
+    if outfile:
+        log.info("Saving %s", outfile)
+        font.save(outfile)
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

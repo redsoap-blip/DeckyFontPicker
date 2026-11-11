@@ -1,1 +1,515 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzIGltcG9ydCBvdFRhYmxlcyBhcyBvdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IG90Um91bmQKZnJvbSBmb250VG9vbHMudHRMaWIuYmV5b25kNjRrIGltcG9ydCBfY29tcGFjdF9sYXlvdXRfdGFibGVzCmZyb20gY29weSBpbXBvcnQgZGVlcGNvcHkKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKCJmb250VG9vbHMudmFyTGliLmluc3RhbmNlciIpCgpfTE9PS1VQX0NPTkRJVElPTl9GQUxTRSA9IDAKX0xPT0tVUF9DT05ESVRJT05fVFJVRSA9IDEKX0xPT0tVUF9DT05ESVRJT05fS0VFUCA9IDIKCgpkZWYgX2ZlYXR1cmVWYXJpYXRpb25SZWNvcmRJc1VuaXF1ZShyZWMsIHNlZW4pOgogICAgY29uZGl0aW9uU2V0ID0gW10KICAgIGNvbmRpdGlvblNldHMgPSAoCiAgICAgICAgcmVjLkNvbmRpdGlvblNldC5Db25kaXRpb25UYWJsZSBpZiByZWMuQ29uZGl0aW9uU2V0IGlzIG5vdCBOb25lIGVsc2UgW10KICAgICkKICAgIGZvciBjb25kIGluIGNvbmRpdGlvblNldHM6CiAgICAgICAgaWYgY29uZCBpcyBOb25lOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIGNvbmQuRm9ybWF0ICE9IDE6CiAgICAgICAgICAgICMgY2FuJ3QgdGVsbCB3aGV0aGVyIHRoaXMgaXMgZHVwbGljYXRlLCBhc3N1bWUgaXMgdW5pcXVlCiAgICAgICAgICAgIHJldHVybiBUcnVlCiAgICAgICAgY29uZGl0aW9uU2V0LmFwcGVuZCgKICAgICAgICAgICAgKGNvbmQuQXhpc0luZGV4LCBjb25kLkZpbHRlclJhbmdlTWluVmFsdWUsIGNvbmQuRmlsdGVyUmFuZ2VNYXhWYWx1ZSkKICAgICAgICApCiAgICAjIGJlc2lkZXMgdGhlIHNldCBvZiBjb25kaXRpb25zLCB3ZSBhbHNvIGluY2x1ZGUgdGhlIEZlYXR1cmVUYWJsZVN1YnN0aXR1dGlvbgogICAgIyB2ZXJzaW9uIHRvIGlkZW50aWZ5IHVuaXF1ZSBGZWF0dXJlVmFyaWF0aW9uUmVjb3JkcywgZXZlbiB0aG91Z2ggb25seSBvbmUKICAgICMgdmVyc2lvbiBpcyBjdXJyZW50bHkgZGVmaW5lZC4gSXQncyB0aGVvcmV0aWNhbGx5IHBvc3NpYmxlIHRoYXQgbXVsdGlwbGUKICAgICMgcmVjb3JkcyB3aXRoIHNhbWUgY29uZGl0aW9ucyBidXQgZGlmZmVyZW50IHN1YnN0aXR1dGlvbiB0YWJsZSB2ZXJzaW9uIGJlCiAgICAjIHByZXNlbnQgaW4gdGhlIHNhbWUgZm9udCBmb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eS4KICAgIHN1YnN0aXR1dGlvblZlcnNpb24gPSAoCiAgICAgICAgcmVjLkZlYXR1cmVUYWJsZVN1YnN0aXR1dGlvbi5WZXJzaW9uCiAgICAgICAgaWYgcmVjLkZlYXR1cmVUYWJsZVN1YnN0aXR1dGlvbiBpcyBub3QgTm9uZQogICAgICAgIGVsc2UgMHgwMDAxMDAwMAogICAgKQogICAgcmVjb3JkS2V5ID0gZnJvemVuc2V0KFtzdWJzdGl0dXRpb25WZXJzaW9uXSArIGNvbmRpdGlvblNldCkKICAgIGlmIHJlY29yZEtleSBpbiBzZWVuOgogICAgICAgIHJldHVybiBGYWxzZQogICAgZWxzZToKICAgICAgICBzZWVuLmFkZChyZWNvcmRLZXkpICAjIHNpZGUgZWZmZWN0CiAgICAgICAgcmV0dXJuIFRydWUKCgpkZWYgX2xpbWl0RmVhdHVyZVZhcmlhdGlvbkNvbmRpdGlvblJhbmdlKGNvbmRpdGlvbiwgYXhpc0xpbWl0KToKICAgIG1pblZhbHVlID0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWluVmFsdWUKICAgIG1heFZhbHVlID0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWF4VmFsdWUKCiAgICBpZiAoCiAgICAgICAgbWluVmFsdWUgPiBtYXhWYWx1ZQogICAgICAgIG9yIG1pblZhbHVlID4gYXhpc0xpbWl0Lm1heGltdW0KICAgICAgICBvciBtYXhWYWx1ZSA8IGF4aXNMaW1pdC5taW5pbXVtCiAgICApOgogICAgICAgICMgY29uZGl0aW9uIGludmFsaWQgb3Igb3V0IG9mIHJhbmdlCiAgICAgICAgcmV0dXJuCgogICAgcmV0dXJuIHR1cGxlKAogICAgICAgIGF4aXNMaW1pdC5yZW5vcm1hbGl6ZVZhbHVlKHYsIGV4dHJhcG9sYXRlPUZhbHNlKSBmb3IgdiBpbiAobWluVmFsdWUsIG1heFZhbHVlKQogICAgKQoKCmRlZiBfY29uZGl0aW9uQXBwbGllc0F0RGVmYXVsdCgKICAgIGNvbmRpdGlvbiwgYXhpc0xpbWl0cywgZnZhckF4ZXMsIGRlcHRoPTY0LCBpbnN0YW5jZXI9Tm9uZQopOgogICAgaWYgY29uZGl0aW9uIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIFRydWUKICAgIGlmIG5vdCBkZXB0aDoKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gMToKICAgICAgICBpZiBjb25kaXRpb24uQXhpc0luZGV4ID49IGxlbihmdmFyQXhlcyk6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIGF4aXNUYWcgPSBmdmFyQXhlc1tjb25kaXRpb24uQXhpc0luZGV4XS5heGlzVGFnCiAgICAgICAgZGVmYXVsdCA9IGF4aXNMaW1pdHNbYXhpc1RhZ10uZGVmYXVsdCBpZiBheGlzVGFnIGluIGF4aXNMaW1pdHMgZWxzZSAwCiAgICAgICAgcmV0dXJuIGNvbmRpdGlvbi5GaWx0ZXJSYW5nZU1pblZhbHVlIDw9IGRlZmF1bHQgPD0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWF4VmFsdWUKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gMjoKICAgICAgICB2YWx1ZSA9IGNvbmRpdGlvbi5EZWZhdWx0VmFsdWUKICAgICAgICBpZiBpbnN0YW5jZXIgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHZhbHVlICs9IGluc3RhbmNlcltjb25kaXRpb24uVmFySWR4XQogICAgICAgIHJldHVybiB2YWx1ZSA+IDAKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgaW4gKDMsIDQpOgogICAgICAgIHZhbHVlcyA9ICgKICAgICAgICAgICAgX2NvbmRpdGlvbkFwcGxpZXNBdERlZmF1bHQoCiAgICAgICAgICAgICAgICBjaGlsZCwgYXhpc0xpbWl0cywgZnZhckF4ZXMsIGRlcHRoIC0gMSwgaW5zdGFuY2VyCiAgICAgICAgICAgICkKICAgICAgICAgICAgZm9yIGNoaWxkIGluIGNvbmRpdGlvbi5Db25kaXRpb25UYWJsZQogICAgICAgICkKICAgICAgICByZXR1cm4gYWxsKHZhbHVlcykgaWYgY29uZGl0aW9uLkZvcm1hdCA9PSAzIGVsc2UgYW55KHZhbHVlcykKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgPT0gNToKICAgICAgICByZXR1cm4gbm90IF9jb25kaXRpb25BcHBsaWVzQXREZWZhdWx0KAogICAgICAgICAgICBjb25kaXRpb24uQ29uZGl0aW9uVGFibGUsIGF4aXNMaW1pdHMsIGZ2YXJBeGVzLCBkZXB0aCAtIDEsIGluc3RhbmNlcgogICAgICAgICkKICAgIHJldHVybiBGYWxzZQoKCmRlZiBfaW5zdGFudGlhdGVGZWF0dXJlVmFyaWF0aW9uUmVjb3JkKAogICAgcmVjb3JkLAogICAgcmVjSWR4LAogICAgYXhpc0xpbWl0cywKICAgIGZ2YXJBeGVzLAogICAgYXhpc0luZGV4TWFwLAogICAgY29uZGl0aW9uUmVzdWx0cywKICAgIGNvbmRpdGlvbkRlZmF1bHRzLAopOgogICAgYXBwbGllcyA9IFRydWUKICAgIHNob3VsZEtlZXAgPSBGYWxzZQogICAgbmV3Q29uZGl0aW9ucyA9IFtdCiAgICBpZiByZWNvcmQuQ29uZGl0aW9uU2V0IGlzIE5vbmU6CiAgICAgICAgcmVjb3JkLkNvbmRpdGlvblNldCA9IG90LkNvbmRpdGlvblNldCgpCiAgICAgICAgcmVjb3JkLkNvbmRpdGlvblNldC5Db25kaXRpb25UYWJsZSA9IFtdCiAgICAgICAgcmVjb3JkLkNvbmRpdGlvblNldC5Db25kaXRpb25Db3VudCA9IDAKICAgIGZvciBpLCBjb25kaXRpb24gaW4gZW51bWVyYXRlKHJlY29yZC5Db25kaXRpb25TZXQuQ29uZGl0aW9uVGFibGUpOgogICAgICAgIGlmIGNvbmRpdGlvbiBpcyBOb25lOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgaW4gKDEsIDIsIDMsIDQsIDUpOgogICAgICAgICAgICBhcHBsaWVzICY9IGNvbmRpdGlvbkRlZmF1bHRzW2lkKGNvbmRpdGlvbildCiAgICAgICAgICAgIHJlc3VsdCA9IF9pbnN0YW50aWF0ZUxvb2t1cENvbmRpdGlvbigKICAgICAgICAgICAgICAgIGNvbmRpdGlvbiwgYXhpc0xpbWl0cywgZnZhckF4ZXMsIGF4aXNJbmRleE1hcCwgY29uZGl0aW9uUmVzdWx0cwogICAgICAgICAgICApCiAgICAgICAgICAgIGlmIHJlc3VsdCA9PSBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRToKICAgICAgICAgICAgICAgIG5ld0NvbmRpdGlvbnMgPSBOb25lCiAgICAgICAgICAgICAgICBhcHBsaWVzID0gRmFsc2UKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGlmIHJlc3VsdCA9PSBfTE9PS1VQX0NPTkRJVElPTl9LRUVQOgogICAgICAgICAgICAgICAgbmV3Q29uZGl0aW9ucy5hcHBlbmQoY29uZGl0aW9uKQogICAgICAgICAgICAgICAgc2hvdWxkS2VlcCA9IFRydWUKICAgICAgICAgICAgZWxpZiBheGlzSW5kZXhNYXA6CiAgICAgICAgICAgICAgICBzaG91bGRLZWVwID0gVHJ1ZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IoCiAgICAgICAgICAgICAgICBmIkZlYXR1cmVWYXJpYXRpb25zIGNvbmRpdGlvbiBmb3JtYXQge2NvbmRpdGlvbi5Gb3JtYXR9IGlzIG5vdCBzdXBwb3J0ZWQiCiAgICAgICAgICAgICkKCiAgICAjIFNhdGlzZmllZCBwaW5uZWQgY29uZGl0aW9ucyBjYW4gbGVhdmUgYSB1bml2ZXJzYWwgZmlyc3QtbWF0Y2ggcmVjb3JkLgogICAgdW5pdmVyc2FsID0gbmV3Q29uZGl0aW9ucyBpcyBub3QgTm9uZSBhbmQgbm90IG5ld0NvbmRpdGlvbnMKICAgIGlmIG5ld0NvbmRpdGlvbnMgaXMgbm90IE5vbmUgYW5kIChzaG91bGRLZWVwIG9yIHVuaXZlcnNhbCk6CiAgICAgICAgcmVjb3JkLkNvbmRpdGlvblNldC5Db25kaXRpb25UYWJsZSA9IG5ld0NvbmRpdGlvbnMKICAgICAgICBpZiBub3QgbmV3Q29uZGl0aW9uczoKICAgICAgICAgICAgcmVjb3JkLkNvbmRpdGlvblNldCA9IE5vbmUKICAgICAgICBzaG91bGRLZWVwID0gc2hvdWxkS2VlcCBvciBib29sKGF4aXNJbmRleE1hcCkKICAgIGVsc2U6CiAgICAgICAgc2hvdWxkS2VlcCA9IEZhbHNlCgogICAgcmV0dXJuIGFwcGxpZXMsIHNob3VsZEtlZXAsIHVuaXZlcnNhbAoKCmRlZiBfdHJ1ZUxvb2t1cENvbmRpdGlvbigpOgogICAgY29uZGl0aW9uID0gb3QuQ29uZGl0aW9uVGFibGUoKQogICAgY29uZGl0aW9uLkZvcm1hdCA9IDIKICAgIGNvbmRpdGlvbi5EZWZhdWx0VmFsdWUgPSAxCiAgICBjb25kaXRpb24uVmFySWR4ID0gb3QuTk9fVkFSSUFUSU9OX0lOREVYCiAgICByZXR1cm4gY29uZGl0aW9uCgoKZGVmIF9pbnN0YW50aWF0ZUxvb2t1cENvbmRpdGlvbigKICAgIGNvbmRpdGlvbiwgYXhpc0xpbWl0cywgZnZhckF4ZXMsIGF4aXNJbmRleE1hcCwgY29uZGl0aW9uUmVzdWx0cywgZGVwdGg9NjQKKToKICAgICMgU2hhcmVkIG5vZGVzIG11c3QgYmUgZm9sZGVkIGFuZCByZW1hcHBlZCBvbmx5IG9uY2UsIGV2ZW4gYWNyb3NzIHRhYmxlcy4KICAgIGtleSA9IGlkKGNvbmRpdGlvbikKICAgIGlmIGtleSBub3QgaW4gY29uZGl0aW9uUmVzdWx0czoKICAgICAgICBjb25kaXRpb25SZXN1bHRzW2tleV0gPSBfaW5zdGFudGlhdGVMb29rdXBDb25kaXRpb25JbXBsKAogICAgICAgICAgICBjb25kaXRpb24sIGF4aXNMaW1pdHMsIGZ2YXJBeGVzLCBheGlzSW5kZXhNYXAsIGNvbmRpdGlvblJlc3VsdHMsIGRlcHRoCiAgICAgICAgKQogICAgcmV0dXJuIGNvbmRpdGlvblJlc3VsdHNba2V5XQoKCmRlZiBfaW5zdGFudGlhdGVMb29rdXBDb25kaXRpb25JbXBsKAogICAgY29uZGl0aW9uLCBheGlzTGltaXRzLCBmdmFyQXhlcywgYXhpc0luZGV4TWFwLCBjb25kaXRpb25SZXN1bHRzLCBkZXB0aAopOgogICAgaWYgY29uZGl0aW9uIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIF9MT09LVVBfQ09ORElUSU9OX1RSVUUKCiAgICBpZiBub3QgZGVwdGg6CiAgICAgICAgbG9nLndhcm5pbmcoIkxvb2t1cFZhcmlhdGlvblJlY29yZCBjb25kaXRpb24gbmVzdGluZyBpcyB0b28gZGVlcDsgaWdub3JlZCIpCiAgICAgICAgcmV0dXJuIF9MT09LVVBfQ09ORElUSU9OX0tFRVAKCiAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDE6CiAgICAgICAgYXhpc0lkeCA9IGNvbmRpdGlvbi5BeGlzSW5kZXgKICAgICAgICBpZiBheGlzSWR4ID49IGxlbihmdmFyQXhlcyk6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgIkxvb2t1cFZhcmlhdGlvblJlY29yZCBjb25kaXRpb24gaGFzIGludmFsaWQgYXhpcyBpbmRleCAlZDsgaWdub3JlZCIsCiAgICAgICAgICAgICAgICBheGlzSWR4LAogICAgICAgICAgICApCiAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9LRUVQCgogICAgICAgIGF4aXNUYWcgPSBmdmFyQXhlc1theGlzSWR4XS5heGlzVGFnCiAgICAgICAgZnJvbSBmb250VG9vbHMudmFyTGliLmluc3RhbmNlciBpbXBvcnQgTm9ybWFsaXplZEF4aXNUcmlwbGVBbmREaXN0YW5jZXMKCiAgICAgICAgdHJpcGxlID0gYXhpc0xpbWl0cy5nZXQoYXhpc1RhZywgTm9ybWFsaXplZEF4aXNUcmlwbGVBbmREaXN0YW5jZXMoLTEsIDAsICsxKSkKICAgICAgICBtaW5pbXVtID0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWluVmFsdWUKICAgICAgICBtYXhpbXVtID0gY29uZGl0aW9uLkZpbHRlclJhbmdlTWF4VmFsdWUKICAgICAgICBpZiBtaW5pbXVtID4gbWF4aW11bSBvciB0cmlwbGUubWluaW11bSA+IG1heGltdW0gb3IgdHJpcGxlLm1heGltdW0gPCBtaW5pbXVtOgogICAgICAgICAgICByZXR1cm4gX0xPT0tVUF9DT05ESVRJT05fRkFMU0UKICAgICAgICBpZiB0cmlwbGUubWluaW11bSA9PSB0cmlwbGUubWF4aW11bToKICAgICAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgICAgIF9MT09LVVBfQ09ORElUSU9OX1RSVUUKICAgICAgICAgICAgICAgIGlmIG1pbmltdW0gPD0gdHJpcGxlLmRlZmF1bHQgPD0gbWF4aW11bQogICAgICAgICAgICAgICAgZWxzZSBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRQogICAgICAgICAgICApCgogICAgICAgIG5ld1JhbmdlID0gX2xpbWl0RmVhdHVyZVZhcmlhdGlvbkNvbmRpdGlvblJhbmdlKGNvbmRpdGlvbiwgdHJpcGxlKQogICAgICAgIGlmIG5ld1JhbmdlIGlzIE5vbmUgb3IgYXhpc1RhZyBub3QgaW4gYXhpc0luZGV4TWFwOgogICAgICAgICAgICByZXR1cm4gX0xPT0tVUF9DT05ESVRJT05fRkFMU0UKCiAgICAgICAgY29uZGl0aW9uLkF4aXNJbmRleCA9IGF4aXNJbmRleE1hcFtheGlzVGFnXQogICAgICAgIGNvbmRpdGlvbi5GaWx0ZXJSYW5nZU1pblZhbHVlLCBjb25kaXRpb24uRmlsdGVyUmFuZ2VNYXhWYWx1ZSA9IG5ld1JhbmdlCiAgICAgICAgaWYgbmV3UmFuZ2VbMF0gPD0gLTEgYW5kIG5ld1JhbmdlWzFdID49IDE6CiAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9UUlVFCiAgICAgICAgcmV0dXJuIF9MT09LVVBfQ09ORElUSU9OX0tFRVAKCiAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDI6CiAgICAgICAgaWYgY29uZGl0aW9uLlZhcklkeCAhPSBvdC5OT19WQVJJQVRJT05fSU5ERVg6CiAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9LRUVQCiAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgX0xPT0tVUF9DT05ESVRJT05fVFJVRQogICAgICAgICAgICBpZiBjb25kaXRpb24uRGVmYXVsdFZhbHVlID4gMAogICAgICAgICAgICBlbHNlIF9MT09LVVBfQ09ORElUSU9OX0ZBTFNFCiAgICAgICAgKQoKICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgaW4gKDMsIDQpOgogICAgICAgIG5ld0NvbmRpdGlvbnMgPSBbXQogICAgICAgIGZvciBjaGlsZCBpbiBjb25kaXRpb24uQ29uZGl0aW9uVGFibGU6CiAgICAgICAgICAgIHJlc3VsdCA9IF9pbnN0YW50aWF0ZUxvb2t1cENvbmRpdGlvbigKICAgICAgICAgICAgICAgIGNoaWxkLCBheGlzTGltaXRzLCBmdmFyQXhlcywgYXhpc0luZGV4TWFwLCBjb25kaXRpb25SZXN1bHRzLCBkZXB0aCAtIDEKICAgICAgICAgICAgKQogICAgICAgICAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDMgYW5kIHJlc3VsdCA9PSBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRToKICAgICAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRQogICAgICAgICAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDQgYW5kIHJlc3VsdCA9PSBfTE9PS1VQX0NPTkRJVElPTl9UUlVFOgogICAgICAgICAgICAgICAgcmV0dXJuIF9MT09LVVBfQ09ORElUSU9OX1RSVUUKICAgICAgICAgICAgaWYgcmVzdWx0ID09IF9MT09LVVBfQ09ORElUSU9OX0tFRVA6CiAgICAgICAgICAgICAgICBuZXdDb25kaXRpb25zLmFwcGVuZChjaGlsZCkKCiAgICAgICAgY29uZGl0aW9uLkNvbmRpdGlvblRhYmxlID0gbmV3Q29uZGl0aW9ucwogICAgICAgIGNvbmRpdGlvbi5Db25kaXRpb25Db3VudCA9IGxlbihuZXdDb25kaXRpb25zKQogICAgICAgIGlmIG5ld0NvbmRpdGlvbnM6CiAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9LRUVQCiAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgX0xPT0tVUF9DT05ESVRJT05fVFJVRSBpZiBjb25kaXRpb24uRm9ybWF0ID09IDMgZWxzZSBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRQogICAgICAgICkKCiAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDU6CiAgICAgICAgcmVzdWx0ID0gX2luc3RhbnRpYXRlTG9va3VwQ29uZGl0aW9uKAogICAgICAgICAgICBjb25kaXRpb24uQ29uZGl0aW9uVGFibGUsCiAgICAgICAgICAgIGF4aXNMaW1pdHMsCiAgICAgICAgICAgIGZ2YXJBeGVzLAogICAgICAgICAgICBheGlzSW5kZXhNYXAsCiAgICAgICAgICAgIGNvbmRpdGlvblJlc3VsdHMsCiAgICAgICAgICAgIGRlcHRoIC0gMSwKICAgICAgICApCiAgICAgICAgaWYgcmVzdWx0ID09IF9MT09LVVBfQ09ORElUSU9OX1RSVUU6CiAgICAgICAgICAgIHJldHVybiBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRQogICAgICAgIGlmIHJlc3VsdCA9PSBfTE9PS1VQX0NPTkRJVElPTl9GQUxTRToKICAgICAgICAgICAgcmV0dXJuIF9MT09LVVBfQ09ORElUSU9OX1RSVUUKICAgICAgICByZXR1cm4gX0xPT0tVUF9DT05ESVRJT05fS0VFUAoKICAgIGxvZy53YXJuaW5nKAogICAgICAgICJMb29rdXBWYXJpYXRpb25SZWNvcmQgY29uZGl0aW9uIGhhcyB1bnN1cHBvcnRlZCBmb3JtYXQgJWQ7IGlnbm9yZWQiLAogICAgICAgIGNvbmRpdGlvbi5Gb3JtYXQsCiAgICApCiAgICByZXR1cm4gX0xPT0tVUF9DT05ESVRJT05fS0VFUAoKCmRlZiBfaW5zdGFudGlhdGVMb29rdXBWYXJpYXRpb25zKAogICAgdGFibGUsIGZ2YXJBeGVzLCBheGlzTGltaXRzLCBheGlzSW5kZXhNYXAsIGNvbmRpdGlvblJlc3VsdHMKKToKICAgIHZhcmlhdGlvbnMgPSB0YWJsZS5GZWF0dXJlVmFyaWF0aW9ucwogICAgcmVjb3JkcyA9IGdldGF0dHIodmFyaWF0aW9ucywgIkxvb2t1cFZhcmlhdGlvblJlY29yZCIsIFtdKQogICAgaWYgbm90IHJlY29yZHM6CiAgICAgICAgcmV0dXJuCgogICAgZnVsbHlJbnN0YW5jZWQgPSBub3QgYXhpc0luZGV4TWFwCiAgICBuZXdSZWNvcmRzID0gW10KICAgIGZvciByZWNvcmQgaW4gcmVjb3JkczoKICAgICAgICBmZWF0dXJlTG9va3VwcyA9IHJlY29yZC5GZWF0dXJlTG9va3Vwc1RhYmxlCiAgICAgICAgc2VsZWN0ZWRMb29rdXBzID0gW10KICAgICAgICBuZXdDb25kaXRpb25SZWNvcmRzID0gW10KICAgICAgICBjYW5CYWtlID0gZnVsbHlJbnN0YW5jZWQKCiAgICAgICAgZm9yIGNvbmRpdGlvblJlY29yZCBpbiBmZWF0dXJlTG9va3Vwcy5Mb29rdXBDb25kaXRpb25SZWNvcmQ6CiAgICAgICAgICAgIHJlc3VsdCA9IF9pbnN0YW50aWF0ZUxvb2t1cENvbmRpdGlvbigKICAgICAgICAgICAgICAgIGNvbmRpdGlvblJlY29yZC5Db25kaXRpb25UYWJsZSwKICAgICAgICAgICAgICAgIGF4aXNMaW1pdHMsCiAgICAgICAgICAgICAgICBmdmFyQXhlcywKICAgICAgICAgICAgICAgIGF4aXNJbmRleE1hcCwKICAgICAgICAgICAgICAgIGNvbmRpdGlvblJlc3VsdHMsCiAgICAgICAgICAgICkKICAgICAgICAgICAgaWYgcmVzdWx0ID09IF9MT09LVVBfQ09ORElUSU9OX0ZBTFNFOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgaWYgcmVzdWx0ID09IF9MT09LVVBfQ09ORElUSU9OX1RSVUU6CiAgICAgICAgICAgICAgICBzZWxlY3RlZExvb2t1cHMuZXh0ZW5kKGNvbmRpdGlvblJlY29yZC5Mb29rdXBJbmRleExpc3QuTG9va3VwSW5kZXgpCiAgICAgICAgICAgICAgICBpZiBub3QgZnVsbHlJbnN0YW5jZWQ6CiAgICAgICAgICAgICAgICAgICAgY29uZGl0aW9uUmVjb3JkLkNvbmRpdGlvblRhYmxlID0gX3RydWVMb29rdXBDb25kaXRpb24oKQogICAgICAgICAgICAgICAgICAgIG5ld0NvbmRpdGlvblJlY29yZHMuYXBwZW5kKGNvbmRpdGlvblJlY29yZCkKICAgICAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgICAgICBjYW5CYWtlID0gRmFsc2UKICAgICAgICAgICAgbmV3Q29uZGl0aW9uUmVjb3Jkcy5hcHBlbmQoY29uZGl0aW9uUmVjb3JkKQoKICAgICAgICBpZiBjYW5CYWtlIGFuZCB0YWJsZS5GZWF0dXJlTGlzdCBpcyBub3QgTm9uZToKICAgICAgICAgICAgZmVhdHVyZVJlY29yZCA9IHRhYmxlLkZlYXR1cmVMaXN0LkZlYXR1cmVSZWNvcmRbcmVjb3JkLkZlYXR1cmVJbmRleF0KICAgICAgICAgICAgZmVhdHVyZSA9IGRlZXBjb3B5KGZlYXR1cmVSZWNvcmQuRmVhdHVyZSkKICAgICAgICAgICAgbG9va3VwSW5kaWNlcyA9ICgKICAgICAgICAgICAgICAgIGxpc3QoZmVhdHVyZS5Mb29rdXBMaXN0SW5kZXgpIGlmIGZlYXR1cmVMb29rdXBzLkZsYWdzICYgMSBlbHNlIFtdCiAgICAgICAgICAgICkKICAgICAgICAgICAgbG9va3VwSW5kaWNlcy5leHRlbmQoc2VsZWN0ZWRMb29rdXBzKQogICAgICAgICAgICBmZWF0dXJlLkxvb2t1cExpc3RJbmRleCA9IHNvcnRlZChzZXQobG9va3VwSW5kaWNlcykpCiAgICAgICAgICAgIGZlYXR1cmUuTG9va3VwQ291bnQgPSBsZW4oZmVhdHVyZS5Mb29rdXBMaXN0SW5kZXgpCiAgICAgICAgICAgIGZlYXR1cmVSZWNvcmQuRmVhdHVyZSA9IGZlYXR1cmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBmZWF0dXJlTG9va3Vwcy5Mb29rdXBDb25kaXRpb25SZWNvcmQgPSBuZXdDb25kaXRpb25SZWNvcmRzCiAgICAgICAgICAgIGZlYXR1cmVMb29rdXBzLkxvb2t1cENvbmRpdGlvbkNvdW50ID0gbGVuKG5ld0NvbmRpdGlvblJlY29yZHMpCiAgICAgICAgICAgIG5ld1JlY29yZHMuYXBwZW5kKHJlY29yZCkKCiAgICB2YXJpYXRpb25zLkxvb2t1cFZhcmlhdGlvblJlY29yZCA9IG5ld1JlY29yZHMKICAgIHZhcmlhdGlvbnMuTG9va3VwVmFyaWF0aW9uQ291bnQgPSBsZW4obmV3UmVjb3JkcykKCgpkZWYgX2l0ZXJMb29rdXBWYXJpYXRpb25Db25kaXRpb25zKHZhcmZvbnQsIGRvbmU9Tm9uZSk6CiAgICBjb25kaXRpb25zID0gW10KICAgIGZvciB0YWJsZVRhZyBpbiAoIkdTVUIiLCAiR1BPUyIpOgogICAgICAgIGlmIHRhYmxlVGFnIG5vdCBpbiB2YXJmb250OgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHZhcmlhdGlvbnMgPSBnZXRhdHRyKHZhcmZvbnRbdGFibGVUYWddLnRhYmxlLCAiRmVhdHVyZVZhcmlhdGlvbnMiLCBOb25lKQogICAgICAgIGZvciByZWNvcmQgaW4gZ2V0YXR0cih2YXJpYXRpb25zLCAiRmVhdHVyZVZhcmlhdGlvblJlY29yZCIsIFtdKToKICAgICAgICAgICAgaWYgcmVjb3JkLkNvbmRpdGlvblNldCBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIGNvbmRpdGlvbnMuZXh0ZW5kKHJlY29yZC5Db25kaXRpb25TZXQuQ29uZGl0aW9uVGFibGUpCiAgICAgICAgZm9yIHJlY29yZCBpbiBnZXRhdHRyKHZhcmlhdGlvbnMsICJMb29rdXBWYXJpYXRpb25SZWNvcmQiLCBbXSk6CiAgICAgICAgICAgIGNvbmRpdGlvbnMuZXh0ZW5kKAogICAgICAgICAgICAgICAgY29uZGl0aW9uUmVjb3JkLkNvbmRpdGlvblRhYmxlCiAgICAgICAgICAgICAgICBmb3IgY29uZGl0aW9uUmVjb3JkIGluIHJlY29yZC5GZWF0dXJlTG9va3Vwc1RhYmxlLkxvb2t1cENvbmRpdGlvblJlY29yZAogICAgICAgICAgICApCgogICAgc2VlbiA9IHNldCgpIGlmIGRvbmUgaXMgTm9uZSBlbHNlIGRvbmUKICAgIHdoaWxlIGNvbmRpdGlvbnM6CiAgICAgICAgY29uZGl0aW9uID0gY29uZGl0aW9ucy5wb3AoKQogICAgICAgIGlmIGNvbmRpdGlvbiBpcyBOb25lOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIGlmIGlkKGNvbmRpdGlvbikgaW4gc2VlbjoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBzZWVuLmFkZChpZChjb25kaXRpb24pKQogICAgICAgIHlpZWxkIGNvbmRpdGlvbgoKICAgICAgICBpZiBjb25kaXRpb24uRm9ybWF0IGluICgzLCA0KToKICAgICAgICAgICAgY29uZGl0aW9ucy5leHRlbmQoY29uZGl0aW9uLkNvbmRpdGlvblRhYmxlKQogICAgICAgIGVsaWYgY29uZGl0aW9uLkZvcm1hdCA9PSA1OgogICAgICAgICAgICBjb25kaXRpb25zLmFwcGVuZChjb25kaXRpb24uQ29uZGl0aW9uVGFibGUpCgoKZGVmIGluc3RhbnRpYXRlTG9va3VwVmFyaWF0aW9uQ29uZGl0aW9uVmFsdWVzKAogICAgdmFyZm9udCwgZGVmYXVsdERlbHRhcz1Ob25lLCB2YXJJbmRleE1hcHBpbmc9Tm9uZSwgKiwgZG9uZT1Ob25lCik6CiAgICBmb3IgY29uZGl0aW9uIGluIF9pdGVyTG9va3VwVmFyaWF0aW9uQ29uZGl0aW9ucyh2YXJmb250LCBkb25lKToKICAgICAgICBpZiBjb25kaXRpb24uRm9ybWF0ID09IDI6CiAgICAgICAgICAgIHZhcklkeCA9IGNvbmRpdGlvbi5WYXJJZHgKICAgICAgICAgICAgbmV3VmFySWR4ID0gKAogICAgICAgICAgICAgICAgdmFySWR4CiAgICAgICAgICAgICAgICBpZiB2YXJJbmRleE1hcHBpbmcgaXMgTm9uZQogICAgICAgICAgICAgICAgZWxzZSB2YXJJbmRleE1hcHBpbmcuZ2V0KHZhcklkeCwgb3QuTk9fVkFSSUFUSU9OX0lOREVYKQogICAgICAgICAgICApCiAgICAgICAgICAgIGlmIGRlZmF1bHREZWx0YXMgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IGNvbmRpdGlvbi5EZWZhdWx0VmFsdWUgKyBkZWZhdWx0RGVsdGFzLmdldCh2YXJJZHgsIDApCiAgICAgICAgICAgICAgICAjIE9uY2UgY29uc3RhbnQsIG9ubHkgdGhlIHVucm91bmRlZCBzaWduIG1hdHRlcnMuIFJvdW5kaW5nIGEKICAgICAgICAgICAgICAgICMgc21hbGwgcG9zaXRpdmUgdmFsdWUgdG8gemVybyB3b3VsZCBjaGFuZ2UgdGhlIGNvbmRpdGlvbi4KICAgICAgICAgICAgICAgIGNvbmRpdGlvbi5EZWZhdWx0VmFsdWUgPSAoCiAgICAgICAgICAgICAgICAgICAgaW50KHZhbHVlID4gMCkKICAgICAgICAgICAgICAgICAgICBpZiBuZXdWYXJJZHggPT0gb3QuTk9fVkFSSUFUSU9OX0lOREVYCiAgICAgICAgICAgICAgICAgICAgZWxzZSBvdFJvdW5kKHZhbHVlKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBpZiB2YXJJbmRleE1hcHBpbmcgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICBjb25kaXRpb24uVmFySWR4ID0gbmV3VmFySWR4CgoKZGVmIF9pbnN0YW50aWF0ZUZlYXR1cmVWYXJpYXRpb25zKAogICAgdGFibGUsIGZ2YXJBeGVzLCBheGlzTGltaXRzLCBjb25kaXRpb25SZXN1bHRzLCBjb25kaXRpb25EZWZhdWx0cwopOgogICAgcGlubmVkQXhlcyA9IHNldChheGlzTGltaXRzLnBpbm5lZExvY2F0aW9uKCkpCiAgICBheGlzT3JkZXIgPSBbYXhpcy5heGlzVGFnIGZvciBheGlzIGluIGZ2YXJBeGVzIGlmIGF4aXMuYXhpc1RhZyBub3QgaW4gcGlubmVkQXhlc10KICAgIGF4aXNJbmRleE1hcCA9IHtheGlzVGFnOiBheGlzT3JkZXIuaW5kZXgoYXhpc1RhZykgZm9yIGF4aXNUYWcgaW4gYXhpc09yZGVyfQoKICAgIGZlYXR1cmVWYXJpYXRpb25BcHBsaWVkID0gRmFsc2UKICAgIHVuaXF1ZVJlY29yZHMgPSBzZXQoKQogICAgbmV3UmVjb3JkcyA9IFtdCiAgICBkZWZhdWx0c1N1YnN0cyA9IE5vbmUKCiAgICBmb3IgaSwgcmVjb3JkIGluIGVudW1lcmF0ZSh0YWJsZS5GZWF0dXJlVmFyaWF0aW9ucy5GZWF0dXJlVmFyaWF0aW9uUmVjb3JkKToKICAgICAgICBhcHBsaWVzLCBzaG91bGRLZWVwLCB1bml2ZXJzYWwgPSBfaW5zdGFudGlhdGVGZWF0dXJlVmFyaWF0aW9uUmVjb3JkKAogICAgICAgICAgICByZWNvcmQsCiAgICAgICAgICAgIGksCiAgICAgICAgICAgIGF4aXNMaW1pdHMsCiAgICAgICAgICAgIGZ2YXJBeGVzLAogICAgICAgICAgICBheGlzSW5kZXhNYXAsCiAgICAgICAgICAgIGNvbmRpdGlvblJlc3VsdHMsCiAgICAgICAgICAgIGNvbmRpdGlvbkRlZmF1bHRzLAogICAgICAgICkKCiAgICAgICAgaWYgc2hvdWxkS2VlcCBhbmQgX2ZlYXR1cmVWYXJpYXRpb25SZWNvcmRJc1VuaXF1ZShyZWNvcmQsIHVuaXF1ZVJlY29yZHMpOgogICAgICAgICAgICBuZXdSZWNvcmRzLmFwcGVuZChyZWNvcmQpCgogICAgICAgIGlmIGFwcGxpZXMgYW5kIG5vdCBmZWF0dXJlVmFyaWF0aW9uQXBwbGllZDoKICAgICAgICAgICAgaWYgcmVjb3JkLkZlYXR1cmVUYWJsZVN1YnN0aXR1dGlvbiBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIGFzc2VydCByZWNvcmQuRmVhdHVyZVRhYmxlU3Vic3RpdHV0aW9uLlZlcnNpb24gPT0gMHgwMDAxMDAwMAogICAgICAgICAgICAgICAgZGVmYXVsdHNTdWJzdHMgPSBkZWVwY29weShyZWNvcmQuRmVhdHVyZVRhYmxlU3Vic3RpdHV0aW9uKQogICAgICAgICAgICAgICAgZm9yIGRlZmF1bHQsIHJlYyBpbiB6aXAoCiAgICAgICAgICAgICAgICAgICAgZGVmYXVsdHNTdWJzdHMuU3Vic3RpdHV0aW9uUmVjb3JkLAogICAgICAgICAgICAgICAgICAgIHJlY29yZC5GZWF0dXJlVGFibGVTdWJzdGl0dXRpb24uU3Vic3RpdHV0aW9uUmVjb3JkLAogICAgICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgICAgICBkZWZhdWx0LkZlYXR1cmUgPSBkZWVwY29weSgKICAgICAgICAgICAgICAgICAgICAgICAgdGFibGUuRmVhdHVyZUxpc3QuRmVhdHVyZVJlY29yZFtyZWMuRmVhdHVyZUluZGV4XS5GZWF0dXJlCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgICAgIHRhYmxlLkZlYXR1cmVMaXN0LkZlYXR1cmVSZWNvcmRbcmVjLkZlYXR1cmVJbmRleF0uRmVhdHVyZSA9ICgKICAgICAgICAgICAgICAgICAgICAgICAgZGVlcGNvcHkocmVjLkZlYXR1cmUpCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAjIFNldCB2YXJpYXRpb25zIG9ubHkgb25jZQogICAgICAgICAgICAjIEEgbnVsbCBzdWJzdGl0dXRpb24gc3RpbGwgbWF0Y2hlcyBhbmQgYmxvY2tzIGxhdGVyIHJlY29yZHMuCiAgICAgICAgICAgIGZlYXR1cmVWYXJpYXRpb25BcHBsaWVkID0gVHJ1ZQoKICAgICAgICAjIEZ1cnRoZXIgcmVjb3JkcyBkb24ndCBoYXZlIGEgY2hhbmNlIHRvIGFwcGx5IGFmdGVyIGEgdW5pdmVyc2FsIHJlY29yZAogICAgICAgIGlmIHVuaXZlcnNhbDoKICAgICAgICAgICAgYnJlYWsKCiAgICAjIEluc2VydCBhIGNhdGNoLWFsbCByZWNvcmQgdG8gcmVpbnN0YXRlIHRoZSBvbGQgZmVhdHVyZXMgaWYgbmVjZXNzYXJ5CiAgICBpZiBmZWF0dXJlVmFyaWF0aW9uQXBwbGllZCBhbmQgbmV3UmVjb3JkcyBhbmQgbm90IHVuaXZlcnNhbDoKICAgICAgICBkZWZhdWx0UmVjb3JkID0gb3QuRmVhdHVyZVZhcmlhdGlvblJlY29yZCgpCiAgICAgICAgZGVmYXVsdFJlY29yZC5Db25kaXRpb25TZXQgPSBvdC5Db25kaXRpb25TZXQoKQogICAgICAgIGRlZmF1bHRSZWNvcmQuQ29uZGl0aW9uU2V0LkNvbmRpdGlvblRhYmxlID0gW10KICAgICAgICBkZWZhdWx0UmVjb3JkLkNvbmRpdGlvblNldC5Db25kaXRpb25Db3VudCA9IDAKICAgICAgICBkZWZhdWx0UmVjb3JkLkZlYXR1cmVUYWJsZVN1YnN0aXR1dGlvbiA9IGRlZmF1bHRzU3Vic3RzCgogICAgICAgIG5ld1JlY29yZHMuYXBwZW5kKGRlZmF1bHRSZWNvcmQpCgogICAgdmFyaWF0aW9ucyA9IHRhYmxlLkZlYXR1cmVWYXJpYXRpb25zCiAgICB2YXJpYXRpb25zLkZlYXR1cmVWYXJpYXRpb25SZWNvcmQgPSBuZXdSZWNvcmRzCiAgICB2YXJpYXRpb25zLkZlYXR1cmVWYXJpYXRpb25Db3VudCA9IGxlbihuZXdSZWNvcmRzKQoKICAgIF9pbnN0YW50aWF0ZUxvb2t1cFZhcmlhdGlvbnMoCiAgICAgICAgdGFibGUsIGZ2YXJBeGVzLCBheGlzTGltaXRzLCBheGlzSW5kZXhNYXAsIGNvbmRpdGlvblJlc3VsdHMKICAgICkKCiAgICBpZiBub3QgKAogICAgICAgIHZhcmlhdGlvbnMuRmVhdHVyZVZhcmlhdGlvbkNvdW50CiAgICAgICAgb3IgZ2V0YXR0cih2YXJpYXRpb25zLCAiTG9va3VwVmFyaWF0aW9uQ291bnQiLCAwKQogICAgKToKICAgICAgICBkZWwgdGFibGUuRmVhdHVyZVZhcmlhdGlvbnMKICAgICAgICAjIGRvd25ncmFkZSB0YWJsZSB2ZXJzaW9uIGlmIHRoZXJlIGFyZSBubyBGZWF0dXJlVmFyaWF0aW9ucyBsZWZ0CiAgICAgICAgdGFibGUuVmVyc2lvbiA9IDB4MDAwMTAwMDAKCgpkZWYgX2NoZWNrRmVhdHVyZVZhcmlhdGlvbkNvbmRpdGlvbnModmFyZm9udCk6CiAgICAjIENoZWNrIGJvdGggdGFibGVzIGJlZm9yZSBhbnkgaW5zdGFuY2luZyBjaGFuZ2VzIHRoZWlyIHN0b3JlcyBvciBmZWF0dXJlcy4KICAgIGZvciB0YWJsZVRhZyBpbiAoIkdQT1MiLCAiR1NVQiIpOgogICAgICAgIGlmIHRhYmxlVGFnIG5vdCBpbiB2YXJmb250OgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHZhcmlhdGlvbnMgPSBnZXRhdHRyKHZhcmZvbnRbdGFibGVUYWddLnRhYmxlLCAiRmVhdHVyZVZhcmlhdGlvbnMiLCBOb25lKQogICAgICAgIGlmIHZhcmlhdGlvbnMgaXMgTm9uZToKICAgICAgICAgICAgY29udGludWUKICAgICAgICBmb3IgcmVjb3JkIGluIHZhcmlhdGlvbnMuRmVhdHVyZVZhcmlhdGlvblJlY29yZDoKICAgICAgICAgICAgaWYgcmVjb3JkLkNvbmRpdGlvblNldCBpcyBOb25lOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgZm9yIGNvbmRpdGlvbiBpbiByZWNvcmQuQ29uZGl0aW9uU2V0LkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICAgICAgaWYgY29uZGl0aW9uIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGNvbmRpdGlvbi5Gb3JtYXQgbm90IGluICgxLCAyLCAzLCA0LCA1KToKICAgICAgICAgICAgICAgICAgICByYWlzZSBOb3RJbXBsZW1lbnRlZEVycm9yKAogICAgICAgICAgICAgICAgICAgICAgICBmInt0YWJsZVRhZ30gRmVhdHVyZVZhcmlhdGlvbnMgY29uZGl0aW9uIGZvcm1hdCAiCiAgICAgICAgICAgICAgICAgICAgICAgIGYie2NvbmRpdGlvbi5Gb3JtYXR9IGlzIG5vdCBzdXBwb3J0ZWQiCiAgICAgICAgICAgICAgICAgICAgKQoKCmRlZiBpbnN0YW50aWF0ZUZlYXR1cmVWYXJpYXRpb25zKHZhcmZvbnQsIGF4aXNMaW1pdHMpOgogICAgX2NoZWNrRmVhdHVyZVZhcmlhdGlvbkNvbmRpdGlvbnModmFyZm9udCkKICAgIHdpdGggX2NvbXBhY3RfbGF5b3V0X3RhYmxlcyh2YXJmb250KToKICAgICAgICBfaW5zdGFudGlhdGVGZWF0dXJlVmFyaWF0aW9uc0luRm9udCh2YXJmb250LCBheGlzTGltaXRzKQoKCmRlZiBfaW5zdGFudGlhdGVGZWF0dXJlVmFyaWF0aW9uc0luRm9udCh2YXJmb250LCBheGlzTGltaXRzKToKICAgIGZyb20gZm9udFRvb2xzLnZhckxpYi52YXJTdG9yZSBpbXBvcnQgVmFyU3RvcmVJbnN0YW5jZXIKCiAgICBzdG9yZSA9ICgKICAgICAgICBnZXRhdHRyKHZhcmZvbnRbIkdERUYiXS50YWJsZSwgIlZhclN0b3JlIiwgTm9uZSkgaWYgIkdERUYiIGluIHZhcmZvbnQgZWxzZSBOb25lCiAgICApCiAgICBkZWZhdWx0SW5zdGFuY2VyID0gVmFyU3RvcmVJbnN0YW5jZXIoc3RvcmUsIHZhcmZvbnRbImZ2YXIiXS5heGVzLCB7fSkKICAgIGNvbmRpdGlvblJlc3VsdHMgPSB7fQogICAgY29uZGl0aW9uRGVmYXVsdHMgPSB7fQogICAgIyBSZWNvcmQgZGVmYXVsdCBhcHBsaWNhYmlsaXR5IGJlZm9yZSBhbnkgc2hhcmVkIGNvbmRpdGlvbiBpcyBtb2RpZmllZC4KICAgIGZvciB0YWJsZVRhZyBpbiAoIkdQT1MiLCAiR1NVQiIpOgogICAgICAgIGlmIHRhYmxlVGFnIG5vdCBpbiB2YXJmb250OgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHZhcmlhdGlvbnMgPSBnZXRhdHRyKHZhcmZvbnRbdGFibGVUYWddLnRhYmxlLCAiRmVhdHVyZVZhcmlhdGlvbnMiLCBOb25lKQogICAgICAgIGZvciByZWNvcmQgaW4gZ2V0YXR0cih2YXJpYXRpb25zLCAiRmVhdHVyZVZhcmlhdGlvblJlY29yZCIsIFtdKToKICAgICAgICAgICAgaWYgcmVjb3JkLkNvbmRpdGlvblNldCBpcyBOb25lOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgZm9yIGNvbmRpdGlvbiBpbiByZWNvcmQuQ29uZGl0aW9uU2V0LkNvbmRpdGlvblRhYmxlOgogICAgICAgICAgICAgICAga2V5ID0gaWQoY29uZGl0aW9uKQogICAgICAgICAgICAgICAgaWYga2V5IG5vdCBpbiBjb25kaXRpb25EZWZhdWx0czoKICAgICAgICAgICAgICAgICAgICBjb25kaXRpb25EZWZhdWx0c1trZXldID0gX2NvbmRpdGlvbkFwcGxpZXNBdERlZmF1bHQoCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbmRpdGlvbiwKICAgICAgICAgICAgICAgICAgICAgICAgYXhpc0xpbWl0cywKICAgICAgICAgICAgICAgICAgICAgICAgdmFyZm9udFsiZnZhciJdLmF4ZXMsCiAgICAgICAgICAgICAgICAgICAgICAgIGluc3RhbmNlcj1kZWZhdWx0SW5zdGFuY2VyLAogICAgICAgICAgICAgICAgICAgICkKICAgIGZvciB0YWJsZVRhZyBpbiAoIkdQT1MiLCAiR1NVQiIpOgogICAgICAgIGlmIHRhYmxlVGFnIG5vdCBpbiB2YXJmb250IG9yIG5vdCBnZXRhdHRyKAogICAgICAgICAgICB2YXJmb250W3RhYmxlVGFnXS50YWJsZSwgIkZlYXR1cmVWYXJpYXRpb25zIiwgTm9uZQogICAgICAgICk6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgbG9nLmluZm8oIkluc3RhbnRpYXRpbmcgRmVhdHVyZVZhcmlhdGlvbnMgb2YgJXMgdGFibGUiLCB0YWJsZVRhZykKICAgICAgICBfaW5zdGFudGlhdGVGZWF0dXJlVmFyaWF0aW9ucygKICAgICAgICAgICAgdmFyZm9udFt0YWJsZVRhZ10udGFibGUsCiAgICAgICAgICAgIHZhcmZvbnRbImZ2YXIiXS5heGVzLAogICAgICAgICAgICBheGlzTGltaXRzLAogICAgICAgICAgICBjb25kaXRpb25SZXN1bHRzLAogICAgICAgICAgICBjb25kaXRpb25EZWZhdWx0cywKICAgICAgICApCiAgICAgICAgIyByZW1vdmUgdW5yZWZlcmVuY2VkIGxvb2t1cHMKICAgICAgICB2YXJmb250W3RhYmxlVGFnXS5wcnVuZV9sb29rdXBzKCkK
+from fontTools.ttLib.tables import otTables as ot
+from fontTools.misc.fixedTools import otRound
+from fontTools.ttLib.beyond64k import _compact_layout_tables
+from copy import deepcopy
+import logging
+
+log = logging.getLogger("fontTools.varLib.instancer")
+
+_LOOKUP_CONDITION_FALSE = 0
+_LOOKUP_CONDITION_TRUE = 1
+_LOOKUP_CONDITION_KEEP = 2
+
+
+def _featureVariationRecordIsUnique(rec, seen):
+    conditionSet = []
+    conditionSets = (
+        rec.ConditionSet.ConditionTable if rec.ConditionSet is not None else []
+    )
+    for cond in conditionSets:
+        if cond is None:
+            continue
+        if cond.Format != 1:
+            # can't tell whether this is duplicate, assume is unique
+            return True
+        conditionSet.append(
+            (cond.AxisIndex, cond.FilterRangeMinValue, cond.FilterRangeMaxValue)
+        )
+    # besides the set of conditions, we also include the FeatureTableSubstitution
+    # version to identify unique FeatureVariationRecords, even though only one
+    # version is currently defined. It's theoretically possible that multiple
+    # records with same conditions but different substitution table version be
+    # present in the same font for backward compatibility.
+    substitutionVersion = (
+        rec.FeatureTableSubstitution.Version
+        if rec.FeatureTableSubstitution is not None
+        else 0x00010000
+    )
+    recordKey = frozenset([substitutionVersion] + conditionSet)
+    if recordKey in seen:
+        return False
+    else:
+        seen.add(recordKey)  # side effect
+        return True
+
+
+def _limitFeatureVariationConditionRange(condition, axisLimit):
+    minValue = condition.FilterRangeMinValue
+    maxValue = condition.FilterRangeMaxValue
+
+    if (
+        minValue > maxValue
+        or minValue > axisLimit.maximum
+        or maxValue < axisLimit.minimum
+    ):
+        # condition invalid or out of range
+        return
+
+    return tuple(
+        axisLimit.renormalizeValue(v, extrapolate=False) for v in (minValue, maxValue)
+    )
+
+
+def _conditionAppliesAtDefault(
+    condition, axisLimits, fvarAxes, depth=64, instancer=None
+):
+    if condition is None:
+        return True
+    if not depth:
+        return False
+    if condition.Format == 1:
+        if condition.AxisIndex >= len(fvarAxes):
+            return False
+        axisTag = fvarAxes[condition.AxisIndex].axisTag
+        default = axisLimits[axisTag].default if axisTag in axisLimits else 0
+        return condition.FilterRangeMinValue <= default <= condition.FilterRangeMaxValue
+    if condition.Format == 2:
+        value = condition.DefaultValue
+        if instancer is not None:
+            value += instancer[condition.VarIdx]
+        return value > 0
+    if condition.Format in (3, 4):
+        values = (
+            _conditionAppliesAtDefault(
+                child, axisLimits, fvarAxes, depth - 1, instancer
+            )
+            for child in condition.ConditionTable
+        )
+        return all(values) if condition.Format == 3 else any(values)
+    if condition.Format == 5:
+        return not _conditionAppliesAtDefault(
+            condition.ConditionTable, axisLimits, fvarAxes, depth - 1, instancer
+        )
+    return False
+
+
+def _instantiateFeatureVariationRecord(
+    record,
+    recIdx,
+    axisLimits,
+    fvarAxes,
+    axisIndexMap,
+    conditionResults,
+    conditionDefaults,
+):
+    applies = True
+    shouldKeep = False
+    newConditions = []
+    if record.ConditionSet is None:
+        record.ConditionSet = ot.ConditionSet()
+        record.ConditionSet.ConditionTable = []
+        record.ConditionSet.ConditionCount = 0
+    for i, condition in enumerate(record.ConditionSet.ConditionTable):
+        if condition is None:
+            continue
+        if condition.Format in (1, 2, 3, 4, 5):
+            applies &= conditionDefaults[id(condition)]
+            result = _instantiateLookupCondition(
+                condition, axisLimits, fvarAxes, axisIndexMap, conditionResults
+            )
+            if result == _LOOKUP_CONDITION_FALSE:
+                newConditions = None
+                applies = False
+                break
+            if result == _LOOKUP_CONDITION_KEEP:
+                newConditions.append(condition)
+                shouldKeep = True
+            elif axisIndexMap:
+                shouldKeep = True
+        else:
+            raise NotImplementedError(
+                f"FeatureVariations condition format {condition.Format} is not supported"
+            )
+
+    # Satisfied pinned conditions can leave a universal first-match record.
+    universal = newConditions is not None and not newConditions
+    if newConditions is not None and (shouldKeep or universal):
+        record.ConditionSet.ConditionTable = newConditions
+        if not newConditions:
+            record.ConditionSet = None
+        shouldKeep = shouldKeep or bool(axisIndexMap)
+    else:
+        shouldKeep = False
+
+    return applies, shouldKeep, universal
+
+
+def _trueLookupCondition():
+    condition = ot.ConditionTable()
+    condition.Format = 2
+    condition.DefaultValue = 1
+    condition.VarIdx = ot.NO_VARIATION_INDEX
+    return condition
+
+
+def _instantiateLookupCondition(
+    condition, axisLimits, fvarAxes, axisIndexMap, conditionResults, depth=64
+):
+    # Shared nodes must be folded and remapped only once, even across tables.
+    key = id(condition)
+    if key not in conditionResults:
+        conditionResults[key] = _instantiateLookupConditionImpl(
+            condition, axisLimits, fvarAxes, axisIndexMap, conditionResults, depth
+        )
+    return conditionResults[key]
+
+
+def _instantiateLookupConditionImpl(
+    condition, axisLimits, fvarAxes, axisIndexMap, conditionResults, depth
+):
+    if condition is None:
+        return _LOOKUP_CONDITION_TRUE
+
+    if not depth:
+        log.warning("LookupVariationRecord condition nesting is too deep; ignored")
+        return _LOOKUP_CONDITION_KEEP
+
+    if condition.Format == 1:
+        axisIdx = condition.AxisIndex
+        if axisIdx >= len(fvarAxes):
+            log.warning(
+                "LookupVariationRecord condition has invalid axis index %d; ignored",
+                axisIdx,
+            )
+            return _LOOKUP_CONDITION_KEEP
+
+        axisTag = fvarAxes[axisIdx].axisTag
+        from fontTools.varLib.instancer import NormalizedAxisTripleAndDistances
+
+        triple = axisLimits.get(axisTag, NormalizedAxisTripleAndDistances(-1, 0, +1))
+        minimum = condition.FilterRangeMinValue
+        maximum = condition.FilterRangeMaxValue
+        if minimum > maximum or triple.minimum > maximum or triple.maximum < minimum:
+            return _LOOKUP_CONDITION_FALSE
+        if triple.minimum == triple.maximum:
+            return (
+                _LOOKUP_CONDITION_TRUE
+                if minimum <= triple.default <= maximum
+                else _LOOKUP_CONDITION_FALSE
+            )
+
+        newRange = _limitFeatureVariationConditionRange(condition, triple)
+        if newRange is None or axisTag not in axisIndexMap:
+            return _LOOKUP_CONDITION_FALSE
+
+        condition.AxisIndex = axisIndexMap[axisTag]
+        condition.FilterRangeMinValue, condition.FilterRangeMaxValue = newRange
+        if newRange[0] <= -1 and newRange[1] >= 1:
+            return _LOOKUP_CONDITION_TRUE
+        return _LOOKUP_CONDITION_KEEP
+
+    if condition.Format == 2:
+        if condition.VarIdx != ot.NO_VARIATION_INDEX:
+            return _LOOKUP_CONDITION_KEEP
+        return (
+            _LOOKUP_CONDITION_TRUE
+            if condition.DefaultValue > 0
+            else _LOOKUP_CONDITION_FALSE
+        )
+
+    if condition.Format in (3, 4):
+        newConditions = []
+        for child in condition.ConditionTable:
+            result = _instantiateLookupCondition(
+                child, axisLimits, fvarAxes, axisIndexMap, conditionResults, depth - 1
+            )
+            if condition.Format == 3 and result == _LOOKUP_CONDITION_FALSE:
+                return _LOOKUP_CONDITION_FALSE
+            if condition.Format == 4 and result == _LOOKUP_CONDITION_TRUE:
+                return _LOOKUP_CONDITION_TRUE
+            if result == _LOOKUP_CONDITION_KEEP:
+                newConditions.append(child)
+
+        condition.ConditionTable = newConditions
+        condition.ConditionCount = len(newConditions)
+        if newConditions:
+            return _LOOKUP_CONDITION_KEEP
+        return (
+            _LOOKUP_CONDITION_TRUE if condition.Format == 3 else _LOOKUP_CONDITION_FALSE
+        )
+
+    if condition.Format == 5:
+        result = _instantiateLookupCondition(
+            condition.ConditionTable,
+            axisLimits,
+            fvarAxes,
+            axisIndexMap,
+            conditionResults,
+            depth - 1,
+        )
+        if result == _LOOKUP_CONDITION_TRUE:
+            return _LOOKUP_CONDITION_FALSE
+        if result == _LOOKUP_CONDITION_FALSE:
+            return _LOOKUP_CONDITION_TRUE
+        return _LOOKUP_CONDITION_KEEP
+
+    log.warning(
+        "LookupVariationRecord condition has unsupported format %d; ignored",
+        condition.Format,
+    )
+    return _LOOKUP_CONDITION_KEEP
+
+
+def _instantiateLookupVariations(
+    table, fvarAxes, axisLimits, axisIndexMap, conditionResults
+):
+    variations = table.FeatureVariations
+    records = getattr(variations, "LookupVariationRecord", [])
+    if not records:
+        return
+
+    fullyInstanced = not axisIndexMap
+    newRecords = []
+    for record in records:
+        featureLookups = record.FeatureLookupsTable
+        selectedLookups = []
+        newConditionRecords = []
+        canBake = fullyInstanced
+
+        for conditionRecord in featureLookups.LookupConditionRecord:
+            result = _instantiateLookupCondition(
+                conditionRecord.ConditionTable,
+                axisLimits,
+                fvarAxes,
+                axisIndexMap,
+                conditionResults,
+            )
+            if result == _LOOKUP_CONDITION_FALSE:
+                continue
+            if result == _LOOKUP_CONDITION_TRUE:
+                selectedLookups.extend(conditionRecord.LookupIndexList.LookupIndex)
+                if not fullyInstanced:
+                    conditionRecord.ConditionTable = _trueLookupCondition()
+                    newConditionRecords.append(conditionRecord)
+                continue
+
+            canBake = False
+            newConditionRecords.append(conditionRecord)
+
+        if canBake and table.FeatureList is not None:
+            featureRecord = table.FeatureList.FeatureRecord[record.FeatureIndex]
+            feature = deepcopy(featureRecord.Feature)
+            lookupIndices = (
+                list(feature.LookupListIndex) if featureLookups.Flags & 1 else []
+            )
+            lookupIndices.extend(selectedLookups)
+            feature.LookupListIndex = sorted(set(lookupIndices))
+            feature.LookupCount = len(feature.LookupListIndex)
+            featureRecord.Feature = feature
+        else:
+            featureLookups.LookupConditionRecord = newConditionRecords
+            featureLookups.LookupConditionCount = len(newConditionRecords)
+            newRecords.append(record)
+
+    variations.LookupVariationRecord = newRecords
+    variations.LookupVariationCount = len(newRecords)
+
+
+def _iterLookupVariationConditions(varfont, done=None):
+    conditions = []
+    for tableTag in ("GSUB", "GPOS"):
+        if tableTag not in varfont:
+            continue
+        variations = getattr(varfont[tableTag].table, "FeatureVariations", None)
+        for record in getattr(variations, "FeatureVariationRecord", []):
+            if record.ConditionSet is not None:
+                conditions.extend(record.ConditionSet.ConditionTable)
+        for record in getattr(variations, "LookupVariationRecord", []):
+            conditions.extend(
+                conditionRecord.ConditionTable
+                for conditionRecord in record.FeatureLookupsTable.LookupConditionRecord
+            )
+
+    seen = set() if done is None else done
+    while conditions:
+        condition = conditions.pop()
+        if condition is None:
+            continue
+        if id(condition) in seen:
+            continue
+        seen.add(id(condition))
+        yield condition
+
+        if condition.Format in (3, 4):
+            conditions.extend(condition.ConditionTable)
+        elif condition.Format == 5:
+            conditions.append(condition.ConditionTable)
+
+
+def instantiateLookupVariationConditionValues(
+    varfont, defaultDeltas=None, varIndexMapping=None, *, done=None
+):
+    for condition in _iterLookupVariationConditions(varfont, done):
+        if condition.Format == 2:
+            varIdx = condition.VarIdx
+            newVarIdx = (
+                varIdx
+                if varIndexMapping is None
+                else varIndexMapping.get(varIdx, ot.NO_VARIATION_INDEX)
+            )
+            if defaultDeltas is not None:
+                value = condition.DefaultValue + defaultDeltas.get(varIdx, 0)
+                # Once constant, only the unrounded sign matters. Rounding a
+                # small positive value to zero would change the condition.
+                condition.DefaultValue = (
+                    int(value > 0)
+                    if newVarIdx == ot.NO_VARIATION_INDEX
+                    else otRound(value)
+                )
+            if varIndexMapping is not None:
+                condition.VarIdx = newVarIdx
+
+
+def _instantiateFeatureVariations(
+    table, fvarAxes, axisLimits, conditionResults, conditionDefaults
+):
+    pinnedAxes = set(axisLimits.pinnedLocation())
+    axisOrder = [axis.axisTag for axis in fvarAxes if axis.axisTag not in pinnedAxes]
+    axisIndexMap = {axisTag: axisOrder.index(axisTag) for axisTag in axisOrder}
+
+    featureVariationApplied = False
+    uniqueRecords = set()
+    newRecords = []
+    defaultsSubsts = None
+
+    for i, record in enumerate(table.FeatureVariations.FeatureVariationRecord):
+        applies, shouldKeep, universal = _instantiateFeatureVariationRecord(
+            record,
+            i,
+            axisLimits,
+            fvarAxes,
+            axisIndexMap,
+            conditionResults,
+            conditionDefaults,
+        )
+
+        if shouldKeep and _featureVariationRecordIsUnique(record, uniqueRecords):
+            newRecords.append(record)
+
+        if applies and not featureVariationApplied:
+            if record.FeatureTableSubstitution is not None:
+                assert record.FeatureTableSubstitution.Version == 0x00010000
+                defaultsSubsts = deepcopy(record.FeatureTableSubstitution)
+                for default, rec in zip(
+                    defaultsSubsts.SubstitutionRecord,
+                    record.FeatureTableSubstitution.SubstitutionRecord,
+                ):
+                    default.Feature = deepcopy(
+                        table.FeatureList.FeatureRecord[rec.FeatureIndex].Feature
+                    )
+                    table.FeatureList.FeatureRecord[rec.FeatureIndex].Feature = (
+                        deepcopy(rec.Feature)
+                    )
+            # Set variations only once
+            # A null substitution still matches and blocks later records.
+            featureVariationApplied = True
+
+        # Further records don't have a chance to apply after a universal record
+        if universal:
+            break
+
+    # Insert a catch-all record to reinstate the old features if necessary
+    if featureVariationApplied and newRecords and not universal:
+        defaultRecord = ot.FeatureVariationRecord()
+        defaultRecord.ConditionSet = ot.ConditionSet()
+        defaultRecord.ConditionSet.ConditionTable = []
+        defaultRecord.ConditionSet.ConditionCount = 0
+        defaultRecord.FeatureTableSubstitution = defaultsSubsts
+
+        newRecords.append(defaultRecord)
+
+    variations = table.FeatureVariations
+    variations.FeatureVariationRecord = newRecords
+    variations.FeatureVariationCount = len(newRecords)
+
+    _instantiateLookupVariations(
+        table, fvarAxes, axisLimits, axisIndexMap, conditionResults
+    )
+
+    if not (
+        variations.FeatureVariationCount
+        or getattr(variations, "LookupVariationCount", 0)
+    ):
+        del table.FeatureVariations
+        # downgrade table version if there are no FeatureVariations left
+        table.Version = 0x00010000
+
+
+def _checkFeatureVariationConditions(varfont):
+    # Check both tables before any instancing changes their stores or features.
+    for tableTag in ("GPOS", "GSUB"):
+        if tableTag not in varfont:
+            continue
+        variations = getattr(varfont[tableTag].table, "FeatureVariations", None)
+        if variations is None:
+            continue
+        for record in variations.FeatureVariationRecord:
+            if record.ConditionSet is None:
+                continue
+            for condition in record.ConditionSet.ConditionTable:
+                if condition is None:
+                    continue
+                if condition.Format not in (1, 2, 3, 4, 5):
+                    raise NotImplementedError(
+                        f"{tableTag} FeatureVariations condition format "
+                        f"{condition.Format} is not supported"
+                    )
+
+
+def instantiateFeatureVariations(varfont, axisLimits):
+    _checkFeatureVariationConditions(varfont)
+    with _compact_layout_tables(varfont):
+        _instantiateFeatureVariationsInFont(varfont, axisLimits)
+
+
+def _instantiateFeatureVariationsInFont(varfont, axisLimits):
+    from fontTools.varLib.varStore import VarStoreInstancer
+
+    store = (
+        getattr(varfont["GDEF"].table, "VarStore", None) if "GDEF" in varfont else None
+    )
+    defaultInstancer = VarStoreInstancer(store, varfont["fvar"].axes, {})
+    conditionResults = {}
+    conditionDefaults = {}
+    # Record default applicability before any shared condition is modified.
+    for tableTag in ("GPOS", "GSUB"):
+        if tableTag not in varfont:
+            continue
+        variations = getattr(varfont[tableTag].table, "FeatureVariations", None)
+        for record in getattr(variations, "FeatureVariationRecord", []):
+            if record.ConditionSet is None:
+                continue
+            for condition in record.ConditionSet.ConditionTable:
+                key = id(condition)
+                if key not in conditionDefaults:
+                    conditionDefaults[key] = _conditionAppliesAtDefault(
+                        condition,
+                        axisLimits,
+                        varfont["fvar"].axes,
+                        instancer=defaultInstancer,
+                    )
+    for tableTag in ("GPOS", "GSUB"):
+        if tableTag not in varfont or not getattr(
+            varfont[tableTag].table, "FeatureVariations", None
+        ):
+            continue
+        log.info("Instantiating FeatureVariations of %s table", tableTag)
+        _instantiateFeatureVariations(
+            varfont[tableTag].table,
+            varfont["fvar"].axes,
+            axisLimits,
+            conditionResults,
+            conditionDefaults,
+        )
+        # remove unreferenced lookups
+        varfont[tableTag].prune_lookups()

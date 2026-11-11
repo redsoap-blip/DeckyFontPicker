@@ -1,1 +1,363 @@
-ZnJvbSBjb2xsZWN0aW9ucyBpbXBvcnQgZGVxdWUKZnJvbSBmdW5jdG9vbHMgaW1wb3J0IHBhcnRpYWwKZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgc2FmZUV2YWwKZnJvbSBmb250VG9vbHMubWlzYy5sYXp5VG9vbHMgaW1wb3J0IExhenlEaWN0CmZyb20gZm9udFRvb2xzLnR0TGliIGltcG9ydCBPUFRJTUlaRV9GT05UX1NQRUVECmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5UdXBsZVZhcmlhdGlvbiBpbXBvcnQgVHVwbGVWYXJpYXRpb24KZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IGFycmF5CmltcG9ydCBpdGVydG9vbHMKaW1wb3J0IGxvZ2dpbmcKaW1wb3J0IHN0cnVjdAppbXBvcnQgc3lzCmltcG9ydCBmb250VG9vbHMudHRMaWIudGFibGVzLlR1cGxlVmFyaWF0aW9uIGFzIHR2Cgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCiMgaHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS90eXBvZ3JhcGh5L290c3BlYy9ndmFyLmh0bQojIGh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vdHlwb2dyYXBoeS9vdHNwZWMvb3R2YXJjb21tb25mb3JtYXRzLmh0bQojCiMgQXBwbGUncyBkb2N1bWVudGF0aW9uIG9mICdndmFyJzoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2Z3Zhci5odG1sCiMKIyBGcmVlVHlwZTIgc291cmNlIGNvZGUgZm9yIHBhcnNpbmcgJ2d2YXInOgojIGh0dHA6Ly9naXQuc2F2YW5uYWguZ251Lm9yZy9jZ2l0L2ZyZWV0eXBlL2ZyZWV0eXBlMi5naXQvdHJlZS9zcmMvdHJ1ZXR5cGUvdHRneHZhci5jCgpHVkFSX0hFQURFUl9GT1JNQVRfSEVBRCA9ICIiIgoJPiAjIGJpZyBlbmRpYW4KCXZlcnNpb246CQkJSAoJcmVzZXJ2ZWQ6CQkJSAoJYXhpc0NvdW50OgkJCUgKCXNoYXJlZFR1cGxlQ291bnQ6CQlICglvZmZzZXRUb1NoYXJlZFR1cGxlczoJCUkKIiIiCiMgSW4gYmV0d2VlbiB0aGUgSEVBRCBhbmQgVEFJTCBsaWVzIHRoZSBnbHlwaENvdW50LCB3aGljaCBpcwojIG9mIGRpZmZlcmVudCBzaXplOiAyIGJ5dGVzIGZvciBndmFyLCBhbmQgMyBieXRlcyBmb3IgR1ZBUi4KR1ZBUl9IRUFERVJfRk9STUFUX1RBSUwgPSAiIiIKCT4gIyBiaWcgZW5kaWFuCglmbGFnczoJCQkJSAoJb2Zmc2V0VG9HbHlwaFZhcmlhdGlvbkRhdGE6CUkKIiIiCgpHVkFSX0hFQURFUl9TSVpFX0hFQUQgPSBzc3RydWN0LmNhbGNzaXplKEdWQVJfSEVBREVSX0ZPUk1BVF9IRUFEKQpHVkFSX0hFQURFUl9TSVpFX1RBSUwgPSBzc3RydWN0LmNhbGNzaXplKEdWQVJfSEVBREVSX0ZPUk1BVF9UQUlMKQoKCmNsYXNzIHRhYmxlX19nX3ZfYV9yKERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUpOgogICAgIiIiR2x5cGggVmFyaWF0aW9ucyB0YWJsZQoKICAgIFRoZSBgYGd2YXJgYCB0YWJsZSBwcm92aWRlcyB0aGUgcGVyLWdseXBoIHZhcmlhdGlvbiBkYXRhIHRoYXQKICAgIGRlc2NyaWJlIGhvdyBnbHlwaCBvdXRsaW5lcyBpbiB0aGUgYGBnbHlmYGAgdGFibGUgY2hhbmdlIGFjcm9zcwogICAgdGhlIHZhcmlhdGlvbiBzcGFjZSB0aGF0IGlzIGRlZmluZWQgZm9yIHRoZSBmb250IGluIHRoZSBgYGZ2YXJgYAogICAgdGFibGUuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9ndmFyCiAgICAiIiIKCiAgICBkZXBlbmRlbmNpZXMgPSBbImZ2YXIiLCAiZ2x5ZiJdCiAgICBnaWRfc2l6ZSA9IDIKICAgIGdseXBoVGFibGVUYWcgPSAiZ2x5ZiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgdGFnPU5vbmUpOgogICAgICAgIERlZmF1bHRUYWJsZS5EZWZhdWx0VGFibGUuX19pbml0X18oc2VsZiwgdGFnKQogICAgICAgIHNlbGYudmVyc2lvbiwgc2VsZi5yZXNlcnZlZCA9IDEsIDAKICAgICAgICBzZWxmLmF4aXNDb3VudCA9IDAKICAgICAgICBzZWxmLnZhcmlhdGlvbnMgPSB7fQogICAgICAgICMgU2V0IHdoZW4gdGhlIFRUWCBkZWNsYXJlcyBhbiBheGlzIGNvdW50LCBpLmUuIHRoaXMgaXMgdGhlIG5vLSdmdmFyJwogICAgICAgICMgZm9ybSB3aG9zZSBheGVzIGFyZSBudW1iZXJlZCByYXRoZXIgdGhhbiB0YWdnZWQuIERlY2lkaW5nIHRoaXMgZnJvbQogICAgICAgICMgdGhlIGVsZW1lbnQgcmF0aGVyIHRoYW4gZnJvbSAnZnZhcicga2VlcHMgdGhlIHJlYWQgc2lkZSBpbmRlcGVuZGVudAogICAgICAgICMgb2YgdGhlIG9yZGVyIGluIHdoaWNoIHRoZSB0YWJsZXMgYXJlIGRlc2VyaWFsaXplZC4KICAgICAgICBzZWxmLl9udW1lcmljQXhpc1RhZ3MgPSBGYWxzZQoKICAgIGRlZiBnZXRBeGlzVGFnc18oc2VsZiwgdHRGb250KToKICAgICAgICBpZiAiZnZhciIgaW4gdHRGb250OgogICAgICAgICAgICByZXR1cm4gW2F4aXMuYXhpc1RhZyBmb3IgYXhpcyBpbiB0dEZvbnRbImZ2YXIiXS5heGVzXQogICAgICAgIHJldHVybiBsaXN0KHJhbmdlKHNlbGYuYXhpc0NvdW50KSkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGF4aXNUYWdzID0gc2VsZi5nZXRBeGlzVGFnc18odHRGb250KQogICAgICAgIHNoYXJlZFR1cGxlcyA9IHR2LmNvbXBpbGVTaGFyZWRUdXBsZXMoCiAgICAgICAgICAgIGF4aXNUYWdzLCBpdGVydG9vbHMuY2hhaW4oKnNlbGYudmFyaWF0aW9ucy52YWx1ZXMoKSkKICAgICAgICApCiAgICAgICAgc2hhcmVkVHVwbGVJbmRpY2VzID0ge2Nvb3JkOiBpIGZvciBpLCBjb29yZCBpbiBlbnVtZXJhdGUoc2hhcmVkVHVwbGVzKX0KICAgICAgICBzaGFyZWRUdXBsZVNpemUgPSBzdW0oW2xlbihjKSBmb3IgYyBpbiBzaGFyZWRUdXBsZXNdKQogICAgICAgIGNvbXBpbGVkR2x5cGhzID0gc2VsZi5jb21waWxlR2x5cGhzXyh0dEZvbnQsIGF4aXNUYWdzLCBzaGFyZWRUdXBsZUluZGljZXMpCiAgICAgICAgb2Zmc2V0ID0gMAogICAgICAgIG9mZnNldHMgPSBbXQogICAgICAgIGZvciBnbHlwaCBpbiBjb21waWxlZEdseXBoczoKICAgICAgICAgICAgb2Zmc2V0cy5hcHBlbmQob2Zmc2V0KQogICAgICAgICAgICBvZmZzZXQgKz0gbGVuKGdseXBoKQogICAgICAgIG9mZnNldHMuYXBwZW5kKG9mZnNldCkKICAgICAgICBjb21waWxlZE9mZnNldHMsIHRhYmxlRm9ybWF0ID0gc2VsZi5jb21waWxlT2Zmc2V0c18ob2Zmc2V0cykKCiAgICAgICAgR1ZBUl9IRUFERVJfU0laRSA9IEdWQVJfSEVBREVSX1NJWkVfSEVBRCArIHNlbGYuZ2lkX3NpemUgKyBHVkFSX0hFQURFUl9TSVpFX1RBSUwKICAgICAgICBoZWFkZXIgPSB7fQogICAgICAgIGhlYWRlclsidmVyc2lvbiJdID0gc2VsZi52ZXJzaW9uCiAgICAgICAgaGVhZGVyWyJyZXNlcnZlZCJdID0gc2VsZi5yZXNlcnZlZAogICAgICAgIGhlYWRlclsiYXhpc0NvdW50Il0gPSBsZW4oYXhpc1RhZ3MpCiAgICAgICAgaGVhZGVyWyJzaGFyZWRUdXBsZUNvdW50Il0gPSBsZW4oc2hhcmVkVHVwbGVzKQogICAgICAgIGhlYWRlclsib2Zmc2V0VG9TaGFyZWRUdXBsZXMiXSA9IEdWQVJfSEVBREVSX1NJWkUgKyBsZW4oY29tcGlsZWRPZmZzZXRzKQogICAgICAgIGhlYWRlclsiZmxhZ3MiXSA9IHRhYmxlRm9ybWF0CiAgICAgICAgaGVhZGVyWyJvZmZzZXRUb0dseXBoVmFyaWF0aW9uRGF0YSJdID0gKAogICAgICAgICAgICBoZWFkZXJbIm9mZnNldFRvU2hhcmVkVHVwbGVzIl0gKyBzaGFyZWRUdXBsZVNpemUKICAgICAgICApCgogICAgICAgIHJlc3VsdCA9IFsKICAgICAgICAgICAgc3N0cnVjdC5wYWNrKEdWQVJfSEVBREVSX0ZPUk1BVF9IRUFELCBoZWFkZXIpLAogICAgICAgICAgICBsZW4oY29tcGlsZWRHbHlwaHMpLnRvX2J5dGVzKHNlbGYuZ2lkX3NpemUsICJiaWciKSwKICAgICAgICAgICAgc3N0cnVjdC5wYWNrKEdWQVJfSEVBREVSX0ZPUk1BVF9UQUlMLCBoZWFkZXIpLAogICAgICAgIF0KCiAgICAgICAgcmVzdWx0LmFwcGVuZChjb21waWxlZE9mZnNldHMpCiAgICAgICAgcmVzdWx0LmV4dGVuZChzaGFyZWRUdXBsZXMpCiAgICAgICAgcmVzdWx0LmV4dGVuZChjb21waWxlZEdseXBocykKICAgICAgICByZXR1cm4gYiIiLmpvaW4ocmVzdWx0KQoKICAgIGRlZiBjb21waWxlR2x5cGhzXyhzZWxmLCB0dEZvbnQsIGF4aXNUYWdzLCBzaGFyZWRDb29yZEluZGljZXMpOgogICAgICAgIG9wdGltaXplU3BlZWQgPSB0dEZvbnQuY2ZnW09QVElNSVpFX0ZPTlRfU1BFRURdCiAgICAgICAgcmVzdWx0ID0gW10KICAgICAgICBnbHlmID0gdHRGb250W3NlbGYuZ2x5cGhUYWJsZVRhZ10KICAgICAgICBmb3IgZ2x5cGhOYW1lIGluIHR0Rm9udC5nZXRHbHlwaE9yZGVyKCk6CiAgICAgICAgICAgIHZhcmlhdGlvbnMgPSBzZWxmLnZhcmlhdGlvbnMuZ2V0KGdseXBoTmFtZSwgW10pCiAgICAgICAgICAgIGlmIG5vdCB2YXJpYXRpb25zOgogICAgICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChiIiIpCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBwb2ludENvdW50VW51c2VkID0gMCAgIyBwb2ludENvdW50IGlzIGFjdHVhbGx5IHVudXNlZCBieSBjb21waWxlR2x5cGgKICAgICAgICAgICAgcmVzdWx0LmFwcGVuZCgKICAgICAgICAgICAgICAgIGNvbXBpbGVHbHlwaF8oCiAgICAgICAgICAgICAgICAgICAgc2VsZi5naWRfc2l6ZSwKICAgICAgICAgICAgICAgICAgICB2YXJpYXRpb25zLAogICAgICAgICAgICAgICAgICAgIHBvaW50Q291bnRVbnVzZWQsCiAgICAgICAgICAgICAgICAgICAgYXhpc1RhZ3MsCiAgICAgICAgICAgICAgICAgICAgc2hhcmVkQ29vcmRJbmRpY2VzLAogICAgICAgICAgICAgICAgICAgIG9wdGltaXplU2l6ZT1ub3Qgb3B0aW1pemVTcGVlZCwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiByZXN1bHQKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgZ2x5cGhzID0gdHRGb250LmdldEdseXBoT3JkZXIoKQoKICAgICAgICAjIFBhcnNlIHRoZSBoZWFkZXIKICAgICAgICBHVkFSX0hFQURFUl9TSVpFID0gR1ZBUl9IRUFERVJfU0laRV9IRUFEICsgc2VsZi5naWRfc2l6ZSArIEdWQVJfSEVBREVSX1NJWkVfVEFJTAogICAgICAgIHNzdHJ1Y3QudW5wYWNrKEdWQVJfSEVBREVSX0ZPUk1BVF9IRUFELCBkYXRhWzpHVkFSX0hFQURFUl9TSVpFX0hFQURdLCBzZWxmKQogICAgICAgIHNlbGYuZ2x5cGhDb3VudCA9IGludC5mcm9tX2J5dGVzKAogICAgICAgICAgICBkYXRhW0dWQVJfSEVBREVSX1NJWkVfSEVBRCA6IEdWQVJfSEVBREVSX1NJWkVfSEVBRCArIHNlbGYuZ2lkX3NpemVdLCAiYmlnIgogICAgICAgICkKICAgICAgICBzc3RydWN0LnVucGFjaygKICAgICAgICAgICAgR1ZBUl9IRUFERVJfRk9STUFUX1RBSUwsCiAgICAgICAgICAgIGRhdGFbR1ZBUl9IRUFERVJfU0laRV9IRUFEICsgc2VsZi5naWRfc2l6ZSA6IEdWQVJfSEVBREVSX1NJWkVdLAogICAgICAgICAgICBzZWxmLAogICAgICAgICkKICAgICAgICBheGlzVGFncyA9IHNlbGYuZ2V0QXhpc1RhZ3NfKHR0Rm9udCkKCiAgICAgICAgYXNzZXJ0IGxlbihnbHlwaHMpID09IHNlbGYuZ2x5cGhDb3VudCwgKGxlbihnbHlwaHMpLCBzZWxmLmdseXBoQ291bnQpCiAgICAgICAgYXNzZXJ0IGxlbihheGlzVGFncykgPT0gc2VsZi5heGlzQ291bnQsICgKICAgICAgICAgICAgbGVuKGF4aXNUYWdzKSwKICAgICAgICAgICAgc2VsZi5heGlzQ291bnQsCiAgICAgICAgICAgIGF4aXNUYWdzLAogICAgICAgICkKICAgICAgICBzaGFyZWRDb29yZHMgPSB0di5kZWNvbXBpbGVTaGFyZWRUdXBsZXMoCiAgICAgICAgICAgIGF4aXNUYWdzLCBzZWxmLnNoYXJlZFR1cGxlQ291bnQsIGRhdGEsIHNlbGYub2Zmc2V0VG9TaGFyZWRUdXBsZXMKICAgICAgICApCiAgICAgICAgdmFyaWF0aW9ucyA9IHt9CiAgICAgICAgb2Zmc2V0VG9EYXRhID0gc2VsZi5vZmZzZXRUb0dseXBoVmFyaWF0aW9uRGF0YQogICAgICAgIGdseWYgPSB0dEZvbnRbc2VsZi5nbHlwaFRhYmxlVGFnXQoKICAgICAgICBkZWYgZ2V0X3JlYWRfaXRlbSgpOgogICAgICAgICAgICByZXZlcnNlR2x5cGhNYXAgPSB0dEZvbnQuZ2V0UmV2ZXJzZUdseXBoTWFwKCkKICAgICAgICAgICAgdGFibGVGb3JtYXQgPSBzZWxmLmZsYWdzICYgMQoKICAgICAgICAgICAgZGVmIHJlYWRfaXRlbShnbHlwaE5hbWUpOgogICAgICAgICAgICAgICAgZ2lkID0gcmV2ZXJzZUdseXBoTWFwW2dseXBoTmFtZV0KICAgICAgICAgICAgICAgIG9mZnNldFNpemUgPSAyIGlmIHRhYmxlRm9ybWF0ID09IDAgZWxzZSA0CiAgICAgICAgICAgICAgICBzdGFydE9mZnNldCA9IEdWQVJfSEVBREVSX1NJWkUgKyBvZmZzZXRTaXplICogZ2lkCiAgICAgICAgICAgICAgICBlbmRPZmZzZXQgPSBzdGFydE9mZnNldCArIG9mZnNldFNpemUgKiAyCiAgICAgICAgICAgICAgICBvZmZzZXRzID0gdGFibGVfX2dfdl9hX3IuZGVjb21waWxlT2Zmc2V0c18oCiAgICAgICAgICAgICAgICAgICAgZGF0YVtzdGFydE9mZnNldDplbmRPZmZzZXRdLAogICAgICAgICAgICAgICAgICAgIHRhYmxlRm9ybWF0PXRhYmxlRm9ybWF0LAogICAgICAgICAgICAgICAgICAgIGdseXBoQ291bnQ9MSwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIGd2YXJEYXRhID0gZGF0YVtvZmZzZXRUb0RhdGEgKyBvZmZzZXRzWzBdIDogb2Zmc2V0VG9EYXRhICsgb2Zmc2V0c1sxXV0KICAgICAgICAgICAgICAgIGlmIG5vdCBndmFyRGF0YToKICAgICAgICAgICAgICAgICAgICByZXR1cm4gW10KICAgICAgICAgICAgICAgIGdseXBoID0gZ2x5ZltnbHlwaE5hbWVdCiAgICAgICAgICAgICAgICBudW1Qb2ludHNJbkdseXBoID0gc2VsZi5nZXROdW1Qb2ludHNfKGdseXBoKQogICAgICAgICAgICAgICAgcmV0dXJuIGRlY29tcGlsZUdseXBoXygKICAgICAgICAgICAgICAgICAgICBzZWxmLmdpZF9zaXplLCBudW1Qb2ludHNJbkdseXBoLCBzaGFyZWRDb29yZHMsIGF4aXNUYWdzLCBndmFyRGF0YQogICAgICAgICAgICAgICAgKQoKICAgICAgICAgICAgcmV0dXJuIHJlYWRfaXRlbQoKICAgICAgICByZWFkX2l0ZW0gPSBnZXRfcmVhZF9pdGVtKCkKICAgICAgICBsID0gTGF6eURpY3Qoe2dseXBoc1tnaWRdOiByZWFkX2l0ZW0gZm9yIGdpZCBpbiByYW5nZShzZWxmLmdseXBoQ291bnQpfSkKCiAgICAgICAgc2VsZi52YXJpYXRpb25zID0gbAoKICAgICAgICBpZiB0dEZvbnQubGF6eSBpcyBGYWxzZTogICMgQmUgbGF6eSBmb3IgTm9uZSBhbmQgVHJ1ZQogICAgICAgICAgICBzZWxmLmVuc3VyZURlY29tcGlsZWQoKQoKICAgIGRlZiBlbnN1cmVEZWNvbXBpbGVkKHNlbGYsIHJlY3Vyc2U9RmFsc2UpOgogICAgICAgICMgVGhlIHJlY3Vyc2UgYXJndW1lbnQgaXMgdW51c2VkLCBidXQgcGFydCBvZiB0aGUgc2lnbmF0dXJlIG9mCiAgICAgICAgIyBlbnN1cmVEZWNvbXBpbGVkIGFjcm9zcyB0aGUgbGlicmFyeS4KICAgICAgICAjIFVzZSBhIHplcm8tbGVuZ3RoIGRlcXVlIHRvIGNvbnN1bWUgdGhlIGxhenkgZGljdAogICAgICAgIGRlcXVlKHNlbGYudmFyaWF0aW9ucy52YWx1ZXMoKSwgbWF4bGVuPTApCgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIGRlY29tcGlsZU9mZnNldHNfKGRhdGEsIHRhYmxlRm9ybWF0LCBnbHlwaENvdW50KToKICAgICAgICBpZiB0YWJsZUZvcm1hdCA9PSAwOgogICAgICAgICAgICAjIFNob3J0IGZvcm1hdDogYXJyYXkgb2YgVUludDE2CiAgICAgICAgICAgIG9mZnNldHMgPSBhcnJheS5hcnJheSgiSCIpCiAgICAgICAgICAgIG9mZnNldHNTaXplID0gKGdseXBoQ291bnQgKyAxKSAqIDIKICAgICAgICBlbHNlOgogICAgICAgICAgICAjIExvbmcgZm9ybWF0OiBhcnJheSBvZiBVSW50MzIKICAgICAgICAgICAgb2Zmc2V0cyA9IGFycmF5LmFycmF5KCJJIikKICAgICAgICAgICAgb2Zmc2V0c1NpemUgPSAoZ2x5cGhDb3VudCArIDEpICogNAogICAgICAgIG9mZnNldHMuZnJvbWJ5dGVzKGRhdGFbMDpvZmZzZXRzU2l6ZV0pCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgb2Zmc2V0cy5ieXRlc3dhcCgpCgogICAgICAgICMgSW4gdGhlIHNob3J0IGZvcm1hdCwgb2Zmc2V0cyBuZWVkIHRvIGJlIG11bHRpcGxpZWQgYnkgMi4KICAgICAgICAjIFRoaXMgaXMgbm90IGRvY3VtZW50ZWQgaW4gQXBwbGUncyBUcnVlVHlwZSBzcGVjaWZpY2F0aW9uLAogICAgICAgICMgYnV0IGNhbiBiZSBpbmZlcnJlZCBmcm9tIHRoZSBGcmVlVHlwZSBpbXBsZW1lbnRhdGlvbiwgYW5kCiAgICAgICAgIyB3ZSBjb3VsZCB2ZXJpZnkgaXQgd2l0aCB0d28gc2FtcGxlIEdYIGZvbnRzLgogICAgICAgIGlmIHRhYmxlRm9ybWF0ID09IDA6CiAgICAgICAgICAgIG9mZnNldHMgPSBbb2ZmICogMiBmb3Igb2ZmIGluIG9mZnNldHNdCgogICAgICAgIHJldHVybiBvZmZzZXRzCgogICAgQHN0YXRpY21ldGhvZAogICAgZGVmIGNvbXBpbGVPZmZzZXRzXyhvZmZzZXRzKToKICAgICAgICAiIiJQYWNrcyBhIGxpc3Qgb2Ygb2Zmc2V0cyBpbnRvIGEgJ2d2YXInIG9mZnNldCB0YWJsZS4KCiAgICAgICAgUmV0dXJucyBhIHBhaXIgKGJ5dGVzdHJpbmcsIHRhYmxlRm9ybWF0KS4gQnl0ZXN0cmluZyBpcyB0aGUKICAgICAgICBwYWNrZWQgb2Zmc2V0IHRhYmxlLiBGb3JtYXQgaW5kaWNhdGVzIHdoZXRoZXIgdGhlIHRhYmxlCiAgICAgICAgdXNlcyBzaG9ydCAodGFibGVGb3JtYXQ9MCkgb3IgbG9uZyAodGFibGVGb3JtYXQ9MSkgaW50ZWdlcnMuCiAgICAgICAgVGhlIHJldHVybmVkIHRhYmxlRm9ybWF0IHNob3VsZCBnZXQgcGFja2VkIGludG8gdGhlIGZsYWdzIGZpZWxkCiAgICAgICAgb2YgdGhlICdndmFyJyBoZWFkZXIuCiAgICAgICAgIiIiCiAgICAgICAgYXNzZXJ0IGxlbihvZmZzZXRzKSA+PSAyCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UoMSwgbGVuKG9mZnNldHMpKToKICAgICAgICAgICAgYXNzZXJ0IG9mZnNldHNbaSAtIDFdIDw9IG9mZnNldHNbaV0KICAgICAgICBpZiBtYXgob2Zmc2V0cykgPD0gMHhGRkZGICogMjoKICAgICAgICAgICAgcGFja2VkID0gYXJyYXkuYXJyYXkoIkgiLCBbbiA+PiAxIGZvciBuIGluIG9mZnNldHNdKQogICAgICAgICAgICB0YWJsZUZvcm1hdCA9IDAKICAgICAgICBlbHNlOgogICAgICAgICAgICBwYWNrZWQgPSBhcnJheS5hcnJheSgiSSIsIG9mZnNldHMpCiAgICAgICAgICAgIHRhYmxlRm9ybWF0ID0gMQogICAgICAgIGlmIHN5cy5ieXRlb3JkZXIgIT0gImJpZyI6CiAgICAgICAgICAgIHBhY2tlZC5ieXRlc3dhcCgpCiAgICAgICAgcmV0dXJuIChwYWNrZWQudG9ieXRlcygpLCB0YWJsZUZvcm1hdCkKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInZlcnNpb24iLCB2YWx1ZT1zZWxmLnZlcnNpb24pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInJlc2VydmVkIiwgdmFsdWU9c2VsZi5yZXNlcnZlZCkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgaWYgImZ2YXIiIG5vdCBpbiB0dEZvbnQ6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImF4aXNDb3VudCIsIHZhbHVlPXNlbGYuYXhpc0NvdW50KQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgYXhpc1RhZ3MgPSBzZWxmLmdldEF4aXNUYWdzXyh0dEZvbnQpCiAgICAgICAgZm9yIGdseXBoTmFtZSBpbiB0dEZvbnQuZ2V0R2x5cGhOYW1lcygpOgogICAgICAgICAgICB2YXJpYXRpb25zID0gc2VsZi52YXJpYXRpb25zLmdldChnbHlwaE5hbWUpCiAgICAgICAgICAgIGlmIG5vdCB2YXJpYXRpb25zOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJnbHlwaFZhcmlhdGlvbnMiLCBnbHlwaD1nbHlwaE5hbWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIGd2YXIgaW4gdmFyaWF0aW9uczoKICAgICAgICAgICAgICAgIGd2YXIudG9YTUwod3JpdGVyLCBheGlzVGFncykKICAgICAgICAgICAgd3JpdGVyLmVuZHRhZygiZ2x5cGhWYXJpYXRpb25zIikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gInZlcnNpb24iOgogICAgICAgICAgICBzZWxmLnZlcnNpb24gPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKICAgICAgICBlbGlmIG5hbWUgPT0gInJlc2VydmVkIjoKICAgICAgICAgICAgc2VsZi5yZXNlcnZlZCA9IHNhZmVFdmFsKGF0dHJzWyJ2YWx1ZSJdKQogICAgICAgIGVsaWYgbmFtZSA9PSAiYXhpc0NvdW50IjoKICAgICAgICAgICAgc2VsZi5heGlzQ291bnQgPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKICAgICAgICAgICAgc2VsZi5fbnVtZXJpY0F4aXNUYWdzID0gVHJ1ZQogICAgICAgIGVsaWYgbmFtZSA9PSAiZ2x5cGhWYXJpYXRpb25zIjoKICAgICAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgInZhcmlhdGlvbnMiKToKICAgICAgICAgICAgICAgIHNlbGYudmFyaWF0aW9ucyA9IHt9CiAgICAgICAgICAgIGdseXBoTmFtZSA9IGF0dHJzWyJnbHlwaCJdCiAgICAgICAgICAgIGdseXBoID0gdHRGb250W3NlbGYuZ2x5cGhUYWJsZVRhZ11bZ2x5cGhOYW1lXQogICAgICAgICAgICBudW1Qb2ludHNJbkdseXBoID0gc2VsZi5nZXROdW1Qb2ludHNfKGdseXBoKQogICAgICAgICAgICBnbHlwaFZhcmlhdGlvbnMgPSBbXQogICAgICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgaWYgaXNpbnN0YW5jZShlbGVtZW50LCB0dXBsZSk6CiAgICAgICAgICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBlbGVtZW50CiAgICAgICAgICAgICAgICAgICAgaWYgbmFtZSA9PSAidHVwbGUiOgogICAgICAgICAgICAgICAgICAgICAgICBndmFyID0gVHVwbGVWYXJpYXRpb24oe30sIFtOb25lXSAqIG51bVBvaW50c0luR2x5cGgpCiAgICAgICAgICAgICAgICAgICAgICAgIGdseXBoVmFyaWF0aW9ucy5hcHBlbmQoZ3ZhcikKICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHR1cGxlRWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgaXNpbnN0YW5jZSh0dXBsZUVsZW1lbnQsIHR1cGxlKToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0dXBsZU5hbWUsIHR1cGxlQXR0cnMsIHR1cGxlQ29udGVudCA9IHR1cGxlRWxlbWVudAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGd2YXIuZnJvbVhNTCh0dXBsZU5hbWUsIHR1cGxlQXR0cnMsIHR1cGxlQ29udGVudCkKICAgICAgICAgICAgICAgICAgICAgICAgaWYgc2VsZi5fbnVtZXJpY0F4aXNUYWdzOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZ3Zhci5heGVzID0gewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNhZmVFdmFsKGF4aXMpOiB2YWx1ZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciBheGlzLCB2YWx1ZSBpbiBndmFyLmF4ZXMuaXRlbXMoKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICBzZWxmLnZhcmlhdGlvbnNbZ2x5cGhOYW1lXSA9IGdseXBoVmFyaWF0aW9ucwoKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiBnZXROdW1Qb2ludHNfKGdseXBoKToKICAgICAgICBOVU1fUEhBTlRPTV9QT0lOVFMgPSA0CgogICAgICAgIGlmIGdseXBoLmlzQ29tcG9zaXRlKCk6CiAgICAgICAgICAgIHJldHVybiBsZW4oZ2x5cGguY29tcG9uZW50cykgKyBOVU1fUEhBTlRPTV9QT0lOVFMKICAgICAgICBlbHNlOgogICAgICAgICAgICAjIEVtcHR5IGdseXBocyAoZWcuIHNwYWNlLCBub25tYXJraW5ncmV0dXJuKSBoYXZlIG5vICJjb29yZGluYXRlcyIgYXR0cmlidXRlLgogICAgICAgICAgICByZXR1cm4gbGVuKGdldGF0dHIoZ2x5cGgsICJjb29yZGluYXRlcyIsIFtdKSkgKyBOVU1fUEhBTlRPTV9QT0lOVFMKCgpkZWYgY29tcGlsZUdseXBoXygKICAgIGRhdGFPZmZzZXRTaXplLAogICAgdmFyaWF0aW9ucywKICAgIHBvaW50Q291bnQsCiAgICBheGlzVGFncywKICAgIHNoYXJlZENvb3JkSW5kaWNlcywKICAgICosCiAgICBvcHRpbWl6ZVNpemU9VHJ1ZSwKKToKICAgIGFzc2VydCBkYXRhT2Zmc2V0U2l6ZSBpbiAoMiwgMykKICAgIHR1cGxlVmFyaWF0aW9uQ291bnQsIHR1cGxlcywgZGF0YSA9IHR2LmNvbXBpbGVUdXBsZVZhcmlhdGlvblN0b3JlKAogICAgICAgIHZhcmlhdGlvbnMsIHBvaW50Q291bnQsIGF4aXNUYWdzLCBzaGFyZWRDb29yZEluZGljZXMsIG9wdGltaXplU2l6ZT1vcHRpbWl6ZVNpemUKICAgICkKICAgIGlmIHR1cGxlVmFyaWF0aW9uQ291bnQgPT0gMDoKICAgICAgICByZXR1cm4gYiIiCgogICAgb2Zmc2V0VG9EYXRhID0gMiArIGRhdGFPZmZzZXRTaXplICsgbGVuKHR1cGxlcykKCiAgICByZXN1bHQgPSBbCiAgICAgICAgdHVwbGVWYXJpYXRpb25Db3VudC50b19ieXRlcygyLCAiYmlnIiksCiAgICAgICAgb2Zmc2V0VG9EYXRhLnRvX2J5dGVzKGRhdGFPZmZzZXRTaXplLCAiYmlnIiksCiAgICAgICAgdHVwbGVzLAogICAgICAgIGRhdGEsCiAgICBdCiAgICBpZiAob2Zmc2V0VG9EYXRhICsgbGVuKGRhdGEpKSAlIDIgIT0gMDoKICAgICAgICByZXN1bHQuYXBwZW5kKGIiXDAiKSAgIyBwYWRkaW5nCiAgICByZXR1cm4gYiIiLmpvaW4ocmVzdWx0KQoKCmRlZiBkZWNvbXBpbGVHbHlwaF8oZGF0YU9mZnNldFNpemUsIHBvaW50Q291bnQsIHNoYXJlZFR1cGxlcywgYXhpc1RhZ3MsIGRhdGEpOgogICAgYXNzZXJ0IGRhdGFPZmZzZXRTaXplIGluICgyLCAzKQogICAgaWYgbGVuKGRhdGEpIDwgMiArIGRhdGFPZmZzZXRTaXplOgogICAgICAgIHJldHVybiBbXQoKICAgIHR1cGxlVmFyaWF0aW9uQ291bnQgPSBpbnQuZnJvbV9ieXRlcyhkYXRhWzoyXSwgImJpZyIpCiAgICBvZmZzZXRUb0RhdGEgPSBpbnQuZnJvbV9ieXRlcyhkYXRhWzIgOiAyICsgZGF0YU9mZnNldFNpemVdLCAiYmlnIikKCiAgICBkYXRhUG9zID0gb2Zmc2V0VG9EYXRhCiAgICByZXR1cm4gdHYuZGVjb21waWxlVHVwbGVWYXJpYXRpb25TdG9yZSgKICAgICAgICAiZ3ZhciIsCiAgICAgICAgYXhpc1RhZ3MsCiAgICAgICAgdHVwbGVWYXJpYXRpb25Db3VudCwKICAgICAgICBwb2ludENvdW50LAogICAgICAgIHNoYXJlZFR1cGxlcywKICAgICAgICBkYXRhLAogICAgICAgIDIgKyBkYXRhT2Zmc2V0U2l6ZSwKICAgICAgICBvZmZzZXRUb0RhdGEsCiAgICApCg==
+from collections import deque
+from functools import partial
+from fontTools.misc import sstruct
+from fontTools.misc.textTools import safeEval
+from fontTools.misc.lazyTools import LazyDict
+from fontTools.ttLib import OPTIMIZE_FONT_SPEED
+from fontTools.ttLib.tables.TupleVariation import TupleVariation
+from . import DefaultTable
+import array
+import itertools
+import logging
+import struct
+import sys
+import fontTools.ttLib.tables.TupleVariation as tv
+
+log = logging.getLogger(__name__)
+
+# https://www.microsoft.com/typography/otspec/gvar.htm
+# https://www.microsoft.com/typography/otspec/otvarcommonformats.htm
+#
+# Apple's documentation of 'gvar':
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6gvar.html
+#
+# FreeType2 source code for parsing 'gvar':
+# http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/src/truetype/ttgxvar.c
+
+GVAR_HEADER_FORMAT_HEAD = """
+	> # big endian
+	version:			H
+	reserved:			H
+	axisCount:			H
+	sharedTupleCount:		H
+	offsetToSharedTuples:		I
+"""
+# In between the HEAD and TAIL lies the glyphCount, which is
+# of different size: 2 bytes for gvar, and 3 bytes for GVAR.
+GVAR_HEADER_FORMAT_TAIL = """
+	> # big endian
+	flags:				H
+	offsetToGlyphVariationData:	I
+"""
+
+GVAR_HEADER_SIZE_HEAD = sstruct.calcsize(GVAR_HEADER_FORMAT_HEAD)
+GVAR_HEADER_SIZE_TAIL = sstruct.calcsize(GVAR_HEADER_FORMAT_TAIL)
+
+
+class table__g_v_a_r(DefaultTable.DefaultTable):
+    """Glyph Variations table
+
+    The ``gvar`` table provides the per-glyph variation data that
+    describe how glyph outlines in the ``glyf`` table change across
+    the variation space that is defined for the font in the ``fvar``
+    table.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/gvar
+    """
+
+    dependencies = ["fvar", "glyf"]
+    gid_size = 2
+    glyphTableTag = "glyf"
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.version, self.reserved = 1, 0
+        self.axisCount = 0
+        self.variations = {}
+        # Set when the TTX declares an axis count, i.e. this is the no-'fvar'
+        # form whose axes are numbered rather than tagged. Deciding this from
+        # the element rather than from 'fvar' keeps the read side independent
+        # of the order in which the tables are deserialized.
+        self._numericAxisTags = False
+
+    def getAxisTags_(self, ttFont):
+        if "fvar" in ttFont:
+            return [axis.axisTag for axis in ttFont["fvar"].axes]
+        return list(range(self.axisCount))
+
+    def compile(self, ttFont):
+        axisTags = self.getAxisTags_(ttFont)
+        sharedTuples = tv.compileSharedTuples(
+            axisTags, itertools.chain(*self.variations.values())
+        )
+        sharedTupleIndices = {coord: i for i, coord in enumerate(sharedTuples)}
+        sharedTupleSize = sum([len(c) for c in sharedTuples])
+        compiledGlyphs = self.compileGlyphs_(ttFont, axisTags, sharedTupleIndices)
+        offset = 0
+        offsets = []
+        for glyph in compiledGlyphs:
+            offsets.append(offset)
+            offset += len(glyph)
+        offsets.append(offset)
+        compiledOffsets, tableFormat = self.compileOffsets_(offsets)
+
+        GVAR_HEADER_SIZE = GVAR_HEADER_SIZE_HEAD + self.gid_size + GVAR_HEADER_SIZE_TAIL
+        header = {}
+        header["version"] = self.version
+        header["reserved"] = self.reserved
+        header["axisCount"] = len(axisTags)
+        header["sharedTupleCount"] = len(sharedTuples)
+        header["offsetToSharedTuples"] = GVAR_HEADER_SIZE + len(compiledOffsets)
+        header["flags"] = tableFormat
+        header["offsetToGlyphVariationData"] = (
+            header["offsetToSharedTuples"] + sharedTupleSize
+        )
+
+        result = [
+            sstruct.pack(GVAR_HEADER_FORMAT_HEAD, header),
+            len(compiledGlyphs).to_bytes(self.gid_size, "big"),
+            sstruct.pack(GVAR_HEADER_FORMAT_TAIL, header),
+        ]
+
+        result.append(compiledOffsets)
+        result.extend(sharedTuples)
+        result.extend(compiledGlyphs)
+        return b"".join(result)
+
+    def compileGlyphs_(self, ttFont, axisTags, sharedCoordIndices):
+        optimizeSpeed = ttFont.cfg[OPTIMIZE_FONT_SPEED]
+        result = []
+        glyf = ttFont[self.glyphTableTag]
+        for glyphName in ttFont.getGlyphOrder():
+            variations = self.variations.get(glyphName, [])
+            if not variations:
+                result.append(b"")
+                continue
+            pointCountUnused = 0  # pointCount is actually unused by compileGlyph
+            result.append(
+                compileGlyph_(
+                    self.gid_size,
+                    variations,
+                    pointCountUnused,
+                    axisTags,
+                    sharedCoordIndices,
+                    optimizeSize=not optimizeSpeed,
+                )
+            )
+        return result
+
+    def decompile(self, data, ttFont):
+        glyphs = ttFont.getGlyphOrder()
+
+        # Parse the header
+        GVAR_HEADER_SIZE = GVAR_HEADER_SIZE_HEAD + self.gid_size + GVAR_HEADER_SIZE_TAIL
+        sstruct.unpack(GVAR_HEADER_FORMAT_HEAD, data[:GVAR_HEADER_SIZE_HEAD], self)
+        self.glyphCount = int.from_bytes(
+            data[GVAR_HEADER_SIZE_HEAD : GVAR_HEADER_SIZE_HEAD + self.gid_size], "big"
+        )
+        sstruct.unpack(
+            GVAR_HEADER_FORMAT_TAIL,
+            data[GVAR_HEADER_SIZE_HEAD + self.gid_size : GVAR_HEADER_SIZE],
+            self,
+        )
+        axisTags = self.getAxisTags_(ttFont)
+
+        assert len(glyphs) == self.glyphCount, (len(glyphs), self.glyphCount)
+        assert len(axisTags) == self.axisCount, (
+            len(axisTags),
+            self.axisCount,
+            axisTags,
+        )
+        sharedCoords = tv.decompileSharedTuples(
+            axisTags, self.sharedTupleCount, data, self.offsetToSharedTuples
+        )
+        variations = {}
+        offsetToData = self.offsetToGlyphVariationData
+        glyf = ttFont[self.glyphTableTag]
+
+        def get_read_item():
+            reverseGlyphMap = ttFont.getReverseGlyphMap()
+            tableFormat = self.flags & 1
+
+            def read_item(glyphName):
+                gid = reverseGlyphMap[glyphName]
+                offsetSize = 2 if tableFormat == 0 else 4
+                startOffset = GVAR_HEADER_SIZE + offsetSize * gid
+                endOffset = startOffset + offsetSize * 2
+                offsets = table__g_v_a_r.decompileOffsets_(
+                    data[startOffset:endOffset],
+                    tableFormat=tableFormat,
+                    glyphCount=1,
+                )
+                gvarData = data[offsetToData + offsets[0] : offsetToData + offsets[1]]
+                if not gvarData:
+                    return []
+                glyph = glyf[glyphName]
+                numPointsInGlyph = self.getNumPoints_(glyph)
+                return decompileGlyph_(
+                    self.gid_size, numPointsInGlyph, sharedCoords, axisTags, gvarData
+                )
+
+            return read_item
+
+        read_item = get_read_item()
+        l = LazyDict({glyphs[gid]: read_item for gid in range(self.glyphCount)})
+
+        self.variations = l
+
+        if ttFont.lazy is False:  # Be lazy for None and True
+            self.ensureDecompiled()
+
+    def ensureDecompiled(self, recurse=False):
+        # The recurse argument is unused, but part of the signature of
+        # ensureDecompiled across the library.
+        # Use a zero-length deque to consume the lazy dict
+        deque(self.variations.values(), maxlen=0)
+
+    @staticmethod
+    def decompileOffsets_(data, tableFormat, glyphCount):
+        if tableFormat == 0:
+            # Short format: array of UInt16
+            offsets = array.array("H")
+            offsetsSize = (glyphCount + 1) * 2
+        else:
+            # Long format: array of UInt32
+            offsets = array.array("I")
+            offsetsSize = (glyphCount + 1) * 4
+        offsets.frombytes(data[0:offsetsSize])
+        if sys.byteorder != "big":
+            offsets.byteswap()
+
+        # In the short format, offsets need to be multiplied by 2.
+        # This is not documented in Apple's TrueType specification,
+        # but can be inferred from the FreeType implementation, and
+        # we could verify it with two sample GX fonts.
+        if tableFormat == 0:
+            offsets = [off * 2 for off in offsets]
+
+        return offsets
+
+    @staticmethod
+    def compileOffsets_(offsets):
+        """Packs a list of offsets into a 'gvar' offset table.
+
+        Returns a pair (bytestring, tableFormat). Bytestring is the
+        packed offset table. Format indicates whether the table
+        uses short (tableFormat=0) or long (tableFormat=1) integers.
+        The returned tableFormat should get packed into the flags field
+        of the 'gvar' header.
+        """
+        assert len(offsets) >= 2
+        for i in range(1, len(offsets)):
+            assert offsets[i - 1] <= offsets[i]
+        if max(offsets) <= 0xFFFF * 2:
+            packed = array.array("H", [n >> 1 for n in offsets])
+            tableFormat = 0
+        else:
+            packed = array.array("I", offsets)
+            tableFormat = 1
+        if sys.byteorder != "big":
+            packed.byteswap()
+        return (packed.tobytes(), tableFormat)
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", value=self.version)
+        writer.newline()
+        writer.simpletag("reserved", value=self.reserved)
+        writer.newline()
+        if "fvar" not in ttFont:
+            writer.simpletag("axisCount", value=self.axisCount)
+            writer.newline()
+        axisTags = self.getAxisTags_(ttFont)
+        for glyphName in ttFont.getGlyphNames():
+            variations = self.variations.get(glyphName)
+            if not variations:
+                continue
+            writer.begintag("glyphVariations", glyph=glyphName)
+            writer.newline()
+            for gvar in variations:
+                gvar.toXML(writer, axisTags)
+            writer.endtag("glyphVariations")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = safeEval(attrs["value"])
+        elif name == "reserved":
+            self.reserved = safeEval(attrs["value"])
+        elif name == "axisCount":
+            self.axisCount = safeEval(attrs["value"])
+            self._numericAxisTags = True
+        elif name == "glyphVariations":
+            if not hasattr(self, "variations"):
+                self.variations = {}
+            glyphName = attrs["glyph"]
+            glyph = ttFont[self.glyphTableTag][glyphName]
+            numPointsInGlyph = self.getNumPoints_(glyph)
+            glyphVariations = []
+            for element in content:
+                if isinstance(element, tuple):
+                    name, attrs, content = element
+                    if name == "tuple":
+                        gvar = TupleVariation({}, [None] * numPointsInGlyph)
+                        glyphVariations.append(gvar)
+                        for tupleElement in content:
+                            if isinstance(tupleElement, tuple):
+                                tupleName, tupleAttrs, tupleContent = tupleElement
+                                gvar.fromXML(tupleName, tupleAttrs, tupleContent)
+                        if self._numericAxisTags:
+                            gvar.axes = {
+                                safeEval(axis): value
+                                for axis, value in gvar.axes.items()
+                            }
+            self.variations[glyphName] = glyphVariations
+
+    @staticmethod
+    def getNumPoints_(glyph):
+        NUM_PHANTOM_POINTS = 4
+
+        if glyph.isComposite():
+            return len(glyph.components) + NUM_PHANTOM_POINTS
+        else:
+            # Empty glyphs (eg. space, nonmarkingreturn) have no "coordinates" attribute.
+            return len(getattr(glyph, "coordinates", [])) + NUM_PHANTOM_POINTS
+
+
+def compileGlyph_(
+    dataOffsetSize,
+    variations,
+    pointCount,
+    axisTags,
+    sharedCoordIndices,
+    *,
+    optimizeSize=True,
+):
+    assert dataOffsetSize in (2, 3)
+    tupleVariationCount, tuples, data = tv.compileTupleVariationStore(
+        variations, pointCount, axisTags, sharedCoordIndices, optimizeSize=optimizeSize
+    )
+    if tupleVariationCount == 0:
+        return b""
+
+    offsetToData = 2 + dataOffsetSize + len(tuples)
+
+    result = [
+        tupleVariationCount.to_bytes(2, "big"),
+        offsetToData.to_bytes(dataOffsetSize, "big"),
+        tuples,
+        data,
+    ]
+    if (offsetToData + len(data)) % 2 != 0:
+        result.append(b"\0")  # padding
+    return b"".join(result)
+
+
+def decompileGlyph_(dataOffsetSize, pointCount, sharedTuples, axisTags, data):
+    assert dataOffsetSize in (2, 3)
+    if len(data) < 2 + dataOffsetSize:
+        return []
+
+    tupleVariationCount = int.from_bytes(data[:2], "big")
+    offsetToData = int.from_bytes(data[2 : 2 + dataOffsetSize], "big")
+
+    dataPos = offsetToData
+    return tv.decompileTupleVariationStore(
+        "gvar",
+        axisTags,
+        tupleVariationCount,
+        pointCount,
+        sharedTuples,
+        data,
+        2 + dataOffsetSize,
+        offsetToData,
+    )

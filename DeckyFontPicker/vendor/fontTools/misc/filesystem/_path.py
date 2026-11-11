@@ -1,1 +1,75 @@
-aW1wb3J0IG9zCmltcG9ydCBwbGF0Zm9ybQoKX1dJTkRPV1NfUExBVEZPUk0gPSBwbGF0Zm9ybS5zeXN0ZW0oKSA9PSAiV2luZG93cyIKCgpkZWYgY29tYmluZShwYXRoMTogc3RyLCBwYXRoMikgLT4gc3RyOgogICAgaWYgbm90IHBhdGgxOgogICAgICAgIHJldHVybiBwYXRoMgogICAgcmV0dXJuICJ7fS97fSIuZm9ybWF0KHBhdGgxLnJzdHJpcCgiLyIpLCBwYXRoMi5sc3RyaXAoIi8iKSkKCgpkZWYgc3BsaXQocGF0aDogc3RyKSAtPiB0dXBsZVtzdHIsIHN0cl06CiAgICBpZiAiLyIgbm90IGluIHBhdGg6CiAgICAgICAgcmV0dXJuICgiIiwgcGF0aCkKICAgIHNwbGl0ID0gcGF0aC5yc3BsaXQoIi8iLCAxKQogICAgcmV0dXJuIChzcGxpdFswXSBvciAiLyIsIHNwbGl0WzFdKQoKCmRlZiBkaXJuYW1lKHBhdGg6IHN0cikgLT4gc3RyOgogICAgcmV0dXJuIHNwbGl0KHBhdGgpWzBdCgoKZGVmIGJhc2VuYW1lKHBhdGg6IHN0cikgLT4gc3RyOgogICAgcmV0dXJuIHNwbGl0KHBhdGgpWzFdCgoKZGVmIGZvcmNlZGlyKHBhdGg6IHN0cikgLT4gc3RyOgogICAgIyBFbnN1cmUgdGhlIHBhdGggZW5kcyB3aXRoIGEgdHJhaWxpbmcgZm9yd2FyZCBzbGFzaC4KICAgIGlmIG5vdCBwYXRoLmVuZHN3aXRoKCIvIik6CiAgICAgICAgcmV0dXJuIHBhdGggKyAiLyIKICAgIHJldHVybiBwYXRoCgoKZGVmIGFic3BhdGgocGF0aDogc3RyKSAtPiBzdHI6CiAgICAjIEZTIG9iamVjdHMgaGF2ZSBubyBjb25jZXB0IG9mIGEgKmN1cnJlbnQgZGlyZWN0b3J5Ki4gVGhpcyBzaW1wbHkKICAgICMgZW5zdXJlcyB0aGUgcGF0aCBzdGFydHMgd2l0aCBhIGZvcndhcmQgc2xhc2guCiAgICBpZiBub3QgcGF0aC5zdGFydHN3aXRoKCIvIik6CiAgICAgICAgcmV0dXJuICIvIiArIHBhdGgKICAgIHJldHVybiBwYXRoCgoKZGVmIGlzYmFzZShwYXRoMTogc3RyLCBwYXRoMjogc3RyKSAtPiBib29sOgogICAgIyBDaGVjayBpZiBgcGF0aDFgIGlzIGEgYmFzZSBvciBwcmVmaXggb2YgYHBhdGgyYC4KICAgIF9wYXRoMSA9IGZvcmNlZGlyKGFic3BhdGgocGF0aDEpKQogICAgX3BhdGgyID0gZm9yY2VkaXIoYWJzcGF0aChwYXRoMikpCiAgICByZXR1cm4gX3BhdGgyLnN0YXJ0c3dpdGgoX3BhdGgxKQoKCmRlZiBmcm9tYmFzZShwYXRoMTogc3RyLCBwYXRoMjogc3RyKSAtPiBzdHI6CiAgICAjIEdldCB0aGUgZmluYWwgcGF0aCBvZiBgcGF0aDJgIHRoYXQgaXNuJ3QgaW4gYHBhdGgxYC4KICAgIGlmIG5vdCBpc2Jhc2UocGF0aDEsIHBhdGgyKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYicGF0aDEgbXVzdCBiZSBhIHByZWZpeCBvZiBwYXRoMjoge3BhdGgxIXJ9IHZzIHtwYXRoMiFyfSIpCiAgICByZXR1cm4gcGF0aDJbbGVuKHBhdGgxKSA6XQoKCmRlZiByZWxwYXRoKHBhdGg6IHN0cikgLT4gc3RyOgogICAgcmV0dXJuIHBhdGgubHN0cmlwKCIvIikKCgpkZWYgbm9ybXBhdGgocGF0aDogc3RyKSAtPiBzdHI6CiAgICBub3JtYWxpemVkID0gb3MucGF0aC5ub3JtcGF0aChwYXRoKQogICAgaWYgX1dJTkRPV1NfUExBVEZPUk06CiAgICAgICAgIyBvcy5wYXRoLm5vcm1wYXRoIGNvbnZlcnRzIGJhY2tzbGFzaGVzIHRvIGZvcndhcmQgc2xhc2hlcyBvbiBXaW5kb3dzCiAgICAgICAgIyBidXQgd2Ugd2FudCBmb3J3YXJkIHNsYXNoZXMsIHNvIHdlIGNvbnZlcnQgdGhlbSBiYWNrCiAgICAgICAgbm9ybWFsaXplZCA9IG5vcm1hbGl6ZWQucmVwbGFjZSgiXFwiLCAiLyIpCiAgICByZXR1cm4gbm9ybWFsaXplZAoKCmRlZiBlc2NhcGVzX3Jvb3QocGF0aDogc3RyKSAtPiBib29sOgogICAgIyBDaGVjayB3aGV0aGVyIGBwYXRoYCBub3JtYWxpemVzIHRvIGEgbG9jYXRpb24gb3V0c2lkZSB0aGUgZmlsZXN5c3RlbSByb290LgogICAgIyBUaGlzIGlzIGEgcHVyZWx5IHRleHR1YWwgdGVzdCwgZm9yIHVzZSB3aGVyZSBhIHBhdGggY2FuIGJlIHJlamVjdGVkIGJlZm9yZQogICAgIyBhbnl0aGluZyB0b3VjaGVzIHRoZSBkaXNrOyBPU0ZTLl9hYnMgZG9lcyB0aGUgYXV0aG9yaXRhdGl2ZSBjaGVjay4KICAgIG5vcm1hbGl6ZWQgPSBub3JtcGF0aChyZWxwYXRoKHBhdGgpKQogICAgcmV0dXJuIG5vcm1hbGl6ZWQgPT0gIi4uIiBvciBub3JtYWxpemVkLnN0YXJ0c3dpdGgoIi4uLyIpCg==
+import os
+import platform
+
+_WINDOWS_PLATFORM = platform.system() == "Windows"
+
+
+def combine(path1: str, path2) -> str:
+    if not path1:
+        return path2
+    return "{}/{}".format(path1.rstrip("/"), path2.lstrip("/"))
+
+
+def split(path: str) -> tuple[str, str]:
+    if "/" not in path:
+        return ("", path)
+    split = path.rsplit("/", 1)
+    return (split[0] or "/", split[1])
+
+
+def dirname(path: str) -> str:
+    return split(path)[0]
+
+
+def basename(path: str) -> str:
+    return split(path)[1]
+
+
+def forcedir(path: str) -> str:
+    # Ensure the path ends with a trailing forward slash.
+    if not path.endswith("/"):
+        return path + "/"
+    return path
+
+
+def abspath(path: str) -> str:
+    # FS objects have no concept of a *current directory*. This simply
+    # ensures the path starts with a forward slash.
+    if not path.startswith("/"):
+        return "/" + path
+    return path
+
+
+def isbase(path1: str, path2: str) -> bool:
+    # Check if `path1` is a base or prefix of `path2`.
+    _path1 = forcedir(abspath(path1))
+    _path2 = forcedir(abspath(path2))
+    return _path2.startswith(_path1)
+
+
+def frombase(path1: str, path2: str) -> str:
+    # Get the final path of `path2` that isn't in `path1`.
+    if not isbase(path1, path2):
+        raise ValueError(f"path1 must be a prefix of path2: {path1!r} vs {path2!r}")
+    return path2[len(path1) :]
+
+
+def relpath(path: str) -> str:
+    return path.lstrip("/")
+
+
+def normpath(path: str) -> str:
+    normalized = os.path.normpath(path)
+    if _WINDOWS_PLATFORM:
+        # os.path.normpath converts backslashes to forward slashes on Windows
+        # but we want forward slashes, so we convert them back
+        normalized = normalized.replace("\\", "/")
+    return normalized
+
+
+def escapes_root(path: str) -> bool:
+    # Check whether `path` normalizes to a location outside the filesystem root.
+    # This is a purely textual test, for use where a path can be rejected before
+    # anything touches the disk; OSFS._abs does the authoritative check.
+    normalized = normpath(relpath(path))
+    return normalized == ".." or normalized.startswith("../")

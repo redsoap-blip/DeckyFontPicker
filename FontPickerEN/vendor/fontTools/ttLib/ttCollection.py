@@ -1,1 +1,249 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudHRGb250IGltcG9ydCBUVEZvbnQKZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwppbXBvcnQgc3RydWN0CmltcG9ydCBsb2dnaW5nCmZyb20gY29udGV4dGxpYiBpbXBvcnQgY29udGV4dG1hbmFnZXIKZnJvbSBmb250VG9vbHMudHRMaWIuc2ZudCBpbXBvcnQgKAogICAgVFRDX1YxLAogICAgVFRDX1YxXzEsCiAgICBUVENfVjIsCiAgICBUVENfVjJfMSwKICAgIHJlYWRUVENIZWFkZXIsCiAgICB3cml0ZVRUQ0hlYWRlciwKKQpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuRF9TX0lfR18gaW1wb3J0IHRhYmxlX0RfU19JX0dfCmZyb20gZm9udFRvb2xzLm1pc2MudGltZVRvb2xzIGltcG9ydCB0aW1lc3RhbXBOb3cKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKCkBjb250ZXh0bWFuYWdlcgpkZWYgX3NoYXJlZE1vZGlmaWVkVGltZXN0YW1wKGZvbnRzKToKICAgICIiIlBpbiBhIHNpbmdsZSBgYGhlYWQubW9kaWZpZWRgYCB0aW1lc3RhbXAgYWNyb3NzIGFuIGl0ZXJhYmxlIG9mIFRURm9udHMuCgogICAgV2hlbiBzZXZlcmFsIGZvbnRzIGFyZSBzYXZlZCB0b2dldGhlciB3aXRoIGBgcmVjYWxjVGltZXN0YW1wPVRydWVgYCwgZWFjaAogICAgb25lIHJlc3RhbXBzIGl0cyBvd24gYGBoZWFkYGAgdGFibGUgdmlhIGBgdGltZXN0YW1wTm93KClgYCwgd2hvc2UKICAgIGdyYW51bGFyaXR5IGlzIG9uZSBzZWNvbmQuIElmIHRoZSB3YWxsIGNsb2NrIHRpY2tzIGJldHdlZW4gdHdvIGZvbnRzJwogICAgYGBoZWFkLmNvbXBpbGUoKWBgIGNhbGxzIHRoZXkgZ2V0IGRpZmZlcmVudCBgYG1vZGlmaWVkYGAgdmFsdWVzLCB3aGljaAogICAgZGVmZWF0cyBieXRlLWlkZW50aWNhbCB0YWJsZSBzaGFyaW5nIChgYHNoYXJlVGFibGVzPVRydWVgYCkgYW5kIG1ha2VzIHRoZQogICAgc2F2ZWQgc2l6ZSBub24tZGV0ZXJtaW5pc3RpYy4KCiAgICBUaGlzIHJlYWRzIGBgdGltZXN0YW1wTm93KClgYCBvbmNlIChzbyBgYFNPVVJDRV9EQVRFX0VQT0NIYGAgaXMgc3RpbGwKICAgIGhvbm9yZWQpIGFuZCBhcHBsaWVzIGl0IHRvIGV2ZXJ5IGZvbnQgdGhhdCB3b3VsZCBoYXZlIHJlY2FsY3VsYXRlZCBpdHMgb3duCiAgICB0aW1lc3RhbXAsIHN1cHByZXNzaW5nIHRoZSBwZXItZm9udCByZXN0YW1wIGZvciB0aGUgZHVyYXRpb24uIEVhY2ggZm9udCdzCiAgICBgYHJlY2FsY1RpbWVzdGFtcGBgIGZsYWcgaXMgcmVzdG9yZWQgb24gZXhpdCwgZXZlbiBpZiB0aGUgYm9keSByYWlzZXM7IHRoZQogICAgcGlubmVkIGBgbW9kaWZpZWRgYCB2YWx1ZSBpcyBsZWZ0IGluIHBsYWNlLCBtYXRjaGluZyBhIG5vcm1hbCByZWNhbGMgc2F2ZS4KICAgIEZvbnRzIHdpdGggYGByZWNhbGNUaW1lc3RhbXBgYCBmYWxzeSwgb3Igd2l0aG91dCBhIGBgaGVhZGBgIHRhYmxlLCBhcmUgbGVmdAogICAgdW50b3VjaGVkICh0aGVpciBgYGhlYWRgYCBpcyBub3QgZXZlbiBsb2FkZWQpLgoKICAgIFNlZSBodHRwczovL2dpdGh1Yi5jb20vZm9udHRvb2xzL2ZvbnR0b29scy9pc3N1ZXMvNDExMC4KICAgICIiIgogICAgbm93ID0gdGltZXN0YW1wTm93KCkKICAgIHJlc3RvcmUgPSBbXQogICAgdHJ5OgogICAgICAgIGZvciBmb250IGluIGZvbnRzOgogICAgICAgICAgICBpZiBmb250LnJlY2FsY1RpbWVzdGFtcCBhbmQgImhlYWQiIGluIGZvbnQ6CiAgICAgICAgICAgICAgICAjIHJlY29yZCB0aGUgb3JpZ2luYWwgZmxhZyAqYmVmb3JlKiBtdXRhdGluZywgc28gdGhlIGZpbmFsbHkKICAgICAgICAgICAgICAgICMgYmxvY2sgcmVzdG9yZXMgaXQgZXZlbiBpZiBsb2FkaW5nICdoZWFkJyBiZWxvdyByYWlzZXMKICAgICAgICAgICAgICAgIHJlc3RvcmUuYXBwZW5kKChmb250LCBmb250LnJlY2FsY1RpbWVzdGFtcCkpCiAgICAgICAgICAgICAgICBmb250WyJoZWFkIl0ubW9kaWZpZWQgPSBub3cKICAgICAgICAgICAgICAgIGZvbnQucmVjYWxjVGltZXN0YW1wID0gRmFsc2UKICAgICAgICB5aWVsZCBub3cKICAgIGZpbmFsbHk6CiAgICAgICAgZm9yIGZvbnQsIHJlY2FsY1RpbWVzdGFtcCBpbiByZXN0b3JlOgogICAgICAgICAgICBmb250LnJlY2FsY1RpbWVzdGFtcCA9IHJlY2FsY1RpbWVzdGFtcAoKCmNsYXNzIFRUQ29sbGVjdGlvbihvYmplY3QpOgogICAgIiIiT2JqZWN0IHJlcHJlc2VudGluZyBhIFRydWVUeXBlIENvbGxlY3Rpb24gLyBPcGVuVHlwZSBDb2xsZWN0aW9uLgogICAgVGhlIG1haW4gQVBJIGlzIHNlbGYuZm9udHMgYmVpbmcgYSBsaXN0IG9mIFRURm9udCBpbnN0YW5jZXMuCgogICAgRm9yIFRUQyB2ZXJzaW9ucyAxLjEgYW5kIDIuMSwgYGBmb250c2BgIGNvbnRhaW5zIHRoZSBwcmVmZXJyZWQgZXh0ZW5kZWQKICAgIGZvbnQgbGlzdCBhbmQgYGBsZWdhY3lGb250c2BgIGNvbnRhaW5zIHRoZSBjb21wYXRpYmlsaXR5IGZvbnQgbGlzdC4gVG8KICAgIHdyaXRlIG9uZSBvZiB0aGVzZSB2ZXJzaW9ucywgc2V0IGJvdGggYXR0cmlidXRlczsgRm9udFRvb2xzIGRvZXMgbm90IGRlcml2ZQogICAgbGVnYWN5IGZvbnRzIGF1dG9tYXRpY2FsbHkuCgogICAgSWYgc2hhcmVUYWJsZXMgaXMgVHJ1ZSwgdGhlbiBkaWZmZXJlbnQgZm9udHMgaW4gdGhlIGNvbGxlY3Rpb24KICAgIG1pZ2h0IHBvaW50IHRvIHRoZSBzYW1lIHRhYmxlIG9iamVjdCBpZiB0aGUgZGF0YSBmb3IgdGhlIHRhYmxlIHdhcwogICAgdGhlIHNhbWUgaW4gdGhlIGZvbnQgZmlsZS4gIE5vdGUsIGhvd2V2ZXIsIHRoYXQgdGhpcyBtaWdodCByZXN1bHQKICAgIGluIHN1cHJpc2VzIGFuZCBpbmNvcnJlY3QgYmVoYXZpb3IgaWYgdGhlIGRpZmZlcmVudCBmb250cyBpbnZvbHZlZAogICAgaGF2ZSBkaWZmZXJlbnQgR2x5cGhPcmRlci4gIFVzZSBvbmx5IGlmIHlvdSBrbm93IHdoYXQgeW91IGFyZSBkb2luZy4KICAgICIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBmaWxlPU5vbmUsIHNoYXJlVGFibGVzPUZhbHNlLCAqKmt3YXJncyk6CiAgICAgICAgZm9udHMgPSBzZWxmLmZvbnRzID0gW10KICAgICAgICBpZiBmaWxlIGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybgoKICAgICAgICBhc3NlcnQgImZvbnROdW1iZXIiIG5vdCBpbiBrd2FyZ3MsIGt3YXJncwoKICAgICAgICBjbG9zZVN0cmVhbSA9IEZhbHNlCiAgICAgICAgaWYgbm90IGhhc2F0dHIoZmlsZSwgInJlYWQiKToKICAgICAgICAgICAgZmlsZSA9IG9wZW4oZmlsZSwgInJiIikKICAgICAgICAgICAgY2xvc2VTdHJlYW0gPSBUcnVlCgogICAgICAgIHRhYmxlQ2FjaGUgPSB7fSBpZiBzaGFyZVRhYmxlcyBlbHNlIE5vbmUKCiAgICAgICAgaGVhZGVyID0gcmVhZFRUQ0hlYWRlcihmaWxlKQogICAgICAgIG51bUZvbnRzID0gZ2V0YXR0cihoZWFkZXIsICJudW1Gb250czIiLCBoZWFkZXIubnVtRm9udHMpCiAgICAgICAgZm9yIGkgaW4gcmFuZ2UobnVtRm9udHMpOgogICAgICAgICAgICBmb250ID0gVFRGb250KGZpbGUsIGZvbnROdW1iZXI9aSwgX3RhYmxlQ2FjaGU9dGFibGVDYWNoZSwgKiprd2FyZ3MpCiAgICAgICAgICAgIGZvbnRzLmFwcGVuZChmb250KQoKICAgICAgICBpZiBoYXNhdHRyKGhlYWRlciwgIm51bUZvbnRzMiIpOgogICAgICAgICAgICBzZWxmLmxlZ2FjeUZvbnRzID0gW10KICAgICAgICAgICAgZm9yIGkgaW4gcmFuZ2UoaGVhZGVyLm51bUZvbnRzKToKICAgICAgICAgICAgICAgIGZvbnQgPSBUVEZvbnQoCiAgICAgICAgICAgICAgICAgICAgZmlsZSwKICAgICAgICAgICAgICAgICAgICBmb250TnVtYmVyPWksCiAgICAgICAgICAgICAgICAgICAgX3RhYmxlQ2FjaGU9dGFibGVDYWNoZSwKICAgICAgICAgICAgICAgICAgICBfdXNlTGVnYWN5VFRDPVRydWUsCiAgICAgICAgICAgICAgICAgICAgKiprd2FyZ3MsCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBzZWxmLmxlZ2FjeUZvbnRzLmFwcGVuZChmb250KQoKICAgICAgICBpZiBoZWFkZXIuVmVyc2lvbiBpbiAoVFRDX1YyLCBUVENfVjJfMSk6CiAgICAgICAgICAgIHNlbGYuZHNpZzogdGFibGVfRF9TX0lfR18gfCBOb25lID0gTm9uZQogICAgICAgICAgICBpZiBoZWFkZXIudWxEc2lnT2Zmc2V0ICE9IDA6CiAgICAgICAgICAgICAgICBzZWxmLmRzaWcgPSB0YWJsZV9EX1NfSV9HXygiRFNJRyIpCiAgICAgICAgICAgICAgICBmaWxlLnNlZWsoaGVhZGVyLnVsRHNpZ09mZnNldCwgMCkKICAgICAgICAgICAgICAgIHNlbGYuZHNpZy5kYXRhID0gZmlsZS5yZWFkKGhlYWRlci51bERzaWdMZW5ndGgpCgogICAgICAgICMgZG9uJ3QgY2xvc2UgZmlsZSBpZiBsYXp5PVRydWUsIGFzIHRoZSBUVEZvbnQgaG9sZCBhIHJlZmVyZW5jZSB0byB0aGUgb3JpZ2luYWwKICAgICAgICAjIGZpbGU7IHRoZSBmaWxlIHdpbGwgYmUgY2xvc2VkIG9uY2UgdGhlIFRURm9udHMgYXJlIGNsb3NlZCBpbiB0aGUKICAgICAgICAjIFRUQ29sbGVjdGlvbi5jbG9zZSgpLiBXZSBzdGlsbCB3YW50IHRvIGNsb3NlIHRoZSBmaWxlIGlmIGxhenkgaXMgTm9uZSBvcgogICAgICAgICMgRmFsc2UsIGJlY2F1c2UgaW4gdGhhdCBjYXNlIHRoZSBUVEZvbnQgbm8gbG9uZ2VyIG5lZWQgdGhlIG9yaWdpbmFsIGZpbGUKICAgICAgICAjIGFuZCB3ZSB3YW50IHRvIGF2b2lkICdSZXNvdXJjZVdhcm5pbmc6IHVuY2xvc2VkIGZpbGUnLgogICAgICAgIGlmIG5vdCBrd2FyZ3MuZ2V0KCJsYXp5IikgYW5kIGNsb3NlU3RyZWFtOgogICAgICAgICAgICBmaWxlLmNsb3NlKCkKCiAgICBkZWYgX19lbnRlcl9fKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmCgogICAgZGVmIF9fZXhpdF9fKHNlbGYsIHR5cGUsIHZhbHVlLCB0cmFjZWJhY2spOgogICAgICAgIHNlbGYuY2xvc2UoKQoKICAgIGRlZiBjbG9zZShzZWxmKToKICAgICAgICBmb3IgZm9udCBpbiBzZWxmLmZvbnRzOgogICAgICAgICAgICBmb250LmNsb3NlKCkKICAgICAgICBmb3IgZm9udCBpbiBnZXRhdHRyKHNlbGYsICJsZWdhY3lGb250cyIsICgpKToKICAgICAgICAgICAgZm9udC5jbG9zZSgpCgogICAgZGVmIHNhdmUoc2VsZiwgZmlsZSwgc2hhcmVUYWJsZXM9VHJ1ZSk6CiAgICAgICAgIiIiU2F2ZSB0aGUgZm9udCB0byBkaXNrLiBTaW1pbGFybHkgdG8gdGhlIGNvbnN0cnVjdG9yLAogICAgICAgIHRoZSAnZmlsZScgYXJndW1lbnQgY2FuIGJlIGVpdGhlciBhIHBhdGhuYW1lIG9yIGEgd3JpdGFibGUKICAgICAgICBmaWxlIG9iamVjdC4KICAgICAgICAiIiIKICAgICAgICBpZiBub3QgaGFzYXR0cihmaWxlLCAid3JpdGUiKToKICAgICAgICAgICAgZmluYWwgPSBOb25lCiAgICAgICAgICAgIGZpbGUgPSBvcGVuKGZpbGUsICJ3YiIpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBhc3N1bWUgImZpbGUiIGlzIGEgd3JpdGFibGUgZmlsZSBvYmplY3QKICAgICAgICAgICAgIyB3cml0ZSB0byBhIHRlbXBvcmFyeSBzdHJlYW0gdG8gYWxsb3cgc2F2aW5nIHRvIHVuc2Vla2FibGUgc3RyZWFtcwogICAgICAgICAgICBmaW5hbCA9IGZpbGUKICAgICAgICAgICAgZmlsZSA9IEJ5dGVzSU8oKQoKICAgICAgICB0YWJsZUNhY2hlID0ge30gaWYgc2hhcmVUYWJsZXMgZWxzZSBOb25lCgogICAgICAgICMgQSBWMiBUVEMgd2lsbCBiZSBzYXZlZCBpZiBzZWxmLmRzaWcgaXMgcHJlc2VudCwgZXZlbiBpZiBpdCBpcyBOb25lLgogICAgICAgICMgVGhlIG1pbm9yIHZlcnNpb24gaXMgMSB3aGVuIGEgbGVnYWN5IGNvbXBhdGliaWxpdHkgbGlzdCBpcyBwcmVzZW50LgogICAgICAgIGhhc0xlZ2FjeUZvbnRzID0gaGFzYXR0cihzZWxmLCAibGVnYWN5Rm9udHMiKQogICAgICAgIGlmIGhhc2F0dHIoc2VsZiwgImRzaWciKToKICAgICAgICAgICAgdmVyc2lvbiA9IFRUQ19WMl8xIGlmIGhhc0xlZ2FjeUZvbnRzIGVsc2UgVFRDX1YyCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdmVyc2lvbiA9IFRUQ19WMV8xIGlmIGhhc0xlZ2FjeUZvbnRzIGVsc2UgVFRDX1YxCiAgICAgICAgbGVnYWN5Rm9udHMgPSBzZWxmLmxlZ2FjeUZvbnRzIGlmIGhhc0xlZ2FjeUZvbnRzIGVsc2UgW10KCiAgICAgICAgIyBQaW4gb25lICdtb2RpZmllZCcgdGltZXN0YW1wIHNvIHRoZSBmb250cycgJ2hlYWQnIHRhYmxlcyBjYW4gYmUgc2hhcmVkLgogICAgICAgIHdpdGggX3NoYXJlZE1vZGlmaWVkVGltZXN0YW1wKFsqbGVnYWN5Rm9udHMsICpzZWxmLmZvbnRzXSk6CiAgICAgICAgICAgIG9mZnNldHNfb2Zmc2V0ID0gd3JpdGVUVENIZWFkZXIoCiAgICAgICAgICAgICAgICBmaWxlLAogICAgICAgICAgICAgICAgbGVuKGxlZ2FjeUZvbnRzKSBpZiBoYXNMZWdhY3lGb250cyBlbHNlIGxlbihzZWxmLmZvbnRzKSwKICAgICAgICAgICAgICAgIHZlcnNpb249dmVyc2lvbiwKICAgICAgICAgICAgICAgIG51bUZvbnRzMj1sZW4oc2VsZi5mb250cyksCiAgICAgICAgICAgICkKICAgICAgICAgICAgb2Zmc2V0czJfb2Zmc2V0ID0gKAogICAgICAgICAgICAgICAgZmlsZS50ZWxsKCkgLSA0ICogbGVuKHNlbGYuZm9udHMpIGlmIGhhc0xlZ2FjeUZvbnRzIGVsc2UgTm9uZQogICAgICAgICAgICApCiAgICAgICAgICAgIGxlZ2FjeU9mZnNldHMgPSBbXQogICAgICAgICAgICBmb3IgZm9udCBpbiBsZWdhY3lGb250czoKICAgICAgICAgICAgICAgIGxlZ2FjeU9mZnNldHMuYXBwZW5kKGZpbGUudGVsbCgpKQogICAgICAgICAgICAgICAgZm9udC5fc2F2ZShmaWxlLCB0YWJsZUNhY2hlPXRhYmxlQ2FjaGUpCiAgICAgICAgICAgICAgICBmaWxlLnNlZWsoMCwgMikKICAgICAgICAgICAgb2Zmc2V0cyA9IFtdCiAgICAgICAgICAgIGZvciBmb250IGluIHNlbGYuZm9udHM6CiAgICAgICAgICAgICAgICBvZmZzZXRzLmFwcGVuZChmaWxlLnRlbGwoKSkKICAgICAgICAgICAgICAgIGZvbnQuX3NhdmUoZmlsZSwgdGFibGVDYWNoZT10YWJsZUNhY2hlKQogICAgICAgICAgICAgICAgZmlsZS5zZWVrKDAsIDIpCgogICAgICAgIGZpbGUuc2VlayhvZmZzZXRzX29mZnNldCkKICAgICAgICBpZiBoYXNMZWdhY3lGb250czoKICAgICAgICAgICAgZmlsZS53cml0ZShzdHJ1Y3QucGFjaygiPiVkTCIgJSBsZW4obGVnYWN5T2Zmc2V0cyksICpsZWdhY3lPZmZzZXRzKSkKICAgICAgICAgICAgZmlsZS5zZWVrKG9mZnNldHMyX29mZnNldCkKICAgICAgICBmaWxlLndyaXRlKHN0cnVjdC5wYWNrKCI+JWRMIiAlIGxlbihvZmZzZXRzKSwgKm9mZnNldHMpKQoKICAgICAgICBpZiB2ZXJzaW9uIGluIChUVENfVjIsIFRUQ19WMl8xKSBhbmQgc2VsZi5kc2lnIGlzIG5vdCBOb25lOgogICAgICAgICAgICAjIENvbXBpbGUgdGhlIERTSUcgaWYgbmVjZXNzYXJ5CiAgICAgICAgICAgIGlmIGhhc2F0dHIoc2VsZi5kc2lnLCAiZGF0YSIpOgogICAgICAgICAgICAgICAgZGF0YSA9IHNlbGYuZHNpZy5kYXRhCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBkYXRhID0gc2VsZi5kc2lnLmNvbXBpbGUoTm9uZSkKICAgICAgICAgICAgIyBXcml0ZSB0aGUgRFNJRyB0YWcsIGxlbmd0aCwgYW5kIG9mZnNldAogICAgICAgICAgICAjIFdlIGFyZSBhdCB0aGUgb2Zmc2V0IHdoZXJlIHRoZSBEU0lHIGhlYWRlciBzdGFydHMKICAgICAgICAgICAgZHNpZ19oZWFkZXJfZmllbGRzX29mZnNldCA9IG9mZnNldHNfb2Zmc2V0ICsgNCAqICgKICAgICAgICAgICAgICAgIGxlbihsZWdhY3lPZmZzZXRzKSBpZiBoYXNMZWdhY3lGb250cyBlbHNlIGxlbihvZmZzZXRzKQogICAgICAgICAgICApCiAgICAgICAgICAgICMgVGhlIERTSUcgZGF0YSB3aWxsIGJlIHdyaXR0ZW4gdG8gdGhlIGVuZCBvZiB0aGUgZmlsZSwgZ28gdGhlcmUKICAgICAgICAgICAgZmlsZS5zZWVrKDAsIDIpCiAgICAgICAgICAgIGRzaWdfb2Zmc2V0ID0gZmlsZS50ZWxsKCkKICAgICAgICAgICAgIyBXcml0ZSB0aGUgYWN0dWFsIGRhdGEKICAgICAgICAgICAgZmlsZS53cml0ZShkYXRhKQogICAgICAgICAgICAjIEdvIGJhY2sgdG8gdGhlIERTSUcgaGVhZGVyCiAgICAgICAgICAgIGZpbGUuc2Vlayhkc2lnX2hlYWRlcl9maWVsZHNfb2Zmc2V0KQogICAgICAgICAgICAjIFdyaXRlIHRoZSB0YWcKICAgICAgICAgICAgZmlsZS53cml0ZShiIkRTSUciKQogICAgICAgICAgICAjIFdyaXRlIHRoZSBsZW5ndGggYW5kIG9mZnNldAogICAgICAgICAgICBmaWxlLndyaXRlKHN0cnVjdC5wYWNrKCI+MkwiLCBsZW4oZGF0YSksIGRzaWdfb2Zmc2V0KSkKCiAgICAgICAgaWYgZmluYWw6CiAgICAgICAgICAgIGZpbmFsLndyaXRlKGZpbGUuZ2V0dmFsdWUoKSkKICAgICAgICBmaWxlLmNsb3NlKCkKCiAgICBkZWYgc2F2ZVhNTChzZWxmLCBmaWxlT3JQYXRoLCBuZXdsaW5lc3RyPSJcbiIsIHdyaXRlVmVyc2lvbj1UcnVlLCAqKmt3YXJncyk6CiAgICAgICAgZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgeG1sV3JpdGVyCgogICAgICAgIHdyaXRlciA9IHhtbFdyaXRlci5YTUxXcml0ZXIoZmlsZU9yUGF0aCwgbmV3bGluZXN0cj1uZXdsaW5lc3RyKQoKICAgICAgICBpZiB3cml0ZVZlcnNpb246CiAgICAgICAgICAgIGZyb20gZm9udFRvb2xzIGltcG9ydCB2ZXJzaW9uCgogICAgICAgICAgICB2ZXJzaW9uID0gIi4iLmpvaW4odmVyc2lvbi5zcGxpdCgiLiIpWzoyXSkKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJ0dENvbGxlY3Rpb24iLCB0dExpYlZlcnNpb249dmVyc2lvbikKICAgICAgICBlbHNlOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoInR0Q29sbGVjdGlvbiIpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICAgICAgZm9yIGZvbnQgaW4gc2VsZi5mb250czoKICAgICAgICAgICAgZm9udC5fc2F2ZVhNTCh3cml0ZXIsIHdyaXRlVmVyc2lvbj1GYWxzZSwgKiprd2FyZ3MpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKCiAgICAgICAgd3JpdGVyLmVuZHRhZygidHRDb2xsZWN0aW9uIikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgICAgIHdyaXRlci5jbG9zZSgpCgogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIGl0ZW0pOgogICAgICAgIHJldHVybiBzZWxmLmZvbnRzW2l0ZW1dCgogICAgZGVmIF9fc2V0aXRlbV9fKHNlbGYsIGl0ZW0sIHZhbHVlKToKICAgICAgICBzZWxmLmZvbnRzW2l0ZW1dID0gdmFsdWUKCiAgICBkZWYgX19kZWxpdGVtX18oc2VsZiwgaXRlbSk6CiAgICAgICAgcmV0dXJuIHNlbGYuZm9udHNbaXRlbV0KCiAgICBkZWYgX19sZW5fXyhzZWxmKToKICAgICAgICByZXR1cm4gbGVuKHNlbGYuZm9udHMpCgogICAgZGVmIF9faXRlcl9fKHNlbGYpOgogICAgICAgIHJldHVybiBpdGVyKHNlbGYuZm9udHMpCg==
+from fontTools.ttLib.ttFont import TTFont
+from io import BytesIO
+import struct
+import logging
+from contextlib import contextmanager
+from fontTools.ttLib.sfnt import (
+    TTC_V1,
+    TTC_V1_1,
+    TTC_V2,
+    TTC_V2_1,
+    readTTCHeader,
+    writeTTCHeader,
+)
+from fontTools.ttLib.tables.D_S_I_G_ import table_D_S_I_G_
+from fontTools.misc.timeTools import timestampNow
+
+log = logging.getLogger(__name__)
+
+
+@contextmanager
+def _sharedModifiedTimestamp(fonts):
+    """Pin a single ``head.modified`` timestamp across an iterable of TTFonts.
+
+    When several fonts are saved together with ``recalcTimestamp=True``, each
+    one restamps its own ``head`` table via ``timestampNow()``, whose
+    granularity is one second. If the wall clock ticks between two fonts'
+    ``head.compile()`` calls they get different ``modified`` values, which
+    defeats byte-identical table sharing (``shareTables=True``) and makes the
+    saved size non-deterministic.
+
+    This reads ``timestampNow()`` once (so ``SOURCE_DATE_EPOCH`` is still
+    honored) and applies it to every font that would have recalculated its own
+    timestamp, suppressing the per-font restamp for the duration. Each font's
+    ``recalcTimestamp`` flag is restored on exit, even if the body raises; the
+    pinned ``modified`` value is left in place, matching a normal recalc save.
+    Fonts with ``recalcTimestamp`` falsy, or without a ``head`` table, are left
+    untouched (their ``head`` is not even loaded).
+
+    See https://github.com/fonttools/fonttools/issues/4110.
+    """
+    now = timestampNow()
+    restore = []
+    try:
+        for font in fonts:
+            if font.recalcTimestamp and "head" in font:
+                # record the original flag *before* mutating, so the finally
+                # block restores it even if loading 'head' below raises
+                restore.append((font, font.recalcTimestamp))
+                font["head"].modified = now
+                font.recalcTimestamp = False
+        yield now
+    finally:
+        for font, recalcTimestamp in restore:
+            font.recalcTimestamp = recalcTimestamp
+
+
+class TTCollection(object):
+    """Object representing a TrueType Collection / OpenType Collection.
+    The main API is self.fonts being a list of TTFont instances.
+
+    For TTC versions 1.1 and 2.1, ``fonts`` contains the preferred extended
+    font list and ``legacyFonts`` contains the compatibility font list. To
+    write one of these versions, set both attributes; FontTools does not derive
+    legacy fonts automatically.
+
+    If shareTables is True, then different fonts in the collection
+    might point to the same table object if the data for the table was
+    the same in the font file.  Note, however, that this might result
+    in suprises and incorrect behavior if the different fonts involved
+    have different GlyphOrder.  Use only if you know what you are doing.
+    """
+
+    def __init__(self, file=None, shareTables=False, **kwargs):
+        fonts = self.fonts = []
+        if file is None:
+            return
+
+        assert "fontNumber" not in kwargs, kwargs
+
+        closeStream = False
+        if not hasattr(file, "read"):
+            file = open(file, "rb")
+            closeStream = True
+
+        tableCache = {} if shareTables else None
+
+        header = readTTCHeader(file)
+        numFonts = getattr(header, "numFonts2", header.numFonts)
+        for i in range(numFonts):
+            font = TTFont(file, fontNumber=i, _tableCache=tableCache, **kwargs)
+            fonts.append(font)
+
+        if hasattr(header, "numFonts2"):
+            self.legacyFonts = []
+            for i in range(header.numFonts):
+                font = TTFont(
+                    file,
+                    fontNumber=i,
+                    _tableCache=tableCache,
+                    _useLegacyTTC=True,
+                    **kwargs,
+                )
+                self.legacyFonts.append(font)
+
+        if header.Version in (TTC_V2, TTC_V2_1):
+            self.dsig: table_D_S_I_G_ | None = None
+            if header.ulDsigOffset != 0:
+                self.dsig = table_D_S_I_G_("DSIG")
+                file.seek(header.ulDsigOffset, 0)
+                self.dsig.data = file.read(header.ulDsigLength)
+
+        # don't close file if lazy=True, as the TTFont hold a reference to the original
+        # file; the file will be closed once the TTFonts are closed in the
+        # TTCollection.close(). We still want to close the file if lazy is None or
+        # False, because in that case the TTFont no longer need the original file
+        # and we want to avoid 'ResourceWarning: unclosed file'.
+        if not kwargs.get("lazy") and closeStream:
+            file.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.close()
+
+    def close(self):
+        for font in self.fonts:
+            font.close()
+        for font in getattr(self, "legacyFonts", ()):
+            font.close()
+
+    def save(self, file, shareTables=True):
+        """Save the font to disk. Similarly to the constructor,
+        the 'file' argument can be either a pathname or a writable
+        file object.
+        """
+        if not hasattr(file, "write"):
+            final = None
+            file = open(file, "wb")
+        else:
+            # assume "file" is a writable file object
+            # write to a temporary stream to allow saving to unseekable streams
+            final = file
+            file = BytesIO()
+
+        tableCache = {} if shareTables else None
+
+        # A V2 TTC will be saved if self.dsig is present, even if it is None.
+        # The minor version is 1 when a legacy compatibility list is present.
+        hasLegacyFonts = hasattr(self, "legacyFonts")
+        if hasattr(self, "dsig"):
+            version = TTC_V2_1 if hasLegacyFonts else TTC_V2
+        else:
+            version = TTC_V1_1 if hasLegacyFonts else TTC_V1
+        legacyFonts = self.legacyFonts if hasLegacyFonts else []
+
+        # Pin one 'modified' timestamp so the fonts' 'head' tables can be shared.
+        with _sharedModifiedTimestamp([*legacyFonts, *self.fonts]):
+            offsets_offset = writeTTCHeader(
+                file,
+                len(legacyFonts) if hasLegacyFonts else len(self.fonts),
+                version=version,
+                numFonts2=len(self.fonts),
+            )
+            offsets2_offset = (
+                file.tell() - 4 * len(self.fonts) if hasLegacyFonts else None
+            )
+            legacyOffsets = []
+            for font in legacyFonts:
+                legacyOffsets.append(file.tell())
+                font._save(file, tableCache=tableCache)
+                file.seek(0, 2)
+            offsets = []
+            for font in self.fonts:
+                offsets.append(file.tell())
+                font._save(file, tableCache=tableCache)
+                file.seek(0, 2)
+
+        file.seek(offsets_offset)
+        if hasLegacyFonts:
+            file.write(struct.pack(">%dL" % len(legacyOffsets), *legacyOffsets))
+            file.seek(offsets2_offset)
+        file.write(struct.pack(">%dL" % len(offsets), *offsets))
+
+        if version in (TTC_V2, TTC_V2_1) and self.dsig is not None:
+            # Compile the DSIG if necessary
+            if hasattr(self.dsig, "data"):
+                data = self.dsig.data
+            else:
+                data = self.dsig.compile(None)
+            # Write the DSIG tag, length, and offset
+            # We are at the offset where the DSIG header starts
+            dsig_header_fields_offset = offsets_offset + 4 * (
+                len(legacyOffsets) if hasLegacyFonts else len(offsets)
+            )
+            # The DSIG data will be written to the end of the file, go there
+            file.seek(0, 2)
+            dsig_offset = file.tell()
+            # Write the actual data
+            file.write(data)
+            # Go back to the DSIG header
+            file.seek(dsig_header_fields_offset)
+            # Write the tag
+            file.write(b"DSIG")
+            # Write the length and offset
+            file.write(struct.pack(">2L", len(data), dsig_offset))
+
+        if final:
+            final.write(file.getvalue())
+        file.close()
+
+    def saveXML(self, fileOrPath, newlinestr="\n", writeVersion=True, **kwargs):
+        from fontTools.misc import xmlWriter
+
+        writer = xmlWriter.XMLWriter(fileOrPath, newlinestr=newlinestr)
+
+        if writeVersion:
+            from fontTools import version
+
+            version = ".".join(version.split(".")[:2])
+            writer.begintag("ttCollection", ttLibVersion=version)
+        else:
+            writer.begintag("ttCollection")
+        writer.newline()
+        writer.newline()
+
+        for font in self.fonts:
+            font._saveXML(writer, writeVersion=False, **kwargs)
+            writer.newline()
+
+        writer.endtag("ttCollection")
+        writer.newline()
+
+        writer.close()
+
+    def __getitem__(self, item):
+        return self.fonts[item]
+
+    def __setitem__(self, item, value):
+        self.fonts[item] = value
+
+    def __delitem__(self, item):
+        return self.fonts[item]
+
+    def __len__(self):
+        return len(self.fonts)
+
+    def __iter__(self):
+        return iter(self.fonts)

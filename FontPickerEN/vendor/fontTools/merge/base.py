@@ -1,1 +1,80 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZCwgUm9vemJlaCBQb3VybmFkZXIKCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5EZWZhdWx0VGFibGUgaW1wb3J0IERlZmF1bHRUYWJsZQppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5tZXJnZSIpCgoKZGVmIGFkZF9tZXRob2QoKmNsYXp6ZXMsICoqa3dhcmdzKToKICAgICIiIlJldHVybnMgYSBkZWNvcmF0b3IgZnVuY3Rpb24gdGhhdCBhZGRzIGEgbmV3IG1ldGhvZCB0byBvbmUgb3IKICAgIG1vcmUgY2xhc3Nlcy4iIiIKICAgIGFsbG93RGVmYXVsdCA9IGt3YXJncy5nZXQoImFsbG93RGVmYXVsdFRhYmxlIiwgRmFsc2UpCgogICAgZGVmIHdyYXBwZXIobWV0aG9kKToKICAgICAgICBkb25lID0gW10KICAgICAgICBmb3IgY2xhenogaW4gY2xhenplczoKICAgICAgICAgICAgaWYgY2xhenogaW4gZG9uZToKICAgICAgICAgICAgICAgIGNvbnRpbnVlICAjIFN1cHBvcnQgbXVsdGlwbGUgbmFtZXMgb2YgYSBjbGF6egogICAgICAgICAgICBkb25lLmFwcGVuZChjbGF6eikKICAgICAgICAgICAgYXNzZXJ0IGFsbG93RGVmYXVsdCBvciBjbGF6eiAhPSBEZWZhdWx0VGFibGUsICJPb3BzLCB0YWJsZSBjbGFzcyBub3QgZm91bmQuIgogICAgICAgICAgICBhc3NlcnQgKAogICAgICAgICAgICAgICAgbWV0aG9kLl9fbmFtZV9fIG5vdCBpbiBjbGF6ei5fX2RpY3RfXwogICAgICAgICAgICApLCAiT29wcywgY2xhc3MgJyVzJyBoYXMgbWV0aG9kICclcycuIiAlIChjbGF6ei5fX25hbWVfXywgbWV0aG9kLl9fbmFtZV9fKQogICAgICAgICAgICBzZXRhdHRyKGNsYXp6LCBtZXRob2QuX19uYW1lX18sIG1ldGhvZCkKICAgICAgICByZXR1cm4gTm9uZQoKICAgIHJldHVybiB3cmFwcGVyCgoKZGVmIG1lcmdlT2JqZWN0cyhsc3QpOgogICAgbHN0ID0gW2l0ZW0gZm9yIGl0ZW0gaW4gbHN0IGlmIGl0ZW0gaXMgbm90IE5vdEltcGxlbWVudGVkXQogICAgaWYgbm90IGxzdDoKICAgICAgICByZXR1cm4gTm90SW1wbGVtZW50ZWQKICAgIGxzdCA9IFtpdGVtIGZvciBpdGVtIGluIGxzdCBpZiBpdGVtIGlzIG5vdCBOb25lXQogICAgaWYgbm90IGxzdDoKICAgICAgICByZXR1cm4gTm9uZQoKICAgIGNsYXp6ID0gbHN0WzBdLl9fY2xhc3NfXwogICAgYXNzZXJ0IGFsbCh0eXBlKGl0ZW0pID09IGNsYXp6IGZvciBpdGVtIGluIGxzdCksIGxzdAoKICAgIGxvZ2ljID0gY2xhenoubWVyZ2VNYXAKICAgIHJldHVyblRhYmxlID0gY2xhenooKQogICAgcmV0dXJuRGljdCA9IHt9CgogICAgYWxsS2V5cyA9IHNldC51bmlvbihzZXQoKSwgKih2YXJzKHRhYmxlKS5rZXlzKCkgZm9yIHRhYmxlIGluIGxzdCkpCiAgICBmb3Iga2V5IGluIGFsbEtleXM6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBtZXJnZUxvZ2ljID0gbG9naWNba2V5XQogICAgICAgIGV4Y2VwdCBLZXlFcnJvcjoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgbWVyZ2VMb2dpYyA9IGxvZ2ljWyIqIl0KICAgICAgICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICAgICAgcmFpc2UgRXhjZXB0aW9uKAogICAgICAgICAgICAgICAgICAgICJEb24ndCBrbm93IGhvdyB0byBtZXJnZSBrZXkgJXMgb2YgY2xhc3MgJXMiICUgKGtleSwgY2xhenouX19uYW1lX18pCiAgICAgICAgICAgICAgICApCiAgICAgICAgaWYgbWVyZ2VMb2dpYyBpcyBOb3RJbXBsZW1lbnRlZDoKICAgICAgICAgICAgY29udGludWUKICAgICAgICB2YWx1ZSA9IG1lcmdlTG9naWMoZ2V0YXR0cih0YWJsZSwga2V5LCBOb3RJbXBsZW1lbnRlZCkgZm9yIHRhYmxlIGluIGxzdCkKICAgICAgICBpZiB2YWx1ZSBpcyBub3QgTm90SW1wbGVtZW50ZWQ6CiAgICAgICAgICAgIHJldHVybkRpY3Rba2V5XSA9IHZhbHVlCgogICAgcmV0dXJuVGFibGUuX19kaWN0X18gPSByZXR1cm5EaWN0CgogICAgcmV0dXJuIHJldHVyblRhYmxlCgoKQGFkZF9tZXRob2QoRGVmYXVsdFRhYmxlLCBhbGxvd0RlZmF1bHRUYWJsZT1UcnVlKQpkZWYgbWVyZ2Uoc2VsZiwgbSwgdGFibGVzKToKICAgIGlmIG5vdCBoYXNhdHRyKHNlbGYsICJtZXJnZU1hcCIpOgogICAgICAgIGxvZy5pbmZvKCJEb24ndCBrbm93IGhvdyB0byBtZXJnZSAnJXMnLiIsIHNlbGYudGFibGVUYWcpCiAgICAgICAgcmV0dXJuIE5vdEltcGxlbWVudGVkCgogICAgbG9naWMgPSBzZWxmLm1lcmdlTWFwCgogICAgaWYgaXNpbnN0YW5jZShsb2dpYywgZGljdCk6CiAgICAgICAgcmV0dXJuIG0ubWVyZ2VPYmplY3RzKHNlbGYsIHNlbGYubWVyZ2VNYXAsIHRhYmxlcykKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIGxvZ2ljKHRhYmxlcykK
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod, Roozbeh Pournader
+
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
+import logging
+
+log = logging.getLogger("fontTools.merge")
+
+
+def add_method(*clazzes, **kwargs):
+    """Returns a decorator function that adds a new method to one or
+    more classes."""
+    allowDefault = kwargs.get("allowDefaultTable", False)
+
+    def wrapper(method):
+        done = []
+        for clazz in clazzes:
+            if clazz in done:
+                continue  # Support multiple names of a clazz
+            done.append(clazz)
+            assert allowDefault or clazz != DefaultTable, "Oops, table class not found."
+            assert (
+                method.__name__ not in clazz.__dict__
+            ), "Oops, class '%s' has method '%s'." % (clazz.__name__, method.__name__)
+            setattr(clazz, method.__name__, method)
+        return None
+
+    return wrapper
+
+
+def mergeObjects(lst):
+    lst = [item for item in lst if item is not NotImplemented]
+    if not lst:
+        return NotImplemented
+    lst = [item for item in lst if item is not None]
+    if not lst:
+        return None
+
+    clazz = lst[0].__class__
+    assert all(type(item) == clazz for item in lst), lst
+
+    logic = clazz.mergeMap
+    returnTable = clazz()
+    returnDict = {}
+
+    allKeys = set.union(set(), *(vars(table).keys() for table in lst))
+    for key in allKeys:
+        try:
+            mergeLogic = logic[key]
+        except KeyError:
+            try:
+                mergeLogic = logic["*"]
+            except KeyError:
+                raise Exception(
+                    "Don't know how to merge key %s of class %s" % (key, clazz.__name__)
+                )
+        if mergeLogic is NotImplemented:
+            continue
+        value = mergeLogic(getattr(table, key, NotImplemented) for table in lst)
+        if value is not NotImplemented:
+            returnDict[key] = value
+
+    returnTable.__dict__ = returnDict
+
+    return returnTable
+
+
+@add_method(DefaultTable, allowDefaultTable=True)
+def merge(self, m, tables):
+    if not hasattr(self, "mergeMap"):
+        log.info("Don't know how to merge '%s'.", self.tableTag)
+        return NotImplemented
+
+    logic = self.mergeMap
+
+    if isinstance(logic, dict):
+        return m.mergeObjects(self, self.mergeMap, tables)
+    else:
+        return logic(tables)

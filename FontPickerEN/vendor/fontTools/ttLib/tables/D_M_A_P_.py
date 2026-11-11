@@ -1,1 +1,12 @@
-ZnJvbSAuX2NfbV9hX3AgaW1wb3J0IHRhYmxlX19jX21fYV9wCgoKY2xhc3MgdGFibGVfRF9NX0FfUF8odGFibGVfX2NfbV9hX3ApOgogICAgIiIiRGVsdGEgbWFwIHRhYmxlLgoKICAgIFRoZSBETUFQIHRhYmxlIGhhcyB0aGUgc2FtZSBiaW5hcnkgc3RydWN0dXJlIGFzIHRoZSBgYGNtYXBgYCB0YWJsZS4gIEl0cwogICAgbWFwcGluZ3MgdGFrZSBwcmVjZWRlbmNlIG92ZXIgYGBjbWFwYGAgbWFwcGluZ3Mgd2hlbiBib3RoIHRhYmxlcyBhcmUKICAgIHByZXNlbnQuCiAgICAiIiIKCiAgICBwYXNzCg==
+from ._c_m_a_p import table__c_m_a_p
+
+
+class table_D_M_A_P_(table__c_m_a_p):
+    """Delta map table.
+
+    The DMAP table has the same binary structure as the ``cmap`` table.  Its
+    mappings take precedence over ``cmap`` mappings when both tables are
+    present.
+    """
+
+    pass

@@ -1,1 +1,13 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfR19EX0VfRl8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJHbHlwaCBEZWZpbml0aW9uIHRhYmxlCgogICAgVGhlIGBgR0RFRmBgIHRhYmxlIHN0b3JlcyB2YXJpb3VzIGdseXBoIHByb3BlcnRpZXMgdGhhdCBhcmUgdXNlZAogICAgYnkgT3BlblR5cGUgTGF5b3V0LgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vbGVhcm4ubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvZ2RlZgogICAgIiIiCgogICAgcGFzcwo=
+from .otBase import BaseTTXConverter
+
+
+class table_G_D_E_F_(BaseTTXConverter):
+    """Glyph Definition table
+
+    The ``GDEF`` table stores various glyph properties that are used
+    by OpenType Layout.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/gdef
+    """
+
+    pass

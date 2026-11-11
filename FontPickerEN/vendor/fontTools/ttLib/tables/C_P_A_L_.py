@@ -1,1 +1,305 @@
-IyBDb3B5cmlnaHQgMjAxMyBHb29nbGUsIEluYy4gQWxsIFJpZ2h0cyBSZXNlcnZlZC4KIwojIEdvb2dsZSBBdXRob3Iocyk6IEJlaGRhZCBFc2ZhaGJvZAoKZnJvbSBmb250VG9vbHMubWlzYy50ZXh0VG9vbHMgaW1wb3J0IGJ5dGVzam9pbiwgc2FmZUV2YWwKZnJvbSAuIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IGFycmF5CmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IG5hbWVkdHVwbGUKaW1wb3J0IHN0cnVjdAppbXBvcnQgc3lzCgoKY2xhc3MgdGFibGVfQ19QX0FfTF8oRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJDb2xvciBQYWxldHRlIHRhYmxlCgogICAgVGhlIGBgQ1BBTGBgIHRhYmxlIGNvbnRhaW5zIGEgc2V0IG9mIG9uZSBvciBtb3JlIGNvbG9yIHBhbGV0dGVzLiBUaGUgY29sb3IKICAgIHJlY29yZHMgaW4gZWFjaCBwYWxldHRlIGNhbiBiZSByZWZlcmVuY2VkIGJ5IHRoZSBgYENPTFJgYCB0YWJsZSB0byBzcGVjaWZ5CiAgICB0aGUgY29sb3JzIHVzZWQgaW4gYSBjb2xvciBnbHlwaC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2NwYWwKICAgICIiIgoKICAgIE5PX05BTUVfSUQgPSAweEZGRkYKICAgIERFRkFVTFRfUEFMRVRURV9UWVBFID0gMAoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB0YWc9Tm9uZSk6CiAgICAgICAgRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZS5fX2luaXRfXyhzZWxmLCB0YWcpCiAgICAgICAgc2VsZi5wYWxldHRlcyA9IFtdCiAgICAgICAgc2VsZi5wYWxldHRlVHlwZXMgPSBbXQogICAgICAgIHNlbGYucGFsZXR0ZUxhYmVscyA9IFtdCiAgICAgICAgc2VsZi5wYWxldHRlRW50cnlMYWJlbHMgPSBbXQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgdHRGb250KToKICAgICAgICAoCiAgICAgICAgICAgIHNlbGYudmVyc2lvbiwKICAgICAgICAgICAgc2VsZi5udW1QYWxldHRlRW50cmllcywKICAgICAgICAgICAgbnVtUGFsZXR0ZXMsCiAgICAgICAgICAgIG51bUNvbG9yUmVjb3JkcywKICAgICAgICAgICAgZ29mZnNldEZpcnN0Q29sb3JSZWNvcmQsCiAgICAgICAgKSA9IHN0cnVjdC51bnBhY2soIj5ISEhITCIsIGRhdGFbOjEyXSkKICAgICAgICBhc3NlcnQgKAogICAgICAgICAgICBzZWxmLnZlcnNpb24gPD0gMQogICAgICAgICksICJWZXJzaW9uIG9mIENQQUwgdGFibGUgaXMgaGlnaGVyIHRoYW4gSSBrbm93IGhvdyB0byBoYW5kbGUiCiAgICAgICAgc2VsZi5wYWxldHRlcyA9IFtdCiAgICAgICAgcG9zID0gMTIKICAgICAgICBmb3IgaSBpbiByYW5nZShudW1QYWxldHRlcyk6CiAgICAgICAgICAgIHN0YXJ0SW5kZXggPSBzdHJ1Y3QudW5wYWNrKCI+SCIsIGRhdGFbcG9zIDogcG9zICsgMl0pWzBdCiAgICAgICAgICAgIGFzc2VydCBzdGFydEluZGV4ICsgc2VsZi5udW1QYWxldHRlRW50cmllcyA8PSBudW1Db2xvclJlY29yZHMKICAgICAgICAgICAgcG9zICs9IDIKICAgICAgICAgICAgcGFsZXR0ZSA9IFtdCiAgICAgICAgICAgIHBwb3MgPSBnb2Zmc2V0Rmlyc3RDb2xvclJlY29yZCArIHN0YXJ0SW5kZXggKiA0CiAgICAgICAgICAgIGZvciBqIGluIHJhbmdlKHNlbGYubnVtUGFsZXR0ZUVudHJpZXMpOgogICAgICAgICAgICAgICAgcGFsZXR0ZS5hcHBlbmQoQ29sb3IoKnN0cnVjdC51bnBhY2soIj5CQkJCIiwgZGF0YVtwcG9zIDogcHBvcyArIDRdKSkpCiAgICAgICAgICAgICAgICBwcG9zICs9IDQKICAgICAgICAgICAgc2VsZi5wYWxldHRlcy5hcHBlbmQocGFsZXR0ZSkKICAgICAgICBpZiBzZWxmLnZlcnNpb24gPT0gMDoKICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlVHlwZUFycmF5ID0gMAogICAgICAgICAgICBvZmZzZXRUb1BhbGV0dGVMYWJlbEFycmF5ID0gMAogICAgICAgICAgICBvZmZzZXRUb1BhbGV0dGVFbnRyeUxhYmVsQXJyYXkgPSAwCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcG9zID0gMTIgKyBudW1QYWxldHRlcyAqIDIKICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlVHlwZUFycmF5LAogICAgICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlTGFiZWxBcnJheSwKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZUVudHJ5TGFiZWxBcnJheSwKICAgICAgICAgICAgKSA9IHN0cnVjdC51bnBhY2soIj5MTEwiLCBkYXRhW3BvcyA6IHBvcyArIDEyXSkKICAgICAgICBzZWxmLnBhbGV0dGVUeXBlcyA9IHNlbGYuX2RlY29tcGlsZVVJbnQzMkFycmF5KAogICAgICAgICAgICBkYXRhLAogICAgICAgICAgICBvZmZzZXRUb1BhbGV0dGVUeXBlQXJyYXksCiAgICAgICAgICAgIG51bVBhbGV0dGVzLAogICAgICAgICAgICBkZWZhdWx0PXNlbGYuREVGQVVMVF9QQUxFVFRFX1RZUEUsCiAgICAgICAgKQogICAgICAgIHNlbGYucGFsZXR0ZUxhYmVscyA9IHNlbGYuX2RlY29tcGlsZVVJbnQxNkFycmF5KAogICAgICAgICAgICBkYXRhLCBvZmZzZXRUb1BhbGV0dGVMYWJlbEFycmF5LCBudW1QYWxldHRlcywgZGVmYXVsdD1zZWxmLk5PX05BTUVfSUQKICAgICAgICApCiAgICAgICAgc2VsZi5wYWxldHRlRW50cnlMYWJlbHMgPSBzZWxmLl9kZWNvbXBpbGVVSW50MTZBcnJheSgKICAgICAgICAgICAgZGF0YSwKICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlRW50cnlMYWJlbEFycmF5LAogICAgICAgICAgICBzZWxmLm51bVBhbGV0dGVFbnRyaWVzLAogICAgICAgICAgICBkZWZhdWx0PXNlbGYuTk9fTkFNRV9JRCwKICAgICAgICApCgogICAgZGVmIF9kZWNvbXBpbGVVSW50MTZBcnJheShzZWxmLCBkYXRhLCBvZmZzZXQsIG51bUVsZW1lbnRzLCBkZWZhdWx0PTApOgogICAgICAgIGlmIG9mZnNldCA9PSAwOgogICAgICAgICAgICByZXR1cm4gW2RlZmF1bHRdICogbnVtRWxlbWVudHMKICAgICAgICByZXN1bHQgPSBhcnJheS5hcnJheSgiSCIsIGRhdGFbb2Zmc2V0IDogb2Zmc2V0ICsgMiAqIG51bUVsZW1lbnRzXSkKICAgICAgICBpZiBzeXMuYnl0ZW9yZGVyICE9ICJiaWciOgogICAgICAgICAgICByZXN1bHQuYnl0ZXN3YXAoKQogICAgICAgIGFzc2VydCBsZW4ocmVzdWx0KSA9PSBudW1FbGVtZW50cywgcmVzdWx0CiAgICAgICAgcmV0dXJuIHJlc3VsdC50b2xpc3QoKQoKICAgIGRlZiBfZGVjb21waWxlVUludDMyQXJyYXkoc2VsZiwgZGF0YSwgb2Zmc2V0LCBudW1FbGVtZW50cywgZGVmYXVsdD0wKToKICAgICAgICBpZiBvZmZzZXQgPT0gMDoKICAgICAgICAgICAgcmV0dXJuIFtkZWZhdWx0XSAqIG51bUVsZW1lbnRzCiAgICAgICAgcmVzdWx0ID0gYXJyYXkuYXJyYXkoIkkiLCBkYXRhW29mZnNldCA6IG9mZnNldCArIDQgKiBudW1FbGVtZW50c10pCiAgICAgICAgaWYgc3lzLmJ5dGVvcmRlciAhPSAiYmlnIjoKICAgICAgICAgICAgcmVzdWx0LmJ5dGVzd2FwKCkKICAgICAgICBhc3NlcnQgbGVuKHJlc3VsdCkgPT0gbnVtRWxlbWVudHMsIHJlc3VsdAogICAgICAgIHJldHVybiByZXN1bHQudG9saXN0KCkKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGNvbG9yUmVjb3JkSW5kaWNlcywgY29sb3JSZWNvcmRzID0gc2VsZi5fY29tcGlsZUNvbG9yUmVjb3JkcygpCiAgICAgICAgcGFsZXR0ZVR5cGVzID0gc2VsZi5fY29tcGlsZVBhbGV0dGVUeXBlcygpCiAgICAgICAgcGFsZXR0ZUxhYmVscyA9IHNlbGYuX2NvbXBpbGVQYWxldHRlTGFiZWxzKCkKICAgICAgICBwYWxldHRlRW50cnlMYWJlbHMgPSBzZWxmLl9jb21waWxlUGFsZXR0ZUVudHJ5TGFiZWxzKCkKICAgICAgICBudW1Db2xvclJlY29yZHMgPSBsZW4oY29sb3JSZWNvcmRzKSAvLyA0CiAgICAgICAgb2Zmc2V0VG9GaXJzdENvbG9yUmVjb3JkID0gMTIgKyBsZW4oY29sb3JSZWNvcmRJbmRpY2VzKQogICAgICAgIGlmIHNlbGYudmVyc2lvbiA+PSAxOgogICAgICAgICAgICBvZmZzZXRUb0ZpcnN0Q29sb3JSZWNvcmQgKz0gMTIKICAgICAgICBoZWFkZXIgPSBzdHJ1Y3QucGFjaygKICAgICAgICAgICAgIj5ISEhITCIsCiAgICAgICAgICAgIHNlbGYudmVyc2lvbiwKICAgICAgICAgICAgc2VsZi5udW1QYWxldHRlRW50cmllcywKICAgICAgICAgICAgbGVuKHNlbGYucGFsZXR0ZXMpLAogICAgICAgICAgICBudW1Db2xvclJlY29yZHMsCiAgICAgICAgICAgIG9mZnNldFRvRmlyc3RDb2xvclJlY29yZCwKICAgICAgICApCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uID09IDA6CiAgICAgICAgICAgIGRhdGFMaXN0ID0gW2hlYWRlciwgY29sb3JSZWNvcmRJbmRpY2VzLCBjb2xvclJlY29yZHNdCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcG9zID0gb2Zmc2V0VG9GaXJzdENvbG9yUmVjb3JkICsgbGVuKGNvbG9yUmVjb3JkcykKICAgICAgICAgICAgaWYgbGVuKHBhbGV0dGVUeXBlcykgPT0gMDoKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZVR5cGVBcnJheSA9IDAKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZVR5cGVBcnJheSA9IHBvcwogICAgICAgICAgICAgICAgcG9zICs9IGxlbihwYWxldHRlVHlwZXMpCiAgICAgICAgICAgIGlmIGxlbihwYWxldHRlTGFiZWxzKSA9PSAwOgogICAgICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlTGFiZWxBcnJheSA9IDAKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZUxhYmVsQXJyYXkgPSBwb3MKICAgICAgICAgICAgICAgIHBvcyArPSBsZW4ocGFsZXR0ZUxhYmVscykKICAgICAgICAgICAgaWYgbGVuKHBhbGV0dGVFbnRyeUxhYmVscykgPT0gMDoKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZUVudHJ5TGFiZWxBcnJheSA9IDAKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG9mZnNldFRvUGFsZXR0ZUVudHJ5TGFiZWxBcnJheSA9IHBvcwogICAgICAgICAgICAgICAgcG9zICs9IGxlbihwYWxldHRlTGFiZWxzKQogICAgICAgICAgICBoZWFkZXIxID0gc3RydWN0LnBhY2soCiAgICAgICAgICAgICAgICAiPkxMTCIsCiAgICAgICAgICAgICAgICBvZmZzZXRUb1BhbGV0dGVUeXBlQXJyYXksCiAgICAgICAgICAgICAgICBvZmZzZXRUb1BhbGV0dGVMYWJlbEFycmF5LAogICAgICAgICAgICAgICAgb2Zmc2V0VG9QYWxldHRlRW50cnlMYWJlbEFycmF5LAogICAgICAgICAgICApCiAgICAgICAgICAgIGRhdGFMaXN0ID0gWwogICAgICAgICAgICAgICAgaGVhZGVyLAogICAgICAgICAgICAgICAgY29sb3JSZWNvcmRJbmRpY2VzLAogICAgICAgICAgICAgICAgaGVhZGVyMSwKICAgICAgICAgICAgICAgIGNvbG9yUmVjb3JkcywKICAgICAgICAgICAgICAgIHBhbGV0dGVUeXBlcywKICAgICAgICAgICAgICAgIHBhbGV0dGVMYWJlbHMsCiAgICAgICAgICAgICAgICBwYWxldHRlRW50cnlMYWJlbHMsCiAgICAgICAgICAgIF0KICAgICAgICByZXR1cm4gYnl0ZXNqb2luKGRhdGFMaXN0KQoKICAgIGRlZiBfY29tcGlsZVBhbGV0dGUoc2VsZiwgcGFsZXR0ZSk6CiAgICAgICAgYXNzZXJ0IGxlbihwYWxldHRlKSA9PSBzZWxmLm51bVBhbGV0dGVFbnRyaWVzCiAgICAgICAgcGFjayA9IGxhbWJkYSBjOiBzdHJ1Y3QucGFjaygiPkJCQkIiLCBjLmJsdWUsIGMuZ3JlZW4sIGMucmVkLCBjLmFscGhhKQogICAgICAgIHJldHVybiBieXRlc2pvaW4oW3BhY2soY29sb3IpIGZvciBjb2xvciBpbiBwYWxldHRlXSkKCiAgICBkZWYgX2NvbXBpbGVDb2xvclJlY29yZHMoc2VsZik6CiAgICAgICAgY29sb3JSZWNvcmRzLCBjb2xvclJlY29yZEluZGljZXMsIHBvb2wgPSBbXSwgW10sIHt9CiAgICAgICAgZm9yIHBhbGV0dGUgaW4gc2VsZi5wYWxldHRlczoKICAgICAgICAgICAgcGFja2VkUGFsZXR0ZSA9IHNlbGYuX2NvbXBpbGVQYWxldHRlKHBhbGV0dGUpCiAgICAgICAgICAgIGlmIHBhY2tlZFBhbGV0dGUgaW4gcG9vbDoKICAgICAgICAgICAgICAgIGluZGV4ID0gcG9vbFtwYWNrZWRQYWxldHRlXQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgaW5kZXggPSBsZW4oY29sb3JSZWNvcmRzKQogICAgICAgICAgICAgICAgY29sb3JSZWNvcmRzLmFwcGVuZChwYWNrZWRQYWxldHRlKQogICAgICAgICAgICAgICAgcG9vbFtwYWNrZWRQYWxldHRlXSA9IGluZGV4CiAgICAgICAgICAgIGNvbG9yUmVjb3JkSW5kaWNlcy5hcHBlbmQoc3RydWN0LnBhY2soIj5IIiwgaW5kZXggKiBzZWxmLm51bVBhbGV0dGVFbnRyaWVzKSkKICAgICAgICByZXR1cm4gYnl0ZXNqb2luKGNvbG9yUmVjb3JkSW5kaWNlcyksIGJ5dGVzam9pbihjb2xvclJlY29yZHMpCgogICAgZGVmIF9jb21waWxlUGFsZXR0ZVR5cGVzKHNlbGYpOgogICAgICAgIGlmIHNlbGYudmVyc2lvbiA9PSAwIG9yIG5vdCBhbnkoc2VsZi5wYWxldHRlVHlwZXMpOgogICAgICAgICAgICByZXR1cm4gYiIiCiAgICAgICAgYXNzZXJ0IGxlbihzZWxmLnBhbGV0dGVUeXBlcykgPT0gbGVuKHNlbGYucGFsZXR0ZXMpCiAgICAgICAgcmVzdWx0ID0gYnl0ZXNqb2luKFtzdHJ1Y3QucGFjaygiPkkiLCBwdHlwZSkgZm9yIHB0eXBlIGluIHNlbGYucGFsZXR0ZVR5cGVzXSkKICAgICAgICBhc3NlcnQgbGVuKHJlc3VsdCkgPT0gNCAqIGxlbihzZWxmLnBhbGV0dGVzKQogICAgICAgIHJldHVybiByZXN1bHQKCiAgICBkZWYgX2NvbXBpbGVQYWxldHRlTGFiZWxzKHNlbGYpOgogICAgICAgIGlmIHNlbGYudmVyc2lvbiA9PSAwIG9yIGFsbChsID09IHNlbGYuTk9fTkFNRV9JRCBmb3IgbCBpbiBzZWxmLnBhbGV0dGVMYWJlbHMpOgogICAgICAgICAgICByZXR1cm4gYiIiCiAgICAgICAgYXNzZXJ0IGxlbihzZWxmLnBhbGV0dGVMYWJlbHMpID09IGxlbihzZWxmLnBhbGV0dGVzKQogICAgICAgIHJlc3VsdCA9IGJ5dGVzam9pbihbc3RydWN0LnBhY2soIj5IIiwgbGFiZWwpIGZvciBsYWJlbCBpbiBzZWxmLnBhbGV0dGVMYWJlbHNdKQogICAgICAgIGFzc2VydCBsZW4ocmVzdWx0KSA9PSAyICogbGVuKHNlbGYucGFsZXR0ZXMpCiAgICAgICAgcmV0dXJuIHJlc3VsdAoKICAgIGRlZiBfY29tcGlsZVBhbGV0dGVFbnRyeUxhYmVscyhzZWxmKToKICAgICAgICBpZiBzZWxmLnZlcnNpb24gPT0gMCBvciBhbGwoCiAgICAgICAgICAgIGwgPT0gc2VsZi5OT19OQU1FX0lEIGZvciBsIGluIHNlbGYucGFsZXR0ZUVudHJ5TGFiZWxzCiAgICAgICAgKToKICAgICAgICAgICAgcmV0dXJuIGIiIgogICAgICAgIGFzc2VydCBsZW4oc2VsZi5wYWxldHRlRW50cnlMYWJlbHMpID09IHNlbGYubnVtUGFsZXR0ZUVudHJpZXMKICAgICAgICByZXN1bHQgPSBieXRlc2pvaW4oCiAgICAgICAgICAgIFtzdHJ1Y3QucGFjaygiPkgiLCBsYWJlbCkgZm9yIGxhYmVsIGluIHNlbGYucGFsZXR0ZUVudHJ5TGFiZWxzXQogICAgICAgICkKICAgICAgICBhc3NlcnQgbGVuKHJlc3VsdCkgPT0gMiAqIHNlbGYubnVtUGFsZXR0ZUVudHJpZXMKICAgICAgICByZXR1cm4gcmVzdWx0CgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBudW1QYWxldHRlcyA9IGxlbihzZWxmLnBhbGV0dGVzKQogICAgICAgIHBhbGV0dGVMYWJlbHMgPSB7aTogbmFtZUlEIGZvciAoaSwgbmFtZUlEKSBpbiBlbnVtZXJhdGUoc2VsZi5wYWxldHRlTGFiZWxzKX0KICAgICAgICBwYWxldHRlVHlwZXMgPSB7aTogdHlwIGZvciAoaSwgdHlwKSBpbiBlbnVtZXJhdGUoc2VsZi5wYWxldHRlVHlwZXMpfQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInZlcnNpb24iLCB2YWx1ZT1zZWxmLnZlcnNpb24pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoIm51bVBhbGV0dGVFbnRyaWVzIiwgdmFsdWU9c2VsZi5udW1QYWxldHRlRW50cmllcykKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgZm9yIGluZGV4LCBwYWxldHRlIGluIGVudW1lcmF0ZShzZWxmLnBhbGV0dGVzKToKICAgICAgICAgICAgYXR0cnMgPSB7ImluZGV4IjogaW5kZXh9CiAgICAgICAgICAgIHBhbGV0dGVUeXBlID0gcGFsZXR0ZVR5cGVzLmdldChpbmRleCwgc2VsZi5ERUZBVUxUX1BBTEVUVEVfVFlQRSkKICAgICAgICAgICAgcGFsZXR0ZUxhYmVsID0gcGFsZXR0ZUxhYmVscy5nZXQoaW5kZXgsIHNlbGYuTk9fTkFNRV9JRCkKICAgICAgICAgICAgaWYgc2VsZi52ZXJzaW9uID4gMCBhbmQgcGFsZXR0ZUxhYmVsICE9IHNlbGYuTk9fTkFNRV9JRDoKICAgICAgICAgICAgICAgIGF0dHJzWyJsYWJlbCJdID0gcGFsZXR0ZUxhYmVsCiAgICAgICAgICAgIGlmIHNlbGYudmVyc2lvbiA+IDAgYW5kIHBhbGV0dGVUeXBlICE9IHNlbGYuREVGQVVMVF9QQUxFVFRFX1RZUEU6CiAgICAgICAgICAgICAgICBhdHRyc1sidHlwZSJdID0gcGFsZXR0ZVR5cGUKICAgICAgICAgICAgd3JpdGVyLmJlZ2ludGFnKCJwYWxldHRlIiwgKiphdHRycykKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICBpZiAoCiAgICAgICAgICAgICAgICBzZWxmLnZlcnNpb24gPiAwCiAgICAgICAgICAgICAgICBhbmQgcGFsZXR0ZUxhYmVsICE9IHNlbGYuTk9fTkFNRV9JRAogICAgICAgICAgICAgICAgYW5kIHR0Rm9udAogICAgICAgICAgICAgICAgYW5kICJuYW1lIiBpbiB0dEZvbnQKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIG5hbWUgPSB0dEZvbnRbIm5hbWUiXS5nZXREZWJ1Z05hbWUocGFsZXR0ZUxhYmVsKQogICAgICAgICAgICAgICAgaWYgbmFtZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICB3cml0ZXIuY29tbWVudChuYW1lKQogICAgICAgICAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgYXNzZXJ0IGxlbihwYWxldHRlKSA9PSBzZWxmLm51bVBhbGV0dGVFbnRyaWVzCiAgICAgICAgICAgIGZvciBjaW5kZXgsIGNvbG9yIGluIGVudW1lcmF0ZShwYWxldHRlKToKICAgICAgICAgICAgICAgIGNvbG9yLnRvWE1MKHdyaXRlciwgdHRGb250LCBjaW5kZXgpCiAgICAgICAgICAgIHdyaXRlci5lbmR0YWcoInBhbGV0dGUiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uID4gMCBhbmQgbm90IGFsbCgKICAgICAgICAgICAgbCA9PSBzZWxmLk5PX05BTUVfSUQgZm9yIGwgaW4gc2VsZi5wYWxldHRlRW50cnlMYWJlbHMKICAgICAgICApOgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoInBhbGV0dGVFbnRyeUxhYmVscyIpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgZm9yIGluZGV4LCBsYWJlbCBpbiBlbnVtZXJhdGUoc2VsZi5wYWxldHRlRW50cnlMYWJlbHMpOgogICAgICAgICAgICAgICAgaWYgbGFiZWwgIT0gc2VsZi5OT19OQU1FX0lEOgogICAgICAgICAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImxhYmVsIiwgaW5kZXg9aW5kZXgsIHZhbHVlPWxhYmVsKQogICAgICAgICAgICAgICAgICAgIGlmIHNlbGYudmVyc2lvbiA+IDAgYW5kIGxhYmVsIGFuZCB0dEZvbnQgYW5kICJuYW1lIiBpbiB0dEZvbnQ6CiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWUgPSB0dEZvbnRbIm5hbWUiXS5nZXREZWJ1Z05hbWUobGFiZWwpCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIG5hbWUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB3cml0ZXIuY29tbWVudChuYW1lKQogICAgICAgICAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgd3JpdGVyLmVuZHRhZygicGFsZXR0ZUVudHJ5TGFiZWxzIikKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gInBhbGV0dGUiOgogICAgICAgICAgICBzZWxmLnBhbGV0dGVMYWJlbHMuYXBwZW5kKGludChhdHRycy5nZXQoImxhYmVsIiwgc2VsZi5OT19OQU1FX0lEKSkpCiAgICAgICAgICAgIHNlbGYucGFsZXR0ZVR5cGVzLmFwcGVuZChpbnQoYXR0cnMuZ2V0KCJ0eXBlIiwgc2VsZi5ERUZBVUxUX1BBTEVUVEVfVFlQRSkpKQogICAgICAgICAgICBwYWxldHRlID0gW10KICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoZWxlbWVudCwgc3RyKToKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgYXR0cnMgPSBlbGVtZW50WzFdCiAgICAgICAgICAgICAgICBjb2xvciA9IENvbG9yLmZyb21IZXgoYXR0cnNbInZhbHVlIl0pCiAgICAgICAgICAgICAgICBwYWxldHRlLmFwcGVuZChjb2xvcikKICAgICAgICAgICAgc2VsZi5wYWxldHRlcy5hcHBlbmQocGFsZXR0ZSkKICAgICAgICBlbGlmIG5hbWUgPT0gInBhbGV0dGVFbnRyeUxhYmVscyI6CiAgICAgICAgICAgIGNvbG9yTGFiZWxzID0ge30KICAgICAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoZWxlbWVudCwgc3RyKToKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgZWxlbWVudE5hbWUsIGVsZW1lbnRBdHRyLCBfID0gZWxlbWVudAogICAgICAgICAgICAgICAgaWYgZWxlbWVudE5hbWUgPT0gImxhYmVsIjoKICAgICAgICAgICAgICAgICAgICBsYWJlbEluZGV4ID0gc2FmZUV2YWwoZWxlbWVudEF0dHJbImluZGV4Il0pCiAgICAgICAgICAgICAgICAgICAgbmFtZUlEID0gc2FmZUV2YWwoZWxlbWVudEF0dHJbInZhbHVlIl0pCiAgICAgICAgICAgICAgICAgICAgY29sb3JMYWJlbHNbbGFiZWxJbmRleF0gPSBuYW1lSUQKICAgICAgICAgICAgc2VsZi5wYWxldHRlRW50cnlMYWJlbHMgPSBbCiAgICAgICAgICAgICAgICBjb2xvckxhYmVscy5nZXQoaSwgc2VsZi5OT19OQU1FX0lEKQogICAgICAgICAgICAgICAgZm9yIGkgaW4gcmFuZ2Uoc2VsZi5udW1QYWxldHRlRW50cmllcykKICAgICAgICAgICAgXQogICAgICAgIGVsaWYgInZhbHVlIiBpbiBhdHRyczoKICAgICAgICAgICAgdmFsdWUgPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBuYW1lLCB2YWx1ZSkKICAgICAgICAgICAgaWYgbmFtZSA9PSAibnVtUGFsZXR0ZUVudHJpZXMiOgogICAgICAgICAgICAgICAgc2VsZi5wYWxldHRlRW50cnlMYWJlbHMgPSBbc2VsZi5OT19OQU1FX0lEXSAqIHNlbGYubnVtUGFsZXR0ZUVudHJpZXMKCgpjbGFzcyBDb2xvcihuYW1lZHR1cGxlKCJDb2xvciIsICJibHVlIGdyZWVuIHJlZCBhbHBoYSIpKToKICAgIGRlZiBoZXgoc2VsZik6CiAgICAgICAgcmV0dXJuICIjJTAyWCUwMlglMDJYJTAyWCIgJSAoc2VsZi5yZWQsIHNlbGYuZ3JlZW4sIHNlbGYuYmx1ZSwgc2VsZi5hbHBoYSkKCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuaGV4KCkKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQsIGluZGV4PU5vbmUpOgogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImNvbG9yIiwgdmFsdWU9c2VsZi5oZXgoKSwgaW5kZXg9aW5kZXgpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIEBjbGFzc21ldGhvZAogICAgZGVmIGZyb21IZXgoY2xzLCB2YWx1ZSk6CiAgICAgICAgaWYgdmFsdWVbMF0gPT0gIiMiOgogICAgICAgICAgICB2YWx1ZSA9IHZhbHVlWzE6XQogICAgICAgIHJlZCA9IGludCh2YWx1ZVswOjJdLCAxNikKICAgICAgICBncmVlbiA9IGludCh2YWx1ZVsyOjRdLCAxNikKICAgICAgICBibHVlID0gaW50KHZhbHVlWzQ6Nl0sIDE2KQogICAgICAgIGFscGhhID0gaW50KHZhbHVlWzY6OF0sIDE2KSBpZiBsZW4odmFsdWUpID49IDggZWxzZSAweEZGCiAgICAgICAgcmV0dXJuIGNscyhyZWQ9cmVkLCBncmVlbj1ncmVlbiwgYmx1ZT1ibHVlLCBhbHBoYT1hbHBoYSkKCiAgICBAY2xhc3NtZXRob2QKICAgIGRlZiBmcm9tUkdCQShjbHMsIHJlZCwgZ3JlZW4sIGJsdWUsIGFscGhhKToKICAgICAgICByZXR1cm4gY2xzKHJlZD1yZWQsIGdyZWVuPWdyZWVuLCBibHVlPWJsdWUsIGFscGhhPWFscGhhKQo=
+# Copyright 2013 Google, Inc. All Rights Reserved.
+#
+# Google Author(s): Behdad Esfahbod
+
+from fontTools.misc.textTools import bytesjoin, safeEval
+from . import DefaultTable
+import array
+from collections import namedtuple
+import struct
+import sys
+
+
+class table_C_P_A_L_(DefaultTable.DefaultTable):
+    """Color Palette table
+
+    The ``CPAL`` table contains a set of one or more color palettes. The color
+    records in each palette can be referenced by the ``COLR`` table to specify
+    the colors used in a color glyph.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/cpal
+    """
+
+    NO_NAME_ID = 0xFFFF
+    DEFAULT_PALETTE_TYPE = 0
+
+    def __init__(self, tag=None):
+        DefaultTable.DefaultTable.__init__(self, tag)
+        self.palettes = []
+        self.paletteTypes = []
+        self.paletteLabels = []
+        self.paletteEntryLabels = []
+
+    def decompile(self, data, ttFont):
+        (
+            self.version,
+            self.numPaletteEntries,
+            numPalettes,
+            numColorRecords,
+            goffsetFirstColorRecord,
+        ) = struct.unpack(">HHHHL", data[:12])
+        assert (
+            self.version <= 1
+        ), "Version of CPAL table is higher than I know how to handle"
+        self.palettes = []
+        pos = 12
+        for i in range(numPalettes):
+            startIndex = struct.unpack(">H", data[pos : pos + 2])[0]
+            assert startIndex + self.numPaletteEntries <= numColorRecords
+            pos += 2
+            palette = []
+            ppos = goffsetFirstColorRecord + startIndex * 4
+            for j in range(self.numPaletteEntries):
+                palette.append(Color(*struct.unpack(">BBBB", data[ppos : ppos + 4])))
+                ppos += 4
+            self.palettes.append(palette)
+        if self.version == 0:
+            offsetToPaletteTypeArray = 0
+            offsetToPaletteLabelArray = 0
+            offsetToPaletteEntryLabelArray = 0
+        else:
+            pos = 12 + numPalettes * 2
+            (
+                offsetToPaletteTypeArray,
+                offsetToPaletteLabelArray,
+                offsetToPaletteEntryLabelArray,
+            ) = struct.unpack(">LLL", data[pos : pos + 12])
+        self.paletteTypes = self._decompileUInt32Array(
+            data,
+            offsetToPaletteTypeArray,
+            numPalettes,
+            default=self.DEFAULT_PALETTE_TYPE,
+        )
+        self.paletteLabels = self._decompileUInt16Array(
+            data, offsetToPaletteLabelArray, numPalettes, default=self.NO_NAME_ID
+        )
+        self.paletteEntryLabels = self._decompileUInt16Array(
+            data,
+            offsetToPaletteEntryLabelArray,
+            self.numPaletteEntries,
+            default=self.NO_NAME_ID,
+        )
+
+    def _decompileUInt16Array(self, data, offset, numElements, default=0):
+        if offset == 0:
+            return [default] * numElements
+        result = array.array("H", data[offset : offset + 2 * numElements])
+        if sys.byteorder != "big":
+            result.byteswap()
+        assert len(result) == numElements, result
+        return result.tolist()
+
+    def _decompileUInt32Array(self, data, offset, numElements, default=0):
+        if offset == 0:
+            return [default] * numElements
+        result = array.array("I", data[offset : offset + 4 * numElements])
+        if sys.byteorder != "big":
+            result.byteswap()
+        assert len(result) == numElements, result
+        return result.tolist()
+
+    def compile(self, ttFont):
+        colorRecordIndices, colorRecords = self._compileColorRecords()
+        paletteTypes = self._compilePaletteTypes()
+        paletteLabels = self._compilePaletteLabels()
+        paletteEntryLabels = self._compilePaletteEntryLabels()
+        numColorRecords = len(colorRecords) // 4
+        offsetToFirstColorRecord = 12 + len(colorRecordIndices)
+        if self.version >= 1:
+            offsetToFirstColorRecord += 12
+        header = struct.pack(
+            ">HHHHL",
+            self.version,
+            self.numPaletteEntries,
+            len(self.palettes),
+            numColorRecords,
+            offsetToFirstColorRecord,
+        )
+        if self.version == 0:
+            dataList = [header, colorRecordIndices, colorRecords]
+        else:
+            pos = offsetToFirstColorRecord + len(colorRecords)
+            if len(paletteTypes) == 0:
+                offsetToPaletteTypeArray = 0
+            else:
+                offsetToPaletteTypeArray = pos
+                pos += len(paletteTypes)
+            if len(paletteLabels) == 0:
+                offsetToPaletteLabelArray = 0
+            else:
+                offsetToPaletteLabelArray = pos
+                pos += len(paletteLabels)
+            if len(paletteEntryLabels) == 0:
+                offsetToPaletteEntryLabelArray = 0
+            else:
+                offsetToPaletteEntryLabelArray = pos
+                pos += len(paletteLabels)
+            header1 = struct.pack(
+                ">LLL",
+                offsetToPaletteTypeArray,
+                offsetToPaletteLabelArray,
+                offsetToPaletteEntryLabelArray,
+            )
+            dataList = [
+                header,
+                colorRecordIndices,
+                header1,
+                colorRecords,
+                paletteTypes,
+                paletteLabels,
+                paletteEntryLabels,
+            ]
+        return bytesjoin(dataList)
+
+    def _compilePalette(self, palette):
+        assert len(palette) == self.numPaletteEntries
+        pack = lambda c: struct.pack(">BBBB", c.blue, c.green, c.red, c.alpha)
+        return bytesjoin([pack(color) for color in palette])
+
+    def _compileColorRecords(self):
+        colorRecords, colorRecordIndices, pool = [], [], {}
+        for palette in self.palettes:
+            packedPalette = self._compilePalette(palette)
+            if packedPalette in pool:
+                index = pool[packedPalette]
+            else:
+                index = len(colorRecords)
+                colorRecords.append(packedPalette)
+                pool[packedPalette] = index
+            colorRecordIndices.append(struct.pack(">H", index * self.numPaletteEntries))
+        return bytesjoin(colorRecordIndices), bytesjoin(colorRecords)
+
+    def _compilePaletteTypes(self):
+        if self.version == 0 or not any(self.paletteTypes):
+            return b""
+        assert len(self.paletteTypes) == len(self.palettes)
+        result = bytesjoin([struct.pack(">I", ptype) for ptype in self.paletteTypes])
+        assert len(result) == 4 * len(self.palettes)
+        return result
+
+    def _compilePaletteLabels(self):
+        if self.version == 0 or all(l == self.NO_NAME_ID for l in self.paletteLabels):
+            return b""
+        assert len(self.paletteLabels) == len(self.palettes)
+        result = bytesjoin([struct.pack(">H", label) for label in self.paletteLabels])
+        assert len(result) == 2 * len(self.palettes)
+        return result
+
+    def _compilePaletteEntryLabels(self):
+        if self.version == 0 or all(
+            l == self.NO_NAME_ID for l in self.paletteEntryLabels
+        ):
+            return b""
+        assert len(self.paletteEntryLabels) == self.numPaletteEntries
+        result = bytesjoin(
+            [struct.pack(">H", label) for label in self.paletteEntryLabels]
+        )
+        assert len(result) == 2 * self.numPaletteEntries
+        return result
+
+    def toXML(self, writer, ttFont):
+        numPalettes = len(self.palettes)
+        paletteLabels = {i: nameID for (i, nameID) in enumerate(self.paletteLabels)}
+        paletteTypes = {i: typ for (i, typ) in enumerate(self.paletteTypes)}
+        writer.simpletag("version", value=self.version)
+        writer.newline()
+        writer.simpletag("numPaletteEntries", value=self.numPaletteEntries)
+        writer.newline()
+        for index, palette in enumerate(self.palettes):
+            attrs = {"index": index}
+            paletteType = paletteTypes.get(index, self.DEFAULT_PALETTE_TYPE)
+            paletteLabel = paletteLabels.get(index, self.NO_NAME_ID)
+            if self.version > 0 and paletteLabel != self.NO_NAME_ID:
+                attrs["label"] = paletteLabel
+            if self.version > 0 and paletteType != self.DEFAULT_PALETTE_TYPE:
+                attrs["type"] = paletteType
+            writer.begintag("palette", **attrs)
+            writer.newline()
+            if (
+                self.version > 0
+                and paletteLabel != self.NO_NAME_ID
+                and ttFont
+                and "name" in ttFont
+            ):
+                name = ttFont["name"].getDebugName(paletteLabel)
+                if name is not None:
+                    writer.comment(name)
+                    writer.newline()
+            assert len(palette) == self.numPaletteEntries
+            for cindex, color in enumerate(palette):
+                color.toXML(writer, ttFont, cindex)
+            writer.endtag("palette")
+            writer.newline()
+        if self.version > 0 and not all(
+            l == self.NO_NAME_ID for l in self.paletteEntryLabels
+        ):
+            writer.begintag("paletteEntryLabels")
+            writer.newline()
+            for index, label in enumerate(self.paletteEntryLabels):
+                if label != self.NO_NAME_ID:
+                    writer.simpletag("label", index=index, value=label)
+                    if self.version > 0 and label and ttFont and "name" in ttFont:
+                        name = ttFont["name"].getDebugName(label)
+                        if name is not None:
+                            writer.comment(name)
+                    writer.newline()
+            writer.endtag("paletteEntryLabels")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "palette":
+            self.paletteLabels.append(int(attrs.get("label", self.NO_NAME_ID)))
+            self.paletteTypes.append(int(attrs.get("type", self.DEFAULT_PALETTE_TYPE)))
+            palette = []
+            for element in content:
+                if isinstance(element, str):
+                    continue
+                attrs = element[1]
+                color = Color.fromHex(attrs["value"])
+                palette.append(color)
+            self.palettes.append(palette)
+        elif name == "paletteEntryLabels":
+            colorLabels = {}
+            for element in content:
+                if isinstance(element, str):
+                    continue
+                elementName, elementAttr, _ = element
+                if elementName == "label":
+                    labelIndex = safeEval(elementAttr["index"])
+                    nameID = safeEval(elementAttr["value"])
+                    colorLabels[labelIndex] = nameID
+            self.paletteEntryLabels = [
+                colorLabels.get(i, self.NO_NAME_ID)
+                for i in range(self.numPaletteEntries)
+            ]
+        elif "value" in attrs:
+            value = safeEval(attrs["value"])
+            setattr(self, name, value)
+            if name == "numPaletteEntries":
+                self.paletteEntryLabels = [self.NO_NAME_ID] * self.numPaletteEntries
+
+
+class Color(namedtuple("Color", "blue green red alpha")):
+    def hex(self):
+        return "#%02X%02X%02X%02X" % (self.red, self.green, self.blue, self.alpha)
+
+    def __repr__(self):
+        return self.hex()
+
+    def toXML(self, writer, ttFont, index=None):
+        writer.simpletag("color", value=self.hex(), index=index)
+        writer.newline()
+
+    @classmethod
+    def fromHex(cls, value):
+        if value[0] == "#":
+            value = value[1:]
+        red = int(value[0:2], 16)
+        green = int(value[2:4], 16)
+        blue = int(value[4:6], 16)
+        alpha = int(value[6:8], 16) if len(value) >= 8 else 0xFF
+        return cls(red=red, green=green, blue=blue, alpha=alpha)
+
+    @classmethod
+    def fromRGBA(cls, red, green, blue, alpha):
+        return cls(red=red, green=green, blue=blue, alpha=alpha)

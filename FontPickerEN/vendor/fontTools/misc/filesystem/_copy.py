@@ -1,1 +1,45 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwoKZnJvbSAuX2Vycm9ycyBpbXBvcnQgSWxsZWdhbERlc3RpbmF0aW9uCmZyb20gLl9wYXRoIGltcG9ydCBjb21iaW5lLCBmcm9tYmFzZSwgaXNiYXNlCmZyb20gLl90b29scyBpbXBvcnQgY29weV9maWxlX2RhdGEKCmlmIHR5cGluZy5UWVBFX0NIRUNLSU5HOgogICAgZnJvbSAuX2Jhc2UgaW1wb3J0IEZTCgoKZGVmIGNvcHlfZmlsZShzcmNfZnM6IEZTLCBzcmNfcGF0aDogc3RyLCBkc3RfZnM6IEZTLCBkc3RfcGF0aDogc3RyKToKICAgIGlmIHNyY19mcyBpcyBkc3RfZnMgYW5kIHNyY19wYXRoID09IGRzdF9wYXRoOgogICAgICAgIHJhaXNlIElsbGVnYWxEZXN0aW5hdGlvbihmImNhbm5vdCBjb3B5IHtzcmNfcGF0aCFyfSB0byBpdHNlbGYiKQoKICAgIHdpdGggc3JjX2ZzLm9wZW4oc3JjX3BhdGgsICJyYiIpIGFzIHNyY19maWxlOgogICAgICAgIHdpdGggZHN0X2ZzLm9wZW4oZHN0X3BhdGgsICJ3YiIpIGFzIGRzdF9maWxlOgogICAgICAgICAgICBjb3B5X2ZpbGVfZGF0YShzcmNfZmlsZSwgZHN0X2ZpbGUpCgoKZGVmIGNvcHlfc3RydWN0dXJlKAogICAgc3JjX2ZzOiBGUywKICAgIGRzdF9mczogRlMsCiAgICBzcmNfcm9vdDogc3RyID0gIi8iLAogICAgZHN0X3Jvb3Q6IHN0ciA9ICIvIiwKKToKICAgIGlmIHNyY19mcyBpcyBkc3RfZnMgYW5kIGlzYmFzZShzcmNfcm9vdCwgZHN0X3Jvb3QpOgogICAgICAgIHJhaXNlIElsbGVnYWxEZXN0aW5hdGlvbihmImNhbm5vdCBjb3B5IHtzcmNfZnMhcn0gdG8gaXRzZWxmIikKCiAgICBkc3RfZnMubWFrZWRpcnMoZHN0X3Jvb3QsIHJlY3JlYXRlPVRydWUpCiAgICBmb3IgZGlyX3BhdGggaW4gc3JjX2ZzLndhbGsuZGlycyhzcmNfcm9vdCk6CiAgICAgICAgZHN0X2ZzLm1ha2VkaXIoY29tYmluZShkc3Rfcm9vdCwgZnJvbWJhc2Uoc3JjX3Jvb3QsIGRpcl9wYXRoKSksIHJlY3JlYXRlPVRydWUpCgoKZGVmIGNvcHlfZGlyKHNyY19mczogRlMsIHNyY19wYXRoOiBzdHIsIGRzdF9mczogRlMsIGRzdF9wYXRoOiBzdHIpOgogICAgY29weV9zdHJ1Y3R1cmUoc3JjX2ZzLCBkc3RfZnMsIHNyY19wYXRoLCBkc3RfcGF0aCkKCiAgICBmb3IgZmlsZV9wYXRoIGluIHNyY19mcy53YWxrLmZpbGVzKHNyY19wYXRoKToKICAgICAgICBjb3B5X3BhdGggPSBjb21iaW5lKGRzdF9wYXRoLCBmcm9tYmFzZShzcmNfcGF0aCwgZmlsZV9wYXRoKSkKICAgICAgICBjb3B5X2ZpbGUoc3JjX2ZzLCBmaWxlX3BhdGgsIGRzdF9mcywgY29weV9wYXRoKQoKCmRlZiBjb3B5X2ZzKHNyY19mczogRlMsIGRzdF9mczogRlMpOgogICAgY29weV9kaXIoc3JjX2ZzLCAiLyIsIGRzdF9mcywgIi8iKQo=
+from __future__ import annotations
+
+import typing
+
+from ._errors import IllegalDestination
+from ._path import combine, frombase, isbase
+from ._tools import copy_file_data
+
+if typing.TYPE_CHECKING:
+    from ._base import FS
+
+
+def copy_file(src_fs: FS, src_path: str, dst_fs: FS, dst_path: str):
+    if src_fs is dst_fs and src_path == dst_path:
+        raise IllegalDestination(f"cannot copy {src_path!r} to itself")
+
+    with src_fs.open(src_path, "rb") as src_file:
+        with dst_fs.open(dst_path, "wb") as dst_file:
+            copy_file_data(src_file, dst_file)
+
+
+def copy_structure(
+    src_fs: FS,
+    dst_fs: FS,
+    src_root: str = "/",
+    dst_root: str = "/",
+):
+    if src_fs is dst_fs and isbase(src_root, dst_root):
+        raise IllegalDestination(f"cannot copy {src_fs!r} to itself")
+
+    dst_fs.makedirs(dst_root, recreate=True)
+    for dir_path in src_fs.walk.dirs(src_root):
+        dst_fs.makedir(combine(dst_root, frombase(src_root, dir_path)), recreate=True)
+
+
+def copy_dir(src_fs: FS, src_path: str, dst_fs: FS, dst_path: str):
+    copy_structure(src_fs, dst_fs, src_path, dst_path)
+
+    for file_path in src_fs.walk.files(src_path):
+        copy_path = combine(dst_path, frombase(src_path, file_path))
+        copy_file(src_fs, file_path, dst_fs, copy_path)
+
+
+def copy_fs(src_fs: FS, dst_fs: FS):
+    copy_dir(src_fs, "/", dst_fs, "/")

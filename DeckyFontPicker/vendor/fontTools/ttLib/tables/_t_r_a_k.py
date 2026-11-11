@@ -1,1 +1,329 @@
-ZnJvbSBmb250VG9vbHMubWlzYyBpbXBvcnQgc3N0cnVjdApmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0ICgKICAgIGZpeGVkVG9GbG9hdCBhcyBmaTJmbCwKICAgIGZsb2F0VG9GaXhlZCBhcyBmbDJmaSwKICAgIGZsb2F0VG9GaXhlZFRvU3RyIGFzIGZsMnN0ciwKICAgIHN0clRvRml4ZWRUb0Zsb2F0IGFzIHN0cjJmbCwKKQpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgYnl0ZXNqb2luLCBzYWZlRXZhbApmcm9tIGZvbnRUb29scy50dExpYiBpbXBvcnQgVFRMaWJFcnJvcgpmcm9tIC4gaW1wb3J0IERlZmF1bHRUYWJsZQppbXBvcnQgc3RydWN0CmZyb20gY29sbGVjdGlvbnMuYWJjIGltcG9ydCBNdXRhYmxlTWFwcGluZwoKIyBBcHBsZSdzIGRvY3VtZW50YXRpb24gb2YgJ3RyYWsnOgojIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZ0cmFrLmh0bWwKClRSQUtfSEVBREVSX0ZPUk1BVCA9ICIiIgoJPiAjIGJpZyBlbmRpYW4KCXZlcnNpb246ICAgICAxNi4xNkYKCWZvcm1hdDogICAgICBICglob3Jpek9mZnNldDogSAoJdmVydE9mZnNldDogIEgKCXJlc2VydmVkOiAgICBICiIiIgoKVFJBS19IRUFERVJfRk9STUFUX1NJWkUgPSBzc3RydWN0LmNhbGNzaXplKFRSQUtfSEVBREVSX0ZPUk1BVCkKCgpUUkFDS19EQVRBX0ZPUk1BVCA9ICIiIgoJPiAjIGJpZyBlbmRpYW4KCW5UcmFja3M6ICAgICAgICAgSAoJblNpemVzOiAgICAgICAgICBICglzaXplVGFibGVPZmZzZXQ6IEwKIiIiCgpUUkFDS19EQVRBX0ZPUk1BVF9TSVpFID0gc3N0cnVjdC5jYWxjc2l6ZShUUkFDS19EQVRBX0ZPUk1BVCkKCgpUUkFDS19UQUJMRV9FTlRSWV9GT1JNQVQgPSAiIiIKCT4gIyBiaWcgZW5kaWFuCgl0cmFjazogICAgICAxNi4xNkYKCW5hbWVJbmRleDogICAgICAgSAoJb2Zmc2V0OiAgICAgICAgICBICiIiIgoKVFJBQ0tfVEFCTEVfRU5UUllfRk9STUFUX1NJWkUgPSBzc3RydWN0LmNhbGNzaXplKFRSQUNLX1RBQkxFX0VOVFJZX0ZPUk1BVCkKCgojIHNpemUgdmFsdWVzIGFyZSBhY3R1YWxseSAnMTYuMTZGJyBmaXhlZC1wb2ludCB2YWx1ZXMsIGJ1dCBoZXJlIEkgZG8gdGhlCiMgZml4ZWRUb0Zsb2F0IGNvbnZlcnNpb24gbWFudWFsbHkgaW5zdGVhZCBvZiByZWx5aW5nIG9uIHNzdHJ1Y3QKU0laRV9WQUxVRV9GT1JNQVQgPSAiPmwiClNJWkVfVkFMVUVfRk9STUFUX1NJWkUgPSBzdHJ1Y3QuY2FsY3NpemUoU0laRV9WQUxVRV9GT1JNQVQpCgojIHBlci1TaXplIHZhbHVlcyBhcmUgaW4gJ0ZVbml0cycsIGkuZS4gMTYtYml0IHNpZ25lZCBpbnRlZ2VycwpQRVJfU0laRV9WQUxVRV9GT1JNQVQgPSAiPmgiClBFUl9TSVpFX1ZBTFVFX0ZPUk1BVF9TSVpFID0gc3RydWN0LmNhbGNzaXplKFBFUl9TSVpFX1ZBTFVFX0ZPUk1BVCkKCgpjbGFzcyB0YWJsZV9fdF9yX2FfayhEZWZhdWx0VGFibGUuRGVmYXVsdFRhYmxlKToKICAgICIiIlRoZSBBQVQgYGB0cmFrYGAgdGFibGUgY2FuIHN0b3JlIHBlci1zaXplIGFkanVzdG1lbnRzIHRvIGVhY2ggZ2x5cGgncwogICAgc2lkZWJlYXJpbmdzIHRvIG1ha2Ugd2hlbiB0cmFja2luZyBpcyBlbmFibGVkLCB3aGljaCBhcHBsaWNhdGlvbnMgY2FuCiAgICB1c2UgdG8gcHJvdmlkZSBtb3JlIHZpc3VhbGx5IGJhbGFuY2VkIGxpbmUgc3BhY2luZy4KCiAgICBTZWUgYWxzbyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2dHJhay5odG1sCiAgICAiIiIKCiAgICBkZWYgY29tcGlsZShzZWxmLCB0dEZvbnQpOgogICAgICAgIGRhdGFMaXN0ID0gW10KICAgICAgICBvZmZzZXQgPSBUUkFLX0hFQURFUl9GT1JNQVRfU0laRQogICAgICAgIGZvciBkaXJlY3Rpb24gaW4gKCJob3JpeiIsICJ2ZXJ0Iik6CiAgICAgICAgICAgIHRyYWNrRGF0YSA9IGdldGF0dHIoc2VsZiwgZGlyZWN0aW9uICsgIkRhdGEiLCBUcmFja0RhdGEoKSkKICAgICAgICAgICAgb2Zmc2V0TmFtZSA9IGRpcmVjdGlvbiArICJPZmZzZXQiCiAgICAgICAgICAgICMgc2V0IG9mZnNldCB0byAwIGlmIE5vbmUgb3IgZW1wdHkKICAgICAgICAgICAgaWYgbm90IHRyYWNrRGF0YToKICAgICAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgb2Zmc2V0TmFtZSwgMCkKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICMgVHJhY2tEYXRhIHRhYmxlIGZvcm1hdCBtdXN0IGJlIGxvbmd3b3JkIGFsaWduZWQKICAgICAgICAgICAgYWxpZ25lZE9mZnNldCA9IChvZmZzZXQgKyAzKSAmIH4zCiAgICAgICAgICAgIHBhZGRpbmcsIG9mZnNldCA9IGIiXHgwMCIgKiAoYWxpZ25lZE9mZnNldCAtIG9mZnNldCksIGFsaWduZWRPZmZzZXQKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBvZmZzZXROYW1lLCBvZmZzZXQpCgogICAgICAgICAgICBkYXRhID0gdHJhY2tEYXRhLmNvbXBpbGUob2Zmc2V0KQogICAgICAgICAgICBvZmZzZXQgKz0gbGVuKGRhdGEpCiAgICAgICAgICAgIGRhdGFMaXN0LmFwcGVuZChwYWRkaW5nICsgZGF0YSkKCiAgICAgICAgc2VsZi5yZXNlcnZlZCA9IDAKICAgICAgICB0YWJsZURhdGEgPSBieXRlc2pvaW4oW3NzdHJ1Y3QucGFjayhUUkFLX0hFQURFUl9GT1JNQVQsIHNlbGYpXSArIGRhdGFMaXN0KQogICAgICAgIHJldHVybiB0YWJsZURhdGEKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgc3N0cnVjdC51bnBhY2soVFJBS19IRUFERVJfRk9STUFULCBkYXRhWzpUUkFLX0hFQURFUl9GT1JNQVRfU0laRV0sIHNlbGYpCiAgICAgICAgZm9yIGRpcmVjdGlvbiBpbiAoImhvcml6IiwgInZlcnQiKToKICAgICAgICAgICAgdHJhY2tEYXRhID0gVHJhY2tEYXRhKCkKICAgICAgICAgICAgb2Zmc2V0ID0gZ2V0YXR0cihzZWxmLCBkaXJlY3Rpb24gKyAiT2Zmc2V0IikKICAgICAgICAgICAgaWYgb2Zmc2V0ICE9IDA6CiAgICAgICAgICAgICAgICB0cmFja0RhdGEuZGVjb21waWxlKGRhdGEsIG9mZnNldCkKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBkaXJlY3Rpb24gKyAiRGF0YSIsIHRyYWNrRGF0YSkKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInZlcnNpb24iLCB2YWx1ZT1zZWxmLnZlcnNpb24pCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIHdyaXRlci5zaW1wbGV0YWcoImZvcm1hdCIsIHZhbHVlPXNlbGYuZm9ybWF0KQogICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICBmb3IgZGlyZWN0aW9uIGluICgiaG9yaXoiLCAidmVydCIpOgogICAgICAgICAgICBkYXRhTmFtZSA9IGRpcmVjdGlvbiArICJEYXRhIgogICAgICAgICAgICB3cml0ZXIuYmVnaW50YWcoZGF0YU5hbWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICAgICAgdHJhY2tEYXRhID0gZ2V0YXR0cihzZWxmLCBkYXRhTmFtZSwgVHJhY2tEYXRhKCkpCiAgICAgICAgICAgIHRyYWNrRGF0YS50b1hNTCh3cml0ZXIsIHR0Rm9udCkKICAgICAgICAgICAgd3JpdGVyLmVuZHRhZyhkYXRhTmFtZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQoKICAgIGRlZiBmcm9tWE1MKHNlbGYsIG5hbWUsIGF0dHJzLCBjb250ZW50LCB0dEZvbnQpOgogICAgICAgIGlmIG5hbWUgPT0gInZlcnNpb24iOgogICAgICAgICAgICBzZWxmLnZlcnNpb24gPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKICAgICAgICBlbGlmIG5hbWUgPT0gImZvcm1hdCI6CiAgICAgICAgICAgIHNlbGYuZm9ybWF0ID0gc2FmZUV2YWwoYXR0cnNbInZhbHVlIl0pCiAgICAgICAgZWxpZiBuYW1lIGluICgiaG9yaXpEYXRhIiwgInZlcnREYXRhIik6CiAgICAgICAgICAgIHRyYWNrRGF0YSA9IFRyYWNrRGF0YSgpCiAgICAgICAgICAgIHNldGF0dHIoc2VsZiwgbmFtZSwgdHJhY2tEYXRhKQogICAgICAgICAgICBmb3IgZWxlbWVudCBpbiBjb250ZW50OgogICAgICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICBuYW1lLCBhdHRycywgY29udGVudF8gPSBlbGVtZW50CiAgICAgICAgICAgICAgICB0cmFja0RhdGEuZnJvbVhNTChuYW1lLCBhdHRycywgY29udGVudF8sIHR0Rm9udCkKCgpjbGFzcyBUcmFja0RhdGEoTXV0YWJsZU1hcHBpbmcpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGluaXRpYWxkYXRhPXt9KToKICAgICAgICBzZWxmLl9tYXAgPSBkaWN0KGluaXRpYWxkYXRhKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIG9mZnNldCk6CiAgICAgICAgblRyYWNrcyA9IGxlbihzZWxmKQogICAgICAgIHNpemVzID0gc2VsZi5zaXplcygpCiAgICAgICAgblNpemVzID0gbGVuKHNpemVzKQoKICAgICAgICAjIG9mZnNldCB0byB0aGUgc3RhcnQgb2YgdGhlIHNpemUgc3VidGFibGUKICAgICAgICBvZmZzZXQgKz0gVFJBQ0tfREFUQV9GT1JNQVRfU0laRSArIFRSQUNLX1RBQkxFX0VOVFJZX0ZPUk1BVF9TSVpFICogblRyYWNrcwogICAgICAgIHRyYWNrRGF0YUhlYWRlciA9IHNzdHJ1Y3QucGFjaygKICAgICAgICAgICAgVFJBQ0tfREFUQV9GT1JNQVQsCiAgICAgICAgICAgIHsiblRyYWNrcyI6IG5UcmFja3MsICJuU2l6ZXMiOiBuU2l6ZXMsICJzaXplVGFibGVPZmZzZXQiOiBvZmZzZXR9LAogICAgICAgICkKCiAgICAgICAgZW50cnlEYXRhTGlzdCA9IFtdCiAgICAgICAgcGVyU2l6ZURhdGFMaXN0ID0gW10KICAgICAgICAjIG9mZnNldCB0byBwZXItc2l6ZSB0cmFja2luZyB2YWx1ZXMKICAgICAgICBvZmZzZXQgKz0gU0laRV9WQUxVRV9GT1JNQVRfU0laRSAqIG5TaXplcwogICAgICAgICMgc29ydCB0cmFjayB0YWJsZSBlbnRyaWVzIGJ5IHRyYWNrIHZhbHVlCiAgICAgICAgZm9yIHRyYWNrLCBlbnRyeSBpbiBzb3J0ZWQoc2VsZi5pdGVtcygpKToKICAgICAgICAgICAgYXNzZXJ0IGVudHJ5Lm5hbWVJbmRleCBpcyBub3QgTm9uZQogICAgICAgICAgICBlbnRyeS50cmFjayA9IHRyYWNrCiAgICAgICAgICAgIGVudHJ5Lm9mZnNldCA9IG9mZnNldAogICAgICAgICAgICBlbnRyeURhdGFMaXN0ICs9IFtzc3RydWN0LnBhY2soVFJBQ0tfVEFCTEVfRU5UUllfRk9STUFULCBlbnRyeSldCiAgICAgICAgICAgICMgc29ydCBwZXItc2l6ZSB2YWx1ZXMgYnkgc2l6ZQogICAgICAgICAgICBmb3Igc2l6ZSwgdmFsdWUgaW4gc29ydGVkKGVudHJ5Lml0ZW1zKCkpOgogICAgICAgICAgICAgICAgcGVyU2l6ZURhdGFMaXN0ICs9IFtzdHJ1Y3QucGFjayhQRVJfU0laRV9WQUxVRV9GT1JNQVQsIHZhbHVlKV0KICAgICAgICAgICAgb2Zmc2V0ICs9IFBFUl9TSVpFX1ZBTFVFX0ZPUk1BVF9TSVpFICogblNpemVzCiAgICAgICAgIyBzb3J0IHNpemUgdmFsdWVzCiAgICAgICAgc2l6ZURhdGFMaXN0ID0gWwogICAgICAgICAgICBzdHJ1Y3QucGFjayhTSVpFX1ZBTFVFX0ZPUk1BVCwgZmwyZmkoc3YsIDE2KSkgZm9yIHN2IGluIHNvcnRlZChzaXplcykKICAgICAgICBdCgogICAgICAgIGRhdGEgPSBieXRlc2pvaW4oCiAgICAgICAgICAgIFt0cmFja0RhdGFIZWFkZXJdICsgZW50cnlEYXRhTGlzdCArIHNpemVEYXRhTGlzdCArIHBlclNpemVEYXRhTGlzdAogICAgICAgICkKICAgICAgICByZXR1cm4gZGF0YQoKICAgIGRlZiBkZWNvbXBpbGUoc2VsZiwgZGF0YSwgb2Zmc2V0KToKICAgICAgICAjIGluaXRpYWwgb2Zmc2V0IGlzIGZyb20gdGhlIHN0YXJ0IG9mIHRyYWsgdGFibGUgdG8gdGhlIGN1cnJlbnQgVHJhY2tEYXRhCiAgICAgICAgdHJhY2tEYXRhSGVhZGVyID0gZGF0YVtvZmZzZXQgOiBvZmZzZXQgKyBUUkFDS19EQVRBX0ZPUk1BVF9TSVpFXQogICAgICAgIGlmIGxlbih0cmFja0RhdGFIZWFkZXIpICE9IFRSQUNLX0RBVEFfRk9STUFUX1NJWkU6CiAgICAgICAgICAgIHJhaXNlIFRUTGliRXJyb3IoIm5vdCBlbm91Z2ggZGF0YSB0byBkZWNvbXBpbGUgVHJhY2tEYXRhIGhlYWRlciIpCiAgICAgICAgc3N0cnVjdC51bnBhY2soVFJBQ0tfREFUQV9GT1JNQVQsIHRyYWNrRGF0YUhlYWRlciwgc2VsZikKICAgICAgICBvZmZzZXQgKz0gVFJBQ0tfREFUQV9GT1JNQVRfU0laRQoKICAgICAgICBuU2l6ZXMgPSBzZWxmLm5TaXplcwogICAgICAgIHNpemVUYWJsZU9mZnNldCA9IHNlbGYuc2l6ZVRhYmxlT2Zmc2V0CiAgICAgICAgc2l6ZVRhYmxlID0gW10KICAgICAgICBmb3IgaSBpbiByYW5nZShuU2l6ZXMpOgogICAgICAgICAgICBzaXplVmFsdWVEYXRhID0gZGF0YVsKICAgICAgICAgICAgICAgIHNpemVUYWJsZU9mZnNldCA6IHNpemVUYWJsZU9mZnNldCArIFNJWkVfVkFMVUVfRk9STUFUX1NJWkUKICAgICAgICAgICAgXQogICAgICAgICAgICBpZiBsZW4oc2l6ZVZhbHVlRGF0YSkgPCBTSVpFX1ZBTFVFX0ZPUk1BVF9TSVpFOgogICAgICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigibm90IGVub3VnaCBkYXRhIHRvIGRlY29tcGlsZSBUcmFja0RhdGEgc2l6ZSBzdWJ0YWJsZSIpCiAgICAgICAgICAgIChzaXplVmFsdWUsKSA9IHN0cnVjdC51bnBhY2soU0laRV9WQUxVRV9GT1JNQVQsIHNpemVWYWx1ZURhdGEpCiAgICAgICAgICAgIHNpemVUYWJsZS5hcHBlbmQoZmkyZmwoc2l6ZVZhbHVlLCAxNikpCiAgICAgICAgICAgIHNpemVUYWJsZU9mZnNldCArPSBTSVpFX1ZBTFVFX0ZPUk1BVF9TSVpFCgogICAgICAgIGZvciBpIGluIHJhbmdlKHNlbGYublRyYWNrcyk6CiAgICAgICAgICAgIGVudHJ5ID0gVHJhY2tUYWJsZUVudHJ5KCkKICAgICAgICAgICAgZW50cnlEYXRhID0gZGF0YVtvZmZzZXQgOiBvZmZzZXQgKyBUUkFDS19UQUJMRV9FTlRSWV9GT1JNQVRfU0laRV0KICAgICAgICAgICAgaWYgbGVuKGVudHJ5RGF0YSkgPCBUUkFDS19UQUJMRV9FTlRSWV9GT1JNQVRfU0laRToKICAgICAgICAgICAgICAgIHJhaXNlIFRUTGliRXJyb3IoIm5vdCBlbm91Z2ggZGF0YSB0byBkZWNvbXBpbGUgVHJhY2tUYWJsZUVudHJ5IHJlY29yZCIpCiAgICAgICAgICAgIHNzdHJ1Y3QudW5wYWNrKFRSQUNLX1RBQkxFX0VOVFJZX0ZPUk1BVCwgZW50cnlEYXRhLCBlbnRyeSkKICAgICAgICAgICAgcGVyU2l6ZU9mZnNldCA9IGVudHJ5Lm9mZnNldAogICAgICAgICAgICBmb3IgaiBpbiByYW5nZShuU2l6ZXMpOgogICAgICAgICAgICAgICAgc2l6ZSA9IHNpemVUYWJsZVtqXQogICAgICAgICAgICAgICAgcGVyU2l6ZVZhbHVlRGF0YSA9IGRhdGFbCiAgICAgICAgICAgICAgICAgICAgcGVyU2l6ZU9mZnNldCA6IHBlclNpemVPZmZzZXQgKyBQRVJfU0laRV9WQUxVRV9GT1JNQVRfU0laRQogICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgaWYgbGVuKHBlclNpemVWYWx1ZURhdGEpIDwgUEVSX1NJWkVfVkFMVUVfRk9STUFUX1NJWkU6CiAgICAgICAgICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigKICAgICAgICAgICAgICAgICAgICAgICAgIm5vdCBlbm91Z2ggZGF0YSB0byBkZWNvbXBpbGUgcGVyLXNpemUgdHJhY2sgdmFsdWVzIgogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIChwZXJTaXplVmFsdWUsKSA9IHN0cnVjdC51bnBhY2soUEVSX1NJWkVfVkFMVUVfRk9STUFULCBwZXJTaXplVmFsdWVEYXRhKQogICAgICAgICAgICAgICAgZW50cnlbc2l6ZV0gPSBwZXJTaXplVmFsdWUKICAgICAgICAgICAgICAgIHBlclNpemVPZmZzZXQgKz0gUEVSX1NJWkVfVkFMVUVfRk9STUFUX1NJWkUKICAgICAgICAgICAgc2VsZltlbnRyeS50cmFja10gPSBlbnRyeQogICAgICAgICAgICBvZmZzZXQgKz0gVFJBQ0tfVEFCTEVfRU5UUllfRk9STUFUX1NJWkUKCiAgICBkZWYgdG9YTUwoc2VsZiwgd3JpdGVyLCB0dEZvbnQpOgogICAgICAgIG5UcmFja3MgPSBsZW4oc2VsZikKICAgICAgICBuU2l6ZXMgPSBsZW4oc2VsZi5zaXplcygpKQogICAgICAgIHdyaXRlci5jb21tZW50KCJuVHJhY2tzPSVkLCBuU2l6ZXM9JWQiICUgKG5UcmFja3MsIG5TaXplcykpCiAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciB0cmFjaywgZW50cnkgaW4gc29ydGVkKHNlbGYuaXRlbXMoKSk6CiAgICAgICAgICAgIGFzc2VydCBlbnRyeS5uYW1lSW5kZXggaXMgbm90IE5vbmUKICAgICAgICAgICAgZW50cnkudHJhY2sgPSB0cmFjawogICAgICAgICAgICBlbnRyeS50b1hNTCh3cml0ZXIsIHR0Rm9udCkKCiAgICBkZWYgZnJvbVhNTChzZWxmLCBuYW1lLCBhdHRycywgY29udGVudCwgdHRGb250KToKICAgICAgICBpZiBuYW1lICE9ICJ0cmFja0VudHJ5IjoKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgZW50cnkgPSBUcmFja1RhYmxlRW50cnkoKQogICAgICAgIGVudHJ5LmZyb21YTUwobmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCkKICAgICAgICBzZWxmW2VudHJ5LnRyYWNrXSA9IGVudHJ5CgogICAgZGVmIHNpemVzKHNlbGYpOgogICAgICAgIGlmIG5vdCBzZWxmOgogICAgICAgICAgICByZXR1cm4gZnJvemVuc2V0KCkKICAgICAgICB0cmFja3MgPSBsaXN0KHNlbGYudHJhY2tzKCkpCiAgICAgICAgc2l6ZXMgPSBzZWxmW3RyYWNrcy5wb3AoMCldLnNpemVzKCkKICAgICAgICBmb3IgdHJhY2sgaW4gdHJhY2tzOgogICAgICAgICAgICBlbnRyeVNpemVzID0gc2VsZlt0cmFja10uc2l6ZXMoKQogICAgICAgICAgICBpZiBzaXplcyAhPSBlbnRyeVNpemVzOgogICAgICAgICAgICAgICAgcmFpc2UgVFRMaWJFcnJvcigKICAgICAgICAgICAgICAgICAgICAiJ3RyYWsnIHRhYmxlIGVudHJpZXMgbXVzdCBzcGVjaWZ5IHRoZSBzYW1lIHNpemVzOiAiCiAgICAgICAgICAgICAgICAgICAgIiVzICE9ICVzIiAlIChzb3J0ZWQoc2l6ZXMpLCBzb3J0ZWQoZW50cnlTaXplcykpCiAgICAgICAgICAgICAgICApCiAgICAgICAgcmV0dXJuIGZyb3plbnNldChzaXplcykKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgdHJhY2spOgogICAgICAgIHJldHVybiBzZWxmLl9tYXBbdHJhY2tdCgogICAgZGVmIF9fZGVsaXRlbV9fKHNlbGYsIHRyYWNrKToKICAgICAgICBkZWwgc2VsZi5fbWFwW3RyYWNrXQoKICAgIGRlZiBfX3NldGl0ZW1fXyhzZWxmLCB0cmFjaywgZW50cnkpOgogICAgICAgIHNlbGYuX21hcFt0cmFja10gPSBlbnRyeQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5fbWFwKQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gaXRlcihzZWxmLl9tYXApCgogICAgZGVmIGtleXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX21hcC5rZXlzKCkKCiAgICB0cmFja3MgPSBrZXlzCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiAiVHJhY2tEYXRhKHt9KSIuZm9ybWF0KHNlbGYuX21hcCBpZiBzZWxmIGVsc2UgIiIpCgoKY2xhc3MgVHJhY2tUYWJsZUVudHJ5KE11dGFibGVNYXBwaW5nKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCB2YWx1ZXM9e30sIG5hbWVJbmRleD1Ob25lKToKICAgICAgICBzZWxmLm5hbWVJbmRleCA9IG5hbWVJbmRleAogICAgICAgIHNlbGYuX21hcCA9IGRpY3QodmFsdWVzKQoKICAgIGRlZiB0b1hNTChzZWxmLCB3cml0ZXIsIHR0Rm9udCk6CiAgICAgICAgbmFtZSA9IHR0Rm9udFsibmFtZSJdLmdldERlYnVnTmFtZShzZWxmLm5hbWVJbmRleCkKICAgICAgICB3cml0ZXIuYmVnaW50YWcoCiAgICAgICAgICAgICJ0cmFja0VudHJ5IiwKICAgICAgICAgICAgKCgidmFsdWUiLCBmbDJzdHIoc2VsZi50cmFjaywgMTYpKSwgKCJuYW1lSW5kZXgiLCBzZWxmLm5hbWVJbmRleCkpLAogICAgICAgICkKICAgICAgICB3cml0ZXIubmV3bGluZSgpCiAgICAgICAgaWYgbmFtZToKICAgICAgICAgICAgd3JpdGVyLmNvbW1lbnQobmFtZSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgIGZvciBzaXplLCBwZXJTaXplVmFsdWUgaW4gc29ydGVkKHNlbGYuaXRlbXMoKSk6CiAgICAgICAgICAgIHdyaXRlci5zaW1wbGV0YWcoInRyYWNrIiwgc2l6ZT1mbDJzdHIoc2l6ZSwgMTYpLCB2YWx1ZT1wZXJTaXplVmFsdWUpCiAgICAgICAgICAgIHdyaXRlci5uZXdsaW5lKCkKICAgICAgICB3cml0ZXIuZW5kdGFnKCJ0cmFja0VudHJ5IikKICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgc2VsZi50cmFjayA9IHN0cjJmbChhdHRyc1sidmFsdWUiXSwgMTYpCiAgICAgICAgc2VsZi5uYW1lSW5kZXggPSBzYWZlRXZhbChhdHRyc1sibmFtZUluZGV4Il0pCiAgICAgICAgZm9yIGVsZW1lbnQgaW4gY29udGVudDoKICAgICAgICAgICAgaWYgbm90IGlzaW5zdGFuY2UoZWxlbWVudCwgdHVwbGUpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgbmFtZSwgYXR0cnMsIF8gPSBlbGVtZW50CiAgICAgICAgICAgIGlmIG5hbWUgIT0gInRyYWNrIjoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHNpemUgPSBzdHIyZmwoYXR0cnNbInNpemUiXSwgMTYpCiAgICAgICAgICAgIHNlbGZbc2l6ZV0gPSBzYWZlRXZhbChhdHRyc1sidmFsdWUiXSkKCiAgICBkZWYgX19nZXRpdGVtX18oc2VsZiwgc2l6ZSk6CiAgICAgICAgcmV0dXJuIHNlbGYuX21hcFtzaXplXQoKICAgIGRlZiBfX2RlbGl0ZW1fXyhzZWxmLCBzaXplKToKICAgICAgICBkZWwgc2VsZi5fbWFwW3NpemVdCgogICAgZGVmIF9fc2V0aXRlbV9fKHNlbGYsIHNpemUsIHZhbHVlKToKICAgICAgICBzZWxmLl9tYXBbc2l6ZV0gPSB2YWx1ZQoKICAgIGRlZiBfX2xlbl9fKHNlbGYpOgogICAgICAgIHJldHVybiBsZW4oc2VsZi5fbWFwKQoKICAgIGRlZiBfX2l0ZXJfXyhzZWxmKToKICAgICAgICByZXR1cm4gaXRlcihzZWxmLl9tYXApCgogICAgZGVmIGtleXMoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX21hcC5rZXlzKCkKCiAgICBzaXplcyA9IGtleXMKCiAgICBkZWYgX19yZXByX18oc2VsZik6CiAgICAgICAgcmV0dXJuICJUcmFja1RhYmxlRW50cnkoe30sIG5hbWVJbmRleD17fSkiLmZvcm1hdChzZWxmLl9tYXAsIHNlbGYubmFtZUluZGV4KQoKICAgIGRlZiBfX2VxX18oc2VsZiwgb3RoZXIpOgogICAgICAgIGlmIG5vdCBpc2luc3RhbmNlKG90aGVyLCBzZWxmLl9fY2xhc3NfXyk6CiAgICAgICAgICAgIHJldHVybiBOb3RJbXBsZW1lbnRlZAogICAgICAgIHJldHVybiBzZWxmLm5hbWVJbmRleCA9PSBvdGhlci5uYW1lSW5kZXggYW5kIGRpY3Qoc2VsZikgPT0gZGljdChvdGhlcikKCiAgICBkZWYgX19uZV9fKHNlbGYsIG90aGVyKToKICAgICAgICByZXN1bHQgPSBzZWxmLl9fZXFfXyhvdGhlcikKICAgICAgICByZXR1cm4gcmVzdWx0IGlmIHJlc3VsdCBpcyBOb3RJbXBsZW1lbnRlZCBlbHNlIG5vdCByZXN1bHQK
+from fontTools.misc import sstruct
+from fontTools.misc.fixedTools import (
+    fixedToFloat as fi2fl,
+    floatToFixed as fl2fi,
+    floatToFixedToStr as fl2str,
+    strToFixedToFloat as str2fl,
+)
+from fontTools.misc.textTools import bytesjoin, safeEval
+from fontTools.ttLib import TTLibError
+from . import DefaultTable
+import struct
+from collections.abc import MutableMapping
+
+# Apple's documentation of 'trak':
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6trak.html
+
+TRAK_HEADER_FORMAT = """
+	> # big endian
+	version:     16.16F
+	format:      H
+	horizOffset: H
+	vertOffset:  H
+	reserved:    H
+"""
+
+TRAK_HEADER_FORMAT_SIZE = sstruct.calcsize(TRAK_HEADER_FORMAT)
+
+
+TRACK_DATA_FORMAT = """
+	> # big endian
+	nTracks:         H
+	nSizes:          H
+	sizeTableOffset: L
+"""
+
+TRACK_DATA_FORMAT_SIZE = sstruct.calcsize(TRACK_DATA_FORMAT)
+
+
+TRACK_TABLE_ENTRY_FORMAT = """
+	> # big endian
+	track:      16.16F
+	nameIndex:       H
+	offset:          H
+"""
+
+TRACK_TABLE_ENTRY_FORMAT_SIZE = sstruct.calcsize(TRACK_TABLE_ENTRY_FORMAT)
+
+
+# size values are actually '16.16F' fixed-point values, but here I do the
+# fixedToFloat conversion manually instead of relying on sstruct
+SIZE_VALUE_FORMAT = ">l"
+SIZE_VALUE_FORMAT_SIZE = struct.calcsize(SIZE_VALUE_FORMAT)
+
+# per-Size values are in 'FUnits', i.e. 16-bit signed integers
+PER_SIZE_VALUE_FORMAT = ">h"
+PER_SIZE_VALUE_FORMAT_SIZE = struct.calcsize(PER_SIZE_VALUE_FORMAT)
+
+
+class table__t_r_a_k(DefaultTable.DefaultTable):
+    """The AAT ``trak`` table can store per-size adjustments to each glyph's
+    sidebearings to make when tracking is enabled, which applications can
+    use to provide more visually balanced line spacing.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6trak.html
+    """
+
+    def compile(self, ttFont):
+        dataList = []
+        offset = TRAK_HEADER_FORMAT_SIZE
+        for direction in ("horiz", "vert"):
+            trackData = getattr(self, direction + "Data", TrackData())
+            offsetName = direction + "Offset"
+            # set offset to 0 if None or empty
+            if not trackData:
+                setattr(self, offsetName, 0)
+                continue
+            # TrackData table format must be longword aligned
+            alignedOffset = (offset + 3) & ~3
+            padding, offset = b"\x00" * (alignedOffset - offset), alignedOffset
+            setattr(self, offsetName, offset)
+
+            data = trackData.compile(offset)
+            offset += len(data)
+            dataList.append(padding + data)
+
+        self.reserved = 0
+        tableData = bytesjoin([sstruct.pack(TRAK_HEADER_FORMAT, self)] + dataList)
+        return tableData
+
+    def decompile(self, data, ttFont):
+        sstruct.unpack(TRAK_HEADER_FORMAT, data[:TRAK_HEADER_FORMAT_SIZE], self)
+        for direction in ("horiz", "vert"):
+            trackData = TrackData()
+            offset = getattr(self, direction + "Offset")
+            if offset != 0:
+                trackData.decompile(data, offset)
+            setattr(self, direction + "Data", trackData)
+
+    def toXML(self, writer, ttFont):
+        writer.simpletag("version", value=self.version)
+        writer.newline()
+        writer.simpletag("format", value=self.format)
+        writer.newline()
+        for direction in ("horiz", "vert"):
+            dataName = direction + "Data"
+            writer.begintag(dataName)
+            writer.newline()
+            trackData = getattr(self, dataName, TrackData())
+            trackData.toXML(writer, ttFont)
+            writer.endtag(dataName)
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "version":
+            self.version = safeEval(attrs["value"])
+        elif name == "format":
+            self.format = safeEval(attrs["value"])
+        elif name in ("horizData", "vertData"):
+            trackData = TrackData()
+            setattr(self, name, trackData)
+            for element in content:
+                if not isinstance(element, tuple):
+                    continue
+                name, attrs, content_ = element
+                trackData.fromXML(name, attrs, content_, ttFont)
+
+
+class TrackData(MutableMapping):
+    def __init__(self, initialdata={}):
+        self._map = dict(initialdata)
+
+    def compile(self, offset):
+        nTracks = len(self)
+        sizes = self.sizes()
+        nSizes = len(sizes)
+
+        # offset to the start of the size subtable
+        offset += TRACK_DATA_FORMAT_SIZE + TRACK_TABLE_ENTRY_FORMAT_SIZE * nTracks
+        trackDataHeader = sstruct.pack(
+            TRACK_DATA_FORMAT,
+            {"nTracks": nTracks, "nSizes": nSizes, "sizeTableOffset": offset},
+        )
+
+        entryDataList = []
+        perSizeDataList = []
+        # offset to per-size tracking values
+        offset += SIZE_VALUE_FORMAT_SIZE * nSizes
+        # sort track table entries by track value
+        for track, entry in sorted(self.items()):
+            assert entry.nameIndex is not None
+            entry.track = track
+            entry.offset = offset
+            entryDataList += [sstruct.pack(TRACK_TABLE_ENTRY_FORMAT, entry)]
+            # sort per-size values by size
+            for size, value in sorted(entry.items()):
+                perSizeDataList += [struct.pack(PER_SIZE_VALUE_FORMAT, value)]
+            offset += PER_SIZE_VALUE_FORMAT_SIZE * nSizes
+        # sort size values
+        sizeDataList = [
+            struct.pack(SIZE_VALUE_FORMAT, fl2fi(sv, 16)) for sv in sorted(sizes)
+        ]
+
+        data = bytesjoin(
+            [trackDataHeader] + entryDataList + sizeDataList + perSizeDataList
+        )
+        return data
+
+    def decompile(self, data, offset):
+        # initial offset is from the start of trak table to the current TrackData
+        trackDataHeader = data[offset : offset + TRACK_DATA_FORMAT_SIZE]
+        if len(trackDataHeader) != TRACK_DATA_FORMAT_SIZE:
+            raise TTLibError("not enough data to decompile TrackData header")
+        sstruct.unpack(TRACK_DATA_FORMAT, trackDataHeader, self)
+        offset += TRACK_DATA_FORMAT_SIZE
+
+        nSizes = self.nSizes
+        sizeTableOffset = self.sizeTableOffset
+        sizeTable = []
+        for i in range(nSizes):
+            sizeValueData = data[
+                sizeTableOffset : sizeTableOffset + SIZE_VALUE_FORMAT_SIZE
+            ]
+            if len(sizeValueData) < SIZE_VALUE_FORMAT_SIZE:
+                raise TTLibError("not enough data to decompile TrackData size subtable")
+            (sizeValue,) = struct.unpack(SIZE_VALUE_FORMAT, sizeValueData)
+            sizeTable.append(fi2fl(sizeValue, 16))
+            sizeTableOffset += SIZE_VALUE_FORMAT_SIZE
+
+        for i in range(self.nTracks):
+            entry = TrackTableEntry()
+            entryData = data[offset : offset + TRACK_TABLE_ENTRY_FORMAT_SIZE]
+            if len(entryData) < TRACK_TABLE_ENTRY_FORMAT_SIZE:
+                raise TTLibError("not enough data to decompile TrackTableEntry record")
+            sstruct.unpack(TRACK_TABLE_ENTRY_FORMAT, entryData, entry)
+            perSizeOffset = entry.offset
+            for j in range(nSizes):
+                size = sizeTable[j]
+                perSizeValueData = data[
+                    perSizeOffset : perSizeOffset + PER_SIZE_VALUE_FORMAT_SIZE
+                ]
+                if len(perSizeValueData) < PER_SIZE_VALUE_FORMAT_SIZE:
+                    raise TTLibError(
+                        "not enough data to decompile per-size track values"
+                    )
+                (perSizeValue,) = struct.unpack(PER_SIZE_VALUE_FORMAT, perSizeValueData)
+                entry[size] = perSizeValue
+                perSizeOffset += PER_SIZE_VALUE_FORMAT_SIZE
+            self[entry.track] = entry
+            offset += TRACK_TABLE_ENTRY_FORMAT_SIZE
+
+    def toXML(self, writer, ttFont):
+        nTracks = len(self)
+        nSizes = len(self.sizes())
+        writer.comment("nTracks=%d, nSizes=%d" % (nTracks, nSizes))
+        writer.newline()
+        for track, entry in sorted(self.items()):
+            assert entry.nameIndex is not None
+            entry.track = track
+            entry.toXML(writer, ttFont)
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name != "trackEntry":
+            return
+        entry = TrackTableEntry()
+        entry.fromXML(name, attrs, content, ttFont)
+        self[entry.track] = entry
+
+    def sizes(self):
+        if not self:
+            return frozenset()
+        tracks = list(self.tracks())
+        sizes = self[tracks.pop(0)].sizes()
+        for track in tracks:
+            entrySizes = self[track].sizes()
+            if sizes != entrySizes:
+                raise TTLibError(
+                    "'trak' table entries must specify the same sizes: "
+                    "%s != %s" % (sorted(sizes), sorted(entrySizes))
+                )
+        return frozenset(sizes)
+
+    def __getitem__(self, track):
+        return self._map[track]
+
+    def __delitem__(self, track):
+        del self._map[track]
+
+    def __setitem__(self, track, entry):
+        self._map[track] = entry
+
+    def __len__(self):
+        return len(self._map)
+
+    def __iter__(self):
+        return iter(self._map)
+
+    def keys(self):
+        return self._map.keys()
+
+    tracks = keys
+
+    def __repr__(self):
+        return "TrackData({})".format(self._map if self else "")
+
+
+class TrackTableEntry(MutableMapping):
+    def __init__(self, values={}, nameIndex=None):
+        self.nameIndex = nameIndex
+        self._map = dict(values)
+
+    def toXML(self, writer, ttFont):
+        name = ttFont["name"].getDebugName(self.nameIndex)
+        writer.begintag(
+            "trackEntry",
+            (("value", fl2str(self.track, 16)), ("nameIndex", self.nameIndex)),
+        )
+        writer.newline()
+        if name:
+            writer.comment(name)
+            writer.newline()
+        for size, perSizeValue in sorted(self.items()):
+            writer.simpletag("track", size=fl2str(size, 16), value=perSizeValue)
+            writer.newline()
+        writer.endtag("trackEntry")
+        writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        self.track = str2fl(attrs["value"], 16)
+        self.nameIndex = safeEval(attrs["nameIndex"])
+        for element in content:
+            if not isinstance(element, tuple):
+                continue
+            name, attrs, _ = element
+            if name != "track":
+                continue
+            size = str2fl(attrs["size"], 16)
+            self[size] = safeEval(attrs["value"])
+
+    def __getitem__(self, size):
+        return self._map[size]
+
+    def __delitem__(self, size):
+        del self._map[size]
+
+    def __setitem__(self, size, value):
+        self._map[size] = value
+
+    def __len__(self):
+        return len(self._map)
+
+    def __iter__(self):
+        return iter(self._map)
+
+    def keys(self):
+        return self._map.keys()
+
+    sizes = keys
+
+    def __repr__(self):
+        return "TrackTableEntry({}, nameIndex={})".format(self._map, self.nameIndex)
+
+    def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return NotImplemented
+        return self.nameIndex == other.nameIndex and dict(self) == dict(other)
+
+    def __ne__(self, other):
+        result = self.__eq__(other)
+        return result if result is NotImplemented else not result

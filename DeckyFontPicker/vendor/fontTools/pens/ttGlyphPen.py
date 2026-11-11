@@ -1,1 +1,336 @@
-ZnJvbSBhcnJheSBpbXBvcnQgYXJyYXkKZnJvbSB0eXBpbmcgaW1wb3J0IEFueSwgQ2FsbGFibGUsIERpY3QsIE9wdGlvbmFsLCBUdXBsZQpmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IE1BWF9GMkRPVDE0LCBmbG9hdFRvRml4ZWRUb0Zsb2F0CmZyb20gZm9udFRvb2xzLm1pc2MubG9nZ2luZ1Rvb2xzIGltcG9ydCBMb2dNaXhpbgpmcm9tIGZvbnRUb29scy5wZW5zLnBvaW50UGVuIGltcG9ydCBBYnN0cmFjdFBvaW50UGVuCmZyb20gZm9udFRvb2xzLm1pc2Mucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZApmcm9tIGZvbnRUb29scy5wZW5zLmJhc2VQZW4gaW1wb3J0IExvZ2dpbmdQZW4sIFBlbkVycm9yCmZyb20gZm9udFRvb2xzLnBlbnMudHJhbnNmb3JtUGVuIGltcG9ydCBUcmFuc2Zvcm1QZW4sIFRyYW5zZm9ybVBvaW50UGVuCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcyBpbXBvcnQgdHRQcm9ncmFtCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5fZ19sX3lfZiBpbXBvcnQgZmxhZ09uQ3VydmUsIGZsYWdDdWJpYwpmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuX2dfbF95X2YgaW1wb3J0IEdseXBoCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5fZ19sX3lfZiBpbXBvcnQgR2x5cGhDb21wb25lbnQKZnJvbSBmb250VG9vbHMudHRMaWIudGFibGVzLl9nX2xfeV9mIGltcG9ydCBHbHlwaENvb3JkaW5hdGVzCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5fZ19sX3lfZiBpbXBvcnQgZHJvcEltcGxpZWRPbkN1cnZlUG9pbnRzCmltcG9ydCBtYXRoCgpfX2FsbF9fID0gWyJUVEdseXBoUGVuIiwgIlRUR2x5cGhQb2ludFBlbiJdCgoKY2xhc3MgX1RUR2x5cGhCYXNlUGVuOgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgZ2x5cGhTZXQ6IE9wdGlvbmFsW0RpY3Rbc3RyLCBBbnldXSwKICAgICAgICBoYW5kbGVPdmVyZmxvd2luZ1RyYW5zZm9ybXM6IGJvb2wgPSBUcnVlLAogICAgKSAtPiBOb25lOgogICAgICAgICIiIgogICAgICAgIENvbnN0cnVjdCBhIG5ldyBwZW4uCgogICAgICAgIEFyZ3M6CiAgICAgICAgICAgIGdseXBoU2V0IChEaWN0W3N0ciwgQW55XSk6IEEgZ2x5cGhzZXQgb2JqZWN0LCB1c2VkIHRvIHJlc29sdmUgY29tcG9uZW50cy4KICAgICAgICAgICAgaGFuZGxlT3ZlcmZsb3dpbmdUcmFuc2Zvcm1zIChib29sKTogU2VlIGJlbG93LgoKICAgICAgICBJZiBgYGhhbmRsZU92ZXJmbG93aW5nVHJhbnNmb3Jtc2BgIGlzIFRydWUsIHRoZSBjb21wb25lbnRzJyB0cmFuc2Zvcm0gdmFsdWVzCiAgICAgICAgYXJlIGNoZWNrZWQgdGhhdCB0aGV5IGRvbid0IG92ZXJmbG93IHRoZSBsaW1pdHMgb2YgYSBGMkRvdDE0IG51bWJlcjoKICAgICAgICAtMi4wIDw9IHYgPCArMi4wLiBJZiBhbnkgdHJhbnNmb3JtIHZhbHVlIGV4Y2VlZHMgdGhlc2UsIHRoZSBjb21wb3NpdGUKICAgICAgICBnbHlwaCBpcyBkZWNvbXBvc2VkLgoKICAgICAgICBBbiBleGNlcHRpb24gdG8gdGhpcyBydWxlIGlzIGRvbmUgZm9yIHZhbHVlcyB0aGF0IGFyZSB2ZXJ5IGNsb3NlIHRvICsyLjAKICAgICAgICAoYm90aCBmb3IgY29uc2lzdGVuY3kgd2l0aCB0aGUgLTIuMCBjYXNlLCBhbmQgZm9yIHRoZSByZWxhdGl2ZSBmcmVxdWVuY3kKICAgICAgICB0aGVzZSBvY2N1ciBpbiByZWFsIGZvbnRzKS4gV2hlbiBhbG1vc3QgKzIuMCB2YWx1ZXMgb2NjdXIgKGFuZCBhbGwgb3RoZXIKICAgICAgICB2YWx1ZXMgYXJlIHdpdGhpbiB0aGUgcmFuZ2UgLTIuMCA8PSB4IDw9ICsyLjApLCB0aGV5IGFyZSBjbGFtcGVkIHRvIHRoZQogICAgICAgIG1heGltdW0gcG9zaXRpdmUgdmFsdWUgdGhhdCBjYW4gc3RpbGwgYmUgZW5jb2RlZCBhcyBhbiBGMkRvdDE0OiBpLmUuCiAgICAgICAgMS45OTk5Mzg5NjQ4NDM3NS4KCiAgICAgICAgSWYgRmFsc2UsIG5vIGNoZWNrIGlzIGRvbmUgYW5kIGFsbCBjb21wb25lbnRzIGFyZSB0cmFuc2xhdGVkIHVubW9kaWZpZWQKICAgICAgICBpbnRvIHRoZSBnbHlmIHRhYmxlLCBmb2xsb3dlZCBieSBhbiBpbmV2aXRhYmxlIGBgc3RydWN0LmVycm9yYGAgb25jZSBhbgogICAgICAgIGF0dGVtcHQgaXMgbWFkZSB0byBjb21waWxlIHRoZW0uCgogICAgICAgIElmIGJvdGggY29udG91cnMgYW5kIGNvbXBvbmVudHMgYXJlIHByZXNlbnQgaW4gYSBnbHlwaCwgdGhlIGNvbXBvbmVudHMKICAgICAgICBhcmUgZGVjb21wb3NlZC4KICAgICAgICAiIiIKICAgICAgICBzZWxmLmdseXBoU2V0ID0gZ2x5cGhTZXQKICAgICAgICBzZWxmLmhhbmRsZU92ZXJmbG93aW5nVHJhbnNmb3JtcyA9IGhhbmRsZU92ZXJmbG93aW5nVHJhbnNmb3JtcwogICAgICAgIHNlbGYuaW5pdCgpCgogICAgZGVmIF9kZWNvbXBvc2UoCiAgICAgICAgc2VsZiwKICAgICAgICBnbHlwaE5hbWU6IHN0ciwKICAgICAgICB0cmFuc2Zvcm1hdGlvbjogVHVwbGVbZmxvYXQsIGZsb2F0LCBmbG9hdCwgZmxvYXQsIGZsb2F0LCBmbG9hdF0sCiAgICApOgogICAgICAgIHRwZW4gPSBzZWxmLnRyYW5zZm9ybVBlbihzZWxmLCB0cmFuc2Zvcm1hdGlvbikKICAgICAgICBnZXRhdHRyKHNlbGYuZ2x5cGhTZXRbZ2x5cGhOYW1lXSwgc2VsZi5kcmF3TWV0aG9kKSh0cGVuKQoKICAgIGRlZiBfaXNDbG9zZWQoc2VsZik6CiAgICAgICAgIiIiCiAgICAgICAgQ2hlY2sgaWYgdGhlIGN1cnJlbnQgcGF0aCBpcyBjbG9zZWQuCiAgICAgICAgIiIiCiAgICAgICAgcmFpc2UgTm90SW1wbGVtZW50ZWRFcnJvcgoKICAgIGRlZiBpbml0KHNlbGYpIC0+IE5vbmU6CiAgICAgICAgc2VsZi5wb2ludHMgPSBbXQogICAgICAgIHNlbGYuZW5kUHRzID0gW10KICAgICAgICBzZWxmLnR5cGVzID0gW10KICAgICAgICBzZWxmLmNvbXBvbmVudHMgPSBbXQoKICAgIGRlZiBhZGRDb21wb25lbnQoCiAgICAgICAgc2VsZiwKICAgICAgICBiYXNlR2x5cGhOYW1lOiBzdHIsCiAgICAgICAgdHJhbnNmb3JtYXRpb246IFR1cGxlW2Zsb2F0LCBmbG9hdCwgZmxvYXQsIGZsb2F0LCBmbG9hdCwgZmxvYXRdLAogICAgICAgIGlkZW50aWZpZXI6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgICAgICoqa3dhcmdzOiBBbnksCiAgICApIC0+IE5vbmU6CiAgICAgICAgIiIiCiAgICAgICAgQWRkIGEgc3ViIGdseXBoLgogICAgICAgICIiIgogICAgICAgIHNlbGYuY29tcG9uZW50cy5hcHBlbmQoKGJhc2VHbHlwaE5hbWUsIHRyYW5zZm9ybWF0aW9uKSkKCiAgICBkZWYgX2J1aWxkQ29tcG9uZW50cyhzZWxmLCBjb21wb25lbnRGbGFncyk6CiAgICAgICAgaWYgc2VsZi5oYW5kbGVPdmVyZmxvd2luZ1RyYW5zZm9ybXM6CiAgICAgICAgICAgICMgd2UgY2FuJ3QgZW5jb2RlIHRyYW5zZm9ybSB2YWx1ZXMgPiAyIG9yIDwgLTIgaW4gRjJEb3QxNCwKICAgICAgICAgICAgIyBzbyB3ZSBtdXN0IGRlY29tcG9zZSB0aGUgZ2x5cGggaWYgYW55IHRyYW5zZm9ybSBleGNlZWRzIHRoZXNlCiAgICAgICAgICAgIG92ZXJmbG93aW5nID0gYW55KAogICAgICAgICAgICAgICAgcyA+IDIgb3IgcyA8IC0yCiAgICAgICAgICAgICAgICBmb3IgKGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24pIGluIHNlbGYuY29tcG9uZW50cwogICAgICAgICAgICAgICAgZm9yIHMgaW4gdHJhbnNmb3JtYXRpb25bOjRdCiAgICAgICAgICAgICkKICAgICAgICBjb21wb25lbnRzID0gW10KICAgICAgICBmb3IgZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbiBpbiBzZWxmLmNvbXBvbmVudHM6CiAgICAgICAgICAgIGlmIGdseXBoTmFtZSBub3QgaW4gc2VsZi5nbHlwaFNldDoKICAgICAgICAgICAgICAgIHNlbGYubG9nLndhcm5pbmcoZiJza2lwcGVkIG5vbi1leGlzdGluZyBjb21wb25lbnQgJ3tnbHlwaE5hbWV9JyIpCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBpZiBzZWxmLnBvaW50cyBvciAoc2VsZi5oYW5kbGVPdmVyZmxvd2luZ1RyYW5zZm9ybXMgYW5kIG92ZXJmbG93aW5nKToKICAgICAgICAgICAgICAgICMgY2FuJ3QgaGF2ZSBib3RoIGNvb3JkaW5hdGVzIGFuZCBjb21wb25lbnRzLCBzbyBkZWNvbXBvc2UKICAgICAgICAgICAgICAgIHNlbGYuX2RlY29tcG9zZShnbHlwaE5hbWUsIHRyYW5zZm9ybWF0aW9uKQogICAgICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgICAgIGNvbXBvbmVudCA9IEdseXBoQ29tcG9uZW50KCkKICAgICAgICAgICAgY29tcG9uZW50LmdseXBoTmFtZSA9IGdseXBoTmFtZQogICAgICAgICAgICBjb21wb25lbnQueCwgY29tcG9uZW50LnkgPSAob3RSb3VuZCh2KSBmb3IgdiBpbiB0cmFuc2Zvcm1hdGlvbls0Ol0pCiAgICAgICAgICAgICMgcXVhbnRpemUgZmxvYXRzIHRvIEYyRG90MTQgc28gd2UgZ2V0IHNhbWUgdmFsdWVzIGFzIHdoZW4gZGVjb21waWxlZAogICAgICAgICAgICAjIGZyb20gYSBiaW5hcnkgZ2x5ZiB0YWJsZQogICAgICAgICAgICB0cmFuc2Zvcm1hdGlvbiA9IHR1cGxlKAogICAgICAgICAgICAgICAgZmxvYXRUb0ZpeGVkVG9GbG9hdCh2LCAxNCkgZm9yIHYgaW4gdHJhbnNmb3JtYXRpb25bOjRdCiAgICAgICAgICAgICkKICAgICAgICAgICAgaWYgdHJhbnNmb3JtYXRpb24gIT0gKDEsIDAsIDAsIDEpOgogICAgICAgICAgICAgICAgaWYgc2VsZi5oYW5kbGVPdmVyZmxvd2luZ1RyYW5zZm9ybXMgYW5kIGFueSgKICAgICAgICAgICAgICAgICAgICBNQVhfRjJET1QxNCA8IHMgPD0gMiBmb3IgcyBpbiB0cmFuc2Zvcm1hdGlvbgogICAgICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgICAgICAjIGNsYW1wIHZhbHVlcyB+PSArMi4wIHNvIHdlIGNhbiBrZWVwIHRoZSBjb21wb25lbnQKICAgICAgICAgICAgICAgICAgICB0cmFuc2Zvcm1hdGlvbiA9IHR1cGxlKAogICAgICAgICAgICAgICAgICAgICAgICBNQVhfRjJET1QxNCBpZiBNQVhfRjJET1QxNCA8IHMgPD0gMiBlbHNlIHMKICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHMgaW4gdHJhbnNmb3JtYXRpb24KICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBjb21wb25lbnQudHJhbnNmb3JtID0gKHRyYW5zZm9ybWF0aW9uWzoyXSwgdHJhbnNmb3JtYXRpb25bMjpdKQogICAgICAgICAgICBjb21wb25lbnQuZmxhZ3MgPSBjb21wb25lbnRGbGFncwogICAgICAgICAgICBjb21wb25lbnRzLmFwcGVuZChjb21wb25lbnQpCiAgICAgICAgcmV0dXJuIGNvbXBvbmVudHMKCiAgICBkZWYgZ2x5cGgoCiAgICAgICAgc2VsZiwKICAgICAgICBjb21wb25lbnRGbGFnczogaW50ID0gMHgwNCwKICAgICAgICBkcm9wSW1wbGllZE9uQ3VydmVzOiBib29sID0gRmFsc2UsCiAgICAgICAgKiwKICAgICAgICByb3VuZDogQ2FsbGFibGVbW2Zsb2F0XSwgaW50XSA9IG90Um91bmQsCiAgICApIC0+IEdseXBoOgogICAgICAgICIiIgogICAgICAgIFJldHVybnMgYSA6cHk6Y2xhc3M6YH4uX2dfbF95X2YuR2x5cGhgIG9iamVjdCByZXByZXNlbnRpbmcgdGhlIGdseXBoLgoKICAgICAgICBBcmdzOgogICAgICAgICAgICBjb21wb25lbnRGbGFnczogRmxhZ3MgdG8gdXNlIGZvciBjb21wb25lbnQgZ2x5cGhzLiAoZGVmYXVsdDogMHgwNCkKCiAgICAgICAgICAgIGRyb3BJbXBsaWVkT25DdXJ2ZXM6IFdoZXRoZXIgdG8gcmVtb3ZlIGltcGxpZWQtb25jdXJ2ZSBwb2ludHMuIChkZWZhdWx0OiBGYWxzZSkKICAgICAgICAiIiIKICAgICAgICBpZiBub3Qgc2VsZi5faXNDbG9zZWQoKToKICAgICAgICAgICAgcmFpc2UgUGVuRXJyb3IoIkRpZG4ndCBjbG9zZSBsYXN0IGNvbnRvdXIuIikKICAgICAgICBjb21wb25lbnRzID0gc2VsZi5fYnVpbGRDb21wb25lbnRzKGNvbXBvbmVudEZsYWdzKQoKICAgICAgICBnbHlwaCA9IEdseXBoKCkKICAgICAgICBnbHlwaC5jb29yZGluYXRlcyA9IEdseXBoQ29vcmRpbmF0ZXMoc2VsZi5wb2ludHMpCiAgICAgICAgZ2x5cGguZW5kUHRzT2ZDb250b3VycyA9IHNlbGYuZW5kUHRzCiAgICAgICAgZ2x5cGguZmxhZ3MgPSBhcnJheSgiQiIsIHNlbGYudHlwZXMpCiAgICAgICAgc2VsZi5pbml0KCkKCiAgICAgICAgaWYgY29tcG9uZW50czoKICAgICAgICAgICAgIyBJZiBib3RoIGNvbXBvbmVudHMgYW5kIGNvbnRvdXJzIHdlcmUgcHJlc2VudCwgdGhleSBoYXZlIGJ5IG5vdwogICAgICAgICAgICAjIGJlZW4gZGVjb21wb3NlZCBieSBfYnVpbGRDb21wb25lbnRzLgogICAgICAgICAgICBnbHlwaC5jb21wb25lbnRzID0gY29tcG9uZW50cwogICAgICAgICAgICBnbHlwaC5udW1iZXJPZkNvbnRvdXJzID0gLTEKICAgICAgICBlbHNlOgogICAgICAgICAgICBnbHlwaC5udW1iZXJPZkNvbnRvdXJzID0gbGVuKGdseXBoLmVuZFB0c09mQ29udG91cnMpCiAgICAgICAgICAgIGdseXBoLnByb2dyYW0gPSB0dFByb2dyYW0uUHJvZ3JhbSgpCiAgICAgICAgICAgIGdseXBoLnByb2dyYW0uZnJvbUJ5dGVjb2RlKGIiIikKICAgICAgICAgICAgaWYgZHJvcEltcGxpZWRPbkN1cnZlczoKICAgICAgICAgICAgICAgIGRyb3BJbXBsaWVkT25DdXJ2ZVBvaW50cyhnbHlwaCkKICAgICAgICAgICAgZ2x5cGguY29vcmRpbmF0ZXMudG9JbnQocm91bmQ9cm91bmQpCgogICAgICAgIHJldHVybiBnbHlwaAoKCmNsYXNzIFRUR2x5cGhQZW4oX1RUR2x5cGhCYXNlUGVuLCBMb2dnaW5nUGVuKToKICAgICIiIgogICAgUGVuIHVzZWQgZm9yIGRyYXdpbmcgdG8gYSBUcnVlVHlwZSBnbHlwaC4KCiAgICBUaGlzIHBlbiBjYW4gYmUgdXNlZCB0byBjb25zdHJ1Y3Qgb3IgbW9kaWZ5IGdseXBocyBpbiBhIFRydWVUeXBlIGZvcm1hdAogICAgZm9udC4gQWZ0ZXIgdXNpbmcgdGhlIHBlbiB0byBkcmF3LCB1c2UgdGhlIGBgLmdseXBoKClgYCBtZXRob2QgdG8gcmV0cmlldmUKICAgIGEgOnB5OmNsYXNzOmB+Ll9nX2xfeV9mLkdseXBoYCBvYmplY3QgcmVwcmVzZW50aW5nIHRoZSBnbHlwaC4KICAgICIiIgoKICAgIGRyYXdNZXRob2QgPSAiZHJhdyIKICAgIHRyYW5zZm9ybVBlbiA9IFRyYW5zZm9ybVBlbgoKICAgIGRlZiBfX2luaXRfXygKICAgICAgICBzZWxmLAogICAgICAgIGdseXBoU2V0OiBPcHRpb25hbFtEaWN0W3N0ciwgQW55XV0gPSBOb25lLAogICAgICAgIGhhbmRsZU92ZXJmbG93aW5nVHJhbnNmb3JtczogYm9vbCA9IFRydWUsCiAgICAgICAgb3V0cHV0SW1wbGllZENsb3NpbmdMaW5lOiBib29sID0gRmFsc2UsCiAgICApIC0+IE5vbmU6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXyhnbHlwaFNldCwgaGFuZGxlT3ZlcmZsb3dpbmdUcmFuc2Zvcm1zKQogICAgICAgIHNlbGYub3V0cHV0SW1wbGllZENsb3NpbmdMaW5lID0gb3V0cHV0SW1wbGllZENsb3NpbmdMaW5lCgogICAgZGVmIF9hZGRQb2ludChzZWxmLCBwdDogVHVwbGVbZmxvYXQsIGZsb2F0XSwgdHA6IGludCkgLT4gTm9uZToKICAgICAgICBzZWxmLnBvaW50cy5hcHBlbmQocHQpCiAgICAgICAgc2VsZi50eXBlcy5hcHBlbmQodHApCgogICAgZGVmIF9wb3BQb2ludChzZWxmKSAtPiBOb25lOgogICAgICAgIHNlbGYucG9pbnRzLnBvcCgpCiAgICAgICAgc2VsZi50eXBlcy5wb3AoKQoKICAgIGRlZiBfaXNDbG9zZWQoc2VsZikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gKG5vdCBzZWxmLnBvaW50cykgb3IgKAogICAgICAgICAgICBzZWxmLmVuZFB0cyBhbmQgc2VsZi5lbmRQdHNbLTFdID09IGxlbihzZWxmLnBvaW50cykgLSAxCiAgICAgICAgKQoKICAgIGRlZiBsaW5lVG8oc2VsZiwgcHQ6IFR1cGxlW2Zsb2F0LCBmbG9hdF0pIC0+IE5vbmU6CiAgICAgICAgc2VsZi5fYWRkUG9pbnQocHQsIGZsYWdPbkN1cnZlKQoKICAgIGRlZiBtb3ZlVG8oc2VsZiwgcHQ6IFR1cGxlW2Zsb2F0LCBmbG9hdF0pIC0+IE5vbmU6CiAgICAgICAgaWYgbm90IHNlbGYuX2lzQ2xvc2VkKCk6CiAgICAgICAgICAgIHJhaXNlIFBlbkVycm9yKCcibW92ZSItdHlwZSBwb2ludCBtdXN0IGJlZ2luIGEgbmV3IGNvbnRvdXIuJykKICAgICAgICBzZWxmLl9hZGRQb2ludChwdCwgZmxhZ09uQ3VydmUpCgogICAgZGVmIGN1cnZlVG8oc2VsZiwgKnBvaW50cykgLT4gTm9uZToKICAgICAgICBhc3NlcnQgbGVuKHBvaW50cykgJSAyID09IDEKICAgICAgICBmb3IgcHQgaW4gcG9pbnRzWzotMV06CiAgICAgICAgICAgIHNlbGYuX2FkZFBvaW50KHB0LCBmbGFnQ3ViaWMpCgogICAgICAgICMgbGFzdCBwb2ludCBpcyBOb25lIGlmIHRoZXJlIGFyZSBubyBvbi1jdXJ2ZSBwb2ludHMKICAgICAgICBpZiBwb2ludHNbLTFdIGlzIG5vdCBOb25lOgogICAgICAgICAgICBzZWxmLl9hZGRQb2ludChwb2ludHNbLTFdLCAxKQoKICAgIGRlZiBxQ3VydmVUbyhzZWxmLCAqcG9pbnRzKSAtPiBOb25lOgogICAgICAgIGFzc2VydCBsZW4ocG9pbnRzKSA+PSAxCiAgICAgICAgZm9yIHB0IGluIHBvaW50c1s6LTFdOgogICAgICAgICAgICBzZWxmLl9hZGRQb2ludChwdCwgMCkKCiAgICAgICAgIyBsYXN0IHBvaW50IGlzIE5vbmUgaWYgdGhlcmUgYXJlIG5vIG9uLWN1cnZlIHBvaW50cwogICAgICAgIGlmIHBvaW50c1stMV0gaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHNlbGYuX2FkZFBvaW50KHBvaW50c1stMV0sIDEpCgogICAgZGVmIGNsb3NlUGF0aChzZWxmKSAtPiBOb25lOgogICAgICAgIGVuZFB0ID0gbGVuKHNlbGYucG9pbnRzKSAtIDEKCiAgICAgICAgIyBpZ25vcmUgYW5jaG9ycyAob25lLXBvaW50IHBhdGhzKQogICAgICAgIGlmIGVuZFB0ID09IDAgb3IgKHNlbGYuZW5kUHRzIGFuZCBlbmRQdCA9PSBzZWxmLmVuZFB0c1stMV0gKyAxKToKICAgICAgICAgICAgc2VsZi5fcG9wUG9pbnQoKQogICAgICAgICAgICByZXR1cm4KCiAgICAgICAgaWYgbm90IHNlbGYub3V0cHV0SW1wbGllZENsb3NpbmdMaW5lOgogICAgICAgICAgICAjIGlmIGZpcnN0IGFuZCBsYXN0IHBvaW50IG9uIHRoaXMgcGF0aCBhcmUgdGhlIHNhbWUsIHJlbW92ZSBsYXN0CiAgICAgICAgICAgIHN0YXJ0UHQgPSAwCiAgICAgICAgICAgIGlmIHNlbGYuZW5kUHRzOgogICAgICAgICAgICAgICAgc3RhcnRQdCA9IHNlbGYuZW5kUHRzWy0xXSArIDEKICAgICAgICAgICAgaWYgc2VsZi5wb2ludHNbc3RhcnRQdF0gPT0gc2VsZi5wb2ludHNbZW5kUHRdOgogICAgICAgICAgICAgICAgc2VsZi5fcG9wUG9pbnQoKQogICAgICAgICAgICAgICAgZW5kUHQgLT0gMQoKICAgICAgICBzZWxmLmVuZFB0cy5hcHBlbmQoZW5kUHQpCgogICAgZGVmIGVuZFBhdGgoc2VsZikgLT4gTm9uZToKICAgICAgICAjIFRydWVUeXBlIGNvbnRvdXJzIGFyZSBhbHdheXMgImNsb3NlZCIKICAgICAgICBzZWxmLmNsb3NlUGF0aCgpCgoKY2xhc3MgVFRHbHlwaFBvaW50UGVuKF9UVEdseXBoQmFzZVBlbiwgTG9nTWl4aW4sIEFic3RyYWN0UG9pbnRQZW4pOgogICAgIiIiCiAgICBQb2ludCBwZW4gdXNlZCBmb3IgZHJhd2luZyB0byBhIFRydWVUeXBlIGdseXBoLgoKICAgIFRoaXMgcGVuIGNhbiBiZSB1c2VkIHRvIGNvbnN0cnVjdCBvciBtb2RpZnkgZ2x5cGhzIGluIGEgVHJ1ZVR5cGUgZm9ybWF0CiAgICBmb250LiBBZnRlciB1c2luZyB0aGUgcGVuIHRvIGRyYXcsIHVzZSB0aGUgYGAuZ2x5cGgoKWBgIG1ldGhvZCB0byByZXRyaWV2ZQogICAgYSA6cHk6Y2xhc3M6YH4uX2dfbF95X2YuR2x5cGhgIG9iamVjdCByZXByZXNlbnRpbmcgdGhlIGdseXBoLgogICAgIiIiCgogICAgZHJhd01ldGhvZCA9ICJkcmF3UG9pbnRzIgogICAgdHJhbnNmb3JtUGVuID0gVHJhbnNmb3JtUG9pbnRQZW4KCiAgICBkZWYgaW5pdChzZWxmKSAtPiBOb25lOgogICAgICAgIHN1cGVyKCkuaW5pdCgpCiAgICAgICAgc2VsZi5fY3VycmVudENvbnRvdXJTdGFydEluZGV4ID0gTm9uZQoKICAgIGRlZiBfaXNDbG9zZWQoc2VsZikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gc2VsZi5fY3VycmVudENvbnRvdXJTdGFydEluZGV4IGlzIE5vbmUKCiAgICBkZWYgYmVnaW5QYXRoKHNlbGYsIGlkZW50aWZpZXI6IE9wdGlvbmFsW3N0cl0gPSBOb25lLCAqKmt3YXJnczogQW55KSAtPiBOb25lOgogICAgICAgICIiIgogICAgICAgIFN0YXJ0IGEgbmV3IHN1YiBwYXRoLgogICAgICAgICIiIgogICAgICAgIGlmIG5vdCBzZWxmLl9pc0Nsb3NlZCgpOgogICAgICAgICAgICByYWlzZSBQZW5FcnJvcigiRGlkbid0IGNsb3NlIHByZXZpb3VzIGNvbnRvdXIuIikKICAgICAgICBzZWxmLl9jdXJyZW50Q29udG91clN0YXJ0SW5kZXggPSBsZW4oc2VsZi5wb2ludHMpCgogICAgZGVmIGVuZFBhdGgoc2VsZikgLT4gTm9uZToKICAgICAgICAiIiIKICAgICAgICBFbmQgdGhlIGN1cnJlbnQgc3ViIHBhdGguCiAgICAgICAgIiIiCiAgICAgICAgIyBUcnVlVHlwZSBjb250b3VycyBhcmUgYWx3YXlzICJjbG9zZWQiCiAgICAgICAgaWYgc2VsZi5faXNDbG9zZWQoKToKICAgICAgICAgICAgcmFpc2UgUGVuRXJyb3IoIkNvbnRvdXIgaXMgYWxyZWFkeSBjbG9zZWQuIikKICAgICAgICBpZiBzZWxmLl9jdXJyZW50Q29udG91clN0YXJ0SW5kZXggPT0gbGVuKHNlbGYucG9pbnRzKToKICAgICAgICAgICAgIyBpZ25vcmUgZW1wdHkgY29udG91cnMKICAgICAgICAgICAgc2VsZi5fY3VycmVudENvbnRvdXJTdGFydEluZGV4ID0gTm9uZQogICAgICAgICAgICByZXR1cm4KCiAgICAgICAgY29udG91clN0YXJ0ID0gc2VsZi5lbmRQdHNbLTFdICsgMSBpZiBzZWxmLmVuZFB0cyBlbHNlIDAKICAgICAgICBzZWxmLmVuZFB0cy5hcHBlbmQobGVuKHNlbGYucG9pbnRzKSAtIDEpCiAgICAgICAgc2VsZi5fY3VycmVudENvbnRvdXJTdGFydEluZGV4ID0gTm9uZQoKICAgICAgICAjIFJlc29sdmUgdHlwZXMgZm9yIGFueSBjdWJpYyBzZWdtZW50cwogICAgICAgIGZsYWdzID0gc2VsZi50eXBlcwogICAgICAgIGZvciBpIGluIHJhbmdlKGNvbnRvdXJTdGFydCwgbGVuKGZsYWdzKSk6CiAgICAgICAgICAgIGlmIGZsYWdzW2ldID09ICJjdXJ2ZSI6CiAgICAgICAgICAgICAgICBqID0gaSAtIDEKICAgICAgICAgICAgICAgIGlmIGogPCBjb250b3VyU3RhcnQ6CiAgICAgICAgICAgICAgICAgICAgaiA9IGxlbihmbGFncykgLSAxCiAgICAgICAgICAgICAgICB3aGlsZSBmbGFnc1tqXSA9PSAwOgogICAgICAgICAgICAgICAgICAgIGZsYWdzW2pdID0gZmxhZ0N1YmljCiAgICAgICAgICAgICAgICAgICAgaiAtPSAxCiAgICAgICAgICAgICAgICAgICAgaWYgaiA8IGNvbnRvdXJTdGFydDoKICAgICAgICAgICAgICAgICAgICAgICAgaiA9IGxlbihmbGFncykgLSAxCiAgICAgICAgICAgICAgICBmbGFnc1tpXSA9IGZsYWdPbkN1cnZlCgogICAgZGVmIGFkZFBvaW50KAogICAgICAgIHNlbGYsCiAgICAgICAgcHQ6IFR1cGxlW2Zsb2F0LCBmbG9hdF0sCiAgICAgICAgc2VnbWVudFR5cGU6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgICAgIHNtb290aDogYm9vbCA9IEZhbHNlLAogICAgICAgIG5hbWU6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgICAgIGlkZW50aWZpZXI6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgICAgICoqa3dhcmdzOiBBbnksCiAgICApIC0+IE5vbmU6CiAgICAgICAgIiIiCiAgICAgICAgQWRkIGEgcG9pbnQgdG8gdGhlIGN1cnJlbnQgc3ViIHBhdGguCiAgICAgICAgIiIiCiAgICAgICAgaWYgc2VsZi5faXNDbG9zZWQoKToKICAgICAgICAgICAgcmFpc2UgUGVuRXJyb3IoIkNhbid0IGFkZCBhIHBvaW50IHRvIGEgY2xvc2VkIGNvbnRvdXIuIikKICAgICAgICBpZiBzZWdtZW50VHlwZSBpcyBOb25lOgogICAgICAgICAgICBzZWxmLnR5cGVzLmFwcGVuZCgwKQogICAgICAgIGVsaWYgc2VnbWVudFR5cGUgaW4gKCJsaW5lIiwgIm1vdmUiKToKICAgICAgICAgICAgc2VsZi50eXBlcy5hcHBlbmQoZmxhZ09uQ3VydmUpCiAgICAgICAgZWxpZiBzZWdtZW50VHlwZSA9PSAicWN1cnZlIjoKICAgICAgICAgICAgc2VsZi50eXBlcy5hcHBlbmQoZmxhZ09uQ3VydmUpCiAgICAgICAgZWxpZiBzZWdtZW50VHlwZSA9PSAiY3VydmUiOgogICAgICAgICAgICBzZWxmLnR5cGVzLmFwcGVuZCgiY3VydmUiKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIEFzc2VydGlvbkVycm9yKHNlZ21lbnRUeXBlKQoKICAgICAgICBzZWxmLnBvaW50cy5hcHBlbmQocHQpCg==
+from array import array
+from typing import Any, Callable, Dict, Optional, Tuple
+from fontTools.misc.fixedTools import MAX_F2DOT14, floatToFixedToFloat
+from fontTools.misc.loggingTools import LogMixin
+from fontTools.pens.pointPen import AbstractPointPen
+from fontTools.misc.roundTools import otRound
+from fontTools.pens.basePen import LoggingPen, PenError
+from fontTools.pens.transformPen import TransformPen, TransformPointPen
+from fontTools.ttLib.tables import ttProgram
+from fontTools.ttLib.tables._g_l_y_f import flagOnCurve, flagCubic
+from fontTools.ttLib.tables._g_l_y_f import Glyph
+from fontTools.ttLib.tables._g_l_y_f import GlyphComponent
+from fontTools.ttLib.tables._g_l_y_f import GlyphCoordinates
+from fontTools.ttLib.tables._g_l_y_f import dropImpliedOnCurvePoints
+import math
+
+__all__ = ["TTGlyphPen", "TTGlyphPointPen"]
+
+
+class _TTGlyphBasePen:
+    def __init__(
+        self,
+        glyphSet: Optional[Dict[str, Any]],
+        handleOverflowingTransforms: bool = True,
+    ) -> None:
+        """
+        Construct a new pen.
+
+        Args:
+            glyphSet (Dict[str, Any]): A glyphset object, used to resolve components.
+            handleOverflowingTransforms (bool): See below.
+
+        If ``handleOverflowingTransforms`` is True, the components' transform values
+        are checked that they don't overflow the limits of a F2Dot14 number:
+        -2.0 <= v < +2.0. If any transform value exceeds these, the composite
+        glyph is decomposed.
+
+        An exception to this rule is done for values that are very close to +2.0
+        (both for consistency with the -2.0 case, and for the relative frequency
+        these occur in real fonts). When almost +2.0 values occur (and all other
+        values are within the range -2.0 <= x <= +2.0), they are clamped to the
+        maximum positive value that can still be encoded as an F2Dot14: i.e.
+        1.99993896484375.
+
+        If False, no check is done and all components are translated unmodified
+        into the glyf table, followed by an inevitable ``struct.error`` once an
+        attempt is made to compile them.
+
+        If both contours and components are present in a glyph, the components
+        are decomposed.
+        """
+        self.glyphSet = glyphSet
+        self.handleOverflowingTransforms = handleOverflowingTransforms
+        self.init()
+
+    def _decompose(
+        self,
+        glyphName: str,
+        transformation: Tuple[float, float, float, float, float, float],
+    ):
+        tpen = self.transformPen(self, transformation)
+        getattr(self.glyphSet[glyphName], self.drawMethod)(tpen)
+
+    def _isClosed(self):
+        """
+        Check if the current path is closed.
+        """
+        raise NotImplementedError
+
+    def init(self) -> None:
+        self.points = []
+        self.endPts = []
+        self.types = []
+        self.components = []
+
+    def addComponent(
+        self,
+        baseGlyphName: str,
+        transformation: Tuple[float, float, float, float, float, float],
+        identifier: Optional[str] = None,
+        **kwargs: Any,
+    ) -> None:
+        """
+        Add a sub glyph.
+        """
+        self.components.append((baseGlyphName, transformation))
+
+    def _buildComponents(self, componentFlags):
+        if self.handleOverflowingTransforms:
+            # we can't encode transform values > 2 or < -2 in F2Dot14,
+            # so we must decompose the glyph if any transform exceeds these
+            overflowing = any(
+                s > 2 or s < -2
+                for (glyphName, transformation) in self.components
+                for s in transformation[:4]
+            )
+        components = []
+        for glyphName, transformation in self.components:
+            if glyphName not in self.glyphSet:
+                self.log.warning(f"skipped non-existing component '{glyphName}'")
+                continue
+            if self.points or (self.handleOverflowingTransforms and overflowing):
+                # can't have both coordinates and components, so decompose
+                self._decompose(glyphName, transformation)
+                continue
+
+            component = GlyphComponent()
+            component.glyphName = glyphName
+            component.x, component.y = (otRound(v) for v in transformation[4:])
+            # quantize floats to F2Dot14 so we get same values as when decompiled
+            # from a binary glyf table
+            transformation = tuple(
+                floatToFixedToFloat(v, 14) for v in transformation[:4]
+            )
+            if transformation != (1, 0, 0, 1):
+                if self.handleOverflowingTransforms and any(
+                    MAX_F2DOT14 < s <= 2 for s in transformation
+                ):
+                    # clamp values ~= +2.0 so we can keep the component
+                    transformation = tuple(
+                        MAX_F2DOT14 if MAX_F2DOT14 < s <= 2 else s
+                        for s in transformation
+                    )
+                component.transform = (transformation[:2], transformation[2:])
+            component.flags = componentFlags
+            components.append(component)
+        return components
+
+    def glyph(
+        self,
+        componentFlags: int = 0x04,
+        dropImpliedOnCurves: bool = False,
+        *,
+        round: Callable[[float], int] = otRound,
+    ) -> Glyph:
+        """
+        Returns a :py:class:`~._g_l_y_f.Glyph` object representing the glyph.
+
+        Args:
+            componentFlags: Flags to use for component glyphs. (default: 0x04)
+
+            dropImpliedOnCurves: Whether to remove implied-oncurve points. (default: False)
+        """
+        if not self._isClosed():
+            raise PenError("Didn't close last contour.")
+        components = self._buildComponents(componentFlags)
+
+        glyph = Glyph()
+        glyph.coordinates = GlyphCoordinates(self.points)
+        glyph.endPtsOfContours = self.endPts
+        glyph.flags = array("B", self.types)
+        self.init()
+
+        if components:
+            # If both components and contours were present, they have by now
+            # been decomposed by _buildComponents.
+            glyph.components = components
+            glyph.numberOfContours = -1
+        else:
+            glyph.numberOfContours = len(glyph.endPtsOfContours)
+            glyph.program = ttProgram.Program()
+            glyph.program.fromBytecode(b"")
+            if dropImpliedOnCurves:
+                dropImpliedOnCurvePoints(glyph)
+            glyph.coordinates.toInt(round=round)
+
+        return glyph
+
+
+class TTGlyphPen(_TTGlyphBasePen, LoggingPen):
+    """
+    Pen used for drawing to a TrueType glyph.
+
+    This pen can be used to construct or modify glyphs in a TrueType format
+    font. After using the pen to draw, use the ``.glyph()`` method to retrieve
+    a :py:class:`~._g_l_y_f.Glyph` object representing the glyph.
+    """
+
+    drawMethod = "draw"
+    transformPen = TransformPen
+
+    def __init__(
+        self,
+        glyphSet: Optional[Dict[str, Any]] = None,
+        handleOverflowingTransforms: bool = True,
+        outputImpliedClosingLine: bool = False,
+    ) -> None:
+        super().__init__(glyphSet, handleOverflowingTransforms)
+        self.outputImpliedClosingLine = outputImpliedClosingLine
+
+    def _addPoint(self, pt: Tuple[float, float], tp: int) -> None:
+        self.points.append(pt)
+        self.types.append(tp)
+
+    def _popPoint(self) -> None:
+        self.points.pop()
+        self.types.pop()
+
+    def _isClosed(self) -> bool:
+        return (not self.points) or (
+            self.endPts and self.endPts[-1] == len(self.points) - 1
+        )
+
+    def lineTo(self, pt: Tuple[float, float]) -> None:
+        self._addPoint(pt, flagOnCurve)
+
+    def moveTo(self, pt: Tuple[float, float]) -> None:
+        if not self._isClosed():
+            raise PenError('"move"-type point must begin a new contour.')
+        self._addPoint(pt, flagOnCurve)
+
+    def curveTo(self, *points) -> None:
+        assert len(points) % 2 == 1
+        for pt in points[:-1]:
+            self._addPoint(pt, flagCubic)
+
+        # last point is None if there are no on-curve points
+        if points[-1] is not None:
+            self._addPoint(points[-1], 1)
+
+    def qCurveTo(self, *points) -> None:
+        assert len(points) >= 1
+        for pt in points[:-1]:
+            self._addPoint(pt, 0)
+
+        # last point is None if there are no on-curve points
+        if points[-1] is not None:
+            self._addPoint(points[-1], 1)
+
+    def closePath(self) -> None:
+        endPt = len(self.points) - 1
+
+        # ignore anchors (one-point paths)
+        if endPt == 0 or (self.endPts and endPt == self.endPts[-1] + 1):
+            self._popPoint()
+            return
+
+        if not self.outputImpliedClosingLine:
+            # if first and last point on this path are the same, remove last
+            startPt = 0
+            if self.endPts:
+                startPt = self.endPts[-1] + 1
+            if self.points[startPt] == self.points[endPt]:
+                self._popPoint()
+                endPt -= 1
+
+        self.endPts.append(endPt)
+
+    def endPath(self) -> None:
+        # TrueType contours are always "closed"
+        self.closePath()
+
+
+class TTGlyphPointPen(_TTGlyphBasePen, LogMixin, AbstractPointPen):
+    """
+    Point pen used for drawing to a TrueType glyph.
+
+    This pen can be used to construct or modify glyphs in a TrueType format
+    font. After using the pen to draw, use the ``.glyph()`` method to retrieve
+    a :py:class:`~._g_l_y_f.Glyph` object representing the glyph.
+    """
+
+    drawMethod = "drawPoints"
+    transformPen = TransformPointPen
+
+    def init(self) -> None:
+        super().init()
+        self._currentContourStartIndex = None
+
+    def _isClosed(self) -> bool:
+        return self._currentContourStartIndex is None
+
+    def beginPath(self, identifier: Optional[str] = None, **kwargs: Any) -> None:
+        """
+        Start a new sub path.
+        """
+        if not self._isClosed():
+            raise PenError("Didn't close previous contour.")
+        self._currentContourStartIndex = len(self.points)
+
+    def endPath(self) -> None:
+        """
+        End the current sub path.
+        """
+        # TrueType contours are always "closed"
+        if self._isClosed():
+            raise PenError("Contour is already closed.")
+        if self._currentContourStartIndex == len(self.points):
+            # ignore empty contours
+            self._currentContourStartIndex = None
+            return
+
+        contourStart = self.endPts[-1] + 1 if self.endPts else 0
+        self.endPts.append(len(self.points) - 1)
+        self._currentContourStartIndex = None
+
+        # Resolve types for any cubic segments
+        flags = self.types
+        for i in range(contourStart, len(flags)):
+            if flags[i] == "curve":
+                j = i - 1
+                if j < contourStart:
+                    j = len(flags) - 1
+                while flags[j] == 0:
+                    flags[j] = flagCubic
+                    j -= 1
+                    if j < contourStart:
+                        j = len(flags) - 1
+                flags[i] = flagOnCurve
+
+    def addPoint(
+        self,
+        pt: Tuple[float, float],
+        segmentType: Optional[str] = None,
+        smooth: bool = False,
+        name: Optional[str] = None,
+        identifier: Optional[str] = None,
+        **kwargs: Any,
+    ) -> None:
+        """
+        Add a point to the current sub path.
+        """
+        if self._isClosed():
+            raise PenError("Can't add a point to a closed contour.")
+        if segmentType is None:
+            self.types.append(0)
+        elif segmentType in ("line", "move"):
+            self.types.append(flagOnCurve)
+        elif segmentType == "qcurve":
+            self.types.append(flagOnCurve)
+        elif segmentType == "curve":
+            self.types.append("curve")
+        else:
+            raise AssertionError(segmentType)
+
+        self.points.append(pt)

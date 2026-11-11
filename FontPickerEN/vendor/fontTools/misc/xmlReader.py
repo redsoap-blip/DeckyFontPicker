@@ -1,1 +1,189 @@
-ZnJvbSBmb250VG9vbHMgaW1wb3J0IHR0TGliCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBzYWZlRXZhbApmcm9tIGZvbnRUb29scy50dExpYi50YWJsZXMuRGVmYXVsdFRhYmxlIGltcG9ydCBEZWZhdWx0VGFibGUKaW1wb3J0IHN5cwppbXBvcnQgb3MKaW1wb3J0IGxvZ2dpbmcKCmxvZyA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKCmNsYXNzIFRUWFBhcnNlRXJyb3IoRXhjZXB0aW9uKToKICAgIHBhc3MKCgpCVUZTSVpFID0gMHg0MDAwCgoKY2xhc3MgWE1MUmVhZGVyKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwgZmlsZU9yUGF0aCwgdHRGb250LCBwcm9ncmVzcz1Ob25lLCBxdWlldD1Ob25lLCBjb250ZW50T25seT1GYWxzZQogICAgKToKICAgICAgICBpZiBmaWxlT3JQYXRoID09ICItIjoKICAgICAgICAgICAgZmlsZU9yUGF0aCA9IHN5cy5zdGRpbgogICAgICAgIGlmIG5vdCBoYXNhdHRyKGZpbGVPclBhdGgsICJyZWFkIik6CiAgICAgICAgICAgIHNlbGYuZmlsZSA9IG9wZW4oZmlsZU9yUGF0aCwgInJiIikKICAgICAgICAgICAgc2VsZi5fY2xvc2VTdHJlYW0gPSBUcnVlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBhc3N1bWUgcmVhZGFibGUgZmlsZSBvYmplY3QKICAgICAgICAgICAgc2VsZi5maWxlID0gZmlsZU9yUGF0aAogICAgICAgICAgICBzZWxmLl9jbG9zZVN0cmVhbSA9IEZhbHNlCiAgICAgICAgc2VsZi50dEZvbnQgPSB0dEZvbnQKICAgICAgICBzZWxmLnByb2dyZXNzID0gcHJvZ3Jlc3MKICAgICAgICBpZiBxdWlldCBpcyBub3QgTm9uZToKICAgICAgICAgICAgZnJvbSBmb250VG9vbHMubWlzYy5sb2dnaW5nVG9vbHMgaW1wb3J0IGRlcHJlY2F0ZUFyZ3VtZW50CgogICAgICAgICAgICBkZXByZWNhdGVBcmd1bWVudCgicXVpZXQiLCAiY29uZmlndXJlIGxvZ2dpbmcgaW5zdGVhZCIpCiAgICAgICAgICAgIHNlbGYucXVpZXQgPSBxdWlldAogICAgICAgIHNlbGYucm9vdCA9IE5vbmUKICAgICAgICBzZWxmLmNvbnRlbnRTdGFjayA9IFtdCiAgICAgICAgc2VsZi5jb250ZW50T25seSA9IGNvbnRlbnRPbmx5CiAgICAgICAgc2VsZi5zdGFja1NpemUgPSAwCgogICAgZGVmIHJlYWQoc2VsZiwgcm9vdGxlc3M9RmFsc2UpOgogICAgICAgIGlmIHJvb3RsZXNzOgogICAgICAgICAgICBzZWxmLnN0YWNrU2l6ZSArPSAxCiAgICAgICAgdHJ5OgogICAgICAgICAgICBpZiBzZWxmLnByb2dyZXNzOgogICAgICAgICAgICAgICAgc2VsZi5maWxlLnNlZWsoMCwgMikKICAgICAgICAgICAgICAgIGZpbGVTaXplID0gc2VsZi5maWxlLnRlbGwoKQogICAgICAgICAgICAgICAgc2VsZi5wcm9ncmVzcy5zZXQoMCwgZmlsZVNpemUgLy8gMTAwIG9yIDEpCiAgICAgICAgICAgICAgICBzZWxmLmZpbGUuc2VlaygwKQogICAgICAgICAgICBzZWxmLl9wYXJzZUZpbGUoc2VsZi5maWxlKQogICAgICAgIGZpbmFsbHk6CiAgICAgICAgICAgIGlmIHNlbGYuX2Nsb3NlU3RyZWFtOgogICAgICAgICAgICAgICAgc2VsZi5jbG9zZSgpCiAgICAgICAgICAgIGlmIHJvb3RsZXNzOgogICAgICAgICAgICAgICAgc2VsZi5zdGFja1NpemUgLT0gMQoKICAgIGRlZiBjbG9zZShzZWxmKToKICAgICAgICBzZWxmLmZpbGUuY2xvc2UoKQoKICAgIGRlZiBfcGFyc2VGaWxlKHNlbGYsIGZpbGUpOgogICAgICAgIGZyb20geG1sLnBhcnNlcnMuZXhwYXQgaW1wb3J0IFBhcnNlckNyZWF0ZQoKICAgICAgICBwYXJzZXIgPSBQYXJzZXJDcmVhdGUoKQogICAgICAgIHBhcnNlci5TdGFydEVsZW1lbnRIYW5kbGVyID0gc2VsZi5fc3RhcnRFbGVtZW50SGFuZGxlcgogICAgICAgIHBhcnNlci5FbmRFbGVtZW50SGFuZGxlciA9IHNlbGYuX2VuZEVsZW1lbnRIYW5kbGVyCiAgICAgICAgcGFyc2VyLkNoYXJhY3RlckRhdGFIYW5kbGVyID0gc2VsZi5fY2hhcmFjdGVyRGF0YUhhbmRsZXIKCiAgICAgICAgcG9zID0gMAogICAgICAgIHdoaWxlIFRydWU6CiAgICAgICAgICAgIGNodW5rID0gZmlsZS5yZWFkKEJVRlNJWkUpCiAgICAgICAgICAgIGlmIG5vdCBjaHVuazoKICAgICAgICAgICAgICAgIHBhcnNlci5QYXJzZShjaHVuaywgMSkKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIHBvcyA9IHBvcyArIGxlbihjaHVuaykKICAgICAgICAgICAgaWYgc2VsZi5wcm9ncmVzczoKICAgICAgICAgICAgICAgIHNlbGYucHJvZ3Jlc3Muc2V0KHBvcyAvLyAxMDApCiAgICAgICAgICAgIHBhcnNlci5QYXJzZShjaHVuaywgMCkKCiAgICBkZWYgX3N0YXJ0RWxlbWVudEhhbmRsZXIoc2VsZiwgbmFtZSwgYXR0cnMpOgogICAgICAgIGlmIHNlbGYuc3RhY2tTaXplID09IDEgYW5kIHNlbGYuY29udGVudE9ubHk6CiAgICAgICAgICAgICMgV2UgYWxyZWFkeSBrbm93IHRoZSB0YWJsZSB3ZSdyZSBwYXJzaW5nLCBza2lwCiAgICAgICAgICAgICMgcGFyc2luZyB0aGUgdGFibGUgdGFnIGFuZCBjb250aW51ZSB0bwogICAgICAgICAgICAjIHN0YWNrICcyJyB3aGljaCBiZWdpbnMgcGFyc2luZyBjb250ZW50CiAgICAgICAgICAgIHNlbGYuY29udGVudFN0YWNrLmFwcGVuZChbXSkKICAgICAgICAgICAgc2VsZi5zdGFja1NpemUgPSAyCiAgICAgICAgICAgIHJldHVybgogICAgICAgIHN0YWNrU2l6ZSA9IHNlbGYuc3RhY2tTaXplCiAgICAgICAgc2VsZi5zdGFja1NpemUgPSBzdGFja1NpemUgKyAxCiAgICAgICAgc3ViRmlsZSA9IGF0dHJzLmdldCgic3JjIikKICAgICAgICBpZiBzdWJGaWxlIGlzIG5vdCBOb25lOgogICAgICAgICAgICBpZiBoYXNhdHRyKHNlbGYuZmlsZSwgIm5hbWUiKToKICAgICAgICAgICAgICAgICMgaWYgZmlsZSBoYXMgYSBuYW1lLCBnZXQgaXRzIHBhcmVudCBkaXJlY3RvcnkKICAgICAgICAgICAgICAgIGRpcm5hbWUgPSBvcy5wYXRoLmRpcm5hbWUoc2VsZi5maWxlLm5hbWUpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAjIGVsc2UgZmFsbCBiYWNrIHRvIHVzaW5nIHRoZSBjdXJyZW50IHdvcmtpbmcgZGlyZWN0b3J5CiAgICAgICAgICAgICAgICBkaXJuYW1lID0gb3MuZ2V0Y3dkKCkKICAgICAgICAgICAgc3ViRmlsZSA9IG9zLnBhdGguam9pbihkaXJuYW1lLCBzdWJGaWxlKQogICAgICAgIGlmIG5vdCBzdGFja1NpemU6CiAgICAgICAgICAgIGlmIG5hbWUgIT0gInR0Rm9udCI6CiAgICAgICAgICAgICAgICByYWlzZSBUVFhQYXJzZUVycm9yKCJpbGxlZ2FsIHJvb3QgdGFnOiAlcyIgJSBuYW1lKQogICAgICAgICAgICBpZiBzZWxmLnR0Rm9udC5yZWFkZXIgaXMgTm9uZSBhbmQgbm90IHNlbGYudHRGb250LnRhYmxlczoKICAgICAgICAgICAgICAgIHNmbnRWZXJzaW9uID0gYXR0cnMuZ2V0KCJzZm50VmVyc2lvbiIpCiAgICAgICAgICAgICAgICBpZiBzZm50VmVyc2lvbiBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgICAgICBpZiBsZW4oc2ZudFZlcnNpb24pICE9IDQ6CiAgICAgICAgICAgICAgICAgICAgICAgIHNmbnRWZXJzaW9uID0gc2FmZUV2YWwoJyInICsgc2ZudFZlcnNpb24gKyAnIicpCiAgICAgICAgICAgICAgICAgICAgc2VsZi50dEZvbnQuc2ZudFZlcnNpb24gPSBzZm50VmVyc2lvbgogICAgICAgICAgICBzZWxmLmNvbnRlbnRTdGFjay5hcHBlbmQoW10pCiAgICAgICAgZWxpZiBzdGFja1NpemUgPT0gMToKICAgICAgICAgICAgaWYgc3ViRmlsZSBpcyBub3QgTm9uZToKICAgICAgICAgICAgICAgIHN1YlJlYWRlciA9IFhNTFJlYWRlcihzdWJGaWxlLCBzZWxmLnR0Rm9udCwgc2VsZi5wcm9ncmVzcykKICAgICAgICAgICAgICAgIHN1YlJlYWRlci5yZWFkKCkKICAgICAgICAgICAgICAgIHNlbGYuY29udGVudFN0YWNrLmFwcGVuZChbXSkKICAgICAgICAgICAgICAgIHJldHVybgogICAgICAgICAgICB0YWcgPSB0dExpYi54bWxUb1RhZyhuYW1lKQogICAgICAgICAgICBtc2cgPSAiUGFyc2luZyAnJXMnIHRhYmxlLi4uIiAlIHRhZwogICAgICAgICAgICBpZiBzZWxmLnByb2dyZXNzOgogICAgICAgICAgICAgICAgc2VsZi5wcm9ncmVzcy5zZXRMYWJlbChtc2cpCiAgICAgICAgICAgIGxvZy5pbmZvKG1zZykKICAgICAgICAgICAgaWYgdGFnID09ICJHbHlwaE9yZGVyIjoKICAgICAgICAgICAgICAgIHRhYmxlQ2xhc3MgPSB0dExpYi5HbHlwaE9yZGVyCiAgICAgICAgICAgIGVsaWYgIkVSUk9SIiBpbiBhdHRycyBvciAoInJhdyIgaW4gYXR0cnMgYW5kIHNhZmVFdmFsKGF0dHJzWyJyYXciXSkpOgogICAgICAgICAgICAgICAgdGFibGVDbGFzcyA9IERlZmF1bHRUYWJsZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgdGFibGVDbGFzcyA9IHR0TGliLmdldFRhYmxlQ2xhc3ModGFnKQogICAgICAgICAgICAgICAgaWYgdGFibGVDbGFzcyBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgIHRhYmxlQ2xhc3MgPSBEZWZhdWx0VGFibGUKICAgICAgICAgICAgaWYgdGFnID09ICJsb2NhIiBhbmQgdGFnIGluIHNlbGYudHRGb250OgogICAgICAgICAgICAgICAgIyBTcGVjaWFsLWNhc2UgdGhlICdsb2NhJyB0YWJsZSBhcyB3ZSBuZWVkIHRoZQogICAgICAgICAgICAgICAgIyAgICBvcmlnaW5hbCBpZiB0aGUgJ2dseWYnIHRhYmxlIGlzbid0IHJlY29tcGlsZWQuCiAgICAgICAgICAgICAgICBzZWxmLmN1cnJlbnRUYWJsZSA9IHNlbGYudHRGb250W3RhZ10KICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHNlbGYuY3VycmVudFRhYmxlID0gdGFibGVDbGFzcyh0YWcpCiAgICAgICAgICAgICAgICBzZWxmLnR0Rm9udFt0YWddID0gc2VsZi5jdXJyZW50VGFibGUKICAgICAgICAgICAgc2VsZi5jb250ZW50U3RhY2suYXBwZW5kKFtdKQogICAgICAgIGVsaWYgc3RhY2tTaXplID09IDIgYW5kIHN1YkZpbGUgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHN1YlJlYWRlciA9IFhNTFJlYWRlcihzdWJGaWxlLCBzZWxmLnR0Rm9udCwgc2VsZi5wcm9ncmVzcywgY29udGVudE9ubHk9VHJ1ZSkKICAgICAgICAgICAgc3ViUmVhZGVyLnJlYWQoKQogICAgICAgICAgICBzZWxmLmNvbnRlbnRTdGFjay5hcHBlbmQoW10pCiAgICAgICAgICAgIHNlbGYucm9vdCA9IHN1YlJlYWRlci5yb290CiAgICAgICAgZWxpZiBzdGFja1NpemUgPT0gMjoKICAgICAgICAgICAgc2VsZi5jb250ZW50U3RhY2suYXBwZW5kKFtdKQogICAgICAgICAgICBzZWxmLnJvb3QgPSAobmFtZSwgYXR0cnMsIHNlbGYuY29udGVudFN0YWNrWy0xXSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBsID0gW10KICAgICAgICAgICAgc2VsZi5jb250ZW50U3RhY2tbLTFdLmFwcGVuZCgobmFtZSwgYXR0cnMsIGwpKQogICAgICAgICAgICBzZWxmLmNvbnRlbnRTdGFjay5hcHBlbmQobCkKCiAgICBkZWYgX2NoYXJhY3RlckRhdGFIYW5kbGVyKHNlbGYsIGRhdGEpOgogICAgICAgIGlmIHNlbGYuc3RhY2tTaXplID4gMToKICAgICAgICAgICAgIyBwYXJzZXIgcGFyc2VzIGluIGNodW5rcywgc28gd2UgbWF5IGdldCBtdWx0aXBsZSBjYWxscwogICAgICAgICAgICAjIGZvciB0aGUgc2FtZSB0ZXh0IG5vZGU7IHRodXMgd2UgbmVlZCB0byBhcHBlbmQgdGhlIGRhdGEKICAgICAgICAgICAgIyB0byB0aGUgbGFzdCBpdGVtIGluIHRoZSBjb250ZW50IHN0YWNrOgogICAgICAgICAgICAjIGh0dHBzOi8vZ2l0aHViLmNvbS9mb250dG9vbHMvZm9udHRvb2xzL2lzc3Vlcy8yNjE0CiAgICAgICAgICAgIGlmICgKICAgICAgICAgICAgICAgIGRhdGEgIT0gIlxuIgogICAgICAgICAgICAgICAgYW5kIHNlbGYuY29udGVudFN0YWNrWy0xXQogICAgICAgICAgICAgICAgYW5kIGlzaW5zdGFuY2Uoc2VsZi5jb250ZW50U3RhY2tbLTFdWy0xXSwgc3RyKQogICAgICAgICAgICAgICAgYW5kIHNlbGYuY29udGVudFN0YWNrWy0xXVstMV0gIT0gIlxuIgogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgc2VsZi5jb250ZW50U3RhY2tbLTFdWy0xXSArPSBkYXRhCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBzZWxmLmNvbnRlbnRTdGFja1stMV0uYXBwZW5kKGRhdGEpCgogICAgZGVmIF9lbmRFbGVtZW50SGFuZGxlcihzZWxmLCBuYW1lKToKICAgICAgICBzZWxmLnN0YWNrU2l6ZSA9IHNlbGYuc3RhY2tTaXplIC0gMQogICAgICAgIGRlbCBzZWxmLmNvbnRlbnRTdGFja1stMV0KICAgICAgICBpZiBub3Qgc2VsZi5jb250ZW50T25seToKICAgICAgICAgICAgaWYgc2VsZi5zdGFja1NpemUgPT0gMToKICAgICAgICAgICAgICAgIHNlbGYucm9vdCA9IE5vbmUKICAgICAgICAgICAgZWxpZiBzZWxmLnN0YWNrU2l6ZSA9PSAyOgogICAgICAgICAgICAgICAgbmFtZSwgYXR0cnMsIGNvbnRlbnQgPSBzZWxmLnJvb3QKICAgICAgICAgICAgICAgIHNlbGYuY3VycmVudFRhYmxlLmZyb21YTUwobmFtZSwgYXR0cnMsIGNvbnRlbnQsIHNlbGYudHRGb250KQogICAgICAgICAgICAgICAgc2VsZi5yb290ID0gTm9uZQoKCmNsYXNzIFByb2dyZXNzUHJpbnRlcihvYmplY3QpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHRpdGxlLCBtYXh2YWw9MTAwKToKICAgICAgICBwcmludCh0aXRsZSkKCiAgICBkZWYgc2V0KHNlbGYsIHZhbCwgbWF4dmFsPU5vbmUpOgogICAgICAgIHBhc3MKCiAgICBkZWYgaW5jcmVtZW50KHNlbGYsIHZhbD0xKToKICAgICAgICBwYXNzCgogICAgZGVmIHNldExhYmVsKHNlbGYsIHRleHQpOgogICAgICAgIHByaW50KHRleHQpCg==
+from fontTools import ttLib
+from fontTools.misc.textTools import safeEval
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
+import sys
+import os
+import logging
+
+log = logging.getLogger(__name__)
+
+
+class TTXParseError(Exception):
+    pass
+
+
+BUFSIZE = 0x4000
+
+
+class XMLReader(object):
+    def __init__(
+        self, fileOrPath, ttFont, progress=None, quiet=None, contentOnly=False
+    ):
+        if fileOrPath == "-":
+            fileOrPath = sys.stdin
+        if not hasattr(fileOrPath, "read"):
+            self.file = open(fileOrPath, "rb")
+            self._closeStream = True
+        else:
+            # assume readable file object
+            self.file = fileOrPath
+            self._closeStream = False
+        self.ttFont = ttFont
+        self.progress = progress
+        if quiet is not None:
+            from fontTools.misc.loggingTools import deprecateArgument
+
+            deprecateArgument("quiet", "configure logging instead")
+            self.quiet = quiet
+        self.root = None
+        self.contentStack = []
+        self.contentOnly = contentOnly
+        self.stackSize = 0
+
+    def read(self, rootless=False):
+        if rootless:
+            self.stackSize += 1
+        try:
+            if self.progress:
+                self.file.seek(0, 2)
+                fileSize = self.file.tell()
+                self.progress.set(0, fileSize // 100 or 1)
+                self.file.seek(0)
+            self._parseFile(self.file)
+        finally:
+            if self._closeStream:
+                self.close()
+            if rootless:
+                self.stackSize -= 1
+
+    def close(self):
+        self.file.close()
+
+    def _parseFile(self, file):
+        from xml.parsers.expat import ParserCreate
+
+        parser = ParserCreate()
+        parser.StartElementHandler = self._startElementHandler
+        parser.EndElementHandler = self._endElementHandler
+        parser.CharacterDataHandler = self._characterDataHandler
+
+        pos = 0
+        while True:
+            chunk = file.read(BUFSIZE)
+            if not chunk:
+                parser.Parse(chunk, 1)
+                break
+            pos = pos + len(chunk)
+            if self.progress:
+                self.progress.set(pos // 100)
+            parser.Parse(chunk, 0)
+
+    def _startElementHandler(self, name, attrs):
+        if self.stackSize == 1 and self.contentOnly:
+            # We already know the table we're parsing, skip
+            # parsing the table tag and continue to
+            # stack '2' which begins parsing content
+            self.contentStack.append([])
+            self.stackSize = 2
+            return
+        stackSize = self.stackSize
+        self.stackSize = stackSize + 1
+        subFile = attrs.get("src")
+        if subFile is not None:
+            if hasattr(self.file, "name"):
+                # if file has a name, get its parent directory
+                dirname = os.path.dirname(self.file.name)
+            else:
+                # else fall back to using the current working directory
+                dirname = os.getcwd()
+            subFile = os.path.join(dirname, subFile)
+        if not stackSize:
+            if name != "ttFont":
+                raise TTXParseError("illegal root tag: %s" % name)
+            if self.ttFont.reader is None and not self.ttFont.tables:
+                sfntVersion = attrs.get("sfntVersion")
+                if sfntVersion is not None:
+                    if len(sfntVersion) != 4:
+                        sfntVersion = safeEval('"' + sfntVersion + '"')
+                    self.ttFont.sfntVersion = sfntVersion
+            self.contentStack.append([])
+        elif stackSize == 1:
+            if subFile is not None:
+                subReader = XMLReader(subFile, self.ttFont, self.progress)
+                subReader.read()
+                self.contentStack.append([])
+                return
+            tag = ttLib.xmlToTag(name)
+            msg = "Parsing '%s' table..." % tag
+            if self.progress:
+                self.progress.setLabel(msg)
+            log.info(msg)
+            if tag == "GlyphOrder":
+                tableClass = ttLib.GlyphOrder
+            elif "ERROR" in attrs or ("raw" in attrs and safeEval(attrs["raw"])):
+                tableClass = DefaultTable
+            else:
+                tableClass = ttLib.getTableClass(tag)
+                if tableClass is None:
+                    tableClass = DefaultTable
+            if tag == "loca" and tag in self.ttFont:
+                # Special-case the 'loca' table as we need the
+                #    original if the 'glyf' table isn't recompiled.
+                self.currentTable = self.ttFont[tag]
+            else:
+                self.currentTable = tableClass(tag)
+                self.ttFont[tag] = self.currentTable
+            self.contentStack.append([])
+        elif stackSize == 2 and subFile is not None:
+            subReader = XMLReader(subFile, self.ttFont, self.progress, contentOnly=True)
+            subReader.read()
+            self.contentStack.append([])
+            self.root = subReader.root
+        elif stackSize == 2:
+            self.contentStack.append([])
+            self.root = (name, attrs, self.contentStack[-1])
+        else:
+            l = []
+            self.contentStack[-1].append((name, attrs, l))
+            self.contentStack.append(l)
+
+    def _characterDataHandler(self, data):
+        if self.stackSize > 1:
+            # parser parses in chunks, so we may get multiple calls
+            # for the same text node; thus we need to append the data
+            # to the last item in the content stack:
+            # https://github.com/fonttools/fonttools/issues/2614
+            if (
+                data != "\n"
+                and self.contentStack[-1]
+                and isinstance(self.contentStack[-1][-1], str)
+                and self.contentStack[-1][-1] != "\n"
+            ):
+                self.contentStack[-1][-1] += data
+            else:
+                self.contentStack[-1].append(data)
+
+    def _endElementHandler(self, name):
+        self.stackSize = self.stackSize - 1
+        del self.contentStack[-1]
+        if not self.contentOnly:
+            if self.stackSize == 1:
+                self.root = None
+            elif self.stackSize == 2:
+                name, attrs, content = self.root
+                self.currentTable.fromXML(name, attrs, content, self.ttFont)
+                self.root = None
+
+
+class ProgressPrinter(object):
+    def __init__(self, title, maxval=100):
+        print(title)
+
+    def set(self, val, maxval=None):
+        pass
+
+    def increment(self, val=1):
+        pass
+
+    def setLabel(self, text):
+        print(text)

@@ -1,1 +1,219 @@
-aW1wb3J0IHRleHR3cmFwCgoKY2xhc3MgVmFyTGliRXJyb3IoRXhjZXB0aW9uKToKICAgICIiIkJhc2UgZXhjZXB0aW9uIGZvciB0aGUgdmFyTGliIG1vZHVsZS4iIiIKCgpjbGFzcyBWYXJMaWJWYWxpZGF0aW9uRXJyb3IoVmFyTGliRXJyb3IpOgogICAgIiIiUmFpc2VkIHdoZW4gaW5wdXQgZGF0YSBpcyBpbnZhbGlkIGZyb20gdmFyTGliJ3MgcG9pbnQgb2Ygdmlldy4iIiIKCgpjbGFzcyBWYXJMaWJNZXJnZUVycm9yKFZhckxpYkVycm9yKToKICAgICIiIlJhaXNlZCB3aGVuIGlucHV0IGRhdGEgY2Fubm90IGJlIG1lcmdlZCBpbnRvIGEgdmFyaWFibGUgZm9udC4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbWVyZ2VyPU5vbmUsICoqa3dhcmdzKToKICAgICAgICBzZWxmLm1lcmdlciA9IG1lcmdlcgogICAgICAgIGlmIG5vdCBrd2FyZ3M6CiAgICAgICAgICAgIGt3YXJncyA9IHt9CiAgICAgICAgaWYgInN0YWNrIiBpbiBrd2FyZ3M6CiAgICAgICAgICAgIHNlbGYuc3RhY2sgPSBrd2FyZ3NbInN0YWNrIl0KICAgICAgICAgICAgZGVsIGt3YXJnc1sic3RhY2siXQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYuc3RhY2sgPSBbXQogICAgICAgIHNlbGYuY2F1c2UgPSBrd2FyZ3MKCiAgICBAcHJvcGVydHkKICAgIGRlZiByZWFzb24oc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuX19kb2NfXwoKICAgIGRlZiBfbWFzdGVyX25hbWUoc2VsZiwgaXgpOgogICAgICAgIGlmIHNlbGYubWVyZ2VyIGlzIG5vdCBOb25lOgogICAgICAgICAgICB0dGYgPSBzZWxmLm1lcmdlci50dGZzW2l4XQogICAgICAgICAgICBpZiAibmFtZSIgaW4gdHRmIGFuZCB0dGZbIm5hbWUiXS5nZXRCZXN0RnVsbE5hbWUoKToKICAgICAgICAgICAgICAgIHJldHVybiB0dGZbIm5hbWUiXS5nZXRCZXN0RnVsbE5hbWUoKQogICAgICAgICAgICBlbGlmIGhhc2F0dHIodHRmLnJlYWRlciwgImZpbGUiKSBhbmQgaGFzYXR0cih0dGYucmVhZGVyLmZpbGUsICJuYW1lIik6CiAgICAgICAgICAgICAgICByZXR1cm4gdHRmLnJlYWRlci5maWxlLm5hbWUKICAgICAgICByZXR1cm4gZiJtYXN0ZXIgbnVtYmVyIHtpeH0iCgogICAgQHByb3BlcnR5CiAgICBkZWYgb2ZmZW5kZXIoc2VsZik6CiAgICAgICAgaWYgImV4cGVjdGVkIiBpbiBzZWxmLmNhdXNlIGFuZCAiZ290IiBpbiBzZWxmLmNhdXNlOgogICAgICAgICAgICBpbmRleCA9IFt4ID09IHNlbGYuY2F1c2VbImV4cGVjdGVkIl0gZm9yIHggaW4gc2VsZi5jYXVzZVsiZ290Il1dLmluZGV4KAogICAgICAgICAgICAgICAgRmFsc2UKICAgICAgICAgICAgKQogICAgICAgICAgICBtYXN0ZXJfbmFtZSA9IHNlbGYuX21hc3Rlcl9uYW1lKGluZGV4KQogICAgICAgICAgICBpZiAibG9jYXRpb24iIGluIHNlbGYuY2F1c2U6CiAgICAgICAgICAgICAgICBtYXN0ZXJfbmFtZSA9IGYie21hc3Rlcl9uYW1lfSAoe3NlbGYuY2F1c2VbJ2xvY2F0aW9uJ119KSIKICAgICAgICAgICAgcmV0dXJuIGluZGV4LCBtYXN0ZXJfbmFtZQogICAgICAgIHJldHVybiBOb25lLCBOb25lCgogICAgQHByb3BlcnR5CiAgICBkZWYgZGV0YWlscyhzZWxmKToKICAgICAgICBpZiAiZXhwZWN0ZWQiIGluIHNlbGYuY2F1c2UgYW5kICJnb3QiIGluIHNlbGYuY2F1c2U6CiAgICAgICAgICAgIG9mZmVuZGVyX2luZGV4LCBvZmZlbmRlciA9IHNlbGYub2ZmZW5kZXIKICAgICAgICAgICAgZ290ID0gc2VsZi5jYXVzZVsiZ290Il1bb2ZmZW5kZXJfaW5kZXhdCiAgICAgICAgICAgIHJldHVybiBmIkV4cGVjdGVkIHRvIHNlZSB7c2VsZi5zdGFja1swXX09PXtzZWxmLmNhdXNlWydleHBlY3RlZCddIXJ9LCBpbnN0ZWFkIHNhdyB7Z290IXJ9XG4iCiAgICAgICAgcmV0dXJuICIiCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgb2ZmZW5kZXJfaW5kZXgsIG9mZmVuZGVyID0gc2VsZi5vZmZlbmRlcgogICAgICAgIGxvY2F0aW9uID0gIiIKICAgICAgICBpZiBvZmZlbmRlcjoKICAgICAgICAgICAgbG9jYXRpb24gPSBmIlxuXG5UaGUgcHJvYmxlbSBpcyBsaWtlbHkgdG8gYmUgaW4ge29mZmVuZGVyfTpcbiIKICAgICAgICBjb250ZXh0ID0gIiIuam9pbihyZXZlcnNlZChzZWxmLnN0YWNrKSkKICAgICAgICBiYXNpYyA9IHRleHR3cmFwLmZpbGwoCiAgICAgICAgICAgIGYiQ291bGRuJ3QgbWVyZ2UgdGhlIGZvbnRzLCBiZWNhdXNlIHtzZWxmLnJlYXNvbn0uICIKICAgICAgICAgICAgZiJUaGlzIGhhcHBlbmVkIHdoaWxlIHBlcmZvcm1pbmcgdGhlIGZvbGxvd2luZyBvcGVyYXRpb246IHtjb250ZXh0fSIsCiAgICAgICAgICAgIHdpZHRoPTc4LAogICAgICAgICkKICAgICAgICByZXR1cm4gIlxuXG4iICsgYmFzaWMgKyBsb2NhdGlvbiArIHNlbGYuZGV0YWlscwoKCmNsYXNzIFNob3VsZEJlQ29uc3RhbnQoVmFyTGliTWVyZ2VFcnJvcik6CiAgICAiIiJzb21lIHZhbHVlcyB3ZXJlIGRpZmZlcmVudCwgYnV0IHNob3VsZCBoYXZlIGJlZW4gdGhlIHNhbWUiIiIKCiAgICBAcHJvcGVydHkKICAgIGRlZiBkZXRhaWxzKHNlbGYpOgogICAgICAgIGJhc2ljX21lc3NhZ2UgPSBzdXBlcigpLmRldGFpbHMKCiAgICAgICAgaWYgc2VsZi5zdGFja1swXSAhPSAiLkZlYXR1cmVDb3VudCIgb3Igc2VsZi5tZXJnZXIgaXMgTm9uZToKICAgICAgICAgICAgcmV0dXJuIGJhc2ljX21lc3NhZ2UKCiAgICAgICAgYXNzZXJ0IHNlbGYuc3RhY2tbMF0gPT0gIi5GZWF0dXJlQ291bnQiCiAgICAgICAgb2ZmZW5kZXJfaW5kZXgsIF8gPSBzZWxmLm9mZmVuZGVyCiAgICAgICAgYmFkX3R0ZiA9IHNlbGYubWVyZ2VyLnR0ZnNbb2ZmZW5kZXJfaW5kZXhdCiAgICAgICAgZ29vZF90dGYgPSBuZXh0KAogICAgICAgICAgICB0dGYKICAgICAgICAgICAgZm9yIHR0ZiBpbiBzZWxmLm1lcmdlci50dGZzCiAgICAgICAgICAgIGlmIHNlbGYuc3RhY2tbLTFdIGluIHR0ZgogICAgICAgICAgICBhbmQgdHRmW3NlbGYuc3RhY2tbLTFdXS50YWJsZS5GZWF0dXJlTGlzdC5GZWF0dXJlQ291bnQKICAgICAgICAgICAgPT0gc2VsZi5jYXVzZVsiZXhwZWN0ZWQiXQogICAgICAgICkKCiAgICAgICAgZ29vZF9mZWF0dXJlcyA9IFsKICAgICAgICAgICAgeC5GZWF0dXJlVGFnCiAgICAgICAgICAgIGZvciB4IGluIGdvb2RfdHRmW3NlbGYuc3RhY2tbLTFdXS50YWJsZS5GZWF0dXJlTGlzdC5GZWF0dXJlUmVjb3JkCiAgICAgICAgXQogICAgICAgIGJhZF9mZWF0dXJlcyA9IFsKICAgICAgICAgICAgeC5GZWF0dXJlVGFnCiAgICAgICAgICAgIGZvciB4IGluIGJhZF90dGZbc2VsZi5zdGFja1stMV1dLnRhYmxlLkZlYXR1cmVMaXN0LkZlYXR1cmVSZWNvcmQKICAgICAgICBdCiAgICAgICAgcmV0dXJuIGJhc2ljX21lc3NhZ2UgKyAoCiAgICAgICAgICAgICJcbkluY29tcGF0aWJsZSBmZWF0dXJlcyBiZXR3ZWVuIG1hc3RlcnMuXG4iCiAgICAgICAgICAgIGYiRXhwZWN0ZWQ6IHsnLCAnLmpvaW4oZ29vZF9mZWF0dXJlcyl9LlxuIgogICAgICAgICAgICBmIkdvdDogeycsICcuam9pbihiYWRfZmVhdHVyZXMpfS5cbiIKICAgICAgICApCgoKY2xhc3MgRm91bmRBTm9uZShWYXJMaWJNZXJnZUVycm9yKToKICAgICIiIm9uZSBvZiB0aGUgdmFsdWVzIGluIGEgbGlzdCB3YXMgZW1wdHkgd2hlbiBpdCBzaG91bGRuJ3QgaGF2ZSBiZWVuIiIiCgogICAgQHByb3BlcnR5CiAgICBkZWYgb2ZmZW5kZXIoc2VsZik6CiAgICAgICAgaW5kZXggPSBbeCBpcyBOb25lIGZvciB4IGluIHNlbGYuY2F1c2VbImdvdCJdXS5pbmRleChUcnVlKQogICAgICAgIHJldHVybiBpbmRleCwgc2VsZi5fbWFzdGVyX25hbWUoaW5kZXgpCgogICAgQHByb3BlcnR5CiAgICBkZWYgZGV0YWlscyhzZWxmKToKICAgICAgICBjYXVzZSwgc3RhY2sgPSBzZWxmLmNhdXNlLCBzZWxmLnN0YWNrCiAgICAgICAgcmV0dXJuIGYie3N0YWNrWzBdfT09e2NhdXNlWydnb3QnXX1cbiIKCgpjbGFzcyBOb3RBTm9uZShWYXJMaWJNZXJnZUVycm9yKToKICAgICIiIm9uZSBvZiB0aGUgdmFsdWVzIGluIGEgbGlzdCB3YXMgbm90IGVtcHR5IHdoZW4gaXQgc2hvdWxkIGhhdmUgYmVlbiIiIgoKICAgIEBwcm9wZXJ0eQogICAgZGVmIG9mZmVuZGVyKHNlbGYpOgogICAgICAgIGluZGV4ID0gW3ggaXMgbm90IE5vbmUgZm9yIHggaW4gc2VsZi5jYXVzZVsiZ290Il1dLmluZGV4KFRydWUpCiAgICAgICAgcmV0dXJuIGluZGV4LCBzZWxmLl9tYXN0ZXJfbmFtZShpbmRleCkKCiAgICBAcHJvcGVydHkKICAgIGRlZiBkZXRhaWxzKHNlbGYpOgogICAgICAgIGNhdXNlLCBzdGFjayA9IHNlbGYuY2F1c2UsIHNlbGYuc3RhY2sKICAgICAgICByZXR1cm4gZiJ7c3RhY2tbMF19PT17Y2F1c2VbJ2dvdCddfVxuIgoKCmNsYXNzIE1pc21hdGNoZWRUeXBlcyhWYXJMaWJNZXJnZUVycm9yKToKICAgICIiImRhdGEgaGFkIGluY29uc2lzdGVudCB0eXBlcyIiIgoKCmNsYXNzIExlbmd0aHNEaWZmZXIoVmFyTGliTWVyZ2VFcnJvcik6CiAgICAiIiJhIGxpc3Qgb2Ygb2JqZWN0cyBoYWQgaW5jb25zaXN0ZW50IGxlbmd0aHMiIiIKCgpjbGFzcyBLZXlzRGlmZmVyKFZhckxpYk1lcmdlRXJyb3IpOgogICAgIiIiYSBsaXN0IG9mIG9iamVjdHMgaGFkIGRpZmZlcmVudCBrZXlzIiIiCgoKY2xhc3MgSW5jb25zaXN0ZW50R2x5cGhPcmRlcihWYXJMaWJNZXJnZUVycm9yKToKICAgICIiInRoZSBnbHlwaCBvcmRlciB3YXMgaW5jb25zaXN0ZW50IGJldHdlZW4gbWFzdGVycyIiIgoKCmNsYXNzIEluY29uc2lzdGVudEV4dGVuc2lvbnMoVmFyTGliTWVyZ2VFcnJvcik6CiAgICAiIiJ0aGUgbWFzdGVycyB1c2UgZXh0ZW5zaW9uIGxvb2t1cHMgaW4gaW5jb25zaXN0ZW50IHdheXMiIiIKCgpjbGFzcyBVbnN1cHBvcnRlZEZvcm1hdChWYXJMaWJNZXJnZUVycm9yKToKICAgICIiImFuIE9wZW5UeXBlIHN1YnRhYmxlICglcykgaGFkIGEgZm9ybWF0IEkgZGlkbid0IGV4cGVjdCIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBtZXJnZXI9Tm9uZSwgKiprd2FyZ3MpOgogICAgICAgIHN1cGVyKCkuX19pbml0X18obWVyZ2VyLCAqKmt3YXJncykKICAgICAgICBpZiBub3Qgc2VsZi5zdGFjazoKICAgICAgICAgICAgc2VsZi5zdGFjayA9IFsiLkZvcm1hdCJdCgogICAgQHByb3BlcnR5CiAgICBkZWYgcmVhc29uKHNlbGYpOgogICAgICAgIHMgPSBzZWxmLl9fZG9jX18gJSBzZWxmLmNhdXNlWyJzdWJ0YWJsZSJdCiAgICAgICAgaWYgInZhbHVlIiBpbiBzZWxmLmNhdXNlOgogICAgICAgICAgICBzICs9IGYiICh7c2VsZi5jYXVzZVsndmFsdWUnXSFyfSkiCiAgICAgICAgcmV0dXJuIHMKCgpjbGFzcyBJbmNvbnNpc3RlbnRGb3JtYXRzKFVuc3VwcG9ydGVkRm9ybWF0KToKICAgICIiImFuIE9wZW5UeXBlIHN1YnRhYmxlICglcykgaGFkIGluY29uc2lzdGVudCBmb3JtYXRzIGJldHdlZW4gbWFzdGVycyIiIgoKCmNsYXNzIFZhckxpYkNGRk1lcmdlRXJyb3IoVmFyTGliRXJyb3IpOgogICAgcGFzcwoKCmNsYXNzIFZhckxpYkNGRkRpY3RNZXJnZUVycm9yKFZhckxpYkNGRk1lcmdlRXJyb3IpOgogICAgIiIiUmFpc2VkIHdoZW4gYSBDRkYgUHJpdmF0ZURpY3QgY2Fubm90IGJlIG1lcmdlZC4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwga2V5LCB2YWx1ZSwgdmFsdWVzKToKICAgICAgICBlcnJvcl9tc2cgPSAoCiAgICAgICAgICAgIGYiRm9yIHRoZSBQcml2YXRlIERpY3Qga2V5ICd7a2V5fScsIHRoZSBkZWZhdWx0IGZvbnQgdmFsdWUgbGlzdDoiCiAgICAgICAgICAgIGYiXG5cdHt2YWx1ZX1cbmhhZCBhIGRpZmZlcmVudCBudW1iZXIgb2YgdmFsdWVzIHRoYW4gYSByZWdpb24gZm9udDoiCiAgICAgICAgKQogICAgICAgIGZvciByZWdpb25fdmFsdWUgaW4gdmFsdWVzOgogICAgICAgICAgICBlcnJvcl9tc2cgKz0gZiJcblx0e3JlZ2lvbl92YWx1ZX0iCiAgICAgICAgc2VsZi5hcmdzID0gKGVycm9yX21zZywpCgoKY2xhc3MgVmFyTGliQ0ZGUG9pbnRUeXBlTWVyZ2VFcnJvcihWYXJMaWJDRkZNZXJnZUVycm9yKToKICAgICIiIlJhaXNlZCB3aGVuIGEgQ0ZGIGdseXBoIGNhbm5vdCBiZSBtZXJnZWQgYmVjYXVzZSBvZiBwb2ludCB0eXBlIGRpZmZlcmVuY2VzLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBwb2ludF90eXBlLCBwdF9pbmRleCwgbV9pbmRleCwgZGVmYXVsdF90eXBlLCBnbHlwaF9uYW1lKToKICAgICAgICBlcnJvcl9tc2cgPSAoCiAgICAgICAgICAgIGYiR2x5cGggJ3tnbHlwaF9uYW1lfSc6ICd7cG9pbnRfdHlwZX0nIGF0IHBvaW50IGluZGV4IHtwdF9pbmRleH0gaW4gIgogICAgICAgICAgICBmIm1hc3RlciBpbmRleCB7bV9pbmRleH0gZGlmZmVycyBmcm9tIHRoZSBkZWZhdWx0IGZvbnQgcG9pbnQgdHlwZSAiCiAgICAgICAgICAgIGYiJ3tkZWZhdWx0X3R5cGV9JyIKICAgICAgICApCiAgICAgICAgc2VsZi5hcmdzID0gKGVycm9yX21zZywpCgoKY2xhc3MgVmFyTGliQ0ZGSGludFR5cGVNZXJnZUVycm9yKFZhckxpYkNGRk1lcmdlRXJyb3IpOgogICAgIiIiUmFpc2VkIHdoZW4gYSBDRkYgZ2x5cGggY2Fubm90IGJlIG1lcmdlZCBiZWNhdXNlIG9mIGhpbnQgdHlwZSBkaWZmZXJlbmNlcy4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgaGludF90eXBlLCBjbWRfaW5kZXgsIG1faW5kZXgsIGRlZmF1bHRfdHlwZSwgZ2x5cGhfbmFtZSk6CiAgICAgICAgZXJyb3JfbXNnID0gKAogICAgICAgICAgICBmIkdseXBoICd7Z2x5cGhfbmFtZX0nOiAne2hpbnRfdHlwZX0nIGF0IGluZGV4IHtjbWRfaW5kZXh9IGluICIKICAgICAgICAgICAgZiJtYXN0ZXIgaW5kZXgge21faW5kZXh9IGRpZmZlcnMgZnJvbSB0aGUgZGVmYXVsdCBmb250IGhpbnQgdHlwZSAiCiAgICAgICAgICAgIGYiJ3tkZWZhdWx0X3R5cGV9JyIKICAgICAgICApCiAgICAgICAgc2VsZi5hcmdzID0gKGVycm9yX21zZywpCgoKY2xhc3MgVmFyaWF0aW9uTW9kZWxFcnJvcihWYXJMaWJFcnJvcik6CiAgICAiIiJSYWlzZWQgd2hlbiBhIHZhcmlhdGlvbiBtb2RlbCBpcyBmYXVsdHkuIiIiCg==
+import textwrap
+
+
+class VarLibError(Exception):
+    """Base exception for the varLib module."""
+
+
+class VarLibValidationError(VarLibError):
+    """Raised when input data is invalid from varLib's point of view."""
+
+
+class VarLibMergeError(VarLibError):
+    """Raised when input data cannot be merged into a variable font."""
+
+    def __init__(self, merger=None, **kwargs):
+        self.merger = merger
+        if not kwargs:
+            kwargs = {}
+        if "stack" in kwargs:
+            self.stack = kwargs["stack"]
+            del kwargs["stack"]
+        else:
+            self.stack = []
+        self.cause = kwargs
+
+    @property
+    def reason(self):
+        return self.__doc__
+
+    def _master_name(self, ix):
+        if self.merger is not None:
+            ttf = self.merger.ttfs[ix]
+            if "name" in ttf and ttf["name"].getBestFullName():
+                return ttf["name"].getBestFullName()
+            elif hasattr(ttf.reader, "file") and hasattr(ttf.reader.file, "name"):
+                return ttf.reader.file.name
+        return f"master number {ix}"
+
+    @property
+    def offender(self):
+        if "expected" in self.cause and "got" in self.cause:
+            index = [x == self.cause["expected"] for x in self.cause["got"]].index(
+                False
+            )
+            master_name = self._master_name(index)
+            if "location" in self.cause:
+                master_name = f"{master_name} ({self.cause['location']})"
+            return index, master_name
+        return None, None
+
+    @property
+    def details(self):
+        if "expected" in self.cause and "got" in self.cause:
+            offender_index, offender = self.offender
+            got = self.cause["got"][offender_index]
+            return f"Expected to see {self.stack[0]}=={self.cause['expected']!r}, instead saw {got!r}\n"
+        return ""
+
+    def __str__(self):
+        offender_index, offender = self.offender
+        location = ""
+        if offender:
+            location = f"\n\nThe problem is likely to be in {offender}:\n"
+        context = "".join(reversed(self.stack))
+        basic = textwrap.fill(
+            f"Couldn't merge the fonts, because {self.reason}. "
+            f"This happened while performing the following operation: {context}",
+            width=78,
+        )
+        return "\n\n" + basic + location + self.details
+
+
+class ShouldBeConstant(VarLibMergeError):
+    """some values were different, but should have been the same"""
+
+    @property
+    def details(self):
+        basic_message = super().details
+
+        if self.stack[0] != ".FeatureCount" or self.merger is None:
+            return basic_message
+
+        assert self.stack[0] == ".FeatureCount"
+        offender_index, _ = self.offender
+        bad_ttf = self.merger.ttfs[offender_index]
+        good_ttf = next(
+            ttf
+            for ttf in self.merger.ttfs
+            if self.stack[-1] in ttf
+            and ttf[self.stack[-1]].table.FeatureList.FeatureCount
+            == self.cause["expected"]
+        )
+
+        good_features = [
+            x.FeatureTag
+            for x in good_ttf[self.stack[-1]].table.FeatureList.FeatureRecord
+        ]
+        bad_features = [
+            x.FeatureTag
+            for x in bad_ttf[self.stack[-1]].table.FeatureList.FeatureRecord
+        ]
+        return basic_message + (
+            "\nIncompatible features between masters.\n"
+            f"Expected: {', '.join(good_features)}.\n"
+            f"Got: {', '.join(bad_features)}.\n"
+        )
+
+
+class FoundANone(VarLibMergeError):
+    """one of the values in a list was empty when it shouldn't have been"""
+
+    @property
+    def offender(self):
+        index = [x is None for x in self.cause["got"]].index(True)
+        return index, self._master_name(index)
+
+    @property
+    def details(self):
+        cause, stack = self.cause, self.stack
+        return f"{stack[0]}=={cause['got']}\n"
+
+
+class NotANone(VarLibMergeError):
+    """one of the values in a list was not empty when it should have been"""
+
+    @property
+    def offender(self):
+        index = [x is not None for x in self.cause["got"]].index(True)
+        return index, self._master_name(index)
+
+    @property
+    def details(self):
+        cause, stack = self.cause, self.stack
+        return f"{stack[0]}=={cause['got']}\n"
+
+
+class MismatchedTypes(VarLibMergeError):
+    """data had inconsistent types"""
+
+
+class LengthsDiffer(VarLibMergeError):
+    """a list of objects had inconsistent lengths"""
+
+
+class KeysDiffer(VarLibMergeError):
+    """a list of objects had different keys"""
+
+
+class InconsistentGlyphOrder(VarLibMergeError):
+    """the glyph order was inconsistent between masters"""
+
+
+class InconsistentExtensions(VarLibMergeError):
+    """the masters use extension lookups in inconsistent ways"""
+
+
+class UnsupportedFormat(VarLibMergeError):
+    """an OpenType subtable (%s) had a format I didn't expect"""
+
+    def __init__(self, merger=None, **kwargs):
+        super().__init__(merger, **kwargs)
+        if not self.stack:
+            self.stack = [".Format"]
+
+    @property
+    def reason(self):
+        s = self.__doc__ % self.cause["subtable"]
+        if "value" in self.cause:
+            s += f" ({self.cause['value']!r})"
+        return s
+
+
+class InconsistentFormats(UnsupportedFormat):
+    """an OpenType subtable (%s) had inconsistent formats between masters"""
+
+
+class VarLibCFFMergeError(VarLibError):
+    pass
+
+
+class VarLibCFFDictMergeError(VarLibCFFMergeError):
+    """Raised when a CFF PrivateDict cannot be merged."""
+
+    def __init__(self, key, value, values):
+        error_msg = (
+            f"For the Private Dict key '{key}', the default font value list:"
+            f"\n\t{value}\nhad a different number of values than a region font:"
+        )
+        for region_value in values:
+            error_msg += f"\n\t{region_value}"
+        self.args = (error_msg,)
+
+
+class VarLibCFFPointTypeMergeError(VarLibCFFMergeError):
+    """Raised when a CFF glyph cannot be merged because of point type differences."""
+
+    def __init__(self, point_type, pt_index, m_index, default_type, glyph_name):
+        error_msg = (
+            f"Glyph '{glyph_name}': '{point_type}' at point index {pt_index} in "
+            f"master index {m_index} differs from the default font point type "
+            f"'{default_type}'"
+        )
+        self.args = (error_msg,)
+
+
+class VarLibCFFHintTypeMergeError(VarLibCFFMergeError):
+    """Raised when a CFF glyph cannot be merged because of hint type differences."""
+
+    def __init__(self, hint_type, cmd_index, m_index, default_type, glyph_name):
+        error_msg = (
+            f"Glyph '{glyph_name}': '{hint_type}' at index {cmd_index} in "
+            f"master index {m_index} differs from the default font hint type "
+            f"'{default_type}'"
+        )
+        self.args = (error_msg,)
+
+
+class VariationModelError(VarLibError):
+    """Raised when a variation model is faulty."""

@@ -1,1 +1,15 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKIyBodHRwczovL2RldmVsb3Blci5hcHBsZS5jb20vZm9udHMvVHJ1ZVR5cGUtUmVmZXJlbmNlLU1hbnVhbC9STTA2L0NoYXA2YnNsbi5odG1sCmNsYXNzIHRhYmxlX19iX3NfbF9uKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgIiIiQmFzZWxpbmUgdGFibGUKCiAgICBUaGUgQUFUIGBgYnNsbmBgIHRhYmxlIGlzIHNpbWlsYXIgaW4gcHVycG9zZSB0byB0aGUgT3BlblR5cGUgYGBCQVNFYGAKICAgIHRhYmxlOyBpdCBzdG9yZXMgcGVyLXNjcmlwdCBiYXNlbGluZXMgdG8gc3VwcG9ydCBhdXRvbWF0aWMgYWxpZ25tZW50CiAgICBvZiBsaW5lcyBvZiB0ZXh0LgoKICAgIFNlZSBhbHNvIGh0dHBzOi8vZGV2ZWxvcGVyLmFwcGxlLmNvbS9mb250cy9UcnVlVHlwZS1SZWZlcmVuY2UtTWFudWFsL1JNMDYvQ2hhcDZic2xuLmh0bWwKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6bsln.html
+class table__b_s_l_n(BaseTTXConverter):
+    """Baseline table
+
+    The AAT ``bsln`` table is similar in purpose to the OpenType ``BASE``
+    table; it stores per-script baselines to support automatic alignment
+    of lines of text.
+
+    See also https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6bsln.html
+    """
+
+    pass

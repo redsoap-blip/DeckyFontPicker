@@ -1,1 +1,11 @@
-IiIiRW51bS1yZWxhdGVkIHV0aWxpdGllcy4KCkRlcHJlY2F0ZWQ6IHRoaXMgbW9kdWxlIG9ubHkgcmUtZXhwb3J0cyBlbnVtLlN0ckVudW0gZm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHk7CmltcG9ydCBpdCBmcm9tIHRoZSBzdGFuZGFyZCBsaWJyYXJ5IGVudW0gbW9kdWxlIGluc3RlYWQuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBlbnVtIGltcG9ydCBTdHJFbnVtCgpfX2FsbF9fID0gWyJTdHJFbnVtIl0K
+"""Enum-related utilities.
+
+Deprecated: this module only re-exports enum.StrEnum for backward compatibility;
+import it from the standard library enum module instead.
+"""
+
+from __future__ import annotations
+
+from enum import StrEnum
+
+__all__ = ["StrEnum"]

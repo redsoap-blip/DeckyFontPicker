@@ -1,1 +1,88 @@
-IyBDb3B5cmlnaHQgKGMpIDIwMDkgVHlwZSBTdXBwbHkgTExDCiMgQXV0aG9yOiBUYWwgTGVtaW5nCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgpmcm9tIHR5cGluZyBpbXBvcnQgQW55LCBEaWN0LCBMaXN0LCBUdXBsZQoKZnJvbSBmb250VG9vbHMuY2ZmTGliLnNwZWNpYWxpemVyIGltcG9ydCBjb21tYW5kc1RvUHJvZ3JhbSwgc3BlY2lhbGl6ZUNvbW1hbmRzCmZyb20gZm9udFRvb2xzLm1pc2MucHNDaGFyU3RyaW5ncyBpbXBvcnQgVDJDaGFyU3RyaW5nCmZyb20gZm9udFRvb2xzLm1pc2Mucm91bmRUb29scyBpbXBvcnQgb3RSb3VuZCwgcm91bmRGdW5jCmZyb20gZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBpbXBvcnQgQmFzZVBlbgoKCmNsYXNzIFQyQ2hhclN0cmluZ1BlbihCYXNlUGVuKToKICAgICIiIlBlbiB0byBkcmF3IFR5cGUgMiBDaGFyU3RyaW5ncy4KCiAgICBUaGUgJ3JvdW5kVG9sZXJhbmNlJyBhcmd1bWVudCBjb250cm9scyB0aGUgcm91bmRpbmcgb2YgcG9pbnQgY29vcmRpbmF0ZXMuCiAgICBJdCBpcyBkZWZpbmVkIGFzIHRoZSBtYXhpbXVtIGFic29sdXRlIGRpZmZlcmVuY2UgYmV0d2VlbiB0aGUgb3JpZ2luYWwKICAgIGZsb2F0IGFuZCB0aGUgcm91bmRlZCBpbnRlZ2VyIHZhbHVlLgogICAgVGhlIGRlZmF1bHQgdG9sZXJhbmNlIG9mIDAuNSBtZWFucyB0aGF0IGFsbCBmbG9hdHMgYXJlIHJvdW5kZWQgdG8gaW50ZWdlcjsKICAgIGEgdmFsdWUgb2YgMCBkaXNhYmxlcyByb3VuZGluZzsgdmFsdWVzIGluIGJldHdlZW4gd2lsbCBvbmx5IHJvdW5kIGZsb2F0cwogICAgd2hpY2ggYXJlIGNsb3NlIHRvIHRoZWlyIGludGVncmFsIHBhcnQgd2l0aGluIHRoZSB0b2xlcmF0ZWQgcmFuZ2UuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwKICAgICAgICB3aWR0aDogZmxvYXQgfCBOb25lLAogICAgICAgIGdseXBoU2V0OiBEaWN0W3N0ciwgQW55XSB8IE5vbmUsCiAgICAgICAgcm91bmRUb2xlcmFuY2U6IGZsb2F0ID0gMC41LAogICAgICAgIENGRjI6IGJvb2wgPSBGYWxzZSwKICAgICkgLT4gTm9uZToKICAgICAgICBzdXBlcihUMkNoYXJTdHJpbmdQZW4sIHNlbGYpLl9faW5pdF9fKGdseXBoU2V0KQogICAgICAgIHNlbGYucm91bmQgPSByb3VuZEZ1bmMocm91bmRUb2xlcmFuY2UpCiAgICAgICAgc2VsZi5fQ0ZGMiA9IENGRjIKICAgICAgICBzZWxmLl93aWR0aCA9IHdpZHRoCiAgICAgICAgc2VsZi5fY29tbWFuZHM6IExpc3RbVHVwbGVbc3RyIHwgYnl0ZXMsIExpc3RbZmxvYXRdXV0gPSBbXQogICAgICAgIHNlbGYuX3AwID0gKDAsIDApCgogICAgZGVmIF9wKHNlbGYsIHB0OiBUdXBsZVtmbG9hdCwgZmxvYXRdKSAtPiBMaXN0W2Zsb2F0XToKICAgICAgICBwMCA9IHNlbGYuX3AwCiAgICAgICAgcHQgPSBzZWxmLl9wMCA9IChzZWxmLnJvdW5kKHB0WzBdKSwgc2VsZi5yb3VuZChwdFsxXSkpCiAgICAgICAgcmV0dXJuIFtwdFswXSAtIHAwWzBdLCBwdFsxXSAtIHAwWzFdXQoKICAgIGRlZiBfbW92ZVRvKHNlbGYsIHB0OiBUdXBsZVtmbG9hdCwgZmxvYXRdKSAtPiBOb25lOgogICAgICAgIHNlbGYuX2NvbW1hbmRzLmFwcGVuZCgoInJtb3ZldG8iLCBzZWxmLl9wKHB0KSkpCgogICAgZGVmIF9saW5lVG8oc2VsZiwgcHQ6IFR1cGxlW2Zsb2F0LCBmbG9hdF0pIC0+IE5vbmU6CiAgICAgICAgc2VsZi5fY29tbWFuZHMuYXBwZW5kKCgicmxpbmV0byIsIHNlbGYuX3AocHQpKSkKCiAgICBkZWYgX2N1cnZlVG9PbmUoCiAgICAgICAgc2VsZiwKICAgICAgICBwdDE6IFR1cGxlW2Zsb2F0LCBmbG9hdF0sCiAgICAgICAgcHQyOiBUdXBsZVtmbG9hdCwgZmxvYXRdLAogICAgICAgIHB0MzogVHVwbGVbZmxvYXQsIGZsb2F0XSwKICAgICkgLT4gTm9uZToKICAgICAgICBfcCA9IHNlbGYuX3AKICAgICAgICBzZWxmLl9jb21tYW5kcy5hcHBlbmQoKCJycmN1cnZldG8iLCBfcChwdDEpICsgX3AocHQyKSArIF9wKHB0MykpKQoKICAgIGRlZiBfY2xvc2VQYXRoKHNlbGYpIC0+IE5vbmU6CiAgICAgICAgcGFzcwoKICAgIGRlZiBfZW5kUGF0aChzZWxmKSAtPiBOb25lOgogICAgICAgIHBhc3MKCiAgICBkZWYgZ2V0Q2hhclN0cmluZygKICAgICAgICBzZWxmLAogICAgICAgIHByaXZhdGU6IERpY3QgfCBOb25lID0gTm9uZSwKICAgICAgICBnbG9iYWxTdWJyczogTGlzdCB8IE5vbmUgPSBOb25lLAogICAgICAgIG9wdGltaXplOiBib29sID0gVHJ1ZSwKICAgICkgLT4gVDJDaGFyU3RyaW5nOgogICAgICAgIGNvbW1hbmRzID0gc2VsZi5fY29tbWFuZHMKICAgICAgICBpZiBvcHRpbWl6ZToKICAgICAgICAgICAgbWF4c3RhY2sgPSA0OCBpZiBub3Qgc2VsZi5fQ0ZGMiBlbHNlIDUxMwogICAgICAgICAgICBjb21tYW5kcyA9IHNwZWNpYWxpemVDb21tYW5kcygKICAgICAgICAgICAgICAgIGNvbW1hbmRzLCBnZW5lcmFsaXplRmlyc3Q9RmFsc2UsIG1heHN0YWNrPW1heHN0YWNrCiAgICAgICAgICAgICkKICAgICAgICBwcm9ncmFtID0gY29tbWFuZHNUb1Byb2dyYW0oY29tbWFuZHMpCiAgICAgICAgaWYgc2VsZi5fd2lkdGggaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGFzc2VydCAoCiAgICAgICAgICAgICAgICBub3Qgc2VsZi5fQ0ZGMgogICAgICAgICAgICApLCAiQ0ZGMiBkb2VzIG5vdCBhbGxvdyBlbmNvZGluZyBnbHlwaCB3aWR0aCBpbiBDaGFyU3RyaW5nLiIKICAgICAgICAgICAgcHJvZ3JhbS5pbnNlcnQoMCwgb3RSb3VuZChzZWxmLl93aWR0aCkpCiAgICAgICAgaWYgbm90IHNlbGYuX0NGRjI6CiAgICAgICAgICAgIHByb2dyYW0uYXBwZW5kKCJlbmRjaGFyIikKICAgICAgICBjaGFyU3RyaW5nID0gVDJDaGFyU3RyaW5nKAogICAgICAgICAgICBwcm9ncmFtPXByb2dyYW0sIHByaXZhdGU9cHJpdmF0ZSwgZ2xvYmFsU3VicnM9Z2xvYmFsU3VicnMKICAgICAgICApCiAgICAgICAgcmV0dXJuIGNoYXJTdHJpbmcK
+# Copyright (c) 2009 Type Supply LLC
+# Author: Tal Leming
+
+from __future__ import annotations
+
+from typing import Any, Dict, List, Tuple
+
+from fontTools.cffLib.specializer import commandsToProgram, specializeCommands
+from fontTools.misc.psCharStrings import T2CharString
+from fontTools.misc.roundTools import otRound, roundFunc
+from fontTools.pens.basePen import BasePen
+
+
+class T2CharStringPen(BasePen):
+    """Pen to draw Type 2 CharStrings.
+
+    The 'roundTolerance' argument controls the rounding of point coordinates.
+    It is defined as the maximum absolute difference between the original
+    float and the rounded integer value.
+    The default tolerance of 0.5 means that all floats are rounded to integer;
+    a value of 0 disables rounding; values in between will only round floats
+    which are close to their integral part within the tolerated range.
+    """
+
+    def __init__(
+        self,
+        width: float | None,
+        glyphSet: Dict[str, Any] | None,
+        roundTolerance: float = 0.5,
+        CFF2: bool = False,
+    ) -> None:
+        super(T2CharStringPen, self).__init__(glyphSet)
+        self.round = roundFunc(roundTolerance)
+        self._CFF2 = CFF2
+        self._width = width
+        self._commands: List[Tuple[str | bytes, List[float]]] = []
+        self._p0 = (0, 0)
+
+    def _p(self, pt: Tuple[float, float]) -> List[float]:
+        p0 = self._p0
+        pt = self._p0 = (self.round(pt[0]), self.round(pt[1]))
+        return [pt[0] - p0[0], pt[1] - p0[1]]
+
+    def _moveTo(self, pt: Tuple[float, float]) -> None:
+        self._commands.append(("rmoveto", self._p(pt)))
+
+    def _lineTo(self, pt: Tuple[float, float]) -> None:
+        self._commands.append(("rlineto", self._p(pt)))
+
+    def _curveToOne(
+        self,
+        pt1: Tuple[float, float],
+        pt2: Tuple[float, float],
+        pt3: Tuple[float, float],
+    ) -> None:
+        _p = self._p
+        self._commands.append(("rrcurveto", _p(pt1) + _p(pt2) + _p(pt3)))
+
+    def _closePath(self) -> None:
+        pass
+
+    def _endPath(self) -> None:
+        pass
+
+    def getCharString(
+        self,
+        private: Dict | None = None,
+        globalSubrs: List | None = None,
+        optimize: bool = True,
+    ) -> T2CharString:
+        commands = self._commands
+        if optimize:
+            maxstack = 48 if not self._CFF2 else 513
+            commands = specializeCommands(
+                commands, generalizeFirst=False, maxstack=maxstack
+            )
+        program = commandsToProgram(commands)
+        if self._width is not None:
+            assert (
+                not self._CFF2
+            ), "CFF2 does not allow encoding glyph width in CharString."
+            program.insert(0, otRound(self._width))
+        if not self._CFF2:
+            program.append("endchar")
+        charString = T2CharString(
+            program=program, private=private, globalSubrs=globalSubrs
+        )
+        return charString

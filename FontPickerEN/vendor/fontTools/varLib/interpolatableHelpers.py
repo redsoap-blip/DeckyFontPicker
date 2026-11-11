@@ -1,1 +1,362 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIudHRHbHlwaFNldCBpbXBvcnQgTGVycEdseXBoU2V0CmZyb20gZm9udFRvb2xzLnBlbnMuYmFzZVBlbiBpbXBvcnQgQWJzdHJhY3RQZW4sIEJhc2VQZW4sIERlY29tcG9zaW5nUGVuCmZyb20gZm9udFRvb2xzLnBlbnMucG9pbnRQZW4gaW1wb3J0IEFic3RyYWN0UG9pbnRQZW4sIFNlZ21lbnRUb1BvaW50UGVuCmZyb20gZm9udFRvb2xzLnBlbnMucmVjb3JkaW5nUGVuIGltcG9ydCBSZWNvcmRpbmdQZW4sIERlY29tcG9zaW5nUmVjb3JkaW5nUGVuCmZyb20gZm9udFRvb2xzLm1pc2MudHJhbnNmb3JtIGltcG9ydCBUcmFuc2Zvcm0KZnJvbSBjb2xsZWN0aW9ucyBpbXBvcnQgZGVmYXVsdGRpY3QsIGRlcXVlCmZyb20gbWF0aCBpbXBvcnQgc3FydCwgY29weXNpZ24sIGF0YW4yLCBwaQppbXBvcnQgaXRlcnRvb2xzCgppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy52YXJMaWIuaW50ZXJwb2xhdGFibGUiKQoKCmNsYXNzIEludGVycG9sYXRhYmxlUHJvYmxlbToKICAgIE5PVEhJTkcgPSAibm90aGluZyIKICAgIE1JU1NJTkcgPSAibWlzc2luZyIKICAgIE9QRU5fUEFUSCA9ICJvcGVuX3BhdGgiCiAgICBQQVRIX0NPVU5UID0gInBhdGhfY291bnQiCiAgICBOT0RFX0NPVU5UID0gIm5vZGVfY291bnQiCiAgICBOT0RFX0lOQ09NUEFUSUJJTElUWSA9ICJub2RlX2luY29tcGF0aWJpbGl0eSIKICAgIENPTlRPVVJfT1JERVIgPSAiY29udG91cl9vcmRlciIKICAgIFdST05HX1NUQVJUX1BPSU5UID0gIndyb25nX3N0YXJ0X3BvaW50IgogICAgS0lOSyA9ICJraW5rIgogICAgVU5ERVJXRUlHSFQgPSAidW5kZXJ3ZWlnaHQiCiAgICBPVkVSV0VJR0hUID0gIm92ZXJ3ZWlnaHQiCgogICAgc2V2ZXJpdHkgPSB7CiAgICAgICAgTUlTU0lORzogMSwKICAgICAgICBPUEVOX1BBVEg6IDIsCiAgICAgICAgUEFUSF9DT1VOVDogMywKICAgICAgICBOT0RFX0NPVU5UOiA0LAogICAgICAgIE5PREVfSU5DT01QQVRJQklMSVRZOiA1LAogICAgICAgIENPTlRPVVJfT1JERVI6IDYsCiAgICAgICAgV1JPTkdfU1RBUlRfUE9JTlQ6IDcsCiAgICAgICAgS0lOSzogOCwKICAgICAgICBVTkRFUldFSUdIVDogOSwKICAgICAgICBPVkVSV0VJR0hUOiAxMCwKICAgICAgICBOT1RISU5HOiAxMSwKICAgIH0KCgpkZWYgc29ydF9wcm9ibGVtcyhwcm9ibGVtcyk6CiAgICAiIiJTb3J0IHByb2JsZW0gZ3JvdXBzIGJ5IHRoZWlyIG1vc3Qgc2V2ZXJlIHByb2JsZW0gdHlwZS4iIiIKICAgIHJldHVybiBkaWN0KAogICAgICAgIHNvcnRlZCgKICAgICAgICAgICAgcHJvYmxlbXMuaXRlbXMoKSwKICAgICAgICAgICAga2V5PWxhbWJkYSBfOiAtbWluKAogICAgICAgICAgICAgICAgKAogICAgICAgICAgICAgICAgICAgIChJbnRlcnBvbGF0YWJsZVByb2JsZW0uc2V2ZXJpdHlbcFsidHlwZSJdXSArIHAuZ2V0KCJ0b2xlcmFuY2UiLCAwKSkKICAgICAgICAgICAgICAgICAgICBmb3IgcCBpbiBfWzFdCiAgICAgICAgICAgICAgICApLAogICAgICAgICAgICApLAogICAgICAgICAgICByZXZlcnNlPVRydWUsCiAgICAgICAgKQogICAgKQoKCmRlZiByb3RfbGlzdChsLCBrKToKICAgICIiIlJvdGF0ZSBsaXN0IGJ5IGsgaXRlbXMgZm9yd2FyZC4gIEllLiBpdGVtIGF0IHBvc2l0aW9uIDAgd2lsbCBiZQogICAgYXQgcG9zaXRpb24gayBpbiByZXR1cm5lZCBsaXN0LiAgTmVnYXRpdmUgayBpcyBhbGxvd2VkLiIiIgogICAgcmV0dXJuIGxbLWs6XSArIGxbOi1rXQoKCmNsYXNzIFBlckNvbnRvdXJQZW4oQmFzZVBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgUGVuLCBnbHlwaHNldD1Ob25lKToKICAgICAgICBCYXNlUGVuLl9faW5pdF9fKHNlbGYsIGdseXBoc2V0KQogICAgICAgIHNlbGYuX1BlbiA9IFBlbgogICAgICAgIHNlbGYuX3BlbiA9IE5vbmUKICAgICAgICBzZWxmLnZhbHVlID0gW10KCiAgICBkZWYgX21vdmVUbyhzZWxmLCBwMCk6CiAgICAgICAgc2VsZi5fbmV3SXRlbSgpCiAgICAgICAgc2VsZi5fcGVuLm1vdmVUbyhwMCkKCiAgICBkZWYgX2xpbmVUbyhzZWxmLCBwMSk6CiAgICAgICAgc2VsZi5fcGVuLmxpbmVUbyhwMSkKCiAgICBkZWYgX3FDdXJ2ZVRvT25lKHNlbGYsIHAxLCBwMik6CiAgICAgICAgc2VsZi5fcGVuLnFDdXJ2ZVRvKHAxLCBwMikKCiAgICBkZWYgX2N1cnZlVG9PbmUoc2VsZiwgcDEsIHAyLCBwMyk6CiAgICAgICAgc2VsZi5fcGVuLmN1cnZlVG8ocDEsIHAyLCBwMykKCiAgICBkZWYgX2Nsb3NlUGF0aChzZWxmKToKICAgICAgICBzZWxmLl9wZW4uY2xvc2VQYXRoKCkKICAgICAgICBzZWxmLl9wZW4gPSBOb25lCgogICAgZGVmIF9lbmRQYXRoKHNlbGYpOgogICAgICAgIHNlbGYuX3Blbi5lbmRQYXRoKCkKICAgICAgICBzZWxmLl9wZW4gPSBOb25lCgogICAgZGVmIF9uZXdJdGVtKHNlbGYpOgogICAgICAgIHNlbGYuX3BlbiA9IHBlbiA9IHNlbGYuX1BlbigpCiAgICAgICAgc2VsZi52YWx1ZS5hcHBlbmQocGVuKQoKCmNsYXNzIFBlckNvbnRvdXJPckNvbXBvbmVudFBlbihQZXJDb250b3VyUGVuKToKICAgIGRlZiBhZGRDb21wb25lbnQoc2VsZiwgZ2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbik6CiAgICAgICAgc2VsZi5fbmV3SXRlbSgpCiAgICAgICAgc2VsZi52YWx1ZVstMV0uYWRkQ29tcG9uZW50KGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb24pCgoKY2xhc3MgU2ltcGxlUmVjb3JkaW5nUG9pbnRQZW4oQWJzdHJhY3RQb2ludFBlbik6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi52YWx1ZSA9IFtdCgogICAgZGVmIGJlZ2luUGF0aChzZWxmLCBpZGVudGlmaWVyPU5vbmUsICoqa3dhcmdzKToKICAgICAgICBwYXNzCgogICAgZGVmIGVuZFBhdGgoc2VsZikgLT4gTm9uZToKICAgICAgICBwYXNzCgogICAgZGVmIGFkZFBvaW50KHNlbGYsIHB0LCBzZWdtZW50VHlwZT1Ob25lKToKICAgICAgICBzZWxmLnZhbHVlLmFwcGVuZCgocHQsIEZhbHNlIGlmIHNlZ21lbnRUeXBlIGlzIE5vbmUgZWxzZSBUcnVlKSkKCgpkZWYgdmRpZmZfaHlwb3QyKHYwLCB2MSk6CiAgICBzID0gMAogICAgZm9yIHgwLCB4MSBpbiB6aXAodjAsIHYxKToKICAgICAgICBkID0geDEgLSB4MAogICAgICAgIHMgKz0gZCAqIGQKICAgIHJldHVybiBzCgoKZGVmIHZkaWZmX2h5cG90Ml9jb21wbGV4KHYwLCB2MSk6CiAgICBzID0gMAogICAgZm9yIHgwLCB4MSBpbiB6aXAodjAsIHYxKToKICAgICAgICBkID0geDEgLSB4MAogICAgICAgIHMgKz0gZC5yZWFsICogZC5yZWFsICsgZC5pbWFnICogZC5pbWFnCiAgICAgICAgIyBUaGlzIGRvZXMgdGhlIHNhbWUgYnV0IHNlZW1zIHRvIGJlIHNsb3dlcjoKICAgICAgICAjIHMgKz0gKGQgKiBkLmNvbmp1Z2F0ZSgpKS5yZWFsCiAgICByZXR1cm4gcwoKCmRlZiBtYXRjaGluZ19jb3N0KEcsIG1hdGNoaW5nKToKICAgIHJldHVybiBzdW0oR1tpXVtqXSBmb3IgaSwgaiBpbiBlbnVtZXJhdGUobWF0Y2hpbmcpKQoKCmRlZiBtaW5fY29zdF9wZXJmZWN0X2JpcGFydGl0ZV9tYXRjaGluZ19zY2lweShHKToKICAgIG4gPSBsZW4oRykKICAgIHJvd3MsIGNvbHMgPSBsaW5lYXJfc3VtX2Fzc2lnbm1lbnQoRykKICAgIGFzc2VydCAocm93cyA9PSBsaXN0KHJhbmdlKG4pKSkuYWxsKCkKICAgICMgQ29udmVydCBudW1weSBhcnJheSBhbmQgaW50ZWdlciB0byBQeXRob24gdHlwZXMsCiAgICAjIHRvIGVuc3VyZSB0aGF0IHRoaXMgaXMgSlNPTi1zZXJpYWxpemFibGUuCiAgICBjb2xzID0gbGlzdChpbnQoZSkgZm9yIGUgaW4gY29scykKICAgIHJldHVybiBsaXN0KGNvbHMpLCBtYXRjaGluZ19jb3N0KEcsIGNvbHMpCgoKZGVmIG1pbl9jb3N0X3BlcmZlY3RfYmlwYXJ0aXRlX21hdGNoaW5nX211bmtyZXMoRyk6CiAgICBuID0gbGVuKEcpCiAgICBjb2xzID0gW05vbmVdICogbgogICAgZm9yIHJvdywgY29sIGluIE11bmtyZXMoKS5jb21wdXRlKEcpOgogICAgICAgIGNvbHNbcm93XSA9IGNvbAogICAgcmV0dXJuIGNvbHMsIG1hdGNoaW5nX2Nvc3QoRywgY29scykKCgpkZWYgbWluX2Nvc3RfcGVyZmVjdF9iaXBhcnRpdGVfbWF0Y2hpbmdfYnJ1dGVmb3JjZShHKToKICAgIG4gPSBsZW4oRykKCiAgICBpZiBuID4gNjoKICAgICAgICByYWlzZSBFeGNlcHRpb24oIkluc3RhbGwgUHl0aG9uIG1vZHVsZSAnbXVua3Jlcycgb3IgJ3NjaXB5ID49IDAuMTcuMCciKQoKICAgICMgT3RoZXJ3aXNlIGp1c3QgYnJ1dGUtZm9yY2UKICAgIHBlcm11dGF0aW9ucyA9IGl0ZXJ0b29scy5wZXJtdXRhdGlvbnMocmFuZ2UobikpCiAgICBiZXN0ID0gbGlzdChuZXh0KHBlcm11dGF0aW9ucykpCiAgICBiZXN0X2Nvc3QgPSBtYXRjaGluZ19jb3N0KEcsIGJlc3QpCiAgICBmb3IgcCBpbiBwZXJtdXRhdGlvbnM6CiAgICAgICAgY29zdCA9IG1hdGNoaW5nX2Nvc3QoRywgcCkKICAgICAgICBpZiBjb3N0IDwgYmVzdF9jb3N0OgogICAgICAgICAgICBiZXN0LCBiZXN0X2Nvc3QgPSBsaXN0KHApLCBjb3N0CiAgICByZXR1cm4gYmVzdCwgYmVzdF9jb3N0CgoKIyBQcmVmZXIgYHNjaXB5Lm9wdGltaXplLmxpbmVhcl9zdW1fYXNzaWdubWVudGAgZm9yIHBlcmZvcm1hbmNlLgojIGBNdW5rcmVzYCBpcyBhbHNvIHN1cHBvcnRlZCBhcyBhIGZhbGxiYWNrIGZvciBtaW5pbWFsaXN0aWMgc3lzdGVtcwojIHdoZXJlIGluc3RhbGxpbmcgU2NpUHkgaXMgbm90IGZlYXNpYmxlLgp0cnk6CiAgICBmcm9tIHNjaXB5Lm9wdGltaXplIGltcG9ydCBsaW5lYXJfc3VtX2Fzc2lnbm1lbnQKCiAgICBtaW5fY29zdF9wZXJmZWN0X2JpcGFydGl0ZV9tYXRjaGluZyA9IG1pbl9jb3N0X3BlcmZlY3RfYmlwYXJ0aXRlX21hdGNoaW5nX3NjaXB5CmV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgIHRyeToKICAgICAgICBmcm9tIG11bmtyZXMgaW1wb3J0IE11bmtyZXMKCiAgICAgICAgbWluX2Nvc3RfcGVyZmVjdF9iaXBhcnRpdGVfbWF0Y2hpbmcgPSAoCiAgICAgICAgICAgIG1pbl9jb3N0X3BlcmZlY3RfYmlwYXJ0aXRlX21hdGNoaW5nX211bmtyZXMKICAgICAgICApCiAgICBleGNlcHQgSW1wb3J0RXJyb3I6CiAgICAgICAgbWluX2Nvc3RfcGVyZmVjdF9iaXBhcnRpdGVfbWF0Y2hpbmcgPSAoCiAgICAgICAgICAgIG1pbl9jb3N0X3BlcmZlY3RfYmlwYXJ0aXRlX21hdGNoaW5nX2JydXRlZm9yY2UKICAgICAgICApCgoKZGVmIGNvbnRvdXJfdmVjdG9yX2Zyb21fc3RhdHMoc3RhdHMpOgogICAgIyBEb24ndCBjaGFuZ2UgdGhlIG9yZGVyIG9mIGl0ZW1zIGhlcmUuCiAgICAjIEl0J3Mgb2theSB0byBhZGQgdG8gdGhlIGVuZCwgYnV0IG90aGVyd2lzZSwgb3RoZXIKICAgICMgY29kZSBkZXBlbmRzIG9uIGl0LiBTZWFyY2ggZm9yICJjb3ZhcmlhbmNlIi4KICAgIHNpemUgPSBzcXJ0KGFicyhzdGF0cy5hcmVhKSkKICAgIHJldHVybiAoCiAgICAgICAgY29weXNpZ24oKHNpemUpLCBzdGF0cy5hcmVhKSwKICAgICAgICBzdGF0cy5tZWFuWCwKICAgICAgICBzdGF0cy5tZWFuWSwKICAgICAgICBzdGF0cy5zdGRkZXZYICogMiwKICAgICAgICBzdGF0cy5zdGRkZXZZICogMiwKICAgICAgICBzdGF0cy5jb3JyZWxhdGlvbiAqIHNpemUsCiAgICApCgoKZGVmIG1hdGNoaW5nX2Zvcl92ZWN0b3JzKG0wLCBtMSk6CiAgICBuID0gbGVuKG0wKQoKICAgIGNvc3RzID0gW1t2ZGlmZl9oeXBvdDIodjAsIHYxKSBmb3IgdjEgaW4gbTFdIGZvciB2MCBpbiBtMF0KICAgICgKICAgICAgICBtYXRjaGluZywKICAgICAgICBtYXRjaGluZ19jb3N0LAogICAgKSA9IG1pbl9jb3N0X3BlcmZlY3RfYmlwYXJ0aXRlX21hdGNoaW5nKGNvc3RzKQogICAgaWRlbnRpdHlfY29zdCA9IHN1bShjb3N0c1tpXVtpXSBmb3IgaSBpbiByYW5nZShuKSkKICAgIHJldHVybiBtYXRjaGluZywgbWF0Y2hpbmdfY29zdCwgaWRlbnRpdHlfY29zdAoKCmRlZiBwb2ludHNfY2hhcmFjdGVyaXN0aWNfYml0cyhwb2ludHMpOgogICAgYml0cyA9IDAKICAgIGZvciBwdCwgYiBpbiByZXZlcnNlZChwb2ludHMpOgogICAgICAgIGJpdHMgPSAoYml0cyA8PCAxKSB8IGIKICAgIHJldHVybiBiaXRzCgoKX05VTV9JVEVNU19QRVJfUE9JTlRTX0NPTVBMRVhfVkVDVE9SID0gNAoKCmRlZiBwb2ludHNfY29tcGxleF92ZWN0b3IocG9pbnRzKToKICAgIHZlY3RvciA9IFtdCiAgICBpZiBub3QgcG9pbnRzOgogICAgICAgIHJldHVybiB2ZWN0b3IKICAgIHBvaW50cyA9IFtjb21wbGV4KCpwdCkgZm9yIHB0LCBfIGluIHBvaW50c10KICAgIG4gPSBsZW4ocG9pbnRzKQogICAgYXNzZXJ0IF9OVU1fSVRFTVNfUEVSX1BPSU5UU19DT01QTEVYX1ZFQ1RPUiA9PSA0CiAgICBwb2ludHMuZXh0ZW5kKHBvaW50c1s6IF9OVU1fSVRFTVNfUEVSX1BPSU5UU19DT01QTEVYX1ZFQ1RPUiAtIDFdKQogICAgd2hpbGUgbGVuKHBvaW50cykgPCBfTlVNX0lURU1TX1BFUl9QT0lOVFNfQ09NUExFWF9WRUNUT1I6CiAgICAgICAgcG9pbnRzLmV4dGVuZChwb2ludHNbOiBfTlVNX0lURU1TX1BFUl9QT0lOVFNfQ09NUExFWF9WRUNUT1IgLSAxXSkKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgICMgVGhlIHdlaWdodHMgYXJlIG1hZ2ljIG51bWJlcnMuCgogICAgICAgICMgVGhlIHBvaW50IGl0c2VsZgogICAgICAgIHAwID0gcG9pbnRzW2ldCiAgICAgICAgdmVjdG9yLmFwcGVuZChwMCkKCiAgICAgICAgIyBUaGUgdmVjdG9yIHRvIHRoZSBuZXh0IHBvaW50CiAgICAgICAgcDEgPSBwb2ludHNbaSArIDFdCiAgICAgICAgZDAgPSBwMSAtIHAwCiAgICAgICAgdmVjdG9yLmFwcGVuZChkMCAqIDMpCgogICAgICAgICMgVGhlIHR1cm4gdmVjdG9yCiAgICAgICAgcDIgPSBwb2ludHNbaSArIDJdCiAgICAgICAgZDEgPSBwMiAtIHAxCiAgICAgICAgdmVjdG9yLmFwcGVuZChkMSAtIGQwKQoKICAgICAgICAjIFRoZSBhbmdsZSB0byB0aGUgbmV4dCBwb2ludCwgYXMgYSBjcm9zcyBwcm9kdWN0OwogICAgICAgICMgU3F1YXJlIHJvb3Qgb2YsIHRvIG1hdGNoIGRpbWVudGlvbmFsaXR5IG9mIGRpc3RhbmNlLgogICAgICAgIGNyb3NzID0gZDAucmVhbCAqIGQxLmltYWcgLSBkMC5pbWFnICogZDEucmVhbAogICAgICAgIGNyb3NzID0gY29weXNpZ24oc3FydChhYnMoY3Jvc3MpKSwgY3Jvc3MpCiAgICAgICAgdmVjdG9yLmFwcGVuZChjcm9zcyAqIDQpCgogICAgcmV0dXJuIHZlY3RvcgoKCmRlZiBhZGRfaXNvbW9ycGhpc21zKHBvaW50cywgaXNvbW9ycGhpc21zLCByZXZlcnNlKToKICAgIHJlZmVyZW5jZV9iaXRzID0gcG9pbnRzX2NoYXJhY3RlcmlzdGljX2JpdHMocG9pbnRzKQogICAgbiA9IGxlbihwb2ludHMpCgogICAgIyBpZiBwb2ludHNbMF1bMF0gPT0gcG9pbnRzWy0xXVswXToKICAgICMgICBhYm9ydAoKICAgIGlmIHJldmVyc2U6CiAgICAgICAgcG9pbnRzID0gcG9pbnRzWzo6LTFdCiAgICAgICAgYml0cyA9IHBvaW50c19jaGFyYWN0ZXJpc3RpY19iaXRzKHBvaW50cykKICAgIGVsc2U6CiAgICAgICAgYml0cyA9IHJlZmVyZW5jZV9iaXRzCgogICAgdmVjdG9yID0gcG9pbnRzX2NvbXBsZXhfdmVjdG9yKHBvaW50cykKCiAgICBhc3NlcnQgbGVuKHZlY3RvcikgJSBuID09IDAKICAgIG11bHQgPSBsZW4odmVjdG9yKSAvLyBuCiAgICBtYXNrID0gKDEgPDwgbikgLSAxCgogICAgZm9yIGkgaW4gcmFuZ2Uobik6CiAgICAgICAgYiA9ICgoYml0cyA8PCAobiAtIGkpKSAmIG1hc2spIHwgKGJpdHMgPj4gaSkKICAgICAgICBpZiBiID09IHJlZmVyZW5jZV9iaXRzOgogICAgICAgICAgICBpc29tb3JwaGlzbXMuYXBwZW5kKAogICAgICAgICAgICAgICAgKHJvdF9saXN0KHZlY3RvciwgLWkgKiBtdWx0KSwgbiAtIDEgLSBpIGlmIHJldmVyc2UgZWxzZSBpLCByZXZlcnNlKQogICAgICAgICAgICApCgoKZGVmIGZpbmRfcGFyZW50c19hbmRfb3JkZXIoZ2x5cGhzZXRzLCBsb2NhdGlvbnMsICosIGRpc2NyZXRlX2F4ZXM9c2V0KCkpOgogICAgcGFyZW50cyA9IFtOb25lXSArIGxpc3QocmFuZ2UobGVuKGdseXBoc2V0cykgLSAxKSkKICAgIG9yZGVyID0gbGlzdChyYW5nZShsZW4oZ2x5cGhzZXRzKSkpCiAgICBpZiBsb2NhdGlvbnM6CiAgICAgICAgIyBPcmRlciBiYXNlIG1hc3RlciBmaXJzdAogICAgICAgIGJhc2VzID0gWwogICAgICAgICAgICBpCiAgICAgICAgICAgIGZvciBpLCBsIGluIGVudW1lcmF0ZShsb2NhdGlvbnMpCiAgICAgICAgICAgIGlmIGFsbCh2ID09IDAgZm9yIGssIHYgaW4gbC5pdGVtcygpIGlmIGsgbm90IGluIGRpc2NyZXRlX2F4ZXMpCiAgICAgICAgXQogICAgICAgIGlmIGJhc2VzOgogICAgICAgICAgICBsb2cuaW5mbygiRm91bmQgJXMgYmFzZSBtYXN0ZXJzOiAlcyIsIGxlbihiYXNlcyksIGJhc2VzKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKCJObyBiYXNlIG1hc3RlciBsb2NhdGlvbiBmb3VuZCIpCgogICAgICAgICMgRm9ybSBhIG1pbmltdW0gc3Bhbm5pbmcgdHJlZSBvZiB0aGUgbG9jYXRpb25zCiAgICAgICAgdHJ5OgogICAgICAgICAgICBmcm9tIHNjaXB5LnNwYXJzZS5jc2dyYXBoIGltcG9ydCBtaW5pbXVtX3NwYW5uaW5nX3RyZWUKCiAgICAgICAgICAgIGdyYXBoID0gW1swXSAqIGxlbihsb2NhdGlvbnMpIGZvciBfIGluIHJhbmdlKGxlbihsb2NhdGlvbnMpKV0KICAgICAgICAgICAgYXhlcyA9IHNldCgpCiAgICAgICAgICAgIGZvciBsIGluIGxvY2F0aW9uczoKICAgICAgICAgICAgICAgIGF4ZXMudXBkYXRlKGwua2V5cygpKQogICAgICAgICAgICBheGVzID0gc29ydGVkKGF4ZXMpCiAgICAgICAgICAgIHZlY3RvcnMgPSBbdHVwbGUobC5nZXQoaywgMCkgZm9yIGsgaW4gYXhlcykgZm9yIGwgaW4gbG9jYXRpb25zXQogICAgICAgICAgICBmb3IgaSwgaiBpbiBpdGVydG9vbHMuY29tYmluYXRpb25zKHJhbmdlKGxlbihsb2NhdGlvbnMpKSwgMik6CiAgICAgICAgICAgICAgICBpX2Rpc2NyZXRlX2xvY2F0aW9uID0gewogICAgICAgICAgICAgICAgICAgIGs6IHYgZm9yIGssIHYgaW4gemlwKGF4ZXMsIHZlY3RvcnNbaV0pIGlmIGsgaW4gZGlzY3JldGVfYXhlcwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgal9kaXNjcmV0ZV9sb2NhdGlvbiA9IHsKICAgICAgICAgICAgICAgICAgICBrOiB2IGZvciBrLCB2IGluIHppcChheGVzLCB2ZWN0b3JzW2pdKSBpZiBrIGluIGRpc2NyZXRlX2F4ZXMKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGlmIGlfZGlzY3JldGVfbG9jYXRpb24gIT0gal9kaXNjcmV0ZV9sb2NhdGlvbjoKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgZ3JhcGhbaV1bal0gPSB2ZGlmZl9oeXBvdDIodmVjdG9yc1tpXSwgdmVjdG9yc1tqXSkKCiAgICAgICAgICAgIHRyZWUgPSBtaW5pbXVtX3NwYW5uaW5nX3RyZWUoZ3JhcGgsIG92ZXJ3cml0ZT1UcnVlKQogICAgICAgICAgICByb3dzLCBjb2xzID0gdHJlZS5ub256ZXJvKCkKICAgICAgICAgICAgZ3JhcGggPSBkZWZhdWx0ZGljdChzZXQpCiAgICAgICAgICAgIGZvciByb3csIGNvbCBpbiB6aXAocm93cywgY29scyk6CiAgICAgICAgICAgICAgICAjIEtlZXAgbWFzdGVyIGluZGljZXMgSlNPTi1zZXJpYWxpemFibGUsIGxpa2UgdGhlIG5vbi1TY2lQeSBwYXRoLgogICAgICAgICAgICAgICAgcm93LCBjb2wgPSBpbnQocm93KSwgaW50KGNvbCkKICAgICAgICAgICAgICAgIGdyYXBoW3Jvd10uYWRkKGNvbCkKICAgICAgICAgICAgICAgIGdyYXBoW2NvbF0uYWRkKHJvdykKCiAgICAgICAgICAgICMgVHJhdmVyc2UgZ3JhcGggZnJvbSB0aGUgYmFzZSBhbmQgYXNzaWduIHBhcmVudHMKICAgICAgICAgICAgcGFyZW50cyA9IFtOb25lXSAqIGxlbihsb2NhdGlvbnMpCiAgICAgICAgICAgIG9yZGVyID0gW10KICAgICAgICAgICAgdmlzaXRlZCA9IHNldCgpCiAgICAgICAgICAgIHF1ZXVlID0gZGVxdWUoYmFzZXMpCiAgICAgICAgICAgIHdoaWxlIHF1ZXVlOgogICAgICAgICAgICAgICAgaSA9IHF1ZXVlLnBvcGxlZnQoKQogICAgICAgICAgICAgICAgdmlzaXRlZC5hZGQoaSkKICAgICAgICAgICAgICAgIG9yZGVyLmFwcGVuZChpKQogICAgICAgICAgICAgICAgZm9yIGogaW4gc29ydGVkKGdyYXBoW2ldKToKICAgICAgICAgICAgICAgICAgICBpZiBqIG5vdCBpbiB2aXNpdGVkOgogICAgICAgICAgICAgICAgICAgICAgICBwYXJlbnRzW2pdID0gaQogICAgICAgICAgICAgICAgICAgICAgICBxdWV1ZS5hcHBlbmQoaikKICAgICAgICAgICAgYXNzZXJ0IGxlbihvcmRlcikgPT0gbGVuKAogICAgICAgICAgICAgICAgcGFyZW50cwogICAgICAgICAgICApLCAiTm90IGFsbCBtYXN0ZXJzIGFyZSByZWFjaGFibGU7IHJlcG9ydCBhbiBpc3N1ZSIKCiAgICAgICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgICAgICBwYXNzCgogICAgICAgIGxvZy5pbmZvKCJQYXJlbnRzOiAlcyIsIHBhcmVudHMpCiAgICAgICAgbG9nLmluZm8oIk9yZGVyOiAlcyIsIG9yZGVyKQogICAgcmV0dXJuIHBhcmVudHMsIG9yZGVyCg==
+from fontTools.ttLib.ttGlyphSet import LerpGlyphSet
+from fontTools.pens.basePen import AbstractPen, BasePen, DecomposingPen
+from fontTools.pens.pointPen import AbstractPointPen, SegmentToPointPen
+from fontTools.pens.recordingPen import RecordingPen, DecomposingRecordingPen
+from fontTools.misc.transform import Transform
+from collections import defaultdict, deque
+from math import sqrt, copysign, atan2, pi
+import itertools
+
+import logging
+
+log = logging.getLogger("fontTools.varLib.interpolatable")
+
+
+class InterpolatableProblem:
+    NOTHING = "nothing"
+    MISSING = "missing"
+    OPEN_PATH = "open_path"
+    PATH_COUNT = "path_count"
+    NODE_COUNT = "node_count"
+    NODE_INCOMPATIBILITY = "node_incompatibility"
+    CONTOUR_ORDER = "contour_order"
+    WRONG_START_POINT = "wrong_start_point"
+    KINK = "kink"
+    UNDERWEIGHT = "underweight"
+    OVERWEIGHT = "overweight"
+
+    severity = {
+        MISSING: 1,
+        OPEN_PATH: 2,
+        PATH_COUNT: 3,
+        NODE_COUNT: 4,
+        NODE_INCOMPATIBILITY: 5,
+        CONTOUR_ORDER: 6,
+        WRONG_START_POINT: 7,
+        KINK: 8,
+        UNDERWEIGHT: 9,
+        OVERWEIGHT: 10,
+        NOTHING: 11,
+    }
+
+
+def sort_problems(problems):
+    """Sort problem groups by their most severe problem type."""
+    return dict(
+        sorted(
+            problems.items(),
+            key=lambda _: -min(
+                (
+                    (InterpolatableProblem.severity[p["type"]] + p.get("tolerance", 0))
+                    for p in _[1]
+                ),
+            ),
+            reverse=True,
+        )
+    )
+
+
+def rot_list(l, k):
+    """Rotate list by k items forward.  Ie. item at position 0 will be
+    at position k in returned list.  Negative k is allowed."""
+    return l[-k:] + l[:-k]
+
+
+class PerContourPen(BasePen):
+    def __init__(self, Pen, glyphset=None):
+        BasePen.__init__(self, glyphset)
+        self._Pen = Pen
+        self._pen = None
+        self.value = []
+
+    def _moveTo(self, p0):
+        self._newItem()
+        self._pen.moveTo(p0)
+
+    def _lineTo(self, p1):
+        self._pen.lineTo(p1)
+
+    def _qCurveToOne(self, p1, p2):
+        self._pen.qCurveTo(p1, p2)
+
+    def _curveToOne(self, p1, p2, p3):
+        self._pen.curveTo(p1, p2, p3)
+
+    def _closePath(self):
+        self._pen.closePath()
+        self._pen = None
+
+    def _endPath(self):
+        self._pen.endPath()
+        self._pen = None
+
+    def _newItem(self):
+        self._pen = pen = self._Pen()
+        self.value.append(pen)
+
+
+class PerContourOrComponentPen(PerContourPen):
+    def addComponent(self, glyphName, transformation):
+        self._newItem()
+        self.value[-1].addComponent(glyphName, transformation)
+
+
+class SimpleRecordingPointPen(AbstractPointPen):
+    def __init__(self):
+        self.value = []
+
+    def beginPath(self, identifier=None, **kwargs):
+        pass
+
+    def endPath(self) -> None:
+        pass
+
+    def addPoint(self, pt, segmentType=None):
+        self.value.append((pt, False if segmentType is None else True))
+
+
+def vdiff_hypot2(v0, v1):
+    s = 0
+    for x0, x1 in zip(v0, v1):
+        d = x1 - x0
+        s += d * d
+    return s
+
+
+def vdiff_hypot2_complex(v0, v1):
+    s = 0
+    for x0, x1 in zip(v0, v1):
+        d = x1 - x0
+        s += d.real * d.real + d.imag * d.imag
+        # This does the same but seems to be slower:
+        # s += (d * d.conjugate()).real
+    return s
+
+
+def matching_cost(G, matching):
+    return sum(G[i][j] for i, j in enumerate(matching))
+
+
+def min_cost_perfect_bipartite_matching_scipy(G):
+    n = len(G)
+    rows, cols = linear_sum_assignment(G)
+    assert (rows == list(range(n))).all()
+    # Convert numpy array and integer to Python types,
+    # to ensure that this is JSON-serializable.
+    cols = list(int(e) for e in cols)
+    return list(cols), matching_cost(G, cols)
+
+
+def min_cost_perfect_bipartite_matching_munkres(G):
+    n = len(G)
+    cols = [None] * n
+    for row, col in Munkres().compute(G):
+        cols[row] = col
+    return cols, matching_cost(G, cols)
+
+
+def min_cost_perfect_bipartite_matching_bruteforce(G):
+    n = len(G)
+
+    if n > 6:
+        raise Exception("Install Python module 'munkres' or 'scipy >= 0.17.0'")
+
+    # Otherwise just brute-force
+    permutations = itertools.permutations(range(n))
+    best = list(next(permutations))
+    best_cost = matching_cost(G, best)
+    for p in permutations:
+        cost = matching_cost(G, p)
+        if cost < best_cost:
+            best, best_cost = list(p), cost
+    return best, best_cost
+
+
+# Prefer `scipy.optimize.linear_sum_assignment` for performance.
+# `Munkres` is also supported as a fallback for minimalistic systems
+# where installing SciPy is not feasible.
+try:
+    from scipy.optimize import linear_sum_assignment
+
+    min_cost_perfect_bipartite_matching = min_cost_perfect_bipartite_matching_scipy
+except ImportError:
+    try:
+        from munkres import Munkres
+
+        min_cost_perfect_bipartite_matching = (
+            min_cost_perfect_bipartite_matching_munkres
+        )
+    except ImportError:
+        min_cost_perfect_bipartite_matching = (
+            min_cost_perfect_bipartite_matching_bruteforce
+        )
+
+
+def contour_vector_from_stats(stats):
+    # Don't change the order of items here.
+    # It's okay to add to the end, but otherwise, other
+    # code depends on it. Search for "covariance".
+    size = sqrt(abs(stats.area))
+    return (
+        copysign((size), stats.area),
+        stats.meanX,
+        stats.meanY,
+        stats.stddevX * 2,
+        stats.stddevY * 2,
+        stats.correlation * size,
+    )
+
+
+def matching_for_vectors(m0, m1):
+    n = len(m0)
+
+    costs = [[vdiff_hypot2(v0, v1) for v1 in m1] for v0 in m0]
+    (
+        matching,
+        matching_cost,
+    ) = min_cost_perfect_bipartite_matching(costs)
+    identity_cost = sum(costs[i][i] for i in range(n))
+    return matching, matching_cost, identity_cost
+
+
+def points_characteristic_bits(points):
+    bits = 0
+    for pt, b in reversed(points):
+        bits = (bits << 1) | b
+    return bits
+
+
+_NUM_ITEMS_PER_POINTS_COMPLEX_VECTOR = 4
+
+
+def points_complex_vector(points):
+    vector = []
+    if not points:
+        return vector
+    points = [complex(*pt) for pt, _ in points]
+    n = len(points)
+    assert _NUM_ITEMS_PER_POINTS_COMPLEX_VECTOR == 4
+    points.extend(points[: _NUM_ITEMS_PER_POINTS_COMPLEX_VECTOR - 1])
+    while len(points) < _NUM_ITEMS_PER_POINTS_COMPLEX_VECTOR:
+        points.extend(points[: _NUM_ITEMS_PER_POINTS_COMPLEX_VECTOR - 1])
+    for i in range(n):
+        # The weights are magic numbers.
+
+        # The point itself
+        p0 = points[i]
+        vector.append(p0)
+
+        # The vector to the next point
+        p1 = points[i + 1]
+        d0 = p1 - p0
+        vector.append(d0 * 3)
+
+        # The turn vector
+        p2 = points[i + 2]
+        d1 = p2 - p1
+        vector.append(d1 - d0)
+
+        # The angle to the next point, as a cross product;
+        # Square root of, to match dimentionality of distance.
+        cross = d0.real * d1.imag - d0.imag * d1.real
+        cross = copysign(sqrt(abs(cross)), cross)
+        vector.append(cross * 4)
+
+    return vector
+
+
+def add_isomorphisms(points, isomorphisms, reverse):
+    reference_bits = points_characteristic_bits(points)
+    n = len(points)
+
+    # if points[0][0] == points[-1][0]:
+    #   abort
+
+    if reverse:
+        points = points[::-1]
+        bits = points_characteristic_bits(points)
+    else:
+        bits = reference_bits
+
+    vector = points_complex_vector(points)
+
+    assert len(vector) % n == 0
+    mult = len(vector) // n
+    mask = (1 << n) - 1
+
+    for i in range(n):
+        b = ((bits << (n - i)) & mask) | (bits >> i)
+        if b == reference_bits:
+            isomorphisms.append(
+                (rot_list(vector, -i * mult), n - 1 - i if reverse else i, reverse)
+            )
+
+
+def find_parents_and_order(glyphsets, locations, *, discrete_axes=set()):
+    parents = [None] + list(range(len(glyphsets) - 1))
+    order = list(range(len(glyphsets)))
+    if locations:
+        # Order base master first
+        bases = [
+            i
+            for i, l in enumerate(locations)
+            if all(v == 0 for k, v in l.items() if k not in discrete_axes)
+        ]
+        if bases:
+            log.info("Found %s base masters: %s", len(bases), bases)
+        else:
+            log.warning("No base master location found")
+
+        # Form a minimum spanning tree of the locations
+        try:
+            from scipy.sparse.csgraph import minimum_spanning_tree
+
+            graph = [[0] * len(locations) for _ in range(len(locations))]
+            axes = set()
+            for l in locations:
+                axes.update(l.keys())
+            axes = sorted(axes)
+            vectors = [tuple(l.get(k, 0) for k in axes) for l in locations]
+            for i, j in itertools.combinations(range(len(locations)), 2):
+                i_discrete_location = {
+                    k: v for k, v in zip(axes, vectors[i]) if k in discrete_axes
+                }
+                j_discrete_location = {
+                    k: v for k, v in zip(axes, vectors[j]) if k in discrete_axes
+                }
+                if i_discrete_location != j_discrete_location:
+                    continue
+                graph[i][j] = vdiff_hypot2(vectors[i], vectors[j])
+
+            tree = minimum_spanning_tree(graph, overwrite=True)
+            rows, cols = tree.nonzero()
+            graph = defaultdict(set)
+            for row, col in zip(rows, cols):
+                # Keep master indices JSON-serializable, like the non-SciPy path.
+                row, col = int(row), int(col)
+                graph[row].add(col)
+                graph[col].add(row)
+
+            # Traverse graph from the base and assign parents
+            parents = [None] * len(locations)
+            order = []
+            visited = set()
+            queue = deque(bases)
+            while queue:
+                i = queue.popleft()
+                visited.add(i)
+                order.append(i)
+                for j in sorted(graph[i]):
+                    if j not in visited:
+                        parents[j] = i
+                        queue.append(j)
+            assert len(order) == len(
+                parents
+            ), "Not all masters are reachable; report an issue"
+
+        except ImportError:
+            pass
+
+        log.info("Parents: %s", parents)
+        log.info("Order: %s", order)
+    return parents, order

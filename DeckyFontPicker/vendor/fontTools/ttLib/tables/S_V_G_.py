@@ -1,1 +1,222 @@
-IiIiQ29tcGlsZXMvZGVjb21waWxlcyBTVkcgdGFibGUuCgpodHRwczovL2RvY3MubWljcm9zb2Z0LmNvbS9lbi11cy90eXBvZ3JhcGh5L29wZW50eXBlL3NwZWMvc3ZnCgpUaGUgWE1MIGZvcm1hdCBpczoKCi4uIGNvZGUtYmxvY2s6OiB4bWwKCiAgICAgICAgPFNWRz4KICAgICAgICAgICAgICAgIDxzdmdEb2MgZW5kR2x5cGhJRD0iMSIgc3RhcnRHbHlwaElEPSIxIj4KICAgICAgICAgICAgICAgICAgICAgICAgPCFbQ0RBVEFbIDxjb21wbGV0ZSBTVkcgZG9jPiBdXQogICAgICAgICAgICAgICAgPC9zdmdEb2M+CiAgICAgICAgLi4uCiAgICAgICAgICAgICAgICA8c3ZnRG9jIGVuZEdseXBoSUQ9Im4iIHN0YXJ0R2x5cGhJRD0ibSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhW0NEQVRBWyA8Y29tcGxldGUgU1ZHIGRvYz4gXV0KICAgICAgICAgICAgICAgIDwvc3ZnRG9jPgogICAgICAgIDwvU1ZHPgoiIiIKCmZyb20gZm9udFRvb2xzLm1pc2MudGV4dFRvb2xzIGltcG9ydCBieXRlc2pvaW4sIHNhZmVFdmFsLCBzdHJqb2luLCB0b2J5dGVzLCB0b3N0cgpmcm9tIGZvbnRUb29scy5taXNjIGltcG9ydCBzc3RydWN0CmZyb20gLiBpbXBvcnQgRGVmYXVsdFRhYmxlCmZyb20gY29sbGVjdGlvbnMuYWJjIGltcG9ydCBTZXF1ZW5jZQpmcm9tIGRhdGFjbGFzc2VzIGltcG9ydCBkYXRhY2xhc3MsIGFzdHVwbGUKZnJvbSBpbyBpbXBvcnQgQnl0ZXNJTwppbXBvcnQgc3RydWN0CmltcG9ydCBsb2dnaW5nCgpsb2cgPSBsb2dnaW5nLmdldExvZ2dlcihfX25hbWVfXykKCgpTVkdfZm9ybWF0XzAgPSAiIiIKCT4gICAjIGJpZyBlbmRpYW4KCXZlcnNpb246ICAgICAgICAgICAgICAgICAgSAoJb2Zmc2V0VG9TVkdEb2NJbmRleDogICAgICBMCglyZXNlcnZlZDogICAgICAgICAgICAgICAgIEwKIiIiCgpTVkdfZm9ybWF0XzBTaXplID0gc3N0cnVjdC5jYWxjc2l6ZShTVkdfZm9ybWF0XzApCgpkb2NfaW5kZXhfZW50cnlfZm9ybWF0XzAgPSAiIiIKCT4gICAjIGJpZyBlbmRpYW4KCXN0YXJ0R2x5cGhJRDogICAgICAgICAgICAgSAoJZW5kR2x5cGhJRDogICAgICAgICAgICAgICBICglzdmdEb2NPZmZzZXQ6ICAgICAgICAgICAgIEwKCXN2Z0RvY0xlbmd0aDogICAgICAgICAgICAgTAoiIiIKCmRvY19pbmRleF9lbnRyeV9mb3JtYXRfMFNpemUgPSBzc3RydWN0LmNhbGNzaXplKGRvY19pbmRleF9lbnRyeV9mb3JtYXRfMCkKCgpjbGFzcyB0YWJsZV9TX1ZfR18oRGVmYXVsdFRhYmxlLkRlZmF1bHRUYWJsZSk6CiAgICAiIiJTY2FsYWJsZSBWZWN0b3IgR3JhcGhpY3MgdGFibGUKCiAgICBUaGUgYGBTVkdgYCB0YWJsZSBjb250YWlucyByZXByZXNlbnRhdGlvbnMgZm9yIGdseXBocyBpbiB0aGUgU1ZHCiAgICBpbWFnZSBmb3JtYXQuCgogICAgU2VlIGFsc28gaHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3R5cG9ncmFwaHkvb3BlbnR5cGUvc3BlYy9zdGF0CiAgICAiIiIKCiAgICBkZWYgZGVjb21waWxlKHNlbGYsIGRhdGEsIHR0Rm9udCk6CiAgICAgICAgc2VsZi5kb2NMaXN0ID0gW10KICAgICAgICAjIFZlcnNpb24gMCBpcyB0aGUgc3RhbmRhcmRpemVkIHZlcnNpb24gb2YgdGhlIHRhYmxlOyBhbmQgY3VycmVudC4KICAgICAgICAjIGh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vdHlwb2dyYXBoeS9vdHNwZWMvc3ZnLmh0bQogICAgICAgIHNzdHJ1Y3QudW5wYWNrKFNWR19mb3JtYXRfMCwgZGF0YVs6U1ZHX2Zvcm1hdF8wU2l6ZV0sIHNlbGYpCiAgICAgICAgaWYgc2VsZi52ZXJzaW9uICE9IDA6CiAgICAgICAgICAgIGxvZy53YXJuaW5nKAogICAgICAgICAgICAgICAgIlVua25vd24gU1ZHIHRhYmxlIHZlcnNpb24gJyVzJy4gRGVjb21waWxpbmcgYXMgdmVyc2lvbiAwLiIsCiAgICAgICAgICAgICAgICBzZWxmLnZlcnNpb24sCiAgICAgICAgICAgICkKICAgICAgICAjIHJlYWQgaW4gU1ZHIERvY3VtZW50cyBJbmRleAogICAgICAgICMgZGF0YSBzdGFydHMgd2l0aCB0aGUgZmlyc3QgZW50cnkgb2YgdGhlIGVudHJ5IGxpc3QuCiAgICAgICAgcG9zID0gc3ViVGFibGVTdGFydCA9IHNlbGYub2Zmc2V0VG9TVkdEb2NJbmRleAogICAgICAgIHNlbGYubnVtRW50cmllcyA9IHN0cnVjdC51bnBhY2soIj5IIiwgZGF0YVtwb3MgOiBwb3MgKyAyXSlbMF0KICAgICAgICBwb3MgKz0gMgogICAgICAgIGlmIHNlbGYubnVtRW50cmllcyA+IDA6CiAgICAgICAgICAgIGRhdGEyID0gZGF0YVtwb3M6XQogICAgICAgICAgICBlbnRyaWVzID0gW10KICAgICAgICAgICAgZm9yIGkgaW4gcmFuZ2Uoc2VsZi5udW1FbnRyaWVzKToKICAgICAgICAgICAgICAgIHJlY29yZF9kYXRhID0gZGF0YTJbCiAgICAgICAgICAgICAgICAgICAgaQogICAgICAgICAgICAgICAgICAgICogZG9jX2luZGV4X2VudHJ5X2Zvcm1hdF8wU2l6ZSA6IChpICsgMSkKICAgICAgICAgICAgICAgICAgICAqIGRvY19pbmRleF9lbnRyeV9mb3JtYXRfMFNpemUKICAgICAgICAgICAgICAgIF0KICAgICAgICAgICAgICAgIGRvY0luZGV4RW50cnkgPSBzc3RydWN0LnVucGFjaygKICAgICAgICAgICAgICAgICAgICBkb2NfaW5kZXhfZW50cnlfZm9ybWF0XzAsIHJlY29yZF9kYXRhLCBEb2N1bWVudEluZGV4RW50cnkoKQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgZW50cmllcy5hcHBlbmQoZG9jSW5kZXhFbnRyeSkKCiAgICAgICAgICAgIGZvciBlbnRyeSBpbiBlbnRyaWVzOgogICAgICAgICAgICAgICAgc3RhcnQgPSBlbnRyeS5zdmdEb2NPZmZzZXQgKyBzdWJUYWJsZVN0YXJ0CiAgICAgICAgICAgICAgICBlbmQgPSBzdGFydCArIGVudHJ5LnN2Z0RvY0xlbmd0aAogICAgICAgICAgICAgICAgZG9jID0gZGF0YVtzdGFydDplbmRdCiAgICAgICAgICAgICAgICBjb21wcmVzc2VkID0gRmFsc2UKICAgICAgICAgICAgICAgIGlmIGRvYy5zdGFydHN3aXRoKGIiXHgxZlx4OGIiKToKICAgICAgICAgICAgICAgICAgICBpbXBvcnQgZ3ppcAoKICAgICAgICAgICAgICAgICAgICBieXRlc0lPID0gQnl0ZXNJTyhkb2MpCiAgICAgICAgICAgICAgICAgICAgd2l0aCBnemlwLkd6aXBGaWxlKE5vbmUsICJyIiwgZmlsZW9iaj1ieXRlc0lPKSBhcyBndW56aXBwZXI6CiAgICAgICAgICAgICAgICAgICAgICAgIGRvYyA9IGd1bnppcHBlci5yZWFkKCkKICAgICAgICAgICAgICAgICAgICBkZWwgYnl0ZXNJTwogICAgICAgICAgICAgICAgICAgIGNvbXByZXNzZWQgPSBUcnVlCiAgICAgICAgICAgICAgICBkb2MgPSB0b3N0cihkb2MsICJ1dGZfOCIpCiAgICAgICAgICAgICAgICBzZWxmLmRvY0xpc3QuYXBwZW5kKAogICAgICAgICAgICAgICAgICAgIFNWR0RvY3VtZW50KGRvYywgZW50cnkuc3RhcnRHbHlwaElELCBlbnRyeS5lbmRHbHlwaElELCBjb21wcmVzc2VkKQogICAgICAgICAgICAgICAgKQoKICAgIGRlZiBjb21waWxlKHNlbGYsIHR0Rm9udCk6CiAgICAgICAgdmVyc2lvbiA9IDAKICAgICAgICBvZmZzZXRUb1NWR0RvY0luZGV4ID0gKAogICAgICAgICAgICBTVkdfZm9ybWF0XzBTaXplICAjIEkgc3RhcnQgdGhlIFNWR0RvY0luZGV4IHJpZ2h0IGFmdGVyIHRoZSBoZWFkZXIuCiAgICAgICAgKQogICAgICAgICMgZ2V0IFNHVkRvYyBpbmZvLgogICAgICAgIGRvY0xpc3QgPSBbXQogICAgICAgIGVudHJ5TGlzdCA9IFtdCiAgICAgICAgbnVtRW50cmllcyA9IGxlbihzZWxmLmRvY0xpc3QpCiAgICAgICAgZGF0dW0gPSBzdHJ1Y3QucGFjaygiPkgiLCBudW1FbnRyaWVzKQogICAgICAgIGVudHJ5TGlzdC5hcHBlbmQoZGF0dW0pCiAgICAgICAgY3VyT2Zmc2V0ID0gbGVuKGRhdHVtKSArIGRvY19pbmRleF9lbnRyeV9mb3JtYXRfMFNpemUgKiBudW1FbnRyaWVzCiAgICAgICAgc2VlbkRvY3MgPSB7fQogICAgICAgIGFsbENvbXByZXNzZWQgPSBnZXRhdHRyKHNlbGYsICJjb21wcmVzc2VkIiwgRmFsc2UpCiAgICAgICAgZm9yIGksIGRvYyBpbiBlbnVtZXJhdGUoc2VsZi5kb2NMaXN0KToKICAgICAgICAgICAgaWYgaXNpbnN0YW5jZShkb2MsIChsaXN0LCB0dXBsZSkpOgogICAgICAgICAgICAgICAgZG9jID0gU1ZHRG9jdW1lbnQoKmRvYykKICAgICAgICAgICAgICAgIHNlbGYuZG9jTGlzdFtpXSA9IGRvYwogICAgICAgICAgICBkb2NCeXRlcyA9IHRvYnl0ZXMoZG9jLmRhdGEsIGVuY29kaW5nPSJ1dGZfOCIpCiAgICAgICAgICAgIGlmIChhbGxDb21wcmVzc2VkIG9yIGRvYy5jb21wcmVzc2VkKSBhbmQgbm90IGRvY0J5dGVzLnN0YXJ0c3dpdGgoCiAgICAgICAgICAgICAgICBiIlx4MWZceDhiIgogICAgICAgICAgICApOgogICAgICAgICAgICAgICAgaW1wb3J0IGd6aXAKCiAgICAgICAgICAgICAgICBieXRlc0lPID0gQnl0ZXNJTygpCiAgICAgICAgICAgICAgICAjIG10aW1lPTAgc3RyaXBzIHRoZSB1c2VsZXNzIHRpbWVzdGFtcCBhbmQgbWFrZXMgZ3ppcCBvdXRwdXQgcmVwcm9kdWNpYmxlOwogICAgICAgICAgICAgICAgIyBlcXVpdmFsZW50IHRvIGBnemlwIC1uYAogICAgICAgICAgICAgICAgd2l0aCBnemlwLkd6aXBGaWxlKE5vbmUsICJ3IiwgZmlsZW9iaj1ieXRlc0lPLCBtdGltZT0wKSBhcyBnemlwcGVyOgogICAgICAgICAgICAgICAgICAgIGd6aXBwZXIud3JpdGUoZG9jQnl0ZXMpCiAgICAgICAgICAgICAgICBnemlwcGVkID0gYnl0ZXNJTy5nZXR2YWx1ZSgpCiAgICAgICAgICAgICAgICBpZiBsZW4oZ3ppcHBlZCkgPCBsZW4oZG9jQnl0ZXMpOgogICAgICAgICAgICAgICAgICAgIGRvY0J5dGVzID0gZ3ppcHBlZAogICAgICAgICAgICAgICAgZGVsIGd6aXBwZWQsIGJ5dGVzSU8KICAgICAgICAgICAgZG9jTGVuZ3RoID0gbGVuKGRvY0J5dGVzKQogICAgICAgICAgICBpZiBkb2NCeXRlcyBpbiBzZWVuRG9jczoKICAgICAgICAgICAgICAgIGRvY09mZnNldCA9IHNlZW5Eb2NzW2RvY0J5dGVzXQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgZG9jT2Zmc2V0ID0gY3VyT2Zmc2V0CiAgICAgICAgICAgICAgICBjdXJPZmZzZXQgKz0gZG9jTGVuZ3RoCiAgICAgICAgICAgICAgICBzZWVuRG9jc1tkb2NCeXRlc10gPSBkb2NPZmZzZXQKICAgICAgICAgICAgICAgIGRvY0xpc3QuYXBwZW5kKGRvY0J5dGVzKQogICAgICAgICAgICBlbnRyeSA9IHN0cnVjdC5wYWNrKAogICAgICAgICAgICAgICAgIj5ISExMIiwgZG9jLnN0YXJ0R2x5cGhJRCwgZG9jLmVuZEdseXBoSUQsIGRvY09mZnNldCwgZG9jTGVuZ3RoCiAgICAgICAgICAgICkKICAgICAgICAgICAgZW50cnlMaXN0LmFwcGVuZChlbnRyeSkKICAgICAgICBlbnRyeUxpc3QuZXh0ZW5kKGRvY0xpc3QpCiAgICAgICAgc3ZnRG9jRGF0YSA9IGJ5dGVzam9pbihlbnRyeUxpc3QpCgogICAgICAgIHJlc2VydmVkID0gMAogICAgICAgIGhlYWRlciA9IHN0cnVjdC5wYWNrKCI+SExMIiwgdmVyc2lvbiwgb2Zmc2V0VG9TVkdEb2NJbmRleCwgcmVzZXJ2ZWQpCiAgICAgICAgZGF0YSA9IFtoZWFkZXIsIHN2Z0RvY0RhdGFdCiAgICAgICAgZGF0YSA9IGJ5dGVzam9pbihkYXRhKQogICAgICAgIHJldHVybiBkYXRhCgogICAgZGVmIHRvWE1MKHNlbGYsIHdyaXRlciwgdHRGb250KToKICAgICAgICBmb3IgaSwgZG9jIGluIGVudW1lcmF0ZShzZWxmLmRvY0xpc3QpOgogICAgICAgICAgICBpZiBpc2luc3RhbmNlKGRvYywgKGxpc3QsIHR1cGxlKSk6CiAgICAgICAgICAgICAgICBkb2MgPSBTVkdEb2N1bWVudCgqZG9jKQogICAgICAgICAgICAgICAgc2VsZi5kb2NMaXN0W2ldID0gZG9jCiAgICAgICAgICAgIGF0dHJzID0geyJzdGFydEdseXBoSUQiOiBkb2Muc3RhcnRHbHlwaElELCAiZW5kR2x5cGhJRCI6IGRvYy5lbmRHbHlwaElEfQogICAgICAgICAgICBpZiBkb2MuY29tcHJlc3NlZDoKICAgICAgICAgICAgICAgIGF0dHJzWyJjb21wcmVzc2VkIl0gPSAxCiAgICAgICAgICAgIHdyaXRlci5iZWdpbnRhZygic3ZnRG9jIiwgKiphdHRycykKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIud3JpdGVjZGF0YShkb2MuZGF0YSkKICAgICAgICAgICAgd3JpdGVyLm5ld2xpbmUoKQogICAgICAgICAgICB3cml0ZXIuZW5kdGFnKCJzdmdEb2MiKQogICAgICAgICAgICB3cml0ZXIubmV3bGluZSgpCgogICAgZGVmIGZyb21YTUwoc2VsZiwgbmFtZSwgYXR0cnMsIGNvbnRlbnQsIHR0Rm9udCk6CiAgICAgICAgaWYgbmFtZSA9PSAic3ZnRG9jIjoKICAgICAgICAgICAgaWYgbm90IGhhc2F0dHIoc2VsZiwgImRvY0xpc3QiKToKICAgICAgICAgICAgICAgIHNlbGYuZG9jTGlzdCA9IFtdCiAgICAgICAgICAgIGRvYyA9IHN0cmpvaW4oY29udGVudCkKICAgICAgICAgICAgZG9jID0gZG9jLnN0cmlwKCkKICAgICAgICAgICAgc3RhcnRHSUQgPSBpbnQoYXR0cnNbInN0YXJ0R2x5cGhJRCJdKQogICAgICAgICAgICBlbmRHSUQgPSBpbnQoYXR0cnNbImVuZEdseXBoSUQiXSkKICAgICAgICAgICAgY29tcHJlc3NlZCA9IGJvb2woc2FmZUV2YWwoYXR0cnMuZ2V0KCJjb21wcmVzc2VkIiwgIjAiKSkpCiAgICAgICAgICAgIHNlbGYuZG9jTGlzdC5hcHBlbmQoU1ZHRG9jdW1lbnQoZG9jLCBzdGFydEdJRCwgZW5kR0lELCBjb21wcmVzc2VkKSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBsb2cud2FybmluZygiVW5rbm93biAlcyAlcyIsIG5hbWUsIGNvbnRlbnQpCgoKY2xhc3MgRG9jdW1lbnRJbmRleEVudHJ5KG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5zdGFydEdseXBoSUQgPSBOb25lICAjIFVTSE9SVAogICAgICAgIHNlbGYuZW5kR2x5cGhJRCA9IE5vbmUgICMgVVNIT1JUCiAgICAgICAgc2VsZi5zdmdEb2NPZmZzZXQgPSBOb25lICAjIFVMT05HCiAgICAgICAgc2VsZi5zdmdEb2NMZW5ndGggPSBOb25lICAjIFVMT05HCgogICAgZGVmIF9fcmVwcl9fKHNlbGYpOgogICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICJzdGFydEdseXBoSUQ6ICVzLCBlbmRHbHlwaElEOiAlcywgc3ZnRG9jT2Zmc2V0OiAlcywgc3ZnRG9jTGVuZ3RoOiAlcyIKICAgICAgICAgICAgJSAoc2VsZi5zdGFydEdseXBoSUQsIHNlbGYuZW5kR2x5cGhJRCwgc2VsZi5zdmdEb2NPZmZzZXQsIHNlbGYuc3ZnRG9jTGVuZ3RoKQogICAgICAgICkKCgpAZGF0YWNsYXNzCmNsYXNzIFNWR0RvY3VtZW50KFNlcXVlbmNlKToKICAgIGRhdGE6IHN0cgogICAgc3RhcnRHbHlwaElEOiBpbnQKICAgIGVuZEdseXBoSUQ6IGludAogICAgY29tcHJlc3NlZDogYm9vbCA9IEZhbHNlCgogICAgIyBQcmV2aW91c2x5LCB0aGUgU1ZHIHRhYmxlJ3MgZG9jTGlzdCBhdHRyaWJ1dGUgY29udGFpbmVkIGEgbGlzdHMgb2YgMyBpdGVtczoKICAgICMgW2RvYywgc3RhcnRHbHlwaElELCBlbmRHbHlwaElEXTsgbGF0ZXIsIHdlIGFkZGVkIGEgYGNvbXByZXNzZWRgIGF0dHJpYnV0ZS4KICAgICMgRm9yIGJhY2t3YXJkIGNvbXBhdGliaWxpdHkgd2l0aCBjb2RlIHRoYXQgZGVwZW5kcyBvZiB0aGVtIGJlaW5nIHNlcXVlbmNlcyBvZgogICAgIyBmaXhlZCBsZW5ndGg9Mywgd2Ugc3ViY2xhc3MgdGhlIFNlcXVlbmNlIGFic3RyYWN0IGJhc2UgY2xhc3MgYW5kIHByZXRlbmQgb25seQogICAgIyB0aGUgZmlyc3QgdGhyZWUgaXRlbXMgYXJlIHByZXNlbnQuICdjb21wcmVzc2VkJyBpcyBvbmx5IGFjY2Vzc2libGUgdmlhIG5hbWVkCiAgICAjIGF0dHJpYnV0ZSBsb29rdXAgbGlrZSByZWd1bGFyIGRhdGFjbGFzc2VzOiBpLmUuIGBkb2MuY29tcHJlc3NlZGAsIG5vdCBgZG9jWzNdYAogICAgZGVmIF9fZ2V0aXRlbV9fKHNlbGYsIGluZGV4KToKICAgICAgICByZXR1cm4gYXN0dXBsZShzZWxmKVs6M11baW5kZXhdCgogICAgZGVmIF9fbGVuX18oc2VsZik6CiAgICAgICAgcmV0dXJuIDMK
+"""Compiles/decompiles SVG table.
+
+https://docs.microsoft.com/en-us/typography/opentype/spec/svg
+
+The XML format is:
+
+.. code-block:: xml
+
+        <SVG>
+                <svgDoc endGlyphID="1" startGlyphID="1">
+                        <![CDATA[ <complete SVG doc> ]]
+                </svgDoc>
+        ...
+                <svgDoc endGlyphID="n" startGlyphID="m">
+                        <![CDATA[ <complete SVG doc> ]]
+                </svgDoc>
+        </SVG>
+"""
+
+from fontTools.misc.textTools import bytesjoin, safeEval, strjoin, tobytes, tostr
+from fontTools.misc import sstruct
+from . import DefaultTable
+from collections.abc import Sequence
+from dataclasses import dataclass, astuple
+from io import BytesIO
+import struct
+import logging
+
+log = logging.getLogger(__name__)
+
+
+SVG_format_0 = """
+	>   # big endian
+	version:                  H
+	offsetToSVGDocIndex:      L
+	reserved:                 L
+"""
+
+SVG_format_0Size = sstruct.calcsize(SVG_format_0)
+
+doc_index_entry_format_0 = """
+	>   # big endian
+	startGlyphID:             H
+	endGlyphID:               H
+	svgDocOffset:             L
+	svgDocLength:             L
+"""
+
+doc_index_entry_format_0Size = sstruct.calcsize(doc_index_entry_format_0)
+
+
+class table_S_V_G_(DefaultTable.DefaultTable):
+    """Scalable Vector Graphics table
+
+    The ``SVG`` table contains representations for glyphs in the SVG
+    image format.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/stat
+    """
+
+    def decompile(self, data, ttFont):
+        self.docList = []
+        # Version 0 is the standardized version of the table; and current.
+        # https://www.microsoft.com/typography/otspec/svg.htm
+        sstruct.unpack(SVG_format_0, data[:SVG_format_0Size], self)
+        if self.version != 0:
+            log.warning(
+                "Unknown SVG table version '%s'. Decompiling as version 0.",
+                self.version,
+            )
+        # read in SVG Documents Index
+        # data starts with the first entry of the entry list.
+        pos = subTableStart = self.offsetToSVGDocIndex
+        self.numEntries = struct.unpack(">H", data[pos : pos + 2])[0]
+        pos += 2
+        if self.numEntries > 0:
+            data2 = data[pos:]
+            entries = []
+            for i in range(self.numEntries):
+                record_data = data2[
+                    i
+                    * doc_index_entry_format_0Size : (i + 1)
+                    * doc_index_entry_format_0Size
+                ]
+                docIndexEntry = sstruct.unpack(
+                    doc_index_entry_format_0, record_data, DocumentIndexEntry()
+                )
+                entries.append(docIndexEntry)
+
+            for entry in entries:
+                start = entry.svgDocOffset + subTableStart
+                end = start + entry.svgDocLength
+                doc = data[start:end]
+                compressed = False
+                if doc.startswith(b"\x1f\x8b"):
+                    import gzip
+
+                    bytesIO = BytesIO(doc)
+                    with gzip.GzipFile(None, "r", fileobj=bytesIO) as gunzipper:
+                        doc = gunzipper.read()
+                    del bytesIO
+                    compressed = True
+                doc = tostr(doc, "utf_8")
+                self.docList.append(
+                    SVGDocument(doc, entry.startGlyphID, entry.endGlyphID, compressed)
+                )
+
+    def compile(self, ttFont):
+        version = 0
+        offsetToSVGDocIndex = (
+            SVG_format_0Size  # I start the SVGDocIndex right after the header.
+        )
+        # get SGVDoc info.
+        docList = []
+        entryList = []
+        numEntries = len(self.docList)
+        datum = struct.pack(">H", numEntries)
+        entryList.append(datum)
+        curOffset = len(datum) + doc_index_entry_format_0Size * numEntries
+        seenDocs = {}
+        allCompressed = getattr(self, "compressed", False)
+        for i, doc in enumerate(self.docList):
+            if isinstance(doc, (list, tuple)):
+                doc = SVGDocument(*doc)
+                self.docList[i] = doc
+            docBytes = tobytes(doc.data, encoding="utf_8")
+            if (allCompressed or doc.compressed) and not docBytes.startswith(
+                b"\x1f\x8b"
+            ):
+                import gzip
+
+                bytesIO = BytesIO()
+                # mtime=0 strips the useless timestamp and makes gzip output reproducible;
+                # equivalent to `gzip -n`
+                with gzip.GzipFile(None, "w", fileobj=bytesIO, mtime=0) as gzipper:
+                    gzipper.write(docBytes)
+                gzipped = bytesIO.getvalue()
+                if len(gzipped) < len(docBytes):
+                    docBytes = gzipped
+                del gzipped, bytesIO
+            docLength = len(docBytes)
+            if docBytes in seenDocs:
+                docOffset = seenDocs[docBytes]
+            else:
+                docOffset = curOffset
+                curOffset += docLength
+                seenDocs[docBytes] = docOffset
+                docList.append(docBytes)
+            entry = struct.pack(
+                ">HHLL", doc.startGlyphID, doc.endGlyphID, docOffset, docLength
+            )
+            entryList.append(entry)
+        entryList.extend(docList)
+        svgDocData = bytesjoin(entryList)
+
+        reserved = 0
+        header = struct.pack(">HLL", version, offsetToSVGDocIndex, reserved)
+        data = [header, svgDocData]
+        data = bytesjoin(data)
+        return data
+
+    def toXML(self, writer, ttFont):
+        for i, doc in enumerate(self.docList):
+            if isinstance(doc, (list, tuple)):
+                doc = SVGDocument(*doc)
+                self.docList[i] = doc
+            attrs = {"startGlyphID": doc.startGlyphID, "endGlyphID": doc.endGlyphID}
+            if doc.compressed:
+                attrs["compressed"] = 1
+            writer.begintag("svgDoc", **attrs)
+            writer.newline()
+            writer.writecdata(doc.data)
+            writer.newline()
+            writer.endtag("svgDoc")
+            writer.newline()
+
+    def fromXML(self, name, attrs, content, ttFont):
+        if name == "svgDoc":
+            if not hasattr(self, "docList"):
+                self.docList = []
+            doc = strjoin(content)
+            doc = doc.strip()
+            startGID = int(attrs["startGlyphID"])
+            endGID = int(attrs["endGlyphID"])
+            compressed = bool(safeEval(attrs.get("compressed", "0")))
+            self.docList.append(SVGDocument(doc, startGID, endGID, compressed))
+        else:
+            log.warning("Unknown %s %s", name, content)
+
+
+class DocumentIndexEntry(object):
+    def __init__(self):
+        self.startGlyphID = None  # USHORT
+        self.endGlyphID = None  # USHORT
+        self.svgDocOffset = None  # ULONG
+        self.svgDocLength = None  # ULONG
+
+    def __repr__(self):
+        return (
+            "startGlyphID: %s, endGlyphID: %s, svgDocOffset: %s, svgDocLength: %s"
+            % (self.startGlyphID, self.endGlyphID, self.svgDocOffset, self.svgDocLength)
+        )
+
+
+@dataclass
+class SVGDocument(Sequence):
+    data: str
+    startGlyphID: int
+    endGlyphID: int
+    compressed: bool = False
+
+    # Previously, the SVG table's docList attribute contained a lists of 3 items:
+    # [doc, startGlyphID, endGlyphID]; later, we added a `compressed` attribute.
+    # For backward compatibility with code that depends of them being sequences of
+    # fixed length=3, we subclass the Sequence abstract base class and pretend only
+    # the first three items are present. 'compressed' is only accessible via named
+    # attribute lookup like regular dataclasses: i.e. `doc.compressed`, not `doc[3]`
+    def __getitem__(self, index):
+        return astuple(self)[:3][index]
+
+    def __len__(self):
+        return 3

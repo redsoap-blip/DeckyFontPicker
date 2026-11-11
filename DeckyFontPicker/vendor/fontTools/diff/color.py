@@ -1,1 +1,44 @@
-ZnJvbSB0eXBpbmcgaW1wb3J0IERpY3QsIFRleHQKCmFuc2ljb2xvcnM6IERpY3RbVGV4dCwgVGV4dF0gPSB7CiAgICAiQkxBQ0siOiAiXDAzM1szMG0iLAogICAgIlJFRCI6ICJcMDMzWzMxbSIsCiAgICAiR1JFRU4iOiAiXDAzM1szMm0iLAogICAgIllFTExPVyI6ICJcMDMzWzMzbSIsCiAgICAiQkxVRSI6ICJcMDMzWzM0bSIsCiAgICAiTUFHRU5UQSI6ICJcMDMzWzM1bSIsCiAgICAiQ1lBTiI6ICJcMDMzWzM2bSIsCiAgICAiV0hJVEUiOiAiXDAzM1szN20iLAogICAgIkJPTEQiOiAiXDAzM1sxbSIsCiAgICAiUkVTRVQiOiAiXDAzM1swbSIsCn0KCmdyZWVuX3N0YXJ0OiBUZXh0ID0gYW5zaWNvbG9yc1siR1JFRU4iXQpyZWRfc3RhcnQ6IFRleHQgPSBhbnNpY29sb3JzWyJSRUQiXQpjeWFuX3N0YXJ0OiBUZXh0ID0gYW5zaWNvbG9yc1siQ1lBTiJdCnJlc2V0OiBUZXh0ID0gYW5zaWNvbG9yc1siUkVTRVQiXQoKCmRlZiBjb2xvcl91bmlmaWVkX2RpZmZfbGluZShsaW5lOiBUZXh0KSAtPiBUZXh0OgogICAgIiIiUmV0dXJucyBhbiBBTlNJIGVzY2FwZSBjb2RlIGNvbG9yZWQgc3RyaW5nIHdpdGggY29sb3IgYmFzZWQKICAgIG9uIHRoZSB1bmlmaWVkIGRpZmYgbGluZSB0eXBlLiIiIgogICAgaWYgbGluZVswOjJdID09ICIrICI6CiAgICAgICAgcmV0dXJuIGYie2dyZWVuX3N0YXJ0fXtsaW5lfXtyZXNldH0iCiAgICBlbGlmIGxpbmUgPT0gIitcbiI6CiAgICAgICAgIyBzb21lIGxpbmVzIGFyZSBmb3JtYXR0ZWQgYXMgaHlwaGVuIG9ubHkgd2l0aCBubyBvdGhlciBjaGFyYWN0ZXJzCiAgICAgICAgIyB0aGlzIGluZGljYXRlcyBhbiBhZGRlZCBlbXB0eSBsaW5lCiAgICAgICAgcmV0dXJuIGYie2dyZWVuX3N0YXJ0fXtsaW5lfXtyZXNldH0iCiAgICBlbGlmIGxpbmVbMDoyXSA9PSAiLSAiOgogICAgICAgIHJldHVybiBmIntyZWRfc3RhcnR9e2xpbmV9e3Jlc2V0fSIKICAgIGVsaWYgbGluZSA9PSAiLVxuIjoKICAgICAgICAjIHNvbWUgbGluZXMgYXJlIGZvcm1hdHRlZCBhcyBoeXBoZW4gb25seSB3aXRoIG5vIG90aGVyIGNoYXJhY3RlcnMKICAgICAgICAjIHRoaXMgaW5kaWNhdGVzIGEgZGVsZXRlZCBlbXB0eSBsaW5lCiAgICAgICAgcmV0dXJuIGYie3JlZF9zdGFydH17bGluZX17cmVzZXR9IgogICAgZWxpZiBsaW5lWzA6M10gPT0gIkBAICI6CiAgICAgICAgcmV0dXJuIGYie2N5YW5fc3RhcnR9e2xpbmV9e3Jlc2V0fSIKICAgIGVsaWYgbGluZVswOjRdID09ICItLS0gIjoKICAgICAgICByZXR1cm4gZiJ7cmVkX3N0YXJ0fXtsaW5lfXtyZXNldH0iCiAgICBlbGlmIGxpbmVbMDo0XSA9PSAiKysrICI6CiAgICAgICAgcmV0dXJuIGYie2dyZWVuX3N0YXJ0fXtsaW5lfXtyZXNldH0iCiAgICBlbHNlOgogICAgICAgIHJldHVybiBsaW5lCg==
+from typing import Dict, Text
+
+ansicolors: Dict[Text, Text] = {
+    "BLACK": "\033[30m",
+    "RED": "\033[31m",
+    "GREEN": "\033[32m",
+    "YELLOW": "\033[33m",
+    "BLUE": "\033[34m",
+    "MAGENTA": "\033[35m",
+    "CYAN": "\033[36m",
+    "WHITE": "\033[37m",
+    "BOLD": "\033[1m",
+    "RESET": "\033[0m",
+}
+
+green_start: Text = ansicolors["GREEN"]
+red_start: Text = ansicolors["RED"]
+cyan_start: Text = ansicolors["CYAN"]
+reset: Text = ansicolors["RESET"]
+
+
+def color_unified_diff_line(line: Text) -> Text:
+    """Returns an ANSI escape code colored string with color based
+    on the unified diff line type."""
+    if line[0:2] == "+ ":
+        return f"{green_start}{line}{reset}"
+    elif line == "+\n":
+        # some lines are formatted as hyphen only with no other characters
+        # this indicates an added empty line
+        return f"{green_start}{line}{reset}"
+    elif line[0:2] == "- ":
+        return f"{red_start}{line}{reset}"
+    elif line == "-\n":
+        # some lines are formatted as hyphen only with no other characters
+        # this indicates a deleted empty line
+        return f"{red_start}{line}{reset}"
+    elif line[0:3] == "@@ ":
+        return f"{cyan_start}{line}{reset}"
+    elif line[0:4] == "--- ":
+        return f"{red_start}{line}{reset}"
+    elif line[0:4] == "+++ ":
+        return f"{green_start}{line}{reset}"
+    else:
+        return line

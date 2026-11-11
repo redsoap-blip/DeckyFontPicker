@@ -1,1 +1,134 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwpmcm9tIGFiYyBpbXBvcnQgQUJDLCBhYnN0cmFjdG1ldGhvZAoKZnJvbSAuX2NvcHkgaW1wb3J0IGNvcHlfZGlyLCBjb3B5X2ZpbGUKZnJvbSAuX2Vycm9ycyBpbXBvcnQgKAogICAgRGVzdGluYXRpb25FeGlzdHMsCiAgICBEaXJlY3RvcnlFeHBlY3RlZCwKICAgIEZpbGVFeHBlY3RlZCwKICAgIEZpbGVzeXN0ZW1DbG9zZWQsCiAgICBOb1N5c1BhdGgsCiAgICBSZXNvdXJjZU5vdEZvdW5kLAopCmZyb20gLl9wYXRoIGltcG9ydCBkaXJuYW1lCmZyb20gLl93YWxrIGltcG9ydCBCb3VuZFdhbGtlcgoKaWYgdHlwaW5nLlRZUEVfQ0hFQ0tJTkc6CiAgICBmcm9tIHR5cGluZyBpbXBvcnQgSU8sIEFueSwgQ29sbGVjdGlvbiwgSXRlcmF0b3IsIFNlbGYsIFR5cGUKCiAgICBmcm9tIC5faW5mbyBpbXBvcnQgSW5mbwogICAgZnJvbSAuX3N1YmZzIGltcG9ydCBTdWJGUwoKCmNsYXNzIEZTKEFCQyk6CiAgICAiIiJBYnN0cmFjdCBiYXNlIGNsYXNzIGZvciBjdXN0b20gZmlsZXN5c3RlbXMuIiIiCgogICAgX2Nsb3NlZDogYm9vbCA9IEZhbHNlCgogICAgQGFic3RyYWN0bWV0aG9kCiAgICBkZWYgb3BlbihzZWxmLCBwYXRoOiBzdHIsIG1vZGU6IHN0ciA9ICJyYiIsICoqa3dhcmdzKSAtPiBJT1tBbnldOiAuLi4KCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiBleGlzdHMoc2VsZiwgcGF0aDogc3RyKSAtPiBib29sOiAuLi4KCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiBpc2RpcihzZWxmLCBwYXRoOiBzdHIpIC0+IGJvb2w6IC4uLgoKICAgIEBhYnN0cmFjdG1ldGhvZAogICAgZGVmIGlzZmlsZShzZWxmLCBwYXRoOiBzdHIpIC0+IGJvb2w6IC4uLgoKICAgIEBhYnN0cmFjdG1ldGhvZAogICAgZGVmIGxpc3RkaXIoc2VsZiwgcGF0aDogc3RyKSAtPiBsaXN0W3N0cl06IC4uLgoKICAgIEBhYnN0cmFjdG1ldGhvZAogICAgZGVmIG1ha2VkaXIoc2VsZiwgcGF0aDogc3RyLCByZWNyZWF0ZTogYm9vbCA9IEZhbHNlKSAtPiBTdWJGUzogLi4uCgogICAgQGFic3RyYWN0bWV0aG9kCiAgICBkZWYgbWFrZWRpcnMoc2VsZiwgcGF0aDogc3RyLCByZWNyZWF0ZTogYm9vbCA9IEZhbHNlKSAtPiBTdWJGUzogLi4uCgogICAgQGFic3RyYWN0bWV0aG9kCiAgICBkZWYgZ2V0aW5mbyhzZWxmLCBwYXRoOiBzdHIsIG5hbWVzcGFjZXM6IENvbGxlY3Rpb25bc3RyXSB8IE5vbmUgPSBOb25lKSAtPiBJbmZvOiAuLi4KCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiByZW1vdmUoc2VsZiwgcGF0aDogc3RyKSAtPiBOb25lOiAuLi4KCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiByZW1vdmVkaXIoc2VsZiwgcGF0aDogc3RyKSAtPiBOb25lOiAuLi4KCiAgICBAYWJzdHJhY3RtZXRob2QKICAgIGRlZiByZW1vdmV0cmVlKHNlbGYsIHBhdGg6IHN0cikgLT4gTm9uZTogLi4uCgogICAgQGFic3RyYWN0bWV0aG9kCiAgICBkZWYgbW92ZWRpcihzZWxmLCBzcmM6IHN0ciwgZHN0OiBzdHIsIGNyZWF0ZTogYm9vbCA9IEZhbHNlKSAtPiBOb25lOiAuLi4KCiAgICBkZWYgZ2V0c3lzcGF0aChzZWxmLCBwYXRoOiBzdHIpIC0+IHN0cjoKICAgICAgICByYWlzZSBOb1N5c1BhdGgoZiJ0aGUgZmlsZXN5c3RlbSB7c2VsZiFyfSBoYXMgbm8gc3lzdGVtIHBhdGgiKQoKICAgIGRlZiBjbG9zZShzZWxmKToKICAgICAgICBzZWxmLl9jbG9zZWQgPSBUcnVlCgogICAgZGVmIGlzY2xvc2VkKHNlbGYpIC0+IGJvb2w6CiAgICAgICAgcmV0dXJuIHNlbGYuX2Nsb3NlZAoKICAgIGRlZiBfX2VudGVyX18oc2VsZikgLT4gU2VsZjoKICAgICAgICByZXR1cm4gc2VsZgoKICAgIGRlZiBfX2V4aXRfXyhzZWxmLCBleGNfdHlwZSwgZXhjLCB0Yik6CiAgICAgICAgc2VsZi5jbG9zZSgpCiAgICAgICAgcmV0dXJuIEZhbHNlICAjIG5ldmVyIHN3YWxsb3cgZXhjZXB0aW9ucwoKICAgIGRlZiBjaGVjayhzZWxmKToKICAgICAgICBpZiBzZWxmLl9jbG9zZWQ6CiAgICAgICAgICAgIHJhaXNlIEZpbGVzeXN0ZW1DbG9zZWQoZiJ0aGUgZmlsZXN5c3RlbSB7c2VsZiFyfSBpcyBjbG9zZWQiKQoKICAgIGRlZiBvcGVuZGlyKHNlbGYsIHBhdGg6IHN0ciwgKiwgZmFjdG9yeTogVHlwZVtTdWJGU10gfCBOb25lID0gTm9uZSkgLT4gU3ViRlM6CiAgICAgICAgIiIiUmV0dXJuIGEgc3Vi4oCRZmlsZXN5c3RlbSByb290ZWQgYXQgYHBhdGhgLiIiIgogICAgICAgIGlmIGZhY3RvcnkgaXMgTm9uZToKICAgICAgICAgICAgZnJvbSAuX3N1YmZzIGltcG9ydCBTdWJGUwoKICAgICAgICAgICAgZmFjdG9yeSA9IFN1YkZTCiAgICAgICAgcmV0dXJuIGZhY3Rvcnkoc2VsZiwgcGF0aCkKCiAgICBkZWYgc2NhbmRpcigKICAgICAgICBzZWxmLCBwYXRoOiBzdHIsIG5hbWVzcGFjZXM6IENvbGxlY3Rpb25bc3RyXSB8IE5vbmUgPSBOb25lCiAgICApIC0+IEl0ZXJhdG9yW0luZm9dOgogICAgICAgIHJldHVybiAoc2VsZi5nZXRpbmZvKGYie3BhdGh9L3twfSIsIG5hbWVzcGFjZXMpIGZvciBwIGluIHNlbGYubGlzdGRpcihwYXRoKSkKCiAgICBAcHJvcGVydHkKICAgIGRlZiB3YWxrKHNlbGYpIC0+IEJvdW5kV2Fsa2VyOgogICAgICAgIHJldHVybiBCb3VuZFdhbGtlcihzZWxmKQoKICAgIGRlZiByZWFkYnl0ZXMoc2VsZiwgcGF0aDogc3RyKSAtPiBieXRlczoKICAgICAgICB3aXRoIHNlbGYub3BlbihwYXRoLCAicmIiKSBhcyBmOgogICAgICAgICAgICByZXR1cm4gZi5yZWFkKCkKCiAgICBkZWYgd3JpdGVieXRlcyhzZWxmLCBwYXRoOiBzdHIsIGRhdGE6IGJ5dGVzKToKICAgICAgICB3aXRoIHNlbGYub3BlbihwYXRoLCAid2IiKSBhcyBmOgogICAgICAgICAgICBmLndyaXRlKGRhdGEpCgogICAgZGVmIGNyZWF0ZShzZWxmLCBwYXRoOiBzdHIsIHdpcGU6IGJvb2wgPSBGYWxzZSk6CiAgICAgICAgaWYgbm90IHdpcGUgYW5kIHNlbGYuZXhpc3RzKHBhdGgpOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICB3aXRoIHNlbGYub3BlbihwYXRoLCAid2IiKToKICAgICAgICAgICAgcGFzcyAgIyAndG91Y2gnIGVtcHR5IGZpbGUKICAgICAgICByZXR1cm4gVHJ1ZQoKICAgIGRlZiBjb3B5KHNlbGYsIHNyY19wYXRoOiBzdHIsIGRzdF9wYXRoOiBzdHIsIG92ZXJ3cml0ZT1GYWxzZSk6CiAgICAgICAgaWYgbm90IHNlbGYuZXhpc3RzKHNyY19wYXRoKToKICAgICAgICAgICAgcmFpc2UgUmVzb3VyY2VOb3RGb3VuZChmIntzcmNfcGF0aCFyfSBkb2VzIG5vdCBleGlzdCIpCiAgICAgICAgZWxpZiBub3Qgc2VsZi5pc2ZpbGUoc3JjX3BhdGgpOgogICAgICAgICAgICByYWlzZSBGaWxlRXhwZWN0ZWQoZiJwYXRoIHtzcmNfcGF0aCFyfSBzaG91bGQgYmUgYSBmaWxlIikKICAgICAgICBpZiBub3Qgb3ZlcndyaXRlIGFuZCBzZWxmLmV4aXN0cyhkc3RfcGF0aCk6CiAgICAgICAgICAgIHJhaXNlIERlc3RpbmF0aW9uRXhpc3RzKGYiZGVzdGluYXRpb24ge2RzdF9wYXRoIXJ9IGFscmVhZHkgZXhpc3RzIikKICAgICAgICBpZiBub3Qgc2VsZi5pc2RpcihkaXJuYW1lKGRzdF9wYXRoKSk6CiAgICAgICAgICAgIHJhaXNlIERpcmVjdG9yeUV4cGVjdGVkKGYicGF0aCB7ZGlybmFtZShkc3RfcGF0aCkhcn0gc2hvdWxkIGJlIGEgZGlyZWN0b3J5IikKICAgICAgICBjb3B5X2ZpbGUoc2VsZiwgc3JjX3BhdGgsIHNlbGYsIGRzdF9wYXRoKQoKICAgIGRlZiBjb3B5ZGlyKHNlbGYsIHNyY19wYXRoOiBzdHIsIGRzdF9wYXRoOiBzdHIsIGNyZWF0ZT1GYWxzZSk6CiAgICAgICAgaWYgbm90IGNyZWF0ZSBhbmQgbm90IHNlbGYuZXhpc3RzKGRzdF9wYXRoKToKICAgICAgICAgICAgcmFpc2UgUmVzb3VyY2VOb3RGb3VuZChmIntkc3RfcGF0aCFyfSBkb2VzIG5vdCBleGlzdCIpCiAgICAgICAgaWYgbm90IHNlbGYuaXNkaXIoc3JjX3BhdGgpOgogICAgICAgICAgICByYWlzZSBEaXJlY3RvcnlFeHBlY3RlZChmInBhdGgge3NyY19wYXRoIXJ9IHNob3VsZCBiZSBhIGRpcmVjdG9yeSIpCiAgICAgICAgY29weV9kaXIoc2VsZiwgc3JjX3BhdGgsIHNlbGYsIGRzdF9wYXRoKQo=
+from __future__ import annotations
+
+import typing
+from abc import ABC, abstractmethod
+
+from ._copy import copy_dir, copy_file
+from ._errors import (
+    DestinationExists,
+    DirectoryExpected,
+    FileExpected,
+    FilesystemClosed,
+    NoSysPath,
+    ResourceNotFound,
+)
+from ._path import dirname
+from ._walk import BoundWalker
+
+if typing.TYPE_CHECKING:
+    from typing import IO, Any, Collection, Iterator, Self, Type
+
+    from ._info import Info
+    from ._subfs import SubFS
+
+
+class FS(ABC):
+    """Abstract base class for custom filesystems."""
+
+    _closed: bool = False
+
+    @abstractmethod
+    def open(self, path: str, mode: str = "rb", **kwargs) -> IO[Any]: ...
+
+    @abstractmethod
+    def exists(self, path: str) -> bool: ...
+
+    @abstractmethod
+    def isdir(self, path: str) -> bool: ...
+
+    @abstractmethod
+    def isfile(self, path: str) -> bool: ...
+
+    @abstractmethod
+    def listdir(self, path: str) -> list[str]: ...
+
+    @abstractmethod
+    def makedir(self, path: str, recreate: bool = False) -> SubFS: ...
+
+    @abstractmethod
+    def makedirs(self, path: str, recreate: bool = False) -> SubFS: ...
+
+    @abstractmethod
+    def getinfo(self, path: str, namespaces: Collection[str] | None = None) -> Info: ...
+
+    @abstractmethod
+    def remove(self, path: str) -> None: ...
+
+    @abstractmethod
+    def removedir(self, path: str) -> None: ...
+
+    @abstractmethod
+    def removetree(self, path: str) -> None: ...
+
+    @abstractmethod
+    def movedir(self, src: str, dst: str, create: bool = False) -> None: ...
+
+    def getsyspath(self, path: str) -> str:
+        raise NoSysPath(f"the filesystem {self!r} has no system path")
+
+    def close(self):
+        self._closed = True
+
+    def isclosed(self) -> bool:
+        return self._closed
+
+    def __enter__(self) -> Self:
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        self.close()
+        return False  # never swallow exceptions
+
+    def check(self):
+        if self._closed:
+            raise FilesystemClosed(f"the filesystem {self!r} is closed")
+
+    def opendir(self, path: str, *, factory: Type[SubFS] | None = None) -> SubFS:
+        """Return a sub‑filesystem rooted at `path`."""
+        if factory is None:
+            from ._subfs import SubFS
+
+            factory = SubFS
+        return factory(self, path)
+
+    def scandir(
+        self, path: str, namespaces: Collection[str] | None = None
+    ) -> Iterator[Info]:
+        return (self.getinfo(f"{path}/{p}", namespaces) for p in self.listdir(path))
+
+    @property
+    def walk(self) -> BoundWalker:
+        return BoundWalker(self)
+
+    def readbytes(self, path: str) -> bytes:
+        with self.open(path, "rb") as f:
+            return f.read()
+
+    def writebytes(self, path: str, data: bytes):
+        with self.open(path, "wb") as f:
+            f.write(data)
+
+    def create(self, path: str, wipe: bool = False):
+        if not wipe and self.exists(path):
+            return False
+        with self.open(path, "wb"):
+            pass  # 'touch' empty file
+        return True
+
+    def copy(self, src_path: str, dst_path: str, overwrite=False):
+        if not self.exists(src_path):
+            raise ResourceNotFound(f"{src_path!r} does not exist")
+        elif not self.isfile(src_path):
+            raise FileExpected(f"path {src_path!r} should be a file")
+        if not overwrite and self.exists(dst_path):
+            raise DestinationExists(f"destination {dst_path!r} already exists")
+        if not self.isdir(dirname(dst_path)):
+            raise DirectoryExpected(f"path {dirname(dst_path)!r} should be a directory")
+        copy_file(self, src_path, self, dst_path)
+
+    def copydir(self, src_path: str, dst_path: str, create=False):
+        if not create and not self.exists(dst_path):
+            raise ResourceNotFound(f"{dst_path!r} does not exist")
+        if not self.isdir(src_path):
+            raise DirectoryExpected(f"path {src_path!r} should be a directory")
+        copy_dir(self, src_path, self, dst_path)

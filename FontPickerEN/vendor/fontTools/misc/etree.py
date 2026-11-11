@@ -1,1 +1,470 @@
-IiIiU2hpbSBtb2R1bGUgZXhwb3J0aW5nIHRoZSBzYW1lIEVsZW1lbnRUcmVlIEFQSSBmb3IgbHhtbCBhbmQKeG1sLmV0cmVlIGJhY2tlbmRzLgoKV2hlbiBseG1sIGlzIGluc3RhbGxlZCwgaXQgaXMgYXV0b21hdGljYWxseSBwcmVmZXJyZWQgb3ZlciB0aGUgYnVpbHQtaW4KeG1sLmV0cmVlIG1vZHVsZS4KT24gUHl0aG9uIDIuNywgdGhlIGNFbGVtZW50VHJlZSBtb2R1bGUgaXMgcHJlZmVycmVkIG92ZXIgdGhlIHB1cmUtcHl0aG9uCkVsZW1lbnRUcmVlIG1vZHVsZS4KCkJlc2lkZXMgZXhwb3J0aW5nIGEgdW5pZmllZCBpbnRlcmZhY2UsIHRoaXMgYWxzbyBkZWZpbmVzIGV4dHJhIGZ1bmN0aW9ucwpvciBzdWJjbGFzc2VzIGJ1aWx0LWluIEVsZW1lbnRUcmVlIGNsYXNzZXMgdG8gYWRkIGZlYXR1cmVzIHRoYXQgYXJlCm9ubHkgYXZhaWxibGUgaW4gbHhtbCwgbGlrZSBPcmRlcmVkRGljdCBmb3IgYXR0cmlidXRlcywgcHJldHR5X3ByaW50IGFuZAppdGVyd2Fsay4KIiIiCgpmcm9tIGZvbnRUb29scy5taXNjLnRleHRUb29scyBpbXBvcnQgdG9zdHIKClhNTF9ERUNMQVJBVElPTiA9ICIiIjw/eG1sIHZlcnNpb249JzEuMCcgZW5jb2Rpbmc9JyVzJz8+IiIiCgpfX2FsbF9fID0gWwogICAgIyBwdWJsaWMgc3ltYm9scwogICAgIkNvbW1lbnQiLAogICAgImR1bXAiLAogICAgIkVsZW1lbnQiLAogICAgIkVsZW1lbnRUcmVlIiwKICAgICJmcm9tc3RyaW5nIiwKICAgICJmcm9tc3RyaW5nbGlzdCIsCiAgICAiaXNlbGVtZW50IiwKICAgICJpdGVycGFyc2UiLAogICAgInBhcnNlIiwKICAgICJQYXJzZUVycm9yIiwKICAgICJQSSIsCiAgICAiUHJvY2Vzc2luZ0luc3RydWN0aW9uIiwKICAgICJRTmFtZSIsCiAgICAiU3ViRWxlbWVudCIsCiAgICAidG9zdHJpbmciLAogICAgInRvc3RyaW5nbGlzdCIsCiAgICAiVHJlZUJ1aWxkZXIiLAogICAgIlhNTCIsCiAgICAiWE1MUGFyc2VyIiwKICAgICJyZWdpc3Rlcl9uYW1lc3BhY2UiLApdCgp0cnk6CiAgICBmcm9tIGx4bWwuZXRyZWUgaW1wb3J0ICoKCiAgICBfaGF2ZV9seG1sID0gVHJ1ZQoKICAgICMgbHhtbCByZXNvbHZlcyBleHRlcm5hbCBlbnRpdGllcyBieSBkZWZhdWx0LCBhbmQgdXAgdG8gNi4xLjIgaXQgYWxzbwogICAgIyBmZXRjaGVkIGV4dGVybmFsIHBhcmFtZXRlciBlbnRpdGllcyB3aXRoIHJlc29sdmVfZW50aXRpZXM9ImludGVybmFsIgogICAgIyAoaHR0cHM6Ly9idWdzLmxhdW5jaHBhZC5uZXQvbHhtbC8rYnVnLzIxNjU5MDEpLiBUaGUgRWxlbWVudFRyZWUgYmFja2VuZAogICAgIyBuZXZlciByZXNvbHZlcyBlbnRpdGllcyBhdCBhbGwsIHNvIGRlZmF1bHQgdG8gRmFsc2UgYW5kIGtlZXAgdGhlIHR3bwogICAgIyBiYWNrZW5kcyBpbiBhZ3JlZW1lbnQsIHJhdGhlciB0aGFuIGRlcGVuZCBvbiB0aGUgaW5zdGFsbGVkIGx4bWwgdmVyc2lvbi4KICAgIF9YTUxQYXJzZXIgPSBYTUxQYXJzZXIKCiAgICBjbGFzcyBYTUxQYXJzZXIoX1hNTFBhcnNlcik6CiAgICAgICAgIiIiWE1MUGFyc2VyIHN1YmNsYXNzIHRoYXQgZG9lc24ndCByZXNvbHZlIGVudGl0aWVzLiIiIgoKICAgICAgICBkZWYgX19pbml0X18oc2VsZiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICAgICAga3dhcmdzLnNldGRlZmF1bHQoInJlc29sdmVfZW50aXRpZXMiLCBGYWxzZSkKICAgICAgICAgICAgc3VwZXIoWE1MUGFyc2VyLCBzZWxmKS5fX2luaXRfXygqYXJncywgKiprd2FyZ3MpCgpleGNlcHQgSW1wb3J0RXJyb3I6CiAgICB0cnk6CiAgICAgICAgZnJvbSB4bWwuZXRyZWUuY0VsZW1lbnRUcmVlIGltcG9ydCAqCgogICAgICAgICMgdGhlIGNFbGVtZW50VHJlZSB2ZXJzaW9uIG9mIFhNTCBmdW5jdGlvbiBkb2Vzbid0IHN1cHBvcnQKICAgICAgICAjIHRoZSBvcHRpb25hbCAncGFyc2VyJyBrZXl3b3JkIGFyZ3VtZW50CiAgICAgICAgZnJvbSB4bWwuZXRyZWUuRWxlbWVudFRyZWUgaW1wb3J0IFhNTAogICAgZXhjZXB0IEltcG9ydEVycm9yOiAgIyBwcmFnbWE6IG5vIGNvdmVyCiAgICAgICAgZnJvbSB4bWwuZXRyZWUuRWxlbWVudFRyZWUgaW1wb3J0ICoKICAgIF9oYXZlX2x4bWwgPSBGYWxzZQoKICAgIF9BdHRyaWIgPSBkaWN0CgogICAgaWYgaXNpbnN0YW5jZShFbGVtZW50LCB0eXBlKToKICAgICAgICBfRWxlbWVudCA9IEVsZW1lbnQKICAgIGVsc2U6CiAgICAgICAgIyBpbiBweTI3LCBjRWxlbWVudFRyZWUuRWxlbWVudCBjYW5ub3QgYmUgc3ViY2xhc3NlZCwgc28KICAgICAgICAjIHdlIG5lZWQgdG8gaW1wb3J0IHRoZSBwdXJlLXB5dGhvbiBjbGFzcwogICAgICAgIGZyb20geG1sLmV0cmVlLkVsZW1lbnRUcmVlIGltcG9ydCBFbGVtZW50IGFzIF9FbGVtZW50CgogICAgY2xhc3MgRWxlbWVudChfRWxlbWVudCk6CiAgICAgICAgIiIiRWxlbWVudCBzdWJjbGFzcyB0aGF0IGtlZXBzIHRoZSBvcmRlciBvZiBhdHRyaWJ1dGVzLiIiIgoKICAgICAgICBkZWYgX19pbml0X18oc2VsZiwgdGFnLCBhdHRyaWI9X0F0dHJpYigpLCAqKmV4dHJhKToKICAgICAgICAgICAgc3VwZXIoRWxlbWVudCwgc2VsZikuX19pbml0X18odGFnKQogICAgICAgICAgICBzZWxmLmF0dHJpYiA9IF9BdHRyaWIoKQogICAgICAgICAgICBpZiBhdHRyaWI6CiAgICAgICAgICAgICAgICBzZWxmLmF0dHJpYi51cGRhdGUoYXR0cmliKQogICAgICAgICAgICBpZiBleHRyYToKICAgICAgICAgICAgICAgIHNlbGYuYXR0cmliLnVwZGF0ZShleHRyYSkKCiAgICBkZWYgU3ViRWxlbWVudChwYXJlbnQsIHRhZywgYXR0cmliPV9BdHRyaWIoKSwgKipleHRyYSk6CiAgICAgICAgIiIiTXVzdCBvdmVycmlkZSBTdWJFbGVtZW50IGFzIHdlbGwgb3RoZXJ3aXNlIF9lbGVtZW50dHJlZS5TdWJFbGVtZW50CiAgICAgICAgZmFpbHMgaWYgJ3BhcmVudCcgaXMgYSBzdWJjbGFzcyBvZiBFbGVtZW50IG9iamVjdC4KICAgICAgICAiIiIKICAgICAgICBlbGVtZW50ID0gcGFyZW50Ll9fY2xhc3NfXyh0YWcsIGF0dHJpYiwgKipleHRyYSkKICAgICAgICBwYXJlbnQuYXBwZW5kKGVsZW1lbnQpCiAgICAgICAgcmV0dXJuIGVsZW1lbnQKCiAgICBkZWYgX2l0ZXJ3YWxrKGVsZW1lbnQsIGV2ZW50cywgdGFnKToKICAgICAgICBpbmNsdWRlID0gdGFnIGlzIE5vbmUgb3IgZWxlbWVudC50YWcgPT0gdGFnCiAgICAgICAgaWYgaW5jbHVkZSBhbmQgInN0YXJ0IiBpbiBldmVudHM6CiAgICAgICAgICAgIHlpZWxkICgic3RhcnQiLCBlbGVtZW50KQogICAgICAgIGZvciBlIGluIGVsZW1lbnQ6CiAgICAgICAgICAgIGZvciBpdGVtIGluIF9pdGVyd2FsayhlLCBldmVudHMsIHRhZyk6CiAgICAgICAgICAgICAgICB5aWVsZCBpdGVtCiAgICAgICAgaWYgaW5jbHVkZToKICAgICAgICAgICAgeWllbGQgKCJlbmQiLCBlbGVtZW50KQoKICAgIGRlZiBpdGVyd2FsayhlbGVtZW50X29yX3RyZWUsIGV2ZW50cz0oImVuZCIsKSwgdGFnPU5vbmUpOgogICAgICAgICIiIkEgdHJlZSB3YWxrZXIgdGhhdCBnZW5lcmF0ZXMgZXZlbnRzIGZyb20gYW4gZXhpc3RpbmcgdHJlZSBhcwogICAgICAgIGlmIGl0IHdhcyBwYXJzaW5nIFhNTCBkYXRhIHdpdGggaXRlcnBhcnNlKCkuCiAgICAgICAgRHJvcC1pbiByZXBsYWNlbWVudCBmb3IgbHhtbC5ldHJlZS5pdGVyd2Fsay4KICAgICAgICAiIiIKICAgICAgICBpZiBpc2VsZW1lbnQoZWxlbWVudF9vcl90cmVlKToKICAgICAgICAgICAgZWxlbWVudCA9IGVsZW1lbnRfb3JfdHJlZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGVsZW1lbnQgPSBlbGVtZW50X29yX3RyZWUuZ2V0cm9vdCgpCiAgICAgICAgaWYgdGFnID09ICIqIjoKICAgICAgICAgICAgdGFnID0gTm9uZQogICAgICAgIGZvciBpdGVtIGluIF9pdGVyd2FsayhlbGVtZW50LCBldmVudHMsIHRhZyk6CiAgICAgICAgICAgIHlpZWxkIGl0ZW0KCiAgICBfRWxlbWVudFRyZWUgPSBFbGVtZW50VHJlZQoKICAgIGNsYXNzIEVsZW1lbnRUcmVlKF9FbGVtZW50VHJlZSk6CiAgICAgICAgIiIiRWxlbWVudFRyZWUgc3ViY2xhc3MgdGhhdCBhZGRzICdwcmV0dHlfcHJpbnQnIGFuZCAnZG9jdHlwZScKICAgICAgICBhcmd1bWVudHMgdG8gdGhlICd3cml0ZScgbWV0aG9kLgogICAgICAgIEN1cnJlbnRseSB0aGVzZSBhcmUgb25seSBzdXBwb3J0ZWQgZm9yIHRoZSBkZWZhdWx0IFhNTCBzZXJpYWxpemF0aW9uCiAgICAgICAgJ21ldGhvZCcsIGFuZCBub3QgYWxzbyBmb3IgImh0bWwiIG9yICJ0ZXh0IiwgZm9yIHRoZXNlIGFyZSBkZWxlZ2F0ZWQKICAgICAgICB0byB0aGUgYmFzZSBjbGFzcy4KICAgICAgICAiIiIKCiAgICAgICAgZGVmIHdyaXRlKAogICAgICAgICAgICBzZWxmLAogICAgICAgICAgICBmaWxlX29yX2ZpbGVuYW1lLAogICAgICAgICAgICBlbmNvZGluZz1Ob25lLAogICAgICAgICAgICB4bWxfZGVjbGFyYXRpb249RmFsc2UsCiAgICAgICAgICAgIG1ldGhvZD1Ob25lLAogICAgICAgICAgICBkb2N0eXBlPU5vbmUsCiAgICAgICAgICAgIHByZXR0eV9wcmludD1GYWxzZSwKICAgICAgICApOgogICAgICAgICAgICBpZiBtZXRob2QgYW5kIG1ldGhvZCAhPSAieG1sIjoKICAgICAgICAgICAgICAgICMgZGVsZWdhdGUgdG8gc3VwZXItY2xhc3MKICAgICAgICAgICAgICAgIHN1cGVyKEVsZW1lbnRUcmVlLCBzZWxmKS53cml0ZSgKICAgICAgICAgICAgICAgICAgICBmaWxlX29yX2ZpbGVuYW1lLAogICAgICAgICAgICAgICAgICAgIGVuY29kaW5nPWVuY29kaW5nLAogICAgICAgICAgICAgICAgICAgIHhtbF9kZWNsYXJhdGlvbj14bWxfZGVjbGFyYXRpb24sCiAgICAgICAgICAgICAgICAgICAgbWV0aG9kPW1ldGhvZCwKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIHJldHVybgoKICAgICAgICAgICAgaWYgZW5jb2RpbmcgaXMgbm90IE5vbmUgYW5kIGVuY29kaW5nLmxvd2VyKCkgPT0gInVuaWNvZGUiOgogICAgICAgICAgICAgICAgaWYgeG1sX2RlY2xhcmF0aW9uOgogICAgICAgICAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgICJTZXJpYWxpc2F0aW9uIHRvIHVuaWNvZGUgbXVzdCBub3QgcmVxdWVzdCBhbiBYTUwgZGVjbGFyYXRpb24iCiAgICAgICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgd3JpdGVfZGVjbGFyYXRpb24gPSBGYWxzZQogICAgICAgICAgICAgICAgZW5jb2RpbmcgPSAidW5pY29kZSIKICAgICAgICAgICAgZWxpZiB4bWxfZGVjbGFyYXRpb24gaXMgTm9uZToKICAgICAgICAgICAgICAgICMgYnkgZGVmYXVsdCwgd3JpdGUgYW4gWE1MIGRlY2xhcmF0aW9uIG9ubHkgZm9yIG5vbi1zdGFuZGFyZCBlbmNvZGluZ3MKICAgICAgICAgICAgICAgIHdyaXRlX2RlY2xhcmF0aW9uID0gZW5jb2RpbmcgaXMgbm90IE5vbmUgYW5kIGVuY29kaW5nLnVwcGVyKCkgbm90IGluICgKICAgICAgICAgICAgICAgICAgICAiQVNDSUkiLAogICAgICAgICAgICAgICAgICAgICJVVEYtOCIsCiAgICAgICAgICAgICAgICAgICAgIlVURjgiLAogICAgICAgICAgICAgICAgICAgICJVUy1BU0NJSSIsCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB3cml0ZV9kZWNsYXJhdGlvbiA9IHhtbF9kZWNsYXJhdGlvbgoKICAgICAgICAgICAgaWYgZW5jb2RpbmcgaXMgTm9uZToKICAgICAgICAgICAgICAgIGVuY29kaW5nID0gIkFTQ0lJIgoKICAgICAgICAgICAgaWYgcHJldHR5X3ByaW50OgogICAgICAgICAgICAgICAgIyBOT1RFIHRoaXMgd2lsbCBtb2RpZnkgdGhlIHRyZWUgaW4tcGxhY2UKICAgICAgICAgICAgICAgIF9pbmRlbnQoc2VsZi5fcm9vdCkKCiAgICAgICAgICAgIHdpdGggX2dldF93cml0ZXIoZmlsZV9vcl9maWxlbmFtZSwgZW5jb2RpbmcpIGFzIHdyaXRlOgogICAgICAgICAgICAgICAgaWYgd3JpdGVfZGVjbGFyYXRpb246CiAgICAgICAgICAgICAgICAgICAgd3JpdGUoWE1MX0RFQ0xBUkFUSU9OICUgZW5jb2RpbmcudXBwZXIoKSkKICAgICAgICAgICAgICAgICAgICBpZiBwcmV0dHlfcHJpbnQ6CiAgICAgICAgICAgICAgICAgICAgICAgIHdyaXRlKCJcbiIpCiAgICAgICAgICAgICAgICBpZiBkb2N0eXBlOgogICAgICAgICAgICAgICAgICAgIHdyaXRlKF90b3VuaWNvZGUoZG9jdHlwZSkpCiAgICAgICAgICAgICAgICAgICAgaWYgcHJldHR5X3ByaW50OgogICAgICAgICAgICAgICAgICAgICAgICB3cml0ZSgiXG4iKQoKICAgICAgICAgICAgICAgIHFuYW1lcywgbmFtZXNwYWNlcyA9IF9uYW1lc3BhY2VzKHNlbGYuX3Jvb3QpCiAgICAgICAgICAgICAgICBfc2VyaWFsaXplX3htbCh3cml0ZSwgc2VsZi5fcm9vdCwgcW5hbWVzLCBuYW1lc3BhY2VzKQoKICAgIGltcG9ydCBpbwoKICAgIGRlZiB0b3N0cmluZygKICAgICAgICBlbGVtZW50LAogICAgICAgIGVuY29kaW5nPU5vbmUsCiAgICAgICAgeG1sX2RlY2xhcmF0aW9uPU5vbmUsCiAgICAgICAgbWV0aG9kPU5vbmUsCiAgICAgICAgZG9jdHlwZT1Ob25lLAogICAgICAgIHByZXR0eV9wcmludD1GYWxzZSwKICAgICk6CiAgICAgICAgIiIiQ3VzdG9tICd0b3N0cmluZycgZnVuY3Rpb24gdGhhdCB1c2VzIG91ciBFbGVtZW50VHJlZSBzdWJjbGFzcywgd2l0aAogICAgICAgIHByZXR0eV9wcmludCBzdXBwb3J0LgogICAgICAgICIiIgogICAgICAgIHN0cmVhbSA9IGlvLlN0cmluZ0lPKCkgaWYgZW5jb2RpbmcgPT0gInVuaWNvZGUiIGVsc2UgaW8uQnl0ZXNJTygpCiAgICAgICAgRWxlbWVudFRyZWUoZWxlbWVudCkud3JpdGUoCiAgICAgICAgICAgIHN0cmVhbSwKICAgICAgICAgICAgZW5jb2Rpbmc9ZW5jb2RpbmcsCiAgICAgICAgICAgIHhtbF9kZWNsYXJhdGlvbj14bWxfZGVjbGFyYXRpb24sCiAgICAgICAgICAgIG1ldGhvZD1tZXRob2QsCiAgICAgICAgICAgIGRvY3R5cGU9ZG9jdHlwZSwKICAgICAgICAgICAgcHJldHR5X3ByaW50PXByZXR0eV9wcmludCwKICAgICAgICApCiAgICAgICAgcmV0dXJuIHN0cmVhbS5nZXR2YWx1ZSgpCgogICAgIyBzZXJpYWxpemF0aW9uIHN1cHBvcnQKCiAgICBpbXBvcnQgcmUKCiAgICAjIFZhbGlkIFhNTCBzdHJpbmdzIGNhbiBpbmNsdWRlIGFueSBVbmljb2RlIGNoYXJhY3RlciwgZXhjbHVkaW5nIGNvbnRyb2wKICAgICMgY2hhcmFjdGVycywgdGhlIHN1cnJvZ2F0ZSBibG9ja3MsIEZGRkUsIGFuZCBGRkZGOgogICAgIyAgIENoYXIgOjo9ICN4OSB8ICN4QSB8ICN4RCB8IFsjeDIwLSN4RDdGRl0gfCBbI3hFMDAwLSN4RkZGRF0gfCBbI3gxMDAwMC0jeDEwRkZGRl0KICAgICMgSGVyZSB3ZSByZXZlcnNlZCB0aGUgcGF0dGVybiB0byBtYXRjaCBvbmx5IHRoZSBpbnZhbGlkIGNoYXJhY3RlcnMuCiAgICBfaW52YWxpZF94bWxfc3RyaW5nID0gcmUuY29tcGlsZSgKICAgICAgICAiW1x1MDAwMC1cdTAwMDhcdTAwMGItXHUwMDBjXHUwMDBlLVx1MDAxZlx1ZDgwMC1cdWRmZmZcdWZmZmUtXHVmZmZmXSIKICAgICkKCiAgICBkZWYgX3RvdW5pY29kZShzKToKICAgICAgICAiIiJUZXN0IGlmIGEgc3RyaW5nIGlzIHZhbGlkIHVzZXIgaW5wdXQgYW5kIGRlY29kZSBpdCB0byB1bmljb2RlIHN0cmluZwogICAgICAgIHVzaW5nIEFTQ0lJIGVuY29kaW5nIGlmIGl0J3MgYSBieXRlcyBzdHJpbmcuCiAgICAgICAgUmVqZWN0IGFsbCBieXRlcy91bmljb2RlIGlucHV0IHRoYXQgY29udGFpbnMgbm9uLVhNTCBjaGFyYWN0ZXJzLgogICAgICAgIFJlamVjdCBhbGwgYnl0ZXMgaW5wdXQgdGhhdCBjb250YWlucyBub24tQVNDSUkgY2hhcmFjdGVycy4KICAgICAgICAiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHMgPSB0b3N0cihzLCBlbmNvZGluZz0iYXNjaWkiLCBlcnJvcnM9InN0cmljdCIpCiAgICAgICAgZXhjZXB0IFVuaWNvZGVEZWNvZGVFcnJvcjoKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgICAgICJCeXRlcyBzdHJpbmdzIGNhbiBvbmx5IGNvbnRhaW4gQVNDSUkgY2hhcmFjdGVycy4gIgogICAgICAgICAgICAgICAgIlVzZSB1bmljb2RlIHN0cmluZ3MgZm9yIG5vbi1BU0NJSSBjaGFyYWN0ZXJzLiIKICAgICAgICAgICAgKQogICAgICAgIGV4Y2VwdCBBdHRyaWJ1dGVFcnJvcjoKICAgICAgICAgICAgX3JhaXNlX3NlcmlhbGl6YXRpb25fZXJyb3IocykKICAgICAgICBpZiBzIGFuZCBfaW52YWxpZF94bWxfc3RyaW5nLnNlYXJjaChzKToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgICAgICJBbGwgc3RyaW5ncyBtdXN0IGJlIFhNTCBjb21wYXRpYmxlOiBVbmljb2RlIG9yIEFTQ0lJLCAiCiAgICAgICAgICAgICAgICAibm8gTlVMTCBieXRlcyBvciBjb250cm9sIGNoYXJhY3RlcnMiCiAgICAgICAgICAgICkKICAgICAgICByZXR1cm4gcwoKICAgIGltcG9ydCBjb250ZXh0bGliCgogICAgQGNvbnRleHRsaWIuY29udGV4dG1hbmFnZXIKICAgIGRlZiBfZ2V0X3dyaXRlcihmaWxlX29yX2ZpbGVuYW1lLCBlbmNvZGluZyk6CiAgICAgICAgIyByZXR1cm5zIHRleHQgd3JpdGUgbWV0aG9kIGFuZCByZWxlYXNlIGFsbCByZXNvdXJjZXMgYWZ0ZXIgdXNpbmcKICAgICAgICB0cnk6CiAgICAgICAgICAgIHdyaXRlID0gZmlsZV9vcl9maWxlbmFtZS53cml0ZQogICAgICAgIGV4Y2VwdCBBdHRyaWJ1dGVFcnJvcjoKICAgICAgICAgICAgIyBmaWxlX29yX2ZpbGVuYW1lIGlzIGEgZmlsZSBuYW1lCiAgICAgICAgICAgIGYgPSBvcGVuKAogICAgICAgICAgICAgICAgZmlsZV9vcl9maWxlbmFtZSwKICAgICAgICAgICAgICAgICJ3IiwKICAgICAgICAgICAgICAgIGVuY29kaW5nPSJ1dGYtOCIgaWYgZW5jb2RpbmcgPT0gInVuaWNvZGUiIGVsc2UgZW5jb2RpbmcsCiAgICAgICAgICAgICAgICBlcnJvcnM9InhtbGNoYXJyZWZyZXBsYWNlIiwKICAgICAgICAgICAgKQogICAgICAgICAgICB3aXRoIGY6CiAgICAgICAgICAgICAgICB5aWVsZCBmLndyaXRlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBmaWxlX29yX2ZpbGVuYW1lIGlzIGEgZmlsZS1saWtlIG9iamVjdAogICAgICAgICAgICAjIGVuY29kaW5nIGRldGVybWluZXMgaWYgaXQgaXMgYSB0ZXh0IG9yIGJpbmFyeSB3cml0ZXIKICAgICAgICAgICAgaWYgZW5jb2RpbmcgPT0gInVuaWNvZGUiOgogICAgICAgICAgICAgICAgIyB1c2UgYSB0ZXh0IHdyaXRlciBhcyBpcwogICAgICAgICAgICAgICAgeWllbGQgd3JpdGUKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICMgd3JhcCBhIGJpbmFyeSB3cml0ZXIgd2l0aCBUZXh0SU9XcmFwcGVyCiAgICAgICAgICAgICAgICBkZXRhY2hfYnVmZmVyID0gRmFsc2UKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoZmlsZV9vcl9maWxlbmFtZSwgaW8uQnVmZmVyZWRJT0Jhc2UpOgogICAgICAgICAgICAgICAgICAgIGJ1ZiA9IGZpbGVfb3JfZmlsZW5hbWUKICAgICAgICAgICAgICAgIGVsaWYgaXNpbnN0YW5jZShmaWxlX29yX2ZpbGVuYW1lLCBpby5SYXdJT0Jhc2UpOgogICAgICAgICAgICAgICAgICAgIGJ1ZiA9IGlvLkJ1ZmZlcmVkV3JpdGVyKGZpbGVfb3JfZmlsZW5hbWUpCiAgICAgICAgICAgICAgICAgICAgZGV0YWNoX2J1ZmZlciA9IFRydWUKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgIyBUaGlzIGlzIHRvIGhhbmRsZSBwYXNzZWQgb2JqZWN0cyB0aGF0IGFyZW4ndCBpbiB0aGUKICAgICAgICAgICAgICAgICAgICAjIElPQmFzZSBoaWVyYXJjaHksIGJ1dCBqdXN0IGhhdmUgYSB3cml0ZSBtZXRob2QKICAgICAgICAgICAgICAgICAgICBidWYgPSBpby5CdWZmZXJlZElPQmFzZSgpCiAgICAgICAgICAgICAgICAgICAgYnVmLndyaXRhYmxlID0gbGFtYmRhOiBUcnVlCiAgICAgICAgICAgICAgICAgICAgYnVmLndyaXRlID0gd3JpdGUKICAgICAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgICAgICMgVGV4dElPV3JhcHBlciB1c2VzIHRoaXMgbWV0aG9kcyB0byBkZXRlcm1pbmUKICAgICAgICAgICAgICAgICAgICAgICAgIyBpZiBCT00gKGZvciBVVEYtMTYsIGV0Yykgc2hvdWxkIGJlIGFkZGVkCiAgICAgICAgICAgICAgICAgICAgICAgIGJ1Zi5zZWVrYWJsZSA9IGZpbGVfb3JfZmlsZW5hbWUuc2Vla2FibGUKICAgICAgICAgICAgICAgICAgICAgICAgYnVmLnRlbGwgPSBmaWxlX29yX2ZpbGVuYW1lLnRlbGwKICAgICAgICAgICAgICAgICAgICBleGNlcHQgQXR0cmlidXRlRXJyb3I6CiAgICAgICAgICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICAgICAgICAgIHdyYXBwZXIgPSBpby5UZXh0SU9XcmFwcGVyKAogICAgICAgICAgICAgICAgICAgIGJ1ZiwKICAgICAgICAgICAgICAgICAgICBlbmNvZGluZz1lbmNvZGluZywKICAgICAgICAgICAgICAgICAgICBlcnJvcnM9InhtbGNoYXJyZWZyZXBsYWNlIiwKICAgICAgICAgICAgICAgICAgICBuZXdsaW5lPSJcbiIsCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICAgICAgeWllbGQgd3JhcHBlci53cml0ZQogICAgICAgICAgICAgICAgZmluYWxseToKICAgICAgICAgICAgICAgICAgICAjIEtlZXAgdGhlIG9yaWdpbmFsIGZpbGUgb3BlbiB3aGVuIHRoZSBUZXh0SU9XcmFwcGVyIGFuZAogICAgICAgICAgICAgICAgICAgICMgdGhlIEJ1ZmZlcmVkV3JpdGVyIGFyZSBkZXN0cm95ZWQKICAgICAgICAgICAgICAgICAgICB3cmFwcGVyLmRldGFjaCgpCiAgICAgICAgICAgICAgICAgICAgaWYgZGV0YWNoX2J1ZmZlcjoKICAgICAgICAgICAgICAgICAgICAgICAgYnVmLmRldGFjaCgpCgogICAgZnJvbSB4bWwuZXRyZWUuRWxlbWVudFRyZWUgaW1wb3J0IF9uYW1lc3BhY2VfbWFwCgogICAgZGVmIF9uYW1lc3BhY2VzKGVsZW0pOgogICAgICAgICMgaWRlbnRpZnkgbmFtZXNwYWNlcyB1c2VkIGluIHRoaXMgdHJlZQoKICAgICAgICAjIG1hcHMgcW5hbWVzIHRvICplbmNvZGVkKiBwcmVmaXg6bG9jYWwgbmFtZXMKICAgICAgICBxbmFtZXMgPSB7Tm9uZTogTm9uZX0KCiAgICAgICAgIyBtYXBzIHVyaTpzIHRvIHByZWZpeGVzCiAgICAgICAgbmFtZXNwYWNlcyA9IHt9CgogICAgICAgIGRlZiBhZGRfcW5hbWUocW5hbWUpOgogICAgICAgICAgICAjIGNhbGN1bGF0ZSBzZXJpYWxpemVkIHFuYW1lIHJlcHJlc2VudGF0aW9uCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHFuYW1lID0gX3RvdW5pY29kZShxbmFtZSkKICAgICAgICAgICAgICAgIGlmIHFuYW1lWzoxXSA9PSAieyI6CiAgICAgICAgICAgICAgICAgICAgdXJpLCB0YWcgPSBxbmFtZVsxOl0ucnNwbGl0KCJ9IiwgMSkKICAgICAgICAgICAgICAgICAgICBwcmVmaXggPSBuYW1lc3BhY2VzLmdldCh1cmkpCiAgICAgICAgICAgICAgICAgICAgaWYgcHJlZml4IGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIHByZWZpeCA9IF9uYW1lc3BhY2VfbWFwLmdldCh1cmkpCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIHByZWZpeCBpcyBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgcHJlZml4ID0gIm5zJWQiICUgbGVuKG5hbWVzcGFjZXMpCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcmVmaXggPSBfdG91bmljb2RlKHByZWZpeCkKICAgICAgICAgICAgICAgICAgICAgICAgaWYgcHJlZml4ICE9ICJ4bWwiOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgbmFtZXNwYWNlc1t1cmldID0gcHJlZml4CiAgICAgICAgICAgICAgICAgICAgaWYgcHJlZml4OgogICAgICAgICAgICAgICAgICAgICAgICBxbmFtZXNbcW5hbWVdID0gIiVzOiVzIiAlIChwcmVmaXgsIHRhZykKICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICBxbmFtZXNbcW5hbWVdID0gdGFnICAjIGRlZmF1bHQgZWxlbWVudAogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBxbmFtZXNbcW5hbWVdID0gcW5hbWUKICAgICAgICAgICAgZXhjZXB0IFR5cGVFcnJvcjoKICAgICAgICAgICAgICAgIF9yYWlzZV9zZXJpYWxpemF0aW9uX2Vycm9yKHFuYW1lKQoKICAgICAgICAjIHBvcHVsYXRlIHFuYW1lIGFuZCBuYW1lc3BhY2VzIHRhYmxlCiAgICAgICAgZm9yIGVsZW0gaW4gZWxlbS5pdGVyKCk6CiAgICAgICAgICAgIHRhZyA9IGVsZW0udGFnCiAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UodGFnLCBRTmFtZSk6CiAgICAgICAgICAgICAgICBpZiB0YWcudGV4dCBub3QgaW4gcW5hbWVzOgogICAgICAgICAgICAgICAgICAgIGFkZF9xbmFtZSh0YWcudGV4dCkKICAgICAgICAgICAgZWxpZiBpc2luc3RhbmNlKHRhZywgc3RyKToKICAgICAgICAgICAgICAgIGlmIHRhZyBub3QgaW4gcW5hbWVzOgogICAgICAgICAgICAgICAgICAgIGFkZF9xbmFtZSh0YWcpCiAgICAgICAgICAgIGVsaWYgdGFnIGlzIG5vdCBOb25lIGFuZCB0YWcgaXMgbm90IENvbW1lbnQgYW5kIHRhZyBpcyBub3QgUEk6CiAgICAgICAgICAgICAgICBfcmFpc2Vfc2VyaWFsaXphdGlvbl9lcnJvcih0YWcpCiAgICAgICAgICAgIGZvciBrZXksIHZhbHVlIGluIGVsZW0uaXRlbXMoKToKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2Uoa2V5LCBRTmFtZSk6CiAgICAgICAgICAgICAgICAgICAga2V5ID0ga2V5LnRleHQKICAgICAgICAgICAgICAgIGlmIGtleSBub3QgaW4gcW5hbWVzOgogICAgICAgICAgICAgICAgICAgIGFkZF9xbmFtZShrZXkpCiAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKHZhbHVlLCBRTmFtZSkgYW5kIHZhbHVlLnRleHQgbm90IGluIHFuYW1lczoKICAgICAgICAgICAgICAgICAgICBhZGRfcW5hbWUodmFsdWUudGV4dCkKICAgICAgICAgICAgdGV4dCA9IGVsZW0udGV4dAogICAgICAgICAgICBpZiBpc2luc3RhbmNlKHRleHQsIFFOYW1lKSBhbmQgdGV4dC50ZXh0IG5vdCBpbiBxbmFtZXM6CiAgICAgICAgICAgICAgICBhZGRfcW5hbWUodGV4dC50ZXh0KQogICAgICAgIHJldHVybiBxbmFtZXMsIG5hbWVzcGFjZXMKCiAgICBkZWYgX3NlcmlhbGl6ZV94bWwod3JpdGUsIGVsZW0sIHFuYW1lcywgbmFtZXNwYWNlcywgKiprd2FyZ3MpOgogICAgICAgIHRhZyA9IGVsZW0udGFnCiAgICAgICAgdGV4dCA9IGVsZW0udGV4dAogICAgICAgIGlmIHRhZyBpcyBDb21tZW50OgogICAgICAgICAgICB3cml0ZSgiPCEtLSVzLS0+IiAlIF90b3VuaWNvZGUodGV4dCkpCiAgICAgICAgZWxpZiB0YWcgaXMgUHJvY2Vzc2luZ0luc3RydWN0aW9uOgogICAgICAgICAgICB3cml0ZSgiPD8lcz8+IiAlIF90b3VuaWNvZGUodGV4dCkpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdGFnID0gcW5hbWVzW190b3VuaWNvZGUodGFnKSBpZiB0YWcgaXMgbm90IE5vbmUgZWxzZSBOb25lXQogICAgICAgICAgICBpZiB0YWcgaXMgTm9uZToKICAgICAgICAgICAgICAgIGlmIHRleHQ6CiAgICAgICAgICAgICAgICAgICAgd3JpdGUoX2VzY2FwZV9jZGF0YSh0ZXh0KSkKICAgICAgICAgICAgICAgIGZvciBlIGluIGVsZW06CiAgICAgICAgICAgICAgICAgICAgX3NlcmlhbGl6ZV94bWwod3JpdGUsIGUsIHFuYW1lcywgTm9uZSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHdyaXRlKCI8IiArIHRhZykKICAgICAgICAgICAgICAgIGlmIG5hbWVzcGFjZXM6CiAgICAgICAgICAgICAgICAgICAgZm9yIHVyaSwgcHJlZml4IGluIHNvcnRlZCgKICAgICAgICAgICAgICAgICAgICAgICAgbmFtZXNwYWNlcy5pdGVtcygpLCBrZXk9bGFtYmRhIHg6IHhbMV0KICAgICAgICAgICAgICAgICAgICApOiAgIyBzb3J0IG9uIHByZWZpeAogICAgICAgICAgICAgICAgICAgICAgICBpZiBwcmVmaXg6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcmVmaXggPSAiOiIgKyBwcmVmaXgKICAgICAgICAgICAgICAgICAgICAgICAgd3JpdGUoJyB4bWxucyVzPSIlcyInICUgKHByZWZpeCwgX2VzY2FwZV9hdHRyaWIodXJpKSkpCiAgICAgICAgICAgICAgICBhdHRycyA9IGVsZW0uYXR0cmliCiAgICAgICAgICAgICAgICBpZiBhdHRyczoKICAgICAgICAgICAgICAgICAgICAjIHRyeSB0byBrZWVwIGV4aXN0aW5nIGF0dHJpYiBvcmRlcgogICAgICAgICAgICAgICAgICAgIGlmIGxlbihhdHRycykgPD0gMSBvciB0eXBlKGF0dHJzKSBpcyBfQXR0cmliOgogICAgICAgICAgICAgICAgICAgICAgICBpdGVtcyA9IGF0dHJzLml0ZW1zKCkKICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICAjIGlmIHBsYWluIGRpY3QsIHVzZSBsZXhpY2FsIG9yZGVyCiAgICAgICAgICAgICAgICAgICAgICAgIGl0ZW1zID0gc29ydGVkKGF0dHJzLml0ZW1zKCkpCiAgICAgICAgICAgICAgICAgICAgZm9yIGssIHYgaW4gaXRlbXM6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoaywgUU5hbWUpOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgayA9IF90b3VuaWNvZGUoay50ZXh0KQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgayA9IF90b3VuaWNvZGUoaykKICAgICAgICAgICAgICAgICAgICAgICAgaWYgaXNpbnN0YW5jZSh2LCBRTmFtZSk6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2ID0gcW5hbWVzW190b3VuaWNvZGUodi50ZXh0KV0KICAgICAgICAgICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHYgPSBfZXNjYXBlX2F0dHJpYih2KQogICAgICAgICAgICAgICAgICAgICAgICB3cml0ZSgnICVzPSIlcyInICUgKHFuYW1lc1trXSwgdikpCiAgICAgICAgICAgICAgICBpZiB0ZXh0IGlzIG5vdCBOb25lIG9yIGxlbihlbGVtKToKICAgICAgICAgICAgICAgICAgICB3cml0ZSgiPiIpCiAgICAgICAgICAgICAgICAgICAgaWYgdGV4dDoKICAgICAgICAgICAgICAgICAgICAgICAgd3JpdGUoX2VzY2FwZV9jZGF0YSh0ZXh0KSkKICAgICAgICAgICAgICAgICAgICBmb3IgZSBpbiBlbGVtOgogICAgICAgICAgICAgICAgICAgICAgICBfc2VyaWFsaXplX3htbCh3cml0ZSwgZSwgcW5hbWVzLCBOb25lKQogICAgICAgICAgICAgICAgICAgIHdyaXRlKCI8LyIgKyB0YWcgKyAiPiIpCiAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgIHdyaXRlKCIvPiIpCiAgICAgICAgaWYgZWxlbS50YWlsOgogICAgICAgICAgICB3cml0ZShfZXNjYXBlX2NkYXRhKGVsZW0udGFpbCkpCgogICAgZGVmIF9yYWlzZV9zZXJpYWxpemF0aW9uX2Vycm9yKHRleHQpOgogICAgICAgIHJhaXNlIFR5cGVFcnJvcigiY2Fubm90IHNlcmlhbGl6ZSAlciAodHlwZSAlcykiICUgKHRleHQsIHR5cGUodGV4dCkuX19uYW1lX18pKQoKICAgIGRlZiBfZXNjYXBlX2NkYXRhKHRleHQpOgogICAgICAgICMgZXNjYXBlIGNoYXJhY3RlciBkYXRhCiAgICAgICAgdHJ5OgogICAgICAgICAgICB0ZXh0ID0gX3RvdW5pY29kZSh0ZXh0KQogICAgICAgICAgICAjIGl0J3Mgd29ydGggYXZvaWRpbmcgZG8tbm90aGluZyBjYWxscyBmb3Igc2hvcnQgc3RyaW5ncwogICAgICAgICAgICBpZiAiJiIgaW4gdGV4dDoKICAgICAgICAgICAgICAgIHRleHQgPSB0ZXh0LnJlcGxhY2UoIiYiLCAiJmFtcDsiKQogICAgICAgICAgICBpZiAiPCIgaW4gdGV4dDoKICAgICAgICAgICAgICAgIHRleHQgPSB0ZXh0LnJlcGxhY2UoIjwiLCAiJmx0OyIpCiAgICAgICAgICAgIGlmICI+IiBpbiB0ZXh0OgogICAgICAgICAgICAgICAgdGV4dCA9IHRleHQucmVwbGFjZSgiPiIsICImZ3Q7IikKICAgICAgICAgICAgcmV0dXJuIHRleHQKICAgICAgICBleGNlcHQgKFR5cGVFcnJvciwgQXR0cmlidXRlRXJyb3IpOgogICAgICAgICAgICBfcmFpc2Vfc2VyaWFsaXphdGlvbl9lcnJvcih0ZXh0KQoKICAgIGRlZiBfZXNjYXBlX2F0dHJpYih0ZXh0KToKICAgICAgICAjIGVzY2FwZSBhdHRyaWJ1dGUgdmFsdWUKICAgICAgICB0cnk6CiAgICAgICAgICAgIHRleHQgPSBfdG91bmljb2RlKHRleHQpCiAgICAgICAgICAgIGlmICImIiBpbiB0ZXh0OgogICAgICAgICAgICAgICAgdGV4dCA9IHRleHQucmVwbGFjZSgiJiIsICImYW1wOyIpCiAgICAgICAgICAgIGlmICI8IiBpbiB0ZXh0OgogICAgICAgICAgICAgICAgdGV4dCA9IHRleHQucmVwbGFjZSgiPCIsICImbHQ7IikKICAgICAgICAgICAgaWYgIj4iIGluIHRleHQ6CiAgICAgICAgICAgICAgICB0ZXh0ID0gdGV4dC5yZXBsYWNlKCI+IiwgIiZndDsiKQogICAgICAgICAgICBpZiAnIicgaW4gdGV4dDoKICAgICAgICAgICAgICAgIHRleHQgPSB0ZXh0LnJlcGxhY2UoJyInLCAiJnF1b3Q7IikKICAgICAgICAgICAgaWYgIlxuIiBpbiB0ZXh0OgogICAgICAgICAgICAgICAgdGV4dCA9IHRleHQucmVwbGFjZSgiXG4iLCAiJiMxMDsiKQogICAgICAgICAgICByZXR1cm4gdGV4dAogICAgICAgIGV4Y2VwdCAoVHlwZUVycm9yLCBBdHRyaWJ1dGVFcnJvcik6CiAgICAgICAgICAgIF9yYWlzZV9zZXJpYWxpemF0aW9uX2Vycm9yKHRleHQpCgogICAgZGVmIF9pbmRlbnQoZWxlbSwgbGV2ZWw9MCk6CiAgICAgICAgIyBGcm9tIGh0dHA6Ly9lZmZib3Qub3JnL3pvbmUvZWxlbWVudC1saWIuaHRtI3ByZXR0eXByaW50CiAgICAgICAgaSA9ICJcbiIgKyBsZXZlbCAqICIgICIKICAgICAgICBpZiBsZW4oZWxlbSk6CiAgICAgICAgICAgIGlmIG5vdCBlbGVtLnRleHQgb3Igbm90IGVsZW0udGV4dC5zdHJpcCgpOgogICAgICAgICAgICAgICAgZWxlbS50ZXh0ID0gaSArICIgICIKICAgICAgICAgICAgaWYgbm90IGVsZW0udGFpbCBvciBub3QgZWxlbS50YWlsLnN0cmlwKCk6CiAgICAgICAgICAgICAgICBlbGVtLnRhaWwgPSBpCiAgICAgICAgICAgIGZvciBlbGVtIGluIGVsZW06CiAgICAgICAgICAgICAgICBfaW5kZW50KGVsZW0sIGxldmVsICsgMSkKICAgICAgICAgICAgaWYgbm90IGVsZW0udGFpbCBvciBub3QgZWxlbS50YWlsLnN0cmlwKCk6CiAgICAgICAgICAgICAgICBlbGVtLnRhaWwgPSBpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgbGV2ZWwgYW5kIChub3QgZWxlbS50YWlsIG9yIG5vdCBlbGVtLnRhaWwuc3RyaXAoKSk6CiAgICAgICAgICAgICAgICBlbGVtLnRhaWwgPSBpCg==
+"""Shim module exporting the same ElementTree API for lxml and
+xml.etree backends.
+
+When lxml is installed, it is automatically preferred over the built-in
+xml.etree module.
+On Python 2.7, the cElementTree module is preferred over the pure-python
+ElementTree module.
+
+Besides exporting a unified interface, this also defines extra functions
+or subclasses built-in ElementTree classes to add features that are
+only availble in lxml, like OrderedDict for attributes, pretty_print and
+iterwalk.
+"""
+
+from fontTools.misc.textTools import tostr
+
+XML_DECLARATION = """<?xml version='1.0' encoding='%s'?>"""
+
+__all__ = [
+    # public symbols
+    "Comment",
+    "dump",
+    "Element",
+    "ElementTree",
+    "fromstring",
+    "fromstringlist",
+    "iselement",
+    "iterparse",
+    "parse",
+    "ParseError",
+    "PI",
+    "ProcessingInstruction",
+    "QName",
+    "SubElement",
+    "tostring",
+    "tostringlist",
+    "TreeBuilder",
+    "XML",
+    "XMLParser",
+    "register_namespace",
+]
+
+try:
+    from lxml.etree import *
+
+    _have_lxml = True
+
+    # lxml resolves external entities by default, and up to 6.1.2 it also
+    # fetched external parameter entities with resolve_entities="internal"
+    # (https://bugs.launchpad.net/lxml/+bug/2165901). The ElementTree backend
+    # never resolves entities at all, so default to False and keep the two
+    # backends in agreement, rather than depend on the installed lxml version.
+    _XMLParser = XMLParser
+
+    class XMLParser(_XMLParser):
+        """XMLParser subclass that doesn't resolve entities."""
+
+        def __init__(self, *args, **kwargs):
+            kwargs.setdefault("resolve_entities", False)
+            super(XMLParser, self).__init__(*args, **kwargs)
+
+except ImportError:
+    try:
+        from xml.etree.cElementTree import *
+
+        # the cElementTree version of XML function doesn't support
+        # the optional 'parser' keyword argument
+        from xml.etree.ElementTree import XML
+    except ImportError:  # pragma: no cover
+        from xml.etree.ElementTree import *
+    _have_lxml = False
+
+    _Attrib = dict
+
+    if isinstance(Element, type):
+        _Element = Element
+    else:
+        # in py27, cElementTree.Element cannot be subclassed, so
+        # we need to import the pure-python class
+        from xml.etree.ElementTree import Element as _Element
+
+    class Element(_Element):
+        """Element subclass that keeps the order of attributes."""
+
+        def __init__(self, tag, attrib=_Attrib(), **extra):
+            super(Element, self).__init__(tag)
+            self.attrib = _Attrib()
+            if attrib:
+                self.attrib.update(attrib)
+            if extra:
+                self.attrib.update(extra)
+
+    def SubElement(parent, tag, attrib=_Attrib(), **extra):
+        """Must override SubElement as well otherwise _elementtree.SubElement
+        fails if 'parent' is a subclass of Element object.
+        """
+        element = parent.__class__(tag, attrib, **extra)
+        parent.append(element)
+        return element
+
+    def _iterwalk(element, events, tag):
+        include = tag is None or element.tag == tag
+        if include and "start" in events:
+            yield ("start", element)
+        for e in element:
+            for item in _iterwalk(e, events, tag):
+                yield item
+        if include:
+            yield ("end", element)
+
+    def iterwalk(element_or_tree, events=("end",), tag=None):
+        """A tree walker that generates events from an existing tree as
+        if it was parsing XML data with iterparse().
+        Drop-in replacement for lxml.etree.iterwalk.
+        """
+        if iselement(element_or_tree):
+            element = element_or_tree
+        else:
+            element = element_or_tree.getroot()
+        if tag == "*":
+            tag = None
+        for item in _iterwalk(element, events, tag):
+            yield item
+
+    _ElementTree = ElementTree
+
+    class ElementTree(_ElementTree):
+        """ElementTree subclass that adds 'pretty_print' and 'doctype'
+        arguments to the 'write' method.
+        Currently these are only supported for the default XML serialization
+        'method', and not also for "html" or "text", for these are delegated
+        to the base class.
+        """
+
+        def write(
+            self,
+            file_or_filename,
+            encoding=None,
+            xml_declaration=False,
+            method=None,
+            doctype=None,
+            pretty_print=False,
+        ):
+            if method and method != "xml":
+                # delegate to super-class
+                super(ElementTree, self).write(
+                    file_or_filename,
+                    encoding=encoding,
+                    xml_declaration=xml_declaration,
+                    method=method,
+                )
+                return
+
+            if encoding is not None and encoding.lower() == "unicode":
+                if xml_declaration:
+                    raise ValueError(
+                        "Serialisation to unicode must not request an XML declaration"
+                    )
+                write_declaration = False
+                encoding = "unicode"
+            elif xml_declaration is None:
+                # by default, write an XML declaration only for non-standard encodings
+                write_declaration = encoding is not None and encoding.upper() not in (
+                    "ASCII",
+                    "UTF-8",
+                    "UTF8",
+                    "US-ASCII",
+                )
+            else:
+                write_declaration = xml_declaration
+
+            if encoding is None:
+                encoding = "ASCII"
+
+            if pretty_print:
+                # NOTE this will modify the tree in-place
+                _indent(self._root)
+
+            with _get_writer(file_or_filename, encoding) as write:
+                if write_declaration:
+                    write(XML_DECLARATION % encoding.upper())
+                    if pretty_print:
+                        write("\n")
+                if doctype:
+                    write(_tounicode(doctype))
+                    if pretty_print:
+                        write("\n")
+
+                qnames, namespaces = _namespaces(self._root)
+                _serialize_xml(write, self._root, qnames, namespaces)
+
+    import io
+
+    def tostring(
+        element,
+        encoding=None,
+        xml_declaration=None,
+        method=None,
+        doctype=None,
+        pretty_print=False,
+    ):
+        """Custom 'tostring' function that uses our ElementTree subclass, with
+        pretty_print support.
+        """
+        stream = io.StringIO() if encoding == "unicode" else io.BytesIO()
+        ElementTree(element).write(
+            stream,
+            encoding=encoding,
+            xml_declaration=xml_declaration,
+            method=method,
+            doctype=doctype,
+            pretty_print=pretty_print,
+        )
+        return stream.getvalue()
+
+    # serialization support
+
+    import re
+
+    # Valid XML strings can include any Unicode character, excluding control
+    # characters, the surrogate blocks, FFFE, and FFFF:
+    #   Char ::= #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+    # Here we reversed the pattern to match only the invalid characters.
+    _invalid_xml_string = re.compile(
+        "[\u0000-\u0008\u000b-\u000c\u000e-\u001f\ud800-\udfff\ufffe-\uffff]"
+    )
+
+    def _tounicode(s):
+        """Test if a string is valid user input and decode it to unicode string
+        using ASCII encoding if it's a bytes string.
+        Reject all bytes/unicode input that contains non-XML characters.
+        Reject all bytes input that contains non-ASCII characters.
+        """
+        try:
+            s = tostr(s, encoding="ascii", errors="strict")
+        except UnicodeDecodeError:
+            raise ValueError(
+                "Bytes strings can only contain ASCII characters. "
+                "Use unicode strings for non-ASCII characters."
+            )
+        except AttributeError:
+            _raise_serialization_error(s)
+        if s and _invalid_xml_string.search(s):
+            raise ValueError(
+                "All strings must be XML compatible: Unicode or ASCII, "
+                "no NULL bytes or control characters"
+            )
+        return s
+
+    import contextlib
+
+    @contextlib.contextmanager
+    def _get_writer(file_or_filename, encoding):
+        # returns text write method and release all resources after using
+        try:
+            write = file_or_filename.write
+        except AttributeError:
+            # file_or_filename is a file name
+            f = open(
+                file_or_filename,
+                "w",
+                encoding="utf-8" if encoding == "unicode" else encoding,
+                errors="xmlcharrefreplace",
+            )
+            with f:
+                yield f.write
+        else:
+            # file_or_filename is a file-like object
+            # encoding determines if it is a text or binary writer
+            if encoding == "unicode":
+                # use a text writer as is
+                yield write
+            else:
+                # wrap a binary writer with TextIOWrapper
+                detach_buffer = False
+                if isinstance(file_or_filename, io.BufferedIOBase):
+                    buf = file_or_filename
+                elif isinstance(file_or_filename, io.RawIOBase):
+                    buf = io.BufferedWriter(file_or_filename)
+                    detach_buffer = True
+                else:
+                    # This is to handle passed objects that aren't in the
+                    # IOBase hierarchy, but just have a write method
+                    buf = io.BufferedIOBase()
+                    buf.writable = lambda: True
+                    buf.write = write
+                    try:
+                        # TextIOWrapper uses this methods to determine
+                        # if BOM (for UTF-16, etc) should be added
+                        buf.seekable = file_or_filename.seekable
+                        buf.tell = file_or_filename.tell
+                    except AttributeError:
+                        pass
+                wrapper = io.TextIOWrapper(
+                    buf,
+                    encoding=encoding,
+                    errors="xmlcharrefreplace",
+                    newline="\n",
+                )
+                try:
+                    yield wrapper.write
+                finally:
+                    # Keep the original file open when the TextIOWrapper and
+                    # the BufferedWriter are destroyed
+                    wrapper.detach()
+                    if detach_buffer:
+                        buf.detach()
+
+    from xml.etree.ElementTree import _namespace_map
+
+    def _namespaces(elem):
+        # identify namespaces used in this tree
+
+        # maps qnames to *encoded* prefix:local names
+        qnames = {None: None}
+
+        # maps uri:s to prefixes
+        namespaces = {}
+
+        def add_qname(qname):
+            # calculate serialized qname representation
+            try:
+                qname = _tounicode(qname)
+                if qname[:1] == "{":
+                    uri, tag = qname[1:].rsplit("}", 1)
+                    prefix = namespaces.get(uri)
+                    if prefix is None:
+                        prefix = _namespace_map.get(uri)
+                        if prefix is None:
+                            prefix = "ns%d" % len(namespaces)
+                        else:
+                            prefix = _tounicode(prefix)
+                        if prefix != "xml":
+                            namespaces[uri] = prefix
+                    if prefix:
+                        qnames[qname] = "%s:%s" % (prefix, tag)
+                    else:
+                        qnames[qname] = tag  # default element
+                else:
+                    qnames[qname] = qname
+            except TypeError:
+                _raise_serialization_error(qname)
+
+        # populate qname and namespaces table
+        for elem in elem.iter():
+            tag = elem.tag
+            if isinstance(tag, QName):
+                if tag.text not in qnames:
+                    add_qname(tag.text)
+            elif isinstance(tag, str):
+                if tag not in qnames:
+                    add_qname(tag)
+            elif tag is not None and tag is not Comment and tag is not PI:
+                _raise_serialization_error(tag)
+            for key, value in elem.items():
+                if isinstance(key, QName):
+                    key = key.text
+                if key not in qnames:
+                    add_qname(key)
+                if isinstance(value, QName) and value.text not in qnames:
+                    add_qname(value.text)
+            text = elem.text
+            if isinstance(text, QName) and text.text not in qnames:
+                add_qname(text.text)
+        return qnames, namespaces
+
+    def _serialize_xml(write, elem, qnames, namespaces, **kwargs):
+        tag = elem.tag
+        text = elem.text
+        if tag is Comment:
+            write("<!--%s-->" % _tounicode(text))
+        elif tag is ProcessingInstruction:
+            write("<?%s?>" % _tounicode(text))
+        else:
+            tag = qnames[_tounicode(tag) if tag is not None else None]
+            if tag is None:
+                if text:
+                    write(_escape_cdata(text))
+                for e in elem:
+                    _serialize_xml(write, e, qnames, None)
+            else:
+                write("<" + tag)
+                if namespaces:
+                    for uri, prefix in sorted(
+                        namespaces.items(), key=lambda x: x[1]
+                    ):  # sort on prefix
+                        if prefix:
+                            prefix = ":" + prefix
+                        write(' xmlns%s="%s"' % (prefix, _escape_attrib(uri)))
+                attrs = elem.attrib
+                if attrs:
+                    # try to keep existing attrib order
+                    if len(attrs) <= 1 or type(attrs) is _Attrib:
+                        items = attrs.items()
+                    else:
+                        # if plain dict, use lexical order
+                        items = sorted(attrs.items())
+                    for k, v in items:
+                        if isinstance(k, QName):
+                            k = _tounicode(k.text)
+                        else:
+                            k = _tounicode(k)
+                        if isinstance(v, QName):
+                            v = qnames[_tounicode(v.text)]
+                        else:
+                            v = _escape_attrib(v)
+                        write(' %s="%s"' % (qnames[k], v))
+                if text is not None or len(elem):
+                    write(">")
+                    if text:
+                        write(_escape_cdata(text))
+                    for e in elem:
+                        _serialize_xml(write, e, qnames, None)
+                    write("</" + tag + ">")
+                else:
+                    write("/>")
+        if elem.tail:
+            write(_escape_cdata(elem.tail))
+
+    def _raise_serialization_error(text):
+        raise TypeError("cannot serialize %r (type %s)" % (text, type(text).__name__))
+
+    def _escape_cdata(text):
+        # escape character data
+        try:
+            text = _tounicode(text)
+            # it's worth avoiding do-nothing calls for short strings
+            if "&" in text:
+                text = text.replace("&", "&amp;")
+            if "<" in text:
+                text = text.replace("<", "&lt;")
+            if ">" in text:
+                text = text.replace(">", "&gt;")
+            return text
+        except (TypeError, AttributeError):
+            _raise_serialization_error(text)
+
+    def _escape_attrib(text):
+        # escape attribute value
+        try:
+            text = _tounicode(text)
+            if "&" in text:
+                text = text.replace("&", "&amp;")
+            if "<" in text:
+                text = text.replace("<", "&lt;")
+            if ">" in text:
+                text = text.replace(">", "&gt;")
+            if '"' in text:
+                text = text.replace('"', "&quot;")
+            if "\n" in text:
+                text = text.replace("\n", "&#10;")
+            return text
+        except (TypeError, AttributeError):
+            _raise_serialization_error(text)
+
+    def _indent(elem, level=0):
+        # From http://effbot.org/zone/element-lib.htm#prettyprint
+        i = "\n" + level * "  "
+        if len(elem):
+            if not elem.text or not elem.text.strip():
+                elem.text = i + "  "
+            if not elem.tail or not elem.tail.strip():
+                elem.tail = i
+            for elem in elem:
+                _indent(elem, level + 1)
+            if not elem.tail or not elem.tail.strip():
+                elem.tail = i
+        else:
+            if level and (not elem.tail or not elem.tail.strip()):
+                elem.tail = i

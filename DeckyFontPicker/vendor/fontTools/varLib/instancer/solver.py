@@ -1,1 +1,309 @@
-ZnJvbSBmb250VG9vbHMudmFyTGliLm1vZGVscyBpbXBvcnQgc3VwcG9ydFNjYWxhcgpmcm9tIGZvbnRUb29scy5taXNjLmZpeGVkVG9vbHMgaW1wb3J0IE1BWF9GMkRPVDE0CmZyb20gZnVuY3Rvb2xzIGltcG9ydCBscnVfY2FjaGUKCl9fYWxsX18gPSBbInJlYmFzZVRlbnQiXQoKRVBTSUxPTiA9IDEgLyAoMSA8PCAxNCkKCgpkZWYgX3JldmVyc2VfbmVnYXRlKHYpOgogICAgcmV0dXJuICgtdlsyXSwgLXZbMV0sIC12WzBdKQoKCmRlZiBfc29sdmUodGVudCwgYXhpc0xpbWl0LCBuZWdhdGl2ZT1GYWxzZSk6CiAgICBheGlzTWluLCBheGlzRGVmLCBheGlzTWF4LCBfZGlzdGFuY2VOZWdhdGl2ZSwgX2Rpc3RhbmNlUG9zaXRpdmUgPSBheGlzTGltaXQKICAgIGxvd2VyLCBwZWFrLCB1cHBlciA9IHRlbnQKCiAgICAjIE1pcnJvciB0aGUgcHJvYmxlbSBzdWNoIHRoYXQgYXhpc0RlZiA8PSBwZWFrCiAgICBpZiBheGlzRGVmID4gcGVhazoKICAgICAgICByZXR1cm4gWwogICAgICAgICAgICAoc2NhbGFyLCBfcmV2ZXJzZV9uZWdhdGUodCkgaWYgdCBpcyBub3QgTm9uZSBlbHNlIE5vbmUpCiAgICAgICAgICAgIGZvciBzY2FsYXIsIHQgaW4gX3NvbHZlKAogICAgICAgICAgICAgICAgX3JldmVyc2VfbmVnYXRlKHRlbnQpLAogICAgICAgICAgICAgICAgYXhpc0xpbWl0LnJldmVyc2VfbmVnYXRlKCksCiAgICAgICAgICAgICAgICBub3QgbmVnYXRpdmUsCiAgICAgICAgICAgICkKICAgICAgICBdCiAgICAjIGF4aXNEZWYgPD0gcGVhawoKICAgICMgY2FzZSAxOiBUaGUgd2hvbGUgZGVsdGFzZXQgZmFsbHMgb3V0c2lkZSB0aGUgbmV3IGxpbWl0OyB3ZSBjYW4gZHJvcCBpdAogICAgIwogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBlYWsKICAgICMgIDEuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLm8uLi4uLi4uLi4uCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8gXAogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8gICBcCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvICAgICBcCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8gICAgICAgXAogICAgIyAgMC0tLXwtLS0tLS0tLS0tLXwtLS0tLS0tLS0tfC0tLS0tLS0tIG8gICAgICAgICBvLS0tLTEKICAgICMgICAgYXhpc01pbiAgICAgYXhpc0RlZiAgICBheGlzTWF4ICAgbG93ZXIgICAgIHVwcGVyCiAgICAjCiAgICBpZiBheGlzTWF4IDw9IGxvd2VyIGFuZCBheGlzTWF4IDwgcGVhazoKICAgICAgICByZXR1cm4gW10gICMgTm8gb3ZlcmxhcAoKICAgICMgY2FzZSAyOiBPbmx5IHRoZSBwZWFrIGFuZCBvdXRlcm1vc3QgYm91bmQgZmFsbCBvdXRzaWRlIHRoZSBuZXcgbGltaXQ7CiAgICAjIHdlIGtlZXAgdGhlIGRlbHRhc2V0LCB1cGRhdGUgcGVhayBhbmQgb3V0ZXJtb3N0IGJvdW5kIGFuZCBhbmQgc2NhbGUgZGVsdGFzCiAgICAjIGJ5IHRoZSBzY2FsYXIgdmFsdWUgZm9yIHRoZSByZXN0cmljdGVkIGF4aXMgYXQgdGhlIG5ldyBsaW1pdCwgYW5kIHNvbHZlCiAgICAjIHJlY3Vyc2l2ZWx5LgogICAgIwogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8cGVhawogICAgIyAgMS4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi58Lm8uLi4uLi4uLi4uCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwvIFwKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLyAgIFwKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvfCAgICBcCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvIHwgICAgIFwKICAgICMgIDAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gbyAgfCAgICAgIG8tLS0tMQogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgIGxvd2VyICB8ICAgICAgdXBwZXIKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfAogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYXhpc01heAogICAgIwogICAgIyBDb252ZXJ0IHRvOgogICAgIwogICAgIyAgMS4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbyBwZWFrCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL3wKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC94fAogICAgIyAgMC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBvICBvIHVwcGVyIC0tLS0xCiAgICAjICAgICAgICAgICAgICAgICAgICAgICAgICAgbG93ZXIgIHwKICAgICMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfAogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYXhpc01heAogICAgaWYgYXhpc01heCA8IHBlYWs6CiAgICAgICAgbXVsdCA9IHN1cHBvcnRTY2FsYXIoeyJ0YWciOiBheGlzTWF4fSwgeyJ0YWciOiB0ZW50fSkKICAgICAgICB0ZW50ID0gKGxvd2VyLCBheGlzTWF4LCBheGlzTWF4KQogICAgICAgIHJldHVybiBbKHNjYWxhciAqIG11bHQsIHQpIGZvciBzY2FsYXIsIHQgaW4gX3NvbHZlKHRlbnQsIGF4aXNMaW1pdCldCgogICAgIyBsb3dlciA8PSBheGlzRGVmIDw9IHBlYWsgPD0gYXhpc01heAoKICAgIGdhaW4gPSBzdXBwb3J0U2NhbGFyKHsidGFnIjogYXhpc0RlZn0sIHsidGFnIjogdGVudH0pCiAgICBvdXQgPSBbKGdhaW4sIE5vbmUpXQoKICAgICMgRmlyc3QsIHRoZSBwb3NpdGl2ZSBzaWRlCgogICAgIyBvdXRHYWluIGlzIHRoZSBzY2FsYXIgb2YgYXhpc01heCBhdCB0aGUgdGVudC4KICAgIG91dEdhaW4gPSBzdXBwb3J0U2NhbGFyKHsidGFnIjogYXhpc01heH0sIHsidGFnIjogdGVudH0pCgogICAgIyBDYXNlIDNhOiBHYWluIGlzIG1vcmUgdGhhbiBvdXRHYWluLiBUaGUgdGVudCBkb3duLXNsb3BlIGNyb3NzZXMKICAgICMgdGhlIGF4aXMgaW50byBuZWdhdGl2ZS4gV2UgaGF2ZSB0byBzcGxpdCBpdCBpbnRvIG11bHRpcGxlcy4KICAgICMKICAgICMgICAgICAgICAgICAgICAgICAgICAgfCBwZWFrICB8CiAgICAjICAxLi4uLi4uLi4uLi4uLi4uLi4uLnwuby4uLi4ufC4uLi4uLi4uLi4uLi4uCiAgICAjICAgICAgICAgICAgICAgICAgICAgIHwveFxfICAgfAogICAgIyAgZ2Fpbi4uLi4uLi4uLi4uLi4uLi4rLi4uLitfLnwuLi4uLi4uLi4uLi4uLgogICAgIyAgICAgICAgICAgICAgICAgICAgIC98ICAgIHx5XHwKICAgICMgIC4uLi4uLi4uLi4uLi4uLi4uLi8ufC4uLi58Li4rXy4uLi4uLm91dEdhaW4KICAgICMgICAgICAgICAgICAgICAgICAgLyAgfCAgICB8ICB8IFwKICAgICMgIDAtLS18LS0tLS0tLS0tLS1vICAgfCAgICB8ICB8ICBvLS0tLS0tLS0tLTEKICAgICMgICAgYXhpc01pbiAgICBsb3dlciAgfCAgICB8ICB8ICAgdXBwZXIKICAgICMgICAgICAgICAgICAgICAgICAgICAgfCAgICB8ICB8CiAgICAjICAgICAgICAgICAgICAgIGF4aXNEZWYgICAgfCAgYXhpc01heAogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgIHwKICAgICMgICAgICAgICAgICAgICAgICAgICAgY3Jvc3NpbmcKICAgIGlmIGdhaW4gPj0gb3V0R2FpbjoKICAgICAgICAjIE5vdGUgdGhhdCB0aGlzIGlzIHRoZSBicmFuY2ggdGFrZW4gaWYgYm90aCBnYWluIGFuZCBvdXRHYWluIGFyZSAwLgoKICAgICAgICAjIENyb3NzaW5nIHBvaW50IG9uIHRoZSBheGlzLgogICAgICAgIGNyb3NzaW5nID0gcGVhayArICgxIC0gZ2FpbikgKiAodXBwZXIgLSBwZWFrKQoKICAgICAgICBsb2MgPSAobWF4KGxvd2VyLCBheGlzRGVmKSwgcGVhaywgY3Jvc3NpbmcpCiAgICAgICAgc2NhbGFyID0gMQoKICAgICAgICAjIFRoZSBwYXJ0IGJlZm9yZSB0aGUgY3Jvc3NpbmcgcG9pbnQuCiAgICAgICAgb3V0LmFwcGVuZCgoc2NhbGFyIC0gZ2FpbiwgbG9jKSkKCiAgICAgICAgIyBUaGUgcGFydCBhZnRlciB0aGUgY3Jvc3NpbmcgcG9pbnQgbWF5IHVzZSBvbmUgb3IgdHdvIHRlbnRzLAogICAgICAgICMgZGVwZW5kaW5nIG9uIHdoZXRoZXIgdXBwZXIgaXMgYmVmb3JlIGF4aXNNYXggb3Igbm90LCBpbiBvbmUKICAgICAgICAjIGNhc2Ugd2UgbmVlZCB0byBrZWVwIGl0IGRvd24gdG8gZXRlcm5pdHkuCgogICAgICAgICMgQ2FzZSAzYTEsIHNpbWlsYXIgdG8gY2FzZSAxbmVnOyBqdXN0IG9uZSB0ZW50IG5lZWRlZCwgYXMgaW4KICAgICAgICAjIHRoZSBkcmF3aW5nIGFib3ZlLgogICAgICAgIGlmIHVwcGVyID49IGF4aXNNYXg6CiAgICAgICAgICAgIGxvYyA9IChjcm9zc2luZywgYXhpc01heCwgYXhpc01heCkKICAgICAgICAgICAgc2NhbGFyID0gb3V0R2FpbgoKICAgICAgICAgICAgb3V0LmFwcGVuZCgoc2NhbGFyIC0gZ2FpbiwgbG9jKSkKCiAgICAgICAgIyBDYXNlIDNhMjogU2ltaWxhciB0byBjYXNlIDJuZWc7IHR3byB0ZW50cyBuZWVkZWQsIHRvIGtlZXAKICAgICAgICAjIGRvd24gdG8gZXRlcm5pdHkuCiAgICAgICAgIwogICAgICAgICMgICAgICAgICAgICAgICAgICAgICAgfCBwZWFrICAgICAgICAgICAgIHwKICAgICAgICAjICAxLi4uLi4uLi4uLi4uLi4uLi4uLnwuby4uLi4uLi4uLi4uLi4uLi58Li4uCiAgICAgICAgIyAgICAgICAgICAgICAgICAgICAgICB8LyBcXyAgICAgICAgICAgICAgfAogICAgICAgICMgIGdhaW4uLi4uLi4uLi4uLi4uLi4uKy4uLi4rXy4uLi4uLi4uLi4uLnwuLi4KICAgICAgICAjICAgICAgICAgICAgICAgICAgICAgL3wgICAgfCBceHh4eHh4eHh4eHl8CiAgICAgICAgIyAgICAgICAgICAgICAgICAgICAgLyB8ICAgIHwgIFxfeHh4eHh5eXl5fAogICAgICAgICMgICAgICAgICAgICAgICAgICAgLyAgfCAgICB8ICAgIFx4eHl5eXl5eXwKICAgICAgICAjICAwLS0tfC0tLS0tLS0tLS0tbyAgIHwgICAgfCAgICAgby0tLS0tLS18LS0xCiAgICAgICAgIyAgICBheGlzTWluICAgIGxvd2VyICB8ICAgIHwgICAgICB1cHBlciAgfAogICAgICAgICMgICAgICAgICAgICAgICAgICAgICAgfCAgICB8ICAgICAgICAgICAgIHwKICAgICAgICAjICAgICAgICAgICAgICAgIGF4aXNEZWYgICAgfCAgICAgICAgICAgICBheGlzTWF4CiAgICAgICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgIHwKICAgICAgICAjICAgICAgICAgICAgICAgICAgICAgIGNyb3NzaW5nCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBBIHRlbnQncyBwZWFrIGNhbm5vdCBmYWxsIG9uIGF4aXMgZGVmYXVsdC4gTnVkZ2UgaXQuCiAgICAgICAgICAgIGlmIHVwcGVyID09IGF4aXNEZWY6CiAgICAgICAgICAgICAgICB1cHBlciArPSBFUFNJTE9OCgogICAgICAgICAgICAjIERvd25zbG9wZS4KICAgICAgICAgICAgbG9jMSA9IChjcm9zc2luZywgdXBwZXIsIGF4aXNNYXgpCiAgICAgICAgICAgIHNjYWxhcjEgPSAwCgogICAgICAgICAgICAjIEV0ZXJuaXR5IGp1c3RpZnkuCiAgICAgICAgICAgIGxvYzIgPSAodXBwZXIsIGF4aXNNYXgsIGF4aXNNYXgpCiAgICAgICAgICAgIHNjYWxhcjIgPSAwCgogICAgICAgICAgICBvdXQuYXBwZW5kKChzY2FsYXIxIC0gZ2FpbiwgbG9jMSkpCiAgICAgICAgICAgIG91dC5hcHBlbmQoKHNjYWxhcjIgLSBnYWluLCBsb2MyKSkKCiAgICBlbHNlOgogICAgICAgICMgU3BlY2lhbC1jYXNlIGlmIHBlYWsgaXMgYXQgYXhpc01heC4KICAgICAgICBpZiBheGlzTWF4ID09IHBlYWs6CiAgICAgICAgICAgIHVwcGVyID0gcGVhawoKICAgICAgICAjIENhc2UgMzoKICAgICAgICAjIFdlIGtlZXAgZGVsdGEgYXMgaXMgYW5kIG9ubHkgc2NhbGUgdGhlIGF4aXMgdXBwZXIgdG8gYWNoaWV2ZQogICAgICAgICMgdGhlIGRlc2lyZWQgbmV3IHRlbnQgaWYgZmVhc2libGUuCiAgICAgICAgIwogICAgICAgICMgICAgICAgICAgICAgICAgICAgICAgICBwZWFrCiAgICAgICAgIyAgMS4uLi4uLi4uLi4uLi4uLi4uLi4uLm8uLi4uLi4uLi4uLi4uLi4uLi4uLgogICAgICAgICMgICAgICAgICAgICAgICAgICAgICAgIC8gXF98CiAgICAgICAgIyAgLi4uLi4uLi4uLi4uLi4uLi4uLi4vLi4uLitfLi4uLi4uLi4ub3V0R2FpbgogICAgICAgICMgICAgICAgICAgICAgICAgICAgICAvICAgICB8IFwKICAgICAgICAjICBnYWluLi4uLi4uLi4uLi4uLi4rLi4uLi4ufC4uK18uLi4uLi4uLi4uLi4uCiAgICAgICAgIyAgICAgICAgICAgICAgICAgICAvfCAgICAgIHwgIHwgXAogICAgICAgICMgIDAtLS18LS0tLS0tLS0tLS1vIHwgICAgICB8ICB8ICBvLS0tLS0tLS0tLTEKICAgICAgICAjICAgIGF4aXNNaW4gICAgbG93ZXJ8ICAgICAgfCAgfCAgIHVwcGVyCiAgICAgICAgIyAgICAgICAgICAgICAgICAgICAgfCAgICAgIHwgIG5ld1VwcGVyCiAgICAgICAgIyAgICAgICAgICAgICAgYXhpc0RlZiAgICAgIGF4aXNNYXgKICAgICAgICAjCiAgICAgICAgbmV3VXBwZXIgPSBwZWFrICsgKDEgLSBnYWluKSAqICh1cHBlciAtIHBlYWspCiAgICAgICAgYXNzZXJ0IGF4aXNNYXggPD0gbmV3VXBwZXIgICMgQmVjYXVzZSBvdXRHYWluID4gZ2FpbgogICAgICAgICMgRGlzYWJsZWQgYmVjYXVzZSBvdHMgZG9lc24ndCBsaWtlIHVzOgogICAgICAgICMgaHR0cHM6Ly9naXRodWIuY29tL2ZvbnR0b29scy9mb250dG9vbHMvaXNzdWVzLzMzNTAKICAgICAgICBpZiBGYWxzZSBhbmQgbmV3VXBwZXIgPD0gYXhpc0RlZiArIChheGlzTWF4IC0gYXhpc0RlZikgKiAyOgogICAgICAgICAgICB1cHBlciA9IG5ld1VwcGVyCiAgICAgICAgICAgIGlmIG5vdCBuZWdhdGl2ZSBhbmQgYXhpc0RlZiArIChheGlzTWF4IC0gYXhpc0RlZikgKiBNQVhfRjJET1QxNCA8IHVwcGVyOgogICAgICAgICAgICAgICAgIyB3ZSBjbGFtcCArMi4wIHRvIHRoZSBtYXggRjJEb3QxNCAofjEuOTk5OTQpIGZvciBjb252ZW5pZW5jZQogICAgICAgICAgICAgICAgdXBwZXIgPSBheGlzRGVmICsgKGF4aXNNYXggLSBheGlzRGVmKSAqIE1BWF9GMkRPVDE0CiAgICAgICAgICAgICAgICBhc3NlcnQgcGVhayA8IHVwcGVyCgogICAgICAgICAgICBsb2MgPSAobWF4KGF4aXNEZWYsIGxvd2VyKSwgcGVhaywgdXBwZXIpCiAgICAgICAgICAgIHNjYWxhciA9IDEKCiAgICAgICAgICAgIG91dC5hcHBlbmQoKHNjYWxhciAtIGdhaW4sIGxvYykpCgogICAgICAgICMgQ2FzZSA0OiBOZXcgbGltaXQgZG9lc24ndCBmaXQ7IHdlIG5lZWQgdG8gY2hvcCBpbnRvIHR3byB0ZW50cywKICAgICAgICAjIGJlY2F1c2UgdGhlIHNoYXBlIG9mIGEgdHJpYW5nbGUgd2l0aCBwYXJ0IG9mIG9uZSBzaWRlIGN1dCBvZmYKICAgICAgICAjIGNhbm5vdCBiZSByZXByZXNlbnRlZCBhcyBhIHRyaWFuZ2xlIGl0c2VsZi4KICAgICAgICAjCiAgICAgICAgIyAgICAgICAgICAgIHwgICBwZWFrIHwKICAgICAgICAjICAxLi4uLi4uLi4ufC4uLi4uLm8ufC4uLi4uLi4uLi4uLi4uLi4uLi4uCiAgICAgICAgIyAgLi4uLi4uLi4uLnwuLi4uLi94XHwuLi4uLi4uLi4uLi4ub3V0R2FpbgogICAgICAgICMgICAgICAgICAgICB8ICAgIHx4eHl8XF8KICAgICAgICAjICAgICAgICAgICAgfCAgIC94eHh5fCAgXF8KICAgICAgICAjICAgICAgICAgICAgfCAgfHh4eHh5fCAgICBcXwogICAgICAgICMgICAgICAgICAgICB8ICAveHh4eHl8ICAgICAgXF8KICAgICAgICAjICAwLS0tfC0tLS0tfC1veHh4eHh4fCAgICAgICAgby0tLS0tLS0tLS0xCiAgICAgICAgIyAgICBheGlzTWluIHwgbG93ZXIgIHwgICAgICAgIHVwcGVyCiAgICAgICAgIyAgICAgICAgICAgIHwgICAgICAgIHwKICAgICAgICAjICAgICAgICAgIGF4aXNEZWYgIGF4aXNNYXgKICAgICAgICAjCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbG9jMSA9IChtYXgoYXhpc0RlZiwgbG93ZXIpLCBwZWFrLCBheGlzTWF4KQogICAgICAgICAgICBzY2FsYXIxID0gMQoKICAgICAgICAgICAgbG9jMiA9IChwZWFrLCBheGlzTWF4LCBheGlzTWF4KQogICAgICAgICAgICBzY2FsYXIyID0gb3V0R2FpbgoKICAgICAgICAgICAgb3V0LmFwcGVuZCgoc2NhbGFyMSAtIGdhaW4sIGxvYzEpKQogICAgICAgICAgICAjIERvbid0IGFkZCBhIGRpcmFjIGRlbHRhIQogICAgICAgICAgICBpZiBwZWFrIDwgYXhpc01heDoKICAgICAgICAgICAgICAgIG91dC5hcHBlbmQoKHNjYWxhcjIgLSBnYWluLCBsb2MyKSkKCiAgICAjIE5vdywgdGhlIG5lZ2F0aXZlIHNpZGUKCiAgICAjIENhc2UgMW5lZzogTG93ZXIgZXh0ZW5kcyBiZXlvbmQgYXhpc01pbjogd2UgY2hvcC4gU2ltcGxlLgogICAgIwogICAgIyAgICAgICAgICAgICAgICAgICAgIHwgICB8cGVhawogICAgIyAgMS4uLi4uLi4uLi4uLi4uLi4uLnwuLi58Lm8uLi4uLi4uLi4uLi4uLi4uLgogICAgIyAgICAgICAgICAgICAgICAgICAgIHwgICB8LyBcCiAgICAjICBnYWluLi4uLi4uLi4uLi4uLi4ufC4uLisuLi5cLi4uLi4uLi4uLi4uLi4uCiAgICAjICAgICAgICAgICAgICAgICAgICAgfHhfL3wgICAgXAogICAgIyAgICAgICAgICAgICAgICAgICAgIHwvICB8ICAgICBcCiAgICAjICAgICAgICAgICAgICAgICAgIF8vfCAgIHwgICAgICBcCiAgICAjICAwLS0tLS0tLS0tLS0tLS0tbyAgfCAgIHwgICAgICAgby0tLS0tLS0tLS0xCiAgICAjICAgICAgICAgICAgICBsb3dlciAgfCAgIHwgICAgICAgdXBwZXIKICAgICMgICAgICAgICAgICAgICAgICAgICB8ICAgfAogICAgIyAgICAgICAgICAgICAgIGF4aXNNaW4gICBheGlzRGVmCiAgICAjCiAgICBpZiBsb3dlciA8PSBheGlzTWluOgogICAgICAgIGxvYyA9IChheGlzTWluLCBheGlzTWluLCBheGlzRGVmKQogICAgICAgIHNjYWxhciA9IHN1cHBvcnRTY2FsYXIoeyJ0YWciOiBheGlzTWlufSwgeyJ0YWciOiB0ZW50fSkKCiAgICAgICAgb3V0LmFwcGVuZCgoc2NhbGFyIC0gZ2FpbiwgbG9jKSkKCiAgICAjIENhc2UgMm5lZzogTG93ZXIgaXMgYmV0d2VuIGF4aXNNaW4gYW5kIGF4aXNEZWY6IHdlIGFkZCB0d28KICAgICMgdGVudHMgdG8ga2VlcCBpdCBkb3duIGFsbCB0aGUgd2F5IHRvIGV0ZXJuaXR5LgogICAgIwogICAgIyAgICAgIHwgICAgICAgICAgICAgICB8cGVhawogICAgIyAgMS4uLnwuLi4uLi4uLi4uLi4uLi58Lm8uLi4uLi4uLi4uLi4uLi4uLgogICAgIyAgICAgIHwgICAgICAgICAgICAgICB8LyBcCiAgICAjICBnYWlufC4uLi4uLi4uLi4uLi4uLisuLi5cLi4uLi4uLi4uLi4uLi4uCiAgICAjICAgICAgfHl4eHh4eHh4eHh4eHh4L3wgICAgXAogICAgIyAgICAgIHx5eXl5eXl4eHh4eHh4LyB8ICAgICBcCiAgICAjICAgICAgfHl5eXl5eXl5eXl5eC8gIHwgICAgICBcCiAgICAjICAwLS0tfC0tLS0tLS0tLS0tbyAgIHwgICAgICAgby0tLS0tLS0tLS0xCiAgICAjICAgIGF4aXNNaW4gICAgbG93ZXIgIHwgICAgICAgdXBwZXIKICAgICMgICAgICAgICAgICAgICAgICAgICAgfAogICAgIyAgICAgICAgICAgICAgICAgICAgYXhpc0RlZgogICAgIwogICAgZWxzZToKICAgICAgICAjIEEgdGVudCdzIHBlYWsgY2Fubm90IGZhbGwgb24gYXhpcyBkZWZhdWx0LiBOdWRnZSBpdC4KICAgICAgICBpZiBsb3dlciA9PSBheGlzRGVmOgogICAgICAgICAgICBsb3dlciAtPSBFUFNJTE9OCgogICAgICAgICMgRG93bnNsb3BlLgogICAgICAgIGxvYzEgPSAoYXhpc01pbiwgbG93ZXIsIGF4aXNEZWYpCiAgICAgICAgc2NhbGFyMSA9IDAKCiAgICAgICAgIyBFdGVybml0eSBqdXN0aWZ5LgogICAgICAgIGxvYzIgPSAoYXhpc01pbiwgYXhpc01pbiwgbG93ZXIpCiAgICAgICAgc2NhbGFyMiA9IDAKCiAgICAgICAgb3V0LmFwcGVuZCgoc2NhbGFyMSAtIGdhaW4sIGxvYzEpKQogICAgICAgIG91dC5hcHBlbmQoKHNjYWxhcjIgLSBnYWluLCBsb2MyKSkKCiAgICByZXR1cm4gb3V0CgoKQGxydV9jYWNoZSgxMjgpCmRlZiByZWJhc2VUZW50KHRlbnQsIGF4aXNMaW1pdCk6CiAgICAiIiJHaXZlbiBhIHR1cGxlIChsb3dlcixwZWFrLHVwcGVyKSAidGVudCIgYW5kIG5ldyBheGlzIGxpbWl0cwogICAgKGF4aXNNaW4sYXhpc0RlZmF1bHQsYXhpc01heCksIHNvbHZlcyBob3cgdG8gcmVwcmVzZW50IHRoZSB0ZW50CiAgICB1bmRlciB0aGUgbmV3IGF4aXMgY29uZmlndXJhdGlvbi4gIEFsbCB2YWx1ZXMgYXJlIGluIG5vcm1hbGl6ZWQKICAgIC0xLDAsKzEgY29vcmRpbmF0ZSBzeXN0ZW0uIFRlbnQgdmFsdWVzIGNhbiBiZSBvdXRzaWRlIHRoaXMgcmFuZ2UuCgogICAgUmV0dXJuIHZhbHVlIGlzIGEgbGlzdCBvZiB0dXBsZXMuIEVhY2ggdHVwbGUgaXMgb2YgdGhlIGZvcm0KICAgIChzY2FsYXIsdGVudCksIHdoZXJlIHNjYWxhciBpcyBhIG11bHRpcGxlciB0byBtdWx0aXBseSBhbnkKICAgIGRlbHRhLXNldHMgYnksIGFuZCB0ZW50IGlzIGEgbmV3IHRlbnQgZm9yIHRoYXQgb3V0cHV0IGRlbHRhLXNldC4KICAgIElmIHRlbnQgdmFsdWUgaXMgTm9uZSwgdGhhdCBpcyBhIHNwZWNpYWwgZGVsdGFzZXQgdGhhdCBzaG91bGQKICAgIGJlIGFsd2F5cy1lbmFibGVkIChjYWxsZWQgImdhaW4iKS4iIiIKCiAgICBheGlzTWluLCBheGlzRGVmLCBheGlzTWF4LCBfZGlzdGFuY2VOZWdhdGl2ZSwgX2Rpc3RhbmNlUG9zaXRpdmUgPSBheGlzTGltaXQKICAgIGFzc2VydCAtMSA8PSBheGlzTWluIDw9IGF4aXNEZWYgPD0gYXhpc01heCA8PSArMQoKICAgIGxvd2VyLCBwZWFrLCB1cHBlciA9IHRlbnQKICAgIGFzc2VydCAtMiA8PSBsb3dlciA8PSBwZWFrIDw9IHVwcGVyIDw9ICsyCgogICAgYXNzZXJ0IHBlYWsgIT0gMAoKICAgIHNvbHMgPSBfc29sdmUodGVudCwgYXhpc0xpbWl0KQoKICAgIG4gPSBsYW1iZGEgdjogYXhpc0xpbWl0LnJlbm9ybWFsaXplVmFsdWUodikKICAgIHNvbHMgPSBbCiAgICAgICAgKHNjYWxhciwgKG4odlswXSksIG4odlsxXSksIG4odlsyXSkpIGlmIHYgaXMgbm90IE5vbmUgZWxzZSBOb25lKQogICAgICAgIGZvciBzY2FsYXIsIHYgaW4gc29scwogICAgICAgIGlmIHNjYWxhcgogICAgXQoKICAgIHJldHVybiBzb2xzCg==
+from fontTools.varLib.models import supportScalar
+from fontTools.misc.fixedTools import MAX_F2DOT14
+from functools import lru_cache
+
+__all__ = ["rebaseTent"]
+
+EPSILON = 1 / (1 << 14)
+
+
+def _reverse_negate(v):
+    return (-v[2], -v[1], -v[0])
+
+
+def _solve(tent, axisLimit, negative=False):
+    axisMin, axisDef, axisMax, _distanceNegative, _distancePositive = axisLimit
+    lower, peak, upper = tent
+
+    # Mirror the problem such that axisDef <= peak
+    if axisDef > peak:
+        return [
+            (scalar, _reverse_negate(t) if t is not None else None)
+            for scalar, t in _solve(
+                _reverse_negate(tent),
+                axisLimit.reverse_negate(),
+                not negative,
+            )
+        ]
+    # axisDef <= peak
+
+    # case 1: The whole deltaset falls outside the new limit; we can drop it
+    #
+    #                                          peak
+    #  1.........................................o..........
+    #                                           / \
+    #                                          /   \
+    #                                         /     \
+    #                                        /       \
+    #  0---|-----------|----------|-------- o         o----1
+    #    axisMin     axisDef    axisMax   lower     upper
+    #
+    if axisMax <= lower and axisMax < peak:
+        return []  # No overlap
+
+    # case 2: Only the peak and outermost bound fall outside the new limit;
+    # we keep the deltaset, update peak and outermost bound and and scale deltas
+    # by the scalar value for the restricted axis at the new limit, and solve
+    # recursively.
+    #
+    #                                  |peak
+    #  1...............................|.o..........
+    #                                  |/ \
+    #                                  /   \
+    #                                 /|    \
+    #                                / |     \
+    #  0--------------------------- o  |      o----1
+    #                           lower  |      upper
+    #                                  |
+    #                                axisMax
+    #
+    # Convert to:
+    #
+    #  1............................................
+    #                                  |
+    #                                  o peak
+    #                                 /|
+    #                                /x|
+    #  0--------------------------- o  o upper ----1
+    #                           lower  |
+    #                                  |
+    #                                axisMax
+    if axisMax < peak:
+        mult = supportScalar({"tag": axisMax}, {"tag": tent})
+        tent = (lower, axisMax, axisMax)
+        return [(scalar * mult, t) for scalar, t in _solve(tent, axisLimit)]
+
+    # lower <= axisDef <= peak <= axisMax
+
+    gain = supportScalar({"tag": axisDef}, {"tag": tent})
+    out = [(gain, None)]
+
+    # First, the positive side
+
+    # outGain is the scalar of axisMax at the tent.
+    outGain = supportScalar({"tag": axisMax}, {"tag": tent})
+
+    # Case 3a: Gain is more than outGain. The tent down-slope crosses
+    # the axis into negative. We have to split it into multiples.
+    #
+    #                      | peak  |
+    #  1...................|.o.....|..............
+    #                      |/x\_   |
+    #  gain................+....+_.|..............
+    #                     /|    |y\|
+    #  ................../.|....|..+_......outGain
+    #                   /  |    |  | \
+    #  0---|-----------o   |    |  |  o----------1
+    #    axisMin    lower  |    |  |   upper
+    #                      |    |  |
+    #                axisDef    |  axisMax
+    #                           |
+    #                      crossing
+    if gain >= outGain:
+        # Note that this is the branch taken if both gain and outGain are 0.
+
+        # Crossing point on the axis.
+        crossing = peak + (1 - gain) * (upper - peak)
+
+        loc = (max(lower, axisDef), peak, crossing)
+        scalar = 1
+
+        # The part before the crossing point.
+        out.append((scalar - gain, loc))
+
+        # The part after the crossing point may use one or two tents,
+        # depending on whether upper is before axisMax or not, in one
+        # case we need to keep it down to eternity.
+
+        # Case 3a1, similar to case 1neg; just one tent needed, as in
+        # the drawing above.
+        if upper >= axisMax:
+            loc = (crossing, axisMax, axisMax)
+            scalar = outGain
+
+            out.append((scalar - gain, loc))
+
+        # Case 3a2: Similar to case 2neg; two tents needed, to keep
+        # down to eternity.
+        #
+        #                      | peak             |
+        #  1...................|.o................|...
+        #                      |/ \_              |
+        #  gain................+....+_............|...
+        #                     /|    | \xxxxxxxxxxy|
+        #                    / |    |  \_xxxxxyyyy|
+        #                   /  |    |    \xxyyyyyy|
+        #  0---|-----------o   |    |     o-------|--1
+        #    axisMin    lower  |    |      upper  |
+        #                      |    |             |
+        #                axisDef    |             axisMax
+        #                           |
+        #                      crossing
+        else:
+            # A tent's peak cannot fall on axis default. Nudge it.
+            if upper == axisDef:
+                upper += EPSILON
+
+            # Downslope.
+            loc1 = (crossing, upper, axisMax)
+            scalar1 = 0
+
+            # Eternity justify.
+            loc2 = (upper, axisMax, axisMax)
+            scalar2 = 0
+
+            out.append((scalar1 - gain, loc1))
+            out.append((scalar2 - gain, loc2))
+
+    else:
+        # Special-case if peak is at axisMax.
+        if axisMax == peak:
+            upper = peak
+
+        # Case 3:
+        # We keep delta as is and only scale the axis upper to achieve
+        # the desired new tent if feasible.
+        #
+        #                        peak
+        #  1.....................o....................
+        #                       / \_|
+        #  ..................../....+_.........outGain
+        #                     /     | \
+        #  gain..............+......|..+_.............
+        #                   /|      |  | \
+        #  0---|-----------o |      |  |  o----------1
+        #    axisMin    lower|      |  |   upper
+        #                    |      |  newUpper
+        #              axisDef      axisMax
+        #
+        newUpper = peak + (1 - gain) * (upper - peak)
+        assert axisMax <= newUpper  # Because outGain > gain
+        # Disabled because ots doesn't like us:
+        # https://github.com/fonttools/fonttools/issues/3350
+        if False and newUpper <= axisDef + (axisMax - axisDef) * 2:
+            upper = newUpper
+            if not negative and axisDef + (axisMax - axisDef) * MAX_F2DOT14 < upper:
+                # we clamp +2.0 to the max F2Dot14 (~1.99994) for convenience
+                upper = axisDef + (axisMax - axisDef) * MAX_F2DOT14
+                assert peak < upper
+
+            loc = (max(axisDef, lower), peak, upper)
+            scalar = 1
+
+            out.append((scalar - gain, loc))
+
+        # Case 4: New limit doesn't fit; we need to chop into two tents,
+        # because the shape of a triangle with part of one side cut off
+        # cannot be represented as a triangle itself.
+        #
+        #            |   peak |
+        #  1.........|......o.|....................
+        #  ..........|...../x\|.............outGain
+        #            |    |xxy|\_
+        #            |   /xxxy|  \_
+        #            |  |xxxxy|    \_
+        #            |  /xxxxy|      \_
+        #  0---|-----|-oxxxxxx|        o----------1
+        #    axisMin | lower  |        upper
+        #            |        |
+        #          axisDef  axisMax
+        #
+        else:
+            loc1 = (max(axisDef, lower), peak, axisMax)
+            scalar1 = 1
+
+            loc2 = (peak, axisMax, axisMax)
+            scalar2 = outGain
+
+            out.append((scalar1 - gain, loc1))
+            # Don't add a dirac delta!
+            if peak < axisMax:
+                out.append((scalar2 - gain, loc2))
+
+    # Now, the negative side
+
+    # Case 1neg: Lower extends beyond axisMin: we chop. Simple.
+    #
+    #                     |   |peak
+    #  1..................|...|.o.................
+    #                     |   |/ \
+    #  gain...............|...+...\...............
+    #                     |x_/|    \
+    #                     |/  |     \
+    #                   _/|   |      \
+    #  0---------------o  |   |       o----------1
+    #              lower  |   |       upper
+    #                     |   |
+    #               axisMin   axisDef
+    #
+    if lower <= axisMin:
+        loc = (axisMin, axisMin, axisDef)
+        scalar = supportScalar({"tag": axisMin}, {"tag": tent})
+
+        out.append((scalar - gain, loc))
+
+    # Case 2neg: Lower is betwen axisMin and axisDef: we add two
+    # tents to keep it down all the way to eternity.
+    #
+    #      |               |peak
+    #  1...|...............|.o.................
+    #      |               |/ \
+    #  gain|...............+...\...............
+    #      |yxxxxxxxxxxxxx/|    \
+    #      |yyyyyyxxxxxxx/ |     \
+    #      |yyyyyyyyyyyx/  |      \
+    #  0---|-----------o   |       o----------1
+    #    axisMin    lower  |       upper
+    #                      |
+    #                    axisDef
+    #
+    else:
+        # A tent's peak cannot fall on axis default. Nudge it.
+        if lower == axisDef:
+            lower -= EPSILON
+
+        # Downslope.
+        loc1 = (axisMin, lower, axisDef)
+        scalar1 = 0
+
+        # Eternity justify.
+        loc2 = (axisMin, axisMin, lower)
+        scalar2 = 0
+
+        out.append((scalar1 - gain, loc1))
+        out.append((scalar2 - gain, loc2))
+
+    return out
+
+
+@lru_cache(128)
+def rebaseTent(tent, axisLimit):
+    """Given a tuple (lower,peak,upper) "tent" and new axis limits
+    (axisMin,axisDefault,axisMax), solves how to represent the tent
+    under the new axis configuration.  All values are in normalized
+    -1,0,+1 coordinate system. Tent values can be outside this range.
+
+    Return value is a list of tuples. Each tuple is of the form
+    (scalar,tent), where scalar is a multipler to multiply any
+    delta-sets by, and tent is a new tent for that output delta-set.
+    If tent value is None, that is a special deltaset that should
+    be always-enabled (called "gain")."""
+
+    axisMin, axisDef, axisMax, _distanceNegative, _distancePositive = axisLimit
+    assert -1 <= axisMin <= axisDef <= axisMax <= +1
+
+    lower, peak, upper = tent
+    assert -2 <= lower <= peak <= upper <= +2
+
+    assert peak != 0
+
+    sols = _solve(tent, axisLimit)
+
+    n = lambda v: axisLimit.renormalizeValue(v)
+    sols = [
+        (scalar, (n(v[0]), n(v[1]), n(v[2])) if v is not None else None)
+        for scalar, v in sols
+        if scalar
+    ]
+
+    return sols

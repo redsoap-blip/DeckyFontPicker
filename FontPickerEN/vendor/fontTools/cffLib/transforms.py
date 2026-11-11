@@ -1,1 +1,495 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5wc0NoYXJTdHJpbmdzIGltcG9ydCAoCiAgICBTaW1wbGVUMkRlY29tcGlsZXIsCiAgICBUMldpZHRoRXh0cmFjdG9yLAogICAgY2FsY1N1YnJCaWFzLAopCgoKZGVmIF91bmlxX3NvcnQobCk6CiAgICByZXR1cm4gc29ydGVkKHNldChsKSkKCgpjbGFzcyBTdG9wSGludENvdW50RXZlbnQoRXhjZXB0aW9uKToKICAgIHBhc3MKCgpjbGFzcyBfRGVzdWJyb3V0aW5pemluZ1QyRGVjb21waWxlcihTaW1wbGVUMkRlY29tcGlsZXIpOgogICAgc3RvcF9oaW50Y291bnRfb3BzID0gKAogICAgICAgICJvcF9oaW50bWFzayIsCiAgICAgICAgIm9wX2NudHJtYXNrIiwKICAgICAgICAib3Bfcm1vdmV0byIsCiAgICAgICAgIm9wX2htb3ZldG8iLAogICAgICAgICJvcF92bW92ZXRvIiwKICAgICkKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbG9jYWxTdWJycywgZ2xvYmFsU3VicnMsIHByaXZhdGU9Tm9uZSk6CiAgICAgICAgU2ltcGxlVDJEZWNvbXBpbGVyLl9faW5pdF9fKHNlbGYsIGxvY2FsU3VicnMsIGdsb2JhbFN1YnJzLCBwcml2YXRlKQoKICAgIGRlZiBleGVjdXRlKHNlbGYsIGNoYXJTdHJpbmcpOgogICAgICAgIHNlbGYubmVlZF9oaW50Y291bnQgPSBUcnVlICAjIHVudGlsIHByb3ZlbiBvdGhlcndpc2UKICAgICAgICBmb3Igb3BfbmFtZSBpbiBzZWxmLnN0b3BfaGludGNvdW50X29wczoKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBvcF9uYW1lLCBzZWxmLnN0b3BfaGludF9jb3VudCkKCiAgICAgICAgaWYgaGFzYXR0cihjaGFyU3RyaW5nLCAiX2Rlc3Vicm91dGluaXplZCIpOgogICAgICAgICAgICAjIElmIGEgY2hhcnN0cmluZyBoYXMgYWxyZWFkeSBiZWVuIGRlc3Vicm91dGluaXplZCwgd2Ugd2lsbCBzdGlsbAogICAgICAgICAgICAjIG5lZWQgdG8gZXhlY3V0ZSBpdCBpZiB3ZSBuZWVkIHRvIGNvdW50IGhpbnRzIGluIG9yZGVyIHRvCiAgICAgICAgICAgICMgY29tcHV0ZSB0aGUgYnl0ZSBsZW5ndGggZm9yIG1hc2sgYXJndW1lbnRzLCBhbmQgaGF2ZW4ndCBmaW5pc2hlZAogICAgICAgICAgICAjIGNvdW50aW5nIGhpbnRzIHBhaXJzLgogICAgICAgICAgICBpZiBzZWxmLm5lZWRfaGludGNvdW50IGFuZCBzZWxmLmNhbGxpbmdTdGFjazoKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICBTaW1wbGVUMkRlY29tcGlsZXIuZXhlY3V0ZShzZWxmLCBjaGFyU3RyaW5nKQogICAgICAgICAgICAgICAgZXhjZXB0IFN0b3BIaW50Q291bnRFdmVudDoKICAgICAgICAgICAgICAgICAgICBkZWwgc2VsZi5jYWxsaW5nU3RhY2tbLTFdCiAgICAgICAgICAgIHJldHVybgoKICAgICAgICBjaGFyU3RyaW5nLl9wYXRjaGVzID0gW10KICAgICAgICBTaW1wbGVUMkRlY29tcGlsZXIuZXhlY3V0ZShzZWxmLCBjaGFyU3RyaW5nKQogICAgICAgIGRlc3Vicm91dGluaXplZCA9IGNoYXJTdHJpbmcucHJvZ3JhbVs6XQogICAgICAgIGZvciBpZHgsIGV4cGFuc2lvbiBpbiByZXZlcnNlZChjaGFyU3RyaW5nLl9wYXRjaGVzKToKICAgICAgICAgICAgYXNzZXJ0IGlkeCA+PSAyCiAgICAgICAgICAgIGFzc2VydCBkZXN1YnJvdXRpbml6ZWRbaWR4IC0gMV0gaW4gWwogICAgICAgICAgICAgICAgImNhbGxzdWJyIiwKICAgICAgICAgICAgICAgICJjYWxsZ3N1YnIiLAogICAgICAgICAgICBdLCBkZXN1YnJvdXRpbml6ZWRbaWR4IC0gMV0KICAgICAgICAgICAgYXNzZXJ0IHR5cGUoZGVzdWJyb3V0aW5pemVkW2lkeCAtIDJdKSA9PSBpbnQKICAgICAgICAgICAgaWYgZXhwYW5zaW9uWy0xXSA9PSAicmV0dXJuIjoKICAgICAgICAgICAgICAgIGV4cGFuc2lvbiA9IGV4cGFuc2lvbls6LTFdCiAgICAgICAgICAgIGRlc3Vicm91dGluaXplZFtpZHggLSAyIDogaWR4XSA9IGV4cGFuc2lvbgogICAgICAgIGlmIG5vdCBzZWxmLnByaXZhdGUuaW5fY2ZmMjoKICAgICAgICAgICAgaWYgImVuZGNoYXIiIGluIGRlc3Vicm91dGluaXplZDoKICAgICAgICAgICAgICAgICMgQ3V0IG9mZiBhZnRlciBmaXJzdCBlbmRjaGFyCiAgICAgICAgICAgICAgICBkZXN1YnJvdXRpbml6ZWQgPSBkZXN1YnJvdXRpbml6ZWRbCiAgICAgICAgICAgICAgICAgICAgOiBkZXN1YnJvdXRpbml6ZWQuaW5kZXgoImVuZGNoYXIiKSArIDEKICAgICAgICAgICAgICAgIF0KCiAgICAgICAgY2hhclN0cmluZy5fZGVzdWJyb3V0aW5pemVkID0gZGVzdWJyb3V0aW5pemVkCiAgICAgICAgZGVsIGNoYXJTdHJpbmcuX3BhdGNoZXMKCiAgICBkZWYgb3BfY2FsbHN1YnIoc2VsZiwgaW5kZXgpOgogICAgICAgIHN1YnIgPSBzZWxmLmxvY2FsU3VicnNbc2VsZi5vcGVyYW5kU3RhY2tbLTFdICsgc2VsZi5sb2NhbEJpYXNdCiAgICAgICAgU2ltcGxlVDJEZWNvbXBpbGVyLm9wX2NhbGxzdWJyKHNlbGYsIGluZGV4KQogICAgICAgIHNlbGYucHJvY2Vzc1N1YnIoaW5kZXgsIHN1YnIpCgogICAgZGVmIG9wX2NhbGxnc3VicihzZWxmLCBpbmRleCk6CiAgICAgICAgc3ViciA9IHNlbGYuZ2xvYmFsU3VicnNbc2VsZi5vcGVyYW5kU3RhY2tbLTFdICsgc2VsZi5nbG9iYWxCaWFzXQogICAgICAgIFNpbXBsZVQyRGVjb21waWxlci5vcF9jYWxsZ3N1YnIoc2VsZiwgaW5kZXgpCiAgICAgICAgc2VsZi5wcm9jZXNzU3VicihpbmRleCwgc3VicikKCiAgICBkZWYgc3RvcF9oaW50X2NvdW50KHNlbGYsICphcmdzKToKICAgICAgICBzZWxmLm5lZWRfaGludGNvdW50ID0gRmFsc2UKICAgICAgICBmb3Igb3BfbmFtZSBpbiBzZWxmLnN0b3BfaGludGNvdW50X29wczoKICAgICAgICAgICAgc2V0YXR0cihzZWxmLCBvcF9uYW1lLCBOb25lKQogICAgICAgIGNzID0gc2VsZi5jYWxsaW5nU3RhY2tbLTFdCiAgICAgICAgaWYgaGFzYXR0cihjcywgIl9kZXN1YnJvdXRpbml6ZWQiKToKICAgICAgICAgICAgcmFpc2UgU3RvcEhpbnRDb3VudEV2ZW50KCkKCiAgICBkZWYgb3BfaGludG1hc2soc2VsZiwgaW5kZXgpOgogICAgICAgIFNpbXBsZVQyRGVjb21waWxlci5vcF9oaW50bWFzayhzZWxmLCBpbmRleCkKICAgICAgICBpZiBzZWxmLm5lZWRfaGludGNvdW50OgogICAgICAgICAgICBzZWxmLnN0b3BfaGludF9jb3VudCgpCgogICAgZGVmIHByb2Nlc3NTdWJyKHNlbGYsIGluZGV4LCBzdWJyKToKICAgICAgICBjcyA9IHNlbGYuY2FsbGluZ1N0YWNrWy0xXQogICAgICAgIGlmIG5vdCBoYXNhdHRyKGNzLCAiX2Rlc3Vicm91dGluaXplZCIpOgogICAgICAgICAgICBjcy5fcGF0Y2hlcy5hcHBlbmQoKGluZGV4LCBzdWJyLl9kZXN1YnJvdXRpbml6ZWQpKQoKCmRlZiBkZXN1YnJvdXRpbml6ZUNoYXJTdHJpbmcoY3MpOgogICAgIiIiRGVzdWJyb3V0aW5pemUgYSBjaGFyc3RyaW5nIGluLXBsYWNlLiIiIgogICAgY3MuZGVjb21waWxlKCkKICAgIHN1YnJzID0gZ2V0YXR0cihjcy5wcml2YXRlLCAiU3VicnMiLCBbXSkKICAgIGRlY29tcGlsZXIgPSBfRGVzdWJyb3V0aW5pemluZ1QyRGVjb21waWxlcihzdWJycywgY3MuZ2xvYmFsU3VicnMsIGNzLnByaXZhdGUpCiAgICBkZWNvbXBpbGVyLmV4ZWN1dGUoY3MpCiAgICBjcy5wcm9ncmFtID0gY3MuX2Rlc3Vicm91dGluaXplZAogICAgZGVsIGNzLl9kZXN1YnJvdXRpbml6ZWQKCgpkZWYgZGVzdWJyb3V0aW5pemUoY2ZmKToKICAgIGZvciBmb250TmFtZSBpbiBjZmYuZm9udE5hbWVzOgogICAgICAgIGZvbnQgPSBjZmZbZm9udE5hbWVdCiAgICAgICAgY3MgPSBmb250LkNoYXJTdHJpbmdzCiAgICAgICAgZm9yIGMgaW4gY3MudmFsdWVzKCk6CiAgICAgICAgICAgIGRlc3Vicm91dGluaXplQ2hhclN0cmluZyhjKQogICAgICAgICMgRGVsZXRlIGFsbCB0aGUgbG9jYWwgc3VicnMKICAgICAgICBpZiBoYXNhdHRyKGZvbnQsICJGREFycmF5Iik6CiAgICAgICAgICAgIGZvciBmZCBpbiBmb250LkZEQXJyYXk6CiAgICAgICAgICAgICAgICBwZCA9IGZkLlByaXZhdGUKICAgICAgICAgICAgICAgIGlmIGhhc2F0dHIocGQsICJTdWJycyIpOgogICAgICAgICAgICAgICAgICAgIGRlbCBwZC5TdWJycwogICAgICAgICAgICAgICAgaWYgIlN1YnJzIiBpbiBwZC5yYXdEaWN0OgogICAgICAgICAgICAgICAgICAgIGRlbCBwZC5yYXdEaWN0WyJTdWJycyJdCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcGQgPSBmb250LlByaXZhdGUKICAgICAgICAgICAgaWYgaGFzYXR0cihwZCwgIlN1YnJzIik6CiAgICAgICAgICAgICAgICBkZWwgcGQuU3VicnMKICAgICAgICAgICAgaWYgIlN1YnJzIiBpbiBwZC5yYXdEaWN0OgogICAgICAgICAgICAgICAgZGVsIHBkLnJhd0RpY3RbIlN1YnJzIl0KICAgICMgYXMgd2VsbCBhcyB0aGUgZ2xvYmFsIHN1YnJzCiAgICBjZmYuR2xvYmFsU3VicnMuY2xlYXIoKQoKCmNsYXNzIF9NYXJraW5nVDJEZWNvbXBpbGVyKFNpbXBsZVQyRGVjb21waWxlcik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgbG9jYWxTdWJycywgZ2xvYmFsU3VicnMsIHByaXZhdGUpOgogICAgICAgIFNpbXBsZVQyRGVjb21waWxlci5fX2luaXRfXyhzZWxmLCBsb2NhbFN1YnJzLCBnbG9iYWxTdWJycywgcHJpdmF0ZSkKICAgICAgICBmb3Igc3VicnMgaW4gW2xvY2FsU3VicnMsIGdsb2JhbFN1YnJzXToKICAgICAgICAgICAgaWYgc3VicnMgYW5kIG5vdCBoYXNhdHRyKHN1YnJzLCAiX3VzZWQiKToKICAgICAgICAgICAgICAgIHN1YnJzLl91c2VkID0gc2V0KCkKCiAgICBkZWYgb3BfY2FsbHN1YnIoc2VsZiwgaW5kZXgpOgogICAgICAgIHNlbGYubG9jYWxTdWJycy5fdXNlZC5hZGQoc2VsZi5vcGVyYW5kU3RhY2tbLTFdICsgc2VsZi5sb2NhbEJpYXMpCiAgICAgICAgU2ltcGxlVDJEZWNvbXBpbGVyLm9wX2NhbGxzdWJyKHNlbGYsIGluZGV4KQoKICAgIGRlZiBvcF9jYWxsZ3N1YnIoc2VsZiwgaW5kZXgpOgogICAgICAgIHNlbGYuZ2xvYmFsU3VicnMuX3VzZWQuYWRkKHNlbGYub3BlcmFuZFN0YWNrWy0xXSArIHNlbGYuZ2xvYmFsQmlhcykKICAgICAgICBTaW1wbGVUMkRlY29tcGlsZXIub3BfY2FsbGdzdWJyKHNlbGYsIGluZGV4KQoKCmNsYXNzIF9EZWhpbnRpbmdUMkRlY29tcGlsZXIoVDJXaWR0aEV4dHJhY3Rvcik6CiAgICBjbGFzcyBIaW50cyhvYmplY3QpOgogICAgICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICAgICAgICAgIyBXaGV0aGVyIGNhbGxpbmcgdGhpcyBjaGFyc3RyaW5nIHByb2R1Y2VzIGFueSBoaW50IHN0ZW1zCiAgICAgICAgICAgICMgTm90ZSB0aGF0IGlmIGEgY2hhcnN0cmluZyBzdGFydHMgd2l0aCBoaW50bWFzaywgaXQgd2lsbAogICAgICAgICAgICAjIGhhdmUgaGFzX2hpbnQgc2V0IHRvIFRydWUsIGJlY2F1c2UgaXQgKm1pZ2h0KiBwcm9kdWNlIGFuCiAgICAgICAgICAgICMgaW1wbGljaXQgdnN0ZW0gaWYgY2FsbGVkIHVuZGVyIGNlcnRhaW4gY29uZGl0aW9ucy4KICAgICAgICAgICAgc2VsZi5oYXNfaGludCA9IEZhbHNlCiAgICAgICAgICAgICMgSW5kZXggdG8gc3RhcnQgYXQgdG8gZHJvcCBhbGwgaGludHMKICAgICAgICAgICAgc2VsZi5sYXN0X2hpbnQgPSAwCiAgICAgICAgICAgICMgSW5kZXggdXAgdG8gd2hpY2ggd2Uga25vdyBtb3JlIGhpbnRzIGFyZSBwb3NzaWJsZS4KICAgICAgICAgICAgIyBPbmx5IHJlbGV2YW50IGlmIHN0YXR1cyBpcyAwIG9yIDEuCiAgICAgICAgICAgIHNlbGYubGFzdF9jaGVja2VkID0gMAogICAgICAgICAgICAjIFRoZSBzdGF0dXMgbWVhbnM6CiAgICAgICAgICAgICMgMDogYWZ0ZXIgZHJvcHBpbmcgaGludHMsIHRoaXMgY2hhcnN0cmluZyBpcyBlbXB0eQogICAgICAgICAgICAjIDE6IGFmdGVyIGRyb3BwaW5nIGhpbnRzLCB0aGVyZSBtYXkgYmUgbW9yZSBoaW50cwogICAgICAgICAgICAjIAljb250aW51aW5nIGFmdGVyIHRoaXMsIG9yIHRoZXJlIG1pZ2h0IGJlCiAgICAgICAgICAgICMgCW90aGVyIHRoaW5ncy4gIE5vdCBjbGVhciB5ZXQuCiAgICAgICAgICAgICMgMjogbm8gbW9yZSBoaW50cyBwb3NzaWJsZSBhZnRlciB0aGlzIGNoYXJzdHJpbmcKICAgICAgICAgICAgc2VsZi5zdGF0dXMgPSAwCiAgICAgICAgICAgICMgSGFzIGhpbnRtYXNrIGluc3RydWN0aW9uczsgbm90IHJlY3Vyc2l2ZQogICAgICAgICAgICBzZWxmLmhhc19oaW50bWFzayA9IEZhbHNlCiAgICAgICAgICAgICMgTGlzdCBvZiBpbmRpY2VzIG9mIGNhbGxzIHRvIGVtcHR5IHN1YnJvdXRpbmVzIHRvIHJlbW92ZS4KICAgICAgICAgICAgc2VsZi5kZWxldGlvbnMgPSBbXQoKICAgICAgICBwYXNzCgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsIGNzcywgbG9jYWxTdWJycywgZ2xvYmFsU3VicnMsIG5vbWluYWxXaWR0aFgsIGRlZmF1bHRXaWR0aFgsIHByaXZhdGU9Tm9uZQogICAgKToKICAgICAgICBzZWxmLl9jc3MgPSBjc3MKICAgICAgICBUMldpZHRoRXh0cmFjdG9yLl9faW5pdF9fKAogICAgICAgICAgICBzZWxmLCBsb2NhbFN1YnJzLCBnbG9iYWxTdWJycywgbm9taW5hbFdpZHRoWCwgZGVmYXVsdFdpZHRoWAogICAgICAgICkKICAgICAgICBzZWxmLnByaXZhdGUgPSBwcml2YXRlCgogICAgZGVmIGV4ZWN1dGUoc2VsZiwgY2hhclN0cmluZyk6CiAgICAgICAgb2xkX2hpbnRzID0gY2hhclN0cmluZy5faGludHMgaWYgaGFzYXR0cihjaGFyU3RyaW5nLCAiX2hpbnRzIikgZWxzZSBOb25lCiAgICAgICAgY2hhclN0cmluZy5faGludHMgPSBzZWxmLkhpbnRzKCkKCiAgICAgICAgVDJXaWR0aEV4dHJhY3Rvci5leGVjdXRlKHNlbGYsIGNoYXJTdHJpbmcpCgogICAgICAgIGhpbnRzID0gY2hhclN0cmluZy5faGludHMKCiAgICAgICAgaWYgaGludHMuaGFzX2hpbnQgb3IgaGludHMuaGFzX2hpbnRtYXNrOgogICAgICAgICAgICBzZWxmLl9jc3MuYWRkKGNoYXJTdHJpbmcpCgogICAgICAgIGlmIGhpbnRzLnN0YXR1cyAhPSAyOgogICAgICAgICAgICAjIENoZWNrIGZyb20gbGFzdF9jaGVjaywgbWFrZSBzdXJlIHdlIGRpZG4ndCBoYXZlIGFueSBvcGVyYXRvcnMuCiAgICAgICAgICAgIGZvciBpIGluIHJhbmdlKGhpbnRzLmxhc3RfY2hlY2tlZCwgbGVuKGNoYXJTdHJpbmcucHJvZ3JhbSkgLSAxKToKICAgICAgICAgICAgICAgIGlmIGlzaW5zdGFuY2UoY2hhclN0cmluZy5wcm9ncmFtW2ldLCBzdHIpOgogICAgICAgICAgICAgICAgICAgIGhpbnRzLnN0YXR1cyA9IDIKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBoaW50cy5zdGF0dXMgPSAxICAjIFRoZXJlJ3MgKnNvbWV0aGluZyogaGVyZQogICAgICAgICAgICBoaW50cy5sYXN0X2NoZWNrZWQgPSBsZW4oY2hhclN0cmluZy5wcm9ncmFtKQoKICAgICAgICBpZiBvbGRfaGludHM6CiAgICAgICAgICAgIGFzc2VydCBoaW50cy5fX2RpY3RfXyA9PSBvbGRfaGludHMuX19kaWN0X18KCiAgICBkZWYgb3BfY2FsbHN1YnIoc2VsZiwgaW5kZXgpOgogICAgICAgIHN1YnIgPSBzZWxmLmxvY2FsU3VicnNbc2VsZi5vcGVyYW5kU3RhY2tbLTFdICsgc2VsZi5sb2NhbEJpYXNdCiAgICAgICAgVDJXaWR0aEV4dHJhY3Rvci5vcF9jYWxsc3VicihzZWxmLCBpbmRleCkKICAgICAgICBzZWxmLnByb2Nlc3NTdWJyKGluZGV4LCBzdWJyKQoKICAgIGRlZiBvcF9jYWxsZ3N1YnIoc2VsZiwgaW5kZXgpOgogICAgICAgIHN1YnIgPSBzZWxmLmdsb2JhbFN1YnJzW3NlbGYub3BlcmFuZFN0YWNrWy0xXSArIHNlbGYuZ2xvYmFsQmlhc10KICAgICAgICBUMldpZHRoRXh0cmFjdG9yLm9wX2NhbGxnc3VicihzZWxmLCBpbmRleCkKICAgICAgICBzZWxmLnByb2Nlc3NTdWJyKGluZGV4LCBzdWJyKQoKICAgIGRlZiBvcF9oc3RlbShzZWxmLCBpbmRleCk6CiAgICAgICAgVDJXaWR0aEV4dHJhY3Rvci5vcF9oc3RlbShzZWxmLCBpbmRleCkKICAgICAgICBzZWxmLnByb2Nlc3NIaW50KGluZGV4KQoKICAgIGRlZiBvcF92c3RlbShzZWxmLCBpbmRleCk6CiAgICAgICAgVDJXaWR0aEV4dHJhY3Rvci5vcF92c3RlbShzZWxmLCBpbmRleCkKICAgICAgICBzZWxmLnByb2Nlc3NIaW50KGluZGV4KQoKICAgIGRlZiBvcF9oc3RlbWhtKHNlbGYsIGluZGV4KToKICAgICAgICBUMldpZHRoRXh0cmFjdG9yLm9wX2hzdGVtaG0oc2VsZiwgaW5kZXgpCiAgICAgICAgc2VsZi5wcm9jZXNzSGludChpbmRleCkKCiAgICBkZWYgb3BfdnN0ZW1obShzZWxmLCBpbmRleCk6CiAgICAgICAgVDJXaWR0aEV4dHJhY3Rvci5vcF92c3RlbWhtKHNlbGYsIGluZGV4KQogICAgICAgIHNlbGYucHJvY2Vzc0hpbnQoaW5kZXgpCgogICAgZGVmIG9wX2hpbnRtYXNrKHNlbGYsIGluZGV4KToKICAgICAgICBydiA9IFQyV2lkdGhFeHRyYWN0b3Iub3BfaGludG1hc2soc2VsZiwgaW5kZXgpCiAgICAgICAgc2VsZi5wcm9jZXNzSGludG1hc2soaW5kZXgpCiAgICAgICAgcmV0dXJuIHJ2CgogICAgZGVmIG9wX2NudHJtYXNrKHNlbGYsIGluZGV4KToKICAgICAgICBydiA9IFQyV2lkdGhFeHRyYWN0b3Iub3BfY250cm1hc2soc2VsZiwgaW5kZXgpCiAgICAgICAgc2VsZi5wcm9jZXNzSGludG1hc2soaW5kZXgpCiAgICAgICAgcmV0dXJuIHJ2CgogICAgZGVmIHByb2Nlc3NIaW50bWFzayhzZWxmLCBpbmRleCk6CiAgICAgICAgY3MgPSBzZWxmLmNhbGxpbmdTdGFja1stMV0KICAgICAgICBoaW50cyA9IGNzLl9oaW50cwogICAgICAgIGhpbnRzLmhhc19oaW50bWFzayA9IFRydWUKICAgICAgICBpZiBoaW50cy5zdGF0dXMgIT0gMjoKICAgICAgICAgICAgIyBDaGVjayBmcm9tIGxhc3RfY2hlY2ssIHNlZSBpZiB3ZSBtYXkgYmUgYW4gaW1wbGljaXQgdnN0ZW0KICAgICAgICAgICAgZm9yIGkgaW4gcmFuZ2UoaGludHMubGFzdF9jaGVja2VkLCBpbmRleCAtIDEpOgogICAgICAgICAgICAgICAgaWYgaXNpbnN0YW5jZShjcy5wcm9ncmFtW2ldLCBzdHIpOgogICAgICAgICAgICAgICAgICAgIGhpbnRzLnN0YXR1cyA9IDIKICAgICAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgIyBXZSBhcmUgYW4gaW1wbGljaXQgdnN0ZW0KICAgICAgICAgICAgICAgIGhpbnRzLmhhc19oaW50ID0gVHJ1ZQogICAgICAgICAgICAgICAgaGludHMubGFzdF9oaW50ID0gaW5kZXggKyAxCiAgICAgICAgICAgICAgICBoaW50cy5zdGF0dXMgPSAwCiAgICAgICAgaGludHMubGFzdF9jaGVja2VkID0gaW5kZXggKyAxCgogICAgZGVmIHByb2Nlc3NIaW50KHNlbGYsIGluZGV4KToKICAgICAgICBjcyA9IHNlbGYuY2FsbGluZ1N0YWNrWy0xXQogICAgICAgIGhpbnRzID0gY3MuX2hpbnRzCiAgICAgICAgaGludHMuaGFzX2hpbnQgPSBUcnVlCiAgICAgICAgaGludHMubGFzdF9oaW50ID0gaW5kZXgKICAgICAgICBoaW50cy5sYXN0X2NoZWNrZWQgPSBpbmRleAoKICAgIGRlZiBwcm9jZXNzU3VicihzZWxmLCBpbmRleCwgc3Vicik6CiAgICAgICAgY3MgPSBzZWxmLmNhbGxpbmdTdGFja1stMV0KICAgICAgICBoaW50cyA9IGNzLl9oaW50cwogICAgICAgIHN1YnJfaGludHMgPSBzdWJyLl9oaW50cwoKICAgICAgICAjIENoZWNrIGZyb20gbGFzdF9jaGVjaywgbWFrZSBzdXJlIHdlIGRpZG4ndCBoYXZlCiAgICAgICAgIyBhbnkgb3BlcmF0b3JzLgogICAgICAgIGlmIGhpbnRzLnN0YXR1cyAhPSAyOgogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShoaW50cy5sYXN0X2NoZWNrZWQsIGluZGV4IC0gMSk6CiAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKGNzLnByb2dyYW1baV0sIHN0cik6CiAgICAgICAgICAgICAgICAgICAgaGludHMuc3RhdHVzID0gMgogICAgICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGhpbnRzLmxhc3RfY2hlY2tlZCA9IGluZGV4CgogICAgICAgIGlmIGhpbnRzLnN0YXR1cyAhPSAyOgogICAgICAgICAgICBpZiBzdWJyX2hpbnRzLmhhc19oaW50OgogICAgICAgICAgICAgICAgaGludHMuaGFzX2hpbnQgPSBUcnVlCgogICAgICAgICAgICAgICAgIyBEZWNpZGUgd2hlcmUgdG8gY2hvcCBvZmYgZnJvbQogICAgICAgICAgICAgICAgaWYgc3Vicl9oaW50cy5zdGF0dXMgPT0gMDoKICAgICAgICAgICAgICAgICAgICBoaW50cy5sYXN0X2hpbnQgPSBpbmRleAogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBoaW50cy5sYXN0X2hpbnQgPSBpbmRleCAtIDIgICMgTGVhdmUgdGhlIHN1YnIgY2FsbCBpbgoKICAgICAgICBlbGlmIHN1YnJfaGludHMuc3RhdHVzID09IDA6CiAgICAgICAgICAgIGhpbnRzLmRlbGV0aW9ucy5hcHBlbmQoaW5kZXgpCgogICAgICAgIGhpbnRzLnN0YXR1cyA9IG1heChoaW50cy5zdGF0dXMsIHN1YnJfaGludHMuc3RhdHVzKQoKCmRlZiBfY3Nfc3Vic2V0X3N1YnJvdXRpbmVzKGNoYXJzdHJpbmcsIHN1YnJzLCBnc3VicnMpOgogICAgcCA9IGNoYXJzdHJpbmcucHJvZ3JhbQogICAgZm9yIGkgaW4gcmFuZ2UoMSwgbGVuKHApKToKICAgICAgICBpZiBwW2ldID09ICJjYWxsc3ViciI6CiAgICAgICAgICAgIGFzc2VydCBpc2luc3RhbmNlKHBbaSAtIDFdLCBpbnQpCiAgICAgICAgICAgIHBbaSAtIDFdID0gc3VicnMuX3VzZWQuaW5kZXgocFtpIC0gMV0gKyBzdWJycy5fb2xkX2JpYXMpIC0gc3VicnMuX25ld19iaWFzCiAgICAgICAgZWxpZiBwW2ldID09ICJjYWxsZ3N1YnIiOgogICAgICAgICAgICBhc3NlcnQgaXNpbnN0YW5jZShwW2kgLSAxXSwgaW50KQogICAgICAgICAgICBwW2kgLSAxXSA9ICgKICAgICAgICAgICAgICAgIGdzdWJycy5fdXNlZC5pbmRleChwW2kgLSAxXSArIGdzdWJycy5fb2xkX2JpYXMpIC0gZ3N1YnJzLl9uZXdfYmlhcwogICAgICAgICAgICApCgoKZGVmIF9jc19kcm9wX2hpbnRzKGNoYXJzdHJpbmcpOgogICAgaGludHMgPSBjaGFyc3RyaW5nLl9oaW50cwoKICAgIGlmIGhpbnRzLmRlbGV0aW9uczoKICAgICAgICBwID0gY2hhcnN0cmluZy5wcm9ncmFtCiAgICAgICAgZm9yIGlkeCBpbiByZXZlcnNlZChoaW50cy5kZWxldGlvbnMpOgogICAgICAgICAgICBkZWwgcFtpZHggLSAyIDogaWR4XQoKICAgIGlmIGhpbnRzLmhhc19oaW50OgogICAgICAgIGFzc2VydCBub3QgaGludHMuZGVsZXRpb25zIG9yIGhpbnRzLmxhc3RfaGludCA8PSBoaW50cy5kZWxldGlvbnNbMF0KICAgICAgICBjaGFyc3RyaW5nLnByb2dyYW0gPSBjaGFyc3RyaW5nLnByb2dyYW1baGludHMubGFzdF9oaW50IDpdCiAgICAgICAgaWYgbm90IGNoYXJzdHJpbmcucHJvZ3JhbToKICAgICAgICAgICAgIyBUT0RPIENGRjIgbm8gbmVlZCBmb3IgZW5kY2hhci4KICAgICAgICAgICAgY2hhcnN0cmluZy5wcm9ncmFtLmFwcGVuZCgiZW5kY2hhciIpCiAgICAgICAgaWYgaGFzYXR0cihjaGFyc3RyaW5nLCAid2lkdGgiKToKICAgICAgICAgICAgIyBJbnNlcnQgd2lkdGggYmFjayBpZiBuZWVkZWQKICAgICAgICAgICAgaWYgY2hhcnN0cmluZy53aWR0aCAhPSBjaGFyc3RyaW5nLnByaXZhdGUuZGVmYXVsdFdpZHRoWDoKICAgICAgICAgICAgICAgICMgRm9yIENGRjIgY2hhcnN0cmluZ3MsIHRoaXMgc2hvdWxkIG5ldmVyIGhhcHBlbgogICAgICAgICAgICAgICAgYXNzZXJ0ICgKICAgICAgICAgICAgICAgICAgICBjaGFyc3RyaW5nLnByaXZhdGUuZGVmYXVsdFdpZHRoWCBpcyBub3QgTm9uZQogICAgICAgICAgICAgICAgKSwgIkNGRjIgQ2hhclN0cmluZ3MgbXVzdCBub3QgaGF2ZSBhbiBpbml0aWFsIHdpZHRoIHZhbHVlIgogICAgICAgICAgICAgICAgY2hhcnN0cmluZy5wcm9ncmFtLmluc2VydCgKICAgICAgICAgICAgICAgICAgICAwLCBjaGFyc3RyaW5nLndpZHRoIC0gY2hhcnN0cmluZy5wcml2YXRlLm5vbWluYWxXaWR0aFgKICAgICAgICAgICAgICAgICkKCiAgICBpZiBoaW50cy5oYXNfaGludG1hc2s6CiAgICAgICAgaSA9IDAKICAgICAgICBwID0gY2hhcnN0cmluZy5wcm9ncmFtCiAgICAgICAgd2hpbGUgaSA8IGxlbihwKToKICAgICAgICAgICAgaWYgcFtpXSBpbiBbImhpbnRtYXNrIiwgImNudHJtYXNrIl06CiAgICAgICAgICAgICAgICBhc3NlcnQgaSArIDEgPD0gbGVuKHApCiAgICAgICAgICAgICAgICBkZWwgcFtpIDogaSArIDJdCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICBpICs9IDEKCiAgICBhc3NlcnQgbGVuKGNoYXJzdHJpbmcucHJvZ3JhbSkKCiAgICBkZWwgY2hhcnN0cmluZy5faGludHMKCgpkZWYgcmVtb3ZlX2hpbnRzKGNmZiwgKiwgcmVtb3ZlVW51c2VkU3VicnM6IGJvb2wgPSBUcnVlKToKICAgIGZvciBmb250bmFtZSBpbiBjZmYua2V5cygpOgogICAgICAgIGZvbnQgPSBjZmZbZm9udG5hbWVdCiAgICAgICAgY3MgPSBmb250LkNoYXJTdHJpbmdzCiAgICAgICAgIyBUaGlzIGNhbiBiZSB0cmlja3ksIGJ1dCBkb2Vzbid0IGhhdmUgdG8uIFdoYXQgd2UgZG8gaXM6CiAgICAgICAgIwogICAgICAgICMgLSBSdW4gYWxsIHVzZWQgZ2x5cGggY2hhcnN0cmluZ3MgYW5kIHJlY3Vyc2UgaW50byBzdWJyb3V0aW5lcywKICAgICAgICAjIC0gRm9yIGVhY2ggY2hhcnN0cmluZyAoaW5jbHVkaW5nIHN1YnJvdXRpbmVzKSwgaWYgaXQgaGFzIGFueQogICAgICAgICMgICBvZiB0aGUgaGludCBzdGVtIG9wZXJhdG9ycywgd2UgbWFyayBpdCBhcyBzdWNoLgogICAgICAgICMgICBVcG9uIHJldHVybmluZywgZm9yIGVhY2ggY2hhcnN0cmluZyB3ZSBub3RlIGFsbCB0aGUKICAgICAgICAjICAgc3Vicm91dGluZSBjYWxscyBpdCBtYWtlcyB0aGF0IChyZWN1cnNpdmVseSkgY29udGFpbiBhIHN0ZW0sCiAgICAgICAgIyAtIERyb3BwaW5nIGhpbnRpbmcgdGhlbiBjb25zaXN0cyBvZiB0aGUgZm9sbG93aW5nIHR3byBvcHM6CiAgICAgICAgIyAgICogRHJvcCB0aGUgcGllY2Ugb2YgdGhlIHByb2dyYW0gaW4gZWFjaCBjaGFyc3RyaW5nIGJlZm9yZSB0aGUKICAgICAgICAjICAgICBsYXN0IGNhbGwgdG8gYSBzdGVtIG9wIG9yIGEgc3RlbS1jYWxsaW5nIHN1YnJvdXRpbmUsCiAgICAgICAgIyAgICogRHJvcCBhbGwgaGludG1hc2sgb3BlcmF0aW9ucy4KICAgICAgICAjIC0gSXQncyB0cmlja2llci4uLiBBIGhpbnRtYXNrIHJpZ2h0IGFmdGVyIGhpbnRzIGFuZCBhIGZldyBudW1iZXJzCiAgICAgICAgIyAgICB3aWxsIGFjdCBhcyBhbiBpbXBsaWNpdCB2c3RlbWhtLiBBcyBzdWNoLCB3ZSB0cmFjayB3aGV0aGVyCiAgICAgICAgIyAgICB3ZSBoYXZlIHNlZW4gYW55IG5vbi1oaW50IG9wZXJhdG9ycyBzbyBmYXIgYW5kIGRvIHRoZSByaWdodAogICAgICAgICMgICAgdGhpbmcsIHJlY3Vyc2l2ZWx5Li4uIEdvb2QgbHVjayB1bmRlcnN0YW5kaW5nIHRoYXQgOigKICAgICAgICBjc3MgPSBzZXQoKQogICAgICAgIGZvciBjIGluIGNzLnZhbHVlcygpOgogICAgICAgICAgICBjLmRlY29tcGlsZSgpCiAgICAgICAgICAgIHN1YnJzID0gZ2V0YXR0cihjLnByaXZhdGUsICJTdWJycyIsIFtdKQogICAgICAgICAgICBkZWNvbXBpbGVyID0gX0RlaGludGluZ1QyRGVjb21waWxlcigKICAgICAgICAgICAgICAgIGNzcywKICAgICAgICAgICAgICAgIHN1YnJzLAogICAgICAgICAgICAgICAgYy5nbG9iYWxTdWJycywKICAgICAgICAgICAgICAgIGMucHJpdmF0ZS5ub21pbmFsV2lkdGhYLAogICAgICAgICAgICAgICAgYy5wcml2YXRlLmRlZmF1bHRXaWR0aFgsCiAgICAgICAgICAgICAgICBjLnByaXZhdGUsCiAgICAgICAgICAgICkKICAgICAgICAgICAgZGVjb21waWxlci5leGVjdXRlKGMpCiAgICAgICAgICAgIGMud2lkdGggPSBkZWNvbXBpbGVyLndpZHRoCiAgICAgICAgZm9yIGNoYXJzdHJpbmcgaW4gY3NzOgogICAgICAgICAgICBfY3NfZHJvcF9oaW50cyhjaGFyc3RyaW5nKQogICAgICAgIGRlbCBjc3MKCiAgICAgICAgIyBEcm9wIGZvbnQtd2lkZSBoaW50aW5nIHZhbHVlcwogICAgICAgIGFsbF9wcml2cyA9IFtdCiAgICAgICAgaWYgaGFzYXR0cihmb250LCAiRkRBcnJheSIpOgogICAgICAgICAgICBhbGxfcHJpdnMuZXh0ZW5kKGZkLlByaXZhdGUgZm9yIGZkIGluIGZvbnQuRkRBcnJheSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBhbGxfcHJpdnMuYXBwZW5kKGZvbnQuUHJpdmF0ZSkKICAgICAgICBmb3IgcHJpdiBpbiBhbGxfcHJpdnM6CiAgICAgICAgICAgIGZvciBrIGluIFsKICAgICAgICAgICAgICAgICJCbHVlVmFsdWVzIiwKICAgICAgICAgICAgICAgICJPdGhlckJsdWVzIiwKICAgICAgICAgICAgICAgICJGYW1pbHlCbHVlcyIsCiAgICAgICAgICAgICAgICAiRmFtaWx5T3RoZXJCbHVlcyIsCiAgICAgICAgICAgICAgICAiQmx1ZVNjYWxlIiwKICAgICAgICAgICAgICAgICJCbHVlU2hpZnQiLAogICAgICAgICAgICAgICAgIkJsdWVGdXp6IiwKICAgICAgICAgICAgICAgICJTdGVtU25hcEgiLAogICAgICAgICAgICAgICAgIlN0ZW1TbmFwViIsCiAgICAgICAgICAgICAgICAiU3RkSFciLAogICAgICAgICAgICAgICAgIlN0ZFZXIiwKICAgICAgICAgICAgICAgICJGb3JjZUJvbGQiLAogICAgICAgICAgICAgICAgIkxhbmd1YWdlR3JvdXAiLAogICAgICAgICAgICAgICAgIkV4cGFuc2lvbkZhY3RvciIsCiAgICAgICAgICAgIF06CiAgICAgICAgICAgICAgICBpZiBoYXNhdHRyKHByaXYsIGspOgogICAgICAgICAgICAgICAgICAgIHNldGF0dHIocHJpdiwgaywgTm9uZSkKICAgIGlmIHJlbW92ZVVudXNlZFN1YnJzOgogICAgICAgIHJlbW92ZV91bnVzZWRfc3Vicm91dGluZXMoY2ZmKQoKCmRlZiBfcGRfZGVsZXRlX2VtcHR5X3N1YnJzKHByaXZhdGVfZGljdCk6CiAgICBpZiBoYXNhdHRyKHByaXZhdGVfZGljdCwgIlN1YnJzIikgYW5kIG5vdCBwcml2YXRlX2RpY3QuU3VicnM6CiAgICAgICAgaWYgIlN1YnJzIiBpbiBwcml2YXRlX2RpY3QucmF3RGljdDoKICAgICAgICAgICAgZGVsIHByaXZhdGVfZGljdC5yYXdEaWN0WyJTdWJycyJdCiAgICAgICAgZGVsIHByaXZhdGVfZGljdC5TdWJycwoKCmRlZiByZW1vdmVfdW51c2VkX3N1YnJvdXRpbmVzKGNmZik6CiAgICBmb3IgZm9udG5hbWUgaW4gY2ZmLmtleXMoKToKICAgICAgICBmb250ID0gY2ZmW2ZvbnRuYW1lXQogICAgICAgIGNzID0gZm9udC5DaGFyU3RyaW5ncwogICAgICAgICMgUmVudW1iZXIgc3Vicm91dGluZXMgdG8gcmVtb3ZlIHVudXNlZCBvbmVzCgogICAgICAgICMgTWFyayBhbGwgdXNlZCBzdWJyb3V0aW5lcwogICAgICAgIGZvciBjIGluIGNzLnZhbHVlcygpOgogICAgICAgICAgICBzdWJycyA9IGdldGF0dHIoYy5wcml2YXRlLCAiU3VicnMiLCBbXSkKICAgICAgICAgICAgZGVjb21waWxlciA9IF9NYXJraW5nVDJEZWNvbXBpbGVyKHN1YnJzLCBjLmdsb2JhbFN1YnJzLCBjLnByaXZhdGUpCiAgICAgICAgICAgIGRlY29tcGlsZXIuZXhlY3V0ZShjKQoKICAgICAgICBhbGxfc3VicnMgPSBbZm9udC5HbG9iYWxTdWJyc10KICAgICAgICBpZiBoYXNhdHRyKGZvbnQsICJGREFycmF5Iik6CiAgICAgICAgICAgIGFsbF9zdWJycy5leHRlbmQoCiAgICAgICAgICAgICAgICBmZC5Qcml2YXRlLlN1YnJzCiAgICAgICAgICAgICAgICBmb3IgZmQgaW4gZm9udC5GREFycmF5CiAgICAgICAgICAgICAgICBpZiBoYXNhdHRyKGZkLlByaXZhdGUsICJTdWJycyIpIGFuZCBmZC5Qcml2YXRlLlN1YnJzCiAgICAgICAgICAgICkKICAgICAgICBlbGlmIGhhc2F0dHIoZm9udC5Qcml2YXRlLCAiU3VicnMiKSBhbmQgZm9udC5Qcml2YXRlLlN1YnJzOgogICAgICAgICAgICBhbGxfc3VicnMuYXBwZW5kKGZvbnQuUHJpdmF0ZS5TdWJycykKCiAgICAgICAgc3VicnMgPSBzZXQoc3VicnMpICAjIFJlbW92ZSBkdXBsaWNhdGVzCgogICAgICAgICMgUHJlcGFyZQogICAgICAgIGZvciBzdWJycyBpbiBhbGxfc3VicnM6CiAgICAgICAgICAgIGlmIG5vdCBoYXNhdHRyKHN1YnJzLCAiX3VzZWQiKToKICAgICAgICAgICAgICAgIHN1YnJzLl91c2VkID0gc2V0KCkKICAgICAgICAgICAgc3VicnMuX3VzZWQgPSBfdW5pcV9zb3J0KHN1YnJzLl91c2VkKQogICAgICAgICAgICBzdWJycy5fb2xkX2JpYXMgPSBjYWxjU3VickJpYXMoc3VicnMpCiAgICAgICAgICAgIHN1YnJzLl9uZXdfYmlhcyA9IGNhbGNTdWJyQmlhcyhzdWJycy5fdXNlZCkKCiAgICAgICAgIyBSZW51bWJlciBnbHlwaCBjaGFyc3RyaW5ncwogICAgICAgIGZvciBjIGluIGNzLnZhbHVlcygpOgogICAgICAgICAgICBzdWJycyA9IGdldGF0dHIoYy5wcml2YXRlLCAiU3VicnMiLCBOb25lKQogICAgICAgICAgICBfY3Nfc3Vic2V0X3N1YnJvdXRpbmVzKGMsIHN1YnJzLCBmb250Lkdsb2JhbFN1YnJzKQoKICAgICAgICAjIFJlbnVtYmVyIHN1YnJvdXRpbmVzIHRoZW1zZWx2ZXMKICAgICAgICBmb3Igc3VicnMgaW4gYWxsX3N1YnJzOgogICAgICAgICAgICBpZiBzdWJycyA9PSBmb250Lkdsb2JhbFN1YnJzOgogICAgICAgICAgICAgICAgaWYgbm90IGhhc2F0dHIoZm9udCwgIkZEQXJyYXkiKSBhbmQgaGFzYXR0cihmb250LlByaXZhdGUsICJTdWJycyIpOgogICAgICAgICAgICAgICAgICAgIGxvY2FsX3N1YnJzID0gZm9udC5Qcml2YXRlLlN1YnJzCiAgICAgICAgICAgICAgICBlbGlmICgKICAgICAgICAgICAgICAgICAgICBoYXNhdHRyKGZvbnQsICJGREFycmF5IikKICAgICAgICAgICAgICAgICAgICBhbmQgbGVuKGZvbnQuRkRBcnJheSkgPT0gMQogICAgICAgICAgICAgICAgICAgIGFuZCBoYXNhdHRyKGZvbnQuRkRBcnJheVswXS5Qcml2YXRlLCAiU3VicnMiKQogICAgICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgICAgICAjIFRlY2huaWNhbGx5IHdlIHNob3VsZG4ndCBkbyB0aGlzLiBCdXQgSSd2ZSBydW4gaW50byBmb250cyB0aGF0IGRvIGl0LgogICAgICAgICAgICAgICAgICAgIGxvY2FsX3N1YnJzID0gZm9udC5GREFycmF5WzBdLlByaXZhdGUuU3VicnMKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgbG9jYWxfc3VicnMgPSBOb25lCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBsb2NhbF9zdWJycyA9IHN1YnJzCgogICAgICAgICAgICBzdWJycy5pdGVtcyA9IFtzdWJycy5pdGVtc1tpXSBmb3IgaSBpbiBzdWJycy5fdXNlZF0KICAgICAgICAgICAgaWYgaGFzYXR0cihzdWJycywgImZpbGUiKToKICAgICAgICAgICAgICAgIGRlbCBzdWJycy5maWxlCiAgICAgICAgICAgIGlmIGhhc2F0dHIoc3VicnMsICJvZmZzZXRzIik6CiAgICAgICAgICAgICAgICBkZWwgc3VicnMub2Zmc2V0cwoKICAgICAgICAgICAgZm9yIHN1YnIgaW4gc3VicnMuaXRlbXM6CiAgICAgICAgICAgICAgICBfY3Nfc3Vic2V0X3N1YnJvdXRpbmVzKHN1YnIsIGxvY2FsX3N1YnJzLCBmb250Lkdsb2JhbFN1YnJzKQoKICAgICAgICAjIERlbGV0ZSBsb2NhbCBTdWJyc0luZGV4IGlmIGVtcHR5CiAgICAgICAgaWYgaGFzYXR0cihmb250LCAiRkRBcnJheSIpOgogICAgICAgICAgICBmb3IgZmQgaW4gZm9udC5GREFycmF5OgogICAgICAgICAgICAgICAgX3BkX2RlbGV0ZV9lbXB0eV9zdWJycyhmZC5Qcml2YXRlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIF9wZF9kZWxldGVfZW1wdHlfc3VicnMoZm9udC5Qcml2YXRlKQoKICAgICAgICAjIENsZWFudXAKICAgICAgICBmb3Igc3VicnMgaW4gYWxsX3N1YnJzOgogICAgICAgICAgICBkZWwgc3VicnMuX3VzZWQsIHN1YnJzLl9vbGRfYmlhcywgc3VicnMuX25ld19iaWFzCg==
+from fontTools.misc.psCharStrings import (
+    SimpleT2Decompiler,
+    T2WidthExtractor,
+    calcSubrBias,
+)
+
+
+def _uniq_sort(l):
+    return sorted(set(l))
+
+
+class StopHintCountEvent(Exception):
+    pass
+
+
+class _DesubroutinizingT2Decompiler(SimpleT2Decompiler):
+    stop_hintcount_ops = (
+        "op_hintmask",
+        "op_cntrmask",
+        "op_rmoveto",
+        "op_hmoveto",
+        "op_vmoveto",
+    )
+
+    def __init__(self, localSubrs, globalSubrs, private=None):
+        SimpleT2Decompiler.__init__(self, localSubrs, globalSubrs, private)
+
+    def execute(self, charString):
+        self.need_hintcount = True  # until proven otherwise
+        for op_name in self.stop_hintcount_ops:
+            setattr(self, op_name, self.stop_hint_count)
+
+        if hasattr(charString, "_desubroutinized"):
+            # If a charstring has already been desubroutinized, we will still
+            # need to execute it if we need to count hints in order to
+            # compute the byte length for mask arguments, and haven't finished
+            # counting hints pairs.
+            if self.need_hintcount and self.callingStack:
+                try:
+                    SimpleT2Decompiler.execute(self, charString)
+                except StopHintCountEvent:
+                    del self.callingStack[-1]
+            return
+
+        charString._patches = []
+        SimpleT2Decompiler.execute(self, charString)
+        desubroutinized = charString.program[:]
+        for idx, expansion in reversed(charString._patches):
+            assert idx >= 2
+            assert desubroutinized[idx - 1] in [
+                "callsubr",
+                "callgsubr",
+            ], desubroutinized[idx - 1]
+            assert type(desubroutinized[idx - 2]) == int
+            if expansion[-1] == "return":
+                expansion = expansion[:-1]
+            desubroutinized[idx - 2 : idx] = expansion
+        if not self.private.in_cff2:
+            if "endchar" in desubroutinized:
+                # Cut off after first endchar
+                desubroutinized = desubroutinized[
+                    : desubroutinized.index("endchar") + 1
+                ]
+
+        charString._desubroutinized = desubroutinized
+        del charString._patches
+
+    def op_callsubr(self, index):
+        subr = self.localSubrs[self.operandStack[-1] + self.localBias]
+        SimpleT2Decompiler.op_callsubr(self, index)
+        self.processSubr(index, subr)
+
+    def op_callgsubr(self, index):
+        subr = self.globalSubrs[self.operandStack[-1] + self.globalBias]
+        SimpleT2Decompiler.op_callgsubr(self, index)
+        self.processSubr(index, subr)
+
+    def stop_hint_count(self, *args):
+        self.need_hintcount = False
+        for op_name in self.stop_hintcount_ops:
+            setattr(self, op_name, None)
+        cs = self.callingStack[-1]
+        if hasattr(cs, "_desubroutinized"):
+            raise StopHintCountEvent()
+
+    def op_hintmask(self, index):
+        SimpleT2Decompiler.op_hintmask(self, index)
+        if self.need_hintcount:
+            self.stop_hint_count()
+
+    def processSubr(self, index, subr):
+        cs = self.callingStack[-1]
+        if not hasattr(cs, "_desubroutinized"):
+            cs._patches.append((index, subr._desubroutinized))
+
+
+def desubroutinizeCharString(cs):
+    """Desubroutinize a charstring in-place."""
+    cs.decompile()
+    subrs = getattr(cs.private, "Subrs", [])
+    decompiler = _DesubroutinizingT2Decompiler(subrs, cs.globalSubrs, cs.private)
+    decompiler.execute(cs)
+    cs.program = cs._desubroutinized
+    del cs._desubroutinized
+
+
+def desubroutinize(cff):
+    for fontName in cff.fontNames:
+        font = cff[fontName]
+        cs = font.CharStrings
+        for c in cs.values():
+            desubroutinizeCharString(c)
+        # Delete all the local subrs
+        if hasattr(font, "FDArray"):
+            for fd in font.FDArray:
+                pd = fd.Private
+                if hasattr(pd, "Subrs"):
+                    del pd.Subrs
+                if "Subrs" in pd.rawDict:
+                    del pd.rawDict["Subrs"]
+        else:
+            pd = font.Private
+            if hasattr(pd, "Subrs"):
+                del pd.Subrs
+            if "Subrs" in pd.rawDict:
+                del pd.rawDict["Subrs"]
+    # as well as the global subrs
+    cff.GlobalSubrs.clear()
+
+
+class _MarkingT2Decompiler(SimpleT2Decompiler):
+    def __init__(self, localSubrs, globalSubrs, private):
+        SimpleT2Decompiler.__init__(self, localSubrs, globalSubrs, private)
+        for subrs in [localSubrs, globalSubrs]:
+            if subrs and not hasattr(subrs, "_used"):
+                subrs._used = set()
+
+    def op_callsubr(self, index):
+        self.localSubrs._used.add(self.operandStack[-1] + self.localBias)
+        SimpleT2Decompiler.op_callsubr(self, index)
+
+    def op_callgsubr(self, index):
+        self.globalSubrs._used.add(self.operandStack[-1] + self.globalBias)
+        SimpleT2Decompiler.op_callgsubr(self, index)
+
+
+class _DehintingT2Decompiler(T2WidthExtractor):
+    class Hints(object):
+        def __init__(self):
+            # Whether calling this charstring produces any hint stems
+            # Note that if a charstring starts with hintmask, it will
+            # have has_hint set to True, because it *might* produce an
+            # implicit vstem if called under certain conditions.
+            self.has_hint = False
+            # Index to start at to drop all hints
+            self.last_hint = 0
+            # Index up to which we know more hints are possible.
+            # Only relevant if status is 0 or 1.
+            self.last_checked = 0
+            # The status means:
+            # 0: after dropping hints, this charstring is empty
+            # 1: after dropping hints, there may be more hints
+            # 	continuing after this, or there might be
+            # 	other things.  Not clear yet.
+            # 2: no more hints possible after this charstring
+            self.status = 0
+            # Has hintmask instructions; not recursive
+            self.has_hintmask = False
+            # List of indices of calls to empty subroutines to remove.
+            self.deletions = []
+
+        pass
+
+    def __init__(
+        self, css, localSubrs, globalSubrs, nominalWidthX, defaultWidthX, private=None
+    ):
+        self._css = css
+        T2WidthExtractor.__init__(
+            self, localSubrs, globalSubrs, nominalWidthX, defaultWidthX
+        )
+        self.private = private
+
+    def execute(self, charString):
+        old_hints = charString._hints if hasattr(charString, "_hints") else None
+        charString._hints = self.Hints()
+
+        T2WidthExtractor.execute(self, charString)
+
+        hints = charString._hints
+
+        if hints.has_hint or hints.has_hintmask:
+            self._css.add(charString)
+
+        if hints.status != 2:
+            # Check from last_check, make sure we didn't have any operators.
+            for i in range(hints.last_checked, len(charString.program) - 1):
+                if isinstance(charString.program[i], str):
+                    hints.status = 2
+                    break
+                else:
+                    hints.status = 1  # There's *something* here
+            hints.last_checked = len(charString.program)
+
+        if old_hints:
+            assert hints.__dict__ == old_hints.__dict__
+
+    def op_callsubr(self, index):
+        subr = self.localSubrs[self.operandStack[-1] + self.localBias]
+        T2WidthExtractor.op_callsubr(self, index)
+        self.processSubr(index, subr)
+
+    def op_callgsubr(self, index):
+        subr = self.globalSubrs[self.operandStack[-1] + self.globalBias]
+        T2WidthExtractor.op_callgsubr(self, index)
+        self.processSubr(index, subr)
+
+    def op_hstem(self, index):
+        T2WidthExtractor.op_hstem(self, index)
+        self.processHint(index)
+
+    def op_vstem(self, index):
+        T2WidthExtractor.op_vstem(self, index)
+        self.processHint(index)
+
+    def op_hstemhm(self, index):
+        T2WidthExtractor.op_hstemhm(self, index)
+        self.processHint(index)
+
+    def op_vstemhm(self, index):
+        T2WidthExtractor.op_vstemhm(self, index)
+        self.processHint(index)
+
+    def op_hintmask(self, index):
+        rv = T2WidthExtractor.op_hintmask(self, index)
+        self.processHintmask(index)
+        return rv
+
+    def op_cntrmask(self, index):
+        rv = T2WidthExtractor.op_cntrmask(self, index)
+        self.processHintmask(index)
+        return rv
+
+    def processHintmask(self, index):
+        cs = self.callingStack[-1]
+        hints = cs._hints
+        hints.has_hintmask = True
+        if hints.status != 2:
+            # Check from last_check, see if we may be an implicit vstem
+            for i in range(hints.last_checked, index - 1):
+                if isinstance(cs.program[i], str):
+                    hints.status = 2
+                    break
+            else:
+                # We are an implicit vstem
+                hints.has_hint = True
+                hints.last_hint = index + 1
+                hints.status = 0
+        hints.last_checked = index + 1
+
+    def processHint(self, index):
+        cs = self.callingStack[-1]
+        hints = cs._hints
+        hints.has_hint = True
+        hints.last_hint = index
+        hints.last_checked = index
+
+    def processSubr(self, index, subr):
+        cs = self.callingStack[-1]
+        hints = cs._hints
+        subr_hints = subr._hints
+
+        # Check from last_check, make sure we didn't have
+        # any operators.
+        if hints.status != 2:
+            for i in range(hints.last_checked, index - 1):
+                if isinstance(cs.program[i], str):
+                    hints.status = 2
+                    break
+            hints.last_checked = index
+
+        if hints.status != 2:
+            if subr_hints.has_hint:
+                hints.has_hint = True
+
+                # Decide where to chop off from
+                if subr_hints.status == 0:
+                    hints.last_hint = index
+                else:
+                    hints.last_hint = index - 2  # Leave the subr call in
+
+        elif subr_hints.status == 0:
+            hints.deletions.append(index)
+
+        hints.status = max(hints.status, subr_hints.status)
+
+
+def _cs_subset_subroutines(charstring, subrs, gsubrs):
+    p = charstring.program
+    for i in range(1, len(p)):
+        if p[i] == "callsubr":
+            assert isinstance(p[i - 1], int)
+            p[i - 1] = subrs._used.index(p[i - 1] + subrs._old_bias) - subrs._new_bias
+        elif p[i] == "callgsubr":
+            assert isinstance(p[i - 1], int)
+            p[i - 1] = (
+                gsubrs._used.index(p[i - 1] + gsubrs._old_bias) - gsubrs._new_bias
+            )
+
+
+def _cs_drop_hints(charstring):
+    hints = charstring._hints
+
+    if hints.deletions:
+        p = charstring.program
+        for idx in reversed(hints.deletions):
+            del p[idx - 2 : idx]
+
+    if hints.has_hint:
+        assert not hints.deletions or hints.last_hint <= hints.deletions[0]
+        charstring.program = charstring.program[hints.last_hint :]
+        if not charstring.program:
+            # TODO CFF2 no need for endchar.
+            charstring.program.append("endchar")
+        if hasattr(charstring, "width"):
+            # Insert width back if needed
+            if charstring.width != charstring.private.defaultWidthX:
+                # For CFF2 charstrings, this should never happen
+                assert (
+                    charstring.private.defaultWidthX is not None
+                ), "CFF2 CharStrings must not have an initial width value"
+                charstring.program.insert(
+                    0, charstring.width - charstring.private.nominalWidthX
+                )
+
+    if hints.has_hintmask:
+        i = 0
+        p = charstring.program
+        while i < len(p):
+            if p[i] in ["hintmask", "cntrmask"]:
+                assert i + 1 <= len(p)
+                del p[i : i + 2]
+                continue
+            i += 1
+
+    assert len(charstring.program)
+
+    del charstring._hints
+
+
+def remove_hints(cff, *, removeUnusedSubrs: bool = True):
+    for fontname in cff.keys():
+        font = cff[fontname]
+        cs = font.CharStrings
+        # This can be tricky, but doesn't have to. What we do is:
+        #
+        # - Run all used glyph charstrings and recurse into subroutines,
+        # - For each charstring (including subroutines), if it has any
+        #   of the hint stem operators, we mark it as such.
+        #   Upon returning, for each charstring we note all the
+        #   subroutine calls it makes that (recursively) contain a stem,
+        # - Dropping hinting then consists of the following two ops:
+        #   * Drop the piece of the program in each charstring before the
+        #     last call to a stem op or a stem-calling subroutine,
+        #   * Drop all hintmask operations.
+        # - It's trickier... A hintmask right after hints and a few numbers
+        #    will act as an implicit vstemhm. As such, we track whether
+        #    we have seen any non-hint operators so far and do the right
+        #    thing, recursively... Good luck understanding that :(
+        css = set()
+        for c in cs.values():
+            c.decompile()
+            subrs = getattr(c.private, "Subrs", [])
+            decompiler = _DehintingT2Decompiler(
+                css,
+                subrs,
+                c.globalSubrs,
+                c.private.nominalWidthX,
+                c.private.defaultWidthX,
+                c.private,
+            )
+            decompiler.execute(c)
+            c.width = decompiler.width
+        for charstring in css:
+            _cs_drop_hints(charstring)
+        del css
+
+        # Drop font-wide hinting values
+        all_privs = []
+        if hasattr(font, "FDArray"):
+            all_privs.extend(fd.Private for fd in font.FDArray)
+        else:
+            all_privs.append(font.Private)
+        for priv in all_privs:
+            for k in [
+                "BlueValues",
+                "OtherBlues",
+                "FamilyBlues",
+                "FamilyOtherBlues",
+                "BlueScale",
+                "BlueShift",
+                "BlueFuzz",
+                "StemSnapH",
+                "StemSnapV",
+                "StdHW",
+                "StdVW",
+                "ForceBold",
+                "LanguageGroup",
+                "ExpansionFactor",
+            ]:
+                if hasattr(priv, k):
+                    setattr(priv, k, None)
+    if removeUnusedSubrs:
+        remove_unused_subroutines(cff)
+
+
+def _pd_delete_empty_subrs(private_dict):
+    if hasattr(private_dict, "Subrs") and not private_dict.Subrs:
+        if "Subrs" in private_dict.rawDict:
+            del private_dict.rawDict["Subrs"]
+        del private_dict.Subrs
+
+
+def remove_unused_subroutines(cff):
+    for fontname in cff.keys():
+        font = cff[fontname]
+        cs = font.CharStrings
+        # Renumber subroutines to remove unused ones
+
+        # Mark all used subroutines
+        for c in cs.values():
+            subrs = getattr(c.private, "Subrs", [])
+            decompiler = _MarkingT2Decompiler(subrs, c.globalSubrs, c.private)
+            decompiler.execute(c)
+
+        all_subrs = [font.GlobalSubrs]
+        if hasattr(font, "FDArray"):
+            all_subrs.extend(
+                fd.Private.Subrs
+                for fd in font.FDArray
+                if hasattr(fd.Private, "Subrs") and fd.Private.Subrs
+            )
+        elif hasattr(font.Private, "Subrs") and font.Private.Subrs:
+            all_subrs.append(font.Private.Subrs)
+
+        subrs = set(subrs)  # Remove duplicates
+
+        # Prepare
+        for subrs in all_subrs:
+            if not hasattr(subrs, "_used"):
+                subrs._used = set()
+            subrs._used = _uniq_sort(subrs._used)
+            subrs._old_bias = calcSubrBias(subrs)
+            subrs._new_bias = calcSubrBias(subrs._used)
+
+        # Renumber glyph charstrings
+        for c in cs.values():
+            subrs = getattr(c.private, "Subrs", None)
+            _cs_subset_subroutines(c, subrs, font.GlobalSubrs)
+
+        # Renumber subroutines themselves
+        for subrs in all_subrs:
+            if subrs == font.GlobalSubrs:
+                if not hasattr(font, "FDArray") and hasattr(font.Private, "Subrs"):
+                    local_subrs = font.Private.Subrs
+                elif (
+                    hasattr(font, "FDArray")
+                    and len(font.FDArray) == 1
+                    and hasattr(font.FDArray[0].Private, "Subrs")
+                ):
+                    # Technically we shouldn't do this. But I've run into fonts that do it.
+                    local_subrs = font.FDArray[0].Private.Subrs
+                else:
+                    local_subrs = None
+            else:
+                local_subrs = subrs
+
+            subrs.items = [subrs.items[i] for i in subrs._used]
+            if hasattr(subrs, "file"):
+                del subrs.file
+            if hasattr(subrs, "offsets"):
+                del subrs.offsets
+
+            for subr in subrs.items:
+                _cs_subset_subroutines(subr, local_subrs, font.GlobalSubrs)
+
+        # Delete local SubrsIndex if empty
+        if hasattr(font, "FDArray"):
+            for fd in font.FDArray:
+                _pd_delete_empty_subrs(fd.Private)
+        else:
+            _pd_delete_empty_subrs(font.Private)
+
+        # Cleanup
+        for subrs in all_subrs:
+            del subrs._used, subrs._old_bias, subrs._new_bias

@@ -1,1 +1,95 @@
-ZnJvbSBmb250VG9vbHMubWlzYy5hcnJheVRvb2xzIGltcG9ydCBwYWlyd2lzZQpmcm9tIGZvbnRUb29scy5wZW5zLmZpbHRlclBlbiBpbXBvcnQgQ29udG91ckZpbHRlclBlbgoKX19hbGxfXyA9IFsicmV2ZXJzZWRDb250b3VyIiwgIlJldmVyc2VDb250b3VyUGVuIl0KCgpjbGFzcyBSZXZlcnNlQ29udG91clBlbihDb250b3VyRmlsdGVyUGVuKToKICAgICIiIkZpbHRlciBwZW4gdGhhdCBwYXNzZXMgb3V0bGluZSBkYXRhIHRvIGFub3RoZXIgcGVuLCBidXQgcmV2ZXJzaW5nCiAgICB0aGUgd2luZGluZyBkaXJlY3Rpb24gb2YgYWxsIGNvbnRvdXJzLiBDb21wb25lbnRzIGFyZSBzaW1wbHkgcGFzc2VkCiAgICB0aHJvdWdoIHVuY2hhbmdlZC4KCiAgICBDbG9zZWQgY29udG91cnMgYXJlIHJldmVyc2VkIGluIHN1Y2ggYSB3YXkgdGhhdCB0aGUgZmlyc3QgcG9pbnQgcmVtYWlucwogICAgdGhlIGZpcnN0IHBvaW50LgogICAgIiIiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG91dFBlbiwgb3V0cHV0SW1wbGllZENsb3NpbmdMaW5lPUZhbHNlKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKG91dFBlbikKICAgICAgICBzZWxmLm91dHB1dEltcGxpZWRDbG9zaW5nTGluZSA9IG91dHB1dEltcGxpZWRDbG9zaW5nTGluZQoKICAgIGRlZiBmaWx0ZXJDb250b3VyKHNlbGYsIGNvbnRvdXIpOgogICAgICAgIHJldHVybiByZXZlcnNlZENvbnRvdXIoY29udG91ciwgc2VsZi5vdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmUpCgoKZGVmIHJldmVyc2VkQ29udG91cihjb250b3VyLCBvdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmU9RmFsc2UpOgogICAgIiIiR2VuZXJhdG9yIHRoYXQgdGFrZXMgYSBsaXN0IG9mIHBlbidzIChvcGVyYXRvciwgb3BlcmFuZHMpIHR1cGxlcywKICAgIGFuZCB5aWVsZHMgdGhlbSB3aXRoIHRoZSB3aW5kaW5nIGRpcmVjdGlvbiByZXZlcnNlZC4KICAgICIiIgogICAgaWYgbm90IGNvbnRvdXI6CiAgICAgICAgcmV0dXJuICAjIG5vdGhpbmcgdG8gZG8sIHN0b3AgaXRlcmF0aW9uCgogICAgIyB2YWxpZCBjb250b3VycyBtdXN0IGhhdmUgYXQgbGVhc3QgYSBzdGFydGluZyBhbmQgZW5kaW5nIGNvbW1hbmQsCiAgICAjIGNhbid0IGhhdmUgb25lIHdpdGhvdXQgdGhlIG90aGVyCiAgICBhc3NlcnQgbGVuKGNvbnRvdXIpID4gMSwgImludmFsaWQgY29udG91ciIKCiAgICAjIHRoZSB0eXBlIG9mIHRoZSBsYXN0IGNvbW1hbmQgZGV0ZXJtaW5lcyBpZiB0aGUgY29udG91ciBpcyBjbG9zZWQKICAgIGNvbnRvdXJUeXBlID0gY29udG91ci5wb3AoKVswXQogICAgYXNzZXJ0IGNvbnRvdXJUeXBlIGluICgiZW5kUGF0aCIsICJjbG9zZVBhdGgiKQogICAgY2xvc2VkID0gY29udG91clR5cGUgPT0gImNsb3NlUGF0aCIKCiAgICBmaXJzdFR5cGUsIGZpcnN0UHRzID0gY29udG91ci5wb3AoMCkKICAgIGFzc2VydCBmaXJzdFR5cGUgaW4gKCJtb3ZlVG8iLCAicUN1cnZlVG8iKSwgKAogICAgICAgICJpbnZhbGlkIGluaXRpYWwgc2VnbWVudCB0eXBlOiAlciIgJSBmaXJzdFR5cGUKICAgICkKICAgIGZpcnN0T25DdXJ2ZSA9IGZpcnN0UHRzWy0xXQogICAgaWYgZmlyc3RUeXBlID09ICJxQ3VydmVUbyI6CiAgICAgICAgIyBzcGVjaWFsIGNhc2UgZm9yIFRydWVUeXBlIHBhdGhzIGNvbnRhbmluZyBvbmx5IG9mZi1jdXJ2ZSBwb2ludHMKICAgICAgICBhc3NlcnQgZmlyc3RPbkN1cnZlIGlzIE5vbmUsICJvZmYtY3VydmUgb25seSBwYXRocyBtdXN0IGVuZCB3aXRoICdOb25lJyIKICAgICAgICBhc3NlcnQgbm90IGNvbnRvdXIsICJvbmx5IG9uZSBxQ3VydmVUbyBhbGxvd2VkIHBlciBvZmYtY3VydmUgcGF0aCIKICAgICAgICBmaXJzdFB0cyA9IChmaXJzdFB0c1swXSwpICsgdHVwbGUocmV2ZXJzZWQoZmlyc3RQdHNbMTotMV0pKSArIChOb25lLCkKCiAgICBpZiBub3QgY29udG91cjoKICAgICAgICAjIGNvbnRvdXIgY29udGFpbnMgb25seSBvbmUgc2VnbWVudCwgbm90aGluZyB0byByZXZlcnNlCiAgICAgICAgaWYgZmlyc3RUeXBlID09ICJtb3ZlVG8iOgogICAgICAgICAgICBjbG9zZWQgPSBGYWxzZSAgIyBzaW5nbGUtcG9pbnQgcGF0aHMgY2FuJ3QgYmUgY2xvc2VkCiAgICAgICAgZWxzZToKICAgICAgICAgICAgY2xvc2VkID0gVHJ1ZSAgIyBvZmYtY3VydmUgcGF0aHMgYXJlIGNsb3NlZCBieSBkZWZpbml0aW9uCiAgICAgICAgeWllbGQgZmlyc3RUeXBlLCBmaXJzdFB0cwogICAgZWxzZToKICAgICAgICBsYXN0VHlwZSwgbGFzdFB0cyA9IGNvbnRvdXJbLTFdCiAgICAgICAgbGFzdE9uQ3VydmUgPSBsYXN0UHRzWy0xXQogICAgICAgIGlmIGNsb3NlZDoKICAgICAgICAgICAgIyBmb3IgY2xvc2VkIHBhdGhzLCB3ZSBrZWVwIHRoZSBzdGFydGluZyBwb2ludAogICAgICAgICAgICB5aWVsZCBmaXJzdFR5cGUsIGZpcnN0UHRzCiAgICAgICAgICAgIGlmIGZpcnN0T25DdXJ2ZSAhPSBsYXN0T25DdXJ2ZToKICAgICAgICAgICAgICAgICMgZW1pdCBhbiBpbXBsaWVkIGxpbmUgYmV0d2VlbiB0aGUgbGFzdCBhbmQgZmlyc3QgcG9pbnRzCiAgICAgICAgICAgICAgICB5aWVsZCAibGluZVRvIiwgKGxhc3RPbkN1cnZlLCkKICAgICAgICAgICAgICAgIGNvbnRvdXJbLTFdID0gKGxhc3RUeXBlLCB0dXBsZShsYXN0UHRzWzotMV0pICsgKGZpcnN0T25DdXJ2ZSwpKQoKICAgICAgICAgICAgaWYgbGVuKGNvbnRvdXIpID4gMToKICAgICAgICAgICAgICAgIHNlY29uZFR5cGUsIHNlY29uZFB0cyA9IGNvbnRvdXJbMF0KICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICMgY29udG91ciBoYXMgb25seSB0d28gcG9pbnRzLCB0aGUgc2Vjb25kIGFuZCBsYXN0IGFyZSB0aGUgc2FtZQogICAgICAgICAgICAgICAgc2Vjb25kVHlwZSwgc2Vjb25kUHRzID0gbGFzdFR5cGUsIGxhc3RQdHMKCiAgICAgICAgICAgIGlmIG5vdCBvdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmU6CiAgICAgICAgICAgICAgICAjIGlmIGEgbGluZVRvIGZvbGxvd3MgdGhlIGluaXRpYWwgbW92ZVRvLCBhZnRlciByZXZlcnNpbmcgaXQKICAgICAgICAgICAgICAgICMgd2lsbCBiZSBpbXBsaWVkIGJ5IHRoZSBjbG9zZVBhdGgsIHNvIHdlIGRvbid0IGVtaXQgb25lOwogICAgICAgICAgICAgICAgIyB1bmxlc3MgdGhlIGxpbmVUbyBhbmQgbW92ZVRvIG92ZXJsYXAsIGluIHdoaWNoIGNhc2Ugd2Uga2VlcCB0aGUKICAgICAgICAgICAgICAgICMgZHVwbGljYXRlIHBvaW50cwogICAgICAgICAgICAgICAgaWYgc2Vjb25kVHlwZSA9PSAibGluZVRvIiBhbmQgZmlyc3RQdHMgIT0gc2Vjb25kUHRzOgogICAgICAgICAgICAgICAgICAgIGRlbCBjb250b3VyWzBdCiAgICAgICAgICAgICAgICAgICAgaWYgY29udG91cjoKICAgICAgICAgICAgICAgICAgICAgICAgY29udG91clstMV0gPSAobGFzdFR5cGUsIHR1cGxlKGxhc3RQdHNbOi0xXSkgKyBzZWNvbmRQdHMpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgIyBmb3Igb3BlbiBwYXRocywgdGhlIGxhc3QgcG9pbnQgd2lsbCBiZWNvbWUgdGhlIGZpcnN0CiAgICAgICAgICAgIHlpZWxkIGZpcnN0VHlwZSwgKGxhc3RPbkN1cnZlLCkKICAgICAgICAgICAgY29udG91clstMV0gPSAobGFzdFR5cGUsIHR1cGxlKGxhc3RQdHNbOi0xXSkgKyAoZmlyc3RPbkN1cnZlLCkpCgogICAgICAgICMgd2UgaXRlcmF0ZSBvdmVyIGFsbCBzZWdtZW50IHBhaXJzIGluIHJldmVyc2Ugb3JkZXIsIGFuZCB5aWVsZAogICAgICAgICMgZWFjaCBvbmUgd2l0aCB0aGUgb2ZmLWN1cnZlIHBvaW50cyByZXZlcnNlZCAoaWYgYW55KSwgYW5kCiAgICAgICAgIyB3aXRoIHRoZSBvbi1jdXJ2ZSBwb2ludCBvZiB0aGUgZm9sbG93aW5nIHNlZ21lbnQKICAgICAgICBmb3IgKGN1clR5cGUsIGN1clB0cyksIChfLCBuZXh0UHRzKSBpbiBwYWlyd2lzZShjb250b3VyLCByZXZlcnNlPVRydWUpOgogICAgICAgICAgICB5aWVsZCBjdXJUeXBlLCB0dXBsZShyZXZlcnNlZChjdXJQdHNbOi0xXSkpICsgKG5leHRQdHNbLTFdLCkKCiAgICB5aWVsZCAiY2xvc2VQYXRoIiBpZiBjbG9zZWQgZWxzZSAiZW5kUGF0aCIsICgpCg==
+from fontTools.misc.arrayTools import pairwise
+from fontTools.pens.filterPen import ContourFilterPen
+
+__all__ = ["reversedContour", "ReverseContourPen"]
+
+
+class ReverseContourPen(ContourFilterPen):
+    """Filter pen that passes outline data to another pen, but reversing
+    the winding direction of all contours. Components are simply passed
+    through unchanged.
+
+    Closed contours are reversed in such a way that the first point remains
+    the first point.
+    """
+
+    def __init__(self, outPen, outputImpliedClosingLine=False):
+        super().__init__(outPen)
+        self.outputImpliedClosingLine = outputImpliedClosingLine
+
+    def filterContour(self, contour):
+        return reversedContour(contour, self.outputImpliedClosingLine)
+
+
+def reversedContour(contour, outputImpliedClosingLine=False):
+    """Generator that takes a list of pen's (operator, operands) tuples,
+    and yields them with the winding direction reversed.
+    """
+    if not contour:
+        return  # nothing to do, stop iteration
+
+    # valid contours must have at least a starting and ending command,
+    # can't have one without the other
+    assert len(contour) > 1, "invalid contour"
+
+    # the type of the last command determines if the contour is closed
+    contourType = contour.pop()[0]
+    assert contourType in ("endPath", "closePath")
+    closed = contourType == "closePath"
+
+    firstType, firstPts = contour.pop(0)
+    assert firstType in ("moveTo", "qCurveTo"), (
+        "invalid initial segment type: %r" % firstType
+    )
+    firstOnCurve = firstPts[-1]
+    if firstType == "qCurveTo":
+        # special case for TrueType paths contaning only off-curve points
+        assert firstOnCurve is None, "off-curve only paths must end with 'None'"
+        assert not contour, "only one qCurveTo allowed per off-curve path"
+        firstPts = (firstPts[0],) + tuple(reversed(firstPts[1:-1])) + (None,)
+
+    if not contour:
+        # contour contains only one segment, nothing to reverse
+        if firstType == "moveTo":
+            closed = False  # single-point paths can't be closed
+        else:
+            closed = True  # off-curve paths are closed by definition
+        yield firstType, firstPts
+    else:
+        lastType, lastPts = contour[-1]
+        lastOnCurve = lastPts[-1]
+        if closed:
+            # for closed paths, we keep the starting point
+            yield firstType, firstPts
+            if firstOnCurve != lastOnCurve:
+                # emit an implied line between the last and first points
+                yield "lineTo", (lastOnCurve,)
+                contour[-1] = (lastType, tuple(lastPts[:-1]) + (firstOnCurve,))
+
+            if len(contour) > 1:
+                secondType, secondPts = contour[0]
+            else:
+                # contour has only two points, the second and last are the same
+                secondType, secondPts = lastType, lastPts
+
+            if not outputImpliedClosingLine:
+                # if a lineTo follows the initial moveTo, after reversing it
+                # will be implied by the closePath, so we don't emit one;
+                # unless the lineTo and moveTo overlap, in which case we keep the
+                # duplicate points
+                if secondType == "lineTo" and firstPts != secondPts:
+                    del contour[0]
+                    if contour:
+                        contour[-1] = (lastType, tuple(lastPts[:-1]) + secondPts)
+        else:
+            # for open paths, the last point will become the first
+            yield firstType, (lastOnCurve,)
+            contour[-1] = (lastType, tuple(lastPts[:-1]) + (firstOnCurve,))
+
+        # we iterate over all segment pairs in reverse order, and yield
+        # each one with the off-curve points reversed (if any), and
+        # with the on-curve point of the following segment
+        for (curType, curPts), (_, nextPts) in pairwise(contour, reverse=True):
+            yield curType, tuple(reversed(curPts[:-1])) + (nextPts[-1],)
+
+    yield "closePath" if closed else "endPath", ()

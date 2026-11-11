@@ -1,1 +1,14 @@
-IiIiVFNJe0IsQyxELEosUCxTLFZ9IGFyZSBwcml2YXRlIHRhYmxlcyB1c2VkIGJ5IE1pY3Jvc29mdCBWaXN1YWwgVHJ1ZVR5cGUgKFZUVCkKdG9vbCB0byBzdG9yZSBpdHMgdGFibGUgc291cmNlIGRhdGEuCgpUU0lDIGNvbnRhaW5zIHRoZSBzb3VyY2UgdGV4dCBmb3IgdGhlIFZhcmlhdGlvbiBDVlQgd2luZG93IGFuZCBkYXRhIGZvcgp0aGUgYGBjdmFyYGAgdGFibGUuCgpTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS90b29scy92dHQvdHNpLXRhYmxlcwoiIiIKCmZyb20gLm90QmFzZSBpbXBvcnQgQmFzZVRUWENvbnZlcnRlcgoKCmNsYXNzIHRhYmxlX1RfU19JX0NfKEJhc2VUVFhDb252ZXJ0ZXIpOgogICAgcGFzcwo=
+"""TSI{B,C,D,J,P,S,V} are private tables used by Microsoft Visual TrueType (VTT)
+tool to store its table source data.
+
+TSIC contains the source text for the Variation CVT window and data for
+the ``cvar`` table.
+
+See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
+"""
+
+from .otBase import BaseTTXConverter
+
+
+class table_T_S_I_C_(BaseTTXConverter):
+    pass

@@ -1,1 +1,14 @@
-ZnJvbSAub3RCYXNlIGltcG9ydCBCYXNlVFRYQ29udmVydGVyCgoKY2xhc3MgdGFibGVfQl9BX1NfRV8oQmFzZVRUWENvbnZlcnRlcik6CiAgICAiIiJCYXNlbGluZSB0YWJsZQoKICAgIFRoZSBgYEJBU0VgYCB0YWJsZSBjb250YWlucyBpbmZvcm1hdGlvbiBuZWVkZWQgdG8gYWxpZ24gZ2x5cGhzIGluCiAgICBkaWZmZXJlbnQgc2NyaXB0cywgZnJvbSBkaWZmZXJlbnQgZm9udHMsIG9yIGF0IGRpZmZlcmVudCBzaXplcwogICAgd2l0aGluIHRoZSBzYW1lIGxpbmUgb2YgdGV4dC4KCiAgICBTZWUgYWxzbyBodHRwczovL2xlYXJuLm1pY3Jvc29mdC5jb20vZW4tdXMvdHlwb2dyYXBoeS9vcGVudHlwZS9zcGVjL2Jhc2UKICAgICIiIgoKICAgIHBhc3MK
+from .otBase import BaseTTXConverter
+
+
+class table_B_A_S_E_(BaseTTXConverter):
+    """Baseline table
+
+    The ``BASE`` table contains information needed to align glyphs in
+    different scripts, from different fonts, or at different sizes
+    within the same line of text.
+
+    See also https://learn.microsoft.com/en-us/typography/opentype/spec/base
+    """
+
+    pass

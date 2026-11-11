@@ -1,1 +1,92 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHR5cGluZwpmcm9tIHBhdGhsaWIgaW1wb3J0IFB1cmVQb3NpeFBhdGgKCmZyb20gLl9iYXNlIGltcG9ydCBGUwpmcm9tIC5fZXJyb3JzIGltcG9ydCBEaXJlY3RvcnlFeHBlY3RlZCwgUmVzb3VyY2VOb3RGb3VuZAoKaWYgdHlwaW5nLlRZUEVfQ0hFQ0tJTkc6CiAgICBmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgQ29sbGVjdGlvbgogICAgZnJvbSB0eXBpbmcgaW1wb3J0IElPLCBBbnkKCiAgICBmcm9tIC5faW5mbyBpbXBvcnQgSW5mbwoKCmNsYXNzIFN1YkZTKEZTKToKICAgICIiIk1hcHMgYSBzdWItZGlyZWN0b3J5IG9mIGFub3RoZXIgZmlsZXN5c3RlbS4iIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgcGFyZW50OiBGUywgc3ViX3BhdGg6IHN0cik6CiAgICAgICAgc3VwZXIoKS5fX2luaXRfXygpCiAgICAgICAgc2VsZi5fcGFyZW50ID0gcGFyZW50CiAgICAgICAgc2VsZi5fcHJlZml4ID0gUHVyZVBvc2l4UGF0aChzdWJfcGF0aCkuYXNfcG9zaXgoKS5yc3RyaXAoIi8iKQogICAgICAgIGlmIG5vdCBwYXJlbnQuZXhpc3RzKHNlbGYuX3ByZWZpeCk6CiAgICAgICAgICAgIHJhaXNlIFJlc291cmNlTm90Rm91bmQoZiJObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5OiB7c3ViX3BhdGghcn0iKQogICAgICAgIGVsaWYgbm90IHBhcmVudC5pc2RpcihzZWxmLl9wcmVmaXgpOgogICAgICAgICAgICByYWlzZSBEaXJlY3RvcnlFeHBlY3RlZChmIntzdWJfcGF0aCFyfSBpcyBub3QgYSBkaXJlY3RvcnkiKQoKICAgIGRlZiBkZWxlZ2F0ZV9mcyhzZWxmKToKICAgICAgICByZXR1cm4gc2VsZi5fcGFyZW50CgogICAgZGVmIF9mdWxsKHNlbGYsIHJlbDogc3RyKSAtPiBzdHI6CiAgICAgICAgc2VsZi5jaGVjaygpCiAgICAgICAgcmV0dXJuIGYie3NlbGYuX3ByZWZpeH0ve1B1cmVQb3NpeFBhdGgocmVsKS5hc19wb3NpeCgpfSIubHN0cmlwKCIvIikKCiAgICBkZWYgb3BlbihzZWxmLCBwYXRoOiBzdHIsIG1vZGU6IHN0ciA9ICJyYiIsICoqa3dhcmdzKSAtPiBJT1tBbnldOgogICAgICAgIHJldHVybiBzZWxmLl9wYXJlbnQub3BlbihzZWxmLl9mdWxsKHBhdGgpLCBtb2RlLCAqKmt3YXJncykKCiAgICBkZWYgZXhpc3RzKHNlbGYsIHBhdGg6IHN0cikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gc2VsZi5fcGFyZW50LmV4aXN0cyhzZWxmLl9mdWxsKHBhdGgpKQoKICAgIGRlZiBpc2RpcihzZWxmLCBwYXRoOiBzdHIpIC0+IGJvb2w6CiAgICAgICAgcmV0dXJuIHNlbGYuX3BhcmVudC5pc2RpcihzZWxmLl9mdWxsKHBhdGgpKQoKICAgIGRlZiBpc2ZpbGUoc2VsZiwgcGF0aDogc3RyKSAtPiBib29sOgogICAgICAgIHJldHVybiBzZWxmLl9wYXJlbnQuaXNmaWxlKHNlbGYuX2Z1bGwocGF0aCkpCgogICAgZGVmIGxpc3RkaXIoc2VsZiwgcGF0aDogc3RyKSAtPiBsaXN0W3N0cl06CiAgICAgICAgcmV0dXJuIHNlbGYuX3BhcmVudC5saXN0ZGlyKHNlbGYuX2Z1bGwocGF0aCkpCgogICAgZGVmIG1ha2VkaXIoc2VsZiwgcGF0aDogc3RyLCByZWNyZWF0ZTogYm9vbCA9IEZhbHNlKToKICAgICAgICByZXR1cm4gc2VsZi5fcGFyZW50Lm1ha2VkaXIoc2VsZi5fZnVsbChwYXRoKSwgcmVjcmVhdGU9cmVjcmVhdGUpCgogICAgZGVmIG1ha2VkaXJzKHNlbGYsIHBhdGg6IHN0ciwgcmVjcmVhdGU6IGJvb2wgPSBGYWxzZSk6CiAgICAgICAgcmV0dXJuIHNlbGYuX3BhcmVudC5tYWtlZGlycyhzZWxmLl9mdWxsKHBhdGgpLCByZWNyZWF0ZT1yZWNyZWF0ZSkKCiAgICBkZWYgZ2V0aW5mbyhzZWxmLCBwYXRoOiBzdHIsIG5hbWVzcGFjZXM6IENvbGxlY3Rpb25bc3RyXSB8IE5vbmUgPSBOb25lKSAtPiBJbmZvOgogICAgICAgIHJldHVybiBzZWxmLl9wYXJlbnQuZ2V0aW5mbyhzZWxmLl9mdWxsKHBhdGgpLCBuYW1lc3BhY2VzPW5hbWVzcGFjZXMpCgogICAgZGVmIHJlbW92ZShzZWxmLCBwYXRoOiBzdHIpOgogICAgICAgIHJldHVybiBzZWxmLl9wYXJlbnQucmVtb3ZlKHNlbGYuX2Z1bGwocGF0aCkpCgogICAgZGVmIHJlbW92ZWRpcihzZWxmLCBwYXRoOiBzdHIpOgogICAgICAgIHJldHVybiBzZWxmLl9wYXJlbnQucmVtb3ZlZGlyKHNlbGYuX2Z1bGwocGF0aCkpCgogICAgZGVmIHJlbW92ZXRyZWUoc2VsZiwgcGF0aDogc3RyKToKICAgICAgICByZXR1cm4gc2VsZi5fcGFyZW50LnJlbW92ZXRyZWUoc2VsZi5fZnVsbChwYXRoKSkKCiAgICBkZWYgbW92ZWRpcihzZWxmLCBzcmM6IHN0ciwgZHN0OiBzdHIsIGNyZWF0ZTogYm9vbCA9IEZhbHNlKToKICAgICAgICBzZWxmLl9wYXJlbnQubW92ZWRpcihzZWxmLl9mdWxsKHNyYyksIHNlbGYuX2Z1bGwoZHN0KSwgY3JlYXRlPWNyZWF0ZSkKCiAgICBkZWYgZ2V0c3lzcGF0aChzZWxmLCBwYXRoOiBzdHIpIC0+IHN0cjoKICAgICAgICByZXR1cm4gc2VsZi5fcGFyZW50LmdldHN5c3BhdGgoc2VsZi5fZnVsbChwYXRoKSkKCiAgICBkZWYgcmVhZGJ5dGVzKHNlbGYsIHBhdGg6IHN0cikgLT4gYnl0ZXM6CiAgICAgICAgcmV0dXJuIHNlbGYuX3BhcmVudC5yZWFkYnl0ZXMoc2VsZi5fZnVsbChwYXRoKSkKCiAgICBkZWYgd3JpdGVieXRlcyhzZWxmLCBwYXRoOiBzdHIsIGRhdGE6IGJ5dGVzKToKICAgICAgICBzZWxmLl9wYXJlbnQud3JpdGVieXRlcyhzZWxmLl9mdWxsKHBhdGgpLCBkYXRhKQoKICAgIGRlZiBfX3JlcHJfXyhzZWxmKSAtPiBzdHI6CiAgICAgICAgcmV0dXJuIGYie3NlbGYuX19jbGFzc19fLl9fbmFtZV9ffSh7c2VsZi5fcGFyZW50IXJ9LCB7c2VsZi5fcHJlZml4IXJ9KSIKCiAgICBkZWYgX19zdHJfXyhzZWxmKSAtPiBzdHI6CiAgICAgICAgcmV0dXJuIGYie3NlbGYuX3BhcmVudH0ve3NlbGYuX3ByZWZpeH0iCgoKY2xhc3MgQ2xvc2luZ1N1YkZTKFN1YkZTKToKICAgICIiIkxpa2UgU3ViRlMsIGJ1dCBhdXRvLWNsb3NlcyB0aGUgcGFyZW50IGZpbGVzeXN0ZW0gd2hlbiBjbG9zZWQuIiIiCgogICAgZGVmIGNsb3NlKHNlbGYpOgogICAgICAgIHN1cGVyKCkuY2xvc2UoKQogICAgICAgIHNlbGYuX3BhcmVudC5jbG9zZSgpCg==
+from __future__ import annotations
+
+import typing
+from pathlib import PurePosixPath
+
+from ._base import FS
+from ._errors import DirectoryExpected, ResourceNotFound
+
+if typing.TYPE_CHECKING:
+    from collections.abc import Collection
+    from typing import IO, Any
+
+    from ._info import Info
+
+
+class SubFS(FS):
+    """Maps a sub-directory of another filesystem."""
+
+    def __init__(self, parent: FS, sub_path: str):
+        super().__init__()
+        self._parent = parent
+        self._prefix = PurePosixPath(sub_path).as_posix().rstrip("/")
+        if not parent.exists(self._prefix):
+            raise ResourceNotFound(f"No such file or directory: {sub_path!r}")
+        elif not parent.isdir(self._prefix):
+            raise DirectoryExpected(f"{sub_path!r} is not a directory")
+
+    def delegate_fs(self):
+        return self._parent
+
+    def _full(self, rel: str) -> str:
+        self.check()
+        return f"{self._prefix}/{PurePosixPath(rel).as_posix()}".lstrip("/")
+
+    def open(self, path: str, mode: str = "rb", **kwargs) -> IO[Any]:
+        return self._parent.open(self._full(path), mode, **kwargs)
+
+    def exists(self, path: str) -> bool:
+        return self._parent.exists(self._full(path))
+
+    def isdir(self, path: str) -> bool:
+        return self._parent.isdir(self._full(path))
+
+    def isfile(self, path: str) -> bool:
+        return self._parent.isfile(self._full(path))
+
+    def listdir(self, path: str) -> list[str]:
+        return self._parent.listdir(self._full(path))
+
+    def makedir(self, path: str, recreate: bool = False):
+        return self._parent.makedir(self._full(path), recreate=recreate)
+
+    def makedirs(self, path: str, recreate: bool = False):
+        return self._parent.makedirs(self._full(path), recreate=recreate)
+
+    def getinfo(self, path: str, namespaces: Collection[str] | None = None) -> Info:
+        return self._parent.getinfo(self._full(path), namespaces=namespaces)
+
+    def remove(self, path: str):
+        return self._parent.remove(self._full(path))
+
+    def removedir(self, path: str):
+        return self._parent.removedir(self._full(path))
+
+    def removetree(self, path: str):
+        return self._parent.removetree(self._full(path))
+
+    def movedir(self, src: str, dst: str, create: bool = False):
+        self._parent.movedir(self._full(src), self._full(dst), create=create)
+
+    def getsyspath(self, path: str) -> str:
+        return self._parent.getsyspath(self._full(path))
+
+    def readbytes(self, path: str) -> bytes:
+        return self._parent.readbytes(self._full(path))
+
+    def writebytes(self, path: str, data: bytes):
+        self._parent.writebytes(self._full(path), data)
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({self._parent!r}, {self._prefix!r})"
+
+    def __str__(self) -> str:
+        return f"{self._parent}/{self._prefix}"
+
+
+class ClosingSubFS(SubFS):
+    """Like SubFS, but auto-closes the parent filesystem when closed."""
+
+    def close(self):
+        super().close()
+        self._parent.close()

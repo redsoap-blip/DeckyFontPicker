@@ -1,1 +1,223 @@
-IiIiCmNvbG9yTGliLnRhYmxlX2J1aWxkZXI6IEdlbmVyaWMgaGVscGVyIGZvciBmaWxsaW5nIGluIEJhc2VUYWJsZSBkZXJpdmF0aXZlcyBmcm9tIHR1cGxlcyBhbmQgbWFwcyBhbmQgc3VjaC4KCiIiIgoKaW1wb3J0IGNvbGxlY3Rpb25zCmltcG9ydCBlbnVtCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5vdEJhc2UgaW1wb3J0ICgKICAgIEJhc2VUYWJsZSwKICAgIEZvcm1hdFN3aXRjaGluZ0Jhc2VUYWJsZSwKICAgIFVJbnQ4Rm9ybWF0U3dpdGNoaW5nQmFzZVRhYmxlLAopCmZyb20gZm9udFRvb2xzLnR0TGliLnRhYmxlcy5vdENvbnZlcnRlcnMgaW1wb3J0ICgKICAgIENvbXB1dGVkSW50LAogICAgU2ltcGxlVmFsdWUsCiAgICBTdHJ1Y3QsCiAgICBTaG9ydCwKICAgIFVJbnQ4LAogICAgVVNob3J0LAogICAgSW50VmFsdWUsCiAgICBGbG9hdFZhbHVlLAogICAgT3B0aW9uYWxWYWx1ZSwKKQpmcm9tIGZvbnRUb29scy5taXNjLnJvdW5kVG9vbHMgaW1wb3J0IG90Um91bmQKCgpjbGFzcyBCdWlsZENhbGxiYWNrKGVudW0uRW51bSk6CiAgICAiIiJLZXllZCBvbiAoQkVGT1JFX0JVSUxELCBjbGFzc1ssIEZvcm1hdCBpZiBhdmFpbGFibGVdKS4KICAgIFJlY2VpdmVzIChkZXN0LCBzb3VyY2UpLgogICAgU2hvdWxkIHJldHVybiAoZGVzdCwgc291cmNlKSwgd2hpY2ggY2FuIGJlIG5ldyBvYmplY3RzLgogICAgIiIiCgogICAgQkVGT1JFX0JVSUxEID0gZW51bS5hdXRvKCkKCiAgICAiIiJLZXllZCBvbiAoQUZURVJfQlVJTEQsIGNsYXNzWywgRm9ybWF0IGlmIGF2YWlsYWJsZV0pLgogICAgUmVjZWl2ZXMgKGRlc3QpLgogICAgU2hvdWxkIHJldHVybiBkZXN0LCB3aGljaCBjYW4gYmUgYSBuZXcgb2JqZWN0LgogICAgIiIiCiAgICBBRlRFUl9CVUlMRCA9IGVudW0uYXV0bygpCgogICAgIiIiS2V5ZWQgb24gKENSRUFURV9ERUZBVUxULCBjbGFzc1ssIEZvcm1hdCBpZiBhdmFpbGFibGVdKS4KICAgIFJlY2VpdmVzIG5vIGFyZ3VtZW50cy4KICAgIFNob3VsZCByZXR1cm4gYSBuZXcgaW5zdGFuY2Ugb2YgY2xhc3MuCiAgICAiIiIKICAgIENSRUFURV9ERUZBVUxUID0gZW51bS5hdXRvKCkKCgpkZWYgX2Fzc2lnbmFibGUoY29udmVydGVyc0J5TmFtZSk6CiAgICByZXR1cm4ge2s6IHYgZm9yIGssIHYgaW4gY29udmVydGVyc0J5TmFtZS5pdGVtcygpIGlmIG5vdCBpc2luc3RhbmNlKHYsIENvbXB1dGVkSW50KX0KCgpkZWYgX2lzTm9uU3RyU2VxdWVuY2UodmFsdWUpOgogICAgcmV0dXJuIGlzaW5zdGFuY2UodmFsdWUsIGNvbGxlY3Rpb25zLmFiYy5TZXF1ZW5jZSkgYW5kIG5vdCBpc2luc3RhbmNlKHZhbHVlLCBzdHIpCgoKZGVmIF9zcGxpdF9mb3JtYXQoY2xzLCBzb3VyY2UpOgogICAgaWYgX2lzTm9uU3RyU2VxdWVuY2Uoc291cmNlKToKICAgICAgICBhc3NlcnQgbGVuKHNvdXJjZSkgPiAwLCBmIntjbHN9IG5lZWRzIGF0IGxlYXN0IGZvcm1hdCBmcm9tIHtzb3VyY2V9IgogICAgICAgIGZtdCwgcmVtYWluZGVyID0gc291cmNlWzBdLCBzb3VyY2VbMTpdCiAgICBlbGlmIGlzaW5zdGFuY2Uoc291cmNlLCBjb2xsZWN0aW9ucy5hYmMuTWFwcGluZyk6CiAgICAgICAgYXNzZXJ0ICJGb3JtYXQiIGluIHNvdXJjZSwgZiJ7Y2xzfSBuZWVkcyBhdCBsZWFzdCBGb3JtYXQgZnJvbSB7c291cmNlfSIKICAgICAgICByZW1haW5kZXIgPSBzb3VyY2UuY29weSgpCiAgICAgICAgZm10ID0gcmVtYWluZGVyLnBvcCgiRm9ybWF0IikKICAgIGVsc2U6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIk5vdCBzdXJlIGhvdyB0byBwb3B1bGF0ZSB7Y2xzfSBmcm9tIHtzb3VyY2V9IikKCiAgICBhc3NlcnQgaXNpbnN0YW5jZSgKICAgICAgICBmbXQsIGNvbGxlY3Rpb25zLmFiYy5IYXNoYWJsZQogICAgKSwgZiJ7Y2xzfSBGb3JtYXQgaXMgbm90IGhhc2hhYmxlOiB7Zm10IXJ9IgogICAgYXNzZXJ0IGZtdCBpbiBjbHMuY29udmVydGVyc0J5TmFtZSwgZiJ7Y2xzfSBpbnZhbGlkIEZvcm1hdDoge2ZtdCFyfSIKCiAgICByZXR1cm4gZm10LCByZW1haW5kZXIKCgpjbGFzcyBUYWJsZUJ1aWxkZXI6CiAgICAiIiIKICAgIEhlbHBzIHRvIHBvcHVsYXRlIHRoaW5ncyBkZXJpdmVkIGZyb20gQmFzZVRhYmxlIGZyb20gbWFwcywgdHVwbGVzLCBldGMuCgogICAgQSB0YWJsZSBvZiBsaWZlY3ljbGUgY2FsbGJhY2tzIG1heSBiZSBwcm92aWRlZCB0byBhZGQgbG9naWMgYmV5b25kIHdoYXQgaXMgcG9zc2libGUKICAgIGJhc2VkIG9uIG90RGF0YSBpbmZvIGZvciB0aGUgdGFyZ2V0IGNsYXNzLiBTZWUgQnVpbGRDYWxsYmFja3MuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgY2FsbGJhY2tUYWJsZT1Ob25lKToKICAgICAgICBpZiBjYWxsYmFja1RhYmxlIGlzIE5vbmU6CiAgICAgICAgICAgIGNhbGxiYWNrVGFibGUgPSB7fQogICAgICAgIHNlbGYuX2NhbGxiYWNrVGFibGUgPSBjYWxsYmFja1RhYmxlCgogICAgZGVmIF9jb252ZXJ0KHNlbGYsIGRlc3QsIGZpZWxkLCBjb252ZXJ0ZXIsIHZhbHVlKToKICAgICAgICBlbnVtQ2xhc3MgPSBnZXRhdHRyKGNvbnZlcnRlciwgImVudW1DbGFzcyIsIE5vbmUpCgogICAgICAgIGlmIGVudW1DbGFzczoKICAgICAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgZW51bUNsYXNzKToKICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICAgICAgZWxpZiBpc2luc3RhbmNlKHZhbHVlLCBzdHIpOgogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gZ2V0YXR0cihlbnVtQ2xhc3MsIHZhbHVlLnVwcGVyKCkpCiAgICAgICAgICAgICAgICBleGNlcHQgQXR0cmlidXRlRXJyb3I6CiAgICAgICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmInt2YWx1ZX0gaXMgbm90IGEgdmFsaWQge2VudW1DbGFzc30iKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgdmFsdWUgPSBlbnVtQ2xhc3ModmFsdWUpCgogICAgICAgIGVsaWYgaXNpbnN0YW5jZShjb252ZXJ0ZXIsIEludFZhbHVlKToKICAgICAgICAgICAgdmFsdWUgPSBvdFJvdW5kKHZhbHVlKQogICAgICAgIGVsaWYgaXNpbnN0YW5jZShjb252ZXJ0ZXIsIEZsb2F0VmFsdWUpOgogICAgICAgICAgICB2YWx1ZSA9IGZsb2F0KHZhbHVlKQoKICAgICAgICBlbGlmIGlzaW5zdGFuY2UoY29udmVydGVyLCBTdHJ1Y3QpOgogICAgICAgICAgICBpZiBjb252ZXJ0ZXIucmVwZWF0OgogICAgICAgICAgICAgICAgaWYgX2lzTm9uU3RyU2VxdWVuY2UodmFsdWUpOgogICAgICAgICAgICAgICAgICAgIHZhbHVlID0gW3NlbGYuYnVpbGQoY29udmVydGVyLnRhYmxlQ2xhc3MsIHYpIGZvciB2IGluIHZhbHVlXQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICB2YWx1ZSA9IFtzZWxmLmJ1aWxkKGNvbnZlcnRlci50YWJsZUNsYXNzLCB2YWx1ZSldCiAgICAgICAgICAgICAgICBzZXRhdHRyKGRlc3QsIGNvbnZlcnRlci5yZXBlYXQsIGxlbih2YWx1ZSkpCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICB2YWx1ZSA9IHNlbGYuYnVpbGQoY29udmVydGVyLnRhYmxlQ2xhc3MsIHZhbHVlKQogICAgICAgIGVsaWYgY2FsbGFibGUoY29udmVydGVyKToKICAgICAgICAgICAgdmFsdWUgPSBjb252ZXJ0ZXIodmFsdWUpCgogICAgICAgIHNldGF0dHIoZGVzdCwgZmllbGQsIHZhbHVlKQoKICAgIGRlZiBidWlsZChzZWxmLCBjbHMsIHNvdXJjZSk6CiAgICAgICAgYXNzZXJ0IGlzc3ViY2xhc3MoY2xzLCBCYXNlVGFibGUpCgogICAgICAgIGlmIGlzaW5zdGFuY2Uoc291cmNlLCBjbHMpOgogICAgICAgICAgICByZXR1cm4gc291cmNlCgogICAgICAgIGNhbGxiYWNrS2V5ID0gKGNscywpCiAgICAgICAgZm10ID0gTm9uZQogICAgICAgIGlmIGlzc3ViY2xhc3MoY2xzLCBGb3JtYXRTd2l0Y2hpbmdCYXNlVGFibGUpOgogICAgICAgICAgICBmbXQsIHNvdXJjZSA9IF9zcGxpdF9mb3JtYXQoY2xzLCBzb3VyY2UpCiAgICAgICAgICAgIGNhbGxiYWNrS2V5ID0gKGNscywgZm10KQoKICAgICAgICBkZXN0ID0gc2VsZi5fY2FsbGJhY2tUYWJsZS5nZXQoCiAgICAgICAgICAgIChCdWlsZENhbGxiYWNrLkNSRUFURV9ERUZBVUxULCkgKyBjYWxsYmFja0tleSwgbGFtYmRhOiBjbHMoKQogICAgICAgICkoKQogICAgICAgIGFzc2VydCBpc2luc3RhbmNlKGRlc3QsIGNscykKCiAgICAgICAgY29udkJ5TmFtZSA9IF9hc3NpZ25hYmxlKGNscy5jb252ZXJ0ZXJzQnlOYW1lKQogICAgICAgIHNraXBwZWRGaWVsZHMgPSBzZXQoKQoKICAgICAgICAjIEZvciBmb3JtYXQgc3dpdGNoZXJzIHdlIG5lZWQgdG8gcmVzb2x2ZSBjb252ZXJ0ZXJzIGJhc2VkIG9uIGZvcm1hdAogICAgICAgIGlmIGlzc3ViY2xhc3MoY2xzLCBGb3JtYXRTd2l0Y2hpbmdCYXNlVGFibGUpOgogICAgICAgICAgICBkZXN0LkZvcm1hdCA9IGZtdAogICAgICAgICAgICBjb252QnlOYW1lID0gX2Fzc2lnbmFibGUoY29udkJ5TmFtZVtkZXN0LkZvcm1hdF0pCiAgICAgICAgICAgIHNraXBwZWRGaWVsZHMuYWRkKCJGb3JtYXQiKQoKICAgICAgICAjIENvbnZlcnQgc2VxdWVuY2UgPT4gbWFwcGluZyBzbyBiZWZvcmUgdGh1bmsgb25seSBoYXMgdG8gaGFuZGxlIG9uZSBmb3JtYXQKICAgICAgICBpZiBfaXNOb25TdHJTZXF1ZW5jZShzb3VyY2UpOgogICAgICAgICAgICAjIFNlcXVlbmNlICh0eXBpY2FsbHkgbGlzdCBvciB0dXBsZSkgYXNzdW1lZCB0byBtYXRjaCBmaWVsZHMgaW4gZGVjbGFyYXRpb24gb3JkZXIKICAgICAgICAgICAgYXNzZXJ0IGxlbihzb3VyY2UpIDw9IGxlbigKICAgICAgICAgICAgICAgIGNvbnZCeU5hbWUKICAgICAgICAgICAgKSwgZiJTZXF1ZW5jZSBvZiB7bGVuKHNvdXJjZSl9IHRvbyBsb25nIGZvciB7Y2xzfTsgZXhwZWN0ZWQgPD0ge2xlbihjb252QnlOYW1lKX0gdmFsdWVzIgogICAgICAgICAgICBzb3VyY2UgPSBkaWN0KHppcChjb252QnlOYW1lLmtleXMoKSwgc291cmNlKSkKCiAgICAgICAgZGVzdCwgc291cmNlID0gc2VsZi5fY2FsbGJhY2tUYWJsZS5nZXQoCiAgICAgICAgICAgIChCdWlsZENhbGxiYWNrLkJFRk9SRV9CVUlMRCwpICsgY2FsbGJhY2tLZXksIGxhbWJkYSBkLCBzOiAoZCwgcykKICAgICAgICApKGRlc3QsIHNvdXJjZSkKCiAgICAgICAgaWYgaXNpbnN0YW5jZShzb3VyY2UsIGNvbGxlY3Rpb25zLmFiYy5NYXBwaW5nKToKICAgICAgICAgICAgZm9yIGZpZWxkLCB2YWx1ZSBpbiBzb3VyY2UuaXRlbXMoKToKICAgICAgICAgICAgICAgIGlmIGZpZWxkIGluIHNraXBwZWRGaWVsZHM6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGNvbnZlcnRlciA9IGNvbnZCeU5hbWUuZ2V0KGZpZWxkLCBOb25lKQogICAgICAgICAgICAgICAgaWYgbm90IGNvbnZlcnRlcjoKICAgICAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgICAgICAgICBmIlVucmVjb2duaXplZCBmaWVsZCB7ZmllbGR9IGZvciB7Y2xzfTsgZXhwZWN0ZWQgb25lIG9mIHtzb3J0ZWQoY29udkJ5TmFtZS5rZXlzKCkpfSIKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBzZWxmLl9jb252ZXJ0KGRlc3QsIGZpZWxkLCBjb252ZXJ0ZXIsIHZhbHVlKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgICMgbGV0J3MgdHJ5IGFzIGEgMS10dXBsZQogICAgICAgICAgICBkZXN0ID0gc2VsZi5idWlsZChjbHMsIChzb3VyY2UsKSkKCiAgICAgICAgZm9yIGZpZWxkLCBjb252IGluIGNvbnZCeU5hbWUuaXRlbXMoKToKICAgICAgICAgICAgaWYgbm90IGhhc2F0dHIoZGVzdCwgZmllbGQpIGFuZCBpc2luc3RhbmNlKGNvbnYsIE9wdGlvbmFsVmFsdWUpOgogICAgICAgICAgICAgICAgc2V0YXR0cihkZXN0LCBmaWVsZCwgY29udi5ERUZBVUxUKQoKICAgICAgICBkZXN0ID0gc2VsZi5fY2FsbGJhY2tUYWJsZS5nZXQoCiAgICAgICAgICAgIChCdWlsZENhbGxiYWNrLkFGVEVSX0JVSUxELCkgKyBjYWxsYmFja0tleSwgbGFtYmRhIGQ6IGQKICAgICAgICApKGRlc3QpCgogICAgICAgIHJldHVybiBkZXN0CgoKY2xhc3MgVGFibGVVbmJ1aWxkZXI6CiAgICBkZWYgX19pbml0X18oc2VsZiwgY2FsbGJhY2tUYWJsZT1Ob25lKToKICAgICAgICBpZiBjYWxsYmFja1RhYmxlIGlzIE5vbmU6CiAgICAgICAgICAgIGNhbGxiYWNrVGFibGUgPSB7fQogICAgICAgIHNlbGYuX2NhbGxiYWNrVGFibGUgPSBjYWxsYmFja1RhYmxlCgogICAgZGVmIHVuYnVpbGQoc2VsZiwgdGFibGUpOgogICAgICAgIGFzc2VydCBpc2luc3RhbmNlKHRhYmxlLCBCYXNlVGFibGUpCgogICAgICAgIHNvdXJjZSA9IHt9CgogICAgICAgIGNhbGxiYWNrS2V5ID0gKHR5cGUodGFibGUpLCkKICAgICAgICBpZiBpc2luc3RhbmNlKHRhYmxlLCBGb3JtYXRTd2l0Y2hpbmdCYXNlVGFibGUpOgogICAgICAgICAgICBzb3VyY2VbIkZvcm1hdCJdID0gaW50KHRhYmxlLkZvcm1hdCkKICAgICAgICAgICAgY2FsbGJhY2tLZXkgKz0gKHRhYmxlLkZvcm1hdCwpCgogICAgICAgIGZvciBjb252ZXJ0ZXIgaW4gdGFibGUuZ2V0Q29udmVydGVycygpOgogICAgICAgICAgICBpZiBpc2luc3RhbmNlKGNvbnZlcnRlciwgQ29tcHV0ZWRJbnQpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgdmFsdWUgPSBnZXRhdHRyKHRhYmxlLCBjb252ZXJ0ZXIubmFtZSkKCiAgICAgICAgICAgIGVudW1DbGFzcyA9IGdldGF0dHIoY29udmVydGVyLCAiZW51bUNsYXNzIiwgTm9uZSkKICAgICAgICAgICAgaWYgZW51bUNsYXNzOgogICAgICAgICAgICAgICAgc291cmNlW2NvbnZlcnRlci5uYW1lXSA9IHZhbHVlLm5hbWUubG93ZXIoKQogICAgICAgICAgICBlbGlmIGlzaW5zdGFuY2UoY29udmVydGVyLCBTdHJ1Y3QpOgogICAgICAgICAgICAgICAgaWYgY29udmVydGVyLnJlcGVhdDoKICAgICAgICAgICAgICAgICAgICBzb3VyY2VbY29udmVydGVyLm5hbWVdID0gW3NlbGYudW5idWlsZCh2KSBmb3IgdiBpbiB2YWx1ZV0KICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgc291cmNlW2NvbnZlcnRlci5uYW1lXSA9IHNlbGYudW5idWlsZCh2YWx1ZSkKICAgICAgICAgICAgZWxpZiBpc2luc3RhbmNlKGNvbnZlcnRlciwgU2ltcGxlVmFsdWUpOgogICAgICAgICAgICAgICAgIyAic2ltcGxlIiB2YWx1ZXMgKGUuZy4gaW50LCBmbG9hdCwgc3RyKSBuZWVkIG5vIGZ1cnRoZXIgdW4tYnVpbGRpbmcKICAgICAgICAgICAgICAgIHNvdXJjZVtjb252ZXJ0ZXIubmFtZV0gPSB2YWx1ZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmFpc2UgTm90SW1wbGVtZW50ZWRFcnJvcigKICAgICAgICAgICAgICAgICAgICAiRG9uJ3Qga25vdyBob3cgdW5idWlsZCB7dmFsdWUhcn0gd2l0aCB7Y29udmVydGVyIXJ9IgogICAgICAgICAgICAgICAgKQoKICAgICAgICBzb3VyY2UgPSBzZWxmLl9jYWxsYmFja1RhYmxlLmdldChjYWxsYmFja0tleSwgbGFtYmRhIHM6IHMpKHNvdXJjZSkKCiAgICAgICAgcmV0dXJuIHNvdXJjZQo=
+"""
+colorLib.table_builder: Generic helper for filling in BaseTable derivatives from tuples and maps and such.
+
+"""
+
+import collections
+import enum
+from fontTools.ttLib.tables.otBase import (
+    BaseTable,
+    FormatSwitchingBaseTable,
+    UInt8FormatSwitchingBaseTable,
+)
+from fontTools.ttLib.tables.otConverters import (
+    ComputedInt,
+    SimpleValue,
+    Struct,
+    Short,
+    UInt8,
+    UShort,
+    IntValue,
+    FloatValue,
+    OptionalValue,
+)
+from fontTools.misc.roundTools import otRound
+
+
+class BuildCallback(enum.Enum):
+    """Keyed on (BEFORE_BUILD, class[, Format if available]).
+    Receives (dest, source).
+    Should return (dest, source), which can be new objects.
+    """
+
+    BEFORE_BUILD = enum.auto()
+
+    """Keyed on (AFTER_BUILD, class[, Format if available]).
+    Receives (dest).
+    Should return dest, which can be a new object.
+    """
+    AFTER_BUILD = enum.auto()
+
+    """Keyed on (CREATE_DEFAULT, class[, Format if available]).
+    Receives no arguments.
+    Should return a new instance of class.
+    """
+    CREATE_DEFAULT = enum.auto()
+
+
+def _assignable(convertersByName):
+    return {k: v for k, v in convertersByName.items() if not isinstance(v, ComputedInt)}
+
+
+def _isNonStrSequence(value):
+    return isinstance(value, collections.abc.Sequence) and not isinstance(value, str)
+
+
+def _split_format(cls, source):
+    if _isNonStrSequence(source):
+        assert len(source) > 0, f"{cls} needs at least format from {source}"
+        fmt, remainder = source[0], source[1:]
+    elif isinstance(source, collections.abc.Mapping):
+        assert "Format" in source, f"{cls} needs at least Format from {source}"
+        remainder = source.copy()
+        fmt = remainder.pop("Format")
+    else:
+        raise ValueError(f"Not sure how to populate {cls} from {source}")
+
+    assert isinstance(
+        fmt, collections.abc.Hashable
+    ), f"{cls} Format is not hashable: {fmt!r}"
+    assert fmt in cls.convertersByName, f"{cls} invalid Format: {fmt!r}"
+
+    return fmt, remainder
+
+
+class TableBuilder:
+    """
+    Helps to populate things derived from BaseTable from maps, tuples, etc.
+
+    A table of lifecycle callbacks may be provided to add logic beyond what is possible
+    based on otData info for the target class. See BuildCallbacks.
+    """
+
+    def __init__(self, callbackTable=None):
+        if callbackTable is None:
+            callbackTable = {}
+        self._callbackTable = callbackTable
+
+    def _convert(self, dest, field, converter, value):
+        enumClass = getattr(converter, "enumClass", None)
+
+        if enumClass:
+            if isinstance(value, enumClass):
+                pass
+            elif isinstance(value, str):
+                try:
+                    value = getattr(enumClass, value.upper())
+                except AttributeError:
+                    raise ValueError(f"{value} is not a valid {enumClass}")
+            else:
+                value = enumClass(value)
+
+        elif isinstance(converter, IntValue):
+            value = otRound(value)
+        elif isinstance(converter, FloatValue):
+            value = float(value)
+
+        elif isinstance(converter, Struct):
+            if converter.repeat:
+                if _isNonStrSequence(value):
+                    value = [self.build(converter.tableClass, v) for v in value]
+                else:
+                    value = [self.build(converter.tableClass, value)]
+                setattr(dest, converter.repeat, len(value))
+            else:
+                value = self.build(converter.tableClass, value)
+        elif callable(converter):
+            value = converter(value)
+
+        setattr(dest, field, value)
+
+    def build(self, cls, source):
+        assert issubclass(cls, BaseTable)
+
+        if isinstance(source, cls):
+            return source
+
+        callbackKey = (cls,)
+        fmt = None
+        if issubclass(cls, FormatSwitchingBaseTable):
+            fmt, source = _split_format(cls, source)
+            callbackKey = (cls, fmt)
+
+        dest = self._callbackTable.get(
+            (BuildCallback.CREATE_DEFAULT,) + callbackKey, lambda: cls()
+        )()
+        assert isinstance(dest, cls)
+
+        convByName = _assignable(cls.convertersByName)
+        skippedFields = set()
+
+        # For format switchers we need to resolve converters based on format
+        if issubclass(cls, FormatSwitchingBaseTable):
+            dest.Format = fmt
+            convByName = _assignable(convByName[dest.Format])
+            skippedFields.add("Format")
+
+        # Convert sequence => mapping so before thunk only has to handle one format
+        if _isNonStrSequence(source):
+            # Sequence (typically list or tuple) assumed to match fields in declaration order
+            assert len(source) <= len(
+                convByName
+            ), f"Sequence of {len(source)} too long for {cls}; expected <= {len(convByName)} values"
+            source = dict(zip(convByName.keys(), source))
+
+        dest, source = self._callbackTable.get(
+            (BuildCallback.BEFORE_BUILD,) + callbackKey, lambda d, s: (d, s)
+        )(dest, source)
+
+        if isinstance(source, collections.abc.Mapping):
+            for field, value in source.items():
+                if field in skippedFields:
+                    continue
+                converter = convByName.get(field, None)
+                if not converter:
+                    raise ValueError(
+                        f"Unrecognized field {field} for {cls}; expected one of {sorted(convByName.keys())}"
+                    )
+                self._convert(dest, field, converter, value)
+        else:
+            # let's try as a 1-tuple
+            dest = self.build(cls, (source,))
+
+        for field, conv in convByName.items():
+            if not hasattr(dest, field) and isinstance(conv, OptionalValue):
+                setattr(dest, field, conv.DEFAULT)
+
+        dest = self._callbackTable.get(
+            (BuildCallback.AFTER_BUILD,) + callbackKey, lambda d: d
+        )(dest)
+
+        return dest
+
+
+class TableUnbuilder:
+    def __init__(self, callbackTable=None):
+        if callbackTable is None:
+            callbackTable = {}
+        self._callbackTable = callbackTable
+
+    def unbuild(self, table):
+        assert isinstance(table, BaseTable)
+
+        source = {}
+
+        callbackKey = (type(table),)
+        if isinstance(table, FormatSwitchingBaseTable):
+            source["Format"] = int(table.Format)
+            callbackKey += (table.Format,)
+
+        for converter in table.getConverters():
+            if isinstance(converter, ComputedInt):
+                continue
+            value = getattr(table, converter.name)
+
+            enumClass = getattr(converter, "enumClass", None)
+            if enumClass:
+                source[converter.name] = value.name.lower()
+            elif isinstance(converter, Struct):
+                if converter.repeat:
+                    source[converter.name] = [self.unbuild(v) for v in value]
+                else:
+                    source[converter.name] = self.unbuild(value)
+            elif isinstance(converter, SimpleValue):
+                # "simple" values (e.g. int, float, str) need no further un-building
+                source[converter.name] = value
+            else:
+                raise NotImplementedError(
+                    "Don't know how unbuild {value!r} with {converter!r}"
+                )
+
+        source = self._callbackTable.get(callbackKey, lambda s: s)(source)
+
+        return source

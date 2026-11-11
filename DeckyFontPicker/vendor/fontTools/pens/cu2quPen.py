@@ -1,1 +1,325 @@
-IyBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLgojCiMgTGljZW5zZWQgdW5kZXIgdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlICJMaWNlbnNlIik7CiMgeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgojIFlvdSBtYXkgb2J0YWluIGEgY29weSBvZiB0aGUgTGljZW5zZSBhdAojCiMgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAojCiMgVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQojIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuICJBUyBJUyIgQkFTSVMsCiMgV0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZIEtJTkQsIGVpdGhlciBleHByZXNzIG9yIGltcGxpZWQuCiMgU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZAojIGxpbWl0YXRpb25zIHVuZGVyIHRoZSBMaWNlbnNlLgoKaW1wb3J0IG9wZXJhdG9yCmZyb20gZm9udFRvb2xzLmN1MnF1IGltcG9ydCBjdXJ2ZV90b19xdWFkcmF0aWMsIGN1cnZlc190b19xdWFkcmF0aWMKZnJvbSBmb250VG9vbHMucGVucy5iYXNlUGVuIGltcG9ydCBkZWNvbXBvc2VTdXBlckJlemllclNlZ21lbnQKZnJvbSBmb250VG9vbHMucGVucy5maWx0ZXJQZW4gaW1wb3J0IEZpbHRlclBlbgpmcm9tIGZvbnRUb29scy5wZW5zLnJldmVyc2VDb250b3VyUGVuIGltcG9ydCBSZXZlcnNlQ29udG91clBlbgpmcm9tIGZvbnRUb29scy5wZW5zLnBvaW50UGVuIGltcG9ydCBCYXNlUG9pbnRUb1NlZ21lbnRQZW4KZnJvbSBmb250VG9vbHMucGVucy5wb2ludFBlbiBpbXBvcnQgUmV2ZXJzZUNvbnRvdXJQb2ludFBlbgoKCmNsYXNzIEN1MlF1UGVuKEZpbHRlclBlbik6CiAgICAiIiJBIGZpbHRlciBwZW4gdG8gY29udmVydCBjdWJpYyBiZXppZXIgY3VydmVzIHRvIHF1YWRyYXRpYyBiLXNwbGluZXMKICAgIHVzaW5nIHRoZSBGb250VG9vbHMgU2VnbWVudFBlbiBwcm90b2NvbC4KCiAgICBBcmdzOgoKICAgICAgICBvdGhlcl9wZW46IGFub3RoZXIgU2VnbWVudFBlbiB1c2VkIHRvIGRyYXcgdGhlIHRyYW5zZm9ybWVkIG91dGxpbmUuCiAgICAgICAgbWF4X2VycjogbWF4aW11bSBhcHByb3hpbWF0aW9uIGVycm9yIGluIGZvbnQgdW5pdHMuIEZvciBvcHRpbWFsIHJlc3VsdHMsCiAgICAgICAgICAgIGlmIHlvdSBrbm93IHRoZSBVUEVNIG9mIHRoZSBmb250LCB3ZSByZWNvbW1lbmQgc2V0dGluZyB0aGlzIHRvIGEKICAgICAgICAgICAgdmFsdWUgZXF1YWwsIG9yIGNsb3NlIHRvIFVQRU0gLyAxMDAwLgogICAgICAgIHJldmVyc2VfZGlyZWN0aW9uOiBmbGlwIHRoZSBjb250b3VycycgZGlyZWN0aW9uIGJ1dCBrZWVwIHN0YXJ0aW5nIHBvaW50LgogICAgICAgIHN0YXRzOiBhIGRpY3Rpb25hcnkgY291bnRpbmcgdGhlIHBvaW50IG51bWJlcnMgb2YgcXVhZHJhdGljIHNlZ21lbnRzLgogICAgICAgIGFsbF9xdWFkcmF0aWM6IGlmIFRydWUgKGRlZmF1bHQpLCBvbmx5IHF1YWRyYXRpYyBiLXNwbGluZXMgYXJlIGdlbmVyYXRlZC4KICAgICAgICAgICAgaWYgRmFsc2UsIHF1YWRyYXRpYyBjdXJ2ZXMgb3IgY3ViaWMgY3VydmVzIGFyZSBnZW5lcmF0ZWQgZGVwZW5kaW5nCiAgICAgICAgICAgIG9uIHdoaWNoIG9uZSBpcyBtb3JlIGVjb25vbWljYWwuCiAgICAiIiIKCiAgICBkZWYgX19pbml0X18oCiAgICAgICAgc2VsZiwKICAgICAgICBvdGhlcl9wZW4sCiAgICAgICAgbWF4X2VyciwKICAgICAgICByZXZlcnNlX2RpcmVjdGlvbj1GYWxzZSwKICAgICAgICBzdGF0cz1Ob25lLAogICAgICAgIGFsbF9xdWFkcmF0aWM9VHJ1ZSwKICAgICk6CiAgICAgICAgaWYgcmV2ZXJzZV9kaXJlY3Rpb246CiAgICAgICAgICAgIG90aGVyX3BlbiA9IFJldmVyc2VDb250b3VyUGVuKG90aGVyX3BlbikKICAgICAgICBzdXBlcigpLl9faW5pdF9fKG90aGVyX3BlbikKICAgICAgICBzZWxmLm1heF9lcnIgPSBtYXhfZXJyCiAgICAgICAgc2VsZi5zdGF0cyA9IHN0YXRzCiAgICAgICAgc2VsZi5hbGxfcXVhZHJhdGljID0gYWxsX3F1YWRyYXRpYwoKICAgIGRlZiBfY29udmVydF9jdXJ2ZShzZWxmLCBwdDEsIHB0MiwgcHQzKToKICAgICAgICBjdXJ2ZSA9IChzZWxmLmN1cnJlbnRfcHQsIHB0MSwgcHQyLCBwdDMpCiAgICAgICAgcmVzdWx0ID0gY3VydmVfdG9fcXVhZHJhdGljKGN1cnZlLCBzZWxmLm1heF9lcnIsIHNlbGYuYWxsX3F1YWRyYXRpYykKICAgICAgICBpZiBzZWxmLnN0YXRzIGlzIG5vdCBOb25lOgogICAgICAgICAgICBuID0gc3RyKGxlbihyZXN1bHQpIC0gMikKICAgICAgICAgICAgc2VsZi5zdGF0c1tuXSA9IHNlbGYuc3RhdHMuZ2V0KG4sIDApICsgMQogICAgICAgIGlmIHNlbGYuYWxsX3F1YWRyYXRpYzoKICAgICAgICAgICAgc2VsZi5xQ3VydmVUbygqcmVzdWx0WzE6XSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBpZiBsZW4ocmVzdWx0KSA9PSAzOgogICAgICAgICAgICAgICAgc2VsZi5xQ3VydmVUbygqcmVzdWx0WzE6XSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIGFzc2VydCBsZW4ocmVzdWx0KSA9PSA0CiAgICAgICAgICAgICAgICBzdXBlcigpLmN1cnZlVG8oKnJlc3VsdFsxOl0pCgogICAgZGVmIGN1cnZlVG8oc2VsZiwgKnBvaW50cyk6CiAgICAgICAgbiA9IGxlbihwb2ludHMpCiAgICAgICAgaWYgbiA9PSAzOgogICAgICAgICAgICAjIHRoaXMgaXMgdGhlIG1vc3QgY29tbW9uIGNhc2UsIHNvIHdlIHNwZWNpYWwtY2FzZSBpdAogICAgICAgICAgICBzZWxmLl9jb252ZXJ0X2N1cnZlKCpwb2ludHMpCiAgICAgICAgZWxpZiBuID4gMzoKICAgICAgICAgICAgZm9yIHNlZ21lbnQgaW4gZGVjb21wb3NlU3VwZXJCZXppZXJTZWdtZW50KHBvaW50cyk6CiAgICAgICAgICAgICAgICBzZWxmLl9jb252ZXJ0X2N1cnZlKCpzZWdtZW50KQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYucUN1cnZlVG8oKnBvaW50cykKCgpjbGFzcyBDdTJRdVBvaW50UGVuKEJhc2VQb2ludFRvU2VnbWVudFBlbik6CiAgICAiIiJBIGZpbHRlciBwZW4gdG8gY29udmVydCBjdWJpYyBiZXppZXIgY3VydmVzIHRvIHF1YWRyYXRpYyBiLXNwbGluZXMKICAgIHVzaW5nIHRoZSBGb250VG9vbHMgUG9pbnRQZW4gcHJvdG9jb2wuCgogICAgQXJnczoKICAgICAgICBvdGhlcl9wb2ludF9wZW46IGFub3RoZXIgUG9pbnRQZW4gdXNlZCB0byBkcmF3IHRoZSB0cmFuc2Zvcm1lZCBvdXRsaW5lLgogICAgICAgIG1heF9lcnI6IG1heGltdW0gYXBwcm94aW1hdGlvbiBlcnJvciBpbiBmb250IHVuaXRzLiBGb3Igb3B0aW1hbCByZXN1bHRzLAogICAgICAgICAgICBpZiB5b3Uga25vdyB0aGUgVVBFTSBvZiB0aGUgZm9udCwgd2UgcmVjb21tZW5kIHNldHRpbmcgdGhpcyB0byBhCiAgICAgICAgICAgIHZhbHVlIGVxdWFsLCBvciBjbG9zZSB0byBVUEVNIC8gMTAwMC4KICAgICAgICByZXZlcnNlX2RpcmVjdGlvbjogcmV2ZXJzZSB0aGUgd2luZGluZyBkaXJlY3Rpb24gb2YgYWxsIGNvbnRvdXJzLgogICAgICAgIHN0YXRzOiBhIGRpY3Rpb25hcnkgY291bnRpbmcgdGhlIHBvaW50IG51bWJlcnMgb2YgcXVhZHJhdGljIHNlZ21lbnRzLgogICAgICAgIGFsbF9xdWFkcmF0aWM6IGlmIFRydWUgKGRlZmF1bHQpLCBvbmx5IHF1YWRyYXRpYyBiLXNwbGluZXMgYXJlIGdlbmVyYXRlZC4KICAgICAgICAgICAgaWYgRmFsc2UsIHF1YWRyYXRpYyBjdXJ2ZXMgb3IgY3ViaWMgY3VydmVzIGFyZSBnZW5lcmF0ZWQgZGVwZW5kaW5nCiAgICAgICAgICAgIG9uIHdoaWNoIG9uZSBpcyBtb3JlIGVjb25vbWljYWwuCiAgICAiIiIKCiAgICBfX3BvaW50c19yZXF1aXJlZCA9IHsKICAgICAgICAibW92ZSI6ICgxLCBvcGVyYXRvci5lcSksCiAgICAgICAgImxpbmUiOiAoMSwgb3BlcmF0b3IuZXEpLAogICAgICAgICJxY3VydmUiOiAoMiwgb3BlcmF0b3IuZ2UpLAogICAgICAgICJjdXJ2ZSI6ICgzLCBvcGVyYXRvci5lcSksCiAgICB9CgogICAgZGVmIF9faW5pdF9fKAogICAgICAgIHNlbGYsCiAgICAgICAgb3RoZXJfcG9pbnRfcGVuLAogICAgICAgIG1heF9lcnIsCiAgICAgICAgcmV2ZXJzZV9kaXJlY3Rpb249RmFsc2UsCiAgICAgICAgc3RhdHM9Tm9uZSwKICAgICAgICBhbGxfcXVhZHJhdGljPVRydWUsCiAgICApOgogICAgICAgIEJhc2VQb2ludFRvU2VnbWVudFBlbi5fX2luaXRfXyhzZWxmKQogICAgICAgIGlmIHJldmVyc2VfZGlyZWN0aW9uOgogICAgICAgICAgICBzZWxmLnBlbiA9IFJldmVyc2VDb250b3VyUG9pbnRQZW4ob3RoZXJfcG9pbnRfcGVuKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHNlbGYucGVuID0gb3RoZXJfcG9pbnRfcGVuCiAgICAgICAgc2VsZi5tYXhfZXJyID0gbWF4X2VycgogICAgICAgIHNlbGYuc3RhdHMgPSBzdGF0cwogICAgICAgIHNlbGYuYWxsX3F1YWRyYXRpYyA9IGFsbF9xdWFkcmF0aWMKCiAgICBkZWYgX2ZsdXNoQ29udG91cihzZWxmLCBzZWdtZW50cyk6CiAgICAgICAgYXNzZXJ0IGxlbihzZWdtZW50cykgPj0gMQogICAgICAgIGNsb3NlZCA9IHNlZ21lbnRzWzBdWzBdICE9ICJtb3ZlIgogICAgICAgIG5ld19zZWdtZW50cyA9IFtdCiAgICAgICAgcHJldl9wb2ludHMgPSBzZWdtZW50c1stMV1bMV0KICAgICAgICBwcmV2X29uX2N1cnZlID0gcHJldl9wb2ludHNbLTFdWzBdCiAgICAgICAgZm9yIHNlZ21lbnRfdHlwZSwgcG9pbnRzIGluIHNlZ21lbnRzOgogICAgICAgICAgICBpZiBzZWdtZW50X3R5cGUgPT0gImN1cnZlIjoKICAgICAgICAgICAgICAgIGZvciBzdWJfcG9pbnRzIGluIHNlbGYuX3NwbGl0X3N1cGVyX2Jlemllcl9zZWdtZW50cyhwb2ludHMpOgogICAgICAgICAgICAgICAgICAgIG9uX2N1cnZlLCBzbW9vdGgsIG5hbWUsIGt3YXJncyA9IHN1Yl9wb2ludHNbLTFdCiAgICAgICAgICAgICAgICAgICAgYmNwMSwgYmNwMiA9IHN1Yl9wb2ludHNbMF1bMF0sIHN1Yl9wb2ludHNbMV1bMF0KICAgICAgICAgICAgICAgICAgICBjdWJpYyA9IFtwcmV2X29uX2N1cnZlLCBiY3AxLCBiY3AyLCBvbl9jdXJ2ZV0KICAgICAgICAgICAgICAgICAgICBxdWFkID0gY3VydmVfdG9fcXVhZHJhdGljKGN1YmljLCBzZWxmLm1heF9lcnIsIHNlbGYuYWxsX3F1YWRyYXRpYykKICAgICAgICAgICAgICAgICAgICBpZiBzZWxmLnN0YXRzIGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgICAgICAgICBuID0gc3RyKGxlbihxdWFkKSAtIDIpCiAgICAgICAgICAgICAgICAgICAgICAgIHNlbGYuc3RhdHNbbl0gPSBzZWxmLnN0YXRzLmdldChuLCAwKSArIDEKICAgICAgICAgICAgICAgICAgICBuZXdfcG9pbnRzID0gWyhwdCwgRmFsc2UsIE5vbmUsIHt9KSBmb3IgcHQgaW4gcXVhZFsxOi0xXV0KICAgICAgICAgICAgICAgICAgICBuZXdfcG9pbnRzLmFwcGVuZCgob25fY3VydmUsIHNtb290aCwgbmFtZSwga3dhcmdzKSkKICAgICAgICAgICAgICAgICAgICBpZiBzZWxmLmFsbF9xdWFkcmF0aWMgb3IgbGVuKG5ld19wb2ludHMpID09IDI6CiAgICAgICAgICAgICAgICAgICAgICAgIG5ld19zZWdtZW50cy5hcHBlbmQoWyJxY3VydmUiLCBuZXdfcG9pbnRzXSkKICAgICAgICAgICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgICAgICAgICBuZXdfc2VnbWVudHMuYXBwZW5kKFsiY3VydmUiLCBuZXdfcG9pbnRzXSkKICAgICAgICAgICAgICAgICAgICBwcmV2X29uX2N1cnZlID0gc3ViX3BvaW50c1stMV1bMF0KICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG5ld19zZWdtZW50cy5hcHBlbmQoW3NlZ21lbnRfdHlwZSwgcG9pbnRzXSkKICAgICAgICAgICAgICAgIHByZXZfb25fY3VydmUgPSBwb2ludHNbLTFdWzBdCiAgICAgICAgaWYgY2xvc2VkOgogICAgICAgICAgICAjIHRoZSBCYXNlUG9pbnRUb1NlZ21lbnRQZW4uZW5kUGF0aCBtZXRob2QgdGhhdCBjYWxscyBfZmx1c2hDb250b3VyCiAgICAgICAgICAgICMgcm90YXRlcyB0aGUgcG9pbnQgbGlzdCBvZiBjbG9zZWQgY29udG91cnMgc28gdGhhdCB0aGV5IGVuZCB3aXRoCiAgICAgICAgICAgICMgdGhlIGZpcnN0IG9uLWN1cnZlIHBvaW50LiBXZSByZXN0b3JlIHRoZSBvcmlnaW5hbCBzdGFydGluZyBwb2ludC4KICAgICAgICAgICAgbmV3X3NlZ21lbnRzID0gbmV3X3NlZ21lbnRzWy0xOl0gKyBuZXdfc2VnbWVudHNbOi0xXQogICAgICAgIHNlbGYuX2RyYXdQb2ludHMobmV3X3NlZ21lbnRzKQoKICAgIGRlZiBfc3BsaXRfc3VwZXJfYmV6aWVyX3NlZ21lbnRzKHNlbGYsIHBvaW50cyk6CiAgICAgICAgc3ViX3NlZ21lbnRzID0gW10KICAgICAgICAjIG4gaXMgdGhlIG51bWJlciBvZiBjb250cm9sIHBvaW50cwogICAgICAgIG4gPSBsZW4ocG9pbnRzKSAtIDEKICAgICAgICBpZiBuID09IDI6CiAgICAgICAgICAgICMgYSBzaW1wbGUgYmV6aWVyIGN1cnZlIHNlZ21lbnQKICAgICAgICAgICAgc3ViX3NlZ21lbnRzLmFwcGVuZChwb2ludHMpCiAgICAgICAgZWxpZiBuID4gMjoKICAgICAgICAgICAgIyBhICJzdXBlciIgYmV6aWVyOyBkZWNvbXBvc2UgaXQKICAgICAgICAgICAgb25fY3VydmUsIHNtb290aCwgbmFtZSwga3dhcmdzID0gcG9pbnRzWy0xXQogICAgICAgICAgICBudW1fc3ViX3NlZ21lbnRzID0gbiAtIDEKICAgICAgICAgICAgZm9yIGksIHN1Yl9wb2ludHMgaW4gZW51bWVyYXRlKAogICAgICAgICAgICAgICAgZGVjb21wb3NlU3VwZXJCZXppZXJTZWdtZW50KFtwdCBmb3IgcHQsIF8sIF8sIF8gaW4gcG9pbnRzXSkKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIG5ld19zZWdtZW50ID0gW10KICAgICAgICAgICAgICAgIGZvciBwb2ludCBpbiBzdWJfcG9pbnRzWzotMV06CiAgICAgICAgICAgICAgICAgICAgbmV3X3NlZ21lbnQuYXBwZW5kKChwb2ludCwgRmFsc2UsIE5vbmUsIHt9KSkKICAgICAgICAgICAgICAgIGlmIGkgPT0gKG51bV9zdWJfc2VnbWVudHMgLSAxKToKICAgICAgICAgICAgICAgICAgICAjIHRoZSBsYXN0IG9uLWN1cnZlIGtlZXBzIGl0cyBvcmlnaW5hbCBhdHRyaWJ1dGVzCiAgICAgICAgICAgICAgICAgICAgbmV3X3NlZ21lbnQuYXBwZW5kKChvbl9jdXJ2ZSwgc21vb3RoLCBuYW1lLCBrd2FyZ3MpKQogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICAjIG9uLWN1cnZlcyBvZiBzdWItc2VnbWVudHMgYXJlIGFsd2F5cyAic21vb3RoIgogICAgICAgICAgICAgICAgICAgIG5ld19zZWdtZW50LmFwcGVuZCgoc3ViX3BvaW50c1stMV0sIFRydWUsIE5vbmUsIHt9KSkKICAgICAgICAgICAgICAgIHN1Yl9zZWdtZW50cy5hcHBlbmQobmV3X3NlZ21lbnQpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmFpc2UgQXNzZXJ0aW9uRXJyb3IoImV4cGVjdGVkIDIgY29udHJvbCBwb2ludHMsIGZvdW5kOiAlZCIgJSBuKQogICAgICAgIHJldHVybiBzdWJfc2VnbWVudHMKCiAgICBkZWYgX2RyYXdQb2ludHMoc2VsZiwgc2VnbWVudHMpOgogICAgICAgIHBlbiA9IHNlbGYucGVuCiAgICAgICAgcGVuLmJlZ2luUGF0aCgpCiAgICAgICAgbGFzdF9vZmZjdXJ2ZXMgPSBbXQogICAgICAgIHBvaW50c19yZXF1aXJlZCA9IHNlbGYuX19wb2ludHNfcmVxdWlyZWQKICAgICAgICBmb3IgaSwgKHNlZ21lbnRfdHlwZSwgcG9pbnRzKSBpbiBlbnVtZXJhdGUoc2VnbWVudHMpOgogICAgICAgICAgICBpZiBzZWdtZW50X3R5cGUgaW4gcG9pbnRzX3JlcXVpcmVkOgogICAgICAgICAgICAgICAgbiwgb3AgPSBwb2ludHNfcmVxdWlyZWRbc2VnbWVudF90eXBlXQogICAgICAgICAgICAgICAgYXNzZXJ0IG9wKGxlbihwb2ludHMpLCBuKSwgKAogICAgICAgICAgICAgICAgICAgIGYiaWxsZWdhbCB7c2VnbWVudF90eXBlIXJ9IHNlZ21lbnQgcG9pbnQgY291bnQ6ICIKICAgICAgICAgICAgICAgICAgICBmImV4cGVjdGVkIHtufSwgZ290IHtsZW4ocG9pbnRzKX0iCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICBvZmZjdXJ2ZXMgPSBwb2ludHNbOi0xXQogICAgICAgICAgICAgICAgaWYgaSA9PSAwOgogICAgICAgICAgICAgICAgICAgICMgYW55IG9mZi1jdXJ2ZSBwb2ludHMgcHJlY2VkaW5nIHRoZSBmaXJzdCBvbi1jdXJ2ZQogICAgICAgICAgICAgICAgICAgICMgd2lsbCBiZSBhcHBlbmRlZCBhdCB0aGUgZW5kIG9mIHRoZSBjb250b3VyCiAgICAgICAgICAgICAgICAgICAgbGFzdF9vZmZjdXJ2ZXMgPSBvZmZjdXJ2ZXMKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgZm9yIHB0LCBzbW9vdGgsIG5hbWUsIGt3YXJncyBpbiBvZmZjdXJ2ZXM6CiAgICAgICAgICAgICAgICAgICAgICAgIHBlbi5hZGRQb2ludChwdCwgTm9uZSwgc21vb3RoLCBuYW1lLCAqKmt3YXJncykKICAgICAgICAgICAgICAgIHB0LCBzbW9vdGgsIG5hbWUsIGt3YXJncyA9IHBvaW50c1stMV0KICAgICAgICAgICAgICAgIGlmIHB0IGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgICAgYXNzZXJ0IHNlZ21lbnRfdHlwZSA9PSAicWN1cnZlIgogICAgICAgICAgICAgICAgICAgICMgc3BlY2lhbCBxdWFkcmF0aWMgY29udG91ciB3aXRoIG5vIG9uLWN1cnZlIHBvaW50czoKICAgICAgICAgICAgICAgICAgICAjIHdlIG5lZWQgdG8gc2tpcCB0aGUgIk5vbmUiIHBvaW50LiBTZWUgYWxzbyB0aGUgUGVuCiAgICAgICAgICAgICAgICAgICAgIyBwcm90b2NvbCdzIHFDdXJ2ZVRvKCkgbWV0aG9kIGFuZCBmb250VG9vbHMucGVucy5iYXNlUGVuCiAgICAgICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICAgICBwZW4uYWRkUG9pbnQocHQsIHNlZ21lbnRfdHlwZSwgc21vb3RoLCBuYW1lLCAqKmt3YXJncykKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJhaXNlIEFzc2VydGlvbkVycm9yKCJ1bmV4cGVjdGVkIHNlZ21lbnQgdHlwZTogJXIiICUgc2VnbWVudF90eXBlKQogICAgICAgIGZvciBwdCwgc21vb3RoLCBuYW1lLCBrd2FyZ3MgaW4gbGFzdF9vZmZjdXJ2ZXM6CiAgICAgICAgICAgIHBlbi5hZGRQb2ludChwdCwgTm9uZSwgc21vb3RoLCBuYW1lLCAqKmt3YXJncykKICAgICAgICBwZW4uZW5kUGF0aCgpCgogICAgZGVmIGFkZENvbXBvbmVudChzZWxmLCBiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbik6CiAgICAgICAgYXNzZXJ0IHNlbGYuY3VycmVudFBhdGggaXMgTm9uZQogICAgICAgIHNlbGYucGVuLmFkZENvbXBvbmVudChiYXNlR2x5cGhOYW1lLCB0cmFuc2Zvcm1hdGlvbikKCgpjbGFzcyBDdTJRdU11bHRpUGVuOgogICAgIiIiQSBmaWx0ZXIgbXVsdGktcGVuIHRvIGNvbnZlcnQgY3ViaWMgYmV6aWVyIGN1cnZlcyB0byBxdWFkcmF0aWMgYi1zcGxpbmVzCiAgICBpbiBhIGludGVycG9sYXRpb24tY29tcGF0aWJsZSBtYW5uZXIsIHVzaW5nIHRoZSBGb250VG9vbHMgU2VnbWVudFBlbiBwcm90b2NvbC4KCiAgICBBcmdzOgoKICAgICAgICBvdGhlcl9wZW5zOiBsaXN0IG9mIFNlZ21lbnRQZW5zIHVzZWQgdG8gZHJhdyB0aGUgdHJhbnNmb3JtZWQgb3V0bGluZXMuCiAgICAgICAgbWF4X2VycjogbWF4aW11bSBhcHByb3hpbWF0aW9uIGVycm9yIGluIGZvbnQgdW5pdHMuIEZvciBvcHRpbWFsIHJlc3VsdHMsCiAgICAgICAgICAgIGlmIHlvdSBrbm93IHRoZSBVUEVNIG9mIHRoZSBmb250LCB3ZSByZWNvbW1lbmQgc2V0dGluZyB0aGlzIHRvIGEKICAgICAgICAgICAgdmFsdWUgZXF1YWwsIG9yIGNsb3NlIHRvIFVQRU0gLyAxMDAwLgogICAgICAgIHJldmVyc2VfZGlyZWN0aW9uOiBmbGlwIHRoZSBjb250b3VycycgZGlyZWN0aW9uIGJ1dCBrZWVwIHN0YXJ0aW5nIHBvaW50LgoKICAgIFRoaXMgcGVuIGRvZXMgbm90IGZvbGxvdyB0aGUgbm9ybWFsIFNlZ21lbnRQZW4gcHJvdG9jb2wuIEluc3RlYWQsIGl0cwogICAgbW92ZVRvL2xpbmVUby9xQ3VydmVUby9jdXJ2ZVRvIG1ldGhvZHMgdGFrZSBhIGxpc3Qgb2YgdHVwbGVzIHRoYXQgYXJlCiAgICBhcmd1bWVudHMgdGhhdCB3b3VsZCBub3JtYWxseSBiZSBwYXNzZWQgdG8gYSBTZWdtZW50UGVuLCBvbmUgaXRlbSBmb3IKICAgIGVhY2ggb2YgdGhlIHBlbnMgaW4gb3RoZXJfcGVucy4KICAgICIiIgoKICAgICMgVE9ETyBTaW1wbGlmeSBsaWtlIDNlOGViY2RjZTU5MmZlOGE1OWNhNGMzYTI5NGNjOTcyNDM1MWUxY2UKICAgICMgUmVtb3ZlIHN0YXJ0X3B0cyBhbmQgX2FkZF9tb3ZlVE8KCiAgICBkZWYgX19pbml0X18oc2VsZiwgb3RoZXJfcGVucywgbWF4X2VyciwgcmV2ZXJzZV9kaXJlY3Rpb249RmFsc2UpOgogICAgICAgIGlmIHJldmVyc2VfZGlyZWN0aW9uOgogICAgICAgICAgICBvdGhlcl9wZW5zID0gWwogICAgICAgICAgICAgICAgUmV2ZXJzZUNvbnRvdXJQZW4ocGVuLCBvdXRwdXRJbXBsaWVkQ2xvc2luZ0xpbmU9VHJ1ZSkKICAgICAgICAgICAgICAgIGZvciBwZW4gaW4gb3RoZXJfcGVucwogICAgICAgICAgICBdCiAgICAgICAgc2VsZi5wZW5zID0gb3RoZXJfcGVucwogICAgICAgIHNlbGYubWF4X2VyciA9IG1heF9lcnIKICAgICAgICBzZWxmLnN0YXJ0X3B0cyA9IE5vbmUKICAgICAgICBzZWxmLmN1cnJlbnRfcHRzID0gTm9uZQoKICAgIGRlZiBfY2hlY2tfY29udG91cl9pc19vcGVuKHNlbGYpOgogICAgICAgIGlmIHNlbGYuY3VycmVudF9wdHMgaXMgTm9uZToKICAgICAgICAgICAgcmFpc2UgQXNzZXJ0aW9uRXJyb3IoIm1vdmVUbyBpcyByZXF1aXJlZCIpCgogICAgZGVmIF9jaGVja19jb250b3VyX2lzX2Nsb3NlZChzZWxmKToKICAgICAgICBpZiBzZWxmLmN1cnJlbnRfcHRzIGlzIG5vdCBOb25lOgogICAgICAgICAgICByYWlzZSBBc3NlcnRpb25FcnJvcigiY2xvc2VQYXRoIG9yIGVuZFBhdGggaXMgcmVxdWlyZWQiKQoKICAgIGRlZiBfYWRkX21vdmVUbyhzZWxmKToKICAgICAgICBpZiBzZWxmLnN0YXJ0X3B0cyBpcyBub3QgTm9uZToKICAgICAgICAgICAgZm9yIHB0LCBwZW4gaW4gemlwKHNlbGYuc3RhcnRfcHRzLCBzZWxmLnBlbnMpOgogICAgICAgICAgICAgICAgcGVuLm1vdmVUbygqcHQpCiAgICAgICAgICAgIHNlbGYuc3RhcnRfcHRzID0gTm9uZQoKICAgIGRlZiBtb3ZlVG8oc2VsZiwgcHRzKToKICAgICAgICBzZWxmLl9jaGVja19jb250b3VyX2lzX2Nsb3NlZCgpCiAgICAgICAgc2VsZi5zdGFydF9wdHMgPSBzZWxmLmN1cnJlbnRfcHRzID0gcHRzCiAgICAgICAgc2VsZi5fYWRkX21vdmVUbygpCgogICAgZGVmIGxpbmVUbyhzZWxmLCBwdHMpOgogICAgICAgIHNlbGYuX2NoZWNrX2NvbnRvdXJfaXNfb3BlbigpCiAgICAgICAgc2VsZi5fYWRkX21vdmVUbygpCiAgICAgICAgZm9yIHB0LCBwZW4gaW4gemlwKHB0cywgc2VsZi5wZW5zKToKICAgICAgICAgICAgcGVuLmxpbmVUbygqcHQpCiAgICAgICAgc2VsZi5jdXJyZW50X3B0cyA9IHB0cwoKICAgIGRlZiBxQ3VydmVUbyhzZWxmLCBwb2ludHNMaXN0KToKICAgICAgICBzZWxmLl9jaGVja19jb250b3VyX2lzX29wZW4oKQogICAgICAgIGlmIGxlbihwb2ludHNMaXN0WzBdKSA9PSAxOgogICAgICAgICAgICBzZWxmLmxpbmVUbyhbKHBvaW50c1swXSwpIGZvciBwb2ludHMgaW4gcG9pbnRzTGlzdF0pCiAgICAgICAgICAgIHJldHVybgogICAgICAgIHNlbGYuX2FkZF9tb3ZlVG8oKQogICAgICAgIGN1cnJlbnRfcHRzID0gW10KICAgICAgICBmb3IgcG9pbnRzLCBwZW4gaW4gemlwKHBvaW50c0xpc3QsIHNlbGYucGVucyk6CiAgICAgICAgICAgIHBlbi5xQ3VydmVUbygqcG9pbnRzKQogICAgICAgICAgICBjdXJyZW50X3B0cy5hcHBlbmQoKHBvaW50c1stMV0sKSkKICAgICAgICBzZWxmLmN1cnJlbnRfcHRzID0gY3VycmVudF9wdHMKCiAgICBkZWYgX2N1cnZlc190b19xdWFkcmF0aWMoc2VsZiwgcG9pbnRzTGlzdCk6CiAgICAgICAgY3VydmVzID0gW10KICAgICAgICBmb3IgY3VycmVudF9wdCwgcG9pbnRzIGluIHppcChzZWxmLmN1cnJlbnRfcHRzLCBwb2ludHNMaXN0KToKICAgICAgICAgICAgY3VydmVzLmFwcGVuZChjdXJyZW50X3B0ICsgcG9pbnRzKQogICAgICAgIHF1YWRyYXRpY3MgPSBjdXJ2ZXNfdG9fcXVhZHJhdGljKGN1cnZlcywgW3NlbGYubWF4X2Vycl0gKiBsZW4oY3VydmVzKSkKICAgICAgICBwb2ludHNMaXN0ID0gW10KICAgICAgICBmb3IgcXVhZHJhdGljIGluIHF1YWRyYXRpY3M6CiAgICAgICAgICAgIHBvaW50c0xpc3QuYXBwZW5kKHF1YWRyYXRpY1sxOl0pCiAgICAgICAgc2VsZi5xQ3VydmVUbyhwb2ludHNMaXN0KQoKICAgIGRlZiBjdXJ2ZVRvKHNlbGYsIHBvaW50c0xpc3QpOgogICAgICAgIHNlbGYuX2NoZWNrX2NvbnRvdXJfaXNfb3BlbigpCiAgICAgICAgc2VsZi5fY3VydmVzX3RvX3F1YWRyYXRpYyhwb2ludHNMaXN0KQoKICAgIGRlZiBjbG9zZVBhdGgoc2VsZik6CiAgICAgICAgc2VsZi5fY2hlY2tfY29udG91cl9pc19vcGVuKCkKICAgICAgICBpZiBzZWxmLnN0YXJ0X3B0cyBpcyBOb25lOgogICAgICAgICAgICBmb3IgcGVuIGluIHNlbGYucGVuczoKICAgICAgICAgICAgICAgIHBlbi5jbG9zZVBhdGgoKQogICAgICAgIHNlbGYuY3VycmVudF9wdHMgPSBzZWxmLnN0YXJ0X3B0cyA9IE5vbmUKCiAgICBkZWYgZW5kUGF0aChzZWxmKToKICAgICAgICBzZWxmLl9jaGVja19jb250b3VyX2lzX29wZW4oKQogICAgICAgIGlmIHNlbGYuc3RhcnRfcHRzIGlzIE5vbmU6CiAgICAgICAgICAgIGZvciBwZW4gaW4gc2VsZi5wZW5zOgogICAgICAgICAgICAgICAgcGVuLmVuZFBhdGgoKQogICAgICAgIHNlbGYuY3VycmVudF9wdHMgPSBzZWxmLnN0YXJ0X3B0cyA9IE5vbmUKCiAgICBkZWYgYWRkQ29tcG9uZW50KHNlbGYsIGdseXBoTmFtZSwgdHJhbnNmb3JtYXRpb25zKToKICAgICAgICBzZWxmLl9jaGVja19jb250b3VyX2lzX2Nsb3NlZCgpCiAgICAgICAgZm9yIHRyYW5zLCBwZW4gaW4gemlwKHRyYW5zZm9ybWF0aW9ucywgc2VsZi5wZW5zKToKICAgICAgICAgICAgcGVuLmFkZENvbXBvbmVudChnbHlwaE5hbWUsIHRyYW5zKQo=
+# Copyright 2016 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import operator
+from fontTools.cu2qu import curve_to_quadratic, curves_to_quadratic
+from fontTools.pens.basePen import decomposeSuperBezierSegment
+from fontTools.pens.filterPen import FilterPen
+from fontTools.pens.reverseContourPen import ReverseContourPen
+from fontTools.pens.pointPen import BasePointToSegmentPen
+from fontTools.pens.pointPen import ReverseContourPointPen
+
+
+class Cu2QuPen(FilterPen):
+    """A filter pen to convert cubic bezier curves to quadratic b-splines
+    using the FontTools SegmentPen protocol.
+
+    Args:
+
+        other_pen: another SegmentPen used to draw the transformed outline.
+        max_err: maximum approximation error in font units. For optimal results,
+            if you know the UPEM of the font, we recommend setting this to a
+            value equal, or close to UPEM / 1000.
+        reverse_direction: flip the contours' direction but keep starting point.
+        stats: a dictionary counting the point numbers of quadratic segments.
+        all_quadratic: if True (default), only quadratic b-splines are generated.
+            if False, quadratic curves or cubic curves are generated depending
+            on which one is more economical.
+    """
+
+    def __init__(
+        self,
+        other_pen,
+        max_err,
+        reverse_direction=False,
+        stats=None,
+        all_quadratic=True,
+    ):
+        if reverse_direction:
+            other_pen = ReverseContourPen(other_pen)
+        super().__init__(other_pen)
+        self.max_err = max_err
+        self.stats = stats
+        self.all_quadratic = all_quadratic
+
+    def _convert_curve(self, pt1, pt2, pt3):
+        curve = (self.current_pt, pt1, pt2, pt3)
+        result = curve_to_quadratic(curve, self.max_err, self.all_quadratic)
+        if self.stats is not None:
+            n = str(len(result) - 2)
+            self.stats[n] = self.stats.get(n, 0) + 1
+        if self.all_quadratic:
+            self.qCurveTo(*result[1:])
+        else:
+            if len(result) == 3:
+                self.qCurveTo(*result[1:])
+            else:
+                assert len(result) == 4
+                super().curveTo(*result[1:])
+
+    def curveTo(self, *points):
+        n = len(points)
+        if n == 3:
+            # this is the most common case, so we special-case it
+            self._convert_curve(*points)
+        elif n > 3:
+            for segment in decomposeSuperBezierSegment(points):
+                self._convert_curve(*segment)
+        else:
+            self.qCurveTo(*points)
+
+
+class Cu2QuPointPen(BasePointToSegmentPen):
+    """A filter pen to convert cubic bezier curves to quadratic b-splines
+    using the FontTools PointPen protocol.
+
+    Args:
+        other_point_pen: another PointPen used to draw the transformed outline.
+        max_err: maximum approximation error in font units. For optimal results,
+            if you know the UPEM of the font, we recommend setting this to a
+            value equal, or close to UPEM / 1000.
+        reverse_direction: reverse the winding direction of all contours.
+        stats: a dictionary counting the point numbers of quadratic segments.
+        all_quadratic: if True (default), only quadratic b-splines are generated.
+            if False, quadratic curves or cubic curves are generated depending
+            on which one is more economical.
+    """
+
+    __points_required = {
+        "move": (1, operator.eq),
+        "line": (1, operator.eq),
+        "qcurve": (2, operator.ge),
+        "curve": (3, operator.eq),
+    }
+
+    def __init__(
+        self,
+        other_point_pen,
+        max_err,
+        reverse_direction=False,
+        stats=None,
+        all_quadratic=True,
+    ):
+        BasePointToSegmentPen.__init__(self)
+        if reverse_direction:
+            self.pen = ReverseContourPointPen(other_point_pen)
+        else:
+            self.pen = other_point_pen
+        self.max_err = max_err
+        self.stats = stats
+        self.all_quadratic = all_quadratic
+
+    def _flushContour(self, segments):
+        assert len(segments) >= 1
+        closed = segments[0][0] != "move"
+        new_segments = []
+        prev_points = segments[-1][1]
+        prev_on_curve = prev_points[-1][0]
+        for segment_type, points in segments:
+            if segment_type == "curve":
+                for sub_points in self._split_super_bezier_segments(points):
+                    on_curve, smooth, name, kwargs = sub_points[-1]
+                    bcp1, bcp2 = sub_points[0][0], sub_points[1][0]
+                    cubic = [prev_on_curve, bcp1, bcp2, on_curve]
+                    quad = curve_to_quadratic(cubic, self.max_err, self.all_quadratic)
+                    if self.stats is not None:
+                        n = str(len(quad) - 2)
+                        self.stats[n] = self.stats.get(n, 0) + 1
+                    new_points = [(pt, False, None, {}) for pt in quad[1:-1]]
+                    new_points.append((on_curve, smooth, name, kwargs))
+                    if self.all_quadratic or len(new_points) == 2:
+                        new_segments.append(["qcurve", new_points])
+                    else:
+                        new_segments.append(["curve", new_points])
+                    prev_on_curve = sub_points[-1][0]
+            else:
+                new_segments.append([segment_type, points])
+                prev_on_curve = points[-1][0]
+        if closed:
+            # the BasePointToSegmentPen.endPath method that calls _flushContour
+            # rotates the point list of closed contours so that they end with
+            # the first on-curve point. We restore the original starting point.
+            new_segments = new_segments[-1:] + new_segments[:-1]
+        self._drawPoints(new_segments)
+
+    def _split_super_bezier_segments(self, points):
+        sub_segments = []
+        # n is the number of control points
+        n = len(points) - 1
+        if n == 2:
+            # a simple bezier curve segment
+            sub_segments.append(points)
+        elif n > 2:
+            # a "super" bezier; decompose it
+            on_curve, smooth, name, kwargs = points[-1]
+            num_sub_segments = n - 1
+            for i, sub_points in enumerate(
+                decomposeSuperBezierSegment([pt for pt, _, _, _ in points])
+            ):
+                new_segment = []
+                for point in sub_points[:-1]:
+                    new_segment.append((point, False, None, {}))
+                if i == (num_sub_segments - 1):
+                    # the last on-curve keeps its original attributes
+                    new_segment.append((on_curve, smooth, name, kwargs))
+                else:
+                    # on-curves of sub-segments are always "smooth"
+                    new_segment.append((sub_points[-1], True, None, {}))
+                sub_segments.append(new_segment)
+        else:
+            raise AssertionError("expected 2 control points, found: %d" % n)
+        return sub_segments
+
+    def _drawPoints(self, segments):
+        pen = self.pen
+        pen.beginPath()
+        last_offcurves = []
+        points_required = self.__points_required
+        for i, (segment_type, points) in enumerate(segments):
+            if segment_type in points_required:
+                n, op = points_required[segment_type]
+                assert op(len(points), n), (
+                    f"illegal {segment_type!r} segment point count: "
+                    f"expected {n}, got {len(points)}"
+                )
+                offcurves = points[:-1]
+                if i == 0:
+                    # any off-curve points preceding the first on-curve
+                    # will be appended at the end of the contour
+                    last_offcurves = offcurves
+                else:
+                    for pt, smooth, name, kwargs in offcurves:
+                        pen.addPoint(pt, None, smooth, name, **kwargs)
+                pt, smooth, name, kwargs = points[-1]
+                if pt is None:
+                    assert segment_type == "qcurve"
+                    # special quadratic contour with no on-curve points:
+                    # we need to skip the "None" point. See also the Pen
+                    # protocol's qCurveTo() method and fontTools.pens.basePen
+                    pass
+                else:
+                    pen.addPoint(pt, segment_type, smooth, name, **kwargs)
+            else:
+                raise AssertionError("unexpected segment type: %r" % segment_type)
+        for pt, smooth, name, kwargs in last_offcurves:
+            pen.addPoint(pt, None, smooth, name, **kwargs)
+        pen.endPath()
+
+    def addComponent(self, baseGlyphName, transformation):
+        assert self.currentPath is None
+        self.pen.addComponent(baseGlyphName, transformation)
+
+
+class Cu2QuMultiPen:
+    """A filter multi-pen to convert cubic bezier curves to quadratic b-splines
+    in a interpolation-compatible manner, using the FontTools SegmentPen protocol.
+
+    Args:
+
+        other_pens: list of SegmentPens used to draw the transformed outlines.
+        max_err: maximum approximation error in font units. For optimal results,
+            if you know the UPEM of the font, we recommend setting this to a
+            value equal, or close to UPEM / 1000.
+        reverse_direction: flip the contours' direction but keep starting point.
+
+    This pen does not follow the normal SegmentPen protocol. Instead, its
+    moveTo/lineTo/qCurveTo/curveTo methods take a list of tuples that are
+    arguments that would normally be passed to a SegmentPen, one item for
+    each of the pens in other_pens.
+    """
+
+    # TODO Simplify like 3e8ebcdce592fe8a59ca4c3a294cc9724351e1ce
+    # Remove start_pts and _add_moveTO
+
+    def __init__(self, other_pens, max_err, reverse_direction=False):
+        if reverse_direction:
+            other_pens = [
+                ReverseContourPen(pen, outputImpliedClosingLine=True)
+                for pen in other_pens
+            ]
+        self.pens = other_pens
+        self.max_err = max_err
+        self.start_pts = None
+        self.current_pts = None
+
+    def _check_contour_is_open(self):
+        if self.current_pts is None:
+            raise AssertionError("moveTo is required")
+
+    def _check_contour_is_closed(self):
+        if self.current_pts is not None:
+            raise AssertionError("closePath or endPath is required")
+
+    def _add_moveTo(self):
+        if self.start_pts is not None:
+            for pt, pen in zip(self.start_pts, self.pens):
+                pen.moveTo(*pt)
+            self.start_pts = None
+
+    def moveTo(self, pts):
+        self._check_contour_is_closed()
+        self.start_pts = self.current_pts = pts
+        self._add_moveTo()
+
+    def lineTo(self, pts):
+        self._check_contour_is_open()
+        self._add_moveTo()
+        for pt, pen in zip(pts, self.pens):
+            pen.lineTo(*pt)
+        self.current_pts = pts
+
+    def qCurveTo(self, pointsList):
+        self._check_contour_is_open()
+        if len(pointsList[0]) == 1:
+            self.lineTo([(points[0],) for points in pointsList])
+            return
+        self._add_moveTo()
+        current_pts = []
+        for points, pen in zip(pointsList, self.pens):
+            pen.qCurveTo(*points)
+            current_pts.append((points[-1],))
+        self.current_pts = current_pts
+
+    def _curves_to_quadratic(self, pointsList):
+        curves = []
+        for current_pt, points in zip(self.current_pts, pointsList):
+            curves.append(current_pt + points)
+        quadratics = curves_to_quadratic(curves, [self.max_err] * len(curves))
+        pointsList = []
+        for quadratic in quadratics:
+            pointsList.append(quadratic[1:])
+        self.qCurveTo(pointsList)
+
+    def curveTo(self, pointsList):
+        self._check_contour_is_open()
+        self._curves_to_quadratic(pointsList)
+
+    def closePath(self):
+        self._check_contour_is_open()
+        if self.start_pts is None:
+            for pen in self.pens:
+                pen.closePath()
+        self.current_pts = self.start_pts = None
+
+    def endPath(self):
+        self._check_contour_is_open()
+        if self.start_pts is None:
+            for pen in self.pens:
+                pen.endPath()
+        self.current_pts = self.start_pts = None
+
+    def addComponent(self, glyphName, transformations):
+        self._check_contour_is_closed()
+        for trans, pen in zip(transformations, self.pens):
+            pen.addComponent(glyphName, trans)

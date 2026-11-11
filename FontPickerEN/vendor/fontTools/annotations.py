@@ -1,1 +1,30 @@
-ZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwpmcm9tIHR5cGluZyBpbXBvcnQgVFlQRV9DSEVDS0lORywgSXRlcmFibGUsIE9wdGlvbmFsLCBUeXBlVmFyLCBVbmlvbgpmcm9tIGNvbGxlY3Rpb25zLmFiYyBpbXBvcnQgQ2FsbGFibGUsIFNlcXVlbmNlCmZyb20gZm9udFRvb2xzLm1pc2MuZmlsZXN5c3RlbS5fYmFzZSBpbXBvcnQgRlMKZnJvbSBvcyBpbXBvcnQgUGF0aExpa2UKZnJvbSB4bWwuZXRyZWUuRWxlbWVudFRyZWUgaW1wb3J0IEVsZW1lbnQgYXMgRWxlbWVudFRyZWVFbGVtZW50CgppZiBUWVBFX0NIRUNLSU5HOgogICAgZnJvbSBmb250VG9vbHMudWZvTGliIGltcG9ydCBVRk9Gb3JtYXRWZXJzaW9uCiAgICBmcm9tIGZvbnRUb29scy51Zm9MaWIuZ2xpZkxpYiBpbXBvcnQgR0xJRkZvcm1hdFZlcnNpb24KICAgIGZyb20gbHhtbC5ldHJlZSBpbXBvcnQgX0VsZW1lbnQgYXMgTHhtbEVsZW1lbnQKCgpUID0gVHlwZVZhcigiVCIpICAjIEdlbmVyaWMgdHlwZQpLID0gVHlwZVZhcigiSyIpICAjIEdlbmVyaWMgZGljdCBrZXkgdHlwZQpWID0gVHlwZVZhcigiViIpICAjIEdlbmVyaWMgZGljdCB2YWx1ZSB0eXBlCgpHbHlwaE5hbWVUb0ZpbGVOYW1lRnVuYyA9IE9wdGlvbmFsW0NhbGxhYmxlW1tzdHIsIHNldFtzdHJdXSwgc3RyXV0KRWxlbWVudFR5cGUgPSBVbmlvbltFbGVtZW50VHJlZUVsZW1lbnQsICJMeG1sRWxlbWVudCJdCkZvcm1hdFZlcnNpb24gPSBVbmlvbltpbnQsIHR1cGxlW2ludCwgaW50XV0KRm9ybWF0VmVyc2lvbnMgPSBPcHRpb25hbFtJdGVyYWJsZVtGb3JtYXRWZXJzaW9uXV0KR0xJRkZvcm1hdFZlcnNpb25JbnB1dCA9IE9wdGlvbmFsW1VuaW9uW2ludCwgdHVwbGVbaW50LCBpbnRdLCAiR0xJRkZvcm1hdFZlcnNpb24iXV0KVUZPRm9ybWF0VmVyc2lvbklucHV0ID0gT3B0aW9uYWxbVW5pb25baW50LCB0dXBsZVtpbnQsIGludF0sICJVRk9Gb3JtYXRWZXJzaW9uIl1dCkludEZsb2F0ID0gVW5pb25baW50LCBmbG9hdF0KS2VybmluZ1BhaXIgPSB0dXBsZVtzdHIsIHN0cl0KS2VybmluZ0RpY3QgPSBkaWN0W0tlcm5pbmdQYWlyLCBJbnRGbG9hdF0KS2VybmluZ0dyb3VwcyA9IGRpY3Rbc3RyLCBTZXF1ZW5jZVtzdHJdXQpLZXJuaW5nTmVzdGVkID0gZGljdFtzdHIsIGRpY3Rbc3RyLCBJbnRGbG9hdF1dClBhdGhTdHIgPSBVbmlvbltzdHIsIFBhdGhMaWtlW3N0cl1dClBhdGhPckZTID0gVW5pb25bUGF0aFN0ciwgRlNdCg==
+from __future__ import annotations
+from typing import TYPE_CHECKING, Iterable, Optional, TypeVar, Union
+from collections.abc import Callable, Sequence
+from fontTools.misc.filesystem._base import FS
+from os import PathLike
+from xml.etree.ElementTree import Element as ElementTreeElement
+
+if TYPE_CHECKING:
+    from fontTools.ufoLib import UFOFormatVersion
+    from fontTools.ufoLib.glifLib import GLIFFormatVersion
+    from lxml.etree import _Element as LxmlElement
+
+
+T = TypeVar("T")  # Generic type
+K = TypeVar("K")  # Generic dict key type
+V = TypeVar("V")  # Generic dict value type
+
+GlyphNameToFileNameFunc = Optional[Callable[[str, set[str]], str]]
+ElementType = Union[ElementTreeElement, "LxmlElement"]
+FormatVersion = Union[int, tuple[int, int]]
+FormatVersions = Optional[Iterable[FormatVersion]]
+GLIFFormatVersionInput = Optional[Union[int, tuple[int, int], "GLIFFormatVersion"]]
+UFOFormatVersionInput = Optional[Union[int, tuple[int, int], "UFOFormatVersion"]]
+IntFloat = Union[int, float]
+KerningPair = tuple[str, str]
+KerningDict = dict[KerningPair, IntFloat]
+KerningGroups = dict[str, Sequence[str]]
+KerningNested = dict[str, dict[str, IntFloat]]
+PathStr = Union[str, PathLike[str]]
+PathOrFS = Union[PathStr, FS]

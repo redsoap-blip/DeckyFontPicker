@@ -1,1 +1,77 @@
-IyBDb3B5cmlnaHQgMjAxNiBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLgojCiMgTGljZW5zZWQgdW5kZXIgdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlICJMaWNlbnNlIik7CiMgeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgojIFlvdSBtYXkgb2J0YWluIGEgY29weSBvZiB0aGUgTGljZW5zZSBhdAojCiMgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAojCiMgVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQojIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuICJBUyBJUyIgQkFTSVMsCiMgV0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZIEtJTkQsIGVpdGhlciBleHByZXNzIG9yIGltcGxpZWQuCiMgU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZAojIGxpbWl0YXRpb25zIHVuZGVyIHRoZSBMaWNlbnNlLgoKCmNsYXNzIEVycm9yKEV4Y2VwdGlvbik6CiAgICAiIiJCYXNlIEN1MlF1IGV4Y2VwdGlvbiBjbGFzcyBmb3IgYWxsIG90aGVyIGVycm9ycy4iIiIKCgpjbGFzcyBBcHByb3hOb3RGb3VuZEVycm9yKEVycm9yKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBjdXJ2ZSk6CiAgICAgICAgbWVzc2FnZSA9ICJubyBhcHByb3hpbWF0aW9uIGZvdW5kOiAlcyIgJSBjdXJ2ZQogICAgICAgIHN1cGVyKCkuX19pbml0X18obWVzc2FnZSkKICAgICAgICBzZWxmLmN1cnZlID0gY3VydmUKCgpjbGFzcyBVbmVxdWFsWmlwTGVuZ3Roc0Vycm9yKEVycm9yKToKICAgIHBhc3MKCgpjbGFzcyBJbmNvbXBhdGlibGVHbHlwaHNFcnJvcihFcnJvcik6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZ2x5cGhzKToKICAgICAgICBhc3NlcnQgbGVuKGdseXBocykgPiAxCiAgICAgICAgc2VsZi5nbHlwaHMgPSBnbHlwaHMKICAgICAgICBuYW1lcyA9IHNldChyZXByKGcubmFtZSkgZm9yIGcgaW4gZ2x5cGhzKQogICAgICAgIGlmIGxlbihuYW1lcykgPiAxOgogICAgICAgICAgICBzZWxmLmNvbWJpbmVkX25hbWUgPSAieyVzfSIgJSAiLCAiLmpvaW4oc29ydGVkKG5hbWVzKSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBzZWxmLmNvbWJpbmVkX25hbWUgPSBuYW1lcy5wb3AoKQoKICAgIGRlZiBfX3JlcHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gIjwlcyAlcz4iICUgKHR5cGUoc2VsZikuX19uYW1lX18sIHNlbGYuY29tYmluZWRfbmFtZSkKCgpjbGFzcyBJbmNvbXBhdGlibGVTZWdtZW50TnVtYmVyRXJyb3IoSW5jb21wYXRpYmxlR2x5cGhzRXJyb3IpOgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgcmV0dXJuICJHbHlwaHMgbmFtZWQgJXMgaGF2ZSBkaWZmZXJlbnQgbnVtYmVyIG9mIHNlZ21lbnRzIiAlICgKICAgICAgICAgICAgc2VsZi5jb21iaW5lZF9uYW1lCiAgICAgICAgKQoKCmNsYXNzIEluY29tcGF0aWJsZVNlZ21lbnRUeXBlc0Vycm9yKEluY29tcGF0aWJsZUdseXBoc0Vycm9yKToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBnbHlwaHMsIHNlZ21lbnRzKToKICAgICAgICBJbmNvbXBhdGlibGVHbHlwaHNFcnJvci5fX2luaXRfXyhzZWxmLCBnbHlwaHMpCiAgICAgICAgc2VsZi5zZWdtZW50cyA9IHNlZ21lbnRzCgogICAgZGVmIF9fc3RyX18oc2VsZik6CiAgICAgICAgbGluZXMgPSBbXQogICAgICAgIG5kaWdpdHMgPSBsZW4oc3RyKG1heChzZWxmLnNlZ21lbnRzKSkpCiAgICAgICAgZm9yIGksIHRhZ3MgaW4gc29ydGVkKHNlbGYuc2VnbWVudHMuaXRlbXMoKSk6CiAgICAgICAgICAgIGxpbmVzLmFwcGVuZCgKICAgICAgICAgICAgICAgICIlczogKCVzKSIgJSAoc3RyKGkpLnJqdXN0KG5kaWdpdHMpLCAiLCAiLmpvaW4ocmVwcih0KSBmb3IgdCBpbiB0YWdzKSkKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiAiR2x5cGhzIG5hbWVkICVzIGhhdmUgaW5jb21wYXRpYmxlIHNlZ21lbnQgdHlwZXM6XG4gICVzIiAlICgKICAgICAgICAgICAgc2VsZi5jb21iaW5lZF9uYW1lLAogICAgICAgICAgICAiXG4gICIuam9pbihsaW5lcyksCiAgICAgICAgKQoKCmNsYXNzIEluY29tcGF0aWJsZUZvbnRzRXJyb3IoRXJyb3IpOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGdseXBoX2Vycm9ycyk6CiAgICAgICAgc2VsZi5nbHlwaF9lcnJvcnMgPSBnbHlwaF9lcnJvcnMKCiAgICBkZWYgX19zdHJfXyhzZWxmKToKICAgICAgICByZXR1cm4gImZvbnRzIGNvbnRhaW5zIGluY29tcGF0aWJsZSBnbHlwaHM6ICVzIiAlICgKICAgICAgICAgICAgIiwgIi5qb2luKHJlcHIoZykgZm9yIGcgaW4gc29ydGVkKHNlbGYuZ2x5cGhfZXJyb3JzLmtleXMoKSkpCiAgICAgICAgKQo=
+# Copyright 2016 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+class Error(Exception):
+    """Base Cu2Qu exception class for all other errors."""
+
+
+class ApproxNotFoundError(Error):
+    def __init__(self, curve):
+        message = "no approximation found: %s" % curve
+        super().__init__(message)
+        self.curve = curve
+
+
+class UnequalZipLengthsError(Error):
+    pass
+
+
+class IncompatibleGlyphsError(Error):
+    def __init__(self, glyphs):
+        assert len(glyphs) > 1
+        self.glyphs = glyphs
+        names = set(repr(g.name) for g in glyphs)
+        if len(names) > 1:
+            self.combined_name = "{%s}" % ", ".join(sorted(names))
+        else:
+            self.combined_name = names.pop()
+
+    def __repr__(self):
+        return "<%s %s>" % (type(self).__name__, self.combined_name)
+
+
+class IncompatibleSegmentNumberError(IncompatibleGlyphsError):
+    def __str__(self):
+        return "Glyphs named %s have different number of segments" % (
+            self.combined_name
+        )
+
+
+class IncompatibleSegmentTypesError(IncompatibleGlyphsError):
+    def __init__(self, glyphs, segments):
+        IncompatibleGlyphsError.__init__(self, glyphs)
+        self.segments = segments
+
+    def __str__(self):
+        lines = []
+        ndigits = len(str(max(self.segments)))
+        for i, tags in sorted(self.segments.items()):
+            lines.append(
+                "%s: (%s)" % (str(i).rjust(ndigits), ", ".join(repr(t) for t in tags))
+            )
+        return "Glyphs named %s have incompatible segment types:\n  %s" % (
+            self.combined_name,
+            "\n  ".join(lines),
+        )
+
+
+class IncompatibleFontsError(Error):
+    def __init__(self, glyph_errors):
+        self.glyph_errors = glyph_errors
+
+    def __str__(self):
+        return "fonts contains incompatible glyphs: %s" % (
+            ", ".join(repr(g) for g in sorted(self.glyph_errors.keys()))
+        )

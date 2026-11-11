@@ -1,1 +1,77 @@
-ZnJvbSBmb250VG9vbHMudHRMaWIgaW1wb3J0IFRURm9udApmcm9tIGZvbnRUb29scy5mZWFMaWIuYnVpbGRlciBpbXBvcnQgYWRkT3BlblR5cGVGZWF0dXJlcywgQnVpbGRlcgpmcm9tIGZvbnRUb29scy5mZWFMaWIuZXJyb3IgaW1wb3J0IEZlYXR1cmVMaWJFcnJvcgpmcm9tIGZvbnRUb29scyBpbXBvcnQgY29uZmlnTG9nZ2VyCmZyb20gZm9udFRvb2xzLm1pc2MuY2xpVG9vbHMgaW1wb3J0IG1ha2VPdXRwdXRGaWxlTmFtZQppbXBvcnQgc3lzCmltcG9ydCBhcmdwYXJzZQppbXBvcnQgbG9nZ2luZwoKbG9nID0gbG9nZ2luZy5nZXRMb2dnZXIoImZvbnRUb29scy5mZWFMaWIiKQoKCmRlZiBtYWluKGFyZ3M9Tm9uZSk6CiAgICAiIiJBZGQgZmVhdHVyZXMgZnJvbSBhIGZlYXR1cmUgZmlsZSAoLmZlYSkgaW50byBhbiBPVEYgZm9udCIiIgogICAgcGFyc2VyID0gYXJncGFyc2UuQXJndW1lbnRQYXJzZXIoCiAgICAgICAgZGVzY3JpcHRpb249IlVzZSBmb250VG9vbHMgdG8gY29tcGlsZSBPcGVuVHlwZSBmZWF0dXJlIGZpbGVzICgqLmZlYSkuIgogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiaW5wdXRfZmVhIiwgbWV0YXZhcj0iRkVBVFVSRVMiLCBoZWxwPSJQYXRoIHRvIHRoZSBmZWF0dXJlIGZpbGUiCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICJpbnB1dF9mb250IiwgbWV0YXZhcj0iSU5QVVRfRk9OVCIsIGhlbHA9IlBhdGggdG8gdGhlIGlucHV0IGZvbnQiCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItbyIsCiAgICAgICAgIi0tb3V0cHV0IiwKICAgICAgICBkZXN0PSJvdXRwdXRfZm9udCIsCiAgICAgICAgbWV0YXZhcj0iT1VUUFVUX0ZPTlQiLAogICAgICAgIGhlbHA9IlBhdGggdG8gdGhlIG91dHB1dCBmb250LiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItdCIsCiAgICAgICAgIi0tdGFibGVzIiwKICAgICAgICBtZXRhdmFyPSJUQUJMRV9UQUciLAogICAgICAgIGNob2ljZXM9QnVpbGRlci5zdXBwb3J0ZWRUYWJsZXMsCiAgICAgICAgbmFyZ3M9IisiLAogICAgICAgIGhlbHA9IlNwZWNpZnkgdGhlIHRhYmxlKHMpIHRvIGJlIGJ1aWx0LiIsCiAgICApCiAgICBwYXJzZXIuYWRkX2FyZ3VtZW50KAogICAgICAgICItZCIsCiAgICAgICAgIi0tZGVidWciLAogICAgICAgIGFjdGlvbj0ic3RvcmVfdHJ1ZSIsCiAgICAgICAgaGVscD0iQWRkIHNvdXJjZS1sZXZlbCBkZWJ1Z2dpbmcgaW5mb3JtYXRpb24gdG8gZm9udC4iLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLXYiLAogICAgICAgICItLXZlcmJvc2UiLAogICAgICAgIGhlbHA9IkluY3JlYXNlIHRoZSBsb2dnZXIgdmVyYm9zaXR5LiBNdWx0aXBsZSAtdiAiICJvcHRpb25zIGFyZSBhbGxvd2VkLiIsCiAgICAgICAgYWN0aW9uPSJjb3VudCIsCiAgICAgICAgZGVmYXVsdD0wLAogICAgKQogICAgcGFyc2VyLmFkZF9hcmd1bWVudCgKICAgICAgICAiLS10cmFjZWJhY2siLCBoZWxwPSJzaG93IHRyYWNlYmFjayBmb3IgZXhjZXB0aW9ucy4iLCBhY3Rpb249InN0b3JlX3RydWUiCiAgICApCiAgICBvcHRpb25zID0gcGFyc2VyLnBhcnNlX2FyZ3MoYXJncykKCiAgICBsZXZlbHMgPSBbIldBUk5JTkciLCAiSU5GTyIsICJERUJVRyJdCiAgICBjb25maWdMb2dnZXIobGV2ZWw9bGV2ZWxzW21pbihsZW4obGV2ZWxzKSAtIDEsIG9wdGlvbnMudmVyYm9zZSldKQoKICAgIG91dHB1dF9mb250ID0gb3B0aW9ucy5vdXRwdXRfZm9udCBvciBtYWtlT3V0cHV0RmlsZU5hbWUob3B0aW9ucy5pbnB1dF9mb250KQogICAgbG9nLmluZm8oIkNvbXBpbGluZyBmZWF0dXJlcyB0byAnJXMnIiAlIChvdXRwdXRfZm9udCkpCgogICAgZm9udCA9IFRURm9udChvcHRpb25zLmlucHV0X2ZvbnQpCiAgICB0cnk6CiAgICAgICAgYWRkT3BlblR5cGVGZWF0dXJlcygKICAgICAgICAgICAgZm9udCwgb3B0aW9ucy5pbnB1dF9mZWEsIHRhYmxlcz1vcHRpb25zLnRhYmxlcywgZGVidWc9b3B0aW9ucy5kZWJ1ZwogICAgICAgICkKICAgIGV4Y2VwdCBGZWF0dXJlTGliRXJyb3IgYXMgZToKICAgICAgICBpZiBvcHRpb25zLnRyYWNlYmFjazoKICAgICAgICAgICAgcmFpc2UKICAgICAgICBsb2cuZXJyb3IoZSkKICAgICAgICBzeXMuZXhpdCgxKQogICAgZm9udC5zYXZlKG91dHB1dF9mb250KQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBzeXMuZXhpdChtYWluKCkpCg==
+from fontTools.ttLib import TTFont
+from fontTools.feaLib.builder import addOpenTypeFeatures, Builder
+from fontTools.feaLib.error import FeatureLibError
+from fontTools import configLogger
+from fontTools.misc.cliTools import makeOutputFileName
+import sys
+import argparse
+import logging
+
+log = logging.getLogger("fontTools.feaLib")
+
+
+def main(args=None):
+    """Add features from a feature file (.fea) into an OTF font"""
+    parser = argparse.ArgumentParser(
+        description="Use fontTools to compile OpenType feature files (*.fea)."
+    )
+    parser.add_argument(
+        "input_fea", metavar="FEATURES", help="Path to the feature file"
+    )
+    parser.add_argument(
+        "input_font", metavar="INPUT_FONT", help="Path to the input font"
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        dest="output_font",
+        metavar="OUTPUT_FONT",
+        help="Path to the output font.",
+    )
+    parser.add_argument(
+        "-t",
+        "--tables",
+        metavar="TABLE_TAG",
+        choices=Builder.supportedTables,
+        nargs="+",
+        help="Specify the table(s) to be built.",
+    )
+    parser.add_argument(
+        "-d",
+        "--debug",
+        action="store_true",
+        help="Add source-level debugging information to font.",
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        help="Increase the logger verbosity. Multiple -v " "options are allowed.",
+        action="count",
+        default=0,
+    )
+    parser.add_argument(
+        "--traceback", help="show traceback for exceptions.", action="store_true"
+    )
+    options = parser.parse_args(args)
+
+    levels = ["WARNING", "INFO", "DEBUG"]
+    configLogger(level=levels[min(len(levels) - 1, options.verbose)])
+
+    output_font = options.output_font or makeOutputFileName(options.input_font)
+    log.info("Compiling features to '%s'" % (output_font))
+
+    font = TTFont(options.input_font)
+    try:
+        addOpenTypeFeatures(
+            font, options.input_fea, tables=options.tables, debug=options.debug
+        )
+    except FeatureLibError as e:
+        if options.traceback:
+            raise
+        log.error(e)
+        sys.exit(1)
+    font.save(output_font)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
