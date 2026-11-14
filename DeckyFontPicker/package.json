@@ -1,0 +1,13 @@
+{
+  "name": "decky-font-picker",
+  "version": "1.4.2",
+  "description": "Decky plugin that applies installed system fonts to Steam Big Picture, MainMenu and QuickAccess.",
+  "author": "Honchane",
+  "keywords": [
+    "decky",
+    "plugin",
+    "steam-deck",
+    "deck",
+    "font"
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "name": "字体选择器",
+  "name": "Font Picker",
   "author": "Honchane",
-  "version": "1.2.0",
+  "version": "1.4.2",
   "flags": [],
   "publish": {
     "tags": ["style", "font"],
-    "description": "读取系统已安装字体，用 Decky 自身注入应用到主界面 / MainMenu / QuickAccess。同一插件支持 local() 与 face 抽取两种投递方式，可随时切换；local 未命中会明确提示，缺中文字形时自动回退。"
+    "description": "读取系统已安装字体，用 Decky 自身注入应用到主界面 / MainMenu / QuickAccess。单包支持中 / 英 / 日 / 韩 界面；西文与中日韩可分别选字体（自动剔除汉字、可关假加粗、可切 CJK 标点）。"
   }
 }
