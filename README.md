@@ -4,15 +4,15 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu and the Quick Access Menu — without touching `~/homebrew/themes`, CSS Loader or the CEF debug port.
 
-**Current version: 1.4.2.** One build, four UI languages — the panel follows the Steam UI language and ships 简体中文 / English / 日本語 / 한국어 dictionaries. `fontTools` 4.68.0 is vendored, so there is nothing else to install.
+**Current version: 1.4.4.** One build, four UI languages — the panel follows the Steam UI language and ships 简体中文 / English / 日本語 / 한국어 dictionaries. `fontTools` 4.68.0 is vendored, so there is nothing else to install.
 
 | Release asset | Plugin folder | UI languages | `fontTools` |
 | --- | --- | --- | --- |
-| `DeckyFontPicker-1.4.2.zip` | `DeckyFontPicker/` | 简体中文 / English / 日本語 / 한국어 (auto) | vendored under `vendor/` |
+| `DeckyFontPicker-1.4.4.zip` | `DeckyFontPicker/` | 简体中文 / English / 日本語 / 한국어 (auto) | vendored under `vendor/` |
 
 ## Install
 
-1. Download `DeckyFontPicker-1.4.2.zip` from the [Releases](../../releases) page.
+1. Download `DeckyFontPicker-1.4.4.zip` from the [Releases](../../releases) page.
 2. In Decky Loader open **Settings → Developer → Install Plugin from ZIP**, or extract the archive into `~/homebrew/plugins/`.
 3. Reload Decky (or restart `plugin_loader.service`) and open the Quick Access Menu.
 
@@ -64,7 +64,7 @@ The write path is deliberately conservative: styles are added and replaced one t
 
 ```
 DeckyFontPicker/     current build source (plugin.json, main.py, face_extract.py, dist/index.js, package.json, vendor/)
-FontPickerEN/        legacy 1.2.0 English-only build, kept for the old releases (not part of 1.4.2)
+FontPickerEN/        legacy 1.2.0 English-only build, kept for the old releases (not part of 1.4.4)
 README.md            this file (English)
 README.zh-CN.md      Chinese version of this file
 LICENSE              MIT
@@ -73,7 +73,7 @@ LICENSE              MIT
 
 ### About `FontPickerEN/`
 
-`FontPickerEN/` is the English-only build that shipped alongside the Chinese build up to **1.2.0**, when the plugin used one package per UI language and offered both a by-name and an extract delivery mode. From the 1.3.x–1.4.x line the plugin is a **single package with four UI languages and a single delivery path (extract & embed)**, so `FontPickerEN/` is frozen at 1.2.0: it is not rebuilt for 1.4.2 and its old release assets still refer to 1.2.0. It is kept only so the 1.2.0 downloads stay reproducible. Do not install it next to the 1.4.2 build — both inject into the same Steam tabs, so only one may be enabled.
+`FontPickerEN/` is the English-only build that shipped alongside the Chinese build up to **1.2.0**, when the plugin used one package per UI language and offered both a by-name and an extract delivery mode. From the 1.3.x–1.4.x line the plugin is a **single package with four UI languages and a single delivery path (extract & embed)**, so `FontPickerEN/` is frozen at 1.2.0: it is not rebuilt for 1.4.4 and its old release assets still refer to 1.2.0. It is kept only so the 1.2.0 downloads stay reproducible. Do not install it next to the 1.4.4 build — both inject into the same Steam tabs, so only one may be enabled.
 
 ## Font sources and limitations
 

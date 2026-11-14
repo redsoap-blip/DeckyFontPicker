@@ -4,15 +4,15 @@
 
 一个 [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) 插件：把 Steam Deck 上已安装的任意字体应用到 Steam 大屏界面（主界面、MainMenu、快捷访问菜单），不写 `~/homebrew/themes`，不依赖 CSS Loader，也不连 CEF 调试口。
 
-**当前版本：1.4.2。** 单包四语言——面板跟随 Steam 界面语言，内置简体中文 / English / 日本語 / 한국어 四套词典；`fontTools` 4.68.0 已随包内置，无需另装任何依赖。
+**当前版本：1.4.4。** 单包四语言——面板跟随 Steam 界面语言，内置简体中文 / English / 日本語 / 한국어 四套词典；`fontTools` 4.68.0 已随包内置，无需另装任何依赖。
 
 | Release 资产 | 插件目录 | 界面语言 | `fontTools` |
 | --- | --- | --- | --- |
-| `DeckyFontPicker-1.4.2.zip` | `DeckyFontPicker/` | 简体中文 / English / 日本語 / 한국어（自动） | 已放在 `vendor/` 下 |
+| `DeckyFontPicker-1.4.4.zip` | `DeckyFontPicker/` | 简体中文 / English / 日本語 / 한국어（自动） | 已放在 `vendor/` 下 |
 
 ## 安装
 
-1. 从 [Releases](../../releases) 页面下载 `DeckyFontPicker-1.4.2.zip`。
+1. 从 [Releases](../../releases) 页面下载 `DeckyFontPicker-1.4.4.zip`。
 2. 在 Decky Loader 里打开 **设置 → 开发者 → 从 ZIP 安装插件**，或把压缩包解压到 `~/homebrew/plugins/`。
 3. 重载 Decky（或重启 `plugin_loader.service`），打开快捷访问菜单。
 
@@ -64,7 +64,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 ```
 DeckyFontPicker/     当前版本的源码（plugin.json、main.py、face_extract.py、dist/index.js、package.json、vendor/）
-FontPickerEN/        1.2.0 时代的英文单语包，仅为旧 release 保留（不属于 1.4.2）
+FontPickerEN/        1.2.0 时代的英文单语包，仅为旧 release 保留（不属于 1.4.4）
 README.md            英文说明
 README.zh-CN.md      本文件
 LICENSE              MIT
@@ -73,7 +73,7 @@ LICENSE              MIT
 
 ### 关于 `FontPickerEN/`
 
-`FontPickerEN/` 是到 **1.2.0** 为止与中文包并列发布的英文单语包——那个时期一个界面语言对应一个包，且每个包内置「按名引用 / 抽取嵌入」两种投递方式。从 1.3.x–1.4.x 起，插件变成**单包四语言、只有一条投递路径（抽取嵌入）**，因此 `FontPickerEN/` 停留在 1.2.0：它不会随 1.4.2 重建，旧 release 资产也仍指向 1.2.0。保留它只是为了让 1.2.0 的下载仍然可复现。请不要把它与 1.4.2 版同时启用——两者注入同一批 Steam 标签页，同一时间只能启用一个。
+`FontPickerEN/` 是到 **1.2.0** 为止与中文包并列发布的英文单语包——那个时期一个界面语言对应一个包，且每个包内置「按名引用 / 抽取嵌入」两种投递方式。从 1.3.x–1.4.x 起，插件变成**单包四语言、只有一条投递路径（抽取嵌入）**，因此 `FontPickerEN/` 停留在 1.2.0：它不会随 1.4.4 重建，旧 release 资产也仍指向 1.2.0。保留它只是为了让 1.2.0 的下载仍然可复现。请不要把它与 1.4.4 版同时启用——两者注入同一批 Steam 标签页，同一时间只能启用一个。
 
 ## 字体来源与限制
 

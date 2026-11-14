@@ -1311,6 +1311,21 @@ def _clean_favorites(state):
     return favorites
 
 
+def _push_history(state, family):
+    """把 family 记入历史：最新在前、去重、无上限。"""
+    if not isinstance(family, str) or not family:
+        return
+    history = state.get("history") or []
+    if isinstance(history, list):
+        history = [name for name in history if isinstance(name, str)]
+    else:
+        history = []
+    if family in history:
+        history.remove(family)
+    history.insert(0, family)
+    state["history"] = history
+
+
 def _inject_stamp(at):
     """注入记录的时间部分：同日 HH:MM，跨日 MM-DD HH:MM。
 
@@ -1457,6 +1472,7 @@ class Plugin:
             return {"ok": False, "error": f"系统里没有字体 {family}", **plugin._payload()}
         state = read_state()
         state["family"] = family
+        _push_history(state, family)
         write_state(state)
         return await plugin._apply(family)
 
@@ -1475,6 +1491,7 @@ class Plugin:
             return {"ok": False, "error": f"系统里没有字体 {family}", **plugin._payload()}
         state = read_state()
         state["family_cjk"] = family
+        _push_history(state, family)
         write_state(state)
         return await plugin._apply(state["family"])
 
@@ -1530,6 +1547,15 @@ class Plugin:
         payload = plugin._payload()
         payload["removed"] = removed
         return payload
+
+    async def clear_history(self):
+        """清空字体使用历史（持久化）。不动任何已选字体与开关。"""
+        plugin = _bind(self)
+        state = read_state()
+        state["history"] = []
+        write_state(state)
+        log("字体使用历史已清空")
+        return {"ok": True, **plugin._payload()}
 
     async def reapply(self):
         plugin = _bind(self)
@@ -1676,8 +1702,9 @@ class Plugin:
         """把选中字体准备成一段 CSS。任何失败都直接抛异常，调用方尚未拆旧样式。"""
         state = read_state()
         split_on = bool(state.get("cjk_split"))
-        # 子开关默认值仅在主开关开启时生效：synth_weight_none 缺省=开、cjk_punct 缺省=关
-        synth_none = split_on and bool(state.get("synth_weight_none", True))
+        # synth_weight_none 已独立于 cjk_split，无论主开关是否开启都读取（缺省=开）
+        # cjk_punct 仍仅在主开关开启时生效（缺省=关）
+        synth_none = bool(state.get("synth_weight_none", True))
         cjk_punct = split_on and bool(state.get("cjk_punct"))
         families = _family_map()
         entry = families.get(family)
@@ -2165,6 +2192,7 @@ class Plugin:
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,
             "favorites": favorites,
+            "history": list(state.get("history") or []),
             "cef": cef,
         }
 

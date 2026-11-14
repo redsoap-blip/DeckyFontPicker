@@ -61,6 +61,7 @@
             "cat.mono": "Mono 等宽",
             "cat.other": "其他",
             "cat.fav": "收藏夹",
+            "cat.history": "历史字体",
             "cat.all": "全部字体",
             "lang.latin": "西文",
             "lang.zh": "中文",
@@ -72,6 +73,7 @@
             "note.mono": "按 fontconfig 的 spacing 字段判定（100 / 110），或 family 名里含 mono / 等宽。",
             "note.other": "既非等宽、名字里也没有明确衬线 / 无衬线关键词的字体。",
             "note.fav": "聚焦某款字体后按 X（手柄）加入/移出收藏",
+            "note.history": "按最近使用时间排列，无上限，卸载的字体自动移除",
             "notInjected": "未注入",
             "injected": "已注入",
             "injectDone": "已完成一次注入 · {0}",
@@ -79,15 +81,12 @@
             "injectNone": "尚未注入",
             "injectHeal": "自动补注入 · {0}",
             "injectHealed": "已自动补注入 · {0}",
-            "serviceDown": "本地字体服务未启动，字体无法生效",
             "reapply": "重新注入当前字体",
             "currentFont": "当前字体",
             "notSelected": "未选择",
             "expand": "展开",
             "collapse": "收起",
             "langUnknown": "lang 未知",
-            "langNotOverridden": "未覆盖界面字体",
-            "langMore": " · 等 {0} 种",
             "langHasCjk": " · 含中文字形",
             "fontChinese": "含中文",
             "fontNoChinese": "无中文，自动回退",
@@ -108,25 +107,25 @@
             "loadMoreRemaining": "加载更多（还剩 {0} 款）",
             "restoreDefault": "恢复 Steam 默认字体",
             "advanced": "高级",
-            "cefFastMode": "CEF 快速模式：{0}",
-            "cefOn": "已开启",
-            "cefOff": "已关闭",
+            "cefFastMode": "CEF 快速模式",
             "cefNote": "开启前需在 Steam 设置 → 开发者 中打开「CEF 远程调试」。端口不可用时自动回落到常规探测，不影响字体注入。",
             "cefNoPort": "未检测到 CEF 调试端口，已回落常规探测。请检查 Steam 设置 → 开发者 → CEF 远程调试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
             "copyLog": "复制日志",
-            "splitMode": "按语言注入：{0}",
-            "splitNote": "开启后西文与中日韩分别选择字体：字体行确认键弹出「应用西文 / 应用中文」菜单选择落槽。关闭则回到单槽模式（确认键直接应用），已选的中日韩字体保留，重新开启自动恢复。",
-            "subSynth": "禁用假加粗：{0}",
+            "history.empty": "暂无使用记录",
+            "clearHistory": "清除历史字体记录",
+            "historyCleared": "已清除历史记录",
+            "splitMode": "按语言注入",
+            "splitNote": "开启后西文与中日韩分别选择字体",
+            "subSynth": "禁用假加粗",
             "subSynthNote": "没有粗体字重的字体不再合成加粗，中粗文字按常规字重显示。",
-            "subPunct": "使用 CJK 标点符号：{0}",
+            "subPunct": "使用 CJK 标点符号",
             "subPunctOn": "开 = 使用 CJK 标点符号（全角），影响中英文界面。",
-            "subPunctOff": "关 = 使用西文标点符号（默认，窄/比例宽度）。",
+            "subPunctOff": "关闭时使用西文标点符号",
             "slotLatin": "西文",
             "slotCjk": "中日韩",
             "followSystem": "跟随系统",
             "stripWarn": "西文字体剔字失败，已回退原始字体，可能遮蔽中日韩槽位（换一款纯西文字体可解决）。",
-            "noBoldInfo": "该字体没有粗体字重，中粗文字按常规显示（可在高级里改）",
             "menuTitle": "应用字体：{0}",
             "menuLatin": "应用西文",
             "menuCjk": "应用中文",
@@ -153,6 +152,7 @@
             "cat.mono": "Mono",
             "cat.other": "Others",
             "cat.fav": "Favorites",
+            "cat.history": "History",
             "cat.all": "All Fonts",
             "lang.latin": "Latin",
             "lang.zh": "Chinese",
@@ -164,6 +164,7 @@
             "note.mono": "Determined by fontconfig's spacing field (100 / 110), or by a family name containing mono / 等宽.",
             "note.other": "Neither monospace nor matched by a serif / sans keyword.",
             "note.fav": "Focus a font and press X (gamepad) to add or remove it from favorites",
+            "note.history": "Ordered by most recent use, unlimited; uninstalled fonts are removed automatically",
             "notInjected": "Not injected",
             "injected": "Injected",
             "injectDone": "Injection completed · {0}",
@@ -171,15 +172,12 @@
             "injectNone": "Not injected yet",
             "injectHeal": "Auto re-injection · {0}",
             "injectHealed": "Auto re-injected · {0}",
-            "serviceDown": "Local font service is not running; fonts cannot be applied",
             "reapply": "Re-inject the current font",
             "currentFont": "Current font",
             "notSelected": "None selected",
             "expand": "Expand",
             "collapse": "Collapse",
             "langUnknown": "lang unknown",
-            "langNotOverridden": "UI font not overridden",
-            "langMore": " · and {0} more",
             "langHasCjk": " · Chinese glyphs included",
             "fontChinese": "Chinese",
             "fontNoChinese": "No Chinese, auto fallback",
@@ -200,25 +198,25 @@
             "loadMoreRemaining": "Load more ({0} left)",
             "restoreDefault": "Restore Steam default font",
             "advanced": "Advanced",
-            "cefFastMode": "CEF fast mode: {0}",
-            "cefOn": "On",
-            "cefOff": "Off",
+            "cefFastMode": "CEF fast mode",
             "cefNote": "Before enabling, turn on \"CEF Remote Debugging\" in Steam Settings → Developer. If the port is unavailable, detection falls back to the regular method and font injection is unaffected.",
             "cefNoPort": "No CEF debugging port detected; fell back to regular detection. Check Steam Settings → Developer → CEF Remote Debugging.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
             "copyLog": "Copy log",
-            "splitMode": "Split by language: {0}",
-            "splitNote": "When on, Latin and CJK fonts are picked separately: pressing confirm in the list slots the font by its language. When off, it returns to a single slot; the CJK font you picked is kept and restored when you turn it back on.",
-            "subSynth": "Disable synthetic bold: {0}",
+            "history.empty": "No history yet",
+            "clearHistory": "Clear font history",
+            "historyCleared": "History cleared",
+            "splitMode": "Split by language",
+            "splitNote": "When on, Latin and CJK fonts are picked separately",
+            "subSynth": "Disable synthetic bold",
             "subSynthNote": "Fonts without a bold face are no longer emboldened synthetically; medium-weight text uses the regular weight.",
-            "subPunct": "Use CJK punctuation: {0}",
+            "subPunct": "Use CJK punctuation",
             "subPunctOn": "On = full-width CJK punctuation; affects both the Chinese and English UI.",
-            "subPunctOff": "Off = Western punctuation (default, narrow / proportional).",
+            "subPunctOff": "Western punctuation is used when off",
             "slotLatin": "Latin",
             "slotCjk": "CJK",
             "followSystem": "Follow system",
             "stripWarn": "Stripping failed for the Latin font, so the original font was used; it may cover the CJK slot (picking a Latin-only font fixes this).",
-            "noBoldInfo": "This font has no bold face, so medium-weight text renders at regular weight (change it in Advanced)",
             "menuTitle": "Apply font: {0}",
             "menuLatin": "Apply to Latin",
             "menuCjk": "Apply to Chinese",
@@ -245,6 +243,7 @@
             "cat.mono": "Mono",
             "cat.other": "その他",
             "cat.fav": "お気に入り",
+            "cat.history": "履歴",
             "cat.all": "すべてのフォント",
             "lang.latin": "欧文",
             "lang.zh": "中国語",
@@ -256,6 +255,7 @@
             "note.mono": "fontconfig の spacing フィールド（100 / 110）で判定します。family 名に mono または 等宽 を含むものも対象です。",
             "note.other": "等幅でもなく、名前にセリフ / サンセリフのキーワードも含まないフォントです。",
             "note.fav": "フォントにフォーカスして X（ゲームパッド）を押すとお気に入りに追加／解除できます",
+            "note.history": "最近使用した順に並び、上限なし。アンインストールしたフォントは自動的に外れます",
             "notInjected": "未適用",
             "injected": "適用済み",
             "injectDone": "一度適用しました · {0}",
@@ -263,15 +263,12 @@
             "injectNone": "まだ適用していません",
             "injectHeal": "自動再適用 · {0}",
             "injectHealed": "自動再適用しました · {0}",
-            "serviceDown": "ローカルフォントサービスが起動していないため、フォントを反映できません",
             "reapply": "現在のフォントを再適用",
             "currentFont": "現在のフォント",
             "notSelected": "未選択",
             "expand": "展開",
             "collapse": "折りたたむ",
             "langUnknown": "lang 不明",
-            "langNotOverridden": "UI フォントは変更されていません",
-            "langMore": " · 他 {0} 言語",
             "langHasCjk": " · 中国語グリフを含む",
             "fontChinese": "中国語対応",
             "fontNoChinese": "中国語なし（自動フォールバック）",
@@ -292,25 +289,25 @@
             "loadMoreRemaining": "さらに読み込む（残り {0} 件）",
             "restoreDefault": "Steam の既定フォントに戻す",
             "advanced": "詳細設定",
-            "cefFastMode": "CEF 高速モード：{0}",
-            "cefOn": "オン",
-            "cefOff": "オフ",
+            "cefFastMode": "CEF 高速モード",
             "cefNote": "有効にする前に、Steam の設定 → 開発者 で「CEF リモートデバッグ」をオンにしてください。ポートが使用できない場合は通常の検出に自動でフォールバックし、フォントの適用には影響しません。",
             "cefNoPort": "CEF デバッグポートが見つからないため、通常の検出にフォールバックしました。Steam の設定 → 開発者 → CEF リモートデバッグ を確認してください。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
             "copyLog": "ログをコピー",
-            "splitMode": "言語別に適用：{0}",
-            "splitNote": "オンにすると西文と中日韓を別々に選べます。リストの決定キーは、選んだフォントの言語に応じて自動でスロットに入ります。オフにすると単一スロットに戻り、選択済みの中日韓フォントは保持され、再度オンにすると復元されます。",
-            "subSynth": "疑似ボールドを無効化：{0}",
+            "history.empty": "記録はまだありません",
+            "clearHistory": "フォント履歴を消去",
+            "historyCleared": "履歴を消去しました",
+            "splitMode": "言語別に適用",
+            "splitNote": "オンにすると西文と中日韓を別々に選べます",
+            "subSynth": "疑似ボールドを無効化",
             "subSynthNote": "ボールドウェイトを持たないフォントは合成ボールドされず、中太の文字は標準ウェイトで表示されます。",
-            "subPunct": "CJK 句読点を使用：{0}",
+            "subPunct": "CJK 句読点を使用",
             "subPunctOn": "オン = CJK 句読点（全角）を使用します。中国語・英語の両 UI に影響します。",
-            "subPunctOff": "オフ = 西文句読点（既定、狭い／プロポーショナル幅）。",
+            "subPunctOff": "オフ時に西文句読点を使用",
             "slotLatin": "西文",
             "slotCjk": "中日韓",
             "followSystem": "システムに従う",
             "stripWarn": "西文フォントのグリフ削除に失敗したため、元のフォントに戻しました。中日韓スロットを覆い隠す可能性があります（西文専用フォントに変えると解決します）。",
-            "noBoldInfo": "このフォントにはボールドウェイトがないため、中太の文字は標準ウェイトで表示されます（詳細設定で変更できます）",
             "menuTitle": "フォントを適用：{0}",
             "menuLatin": "西文に適用",
             "menuCjk": "中国語に適用",
@@ -337,6 +334,7 @@
             "cat.mono": "Mono",
             "cat.other": "기타",
             "cat.fav": "즐겨찾기",
+            "cat.history": "기록",
             "cat.all": "모든 글꼴",
             "lang.latin": "라틴",
             "lang.zh": "중국어",
@@ -348,6 +346,7 @@
             "note.mono": "fontconfig의 spacing 필드(100 / 110)로 판정하며, family 이름에 mono 또는 等宽이 들어간 글꼴도 포함합니다.",
             "note.other": "고정폭도 아니고 이름에 세리프 / 산세리프 키워드도 없는 글꼴입니다.",
             "note.fav": "글꼴에 포커스한 뒤 X(게임패드)를 눌러 즐겨찾기에 추가/해제할 수 있습니다",
+            "note.history": "최근 사용 순으로 정렬되며 제한 없음, 삭제된 글꼴은 자동으로 제외됩니다",
             "notInjected": "적용 안 됨",
             "injected": "적용됨",
             "injectDone": "한 번 적용함 · {0}",
@@ -355,15 +354,12 @@
             "injectNone": "아직 적용 안 됨",
             "injectHeal": "자동 재적용 · {0}",
             "injectHealed": "자동 재적용함 · {0}",
-            "serviceDown": "로컬 글꼴 서비스가 실행되지 않아 글꼴을 적용할 수 없습니다",
             "reapply": "현재 글꼴 다시 적용",
             "currentFont": "현재 글꼴",
             "notSelected": "선택 안 됨",
             "expand": "펼치기",
             "collapse": "접기",
             "langUnknown": "lang 알 수 없음",
-            "langNotOverridden": "UI 글꼴이 변경되지 않았습니다",
-            "langMore": " · 외 {0}개 언어",
             "langHasCjk": " · 중국어 글리프 포함",
             "fontChinese": "중국어 지원",
             "fontNoChinese": "중국어 없음, 자동 대체",
@@ -384,25 +380,25 @@
             "loadMoreRemaining": "더 불러오기({0}개 남음)",
             "restoreDefault": "Steam 기본 글꼴로 복원",
             "advanced": "고급",
-            "cefFastMode": "CEF 고속 모드: {0}",
-            "cefOn": "켜짐",
-            "cefOff": "꺼짐",
+            "cefFastMode": "CEF 고속 모드",
             "cefNote": "사용하기 전에 Steam 설정 → 개발자에서 'CEF 원격 디버깅'을 켜야 합니다. 포트를 사용할 수 없으면 자동으로 일반 감지로 대체되며 글꼴 적용에는 영향을 주지 않습니다.",
             "cefNoPort": "CEF 디버깅 포트를 찾지 못해 일반 감지로 대체했습니다. Steam 설정 → 개발자 → CEF 원격 디버깅을 확인하세요.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
             "copyLog": "로그 복사",
-            "splitMode": "언어별 적용: {0}",
-            "splitNote": "켜면 라틴 문자와 CJK를 각각 선택합니다. 목록에서 확인 키를 누르면 선택한 글꼴의 언어에 맞는 슬롯에 자동으로 들어갑니다. 끄면 단일 슬롯으로 돌아가며, 선택한 CJK 글꼴은 유지되고 다시 켜면 복원됩니다.",
-            "subSynth": "가짜 굵게 사용 안 함: {0}",
+            "history.empty": "기록이 아직 없습니다",
+            "clearHistory": "폰트 기록 지우기",
+            "historyCleared": "기록을 지웠습니다",
+            "splitMode": "언어별 적용",
+            "splitNote": "켜면 라틴 문자와 CJK를 각각 선택합니다",
+            "subSynth": "가짜 굵게 사용 안 함",
             "subSynthNote": "굵은 자획이 없는 글꼴은 합성 굵게 처리되지 않으며, 중간 굵기 글자는 일반 굵기로 표시됩니다.",
-            "subPunct": "CJK 문장 부호 사용: {0}",
+            "subPunct": "CJK 문장 부호 사용",
             "subPunctOn": "켬 = CJK 문장 부호(전각)를 사용합니다. 중국어·영어 UI 모두에 영향을 줍니다.",
-            "subPunctOff": "끔 = 서양 문장 부호(기본, 좁은/가변 폭).",
+            "subPunctOff": "끄면 서양 문장 부호를 사용합니다",
             "slotLatin": "라틴",
             "slotCjk": "CJK",
             "followSystem": "시스템 따름",
             "stripWarn": "라틴 글꼴의 글리프 제거에 실패해 원래 글꼴로 되돌렸습니다. CJK 슬롯을 가릴 수 있습니다(라틴 전용 글꼴로 바꾸면 해결됩니다).",
-            "noBoldInfo": "이 글꼴에는 굵은 자획이 없어 중간 굵기 글자가 일반 굵기로 표시됩니다(고급에서 변경 가능)",
             "menuTitle": "글꼴 적용: {0}",
             "menuLatin": "라틴에 적용",
             "menuCjk": "중국어에 적용",
@@ -600,11 +596,6 @@
                 return node;
             });
         }, [menuFont]);
-
-        // 「当前字体」这一行的折叠状态单独记忆：不复用 collapsed，也不与任何分区共享；默认折叠
-        var currentOpenHook = useState(false);
-        var currentOpen = currentOpenHook[0];
-        var setCurrentOpen = currentOpenHook[1];
 
         // 「加载更多」已加载条数：按 key（分区 id / search）记住；搜索词变化时重置
         var loadCountsHook = useState({});
@@ -889,6 +880,17 @@
             });
         }
 
+        // 清除历史字体记录：后端清空 state["history"] 并随 payload 返回新 state，
+        // call() 内部已经 applyPayload 刷新面板，这里只补一条反馈提示
+        function clearHistory() {
+            if (busy) return;
+            setBusy(true);
+            call("clear_history").then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) setCopyMsg(t("historyCleared"));
+            }).catch(function () { setBusy(false); });
+        }
+
         function toggleFavorite(family) {
             if (!family) return;
             call("toggle_favorite", { family: family });
@@ -946,12 +948,10 @@
 
         var current = state ? state.family : null;
         var favorites = state && Array.isArray(state.favorites) ? state.favorites : [];
+        var history = state && Array.isArray(state.history) ? state.history : [];
 
-        // 方案 D：剔字失败回退原始 face 时给可见警告（绝不静默）；
-        // 禁用假加粗开启且当前西文字体没有 ≥600 face 时的信息提示（不弹窗）
+        // 方案 D：剔字失败回退原始 face 时给可见警告（绝不静默）
         var stripFallback = !!(state && state.strip && state.strip.fallback);
-        var noBoldInfo = !!(state && state.cjk_split && state.synth_weight_none &&
-            state.bold === null && current);
 
         var currentFont = useMemo(function () {
             if (!current) return null;
@@ -1000,6 +1000,13 @@
                 if (byName[favorites[f]]) fav.push(byName[favorites[f]]);
             }
 
+            // 历史字体：后端按最近使用时间排好序（最新在前），这里只做映射；
+            // 已卸载的字体跳过（byName 里没有就不进 hist）
+            var hist = [];
+            for (var hi = 0; hi < history.length; hi++) {
+                if (byName[history[hi]]) hist.push(byName[history[hi]]);
+            }
+
             // 四个基础分类只按字形风格判定（Mono → Serif → Sans → 其他），四类互斥；
             // CJK 字体不再从基础类里剔除，语言归属完全交给语言胶囊处理
             var kinds = ["serif", "sans", "mono", "other"];
@@ -1021,6 +1028,11 @@
                 other: t("note.other"),
             };
             var cats = [
+                { id: "all", name: t("cat.all"), items: full, kind: "all", note: null },
+                {
+                    id: "history", name: t("cat.history"), items: hist, kind: "history",
+                    note: hist.length > 0 ? t("note.history") : t("history.empty"),
+                },
                 {
                     id: "fav", name: t("cat.fav"), items: fav, kind: "fav",
                     // 空态文案去掉，无论 0 款还是有收藏都固定显示这句操作提示
@@ -1036,9 +1048,8 @@
                     note: BASE_NOTE[kinds[c]],
                 });
             }
-            cats.push({ id: "all", name: t("cat.all"), items: full, kind: "all", note: null });
 
-            // 四个基础分类与「全部」带语言胶囊；收藏不带。
+            // 四个基础分类与「全部」带语言胶囊；收藏与历史不带（胶囊条件天然跳过这两个 id）。
             // 计数跟分类一起算好并缓存，点胶囊时只做渲染期过滤，不重跑分类
             for (var p = 0; p < cats.length; p++) {
                 var pillCat = cats[p];
@@ -1049,11 +1060,11 @@
                 pillCat.langCounts = langCounts;
             }
 
-            // 0 款的分类整块隐藏（标题也不渲染）；收藏夹与「全部字体」永远保留
+            // 0 款的分类整块隐藏（标题也不渲染）；历史、收藏夹与「全部字体」永远保留
             return cats.filter(function (cat) {
-                return cat.id === "fav" || cat.id === "all" || cat.items.length > 0;
+                return cat.id === "fav" || cat.id === "history" || cat.id === "all" || cat.items.length > 0;
             });
-        }, [fonts, favorites]);
+        }, [fonts, favorites, history]);
 
         // 该分区是否真的有可切的胶囊：收藏没有 langCounts，搜索行没有 sectionId，
         // 折叠态不渲染胶囊行，这几种情况都要把左右键交还 Steam
@@ -1069,8 +1080,6 @@
         var problemText = null;
         if (state && state.error) {
             problemText = String(state.error);
-        } else if (state && state.server && !state.server.running) {
-            problemText = t("serviceDown");
         }
 
         // 注入历史摘要：只读后端记录的「最近一次注入」结果，不做任何实时检测
@@ -1124,222 +1133,148 @@
             );
         });
 
-        // 字体说明改用 lang 覆盖：中文相关项优先；非中文只列前几项
-        function isZhLangTag(tag) {
-            return tag === "zh" || tag.indexOf("zh-") === 0 || tag === "yue";
-        }
-        // zh-cn → zh-CN，zh-hans → zh-Hans
-        function fmtLangTag(tag) {
-            var parts = String(tag).toLowerCase().split("-");
-            var out = parts[0];
-            for (var i = 1; i < parts.length; i++) {
-                var seg = parts[i];
-                out += "-" + (seg.length === 2
-                    ? seg.toUpperCase()
-                    : seg.charAt(0).toUpperCase() + seg.slice(1));
-            }
-            return out;
-        }
-        function langLine(font) {
-            if (!font) return t("langUnknown");
-            var langs = Array.isArray(font.langs) ? font.langs : [];
-            var total = typeof font.lang_count === "number" ? font.lang_count : langs.length;
-            var usable = !!(font.zh || font.zh_extra);
-            if (!langs.length) return t("langUnknown");
-            var zhLangs = langs.filter(isZhLangTag);
-            if (zhLangs.length) {
-                var shownZh = zhLangs.slice(0, 2).map(fmtLangTag).join(" · ");
-                return "lang " + shownZh
-                    + (zhLangs.length > 2 ? t("langMore", zhLangs.length) : "");
-            }
-            var shown = langs.slice(0, 3).map(fmtLangTag).join(" · ");
-            return "lang " + shown
-                + (total > 3 ? t("langMore", total) : "")
-                + (usable ? t("langHasCjk") : "");
-        }
-
-        // 标题下的说明行：直接展示 lang 覆盖
-        var langText = current ? langLine(currentFont) : t("langNotOverridden");
-
-        // 「当前字体」标题行：与分区标题同一套样式与聚焦实现（fp-sec + focusClassName），
-        // 左侧 ▸/▾ + 标签，右侧字体名；默认折叠，折叠时不渲染说明行与注入状态三行
+        // 「当前字体」卡片：标题 / 槽位摘要 / 三行状态 / 刷新图标合并为一个可聚焦容器，
+        // 不再折叠、所有信息常显；确认键 / 点击 = 重新注入当前字体
         var currentSection = h(deckyFrontendLib.PanelSection, { title: undefined },
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:header" },
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:card" },
                 h(deckyFrontendLib.Focusable, {
-                    id: "fp-sec-current",
+                    id: "fp-targets-reapply",
                     tabIndex: 0,
-                    className: "fp-sec",
+                    className: "fp-flat",
                     focusClassName: "fp-row-focus",
-                    onActivate: function () { setCurrentOpen(function (v) { return !v; }); },
-                    onClick: function () { setCurrentOpen(function (v) { return !v; }); },
-                    onOKActionDescription: currentOpen ? t("collapse") : t("expand"),
+                    onActivate: reapplyFont,
+                    onClick: reapplyFont,
+                    onOKActionDescription: t("reapply"),
                     style: {
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "space-between",
-                        gap: "8px",
-                        padding: "10px 12px",
+                        boxSizing: "border-box",
+                        width: "100%",
+                        // 不加水平留白与底色：三行 PanelSectionRow 与原始版本逐字节相同，
+                        // 这层 Focusable 只做透明的点击/聚焦命中区；上下 6px 给聚焦效果留出呼吸空间
+                        padding: "6px 0",
                         borderRadius: "4px",
                         outline: "none",
-                        fontSize: "14px",
-                        fontWeight: 600,
+                        cursor: current ? "pointer" : "default",
                         transition: "background 80ms linear",
                     },
                 },
-                    h("span", { style: { display: "flex", alignItems: "center", flexShrink: 0 } },
-                        h("span", {
-                            className: "fp-arrow",
-                            style: {
-                                display: "inline-block",
-                                width: "1em",
-                                minWidth: 0,
-                                minHeight: 0,
-                                textAlign: "center",
-                                flexShrink: 0,
-                                padding: 0,
-                                margin: 0,
-                                background: "transparent",
-                                border: 0,
-                                boxShadow: "none",
-                                borderRadius: 0,
-                                fontVariantEmoji: "text",
-                            },
-                        }, currentOpen ? "▾" : "▸"),
-                        h("span", { style: { marginLeft: "6px" } }, t("currentFont"))
-                    ),
-                    // 双行槽位（西文 / 中日韩，CJK 槽未选显示「跟随系统」）+ 状态摘要
-                    // 同一列、右对齐；摘要行在收起状态也能看到三态
+                    // 左侧纵向列：顶部行（标题 + 槽位摘要）+ 三行状态
                     h("div", {
-                        className: "fp-current-name",
                         style: {
                             flex: "1 1 auto",
                             minWidth: 0,
                             display: "flex",
                             flexDirection: "column",
-                            alignItems: "flex-end",
-                            lineHeight: "1.25",
                         },
                     },
-                        h("span", {
+                        h("div", {
                             style: {
-                                maxWidth: "100%",
-                                whiteSpace: "nowrap",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                                fontWeight: 400,
-                                fontSize: "12px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                gap: "8px",
+                                padding: "0 12px",
                             },
-                        }, t("slotLatin") + "：" + (current || t("notSelected"))),
-                        h("span", {
-                            style: {
-                                maxWidth: "100%",
-                                whiteSpace: "nowrap",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                                fontWeight: 400,
-                                fontSize: "12px",
-                                opacity: 0.72,
+                        },
+                            h("span", { style: { fontSize: "14px", fontWeight: 600, flexShrink: "0", whiteSpace: "nowrap" } }, t("currentFont")),
+                            // 双行槽位（西文 / 中日韩，CJK 槽未选显示「跟随系统」）+ 状态摘要
+                            // 同一列、右对齐；摘要行随时可见
+                            h("div", {
+                                className: "fp-current-name",
+                                style: {
+                                    flex: "1 1 auto",
+                                    minWidth: 0,
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "flex-end",
+                                    lineHeight: "1.25",
+                                },
                             },
-                        }, t("slotCjk") + "：" + (state && state.family_cjk ? state.family_cjk : t("followSystem"))),
-                        summary
-                            ? h("span", {
-                                className: "fp-current-summary",
+                                h("span", {
+                                    style: {
+                                        maxWidth: "100%",
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        fontWeight: 400,
+                                        fontSize: "12px",
+                                    },
+                                }, t("slotLatin") + "：" + (current || t("notSelected"))),
+                                h("span", {
+                                    style: {
+                                        maxWidth: "100%",
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        fontWeight: 400,
+                                        fontSize: "12px",
+                                        opacity: 0.72,
+                                    },
+                                }, t("slotCjk") + "：" + (splitOn
+                                    ? (state && state.family_cjk ? state.family_cjk : t("followSystem"))
+                                    : (current || t("notSelected")))),
+                                summary
+                                    ? h("span", {
+                                        className: "fp-current-summary",
+                                        style: {
+                                            maxWidth: "100%",
+                                            // 不截断：目标多 / 名字长时整体换行，卡片高度自适应
+                                            whiteSpace: "normal",
+                                            overflow: "visible",
+                                            wordBreak: "break-word",
+                                            textAlign: "right",
+                                            fontSize: "11px",
+                                            lineHeight: "1.4",
+                                            fontWeight: 600,
+                                            color: summary.color,
+                                        },
+                                    }, summary.text)
+                                    : null,
+                                healSummary
+                                    ? h("span", {
+                                        className: "fp-current-heal",
+                                        style: {
+                                            maxWidth: "100%",
+                                            whiteSpace: "normal",
+                                            overflow: "visible",
+                                            wordBreak: "break-word",
+                                            textAlign: "right",
+                                            fontSize: "11px",
+                                            lineHeight: "1.4",
+                                            fontWeight: 400,
+                                            color: "rgba(255,255,255,0.55)",
+                                        },
+                                    }, healSummary.text)
+                                    : null
+                            )
+                        ),
+                        // 状态块：三行状态与刷新图标横向排列，图标与三行垂直居中
+                        h("div", { style: { display: "flex", alignItems: "center" } },
+                            // 三行状态：与原始版本逐字节相同
+                            h("div", { style: { flex: "1 1 auto", minWidth: 0 } }, targetRows),
+                            h("span", {
+                                title: t("reapply"),
                                 style: {
-                                    maxWidth: "100%",
-                                    // 不截断：目标多 / 名字长时整体换行，卡片高度自适应
-                                    whiteSpace: "normal",
-                                    overflow: "visible",
-                                    wordBreak: "break-word",
-                                    textAlign: "right",
-                                    fontSize: "11px",
-                                    lineHeight: "1.4",
-                                    fontWeight: 600,
-                                    color: summary.color,
+                                    flexShrink: 0,
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    marginLeft: "8px",
+                                    // 距右缘留出空隙，避免图标贴边被裁
+                                    marginRight: "14px",
+                                    opacity: 0.8,
                                 },
-                            }, summary.text)
-                            : null,
-                        healSummary
-                            ? h("span", {
-                                className: "fp-current-heal",
-                                style: {
-                                    maxWidth: "100%",
-                                    whiteSpace: "normal",
-                                    overflow: "visible",
-                                    wordBreak: "break-word",
-                                    textAlign: "right",
-                                    fontSize: "11px",
-                                    lineHeight: "1.4",
-                                    fontWeight: 400,
-                                    color: "rgba(255,255,255,0.55)",
+                            },
+                                h("svg", {
+                                    viewBox: "0 0 24 24", width: "20", height: "20",
+                                    fill: "#c3c8cf", "aria-hidden": true,
                                 },
-                            }, healSummary.text)
-                            : null
+                                    h("path", { d: "M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" }))
+                            )
+                        )
                     )
                 )
             ),
-            currentOpen
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:info" },
-                    h("div", {
-                        title: langText,
-                        style: {
-                            fontSize: "11px",
-                            lineHeight: "1.5",
-                            opacity: 0.72,
-                            // 水平居中；太长就换行，每一行都居中，不截断
-                            textAlign: "center",
-                            whiteSpace: "normal",
-                            wordBreak: "break-word",
-                        },
-                    }, langText))
-                : null,
-            // 三行状态：说明行已移除，「重新注入当前字体」触发迁到状态卡上
-            // 状态卡：三行目标 + 右侧刷新图标包成一个可聚焦容器，
-            // 确认键 / 点击 = 重新注入当前字体（原说明行的触发迁到这里）
-            currentOpen && targetRows.length
-                ? h("div", { key: "fp-current:targets" },
-                    h(deckyFrontendLib.Focusable, {
-                        id: "fp-targets-reapply",
-                        tabIndex: 0,
-                        className: "fp-flat",
-                        focusClassName: "fp-row-focus",
-                        onActivate: reapplyFont,
-                        onClick: reapplyFont,
-                        onOKActionDescription: t("reapply"),
-                        style: {
-                            display: "flex",
-                            alignItems: "center",
-                            boxSizing: "border-box",
-                            width: "100%",
-                            // 不加水平留白与底色：三行 PanelSectionRow 与原始版本逐字节相同，
-                            // 这层 Focusable 只做透明的点击/聚焦命中区；上下 6px 给聚焦效果留出呼吸空间
-                            padding: "6px 0",
-                            borderRadius: "4px",
-                            outline: "none",
-                            cursor: current ? "pointer" : "default",
-                            transition: "background 80ms linear",
-                        },
-                    },
-                        h("div", { style: { flex: "1 1 auto", minWidth: 0 } }, targetRows),
-                        h("span", {
-                            title: t("reapply"),
-                            style: {
-                                flexShrink: 0,
-                                display: "inline-flex",
-                                alignItems: "center",
-                                marginLeft: "8px",
-                                // 距右缘留出空隙，避免图标贴边被裁
-                                marginRight: "14px",
-                                opacity: 0.8,
-                            },
-                        },
-                            h("svg", {
-                                viewBox: "0 0 24 24", width: "20", height: "20",
-                                fill: "#c3c8cf", "aria-hidden": true,
-                            },
-                                h("path", { d: "M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" }))
-                        )
-                    ))
-                : null,
             // 异常提示不属于可折叠内容：任何折叠状态下都常显
             problemText
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:problem" },
@@ -1369,20 +1304,6 @@
                             lineHeight: "1.45",
                         },
                     }, t("stripWarn")))
-                : null,
-            // 禁用假加粗 + 当前西文字体没有 ≥600 face：信息提示（不弹窗）
-            !stripFallback && noBoldInfo
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:nobold" },
-                    h("div", {
-                        style: {
-                            color: "#8ab4f8",
-                            fontSize: "11px",
-                            whiteSpace: "normal",
-                            overflowWrap: "anywhere",
-                            wordBreak: "break-word",
-                            lineHeight: "1.45",
-                        },
-                    }, t("noBoldInfo")))
                 : null,
             // 主开关开启且西文槽是 CJK 字体、CJK 槽未选：首开提示（纯信息，不改语义）
             splitHint
@@ -1445,6 +1366,9 @@
         function sectionHeader(cat, count) {
             var isCollapsed = collapsed[cat.id] !== false;
             var total = typeof count === "number" ? count : cat.items.length;
+            // 只在用户显式点过语言胶囊时才在标题右侧显示筛选名；
+            // pickedLang 有默认值（未选也算西文），不能直接用，否则永远带筛选名
+            var picked = (cat.langCounts && langPick[cat.id]) ? langPick[cat.id] : "";
             return h(deckyFrontendLib.PanelSectionRow, { key: cat.id + ":header" },
                 h(deckyFrontendLib.Focusable, {
                     id: "fp-sec-" + cat.id,
@@ -1509,7 +1433,7 @@
                             textAlign: "right",
                             lineHeight: 1.35,
                         },
-                    }, total + t("fontsCount"))
+                    }, (picked ? t("lang." + picked) + " · " : "") + total + t("fontsCount"))
                 )
             );
         }
@@ -1699,16 +1623,20 @@
             )
         );
 
+        // 高级分区四个开关统一用 Decky 原生 ToggleField：标题在左、开关在右，
+        // 说明文字作为 description 挂在标题下方，行间分隔线由 PanelSectionRow 负责。
+        // useToggleRail 让开关显示为 Steam 新 UI 的小胶囊滑块（非旧版 On/Off 分段按钮）。
+        // 状态后缀（：已开启 / ：已关闭）不再写进标题，由开关本身表达。
         var advancedSection = h(deckyFrontendLib.PanelSection, { title: t("advanced") },
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:btn" },
-                h(deckyFrontendLib.ButtonItem, {
-                    layout: "below",
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:row" },
+                h(deckyFrontendLib.ToggleField, {
+                    label: t("cefFastMode"),
+                    description: t("cefNote"),
+                    checked: cefEnabled,
                     disabled: busy,
-                    onClick: toggleCef,
-                }, t("cefFastMode", cefEnabled ? t("cefOn") : t("cefOff")))
-            ),
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:note" },
-                h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } }, t("cefNote"))
+                    useToggleRail: true,
+                    onChange: toggleCef,
+                })
             ),
             cefEnabled && cefInfo.error
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:error" },
@@ -1721,47 +1649,56 @@
                         t("cefPortInfo", cefInfo.port || "?", cefInfo.tabs == null ? "?" : cefInfo.tabs))
                 )
                 : null,
-            // 分槽注入主开关：开启后西文 / 中日韩两槽位各自选字体，确认键按语言归属落槽
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:btn" },
-                h(deckyFrontendLib.ButtonItem, {
-                    layout: "below",
+            // 禁用假加粗：已独立于分槽主开关，无条件显示
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:synthrow" },
+                h(deckyFrontendLib.ToggleField, {
+                    label: t("subSynth"),
+                    description: t("subSynthNote"),
+                    checked: synthNone,
                     disabled: busy,
-                    onClick: toggleSplit,
-                }, t("splitMode", splitOn ? t("cefOn") : t("cefOff")))
+                    useToggleRail: true,
+                    onChange: toggleSynth,
+                })
             ),
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:note" },
-                h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } }, t("splitNote"))
+            // 分槽注入主开关：开启后西文 / 中日韩两槽位各自选字体，确认键按语言归属落槽
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:row" },
+                h(deckyFrontendLib.ToggleField, {
+                    label: t("splitMode"),
+                    description: t("splitNote"),
+                    checked: splitOn,
+                    disabled: busy,
+                    useToggleRail: true,
+                    onChange: toggleSplit,
+                })
             ),
-            // 两个子开关仅在主开关开启时显示 / 生效
+            // 使用 CJK 标点符号：常显，主开关关闭时置灰禁用
             splitOn
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:synth" },
-                    h(deckyFrontendLib.ButtonItem, {
-                        layout: "below",
-                        disabled: busy,
-                        onClick: toggleSynth,
-                    }, t("subSynth", synthNone ? t("cefOn") : t("cefOff")))
+                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punctrow" },
+                    h(deckyFrontendLib.ToggleField, {
+                        label: t("subPunct"),
+                        description: punctOn ? t("subPunctOn") : t("subPunctOff"),
+                        checked: punctOn,
+                        disabled: busy || !splitOn,
+                        useToggleRail: true,
+                        onChange: togglePunct,
+                    })
                 )
-                : null,
-            splitOn
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:synthnote" },
-                    h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } }, t("subSynthNote"))
-                )
-                : null,
-            splitOn
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punct" },
-                    h(deckyFrontendLib.ButtonItem, {
-                        layout: "below",
-                        disabled: busy,
-                        onClick: togglePunct,
-                    }, t("subPunct", punctOn ? t("cefOn") : t("cefOff")))
-                )
-                : null,
-            splitOn
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punchnote" },
-                    h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } },
-                        punctOn ? t("subPunctOn") : t("subPunctOff"))
-                )
-                : null,
+                : h("div", { style: { opacity: 0.4 } },
+                    h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punctrow" },
+                        h(deckyFrontendLib.ToggleField, {
+                            label: t("subPunct"),
+                            description: punctOn ? t("subPunctOn") : t("subPunctOff"),
+                            checked: punctOn,
+                            disabled: busy || !splitOn,
+                            useToggleRail: true,
+                            onChange: togglePunct,
+                        })
+                    )
+                ),
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-history:clear" },
+                h("div", { style: { marginTop: "10px" } },
+                    h(deckyFrontendLib.ButtonItem, { layout: "below", onClick: clearHistory }, t("clearHistory")))
+            ),
             h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:copy" },
                 // 与上方说明行拉开 10px，固定值，不随反馈文字出现/消失变化
                 h("div", { style: { marginTop: "10px" } },
