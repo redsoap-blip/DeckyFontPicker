@@ -1435,17 +1435,6 @@ class Plugin:
         families = await asyncio.to_thread(_family_map)
         return list_families(families)
 
-    async def set_sort_mode(self, mode):
-        """字体列表排序偏好：default（默认）/ mtime（最新安装优先）。写入 state.json 持久化，
-        重启后随 payload 的 sort_mode 回传前端。不改动注入，返回新 payload 供前端刷新。"""
-        plugin = _bind(self)
-        if mode not in ("default", "mtime"):
-            mode = "default"
-        state = read_state()
-        state["sort_mode"] = mode
-        write_state(state)
-        return plugin._payload()
-
     async def get_font_state(self):
         plugin = _bind(self)
         return plugin._payload()
@@ -1540,7 +1529,7 @@ class Plugin:
         plugin._family = None
         plugin._detail = {}
         state = read_state()
-        # 恢复默认 = 清空两个槽位；不动任何开关（cef_fast 与分槽三开关原样保留）
+        # 恢复默认 = 清空两个槽位；不动任何开关（分槽三开关原样保留）
         state.pop("family", None)
         state.pop("family_cjk", None)
         state.pop("inject_at", None)
@@ -2275,8 +2264,6 @@ class Plugin:
             "cjk_split": bool(state.get("cjk_split")),
             "synth_weight_none": bool(state.get("synth_weight_none", True)),
             "cjk_punct": bool(state.get("cjk_punct")),
-            # 字体列表排序偏好（default / mtime），与前端 set_sort_mode 写入的键同源
-            "sort_mode": state.get("sort_mode") or "default",
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,

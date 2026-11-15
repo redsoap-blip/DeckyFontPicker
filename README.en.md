@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.9.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.10.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
@@ -41,7 +41,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 - The list comes from `fc-list`: every family fontconfig knows about shows up (distro packages, `~/.local/share/fonts`, `~/.fonts`, ...). Bitmap formats the browser cannot use (PCF / BDF / Type1) are filtered out.
 - The list is ordered by install time: non-system fonts come first, newest on disk first (ties broken by family name), while system fonts (`/usr/share`, `/usr/local/share`) sit at the bottom in the backend's default order. There is no toggle (install time is the earliest file mtime of the family).
-- Sections, in the order the current build renders them: `Favorites`, `History`, `Serif`, `Sans`, `Mono`, `Others`, and finally `All Fonts`. A style section with no fonts is hidden entirely; `History`, `Favorites` and `All Fonts` are always present (an empty history reads "No history yet").
+- Sections, in the order the current build renders them: `All Fonts`, `Favorites`, `History`, `Serif`, `Sans`, `Mono`, `Others`. A style section with no fonts is hidden entirely; `All Fonts`, `Favorites` and `History` are always present (an empty history reads "No history yet").
 - **History**: every font you pick is recorded — most recent first, de-duplicated, no limit, persisted in `state.json`; uninstalled fonts are skipped. `Clear font history` in Advanced wipes it in one go.
 - Language pills: `All Fonts` and the four style sections each show a row of `Latin` / `Chinese` / `Japanese` / `Korean` pills once expanded, with per-language counts; click them or press left / right on the gamepad. There is no "no filter" state — Latin is the default. Every family belongs to exactly one pill: a region token in the family name (JP / KR / SC / TC / HK / CN) wins, otherwise zh > ja > ko, and everything else counts as Latin.
 - Row markers: `Chinese` / `No Chinese, auto fallback`, `Bold` / `No bold (synthetic)`, `Monospace`, `Favorite`, `In use`; a search hit on an alias adds an `Alias: xxx` line.

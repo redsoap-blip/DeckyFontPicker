@@ -86,8 +86,6 @@
             "notSelected": "未选择",
             "expand": "展开",
             "collapse": "收起",
-            "langUnknown": "lang 未知",
-            "langHasCjk": " · 含中文字形",
             "fontChinese": "含中文",
             "fontNoChinese": "无中文，自动回退",
             "boldYes": " · 有 Bold",
@@ -124,7 +122,6 @@
             "slotCjk": "中日韩",
             "followSystem": "跟随系统",
             "stripWarn": "西文字体剔字失败，已回退原始字体，可能遮蔽中日韩槽位（换一款纯西文字体可解决）。",
-            "menuTitle": "应用字体：{0}",
             "menuLatin": "应用西文",
             "menuCjk": "应用中文",
             "menuCancel": "按 B 返回取消，不做任何更改",
@@ -158,7 +155,7 @@
             "lang.empty": "No {0} fonts in this category.",
             "note.serif": "Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
             "note.sans": "Family name contains an explicit sans keyword (sans / grotesk / gothic / 黑, etc.).",
-            "note.mono": "Determined by fontconfig's spacing field (100 / 110), or by a family name containing mono / 等宽.",
+            "note.mono": "Determined by fontconfig's spacing field (100 / 110), or by a family name containing mono / 等宽 (a common CJK family-name keyword).",
             "note.other": "Neither monospace nor matched by a serif / sans keyword.",
             "note.fav": "Focus a font and press X (gamepad) to add or remove it from favorites",
             "note.history": "Ordered by most recent use, unlimited; uninstalled fonts are removed automatically",
@@ -174,8 +171,6 @@
             "notSelected": "None selected",
             "expand": "Expand",
             "collapse": "Collapse",
-            "langUnknown": "lang unknown",
-            "langHasCjk": " · Chinese glyphs included",
             "fontChinese": "Chinese",
             "fontNoChinese": "No Chinese, auto fallback",
             "boldYes": " · Bold",
@@ -212,7 +207,6 @@
             "slotCjk": "CJK",
             "followSystem": "Follow system",
             "stripWarn": "Stripping failed for the Latin font, so the original font was used; it may cover the CJK slot (picking a Latin-only font fixes this).",
-            "menuTitle": "Apply font: {0}",
             "menuLatin": "Apply to Latin",
             "menuCjk": "Apply to Chinese",
             "menuCancel": "Press B to go back and cancel without changing anything",
@@ -232,9 +226,9 @@
             "copied": "{0} 行をコピーしました（{1}）",
             "latestLog": "最新のログ",
             "clipboardDenied": "クリップボードを利用できません（書き込みが拒否されました）",
-            "cat.serif": "Serif",
-            "cat.sans": "Sans",
-            "cat.mono": "Mono",
+            "cat.serif": "Serif セリフ",
+            "cat.sans": "Sans サンセリフ",
+            "cat.mono": "Mono 等幅",
             "cat.other": "その他",
             "cat.fav": "お気に入り",
             "cat.history": "履歴",
@@ -246,7 +240,7 @@
             "lang.empty": "この分類には{0}のフォントがありません。",
             "note.serif": "ファミリー名によるヒューリスティック判定です（Serif / Song / Ming / Times / 楷 など）。名前に sans を含むものは除外されます。",
             "note.sans": "名前に明示的なサンセリフのキーワード（sans / grotesk / gothic / 黑 など）を含むものです。",
-            "note.mono": "fontconfig の spacing フィールド（100 / 110）で判定します。family 名に mono または 等宽 を含むものも対象です。",
+            "note.mono": "fontconfig の spacing フィールド（100 / 110）で判定します。family 名に mono または「等宽」（中国語フォントのファミリー名に使われる語）を含むものも対象です。",
             "note.other": "等幅でもなく、名前にセリフ / サンセリフのキーワードも含まないフォントです。",
             "note.fav": "フォントにフォーカスして X（ゲームパッド）を押すとお気に入りに追加／解除できます",
             "note.history": "最近使用した順に並び、上限なし。アンインストールしたフォントは自動的に外れます",
@@ -262,12 +256,10 @@
             "notSelected": "未選択",
             "expand": "展開",
             "collapse": "折りたたむ",
-            "langUnknown": "lang 不明",
-            "langHasCjk": " · 中国語グリフを含む",
             "fontChinese": "中国語対応",
             "fontNoChinese": "中国語なし（自動フォールバック）",
-            "boldYes": " · Bold あり",
-            "boldNo": " · Bold なし（合成太字）",
+            "boldYes": " · 太字あり",
+            "boldNo": " · 太字なし（合成太字）",
             "monoTag": " · 等幅",
             "favTag": " · ★お気に入り",
             "inUse": " · 使用中",
@@ -290,21 +282,20 @@
             "clearHistory": "フォント履歴を消去",
             "historyCleared": "履歴を消去しました",
             "splitMode": "言語別に適用",
-            "splitNote": "オンにすると西文と中日韓を別々に選べます",
-            "subSynth": "疑似ボールドを無効化",
-            "subSynthNote": "ボールドウェイトを持たないフォントは合成ボールドされず、中太の文字は標準ウェイトで表示されます。",
+            "splitNote": "オンにすると欧文と日中韓を別々に選べます",
+            "subSynth": "疑似太字を無効化",
+            "subSynthNote": "太字ウェイトを持たないフォントは合成太字されず、中太の文字は標準ウェイトで表示されます。",
             "subPunct": "CJK 句読点を使用",
             "subPunctOn": "オン = CJK 句読点（全角）を使用します。中国語・英語の両 UI に影響します。",
-            "subPunctOff": "オフ時に西文句読点を使用",
-            "slotLatin": "西文",
-            "slotCjk": "中日韓",
+            "subPunctOff": "オフ時に欧文句読点を使用",
+            "slotLatin": "欧文",
+            "slotCjk": "日中韓",
             "followSystem": "システムに従う",
-            "stripWarn": "西文フォントのグリフ削除に失敗したため、元のフォントに戻しました。中日韓スロットを覆い隠す可能性があります（西文専用フォントに変えると解決します）。",
-            "menuTitle": "フォントを適用：{0}",
-            "menuLatin": "西文に適用",
+            "stripWarn": "欧文フォントのグリフ削除に失敗したため、元のフォントに戻しました。日中韓スロットを覆い隠す可能性があります（欧文専用フォントに変えると解決します）。",
+            "menuLatin": "欧文に適用",
             "menuCjk": "中国語に適用",
             "menuCancel": "B で戻ってキャンセル。変更は行われません",
-            "descLatinStrip": "西文字形のみ使用（漢字は自動的に除外）",
+            "descLatinStrip": "欧文字形のみ使用（漢字は自動的に除外）",
             "descCjkNone": "このフォントには中国語字形がありません"
         },
         ko: {
@@ -333,9 +324,9 @@
             "lang.ko": "한국어",
             "lang.empty": "이 분류에는 {0} 글꼴이 없습니다.",
             "note.serif": "패밀리 이름으로 휴리스틱 판정합니다 (Serif / Song / Ming / Times / 楷 등). 이름에 sans가 들어가면 제외됩니다.",
-            "note.sans": "이름에 명확한 산세리프 키워드(sans / grotesk / gothic / 黑 등)가 들어간 글꼴입니다.",
-            "note.mono": "fontconfig의 spacing 필드(100 / 110)로 판정하며, family 이름에 mono 또는 等宽이 들어간 글꼴도 포함합니다.",
-            "note.other": "고정폭도 아니고 이름에 세리프 / 산세리프 키워드도 없는 글꼴입니다.",
+            "note.sans": "이름에 명확한 sans-serif 키워드(sans / grotesk / gothic / 黑 등)가 들어간 글꼴입니다.",
+            "note.mono": "fontconfig의 spacing 필드(100 / 110)로 판정하며, family 이름에 mono 또는 '等宽'(중국어 글꼴 패밀리 이름에 쓰이는 단어)이 들어간 글꼴도 포함합니다.",
+            "note.other": "monospace도 아니고 이름에 serif / sans-serif 키워드도 없는 글꼴입니다.",
             "note.fav": "글꼴에 포커스한 뒤 X (게임패드)를 눌러 즐겨찾기에 추가/해제할 수 있습니다",
             "note.history": "최근 사용 순으로 정렬되며 제한 없음, 삭제된 글꼴은 자동으로 제외됩니다",
             "notInjected": "적용 안 됨",
@@ -350,8 +341,6 @@
             "notSelected": "선택 안 됨",
             "expand": "펼치기",
             "collapse": "접기",
-            "langUnknown": "lang 알 수 없음",
-            "langHasCjk": " · 중국어 글리프 포함",
             "fontChinese": "중국어 지원",
             "fontNoChinese": "중국어 없음, 자동 대체",
             "boldYes": " · Bold 있음",
@@ -388,7 +377,6 @@
             "slotCjk": "CJK",
             "followSystem": "시스템 따름",
             "stripWarn": "라틴 글꼴의 글리프 제거에 실패해 원래 글꼴로 되돌렸습니다. CJK 슬롯을 가릴 수 있습니다(라틴 전용 글꼴로 바꾸면 해결됩니다).",
-            "menuTitle": "글꼴 적용: {0}",
             "menuLatin": "라틴에 적용",
             "menuCjk": "중국어에 적용",
             "menuCancel": "B로 돌아가 취소하며 변경 사항은 없습니다",
@@ -952,14 +940,6 @@
             return list;
         }, [fonts]);
 
-        var currentFont = useMemo(function () {
-            if (!current) return null;
-            for (var i = 0; i < fonts.length; i++) {
-                if (fonts[i].family === current) return fonts[i];
-            }
-            return null;
-        }, [fonts, current]);
-
         var searchMode = query.trim().length > 0;
 
         var filtered = useMemo(function () {
@@ -1022,6 +1002,7 @@
                 other: t("note.other"),
             };
             var cats = [
+                { id: "all", name: t("cat.all"), items: full, kind: "all", note: null },
                 {
                     id: "fav", name: t("cat.fav"), items: fav, kind: "fav",
                     // 空态文案去掉，无论 0 款还是有收藏都固定显示这句操作提示
@@ -1041,7 +1022,6 @@
                     note: BASE_NOTE[kinds[c]],
                 });
             }
-            cats.push({ id: "all", name: t("cat.all"), items: full, kind: "all", note: null });
 
             // 四个基础分类与「全部」带语言胶囊；收藏与历史不带（胶囊条件天然跳过这两个 id）。
             // 计数跟分类一起算好并缓存，点胶囊时只做渲染期过滤，不重跑分类
