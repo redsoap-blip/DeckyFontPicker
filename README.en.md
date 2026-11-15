@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.8.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.9.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
@@ -32,7 +32,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 | --- | --- |
 | Decky Loader | 3.x; `decky-frontend-lib` 3.25 is used at runtime |
 | Python | System Python 3, used to run `face_extract.py` |
-| CEF Remote Debugging | Required: Steam Settings → Developer → "CEF Remote Debugging". Tab discovery, liveness checks and toast listening all go through that port (Decky Loader depends on it as well) |
+| CEF Remote Debugging | This is a requirement of **Decky Loader itself** (Steam Settings → Developer → "CEF Remote Debugging"). If Decky loads, it is already on — there is nothing extra to configure for the plugin. Tab discovery, liveness checks and toast listening reuse that port |
 | `fontTools` | 4.68.0, vendored under `vendor/`; nothing to install system-wide |
 
 ## Features
@@ -51,7 +51,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 ### Injection and the status card
 
-- Three injection targets: Home, `MainMenu_uid*` and `QuickAccess_uid*`. Home is matched by candidate titles (`Steam 大屏幕模式` / `Steam Big Picture Mode` / `Steam` / `SP`); the two dynamic targets first try the known uid and otherwise take the highest current uid from the CEF tab titles.
+- Three injection targets: Home, `MainMenu_uid*` and `QuickAccess_uid*`. Home is matched by candidate titles (`Steam 大屏幕模式` / `Steam Big Picture Mode` / `Steam` / `SP`) inside the CEF tab list; the two dynamic targets first try the known uid and otherwise take the highest current uid from the CEF tab titles.
 - `notificationtoasts_*` popups are separate windows Steam creates on demand. They are driven by browser-level CEF websocket events (created / title changed / destroyed): inject on appearance, remove on teardown — event-driven, zero polling.
 - All injection goes through Decky's own `inject_css_into_tab`, with exactly one style per tab; when Steam rebuilds a page, the style comes back in the next injection window.
 - Status card: the current font on top (`Latin:` / `CJK:` rows when split is on, with "Follow system" for an unset CJK slot), then one row per target showing `Injected` / `Not injected`, with a refresh icon on the right. The whole card is one focusable item — A / click re-injects the current font. The summary on the right reads `Manual injection · time`, `Auto injection · time` or `Injection failed`; before any injection it reads `Not injected yet`. If the backend also has an auto-injection record (and the summary is not already the auto one), a second grey `Auto injection · time` line appears.
@@ -72,7 +72,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 - `Use CJK punctuation`: only shown when split is on; when enabled, curly quotes, ellipsis and the middle dot are stripped from the Latin slot too, so the CJK slot renders them full-width.
 - `Restore Steam default font`: removes the injection from the three targets and the toasts and clears both slots, without touching any switch. It is the standalone button near the bottom of the panel.
 - `Copy log`: reads the tail of the newest log (up to 200 lines) and puts it on the clipboard for bug reports.
-- A read-only debug-port line: `Debug port <port> · N tabs`, replaced by a red hint when no port can be found. Since the current release the CEF debug port is always on and the panel has no switch for it.
+- A read-only debug-port line: `Debug port <port> · N tabs`, replaced by a red note while the port is not ready. The panel has no CEF toggle — Decky Loader guarantees the port and the plugin only reports its state.
 
 ## Controls
 
@@ -90,7 +90,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 **A Chinese or Japanese font has no effect, text falls back to the default.** With split off, a family without Chinese glyphs gets an installed CJK family appended to the fallback chain (Noto Sans CJK and friends first, then any family with Chinese); with split on, CJK text is served by the CJK slot only, so make sure that slot has a font. If no usable CJK font is installed at all, Steam's own fallback is all that is left.
 
-**It says no CEF debug port can be found.** Enable "CEF Remote Debugging" under Steam Settings → Developer. The plugin reads the port from steamwebhelper's command line and falls back to 8080 / 8081; while the port is unavailable the injection window keeps retrying with backoff and the toast listener reconnects on its own.
+**It says the CEF debug port is not ready.** That only happens during the first few dozen seconds after Steam starts, or while steamwebhelper is reloading. CEF Remote Debugging is a hard prerequisite of Decky Loader — **if Decky loads, it is already on**, so there is no switch to go looking for. The plugin reads the port from steamwebhelper's command line, falls back to 8080 / 8081, and retries within its 30-second window; if the window passes without an injection, press the status card to re-inject.
 
 **Are large font files compressed?** Only a face produced by extraction or stripping, at most 3 MiB, is converted to woff2, and only when `brotli` is available; full CJK faces normally stay `.ttf`. A single-file font that is not stripped is served straight from its system path with no conversion.
 
@@ -108,7 +108,7 @@ Fonts take a single "extract and embed" path: a single-file font that is not str
 
 The write path is deliberately conservative: one serial lock per tab, old styles owned by the plugin removed before the single new one is written, and bookkeeping handled by Decky itself; `state.json` lives in `~/homebrew/settings/DeckyFontPicker/` and logs in `~/homebrew/logs/DeckyFontPicker/`.
 
-Injection runs in a bounded window: a Big Screen UI-mode change (and the start-up restore of a saved font) opens it, it waits 2 s, then retries with 0.5 → 1 → 2 → 4 → 8 s backoff for at most 60 s and gives up; the next UI-mode change opens a new window, while a user action runs the injection again directly. Since the current release the ~180 lines of "CEF closed" fallback (a 1..320 `get_tab_id` scan, second-pass validation, scan budget) are gone entirely; the archived code is in [docs/LEGACY_FALLBACK.md](docs/LEGACY_FALLBACK.md).
+Injection runs in a bounded window: a Big Screen UI-mode change (and the start-up restore of a saved font) opens it, it waits 2 s, then retries with 0.5 → 1 → 2 → 4 → 8 s backoff for at most 30 s and gives up; the next UI-mode change opens a new window, while a user action runs the injection again directly. If it is still not injected when the window expires, press the status card to re-inject or reopen the Quick Access Menu to start a new window. Since the current release the ~180 lines of "CEF closed" fallback (a 1..320 `get_tab_id` scan, second-pass validation, scan budget) are gone entirely; the archived code is in [docs/LEGACY_FALLBACK.md](docs/LEGACY_FALLBACK.md). When the port is not ready it never falls back to blind title probing — all three targets wait for the retry window.
 
 ## Compatibility and known limitations
 
@@ -117,7 +117,7 @@ Injection runs in a bounded window: a Big Screen UI-mode change (and the start-u
 - System fonts and fontconfig are never modified — the plugin only injects styles into the current Steam session.
 - Returning to the desktop no longer auto-injects into the desktop main window; injection on entering Big Screen and on user actions is unchanged.
 - `FontPickerEN/` (the English-only package frozen at 1.2.0) cannot be enabled at the same time as the current build.
-- Decky and the plugin both depend on CEF Remote Debugging; while the port is unavailable the only option is the backoff window.
+- CEF Remote Debugging is a prerequisite of Decky Loader itself, inherited by the plugin — the combination "Decky works but CEF is off" does not exist; the plugin merely waits for the port during Steam's start-up.
 
 ## Repository layout
 

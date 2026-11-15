@@ -8,7 +8,7 @@
 
 一个 [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) 插件：把 Steam Deck 上已经装好的任意字体应用到 Steam 大屏界面——主页、MainMenu、快捷访问菜单，以及好友上线这类通知弹窗。它不写 `~/homebrew/themes`，也不依赖 CSS Loader，样式由 Decky 自己的 `inject_css_into_tab` 注入，恢复默认时再拆掉。
 
-**当前版本：1.4.8。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
+**当前版本：1.4.9。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
 
 ## 安装
 
@@ -34,7 +34,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 | --- | --- |
 | Decky Loader | 3.x，运行时使用 `decky-frontend-lib` 3.25 |
 | Python | 系统 Python 3，`face_extract.py` 由它执行 |
-| CEF 远程调试 | 必须开启：Steam 设置 → 开发者 → 「CEF 远程调试」。tab 发现、验活、弹窗监听都走这个调试口（Decky Loader 本身也依赖它） |
+| CEF 远程调试 | 这是 **Decky Loader 自身**的前置条件（Steam 设置 → 开发者 → 「CEF 远程调试」）。能正常加载 Decky，就说明它已经开着，插件不需要你额外做任何设置 —— tab 发现、验活、弹窗监听直接复用这个调试口 |
 | `fontTools` | 4.68.0，内置在 `vendor/` 下，不需要系统安装 |
 
 ## 功能
@@ -53,7 +53,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 ### 注入与状态卡
 
-- 三个注入目标：主页、`MainMenu_uid*`、`QuickAccess_uid*`。主页按候选标题挑（`Steam 大屏幕模式` / `Steam Big Picture Mode` / `Steam` / `SP`），两个动态目标先按已知 uid 试，不行再从 CEF 的 tab 标题里取当前最大 uid。
+- 三个注入目标：主页、`MainMenu_uid*`、`QuickAccess_uid*`。主页按候选标题（`Steam 大屏幕模式` / `Steam Big Picture Mode` / `Steam` / `SP`）在 CEF tab 列表里匹配；两个动态目标先按已知 uid 试，不行再从 CEF 的 tab 标题里取当前最大 uid。
 - `notificationtoasts_*` 通知弹窗是 Steam 按需创建的独立窗口，由 CEF 浏览器级 websocket 事件（创建 / 标题变化 / 销毁）驱动：出现即注入，销毁即拆除，事件驱动、零轮询。
 - 注入统一走 Decky 自身的 `inject_css_into_tab`，每个 tab 只保留一份样式；Steam 重建页面后，会在下一次注入窗口里补回来。
 - 状态卡：顶部是当前字体（开启分槽时显示 `西文：` / `中日韩：` 两行，中日韩槽未选时显示「跟随系统」），下面三行目标各显示 `已注入` / `未注入`，右侧是刷新图标；整张卡是一个可聚焦项，A / 点击即重新注入当前字体。右侧摘要给出 `手动注入 · 时间`、`自动注入 · 时间`、`注入失败`，还没注入过时显示 `尚未注入`；若后端另有自动补注记录（摘要本身不是「自动注入」时），卡片上会多一行灰色的 `自动注入 · 时间`。
@@ -74,7 +74,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 - `使用 CJK 标点符号`：仅在分槽开启时显示；打开后弯引号、省略号、间隔号也从西文槽剔除，交给中日韩槽全角渲染。
 - `恢复 Steam 默认字体`：拆除三个目标与弹窗的注入，清空两个槽位，不动任何开关；这是列表之后、高级分区之前的独立按钮。
 - `复制日志`：读取最新日志的尾部（最多 200 行）并写入剪贴板，方便反馈问题。
-- 调试端口只读状态行：`调试端口 <端口> · N 个 tab`；取不到端口时换成红色提示。当前版本起 CEF 调试口常开，面板里没有开关。
+- 调试端口只读状态行：`调试端口 <端口> · N 个 tab`；调试口未就绪时换成红色说明。面板不提供 CEF 开关 —— 调试口由 Decky Loader 保证，插件只报告状态。
 
 ## 操作
 
@@ -92,7 +92,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 **中文或日文字体不生效、落回默认？** 未开分槽时，所选字体不含中文会在回退链里自动补一个已安装的中日韩族（优先 Noto Sans CJK 等，其次任意含中文的族），再接 emoji 与 `system-ui` / `sans-serif`；开了分槽，中日韩文字只由中日韩槽提供，请确认该槽已选字体。系统里确实没有可用中日韩字体时，只能落到 Steam 自带字体。
 
-**提示找不到 CEF 调试端口？** 到 Steam 设置 → 开发者 打开「CEF 远程调试」。插件从 steamwebhelper 的启动参数里读端口，读不到时再试 8080 / 8081；端口不可用期间注入窗口按退避重试，弹窗监听自动重连。
+**提示 CEF 调试口未就绪？** 它只会在 Steam 刚启动、或 steamwebhelper 重载的那几十秒里出现。CEF 远程调试是 Decky Loader 的硬前提，**能加载 Decky 就说明它已经开着**，不用去设置里找开关。插件从 steamwebhelper 的启动参数读端口，读不到再试 8080 / 8081，并在 30 秒窗口内自动重试；窗口过了还没注入上，点一下状态卡重新注入即可。
 
 **字体文件很大，会被压缩吗？** 只有抽取或剔字得到的单个 face、体积 ≤ 3 MiB 且环境里 `brotli` 可用时才会转成 woff2；完整的中日韩字体通常仍是 `.ttf`。未剔字的单文件字体（`.ttf` / `.otf`）直接由回环服务供给系统原文件，不做转换。
 
@@ -110,7 +110,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 
 写路径刻意保守：每个 tab 一把串行锁，先清掉自己留下的旧样式再写唯一一份，注入记账走 Decky 自身；`state.json` 位于 `~/homebrew/settings/DeckyFontPicker/`，日志位于 `~/homebrew/logs/DeckyFontPicker/`。
 
-注入是有界窗口：大屏 UI 模式变化（以及插件加载时恢复已保存字体）会开窗，先等 2 s，再按 0.5 → 1 → 2 → 4 → 8 s 退避重试，单次窗口上限 60 s，到期放弃；下一次 UI 模式变化再开新窗口，用户动作则直接重走一遍注入。当前版本起已整体删除约 180 行「CEF 关闭」兜底路径（1..320 逐号扫描、验活二次复核、扫描预算），存档见 [docs/LEGACY_FALLBACK.md](docs/LEGACY_FALLBACK.md)。
+注入是有界窗口：大屏 UI 模式变化（以及插件加载时恢复已保存字体）会开窗，先等 2 s，再按 0.5 → 1 → 2 → 4 → 8 s 退避重试，单次窗口上限 30 s，到期放弃；下一次 UI 模式变化再开新窗口，用户动作则直接重走一遍注入。到期仍未注入时，点一下状态卡重新注入或在快捷访问菜单里再切一次即可重开窗口。当前版本起已整体删除约 180 行「CEF 关闭」兜底路径（1..320 逐号扫描、验活二次复核、扫描预算），存档见 [docs/LEGACY_FALLBACK.md](docs/LEGACY_FALLBACK.md)。调试口未就绪时不会退化成按标题盲试 —— 三个目标一视同仁地等窗口重试。
 
 ## 兼容性与已知限制
 
@@ -119,7 +119,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 - 不改系统字体、不改 fontconfig，只为当前 Steam 会话注入样式。
 - 退出大屏回到桌面后不再自动补注桌面主窗口；进入大屏与用户动作的注入行为不变。
 - `FontPickerEN/`（1.2.0 冻结的英文单语包）不能与当前版本同时启用。
-- Decky 与插件都依赖 CEF 远程调试；调试口不可用期间只能等退避窗口重试。
+- CEF 远程调试是 Decky Loader 自身的前提，插件继承它 —— 不存在「Decky 能用但 CEF 关闭」这种组合，插件只在 Steam 启动早期等调试口就绪。
 
 ## 仓库结构
 
