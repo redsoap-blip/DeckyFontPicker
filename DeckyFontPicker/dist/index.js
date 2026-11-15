@@ -782,21 +782,14 @@
             });
         }
 
-        // CEF 快速模式：默认关闭；开启后从调试端口一次列出全部 tab，失败自动回落
+        // CEF 快速模式：已无 UI 开关、缺省常开；cefInfo 仅用于渲染端口状态/错误提示行
         var cefInfo = (state && state.cef) || { enabled: false, port: null, tabs: null, error: "" };
-        var cefEnabled = !!cefInfo.enabled;
 
         // 分槽注入（按语言注入）开关状态：主开关 + 两个子开关，全部来自后端 payload；
         // 子开关默认值由后端口径统一（主开关开时 synth_weight_none 缺省=开、cjk_punct 缺省=关）
         var splitOn = !!(state && state.cjk_split);
         var synthNone = !!(state && state.synth_weight_none);
         var punctOn = !!(state && state.cjk_punct);
-
-        function toggleCef() {
-            if (busy) return;
-            setBusy(true);
-            call("set_cef_fast", { enabled: !cefEnabled }).then(function () { setBusy(false); });
-        }
 
         // 开关变化会改变注入 CSS（剔字掩码版本 / Motiva Sans / synthesis 行），
         // 后端会按当前字体重新注入一次，所以动作后照常走一次有界轮询确认三行状态
@@ -1623,22 +1616,12 @@
         // useToggleRail 让开关显示为 Steam 新 UI 的小胶囊滑块（非旧版 On/Off 分段按钮）。
         // 状态后缀（：已开启 / ：已关闭）不再写进标题，由开关本身表达。
         var advancedSection = h(deckyFrontendLib.PanelSection, { title: t("advanced") },
-            h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:row" },
-                h(deckyFrontendLib.ToggleField, {
-                    label: t("cefFastMode"),
-                    description: t("cefNote"),
-                    checked: cefEnabled,
-                    disabled: busy,
-                    useToggleRail: true,
-                    onChange: toggleCef,
-                })
-            ),
-            cefEnabled && cefInfo.error
+            cefInfo.error
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:error" },
                     h("div", { style: { color: "#ff9b90", fontSize: "10px", lineHeight: "1.5", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, t("cefNoPort"))
                 )
                 : null,
-            cefEnabled && !cefInfo.error
+            !cefInfo.error
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:ok" },
                     h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } },
                         t("cefPortInfo", cefInfo.port || "?", cefInfo.tabs == null ? "?" : cefInfo.tabs))
