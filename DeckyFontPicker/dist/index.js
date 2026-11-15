@@ -940,6 +940,26 @@
         // 方案 D：剔字失败回退原始 face 时给可见警告（绝不静默）
         var stripFallback = !!(state && state.strip && state.strip.fallback);
 
+        // 字体列表排序（固定为「最新安装」，无切换）：
+        // 非系统字体（is_system 缺省 false）按 install_mtime（face 文件 mtime 最小值，秒）新→旧排在前，
+        // 同 mtime 按族名字母序；系统字体（/usr/share、/usr/local/share）垫底并保持后端默认序
+        // （后端已按 zh 优先+字母排好，Array.sort 稳定，相等元素顺序不变）。
+        var sortedFonts = useMemo(function () {
+            var list = Array.isArray(fonts) ? fonts.slice() : [];
+            list.sort(function (a, b) {
+                var sa = a && a.is_system ? 1 : 0;
+                var sb = b && b.is_system ? 1 : 0;
+                if (sa !== sb) return sa - sb;
+                var ta = (a && a.install_mtime) || 0;
+                var tb = (b && b.install_mtime) || 0;
+                if (ta !== tb) return tb - ta;
+                var na = String((a && a.family) || "").toLowerCase();
+                var nb = String((b && b.family) || "").toLowerCase();
+                return na < nb ? -1 : na > nb ? 1 : 0;
+            });
+            return list;
+        }, [fonts]);
+
         var currentFont = useMemo(function () {
             if (!current) return null;
             for (var i = 0; i < fonts.length; i++) {
@@ -952,7 +972,7 @@
 
         var filtered = useMemo(function () {
             var q = query.trim().toLowerCase();
-            var full = Array.isArray(fonts) ? fonts : [];
+            var full = Array.isArray(sortedFonts) ? sortedFonts : [];
             var list = [];
             for (var i = 0; i < full.length; i++) {
                 var font = full[i];
@@ -970,10 +990,10 @@
                 if (hit !== null) list.push({ font: font, alias: hit });
             }
             return { total: list.length, items: list };
-        }, [fonts, query]);
+        }, [sortedFonts, query]);
 
         var categories = useMemo(function () {
-            var full = Array.isArray(fonts) ? fonts : [];
+            var full = Array.isArray(sortedFonts) ? sortedFonts : [];
             var byName = {};
             for (var i = 0; i < full.length; i++) byName[full[i].family] = full[i];
 
@@ -1010,15 +1030,14 @@
                 other: t("note.other"),
             };
             var cats = [
-                { id: "all", name: t("cat.all"), items: full, kind: "all", note: null },
-                {
-                    id: "history", name: t("cat.history"), items: hist, kind: "history",
-                    note: hist.length > 0 ? t("note.history") : t("history.empty"),
-                },
                 {
                     id: "fav", name: t("cat.fav"), items: fav, kind: "fav",
                     // 空态文案去掉，无论 0 款还是有收藏都固定显示这句操作提示
                     note: t("note.fav"),
+                },
+                {
+                    id: "history", name: t("cat.history"), items: hist, kind: "history",
+                    note: hist.length > 0 ? t("note.history") : t("history.empty"),
                 },
             ];
             for (var c = 0; c < kinds.length; c++) {
@@ -1030,6 +1049,7 @@
                     note: BASE_NOTE[kinds[c]],
                 });
             }
+            cats.push({ id: "all", name: t("cat.all"), items: full, kind: "all", note: null });
 
             // 四个基础分类与「全部」带语言胶囊；收藏与历史不带（胶囊条件天然跳过这两个 id）。
             // 计数跟分类一起算好并缓存，点胶囊时只做渲染期过滤，不重跑分类
@@ -1046,7 +1066,7 @@
             return cats.filter(function (cat) {
                 return cat.id === "fav" || cat.id === "history" || cat.id === "all" || cat.items.length > 0;
             });
-        }, [fonts, favorites, history]);
+        }, [sortedFonts, favorites, history]);
 
         // 该分区是否真的有可切的胶囊：收藏没有 langCounts，搜索行没有 sectionId，
         // 折叠态不渲染胶囊行，这几种情况都要把左右键交还 Steam
@@ -1366,11 +1386,11 @@
                     ref: function (el) { headerRefs.current[cat.id] = el; },
                     onActivate: function () { toggleSection(cat.id); },
                     onClick: function () { toggleSection(cat.id); },
-                    // 左右键切换本分类的语言：只在展开态且本行确实有胶囊时才接管，
-                    // 其余情况返回 false 且不 stopPropagation，把方向键交还 Steam 的焦点导航
                     onButtonDown: function (evt) {
-                        if (!cat.langCounts || isCollapsed) return false;
                         var btn = buttonOf(evt);
+                        // 左右键切换本分类的语言：只在展开态且本行确实有胶囊时才接管，
+                        // 其余情况返回 false 且不 stopPropagation，把方向键交还 Steam 的焦点导航
+                        if (!cat.langCounts || isCollapsed) return false;
                         if (btn !== BTN_LEFT && btn !== BTN_RIGHT) return false;
                         cycleLang(cat.id, btn === BTN_RIGHT ? 1 : -1);
                         evt.stopPropagation();
@@ -1575,7 +1595,7 @@
 
         var countText = searchMode
             ? t("totalFonts", filtered.total)
-            : t("totalFonts", fonts.length);
+            : t("totalFonts", sortedFonts.length);
 
         // 不再渲染「选择字体」纯文本小标题：搜索框直接接在折叠行之后
         var pickerSection = h(deckyFrontendLib.PanelSection, { title: undefined },

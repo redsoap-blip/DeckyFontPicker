@@ -359,6 +359,11 @@ def _faces():
         fmt = parts[5].strip()
         if not path or not os.path.isfile(path):
             continue
+        # face 文件 mtime（单位：秒），用于「最新安装」排序（family 取所有 face 的最小值）
+        try:
+            mtime = int(os.path.getmtime(path))
+        except OSError:
+            mtime = 0
         if ext not in DIRECT_EXT and ext not in COLLECTION_EXT:
             continue
         if fmt and fmt not in USABLE_FORMATS:
@@ -388,6 +393,7 @@ def _faces():
                 "style": parts[1].strip(),
                 "weight": _css_weight(parts[2]),
                 "file": path,
+                "mtime": mtime,
                 "index": index,
                 "format": fmt,
                 "zh": zh,
@@ -404,12 +410,22 @@ def _faces():
     return faces
 
 
+# 系统字体目录：全部 face 都落在这些目录下时，family 视为「系统自带」
+_SYSTEM_FONT_DIRS = ("/usr/share", "/usr/local/share")
+
+
+def _is_system_face_path(path):
+    """face 文件是否位于系统字体目录（/usr/share 或 /usr/local/share）。"""
+    p = (path or "").rstrip("/")
+    return any(p == d or p.startswith(d + "/") for d in _SYSTEM_FONT_DIRS)
+
+
 def _family_map():
     families = {}
     for face in _faces():
         entry = families.setdefault(
             face["family"],
-            {"name": face["family"], "aliases": [], "faces": [], "langs": [], "zh": False, "ja": False, "ko": False, "primary": _primary_lang(face["family"]), "zh_extra": False, "mono": False},
+            {"name": face["family"], "aliases": [], "faces": [], "langs": [], "zh": False, "ja": False, "ko": False, "primary": _primary_lang(face["family"]), "zh_extra": False, "mono": False, "install_mtime": None, "is_system": True},
         )
         # 每个 face 的 family 字段会带上该 face 自己的派生名（如 "Fira Sans Light"），
         # 这里按 family 合并成别名集合，仅用于前端搜索与显示，不参与选面。
@@ -427,6 +443,13 @@ def _family_map():
         entry["ko"] = entry["ko"] or face["ko"]
         entry["zh_extra"] = entry["zh_extra"] or face["zh_extra"]
         entry["mono"] = entry["mono"] or face["mono"]
+        # 安装时间取所有 face 文件 mtime 的最小值（最早出现的那个文件，单位秒）；
+        # 只有全部 face 都在系统字体目录下才算系统字体
+        mtime = face.get("mtime") or 0
+        if mtime and (entry["install_mtime"] is None or mtime < entry["install_mtime"]):
+            entry["install_mtime"] = mtime
+        if not _is_system_face_path(face["file"]):
+            entry["is_system"] = False
     return families
 
 
@@ -487,6 +510,13 @@ def list_families(families=None):
             item["primary"] = entry["primary"]  # 族名地区标记给出的主语言（zh / ja / ko）
         if entry["zh_extra"]:
             item["zh_extra"] = True  # 同理：只在命中「含中文」时才带这个键
+        # 「最新安装」排序用的字段：
+        # install_mtime = 该 family 所有 face 文件 mtime 的最小值（最早落盘的文件，单位：秒）
+        if entry.get("install_mtime") is not None:
+            item["install_mtime"] = int(entry["install_mtime"])
+        # is_system = 所有 face 都在 /usr/share 或 /usr/local/share 下（缺省视为 false）
+        if entry.get("is_system"):
+            item["is_system"] = True
         out.append(item)
     # 排序：中文 → 含中文 → 其它（仅影响「全部字体」列表的先后）
     out.sort(key=lambda item: (0 if item["zh"] else 1 if item.get("zh_extra") else 2, item["family"].lower()))
@@ -1405,6 +1435,17 @@ class Plugin:
         families = await asyncio.to_thread(_family_map)
         return list_families(families)
 
+    async def set_sort_mode(self, mode):
+        """字体列表排序偏好：default（默认）/ mtime（最新安装优先）。写入 state.json 持久化，
+        重启后随 payload 的 sort_mode 回传前端。不改动注入，返回新 payload 供前端刷新。"""
+        plugin = _bind(self)
+        if mode not in ("default", "mtime"):
+            mode = "default"
+        state = read_state()
+        state["sort_mode"] = mode
+        write_state(state)
+        return plugin._payload()
+
     async def get_font_state(self):
         plugin = _bind(self)
         return plugin._payload()
@@ -2221,6 +2262,8 @@ class Plugin:
             "cjk_split": bool(state.get("cjk_split")),
             "synth_weight_none": bool(state.get("synth_weight_none", True)),
             "cjk_punct": bool(state.get("cjk_punct")),
+            # 字体列表排序偏好（default / mtime），与前端 set_sort_mode 写入的键同源
+            "sort_mode": state.get("sort_mode") or "default",
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,
