@@ -6,9 +6,11 @@
   .ttc/.otc 用 fontTools 抽出实际用到的 face，缓存到插件自己的缓存目录。
 - local() 按名引用模式已完全弃用：不再生成按名引用的 @font-face，也不再做命中探测。
 - 样式注入：调用 Decky 自身的 legacy 方法 inject_css_into_tab / remove_css_from_tab
-  （不写 ~/homebrew/themes，不依赖 CSS Loader，不直接连 CEF 调试口）
-- 例外：notificationtoasts_* 弹窗窗口走 CEF 调试口的浏览器级 websocket 事件监听注入
-  （CEF 快速模式开启时才启用；见 TOAST_TAB_PREFIX 处注释）
+  （不写 ~/homebrew/themes，不依赖 CSS Loader）；tab 发现 / 验活 / 弹窗监听一律走
+  CEF 调试口——Decky Loader 本身也依赖它，无需「CEF 关闭」的探测回退，
+  被移除的 legacy 兜底代码见 docs/LEGACY_FALLBACK.md
+- 例外：notificationtoasts_* 弹窗窗口由 CEF 调试口的浏览器级 websocket 事件监听
+  注入（见 TOAST_TAB_PREFIX 处注释）
 """
 
 import asyncio
@@ -21,7 +23,6 @@ import subprocess
 import sys
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -209,14 +210,12 @@ DYNAMIC_PREFIX = {"menu": "MainMenu_uid", "qam": "QuickAccess_uid"}
 FALLBACK_TABS = {"SharedJSContext"}
 # 弹窗（好友上线 / 正在游玩提示）是 Steam 按需创建的独立 CEF 窗口，
 # 标题形如 notificationtoasts_<n>。窗口生老病死全靠事件，现有注入窗口追不上，
-# 所以在 CEF 快速模式开启时挂一个浏览器级 websocket 监听 targetCreated /
+# 所以挂一个浏览器级 websocket 监听 targetCreated /
 # targetInfoChanged / targetDestroyed，命中弹窗立即注入 / 随销毁拆除。
-# 纯事件驱动、零轮询；CEF 调试口关闭时该功能自动停用（legacy 路径无法感知弹窗）。
+# 纯事件驱动、零轮询。
 TOAST_TAB_PREFIX = "notificationtoasts"
 TOAST_WS_BACKOFF = (2.0, 5.0, 15.0, 30.0)  # websocket 断线重连退避，用尽后按 30 s
 _LIVE = None  # 当前 Plugin 实例，供 Decky 以类为 self 回调时回落
-UID_SCAN_MAX = 320
-UID_SCAN_AHEAD = 60
 # UI 模式事件驱动的有界注入窗口：前端订阅 Steam 的 UI 模式变化（大屏 4 / 桌面 7），
 # 变化那一刻三个页面的文档都会销毁重建，只在这个时刻补注入；窗口之外后台完全静默。
 UI_MODE_BIG_PICTURE = 4
@@ -224,16 +223,13 @@ UI_MODE_DESKTOP = 7
 WINDOW_DELAY = 2.0  # 模式切换后先等页面回调建完
 WINDOW_BACKOFF = (0.5, 1.0, 2.0, 4.0, 8.0)  # 单次窗口内的重试退避，用尽后按 8 s 继续
 WINDOW_TOTAL = 60.0  # 单次窗口总时长上限
-WINDOW_UID_SCAN_LIMIT = 2  # 每个动态目标在单个窗口内最多做 2 次 uid 扫描（首发 + 随退避再试一次）
-# CEF 快速模式（默认关闭）：直接读 Steam 的 CEF 调试端口 /json/list，一次列出全部 tab。
+# CEF 调试口：直接读 Steam 的 /json/list，一次列出全部 tab。
 # 前置条件：Steam 设置 → 开发者 → 「CEF 远程调试」（底层是给 steamwebhelper 加
-# --remote-debugging-port）。该设置关闭、端口连不上或列表异常时，一律静默回落到上面的
-# get_tab_id 逐号探测，行为与未开启时完全一致。
+# --remote-debugging-port）——Decky Loader 本身也依赖该调试口。
 CEF_PORTS = (8080, 8081)
 CEF_TIMEOUT = 0.5
 CEF_CACHE_TTL = 0.3
 CEF_TAB_RE = re.compile(r"^(MainMenu|QuickAccess)_uid(\d+)$")
-_CEF_FAST = {"on": False}
 _CEF_CACHE = {"at": 0.0, "tabs": None, "port": None, "why": "", "state": None}
 _CEF_LOCK = threading.Lock()
 
@@ -1104,27 +1100,19 @@ def _cef_log_state(ok, reason):
         return
     _CEF_CACHE["state"] = ok
     if ok:
-        log(f"CEF 快速模式恢复：{reason}")
+        log(f"CEF 调试口恢复：{reason}")
     else:
-        log(f"CEF 快速模式回落（{reason}），改用 get_tab_id 探测")
+        log(f"CEF 调试口不可用（{reason}）：注入窗口按退避重试、弹窗监听自动重连")
 
 
 def _cef_titles():
-    """快速模式下返回当前 tab 标题集合；不可用时返回 None（调用方回落旧路径）。"""
+    """返回当前 tab 标题集合；调试口不可用时返回 None（调用方按退避重试）。"""
     tabs = _cef_fetch()
     if tabs is None:
         _cef_log_state(False, _CEF_CACHE.get("why") or "调试端口无响应")
         return None
     _cef_log_state(True, _CEF_CACHE.get("why") or "")
     return {t.get("title") for t in tabs}
-
-
-def _tab_exists(tab):
-    if _CEF_FAST["on"]:
-        titles = _cef_titles()
-        if titles is not None:
-            return tab in titles
-    return bool(_decky_method("get_tab_id", {"name": tab}, timeout=2).get("success"))
 
 
 def _eval_in_tab(tab, code):
@@ -1135,18 +1123,13 @@ def _style_exists(tab, css_id):
     """返回 True / False / None(无法判断)。
 
     execute_in_tab 对已消失的 tab 返回 HTTP 500，文本里没有 "not found"，
-    单凭它分不清「tab 没了」和「RPC 出问题」；这种情况再用 get_tab_id 问一次：
-    明确 not found 才判 False，明确成功仍是 None（tab 活着但读不到样式，下轮再验），
-    get_tab_id 自己也失败或超时也记 None，不猜。
+    单凭它分不清「tab 没了」和「RPC 出问题」；
+    execute_in_tab 失败且文本含 not found 才判 False，其余记 None 不猜。
     """
     res = _eval_in_tab(tab, f"document.getElementById({json.dumps(css_id)}) !== null")
     if not res.get("success"):
         text = str(res.get("result") or "")
         if "not found" in text:
-            return False
-        probe = _decky_method("get_tab_id", {"name": tab}, timeout=2)
-        if not probe.get("success") and "not found" in str(probe.get("result") or ""):
-            log(f"判定 {tab} 已消失（get_tab_id 明确 not found）")
             return False
         return None
     inner = res.get("result")
@@ -1156,68 +1139,21 @@ def _style_exists(tab, css_id):
     return inner is True
 
 
-# 并发探测参数(实测:Decky 服务端对 legacy RPC 基本串行,8 线程 ~1.5×,
-# 32 线程只有 1.7×,边际递减;16 的在途上限对 Decky 无压力,64×32 压测无错)
-_SCAN_WORKERS = 8
-_SCAN_CHUNK = 16
+def _scan_uid(prefix):
+    """从 CEF tab 标题里直接取当前 uid（menu 扫 MainMenu_uid*，qam 扫 QuickAccess_uid*）。
 
-
-def _scan_uid(hint, prefix, missed=None):
-    """按目标前缀扫出当前 uid（menu 扫 MainMenu_uid*，qam 扫 QuickAccess_uid*）。
-
-    先试上次的 uid，再往上扫 60 个，最后回落到 1..UID_SCAN_MAX。
-    missed：本注入事件里已确认 miss 的 uid 集合（按 prefix 各自记账，调用方持有），
-    传 None 表示不做续传。开启 CEF 快速模式时直接从 /json/list 的标题里取
-    最大的 uid，不再逐个探测。
+    调试口不可用时返回 None，调用方按「没扫到」记账，随注入窗口退避重试。
     """
-    if _CEF_FAST["on"]:
-        titles = _cef_titles()
-        if titles is not None:
-            best = None
-            for title in titles:
-                match = CEF_TAB_RE.match(title or "")
-                if match and match.group(1) + "_uid" == prefix:
-                    value = int(match.group(2))
-                    best = value if best is None else max(best, value)
-            return best
-    order = []
-    if isinstance(hint, int) and hint > 0:
-        order.append(hint)
-        order.extend(range(hint + 1, min(hint + UID_SCAN_AHEAD, UID_SCAN_MAX) + 1))
-    seen = set(order)
-    for value in range(1, UID_SCAN_MAX + 1):
-        if value not in seen:
-            order.append(value)
-    # 续传：本事件已确认 miss 的号不再探测。uid 在会话内单调自增不复用，
-    # 所以事件内「此刻不存在」的号到重试时依然不存在，跳过是安全的。
-    if missed:
-        order = [value for value in order if value not in missed]
-    probed = []
-    result = None
-
-    def _probe(value):
-        return _tab_exists(f"{prefix}{value}")
-
-    with ThreadPoolExecutor(max_workers=_SCAN_WORKERS) as pool:
-        for start in range(0, len(order), _SCAN_CHUNK):
-            block = order[start:start + _SCAN_CHUNK]
-            # 严格按序读结果：优先级（先 hint、再 +60、再全量）不因并发改变；
-            # 命中后本批在途的剩余探测（≤15 个只读 miss）会跑完但不采纳。
-            for value, ok in zip(block, pool.map(_probe, block)):
-                if ok:
-                    result = value
-                    break
-                probed.append(value)
-            if result is not None:
-                break
-    # 记账：本次确实探测过且未命中的 uid 存入 missed，供同事件后续扫描续传
-    if missed is not None:
-        missed.update(probed)
-        if result is None:
-            missed.update(order)
-    log(f"{prefix}* 扫描完成：探测 {len(probed)} 次"
-        f"{f'，命中 uid {result}' if result is not None else '，未命中'}")
-    return result
+    titles = _cef_titles()
+    if titles is None:
+        return None
+    best = None
+    for title in titles:
+        match = CEF_TAB_RE.match(title or "")
+        if match and match.group(1) + "_uid" == prefix:
+            value = int(match.group(2))
+            best = value if best is None else max(best, value)
+    return best
 
 
 # --------------------------------------------------------------------------- #
@@ -1385,10 +1321,7 @@ class Plugin:
         self._detail = {}
         self._dyn_task = None
         self._uid = read_state().get("uid")
-        _CEF_FAST["on"] = bool(read_state().get("cef_fast"))
-        self._uid_scan_budget = {}  # key -> 本窗口剩余 uid 扫描次数（窗口外为空，用户动作注入不限次）
         self._scan_miss_logged = False  # 本次注入周期里是否已经打过「没扫到」，同一事件内只打一条
-        self._scan_miss = {}   # prefix -> set[int]：本注入事件已确认 miss 的 uid（续传用，事件开始清空）
         self._dead_tabs = set()  # 本注入事件已确认死亡的完整 tab 名（验活续传用，事件开始清空）
         self._uid_lock = None  # asyncio.Lock，串行化 uid 发现，懒创建（__init__ 时还没有事件循环）
         self._window_task = None  # 当前注入窗口（同一时刻最多一个）
@@ -1424,19 +1357,14 @@ class Plugin:
         removed = await asyncio.to_thread(_prune_font_cache, tuple(protect))
         log(f"启动缓存清理完成：反推保护 {len(protect)} 个缓存名，删除 {removed} 个，"
             f"耗时 {int((time.monotonic() - t0) * 1000)} ms")
-        if _CEF_FAST["on"]:
-            _port, source = await asyncio.to_thread(_cef_port_hint)
-            tabs = await asyncio.to_thread(_cef_fetch, True)
-            if tabs is None:
-                _CEF_CACHE["state"] = False
-                log(f"CEF 快速模式不可用：{_CEF_CACHE.get('why')}；已回落 get_tab_id。"
-                    "请检查 Steam 设置 → 开发者 → CEF 远程调试")
-            else:
-                _CEF_CACHE["state"] = True
-                log(f"CEF 快速模式生效：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
-        # 弹窗监听：CEF 快速模式开启时挂浏览器事件流（内部自动重连，失败不影响主流程）
-        if _CEF_FAST["on"]:
-            plugin._start_toast_watcher()
+        _port, source = await asyncio.to_thread(_cef_port_hint)
+        tabs = await asyncio.to_thread(_cef_fetch, True)
+        if tabs is None:
+            log(f"CEF 调试口暂不可用：{_CEF_CACHE.get('why')}；注入窗口将按退避重试、弹窗监听将自动重连")
+        else:
+            log(f"CEF 调试口已连接：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
+        # 弹窗监听：挂浏览器事件流（内部自动重连，失败不影响主流程）
+        plugin._start_toast_watcher()
         if not family:
             return
         if family not in families:
@@ -1603,38 +1531,6 @@ class Plugin:
         log("前端模块已加载（on_ui_loaded），本步不做任何注入")
         return {"ok": True}
 
-    # ---- CEF 快速模式 ----
-
-    async def set_cef_fast(self, enabled):
-        """CEF 快速模式开关（持久化）。开启失败不报错，只回落到 get_tab_id 探测。"""
-        plugin = _bind(self)
-        enabled = bool(enabled)
-        _CEF_FAST["on"] = enabled
-        state = read_state()
-        state["cef_fast"] = enabled
-        write_state(state)
-        if enabled:
-            _port, source = await asyncio.to_thread(_cef_port_hint)
-            tabs = await asyncio.to_thread(_cef_fetch, True)
-            if tabs is None:
-                _CEF_CACHE["state"] = False
-                log(f"CEF 快速模式开启失败：{_CEF_CACHE.get('why')}；已回落 get_tab_id。"
-                    "请检查 Steam 设置 → 开发者 → CEF 远程调试")
-            else:
-                _CEF_CACHE["state"] = True
-                log(f"CEF 快速模式已开启：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
-        else:
-            _CEF_CACHE["state"] = None
-            log("CEF 快速模式已关闭，改用 get_tab_id 探测")
-        # 弹窗监听跟随 CEF 快速模式开关
-        if enabled:
-            plugin._start_toast_watcher()
-        else:
-            await plugin._stop_toast_watcher()
-        # 探测路径变了，按新路径重新补注入一次（用户动作，开一次有界窗口）
-        await plugin._start_inject_window()
-        return plugin._payload()
-
     # ---- 日志 ----
 
     async def get_recent_log(self):
@@ -1695,7 +1591,6 @@ class Plugin:
         injected = await self._inject_main()
         self._mark_inject(bool(injected))
         await self._cancel_dyn()
-        self._scan_miss.clear()
         self._dead_tabs.clear()
         self._dyn_task = asyncio.create_task(self._inject_dynamic_all())
         return self._payload()
@@ -1964,13 +1859,12 @@ class Plugin:
         if not self._css or "main" in self._hit:
             return "main" in self._hit
         candidates = list(TARGETS[0][2])
-        if _CEF_FAST["on"]:
-            titles = _cef_titles()
-            if titles is not None:
-                # 只在列表里真实存在的候选里挑，避免对不存在的 tab 发注定失败的 RPC
-                candidates = [tab for tab in candidates if tab in titles]
-                if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
-                    log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
+        titles = _cef_titles()
+        if titles is not None:
+            # 只在列表里真实存在的候选里挑，避免对不存在的 tab 发注定失败的 RPC
+            candidates = [tab for tab in candidates if tab in titles]
+            if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
+                log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
         for tab in candidates:
             css_id = await asyncio.to_thread(_replace_css, tab, self._css)
             if css_id:
@@ -1994,21 +1888,13 @@ class Plugin:
                 self._mark_inject(True, source)
                 return True
 
-        budget = self._uid_scan_budget.get(key)
-        if budget is not None and budget <= 0:
-            log(f"{key}: 本次注入窗口的扫描机会已用完，等下一次 UI 模式变化")
-            return False
-        if budget is not None:
-            self._uid_scan_budget[key] = budget - 1
         seen_uid = self._uid
         async with self._uid_mutex():
             if self._uid and self._uid != seen_uid:
-                # 另一个目标刚扫到新 uid，直接复用，省一次全量扫描
+                # 另一个目标刚发现新 uid，直接复用
                 uid = self._uid
             else:
-                uid = await asyncio.to_thread(
-                    _scan_uid, self._uid, prefix, self._scan_miss.setdefault(prefix, set())
-                )
+                uid = await asyncio.to_thread(_scan_uid, prefix)
         if not uid:
             # 同一次注入周期里只保留第一条「没扫到」：随退避重试 / 另一个动态目标失败时不再重复刷
             if not self._scan_miss_logged:
@@ -2046,8 +1932,6 @@ class Plugin:
     # ---- notificationtoasts_* 弹窗：CEF 事件监听注入 ----
 
     def _start_toast_watcher(self):
-        if not _CEF_FAST["on"]:
-            return
         if self._toast_task is not None and not self._toast_task.done():
             return
         self._toast_task = asyncio.create_task(self._toast_watcher())
@@ -2211,9 +2095,7 @@ class Plugin:
         keys = self._window_targets(mode)
         try:
             await asyncio.sleep(WINDOW_DELAY)
-            self._uid_scan_budget = {key: WINDOW_UID_SCAN_LIMIT for key in DYNAMIC_PREFIX}
             self._scan_miss_logged = False  # 每个窗口内最多一条「没扫到」
-            self._scan_miss.clear()
             self._dead_tabs.clear()
             attempt = 0
             while True:
@@ -2236,8 +2118,6 @@ class Plugin:
             raise
         except Exception as exc:
             log(f"注入窗口异常: {exc}")
-        finally:
-            self._uid_scan_budget = {}
 
     @staticmethod
     def _window_targets(mode):
@@ -2264,16 +2144,15 @@ class Plugin:
         """窗口内的单个目标：样式还在就不重复注入，随页面丢了才按当前实例补注入。"""
         item = self._hit.get(key)
         if item is not None:
-            if _CEF_FAST["on"]:
-                titles = _cef_titles()
-                if titles is not None and item["tab"] not in titles:
-                    # tab 已经不在了：不必再发注定超时的 RPC，直接走补注入
-                    self._hit.pop(key, None)
-                    item = None
+            titles = _cef_titles()
+            if titles is not None and item["tab"] not in titles:
+                # tab 已经不在了：不必再发注定超时的 RPC，直接走补注入
+                self._hit.pop(key, None)
+                item = None
             if item is not None:
                 if item["tab"] in self._dead_tabs:
-                    # 本事件已确认死亡（get_tab_id 明确 not found），跳过重复验活，
-                    # 省掉「execute_in_tab 500 + get_tab_id 补探」≈3.5 ms 的重复账
+                    # 本事件已确认死亡（execute_in_tab 明确 not found），跳过重复验活，
+                    # 省掉重复失败 RPC 的开销
                     self._hit.pop(key, None)
                     item = None
                 else:
@@ -2284,7 +2163,7 @@ class Plugin:
                     if alive is None:
                         # 读不到就当作页面还没建完：保留记录、不重复注入，下一轮再验
                         return False
-                    # alive is False 意味着 get_tab_id 明确 not found，不是猜的：
+                    # alive is False 意味着 execute_in_tab 失败且文本含 not found，不是猜的：
                     # 记入本事件死亡名单，后续轮次不再重复验活
                     self._dead_tabs.add(item["tab"])
                     log(f"{key} 的样式随页面重建丢了（{item['tab']}），重新注入")
@@ -2308,15 +2187,14 @@ class Plugin:
                     "fallback": fallback,
                 }
             )
-        cef = {"enabled": _CEF_FAST["on"], "port": None, "tabs": None, "error": ""}
-        if _CEF_FAST["on"]:
-            # 只读已有快照：抓取由插件加载、set_cef_fast 和注入窗口负责
-            tabs = _CEF_CACHE.get("tabs")
-            cef["port"] = _CEF_CACHE.get("port")
-            if tabs is None:
-                cef["error"] = _CEF_CACHE.get("why") or "未检测到 CEF 调试端口"
-            else:
-                cef["tabs"] = len(tabs)
+        cef = {"enabled": True, "port": None, "tabs": None, "error": ""}
+        # 只读已有快照：抓取由插件加载和注入窗口负责
+        tabs = _CEF_CACHE.get("tabs")
+        cef["port"] = _CEF_CACHE.get("port")
+        if tabs is None:
+            cef["error"] = _CEF_CACHE.get("why") or "未检测到 CEF 调试端口"
+        else:
+            cef["tabs"] = len(tabs)
         state = read_state()
         favorites = _clean_favorites(state)
         inject_level, inject_stamp = _inject_status(state)
