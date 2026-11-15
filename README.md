@@ -8,7 +8,7 @@
 
 一个 [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) 插件：把 Steam Deck 上已经装好的任意字体应用到 Steam 大屏界面——主页、MainMenu、快捷访问菜单，以及好友上线这类通知弹窗。它不写 `~/homebrew/themes`，也不依赖 CSS Loader，样式由 Decky 自己的 `inject_css_into_tab` 注入，恢复默认时再拆掉。
 
-**当前版本：1.4.10。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
+**当前版本：1.4.11。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
 
 ## 安装
 
@@ -48,7 +48,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 - 语言胶囊：`全部字体` 与四个风格分区展开后，标题下方各有一排 `西文` / `中文` / `日文` / `韩文`，显示各语言的款数，点击或左右键切换。没有「不筛选」态——默认就是西文。每款字体按单一主语言归入一个胶囊：族名里的地区标记（JP / KR / SC / TC / HK / CN）优先，其次按 zh > ja > ko，其余算西文。
 - 行内标记：`含中文` / `无中文，自动回退`、`有 Bold` / `无 Bold（合成加粗）`、`等宽`、`★已收藏`、`当前使用`；搜索命中别名时多一行 `别名：xxx`。
 - 即时搜索：主名与别名都查；上方常显 `共 N 款字体`（搜索时是命中数）。每个分区先显示 60 条，超出时给 `加载更多（还剩 N 款）`。没有命中时提示「没有匹配的字体（主名和别名都查过了）。」，清空搜索即回到分类浏览。
-- 分区归属是启发式的，判定顺序 `Mono` → `Serif` → `Sans` → `其他`，四类互斥：`Mono` 先看 fontconfig 的 `spacing`（100 / 110），其次族名含 `mono` / `等宽`；`Serif` 看族名关键词（serif / song / ming / times / 楷 等，名字里含 `sans` 的排除）；`Sans` 看 sans / grotesk / gothic / 黑 等；其余进 `其他`。四个风格分区的说明行会写明当前规则（`全部字体` 没有说明行）。
+- 分区归属是启发式的，判定顺序 `Mono` → `Serif` → `Sans` → `其他`，四类互斥：`Mono` 先看 fontconfig 的 `spacing`（90 双宽 / 100 等宽 / 110 字符格），其次族名含 `mono` / `等宽` / `等寬` / `等幅` / `고정폭` / `fixed` 等关键词；`Serif` 看族名关键词（serif / song / ming / times / 楷 等，名字里含 `sans` 的排除）；`Sans` 看 sans / grotesk / gothic / 黑 等；其余进 `其他`。四个风格分区的说明行会写明当前规则（`全部字体` 没有说明行）。
 - 分区默认折叠，标题行 A / 点击展开；在分区内按 Y 就地收起并把焦点送回标题。
 
 ### 注入与状态卡

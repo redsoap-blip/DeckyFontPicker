@@ -402,8 +402,9 @@ def _faces():
                 # fontconfig 的 lang（"zh-cn|en|ja" 这种），前端直接展示覆盖范围
                 "lang": parts[6].strip(),
                 "zh_extra": zh_extra,
-                # fontconfig 的 spacing：100 = mono，110 = charcell，0/其它 = 比例字体
-                "mono": spacing in (100, 110),
+                # fontconfig 的 spacing：90 = dual、100 = mono、110 = charcell 都按等宽处理
+                # （实测 JetBrains Mono、霞鹜文楷等宽 标的是 90）；0/其它 = 比例字体
+                "mono": spacing in (90, 100, 110),
                 "collection": ext in COLLECTION_EXT,
             }
         )

@@ -70,7 +70,7 @@
             "lang.empty": "该分类下没有{0}字体。",
             "note.serif": "只能按 family 名启发式判断（Serif / Song / Ming / Times / 楷 等），名字里含 sans 的排除。",
             "note.sans": "名字里含明确无衬线关键词（sans / grotesk / gothic / 黑 等）。",
-            "note.mono": "按 fontconfig 的 spacing 字段判定（100 / 110），或 family 名里含 mono / 等宽。",
+            "note.mono": "按 fontconfig 的 spacing 字段判定（90 / 100 / 110），或族名里含 mono / 等宽 / 等寬 / 等幅 / 고정폭 / fixed 等关键词。",
             "note.other": "既非等宽、名字里也没有明确衬线 / 无衬线关键词的字体。",
             "note.fav": "聚焦某款字体后按 X（手柄）加入/移出收藏",
             "note.history": "按最近使用时间排列，无上限，卸载的字体自动移除",
@@ -155,7 +155,7 @@
             "lang.empty": "No {0} fonts in this category.",
             "note.serif": "Heuristic match on the family name (Serif / Song / Ming / Times / Kai, etc.); names containing 'sans' are excluded.",
             "note.sans": "Family name contains an explicit sans keyword (sans / grotesk / gothic / 黑, etc.).",
-            "note.mono": "Determined by fontconfig's spacing field (100 / 110), or by a family name containing mono / 等宽 (a common CJK family-name keyword).",
+            "note.mono": "Determined by fontconfig's spacing field (90 / 100 / 110), or by a family name containing keywords such as mono, 等宽, 等寬, 等幅, 고정폭 or fixed.",
             "note.other": "Neither monospace nor matched by a serif / sans keyword.",
             "note.fav": "Focus a font and press X (gamepad) to add or remove it from favorites",
             "note.history": "Ordered by most recent use, unlimited; uninstalled fonts are removed automatically",
@@ -240,7 +240,7 @@
             "lang.empty": "この分類には{0}のフォントがありません。",
             "note.serif": "ファミリー名によるヒューリスティック判定です（Serif / Song / Ming / Times / 楷 など）。名前に sans を含むものは除外されます。",
             "note.sans": "名前に明示的なサンセリフのキーワード（sans / grotesk / gothic / 黑 など）を含むものです。",
-            "note.mono": "fontconfig の spacing フィールド（100 / 110）で判定します。family 名に mono または「等宽」（中国語フォントのファミリー名に使われる語）を含むものも対象です。",
+            "note.mono": "fontconfig の spacing フィールド（90 / 100 / 110）で判定します。family 名に mono・等宽・等寬・等幅・고정폭・fixed などのキーワードを含むものも対象です。",
             "note.other": "等幅でもなく、名前にセリフ / サンセリフのキーワードも含まないフォントです。",
             "note.fav": "フォントにフォーカスして X（ゲームパッド）を押すとお気に入りに追加／解除できます",
             "note.history": "最近使用した順に並び、上限なし。アンインストールしたフォントは自動的に外れます",
@@ -325,7 +325,7 @@
             "lang.empty": "이 분류에는 {0} 글꼴이 없습니다.",
             "note.serif": "패밀리 이름으로 휴리스틱 판정합니다 (Serif / Song / Ming / Times / 楷 등). 이름에 sans가 들어가면 제외됩니다.",
             "note.sans": "이름에 명확한 sans-serif 키워드(sans / grotesk / gothic / 黑 등)가 들어간 글꼴입니다.",
-            "note.mono": "fontconfig의 spacing 필드(100 / 110)로 판정하며, family 이름에 mono 또는 '等宽'(중국어 글꼴 패밀리 이름에 쓰이는 단어)이 들어간 글꼴도 포함합니다.",
+            "note.mono": "fontconfig의 spacing 필드(90 / 100 / 110)로 판정하며, family 이름에 mono, 等宽, 等寬, 等幅, 고정폭, fixed 등의 키워드가 들어간 글꼴도 포함합니다.",
             "note.other": "monospace도 아니고 이름에 serif / sans-serif 키워드도 없는 글꼴입니다.",
             "note.fav": "글꼴에 포커스한 뒤 X (게임패드)를 눌러 즐겨찾기에 추가/해제할 수 있습니다",
             "note.history": "최근 사용 순으로 정렬되며 제한 없음, 삭제된 글꼴은 자동으로 제외됩니다",
@@ -442,11 +442,17 @@
         return SANS_RE.test(name);
     }
 
-    // Mono：spacing 100/110 之外，名字里含 mono / 等宽 的也算（优先于 Serif/Sans/其他）
+    // Mono：spacing 90/100/110 之外，族名含下列关键词的也算（优先于 Serif/Sans/其他）。
+    // 等宽（简）/ 等寬（繁）/ 等幅（日）/ 고정폭（韩）覆盖三种 CJK 说法；
+    // fixed 对应 Misc Fixed、Sony Fixed，monospace 是通用写法。
+    var MONO_KEYWORDS = ["mono", "等宽", "等寬", "等幅", "고정폭", "fixed", "monospace"];
     function isMono(font) {
         if (font && font.mono) return true;
         var name = String((font && font.family) || "").toLowerCase();
-        return name.indexOf("mono") !== -1 || name.indexOf("等宽") !== -1;
+        for (var i = 0; i < MONO_KEYWORDS.length; i++) {
+            if (name.indexOf(MONO_KEYWORDS[i]) !== -1) return true;
+        }
+        return false;
     }
 
     // 语言胶囊：顺序固定为 西文 / 中文 / 日文 / 韩文，也是左右键循环的唯一序列

@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.10.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.11.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
@@ -46,7 +46,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 - Language pills: `All Fonts` and the four style sections each show a row of `Latin` / `Chinese` / `Japanese` / `Korean` pills once expanded, with per-language counts; click them or press left / right on the gamepad. There is no "no filter" state — Latin is the default. Every family belongs to exactly one pill: a region token in the family name (JP / KR / SC / TC / HK / CN) wins, otherwise zh > ja > ko, and everything else counts as Latin.
 - Row markers: `Chinese` / `No Chinese, auto fallback`, `Bold` / `No bold (synthetic)`, `Monospace`, `Favorite`, `In use`; a search hit on an alias adds an `Alias: xxx` line.
 - Instant search over family names and aliases; the `{N} fonts` count is always shown above the list and shows the hit count while searching. Each section renders 60 entries first, then offers `Load more ({N} left)`. No hit shows "No matching fonts (searched both names and aliases)."; clearing the query returns to the sectioned view.
-- Section placement is heuristic and mutually exclusive, tested in the order `Mono` → `Serif` → `Sans` → `Others`: `Mono` first checks fontconfig `spacing` (100 / 110), then a family name containing `mono` / `等宽`; `Serif` matches serif / song / ming / times / 楷 and similar, excluding names containing `sans`; `Sans` matches sans / grotesk / gothic / 黑 and similar; the rest go to `Others`. The note under each of the four style sections states the rule in use (`All Fonts` has no note).
+- Section placement is heuristic and mutually exclusive, tested in the order `Mono` → `Serif` → `Sans` → `Others`: `Mono` first checks fontconfig `spacing` (90 dual / 100 mono / 110 charcell), then a family name containing `mono` / `等宽` / `等寬` / `等幅` / `고정폭` / `fixed` and similar; `Serif` matches serif / song / ming / times / 楷 and similar, excluding names containing `sans`; `Sans` matches sans / grotesk / gothic / 黑 and similar; the rest go to `Others`. The note under each of the four style sections states the rule in use (`All Fonts` has no note).
 - Sections start collapsed; press A / click the header to expand, and Y inside a section collapses it in place and returns focus to the header.
 
 ### Injection and the status card
