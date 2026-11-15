@@ -222,7 +222,7 @@ UI_MODE_BIG_PICTURE = 4
 UI_MODE_DESKTOP = 7
 WINDOW_DELAY = 2.0  # 模式切换后先等页面回调建完
 WINDOW_BACKOFF = (0.5, 1.0, 2.0, 4.0, 8.0)  # 单次窗口内的重试退避，用尽后按 8 s 继续
-WINDOW_TOTAL = 60.0  # 单次窗口总时长上限
+WINDOW_TOTAL = 30.0  # 单次窗口总时长上限：覆盖大屏切换后页面创建 + 登录慢导致的短暂延迟；到期后由用户动作或下一次 UI 模式变化重开窗
 # CEF 调试口：直接读 Steam 的 /json/list，一次列出全部 tab。
 # 前置条件：Steam 设置 → 开发者 → 「CEF 远程调试」（底层是给 steamwebhelper 加
 # --remote-debugging-port）——Decky Loader 本身也依赖该调试口。
@@ -1132,11 +1132,11 @@ def _cef_log_state(ok, reason):
     if ok:
         log(f"CEF 调试口恢复：{reason}")
     else:
-        log(f"CEF 调试口不可用（{reason}）：注入窗口按退避重试、弹窗监听自动重连")
+        log(f"CEF 调试口尚未就绪（{reason}）：注入窗口会重试，弹窗监听自动重连")
 
 
 def _cef_titles():
-    """返回当前 tab 标题集合；调试口不可用时返回 None（调用方按退避重试）。"""
+    """返回当前 tab 标题集合；调试口尚未就绪时返回 None（调用方按退避重试）。"""
     tabs = _cef_fetch()
     if tabs is None:
         _cef_log_state(False, _CEF_CACHE.get("why") or "调试端口无响应")
@@ -1172,7 +1172,7 @@ def _style_exists(tab, css_id):
 def _scan_uid(prefix):
     """从 CEF tab 标题里直接取当前 uid（menu 扫 MainMenu_uid*，qam 扫 QuickAccess_uid*）。
 
-    调试口不可用时返回 None，调用方按「没扫到」记账，随注入窗口退避重试。
+    调试口尚未就绪时返回 None，调用方按「没扫到」记账，随注入窗口退避重试。
     """
     titles = _cef_titles()
     if titles is None:
@@ -1390,7 +1390,7 @@ class Plugin:
         _port, source = await asyncio.to_thread(_cef_port_hint)
         tabs = await asyncio.to_thread(_cef_fetch, True)
         if tabs is None:
-            log(f"CEF 调试口暂不可用：{_CEF_CACHE.get('why')}；注入窗口将按退避重试、弹窗监听将自动重连")
+            log(f"CEF 调试口尚未就绪：{_CEF_CACHE.get('why')}；注入窗口会重试，弹窗监听自动重连")
         else:
             log(f"CEF 调试口已连接：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
         # 弹窗监听：挂浏览器事件流（内部自动重连，失败不影响主流程）
@@ -1900,12 +1900,16 @@ class Plugin:
         if not self._css or "main" in self._hit:
             return "main" in self._hit
         candidates = list(TARGETS[0][2])
-        titles = _cef_titles()
-        if titles is not None:
-            # 只在列表里真实存在的候选里挑，避免对不存在的 tab 发注定失败的 RPC
-            candidates = [tab for tab in candidates if tab in titles]
-            if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
-                log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
+        # _cef_titles 内部是同步 urlopen（最多 3 个端口 × 0.5 s），必须挪出事件循环
+        titles = await asyncio.to_thread(_cef_titles)
+        if titles is None:
+            # CEF 是硬前提（Decky Loader 自身就依赖它），拿不到 tab 列表只可能是调试口尚未就绪。
+            # 不再按固定标题盲试，交给注入窗口退避重试，避免对不存在的 tab 发注定失败的 RPC。
+            return False
+        # 只在列表里真实存在的候选里挑，避免对不存在的 tab 发注定失败的 RPC
+        candidates = [tab for tab in candidates if tab in titles]
+        if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
+            log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
         for tab in candidates:
             css_id = await asyncio.to_thread(_replace_css, tab, self._css)
             if css_id:
@@ -2147,13 +2151,21 @@ class Plugin:
                     log(f"{len(keys)} 个目标全部注入完成，用时 {elapsed:.2f} 秒")
                     return
                 if elapsed >= WINDOW_TOTAL:
-                    log(f"注入窗口到期（{elapsed:.1f} s），仍未注入 {','.join(missing)}，本次放弃")
+                    why = _CEF_CACHE.get("why") or "无"
+                    log(f"注入窗口到期（{elapsed:.1f} s），仍未注入 {','.join(missing)}，本次放弃，调试口：{why}")
                     return
                 delay = WINDOW_BACKOFF[min(attempt, len(WINDOW_BACKOFF) - 1)]
                 attempt += 1
                 if elapsed + delay > WINDOW_TOTAL:
                     delay = max(WINDOW_TOTAL - elapsed, 0.0)
-                log(f"注入窗口：{','.join(missing)} 未注入，{delay:.1f} s 后重试（第 {attempt} 次）")
+                # 只读 _window_pass 刚写下的快照，不再额外探测（多一次 _cef_fetch 要多耗 0.5~1.5 s）：
+                # tabs 为 None 是「CEF 根本不通」，非 None 是「CEF 通但目标 tab 还没建好」，
+                # 两种卡法分开记，用户看日志就能判断该去开调试口还是该等一下。
+                if _CEF_CACHE.get("tabs") is None:
+                    why = _CEF_CACHE.get("why") or "调试端口无响应"
+                    log(f"注入窗口：CEF 调试口尚未就绪（{why}），{delay:.1f} s 后重试（第 {attempt} 次）")
+                else:
+                    log(f"注入窗口：{','.join(missing)} 未注入，{delay:.1f} s 后重试（第 {attempt} 次）")
                 await asyncio.sleep(delay)
         except asyncio.CancelledError:
             raise
@@ -2185,7 +2197,8 @@ class Plugin:
         """窗口内的单个目标：样式还在就不重复注入，随页面丢了才按当前实例补注入。"""
         item = self._hit.get(key)
         if item is not None:
-            titles = _cef_titles()
+            # 同上：_cef_titles 是同步 urlopen，放到线程里跑，避免卡住事件循环
+            titles = await asyncio.to_thread(_cef_titles)
             if titles is not None and item["tab"] not in titles:
                 # tab 已经不在了：不必再发注定超时的 RPC，直接走补注入
                 self._hit.pop(key, None)
@@ -2228,12 +2241,12 @@ class Plugin:
                     "fallback": fallback,
                 }
             )
-        cef = {"enabled": True, "port": None, "tabs": None, "error": ""}
+        cef = {"port": None, "tabs": None, "error": ""}
         # 只读已有快照：抓取由插件加载和注入窗口负责
         tabs = _CEF_CACHE.get("tabs")
         cef["port"] = _CEF_CACHE.get("port")
         if tabs is None:
-            cef["error"] = _CEF_CACHE.get("why") or "未检测到 CEF 调试端口"
+            cef["error"] = _CEF_CACHE.get("why") or "CEF 调试口尚未就绪"
         else:
             cef["tabs"] = len(tabs)
         state = read_state()

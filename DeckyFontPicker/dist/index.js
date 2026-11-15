@@ -107,9 +107,7 @@
             "loadMoreRemaining": "加载更多（还剩 {0} 款）",
             "restoreDefault": "恢复 Steam 默认字体",
             "advanced": "高级",
-            "cefFastMode": "CEF 快速模式",
-            "cefNote": "开启前需在 Steam 设置 → 开发者 中打开「CEF 远程调试」。端口不可用时自动回落到常规探测，不影响字体注入。",
-            "cefNoPort": "未检测到 CEF 调试端口，已回落常规探测。请检查 Steam 设置 → 开发者 → CEF 远程调试。",
+            "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
             "copyLog": "复制日志",
             "history.empty": "暂无使用记录",
@@ -197,9 +195,7 @@
             "loadMoreRemaining": "Load more ({0} left)",
             "restoreDefault": "Restore Steam default font",
             "advanced": "Advanced",
-            "cefFastMode": "CEF fast mode",
-            "cefNote": "Before enabling, turn on \"CEF Remote Debugging\" in Steam Settings → Developer. If the port is unavailable, detection falls back to the regular method and font injection is unaffected.",
-            "cefNoPort": "No CEF debugging port detected; fell back to regular detection. Check Steam Settings → Developer → CEF Remote Debugging.",
+            "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
             "copyLog": "Copy log",
             "history.empty": "No history yet",
@@ -287,9 +283,7 @@
             "loadMoreRemaining": "さらに読み込む（残り {0} 件）",
             "restoreDefault": "Steam の既定フォントに戻す",
             "advanced": "詳細設定",
-            "cefFastMode": "CEF 高速モード",
-            "cefNote": "有効にする前に、Steam の設定 → 開発者 で「CEF リモートデバッグ」をオンにしてください。ポートが使用できない場合は通常の検出に自動でフォールバックし、フォントの適用には影響しません。",
-            "cefNoPort": "CEF デバッグポートが見つからないため、通常の検出にフォールバックしました。Steam の設定 → 開発者 → CEF リモートデバッグ を確認してください。",
+            "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
             "copyLog": "ログをコピー",
             "history.empty": "記録はまだありません",
@@ -377,9 +371,7 @@
             "loadMoreRemaining": "더 불러오기 ({0}개 남음)",
             "restoreDefault": "Steam 기본 글꼴로 복원",
             "advanced": "고급",
-            "cefFastMode": "CEF 고속 모드",
-            "cefNote": "사용하기 전에 Steam 설정 → 개발자에서 'CEF 원격 디버깅'을 켜야 합니다. 포트를 사용할 수 없으면 자동으로 일반 감지로 대체되며 글꼴 적용에는 영향을 주지 않습니다.",
-            "cefNoPort": "CEF 디버깅 포트를 찾지 못해 일반 감지로 대체했습니다. Steam 설정 → 개발자 → CEF 원격 디버깅을 확인하세요.",
+            "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
             "copyLog": "로그 복사",
             "history.empty": "기록이 아직 없습니다",
@@ -782,8 +774,8 @@
             });
         }
 
-        // CEF 快速模式：已无 UI 开关、缺省常开；cefInfo 仅用于渲染端口状态/错误提示行
-        var cefInfo = (state && state.cef) || { enabled: false, port: null, tabs: null, error: "" };
+        // CEF 调试口：无 UI 开关、缺省常开；cefInfo 仅用于渲染端口状态/错误提示行
+        var cefInfo = (state && state.cef) || { port: null, tabs: null, error: "" };
 
         // 分槽注入（按语言注入）开关状态：主开关 + 两个子开关，全部来自后端 payload；
         // 子开关默认值由后端口径统一（主开关开时 synth_weight_none 缺省=开、cjk_punct 缺省=关）
