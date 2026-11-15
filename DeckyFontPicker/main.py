@@ -7,6 +7,8 @@
 - local() 按名引用模式已完全弃用：不再生成按名引用的 @font-face，也不再做命中探测。
 - 样式注入：调用 Decky 自身的 legacy 方法 inject_css_into_tab / remove_css_from_tab
   （不写 ~/homebrew/themes，不依赖 CSS Loader，不直接连 CEF 调试口）
+- 例外：notificationtoasts_* 弹窗窗口走 CEF 调试口的浏览器级 websocket 事件监听注入
+  （CEF 快速模式开启时才启用；见 TOAST_TAB_PREFIX 处注释）
 """
 
 import asyncio
@@ -205,6 +207,13 @@ DYNAMIC_PREFIX = {"menu": "MainMenu_uid", "qam": "QuickAccess_uid"}
 # 兜底 tab：注入成功也不代表大屏界面真的用上了样式，状态里一律不算「已注入」。
 # SharedJSContext 已从 main 候选里移除，这里只作为历史 state / 未来兜底的防御。
 FALLBACK_TABS = {"SharedJSContext"}
+# 弹窗（好友上线 / 正在游玩提示）是 Steam 按需创建的独立 CEF 窗口，
+# 标题形如 notificationtoasts_<n>。窗口生老病死全靠事件，现有注入窗口追不上，
+# 所以在 CEF 快速模式开启时挂一个浏览器级 websocket 监听 targetCreated /
+# targetInfoChanged / targetDestroyed，命中弹窗立即注入 / 随销毁拆除。
+# 纯事件驱动、零轮询；CEF 调试口关闭时该功能自动停用（legacy 路径无法感知弹窗）。
+TOAST_TAB_PREFIX = "notificationtoasts"
+TOAST_WS_BACKOFF = (2.0, 5.0, 15.0, 30.0)  # websocket 断线重连退避，用尽后按 30 s
 _LIVE = None  # 当前 Plugin 实例，供 Decky 以类为 self 回调时回落
 UID_SCAN_MAX = 320
 UID_SCAN_AHEAD = 60
@@ -1385,6 +1394,9 @@ class Plugin:
         self._window_task = None  # 当前注入窗口（同一时刻最多一个）
         self._window_lock = None  # asyncio.Lock，串行化开窗，懒创建
         self._cache_inuse = set()  # 当前注入正在用的缓存文件（清理时保护）
+        self._toast_task = None  # notificationtoasts_* 弹窗 CEF 事件监听任务
+        self._toasts = {}  # toast tab 名 -> css_id（弹窗注入记账）
+        self._toast_ids = {}  # CEF targetId -> toast tab 名（destroyed 事件反查用）
 
     # ---- 生命周期 ----
 
@@ -1422,6 +1434,9 @@ class Plugin:
             else:
                 _CEF_CACHE["state"] = True
                 log(f"CEF 快速模式生效：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
+        # 弹窗监听：CEF 快速模式开启时挂浏览器事件流（内部自动重连，失败不影响主流程）
+        if _CEF_FAST["on"]:
+            plugin._start_toast_watcher()
         if not family:
             return
         if family not in families:
@@ -1449,6 +1464,7 @@ class Plugin:
 
     async def _unload(self):
         plugin = _bind(self)
+        await plugin._stop_toast_watcher()
         await plugin._cancel_dyn()
         await plugin._stop_window()
         await plugin._remove_all()
@@ -1499,16 +1515,24 @@ class Plugin:
         """分槽注入的主/子开关（持久化）。三个参数都可选，None = 不变。
 
         子开关默认值（主开关开启时）：synth_weight_none 缺省视为开、cjk_punct 缺省视为关。
+        主开关切到关：清空西文 / 中日韩两个槽位（含注入记账）并拆除当前注入，
+        重开后两槽均为空、不自动恢复旧选择。
         任一开关变化都会改变注入 CSS（剔字掩码版本 / Motiva Sans / synthesis 行），
         因此按当前字体重新注入一次；没有已选字体时只落盘，不注入。
         """
         plugin = _bind(self)
         state = read_state()
         changed = False
+        turned_off = False
         if cjk_split is not None:
             value = bool(cjk_split)
+            turned_off = bool(state.get("cjk_split")) and not value
             changed = changed or bool(state.get("cjk_split")) != value
             state["cjk_split"] = value
+            if not value:
+                # 关闭「按语言注入」即清空两个槽位与注入记账，不留旧选择
+                for key in ("family", "family_cjk", "inject_at", "inject_failed_at", "heal_at"):
+                    state.pop(key, None)
         if synth_weight_none is not None:
             value = bool(synth_weight_none)
             changed = changed or bool(state.get("synth_weight_none", True)) != value
@@ -1522,6 +1546,17 @@ class Plugin:
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
             f"synth_weight_none={state.get('synth_weight_none', True)} cjk_punct={state.get('cjk_punct')}")
+        if turned_off:
+            # 两个槽位已清空：拆除现有注入（复用 reset_font 的拆卸顺序；
+            # 不停字体服务，重开开关选字时 register 会按需自起）
+            await plugin._cancel_dyn()
+            await plugin._stop_window()
+            removed = await plugin._remove_all()
+            plugin._css = None
+            plugin._family = None
+            plugin._detail = {}
+            log(f"按语言注入已关闭：西文/中日韩槽位已清空，注入已拆除（{removed} 处）")
+            return plugin._payload()
         family = plugin._family or read_state().get("family")
         if not family:
             return plugin._payload()
@@ -1591,6 +1626,11 @@ class Plugin:
         else:
             _CEF_CACHE["state"] = None
             log("CEF 快速模式已关闭，改用 get_tab_id 探测")
+        # 弹窗监听跟随 CEF 快速模式开关
+        if enabled:
+            plugin._start_toast_watcher()
+        else:
+            await plugin._stop_toast_watcher()
         # 探测路径变了，按新路径重新补注入一次（用户动作，开一次有界窗口）
         await plugin._start_inject_window()
         return plugin._payload()
@@ -1991,15 +2031,123 @@ class Plugin:
     async def _remove_all(self):
         items = list(self._hit.items())
         self._hit = {}
-        if items:
-            await asyncio.gather(
-                *(
-                    asyncio.to_thread(_remove_css, item["tab"], item["css_id"])
-                    for _key, item in items
-                ),
-                return_exceptions=True,
-            )
-        return len(items)
+        toasts = list(self._toasts.items())
+        self._toasts = {}
+        self._toast_ids = {}
+        jobs = [
+            asyncio.to_thread(_remove_css, item["tab"], item["css_id"])
+            for _key, item in items
+        ]
+        jobs.extend(asyncio.to_thread(_remove_css, tab, css_id) for tab, css_id in toasts)
+        if jobs:
+            await asyncio.gather(*jobs, return_exceptions=True)
+        return len(items) + len(toasts)
+
+    # ---- notificationtoasts_* 弹窗：CEF 事件监听注入 ----
+
+    def _start_toast_watcher(self):
+        if not _CEF_FAST["on"]:
+            return
+        if self._toast_task is not None and not self._toast_task.done():
+            return
+        self._toast_task = asyncio.create_task(self._toast_watcher())
+
+    async def _stop_toast_watcher(self):
+        task, self._toast_task = self._toast_task, None
+        if task is not None and not task.done():
+            task.cancel()
+            try:
+                await task
+            except (asyncio.CancelledError, Exception):
+                pass
+
+    async def _toast_watcher(self):
+        """浏览器级 CEF websocket：弹窗窗口一出现即注入当前字体 CSS。
+
+        纯事件驱动（targetCreated / targetInfoChanged / targetDestroyed），无轮询；
+        连接断开按 TOAST_WS_BACKOFF 退避重连，任何失败都不影响主注入流程。
+        """
+        try:
+            import aiohttp
+        except Exception:
+            log("弹窗监听需要 aiohttp，当前运行环境缺少，已停用（不影响其它注入）")
+            return
+        session = aiohttp.ClientSession()
+        try:
+            attempt = 0
+            while True:
+                port = _CEF_CACHE.get("port") or _cef_port_hint()[0]
+                ws_url = None
+                if port:
+                    try:
+                        timeout = aiohttp.ClientTimeout(total=3)
+                        async with session.get(f"http://127.0.0.1:{port}/json/version", timeout=timeout) as res:
+                            data = await res.json()
+                        ws_url = data.get("webSocketDebuggerUrl")
+                    except Exception:
+                        ws_url = None
+                if not ws_url:
+                    await asyncio.sleep(TOAST_WS_BACKOFF[min(attempt, len(TOAST_WS_BACKOFF) - 1)])
+                    attempt += 1
+                    continue
+                try:
+                    async with session.ws_connect(ws_url, timeout=5) as ws:
+                        attempt = 0
+                        log("弹窗监听：已连接 CEF 浏览器事件流")
+                        await ws.send_json({"id": 1, "method": "Target.setDiscoverTargets",
+                                            "params": {"discover": True}})
+                        async for msg in ws:
+                            if msg.type != aiohttp.WSMsgType.TEXT:
+                                if msg.type in (aiohttp.WSMsgType.CLOSED, aiohttp.WSMsgType.ERROR):
+                                    break
+                                continue
+                            try:
+                                data = msg.json()
+                            except Exception:
+                                continue
+                            await self._on_cef_event(data)
+                except asyncio.CancelledError:
+                    raise
+                except Exception as exc:
+                    log(f"弹窗监听：连接中断（{exc}），准备重连")
+                await asyncio.sleep(TOAST_WS_BACKOFF[min(attempt, len(TOAST_WS_BACKOFF) - 1)])
+                attempt += 1
+        finally:
+            await session.close()
+
+    async def _on_cef_event(self, data):
+        if not isinstance(data, dict):
+            return
+        method = data.get("method")
+        params = data.get("params") or {}
+        if method == "Target.targetDestroyed":
+            # targetDestroyed 的 targetId 直接挂在 params 下，没有 targetInfo
+            destroyed_id = params.get("targetId")
+            old = self._toast_ids.pop(destroyed_id, None) if destroyed_id else None
+            if old and old in self._toasts:
+                css_id = self._toasts.pop(old)
+                await asyncio.to_thread(_remove_css, old, css_id)
+            return
+        info = params.get("targetInfo") or {}
+        target_id = info.get("targetId")
+        title = info.get("title") or ""
+        if info.get("type") != "page" or not title.startswith(TOAST_TAB_PREFIX):
+            return
+        # 同一 targetId 的标题换了（如 notificationtoasts_1 → _2）：旧记录拆掉重注
+        old_title = self._toast_ids.get(target_id)
+        if old_title and old_title != title and old_title in self._toasts:
+            css_id = self._toasts.pop(old_title)
+            await asyncio.to_thread(_remove_css, old_title, css_id)
+        self._toast_ids[target_id] = title
+        await self._inject_toast_tab(title)
+
+    async def _inject_toast_tab(self, tab):
+        if not self._css or tab in self._toasts:
+            return
+        css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+        if css_id:
+            self._toasts[tab] = css_id
+            log(f"已注入弹窗 -> {tab}")
 
     def _uid_mutex(self):
         if self._uid_lock is None:
@@ -2011,12 +2159,19 @@ class Plugin:
     # 窗口之外后台没有任何自己醒来干活的东西。
 
     async def on_ui_mode_changed(self, mode=None):
-        """前端订阅到 Steam UI 模式变化时调用（前端已过滤成 4 / 7）。"""
+        """前端订阅到 Steam UI 模式变化时调用（前端已过滤成 4 / 7）。
+
+        退出大屏幕（UI_MODE_DESKTOP = 7）不做检测 / 自动补注：桌面侧不注入，
+        事件直接忽略；进大屏（4，含模式未知）与用户动作的注入行为不变。
+        """
         plugin = _bind(self)
         try:
             value = int(mode)
         except (TypeError, ValueError):
             value = None
+        if value == UI_MODE_DESKTOP:
+            log("收到 UI 模式变化事件：7（退出大屏），已按设置忽略，不做桌面补注入")
+            return {"ok": True, "mode": value, "ignored": True}
         log(f"收到 UI 模式变化事件：{value}，{WINDOW_DELAY:.0f} s 后开始补注入")
         await plugin._start_inject_window(value)
         return {"ok": True, "mode": value}
@@ -2165,7 +2320,7 @@ class Plugin:
         state = read_state()
         favorites = _clean_favorites(state)
         inject_level, inject_stamp = _inject_status(state)
-        # 分槽开关状态：family_cjk 取 state 原值（主开关关闭时仍保留已选、重开自动恢复），
+        # 分槽开关状态：family_cjk 取 state 原值（主开关关闭时槽位即被清空，重开后为跟随系统），
         # 子开关默认值与 _prepare 同口径（synth_weight_none 缺省=开、cjk_punct 缺省=关）
         return {
             "ok": True,
