@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.13.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.14.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
