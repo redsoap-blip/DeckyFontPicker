@@ -1942,7 +1942,16 @@
             "html body .fp-ex-label{display:inline-block;width:30px!important;" +
             "font-family:\"Fira Sans\",\"Noto Sans CJK SC\",sans-serif!important;" +
             "font-size:11px!important;font-weight:600!important;letter-spacing:0.5px!important;" +
-            "color:rgba(138,180,248,0.95)!important;}";
+            "color:rgba(138,180,248,0.95)!important;}" +
+            // 描述行注脚化：ButtonItem layout=below 的 description 由 Steam Item 组件渲染在
+            // 卡片体外、Field 内，原生样式悬在卡下显得游离。调成左缩进 18px（对齐卡片水平
+            // 内边距）、12px、弱化灰，成为卡片注脚。
+            "html body .gamepaddialog_Field:has(.fp-font-row) .gamepaddialog_FieldDescription{" +
+            "margin:6px 0 0 18px!important;font-size:12px!important;" +
+            "color:rgba(235,235,245,0.62)!important;}" +
+            // 行间呼吸感：字体行上下各 6px。
+            "html body .gamepaddialog_Field:has(.fp-font-row){" +
+            "margin-top:6px!important;margin-bottom:6px!important;}";
 
         // 「加载更多」行：沿用标题行的样式与 focusClassName 聚焦方案，只负责加长列表
         function loadMoreRow(remaining, key, moreKey) {
