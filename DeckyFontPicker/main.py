@@ -152,6 +152,20 @@ INTERNAL_FAMILY = "DeckyFontPicker"
 INTERNAL_FAMILY_CJK = "DeckyFontPicker-CJK"
 INTERNAL_FAMILY_FULL = "DeckyFontPicker-Full"
 
+# 列表样张懒加载：行内 / 展开块四语言样张用到的全部字符。后端按这张表把每个字体
+# 抽成只含样张字形的极小子集（几 KB），经 FontServer 以 @font-face 提供给前端。
+# Steam CEF 跑在 pressure-vessel 沙箱里，按 family 名引用系统字体一律 fallback，
+# 只有 @font-face + 127.0.0.1 URL 这种真绑定才生效（当前全局注入已实证）。
+# 子集产物放 CACHE_DIR/preview/ 子目录：主 face 的 9 文件 LRU 只扫 CACHE_DIR 顶层，
+# 不会误删预览子集，预览子集也不占用那 9 个名额。
+PREVIEW_SAMPLE_CHARS = (
+    "The quick brown fox jumps over 0123"
+    "永和九年 岁在癸丑 汉字预览"
+    "いろはにほへと 漢字カタカナ"
+    "다람쥐 헌 쳇바퀴 한글"
+)
+PREVIEW_CACHE_SUBDIR = "preview"
+
 # 方案 D：西文槽剔字掩码（基线版）。西文 face 的 cmap 命中这些区间时，
 # 用 fontTools subset 剔除后再注入，保证字体栈里西文槽不会抢走中日韩字形。
 # 区间由原 B 方案 CJK 表扩充而来（含 PUA）；v2 实机修订：补入谚文字母等
@@ -421,7 +435,8 @@ def _is_system_face_path(path):
     return any(p == d or p.startswith(d + "/") for d in _SYSTEM_FONT_DIRS)
 
 
-def _family_map():
+def _family_map_build():
+    """family 映射构建（走 fc-list 子进程，较慢，由 _family_map 缓存包装）。"""
     families = {}
     for face in _faces():
         entry = families.setdefault(
@@ -452,6 +467,28 @@ def _family_map():
         if not _is_system_face_path(face["file"]):
             entry["is_system"] = False
     return families
+
+
+# ── fc-list 结果缓存 ──
+# fc-list 子进程约 100–300ms，而 _family_map 被 set_font / 面板刷新 / 注入流程高频调用；
+# TTL 内直接复用上次结果，装/删系统字体后最多 FAMILY_TTL 秒内可见，面板重开不受影响。
+# 模式与 _TOKEN_CACHE / _FT_CACHE 一致：双检 + 锁，避免并发线程重复跑 fc-list。
+FAMILY_TTL = 10.0
+_FAMILY_CACHE = {"at": 0.0, "data": None, "lock": threading.Lock()}
+
+
+def _family_map(force=False):
+    """返回 family 映射；TTL 内复用缓存，force=True 强制重跑 fc-list。"""
+    now = time.time()
+    if not force and _FAMILY_CACHE["data"] is not None and now - _FAMILY_CACHE["at"] < FAMILY_TTL:
+        return _FAMILY_CACHE["data"]
+    with _FAMILY_CACHE["lock"]:
+        now = time.time()
+        if not force and _FAMILY_CACHE["data"] is not None and now - _FAMILY_CACHE["at"] < FAMILY_TTL:
+            return _FAMILY_CACHE["data"]
+        _FAMILY_CACHE["data"] = _family_map_build()
+        _FAMILY_CACHE["at"] = now
+        return _FAMILY_CACHE["data"]
 
 
 def _lang_display_order(tags):
@@ -799,6 +836,58 @@ def _ensure_latin_file(face, cjk_punct):
             return woff2, "font/woff2", True, False
 
     return ttf, "font/ttf", True, False
+
+
+def _preview_cache_dir():
+    """预览子集专用目录：避开主 face 的 9 文件 LRU（只扫 CACHE_DIR 顶层）。"""
+    return os.path.join(CACHE_DIR, PREVIEW_CACHE_SUBDIR)
+
+
+def _prepare_preview_face(family):
+    """返回 (本地路径, MIME)：只含样张字符的极小子集，命中缓存直接复用。
+
+    前端通过 get_preview_font RPC 按需调用，只有真正滚进视口的预览行才会触发；
+    不像主注入那样抽整 face、也不会和缓存清理抢名额。子集失败时退回整 face
+    （慢但能显示），字体不存在返回 None。
+    """
+    entry = _family_map().get(family)
+    if entry is None:
+        return None
+    faces = _pick_faces(entry, prefer_zh=True)
+    face = next((f for f in faces if f is not None), None)
+    if face is None:
+        return None
+
+    key = hashlib.sha1(
+        (face["file"] + "#" + str(face["index"]) + "#pv1").encode("utf-8")
+    ).hexdigest()[:20]
+    d = _preview_cache_dir()
+    os.makedirs(d, exist_ok=True)
+    ttf = os.path.join(d, key + ".ttf")
+    woff2 = os.path.join(d, key + ".woff2")
+
+    if os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+        return woff2, "font/woff2"
+    if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
+        proc = _run(
+            [_system_python(), _helper(), "preview", face["file"], str(face["index"]), ttf,
+             PREVIEW_SAMPLE_CHARS],
+            timeout=180,
+        )
+        if proc.returncode != 0 or not os.path.exists(ttf) or os.path.getsize(ttf) <= 0:
+            err = (proc.stderr or "").strip()[:200]
+            log(f"预览子集失败（{os.path.basename(face['file'])}#{face['index']}）: {err}，回退整 face")
+            return _ensure_font_file(face)
+
+    if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
+        proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+        if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+            try:
+                os.remove(ttf)
+            except OSError:
+                pass
+            return woff2, "font/woff2"
+    return ttf, "font/ttf"
 
 
 def _protected_cache_files(state, families):
@@ -1278,6 +1367,37 @@ def write_state(data):
     os.replace(tmp, _state_path())
 
 
+def _norm_level(value, default=0):
+    """把档位参数收敛到 0/1/2，非法值回退 default。"""
+    try:
+        level = int(value)
+    except (TypeError, ValueError):
+        return default
+    return level if level in (0, 1, 2) else default
+
+
+def _norm_expand(value, default=0):
+    """C 方案开关：0 关 / 1 开；旧 2 档（内嵌）迁移为 1。"""
+    try:
+        level = int(value)
+    except (TypeError, ValueError):
+        return default
+    return 0 if level <= 0 else 1
+
+
+def _preview_level_of(state):
+    """预览样张档位（0 关闭 / 1 方案 A / 2 方案 B），兼容旧布尔 preview 键。"""
+    if state.get("preview_level") is not None:
+        return _norm_level(state.get("preview_level"), 2)
+    # 旧布尔迁移：preview=false → 0；缺省 / true → 2（现行方案 B 行为）
+    return 0 if state.get("preview") is False else 2
+
+
+def _expand_level_of(state):
+    """C 方案聚焦展开开关（0 关闭 / 1 展开四语言样张，旧 2 档并入 1）。"""
+    return _norm_expand(state.get("expand_level"), 0)
+
+
 def _clean_favorites(state):
     """把 state 里的 favorites 规范化（去重、去空）。"""
     favorites = []
@@ -1436,6 +1556,28 @@ class Plugin:
         families = await asyncio.to_thread(_family_map)
         return list_families(families)
 
+    async def get_preview_font(self, family):
+        """列表样张懒加载：为 family 准备一份只含样张字符的 @font-face URL。
+
+        前端只有在实际滚进视口的预览行才调用（IntersectionObserver 驱动），
+        URL 由 FontServer 注册，CEF 里 @font-face + 本地 127.0.0.1 真绑定生效；
+        不调用就不抽面、不占缓存名额。返回 {ok, url, mime}。
+        """
+        plugin = _bind(self)
+        try:
+            pair = await asyncio.to_thread(_prepare_preview_face, family)
+        except Exception as exc:
+            log(f"预览字体准备失败 {family!r}: {exc}")
+            return {"ok": False, "error": str(exc)}
+        if not pair:
+            return {"ok": False, "error": f"系统里没有字体 {family}"}
+        path, mime = pair
+        try:
+            url = plugin._server.register(path, mime)
+        except Exception as exc:
+            return {"ok": False, "error": str(exc)}
+        return {"ok": True, "url": url, "mime": mime}
+
     async def get_font_state(self):
         plugin = _bind(self)
         return plugin._payload()
@@ -1470,19 +1612,26 @@ class Plugin:
         write_state(state)
         return await plugin._apply(state["family"])
 
-    async def set_split_options(self, cjk_split=None, synth_weight_none=None, cjk_punct=None):
-        """分槽注入的主/子开关（持久化）。三个参数都可选，None = 不变。
+    async def set_split_options(self, cjk_split=None, synth_weight_none=None, cjk_punct=None,
+                                preview_level=None, expand_level=None, preview=None):
+        """分槽注入的主/子开关（持久化）。参数都可选，None = 不变。
 
         子开关默认值（主开关开启时）：synth_weight_none 缺省视为开、cjk_punct 缺省视为关。
+        preview_level（预览样张档位，0 关闭 / 1 方案 A / 2 方案 B）与
+        expand_level（C 方案聚焦展开开关，0 关闭 / 1 展开；旧 2 档内嵌并入 1）
+        都是纯前端渲染开关，不影响注入 CSS：变化时只落盘、不重新注入。
+        preview（旧布尔参数）兼容保留：true → 2（方案 B）、false → 0；
+        与 preview_level 同时传入时以 preview_level 为准。
         主开关切到关：清空西文 / 中日韩两个槽位（含注入记账）并拆除当前注入，
         重开后两槽均为空、不自动恢复旧选择。
-        任一开关变化都会改变注入 CSS（剔字掩码版本 / Motiva Sans / synthesis 行），
-        因此按当前字体重新注入一次；没有已选字体时只落盘，不注入。
+        影响注入 CSS 的开关变化（剔字掩码版本 / Motiva Sans / synthesis 行）
+        会按当前字体重新注入一次；没有已选字体时只落盘，不注入。
         """
         plugin = _bind(self)
         state = read_state()
         changed = False
         turned_off = False
+        levels_changed = False
         if cjk_split is not None:
             value = bool(cjk_split)
             turned_off = bool(state.get("cjk_split")) and not value
@@ -1500,11 +1649,29 @@ class Plugin:
             value = bool(cjk_punct)
             changed = changed or bool(state.get("cjk_punct")) != value
             state["cjk_punct"] = value
-        if not changed:
+        if preview_level is not None or preview is not None:
+            if preview_level is not None:
+                value = _norm_level(preview_level, _preview_level_of(state))
+            else:
+                # 旧布尔参数兼容：true → 2（方案 B）、false → 0
+                value = 0 if not preview else 2
+            levels_changed = levels_changed or _preview_level_of(state) != value
+            state["preview_level"] = value
+            state["preview"] = value != 0  # 旧键同步维护，兼容老前端
+        if expand_level is not None:
+            value = _norm_expand(expand_level, _expand_level_of(state))
+            levels_changed = levels_changed or _expand_level_of(state) != value
+            state["expand_level"] = value
+        if not (changed or levels_changed):
             return plugin._payload()
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
-            f"synth_weight_none={state.get('synth_weight_none', True)} cjk_punct={state.get('cjk_punct')}")
+            f"synth_weight_none={state.get('synth_weight_none', True)} "
+            f"cjk_punct={state.get('cjk_punct')} "
+            f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)}")
+        if not changed:
+            # 只有预览档位变化：不影响注入 CSS，无需重新注入
+            return plugin._payload()
         if turned_off:
             # 两个槽位已清空：拆除现有注入（复用 reset_font 的拆卸顺序；
             # 不停字体服务，重开开关选字时 register 会按需自起）
@@ -2265,6 +2432,9 @@ class Plugin:
             "cjk_split": bool(state.get("cjk_split")),
             "synth_weight_none": bool(state.get("synth_weight_none", True)),
             "cjk_punct": bool(state.get("cjk_punct")),
+            "preview": bool(_preview_level_of(state) != 0),
+            "preview_level": _preview_level_of(state),
+            "expand_level": _expand_level_of(state),
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,

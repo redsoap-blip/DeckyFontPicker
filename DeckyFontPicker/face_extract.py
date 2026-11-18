@@ -1,17 +1,22 @@
 """字体辅助脚本：从 .ttc/.otc 集合里抽出单个 face、把字体压成 woff2，
-或按剔除码位区间生成剔字子集（方案 D：西文槽去中日韩/PUA 字形）。
+或按剔除码位区间生成剔字子集（方案 D：西文槽去中日韩/PUA 字形），
+或按保留字符表生成极小子集（列表预览样张懒加载）。
 
 由 main.py 用系统 python3 调用，避免依赖 Decky 内嵌解释器里是否有 fontTools。
 
 用法：
-    python3 face_extract.py extract <集合文件> <face 序号> <输出文件>
-    python3 face_extract.py woff2   <输入字体>        <输出文件>
-    python3 face_extract.py subset  <输入字体> <face 序号> <输出文件> <剔除区间串>
+    python3 face_extract.py extract  <集合文件> <face 序号> <输出文件>
+    python3 face_extract.py woff2    <输入字体> <输出文件>
+    python3 face_extract.py subset   <输入字体> <face 序号> <输出文件> <剔除区间串>
+    python3 face_extract.py preview  <输入字体> <face 序号> <输出文件> <保留字符>
 
 subset 模式的退出约定（main.py 据此判定）：
     退出码 0 + 产出文件   -> 已生成剔字子集
     退出码 0 + 无产物     -> cmap 与剔除区间无交集，无需剔字（绝大多数西文字体）
     退出码 1              -> 失败（字体损坏 / 区间串不合法 / 剔完无保留码位等）
+
+preview 模式：只保留 <保留字符> 里出现的码位（样张四语言文本），产物是几 KB 的
+裸 sfnt .ttf；让 Steam CEF 能按 @font-face 懒加载每一行预览，而不必抽出整 face。
 """
 
 import os
@@ -59,6 +64,52 @@ def main(argv):
         tmp = out + ".part"
         font.save(tmp)
         font.close()
+        os.replace(tmp, out)
+        return 0
+
+    if mode == "preview":
+        # 列表样张懒加载：只保留样张文本用到的码位，把 .ttc 整 face（十几 MB）
+        # 变成几 KB 的子集。CEF 里按 family 名引用系统字体必然 fallback（沙箱内
+        # fontconfig 看不到宿主字体），只有 @font-face + 本地 URL 才生效。
+        if len(argv) < 6:
+            fail("preview 模式参数不足：preview <输入字体> <face 序号> <输出文件> <保留字符>")
+        src, index, out, chars = argv[2], int(argv[3]), argv[4], argv[5]
+        if not os.path.isfile(src):
+            fail(f"找不到字体文件 {src}")
+        unicodes = sorted({ord(ch) for ch in chars if ord(ch) >= 32})
+        if not unicodes:
+            fail("保留字符表为空")
+
+        from fontTools import subset as ft_subset
+
+        if src.lower().endswith((".ttc", ".otc")):
+            collection = TTCollection(src, lazy=True)
+            if index < 0 or index >= len(collection.fonts):
+                fail(f"{os.path.basename(src)} 只有 {len(collection.fonts)} 个 face，取不到 #{index}")
+            font = collection.fonts[index]
+        else:
+            font = TTFont(src, lazy=True)
+
+        options = ft_subset.Options()
+        options.layout_features = ["*"]
+        options.name_IDs = ["*"]
+        subsetter = ft_subset.Subsetter(options=options)
+        subsetter.populate(unicodes=unicodes)
+        subsetter.subset(font)
+        # 输出裸 sfnt（输入 ttc/woff 时不继承其容器格式），文件名固定 .ttf
+        font.flavor = None
+
+        os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+        tmp = out + ".part"
+        font.save(tmp)
+        try:
+            TTFont(tmp, lazy=True).close()
+        except Exception:
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+            raise
         os.replace(tmp, out)
         return 0
 
