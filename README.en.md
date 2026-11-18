@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.14.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.19.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
@@ -61,18 +61,17 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 ### Split by language
 
 - With `Split by language` on, A first opens an "Apply to Latin / Apply to Chinese" menu, pre-selected by the font's language: zh / ja / ko preselect Chinese, everything else preselects Latin. B cancels without writing anything.
-- Each slot is extracted and embedded separately. The Latin slot can have CJK and private-use glyphs stripped (the mask covers CJK unified ideographs, kana, Hangul, full-width forms, PUA and more, plus a variant that also includes curly quotes, ellipsis and the middle dot), so CJK text always uses the CJK slot.
+- Each slot is extracted and embedded separately. The Latin slot can have CJK and private-use glyphs stripped (the mask covers CJK unified ideographs, kana, Hangul, full-width forms, PUA and more), so CJK text always uses the CJK slot; Western punctuation (curly quotes, ellipsis, middle dot) is always rendered by the Latin slot.
 - When the CJK slot is empty and the Latin slot really was stripped, the full version of the Latin font is registered under the internal family `DeckyFontPicker-Full` to fill the CJK position of the stack.
 - Turning split off clears both slots (including the injection bookkeeping) and tears the current injection down; turning it back on leaves both slots empty, so you pick again.
 - If stripping fails for the Latin font, the original font is used and a red warning appears under the card: it may cover the CJK slot, and a Latin-only font fixes it.
 
 ### Advanced
 
-- `Font preview samples`: a three-notch slider — 0 off, 1 Plan A (a compact single-line sample per row), 2 Plan B (regular + bold double sample); turn it down on low-memory devices. Samples are served as tiny subsets keeping only the glyphs the sample text uses (a few KB), never the whole face.
+- `Font preview samples`: a three-notch slider — 0 off, 1 Compact (a single-line sample per row), 2 Detailed (regular and bold samples); low-memory devices should use Off or Compact. Samples are served as tiny subsets keeping only the glyphs the sample text uses (a few KB), never the whole face.
 - `Expand preview on focus`: when on, focusing a font row expands a large Latin / Chinese / Japanese / Korean sample inside the row. The old three-level control (including the inline layout) has been folded into this single switch; existing settings migrate automatically.
 - `Disable synthetic bold`: on by default; adds `font-synthesis-weight: none` to the injected rule so fonts without a bold face are no longer emboldened synthetically. Independent of split and always visible.
 - `Split by language`: the master switch described above.
-- `Use CJK punctuation`: only shown when split is on; when enabled, curly quotes, ellipsis and the middle dot are stripped from the Latin slot too, so the CJK slot renders them full-width.
 - `Restore Steam default font`: removes the injection from the three targets and the toasts and clears both slots, without touching any switch. It is the standalone button near the bottom of the panel.
 - `Copy log`: reads the tail of the newest log (up to 200 lines) and puts it on the clipboard for bug reports.
 - A read-only debug-port line: `Debug port <port> · N tabs`, replaced by a red note while the port is not ready. The panel has no CEF toggle — Decky Loader guarantees the port and the plugin only reports its state.

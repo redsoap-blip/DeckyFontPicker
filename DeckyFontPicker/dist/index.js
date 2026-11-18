@@ -121,6 +121,9 @@
             "loadMore": "加载更多",
             "loadMoreRemaining": "加载更多（还剩 {0} 款）",
             "restoreDefault": "恢复 Steam 默认字体",
+            "err.noFamily": "系统里没有字体 {0}",
+            "err.noSelection": "当前没有选择字体",
+            "err.noSlots": "没有选择西文字体，中日韩槽也为空",
             "advanced": "高级",
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
@@ -133,19 +136,16 @@
             "subSynth": "禁用假加粗",
             "subSynthNote": "没有粗体字重的字体不再合成加粗，中粗文字按常规字重显示。",
             "previewSamples": "字体预览样张",
-            "previewNote": "档位：0 关闭 → 1 方案 A（单行紧凑样张）→ 2 方案 B（常规 + 粗体双样张）；低内存设备建议关闭或方案 A。",
+            "previewNote": "单行：紧凑的单行样张\n双行：常规与粗体两行样张\n低内存设备建议使用关闭或单行。",
             "levelOff": "关闭",
-            "notchA": "方案 A",
-            "notchB": "方案 B",
-            "previewExpand": "聚焦展开预览（C 方案）",
+            "notchA": "单行",
+            "notchB": "双行",
+            "previewExpand": "聚焦展开预览",
             "previewExpandNote": "开启后聚焦字体行时展开四语言大样张（西 / 中 / 日 / 韩）。",
             "exLatin": "西",
             "exZh": "中",
             "exJa": "日",
             "exKo": "韩",
-            "subPunct": "使用 CJK 标点符号",
-            "subPunctOn": "开 = 使用 CJK 标点符号（全角），影响中英文界面。",
-            "subPunctOff": "关闭时使用西文标点符号",
             "slotLatin": "西文",
             "slotCjk": "中日韩",
             "followSystem": "跟随系统",
@@ -217,6 +217,9 @@
             "loadMore": "Load more",
             "loadMoreRemaining": "Load more ({0} left)",
             "restoreDefault": "Restore Steam default font",
+            "err.noFamily": "Font not found on system: {0}",
+            "err.noSelection": "No font selected",
+            "err.noSlots": "No Latin or CJK font selected",
             "advanced": "Advanced",
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
@@ -229,19 +232,16 @@
             "subSynth": "Disable synthetic bold",
             "subSynthNote": "Fonts without a bold face are no longer emboldened synthetically; medium-weight text uses the regular weight.",
             "previewSamples": "Font preview samples",
-            "previewNote": "Levels: 0 off -> 1 Plan A (compact sample) -> 2 Plan B (regular + bold samples); turn down on low-memory devices.",
+            "previewNote": "Compact: single-line sample\nDetailed: regular and bold samples\nLow-memory devices should use Off or Compact.",
             "levelOff": "Off",
-            "notchA": "Plan A",
-            "notchB": "Plan B",
-            "previewExpand": "Focus-expand preview (Plan C)",
+            "notchA": "Compact",
+            "notchB": "Detailed",
+            "previewExpand": "Focus-expand preview",
             "previewExpandNote": "When enabled, focusing a font row expands the four-language sample (EN / ZH / JA / KO).",
             "exLatin": "EN",
             "exZh": "ZH",
             "exJa": "JA",
             "exKo": "KO",
-            "subPunct": "Use CJK punctuation",
-            "subPunctOn": "On = full-width CJK punctuation; affects both the Chinese and English UI.",
-            "subPunctOff": "Western punctuation is used when off",
             "slotLatin": "Latin",
             "slotCjk": "CJK",
             "followSystem": "Follow system",
@@ -313,6 +313,9 @@
             "loadMore": "さらに読み込む",
             "loadMoreRemaining": "さらに読み込む（残り {0} 件）",
             "restoreDefault": "Steam の既定フォントに戻す",
+            "err.noFamily": "システムにフォント {0} がありません",
+            "err.noSelection": "フォントが選択されていません",
+            "err.noSlots": "欧文・中日韓のフォントがいずれも選択されていません",
             "advanced": "詳細設定",
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
@@ -325,19 +328,16 @@
             "subSynth": "疑似太字を無効化",
             "subSynthNote": "太字ウェイトを持たないフォントは合成太字されず、中太の文字は標準ウェイトで表示されます。",
             "previewSamples": "フォントプレビュー",
-            "previewNote": "レベル設定：0 オフ → 1 方式 A（コンパクトなサンプル）→ 2 方式 B（通常 + 太字のサンプル）。メモリの少ない環境ではオフか方式 A を推奨します。",
+            "previewNote": "コンパクト：1 行のサンプル\n詳細：通常と太字のサンプル\nメモリの少ない環境ではオフかコンパクトを推奨します。",
             "levelOff": "オフ",
-            "notchA": "方式 A",
-            "notchB": "方式 B",
-            "previewExpand": "フォーカス展開プレビュー（方式 C）",
+            "notchA": "コンパクト",
+            "notchB": "詳細",
+            "previewExpand": "フォーカス展開プレビュー",
             "previewExpandNote": "オンにすると、フォント行にフォーカスしたときに 4 言語（英 / 中 / 日 / 韓）の大きなサンプルを展開表示します。",
             "exLatin": "英",
             "exZh": "中",
             "exJa": "日",
             "exKo": "韓",
-            "subPunct": "CJK 句読点を使用",
-            "subPunctOn": "オン = CJK 句読点（全角）を使用します。中国語・英語の両 UI に影響します。",
-            "subPunctOff": "オフ時に欧文句読点を使用",
             "slotLatin": "欧文",
             "slotCjk": "日中韓",
             "followSystem": "システムに従う",
@@ -409,6 +409,9 @@
             "loadMore": "더 불러오기",
             "loadMoreRemaining": "더 불러오기 ({0}개 남음)",
             "restoreDefault": "Steam 기본 글꼴로 복원",
+            "err.noFamily": "시스템에 글꼴 {0}이(가) 없습니다",
+            "err.noSelection": "선택된 글꼴이 없습니다",
+            "err.noSlots": "라틴 또는 CJK 글꼴이 선택되지 않았습니다",
             "advanced": "고급",
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
@@ -421,19 +424,16 @@
             "subSynth": "가짜 굵게 사용 안 함",
             "subSynthNote": "굵은 자획이 없는 글꼴은 합성 굵게 처리되지 않으며, 중간 굵기 글자는 일반 굵기로 표시됩니다.",
             "previewSamples": "글꼴 미리보기",
-            "previewNote": "레벨 설정: 0 끄기 → 1 방식 A(컴팩트 샘플) → 2 방식 B(일반 + 굵게 샘플). 메모리가 적은 기기에서는 끄기 또는 방식 A를 권장합니다.",
+            "previewNote": "컴팩트: 한 줄 샘플\n상세: 일반과 굵게 샘플\n메모리가 적은 기기에서는 끄기 또는 컴팩트를 권장합니다.",
             "levelOff": "끄기",
-            "notchA": "방식 A",
-            "notchB": "방식 B",
-            "previewExpand": "포커스 확장 미리보기 (방식 C)",
+            "notchA": "컴팩트",
+            "notchB": "상세",
+            "previewExpand": "포커스 확장 미리보기",
             "previewExpandNote": "켜면 글꼴 행에 포커스할 때 4개 언어(영 / 중 / 일 / 한)의 큰 샘플이 펼쳐집니다.",
             "exLatin": "영",
             "exZh": "중",
             "exJa": "일",
             "exKo": "한",
-            "subPunct": "CJK 문장 부호 사용",
-            "subPunctOn": "켬 = CJK 문장 부호 (전각)를 사용합니다. 중국어·영어 UI 모두에 영향을 줍니다.",
-            "subPunctOff": "끄면 서양 문장 부호를 사용합니다",
             "slotLatin": "라틴",
             "slotCjk": "CJK",
             "followSystem": "시스템 따름",
@@ -514,7 +514,11 @@
                 validValues: "steps",
                 minimumDpadGranularity: 1,
                 label: label,
-                description: note,
+                description: (typeof note === "string" && note.indexOf("\n") !== -1)
+                    ? note.split("\n").map(function (line, i) {
+                        return h("span", { key: "ln" + i, style: { display: "block" } }, line);
+                    })
+                    : note,
                 layout: "below",
                 onChange: function (v) {
                     setLevel(v);
@@ -830,13 +834,20 @@
         // 每个分区标题的 DOM 节点，用于「在分区内按 Y 收起」后把焦点送回标题
         var headerRefs = useRef({});
 
+        // 后端面向用户的消息带 key：按当前语言翻译；没有 key 时回退到原文（日志类文本）
+        function textOf(obj) {
+            if (!obj) return "";
+            if (obj.error_key) return t.apply(null, [obj.error_key].concat(obj.error_args || []));
+            return obj.error || obj.message || "";
+        }
+
         function applyPayload(raw) {
             var payload = unwrap(raw);
             if (!payload || typeof payload !== "object") {
                 setMessage(t("noData"));
                 return;
             }
-            setMessage(payload.error || payload.message || "");
+            setMessage(textOf(payload));
             setState(payload);
         }
 
@@ -844,7 +855,7 @@
             return serverApi.callPluginMethod(method, args || {}).then(function (res) {
                 var value = unwrap(res);
                 if (res && res.success === false) {
-                    setMessage((value && value.error) || t("callFailed", method));
+                    setMessage(textOf(value) || t("callFailed", method));
                     return null;
                 }
                 applyPayload(value);
@@ -1125,7 +1136,7 @@
         // 抽取嵌入说明行 = 重新注入当前字体：复用后端已有的 reapply，不另起流程。
         // 没选字体时安静地什么都不做（不发请求、不弹提示）
         function reapplyFont() {
-            if (busy || !current) return;
+            if (busy || (!current && !(state && state.family_cjk))) return;
             setBusy(true);
             stopSettle();
             call("reapply").then(function (value) {
@@ -1137,11 +1148,10 @@
         // CEF 调试口：无 UI 开关、缺省常开；cefInfo 仅用于渲染端口状态/错误提示行
         var cefInfo = (state && state.cef) || { port: null, tabs: null, error: "" };
 
-        // 分槽注入（按语言注入）开关状态：主开关 + 两个子开关，全部来自后端 payload；
-        // 子开关默认值由后端口径统一（主开关开时 synth_weight_none 缺省=开、cjk_punct 缺省=关）
+        // 分槽注入（按语言注入）开关状态：主开关 + 子开关（禁用假加粗），全部来自后端 payload；
+        // 子开关默认值由后端口径统一（synth_weight_none 缺省=开）
         var splitOn = !!(state && state.cjk_split);
         var synthNone = !!(state && state.synth_weight_none);
-        var punctOn = !!(state && state.cjk_punct);
         // 字体预览样张档位：0 关闭 / 1 方案 A / 2 方案 B（兼容旧布尔 preview 键，缺省视为 2）
         var previewLevel = 2;
         var expandLevel = 0;
@@ -1179,16 +1189,6 @@
             setBusy(true);
             stopSettle();
             call("set_split_options", { synth_weight_none: !synthNone }).then(function (value) {
-                setBusy(false);
-                if (value && value.ok !== false) startSettle();
-            });
-        }
-
-        function togglePunct() {
-            if (busy) return;
-            setBusy(true);
-            stopSettle();
-            call("set_split_options", { cjk_punct: !punctOn }).then(function (value) {
                 setBusy(false);
                 if (value && value.ok !== false) startSettle();
             });
@@ -1500,40 +1500,6 @@
             ? { text: t("injectHeal", state.heal_text) }
             : null;
 
-        // 注入状态：三行各一个目标，只按后端 targets[].ok 判断
-        // 标签列宽 auto，状态文字紧跟各标签（用户确认接受三行状态不再左对齐）
-        var TARGET_LABEL_WIDTH = "auto";
-        var targetRows = (state && Array.isArray(state.targets) ? state.targets : []).map(function (target) {
-            var statusText = target.ok ? t("injected") : t("notInjected");
-            // 补注即最近生效注入（healed）时，三行「已注入」跟随主行的绿色
-            var statusColor = target.ok ? (state && state.inject_level === "healed" ? "#8fd4a8" : "#8ab4f8") : "#ff9b90";
-            return h(deckyFrontendLib.PanelSectionRow, { key: target.key },
-                h("div", {
-                    style: {
-                        display: "flex",
-                        alignItems: "center",
-                        fontSize: "13px",
-                        lineHeight: "1.4",
-                        // 左右留白 12px，与顶部字体名行的 12px 对齐（与原始版本完全一致的行结构）
-                        padding: "0 12px",
-                        boxSizing: "border-box",
-                    },
-                },
-                    h("span", {
-                        style: {
-                            display: "inline-block",
-                            width: TARGET_LABEL_WIDTH,
-                            flexShrink: 0,
-                            color: "#c3c8cf",
-                        },
-                    }, target.label + t("colon")),
-                    h("span", {
-                        style: { color: statusColor, fontWeight: 600, fontSize: "12px", minWidth: 0 },
-                    }, statusText)
-                )
-            );
-        });
-
         // 「当前字体」卡片：标题 / 槽位摘要 / 三行状态 / 刷新图标合并为一个可聚焦容器，
         // 不再折叠、所有信息常显；确认键 / 点击 = 重新注入当前字体
         var currentSection = h(deckyFrontendLib.PanelSection, { title: undefined },
@@ -1573,7 +1539,6 @@
                             style: {
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: "space-between",
                                 gap: "8px",
                                 padding: "0 12px",
                             },
@@ -1623,39 +1588,18 @@
                                     },
                                 }, current || t("notSelected"))
                             ),
-                            // 右侧：刷新图标（原状态行右侧图标上移至此，样式不变、垂直居中）
-                            h("span", {
-                                title: t("reapply"),
-                                style: {
-                                    flexShrink: 0,
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    marginLeft: "8px",
-                                    // 距右缘留出空隙，避免图标贴边被裁
-                                    marginRight: "14px",
-                                    opacity: 0.8,
-                                },
-                            },
-                                h("svg", {
-                                    viewBox: "0 0 24 24", width: "20", height: "20",
-                                    fill: "#c3c8cf", "aria-hidden": true,
-                                },
-                                    h("path", { d: "M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" }))
-                            )
                         ),
                         // 状态块：三行状态与摘要纵列横向排列，摘要与三行垂直居中
-                        h("div", { style: { display: "flex", alignItems: "center" } },
-                            // 三行状态：摘要容器 flexShrink 0 后，剩余宽度全部留给状态行，保证单行
-                            h("div", { style: { flex: "1 1 auto", minWidth: 0 } }, targetRows),
-                            // 右侧：摘要纵列（原顶部行内容移入，右对齐；flexShrink 0 防被挤压竖排）
+                        h("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-start", padding: "0 12px" } },
+                            // 摘要纵列：居中显示自动/手动注入的提示
                             h("div", {
                                 style: {
-                                    flex: "0 0 auto",
+                                    flex: "0 1 auto",
                                     minWidth: 0,
                                     display: "flex",
                                     flexDirection: "column",
-                                    alignItems: "flex-end",
-                                    marginRight: "12px",
+                                    alignItems: "flex-start",
+                                    textAlign: "left",
                                     lineHeight: "1.4",
                                 },
                             },
@@ -1668,7 +1612,7 @@
                                             whiteSpace: "normal",
                                             overflow: "visible",
                                             wordBreak: "break-word",
-                                            textAlign: "right",
+                                            textAlign: "left",
                                             fontSize: "11px",
                                             lineHeight: "1.4",
                                             fontWeight: 600,
@@ -1684,7 +1628,7 @@
                                             whiteSpace: "normal",
                                             overflow: "visible",
                                             wordBreak: "break-word",
-                                            textAlign: "right",
+                                            textAlign: "left",
                                             fontSize: "11px",
                                             lineHeight: "1.4",
                                             fontWeight: 400,
@@ -1694,7 +1638,26 @@
                                     : null
                             )
                         )
-                    )
+                    ),
+                            // 刷新图标：卡片右侧，相对整张卡片垂直居中，放大到 26px
+                            h("span", {
+                                title: t("reapply"),
+                                style: {
+                                    flexShrink: 0,
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    marginLeft: "8px",
+                                    // 距右缘留出空隙，避免图标贴边被裁
+                                    marginRight: "14px",
+                                    opacity: 0.8,
+                                },
+                            },
+                                h("svg", {
+                                    viewBox: "0 0 24 24", width: "26", height: "26",
+                                    fill: "#c3c8cf", "aria-hidden": true,
+                                },
+                                    h("path", { d: "M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" }))
+                            )
                 )
             ),
             // 异常提示不属于可折叠内容：任何折叠状态下都常显
@@ -2089,13 +2052,14 @@
             h(deckyFrontendLib.PanelSectionRow, null,
                 h(deckyFrontendLib.ButtonItem, {
                     layout: "below",
-                    disabled: busy || !current,
+                    // 西文或中日韩任一槽有字体即可恢复；只有两槽都空时才禁用
+                    disabled: busy || (!current && !(state && state.family_cjk)),
                     onClick: reset,
                 }, t("restoreDefault"))
             )
         );
 
-        // 高级分区四个开关统一用 Decky 原生 ToggleField：标题在左、开关在右，
+        // 高级分区三个开关统一用 Decky 原生 ToggleField：标题在左、开关在右，
         // 说明文字作为 description 挂在标题下方，行间分隔线由 PanelSectionRow 负责。
         // useToggleRail 让开关显示为 Steam 新 UI 的小胶囊滑块（非旧版 On/Off 分段按钮）。
         // 状态后缀（：已开启 / ：已关闭）不再写进标题，由开关本身表达。
@@ -2148,30 +2112,6 @@
                     onChange: toggleSplit,
                 })
             ),
-            // 使用 CJK 标点符号：常显，主开关关闭时置灰禁用
-            splitOn
-                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punctrow" },
-                    h(deckyFrontendLib.ToggleField, {
-                        label: t("subPunct"),
-                        description: punctOn ? t("subPunctOn") : t("subPunctOff"),
-                        checked: punctOn,
-                        disabled: busy || !splitOn,
-                        useToggleRail: true,
-                        onChange: togglePunct,
-                    })
-                )
-                : h("div", { style: { opacity: 0.4 } },
-                    h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:punctrow" },
-                        h(deckyFrontendLib.ToggleField, {
-                            label: t("subPunct"),
-                            description: punctOn ? t("subPunctOn") : t("subPunctOff"),
-                            checked: punctOn,
-                            disabled: busy || !splitOn,
-                            useToggleRail: true,
-                            onChange: togglePunct,
-                        })
-                    )
-                ),
             h(deckyFrontendLib.PanelSectionRow, { key: "fp-history:clear" },
                 h("div", { style: { marginTop: "10px" } },
                     h(deckyFrontendLib.ButtonItem, { layout: "below", onClick: clearHistory }, t("clearHistory")))

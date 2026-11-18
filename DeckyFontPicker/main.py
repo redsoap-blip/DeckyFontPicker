@@ -190,24 +190,14 @@ LATIN_STRIP_RANGES_BASE = [
     (0x20000, 0x2FA1F),  # CJK 扩展 B~F
     (0xE000, 0xF8FF),  # 私有区（PUA）：Steam 图标字形在自带的 Motiva Sans 内，防自装字体抢
 ]
-# 子开关②「使用 CJK 标点符号」开启时的追加段：这些标点从中文字体全角渲染。
-# 只改这里这一份常量列表即可调整标点归属，不做运行时计算。
-LATIN_STRIP_RANGES_PUNCT = LATIN_STRIP_RANGES_BASE + [
-    (0x2018, 0x201F),  # 弯引号
-    (0x2026, 0x2026),  # 省略号
-    (0x00B7, 0x00B7),  # 间隔号 ·
-]
-
-
 # 剔字掩码版本：掩码内容变更（如 v2 补入谚文字母区）时 +1，产物文件名随之
 # 变化，旧产物自然失效并按陈旧缓存清理，不需要手工清缓存
 LATIN_STRIP_MASK_VERSION = 2
 
 
-def _strip_variant(cjk_punct):
-    """剔字产物的文件名变体后缀：掩码内容或版本变更即新文件，
-    切子开关②/升级掩码后自动重剔一次。"""
-    return f".latinp{LATIN_STRIP_MASK_VERSION}" if cjk_punct else f".latin{LATIN_STRIP_MASK_VERSION}"
+def _strip_variant():
+    """固定使用基础剔字掩码的缓存后缀。"""
+    return f".latin{LATIN_STRIP_MASK_VERSION}"
 
 # 三个注入目标。
 # 主界面标题是稳定的；QuickAccess / MainMenu 在 Steam 里永远带动态后缀
@@ -251,6 +241,20 @@ _CEF_LOCK = threading.Lock()
 # --------------------------------------------------------------------------- #
 # fontconfig 读取
 # --------------------------------------------------------------------------- #
+
+class _KeyedError(RuntimeError):
+    """面向用户的错误：message 保留中文（日志用），key/args 供前端按语言显示。"""
+
+    def __init__(self, key, args=(), message=None):
+        self.key = key
+        self.args_ = list(args)
+        super().__init__(message or key)
+
+
+def _elapsed_ms(t0):
+    """自 t0（time.monotonic()）起经过的毫秒数，用于耗时日志。"""
+    return int((time.monotonic() - t0) * 1000)
+
 
 def _run(args, timeout=20):
     env = None
@@ -486,7 +490,9 @@ def _family_map(force=False):
         now = time.time()
         if not force and _FAMILY_CACHE["data"] is not None and now - _FAMILY_CACHE["at"] < FAMILY_TTL:
             return _FAMILY_CACHE["data"]
+        _t0 = time.monotonic()
         _FAMILY_CACHE["data"] = _family_map_build()
+        log(f"[耗时] 字体列表重建（fc-list）: {_elapsed_ms(_t0)} ms，共 {len(_FAMILY_CACHE['data'])} 个族")
         _FAMILY_CACHE["at"] = now
         return _FAMILY_CACHE["data"]
 
@@ -766,15 +772,19 @@ def _ensure_font_file(face):
     if os.path.exists(ttf) and os.path.getsize(ttf) > 0:
         _touch(ttf)
     if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
+        _t0 = time.monotonic()
         proc = _run(
             [_system_python(), _helper(), "extract", path, str(face["index"]), ttf],
             timeout=180,
         )
+        log(f"[耗时] 抽取 {os.path.basename(path)}#{face['index']}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
         if proc.returncode != 0 or not os.path.exists(ttf):
             raise RuntimeError(f"抽取 {os.path.basename(path)}#{face['index']} 失败: {proc.stderr.strip()[:200]}")
 
     if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
+        _t0 = time.monotonic()
         proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+        log(f"[耗时] woff2 压缩 {os.path.basename(ttf)}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
         if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
             try:
                 os.remove(ttf)
@@ -785,21 +795,21 @@ def _ensure_font_file(face):
     return ttf, "font/ttf"
 
 
-def _ensure_latin_file(face, cjk_punct):
+def _ensure_latin_file(face):
     """西文槽的剔字版 face（方案 D）。返回 (路径, MIME, 剔字发生, 剔字失败)。
 
     - 读 face cmap 与剔除掩码求交：交集为空 → 原样使用（绝大多数西文字体，
       helper 退出码 0 且不产出文件，无剔字开销）；
-    - 交集非空 → fontTools subset 剔字，产物按掩码版本独立命名缓存
-      （{key}.latin.ttf/.woff2 或 {key}.latinp.ttf/.woff2，切子开关②自动重剔）；
+    - 交集非空 → fontTools subset 剔字，产物按掩码版本命名缓存
+      （{key}.latin{掩码版本}.ttf/.woff2，掩码内容变更时版本号 +1 自动重剔）；
     - 失败（退出码≠0 或产物缺失/为空）→ 回退原始 face，strip_fallback=True，
       调用方据此给面板警告，绝不静默。剔除掩码常量在模块级，区间串传给 helper。
     """
-    variant = _strip_variant(cjk_punct)
+    variant = _strip_variant()
     key = _cache_key(face)
     ttf = os.path.join(CACHE_DIR, f"{key}{variant}.ttf")
     woff2 = os.path.join(CACHE_DIR, f"{key}{variant}.woff2")
-    ranges = LATIN_STRIP_RANGES_PUNCT if cjk_punct else LATIN_STRIP_RANGES_BASE
+    ranges = LATIN_STRIP_RANGES_BASE
     strip_arg = ",".join(f"{lo:X}-{hi:X}" if hi > lo else f"{lo:X}" for lo, hi in ranges)
 
     if os.path.exists(woff2) and os.path.getsize(woff2) > 0:
@@ -809,11 +819,14 @@ def _ensure_latin_file(face, cjk_punct):
         _touch(ttf)
     if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
         try:
+            _t0 = time.monotonic()
             proc = _run(
                 [_system_python(), _helper(), "subset", face["file"], str(face["index"]), ttf, strip_arg],
                 timeout=180,
             )
             rc, err = proc.returncode, proc.stderr.strip()[:200]
+            log(f"[耗时] 剔字子集 {os.path.basename(face['file'])}#{face['index']}"
+                f"（基础掩码）: {_elapsed_ms(_t0)} ms rc={rc}")
         except Exception as exc:  # 起进程失败按剔字失败处理
             rc, err = 1, str(exc)
         produced = os.path.exists(ttf)
@@ -896,8 +909,8 @@ def _protected_cache_files(state, families):
     """启动清理的保护集：按 state 反推当前注入会用到的缓存文件名（零抽取）。
 
     family / family_cjk → _pick_faces 选面 → _cache_key → {key}.ttf/.woff2；
-    主开关开启时西文槽的剔字产物 {key}.{latin|latinp}.ttf/.woff2 一并保护
-    （掩码版本取当前子开关②状态，另一版本的产物视为陈旧缓存照常清理）。
+    主开关开启时西文槽的剔字产物 {key}.latin{掩码版本}.ttf/.woff2 一并保护
+    （旧掩码版本的剔字产物不在保护集内，视为陈旧缓存照常清理）。
     字体已卸载则选不到 face，自然跳过；单文件字体不进缓存，反推不到文件名也无妨。
     只做键名拼装，不抽取、不落盘。
     """
@@ -916,7 +929,7 @@ def _protected_cache_files(state, families):
                 continue
             names.extend(full_names(face))
             if split_on:
-                variant = _strip_variant(bool(state.get("cjk_punct")))
+                variant = _strip_variant()
                 key = _cache_key(face)
                 names.append(os.path.join(CACHE_DIR, f"{key}{variant}.ttf"))
                 names.append(os.path.join(CACHE_DIR, f"{key}{variant}.woff2"))
@@ -1356,7 +1369,10 @@ def read_state():
     try:
         with open(_state_path(), "r", encoding="utf-8") as fp:
             data = json.load(fp)
-        return data if isinstance(data, dict) else {}
+        if isinstance(data, dict):
+            data.pop("cjk_punct", None)  # 迁移：移除旧版标点渲染开关状态
+            return data
+        return {}
     except Exception:
         return {}
 
@@ -1518,21 +1534,21 @@ class Plugin:
             log(f"CEF 调试口已连接：{source}（端口 {_CEF_CACHE.get('port')}，{len(tabs)} 个 tab）")
         # 弹窗监听：挂浏览器事件流（内部自动重连，失败不影响主流程）
         plugin._start_toast_watcher()
-        if not family:
-            return
-        if family not in families:
-            log(f"已保存字体 {family!r} 不在系统中，清空选择")
+        if family and family not in families:
+            log(f"已保存字体 {family!r} 不在系统中，清空西文槽选择")
             state.pop("family", None)
             state.pop("inject_at", None)
             state.pop("inject_failed_at", None)
             state.pop("heal_at", None)
             write_state(state)
-            return
+            family = None
         # 主开关开时校验 CJK 槽：字体已卸载则清键（与 family 同款），不影响西文槽恢复
         if state.get("cjk_split") and state.get("family_cjk") and state["family_cjk"] not in families:
             log(f"已保存的 CJK 槽字体 {state['family_cjk']!r} 不在系统中，清空 CJK 槽选择")
             state.pop("family_cjk", None)
             write_state(state)
+        if not family and not (state.get("cjk_split") and state.get("family_cjk")):
+            return
         result = await plugin._apply(family)
         if not result.get("ok"):
             log(f"启动时恢复字体失败: {result.get('error')}")
@@ -1572,7 +1588,7 @@ class Plugin:
             log(f"预览字体准备失败 {family!r}: {exc}")
             return {"ok": False, "error": str(exc)}
         if not pair:
-            return {"ok": False, "error": f"系统里没有字体 {family}"}
+            return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family]}
         path, mime = pair
         try:
             url = plugin._server.register(path, mime)
@@ -1588,7 +1604,7 @@ class Plugin:
         plugin = _bind(self)
         families = await asyncio.to_thread(_family_map)
         if family not in families:
-            return {"ok": False, "error": f"系统里没有字体 {family}", **plugin._payload()}
+            return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
         state = read_state()
         state["family"] = family
         _push_history(state, family)
@@ -1599,26 +1615,36 @@ class Plugin:
         """CJK 槽位选择（主开关开时前端按语言归属调用）。
 
         只写 family_cjk，不动西文槽；槽位归属完全由前端按字体语言决定，后端不做判断。
-        西文槽还没有字体时先拒绝：注入栈以西文槽为锚，先选西文再选中日韩。
+        西文槽为空时只注入中日韩字体（见 _prepare_cjk_only）。
         """
         plugin = _bind(self)
-        state = read_state()
-        if not state.get("family"):
-            return {"ok": False, "error": "请先选择西文字体，再设置中日韩槽位", **plugin._payload()}
         families = await asyncio.to_thread(_family_map)
         if family not in families:
-            return {"ok": False, "error": f"系统里没有字体 {family}", **plugin._payload()}
+            return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
         state = read_state()
         state["family_cjk"] = family
         _push_history(state, family)
         write_state(state)
-        return await plugin._apply(state["family"])
+        # 西文槽为空时 _prepare 会只注入中日韩字体
+        return await plugin._apply(state.get("family"))
 
-    async def set_split_options(self, cjk_split=None, synth_weight_none=None, cjk_punct=None,
+    async def set_split_options(self, cjk_split=None, synth_weight_none=None,
+                                preview_level=None, expand_level=None, preview=None):
+        """分槽开关入口：包一层计时，实际逻辑在 _set_split_options_inner。"""
+        t0 = time.monotonic()
+        try:
+            return await self._set_split_options_inner(
+                cjk_split=cjk_split, synth_weight_none=synth_weight_none,
+                preview_level=preview_level, expand_level=expand_level, preview=preview,
+            )
+        finally:
+            log(f"[耗时] 分槽开关调用合计（cjk_split={cjk_split}）: {_elapsed_ms(t0)} ms")
+
+    async def _set_split_options_inner(self, cjk_split=None, synth_weight_none=None,
                                 preview_level=None, expand_level=None, preview=None):
         """分槽注入的主/子开关（持久化）。参数都可选，None = 不变。
 
-        子开关默认值（主开关开启时）：synth_weight_none 缺省视为开、cjk_punct 缺省视为关。
+        子开关默认值（主开关开启时）：synth_weight_none 缺省视为开。
         preview_level（预览样张档位，0 关闭 / 1 方案 A / 2 方案 B）与
         expand_level（C 方案聚焦展开开关，0 关闭 / 1 展开；旧 2 档内嵌并入 1）
         都是纯前端渲染开关，不影响注入 CSS：变化时只落盘、不重新注入。
@@ -1647,10 +1673,6 @@ class Plugin:
             value = bool(synth_weight_none)
             changed = changed or bool(state.get("synth_weight_none", True)) != value
             state["synth_weight_none"] = value
-        if cjk_punct is not None:
-            value = bool(cjk_punct)
-            changed = changed or bool(state.get("cjk_punct")) != value
-            state["cjk_punct"] = value
         if preview_level is not None or preview is not None:
             if preview_level is not None:
                 value = _norm_level(preview_level, _preview_level_of(state))
@@ -1669,7 +1691,6 @@ class Plugin:
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
             f"synth_weight_none={state.get('synth_weight_none', True)} "
-            f"cjk_punct={state.get('cjk_punct')} "
             f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)}")
         if not changed:
             # 只有预览档位变化：不影响注入 CSS，无需重新注入
@@ -1685,8 +1706,9 @@ class Plugin:
             plugin._detail = {}
             log(f"按语言注入已关闭：西文/中日韩槽位已清空，注入已拆除（{removed} 处）")
             return plugin._payload()
-        family = plugin._family or read_state().get("family")
-        if not family:
+        state_now = read_state()
+        family = plugin._family or state_now.get("family")
+        if not family and not (state_now.get("cjk_split") and state_now.get("family_cjk")):
             return plugin._payload()
         return await plugin._apply(family)
 
@@ -1722,8 +1744,8 @@ class Plugin:
 
     async def reapply(self):
         plugin = _bind(self)
-        if not plugin._family:
-            return {"ok": False, "error": "当前没有选择字体", **plugin._payload()}
+        if not plugin._family and not read_state().get("family_cjk"):
+            return {"ok": False, "error": "当前没有选择字体", "error_key": "err.noSelection", **plugin._payload()}
         return await plugin._apply(plugin._family)
 
     async def on_ui_loaded(self):
@@ -1743,7 +1765,7 @@ class Plugin:
         plugin = _bind(self)
         families = await asyncio.to_thread(_family_map)
         if family not in families:
-            return {"ok": False, "error": f"系统里没有字体 {family}", **plugin._payload()}
+            return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
         state = read_state()
         favorites = _clean_favorites(state)
         added = family not in favorites
@@ -1754,9 +1776,7 @@ class Plugin:
         # 只改 favorites，state 里其它键（含已不再使用的 groups）原样保留
         state["favorites"] = favorites
         write_state(state)
-        payload = plugin._payload()
-        payload["message"] = "已加入收藏夹" if added else "已移出收藏夹"
-        return payload
+        return plugin._payload()
 
     # ---- 应用 / 注入 ----
 
@@ -1768,15 +1788,20 @@ class Plugin:
         前置条件不满足（字体不存在、缺 fontTools、抽取或起服务失败）时直接返回错误，
         已经注入的 CSS 原样保留，不会出现「先 _remove_all() 再抛异常」导致样式被拆掉。
         """
+        t_all = time.monotonic()
         async with self._window_mutex():
             await self._stop_window()
         try:
+            t_prep = time.monotonic()
             detail = await asyncio.to_thread(self._prepare, family, family_cjk)
+            log(f"[耗时] 准备字体 {family!r}: {_elapsed_ms(t_prep)} ms")
         except Exception as exc:
             log(f"准备字体 {family!r} 失败: {exc}")
             self._mark_inject(False)
             payload = self._payload()
             payload.update({"ok": False, "error": str(exc)})
+            if isinstance(exc, _KeyedError):
+                payload.update({"error_key": exc.key, "error_args": exc.args_})
             return payload
 
         await self._remove_all()
@@ -1793,6 +1818,7 @@ class Plugin:
         await self._cancel_dyn()
         self._dead_tabs.clear()
         self._dyn_task = asyncio.create_task(self._inject_dynamic_all())
+        log(f"[耗时] 应用字体 {family!r} 合计（不含动态 uid 注入）: {_elapsed_ms(t_all)} ms")
         return self._payload()
 
     def _mark_inject(self, ok, source="user"):
@@ -1834,17 +1860,15 @@ class Plugin:
             await self._inject_dynamic(key)
 
     def _prepare(self, family, family_cjk=None):
-        """把选中字体准备成一段 CSS。任何失败都直接抛异常，调用方尚未拆旧样式。"""
+        """把选中字体准备成一段 CSS。任何失败都直接抛异常，调用方尚未拆旧样式。
+
+        family 为 None（西文槽为空）时，若中日韩槽有字体，则只注入中日韩字体。
+        """
         state = read_state()
         split_on = bool(state.get("cjk_split"))
         # synth_weight_none 已独立于 cjk_split，无论主开关是否开启都读取（缺省=开）
-        # cjk_punct 仍仅在主开关开启时生效（缺省=关）
         synth_none = bool(state.get("synth_weight_none", True))
-        cjk_punct = split_on and bool(state.get("cjk_punct"))
         families = _family_map()
-        entry = families.get(family)
-        if entry is None:
-            raise RuntimeError(f"系统里没有字体 {family}")
         entry_cjk = None
         if family_cjk is None:
             family_cjk = state.get("family_cjk")
@@ -1854,22 +1878,77 @@ class Plugin:
                 # CJK 槽指向已卸载的字体：按「跟随系统」处理（启动校验负责清键）
                 log(f"CJK 槽字体 {family_cjk!r} 不在系统中，本次按跟随系统处理")
                 family_cjk = None
+        if not family:
+            if split_on and entry_cjk is not None:
+                return self._prepare_cjk_only(family_cjk, entry_cjk, synth_none)
+            raise _KeyedError("err.noSlots", message="没有选择西文字体，中日韩槽也为空")
+        entry = families.get(family)
+        if entry is None:
+            raise _KeyedError("err.noFamily", [family], message=f"系统里没有字体 {family}")
         chain = _fallback_families(
             families, family, entry["zh"], split_on=split_on, cjk_family=family_cjk
         )
         return self._prepare_extract(
             family, entry, chain,
             split_on=split_on, family_cjk=family_cjk, entry_cjk=entry_cjk,
-            synth_none=synth_none, cjk_punct=cjk_punct,
+            synth_none=synth_none,
         )
 
+    def _prepare_cjk_only(self, family_cjk, entry_cjk, synth_none):
+        """只有中日韩槽、西文槽为空：中日韩字体单独作为主字体注入（不剔字、不回填）。
+
+        字体栈 = [中日韩内部族, Motiva Sans, system-ui, sans-serif]。Motiva Sans 保留
+        Steam 自带的 PUA 图标字形，与分槽路径的回退链一致。
+        """
+        reg, med, bold = _pick_faces(entry_cjk, prefer_zh=True)
+        _require_fonttools_if_needed([reg, med, bold])
+        faces = []
+        paths = []
+        details = {}
+        for face, weight, slot in ((reg, 400, "regular"), (med, 500, "medium"), (bold, 700, "bold")):
+            if face is None:
+                details[slot] = None
+                continue
+            path, mime = _ensure_font_file(face)
+            faces.append((self._server.register(path, mime), mime, weight))
+            paths.append(path)
+            details[slot] = {
+                "file": face["file"],
+                "index": face["index"],
+                "weight": face["weight"],
+                "extracted": face["collection"],
+                "mime": mime,
+                "bytes": os.path.getsize(path),
+                "stripped": False,
+            }
+        inuse = [p for p in paths if _is_cache_file(p)]
+        self._cache_inuse = set(inuse)
+        _prune_font_cache(inuse)
+        chain = ["Motiva Sans", "system-ui", "sans-serif"]
+        css = self._build_css([], faces, [], chain, synth_none)
+        log(f"西文槽为空：仅注入中日韩槽字体 {family_cjk!r}（{len(faces)} 条字重声明）")
+        return {
+            "css": css,
+            # 西文槽为空：regular/medium/bold 留给西文，这里只放中日韩字体的信息
+            "regular": None,
+            "medium": None,
+            "bold": None,
+            "cjk": details,
+            "strip": {"done": False, "fallback": False},
+            "full_backfill": False,
+            "split": True,
+            "synth_none": synth_none,
+            "fallback": chain,
+            "zh": entry_cjk["zh"],
+        }
+
     def _prepare_extract(self, family, entry, chain, split_on=False, family_cjk=None,
-                         entry_cjk=None, synth_none=False, cjk_punct=False):
+                         entry_cjk=None, synth_none=False):
         """抽取 face 并生成 CSS。
 
         - 主开关关：单槽 1.4.2 路径（zh 优先选面、不剔字、不注册 medium、
           无 Motiva Sans / synthesis，回退链逐字节同旧版）；
-        - 主开关开：西文槽 prefer_zh=False + 方案 D 剔字（掩码按子开关②选版本）
+        - 主开关开：西文槽 prefer_zh=False + 方案 D 剔字（固定基础剔字掩码）
           + medium 注册；CJK 槽保持 zh 优先与原抽取流程，不做子集化（实测无收益）。
         """
         regular, medium, bold = _pick_faces(entry, prefer_zh=not split_on)
@@ -1880,7 +1959,7 @@ class Plugin:
         # 关则与 1.4.2 完全一致
         def latin_file(face):
             if split_on:
-                return _ensure_latin_file(face, cjk_punct)
+                return _ensure_latin_file(face)
             path, mime = _ensure_font_file(face)
             return path, mime, False, False
 
@@ -1997,7 +2076,6 @@ class Plugin:
             "full_backfill": full_backfill,
             "split": split_on,
             "synth_none": synth_none,
-            "cjk_punct": cjk_punct,
             "fallback": chain,
             "zh": entry["zh"],
         }
@@ -2030,7 +2108,9 @@ class Plugin:
         lines = [face_rule(INTERNAL_FAMILY, url, mime, weight) for url, mime, weight in latin_faces]
         lines.extend(face_rule(INTERNAL_FAMILY_CJK, url, mime, weight) for url, mime, weight in cjk_faces)
         lines.extend(face_rule(INTERNAL_FAMILY_FULL, url, mime, weight) for url, mime, weight in full_faces)
-        stack = [f'"{INTERNAL_FAMILY}"']
+        stack = []
+        if latin_faces:
+            stack.append(f'"{INTERNAL_FAMILY}"')
         if cjk_faces:
             stack.append(f'"{INTERNAL_FAMILY_CJK}"')
         if full_faces:
@@ -2044,7 +2124,7 @@ class Plugin:
         # 靠更高的特异性胜出，不依赖样式注入先后顺序。
         rule = ":root, html body, html body * { font-family: " + ", ".join(stack) + " !important;"
         if synth_none:
-            # 禁用假加粗（子开关①，只随主开关+子开关都开时出现）：
+            # 禁用假加粗（已独立于分槽主开关，无条件生效）：
             # 只关字重合成，不碰斜体合成（font-synthesis-style 一律不动）
             rule += " font-synthesis-weight: none !important;"
         rule += " }"
@@ -2412,7 +2492,7 @@ class Plugin:
         favorites = _clean_favorites(state)
         inject_level, inject_stamp = _inject_status(state)
         # 分槽开关状态：family_cjk 取 state 原值（主开关关闭时槽位即被清空，重开后为跟随系统），
-        # 子开关默认值与 _prepare 同口径（synth_weight_none 缺省=开、cjk_punct 缺省=关）
+        # 子开关默认值与 _prepare 同口径（synth_weight_none 缺省=开）
         return {
             "ok": True,
             "inject_level": inject_level,
@@ -2433,7 +2513,6 @@ class Plugin:
             "cjk": self._detail.get("cjk"),
             "cjk_split": bool(state.get("cjk_split")),
             "synth_weight_none": bool(state.get("synth_weight_none", True)),
-            "cjk_punct": bool(state.get("cjk_punct")),
             "preview": bool(_preview_level_of(state) != 0),
             "preview_level": _preview_level_of(state),
             "expand_level": _expand_level_of(state),
