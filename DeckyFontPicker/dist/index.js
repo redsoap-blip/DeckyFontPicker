@@ -594,7 +594,10 @@
         var familyCss = '"' + slot + '"';
         // data-* 只给 IO 用：滚进视口的预览行才去后端取 @font-face URL（懒加载）
         var loadAttrs = { "data-fp-font": font.family, "data-fp-slot": slot };
-        var kids = [h("div", { className: "fp-fname" }, font.family)];
+        // 名字永远用自身字体渲染：fp-nm 挂同样的 data-* 与 --fp-family，进 IO 懒加载
+        // 集合（与预览档位无关，预览关闭时也生效）；@font-face 未到位前 CSS 里
+        // "slot", inherit 兜底显示默认字体，到位后浏览器按 cmap 逐字符换字自动重排。
+        var kids = [h("div", { className: "fp-fname fp-nm", style: { "--fp-family": familyCss }, ...loadAttrs }, font.family)];
         if (previewLevel === 1) {
             kids.push(h("div", { className: "fp-prev fp-prev-a", style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
         } else if (previewLevel === 2) {
@@ -930,7 +933,7 @@
             var root = rootRef.current;
             if (!root) return;
             var attach = function (io) {
-                var nodes = root.querySelectorAll(".fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
+                var nodes = root.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
                 for (var i = 0; i < nodes.length; i++) {
                     var node = nodes[i];
                     if (node.__fpObserved) continue;
@@ -946,7 +949,7 @@
             };
             if (typeof IntersectionObserver === "undefined") {
                 // 老引擎兜底：只取行内样张，隐藏的展开样张等聚焦后再说
-                var rows = root.querySelectorAll(".fp-prev[data-fp-font]");
+                var rows = root.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font]");
                 for (var j = 0; j < rows.length; j++) {
                     ensurePreviewFont(rows[j].getAttribute("data-fp-font"), rows[j].getAttribute("data-fp-slot"));
                 }
@@ -977,7 +980,7 @@
             previewPortRef.current = port;
             previewFontsRef.current = {};
             setPreviewFontCss("");
-            var nodes = rootRef.current.querySelectorAll(".fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
+            var nodes = rootRef.current.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
             for (var i = 0; i < nodes.length; i++) {
                 var node = nodes[i];
                 node.__fpObserved = 0;
@@ -1880,6 +1883,12 @@
             // 字体名自动换行：覆盖基线 nowrap/省略号，长名可折行（样张仍保持单行省略）。
             "html body .fp-font-row .fp-fname{font-size:16px!important;letter-spacing:0.3px!important;text-align:left!important;" +
             "white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important;}" +
+            // 名字渲染自身字体：@font-face（极小子集）按需注入后逐字符生效；缺字形
+            // 字符回退后面的 UI 默认字体链（= 继承链，实测 Motiva Sans…），观感与
+            // 旧版一致，无豆腐。注意 fallback 不能写 inherit——CSS-wide 关键字混进
+            // 族名列表会让整条声明在计算值阶段作废（首个实现踩坑：名字不换字体）。
+            // 特异性 (0,1,2) 高于后端注入的 html body * (0,0,2)，与 .fp-prev 同策略。
+            "html body .fp-nm{font-family:var(--fp-family),Motiva Sans,Arial,Helvetica,sans-serif!important;}" +
             "html body .fp-prev,html body .fp-prev-b{" +
             "font-family:var(--fp-family)!important;font-size:15px!important;line-height:1.4!important;" +
             "color:rgba(195,200,207,0.72)!important;white-space:nowrap!important;overflow:hidden!important;" +

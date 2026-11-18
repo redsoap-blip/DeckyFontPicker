@@ -859,7 +859,7 @@ def _prepare_preview_face(family):
         return None
 
     key = hashlib.sha1(
-        (face["file"] + "#" + str(face["index"]) + "#pv1").encode("utf-8")
+        (face["file"] + "#" + str(face["index"]) + "#pv2").encode("utf-8")
     ).hexdigest()[:20]
     d = _preview_cache_dir()
     os.makedirs(d, exist_ok=True)
@@ -871,7 +871,9 @@ def _prepare_preview_face(family):
     if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
         proc = _run(
             [_system_python(), _helper(), "preview", face["file"], str(face["index"]), ttf,
-             PREVIEW_SAMPLE_CHARS],
+             # 保留字符 = 样张文本 + 族名：名字元素永远用自身字体渲染（字体名自成样张），
+             # 子集必须覆盖族名字符；族名通常十几个字符，产物仍是几 KB。
+             PREVIEW_SAMPLE_CHARS + family],
             timeout=180,
         )
         if proc.returncode != 0 or not os.path.exists(ttf) or os.path.getsize(ttf) <= 0:
