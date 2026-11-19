@@ -74,11 +74,24 @@
         for (var i = 0; i < s.length; i++) hash = ((hash << 5) + hash + s.charCodeAt(i)) >>> 0;
         return "FpPrev" + hash.toString(36);
     }
+    // mime→format 映射:唯一来源在后端 main.py _build_css 内 fmt_of;新增格式两处同改。
     var FP_PREVIEW_MIME_FORMAT = {
         "font/woff2": "woff2",
         "font/woff": "woff",
         "font/otf": "opentype",
         "font/ttf": "truetype",
+    };
+
+    // 样张文本单一来源(键 exEn/exZh/exJa/exKo = 展开块短样张;prevEn/prevZh = 行内长样张)。
+    // 改任何一条必须 bump 后端缓存键 #pv2(main.py _prepare_preview_face 的 sha1 盐)
+    // 并同步 PREVIEW_SAMPLE_CHARS(main.py:164 附近)字符表。
+    var SAMPLES = {
+        exEn: "The quick brown fox 0123",
+        exZh: "永和九年 岁在癸丑 汉字预览",
+        exJa: "いろはにほへと 漢字カタカナ",
+        exKo: "다람쥐 헌 쳇바퀴 한글",
+        prevEn: "The quick brown fox jumps over 0123",
+        prevZh: "永和九年 岁在癸丑 汉字预览"
     };
 
     // DFL.GamepadButton: CANCEL=2(B) / SECONDARY=3(X) / OPTIONS=4(Y)
@@ -671,19 +684,19 @@
         if (expandLevel > 0) {
             var lines = [
                 h("div", { className: "fp-ex-line fp-ex-lat", style: { "--fp-family": familyCss }, ...loadAttrs },
-                    h("span", { className: "fp-ex-label" }, t("exLatin")), "The quick brown fox 0123")
+                    h("span", { className: "fp-ex-label" }, t("exLatin")), SAMPLES.exEn)
             ];
             if (font.zh || font.zh_extra) {
                 lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
-                    h("span", { className: "fp-ex-label" }, t("exZh")), "永和九年 岁在癸丑 汉字预览"));
+                    h("span", { className: "fp-ex-label" }, t("exZh")), SAMPLES.exZh));
             }
             if (font.ja) {
                 lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
-                    h("span", { className: "fp-ex-label" }, t("exJa")), "いろはにほへと 漢字カタカナ"));
+                    h("span", { className: "fp-ex-label" }, t("exJa")), SAMPLES.exJa));
             }
             if (font.ko) {
                 lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
-                    h("span", { className: "fp-ex-label" }, t("exKo")), "다람쥐 헌 쳇바퀴 한글"));
+                    h("span", { className: "fp-ex-label" }, t("exKo")), SAMPLES.exKo));
             }
             kids.push(h("div", { className: "fp-ex" }, lines));
         }
@@ -706,8 +719,8 @@
         var api = props.api;
 
         // 方案 B：每行常显「常规 + 粗体」双样张，粗体行带 BOLD / SYNTH 标签
-        var sampleEn = "The quick brown fox jumps over 0123";
-        var sampleZh = "永和九年 岁在癸丑 汉字预览";
+        var sampleEn = SAMPLES.prevEn;
+        var sampleZh = SAMPLES.prevZh;
         var sample = (font.zh || font.zh_extra) ? sampleZh : sampleEn;
         var boldLabel = font.has_bold ? "BOLD" : "SYNTH";
 
@@ -1008,24 +1021,26 @@
             return r.bottom > 0 && r.top < window.innerHeight;
         }
 
+        // 视口补扫:IO 挂载与字体服务端口变更两个 useEffect 共用的节点遍历。
+        // __fpObserved 保证每节点只同步补调一次;端口变更路径先清零该标记再走这里。
+        function rescanNodes() {
+            var io = ioRef.current;
+            if (!io || !rootRef.current) return;
+            var nodes = rootRef.current.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
+            for (var i = 0; i < nodes.length; i++) {
+                var node = nodes[i];
+                if (node.__fpObserved) continue;
+                node.__fpObserved = 1;
+                if (isFpNodeVisible(node)) {
+                    ensurePreviewFont(node.getAttribute("data-fp-font"), node.getAttribute("data-fp-slot"));
+                }
+                io.observe(node);
+            }
+        }
+
         useEffect(function () {
             var root = rootRef.current;
             if (!root) return;
-            var attach = function (io) {
-                var nodes = root.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
-                for (var i = 0; i < nodes.length; i++) {
-                    var node = nodes[i];
-                    if (node.__fpObserved) continue;
-                    node.__fpObserved = 1;
-                    // 同步补调：不依赖 IO 首帧回调（该回调在此 CEF 里对初始/新挂载即
-                    // 已可见的节点不来）。几何判定可见就直接取字体；__fpObserved 保证
-                    // 每个节点只补一次，ensurePreviewFont 内 seen[family] 再去重 RPC。
-                    if (isFpNodeVisible(node)) {
-                        ensurePreviewFont(node.getAttribute("data-fp-font"), node.getAttribute("data-fp-slot"));
-                    }
-                    io.observe(node);
-                }
-            };
             if (typeof IntersectionObserver === "undefined") {
                 // 老引擎兜底：只取行内样张，隐藏的展开样张等聚焦后再说
                 var rows = root.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font]");
@@ -1047,9 +1062,9 @@
                 }
             }, { rootMargin: "300px 0px" });
             ioRef.current = io;
-            var mo = new MutationObserver(function () { attach(io); });
+            var mo = new MutationObserver(function () { rescanNodes(); });
             mo.observe(root, { childList: true, subtree: true });
-            attach(io);
+            rescanNodes();
             return function () { mo.disconnect(); io.disconnect(); ioRef.current = null; };
         }, []);
 
@@ -1064,18 +1079,13 @@
             previewFontsRef.current = {};
             previewRetryRef.current = {}; // 新端口 = 新机会，重试计数一并清零
             setPreviewFontCss("");
+            // reset 后同样同步补调当前可见行：端口变了要重新取新 URL，
+            // 只靠 IO 首帧回调同样会漏加载。
             var nodes = rootRef.current.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
             for (var i = 0; i < nodes.length; i++) {
-                var node = nodes[i];
-                node.__fpObserved = 0;
-                // reset 后同样同步补调当前可见行：端口变了要重新取新 URL，
-                // 只靠 IO 首帧回调同样会漏加载。
-                if (isFpNodeVisible(node)) {
-                    node.__fpObserved = 1;
-                    ensurePreviewFont(node.getAttribute("data-fp-font"), node.getAttribute("data-fp-slot"));
-                }
-                io.observe(node);
+                nodes[i].__fpObserved = 0;
             }
+            rescanNodes();
         }, [state && state.server && state.server.port]);
 
         // ---- P4 展开滚动稳定 ----------------------------------------------------

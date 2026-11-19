@@ -128,6 +128,8 @@ WOFF2_MAX_BYTES = 3 * 1024 * 1024
 # 启动清理改为按 state 反推保护集，清理的「保护优先于上限」逻辑不变
 CACHE_KEEP_FILES = 9
 CACHE_EXTS = (".ttf", ".otf", ".woff", ".woff2")
+PREVIEW_CACHE_MAX_FILES = 40
+PREVIEW_CACHE_MAX_BYTES = 8 * 1024 * 1024
 
 PREFERRED_CJK = [
     "Noto Sans CJK SC",
@@ -154,6 +156,8 @@ MODE_EXTRACT = "extract"
 INTERNAL_FAMILY = "DeckyFontPicker"
 INTERNAL_FAMILY_CJK = "DeckyFontPicker-CJK"
 INTERNAL_FAMILY_FULL = "DeckyFontPicker-Full"
+STEAM_UI_FONT = "Motiva Sans"  # Steam 自带 UI 字体（PUA 图标字形在其中）。改名时改这一处，
+                               # 并同步前端 dist/index.js CSS 里的两处 Motiva Sans（该文件有互指注释）。
 
 # 列表样张懒加载：行内 / 展开块四语言样张用到的全部字符。后端按这张表把每个字体
 # 抽成只含样张字形的极小子集（几 KB），经 FontServer 以 @font-face 提供给前端。
@@ -161,6 +165,8 @@ INTERNAL_FAMILY_FULL = "DeckyFontPicker-Full"
 # 只有 @font-face + 127.0.0.1 URL 这种真绑定才生效（当前全局注入已实证）。
 # 子集产物放 CACHE_DIR/preview/ 子目录：主 face 的 9 文件 LRU 只扫 CACHE_DIR 顶层，
 # 不会误删预览子集，预览子集也不占用那 9 个名额。
+# 与前端 dist/index.js 的 SAMPLES 常量互指：改样张文本必须 bump #pv2
+# （_prepare_preview_face 的缓存键盐）并同步本字符表。
 PREVIEW_SAMPLE_CHARS = (
     "The quick brown fox jumps over 0123"
     "永和九年 岁在癸丑 汉字预览"
@@ -740,7 +746,7 @@ def _fallback_families(families, family, has_zh, split_on=False, cjk_family=None
         chain = []
     else:
         chain = _pick_auto_cjk(families, family)
-    chain.append("Motiva Sans")
+    chain.append(STEAM_UI_FONT)
     chain.extend(EMOJI_FALLBACK)
     chain.extend(["system-ui", "sans-serif"])
     return chain
@@ -867,6 +873,28 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
     return removed + part_removed
 
 
+def _woff2_or_ttf(ttf, woff2, timed=False):
+    """woff2 尾块唯一入口：合法 ttf 已在手，能压则压（成功即删 ttf），
+    失败或超尺寸回退注入 ttf。返回 (路径, MIME)。"""
+    if os.path.getsize(ttf) > WOFF2_MAX_BYTES:
+        return ttf, "font/ttf"
+    _t0 = time.monotonic()
+    try:
+        proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+    except Exception as exc:
+        log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
+        return ttf, "font/ttf"
+    if timed:
+        log(f"[耗时] woff2 压缩 {os.path.basename(ttf)}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
+    if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+        try:
+            os.remove(ttf)
+        except OSError:
+            pass
+        return woff2, "font/woff2"
+    return ttf, "font/ttf"
+
+
 def _ensure_font_file(face):
     """返回 (本地文件路径, MIME)。单文件直接引用系统文件，集合抽出单个 face 再缓存。"""
     path = face["file"]
@@ -894,22 +922,7 @@ def _ensure_font_file(face):
         if proc.returncode != 0 or not os.path.exists(ttf):
             raise RuntimeError(f"抽取 {os.path.basename(path)}#{face['index']} 失败: {proc.stderr.strip()[:200]}")
 
-    if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
-        _t0 = time.monotonic()
-        try:
-            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        except Exception as exc:
-            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
-        else:
-            log(f"[耗时] woff2 压缩 {os.path.basename(ttf)}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
-            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-                try:
-                    os.remove(ttf)
-                except OSError:
-                    pass
-                return woff2, "font/woff2"
-
-    return ttf, "font/ttf"
+    return _woff2_or_ttf(ttf, woff2, timed=True)
 
 
 def _ensure_latin_file(face):
@@ -956,25 +969,73 @@ def _ensure_latin_file(face):
             path, mime = _ensure_font_file(face)
             return path, mime, False, False
 
-    if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
-        try:
-            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        except Exception as exc:
-            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
-        else:
-            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-                try:
-                    os.remove(ttf)
-                except OSError:
-                    pass
-                return woff2, "font/woff2", True, False
-
-    return ttf, "font/ttf", True, False
+    path, mime = _woff2_or_ttf(ttf, woff2)
+    return path, mime, True, False
 
 
 def _preview_cache_dir():
     """预览子集专用目录：避开主 face 的 9 文件 LRU（只扫 CACHE_DIR 顶层）。"""
     return os.path.join(CACHE_DIR, PREVIEW_CACHE_SUBDIR)
+
+
+def _prune_preview_cache():
+    """preview 子集缓存回收：按 mtime LRU 保留最近使用,上限 40 个或总量 8 MiB
+    (任一触顶即从最旧开始删);*.part 为 helper 崩溃残留,超 5 分钟收尾删除。
+    只扫 CACHE_DIR/preview/ 子目录,不碰主 face 的 9 文件 LRU。返回删除数量。"""
+    d = _preview_cache_dir()
+    try:
+        names = os.listdir(d)
+    except OSError:
+        return 0
+    now_ts = time.time()
+    removed = 0
+    for name in names:
+        if not name.endswith(".part"):
+            continue
+        path = os.path.join(d, name)
+        try:
+            st = os.stat(path)
+        except OSError:
+            continue
+        if not os.path.isfile(path) or now_ts - st.st_mtime <= 300:
+            continue
+        try:
+            os.remove(path)
+        except OSError as exc:
+            log(f"缓存清理：残留临时文件 {name} 删除不了（{exc.strerror or exc}），先留着")
+            continue
+        removed += 1
+        log(f"缓存清理：删除残留临时文件 {name}（写入未收尾超过 5 分钟）")
+    entries = []
+    for name in names:
+        if not name.lower().endswith((".ttf", ".woff2")):
+            continue
+        path = os.path.join(d, name)
+        try:
+            st = os.stat(path)
+        except OSError:
+            continue
+        if not os.path.isfile(path):
+            continue
+        entries.append((path, st))
+    entries.sort(key=lambda item: item[1].st_mtime_ns, reverse=True)
+    kept_count = 0
+    kept_bytes = 0
+    for path, st in entries:
+        if kept_count < PREVIEW_CACHE_MAX_FILES and kept_bytes + st.st_size <= PREVIEW_CACHE_MAX_BYTES:
+            kept_count += 1
+            kept_bytes += st.st_size
+            continue
+        try:
+            os.remove(path)
+        except OSError as exc:
+            log(f"缓存清理：preview 子集 {os.path.basename(path)} 删除不了（{exc.strerror or exc}），先留着")
+            continue
+        removed += 1
+    if removed:
+        log(f"缓存清理：preview 子集原有 {len(entries)} 个，保留 {kept_count} 个"
+            f"（{_human_size(kept_bytes)} / 上限 {PREVIEW_CACHE_MAX_FILES} 个或 {_human_size(PREVIEW_CACHE_MAX_BYTES)}），删除 {removed} 个")
+    return removed
 
 
 def _prepare_preview_face(family):
@@ -1015,23 +1076,15 @@ def _prepare_preview_face(family):
             log(f"预览子集失败（{os.path.basename(face['file'])}#{face['index']}）: {err}，回退整 face")
             return _ensure_font_file(face)
 
-    if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
-        try:
-            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        except Exception as exc:
-            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
-        else:
-            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-                try:
-                    os.remove(ttf)
-                except OSError:
-                    pass
-                return woff2, "font/woff2"
-    return ttf, "font/ttf"
+    result = _woff2_or_ttf(ttf, woff2)
+    _prune_preview_cache()
+    return result
 
 
-def _protected_cache_files(state, families):
-    """启动清理的保护集：按 state 反推当前注入会用到的缓存文件名（零抽取）。
+def cache_files_for_state(state, families):
+    """按 state 反推当前注入会用到的缓存文件名(零抽取)。
+    "state → 预期缓存名"推导的唯一入口:启动保护集与 _prepare_extract 的实际产物键名
+    共用 _pick_faces/_cache_key 原语,规则变更只改这里(一致性由 _tests_v1420 测试守护)。
 
     family / family_cjk → _pick_faces 选面 → _cache_key → {key}.ttf/.woff2；
     主开关开启时西文槽的剔字产物 {key}.latin{掩码版本}.ttf/.woff2 一并保护
@@ -1066,6 +1119,11 @@ def _protected_cache_files(state, families):
                 if face is not None:
                     names.extend(full_names(face))
     return names
+
+
+def _protected_cache_files(state, families):
+    """启动清理的保护集(委托 cache_files_for_state)。"""
+    return cache_files_for_state(state, families)
 
 
 # --------------------------------------------------------------------------- #
@@ -1490,8 +1548,7 @@ def _require_fonttools_if_needed(faces, subset_needed=False):
             message=(
                 f"分槽注入的西文剔字需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
                 f"- 本次选的 {name} 需要剔除自带的 CJK/PUA 字形后再注入\n"
-                "- 关闭「按语言注入」可回到不需要 fontTools 的单槽模式，或手动安装后重试：\n"
-                f"  {_system_python()} -m pip install --user fonttools\n"
+                "- 换带 fontTools 的完整版，或关闭「按语言注入」后重试\n"
             ),
         )
     raise _KeyedError(
@@ -1499,8 +1556,7 @@ def _require_fonttools_if_needed(faces, subset_needed=False):
         message=(
             f"抽取嵌入需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
             f"- 本次选的 {name} 是 .ttc/.otc 集合，必须先抽出单个 face\n"
-            "- 换成带 fontTools 的完整版，或手动安装后重试：\n"
-            f"  {_system_python()} -m pip install --user fonttools\n"
+            "- 换带 fontTools 的完整版，或改选 .ttf/.otf 单文件字体后重试\n"
         ),
     )
 
@@ -1674,6 +1730,7 @@ class Plugin:
         removed = await asyncio.to_thread(_prune_font_cache, tuple(protect))
         log(f"启动缓存清理完成：反推保护 {len(protect)} 个缓存名，删除 {removed} 个，"
             f"耗时 {int((time.monotonic() - t0) * 1000)} ms")
+        await asyncio.to_thread(_prune_preview_cache)
         _port, source = await asyncio.to_thread(_cef_port_hint)
         tabs = await asyncio.to_thread(_cef_fetch, True)
         if tabs is None:
@@ -1869,12 +1926,7 @@ class Plugin:
         if turned_off:
             # 两个槽位已清空：拆除现有注入（复用 reset_font 的拆卸顺序；
             # 不停字体服务，重开开关选字时 register 会按需自起）
-            await plugin._cancel_dyn()
-            await plugin._stop_window()
-            removed = await plugin._remove_all()
-            plugin._css = None
-            plugin._family = None
-            plugin._detail = {}
+            removed = await plugin._teardown_all()
             log(f"按语言注入已关闭：西文/中日韩槽位已清空，注入已拆除（{removed} 处）")
             return plugin._payload()
         state_now = read_state()
@@ -1883,7 +1935,9 @@ class Plugin:
             return plugin._payload()
         return await plugin._apply(family)
 
-    async def reset_font(self):
+    async def _teardown_all(self):
+        """统一拆卸序列：取消动态注入任务、停注入窗口、移除全部样式并清内存态。
+        返回移除的样式条数。不停字体服务（重开开关选字时 register 会按需自起）。"""
         plugin = _bind(self)
         await plugin._cancel_dyn()
         await plugin._stop_window()
@@ -1891,6 +1945,11 @@ class Plugin:
         plugin._css = None
         plugin._family = None
         plugin._detail = {}
+        return removed
+
+    async def reset_font(self):
+        plugin = _bind(self)
+        removed = await plugin._teardown_all()
         state = read_state()
         # 恢复默认 = 清空两个槽位；不动任何开关（分槽三开关原样保留）
         state.pop("family", None)
@@ -2101,7 +2160,7 @@ class Plugin:
             }
         inuse = [p for p in paths if _is_cache_file(p)]
         _prune_font_cache(inuse)
-        chain = ["Motiva Sans", "system-ui", "sans-serif"]
+        chain = [STEAM_UI_FONT, "system-ui", "sans-serif"]
         css = self._build_css([], faces, [], chain, synth_none)
         log(f"西文槽为空：仅注入中日韩槽字体 {family_cjk!r}（{len(faces)} 条字重声明）")
         return {
@@ -2220,12 +2279,15 @@ class Plugin:
                 full_paths += (full_path,)
             # Full 族由 _build_css 放进栈（跟在 CJK 族之后），这里只负责把
             # 自动补的 CJK 族从链里去掉，避免按名条目与 Full 并存/重复
-            if chain and chain[0] != "Motiva Sans":
+            if chain and chain[0] != STEAM_UI_FONT:
                 chain = chain[1:]
             full_backfill = True
             log(f"西文槽已剔字且 CJK 槽为空：完整版 face 以 {INTERNAL_FAMILY_FULL} "
                 f"回填栈（{len(full_faces)} 条字重声明）")
 
+        # 行为保持决策:此处保护"刚写入的实际产物"(actual),不换用 cache_files_for_state
+        # 的预测集——实际 ⊇ 预测在回退/兜底场景可能破,换用会把预测缺口放大成"刚写就删"。
+        # 键名推导与预测共用 _pick_faces/_cache_key,一致性由 _tests_v1420 测试守护。
         # 新抽取写入后清理一次：正在用的这些文件受保护（含 Full 回填件），其余按
         # 最近使用只留 9 个
         inuse = [p for p in (reg_path, medium_path, bold_path) + cjk_paths + full_paths if _is_cache_file(p)]
@@ -2268,6 +2330,8 @@ class Plugin:
         Steam 改名时这里与 _fallback_families 要跟着调整）。
         族名必须与模块级常量一致，漏一处会出现「payload 说 A、CSS 里叫 B」。
         """
+        # mime→format 映射唯一来源（后端）。前端 dist/index.js 的 FP_PREVIEW_MIME_FORMAT
+        # 与此对应：新增格式时两处同改。
         fmt_of = {
             "font/woff2": "woff2",
             "font/woff": "woff",

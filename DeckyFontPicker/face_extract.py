@@ -28,6 +28,39 @@ def fail(message, code=1):
     sys.exit(code)
 
 
+def _do_subset(font, unicodes, out):
+    """subset/preview 共用管线：给定保留码位表,产出裸 sfnt 子集并原子落盘。
+    保存后回读一遍确保表结构可用;回读失败清掉 .part 再抛。"""
+    from fontTools import subset as ft_subset
+    from fontTools.ttLib import TTFont
+
+    options = ft_subset.Options()
+    # 与实现前实测基线同参：保留全部 layout feature（kern 等）与全部 name 记录。
+    # 注意子集后字形名会按 AGL 重生成，消费方一律按码位对齐，不要依赖字形名。
+    options.layout_features = ["*"]
+    options.name_IDs = ["*"]
+    subsetter = ft_subset.Subsetter(options=options)
+    subsetter.populate(unicodes=unicodes)
+    subsetter.subset(font)
+    # 输出一律为裸 sfnt（输入若是 woff/woff2，读入时 fontTools 会记下 flavor，
+    # 不清掉会把 woff2 字节存进 .ttf 文件名里；ttc/woff 容器格式同样不继承），文件名固定 .ttf
+    font.flavor = None
+
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+    tmp = out + ".part"
+    font.save(tmp)
+    try:
+        TTFont(tmp, lazy=True).close()
+    except Exception:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        raise
+    os.replace(tmp, out)
+    return 0
+
+
 def main(argv):
     if len(argv) < 4:
         fail("参数不足")
@@ -80,8 +113,6 @@ def main(argv):
         if not unicodes:
             fail("保留字符表为空")
 
-        from fontTools import subset as ft_subset
-
         if src.lower().endswith((".ttc", ".otc")):
             collection = TTCollection(src, lazy=True)
             if index < 0 or index >= len(collection.fonts):
@@ -90,28 +121,7 @@ def main(argv):
         else:
             font = TTFont(src, lazy=True)
 
-        options = ft_subset.Options()
-        options.layout_features = ["*"]
-        options.name_IDs = ["*"]
-        subsetter = ft_subset.Subsetter(options=options)
-        subsetter.populate(unicodes=unicodes)
-        subsetter.subset(font)
-        # 输出裸 sfnt（输入 ttc/woff 时不继承其容器格式），文件名固定 .ttf
-        font.flavor = None
-
-        os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-        tmp = out + ".part"
-        font.save(tmp)
-        try:
-            TTFont(tmp, lazy=True).close()
-        except Exception:
-            try:
-                os.remove(tmp)
-            except OSError:
-                pass
-            raise
-        os.replace(tmp, out)
-        return 0
+        return _do_subset(font, unicodes, out)
 
     if mode == "subset":
         # 方案 D 剔字：读 face 的 cmap，与剔除区间求交；交集非空才生成
@@ -139,8 +149,6 @@ def main(argv):
         if not mask:
             fail("剔除区间串为空")
 
-        from fontTools import subset as ft_subset
-
         if src.lower().endswith((".ttc", ".otc")):
             collection = TTCollection(src, lazy=True)
             if index < 0 or index >= len(collection.fonts):
@@ -158,32 +166,7 @@ def main(argv):
         if not kept:
             fail("剔除后没有保留任何码位（该字体全部落在掩码内），拒绝产出空字体")
 
-        options = ft_subset.Options()
-        # 与实现前实测基线同参：保留全部 layout feature（kern 等）与全部 name 记录。
-        # 注意子集后字形名会按 AGL 重生成，消费方一律按码位对齐，不要依赖字形名。
-        options.layout_features = ["*"]
-        options.name_IDs = ["*"]
-        subsetter = ft_subset.Subsetter(options=options)
-        subsetter.populate(unicodes=kept)
-        subsetter.subset(font)
-        # 输出一律为裸 sfnt（输入若是 woff/woff2，读入时 fontTools 会记下 flavor，
-        # 不清掉会把 woff2 字节存进 .ttf 文件名里）
-        font.flavor = None
-
-        os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-        tmp = out + ".part"
-        font.save(tmp)
-        try:
-            # 保存后立刻回读一遍，确保文件完整、表结构可用
-            TTFont(tmp, lazy=True).close()
-        except Exception:
-            try:
-                os.remove(tmp)
-            except OSError:
-                pass
-            raise
-        os.replace(tmp, out)
-        return 0
+        return _do_subset(font, kept, out)
 
     fail(f"未知模式 {mode}")
 
