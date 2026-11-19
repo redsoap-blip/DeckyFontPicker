@@ -156,6 +156,26 @@ MODE_EXTRACT = "extract"
 INTERNAL_FAMILY = "DeckyFontPicker"
 INTERNAL_FAMILY_CJK = "DeckyFontPicker-CJK"
 INTERNAL_FAMILY_FULL = "DeckyFontPicker-Full"
+# 分区注入（1.5.0）：标题槽内部族名。仅档 3 用它（独立标题族 + 选择器块绑定标题容器）；
+# 档 1/2 时标题 faces 直接追加到 INTERNAL_FAMILY 正文族做字重路由，不占这个族名。
+INTERNAL_FAMILY_TITLE = "DeckyFontPicker-Title"
+# 档 1 字重路由边界：computed font-weight 落在 [首, 尾] 区间的元素吃标题字体，
+# 标题 faces 按该区间拆成互不重叠的字重区间描述符（见 _title_weight_ranges）。
+# G0 实测校准（2026-11-20）：800=展示标题/700=区头/600=强调/500=次要/≤400=正文；
+# 下界 700，常量单点可调
+ZONE_WEIGHT_TIERS = (700, 900)
+# 档 3 标题容器选择器：前缀匹配（[class*="..."] 式），禁带 hash 后缀精确类名（修订 5）。
+# 版本号随选择器内容变更递增（与前端 dist/index.js 的说明单点同步）。
+# G0 结论：本机 Deckify 构建实测零命中（DOM+CSS 双 0）——零误伤零覆盖，保留作
+# SteamOS 真机兼容，分区以字重通道为主、类前缀为辅
+TITLE_SELECTORS_VERSION = "g0-calibrated-1"
+TITLE_SELECTORS = ("[class*=\"gamepaddialog_Title\"]",)
+# 档 2 页面覆盖槽 → state 键映射（页面 key 与 TARGETS 的 key 一致：main/menu/qam）。
+PAGE_STATE_KEYS = (
+    ("main", "family_page_main"),
+    ("menu", "family_page_menu"),
+    ("qam", "family_page_qam"),
+)
 STEAM_UI_FONT = "Motiva Sans"  # Steam 自带 UI 字体（PUA 图标字形在其中）。改名时改这一处，
                                # 并同步前端 dist/index.js CSS 里的两处 Motiva Sans（该文件有互指注释）。
 
@@ -609,6 +629,8 @@ class StatePayload(TypedDict, total=False):
     preview: bool  # 预览开关（档位非 0）
     preview_level: int  # 预览档位
     expand_level: int  # 预览展开档位
+    zone: dict  # 分区注入状态 {"level": int, "title_family": str|None, "pages": {"main"/"menu"/"qam": str|None}}
+                # （与前端 dist/index.js JSDoc 的 zone 对象单点同步，改这里必须同步那边）
     strip: dict  # 剔字记账 {"done": bool, "fallback": bool}
     full_backfill: bool  # 完整版 face 是否以 Full 内部族回填
     uid: str | None  # 当前已发现的 UI uid
@@ -752,6 +774,36 @@ def _fallback_families(families, family, has_zh, split_on=False, cjk_family=None
     return chain
 
 
+def _title_weight_ranges(tiers, picked_faces):
+    """档 1 字重路由：把标题槽选出的 faces 映射为互不重叠的字重区间描述符（纯函数）。
+
+    tiers = ZONE_WEIGHT_TIERS = (lo, hi)：computed font-weight 落在 [lo, hi] 的元素
+    吃标题字体；picked_faces 按 _pick_faces 顺序（reg, med, bold），weight 递增。
+    区间按 face 权重切分：face i 覆盖 [max(lo, w_i), 下一 face 权重 - 1]，最后一 face
+    覆盖到 hi；权重在 [lo, hi] 之外的 face 不参与路由。全部 face 都在区间外时取权重
+    最接近 lo 的一个面覆盖整个区间，保证路由不落空。返回 [(face, "lo hi"), ...]，
+    顺序与 picked_faces 一致。
+    区间描述符由 _build_css 的 face_rule 原样插值（如 bold(700) → "700 900"）。
+    档位边界 G0 实测校准（下界 700）：med(500)/reg(400) 在下界之下自然落选，
+    700-900 区间由 bold face 覆盖。
+    """
+    lo, hi = tiers
+    faces = [f for f in picked_faces if f is not None]
+    if not faces:
+        return []
+    in_range = [f for f in faces if lo <= f["weight"] <= hi]
+    if not in_range:
+        near = min(faces, key=lambda f: abs(f["weight"] - lo))
+        return [(near, f"{lo} {hi}")]
+    out = []
+    for i, face in enumerate(in_range):
+        start = max(lo, face["weight"])
+        end = in_range[i + 1]["weight"] - 1 if i + 1 < len(in_range) else hi
+        if start <= end:
+            out.append((face, f"{start} {end}"))
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # 字体资源：抽取 / 压缩 / 缓存
 # --------------------------------------------------------------------------- #
@@ -799,10 +851,13 @@ def _is_cache_file(path):
     return os.path.dirname(os.path.abspath(path)) == os.path.abspath(CACHE_DIR)
 
 
-def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
+def _prune_font_cache(protect=(), keep=None):
     """只保留最近使用的 keep 个缓存 face 文件，其余删除。
 
     protect 里的文件（正在注入/刚写入）一定保留，并计入 keep 名额。
+    keep 为 None（缺省）时按 max(CACHE_KEEP_FILES, len(protected) + 4) 动态抬高上限
+    （修订 1：分区注入后保护集 = 全局槽 + 标题槽 + 3 个页面覆盖槽，可超 9，
+    固定 9 会把刚写好的槽产物抖掉）；显式传 keep 仍按传入值生效。
     按 mtime 排序（命中缓存时会 _touch 刷新，所以 mtime 即最近使用时间）。
     只处理缓存目录内 *.ttf/*.otf/*.woff/*.woff2，不删目录、不碰其它目录；
     删除失败只记日志，不抛异常影响注入。返回删除数量。
@@ -810,6 +865,8 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
     超 5 分钟的在此收尾删除。
     """
     protected = {os.path.abspath(p) for p in protect if p}
+    if keep is None:
+        keep = max(CACHE_KEEP_FILES, len(protected) + 4)
     try:
         names = os.listdir(CACHE_DIR)
     except OSError:
@@ -1089,6 +1146,9 @@ def cache_files_for_state(state, families):
     family / family_cjk → _pick_faces 选面 → _cache_key → {key}.ttf/.woff2；
     主开关开启时西文槽的剔字产物 {key}.latin{掩码版本}.ttf/.woff2 一并保护
     （旧掩码版本的剔字产物不在保护集内，视为陈旧缓存照常清理）。
+    分区注入（1.5.0）追加：档 ≥1 标题槽 faces（全量路径，只有全量键名）、
+    档 ≥2 页面覆盖槽 faces（与全局西文槽同款：全量 + 剔字两套键名，CJK 侧只有
+    全量键名）。保护集变大时 _prune_font_cache 的动态 keep 随之抬高（修订 1）。
     字体已卸载则选不到 face，自然跳过；单文件字体不进缓存，反推不到文件名也无妨。
     只做键名拼装，不抽取、不落盘。
     """
@@ -1116,6 +1176,31 @@ def cache_files_for_state(state, families):
         if cjk_family and cjk_family in families:
             reg, med, bold = _pick_faces(families[cjk_family], prefer_zh=True)
             for face in (reg, med, bold):
+                if face is not None:
+                    names.extend(full_names(face))
+    zone_level = _zone_level_of(state)
+    if zone_level >= 1:
+        family_title = state.get("family_title")
+        if family_title and family_title in families:
+            t_reg, t_med, t_bold = _pick_faces(families[family_title], prefer_zh=True)
+            for face, _weight_desc in _title_weight_ranges(ZONE_WEIGHT_TIERS, (t_reg, t_med, t_bold)):
+                names.extend(full_names(face))
+    if zone_level >= 2:
+        for _page_key, state_key in PAGE_STATE_KEYS:
+            name = state.get(state_key)
+            if not name or name not in families:
+                continue
+            p_reg, p_med, p_bold = _pick_faces(families[name], prefer_zh=False)
+            for face in (p_reg, p_med, p_bold):
+                if face is None:
+                    continue
+                names.extend(full_names(face))
+                variant = _strip_variant()
+                key = _cache_key(face)
+                names.append(os.path.join(CACHE_DIR, f"{key}{variant}.ttf"))
+                names.append(os.path.join(CACHE_DIR, f"{key}{variant}.woff2"))
+            p_cjk_reg, p_cjk_med, p_cjk_bold = _pick_faces(families[name], prefer_zh=True)
+            for face in (p_cjk_reg, p_cjk_med, p_cjk_bold):
                 if face is not None:
                     names.extend(full_names(face))
     return names
@@ -1370,6 +1455,20 @@ def _remove_css(tab, css_id, quiet=False):
             if not owned:
                 _OWNED.pop(tab, None)
     return ok
+
+
+def _page_of_tab(tab):
+    """tab 名 → 页面 key（main/menu/qam），映射依据既有 TARGETS 的 tab 名规则。
+
+    menu/qam 的 tab 永远带动态后缀，按 DYNAMIC_PREFIX 前缀匹配；
+    main 候选（TARGETS[0] 标题精确匹配）、弹窗（notificationtoasts_*，跟随 main）、
+    SharedJSContext 兜底与其余未知 tab 一律归 main。纯函数，供 _css_for 调度。
+    """
+    name = tab or ""
+    for key, prefix in DYNAMIC_PREFIX.items():
+        if name.startswith(prefix):
+            return key
+    return "main"
 
 
 def _cef_port_hint():
@@ -1640,6 +1739,23 @@ def _norm_expand(value, default=0):
     return 0 if level <= 0 else 1
 
 
+def _norm_zone_level(value, default=0):
+    """分区档位收敛到 0/1/2/3，非法值回退 default。"""
+    try:
+        level = int(value)
+    except (TypeError, ValueError):
+        return default
+    return level if level in (0, 1, 2, 3) else default
+
+
+def _zone_level_of(state):
+    """分区注入档位（0 关闭 / 1 字重路由 / 2 页面覆盖 / 3 精确选择器）。
+
+    旧 state 无 zone_level 键 = 档 0 无感升级；非法值一律回退 0。
+    """
+    return _norm_zone_level(state.get("zone_level"), 0)
+
+
 def _preview_level_of(state):
     """预览样张档位（0 关闭 / 1 方案 A / 2 方案 B），兼容旧布尔 preview 键。"""
     if state.get("preview_level") is not None:
@@ -1723,6 +1839,9 @@ class Plugin:
         self._server = FontServer()
         self._hit = {}  # key -> {"tab":..., "css_id":...}
         self._css = None
+        # 分区注入（档 2）：页面 key -> 该页覆盖 CSS；_css 保留 = main 页全局 CSS
+        # （兼容既有读点），未覆盖页由 _css_for 回落到 _css
+        self._css_pages = {}
         self._family = None
         self._detail = {}
         self._dyn_task = None
@@ -1784,6 +1903,22 @@ class Plugin:
         if state.get("cjk_split") and state.get("family_cjk") and state["family_cjk"] not in families:
             log(f"已保存的 CJK 槽字体 {state['family_cjk']!r} 不在系统中，清空 CJK 槽选择")
             state.pop("family_cjk", None)
+            write_state(state)
+        # 分区槽位启动校验（修订 6）：标题槽 + 三个页面覆盖槽全部覆盖，指向已卸载
+        # 字体时一并清键（卸载清槽），不影响西文/CJK 槽恢复
+        zone_cleared = []
+        for _page_key, state_key in PAGE_STATE_KEYS:
+            name = state.get(state_key)
+            if name and name not in families:
+                log(f"已保存的页面覆盖字体 {name!r}（{state_key}）不在系统中，清空该页覆盖")
+                state.pop(state_key, None)
+                zone_cleared.append(state_key)
+        title_name = state.get("family_title")
+        if title_name and title_name not in families:
+            log(f"已保存的标题槽字体 {title_name!r} 不在系统中，清空标题槽选择")
+            state.pop("family_title", None)
+            zone_cleared.append("family_title")
+        if zone_cleared:
             write_state(state)
         if not family and not (state.get("cjk_split") and state.get("family_cjk")):
             return
@@ -1889,7 +2024,8 @@ class Plugin:
         return await plugin._apply(state.get("family"))
 
     async def set_split_options(self, cjk_split=None, synth_weight_none=None,
-                                preview_level=None, expand_level=None, preview=None):
+                                preview_level=None, expand_level=None, preview=None,
+                                zone_level=None):
         """分槽开关入口：包一层计时，实际逻辑在 _set_split_options_inner。"""
         plugin = _bind(self)  # Decky 3.3.1 可能把类本身当 self 传进来，先回落到实例
         t0 = time.monotonic()
@@ -1897,12 +2033,14 @@ class Plugin:
             return await plugin._set_split_options_inner(
                 cjk_split=cjk_split, synth_weight_none=synth_weight_none,
                 preview_level=preview_level, expand_level=expand_level, preview=preview,
+                zone_level=zone_level,
             )
         finally:
             log(f"[耗时] 分槽开关调用合计（cjk_split={cjk_split}）: {_elapsed_ms(t0)} ms")
 
     async def _set_split_options_inner(self, cjk_split=None, synth_weight_none=None,
-                                preview_level=None, expand_level=None, preview=None):
+                                preview_level=None, expand_level=None, preview=None,
+                                zone_level=None):
         """分槽注入的主/子开关（持久化）。参数都可选，None = 不变。
 
         子开关默认值（主开关开启时）：synth_weight_none 缺省视为开。
@@ -1911,8 +2049,11 @@ class Plugin:
         都是纯前端渲染开关，不影响注入 CSS：变化时只落盘、不重新注入。
         preview（旧布尔参数）兼容保留：true → 2（方案 B）、false → 0；
         与 preview_level 同时传入时以 preview_level 为准。
-        主开关切到关：清空西文 / 中日韩两个槽位（含注入记账）并拆除当前注入，
-        重开后两槽均为空、不自动恢复旧选择。
+        zone_level（分区注入档位，0 关闭 / 1 字重路由 / 2 页面覆盖 / 3 精确选择器）：
+        影响注入 CSS，变化时按当前字体重新注入；档位降到 0 即清空分区槽位
+        （标题槽 + 页面覆盖槽），不留旧选择。
+        主开关切到关：清空西文 / 中日韩两个槽位（含分区槽位与注入记账）并拆除
+        当前注入，重开后各槽均为空、不自动恢复旧选择。
         影响注入 CSS 的开关变化（剔字掩码版本 / Motiva Sans / synthesis 行）
         会按当前字体重新注入一次；没有已选字体时只落盘，不注入。
         """
@@ -1927,8 +2068,11 @@ class Plugin:
             changed = changed or bool(state.get("cjk_split")) != value
             state["cjk_split"] = value
             if not value:
-                # 关闭「按语言注入」即清空两个槽位与注入记账，不留旧选择
-                for key in ("family", "family_cjk", "inject_at", "inject_failed_at", "heal_at"):
+                # 关闭「按语言注入」即清空全部槽位与注入记账，不留旧选择
+                # （分区槽位同款一并清空：标题槽 + 三个页面覆盖槽）
+                for key in ("family", "family_cjk", "family_title",
+                            "family_page_main", "family_page_menu", "family_page_qam",
+                            "inject_at", "inject_failed_at", "heal_at"):
                     state.pop(key, None)
         if synth_weight_none is not None:
             value = bool(synth_weight_none)
@@ -1947,12 +2091,23 @@ class Plugin:
             value = _norm_expand(expand_level, _expand_level_of(state))
             levels_changed = levels_changed or _expand_level_of(state) != value
             state["expand_level"] = value
+        if zone_level is not None:
+            value = _norm_zone_level(zone_level, _zone_level_of(state))
+            changed = changed or _zone_level_of(state) != value
+            state["zone_level"] = value
+            if value == 0:
+                # 关闭分区注入即清空分区槽位，不留旧选择（档位本身是开关，同
+                # preview_level 的「开关保留」语义，重开由用户重选字体）
+                for _page_key, key in PAGE_STATE_KEYS:
+                    state.pop(key, None)
+                state.pop("family_title", None)
         if not (changed or levels_changed):
             return plugin._payload()
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
             f"synth_weight_none={state.get('synth_weight_none', True)} "
-            f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)}")
+            f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)} "
+            f"zone_level={_zone_level_of(state)}")
         if not changed:
             # 只有预览档位变化：不影响注入 CSS，无需重新注入
             return plugin._payload()
@@ -1962,11 +2117,83 @@ class Plugin:
             removed = await plugin._teardown_all()
             log(f"按语言注入已关闭：西文/中日韩槽位已清空，注入已拆除（{removed} 处）")
             return plugin._payload()
+        return await plugin._reapply_if_active(plugin)
+
+    async def _reapply_if_active(self, plugin):
+        """有已注入字体时按当前字体重新注入一次（分区槽位 RPC 共用收尾）；
+        没有已选字体时只返回面板状态，不注入。"""
         state_now = read_state()
         family = plugin._family or state_now.get("family")
         if not family and not (state_now.get("cjk_split") and state_now.get("family_cjk")):
             return plugin._payload()
         return await plugin._apply(family)
+
+    async def set_zone_options(self, zone_level=None):
+        """分区注入档位（持久化）：0 关闭 / 1 字重路由 / 2 页面覆盖 / 3 精确选择器。
+
+        独立 RPC 入口（前端滑块也可走 set_split_options 的 zone_level 键，两者同义，
+        都落到 _set_split_options_inner：读 state → 校验 → write_state → 重注入/payload）。
+        档位影响注入 CSS，变化时按当前字体重新注入；档位降到 0 即清空分区槽位
+        （标题槽 + 页面覆盖槽），不留旧选择。
+        """
+        plugin = _bind(self)
+        return await plugin._set_split_options_inner(zone_level=zone_level)
+
+    async def set_title_font(self, family=None):
+        """标题槽字体（档 ≥1 生效，持久化）。family=None = 清除标题槽。
+
+        只写 family_title，不动正文槽；档位 < 1 时只落盘（标题路由未激活，
+        无 CSS 影响），档位 ≥ 1 且当前有注入时按当前字体重新注入一次。
+        """
+        plugin = _bind(self)
+        if family:
+            families = await asyncio.to_thread(_family_map)
+            if family not in families:
+                return {"ok": False, "error": f"系统里没有字体 {family}",
+                        "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
+        state = read_state()
+        if family:
+            state["family_title"] = family
+            _push_history(state, family)
+        else:
+            state.pop("family_title", None)
+        write_state(state)
+        log(f"标题槽字体更新：{family!r}（zone_level={_zone_level_of(state)}）")
+        if _zone_level_of(state) < 1:
+            # 分区未激活：标题选择暂不生效，落盘等待档位开启
+            return plugin._payload()
+        return await plugin._reapply_if_active(plugin)
+
+    async def set_page_font(self, page, family=None):
+        """页面覆盖正文槽（档 ≥2 生效，持久化）。page ∈ main/menu/qam；
+        family=None = 清除该页覆盖（跟随全局正文槽）。
+
+        页面覆盖 = 整对正文槽（西文+CJK）替换（修订 3），只写 family_page_* 对应键，
+        不动全局正文槽；档位 < 2 或当前无注入时只落盘，否则按当前字体重新注入一次。
+        """
+        plugin = _bind(self)
+        page_key = str(page or "").lower()
+        state_key = dict(PAGE_STATE_KEYS).get(page_key)
+        if state_key is None:
+            return {"ok": False, "error": f"未知页面 {page!r}（main/menu/qam）",
+                    "error_key": "err.badPage", "error_args": [str(page)], **plugin._payload()}
+        if family:
+            families = await asyncio.to_thread(_family_map)
+            if family not in families:
+                return {"ok": False, "error": f"系统里没有字体 {family}",
+                        "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
+        state = read_state()
+        if family:
+            state[state_key] = family
+            _push_history(state, family)
+        else:
+            state.pop(state_key, None)
+        write_state(state)
+        log(f"页面覆盖更新：{page_key} -> {family!r}（zone_level={_zone_level_of(state)}）")
+        if _zone_level_of(state) < 2:
+            # 分区档位不足：页面覆盖暂不生效，落盘等待档位开启
+            return plugin._payload()
+        return await plugin._reapply_if_active(plugin)
 
     async def _teardown_all(self):
         """统一拆卸序列：取消动态注入任务、停注入窗口、移除全部样式并清内存态。
@@ -1976,6 +2203,7 @@ class Plugin:
         await plugin._stop_window()
         removed = await plugin._remove_all()
         plugin._css = None
+        plugin._css_pages = {}
         plugin._family = None
         plugin._detail = {}
         return removed
@@ -1984,9 +2212,13 @@ class Plugin:
         plugin = _bind(self)
         removed = await plugin._teardown_all()
         state = read_state()
-        # 恢复默认 = 清空两个槽位；不动任何开关（分槽三开关原样保留）
+        # 恢复默认 = 清空全部槽位（西文 / 中日韩 / 标题 + 三个页面覆盖槽）；
+        # 不动任何开关（分槽三开关与分区档位原样保留）
         state.pop("family", None)
         state.pop("family_cjk", None)
+        for _page_key, state_key in PAGE_STATE_KEYS:
+            state.pop(state_key, None)
+        state.pop("family_title", None)
         state.pop("inject_at", None)
         state.pop("inject_failed_at", None)
         state.pop("heal_at", None)
@@ -2076,6 +2308,8 @@ class Plugin:
 
             await self._remove_all()
             self._css = detail["css"]
+            # 分区注入（档 2）：页面覆盖 CSS map；空 dict = 无覆盖页
+            self._css_pages = detail.get("css_pages") or {}
             self._family = family
             self._detail = detail
             state = read_state()
@@ -2129,15 +2363,60 @@ class Plugin:
                 continue
             await self._inject_dynamic(key)
 
+    # ---- 分区注入槽位准备（1.5.0）----
+
+    def _title_slot_picks(self, title_entry, zone_level):
+        """档 ≥1 标题槽选面（纯选不抽取）：_pick_faces 于标题族（zh 优先，同 CJK 槽口径），
+        字重区间描述符由 _title_weight_ranges 按 ZONE_WEIGHT_TIERS 划分。
+        zone_level < 1 或标题槽为空 → []（档位/槽位退化时标题路由静默关闭）。"""
+        if zone_level < 1 or title_entry is None:
+            return []
+        t_reg, t_med, t_bold = _pick_faces(title_entry, prefer_zh=True)
+        return _title_weight_ranges(ZONE_WEIGHT_TIERS, (t_reg, t_med, t_bold))
+
+    def _register_title_faces(self, picks):
+        """标题槽 faces 走 _ensure_font_file 全量路径（不剔字），注册到字体服务。
+        返回 (css faces, 落盘路径列表)；路径供缓存记账（不剔字 ≠ 不进缓存，
+        .ttc 标题字体同样落盘）。"""
+        faces = []
+        paths = []
+        for face, weight_desc in picks:
+            path, mime = _ensure_font_file(face)
+            faces.append((self._server.register(path, mime), mime, weight_desc))
+            paths.append(path)
+        return faces, paths
+
+    def _page_slot_picks(self, page_entries):
+        """档 ≥2 页面覆盖槽选面（纯选不抽取）。page_entries: {page_key: (family, entry)}。
+        页面覆盖 = 整对正文槽替换（修订 3）：西文槽 prefer_zh=False 且照走剔字通路
+        （覆盖字体自带的 CJK 字形不得遮蔽该页 CJK 槽，防拼盘），CJK 槽 prefer_zh=True；
+        Full 回填只跟随全局正文槽，被覆盖页不叠 Full（_build_css 的 page 分支丢弃）。
+        返回 {page_key: {"name":…, "entry":…, "latin": (r,m,b), "cjk": (r,m,b)}}。"""
+        picks = {}
+        for page_key, (name, entry) in (page_entries or {}).items():
+            p_reg, p_med, p_bold = _pick_faces(entry, prefer_zh=False)
+            p_cjk_reg, p_cjk_med, p_cjk_bold = _pick_faces(entry, prefer_zh=True)
+            picks[page_key] = {
+                "name": name,
+                "entry": entry,
+                "latin": (p_reg, p_med, p_bold),
+                "cjk": (p_cjk_reg, p_cjk_med, p_cjk_bold),
+            }
+        return picks
+
     def _prepare(self, family, family_cjk=None):
         """把选中字体准备成一段 CSS。任何失败都直接抛异常，调用方尚未拆旧样式。
 
         family 为 None（西文槽为空）时，若中日韩槽有字体，则只注入中日韩字体。
+        分区槽位（档 ≥1 标题槽 / 档 ≥2 页面覆盖槽）在这里按 state 解析：
+        指向已卸载字体的槽与 CJK 槽同款按退化处理（无标题字体 / 跟随全局正文槽），
+        不影响本次注入。
         """
         state = read_state()
         split_on = bool(state.get("cjk_split"))
         # synth_weight_none 已独立于 cjk_split，无论主开关是否开启都读取（缺省=开）
         synth_none = bool(state.get("synth_weight_none", True))
+        zone_level = _zone_level_of(state)
         families = _family_map()
         entry_cjk = None
         if family_cjk is None:
@@ -2148,9 +2427,33 @@ class Plugin:
                 # CJK 槽指向已卸载的字体：按「跟随系统」处理（启动校验负责清键）
                 log(f"CJK 槽字体 {family_cjk!r} 不在系统中，本次按跟随系统处理")
                 family_cjk = None
+        # 分区槽位解析（档 ≥1 / 档 ≥2）
+        title_entry = None
+        if zone_level >= 1:
+            family_title = state.get("family_title")
+            if family_title:
+                title_entry = families.get(family_title)
+                if title_entry is None:
+                    log(f"标题槽字体 {family_title!r} 不在系统中，本次按无标题字体处理")
+        page_entries = None
+        if zone_level >= 2:
+            page_entries = {}
+            for page_key, state_key in PAGE_STATE_KEYS:
+                name = state.get(state_key)
+                if not name:
+                    continue
+                page_entry = families.get(name)
+                if page_entry is None:
+                    log(f"页面覆盖字体 {name!r}（{page_key}）不在系统中，该页按跟随全局正文槽处理")
+                    continue
+                page_entries[page_key] = (name, page_entry)
+            if not page_entries:
+                page_entries = None
         if not family:
             if split_on and entry_cjk is not None:
-                return self._prepare_cjk_only(family_cjk, entry_cjk, synth_none)
+                # 西文槽为空：只注入中日韩槽；页面覆盖需要西文槽通路，此路径不生效
+                return self._prepare_cjk_only(family_cjk, entry_cjk, synth_none,
+                                              title_entry=title_entry, zone_level=zone_level)
             raise _KeyedError("err.noSlots", message="没有选择西文字体，中日韩槽也为空")
         entry = families.get(family)
         if entry is None:
@@ -2161,17 +2464,23 @@ class Plugin:
         return self._prepare_extract(
             family, entry, chain,
             split_on=split_on, family_cjk=family_cjk, entry_cjk=entry_cjk,
-            synth_none=synth_none,
+            synth_none=synth_none, title_entry=title_entry,
+            page_entries=page_entries, zone_level=zone_level,
         )
 
-    def _prepare_cjk_only(self, family_cjk, entry_cjk, synth_none):
+    def _prepare_cjk_only(self, family_cjk, entry_cjk, synth_none, title_entry=None, zone_level=0):
         """只有中日韩槽、西文槽为空：中日韩字体单独作为主字体注入（不剔字、不回填）。
 
         字体栈 = [中日韩内部族, Motiva Sans, system-ui, sans-serif]。Motiva Sans 保留
         Steam 自带的 PUA 图标字形，与分槽路径的回退链一致。
+        分区注入：标题路由照常（档 1/2 标题 faces 追加到中日韩内部族；档 3 挂独立
+        标题族 + 选择器块）；页面覆盖需要西文槽通路，此路径不生效，覆盖页沿用全局。
         """
         reg, med, bold = _pick_faces(entry_cjk, prefer_zh=True)
-        _require_fonttools_if_needed([reg, med, bold])
+        title_picks = self._title_slot_picks(title_entry, zone_level)
+        # 修订 2：标题槽 faces 计入 fontTools 需求（标题"不剔字"≠不需要 fontTools）
+        _require_fonttools_if_needed([reg, med, bold] + [f for f, _w in title_picks])
+        title_faces, title_paths = self._register_title_faces(title_picks)
         faces = []
         paths = []
         details = {}
@@ -2191,10 +2500,13 @@ class Plugin:
                 "bytes": os.path.getsize(path),
                 "stripped": False,
             }
-        inuse = [p for p in paths if _is_cache_file(p)]
+        inuse = [p for p in paths + title_paths if _is_cache_file(p)]
         _prune_font_cache(inuse)
         chain = [STEAM_UI_FONT, "system-ui", "sans-serif"]
-        css = self._build_css([], faces, [], chain, synth_none)
+        css = self._build_css([], faces, [], chain, synth_none,
+                              title_faces=title_faces or None,
+                              title_family=INTERNAL_FAMILY_TITLE if zone_level >= 3 else INTERNAL_FAMILY_CJK,
+                              title_selectors=TITLE_SELECTORS if zone_level >= 3 else None)
         log(f"西文槽为空：仅注入中日韩槽字体 {family_cjk!r}（{len(faces)} 条字重声明）")
         return {
             "css": css,
@@ -2212,17 +2524,32 @@ class Plugin:
         }
 
     def _prepare_extract(self, family, entry, chain, split_on=False, family_cjk=None,
-                         entry_cjk=None, synth_none=False):
+                         entry_cjk=None, synth_none=False, title_entry=None,
+                         page_entries=None, zone_level=0):
         """抽取 face 并生成 CSS。
 
         - 主开关关：单槽 1.4.2 路径（zh 优先选面、不剔字、不注册 medium、
           无 Motiva Sans / synthesis，回退链逐字节同旧版）；
         - 主开关开：西文槽 prefer_zh=False + 方案 D 剔字（固定基础剔字掩码）
           + medium 注册；CJK 槽保持 zh 优先与原抽取流程，不做子集化（实测无收益）。
+        - 分区注入（zone_level ≥1）：标题槽走 _ensure_font_file 全量路径（不剔字）；
+          zone_level ≥2 时页面覆盖槽整对替换正文槽（修订 3，见 _page_slot_picks），
+          每个覆盖页单独成串，经 _apply 存进 _css_pages、注入时由 _css_for(tab) 取用。
         """
         regular, medium, bold = _pick_faces(entry, prefer_zh=not split_on)
-        # 集合字体 / 西文剔字才需要 fontTools；这一步在拆卸旧样式之前，失败时旧 CSS 不动
-        _require_fonttools_if_needed([regular, medium, bold], subset_needed=split_on)
+        title_picks = self._title_slot_picks(title_entry, zone_level)
+        page_picks = self._page_slot_picks(page_entries)
+        # 集合字体 / 西文剔字才需要 fontTools；这一步在拆卸旧样式之前，失败时旧 CSS 不动。
+        # 修订 2：标题槽与页面覆盖槽 faces 一并计入（caller 层扩 need）——标题"不剔字"
+        # ≠不需要 fontTools（.ttc 标题字体抽取仍要），页面覆盖西文槽照走剔字通路、
+        # 激活时一律按 subset 口径校验
+        _require_fonttools_if_needed(
+            [regular, medium, bold]
+            + [f for f, _w in title_picks]
+            + [f for picks in page_picks.values() for f in picks["latin"] + picks["cjk"]],
+            subset_needed=split_on or bool(page_picks),
+        )
+        title_faces, title_paths = self._register_title_faces(title_picks)
 
         # 西文槽：主开关开走剔字通路（_ensure_latin_file 内部已含失败回退），
         # 关则与 1.4.2 完全一致
@@ -2318,15 +2645,65 @@ class Plugin:
             log(f"西文槽已剔字且 CJK 槽为空：完整版 face 以 {INTERNAL_FAMILY_FULL} "
                 f"回填栈（{len(full_faces)} 条字重声明）")
 
+        # 页面覆盖槽抽取（档 ≥2）：每个覆盖页单独准备整对正文槽的替换 payload。
+        # 页面链尾与全局同口径：覆盖字体自身含中文时 CJK 槽由它承担（不自动补），
+        # 否则按 _fallback_families 自动补一个 PREFERRED_CJK；Full 回填一律不叠（修订 3）
+        page_css = {}
+        extra_paths = list(title_paths)
+        if page_picks:
+            families = _family_map()
+            for page_key, picks in page_picks.items():
+                p_latin = []
+                for face, weight in zip(picks["latin"], (400, 500, 700)):
+                    if face is None:
+                        continue
+                    p_path, p_mime, _stripped, _failed = _ensure_latin_file(face)
+                    p_latin.append((self._server.register(p_path, p_mime), p_mime, weight))
+                    extra_paths.append(p_path)
+                p_cjk = []
+                for face, weight in zip(picks["cjk"], (400, 500, 700)):
+                    if face is None:
+                        continue
+                    p_path, p_mime = _ensure_font_file(face)
+                    p_cjk.append((self._server.register(p_path, p_mime), p_mime, weight))
+                    extra_paths.append(p_path)
+                p_chain = _fallback_families(
+                    families, picks["name"], picks["entry"]["zh"], split_on=True,
+                    cjk_family=picks["name"] if picks["entry"]["zh"] else None,
+                )
+                page_css[page_key] = {"latin": p_latin, "cjk": p_cjk, "chain": p_chain}
+
         # 行为保持决策:此处保护"刚写入的实际产物"(actual),不换用 cache_files_for_state
         # 的预测集——实际 ⊇ 预测在回退/兜底场景可能破,换用会把预测缺口放大成"刚写就删"。
         # 键名推导与预测共用 _pick_faces/_cache_key,一致性由 _tests_v1420 测试守护。
-        # 新抽取写入后清理一次：正在用的这些文件受保护（含 Full 回填件），其余按
-        # 最近使用只留 9 个
-        inuse = [p for p in (reg_path, medium_path, bold_path) + cjk_paths + full_paths if _is_cache_file(p)]
+        # 新抽取写入后清理一次：正在用的这些文件受保护（含 Full 回填件与标题/页面槽
+        # 产物），其余按最近使用保留；keep 上限随保护集动态抬高（修订 1）
+        inuse = [p for p in (reg_path, medium_path, bold_path) + cjk_paths + full_paths
+                 + tuple(extra_paths) if _is_cache_file(p)]
         _prune_font_cache(inuse)
 
-        css = self._build_css(latin_faces, cjk_faces, full_faces, chain, synth_none)
+        # 全局 CSS（main 页）：档 0 时 title_faces/page 均空，输出与 1.4.22 逐字节一致
+        title_family_css = INTERNAL_FAMILY_TITLE if zone_level >= 3 else INTERNAL_FAMILY
+        css = self._build_css(latin_faces, cjk_faces, full_faces, chain, synth_none,
+                              title_faces=title_faces or None,
+                              title_family=title_family_css if title_faces else None,
+                              title_selectors=TITLE_SELECTORS if zone_level >= 3 else None)
+        # 页面覆盖 CSS（档 2）：仅覆盖页单独成串，未覆盖页由 _css_for 回落全局 CSS
+        css_pages = {}
+        for page_key, page_payload in page_css.items():
+            css_pages[page_key] = self._build_css(
+                latin_faces, cjk_faces, full_faces, chain, synth_none,
+                title_faces=title_faces or None,
+                title_family=title_family_css if title_faces else None,
+                title_selectors=TITLE_SELECTORS if zone_level >= 3 else None,
+                page=page_payload,
+            )
+        if title_faces:
+            log(f"分区注入档 {zone_level}：标题槽 {title_entry['name']!r} 以 {len(title_faces)} "
+                f"条字重区间声明挂 {title_family_css}（TITLE_SELECTORS {TITLE_SELECTORS_VERSION}）")
+        if css_pages:
+            log(f"分区注入档 {zone_level}：页面覆盖生效 {', '.join(sorted(css_pages))}"
+                f"（整对正文槽替换，不叠 Full）")
         return {
             "css": css,
             "regular": face_info(regular, reg_path, reg_mime, reg_stripped),
@@ -2349,10 +2726,14 @@ class Plugin:
             "synth_none": synth_none,
             "fallback": chain,
             "zh": entry["zh"],
+            # 分区注入（档 2）：页面 key → 该页覆盖 CSS；空 dict = 无覆盖页，
+            # _css_for 对缺失页面回落全局 CSS
+            "css_pages": css_pages,
         }
 
     @staticmethod
-    def _build_css(latin_faces, cjk_faces, full_faces, chain, synth_none=False):
+    def _build_css(latin_faces, cjk_faces, full_faces, chain, synth_none=False,
+                   title_faces=None, title_family=None, title_selectors=None, page=None):
         """生成注入 CSS（唯一入口）。
 
         内部族方案：西文槽 @font-face 挂 INTERNAL_FAMILY，CJK 槽挂 INTERNAL_FAMILY_CJK；
@@ -2362,6 +2743,19 @@ class Plugin:
         开关拼好（分槽开时含 "Motiva Sans" —— Steam 自带字体，PUA 图标字形在它里面，
         Steam 改名时这里与 _fallback_families 要跟着调整）。
         族名必须与模块级常量一致，漏一处会出现「payload 说 A、CSS 里叫 B」。
+
+        分区注入（1.5.0）关键字参数，全部缺省时输出与 1.4.22 逐字节一致（档 0 门禁）：
+        - title_faces + title_family（档 1/3）：标题槽 face 规则追加在正文槽规则之后，
+          weight 原样插值，「500 699」式字重区间描述符天然支持（同族多 face 按元素
+          computed weight 选面）。档 1/2 时 title_family=INTERNAL_FAMILY——faces 追加到
+          正文族，正文规则即可命中（字重路由）；档 3 时 title_family=INTERNAL_FAMILY_TITLE；
+        - title_selectors（档 3）：标题规则独立选择器块，选择器取 TITLE_SELECTORS
+          （前缀匹配，修订 5），字体栈 = INTERNAL_FAMILY_TITLE, INTERNAL_FAMILY_CJK,
+          chain（修订 4：标题里的中文落正文 CJK 族，不是 Steam 默认）。正文规则是
+          html body *，标题规则必须连后代一起覆盖（s, s *）才不会被它压回正文栈；
+        - page（档 2）：页面覆盖 payload {"latin":..., "cjk":..., "chain":...}，
+          非空时整对正文槽（西文+CJK）替换为覆盖字体的一对槽，Full 回填丢弃
+          （修订 3：Full 只跟随全局正文槽，被覆盖页不叠 Full）。
         """
         # mime→format 映射唯一来源（后端）。前端 dist/index.js 的 FP_PREVIEW_MIME_FORMAT
         # 与此对应：新增格式时两处同改。
@@ -2378,9 +2772,20 @@ class Plugin:
                 f"font-display:swap;src:url(\"{url}\") format(\"{fmt_of.get(mime, 'truetype')}\");}}"
             )
 
+        # 档 2 页面覆盖：整对正文槽替换（修订 3），覆盖页不叠 Full 回填
+        if page:
+            latin_faces = page["latin"]
+            cjk_faces = page["cjk"]
+            full_faces = []
+            chain = page["chain"]
+
         lines = [face_rule(INTERNAL_FAMILY, url, mime, weight) for url, mime, weight in latin_faces]
         lines.extend(face_rule(INTERNAL_FAMILY_CJK, url, mime, weight) for url, mime, weight in cjk_faces)
         lines.extend(face_rule(INTERNAL_FAMILY_FULL, url, mime, weight) for url, mime, weight in full_faces)
+        # 档 1/3 标题槽 face 规则：追加在正文槽规则之后，字重区间描述符由调用方
+        # （_title_weight_ranges）配好；title_family 决定挂正文族还是独立标题族
+        if title_faces and title_family:
+            lines.extend(face_rule(title_family, url, mime, weight) for url, mime, weight in title_faces)
         stack = []
         if latin_faces:
             stack.append(f'"{INTERNAL_FAMILY}"')
@@ -2402,7 +2807,34 @@ class Plugin:
             rule += " font-synthesis-weight: none !important;"
         rule += " }"
         lines.append(rule)
+        # 档 3 标题规则：独立选择器块绑定标题容器。只在标题 faces 挂 INTERNAL_FAMILY_TITLE
+        # 时发出（档 1/2 的 title_family 是正文族，规则引用标题族会成为死规则）
+        if title_faces and title_selectors and title_family == INTERNAL_FAMILY_TITLE:
+            title_stack = [f'"{INTERNAL_FAMILY_TITLE}"']
+            if cjk_faces:
+                title_stack.append(f'"{INTERNAL_FAMILY_CJK}"')
+            title_stack += [
+                name if name in ("system-ui", "sans-serif", "serif", "monospace") else f'"{name}"'
+                for name in chain
+            ]
+            sel = ", ".join(title_selectors)
+            title_rule = f"{sel}, {sel} * {{ font-family: " + ", ".join(title_stack) + " !important;"
+            if synth_none:
+                title_rule += " font-synthesis-weight: none !important;"
+            title_rule += " }"
+            lines.append(title_rule)
         return "\n".join(lines)
+
+    def _css_for(self, tab):
+        """档 2 per-tab CSS：按 tab 名归属页面取该页应注入的 CSS。
+
+        页面归属由 _page_of_tab 按 TARGETS 的 tab 名规则映射（menu/qam 动态前缀、
+        main 候选/弹窗/未知 tab 归 main）；页面未覆盖（或档 0/1）时回落 main 页
+        全局 CSS（self._css）。弹窗经 toast 路径调用，天然跟随 main。
+        """
+        page = _page_of_tab(tab)
+        css = self._css_pages.get(page)
+        return css if css else self._css
 
     async def _inject_main(self, source="user"):
         """主界面标题稳定，直接按候选注入。返回是否成功。
@@ -2423,7 +2855,7 @@ class Plugin:
         if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
             log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
         for tab in candidates:
-            css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+            css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
             if css_id:
                 self._hit["main"] = {"tab": tab, "css_id": css_id, "alive": True}
                 log(f"已注入 main -> {tab}")
@@ -2438,7 +2870,7 @@ class Plugin:
         prefix = DYNAMIC_PREFIX[key]
         if self._uid:
             tab = f"{prefix}{self._uid}"
-            css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+            css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
             if css_id:
                 self._hit[key] = {"tab": tab, "css_id": css_id, "alive": True}
                 log(f"已注入 {key} -> {tab}")
@@ -2463,7 +2895,7 @@ class Plugin:
         state["uid"] = uid
         write_state(state)
         tab = f"{prefix}{uid}"
-        css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+        css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
         if css_id:
             self._hit[key] = {"tab": tab, "css_id": css_id, "alive": True}
             log(f"已注入 {key} -> {tab}（uid 发现 {uid}）")
@@ -2590,7 +3022,8 @@ class Plugin:
     async def _inject_toast_tab(self, tab):
         if not self._css or tab in self._toasts:
             return
-        css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+        # toast 跟随 main：_page_of_tab 把弹窗 tab 归到 main 页，_css_for 取该页 CSS
+        css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
         if css_id:
             self._toasts[tab] = css_id
             log(f"已注入弹窗 -> {tab}")
@@ -2799,6 +3232,16 @@ class Plugin:
             "preview": bool(_preview_level_of(state) != 0),
             "preview_level": _preview_level_of(state),
             "expand_level": _expand_level_of(state),
+            # 分区注入状态（与前端 JSDoc 的 zone 对象单点同步，契约块一字不差）
+            "zone": {
+                "level": int(state.get("zone_level") or 0),
+                "title_family": state.get("family_title"),
+                "pages": {
+                    "main": state.get("family_page_main"),
+                    "menu": state.get("family_page_menu"),
+                    "qam": state.get("family_page_qam"),
+                },
+            },
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,

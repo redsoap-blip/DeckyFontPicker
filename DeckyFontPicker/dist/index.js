@@ -54,6 +54,9 @@
      * @property {string[]} favorites
      * @property {string[]} history
      * @property {{port: (number|null), tabs: (number|null), error: string}} cef
+     * 界面分区(1.5.0 G2 契约):level 0-3(0=关闭=1.4.22 行为);title_family = 标题槽
+     * 字体;pages = 各页正文覆盖(整对正文槽替换),旧后端 / 档 0 无此键,标可选。
+     * @property {{level: number, title_family: (string|null), pages: {main: (string|null), menu: (string|null), qam: (string|null)}}|null} [zone]
      */
 
     var h = React.createElement;
@@ -92,6 +95,14 @@
         exKo: "다람쥐 헌 쳇바퀴 한글",
         prevEn: "The quick brown fox jumps over 0123",
         prevZh: "永和九年 岁在癸丑 汉字预览"
+    };
+
+    // P3-4:样张内容语言 → lang 属性,键与 SAMPLES 一一对应(样张文本属哪门语言就标
+    // 哪门;字体名行不标——名字本身不是固定语言的内容)。附带收益:Chromium 按 lang
+    // 选 CJK 字形变体(日文汉字 / 中文汉字字形差异)。
+    var SAMPLE_LANG = {
+        exEn: "en", exZh: "zh", exJa: "ja", exKo: "ko",
+        prevEn: "en", prevZh: "zh",
     };
 
     // DFL.GamepadButton: CANCEL=2(B) / SECONDARY=3(X) / OPTIONS=4(Y)
@@ -223,7 +234,24 @@
             "menuCjk": "应用中文",
             "menuCancel": "按 B 返回取消，不做任何更改",
             "descLatinStrip": "仅取其西文字形（自动剔除汉字）",
-            "descCjkNone": "该字体不含中文字形"
+            "descCjkNone": "该字体不含中文字形",
+            "zoneTitle": "界面分区",
+            "zoneNote": "档1：标题按字重改用独立字体\n档2：大屏 / 主菜单 / QAM 可单独覆盖正文\n档3：标题容器精确匹配（实验性）",
+            "zoneOff": "关闭",
+            "zoneWeight": "标题字重",
+            "zonePage": "页面覆盖",
+            "zonePrecise": "精确匹配",
+            "menuTitle": "应用标题",
+            "descTitle": "用作标题字体；正文不受影响",
+            "scopeLabel": "作用范围",
+            "scopeAll": "全部",
+            "pageMain": "大屏",
+            "pageMenu": "主菜单",
+            "pageQam": "QAM",
+            "scopeNote": "仅作用于正文槽落位；标题字体不受影响",
+            "slotTitle": "标题",
+            "pageOverride": "页面覆盖：{0}",
+            "pageOverrideNone": "无"
         },
         en: {
             "pluginTitle": "Font Picker",
@@ -320,7 +348,24 @@
             "menuCjk": "Apply to Chinese",
             "menuCancel": "Press B to go back and cancel without changing anything",
             "descLatinStrip": "Latin glyphs only (CJK characters stripped)",
-            "descCjkNone": "This font has no Chinese glyphs"
+            "descCjkNone": "This font has no Chinese glyphs",
+            "zoneTitle": "UI zones",
+            "zoneNote": "Level 1: titles use a dedicated font selected by weight\nLevel 2: per-page body overrides (main window / main menu / QAM)\nLevel 3: exact title container matching (experimental)",
+            "zoneOff": "Off",
+            "zoneWeight": "Title weight",
+            "zonePage": "Page override",
+            "zonePrecise": "Precise",
+            "menuTitle": "Apply to title",
+            "descTitle": "Used as the title font; body text is unaffected",
+            "scopeLabel": "Scope",
+            "scopeAll": "All pages",
+            "pageMain": "Main window",
+            "pageMenu": "Main menu",
+            "pageQam": "QAM",
+            "scopeNote": "Affects body slots only; the title font is unaffected",
+            "slotTitle": "Title",
+            "pageOverride": "Page overrides: {0}",
+            "pageOverrideNone": "none"
         },
         ja: {
             "pluginTitle": "フォント選択ツール",
@@ -417,7 +462,24 @@
             "menuCjk": "中国語に適用",
             "menuCancel": "B で戻ってキャンセル。変更は行われません",
             "descLatinStrip": "欧文字形のみ使用（漢字は自動的に除外）",
-            "descCjkNone": "このフォントには中国語字形がありません"
+            "descCjkNone": "このフォントには中国語字形がありません",
+            "zoneTitle": "UI ゾーン",
+            "zoneNote": "レベル1：タイトルはウェイト別に専用フォントを使用\nレベル2：大画面 / メインメニュー / QAM で本文を個別に上書き\nレベル3：タイトルコンテナの精密一致（実験的）",
+            "zoneOff": "オフ",
+            "zoneWeight": "タイトルウェイト",
+            "zonePage": "ページ別",
+            "zonePrecise": "精密一致",
+            "menuTitle": "タイトルに適用",
+            "descTitle": "タイトル用フォントとして使用します。本文には影響しません",
+            "scopeLabel": "適用範囲",
+            "scopeAll": "すべて",
+            "pageMain": "大画面",
+            "pageMenu": "メインメニュー",
+            "pageQam": "QAM",
+            "scopeNote": "本文スロットのみに適用されます。タイトル用フォントには影響しません",
+            "slotTitle": "タイトル",
+            "pageOverride": "ページ上書き：{0}",
+            "pageOverrideNone": "なし"
         },
         ko: {
             "pluginTitle": "글꼴 선택기",
@@ -514,7 +576,24 @@
             "menuCjk": "중국어에 적용",
             "menuCancel": "B로 돌아가 취소하며 변경 사항은 없습니다",
             "descLatinStrip": "라틴 글리프만 사용 (한자 자동 제거)",
-            "descCjkNone": "이 글꼴에는 중국어 글리프가 없습니다"
+            "descCjkNone": "이 글꼴에는 중국어 글리프가 없습니다",
+            "zoneTitle": "UI 영역",
+            "zoneNote": "단계 1: 제목은 굵기별로 전용 글꼴 사용\n단계 2: 메인 화면 / 메인 메뉴 / QAM에서 본문을 개별적으로 덮어쓰기\n단계 3: 제목 컨테이너 정밀 일치 (실험적)",
+            "zoneOff": "끄기",
+            "zoneWeight": "제목 굵기",
+            "zonePage": "페이지별",
+            "zonePrecise": "정밀 일치",
+            "menuTitle": "제목에 적용",
+            "descTitle": "제목 글꼴로 사용됩니다. 본문에는 영향이 없습니다",
+            "scopeLabel": "적용 범위",
+            "scopeAll": "전체",
+            "pageMain": "메인 화면",
+            "pageMenu": "메인 메뉴",
+            "pageQam": "QAM",
+            "scopeNote": "본문 슬롯에만 적용됩니다. 제목 글꼴에는 영향이 없습니다",
+            "slotTitle": "제목",
+            "pageOverride": "페이지 덮어쓰기: {0}",
+            "pageOverrideNone": "없음"
         }
     };
 
@@ -665,7 +744,7 @@
 
     // 行内容：档位 0=纯名 / 1=方案 A 单行样张 / 2=方案 B 常规+粗体；expandLevel>0 追加 C 方案展开块。
     // 展开块 DOM 常驻但 display:none——Chromium 对隐藏内容不加载字体，聚焦时才真正渲染（懒加载）
-    function fpRowContent(font, sample, boldLabel, previewLevel, expandLevel) {
+    function fpRowContent(font, sample, boldLabel, previewLevel, expandLevel, sampleLang) {
         var slot = fpPreviewSlot(font.family);
         var familyCss = '"' + slot + '"';
         // data-* 只给 IO 用：滚进视口的预览行才去后端取 @font-face URL（懒加载）
@@ -675,27 +754,27 @@
         // "slot", inherit 兜底显示默认字体，到位后浏览器按 cmap 逐字符换字自动重排。
         var kids = [h("div", { className: "fp-fname fp-nm", style: { "--fp-family": familyCss }, ...loadAttrs }, font.family)];
         if (previewLevel === 1) {
-            kids.push(h("div", { className: "fp-prev fp-prev-a", style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
+            kids.push(h("div", { className: "fp-prev fp-prev-a", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
         } else if (previewLevel === 2) {
-            kids.push(h("div", { className: "fp-prev", style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
-            kids.push(h("div", { className: "fp-prev fp-prev-b", style: { "--fp-family": familyCss }, ...loadAttrs },
+            kids.push(h("div", { className: "fp-prev", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
+            kids.push(h("div", { className: "fp-prev fp-prev-b", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs },
                 h("span", { className: "fp-badge" }, boldLabel + "  "), sample));
         }
         if (expandLevel > 0) {
             var lines = [
-                h("div", { className: "fp-ex-line fp-ex-lat", style: { "--fp-family": familyCss }, ...loadAttrs },
+                h("div", { className: "fp-ex-line fp-ex-lat", lang: SAMPLE_LANG.exEn, style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exLatin")), SAMPLES.exEn)
             ];
             if (font.zh || font.zh_extra) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: SAMPLE_LANG.exZh, style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exZh")), SAMPLES.exZh));
             }
             if (font.ja) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: SAMPLE_LANG.exJa, style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exJa")), SAMPLES.exJa));
             }
             if (font.ko) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: SAMPLE_LANG.exKo, style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exKo")), SAMPLES.exKo));
             }
             kids.push(h("div", { className: "fp-ex" }, lines));
@@ -719,9 +798,10 @@
         var api = props.api;
 
         // 方案 B：每行常显「常规 + 粗体」双样张，粗体行带 BOLD / SYNTH 标签
-        var sampleEn = SAMPLES.prevEn;
-        var sampleZh = SAMPLES.prevZh;
-        var sample = (font.zh || font.zh_extra) ? sampleZh : sampleEn;
+        // P3-4：样张键决定内容语言，lang 属性经 SAMPLE_LANG 由 SAMPLES 键推导
+        var sampleKey = (font.zh || font.zh_extra) ? "prevZh" : "prevEn";
+        var sample = SAMPLES[sampleKey];
+        var sampleLang = SAMPLE_LANG[sampleKey];
         var boldLabel = font.has_bold ? "BOLD" : "SYNTH";
 
         return h(deckyFrontendLib.PanelSectionRow, null,
@@ -754,7 +834,7 @@
                 // ↓ 档位化预览：0=纯字体名（原 1.4.2 行为）/ 1=方案 A / 2=方案 B；
                 //   C 方案展开块由开关控制（expandLevel>0）
                 props.previewOn || props.expandLevel > 0
-                    ? fpRowContent(font, sample, boldLabel, props.previewLevel, props.expandLevel)
+                    ? fpRowContent(font, sample, boldLabel, props.previewLevel, props.expandLevel, sampleLang)
                     : font.family
             ),
             alias ? aliasLine(alias) : null
@@ -873,6 +953,40 @@
                 }
                 return node;
             }, true);
+        }, [menuFont]);
+
+        // 档 2 作用范围（确认菜单内四选一）：每次打开菜单都重置为「全部」；仅影响
+        // 正文槽落位（选中的 page 传给 set_page_font），标题字体不受它影响
+        var menuScopeHook = useState("all");
+        var menuScope = menuScopeHook[0];
+        var setMenuScope = menuScopeHook[1];
+        // P3-1：记录打开菜单的触发元素（字体行），菜单关闭后把焦点送回去
+        var menuTriggerRef = useRef(null);
+
+        // P3-1：关闭确认菜单。关闭后焦点回触发行：force 无视防抢占守卫，0/120/320ms
+        // 重试覆盖「busy 禁用期 focus 无效」与 Steam 重渲染的时序差
+        function closeMenu() {
+            setMenuFont(null);
+            if (menuTriggerRef.current && typeof menuTriggerRef.current.focus === "function") {
+                focusLater(function () { return menuTriggerRef.current; }, true);
+            }
+        }
+
+        // P3-1：桌面键盘 Esc 关闭确认菜单（捕获阶段，与手柄 B / 点空白并列）；
+        // 菜单开着时拦下 Esc，不放行给 Steam 自己的关闭处理
+        useEffect(function () {
+            if (!menuFont) return;
+            function onMenuEscKey(evt) {
+                if (!evt) return;
+                if (evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27) {
+                    evt.stopPropagation();
+                    closeMenu();
+                }
+            }
+            document.addEventListener("keydown", onMenuEscKey, true);
+            return function () {
+                document.removeEventListener("keydown", onMenuEscKey, true);
+            };
         }, [menuFont]);
 
         // 「加载更多」已加载条数：按 key（分区 id / search）记住；搜索词变化时重置
@@ -1204,11 +1318,38 @@
             });
         }
 
-        // 确认键入口：主开关开 → 弹两选项菜单（按语言预选）；
-        // 主开关关 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致
+        // 标题槽写入（档 ≥1）：G2 新 RPC set_title_font({family})，动作后照常短轮询
+        function applyTitleFont(family) {
+            if (busy) return;
+            setBusy(true);
+            stopSettle();
+            call("set_title_font", { family: family }).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) startSettle();
+            });
+        }
+
+        // 页面级正文覆盖（档 ≥2）：G2 新 RPC set_page_font({page, family})，page ∈
+        // main/menu/qam，整对正文槽替换；family=null = 清除该页覆盖（面板不单设清除
+        // 入口，清除走后端 reset），动作后照常短轮询
+        function applyPageFont(page, family) {
+            if (busy) return;
+            setBusy(true);
+            stopSettle();
+            call("set_page_font", { page: page, family: family }).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) startSettle();
+            });
+        }
+
+        // 确认键入口：主开关开 → 弹菜单（按语言预选正文选项；档 ≥1 追加「应用标题」，
+        // 档 2 追加作用范围行）；主开关关 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致
         function choose(family, font) {
             if (busy) return;
             if (splitOn) {
+                // P3-1：记下触发行，菜单关闭后把焦点送回去；作用范围每次打开重置为「全部」
+                menuTriggerRef.current = (typeof document !== "undefined" && document.activeElement) || null;
+                setMenuScope("all");
                 setMenuFont(font || { family: family });
                 return;
             }
@@ -1244,6 +1385,14 @@
         // 子开关默认值由后端口径统一（synth_weight_none 缺省=开）
         var splitOn = !!(state && state.cjk_split);
         var synthNone = !!(state && state.synth_weight_none);
+        // 界面分区档位与数据（G2 契约 payload.zone）：旧后端 / 档 0 无 zone 键 = 档 0，
+        // 全部档位 UI 按原行为渲染；逐字段防御，坏结构一律按档 0 降级
+        var zoneInfo = (state && state["zone"] && typeof state["zone"] === "object") ? state["zone"] : null;
+        var zoneLevel = (zoneInfo && typeof zoneInfo.level === "number")
+            ? Math.max(0, Math.min(3, zoneInfo.level | 0)) : 0;
+        var zonePages = (zoneInfo && zoneInfo.pages && typeof zoneInfo.pages === "object") ? zoneInfo.pages : {};
+        var zoneTitleFamily = (zoneInfo && typeof zoneInfo.title_family === "string" && zoneInfo.title_family)
+            ? zoneInfo.title_family : null;
         // 字体预览样张档位：0 关闭 / 1 方案 A / 2 方案 B（兼容旧布尔 preview 键，缺省视为 2）
         var previewLevel = 2;
         var expandLevel = 0;
@@ -1593,8 +1742,42 @@
             ? { text: t("injectHeal", state.heal_text) }
             : null;
 
+        // 档 2 页面覆盖摘要：列出有正文覆盖的页面（zone.pages），无覆盖时显示「无」，
+        // 让档 2 的覆盖状态始终可见
+        var pageOverrideText = null;
+        if (zoneLevel >= 2) {
+            var pageNames = [];
+            if (zonePages.main) pageNames.push(t("pageMain"));
+            if (zonePages.menu) pageNames.push(t("pageMenu"));
+            if (zonePages.qam) pageNames.push(t("pageQam"));
+            pageOverrideText = t("pageOverride", pageNames.length ? pageNames.join(" · ") : t("pageOverrideNone"));
+        }
+
         // 「当前字体」卡片：标题 / 槽位摘要 / 三行状态 / 刷新图标合并为一个可聚焦容器，
-        // 不再折叠、所有信息常显；确认键 / 点击 = 重新注入当前字体
+        // 不再折叠、所有信息常显；确认键 / 点击 = 重新注入当前字体。
+        // 档 ≥1 槽位行样式与原两行版同一视觉规格，按 标题(1.0) / 西文(0.85) / CJK(0.72)
+        // 递减弱化；页面覆盖摘要行更小更弱，作注脚
+        var slotRowStyle = {
+            maxWidth: "100%",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            fontWeight: 400,
+            fontSize: "12px",
+        };
+        var slotRowStyleMid = Object.assign({}, slotRowStyle, { opacity: 0.85 });
+        var slotRowStyleDim = Object.assign({}, slotRowStyle, { opacity: 0.72 });
+        var slotPageStyle = {
+            maxWidth: "100%",
+            whiteSpace: "normal",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
+            fontWeight: 400,
+            fontSize: "11px",
+            lineHeight: "1.4",
+            opacity: 0.55,
+            marginTop: "2px",
+        };
         var currentSection = h(deckyFrontendLib.PanelSection, { title: undefined },
             h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:card" },
                 h(deckyFrontendLib.Focusable, {
@@ -1648,38 +1831,22 @@
                                     lineHeight: "1.25",
                                 },
                             },
-                                // 槽位区：splitOn 开启时显示「西文 / 中日韩」两行带前缀；
-                                // 关闭时只渲染一行纯字体名（无前缀、无置灰）
-                                splitOn ? h("span", {
-                                    style: {
-                                        maxWidth: "100%",
-                                        whiteSpace: "nowrap",
-                                        overflow: "hidden",
-                                        textOverflow: "ellipsis",
-                                        fontWeight: 400,
-                                        fontSize: "12px",
-                                    },
-                                }, t("slotLatin") + t("colon") + (current || t("notSelected"))) : null,
-                                splitOn ? h("span", {
-                                    style: {
-                                        maxWidth: "100%",
-                                        whiteSpace: "nowrap",
-                                        overflow: "hidden",
-                                        textOverflow: "ellipsis",
-                                        fontWeight: 400,
-                                        fontSize: "12px",
-                                        opacity: 0.72,
-                                    },
-                                }, t("slotCjk") + t("colon") + (state && state.family_cjk ? state.family_cjk : t("followSystem"))) : h("span", {
-                                    style: {
-                                        maxWidth: "100%",
-                                        whiteSpace: "nowrap",
-                                        overflow: "hidden",
-                                        textOverflow: "ellipsis",
-                                        fontWeight: 400,
-                                        fontSize: "12px",
-                                    },
-                                }, current || t("notSelected"))
+                                // 槽位区：档 ≥1 显示「标题 / 正文西文 / 正文CJK」三行
+                                //（标题来自 zone.title_family）；档 0 维持原行为：
+                                // splitOn 开启两行带前缀，关闭只渲染一行纯字体名（无前缀、无置灰）
+                                zoneLevel >= 1 ? h("span", { style: slotRowStyle },
+                                    t("slotTitle") + t("colon") + (zoneTitleFamily || t("notSelected"))) : null,
+                                zoneLevel >= 1 ? h("span", { style: slotRowStyleMid },
+                                    t("slotLatin") + t("colon") + (current || t("notSelected"))) : null,
+                                zoneLevel >= 1 ? h("span", { style: slotRowStyleDim },
+                                    t("slotCjk") + t("colon") + (state && state.family_cjk ? state.family_cjk : t("followSystem"))) : null,
+                                zoneLevel < 1 && splitOn ? h("span", { style: slotRowStyle },
+                                    t("slotLatin") + t("colon") + (current || t("notSelected"))) : null,
+                                zoneLevel < 1 ? (splitOn ? h("span", { style: slotRowStyleDim },
+                                    t("slotCjk") + t("colon") + (state && state.family_cjk ? state.family_cjk : t("followSystem"))) : h("span", { style: slotRowStyle },
+                                    current || t("notSelected"))) : null,
+                                // 档 2：页面覆盖摘要行（哪些页有覆盖，来自 zone.pages）
+                                zoneLevel >= 2 && pageOverrideText ? h("span", { style: slotPageStyle }, pageOverrideText) : null
                             ),
                         ),
                         // 状态块：三行状态与摘要纵列横向排列，摘要与三行垂直居中
@@ -1773,6 +1940,8 @@
             stripFallback
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-current:strip" },
                     h("div", {
+                        // P3-3：剔字回退警告对辅助技术播报
+                        "aria-live": "polite",
                         style: {
                             color: "#ff9b90",
                             fontSize: "11px",
@@ -1785,9 +1954,21 @@
                 : null,
             message && message !== problemText
                 ? h(deckyFrontendLib.PanelSectionRow, null,
-                    h("div", { style: { color: "#ff8a80", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, message))
+                    // P3-3：整体性错误提示对辅助技术播报
+                    h("div", { "aria-live": "polite", style: { color: "#ff8a80", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, message))
                 : null
         );
+
+        // inUse 扩 N 槽：正文西文 / 正文CJK 之外，档 ≥1 的标题槽（zone.title_family）
+        // 与档 ≥2 的页面覆盖（zone.pages.main/menu/qam）也算「使用中」；
+        // 一款字体可同时命中多个槽位，仍合并显示一个「当前使用」标签
+        function isFontInUse(family) {
+            if (!family) return false;
+            if (family === current) return true;
+            if (state && state.family_cjk === family) return true;
+            if (zoneTitleFamily === family) return true;
+            return !!(zonePages.main === family || zonePages.menu === family || zonePages.qam === family);
+        }
 
         // 字体行：渲染逻辑已提到模块层 FontRow（React.memo 化），此处只组 props。
         // key 移到 FontRow 元素上；isFav/inUse 在父级算好传原始值，让比较器保持浅比较。
@@ -1799,8 +1980,7 @@
                 sectionId: sectionId,
                 busy: busy,
                 isFav: favorites.indexOf(font.family) !== -1,
-                // 一款字体可同时命中两个槽位（西文 + 中日韩），v1 合并显示一个「使用中」
-                inUse: font.family === current || !!(state && state.family_cjk === font.family),
+                inUse: isFontInUse(font.family),
                 previewOn: previewOn,
                 previewLevel: previewLevel,
                 expandLevel: expandLevel,
@@ -1913,8 +2093,9 @@
             "border:0!important;background:transparent!important;box-shadow:none!important;}" +
             // 胶囊行整体下移 10px，和分类标题拉开距离
             ".fp-lang-bar{display:flex;flex-wrap:nowrap;gap:6px;width:100%;min-width:0;margin-top:10px;}" +
-            // 竖排两行：标签在上、计数在下；不再用省略号截断
-            ".fp-lang-pill{flex:1 1 0;min-width:0;box-sizing:border-box;height:36px;" +
+            // 竖排两行：标签在上、计数在下；不再用省略号截断。
+            // P3-5：height → min-height，内容更高（如系统字号放大）时胶囊不再裁字
+            ".fp-lang-pill{flex:1 1 0;min-width:0;box-sizing:border-box;min-height:36px;" +
             "padding:3px 4px;border-radius:13px;background:rgba(255,255,255,0.07);" +
             "color:rgba(255,255,255,0.62);font-size:11px;font-weight:500;text-align:center;" +
             "display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;" +
@@ -1927,6 +2108,11 @@
             ".fp-lang-pill.fp-lang-on,.fp-lang-pill.fp-lang-on:hover{" +
             "background:rgba(255,255,255,0.22)!important;color:#ffffff!important;font-weight:600;}" +
             ".fp-lang-pill.fp-lang-on .fp-lang-count{opacity:0.95;font-weight:600;}" +
+            // 聚焦态可见性（P3-2 语言胶囊键盘焦点 / 确认菜单作用范围胶囊手柄焦点）：
+            // 复用选中态配色并加蓝框，与菜单选项 .fp-row-focus 一致
+            ".fp-lang-pill.fp-row-focus,.fp-lang-pill:focus{" +
+            "background:rgba(255,255,255,0.22)!important;color:#ffffff!important;" +
+            "outline:1px solid #66c0f4!important;}" +
             // 方案 B：常规 + 粗体双样张
             // 关键：选择器 html body .fp-prev 特异性 (0,1,2) 高于后端 html body * (0,0,2)，
             // 同为 !important 时本规则胜出，不依赖注入先后顺序。
@@ -2045,8 +2231,18 @@
                 key: key,
                 className: "fp-lang-pill" + (picked === key ? " fp-lang-on" : ""),
                 role: "button",
+                // P3-2：桌面键盘可达（Tab 聚焦，Enter / Space 激活，同 onClick 落 applyLangPick）；
+                // 手柄 L/R 循环逻辑不变，两者并存
+                tabIndex: "0",
                 "aria-pressed": picked === key ? "true" : "false",
                 onClick: function () { applyLangPick(cat.id, key); },
+                onKeyDown: function (evt) {
+                    if (evt && (evt.key === "Enter" || evt.key === " " || evt.key === "Spacebar" ||
+                                evt.keyCode === 13 || evt.keyCode === 32)) {
+                        evt.preventDefault();
+                        applyLangPick(cat.id, key);
+                    }
+                },
             },
                 h("span", { className: "fp-lang-label" }, t("lang." + key)),
                 h("span", { className: "fp-lang-count" }, fmtCount(count))
@@ -2176,6 +2372,12 @@
                     h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, t("woff2Fallback"))
                 )
                 : null,
+            // 界面分区档位滑块（1.5.0 G3）：0 关闭 / 1 标题字重 / 2 页面覆盖 / 3 精确匹配。
+            // 走既有 setLevels({zone_level: v}) → set_split_options 接线（后端已扩展该 RPC）；
+            // 档 ≥1 的分区 UI（确认菜单标题选项 / 当前字体卡三行等）随 payload.zone.level 条件渲染
+            h(TierSliderRow, { key: "fp-zone:row", label: t("zoneTitle"), note: t("zoneNote"), level: zoneLevel,
+                setLevel: function (v) { setLevels({ zone_level: v }); },
+                notches: [t("zoneOff"), t("zoneWeight"), t("zonePage"), t("zonePrecise")] }),
             // 字体预览样张档位滑块：0 关闭 / 1 方案 A / 2 方案 B
             h(TierSliderRow, { key: "fp-preview:row", label: t("previewSamples"), note: t("previewNote"), level: previewLevel,
                 setLevel: function (v) { setLevels({ preview_level: v }); },
@@ -2229,6 +2431,8 @@
             copyMsg
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:copymsg" },
                     h("div", {
+                        // P3-3：复制日志结果对辅助技术播报
+                        "aria-live": "polite",
                         style: copyMsg.indexOf(t("copyFail")) === 0
                             ? { color: "#ff9b90", fontSize: "11px", lineHeight: "1.5" }
                             : { opacity: 0.55, fontSize: "11px", lineHeight: "1.5" },
@@ -2237,17 +2441,25 @@
                 : null
         );
 
-        // 确认键菜单：标题 + 「应用西文 / 应用中文」两选项 + 取消提示。
+        // 确认键菜单：字体名标题 + 「应用西文 / 应用中文」两选项 + （档 ≥1）「应用标题」
+        // + （档 2）作用范围行 + 取消提示。
         // 覆盖提示：不含 CJK 字形的字体「应用中文」标注「该字体不含中文字形」（不禁用）；
         // 自带 CJK 的字体「应用西文」标注「仅取其西文字形（自动剔除汉字）」。
-        // B 键 / 点空白处关闭，不写任何配置
+        // 预选（初始焦点）只落在正文两选项上、按语言归属，标题选项永不自动预选，
+        // 标题 / 正文预选互不串。
+        // 作用范围只影响正文槽落位：选「全部」走既有全局槽 RPC（set_font / set_cjk_font），
+        // 选具体页则把该页传给 set_page_font（整对正文槽替换）；标题槽不受作用范围影响。
+        // P3-1：容器 role=dialog + aria-modal + aria-labelledby 指向字体名标题块（fp-menu-name）；
+        // Esc 关闭（见 onMenuEscKey）与手柄 B / 点空白并列；关闭后焦点回触发字体行。
         function confirmMenu() {
             if (!menuFont) return null;
             var family = menuFont.family;
             var hasCjk = !!(menuFont.zh || menuFont.zh_extra || menuFont.ja || menuFont.ko);
             var latinDesc = hasCjk ? t("descLatinStrip") : undefined;
             var cjkDesc = hasCjk ? undefined : t("descCjkNone");
-            var option = function (key, id, refSetter, label, desc, slot) {
+            // 档 2 且选了具体页：正文落位改走 set_page_font
+            var pageScope = (zoneLevel >= 2 && menuScope !== "all") ? menuScope : null;
+            var option = function (key, id, refSetter, label, desc, act) {
                 return h(deckyFrontendLib.Focusable, {
                     key: key,
                     id: id,
@@ -2255,13 +2467,13 @@
                     className: "fp-sec",
                     focusClassName: "fp-row-focus",
                     ref: refSetter,
-                    onActivate: function () { setMenuFont(null); applyToSlot(slot, family); },
-                    onClick: function () { setMenuFont(null); applyToSlot(slot, family); },
+                    onActivate: function () { closeMenu(); act(); },
+                    onClick: function () { closeMenu(); act(); },
                     onOKActionDescription: label,
                     onButtonDown: function (evt) {
-                        // B = 取消：关闭菜单且不写任何配置
+                        // B = 取消：关闭菜单且不写任何配置，焦点回触发行
                         if (buttonOf(evt) === BTN_B) {
-                            setMenuFont(null);
+                            closeMenu();
                             evt.stopPropagation();
                             return true;
                         }
@@ -2283,9 +2495,45 @@
                         : null
                 );
             };
+            // 正文槽落位：档 2 选了具体页 → set_page_font(page)；否则走全局槽
+            var goBody = function (slot) {
+                if (pageScope) applyPageFont(pageScope, family);
+                else applyToSlot(slot, family);
+            };
+            // 作用范围胶囊（档 2）：复用语言胶囊样式；A / 点击选中，不关菜单，
+            // 所以 onClick 必须 stopPropagation，避免冒泡到遮罩层把菜单点没
+            var scopePill = function (key) {
+                var on = menuScope === key;
+                return h(deckyFrontendLib.Focusable, {
+                    key: "fp-scope-" + key,
+                    tabIndex: 0,
+                    className: "fp-lang-pill" + (on ? " fp-lang-on" : ""),
+                    focusClassName: "fp-row-focus",
+                    role: "button",
+                    "aria-pressed": on ? "true" : "false",
+                    onActivate: function () { setMenuScope(key); },
+                    onClick: function (evt) {
+                        if (evt && evt.stopPropagation) evt.stopPropagation();
+                        setMenuScope(key);
+                    },
+                    onButtonDown: function (evt) {
+                        // B 在胶囊上同样关菜单；左右键不接管，交还 Steam 焦点导航
+                        if (buttonOf(evt) === BTN_B) {
+                            closeMenu();
+                            evt.stopPropagation();
+                            return true;
+                        }
+                        return false;
+                    },
+                    style: { flex: "1 1 0", padding: "3px 4px" },
+                }, key === "all" ? t("scopeAll") : key === "main" ? t("pageMain") : key === "menu" ? t("pageMenu") : t("pageQam"));
+            };
             return h("div", {
                 key: "fp-confirm-menu",
-                onClick: function () { setMenuFont(null); },
+                role: "dialog",
+                "aria-modal": "true",
+                "aria-labelledby": "fp-menu-name",
+                onClick: function () { closeMenu(); },
                 style: {
                     position: "fixed", left: 0, top: 0, right: 0, bottom: 0,
                     zIndex: 2147483647, background: "rgba(0,0,0,0.55)",
@@ -2302,13 +2550,24 @@
                     },
                 },
                     h("div", {
+                        id: "fp-menu-name",
                         title: family,
                         style: { fontSize: "13px", fontWeight: 600, marginBottom: "8px", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" },
                     }, family),
                     option("latin", "fp-menu-latin", function (el) { menuLatinRef.current = el; },
-                        t("menuLatin"), latinDesc, "latin"),
+                        t("menuLatin"), latinDesc, function () { goBody("latin"); }),
                     option("cjk", "fp-menu-cjk", function (el) { menuCjkRef.current = el; },
-                        t("menuCjk"), cjkDesc, "cjk"),
+                        t("menuCjk"), cjkDesc, function () { goBody("cjk"); }),
+                    // 档 ≥1：应用标题（set_title_font），不受作用范围影响；预选永不落在此项
+                    zoneLevel >= 1 ? option("title", "fp-menu-title", null,
+                        t("menuTitle"), t("descTitle"), function () { applyTitleFont(family); }) : null,
+                    // 档 2：作用范围行（全部 / 大屏 / 主菜单 / QAM，默认全部），仅作用于正文槽落位
+                    zoneLevel >= 2 ? h("div", { key: "fp-menu-scope", style: { marginTop: "8px" } },
+                        h("div", { style: { fontSize: "11px", fontWeight: 600, marginBottom: "6px" } }, t("scopeLabel")),
+                        h("div", { className: "fp-lang-bar", style: { marginTop: "0" } },
+                            scopePill("all"), scopePill("main"), scopePill("menu"), scopePill("qam")),
+                        h("div", { style: { opacity: 0.5, fontSize: "10px", marginTop: "6px" } }, t("scopeNote"))
+                    ) : null,
                     h("div", {
                         style: { opacity: 0.5, fontSize: "10px", marginTop: "8px", textAlign: "center" },
                     }, t("menuCancel"))
