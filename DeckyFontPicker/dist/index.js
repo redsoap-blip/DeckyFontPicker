@@ -1,5 +1,60 @@
+// @ts-check
 (function (deckyFrontendLib, React) {
     "use strict";
+
+    /**
+     * 后端 payload 里单个字体族条目(与 main.py list_families 输出逐字段对齐)。
+     * @typedef {Object} FontFamilyItem
+     * @property {string} family
+     * @property {string[]} aliases
+     * @property {boolean} zh
+     * @property {number[]} weights
+     * @property {boolean} has_bold
+     * @property {number} faces
+     * @property {string[]} langs
+     * @property {number} lang_count
+     * @property {boolean} [mono]
+     * @property {boolean} [ja]
+     * @property {boolean} [ko]
+     * @property {string} [primary]
+     * @property {boolean} [zh_extra]
+     * @property {number} [install_mtime]
+     * @property {boolean} [is_system]
+     */
+    /**
+     * 后端 _payload() 返回的面板状态(与 main.py Plugin._payload 返回 dict 逐字段对齐;
+     * 条件键用可选标注)。错误路径另有 ok=false + error/error_key/error_args,
+     * 正常路径恒有 ok=true,这里按正常路径标注、异常键用可选。
+     * @typedef {Object} StatePayload
+     * @property {boolean} ok
+     * @property {string} inject_level
+     * @property {string} inject_text
+     * @property {string} heal_text
+     * @property {string} mode
+     * @property {string|null} family
+     * @property {string|null} family_cjk
+     * @property {boolean} has_css
+     * @property {Array<{key: string, label: string, tab: (string|null), ok: boolean, fallback: boolean}>} targets
+     * @property {{running: boolean, port: number|null}} server
+     * @property {boolean} woff2_ok
+     * @property {string[]} fallback
+     * @property {boolean|null} zh
+     * @property {Object|null} regular
+     * @property {Object|null} medium
+     * @property {Object|null} bold
+     * @property {Object|null} cjk
+     * @property {boolean} cjk_split
+     * @property {boolean} synth_weight_none
+     * @property {boolean} preview
+     * @property {number} preview_level
+     * @property {number} expand_level
+     * @property {{done: boolean, fallback: boolean}} strip
+     * @property {boolean} full_backfill
+     * @property {string|null} uid
+     * @property {string[]} favorites
+     * @property {string[]} history
+     * @property {{port: (number|null), tabs: (number|null), error: string}} cef
+     */
 
     var h = React.createElement;
     var useState = React.useState;
@@ -91,8 +146,6 @@
             "note.other": "既非等宽、名字里也没有明确衬线 / 无衬线关键词的字体。",
             "note.fav": "聚焦某款字体后按 X（手柄）加入/移出收藏",
             "note.history": "按最近使用时间排列，无上限，卸载的字体自动移除",
-            "notInjected": "未注入",
-            "injected": "已注入",
             "colon": "：",
             "injectDone": "手动注入 · {0}",
             "injectFailed": "注入失败",
@@ -124,9 +177,12 @@
             "err.noFamily": "系统里没有字体 {0}",
             "err.noSelection": "当前没有选择字体",
             "err.noSlots": "没有选择西文字体，中日韩槽也为空",
+            "err.fonttoolsMissing": "抽取 {0} 需要 fontTools，当前 Python 没有安装",
+            "err.fonttoolsSubset": "西文剔字需要 fontTools（{0}），可关闭「按语言注入」",
             "advanced": "高级",
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
+            "woff2Fallback": "woff2 不可用，将注入 ttf（体积更大）",
             "copyLog": "复制日志",
             "history.empty": "暂无使用记录",
             "clearHistory": "清除历史字体记录",
@@ -187,8 +243,6 @@
             "note.other": "Neither monospace nor matched by a serif / sans keyword.",
             "note.fav": "Focus a font and press X (gamepad) to add or remove it from favorites",
             "note.history": "Ordered by most recent use, unlimited; uninstalled fonts are removed automatically",
-            "notInjected": "Not injected",
-            "injected": "Injected",
             "colon": ": ",
             "injectDone": "Manual injection · {0}",
             "injectFailed": "Injection failed",
@@ -220,9 +274,12 @@
             "err.noFamily": "Font not found on system: {0}",
             "err.noSelection": "No font selected",
             "err.noSlots": "No Latin or CJK font selected",
+            "err.fonttoolsMissing": "Extracting {0} requires fontTools, which is not installed",
+            "err.fonttoolsSubset": "Latin-slot stripping requires fontTools ({0}); you can turn off per-language injection",
             "advanced": "Advanced",
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
+            "woff2Fallback": "woff2 unavailable, injecting ttf (larger files)",
             "copyLog": "Copy log",
             "history.empty": "No history yet",
             "clearHistory": "Clear font history",
@@ -283,8 +340,6 @@
             "note.other": "等幅でもなく、名前にセリフ / サンセリフのキーワードも含まないフォントです。",
             "note.fav": "フォントにフォーカスして X（ゲームパッド）を押すとお気に入りに追加／解除できます",
             "note.history": "最近使用した順に並び、上限なし。アンインストールしたフォントは自動的に外れます",
-            "notInjected": "未適用",
-            "injected": "適用済み",
             "colon": "：",
             "injectDone": "手動適用 · {0}",
             "injectFailed": "適用に失敗",
@@ -316,9 +371,12 @@
             "err.noFamily": "システムにフォント {0} がありません",
             "err.noSelection": "フォントが選択されていません",
             "err.noSlots": "欧文・中日韓のフォントがいずれも選択されていません",
+            "err.fonttoolsMissing": "{0} の抽出には fontTools が必要ですが、インストールされていません",
+            "err.fonttoolsSubset": "西文スロットの削字には fontTools が必要です（{0}）。「言語別注入」をオフにできます",
             "advanced": "詳細設定",
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
+            "woff2Fallback": "woff2 が利用できないため ttf を注入します（サイズ大）",
             "copyLog": "ログをコピー",
             "history.empty": "記録はまだありません",
             "clearHistory": "フォント履歴を消去",
@@ -379,8 +437,6 @@
             "note.other": "monospace도 아니고 이름에 serif / sans-serif 키워드도 없는 글꼴입니다.",
             "note.fav": "글꼴에 포커스한 뒤 X (게임패드)를 눌러 즐겨찾기에 추가/해제할 수 있습니다",
             "note.history": "최근 사용 순으로 정렬되며 제한 없음, 삭제된 글꼴은 자동으로 제외됩니다",
-            "notInjected": "적용 안 됨",
-            "injected": "적용됨",
             "colon": ": ",
             "injectDone": "수동 적용 · {0}",
             "injectFailed": "적용 실패",
@@ -412,9 +468,12 @@
             "err.noFamily": "시스템에 글꼴 {0}이(가) 없습니다",
             "err.noSelection": "선택된 글꼴이 없습니다",
             "err.noSlots": "라틴 또는 CJK 글꼴이 선택되지 않았습니다",
+            "err.fonttoolsMissing": "{0} 추출에 fontTools가 필요하지만 설치되어 있지 않습니다",
+            "err.fonttoolsSubset": "라틴 슬롯 정리에 fontTools가 필요합니다 ({0}). 언어별 주입을 끌 수 있습니다",
             "advanced": "고급",
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
+            "woff2Fallback": "woff2 사용 불가, ttf 주입(용량 커짐)",
             "copyLog": "로그 복사",
             "history.empty": "기록이 아직 없습니다",
             "clearHistory": "폰트 기록 지우기",
@@ -891,6 +950,7 @@
         var previewFontCss = previewFontCssHook[0];
         var setPreviewFontCss = previewFontCssHook[1];
         var previewFontsRef = useRef({});
+        var previewRetryRef = useRef({});
         var rootRef = useRef(null);
         var ioRef = useRef(null);
         var previewPortRef = useRef(null);
@@ -912,7 +972,15 @@
         function ensurePreviewFont(family, slot) {
             if (!family || !slot) return;
             var seen = previewFontsRef.current;
-            if (seen[family]) return; // 去重：同时可见的多行同一字体只取一次
+            if (seen[family] === "loading" || seen[family] === "ok") return; // 去重：同时可见的多行同一字体只取一次
+            // 失败重试：error 态的行重新进入视口时允许再取一次（IO 回调对 error 行
+            // 不解除观察）。每个字体整个会话最多重试 1 次，仍失败维持 error，防止
+            // 滚动往返无限打 RPC。
+            var retries = previewRetryRef.current;
+            if (seen[family] === "error") {
+                if ((retries[family] || 0) >= 1) return;
+                retries[family] = (retries[family] || 0) + 1;
+            }
             seen[family] = "loading";
             var gen = previewPortRef.current;
             serverApi.callPluginMethod("get_preview_font", { family: family }).then(function (res) {
@@ -970,7 +1038,11 @@
                 for (var i = 0; i < entries.length; i++) {
                     if (!entries[i].isIntersecting) continue;
                     var el = entries[i].target;
-                    io.unobserve(el);
+                    // error 态的行不解除观察：滚出再滚回视口会再次触发本回调，
+                    // ensurePreviewFont 内的重试闸门（每族整个会话一次）兜住请求频率
+                    if (previewFontsRef.current[el.getAttribute("data-fp-font")] !== "error") {
+                        io.unobserve(el);
+                    }
                     ensurePreviewFont(el.getAttribute("data-fp-font"), el.getAttribute("data-fp-slot"));
                 }
             }, { rootMargin: "300px 0px" });
@@ -990,6 +1062,7 @@
             if (previewPortRef.current === port) return;
             previewPortRef.current = port;
             previewFontsRef.current = {};
+            previewRetryRef.current = {}; // 新端口 = 新机会，重试计数一并清零
             setPreviewFontCss("");
             var nodes = rootRef.current.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
             for (var i = 0; i < nodes.length; i++) {
@@ -1265,6 +1338,7 @@
 
         function toggleFavorite(family) {
             if (!family) return;
+            if (busy) return; // 其它批量动作进行中不响应收藏切换,与上方各动作一致
             call("toggle_favorite", { family: family });
         }
 
@@ -2073,6 +2147,14 @@
                 ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-cef:ok" },
                     h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5" } },
                         t("cefPortInfo", cefInfo.port || "?", cefInfo.tabs == null ? "?" : cefInfo.tabs))
+                )
+                : null,
+            // woff2 不可用提示：后端探测系统 Python 缺 brotli 时（payload.woff2_ok === false），
+            // woff2 压缩步骤会失败并自动回退注入 ttf。信息行样式沿用 cefPortInfo 行，
+            // 换行属性取自 cefNoPort 错误行（长文案在窄面板能折行）。
+            state && state.woff2_ok === false
+                ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-woff2:fallback" },
+                    h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, t("woff2Fallback"))
                 )
                 : null,
             // 字体预览样张档位滑块：0 关闭 / 1 方案 A / 2 方案 B

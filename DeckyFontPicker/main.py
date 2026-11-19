@@ -13,6 +13,8 @@
   注入（见 TOAST_TAB_PREFIX 处注释）
 """
 
+from __future__ import annotations  # PEP 563：注解惰性化为字符串，永不运行期求值（TypedDict 类体注解与内建泛型注解均不再抬高解释器地板）
+
 import asyncio
 import hashlib
 import json
@@ -24,6 +26,7 @@ import sys
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from typing import TypedDict
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
@@ -265,7 +268,7 @@ def _run(args, timeout=20):
     return subprocess.run(args, capture_output=True, text=True, timeout=timeout, env=env)
 
 
-def _css_weight(fc_weight):
+def _css_weight(fc_weight) -> int:
     try:
         value = float(fc_weight)
     except (TypeError, ValueError):
@@ -318,7 +321,7 @@ ZH_EXTRA_MIN_CHARS = 500
 ZH_RANGES = ((0x3400, 0x4DBF), (0x4E00, 0x9FFF))  # 扩展 A + 基本区
 
 
-def _parse_charset(spec):
+def _parse_charset(spec) -> list[tuple[int, int]]:
     """解析 fontconfig 的 charset（"20-7e a0-ff 4e00-9fff" 这种区间串）。"""
     ranges = []
     for token in (spec or "").split():
@@ -333,7 +336,7 @@ def _parse_charset(spec):
     return ranges
 
 
-def _cjk_coverage(ranges):
+def _cjk_coverage(ranges) -> int:
     """charset 区间与 CJK 统一表意文字区间的交集码位数（同一码位只算一次）。"""
     if not ranges:
         return 0
@@ -481,7 +484,7 @@ FAMILY_TTL = 10.0
 _FAMILY_CACHE = {"at": 0.0, "data": None, "lock": threading.Lock()}
 
 
-def _family_map(force=False):
+def _family_map(force=False) -> "dict[str, FamilyEntry]":
     """返回 family 映射；TTL 内复用缓存，force=True 强制重跑 fc-list。"""
     now = time.time()
     if not force and _FAMILY_CACHE["data"] is not None and now - _FAMILY_CACHE["at"] < FAMILY_TTL:
@@ -497,7 +500,7 @@ def _family_map(force=False):
         return _FAMILY_CACHE["data"]
 
 
-def _lang_display_order(tags):
+def _lang_display_order(tags) -> list:
     """lang 展示顺序：中文 → 英文 → 常见西文/日韩 → 其它（同组内保持 fontconfig 原顺序）。
 
     fontconfig 的 lang 按字母排序，直接截前几个只会看到 aa/ab/af 这类冷门项，
@@ -528,7 +531,92 @@ def _lang_display_order(tags):
     return sorted(tags, key=order)
 
 
-def list_families(families=None):
+# --------------------------------------------------------------------------- #
+# 类型注解（纯注解，运行期无强校验）
+#
+# TypedDict 只给类型检查器/读者描述字典结构，运行期不做任何键或类型校验：
+# 缺键、多键、类型不符都不会报错，实际行为与本文件 1.4.19 完全一致。
+# 字段以下方构造点的实码为准（_faces / _family_map_build / Plugin._payload）；
+# total=False 表示所有键都可能缺省（face 按条件带键、payload 失败路径才补键）。
+# --------------------------------------------------------------------------- #
+
+
+class FaceDict(TypedDict, total=False):
+    """_faces() 构造的单个 face（_family_map_build 原样收进 entry["faces"]）。"""
+
+    family: str  # face 自己的派生族名（如 "Fira Sans Light"），映射键
+    aliases: list[str]  # 全部族名（含主名），仅用于搜索/显示，不参与选面
+    style: str  # fontconfig 的样式名（Regular / Bold / Italic …）
+    weight: int  # _css_weight 折算的 CSS 字重（400/500/700 …）
+    file: str  # 字体文件绝对路径
+    mtime: int  # 文件 mtime（秒），「最新安装」排序用，取不到为 0
+    index: int  # 集合字体里的 face 序号，单文件为 0
+    format: str  # fontconfig 报的格式（TrueType / CFF …）
+    zh: bool  # lang 含中文
+    ja: bool  # lang 含日文
+    ko: bool  # lang 含韩文
+    lang: str  # fontconfig 的原始 lang 串（"zh-cn|en|ja" 这种）
+    zh_extra: bool  # 非 zh 字体但 charset 带足量汉字（「含中文」类）
+    mono: bool  # 等宽（fontconfig spacing 90/100/110 都算）
+    collection: bool  # 是否 .ttc/.otc 集合（抽取嵌入需要 fontTools）
+
+
+class FamilyEntry(TypedDict, total=False):
+    """_family_map_build() 构造的 family 映射值。"""
+
+    name: str  # 主族名（等于映射键）
+    aliases: list[str]  # 按 family 合并去重后的族名集合（含主名）
+    faces: list[FaceDict]  # 该族全部 face
+    langs: list[str]  # 全部 face 的 lang 标签去重合并（保持 fontconfig 原顺序）
+    zh: bool  # 任一 face 含中文
+    ja: bool  # 任一 face 含日文
+    ko: bool  # 任一 face 含韩文
+    primary: str  # 族名地区标记推断的主语言（zh/ja/ko），推断不出为空串
+    zh_extra: bool  # 任一 face 属「含中文」
+    mono: bool  # 任一 face 等宽
+    install_mtime: int | None  # 所有 face mtime 的最小值（秒），还没有 face 时 None
+    is_system: bool  # 所有 face 都在系统字体目录下（缺省 True，遇外部目录置 False）
+
+
+class StatePayload(TypedDict, total=False):
+    """Plugin._payload() 返回的面板状态（_apply 等失败路径会再补 error* 键）。"""
+
+    ok: bool  # _payload 恒 True；失败路径翻 False 并补 error / error_key / error_args
+    inject_level: str  # _inject_status 四态：done / healed / failed / none
+    inject_text: str  # 最近一次用户注入的时间戳文案
+    heal_text: str  # 最近一次自动补注的时间戳文案
+    mode: str  # 投递模式，恒 MODE_EXTRACT
+    family: str | None  # 当前注入的族名，未注入为 None
+    family_cjk: str | None  # CJK 槽族名（state 原值），未设置为 None
+    has_css: bool  # 是否已有注入的 CSS
+    targets: list  # 注入目标逐项状态（key/label/tab/ok/fallback）
+    server: dict  # {"running": bool, "port": int}
+    woff2_ok: bool  # 系统 Python 有无 brotli（woff2 压缩可用性），前端提示行用
+    fallback: list  # 回退链族名列表（_detail["fallback"]，无 detail 时 []）
+    zh: bool | None  # 所选族是否含中文（_detail["zh"]，未注入为 None）
+    regular: dict | None  # 西文 Regular 槽 face 详情（face_info），无则 None
+    medium: dict | None  # 西文 Medium 槽 face 详情，无则 None
+    bold: dict | None  # 西文 Bold 槽 face 详情，无则 None
+    cjk: dict | None  # CJK 槽 face 详情，无则 None
+    cjk_split: bool  # 分槽注入开关
+    synth_weight_none: bool  # 去掉合成粗斜体开关（缺省开）
+    preview: bool  # 预览开关（档位非 0）
+    preview_level: int  # 预览档位
+    expand_level: int  # 预览展开档位
+    strip: dict  # 剔字记账 {"done": bool, "fallback": bool}
+    full_backfill: bool  # 完整版 face 是否以 Full 内部族回填
+    uid: str | None  # 当前已发现的 UI uid
+    favorites: list  # 收藏列表（清洗后）
+    history: list  # 历史记录
+    cef: dict  # {"port": int|None, "tabs": int|None, "error": str}
+    # ---- 条件键：失败 / 卸载路径才出现 ----
+    error: str  # 失败原因（人类可读中文）
+    error_key: str  # 前端按语言显示用的错误键（err.*）
+    error_args: list  # 错误键的插值参数
+    removed: int  # 卸载路径删除的样式条数
+
+
+def list_families(families=None) -> list[dict]:
     out = []
     for name, entry in (families if families is not None else _family_map()).items():
         weights = sorted({f["weight"] for f in entry["faces"]})
@@ -576,7 +664,7 @@ def _face_score(face):
     return (italic, width, plain)
 
 
-def _pick_faces(entry, prefer_zh=True):
+def _pick_faces(entry, prefer_zh=True) -> "tuple[FaceDict | None, FaceDict | None, FaceDict | None]":
     """挑 Regular(≈80) / Medium(≈100) / Bold(≈200)，返回三元组。
 
     prefer_zh 控制是否优先在「含中文字形」的 face 里挑：CJK 槽保持 True（1.4.2 行为）；
@@ -712,12 +800,36 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
     按 mtime 排序（命中缓存时会 _touch 刷新，所以 mtime 即最近使用时间）。
     只处理缓存目录内 *.ttf/*.otf/*.woff/*.woff2，不删目录、不碰其它目录；
     删除失败只记日志，不抛异常影响注入。返回删除数量。
+    *.part 为 helper 崩溃残留的临时文件（face_extract.py 原子改名前写 out+".part"），
+    超 5 分钟的在此收尾删除。
     """
     protected = {os.path.abspath(p) for p in protect if p}
     try:
         names = os.listdir(CACHE_DIR)
     except OSError:
         return 0
+    # helper 崩溃残留的 *.part 临时文件（face_extract.py 写 out+".part"，原子改名前
+    # 崩溃即残留）。不占 LRU 名额，单独按超时收尾：超过 5 分钟的删掉，新鲜的留着
+    # （可能是正在写入的）。
+    now_ts = time.time()
+    part_removed = 0
+    for name in names:
+        if not name.endswith(".part"):
+            continue
+        part_path = os.path.join(CACHE_DIR, name)
+        try:
+            st = os.stat(part_path)
+        except OSError:
+            continue
+        if not os.path.isfile(part_path) or now_ts - st.st_mtime <= 300:
+            continue
+        try:
+            os.remove(part_path)
+        except OSError as exc:
+            log(f"缓存清理：残留临时文件 {name} 删除不了（{exc.strerror or exc}），先留着")
+            continue
+        part_removed += 1
+        log(f"缓存清理：删除残留临时文件 {name}（写入未收尾超过 5 分钟）")
     entries = []
     for name in names:
         if not name.lower().endswith(CACHE_EXTS):
@@ -749,9 +861,10 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
             continue
         removed += 1
         log(f"缓存清理：删除 {name}（{_human_size(size)}），原因：缓存上限 {keep} 个 face 文件，它不在最近使用之列")
-    if removed:
-        log(f"缓存清理：原有 {len(entries)} 个，保留 {len(keepers)} 个，删除 {removed} 个")
-    return removed
+    if removed or part_removed:
+        extra = f"，另有残留临时文件 {part_removed} 个" if part_removed else ""
+        log(f"缓存清理：原有 {len(entries)} 个，保留 {len(keepers)} 个，删除 {removed} 个{extra}")
+    return removed + part_removed
 
 
 def _ensure_font_file(face):
@@ -783,14 +896,18 @@ def _ensure_font_file(face):
 
     if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
         _t0 = time.monotonic()
-        proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        log(f"[耗时] woff2 压缩 {os.path.basename(ttf)}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
-        if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-            try:
-                os.remove(ttf)
-            except OSError:
-                pass
-            return woff2, "font/woff2"
+        try:
+            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+        except Exception as exc:
+            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
+        else:
+            log(f"[耗时] woff2 压缩 {os.path.basename(ttf)}: {_elapsed_ms(_t0)} ms rc={proc.returncode}")
+            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+                try:
+                    os.remove(ttf)
+                except OSError:
+                    pass
+                return woff2, "font/woff2"
 
     return ttf, "font/ttf"
 
@@ -840,13 +957,17 @@ def _ensure_latin_file(face):
             return path, mime, False, False
 
     if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
-        proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-            try:
-                os.remove(ttf)
-            except OSError:
-                pass
-            return woff2, "font/woff2", True, False
+        try:
+            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+        except Exception as exc:
+            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
+        else:
+            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+                try:
+                    os.remove(ttf)
+                except OSError:
+                    pass
+                return woff2, "font/woff2", True, False
 
     return ttf, "font/ttf", True, False
 
@@ -895,13 +1016,17 @@ def _prepare_preview_face(family):
             return _ensure_font_file(face)
 
     if os.path.getsize(ttf) <= WOFF2_MAX_BYTES:
-        proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
-        if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-            try:
-                os.remove(ttf)
-            except OSError:
-                pass
-            return woff2, "font/woff2"
+        try:
+            proc = _run([_system_python(), _helper(), "woff2", ttf, woff2], timeout=180)
+        except Exception as exc:
+            log(f"woff2 压缩异常（{os.path.basename(ttf)}）: {exc!r}，回退注入 ttf")
+        else:
+            if proc.returncode == 0 and os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+                try:
+                    os.remove(ttf)
+                except OSError:
+                    pass
+                return woff2, "font/woff2"
     return ttf, "font/ttf"
 
 
@@ -1295,7 +1420,10 @@ def _scan_uid(prefix):
 # 前置条件：抽取嵌入在需要 fontTools 时才强制校验
 # --------------------------------------------------------------------------- #
 
-_FT_CACHE = {"at": 0.0, "ok": False, "version": None}
+_FT_CACHE = {"at": 0.0, "ok": False, "version": None, "brotli_ok": False}
+
+# 预览字体请求统计：按（字体服务端口 + family）记录 get_preview_font 调用次数与结果
+_PREVIEW_STATS = {"lock": threading.Lock(), "calls": {}}
 
 
 def _fonttools_refresh(force=False):
@@ -1314,7 +1442,21 @@ def _fonttools_refresh(force=False):
             version = (proc.stdout or "").strip() or None
     except Exception:
         ok = False
-    _FT_CACHE.update({"at": now, "ok": ok, "version": version})
+    # brotli 独立探测（与 fontTools 分开、独立 try/except）：woff2 压缩静默依赖系统
+    # Python 的 brotli/brotlicffi 模块（vendor 未带，见 vendor/fontTools/ttLib/woff2.py:32-40），
+    # 原生 SteamOS 大概率没有；缺失时 helper woff2 步骤 rc=1，注入回退 ttf。
+    # 导入顺序镜像 woff2.py：先 brotlicffi 后 brotli。
+    brotli_ok = False
+    try:
+        proc = _run(
+            [_system_python(), "-c",
+             "try:\n    import brotlicffi\nexcept ImportError:\n    import brotli"],
+            timeout=15,
+        )
+        brotli_ok = proc.returncode == 0
+    except Exception:
+        brotli_ok = False
+    _FT_CACHE.update({"at": now, "ok": ok, "version": version, "brotli_ok": brotli_ok})
     return ok, version
 
 
@@ -1343,17 +1485,23 @@ def _require_fonttools_if_needed(faces, subset_needed=False):
         return
     name = os.path.basename(need[0]["file"])
     if reason == "subset":
-        raise RuntimeError(
-            f"分槽注入的西文剔字需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
-            f"- 本次选的 {name} 需要剔除自带的 CJK/PUA 字形后再注入\n"
-            "- 关闭「按语言注入」可回到不需要 fontTools 的单槽模式，或手动安装后重试：\n"
-            f"  {_system_python()} -m pip install --user fonttools\n"
+        raise _KeyedError(
+            "err.fonttoolsSubset", [name],
+            message=(
+                f"分槽注入的西文剔字需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
+                f"- 本次选的 {name} 需要剔除自带的 CJK/PUA 字形后再注入\n"
+                "- 关闭「按语言注入」可回到不需要 fontTools 的单槽模式，或手动安装后重试：\n"
+                f"  {_system_python()} -m pip install --user fonttools\n"
+            ),
         )
-    raise RuntimeError(
-        f"抽取嵌入需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
-        f"- 本次选的 {name} 是 .ttc/.otc 集合，必须先抽出单个 face\n"
-        "- 换成带 fontTools 的完整版，或手动安装后重试：\n"
-        f"  {_system_python()} -m pip install --user fonttools\n"
+    raise _KeyedError(
+        "err.fonttoolsMissing", [name],
+        message=(
+            f"抽取嵌入需要 fontTools，当前 Python（{_system_python()}）里没有。\n"
+            f"- 本次选的 {name} 是 .ttc/.otc 集合，必须先抽出单个 face\n"
+            "- 换成带 fontTools 的完整版，或手动安装后重试：\n"
+            f"  {_system_python()} -m pip install --user fonttools\n"
+        ),
     )
 
 
@@ -1457,7 +1605,7 @@ def _heal_stamp(state):
     return _inject_stamp(at) if at else ""
 
 
-def _inject_status(state):
+def _inject_status(state) -> tuple[str, str]:
     """注入记录四态：done / healed / failed / none，返回 (level, stamp)。
 
     heal_at 比两个注入标记都新 = 最近一次生效注入来自自动补注，返回 healed
@@ -1495,7 +1643,7 @@ class Plugin:
         self._uid_lock = None  # asyncio.Lock，串行化 uid 发现，懒创建（__init__ 时还没有事件循环）
         self._window_task = None  # 当前注入窗口（同一时刻最多一个）
         self._window_lock = None  # asyncio.Lock，串行化开窗，懒创建
-        self._cache_inuse = set()  # 当前注入正在用的缓存文件（清理时保护）
+        self._apply_lock = None  # asyncio.Lock，串行化应用流程，懒创建
         self._toast_task = None  # notificationtoasts_* 弹窗 CEF 事件监听任务
         self._toasts = {}  # toast tab 名 -> css_id（弹窗注入记账）
         self._toast_ids = {}  # CEF targetId -> toast tab 名（destroyed 事件反查用）
@@ -1582,18 +1730,40 @@ class Plugin:
         不调用就不抽面、不占缓存名额。返回 {ok, url, mime}。
         """
         plugin = _bind(self)
+        port = getattr(getattr(plugin, "_server", None), "port", None)
+        _key = (port, str(family))
+        with _PREVIEW_STATS["lock"]:
+            _entry = _PREVIEW_STATS["calls"].setdefault(_key, {"total": 0, "ok": 0, "fail": 0})
+            _entry["total"] += 1
+            _seq = _entry["total"]
+
+        def _stat(ok: bool, note: str = ""):
+            with _PREVIEW_STATS["lock"]:
+                _stat_entry = _PREVIEW_STATS["calls"][_key]
+                if ok:
+                    _stat_entry["ok"] += 1
+                else:
+                    _stat_entry["fail"] += 1
+                _ok, _fail = _stat_entry["ok"], _stat_entry["fail"]
+            log(f"[预览统计] port={port} family={str(family)!r} 第{_seq}次 {'ok' if ok else 'fail'} "
+                f"累计 ok={_ok}/fail={_fail} {note}".rstrip())
+
         try:
             pair = await asyncio.to_thread(_prepare_preview_face, family)
         except Exception as exc:
             log(f"预览字体准备失败 {family!r}: {exc}")
+            _stat(False, "prepare-exc")
             return {"ok": False, "error": str(exc)}
         if not pair:
+            _stat(False, "no-family")
             return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family]}
         path, mime = pair
         try:
             url = plugin._server.register(path, mime)
         except Exception as exc:
+            _stat(False, "register-exc")
             return {"ok": False, "error": str(exc)}
+        _stat(True, "ok")
         return {"ok": True, "url": url, "mime": mime}
 
     async def get_font_state(self):
@@ -1631,9 +1801,10 @@ class Plugin:
     async def set_split_options(self, cjk_split=None, synth_weight_none=None,
                                 preview_level=None, expand_level=None, preview=None):
         """分槽开关入口：包一层计时，实际逻辑在 _set_split_options_inner。"""
+        plugin = _bind(self)  # Decky 3.3.1 可能把类本身当 self 传进来，先回落到实例
         t0 = time.monotonic()
         try:
-            return await self._set_split_options_inner(
+            return await plugin._set_split_options_inner(
                 cjk_split=cjk_split, synth_weight_none=synth_weight_none,
                 preview_level=preview_level, expand_level=expand_level, preview=preview,
             )
@@ -1788,38 +1959,45 @@ class Plugin:
         前置条件不满足（字体不存在、缺 fontTools、抽取或起服务失败）时直接返回错误，
         已经注入的 CSS 原样保留，不会出现「先 _remove_all() 再抛异常」导致样式被拆掉。
         """
-        t_all = time.monotonic()
-        async with self._window_mutex():
-            await self._stop_window()
-        try:
-            t_prep = time.monotonic()
-            detail = await asyncio.to_thread(self._prepare, family, family_cjk)
-            log(f"[耗时] 准备字体 {family!r}: {_elapsed_ms(t_prep)} ms")
-        except Exception as exc:
-            log(f"准备字体 {family!r} 失败: {exc}")
-            self._mark_inject(False)
-            payload = self._payload()
-            payload.update({"ok": False, "error": str(exc)})
-            if isinstance(exc, _KeyedError):
-                payload.update({"error_key": exc.key, "error_args": exc.args_})
-            return payload
+        # 后端并发兜底：前端 busy 单飞正常时不会并发进 _apply；这里防外部直接重复
+        # 触发（RPC 重试 / 事件竞态）导致两次准备交错。持锁期间再来直接返回当前
+        # 面板状态，不排队、不报错。
+        if self._apply_lock is not None and self._apply_lock.locked():
+            log("_apply 已在进行中：跳过本次重复触发，返回当前面板状态")
+            return self._payload()
+        async with self._apply_mutex():
+            t_all = time.monotonic()
+            async with self._window_mutex():
+                await self._stop_window()
+            try:
+                t_prep = time.monotonic()
+                detail = await asyncio.to_thread(self._prepare, family, family_cjk)
+                log(f"[耗时] 准备字体 {family!r}: {_elapsed_ms(t_prep)} ms")
+            except Exception as exc:
+                log(f"准备字体 {family!r} 失败: {exc}")
+                self._mark_inject(False)
+                payload = self._payload()
+                payload.update({"ok": False, "error": str(exc)})
+                if isinstance(exc, _KeyedError):
+                    payload.update({"error_key": exc.key, "error_args": exc.args_})
+                return payload
 
-        await self._remove_all()
-        self._css = detail["css"]
-        self._family = family
-        self._detail = detail
-        state = read_state()
-        state["mode"] = MODE_EXTRACT
-        write_state(state)
+            await self._remove_all()
+            self._css = detail["css"]
+            self._family = family
+            self._detail = detail
+            state = read_state()
+            state["mode"] = MODE_EXTRACT
+            write_state(state)
 
-        # 主界面同步注入（快），QAM/MainMenu 需要发现 uid，放后台，不阻塞切换
-        injected = await self._inject_main()
-        self._mark_inject(bool(injected))
-        await self._cancel_dyn()
-        self._dead_tabs.clear()
-        self._dyn_task = asyncio.create_task(self._inject_dynamic_all())
-        log(f"[耗时] 应用字体 {family!r} 合计（不含动态 uid 注入）: {_elapsed_ms(t_all)} ms")
-        return self._payload()
+            # 主界面同步注入（快），QAM/MainMenu 需要发现 uid，放后台，不阻塞切换
+            injected = await self._inject_main()
+            self._mark_inject(bool(injected))
+            await self._cancel_dyn()
+            self._dead_tabs.clear()
+            self._dyn_task = asyncio.create_task(self._inject_dynamic_all())
+            log(f"[耗时] 应用字体 {family!r} 合计（不含动态 uid 注入）: {_elapsed_ms(t_all)} ms")
+            return self._payload()
 
     def _mark_inject(self, ok, source="user"):
         """记录注入结果，按来源分开记账，两个字段互不覆盖。
@@ -1922,7 +2100,6 @@ class Plugin:
                 "stripped": False,
             }
         inuse = [p for p in paths if _is_cache_file(p)]
-        self._cache_inuse = set(inuse)
         _prune_font_cache(inuse)
         chain = ["Motiva Sans", "system-ui", "sans-serif"]
         css = self._build_css([], faces, [], chain, synth_none)
@@ -2052,7 +2229,6 @@ class Plugin:
         # 新抽取写入后清理一次：正在用的这些文件受保护（含 Full 回填件），其余按
         # 最近使用只留 9 个
         inuse = [p for p in (reg_path, medium_path, bold_path) + cjk_paths + full_paths if _is_cache_file(p)]
-        self._cache_inuse = set(inuse)
         _prune_font_cache(inuse)
 
         css = self._build_css(latin_faces, cjk_faces, full_faces, chain, synth_none)
@@ -2284,30 +2460,35 @@ class Plugin:
             await session.close()
 
     async def _on_cef_event(self, data):
-        if not isinstance(data, dict):
-            return
-        method = data.get("method")
-        params = data.get("params") or {}
-        if method == "Target.targetDestroyed":
-            # targetDestroyed 的 targetId 直接挂在 params 下，没有 targetInfo
-            destroyed_id = params.get("targetId")
-            old = self._toast_ids.pop(destroyed_id, None) if destroyed_id else None
-            if old and old in self._toasts:
-                css_id = self._toasts.pop(old)
-                await asyncio.to_thread(_remove_css, old, css_id)
-            return
-        info = params.get("targetInfo") or {}
-        target_id = info.get("targetId")
-        title = info.get("title") or ""
-        if info.get("type") != "page" or not title.startswith(TOAST_TAB_PREFIX):
-            return
-        # 同一 targetId 的标题换了（如 notificationtoasts_1 → _2）：旧记录拆掉重注
-        old_title = self._toast_ids.get(target_id)
-        if old_title and old_title != title and old_title in self._toasts:
-            css_id = self._toasts.pop(old_title)
-            await asyncio.to_thread(_remove_css, old_title, css_id)
-        self._toast_ids[target_id] = title
-        await self._inject_toast_tab(title)
+        # 事件处理自隔离：任何异常只丢这一条事件并记日志，绝不冒泡到 WS 循环
+        # （冒泡会被通用 except 误判为"连接中断"而断线重连）。
+        try:
+            if not isinstance(data, dict):
+                return
+            method = data.get("method")
+            params = data.get("params") or {}
+            if method == "Target.targetDestroyed":
+                # targetDestroyed 的 targetId 直接挂在 params 下，没有 targetInfo
+                destroyed_id = params.get("targetId")
+                old = self._toast_ids.pop(destroyed_id, None) if destroyed_id else None
+                if old and old in self._toasts:
+                    css_id = self._toasts.pop(old)
+                    await asyncio.to_thread(_remove_css, old, css_id)
+                return
+            info = params.get("targetInfo") or {}
+            target_id = info.get("targetId")
+            title = info.get("title") or ""
+            if info.get("type") != "page" or not title.startswith(TOAST_TAB_PREFIX):
+                return
+            # 同一 targetId 的标题换了（如 notificationtoasts_1 → _2）：旧记录拆掉重注
+            old_title = self._toast_ids.get(target_id)
+            if old_title and old_title != title and old_title in self._toasts:
+                css_id = self._toasts.pop(old_title)
+                await asyncio.to_thread(_remove_css, old_title, css_id)
+            self._toast_ids[target_id] = title
+            await self._inject_toast_tab(title)
+        except Exception as exc:
+            log(f"CEF 事件处理异常（连接保持）: {exc!r}")
 
     async def _inject_toast_tab(self, tab):
         if not self._css or tab in self._toasts:
@@ -2361,6 +2542,11 @@ class Plugin:
         if self._window_lock is None:
             self._window_lock = asyncio.Lock()
         return self._window_lock
+
+    def _apply_mutex(self):
+        if self._apply_lock is None:
+            self._apply_lock = asyncio.Lock()
+        return self._apply_lock
 
     async def _stop_window(self):
         task = self._window_task
@@ -2465,7 +2651,7 @@ class Plugin:
             return await self._inject_main("heal")
         return await self._inject_dynamic(key, "heal")
 
-    def _payload(self):
+    def _payload(self) -> "StatePayload":
         targets = []
         for key, label, _candidates in TARGETS:
             item = self._hit.get(key)
@@ -2499,12 +2685,12 @@ class Plugin:
             "inject_text": inject_stamp,
             "heal_text": _heal_stamp(state),
             "mode": MODE_EXTRACT,
-            "internal": INTERNAL_FAMILY,
             "family": self._family,
             "family_cjk": state.get("family_cjk"),
             "has_css": bool(self._css),
             "targets": targets,
             "server": {"running": self._server.running, "port": self._server.port},
+            "woff2_ok": bool(_FT_CACHE.get("brotli_ok", False)),
             "fallback": self._detail.get("fallback", []),
             "zh": self._detail.get("zh"),
             "regular": self._detail.get("regular"),
