@@ -2202,7 +2202,14 @@
             "color:rgba(235,235,245,0.62)!important;}" +
             // 行间呼吸感：字体行上下各 6px。
             "html body .gamepaddialog_Field:has(.fp-font-row){" +
-            "margin-top:6px!important;margin-bottom:6px!important;}";
+            "margin-top:6px!important;margin-bottom:6px!important;}" +
+            // F3:名称/样张行 font-size-adjust——字体加载前后 x-height 对齐,不再跳动。
+            // Baseline 2024 Newly available(Chrome 127+):@supports 兜底,老引擎整块不生效。
+            // 仅面板自身样式;注入 CSS(_build_css)不加,避免 Steam UI 全局渲染面变化。
+            "@supports (font-size-adjust: from-font){" +
+            "html body .fp-nm,html body .fp-prev,html body .fp-prev-b,html body .fp-ex-line{" +
+            "font-size-adjust:from-font;}" +
+            "}";
 
         // 「加载更多」行：沿用标题行的样式与 focusClassName 聚焦方案，只负责加长列表
         function loadMoreRow(remaining, key, moreKey) {
