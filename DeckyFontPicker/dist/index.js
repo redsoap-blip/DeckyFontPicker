@@ -967,6 +967,7 @@
         var rootRef = useRef(null);
         var ioRef = useRef(null);
         var previewPortRef = useRef(null);
+        var previewGenRef = useRef(0); // 字体服务代数:仅真实重启(端口真变更)时 +1
 
         // 字体行回调经 ref 转发（每次渲染更新为最新闭包）：FontRow 已 memo 化，
         // memo 跳过重渲染时子组件持有的还是上次渲染的闭包，直接传函数会读到旧状态
@@ -995,9 +996,9 @@
                 retries[family] = (retries[family] || 0) + 1;
             }
             seen[family] = "loading";
-            var gen = previewPortRef.current;
+            var gen = previewGenRef.current;
             serverApi.callPluginMethod("get_preview_font", { family: family }).then(function (res) {
-                if (gen !== previewPortRef.current) return; // 字体服务已重启，丢弃旧端口的 URL
+                if (gen !== previewGenRef.current) return; // 字体服务已重启（代数变化），丢弃旧代数的 URL
                 var value = unwrap(res);
                 if (!value || value.ok !== true || !value.url) {
                     seen[family] = "error";
@@ -1069,13 +1070,21 @@
         }, []);
 
         // 字体服务重启（reset_font 后再选字）端口/token 全变，旧 @font-face URL 会 404。
-        // payload.server.port 一变就清空预览字体缓存，重新观察可见行取新 URL。
+        // 端口 effect 区分首次同步与真实变更：首次（挂载后首个 payload）只记端口，
+        // 不清缓存——挂载 effect 的 rescanNodes 已经补调过，这里再清空会造成同族
+        // 二次请求（mount 双请求）；仅真实变更才清空并重扫。
         useEffect(function () {
             var port = state && state.server && state.server.port;
             var io = ioRef.current;
             if (!port || !io || !rootRef.current) return;
             if (previewPortRef.current === port) return;
+            if (previewPortRef.current === null) {
+                previewPortRef.current = port; // 首次同步:只记端口
+                return;
+            }
+            // 真实变更：旧 URL 已失效，清空重扫；代数 +1 使在途旧响应失效
             previewPortRef.current = port;
+            previewGenRef.current += 1;
             previewFontsRef.current = {};
             previewRetryRef.current = {}; // 新端口 = 新机会，重试计数一并清零
             setPreviewFontCss("");

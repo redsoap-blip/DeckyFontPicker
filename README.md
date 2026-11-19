@@ -8,7 +8,7 @@
 
 一个 [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) 插件：把 Steam Deck 上已经装好的任意字体应用到 Steam 大屏界面——主页、MainMenu、快捷访问菜单，以及好友上线这类通知弹窗。它不写 `~/homebrew/themes`，也不依赖 CSS Loader，样式由 Decky 自己的 `inject_css_into_tab` 注入，恢复默认时再拆掉。
 
-**当前版本：1.4.21。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
+**当前版本：1.4.22。** 单包四语言，面板跟随 Steam 界面语言；`fontTools` 4.68.0 已随包内置，不需要另装依赖。
 
 ## 安装
 

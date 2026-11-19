@@ -1321,10 +1321,25 @@ def _inject_css_locked(tab, css):
     return None
 
 
+def _classify_remove_failure(result_text):
+    """移除失败归类：gone = 样式所附着的 tab/页面/弹窗已不存在（无需移除），
+    real = 真故障（必须保持大声日志，绝不静默）。Decky 3.x 对已销毁 context 的
+    remove_css_from_tab 返回的 result 文本要么含 "not found"，要么是内部异常
+    包装串 "exceptions must derive from BaseException"（两种实测都对应 tab 已
+    不存在）。其余一律 real——Decky 改版后退化为大声日志是 fail-safe。"""
+    text = str(result_text or "")
+    if "not found" in text or "exceptions must derive from BaseException" in text:
+        return "gone"
+    return "real"
+
+
 def _remove_css_locked(tab, css_id, quiet=False):
     res = _decky_method("remove_css_from_tab", {"tab": tab, "css_id": css_id})
     if not res.get("success") and not quiet:
-        log(f"移除 {tab}/{css_id} 失败: {res.get('result')}")
+        if _classify_remove_failure(res.get("result")) == "gone":
+            log(f"移除 {tab}:样式已随页面重建/弹窗已销毁，无需移除")
+        else:
+            log(f"移除 {tab}/{css_id} 失败: {res.get('result')}")
     return bool(res.get("success"))
 
 
@@ -1346,9 +1361,9 @@ def _replace_css(tab, css):
         return css_id
 
 
-def _remove_css(tab, css_id):
+def _remove_css(tab, css_id, quiet=False):
     with _tab_lock(tab):
-        ok = _remove_css_locked(tab, css_id)
+        ok = _remove_css_locked(tab, css_id, quiet=quiet)
         owned = _OWNED.get(tab)
         if owned is not None:
             owned.pop(css_id, None)
@@ -1381,6 +1396,21 @@ def _cef_port_hint():
     return None, "steamwebhelper 启动参数里没有 --remote-debugging-port"
 
 
+def _cef_why_message(attempts):
+    """按探测次序组装 CEF 不可用原因(纯函数)。
+    attempts: [(port, source, detail), ...] 按尝试顺序,source 为 _cef_port_hint
+    的说明或"回落端口",detail 为异常文本。主端口(hint/8080)失败原因优先呈现,
+    回落端口并列补充;仅当没有任何主端口尝试记录时才单独报回落。"""
+    mains = [(p, s, d) for p, s, d in attempts if s != "回落端口"]
+    fallbacks = [(p, s, d) for p, s, d in attempts if s == "回落端口"]
+    if not mains and fallbacks:
+        p, _s, d = fallbacks[0]
+        return f"回落端口 {p} 不可用（{d}）"
+    parts = [f"主端口 {p} 无响应（{d}）" for p, _s, d in mains]
+    parts += [f"回落 {p} 亦不可用" for p, _s, d in fallbacks]
+    return "；".join(parts)
+
+
 def _cef_fetch(force=False):
     """读 /json/list，返回 tab 列表；任何失败返回 None。结果缓存 300 ms。"""
     now = time.monotonic()
@@ -1395,6 +1425,7 @@ def _cef_fetch(force=False):
             if fallback not in [p for p, _ in ports]:
                 ports.append((fallback, "回落端口"))
         tabs, used, why = None, None, ""
+        attempts = []
         for candidate, src in ports:
             try:
                 with urlopen(f"http://127.0.0.1:{candidate}/json/list", timeout=CEF_TIMEOUT) as res:
@@ -1405,7 +1436,9 @@ def _cef_fetch(force=False):
                     why = f"{src}（端口 {candidate}）列出 {len(tabs)} 个 tab"
                     break
             except Exception as exc:
-                why = f"端口 {candidate} 不可用（{exc}）"
+                attempts.append((candidate, src, str(exc)))
+        if tabs is None:
+            why = _cef_why_message(attempts)
         _CEF_CACHE.update({"at": now, "tabs": tabs, "port": used, "why": why})
         return tabs
 
@@ -2448,7 +2481,7 @@ class Plugin:
             asyncio.to_thread(_remove_css, item["tab"], item["css_id"])
             for _key, item in items
         ]
-        jobs.extend(asyncio.to_thread(_remove_css, tab, css_id) for tab, css_id in toasts)
+        jobs.extend(asyncio.to_thread(_remove_css, tab, css_id, True) for tab, css_id in toasts)
         if jobs:
             await asyncio.gather(*jobs, return_exceptions=True)
         return len(items) + len(toasts)
@@ -2537,7 +2570,7 @@ class Plugin:
                 old = self._toast_ids.pop(destroyed_id, None) if destroyed_id else None
                 if old and old in self._toasts:
                     css_id = self._toasts.pop(old)
-                    await asyncio.to_thread(_remove_css, old, css_id)
+                    await asyncio.to_thread(_remove_css, old, css_id, True)
                 return
             info = params.get("targetInfo") or {}
             target_id = info.get("targetId")
