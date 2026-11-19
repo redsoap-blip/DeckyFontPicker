@@ -2092,6 +2092,8 @@ class Plugin:
             levels_changed = levels_changed or _expand_level_of(state) != value
             state["expand_level"] = value
         if zone_level is not None:
+            # 防御归一化：传参非数字/越界时写入前收敛到 0（合法 0-3 透传不变）
+            zone_level = _norm_zone_level(zone_level, 0)
             value = _norm_zone_level(zone_level, _zone_level_of(state))
             changed = changed or _zone_level_of(state) != value
             state["zone_level"] = value
@@ -2127,17 +2129,6 @@ class Plugin:
         if not family and not (state_now.get("cjk_split") and state_now.get("family_cjk")):
             return plugin._payload()
         return await plugin._apply(family)
-
-    async def set_zone_options(self, zone_level=None):
-        """分区注入档位（持久化）：0 关闭 / 1 字重路由 / 2 页面覆盖 / 3 精确选择器。
-
-        独立 RPC 入口（前端滑块也可走 set_split_options 的 zone_level 键，两者同义，
-        都落到 _set_split_options_inner：读 state → 校验 → write_state → 重注入/payload）。
-        档位影响注入 CSS，变化时按当前字体重新注入；档位降到 0 即清空分区槽位
-        （标题槽 + 页面覆盖槽），不留旧选择。
-        """
-        plugin = _bind(self)
-        return await plugin._set_split_options_inner(zone_level=zone_level)
 
     async def set_title_font(self, family=None):
         """标题槽字体（档 ≥1 生效，持久化）。family=None = 清除标题槽。
@@ -3234,7 +3225,8 @@ class Plugin:
             "expand_level": _expand_level_of(state),
             # 分区注入状态（与前端 JSDoc 的 zone 对象单点同步，契约块一字不差）
             "zone": {
-                "level": int(state.get("zone_level") or 0),
+                # 手编 state 的非数字/越界值走 _zone_level_of 兜底收敛 0（int() 直转会抛异常）
+                "level": _zone_level_of(state),
                 "title_family": state.get("family_title"),
                 "pages": {
                     "main": state.get("family_page_main"),

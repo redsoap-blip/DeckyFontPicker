@@ -203,6 +203,7 @@
             "err.noSlots": "没有选择西文字体，中日韩槽也为空",
             "err.fonttoolsMissing": "抽取 {0} 需要 fontTools，当前 Python 没有安装",
             "err.fonttoolsSubset": "西文剔字需要 fontTools（{0}），可关闭「按语言注入」",
+            "err.badPage": "页面参数不正确（仅限大屏 / 主菜单 / 快捷访问）",
             "advanced": "高级",
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
@@ -317,6 +318,7 @@
             "err.noSlots": "No Latin or CJK font selected",
             "err.fonttoolsMissing": "Extracting {0} requires fontTools, which is not installed",
             "err.fonttoolsSubset": "Latin-slot stripping requires fontTools ({0}); you can turn off per-language injection",
+            "err.badPage": "Invalid page (Big Picture / MainMenu / QuickAccess only)",
             "advanced": "Advanced",
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
@@ -431,6 +433,7 @@
             "err.noSlots": "欧文・中日韓のフォントがいずれも選択されていません",
             "err.fonttoolsMissing": "{0} の抽出には fontTools が必要ですが、インストールされていません",
             "err.fonttoolsSubset": "西文スロットの削字には fontTools が必要です（{0}）。「言語別注入」をオフにできます",
+            "err.badPage": "ページ指定が不正です（大画面 / メインメニュー / クイックアクセスのみ）",
             "advanced": "詳細設定",
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
@@ -545,6 +548,7 @@
             "err.noSlots": "라틴 또는 CJK 글꼴이 선택되지 않았습니다",
             "err.fonttoolsMissing": "{0} 추출에 fontTools가 필요하지만 설치되어 있지 않습니다",
             "err.fonttoolsSubset": "라틴 슬롯 정리에 fontTools가 필요합니다 ({0}). 언어별 주입을 끌 수 있습니다",
+            "err.badPage": "잘못된 페이지 지정입니다(빅픽처 / 메인메뉴 / 빠른설정만)",
             "advanced": "고급",
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
@@ -933,9 +937,10 @@
             applyLangPick(sectionId, LANG_KEYS[(idx + step + LANG_KEYS.length) % LANG_KEYS.length]);
         }
 
-        // 确认键菜单（主开关开时）：字体行 A / 点击 → 弹出「应用西文 / 应用中文」小菜单，
-        // 按语言智能归属预选高亮（zh/ja/ko 预选中文，其余预选西文），A→A 两下完成；
-        // B 或点空白处关闭且不写任何配置。主开关关闭时不弹菜单，确认键直接应用（1.4.2 行为）
+        // 确认键菜单（分槽开或档 ≥1 时）：字体行 A / 点击 → 弹确认菜单，正文两项按语言
+        // 智能归属预选高亮（zh/ja/ko 预选中文，其余预选西文），A→A 两下完成；
+        // B 或点空白处关闭且不写任何配置。分槽关且档 0 时不弹菜单，确认键直接应用
+        // （1.4.22 行为）
         var menuFontHook = useState(null);
         var menuFont = menuFontHook[0];
         var setMenuFont = menuFontHook[1];
@@ -1342,11 +1347,15 @@
             });
         }
 
-        // 确认键入口：主开关开 → 弹菜单（按语言预选正文选项；档 ≥1 追加「应用标题」，
-        // 档 2 追加作用范围行）；主开关关 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致
+        // 确认键入口：分槽开或档 ≥1 → 弹确认菜单（按语言预选正文选项；档 ≥1 追加
+        // 「应用标题」，档 2 追加作用范围行）；分槽关且档 0 → 直接应用为西文槽
+        // （set_font），与 1.4.22 行为完全一致
         function choose(family, font) {
             if (busy) return;
-            if (splitOn) {
+            // G3 门：「菜单内至少一项可见」才弹 —— 正文西文/中文两项仅分槽开渲染，
+            // 「应用标题」仅档 ≥1 渲染，故开门条件 = splitOn || zoneLevel >= 1；
+            // 判定放在打开分支，无可选项时（分槽关且档 0）走旧直接应用路径
+            if (splitOn || zoneLevel >= 1) {
                 // P3-1：记下触发行，菜单关闭后把焦点送回去；作用范围每次打开重置为「全部」
                 menuTriggerRef.current = (typeof document !== "undefined" && document.activeElement) || null;
                 setMenuScope("all");
@@ -2341,8 +2350,14 @@
             h(deckyFrontendLib.PanelSectionRow, null,
                 h(deckyFrontendLib.ButtonItem, {
                     layout: "below",
-                    // 西文或中日韩任一槽有字体即可恢复；只有两槽都空时才禁用
-                    disabled: busy || (!current && !(state && state.family_cjk)),
+                    // 西文或中日韩任一槽有字体即可恢复；只有两槽都空时才禁用。
+                    // 标题覆盖（zone.title_family）或页面覆盖（zone.pages.main/menu/qam）
+                    // 存在时同样允许恢复（G3 防御取值，坏结构按 undefined 处理）
+                    disabled: busy || (!current && !(state && state.family_cjk) &&
+                        !(state && state.zone && state.zone.title_family) &&
+                        !(state && state.zone && state.zone.pages && state.zone.pages.main) &&
+                        !(state && state.zone && state.zone.pages && state.zone.pages.menu) &&
+                        !(state && state.zone && state.zone.pages && state.zone.pages.qam)),
                     onClick: reset,
                 }, t("restoreDefault"))
             )
@@ -2441,12 +2456,13 @@
                 : null
         );
 
-        // 确认键菜单：字体名标题 + 「应用西文 / 应用中文」两选项 + （档 ≥1）「应用标题」
-        // + （档 2）作用范围行 + 取消提示。
+        // 确认键菜单：字体名标题 + （分槽开）「应用西文 / 应用中文」两选项
+        // + （档 ≥1）「应用标题」+ （档 2）作用范围行 + 取消提示；选项按槽位可用性渲染，
+        // 正文两项仅分槽开（splitOn）出现、「应用标题」仅档 ≥1 出现（开门条件见 choose）。
         // 覆盖提示：不含 CJK 字形的字体「应用中文」标注「该字体不含中文字形」（不禁用）；
         // 自带 CJK 的字体「应用西文」标注「仅取其西文字形（自动剔除汉字）」。
-        // 预选（初始焦点）只落在正文两选项上、按语言归属，标题选项永不自动预选，
-        // 标题 / 正文预选互不串。
+        // 预选（初始焦点）只落在正文两选项上、按语言归属（仅分槽开时才有预选对象），
+        // 标题选项永不自动预选，标题 / 正文预选互不串。
         // 作用范围只影响正文槽落位：选「全部」走既有全局槽 RPC（set_font / set_cjk_font），
         // 选具体页则把该页传给 set_page_font（整对正文槽替换）；标题槽不受作用范围影响。
         // P3-1：容器 role=dialog + aria-modal + aria-labelledby 指向字体名标题块（fp-menu-name）；
@@ -2554,10 +2570,11 @@
                         title: family,
                         style: { fontSize: "13px", fontWeight: 600, marginBottom: "8px", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" },
                     }, family),
-                    option("latin", "fp-menu-latin", function (el) { menuLatinRef.current = el; },
-                        t("menuLatin"), latinDesc, function () { goBody("latin"); }),
-                    option("cjk", "fp-menu-cjk", function (el) { menuCjkRef.current = el; },
-                        t("menuCjk"), cjkDesc, function () { goBody("cjk"); }),
+                    // 正文两项仅分槽开（splitOn）渲染；分槽关时菜单只有「应用标题」（档 ≥1）
+                    splitOn ? option("latin", "fp-menu-latin", function (el) { menuLatinRef.current = el; },
+                        t("menuLatin"), latinDesc, function () { goBody("latin"); }) : null,
+                    splitOn ? option("cjk", "fp-menu-cjk", function (el) { menuCjkRef.current = el; },
+                        t("menuCjk"), cjkDesc, function () { goBody("cjk"); }) : null,
                     // 档 ≥1：应用标题（set_title_font），不受作用范围影响；预选永不落在此项
                     zoneLevel >= 1 ? option("title", "fp-menu-title", null,
                         t("menuTitle"), t("descTitle"), function () { applyTitleFont(family); }) : null,
