@@ -55,6 +55,26 @@
      * @property {string[]} favorites
      * @property {string[]} history
      * @property {{port: (number|null), tabs: (number|null), error: string}} cef
+     * @property {RegionState|null} region 区域模式状态块（Phase 2 契约：mode/schema_version/
+     *   global/pages/heading_fallback/registry_version；global/pages 结构损坏时为 null）
+     */
+    /**
+     * 区域槽位：{latin, cjk, inherit?}。latin/cjk = 字体族名字符串或 null（null = 继承）；
+     * inherit = 显式继承目标区域 id（可缺省，缺省按 REGION_DEFAULT_INHERIT 表）。
+     * @typedef {Object} RegionSlot
+     * @property {string|null} latin
+     * @property {string|null} cjk
+     * @property {string} [inherit]
+     */
+    /**
+     * payload.region（与 main.py _payload 的 region 块逐字段对齐，单点同步）。
+     * @typedef {Object} RegionState
+     * @property {boolean} mode
+     * @property {number} schema_version
+     * @property {Object.<string, RegionSlot>|null} global
+     * @property {Object.<string, Object.<string, RegionSlot>>|null} pages
+     * @property {boolean} heading_fallback
+     * @property {string} registry_version
      */
 
     var h = React.createElement;
@@ -226,7 +246,53 @@
             "menuCjk": "应用中文",
             "menuCancel": "按 B 返回取消，不做任何更改",
             "descLatinStrip": "仅取其西文字形（自动剔除汉字）",
-            "descCjkNone": "该字体不含中文字形"
+            "descCjkNone": "该字体不含中文字形",
+            "regionMode": "区域模式",
+            "regionModeNote": "开启后注入按语义区域与页面分别配置；关闭 = 与 1.4.23 完全一致",
+            "regionTitle": "区域字体",
+            "region.heading": "标题",
+            "region.body": "正文",
+            "region.secondary": "次级文本",
+            "region.control": "控件文本",
+            "region.emphasis": "强调文本",
+            "regionPage.main": "主界面",
+            "regionPage.menu": "MainMenu",
+            "regionPage.qam": "快捷访问",
+            "regionPage.toast": "通知弹窗",
+            "followNative": "跟随 Steam 原生",
+            "followBody": "跟随正文",
+            "followGlobalRegion": "跟随全局同区域",
+            "followRegion": "跟随 {0}",
+            "regionPickLatin": "选择西文",
+            "regionPickCjk": "选择CJK",
+            "regionReset": "重置",
+            "pickAriaLatin": "为 {0} 选择西文",
+            "pickAriaCjk": "为 {0} 选择CJK",
+            "resetAria": "重置 {0}",
+            "pageReset": "重置本页",
+            "pageResetAria": "重置 {0} 的全部页面覆盖",
+            "pageCovered": "已覆盖 {0} 个区域",
+            "pageNone": "未覆盖（全部跟随全局）",
+            "pageAreasTitle": "页面覆盖",
+            "headingFallbackNote": "标题区域暂无精确映射，已按字重路由",
+            "ctxHint": "正在为「{0}」选择字体：在下方列表点选后确认；Esc/B 取消",
+            "ctxCancel": "取消",
+            "menuRegionApply": "应用到：{0}",
+            "menuRegionDescGlobal": "写入全局区域配置",
+            "menuRegionDescPage": "写入 {0} 页面覆盖",
+            "diagBtn": "检查区域映射",
+            "diagRunning": "正在检查…",
+            "diagMeta": "目标页 {0}（tab：{1}）· Steam {2} · registry {3}",
+            "diagCheckedCount": "检查 {0} 条选择器",
+            "diagTagVerified": "已验证",
+            "diagZeroTag": "无命中",
+            "diagCached": "（缓存）",
+            "diagNone": "本页没有已验证的选择器可检查",
+            "diagFail": "检查失败：{0}",
+            "diagFailGeneric": "检查失败",
+            "regionFontDone": "已应用 {0} 到 {1}",
+            "regionResetDone": "已重置：{0}",
+            "regionPageResetDone": "已重置 {0} 的页面覆盖"
         },
         en: {
             "pluginTitle": "Font Picker",
@@ -325,7 +391,53 @@
             "menuCjk": "Apply to Chinese",
             "menuCancel": "Press B to go back and cancel without changing anything",
             "descLatinStrip": "Latin glyphs only (CJK characters stripped)",
-            "descCjkNone": "This font has no Chinese glyphs"
+            "descCjkNone": "This font has no Chinese glyphs",
+            "regionMode": "Region mode",
+            "regionModeNote": "When on, injection is configured per semantic region and page; off = identical to 1.4.23",
+            "regionTitle": "Region fonts",
+            "region.heading": "Heading",
+            "region.body": "Body",
+            "region.secondary": "Secondary text",
+            "region.control": "Control text",
+            "region.emphasis": "Emphasis text",
+            "regionPage.main": "Main UI",
+            "regionPage.menu": "Main Menu",
+            "regionPage.qam": "Quick Access",
+            "regionPage.toast": "Notification toast",
+            "followNative": "Steam default",
+            "followBody": "Follow body",
+            "followGlobalRegion": "Follow global same region",
+            "followRegion": "Follow {0}",
+            "regionPickLatin": "Pick Latin",
+            "regionPickCjk": "Pick CJK",
+            "regionReset": "Reset",
+            "pickAriaLatin": "Pick Latin font for {0}",
+            "pickAriaCjk": "Pick CJK font for {0}",
+            "resetAria": "Reset {0}",
+            "pageReset": "Reset page",
+            "pageResetAria": "Reset all {0} page overrides",
+            "pageCovered": "{0} region(s) set",
+            "pageNone": "No overrides (all follow global)",
+            "pageAreasTitle": "Page overrides",
+            "headingFallbackNote": "No exact heading mapping yet; routed by font weight",
+            "ctxHint": "Picking a font for \"{0}\": choose from the list below, then confirm; Esc/B cancels",
+            "ctxCancel": "Cancel",
+            "menuRegionApply": "Apply to: {0}",
+            "menuRegionDescGlobal": "Writes the global region profile",
+            "menuRegionDescPage": "Writes the {0} page override",
+            "diagBtn": "Check region mapping",
+            "diagRunning": "Checking…",
+            "diagMeta": "Page {0} (tab: {1}) · Steam {2} · registry {3}",
+            "diagCheckedCount": "Checked {0} selectors",
+            "diagTagVerified": "verified",
+            "diagZeroTag": "no match",
+            "diagCached": " (cached)",
+            "diagNone": "No verified selectors to check on this page",
+            "diagFail": "Check failed: {0}",
+            "diagFailGeneric": "Check failed",
+            "regionFontDone": "Applied {0} to {1}",
+            "regionResetDone": "Reset: {0}",
+            "regionPageResetDone": "Reset {0} page overrides"
         },
         ja: {
             "pluginTitle": "フォント選択ツール",
@@ -424,7 +536,53 @@
             "menuCjk": "中国語に適用",
             "menuCancel": "B で戻ってキャンセル。変更は行われません",
             "descLatinStrip": "欧文字形のみ使用（漢字は自動的に除外）",
-            "descCjkNone": "このフォントには中国語字形がありません"
+            "descCjkNone": "このフォントには中国語字形がありません",
+            "regionMode": "エリアモード",
+            "regionModeNote": "オンにすると、意味エリアとページごとに注入を設定します。オフ = 1.4.23 と完全同一",
+            "regionTitle": "エリアフォント",
+            "region.heading": "見出し",
+            "region.body": "本文",
+            "region.secondary": "補助テキスト",
+            "region.control": "操作テキスト",
+            "region.emphasis": "強調テキスト",
+            "regionPage.main": "メイン画面",
+            "regionPage.menu": "メインメニュー",
+            "regionPage.qam": "クイックアクセス",
+            "regionPage.toast": "通知トースト",
+            "followNative": "Steam 標準に従う",
+            "followBody": "本文に従う",
+            "followGlobalRegion": "グローバルの同エリアに従う",
+            "followRegion": "{0} に従う",
+            "regionPickLatin": "欧文を選ぶ",
+            "regionPickCjk": "CJK を選ぶ",
+            "regionReset": "リセット",
+            "pickAriaLatin": "{0} の欧文を選ぶ",
+            "pickAriaCjk": "{0} の CJK を選ぶ",
+            "resetAria": "{0} をリセット",
+            "pageReset": "ページをリセット",
+            "pageResetAria": "{0} のページ上書きをすべてリセット",
+            "pageCovered": "{0} 個のエリアを設定済み",
+            "pageNone": "上書きなし（すべてグローバルに従う）",
+            "pageAreasTitle": "ページ上書き",
+            "headingFallbackNote": "見出しエリアの精密なマッピングは未整備のため、ウェイトでルーティング中",
+            "ctxHint": "「{0}」のフォントを選択中：下のリストから選んで確定。Esc/B でキャンセル",
+            "ctxCancel": "キャンセル",
+            "menuRegionApply": "適用先：{0}",
+            "menuRegionDescGlobal": "グローバルのエリア設定に書き込みます",
+            "menuRegionDescPage": "{0} ページの上書きに書き込みます",
+            "diagBtn": "エリアマッピングを確認",
+            "diagRunning": "確認中…",
+            "diagMeta": "対象ページ {0}（タブ：{1}）· Steam {2} · registry {3}",
+            "diagCheckedCount": "{0} 件のセレクターを確認",
+            "diagTagVerified": "検証済み",
+            "diagZeroTag": "ヒットなし",
+            "diagCached": "（キャッシュ）",
+            "diagNone": "このページに確認可能な検証済みセレクターがありません",
+            "diagFail": "確認に失敗：{0}",
+            "diagFailGeneric": "確認に失敗",
+            "regionFontDone": "{0} を {1} に適用しました",
+            "regionResetDone": "リセット済み：{0}",
+            "regionPageResetDone": "{0} のページ上書きをリセットしました"
         },
         ko: {
             "pluginTitle": "글꼴 선택기",
@@ -523,7 +681,53 @@
             "menuCjk": "중국어에 적용",
             "menuCancel": "B로 돌아가 취소하며 변경 사항은 없습니다",
             "descLatinStrip": "라틴 글리프만 사용 (한자 자동 제거)",
-            "descCjkNone": "이 글꼴에는 중국어 글리프가 없습니다"
+            "descCjkNone": "이 글꼴에는 중국어 글리프가 없습니다",
+            "regionMode": "지역 모드",
+            "regionModeNote": "켜면 의미 지역과 페이지별로 주입을 설정합니다. 끄기 = 1.4.23과 완전히 동일",
+            "regionTitle": "지역 글꼴",
+            "region.heading": "제목",
+            "region.body": "본문",
+            "region.secondary": "보조 텍스트",
+            "region.control": "컨트롤 텍스트",
+            "region.emphasis": "강조 텍스트",
+            "regionPage.main": "메인 화면",
+            "regionPage.menu": "메인 메뉴",
+            "regionPage.qam": "퀵 액세스",
+            "regionPage.toast": "알림 토스트",
+            "followNative": "Steam 기본 따름",
+            "followBody": "본문 따름",
+            "followGlobalRegion": "전역 같은 지역 따름",
+            "followRegion": "{0} 따름",
+            "regionPickLatin": "라틴 선택",
+            "regionPickCjk": "CJK 선택",
+            "regionReset": "초기화",
+            "pickAriaLatin": "{0}의 라틴 글꼴 선택",
+            "pickAriaCjk": "{0}의 CJK 글꼴 선택",
+            "resetAria": "{0} 초기화",
+            "pageReset": "페이지 초기화",
+            "pageResetAria": "{0}의 페이지 재정의 모두 초기화",
+            "pageCovered": "{0}개 지역 설정됨",
+            "pageNone": "재정의 없음 (모두 전역 따름)",
+            "pageAreasTitle": "페이지 재정의",
+            "headingFallbackNote": "제목 지역의 정밀 매핑이 아직 없어 굵기 기준으로 라우팅 중",
+            "ctxHint": "\"{0}\" 글꼴 선택 중: 아래 목록에서 골라 확정. Esc/B로 취소",
+            "ctxCancel": "취소",
+            "menuRegionApply": "적용 대상: {0}",
+            "menuRegionDescGlobal": "전역 지역 설정에 기록합니다",
+            "menuRegionDescPage": "{0} 페이지 재정의에 기록합니다",
+            "diagBtn": "지역 매핑 확인",
+            "diagRunning": "확인 중...",
+            "diagMeta": "대상 페이지 {0} (탭: {1}) · Steam {2} · registry {3}",
+            "diagCheckedCount": "셀렉터 {0}개 확인",
+            "diagTagVerified": "검증됨",
+            "diagZeroTag": "매치 없음",
+            "diagCached": " (캐시됨)",
+            "diagNone": "이 페이지에 확인할 검증된 셀렉터가 없습니다",
+            "diagFail": "확인 실패: {0}",
+            "diagFailGeneric": "확인 실패",
+            "regionFontDone": "{0}을(를) {1}에 적용했습니다",
+            "regionResetDone": "초기화됨: {0}",
+            "regionPageResetDone": "{0}의 페이지 재정의를 초기화했습니다"
         }
     };
 
@@ -566,6 +770,53 @@
 
     function buttonOf(evt) {
         return evt && evt.detail ? evt.detail.button : null;
+    }
+
+    // ===== 区域模式（1.6.0 Region Profiles）常量与纯函数 =====================
+    // 与后端 main.py REGION_IDS / REGION_PAGES / REGION_DEFAULT_INHERIT 一字对齐；
+    // 槽位结构 {latin, cjk, inherit?}（latin/cjk = 字体族名字符串或 null = 继承）。
+    var REGION_IDS = ["heading", "body", "secondary", "control", "emphasis"];
+    var REGION_PAGES = ["main", "menu", "qam", "toast"];
+    var REGION_DEFAULT_INHERIT = { secondary: "body", control: "body", emphasis: "body" };
+
+    function regionSlotOf(scope, regionId) {
+        var v = scope ? scope[regionId] : null;
+        return (v && typeof v === "object" && !Array.isArray(v)) ? v : null;
+    }
+
+    function slotFont(slot, script) {
+        return (slot && typeof slot[script] === "string" && slot[script]) ? slot[script] : null;
+    }
+
+    // 解析全局某区域某脚本槽的最终生效字体：沿 inherit 链（显式 inherit → 默认继承表）。
+    // 环与深度用上限兜住（后端 normalize 已拒环，前端再防一手）。
+    function resolveGlobalFont(gSlots, regionId, script) {
+        var cur = regionId;
+        var depth = 0;
+        while (cur && depth < 5) {
+            var slot = regionSlotOf(gSlots, cur);
+            var f = slotFont(slot, script);
+            if (f) return f;
+            var inh = (slot && typeof slot.inherit === "string" && REGION_IDS.indexOf(slot.inherit) !== -1)
+                ? slot.inherit : (REGION_DEFAULT_INHERIT[cur] || null);
+            if (!inh || inh === cur) return null;
+            cur = inh;
+            depth += 1;
+        }
+        return null;
+    }
+
+    function regionLabelOf(regionId) {
+        return t("region." + regionId);
+    }
+
+    function pageLabelOf(page) {
+        return t("regionPage." + page);
+    }
+
+    // 区域显示名：全局「标题」；页面覆盖「标题 · 主界面」
+    function regionDisplay(regionId, page) {
+        return regionLabelOf(regionId) + (page ? " · " + pageLabelOf(page) : "");
     }
 
     // 档位滑块行组件：改用 DFL 原生 SliderField（Steam CommonUIModule 原生控件）。
@@ -879,12 +1130,42 @@
         var setMenuFont = menuFontHook[1];
         var menuLatinRef = useRef(null);
         var menuCjkRef = useRef(null);
+        var menuRegionRef = useRef(null);
+        // 区域选择上下文：{region, script, page|null}。非空时字体行点选 → 确认菜单出现
+        // 「应用到 <区域名>」首项（id fp-menu-region）→ set_region_font；取消（菜单 B/遮罩、
+        // 提示行 A/小按钮）即清空。page 缺省 = 写全局区域。
+        var regionCtxHook = useState(null);
+        var regionCtx = regionCtxHook[0];
+        var setRegionCtx = regionCtxHook[1];
+        // 区域设置区「高级」展开态 + 页面覆盖展开态（同时最多展开一页）+ 只读诊断状态 +
+        // 集中播报文本（MWG：live 区集中管理，避免逐行 aria-live 刷屏）
+        var regionAdvHook = useState(false);
+        var regionAdvOpen = regionAdvHook[0];
+        var setRegionAdvOpen = regionAdvHook[1];
+        var regionPageHook = useState(null);
+        var regionPageOpen = regionPageHook[0];
+        var setRegionPageOpen = regionPageHook[1];
+        var regionDiagHook = useState(null);
+        var diag = regionDiagHook[0];
+        var setDiag = regionDiagHook[1];
+        var regionAnnounceHook = useState("");
+        var regionAnnounce = regionAnnounceHook[0];
+        var setRegionAnnounce = regionAnnounceHook[1];
 
         useEffect(function () {
             if (!menuFont) return;
-            var toCjk = primaryLang(menuFont) !== "latin";
+            var ctx = regionCtx;
+            var toCjk = !ctx && primaryLang(menuFont) !== "latin";
             // force：菜单是新开的弹层，焦点要从字体行主动移进菜单选项，不受防抢占守卫约束
             focusLater(function () {
+                if (ctx) {
+                    // 区域上下文菜单：焦点直接落「应用到 <区域名>」项
+                    var regionNode = menuRegionRef.current;
+                    if (!regionNode && typeof document !== "undefined") {
+                        regionNode = document.getElementById("fp-menu-region");
+                    }
+                    return regionNode;
+                }
                 var node = toCjk ? menuCjkRef.current : menuLatinRef.current;
                 if (!node && typeof document !== "undefined") {
                     node = document.getElementById(toCjk ? "fp-menu-cjk" : "fp-menu-latin");
@@ -1317,11 +1598,14 @@
             });
         }
 
-        // 确认键入口：主开关开 → 弹两选项菜单（按语言预选）；
-        // 主开关关 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致
+        // 确认键入口：区域选择上下文激活 → 弹菜单（首项「应用到 <区域名>」→ set_region_font）；
+        // 主开关开（无上下文）→ 弹两选项菜单（按语言预选，1.4.23 行为）；
+        // 两者皆无 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致。
+        // 区域模式下全局选择入口照旧：set_font 写的 family 经后端迁移即 global.body，
+        // 等价于「全局 = body 的快捷方式」，与区域行的 正文 行共存不冲突。
         function choose(family, font) {
             if (busy) return;
-            if (splitOn) {
+            if (regionCtx || splitOn) {
                 setMenuFont(font || { family: family });
                 return;
             }
@@ -1357,6 +1641,13 @@
         // 子开关默认值由后端口径统一（synth_weight_none 缺省=开）
         var splitOn = !!(state && state.cjk_split);
         var synthNone = !!(state && state.synth_weight_none);
+        // 区域模式状态块（Phase 2 契约）：global/pages 结构损坏时后端给 null，这里统一
+        // 兜成空口径（所有槽位按「未设置」显示）；写入类 RPC 由后端拒绝并回传错误文案。
+        // 旧后端 payload 无 region 块时 regionState 为 null：开关与设置区整体不渲染。
+        var regionState = (state && state.region && typeof state.region === "object") ? state.region : null;
+        var regionOn = !!(regionState && regionState.mode);
+        var gSlots = (regionState && regionState.global && typeof regionState.global === "object") ? regionState.global : null;
+        var pPages = (regionState && regionState.pages && typeof regionState.pages === "object") ? regionState.pages : null;
         // 字体预览样张档位：0 关闭 / 1 方案 A / 2 方案 B（兼容旧布尔 preview 键，缺省视为 2）
         var previewLevel = 2;
         var expandLevel = 0;
@@ -1419,6 +1710,368 @@
                 setBusy(false);
                 if (value && value.ok !== false) startSettle();
             });
+        }
+
+        // ===== 区域模式（1.6.0 Region Profiles）动作与构建器 =====================
+        // 显示口径（修订 5 + 功能 4）：全局行未设置按继承目标显示（heading/body = 跟随
+        // Steam 原生；secondary/control/emphasis = 跟随正文，显式 inherit 非默认时显示
+        // 「跟随 <目标>」），页面行未设置显示「跟随全局同区域」并附全局解析值。
+
+        // 全局行未设置时的继承口径文案
+        function globalFollowText(regionId) {
+            var slot = regionSlotOf(gSlots, regionId);
+            var inh = (slot && typeof slot.inherit === "string" && slot.inherit !== regionId &&
+                REGION_IDS.indexOf(slot.inherit) !== -1) ? slot.inherit : (REGION_DEFAULT_INHERIT[regionId] || null);
+            if (inh === "body") return t("followBody");
+            if (inh) return t("followRegion", regionLabelOf(inh));
+            return t("followNative");
+        }
+
+        function pageCoveredCount(page) {
+            var scope = pPages ? pPages[page] : null;
+            var n = 0;
+            for (var i = 0; i < REGION_IDS.length; i++) {
+                var slot = regionSlotOf(scope, REGION_IDS[i]);
+                if (slotFont(slot, "latin") || slotFont(slot, "cjk")) n += 1;
+            }
+            return n;
+        }
+
+        function enterRegionCtx(regionId, script, page) {
+            if (busy || !regionOn) return;
+            setRegionCtx({ region: regionId, script: script, page: page || null });
+        }
+
+        function clearRegionCtx() {
+            setRegionCtx(null);
+        }
+
+        // 区域模式开关：开 = 区域 CSS（4 页全覆盖）；关 = 兼容模式（与 1.4.23 完全一致）。
+        // 关闭时收起上下文与诊断，避免残留提示指向已隐藏的设置区。
+        function toggleRegionMode() {
+            if (busy) return;
+            setBusy(true);
+            stopSettle();
+            var turningOff = regionOn;
+            call("set_region_mode", { enabled: !regionOn }).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) {
+                    startSettle();
+                    if (turningOff) {
+                        setRegionCtx(null);
+                        setDiag(null);
+                        setRegionAnnounce("");
+                    }
+                }
+            });
+        }
+
+        // 写区域字体槽（契约：page 缺省 = 全局；清除走「重置」，不进选择流）
+        function applyToRegion(family) {
+            var ctx = regionCtx;
+            if (busy || !ctx || !regionOn) return;
+            setBusy(true);
+            stopSettle();
+            var args = { region: ctx.region, script: ctx.script, family: family };
+            if (ctx.page) args.page = ctx.page;
+            call("set_region_font", args).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) {
+                    startSettle();
+                    setRegionAnnounce(t("regionFontDone", family, regionDisplay(ctx.region, ctx.page)));
+                }
+            });
+        }
+
+        // 重置单个区域：page 缺省清全局该区域（回默认继承），page 给定只清该页覆盖
+        function resetRegionAction(regionId, page) {
+            if (busy || !regionOn) return;
+            setBusy(true);
+            stopSettle();
+            var args = { region: regionId };
+            if (page) args.page = page;
+            call("reset_region", args).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) {
+                    startSettle();
+                    setRegionAnnounce(t("regionResetDone", regionDisplay(regionId, page)));
+                }
+            });
+        }
+
+        // 重置整页覆盖（契约 reset_region_page）：全局与其它页不动
+        function resetRegionPageAction(page) {
+            if (busy || !regionOn) return;
+            setBusy(true);
+            stopSettle();
+            call("reset_region_page", { page: page }).then(function (value) {
+                setBusy(false);
+                if (value && value.ok !== false) {
+                    startSettle();
+                    setRegionAnnounce(t("regionPageResetDone", pageLabelOf(page)));
+                }
+            });
+        }
+
+        // 「检查区域映射」诊断（设计 §7.3 + 修订 4）：只读 RPC，不占用 busy、不写任何
+        // 配置、不 applyPayload；结果（含失败原因）进 diag state，由 aria-live 摘要区
+        // 渲染。仅在用户点击时刷新，无任何轮询。
+        function runRegionDiag() {
+            if (diag && diag.loading) return;
+            setDiag({ loading: true, result: null, error: "" });
+            serverApi.callPluginMethod("check_region_mapping", {}).then(function (res) {
+                var value = unwrap(res);
+                if (!res || res.success === false) {
+                    setDiag({ loading: false, result: null, error: textOf(value) || t("callFailed", "check_region_mapping") });
+                    return;
+                }
+                if (!value || value.ok !== true) {
+                    var why = textOf(value) || (value && value.why) || t("diagFailGeneric");
+                    setDiag({ loading: false, result: null, error: t("diagFail", why) });
+                    return;
+                }
+                setDiag({ loading: false, result: value, error: "" });
+            }).catch(function (e) {
+                setDiag({ loading: false, result: null, error: t("diagFail", String(e)) });
+            });
+        }
+
+        // 行尾小按钮（自绘 div）：触摸/鼠标/键盘可达（Tab + Enter/Space）；手柄路径由
+        // 行容器的 A/X/Y 承担。QAM 焦点链只认原生控件、自绘 div 不入链（2026-11-18 实
+        // 证），故 tabIndex=0 只服务键盘，不影响手柄导航。
+        function ghostBtn(key, label, aria, onAct) {
+            return h("div", {
+                key: key,
+                role: "button",
+                tabIndex: 0,
+                "aria-label": aria || label,
+                onClick: function (e) {
+                    if (e && e.stopPropagation) e.stopPropagation();
+                    onAct();
+                },
+                onKeyDown: function (e) {
+                    if (!e) return;
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        if (e.stopPropagation) e.stopPropagation();
+                        onAct();
+                    } else if (e.key === " " || e.key === "Spacebar") {
+                        // Space 按 MWG 规范在 keyup 激活；keydown 只挡默认滚屏
+                        e.preventDefault();
+                        if (e.stopPropagation) e.stopPropagation();
+                    }
+                },
+                onKeyUp: function (e) {
+                    if (e && (e.key === " " || e.key === "Spacebar")) {
+                        e.preventDefault();
+                        if (e.stopPropagation) e.stopPropagation();
+                        onAct();
+                    }
+                },
+                style: {
+                    display: "inline-flex",
+                    alignItems: "center",
+                    padding: "3px 9px",
+                    borderRadius: "4px",
+                    outline: "none",
+                    border: "1px solid rgba(255,255,255,0.28)",
+                    background: "transparent",
+                    fontSize: "11px",
+                    lineHeight: "1.4",
+                    cursor: "pointer",
+                    userSelect: "none",
+                },
+            }, label);
+        }
+
+        // 区域行：ButtonItem 做手柄焦点容器（A=选择西文 / X=选择CJK / Y=重置，与字体行
+        // 的 A/X/Y 模式一致），行尾三枚小按钮供触摸/鼠标/键盘。文字颜色不写死，交给
+        // Steam 聚焦态自动翻转（gpfocus 白底时继承色变深，避免字体行踩过的白底刺字坑）。
+        function regionRow(regionId, page) {
+            var scope = page ? (pPages ? pPages[page] : null) : gSlots;
+            var slot = regionSlotOf(scope, regionId);
+            var latinSet = slotFont(slot, "latin");
+            var cjkSet = slotFont(slot, "cjk");
+            var disp = regionDisplay(regionId, page);
+            var latinText;
+            var cjkText;
+            if (page) {
+                var gLat = resolveGlobalFont(gSlots, regionId, "latin");
+                var gCjk = resolveGlobalFont(gSlots, regionId, "cjk");
+                latinText = latinSet || (t("followGlobalRegion") + (gLat ? " · " + gLat : ""));
+                cjkText = cjkSet || (t("followGlobalRegion") + (gCjk ? " · " + gCjk : ""));
+            } else {
+                latinText = latinSet || globalFollowText(regionId);
+                cjkText = cjkSet || globalFollowText(regionId);
+            }
+            return h(deckyFrontendLib.PanelSectionRow, { key: "fp-region-row:" + (page || "g") + ":" + regionId },
+                h(deckyFrontendLib.ButtonItem, {
+                    layout: "below",
+                    disabled: busy,
+                    onOKActionDescription: t("regionPickLatin"),
+                    onSecondaryActionDescription: t("regionPickCjk"),
+                    onOptionsActionDescription: t("regionReset"),
+                    onClick: function () { enterRegionCtx(regionId, "latin", page); },
+                    onButtonDown: function (evt) {
+                        var btn = buttonOf(evt);
+                        if (btn === BTN_X) { enterRegionCtx(regionId, "cjk", page); evt.stopPropagation(); return true; }
+                        if (btn === BTN_Y) { resetRegionAction(regionId, page); evt.stopPropagation(); return true; }
+                        return false;
+                    },
+                },
+                    h("div", { style: { width: "100%", textAlign: "left", display: "flex", alignItems: "flex-start", gap: "8px" } },
+                        h("div", { style: { flex: "1 1 auto", minWidth: 0 } },
+                            h("div", { style: { fontSize: "13px", fontWeight: 600, lineHeight: "1.35" } }, regionLabelOf(regionId)),
+                            h("div", { style: { marginTop: "3px", fontSize: "11px", lineHeight: "1.5", opacity: 0.72, whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } },
+                                t("slotLatin") + t("colon") + latinText),
+                            h("div", { style: { fontSize: "11px", lineHeight: "1.5", opacity: 0.72, whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } },
+                                t("slotCjk") + t("colon") + cjkText)
+                        ),
+                        h("div", { style: { flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "4px" } },
+                            ghostBtn("lat", t("regionPickLatin"), t("pickAriaLatin", disp), function () { enterRegionCtx(regionId, "latin", page); }),
+                            ghostBtn("cjk", t("regionPickCjk"), t("pickAriaCjk", disp), function () { enterRegionCtx(regionId, "cjk", page); }),
+                            ghostBtn("rst", t("regionReset"), t("resetAria", disp), function () { resetRegionAction(regionId, page); })
+                        )
+                    )
+                )
+            );
+        }
+
+        // 「高级」展开头（修订 5 简化视图的开关行）：Focusable 直挂 PanelSectionRow
+        // （分区标题同款实证结构），aria-expanded 同步展开态
+        function regionAdvHeader() {
+            return h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:adv-header" },
+                h(deckyFrontendLib.Focusable, {
+                    id: "fp-region-adv",
+                    tabIndex: 0,
+                    role: "button",
+                    className: "fp-sec",
+                    focusClassName: "fp-row-focus",
+                    "aria-expanded": regionAdvOpen ? "true" : "false",
+                    onActivate: function () { setRegionAdvOpen(!regionAdvOpen); },
+                    onClick: function () { setRegionAdvOpen(!regionAdvOpen); },
+                    onOKActionDescription: regionAdvOpen ? t("collapse") : t("expand"),
+                    style: {
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "10px 12px",
+                        borderRadius: "4px",
+                        outline: "none",
+                        fontSize: "13px",
+                        fontWeight: 600,
+                        transition: "background 80ms linear",
+                    },
+                },
+                    h("span", { className: "fp-arrow", style: { display: "inline-block", width: "1em", minWidth: 0, textAlign: "center", flexShrink: 0 } }, regionAdvOpen ? "▾" : "▸"),
+                    h("span", null, t("advanced"))
+                )
+            );
+        }
+
+        // 页面覆盖摘要行：名称 + 已覆盖区域数；A=展开/收起该页区域行，Y=重置本页。
+        // 行尾「重置本页」小按钮供触摸/鼠标/键盘。
+        function pageHeaderRow(page) {
+            var n = pageCoveredCount(page);
+            var open = regionPageOpen === page;
+            return h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:page:" + page },
+                h(deckyFrontendLib.Focusable, {
+                    id: "fp-region-page-" + page,
+                    tabIndex: 0,
+                    role: "button",
+                    className: "fp-sec",
+                    focusClassName: "fp-row-focus",
+                    "aria-expanded": open ? "true" : "false",
+                    onActivate: function () { setRegionPageOpen(open ? null : page); },
+                    onClick: function () { setRegionPageOpen(open ? null : page); },
+                    onOKActionDescription: open ? t("collapse") : t("expand"),
+                    onOptionsActionDescription: t("pageReset"),
+                    onButtonDown: function (evt) {
+                        if (buttonOf(evt) === BTN_Y) { resetRegionPageAction(page); evt.stopPropagation(); return true; }
+                        return false;
+                    },
+                    style: {
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: "8px",
+                        width: "100%",
+                        padding: "10px 12px",
+                        borderRadius: "4px",
+                        outline: "none",
+                        fontSize: "13px",
+                        fontWeight: 600,
+                        transition: "background 80ms linear",
+                    },
+                },
+                    h("span", { style: { display: "inline-flex", alignItems: "center", minWidth: 0 } },
+                        h("span", { className: "fp-arrow", style: { display: "inline-block", width: "1em", minWidth: 0, textAlign: "center", flexShrink: 0 } }, open ? "▾" : "▸"),
+                        h("span", { style: { marginLeft: "6px" } }, pageLabelOf(page))
+                    ),
+                    h("span", { style: { display: "inline-flex", alignItems: "center", gap: "8px", flexShrink: 0 } },
+                        h("span", { style: { fontSize: "11px", fontWeight: 400, opacity: 0.65 } }, n > 0 ? t("pageCovered", n) : t("pageNone")),
+                        ghostBtn("rst-" + page, t("pageReset"), t("pageResetAria", pageLabelOf(page)), function () { resetRegionPageAction(page); })
+                    )
+                )
+            );
+        }
+
+        function regionPageBlock() {
+            var rows = [];
+            for (var i = 0; i < REGION_PAGES.length; i++) {
+                var page = REGION_PAGES[i];
+                rows.push(pageHeaderRow(page));
+                if (regionPageOpen === page) {
+                    for (var j = 0; j < REGION_IDS.length; j++) {
+                        rows.push(regionRow(REGION_IDS[j], page));
+                    }
+                }
+            }
+            return rows;
+        }
+
+        function diagLine(text, color) {
+            return h("div", {
+                style: {
+                    fontSize: "11px",
+                    lineHeight: "1.5",
+                    color: color || "rgba(235,235,245,0.62)",
+                    whiteSpace: "normal",
+                    overflowWrap: "anywhere",
+                    wordBreak: "break-word",
+                    marginTop: "3px",
+                },
+            }, text);
+        }
+
+        // 诊断输出：只读摘要（命中数 / 已验证标识 / registry 版本 / 失败原因）。
+        // 容器带 aria-live=polite（MWG live 区规范：polite 适合非紧急状态更新）。
+        function diagOutput() {
+            var lines = [];
+            if (diag) {
+                if (diag.loading) {
+                    lines.push(diagLine(t("diagRunning")));
+                } else if (diag.error) {
+                    lines.push(diagLine(diag.error, "#ff9b90"));
+                } else if (diag.result) {
+                    var r = diag.result;
+                    var pageName = REGION_PAGES.indexOf(r.page) !== -1 ? pageLabelOf(r.page) : String(r.page || "?");
+                    lines.push(diagLine(
+                        t("diagMeta", pageName, String(r.tab || "?"),
+                            String(r.steam_build || "?"), String(r.registry_version || "?")) +
+                        (r.cached ? t("diagCached") : "") + " · " + t("diagCheckedCount", r.checked | 0)));
+                    var counts = (r.counts && typeof r.counts === "object") ? r.counts : {};
+                    var keys = Object.keys(counts);
+                    if (!keys.length) lines.push(diagLine(t("diagNone")));
+                    for (var i = 0; i < keys.length; i++) {
+                        var sel = keys[i];
+                        var n = counts[sel];
+                        lines.push(diagLine("[" + t("diagTagVerified") + "] " + sel + t("colon") + n +
+                            (n === 0 ? " · " + t("diagZeroTag") : ""), n === 0 ? "#ff9b90" : "#8fd4a8"));
+                    }
+                }
+            }
+            return h("div", { "aria-live": "polite", style: { width: "100%" } }, lines);
         }
 
         // 预览缓存上限滑块：纯缓存设置，后端只落盘、不重新注入 CSS，因此不占用
@@ -2261,6 +2914,24 @@
 
         // 不再渲染「选择字体」纯文本小标题：搜索框直接接在折叠行之后
         var pickerSection = h(deckyFrontendLib.PanelSection, { title: undefined },
+            // 区域选择上下文提示行（功能 3：可发现、可取消）：ButtonItem 做手柄焦点容器，
+            // A/点击/行尾小按钮 = 取消上下文；文案带 aria-live=polite。region_mode 关闭时
+            // 不渲染（上下文已在 toggleRegionMode 收起）。
+            regionCtx && regionOn ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:ctx" },
+                h(deckyFrontendLib.ButtonItem, {
+                    layout: "below",
+                    disabled: busy,
+                    onOKActionDescription: t("ctxCancel"),
+                    onClick: function () { clearRegionCtx(); },
+                },
+                    h("div", { style: { width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: "8px" } },
+                        h("div", {
+                            "aria-live": "polite",
+                            style: { flex: "1 1 auto", minWidth: 0, fontSize: "12px", lineHeight: "1.5", color: "#8ab4f8", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" },
+                        }, t("ctxHint", regionDisplay(regionCtx.region, regionCtx.page) + " · " + (regionCtx.script === "latin" ? t("slotLatin") : t("slotCjk")))),
+                        ghostBtn("ctxcancel", t("ctxCancel"), t("ctxCancel"), function () { clearRegionCtx(); })
+                    )
+                )) : null,
             h(deckyFrontendLib.PanelSectionRow, null,
                 h(deckyFrontendLib.TextField, {
                     label: t("searchFonts"),
@@ -2293,6 +2964,39 @@
                 }, t("restoreDefault"))
             )
         );
+
+        // 区域设置区（功能 2，region_mode 开时渲染；修订 5 简化视图）：
+        // 默认只放 标题 / 正文 两行 + heading_fallback 提示（修订 1：禁止静默失效）+
+        // 高级展开头；展开后是 次级/控件/强调 三行、页面覆盖区（四页摘要行，可展开为
+        // 逐区域行）与「检查区域映射」诊断。关闭时整块隐藏（兼容态零噪声）。
+        var regionSection = (regionOn && regionState) ? h(deckyFrontendLib.PanelSection, { title: t("regionTitle") },
+            // 集中播报（MWG live 区规范：集中 + polite）：区域动作成功后的继承状态变化提示
+            h("div", {
+                key: "fp-region:announce",
+                "aria-live": "polite",
+                style: { position: "absolute", width: "1px", height: "1px", overflow: "hidden", clipPath: "inset(50%)", whiteSpace: "nowrap" },
+            }, regionAnnounce || ""),
+            regionRow("heading", null),
+            regionRow("body", null),
+            regionState.heading_fallback ? noteRow(t("headingFallbackNote"), "fp-region:hf") : null,
+            regionAdvHeader(),
+            // 「高级」展开（修订 5）：次级/控件/强调三行 + 页面覆盖区 + 检查区域映射诊断
+            regionAdvOpen ? [
+                regionRow("secondary", null),
+                regionRow("control", null),
+                regionRow("emphasis", null),
+                noteRow(t("pageAreasTitle"), "fp-region:pages-title"),
+                regionPageBlock(),
+                h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:diag-btn" },
+                    h(deckyFrontendLib.ButtonItem, {
+                        layout: "below",
+                        disabled: busy || !!(diag && diag.loading),
+                        onClick: runRegionDiag,
+                    }, t("diagBtn"))
+                ),
+                h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:diag-out" }, diagOutput())
+            ] : null
+        ) : null;
 
         // 高级分区三个开关统一用 Decky 原生 ToggleField：标题在左、开关在右，
         // 说明文字作为 description 挂在标题下方，行间分隔线由 PanelSectionRow 负责。
@@ -2356,6 +3060,19 @@
                     onChange: toggleSynth,
                 })
             ),
+            // 区域模式主开关（功能 1，修订 3）：开 = 按语义区域与页面配置注入；
+            // 关 = 兼容模式，注入行为与 1.4.23 完全一致，区域设置区整块隐藏（零噪声）。
+            // 旧后端 payload 无 region 块时不渲染，避免死开关。
+            regionState ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-region:mode" },
+                h(deckyFrontendLib.ToggleField, {
+                    label: t("regionMode"),
+                    description: t("regionModeNote"),
+                    checked: regionOn,
+                    disabled: busy,
+                    useToggleRail: true,
+                    onChange: toggleRegionMode,
+                })
+            ) : null,
             // 分槽注入主开关：开启后西文 / 中日韩两槽位各自选字体，确认键按语言归属落槽
             h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:row" },
                 h(deckyFrontendLib.ToggleField, {
@@ -2391,17 +3108,21 @@
                 : null
         );
 
-        // 确认键菜单：标题 + 「应用西文 / 应用中文」两选项 + 取消提示。
+        // 确认键菜单：标题 + 选项列表 + 取消提示。
+        // 区域选择上下文激活时首项为「应用到 <区域名>」（id fp-menu-region，按上下文
+        // 显示区域/页面/脚本名）→ set_region_font（功能 3）；随后是 1.4.23 既有的
+        // 应用西文 / 应用中文 两项（区域模式下等价于写入 global.body，正文快捷方式共存）。
         // 覆盖提示：不含 CJK 字形的字体「应用中文」标注「该字体不含中文字形」（不禁用）；
         // 自带 CJK 的字体「应用西文」标注「仅取其西文字形（自动剔除汉字）」。
-        // B 键 / 点空白处关闭，不写任何配置
+        // B 键 / 点空白处关闭且不写任何配置，同时结束区域上下文。
         function confirmMenu() {
             if (!menuFont) return null;
             var family = menuFont.family;
+            var ctx = regionCtx;
             var hasCjk = !!(menuFont.zh || menuFont.zh_extra || menuFont.ja || menuFont.ko);
             var latinDesc = hasCjk ? t("descLatinStrip") : undefined;
             var cjkDesc = hasCjk ? undefined : t("descCjkNone");
-            var option = function (key, id, refSetter, label, desc, slot) {
+            var option = function (key, id, refSetter, label, desc, onApply) {
                 return h(deckyFrontendLib.Focusable, {
                     key: key,
                     id: id,
@@ -2409,13 +3130,14 @@
                     className: "fp-sec",
                     focusClassName: "fp-row-focus",
                     ref: refSetter,
-                    onActivate: function () { setMenuFont(null); applyToSlot(slot, family); },
-                    onClick: function () { setMenuFont(null); applyToSlot(slot, family); },
+                    onActivate: function () { setMenuFont(null); clearRegionCtx(); onApply(); },
+                    onClick: function () { setMenuFont(null); clearRegionCtx(); onApply(); },
                     onOKActionDescription: label,
                     onButtonDown: function (evt) {
-                        // B = 取消：关闭菜单且不写任何配置
+                        // B = 取消：关闭菜单且不写任何配置，同时结束区域上下文
                         if (buttonOf(evt) === BTN_B) {
                             setMenuFont(null);
+                            clearRegionCtx();
                             evt.stopPropagation();
                             return true;
                         }
@@ -2437,9 +3159,12 @@
                         : null
                 );
             };
+            var ctxDisp = ctx
+                ? regionDisplay(ctx.region, ctx.page) + " · " + (ctx.script === "latin" ? t("slotLatin") : t("slotCjk"))
+                : "";
             return h("div", {
                 key: "fp-confirm-menu",
-                onClick: function () { setMenuFont(null); },
+                onClick: function () { setMenuFont(null); clearRegionCtx(); },
                 style: {
                     position: "fixed", left: 0, top: 0, right: 0, bottom: 0,
                     zIndex: 2147483647, background: "rgba(0,0,0,0.55)",
@@ -2459,10 +3184,14 @@
                         title: family,
                         style: { fontSize: "13px", fontWeight: 600, marginBottom: "8px", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" },
                     }, family),
+                    ctx ? option("region", "fp-menu-region", function (el) { menuRegionRef.current = el; },
+                        t("menuRegionApply", ctxDisp),
+                        ctx.page ? t("menuRegionDescPage", pageLabelOf(ctx.page)) : t("menuRegionDescGlobal"),
+                        function () { applyToRegion(family); }) : null,
                     option("latin", "fp-menu-latin", function (el) { menuLatinRef.current = el; },
-                        t("menuLatin"), latinDesc, "latin"),
+                        t("menuLatin"), latinDesc, function () { applyToSlot("latin", family); }),
                     option("cjk", "fp-menu-cjk", function (el) { menuCjkRef.current = el; },
-                        t("menuCjk"), cjkDesc, "cjk"),
+                        t("menuCjk"), cjkDesc, function () { applyToSlot("cjk", family); }),
                     h("div", {
                         style: { opacity: 0.5, fontSize: "10px", marginTop: "8px", textAlign: "center" },
                     }, t("menuCancel"))
@@ -2473,7 +3202,7 @@
         return h("div", { ref: function (el) { rootRef.current = el; } },
             h("style", { key: "fp-focus-css" }, focusCss),
             h("style", { key: "fp-preview-font-css", ref: previewStyleRef }),
-            currentSection, pickerSection, categorySections, actionSection, advancedSection,
+            currentSection, pickerSection, categorySections, actionSection, regionSection, advancedSection,
             confirmMenu());
     }
 

@@ -133,6 +133,11 @@ CACHE_EXTS = (".ttf", ".otf", ".woff", ".woff2")
 # 滑块可在 1-30MB 间调节，state 的 preview_cache_mb 为准。
 PREVIEW_CACHE_DEFAULT_MB = 8
 PREVIEW_CACHE_MAX_BYTES = 8 * 1024 * 1024
+# 区域模式缓存总量上限（修订 6）：区域满配保护（4 页 × 5 区域 × 双脚本 × 至多 3 字重
+# + 剔字产物）。沿 1.4.23 _norm_preview_cache_mb 的收敛口径，钳制范围 [16,512] MiB；
+# 文件数 LRU 保留之后若缓存目录 face 文件总字节仍超上限，从最旧的非保护文件开始删除
+# （保护集绝对保留，见 _prune_font_cache 的 max_bytes）。
+REGION_CACHE_MAX_MB = 96
 
 PREFERRED_CJK = [
     "Noto Sans CJK SC",
@@ -613,6 +618,7 @@ class StatePayload(TypedDict, total=False):
     preview_level: int  # 预览档位
     expand_level: int  # 预览展开档位
     preview_cache_mb: int  # 预览子集缓存字节上限（MB），1-30，默认 8（高级分区滑块）
+    region: dict  # 区域模式状态块 {mode, schema_version, global, pages, heading_fallback, registry_version}（与前端 JSDoc 单点同步）
     strip: dict  # 剔字记账 {"done": bool, "fallback": bool}
     full_backfill: bool  # 完整版 face 是否以 Full 内部族回填
     uid: str | None  # 当前已发现的 UI uid
@@ -803,7 +809,7 @@ def _is_cache_file(path):
     return os.path.dirname(os.path.abspath(path)) == os.path.abspath(CACHE_DIR)
 
 
-def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
+def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES, max_bytes=None):
     """只保留最近使用的 keep 个缓存 face 文件，其余删除。
 
     protect 里的文件（正在注入/刚写入）一定保留，并计入 keep 名额。
@@ -812,7 +818,12 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
     删除失败只记日志，不抛异常影响注入。返回删除数量。
     *.part 为 helper 崩溃残留的临时文件（face_extract.py 原子改名前写 out+".part"），
     超 5 分钟的在此收尾删除。
+    max_bytes（修订 6）：缓存目录 face 文件总字节上限，None = 按 _norm_region_cache_mb
+    收敛 REGION_CACHE_MAX_MB（96 MiB，钳制 [16,512]）。文件数 LRU 保留之后若存活总
+    字节仍超上限，从最旧的非保护文件开始删除（保护集绝对保留，日志沿用既有话术）。
     """
+    if max_bytes is None:
+        max_bytes = _norm_region_cache_mb(REGION_CACHE_MAX_MB) * 1024 * 1024
     protected = {os.path.abspath(p) for p in protect if p}
     try:
         names = os.listdir(CACHE_DIR)
@@ -871,9 +882,38 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
             continue
         removed += 1
         log(f"缓存清理：删除 {name}（{_human_size(size)}），原因：缓存上限 {keep} 个 face 文件，它不在最近使用之列")
+    # 修订 6：文件数 LRU 之后按缓存总量 MiB 上限再收一轮（区域满配保护，常驻生效）。
+    # 保护集绝对保留；只从「非保护的 LRU 保留者」（others[:slots] 尾部 = 最旧）开始删，
+    # 直到总字节回落到上限内。删除失败只记日志，不抛异常。
+    total_bytes = 0
+    survivor_sizes = {}
+    for path in keepers:
+        try:
+            size = os.path.getsize(path)
+        except OSError:
+            size = 0
+        survivor_sizes[path] = size
+        total_bytes += size
+    mib_removed = 0
+    if total_bytes > max_bytes:
+        for path in reversed(others[:slots]):
+            if total_bytes <= max_bytes:
+                break
+            name = os.path.basename(path)
+            size = survivor_sizes.get(path, 0)
+            try:
+                os.remove(path)
+            except OSError as exc:
+                log(f"缓存清理失败：{name}（{_human_size(size)}）删除不了（{exc.strerror or exc}），先留着")
+                continue
+            mib_removed += 1
+            removed += 1
+            total_bytes -= size
+            log(f"缓存清理：删除 {name}（{_human_size(size)}），原因：缓存总量超过 "
+                f"{max_bytes // (1024 * 1024)} MiB 上限，从最旧开始删除")
     if removed or part_removed:
         extra = f"，另有残留临时文件 {part_removed} 个" if part_removed else ""
-        log(f"缓存清理：原有 {len(entries)} 个，保留 {len(keepers)} 个，删除 {removed} 个{extra}")
+        log(f"缓存清理：原有 {len(entries)} 个，保留 {len(keepers) - mib_removed} 个，删除 {removed} 个{extra}")
     return removed + part_removed
 
 
@@ -1098,6 +1138,9 @@ def cache_files_for_state(state, families):
     （旧掩码版本的剔字产物不在保护集内，视为陈旧缓存照常清理）。
     字体已卸载则选不到 face，自然跳过；单文件字体不进缓存，反推不到文件名也无妨。
     只做键名拼装，不抽取、不落盘。
+    修订 6：region_mode 真时追加区域保护集——由 resolved profile 反推区域 faces
+    键名（_region_cache_names，从 state + families 反推，零抽取），保证缓存清理
+    不会误删当前区域字体。
     """
     names = []
 
@@ -1125,6 +1168,9 @@ def cache_files_for_state(state, families):
             for face in (reg, med, bold):
                 if face is not None:
                     names.extend(full_names(face))
+    if _region_mode_on(state):
+        # 修订 6：区域模式追加区域 faces 保护名（兼容槽名照旧一并保护，切回模式可复用）
+        names.extend(_region_cache_names(state, families))
     return names
 
 
@@ -1647,6 +1693,18 @@ def _norm_preview_cache_mb(value, default=8):
     return mb if 1 <= mb <= 30 else default
 
 
+def _norm_region_cache_mb(value, default=REGION_CACHE_MAX_MB):
+    """区域模式缓存总量上限（MiB）收敛：钳制 [16,512]，非数字/越界回退 default。
+
+    口径沿 1.4.23 _norm_preview_cache_mb（预览子集 1-30）；区域满配按
+    REGION_CACHE_MAX_MB（96）兜底，范围预留为后续面板设置。"""
+    try:
+        mb = int(value)
+    except (TypeError, ValueError):
+        return default
+    return mb if 16 <= mb <= 512 else default
+
+
 def _preview_cache_mb_of(state):
     """预览缓存字节上限（MB）。旧 state 无 preview_cache_mb 键 = 默认 8，无感升级。"""
     return _norm_preview_cache_mb(state.get("preview_cache_mb"), PREVIEW_CACHE_DEFAULT_MB)
@@ -1734,6 +1792,975 @@ def _inject_status(state) -> tuple[str, str]:
 
 
 # --------------------------------------------------------------------------- #
+# Region Profiles：区域配置模型（纯函数，Phase 1）
+# --------------------------------------------------------------------------- #
+# 设计依据：task_plan_v160_region_20261120.md §5/§6/§8.2/§10 + 修订 1/2/3/4/6。
+# Phase 1 边界：本分区只放常量与纯函数，不读 state 文件、不碰 FontServer /
+# _prepare / _prepare_extract / _build_css / 前端与注入生命周期（Phase 2/3 接线）。
+# 所有函数对入参只读，绝不原地修改，绝不抛异常吞配置（失败一律显式返回）。
+#
+# profiles 文档形状（设计 §5.4，本函数组的产出/输入约定）：
+#   {
+#     "region_schema_version": 1,     # 随文档走；幂等判断以 state 顶层键为准，此为双保险
+#     "region_mode": bool,            # 修订 3：旧 zone_level >= 1 → True
+#     "global": {区域: 槽},            # 5 区域齐全
+#     "pages":  {页面: {区域: 槽}},     # 4 页面齐全；页面只存显式覆盖，缺区域 = 全继承
+#   }
+#   槽 = {"latin": 字体名|None, "cjk": 字体名|None, "inherit": 区域 id|None}
+#   None = 未设置 = 继承，不表示「强制系统默认」（设计 §5.4 约束）。
+
+REGION_SCHEMA_VERSION = 1
+# 第一版 5 个语义区域（设计 §5.1）：不再往 Tier 0-3 档位上堆功能
+REGION_IDS = ("heading", "body", "secondary", "control", "emphasis")
+# 第一版页面范围（设计 §5.2）：toast 独立成页，允许继承全局区域配置
+REGION_PAGES = ("main", "menu", "qam", "toast")
+# 同一元素命中多区域时的显式优先级（设计 §6.2）：control 最高、body 为基础、
+# emphasis 最低；CSS 生成前用它做 selector 冲突去重，不靠规则顺序碰运气
+REGION_PRIORITY = ("control", "heading", "secondary", "body", "emphasis")
+# inherit 链深度上限：静态查环与运行时解析共用；超过即按环处理（全局 body 兜底 + note）
+REGION_INHERIT_MAX_DEPTH = 8
+# secondary / control / emphasis 的默认继承目标（设计 §5.1「默认继承正文」）；
+# heading / body 不声明 inherit，靠链式回退（全局同区域 → 全局 body → Steam 原生）
+REGION_DEFAULT_INHERIT = {"secondary": "body", "control": "body", "emphasis": "body"}
+
+# Selector Registry（修订 4）：代码内版本化常量，state 不存 selector、不联网。
+# "p0-verified-1" 证据来源（Phase 0 探针）：只读 DOM 采样在四页 Deck UI 实测，
+# Steam client build 1794536281 / CEF Chrome/126.0.6478.183；menu / qam / toast
+# 采样时为关闭态骨架（弹层未展开，仅结构性容器可见）。match_count 为 Phase 0
+# 实测数（Phase 2 验收由指挥官提供，骨架态口径）；运行时仍以 check_region_mapping()
+# （只读 evaluate，按 steam build + registry version 缓存）对当前 tab 重新计数为准
+# （设计 §7.3）。false_positive_count 未经误命中抽样归档，保持 None。
+# 条目字段：selector_id / page / region / selector / match_count /
+# false_positive_count / steam_build / cef_build / confidence / notes。
+# hash 类 heading / secondary / emphasis 候选一律不回填（provisional 默认不启用，
+# 设计 §7.2）；没有实测证据的 selector 永远进不了默认启用清单。
+SELECTOR_REGISTRY_VERSION = "p0-verified-1"
+SELECTOR_REGISTRY_V1 = (
+    {
+        "selector_id": "main-body-root", "page": "main", "region": "body",
+        "selector": "body", "match_count": 1, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "主页文档根；命中数随页面内容变化，body 区域由基线规则承担，本条作为组件根证据",
+    },
+    {
+        "selector_id": "menu-body-root", "page": "menu", "region": "body",
+        "selector": "body", "match_count": 1, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "MainMenu_uid* 文档根；采样为关闭态骨架（弹层未展开）",
+    },
+    {
+        "selector_id": "toast-root-alert", "page": "toast", "region": "body",
+        "selector": "[role=alert]", "match_count": 1, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "notificationtoasts_* 弹窗容器 [role=alert]；采样为关闭态骨架",
+    },
+    {
+        "selector_id": "main-control-button", "page": "main", "region": "control",
+        "selector": "[role=button]", "match_count": 18, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "SteamUI 框架按钮容器；采样为主页骨架态",
+    },
+    {
+        "selector_id": "main-control-focusable", "page": "main", "region": "control",
+        "selector": ".Focusable", "match_count": 18, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "SteamUI 可聚焦控件容器；采样为主页骨架态",
+    },
+    {
+        "selector_id": "menu-control-menuitem", "page": "menu", "region": "control",
+        "selector": "[role=menuitem]", "match_count": 8, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "菜单项容器；采样为菜单关闭态骨架",
+    },
+    {
+        "selector_id": "qam-control-tab", "page": "qam", "region": "control",
+        "selector": "[role=tab]", "match_count": 7, "false_positive_count": None,
+        "steam_build": "1794536281", "cef_build": "Chrome/126.0.6478.183",
+        "confidence": "verified",
+        "notes": "QAM 页签容器；采样为 QAM 关闭态骨架",
+    },
+)
+
+
+def _region_slot_default(region):
+    """区域槽默认值：secondary/control/emphasis 显式声明继承 body（设计 §5.1）。"""
+    return {"latin": None, "cjk": None, "inherit": REGION_DEFAULT_INHERIT.get(region)}
+
+
+def _norm_region_font_name(value):
+    """槽内字体名收敛：非 str / 空串 / 纯空白 → None（未设置 = 继承）。"""
+    if not isinstance(value, str):
+        return None
+    return value if value.strip() else None
+
+
+def _norm_region_slot(value, region, where, notes):
+    """区域槽收敛成 3 键规范形（latin/cjk/inherit）。
+
+    value=None 表示缺省 → 静默补默认（幂等补默认不算「覆盖用户新配置」）；
+    其它非 dict 结构视为损坏 → 重建默认槽 + note；inherit 目标不是合法区域 id →
+    回退该区域默认继承 + note。未知键（未来字段）丢弃不记 note。
+    """
+    default_inherit = REGION_DEFAULT_INHERIT.get(region)
+    if value is None:
+        return {"latin": None, "cjk": None, "inherit": default_inherit}
+    if not isinstance(value, dict):
+        notes.append(f"region profiles：{where}.{region} 槽不是对象，重建为默认槽")
+        return {"latin": None, "cjk": None, "inherit": default_inherit}
+    if "inherit" in value:
+        inherit = value.get("inherit")
+        if inherit is not None and (not isinstance(inherit, str) or inherit not in REGION_IDS):
+            notes.append(f"region profiles：{where}.{region} inherit 目标 {inherit!r} 非法，回退默认继承")
+            inherit = default_inherit
+    else:
+        inherit = default_inherit
+    return {
+        "latin": _norm_region_font_name(value.get("latin")),
+        "cjk": _norm_region_font_name(value.get("cjk")),
+        "inherit": inherit,
+    }
+
+
+def _region_reject_inherit_cycles(global_slots, notes):
+    """全局作用域 inherit 链静态查环（设计 §5.4「禁止循环继承」）。
+
+    页面槽的 inherit 目标一律解析到全局作用域（与设计 §5.2 继承链一致），
+    所以环只可能出现在 global 里。按 REGION_IDS 顺序逐起点走链，链回访已见区域
+    即环：环上闭合的那个槽回退继承 body（body 槽自环则清除声明，等价链式回退
+    全局 body）并记 note，其余槽不动。
+    """
+    healed = set()
+    for start in REGION_IDS:
+        if start in healed:
+            continue
+        chain = []
+        visited = set()
+        cur = start
+        while True:
+            slot = global_slots.get(cur) if isinstance(global_slots, dict) else None
+            target = slot.get("inherit") if isinstance(slot, dict) else None
+            if target not in REGION_IDS:
+                break
+            if target in visited:
+                if cur not in healed:
+                    slot["inherit"] = "body" if cur != "body" else None
+                    healed.add(cur)
+                    # 环描述：已走链 + 闭合点（cur 未入链时补上）+ 回边目标
+                    loop_repr = chain + ([cur] if cur not in visited else []) + [target]
+                    notes.append(
+                        f"region profiles：继承环 {'→'.join(loop_repr)}，global.{cur} 回退继承 body")
+                break
+            visited.add(cur)
+            chain.append(cur)
+            cur = target
+            if len(visited) >= REGION_INHERIT_MAX_DEPTH:
+                break  # 理论不可达（只有 5 个区域），防御性截断
+
+
+def normalize_region_profiles(state, capability=None):
+    """规范化 region profiles / 旧 state 迁移（设计 §8.2/§10 + 修订 2/3）。纯函数。
+
+    返回 (profiles, notes)：
+    - profiles：可直接写入 state["region_profiles"] 的新样式文档；顶层结构损坏时
+      为 None（调用方继续用旧配置，不清空 state——设计 §10 迁移失败回滚）；
+    - notes：人类可读中文迁移/healing 说明（面板状态卡与日志用，Phase 2 接线）。
+
+    策略：
+    - state["region_profiles"] 已是 dict（schema 1 幂等路径、缺版本标记的半迁移态
+      一并覆盖）：只补默认 / 修继承环，绝不跑迁移覆盖用户新配置（设计 §10 幂等）；
+    - 否则按 §10 表迁移旧键；本函数不改 state、不删任何键，旧键全保留（兼容周期
+      由调用方掌握）；
+    - schema 版本声称 1 但 region_profiles 缺失/非对象 → (None, notes)：不伪造新
+      配置盖掉可能存在的旧配置；
+    - 槽级结构坏 → 重建默认槽 + note，保住其余健康配置。
+
+    capability（修订 2）：{family: {"zh": bool, "ja": bool, "ko": bool}}，运行时由
+    调用方从 _family_map 取族能力快照传入。仅 family_title 迁移使用：zh/ja/ko 任一
+    为真 → 落 global.heading.cjk 槽；全假 → 落 global.heading.latin 槽；缺 capability
+    记录（含字体已卸载）→ latin/cjk 两槽同写 + note（宁多勿丢，多余槽位由解析链
+    与 Phase 2 的面准备收敛）。
+    """
+    notes: list[str] = []
+    if not isinstance(state, dict):
+        return None, ["region profiles 结构损坏：state 不是对象，跳过迁移，继续使用旧配置"]
+    doc = state.get("region_profiles")
+
+    # ---- 保留路径（幂等）：已有新样式文档 → 只补默认 / 修环，不迁移 ----
+    if isinstance(doc, dict):
+        if (state.get("region_schema_version") != REGION_SCHEMA_VERSION
+                and doc.get("region_schema_version") != REGION_SCHEMA_VERSION):
+            notes.append("region profiles：region_profiles 缺 schema 版本标记，按已有新样式配置保留，补记 region_schema_version=1")
+        mode = doc.get("region_mode")
+        if mode is None:
+            mode = state.get("region_mode")
+        profiles = {
+            "region_schema_version": REGION_SCHEMA_VERSION,
+            "region_mode": bool(mode),
+            "global": {},
+            "pages": {},
+        }
+        for key, value in doc.items():
+            # 未知顶层键原样保留（不销毁用户/未来 schema 的数据）
+            if key not in ("region_schema_version", "region_mode", "global", "pages"):
+                profiles[key] = value
+        g = doc.get("global")
+        if not isinstance(g, dict):
+            if g is not None:
+                notes.append(f"region profiles：global 不是对象（{type(g).__name__}），重建默认全局区域")
+            g = {}
+        for region in REGION_IDS:
+            profiles["global"][region] = _norm_region_slot(g.get(region), region, "global", notes)
+        for key, value in g.items():
+            if key not in REGION_IDS:
+                profiles["global"][key] = value  # 未知区域键保留（前向兼容）
+        p = doc.get("pages")
+        if not isinstance(p, dict):
+            if p is not None:
+                notes.append(f"region profiles：pages 不是对象（{type(p).__name__}），重建默认页面表")
+            p = {}
+        for page in REGION_PAGES:
+            entry = p.get(page)
+            if entry is None:
+                profiles["pages"][page] = {}
+                continue
+            if not isinstance(entry, dict):
+                notes.append(f"region profiles：pages.{page} 不是对象，重建为无页面覆盖")
+                profiles["pages"][page] = {}
+                continue
+            page_out = {}
+            for region in REGION_IDS:
+                if region in entry:
+                    page_out[region] = _norm_region_slot(entry.get(region), region, f"pages.{page}", notes)
+            for key, value in entry.items():
+                if key not in REGION_IDS:
+                    page_out[key] = value  # 未知区域键保留
+            profiles["pages"][page] = page_out
+        for key, value in p.items():
+            if key not in REGION_PAGES:
+                profiles["pages"][key] = value  # 未知页面保留（前向兼容）
+        _region_reject_inherit_cycles(profiles["global"], notes)
+        return profiles, notes
+
+    # ---- 结构坏：schema 声称 1 但文档缺失/坏 → 失败返回，调用方继续用旧配置 ----
+    if state.get("region_schema_version") == REGION_SCHEMA_VERSION:
+        return None, [
+            f"region profiles 结构损坏：region_schema_version=1 但 region_profiles 缺失或不是对象"
+            f"（{type(doc).__name__}），继续使用旧配置"]
+
+    # ---- 迁移路径：按设计 §10 表映射旧键，region_schema_version 置 1 ----
+    if doc is not None:
+        notes.append(f"region profiles：忽略非法 region_profiles（{type(doc).__name__}），按旧键迁移重建")
+    profiles = {
+        "region_schema_version": REGION_SCHEMA_VERSION,
+        "region_mode": False,
+        "global": {region: _region_slot_default(region) for region in REGION_IDS},
+        "pages": {page: {} for page in REGION_PAGES},
+    }
+    # §10：family → global.body.latin
+    family = _norm_region_font_name(state.get("family"))
+    if family is not None:
+        profiles["global"]["body"]["latin"] = family
+        notes.append(f"region profiles 迁移：family {family!r} → global.body.latin")
+    # §10：family_cjk → global.body.cjk
+    family_cjk = _norm_region_font_name(state.get("family_cjk"))
+    if family_cjk is not None:
+        profiles["global"]["body"]["cjk"] = family_cjk
+        notes.append(f"region profiles 迁移：family_cjk {family_cjk!r} → global.body.cjk")
+    # §10 + 修订 2：family_title → global.heading，按字体能力归类落槽
+    family_title = _norm_region_font_name(state.get("family_title"))
+    if family_title is not None:
+        cap = capability.get(family_title) if isinstance(capability, dict) else None
+        if not isinstance(cap, dict):
+            profiles["global"]["heading"]["latin"] = family_title
+            profiles["global"]["heading"]["cjk"] = family_title
+            notes.append(f"region profiles 迁移：family_title {family_title!r} 缺 capability 记录，global.heading latin/cjk 两槽同写")
+        elif cap.get("zh") or cap.get("ja") or cap.get("ko"):
+            profiles["global"]["heading"]["cjk"] = family_title
+            notes.append(f"region profiles 迁移：family_title {family_title!r}（zh/ja/ko 能力）→ global.heading.cjk")
+        else:
+            profiles["global"]["heading"]["latin"] = family_title
+            notes.append(f"region profiles 迁移：family_title {family_title!r}（无 CJK 能力）→ global.heading.latin")
+    # §10：family_page_main/menu/qam → pages.X.body。旧页面覆盖是「整对西文/CJK
+    # 正文槽替换」，故 latin/cjk 同写才忠实；只落 body，绝不复制到该页其它区域
+    # （设计 §10 注意事项）。toast 无旧键，保持无覆盖（继承全局）。
+    for page in ("main", "menu", "qam"):
+        page_font = _norm_region_font_name(state.get(f"family_page_{page}"))
+        if page_font is not None:
+            body_slot = profiles["pages"][page].setdefault("body", _region_slot_default("body"))
+            body_slot["latin"] = page_font
+            body_slot["cjk"] = page_font
+            notes.append(
+                f"region profiles 迁移：family_page_{page} {page_font!r} → pages.{page}.body"
+                f" latin/cjk（整对正文槽语义，仅 body）")
+    # 修订 3：旧 zone_level ≥ 1 → region_mode=true。只读其 ≥1 判断模式，档位值不
+    # 参与新配置；zone_level 键本身由调用方保留一个兼容周期，本函数不删。
+    try:
+        zone_active = int(state.get("zone_level") or 0) >= 1
+    except (TypeError, ValueError):
+        zone_active = False
+    if zone_active:
+        profiles["region_mode"] = True
+        notes.append("region profiles 迁移：zone_level>=1 → region_mode=true（旧档位值不参与新配置）")
+    return profiles, notes
+
+
+def _resolve_global_region_font(region, global_slots, notes=None, _depth=0):
+    """全局作用域单区域解析：全局槽 → inherit（全局）→ 全局 body → Steam 原生。
+
+    返回 (latin, cjk)；None = 该子槽无显式字体（Steam 原生）。inherit 目标按全局
+    作用域解析（与设计 §5.2「继承全局 X」一致，不串页面覆盖）；环/超深 → 全局
+    body 兜底 + note。终级兜底只取全局 body 槽的显式值，不递归 body 自身的
+    inherit 声明，保证链必然终止。
+    """
+    slot = global_slots.get(region) if isinstance(global_slots, dict) else None
+    slot = slot if isinstance(slot, dict) else {}
+    latin = _norm_region_font_name(slot.get("latin"))
+    cjk = _norm_region_font_name(slot.get("cjk"))
+    inherit = slot.get("inherit")
+    if inherit not in REGION_IDS:  # None / 非法值（normalize 已回退，这里防御）
+        inherit = None
+    if (latin is None or cjk is None) and inherit is not None:
+        t_latin = t_cjk = None
+        if inherit == region or _depth >= REGION_INHERIT_MAX_DEPTH:
+            if notes is not None:
+                notes.append(
+                    f"region profiles：global.{region} 继承环/达到深度上限（疑似环），按全局 body 兜底")
+        else:
+            t_latin, t_cjk = _resolve_global_region_font(inherit, global_slots, notes, _depth + 1)
+        if latin is None:
+            latin = t_latin
+        if cjk is None:
+            cjk = t_cjk
+    if region != "body" and (latin is None or cjk is None):
+        body_slot = global_slots.get("body") if isinstance(global_slots, dict) else None
+        body_slot = body_slot if isinstance(body_slot, dict) else {}
+        if latin is None:
+            latin = _norm_region_font_name(body_slot.get("latin"))
+        if cjk is None:
+            cjk = _norm_region_font_name(body_slot.get("cjk"))
+    return latin, cjk
+
+
+def resolve_region_font(region, page_profile, global_profiles, notes=None, _depth=0):
+    """单区域最终字体：页面区域 → 全局同区域 → inherit（全局作用域）→ 全局 body
+    → Steam 原生。返回 (latin, cjk)，None = 整条链都无显式字体（Steam 原生）。
+
+    page_profile：该页 {region: 槽}（None/结构坏 = 无页面覆盖）；
+    global_profiles：全局 {region: 槽}。latin/cjk 两个子槽独立取「第一个非 None」。
+    inherit 声明取值顺序：页面槽 → 全局槽 → 区域默认（REGION_DEFAULT_INHERIT）；
+    页面槽 inherit 指向自身 = 「跟随全局同区域」，交还全局解析（不是环）。
+    修订 1 的 heading 字重降级路由（_title_weight_ranges_160）在 Phase 2 于本函数
+    结果之上接线，本函数不感知字重。
+    """
+    page_slot = page_profile.get(region) if isinstance(page_profile, dict) else None
+    page_slot = page_slot if isinstance(page_slot, dict) else {}
+    global_slot = global_profiles.get(region) if isinstance(global_profiles, dict) else None
+    global_slot = global_slot if isinstance(global_slot, dict) else {}
+    latin = _norm_region_font_name(page_slot.get("latin"))
+    if latin is None:
+        latin = _norm_region_font_name(global_slot.get("latin"))
+    cjk = _norm_region_font_name(page_slot.get("cjk"))
+    if cjk is None:
+        cjk = _norm_region_font_name(global_slot.get("cjk"))
+    inherit = page_slot.get("inherit")
+    source_is_page = inherit is not None
+    if inherit is None:
+        inherit = global_slot.get("inherit")
+    if inherit is None:
+        inherit = REGION_DEFAULT_INHERIT.get(region)
+    if (latin is None or cjk is None) and inherit in REGION_IDS:
+        t_latin = t_cjk = None
+        if source_is_page and inherit == region:
+            # 页面槽「inherit 自身」= 跟随全局同区域：显式值已在上面合并，补走全局链
+            t_latin, t_cjk = _resolve_global_region_font(region, global_profiles, notes, _depth + 1)
+        elif inherit == region:
+            # 全局槽自环（normalize 会 heal，这里运行时防御）：按全局 body 兜底
+            if notes is not None:
+                notes.append(f"region profiles：global.{region} inherit 自环，按全局 body 兜底")
+        elif _depth >= REGION_INHERIT_MAX_DEPTH:
+            if notes is not None:
+                notes.append(
+                    f"region profiles：{region} 继承目标 {inherit} 解析达到深度上限"
+                    f" {REGION_INHERIT_MAX_DEPTH}（疑似环），按全局 body 兜底")
+        else:
+            t_latin, t_cjk = _resolve_global_region_font(inherit, global_profiles, notes, _depth + 1)
+        if latin is None:
+            latin = t_latin
+        if cjk is None:
+            cjk = t_cjk
+    # 终级兜底：全局 body 显式值 → Steam 原生（None 返回给上层）
+    if region != "body" and (latin is None or cjk is None):
+        body_slot = global_profiles.get("body") if isinstance(global_profiles, dict) else None
+        body_slot = body_slot if isinstance(body_slot, dict) else {}
+        if latin is None:
+            latin = _norm_region_font_name(body_slot.get("latin"))
+        if cjk is None:
+            cjk = _norm_region_font_name(body_slot.get("cjk"))
+    return latin, cjk
+
+
+def resolve_page_profile(page, profiles):
+    """整页解析：({region: {"latin", "cjk"}}, notes)，None = Steam 原生。
+
+    继承链：页面区域 → 全局同区域 → inherit（全局作用域）→ 全局 body → Steam 原生。
+    profiles 结构坏（非 dict / global / pages 非 dict）按空配置解析 + note，绝不抛
+    异常——Phase 2 的 CSS 合成在无区域显式字体时自然退化为全局基础字体。
+    """
+    notes: list[str] = []
+    resolved = {region: {"latin": None, "cjk": None} for region in REGION_IDS}
+    if not isinstance(profiles, dict):
+        notes.append("region profiles 不是对象：按空配置解析（全部回退 Steam 原生）")
+        return resolved, notes
+    global_slots = profiles.get("global")
+    if not isinstance(global_slots, dict):
+        if global_slots is None:
+            notes.append("region profiles 缺 global 区域表：按空全局解析")
+        else:
+            notes.append(f"region profiles：global 不是对象（{type(global_slots).__name__}），按空全局解析")
+        global_slots = {}
+    pages = profiles.get("pages")
+    if not isinstance(pages, dict):
+        if pages is not None:
+            notes.append(f"region profiles：pages 不是对象（{type(pages).__name__}），按无页面覆盖解析")
+        pages = {}
+    page_profile = pages.get(page)
+    if page not in REGION_PAGES:
+        # 第一版页面是闭集：范围外的页面不采纳覆盖（数据仍由 normalize 保留，前向兼容）
+        notes.append(f"region profiles：页面 {page!r} 不在第一版页面范围 {REGION_PAGES}，按无覆盖解析")
+        page_profile = {}
+    elif page_profile is None:
+        page_profile = {}
+    elif not isinstance(page_profile, dict):
+        notes.append(f"region profiles：pages.{page} 不是对象，按无页面覆盖解析")
+        page_profile = {}
+    for region in REGION_IDS:
+        latin, cjk = resolve_region_font(region, page_profile, global_slots, notes)
+        resolved[region] = {"latin": latin, "cjk": cjk}
+    return resolved, notes
+
+
+def resolve_selector_rules(page, resolved, registry=SELECTOR_REGISTRY_V1,
+                           selectors_version=SELECTOR_REGISTRY_VERSION):
+    """selector registry → 该页规则清单 [(region, selector, priority_index)]（修订 4）。
+
+    - 只收 confidence=="verified" 且 page 匹配的条目；registry/version 缺省为代码内
+      常量（p0-verified-1 已按修订 4 回填实测条目）；
+    - built-in registry（同一常量对象）与 selectors_version 不匹配 → 返回 []
+      （版本化防陈旧映射）；自定义 registry（测试 / 未来注入）不做版本比对；
+    - resolved 里该区域 latin/cjk 均为 None（Steam 原生）→ 不生成规则（无字体可套）；
+    - body 区域条目跳过（Phase 2 验收裁决）：基线规则
+      （html body,html body * → var(--dfp-font-body)）已覆盖 body 区域，生成
+      `html body body,…` 属模板冗余；registry 条目保留作文档与
+      check_region_mapping 验证用；
+    - 同一 selector 命中多区域 → 按 REGION_PRIORITY 去重（前优先）；
+    - 输出按 priority_index 升序（同 index 按 selector 字典序，保证确定性）。
+    纯函数：不读 DOM、不访问网络；没有 verified 证据的 selector 永远进不了清单。
+    """
+    if registry is SELECTOR_REGISTRY_V1 and selectors_version != SELECTOR_REGISTRY_VERSION:
+        return []
+    if not isinstance(registry, (list, tuple)):
+        return []
+    resolved = resolved if isinstance(resolved, dict) else {}
+    candidates = []
+    for entry in registry:
+        if not isinstance(entry, dict):
+            continue
+        if entry.get("confidence") != "verified":
+            continue
+        if entry.get("page") != page:
+            continue
+        region = entry.get("region")
+        if region not in REGION_IDS:
+            continue
+        if region == "body":
+            # Phase 2 验收裁决：body 由基线规则承担，条目保留作文档/验证用
+            continue
+        selector = entry.get("selector")
+        if not isinstance(selector, str) or not selector.strip():
+            continue
+        fonts = resolved.get(region)
+        latin = cjk = None
+        if isinstance(fonts, dict):
+            latin = _norm_region_font_name(fonts.get("latin"))
+            cjk = _norm_region_font_name(fonts.get("cjk"))
+        elif isinstance(fonts, tuple) and len(fonts) == 2:
+            latin = _norm_region_font_name(fonts[0])
+            cjk = _norm_region_font_name(fonts[1])
+        if latin is None and cjk is None:
+            continue  # 该区域最终无显式字体：规则只会复述 body/原生，不生成
+        candidates.append((region, selector, REGION_PRIORITY.index(region)))
+    best: dict = {}
+    for region, selector, index in candidates:
+        prev = best.get(selector)
+        if prev is None or index < prev[1]:
+            best[selector] = (region, index)
+    rules = [(region, selector, index) for selector, (region, index) in best.items()]
+    rules.sort(key=lambda item: (item[2], item[1]))
+    return rules
+
+
+def _title_weight_ranges_160(tiers, picked_faces):
+    """heading 字重降级路由的区间切分（修订 1，Phase 2 接线使用）。
+
+    来源标注：archive 分支 v1.5.0-pre.3（31ef69c）`_title_weight_ranges` 的同语义
+    重实现，按 1.6.0 Region Profiles 语义改名；不移植 zone/tier 档位代码，本函数
+    仅作为 heading 区域在 selector 证据不足时的字重路由兜底。
+    语义（与 archive 一致）：tiers=(lo, hi)，computed font-weight 落在 [lo, hi] 的
+    元素吃 heading 字体；picked_faces 为 (reg, med, bold) 三元组（_pick_faces 顺序，
+    None 槽位过滤）。落在 [lo, hi] 的 face 参与切分：face i 覆盖
+    [max(lo, w_i), 下一 face 权重 - 1]，末 face 覆盖到 hi，空段丢弃，区间互不重叠；
+    全部 face 在区间外时取 |w - lo| 最小者覆盖整段（路由不落空兜底）。
+    返回 [(face, "lo hi"), ...]；picked_faces 空 / 全 None → []。
+    """
+    lo, hi = tiers
+    faces = [f for f in picked_faces if f is not None]
+    if not faces:
+        return []
+    in_range = [f for f in faces if lo <= f["weight"] <= hi]
+    if not in_range:
+        near = min(faces, key=lambda f: abs(f["weight"] - lo))
+        return [(near, f"{lo} {hi}")]
+    out = []
+    for i, face in enumerate(in_range):
+        start = max(lo, face["weight"])
+        end = in_range[i + 1]["weight"] - 1 if i + 1 < len(in_range) else hi
+        if start <= end:
+            out.append((face, f"{start} {end}"))
+    return out
+
+
+def region_cache_keep(profiles_resolved_count, base=CACHE_KEEP_FILES):
+    """区域模式的缓存文件数下限（修订 6 的文件数部分；总量 MiB 上限 Phase 2 接）。
+
+    resolved profile 数（有显式字体的 page × region 槽位）每多一个就多一组
+    latin/cjk face 产物（至多各 3 字重 + 剔字产物），按 +4 估余量；
+    返回 max(base, resolved_count + 4)。非法入参（非数字/负数）按 0 处理。
+    """
+    try:
+        count = int(profiles_resolved_count)
+    except (TypeError, ValueError):
+        count = 0
+    if count < 0:
+        count = 0
+    try:
+        base_n = int(base)
+    except (TypeError, ValueError):
+        base_n = CACHE_KEEP_FILES
+    return max(base_n, count + 4)
+
+
+# --------------------------------------------------------------------------- #
+# Region Profiles：区域模式运行时（Phase 2：字体准备 + CSS 合成 + 接线原语）
+# --------------------------------------------------------------------------- #
+# 设计依据：task_plan_v160_region_20261120.md §6/§7.3/§8 + 修订 1/3/4/6/7。
+# 边界：兼容模式（region_mode 假）完全不经过本分区——注入 CSS 仍由 Plugin._build_css
+# 独占生成（与 1.4.23 逐字节一致）；区域模式的 CSS 由 build_region_css 独立合成，
+# 旧全局规则与新区域规则绝不同时叠加（设计 §6.4 / §13 末条）。
+# 本分区纯函数对入参只读、绝不原地修改；区域级失败一律降级 + note（修订 1/6/7），
+# 不抛异常打断整次准备。
+
+# heading 字重降级区间（修订 1）：heading 无 verified selector 规则时，heading 的
+# faces 按 [lo, hi] 以字重区间描述符追加注册到正文内部族（同 1.5.0 档 1 机制，
+# 区间切分见 _title_weight_ranges_160；payload 以 heading_fallback 标记显式提示，
+# 禁止静默失效）。
+TITLE_WEIGHT_TIERS = (700, 900)
+
+# 区域模式回退链尾（§6.2「链尾 = 既有 fallback 词表」）：Motiva Sans 保留 Steam 自带
+# 的 PUA 图标字形，emoji 与通用回退与 _fallback_families 的分槽口径一致。
+REGION_FALLBACK_CHAIN = (STEAM_UI_FONT,) + tuple(EMOJI_FALLBACK) + ("system-ui", "sans-serif")
+
+# 区域内部族命名（@font-face 真绑定，不依赖按名系统字体解析）：DFP-<区域>-<脚本>；
+# 正文族 = DFP-Body-Latin / DFP-Body-CJK（§6.2 形态示例同名）。
+REGION_FAMILY_TAGS = {
+    "heading": "Heading", "body": "Body", "secondary": "Secondary",
+    "control": "Control", "emphasis": "Emphasis",
+}
+REGION_SCRIPT_TAGS = {"latin": "Latin", "cjk": "CJK"}
+
+# check_region_mapping 的只读结果缓存：按 (steam_build, SELECTOR_REGISTRY_VERSION,
+# page) 命中（设计 §7.3：不要反复查询所有 selector）。
+_REGION_MAP_CACHE = {"key": None, "data": None}
+
+
+def _region_internal_family(region, script):
+    """区域内部族名：DFP-<区域>-<脚本>。"""
+    return f"DFP-{REGION_FAMILY_TAGS[region]}-{REGION_SCRIPT_TAGS[script]}"
+
+
+def _region_mode_on(state):
+    """区域模式开关（运行时唯一口径）：state 键 region_mode，缺省 false = 兼容模式。
+
+    真 = 区域模式（build_region_css 合成 4 页 CSS）；假 = 兼容模式（1.4.23 现行为，
+    注入 CSS 由 _build_css 生成，与 1.4.23 逐字节一致）。"""
+    return bool((state or {}).get("region_mode") or False)
+
+
+def _region_capability(families):
+    """修订 2 的 capability 快照：{family: {"zh": bool, "ja": bool, "ko": bool}}。
+
+    运行时由 _family_map 取族能力快照传入 normalize_region_profiles
+    （仅 family_title 迁移落槽归类使用）。对入参只读。"""
+    cap = {}
+    for name, entry in (families or {}).items():
+        if isinstance(entry, dict):
+            cap[name] = {
+                "zh": bool(entry.get("zh")),
+                "ja": bool(entry.get("ja")),
+                "ko": bool(entry.get("ko")),
+            }
+    return cap
+
+
+def _region_profiles_for_write(state, families):
+    """RPC 写路径取可写的 region profiles 文档。
+
+    已有 dict 原样返回；缺失/损坏时先 normalize 重建并补齐 state 的影子键
+    （region_profiles / region_schema_version / region_mode 缺省），重建失败返回
+    None（调用方拒绝写入、保持旧配置——设计 §10 迁移失败回滚）。"""
+    doc = state.get("region_profiles") if isinstance(state, dict) else None
+    if isinstance(doc, dict):
+        return doc
+    profiles, _notes = normalize_region_profiles(state, capability=_region_capability(families))
+    if profiles is None or not isinstance(state, dict):
+        return None
+    state["region_profiles"] = profiles
+    state["region_schema_version"] = REGION_SCHEMA_VERSION
+    if state.get("region_mode") is None:
+        state["region_mode"] = bool(profiles.get("region_mode"))
+    return profiles
+
+
+def _region_stack_name(name):
+    """区域栈名字渲染（§6.2 形态）：多词名加引号（"Motiva Sans"/"Noto Color Emoji"），
+    单词名与通用关键字不加引号（Twemoji / system-ui / sans-serif）。"""
+    if " " in name and name not in ("system-ui", "sans-serif", "serif", "monospace"):
+        return f'"{name}"'
+    return name
+
+
+def _region_cache_names(state, families):
+    """区域模式的缓存保护名反推（修订 6，零抽取）。
+
+    由 region_profiles 解析 4 页 resolved，每个显式字体槽按 _pick_faces/_cache_key
+    反推产物键名：latin 槽含剔字变体 {key}.latin{掩码版本}.*（与 prepare_region_faces
+    的实际产物口径一致）；cjk 槽只推全量对。同一 (family, script) 只推一次；
+    字体已卸载自然跳过。只做键名拼装，不抽取、不落盘。"""
+    profiles = state.get("region_profiles") if isinstance(state, dict) else None
+    if not isinstance(profiles, dict):
+        return []
+    names = []
+    seen = set()
+    for page in REGION_PAGES:
+        resolved, _notes = resolve_page_profile(page, profiles)
+        for region in REGION_IDS:
+            slot = resolved.get(region) if isinstance(resolved, dict) else None
+            slot = slot if isinstance(slot, dict) else {}
+            for script in ("latin", "cjk"):
+                family = slot.get(script)
+                if not family or (family, script) in seen:
+                    continue
+                seen.add((family, script))
+                entry = families.get(family) if families else None
+                if entry is None:
+                    continue
+                reg, med, bold = _pick_faces(entry, prefer_zh=(script == "cjk"))
+                for face in (reg, med, bold):
+                    if face is None:
+                        continue
+                    key = _cache_key(face)
+                    names.append(os.path.join(CACHE_DIR, f"{key}.ttf"))
+                    names.append(os.path.join(CACHE_DIR, f"{key}.woff2"))
+                    if script == "latin":
+                        variant = _strip_variant()
+                        names.append(os.path.join(CACHE_DIR, f"{key}{variant}.ttf"))
+                        names.append(os.path.join(CACHE_DIR, f"{key}{variant}.woff2"))
+    return names
+
+
+def prepare_region_faces(resolved, families, server=None):
+    """区域字体准备（设计 §8.2 prepare_region_faces + 修订 6/7）。
+
+    对 resolved 每区域每脚本：_pick_faces（prefer_zh 语义按脚本：latin False /
+    cjk True，与分槽口径一致）→ latin 槽一律 _ensure_latin_file（剔字掩码语义
+    不变）/ cjk 槽 _ensure_font_file → FontServer 注册 → (url, mime, weight) 三元组。
+
+    返回 {"resolved", "paths", "strip"}：
+    - resolved：入参的同构拷贝 + 每区域槽追加（入参绝不原地修改）：
+        "faces":    {"latin": [(url, mime, weight), ...] | None, "cjk": ...}
+        "families": {"latin": 内部族名 | None, "cjk": ...}
+        "picked":   {"latin": (reg, med, bold), "cjk": ...}   # 字重降级切区间用
+        "notes":    [str, ...]                                 # 该槽准备/降级说明
+    - paths：本次实际产出/复用的缓存文件路径（供缓存保护）；
+    - strip：{"done": bool, "fallback": bool}（剔字记账，面板提示用，绝不静默）。
+
+    降级语义：单区域/单脚本失败（字体已卸载 / 选不到面 / 抽取异常）→ 该槽降级
+    继承 body 的已准备产物（body 自身失败则该槽置空 = Steam 原生 + 回退链尾），
+    记 note，不抛出、不中断整次准备。body 先准备（其余区域降级要继承它）。
+    server 缺省取当前实例的 FontServer（测试可注入桩对象）。"""
+    if server is None:
+        server = (_LIVE._server if _LIVE is not None else None) or FontServer()
+    families = families if isinstance(families, dict) else {}
+    source = resolved if isinstance(resolved, dict) else {}
+    out = {}
+    paths = []
+    strip = {"done": False, "fallback": False}
+
+    def prep_one(region, script, name):
+        """单槽准备：返回 (triples, family, picked, notes)。失败/缺字体返回空产物 + note。"""
+        slot_notes = []
+        if name and name not in families:
+            slot_notes.append(
+                f"region faces：{region}.{script} 字体 {name!r} 不在系统中，该槽降级继承正文")
+            name = None
+        if not name:
+            return None, None, (None, None, None), slot_notes
+        try:
+            entry = families[name]
+            reg, med, bold = _pick_faces(entry, prefer_zh=(script == "cjk"))
+            triples = []
+            for face, weight in zip((reg, med, bold), (400, 500, 700)):
+                if face is None:
+                    continue
+                if script == "latin":
+                    # 修订 7：区域西文槽一律走剔字通路（掩码语义不变）
+                    path, mime, stripped, failed = _ensure_latin_file(face)
+                    if stripped:
+                        strip["done"] = True
+                    if failed:
+                        strip["fallback"] = True
+                else:
+                    path, mime = _ensure_font_file(face)
+                url = server.register(path, mime)
+                triples.append((url, mime, weight))
+                if _is_cache_file(path):
+                    paths.append(path)
+        except Exception as exc:
+            log(f"区域字体准备失败 {region}.{script}（{name!r}）: {exc}")
+            slot_notes.append(
+                f"region faces：{region}.{script} 准备失败（{exc}），该槽降级继承正文")
+            return None, None, (None, None, None), slot_notes
+        family = _region_internal_family(region, script) if triples else None
+        return triples, family, (reg, med, bold), slot_notes
+
+    # body 先准备：其余区域失败时降级继承它的产物
+    for region in ("body",) + tuple(r for r in REGION_IDS if r != "body"):
+        base = source.get(region)
+        base = base if isinstance(base, dict) else {}
+        slot_out = {
+            "latin": _norm_region_font_name(base.get("latin")),
+            "cjk": _norm_region_font_name(base.get("cjk")),
+            "faces": {"latin": None, "cjk": None},
+            "families": {"latin": None, "cjk": None},
+            "picked": {"latin": (None, None, None), "cjk": (None, None, None)},
+            "notes": [],
+        }
+        for script in ("latin", "cjk"):
+            triples, family, picked, slot_notes = prep_one(region, script, slot_out[script])
+            slot_out["notes"].extend(slot_notes)
+            if triples:
+                slot_out["faces"][script] = triples
+                slot_out["families"][script] = family
+                slot_out["picked"][script] = picked
+            elif region != "body":
+                # 降级继承正文（body 已先准备）：产物整槽搬过来
+                body_slot = out["body"]
+                slot_out["faces"][script] = body_slot["faces"][script]
+                slot_out["families"][script] = body_slot["families"][script]
+                slot_out["picked"][script] = body_slot["picked"][script]
+        out[region] = slot_out
+    return {"resolved": out, "paths": paths, "strip": strip}
+
+
+def build_region_css(page, resolved, registry=SELECTOR_REGISTRY_V1, chain_base=None,
+                     synth_none=False):
+    """区域模式 CSS 合成（设计 §6.2/§8.2，Phase 2 区域模式唯一入口）。纯函数。
+
+    返回 (css, info)：css = 该页最终注入文本；info = {"heading_fallback": bool,
+    "notes": [...]}（payload 的 heading_fallback 与诊断日志取这里）。
+
+    结构（顺序固定）：
+      1) @font-face：正文族 400/500/700 + 各区域自有产物（按引用集合去重）；
+         heading 降级（修订 1）：heading 无 verified 规则时，heading 自有 faces 按
+         _title_weight_ranges_160(TITLE_WEIGHT_TIERS, picked) 以字重区间描述符追加
+         注册到正文内部族——CSS 本身零额外规则，标记走 info["heading_fallback"]；
+      2) :root 五个 --dfp-font-* 变量（§6.2 形态；与正文同栈的区域 = var(--dfp-font-body)；
+         链尾 = chain_base 或 REGION_FALLBACK_CHAIN，多词名加引号、单词名/通用关键字不加）；
+      3) body 基线规则 html body,html body *{font-family:var(--dfp-font-body)!important;}
+         （区域模式内唯一全局规则，替代旧固定族规则——不叠加，§6.4/§13 末条）；
+      4) verified selector 规则 html body <sel>,html body <sel> *{...var(--dfp-font-<region>)...}
+         （组件根 + 后代；规则清单经 resolve_selector_rules 按 REGION_PRIORITY 去重，
+         body 区域条目不生成规则——基线已覆盖）。
+
+    synth_none（Phase 2 验收裁决，与兼容模式行为对齐）：真时基线规则与全部区域
+    规则追加 font-synthesis-weight:none!important; 子句（禁用假加粗；缺省 False）。
+
+    去重口径：某区域某脚本的 faces 与正文同脚本完全一致（继承/降级所致）→ 该槽
+    引用正文族、不重复 emit @font-face；heading 在降级态整族挂正文族。
+    resolved 里 latin/cjk/faces/families/picked 由 prepare_region_faces 供给；
+    缺 faces 的裸 resolved（纯名字）按无产物解析，CSS 自然退化为基线 + 回退链尾。"""
+    chain = tuple(chain_base) if chain_base else REGION_FALLBACK_CHAIN
+    resolved = resolved if isinstance(resolved, dict) else {}
+    notes = []
+
+    def slot_of(region):
+        slot = resolved.get(region)
+        return slot if isinstance(slot, dict) else {}
+
+    def faces_of(slot, script):
+        faces = slot.get("faces")
+        item = faces.get(script) if isinstance(faces, dict) else None
+        return list(item) if isinstance(item, list) else []
+
+    def family_of(slot, region, script):
+        fams = slot.get("families")
+        fam = fams.get(script) if isinstance(fams, dict) else None
+        return fam or _region_internal_family(region, script)
+
+    body_slot = slot_of("body")
+    body_faces = {s: faces_of(body_slot, s) for s in ("latin", "cjk")}
+    body_fams = {
+        s: (family_of(body_slot, "body", s) if body_faces[s] else None)
+        for s in ("latin", "cjk")
+    }
+
+    rules = resolve_selector_rules(page, resolved, registry)
+    heading_has_rule = any(r[0] == "heading" for r in rules)
+
+    # ---- heading 降级（修订 1）：自有 faces 按 _title_weight_ranges_160 挂正文族 ----
+    range_faces = []  # (family, url, mime, "lo hi")
+    heading_fallback = False
+    heading_slot = slot_of("heading")
+    if not heading_has_rule:
+        for script in ("latin", "cjk"):
+            own = faces_of(heading_slot, script)
+            if not own or own == body_faces[script]:
+                continue  # 无自有产物 / 与正文同源：字重降级无事可做
+            picked = heading_slot.get("picked")
+            live = [f for f in ((picked or {}).get(script) or ()) if f is not None]
+            if not live:
+                continue
+            fam = body_fams[script] or _region_internal_family("body", script)
+            added = 0
+            for face, rng in _title_weight_ranges_160(TITLE_WEIGHT_TIERS, live):
+                idx = next((i for i, f in enumerate(live) if f is face), None)
+                if idx is None or idx >= len(own):
+                    continue
+                url, mime, _w = own[idx]
+                range_faces.append((fam, url, mime, rng))
+                added += 1
+            if added:
+                heading_fallback = True
+                notes.append(
+                    f"heading 无 verified selector 规则：{script} 槽 faces 按字重区间 "
+                    f"{TITLE_WEIGHT_TIERS} 挂正文族 {fam}（{added} 条，修订 1 显式降级）")
+                if body_fams[script] is None:
+                    # 正文族因降级区间行而实际存在：正文变量必须引用它，否则区间行不可达
+                    body_fams[script] = fam
+
+    # ---- 每区域每脚本引用的内部族名（自有 vs 正文族） ----
+    def script_family_ref(region, slot, script):
+        """返回 (族名 | None, 是否自有产物)。降级态 heading 整族挂正文族（不引用自有族）。"""
+        if region == "heading" and not heading_has_rule:
+            own = None
+        else:
+            own = faces_of(slot, script)
+        if own and own != body_faces[script]:
+            return family_of(slot, region, script), True
+        if body_fams[script]:
+            return body_fams[script], False
+        return None, False
+
+    def var_parts(region):
+        slot = slot_of(region)
+        parts = []
+        for script in ("latin", "cjk"):
+            fam, _own = script_family_ref(region, slot, script)
+            if fam:
+                parts.append(f'"{fam}"')
+        parts.extend(_region_stack_name(n) for n in chain)
+        return parts
+
+    body_parts = var_parts("body")
+    var_lines = []
+    for region in ("body", "heading", "secondary", "control", "emphasis"):
+        parts = var_parts(region)
+        value = "var(--dfp-font-body)" if region != "body" and parts == body_parts else ",".join(parts)
+        var_lines.append(f"--dfp-font-{region}:{value}")
+
+    # ---- @font-face（按引用集合去重；format 映射与 _build_css 同表） ----
+    fmt_of = {
+        "font/woff2": "woff2",
+        "font/woff": "woff",
+        "font/otf": "opentype",
+        "font/ttf": "truetype",
+    }
+
+    def face_rule(family, url, mime, weight_desc):
+        return (
+            f"@font-face{{font-family:\"{family}\";font-style:normal;font-weight:{weight_desc};"
+            f"font-display:swap;src:url(\"{url}\") format(\"{fmt_of.get(mime, 'truetype')}\");}}"
+        )
+
+    lines = []
+    emitted = set()
+    for script in ("latin", "cjk"):
+        if body_faces[script] and body_fams[script] and body_fams[script] not in emitted:
+            emitted.add(body_fams[script])
+            for url, mime, weight in body_faces[script]:
+                lines.append(face_rule(body_fams[script], url, mime, weight))
+    for region in ("heading", "secondary", "control", "emphasis"):
+        slot = slot_of(region)
+        for script in ("latin", "cjk"):
+            fam, own = script_family_ref(region, slot, script)
+            if fam is None or not own or fam in emitted:
+                continue
+            emitted.add(fam)
+            for url, mime, weight in faces_of(slot, script):
+                lines.append(face_rule(fam, url, mime, weight))
+    for fam, url, mime, rng in range_faces:
+        lines.append(face_rule(fam, url, mime, rng))  # 字重区间描述符（"lo hi"）
+
+    lines.append(":root{" + ";".join(var_lines) + "}")
+    # body 基线规则：区域模式内唯一全局规则（替代旧固定族规则——不叠加）；
+    # synth_none（裁决 1）：与兼容模式对齐的禁用假加粗子句
+    baseline = "html body,html body *{font-family:var(--dfp-font-body)!important;"
+    if synth_none:
+        baseline += "font-synthesis-weight:none!important;"
+    baseline += "}"
+    lines.append(baseline)
+    for region, selector, _idx in rules:
+        # 组件根 + 后代（§6.2）；selector 为 registry 实测原文，不再转义
+        rule = (f"html body {selector},html body {selector} *"
+                f"{{font-family:var(--dfp-font-{region})!important;")
+        if synth_none:
+            rule += "font-synthesis-weight:none!important;"
+        rule += "}"
+        lines.append(rule)
+    return "\n".join(lines), {"heading_fallback": heading_fallback, "notes": notes}
+
+
+def _page_of_tab(tab):
+    """tab 名 → 区域页面 key（main/menu/qam/toast）。
+
+    menu/qam 的 tab 永远带动态后缀，按 DYNAMIC_PREFIX 前缀匹配；弹窗按
+    TOAST_TAB_PREFIX 前缀归 toast（1.6.0 起弹窗独立成页，设计 §5.2）；主界面候选
+    与其余未知 tab 归 main。纯函数，供 _css_for / check_region_mapping 调度。"""
+    name = tab or ""
+    for key, prefix in DYNAMIC_PREFIX.items():
+        if name.startswith(prefix):
+            return key
+    if name.startswith(TOAST_TAB_PREFIX):
+        return "toast"
+    return "main"
+
+
+# --------------------------------------------------------------------------- #
 # 插件
 # --------------------------------------------------------------------------- #
 
@@ -1744,6 +2771,7 @@ class Plugin:
         self._server = FontServer()
         self._hit = {}  # key -> {"tab":..., "css_id":...}
         self._css = None
+        self._css_pages = {}  # page -> CSS（区域模式 4 页全覆盖；兼容模式恒空，_css_for 回落 _css）
         self._family = None
         self._detail = {}
         self._dyn_task = None
@@ -1779,6 +2807,24 @@ class Plugin:
         # 只留 CACHE_KEEP_FILES 个。反推零抽取（只做 fc-list 选面与键名拼装），
         # 字体已卸载自然跳过；没有它，上限提到 6 后重启也会保留旧文件、双槽首注入也常被误清
         families = await asyncio.to_thread(_family_map)
+        # Region Profiles 启动迁移（修订 2/3/4）：normalize/migrate 结果写回 state，
+        # 幂等；失败保持旧配置不清空（设计 §10）。capability 由 _family_map 提供
+        # （family_title 落槽归类用）；region_mode 按修订 3（zone_level>=1 → true，
+        # 首迁移自动启用；已有显式开关则以 state 为准、profiles 文档同步）。
+        region_profiles, region_notes = normalize_region_profiles(
+            state, capability=_region_capability(families))
+        if region_profiles is not None:
+            if state.get("region_mode") is None:
+                state["region_mode"] = bool(region_profiles.get("region_mode"))
+            else:
+                region_profiles["region_mode"] = bool(state.get("region_mode"))
+            state["region_profiles"] = region_profiles
+            state["region_schema_version"] = REGION_SCHEMA_VERSION
+            write_state(state)
+        else:
+            region_notes = region_notes or ["region profiles 迁移失败：保持旧配置"]
+        for note in region_notes:
+            log(note)
         protect = _protected_cache_files(state, families)
         t0 = time.monotonic()
         removed = await asyncio.to_thread(_prune_font_cache, tuple(protect))
@@ -1807,8 +2853,13 @@ class Plugin:
             state.pop("family_cjk", None)
             write_state(state)
         if not family and not (state.get("cjk_split") and state.get("family_cjk")):
-            return
-        result = await plugin._apply(family)
+            if not _region_mode_on(state):
+                return
+            # 区域模式接管：区域 CSS 不依赖兼容槽位（修订 3），按区域配置注入
+            log("区域模式启用：兼容槽位为空，按区域配置注入")
+            result = await plugin._apply(None)
+        else:
+            result = await plugin._apply(family)
         if not result.get("ok"):
             log(f"启动时恢复字体失败: {result.get('error')}")
             return
@@ -1909,9 +2960,190 @@ class Plugin:
         # 西文槽为空时 _prepare 会只注入中日韩字体
         return await plugin._apply(state.get("family"))
 
+    # ---- 区域模式（Phase 2 RPC，修订 3/4）----
+
+    async def set_region_mode(self, enabled):
+        """区域模式开关（修订 3）：真 = 区域模式（build_region_css 4 页全覆盖），
+        假 = 兼容模式（1.4.23 现行为）。写 region_mode 后重注入/拆卸，逻辑复用
+        _set_split_options_inner 的区域分支（enabled=None = 不变，只返回状态）。"""
+        plugin = _bind(self)
+        return await plugin._set_split_options_inner(region_mode=enabled)
+
+    async def _apply_region_config(self):
+        """区域配置写路径的统一收尾：区域模式开 → 走区域路径重注入；关 → 只落盘
+        （配置供切换后使用），返回当前面板状态。"""
+        plugin = _bind(self)
+        state = read_state()
+        if not _region_mode_on(state):
+            return plugin._payload()
+        return await plugin._apply(state.get("family"))
+
+    async def _apply_region_mode_switch(self, value):
+        """区域模式开关生效：真 → 区域路径重注入（不依赖兼容槽位）；假 → 有兼容
+        槽位选择则重注入兼容 CSS，否则拆卸现有注入。"""
+        plugin = _bind(self)
+        state_now = read_state()
+        if value:
+            return await plugin._apply(state_now.get("family"))
+        family = state_now.get("family")
+        if not family and not (state_now.get("cjk_split") and state_now.get("family_cjk")):
+            removed = await plugin._teardown_all()
+            log(f"区域模式已关闭：无兼容槽位选择，注入已拆除（{removed} 处）")
+            return plugin._payload()
+        return await plugin._apply(family)
+
+    async def set_region_font(self, region, script, family=None, page=None):
+        """区域字体槽设置（设计 §5.4/§9）：page=None 写 global，否则写 pages.<page>；
+        family=None = 清除该槽（回继承）。区域模式开时写完重注入，关时只落盘。"""
+        plugin = _bind(self)
+        if region not in REGION_IDS:
+            return {"ok": False, "error": f"未知区域 {region!r}", **plugin._payload()}
+        if script not in ("latin", "cjk"):
+            return {"ok": False, "error": f"未知脚本槽 {script!r}", **plugin._payload()}
+        if page is not None and page not in REGION_PAGES:
+            return {"ok": False, "error": f"未知页面 {page!r}", **plugin._payload()}
+        families = await asyncio.to_thread(_family_map)
+        if family is not None and family not in families:
+            return {"ok": False, "error": f"系统里没有字体 {family}",
+                    "error_key": "err.noFamily", "error_args": [family], **plugin._payload()}
+        state = read_state()
+        profiles = _region_profiles_for_write(state, families)
+        if profiles is None:
+            return {"ok": False, "error": "region profiles 结构损坏：写入被拒绝（保持旧配置）",
+                    **plugin._payload()}
+        if page is None:
+            scope = profiles["global"]
+        else:
+            scope = profiles["pages"].get(page)
+            if not isinstance(scope, dict):
+                scope = {}
+                profiles["pages"][page] = scope
+        slot = scope.get(region)
+        if not isinstance(slot, dict):
+            slot = _region_slot_default(region)
+            scope[region] = slot
+        slot[script] = family  # None = 清除（未设置 = 继承，设计 §5.4 约束）
+        write_state(state)
+        log(f"区域字体更新：{page or 'global'}.{region}.{script} = {family!r}")
+        return await plugin._apply_region_config()
+
+    async def reset_region(self, region, page=None):
+        """重置区域配置（设计 §9）：page=None 清全局该区域（回默认继承）；page 给定
+        只清该页该区域覆盖（无覆盖 = 继承全局）。区域模式开时写完重注入。"""
+        plugin = _bind(self)
+        if region not in REGION_IDS:
+            return {"ok": False, "error": f"未知区域 {region!r}", **plugin._payload()}
+        if page is not None and page not in REGION_PAGES:
+            return {"ok": False, "error": f"未知页面 {page!r}", **plugin._payload()}
+        state = read_state()
+        families = await asyncio.to_thread(_family_map)
+        profiles = _region_profiles_for_write(state, families)
+        if profiles is None:
+            return {"ok": False, "error": "region profiles 结构损坏：写入被拒绝（保持旧配置）",
+                    **plugin._payload()}
+        if page is None:
+            profiles["global"][region] = _region_slot_default(region)
+        else:
+            scope = profiles["pages"].get(page)
+            if isinstance(scope, dict):
+                scope.pop(region, None)
+        write_state(state)
+        log(f"区域配置已重置：{page or 'global'}.{region}")
+        return await plugin._apply_region_config()
+
+    async def reset_region_page(self, page):
+        """重置整页覆盖（设计 §9）：清 pages.<page> 全部区域覆盖（全局与其它页不动）。"""
+        plugin = _bind(self)
+        if page not in REGION_PAGES:
+            return {"ok": False, "error": f"未知页面 {page!r}", **plugin._payload()}
+        state = read_state()
+        families = await asyncio.to_thread(_family_map)
+        profiles = _region_profiles_for_write(state, families)
+        if profiles is None:
+            return {"ok": False, "error": "region profiles 结构损坏：写入被拒绝（保持旧配置）",
+                    **plugin._payload()}
+        profiles["pages"][page] = {}
+        write_state(state)
+        log(f"区域页面覆盖已重置：pages.{page}")
+        return await plugin._apply_region_config()
+
+    @staticmethod
+    def _pick_mapping_tab(titles):
+        """映射检查的目标 tab：主界面候选 > 动态 uid tab > toast；返回 (tab, page)。
+
+        只读；都拿不到返回 (None, None)。同步函数（内部 _scan_uid 是同步 urlopen），
+        调用方须放线程里跑。"""
+        main_tabs = [t for t in TARGETS[0][2] if t in titles]
+        if main_tabs:
+            return main_tabs[0], "main"
+        for key in ("menu", "qam"):
+            uid = _scan_uid(DYNAMIC_PREFIX[key])
+            candidate = f"{DYNAMIC_PREFIX[key]}{uid}" if uid is not None else None
+            if candidate and candidate in titles:
+                return candidate, key
+        toasts = sorted(t for t in titles if str(t or "").startswith(TOAST_TAB_PREFIX))
+        if toasts:
+            return toasts[-1], "toast"
+        return None, None
+
+    async def check_region_mapping(self):
+        """区域映射检查（设计 §7.3 + 修订 4，只读不写）：经既有 CEF evaluate 通道
+        （execute_in_tab，与 _style_exists 验活同款）对当前 tab 按 registry 逐条
+        evaluate document.querySelectorAll(sel).length（纯读），返回 counts +
+        steam build + registry version。结果按 (steam_build, SELECTOR_REGISTRY_VERSION,
+        page) 缓存；任何失败返回 {ok: False, why} 不抛。"""
+        plugin = _bind(self)
+        try:
+            titles = await asyncio.to_thread(_cef_titles)
+            if titles is None:
+                return {"ok": False, "why": _CEF_CACHE.get("why") or "CEF 调试口尚未就绪"}
+            tab_name, page = await asyncio.to_thread(plugin._pick_mapping_tab, titles)
+            if tab_name is None:
+                return {"ok": False, "why": "没有可检查的 CEF tab（Steam 可能不在大屏模式）"}
+            entries = [e for e in SELECTOR_REGISTRY_V1
+                       if isinstance(e, dict) and e.get("page") == page
+                       and e.get("confidence") == "verified"
+                       and isinstance(e.get("selector"), str) and e["selector"].strip()]
+            steam_build = next((str(e["steam_build"]) for e in entries if e.get("steam_build")), None)
+            key = (steam_build, SELECTOR_REGISTRY_VERSION, page)
+            cached = _REGION_MAP_CACHE
+            if cached["key"] == key and isinstance(cached["data"], dict):
+                return {"ok": True, "cached": True, **cached["data"]}
+            if not entries:
+                data = {"page": page, "tab": tab_name, "counts": {}, "steam_build": steam_build,
+                        "registry_version": SELECTOR_REGISTRY_VERSION, "checked": 0}
+                cached["key"], cached["data"] = key, data
+                return {"ok": True, "cached": False, **data}
+            # 一次 evaluate 读全页计数：键与查询参数都用 json.dumps 转义，纯读不写 DOM
+            code = "JSON.stringify({" + ",".join(
+                f"{json.dumps(e['selector'])}:document.querySelectorAll({json.dumps(e['selector'])}).length"
+                for e in entries) + "})"
+            res = await asyncio.to_thread(_eval_in_tab, tab_name, code)
+            if not res.get("success"):
+                return {"ok": False, "why": f"evaluate 失败：{res.get('result')}"}
+            inner = res.get("result")
+            # legacy 路由会再包一层 {success, result}（与 _style_exists 同款处理）
+            if isinstance(inner, dict):
+                if not inner.get("success"):
+                    return {"ok": False, "why": f"evaluate 失败：{inner.get('result')}"}
+                inner = inner.get("result")
+            try:
+                counts = json.loads(inner)
+            except (TypeError, ValueError):
+                return {"ok": False, "why": f"evaluate 返回不是 JSON：{inner!r}"}
+            if not isinstance(counts, dict):
+                return {"ok": False, "why": f"evaluate 返回不是对象：{inner!r}"}
+            data = {"page": page, "tab": tab_name, "counts": counts,
+                    "steam_build": steam_build, "registry_version": SELECTOR_REGISTRY_VERSION,
+                    "checked": len(entries)}
+            cached["key"], cached["data"] = key, data
+            return {"ok": True, "cached": False, **data}
+        except Exception as exc:
+            return {"ok": False, "why": str(exc)}
+
     async def set_split_options(self, cjk_split=None, synth_weight_none=None,
                                 preview_level=None, expand_level=None, preview=None,
-                                preview_cache_mb=None):
+                                preview_cache_mb=None, region_mode=None):
         """分槽开关入口：包一层计时，实际逻辑在 _set_split_options_inner。"""
         plugin = _bind(self)  # Decky 3.3.1 可能把类本身当 self 传进来，先回落到实例
         t0 = time.monotonic()
@@ -1919,14 +3151,14 @@ class Plugin:
             return await plugin._set_split_options_inner(
                 cjk_split=cjk_split, synth_weight_none=synth_weight_none,
                 preview_level=preview_level, expand_level=expand_level, preview=preview,
-                preview_cache_mb=preview_cache_mb,
+                preview_cache_mb=preview_cache_mb, region_mode=region_mode,
             )
         finally:
             log(f"[耗时] 分槽开关调用合计（cjk_split={cjk_split}）: {_elapsed_ms(t0)} ms")
 
     async def _set_split_options_inner(self, cjk_split=None, synth_weight_none=None,
                                 preview_level=None, expand_level=None, preview=None,
-                                preview_cache_mb=None):
+                                preview_cache_mb=None, region_mode=None):
         """分槽注入的主/子开关（持久化）。参数都可选，None = 不变。
 
         子开关默认值（主开关开启时）：synth_weight_none 缺省视为开。
@@ -1941,6 +3173,8 @@ class Plugin:
         会按当前字体重新注入一次；没有已选字体时只落盘，不注入。
         preview_cache_mb（预览子集缓存字节上限 1-30MB，默认 8）是纯缓存设置：
         只落盘、不参与 changed，绝不触发按当前字体重新注入。
+        region_mode（修订 3，前端开关接线）：区域模式开关（state 键）。变化时按
+        「真 = 区域路径重注入（不依赖兼容槽位）/ 假 = 兼容路径重注入或拆卸」生效。
         """
         plugin = _bind(self)
         state = read_state()
@@ -1948,6 +3182,8 @@ class Plugin:
         turned_off = False
         levels_changed = False
         cache_changed = False
+        region_changed = False
+        region_value = None
         if cjk_split is not None:
             value = bool(cjk_split)
             turned_off = bool(state.get("cjk_split")) and not value
@@ -1981,21 +3217,36 @@ class Plugin:
             if _preview_cache_mb_of(state) != value:
                 cache_changed = True
             state["preview_cache_mb"] = value
-        if not (changed or levels_changed or cache_changed):
+        if region_mode is not None:
+            # 修订 3：区域模式开关（state 键）。profiles 文档已有则同步，保持一致。
+            region_value = bool(region_mode)
+            region_changed = bool(state.get("region_mode") or False) != region_value
+            state["region_mode"] = region_value
+            doc = state.get("region_profiles")
+            if isinstance(doc, dict):
+                doc["region_mode"] = region_value
+        if not (changed or levels_changed or cache_changed or region_changed):
             return plugin._payload()
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
             f"synth_weight_none={state.get('synth_weight_none', True)} "
             f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)} "
-            f"preview_cache_mb={_preview_cache_mb_of(state)}")
-        if not changed:
-            # 只有预览档位变化：不影响注入 CSS，无需重新注入
-            return plugin._payload()
+            f"preview_cache_mb={_preview_cache_mb_of(state)} "
+            f"region_mode={bool(state.get('region_mode') or False)}")
         if turned_off:
             # 两个槽位已清空：拆除现有注入（复用 reset_font 的拆卸顺序；
             # 不停字体服务，重开开关选字时 register 会按需自起）
             removed = await plugin._teardown_all()
             log(f"按语言注入已关闭：西文/中日韩槽位已清空，注入已拆除（{removed} 处）")
+            if region_changed and bool(state.get("region_mode")):
+                # 同调用切到区域模式：区域 CSS 不依赖兼容槽位，拆完直接按区域注入
+                return await plugin._apply(None)
+            return plugin._payload()
+        if region_changed:
+            # 区域模式开关：真 = 区域路径重注入；假 = 兼容路径重注入或拆卸
+            return await plugin._apply_region_mode_switch(region_value)
+        if not changed:
+            # 只有预览档位变化：不影响注入 CSS，无需重新注入
             return plugin._payload()
         state_now = read_state()
         family = plugin._family or state_now.get("family")
@@ -2011,6 +3262,7 @@ class Plugin:
         await plugin._stop_window()
         removed = await plugin._remove_all()
         plugin._css = None
+        plugin._css_pages = {}
         plugin._family = None
         plugin._detail = {}
         return removed
@@ -2042,7 +3294,11 @@ class Plugin:
 
     async def reapply(self):
         plugin = _bind(self)
-        if not plugin._family and not read_state().get("family_cjk"):
+        state = read_state()
+        if _region_mode_on(state):
+            # 区域模式：区域 CSS 不依赖兼容槽位选择
+            return await plugin._apply(plugin._family)
+        if not plugin._family and not state.get("family_cjk"):
             return {"ok": False, "error": "当前没有选择字体", "error_key": "err.noSelection", **plugin._payload()}
         return await plugin._apply(plugin._family)
 
@@ -2111,6 +3367,7 @@ class Plugin:
 
             await self._remove_all()
             self._css = detail["css"]
+            self._css_pages = detail.get("css_pages") or {}
             self._family = family
             self._detail = detail
             state = read_state()
@@ -2168,8 +3425,12 @@ class Plugin:
         """把选中字体准备成一段 CSS。任何失败都直接抛异常，调用方尚未拆旧样式。
 
         family 为 None（西文槽为空）时，若中日韩槽有字体，则只注入中日韩字体。
+        区域模式（region_mode 真）走 _prepare_region 新路径：CSS 由 build_region_css
+        合成（4 页全覆盖），兼容单/双槽路径完全不走（两模式不叠加，§6.4/§13）。
         """
         state = read_state()
+        if _region_mode_on(state):
+            return self._prepare_region(state)
         split_on = bool(state.get("cjk_split"))
         # synth_weight_none 已独立于 cjk_split，无论主开关是否开启都读取（缺省=开）
         synth_none = bool(state.get("synth_weight_none", True))
@@ -2198,6 +3459,80 @@ class Plugin:
             split_on=split_on, family_cjk=family_cjk, entry_cjk=entry_cjk,
             synth_none=synth_none,
         )
+
+    def _prepare_region(self, state):
+        """区域模式 CSS 准备（Phase 2 新路径，4 页全覆盖）。致命失败直接抛异常
+        （调用方尚未拆旧样式，旧注入原样保留——_apply 先准备后拆旧顺序不变）；
+        单区域/单脚本失败已在 prepare_region_faces 降级为继承正文 + note，不中断。
+
+        - 对 4 页：resolve_page_profile → prepare_region_faces → build_region_css
+          （内部经 resolve_selector_rules 取 verified 规则）；
+        - css_pages = {page: css} 全 4 页；css = main 页 CSS（兼容既有读点；
+          _css_for(tab) 按 tab 归属页面调度，同一 tab 只注入一份最终 CSS）；
+        - heading_fallback 标记随 detail 返回（payload 取 main 页，修订 1 显式提示）；
+        - 缓存：实际产物路径保护 + region_cache_keep(显式槽数) 文件数下限 + 总量
+          MiB 上限（_prune_font_cache 内置）。
+        """
+        families = _family_map()
+        profiles = state.get("region_profiles")
+        # 裁决 1：区域规则与兼容模式对齐禁用假加粗（synth_weight_none 缺省=开）
+        synth_none = bool(state.get("synth_weight_none", True))
+        css_pages = {}
+        heading_flags = {}
+        notes_all = []
+        strip = {"done": False, "fallback": False}
+        all_paths = []
+        seen_paths = set()
+        resolved_count = 0
+        for page in REGION_PAGES:
+            resolved, notes = resolve_page_profile(page, profiles)
+            notes_all.extend(f"[{page}] {n}" for n in notes)
+            # 修订 6 文件数部分：有显式字体的 page × region 槽位计数
+            resolved_count += sum(
+                1 for region in REGION_IDS
+                if (resolved.get(region) or {}).get("latin")
+                or (resolved.get(region) or {}).get("cjk"))
+            prep = prepare_region_faces(resolved, families)
+            prepared = prep["resolved"]
+            for path in prep["paths"]:
+                if path not in seen_paths:
+                    seen_paths.add(path)
+                    all_paths.append(path)
+            strip["done"] = strip["done"] or prep["strip"]["done"]
+            strip["fallback"] = strip["fallback"] or prep["strip"]["fallback"]
+            for region in REGION_IDS:
+                notes_all.extend(f"[{page}] {n}" for n in prepared[region]["notes"])
+            css, info = build_region_css(page, prepared, synth_none=synth_none)
+            css_pages[page] = css
+            heading_flags[page] = bool(info["heading_fallback"])
+            notes_all.extend(f"[{page}] {n}" for n in info["notes"])
+        keep = region_cache_keep(resolved_count)
+        _prune_font_cache([p for p in all_paths if _is_cache_file(p)], keep)
+        for note in notes_all:
+            log(note)
+        degraded_pages = sorted(p for p, flag in heading_flags.items() if flag)
+        log(f"区域模式 CSS 准备完成：{len(css_pages)} 页全覆盖，显式槽位 {resolved_count} 个，"
+            f"heading 字重降级页：{degraded_pages or '无'}，剔字 {'发生' if strip['done'] else '未发生'}"
+            + ("（有失败回退）" if strip["fallback"] else ""))
+        return {
+            "css": css_pages["main"],
+            "css_pages": css_pages,
+            "heading_fallback": heading_flags["main"],
+            "heading_fallback_pages": heading_flags,
+            "region_resolved_count": resolved_count,
+            "region_notes": notes_all,
+            "strip": strip,
+            "fallback": list(REGION_FALLBACK_CHAIN),
+            # 兼容 payload 既有键（区域模式不填单槽 face 详情，payload.region 为准）
+            "regular": None,
+            "medium": None,
+            "bold": None,
+            "cjk": None,
+            "full_backfill": False,
+            "split": False,
+            "synth_none": synth_none,
+            "zh": None,
+        }
 
     def _prepare_cjk_only(self, family_cjk, entry_cjk, synth_none):
         """只有中日韩槽、西文槽为空：中日韩字体单独作为主字体注入（不剔字、不回填）。
@@ -2439,6 +3774,17 @@ class Plugin:
         lines.append(rule)
         return "\n".join(lines)
 
+    def _css_for(self, tab):
+        """per-tab CSS 调度：按 tab 名归属页面取该页 CSS（_page_of_tab）。
+
+        页面缺失（或兼容模式，_css_pages 恒空）时回落 self._css——兼容模式行为与
+        1.4.23 完全一致（注入的仍是 _build_css 产物，逐字节相同）。区域模式 4 页
+        全覆盖，每页一份 build_region_css 产物，同一 tab 只注入一份最终 CSS
+        （设计 §6.4/§8.3：旧全局规则与新区域规则不同时叠加）。"""
+        page = _page_of_tab(tab)
+        css = self._css_pages.get(page)
+        return css if css else self._css
+
     async def _inject_main(self, source="user"):
         """主界面标题稳定，直接按候选注入。返回是否成功。
 
@@ -2458,7 +3804,7 @@ class Plugin:
         if "Steam" in candidates and "Steam 大屏幕模式" not in titles:
             log("CEF 列表里只有桌面 Steam tab（未见大屏 tab），按桌面注入")
         for tab in candidates:
-            css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+            css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
             if css_id:
                 self._hit["main"] = {"tab": tab, "css_id": css_id, "alive": True}
                 log(f"已注入 main -> {tab}")
@@ -2473,7 +3819,7 @@ class Plugin:
         prefix = DYNAMIC_PREFIX[key]
         if self._uid:
             tab = f"{prefix}{self._uid}"
-            css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+            css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
             if css_id:
                 self._hit[key] = {"tab": tab, "css_id": css_id, "alive": True}
                 log(f"已注入 {key} -> {tab}")
@@ -2498,7 +3844,7 @@ class Plugin:
         state["uid"] = uid
         write_state(state)
         tab = f"{prefix}{uid}"
-        css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+        css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
         if css_id:
             self._hit[key] = {"tab": tab, "css_id": css_id, "alive": True}
             log(f"已注入 {key} -> {tab}（uid 发现 {uid}）")
@@ -2625,7 +3971,7 @@ class Plugin:
     async def _inject_toast_tab(self, tab):
         if not self._css or tab in self._toasts:
             return
-        css_id = await asyncio.to_thread(_replace_css, tab, self._css)
+        css_id = await asyncio.to_thread(_replace_css, tab, self._css_for(tab))
         if css_id:
             self._toasts[tab] = css_id
             log(f"已注入弹窗 -> {tab}")
@@ -2809,6 +4155,19 @@ class Plugin:
         state = read_state()
         favorites = _clean_favorites(state)
         inject_level, inject_stamp = _inject_status(state)
+        # 区域模式状态块（Phase 2 契约，与前端 JSDoc 单点同步）：mode 取 state 键
+        # （运行时唯一口径）；global/pages 为 normalize 后文档（结构损坏时 None，
+        # 不伪造配置）；heading_fallback 取最近一次区域准备的 main 页标记（修订 1
+        # 显式提示，禁止静默失效）；registry_version 取代码内常量（修订 4）。
+        region_norm, _region_notes = normalize_region_profiles(state)
+        region = {
+            "mode": bool(state.get("region_mode") or False),
+            "schema_version": REGION_SCHEMA_VERSION,
+            "global": region_norm["global"] if region_norm else None,
+            "pages": region_norm["pages"] if region_norm else None,
+            "heading_fallback": bool(self._detail.get("heading_fallback")),
+            "registry_version": SELECTOR_REGISTRY_VERSION,
+        }
         # 分槽开关状态：family_cjk 取 state 原值（主开关关闭时槽位即被清空，重开后为跟随系统），
         # 子开关默认值与 _prepare 同口径（synth_weight_none 缺省=开）
         return {
@@ -2835,6 +4194,7 @@ class Plugin:
             "preview_level": _preview_level_of(state),
             "expand_level": _expand_level_of(state),
             "preview_cache_mb": _preview_cache_mb_of(state),
+            "region": region,
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,
