@@ -48,6 +48,7 @@
      * @property {boolean} preview
      * @property {number} preview_level
      * @property {number} expand_level
+     * @property {number} preview_cache_mb  预览子集缓存字节上限（MB），1-30，默认 8
      * @property {{done: boolean, fallback: boolean}} strip
      * @property {boolean} full_backfill
      * @property {string|null} uid
@@ -196,6 +197,8 @@
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
             "woff2Fallback": "woff2 不可用，将注入 ttf（体积更大）",
+            "previewCacheTitle": "预览缓存上限",
+            "previewCacheNote": "预览子集的磁盘缓存上限（MB），默认 8MB，约可容纳 700 个以上字体预览。调大减少重复裁剪，调小更省磁盘。1–30MB。",
             "copyLog": "复制日志",
             "history.empty": "暂无使用记录",
             "clearHistory": "清除历史字体记录",
@@ -293,6 +296,8 @@
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
             "woff2Fallback": "woff2 unavailable, injecting ttf (larger files)",
+            "previewCacheTitle": "Preview cache limit",
+            "previewCacheNote": "Disk cache limit for font preview subsets (MB). Default 8MB holds roughly 700+ previews. Larger = fewer re-subsets; smaller = less disk. 1-30MB.",
             "copyLog": "Copy log",
             "history.empty": "No history yet",
             "clearHistory": "Clear font history",
@@ -390,6 +395,8 @@
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
             "woff2Fallback": "woff2 が利用できないため ttf を注入します（サイズ大）",
+            "previewCacheTitle": "プレビューキャッシュ上限",
+            "previewCacheNote": "プレビュー用サブセットのディスクキャッシュ上限（MB）。既定 8MB で 700 個以上のプレビューを保持。大きくすると再サブセットが減り、小さくするとディスクを節約。1–30MB。",
             "copyLog": "ログをコピー",
             "history.empty": "記録はまだありません",
             "clearHistory": "フォント履歴を消去",
@@ -487,6 +494,8 @@
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
             "woff2Fallback": "woff2 사용 불가, ttf 주입(용량 커짐)",
+            "previewCacheTitle": "미리보기 캐시 상한",
+            "previewCacheNote": "미리보기 서브셋의 디스크 캐시 상한(MB). 기본 8MB는 700개 이상의 미리보기를 담을 수 있습니다. 크게 하면 재생성이 줄고, 작게 하면 디스크를 절약합니다. 1–30MB.",
             "copyLog": "로그 복사",
             "history.empty": "기록이 아직 없습니다",
             "clearHistory": "폰트 기록 지우기",
@@ -818,6 +827,15 @@
         var busy = busyHook[0];
         var setBusy = busyHook[1];
 
+        // 预览缓存上限（MB）：本地 state 立即反映滑块，避免回弹；payload 到达后
+        // 再同步为后端权威值。refs 记录待发送值与写入确认状态，供防抖与同步守卫用。
+        var cacheMbHook = useState(8);
+        var previewCacheMb = cacheMbHook[0];
+        var setPreviewCacheMb = cacheMbHook[1];
+        var cacheMbTimerRef = useRef(null);
+        var cacheMbValueRef = useRef(8);
+        var cacheMbPendingRef = useRef(false);
+
         var messageHook = useState("");
         var message = messageHook[0];
         var setMessage = messageHook[1];
@@ -959,9 +977,10 @@
         // 行内样张 / 展开块样张先用 fpPreviewSlot(family) 作内部族名写进 --fp-family；
         // 真正滚进视口时才向后端取该字体的极小子集 URL，注入 @font-face 后浏览器自动
         // 换字。隐藏的展开块（display:none）不会进入视口，因此不抽面、不加载字体。
-        var previewFontCssHook = useState("");
-        var previewFontCss = previewFontCssHook[0];
-        var setPreviewFontCss = previewFontCssHook[1];
+        // @font-face 规则直接写专用 <style> 节点（同步注入，写完即可接着 fonts.load），
+        // 不走 React state：一次滚动可新增数十条规则，走 state 会触发整面板重渲染（jank）。
+        var previewStyleRef = useRef(null);
+        var previewRulesRef = useRef({}); // slot -> rule 字符串，按 slot 去重
         var previewFontsRef = useRef({});
         var previewRetryRef = useRef({});
         var rootRef = useRef(null);
@@ -983,13 +1002,36 @@
             focusHeaderNow: focusHeaderNow,
         };
 
+        // 把 @font-face 规则增量追加进专用 style 节点（不走 state，避免全量重写 jank）。
+        // 同一 slot 只写一次；用 CSSStyleSheet.insertRule 只追加新规则，不碰已加载字体的
+        // 规则——旧版整段 textContent 重写会销毁全部 @font-face 触发宽度重排（放大器：
+        // 每次新字体滚入都全量重建，24 条→60 条）。CEF 126 已实测 insertRule 可用，
+        // 保留 textContent 写法作兜底（sheet 不可用时回退）。
+        function commitPreviewRule(slot, rule) {
+            if (previewRulesRef.current[slot]) return;
+            previewRulesRef.current[slot] = rule;
+            var node = previewStyleRef.current;
+            if (!node) return;
+            var sheet = node.sheet;
+            if (sheet && typeof sheet.insertRule === "function") {
+                try {
+                    sheet.insertRule(rule, sheet.cssRules.length);
+                    return;
+                } catch (e) {
+                    // insertRule 抛错（老引擎/无效规则）时回退到全量 textContent 写法
+                }
+            }
+            node.textContent = Object.keys(previewRulesRef.current).map(function (k) {
+                return previewRulesRef.current[k];
+            }).join("");
+        }
+
         function ensurePreviewFont(family, slot) {
             if (!family || !slot) return;
             var seen = previewFontsRef.current;
-            if (seen[family] === "loading" || seen[family] === "ok") return; // 去重：同时可见的多行同一字体只取一次
-            // 失败重试：error 态的行重新进入视口时允许再取一次（IO 回调对 error 行
-            // 不解除观察）。每个字体整个会话最多重试 1 次，仍失败维持 error，防止
-            // 滚动往返无限打 RPC。
+            // 已就绪/在途：直接返回，不重复发 RPC（预热与 IO 懒加载天然去重）
+            if (seen[family] === "ok" || seen[family] === "loading") return;
+            // 失败态：走原有最多 1 次重试；已重试过则放弃（显示 fallback）
             var retries = previewRetryRef.current;
             if (seen[family] === "error") {
                 if ((retries[family] || 0) >= 1) return;
@@ -997,7 +1039,8 @@
             }
             seen[family] = "loading";
             var gen = previewGenRef.current;
-            serverApi.callPluginMethod("get_preview_font", { family: family }).then(function (res) {
+            // 返回 promise 供全量预热队列限流；IO/rescan 等调用点忽略返回值即可
+            return serverApi.callPluginMethod("get_preview_font", { family: family }).then(function (res) {
                 if (gen !== previewGenRef.current) return; // 字体服务已重启（代数变化），丢弃旧代数的 URL
                 var value = unwrap(res);
                 if (!value || value.ok !== true || !value.url) {
@@ -1009,10 +1052,63 @@
                     'font-weight:400;font-display:swap;src:url("' + value.url + '") ' +
                     'format("' + fmt + '");}\n';
                 seen[family] = "ok";
-                setPreviewFontCss(function (prev) { return prev + rule; });
+                commitPreviewRule(slot, rule);
+                // 触发浏览器真正下载字体子集（全量预热依赖它）；不再挂任何加载期门控回调。
+                // 门控对横向跳无效且会造成字体名短暂消失的闪烁，已全撤（用户明确要求）。
+                try {
+                    var loaded = document.fonts.load('15px "' + slot + '"');
+                    if (loaded && typeof loaded.catch === "function") loaded.catch(function () {});
+                } catch (e) {}
             }).catch(function () {
                 seen[family] = "error";
             });
+        }
+
+        // 全量预热：面板打开即把当前列表所有字体的子集预取并加载，不等滚动触发。
+        // 复用 ensurePreviewFont（含去重/RPC/commitPreviewRule/fonts.load/状态机），
+        // 本函数只负责「收集目标 + 限流并发」，不重写任何字体加载逻辑。
+        function prewarmAllFonts() {
+            var root = rootRef.current;
+            if (!root) return;
+            var nodes = root.querySelectorAll(".fp-nm[data-fp-font]");
+            var families = [];
+            var seen = {};
+            for (var i = 0; i < nodes.length; i++) {
+                var fam = nodes[i].getAttribute("data-fp-font");
+                var slt = nodes[i].getAttribute("data-fp-slot");
+                if (!fam || !slt || seen[fam]) continue;
+                seen[fam] = 1;
+                families.push({ family: fam, slot: slt });
+            }
+            if (!families.length) return;
+            var LIMIT = 6; // 并发上限：60 个字体也不会瞬间打满 60 个 RPC
+            var idx = 0;
+            var active = 0;
+            function pump() {
+                while (idx < families.length && active < LIMIT) {
+                    var item = families[idx++];
+                    active++;
+                    var p;
+                    try {
+                        p = ensurePreviewFont(item.family, item.slot);
+                    } catch (e) {
+                        p = null;
+                    }
+                    if (p && typeof p.then === "function") {
+                        p.then(finish, finish);
+                    } else {
+                        Promise.resolve().then(finish); // 去重早退项也走异步，避免深递归
+                    }
+                }
+                if (idx >= families.length && typeof window !== "undefined") {
+                    window.__fpPrewarmDone = true; // 预热队列已全部入队（供探针观察）
+                }
+            }
+            function finish() {
+                active--;
+                pump();
+            }
+            pump();
         }
 
         // 视口可见判定：嵌入式 CEF 的 about:blank webview 里，IntersectionObserver 对
@@ -1066,6 +1162,7 @@
             var mo = new MutationObserver(function () { rescanNodes(); });
             mo.observe(root, { childList: true, subtree: true });
             rescanNodes();
+            prewarmAllFonts(); // 面板打开即全量预热，不等滚动触发（异步进行，不阻塞 effect 返回）
             return function () { mo.disconnect(); io.disconnect(); ioRef.current = null; };
         }, []);
 
@@ -1087,7 +1184,21 @@
             previewGenRef.current += 1;
             previewFontsRef.current = {};
             previewRetryRef.current = {}; // 新端口 = 新机会，重试计数一并清零
-            setPreviewFontCss("");
+            previewRulesRef.current = {}; // 同 slot 去重表一并清，允许写入新 URL 的规则
+            // insertRule 追加的规则挂在 sheet 上：光清 textContent 不足以删除它们，
+            // 必须逐条 deleteRule，否则新端口的旧 URL 规则残留会 404。
+            if (previewStyleRef.current) {
+                var psheet = previewStyleRef.current.sheet;
+                if (psheet && typeof psheet.deleteRule === "function") {
+                    try {
+                        while (psheet.cssRules.length) psheet.deleteRule(0);
+                    } catch (e) {
+                        previewStyleRef.current.textContent = "";
+                    }
+                } else {
+                    previewStyleRef.current.textContent = "";
+                }
+            }
             // reset 后同样同步补调当前可见行：端口变了要重新取新 URL，
             // 只靠 IO 首帧回调同样会漏加载。
             var nodes = rootRef.current.querySelectorAll(".fp-nm[data-fp-font],.fp-prev[data-fp-font],.fp-ex-line[data-fp-font]");
@@ -1095,6 +1206,7 @@
                 nodes[i].__fpObserved = 0;
             }
             rescanNodes();
+            prewarmAllFonts(); // 端口全变、旧 URL 全部失效：重新全量预热
         }, [state && state.server && state.server.port]);
 
         // ---- P4 展开滚动稳定 ----------------------------------------------------
@@ -1137,6 +1249,7 @@
             return function () {
                 aliveRef.current = false;
                 stopSettle();
+                if (cacheMbTimerRef.current) clearTimeout(cacheMbTimerRef.current);
             };
         }, []);
 
@@ -1258,6 +1371,16 @@
                 expandLevel = (state.expand_level | 0) > 0 ? 1 : 0;
             }
         }
+        // 预览缓存字节上限（MB）：payload 为后端权威值，收敛到 1-30
+        var payloadCacheMb = 8;
+        if (state && typeof state.preview_cache_mb === "number") {
+            payloadCacheMb = Math.max(1, Math.min(30, state.preview_cache_mb | 0));
+        }
+        // payload 更新（含 RPC 回包 applyPayload）后同步本地滑块值；写入未确认期间
+        // 暂停同步，避免拖动中被稍后到达的旧 payload 拉回（回弹）。
+        useEffect(function () {
+            if (!cacheMbPendingRef.current) setPreviewCacheMb(payloadCacheMb);
+        }, [payloadCacheMb]);
         var previewOn = previewLevel !== 0; // 兼容旧引用
 
         // 档位滑块行组件 TierSliderRow 已提到模块层（buttonOf 之后），
@@ -1296,6 +1419,25 @@
                 setBusy(false);
                 if (value && value.ok !== false) startSettle();
             });
+        }
+
+        // 预览缓存上限滑块：纯缓存设置，后端只落盘、不重新注入 CSS，因此不占用
+        // busy、也不走 startSettle（call 内部已 applyPayload 回写新值）。连续拖动会
+        // 高频 onChange，用短防抖只送最终值，避免走 setLevels 的 busy 互斥把中间的
+        // onChange 丢掉、滑块被旧 payload 拉回。本地 state 在 onChange 当下即更新。
+        function setCacheMb(v) {
+            var next = Math.max(1, Math.min(30, v | 0));
+            cacheMbValueRef.current = next;
+            cacheMbPendingRef.current = true;
+            setPreviewCacheMb(next);
+            if (cacheMbTimerRef.current) clearTimeout(cacheMbTimerRef.current);
+            cacheMbTimerRef.current = setTimeout(function () {
+                cacheMbTimerRef.current = null;
+                call("set_split_options", { preview_cache_mb: cacheMbValueRef.current }).then(function () {
+                    // 若期间又拖动产生了新值，保护继续有效，直到最后一次写入确认
+                    if (!cacheMbTimerRef.current) cacheMbPendingRef.current = false;
+                });
+            }, 100);
         }
 
         // 复制日志：后端只读返回裁剪后的最新日志；前端写剪贴板。不占用 busy，也不动其它面板状态
@@ -2176,6 +2318,18 @@
                     h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, t("woff2Fallback"))
                 )
                 : null,
+            // 预览缓存字节上限（MB）：原生数值滑块 1-30，默认 8，显示实际数值（非档位 notch 模式）。
+            // 纯缓存设置，走 setCacheMb（本地 state 立即更新，拖动不回弹）。
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-cache:row" },
+                h(deckyFrontendLib.SliderField, {
+                    value: previewCacheMb, min: 1, max: 30, step: 1,
+                    showValue: true, validValues: "steps", minimumDpadGranularity: 1,
+                    label: t("previewCacheTitle"),
+                    description: t("previewCacheNote"),
+                    layout: "below",
+                    onChange: function (v) { setCacheMb(v); },
+                })
+            ),
             // 字体预览样张档位滑块：0 关闭 / 1 方案 A / 2 方案 B
             h(TierSliderRow, { key: "fp-preview:row", label: t("previewSamples"), note: t("previewNote"), level: previewLevel,
                 setLevel: function (v) { setLevels({ preview_level: v }); },
@@ -2318,7 +2472,7 @@
 
         return h("div", { ref: function (el) { rootRef.current = el; } },
             h("style", { key: "fp-focus-css" }, focusCss),
-            h("style", { key: "fp-preview-font-css" }, previewFontCss),
+            h("style", { key: "fp-preview-font-css", ref: previewStyleRef }),
             currentSection, pickerSection, categorySections, actionSection, advancedSection,
             confirmMenu());
     }

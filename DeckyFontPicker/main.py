@@ -128,7 +128,10 @@ WOFF2_MAX_BYTES = 3 * 1024 * 1024
 # 启动清理改为按 state 反推保护集，清理的「保护优先于上限」逻辑不变
 CACHE_KEEP_FILES = 9
 CACHE_EXTS = (".ttf", ".otf", ".woff", ".woff2")
-PREVIEW_CACHE_MAX_FILES = 40
+# 预览子集缓存：只保留字节上限，不再限制文件数（低配机预热几十个字体时，
+# 40 文件上限会把一部分挤出缓存、反复冷抽面）。字节上限默认 8MB，高级分区
+# 滑块可在 1-30MB 间调节，state 的 preview_cache_mb 为准。
+PREVIEW_CACHE_DEFAULT_MB = 8
 PREVIEW_CACHE_MAX_BYTES = 8 * 1024 * 1024
 
 PREFERRED_CJK = [
@@ -609,6 +612,7 @@ class StatePayload(TypedDict, total=False):
     preview: bool  # 预览开关（档位非 0）
     preview_level: int  # 预览档位
     expand_level: int  # 预览展开档位
+    preview_cache_mb: int  # 预览子集缓存字节上限（MB），1-30，默认 8（高级分区滑块）
     strip: dict  # 剔字记账 {"done": bool, "fallback": bool}
     full_backfill: bool  # 完整版 face 是否以 Full 内部族回填
     uid: str | None  # 当前已发现的 UI uid
@@ -978,10 +982,13 @@ def _preview_cache_dir():
     return os.path.join(CACHE_DIR, PREVIEW_CACHE_SUBDIR)
 
 
-def _prune_preview_cache():
-    """preview 子集缓存回收：按 mtime LRU 保留最近使用,上限 40 个或总量 8 MiB
-    (任一触顶即从最旧开始删);*.part 为 helper 崩溃残留,超 5 分钟收尾删除。
+def _prune_preview_cache(limit_bytes=None):
+    """preview 子集缓存回收：按 mtime LRU 保留最近使用，只按字节总量上限
+    （默认取 state 的 preview_cache_mb，1-30MB 可调），不再限制文件数；
+    *.part 为 helper 崩溃残留,超 5 分钟收尾删除。
     只扫 CACHE_DIR/preview/ 子目录,不碰主 face 的 9 文件 LRU。返回删除数量。"""
+    if limit_bytes is None:
+        limit_bytes = _preview_cache_mb_of(read_state()) * 1024 * 1024
     d = _preview_cache_dir()
     try:
         names = os.listdir(d)
@@ -1022,7 +1029,7 @@ def _prune_preview_cache():
     kept_count = 0
     kept_bytes = 0
     for path, st in entries:
-        if kept_count < PREVIEW_CACHE_MAX_FILES and kept_bytes + st.st_size <= PREVIEW_CACHE_MAX_BYTES:
+        if kept_bytes + st.st_size <= limit_bytes:
             kept_count += 1
             kept_bytes += st.st_size
             continue
@@ -1034,7 +1041,7 @@ def _prune_preview_cache():
         removed += 1
     if removed:
         log(f"缓存清理：preview 子集原有 {len(entries)} 个，保留 {kept_count} 个"
-            f"（{_human_size(kept_bytes)} / 上限 {PREVIEW_CACHE_MAX_FILES} 个或 {_human_size(PREVIEW_CACHE_MAX_BYTES)}），删除 {removed} 个")
+            f"（{_human_size(kept_bytes)} / 上限 {_human_size(limit_bytes)}），删除 {removed} 个")
     return removed
 
 
@@ -1631,6 +1638,20 @@ def _norm_level(value, default=0):
     return level if level in (0, 1, 2) else default
 
 
+def _norm_preview_cache_mb(value, default=8):
+    """预览缓存字节上限（MB）收敛到 1-30，非数字/越界回退 default。"""
+    try:
+        mb = int(value)
+    except (TypeError, ValueError):
+        return default
+    return mb if 1 <= mb <= 30 else default
+
+
+def _preview_cache_mb_of(state):
+    """预览缓存字节上限（MB）。旧 state 无 preview_cache_mb 键 = 默认 8，无感升级。"""
+    return _norm_preview_cache_mb(state.get("preview_cache_mb"), PREVIEW_CACHE_DEFAULT_MB)
+
+
 def _norm_expand(value, default=0):
     """C 方案开关：0 关 / 1 开；旧 2 档（内嵌）迁移为 1。"""
     try:
@@ -1889,7 +1910,8 @@ class Plugin:
         return await plugin._apply(state.get("family"))
 
     async def set_split_options(self, cjk_split=None, synth_weight_none=None,
-                                preview_level=None, expand_level=None, preview=None):
+                                preview_level=None, expand_level=None, preview=None,
+                                preview_cache_mb=None):
         """分槽开关入口：包一层计时，实际逻辑在 _set_split_options_inner。"""
         plugin = _bind(self)  # Decky 3.3.1 可能把类本身当 self 传进来，先回落到实例
         t0 = time.monotonic()
@@ -1897,12 +1919,14 @@ class Plugin:
             return await plugin._set_split_options_inner(
                 cjk_split=cjk_split, synth_weight_none=synth_weight_none,
                 preview_level=preview_level, expand_level=expand_level, preview=preview,
+                preview_cache_mb=preview_cache_mb,
             )
         finally:
             log(f"[耗时] 分槽开关调用合计（cjk_split={cjk_split}）: {_elapsed_ms(t0)} ms")
 
     async def _set_split_options_inner(self, cjk_split=None, synth_weight_none=None,
-                                preview_level=None, expand_level=None, preview=None):
+                                preview_level=None, expand_level=None, preview=None,
+                                preview_cache_mb=None):
         """分槽注入的主/子开关（持久化）。参数都可选，None = 不变。
 
         子开关默认值（主开关开启时）：synth_weight_none 缺省视为开。
@@ -1915,12 +1939,15 @@ class Plugin:
         重开后两槽均为空、不自动恢复旧选择。
         影响注入 CSS 的开关变化（剔字掩码版本 / Motiva Sans / synthesis 行）
         会按当前字体重新注入一次；没有已选字体时只落盘，不注入。
+        preview_cache_mb（预览子集缓存字节上限 1-30MB，默认 8）是纯缓存设置：
+        只落盘、不参与 changed，绝不触发按当前字体重新注入。
         """
         plugin = _bind(self)
         state = read_state()
         changed = False
         turned_off = False
         levels_changed = False
+        cache_changed = False
         if cjk_split is not None:
             value = bool(cjk_split)
             turned_off = bool(state.get("cjk_split")) and not value
@@ -1947,12 +1974,20 @@ class Plugin:
             value = _norm_expand(expand_level, _expand_level_of(state))
             levels_changed = levels_changed or _expand_level_of(state) != value
             state["expand_level"] = value
-        if not (changed or levels_changed):
+        if preview_cache_mb is not None:
+            # 纯缓存上限：归一化后落盘，用独立标志，绝不计入 changed（否则会按
+            # 当前字体重新注入 CSS，对调缓存大小完全没必要）
+            value = _norm_preview_cache_mb(preview_cache_mb, _preview_cache_mb_of(state))
+            if _preview_cache_mb_of(state) != value:
+                cache_changed = True
+            state["preview_cache_mb"] = value
+        if not (changed or levels_changed or cache_changed):
             return plugin._payload()
         write_state(state)
         log(f"分槽开关更新：cjk_split={state.get('cjk_split')} "
             f"synth_weight_none={state.get('synth_weight_none', True)} "
-            f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)}")
+            f"preview_level={_preview_level_of(state)} expand_level={_expand_level_of(state)} "
+            f"preview_cache_mb={_preview_cache_mb_of(state)}")
         if not changed:
             # 只有预览档位变化：不影响注入 CSS，无需重新注入
             return plugin._payload()
@@ -2799,6 +2834,7 @@ class Plugin:
             "preview": bool(_preview_level_of(state) != 0),
             "preview_level": _preview_level_of(state),
             "expand_level": _expand_level_of(state),
+            "preview_cache_mb": _preview_cache_mb_of(state),
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,

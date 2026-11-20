@@ -8,7 +8,7 @@
 
 A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that applies any font already installed on your Steam Deck to the Steam Big Screen UI — Home, MainMenu, the Quick Access Menu, and notification toasts such as friend-online popups. It never writes to `~/homebrew/themes` and does not need CSS Loader: styles go in through Decky's own `inject_css_into_tab` and are removed again when you restore the default.
 
-**Current version: 1.4.22.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
+**Current version: 1.4.23.** One package, four UI languages — the panel follows the Steam UI language. `fontTools` 4.68.0 is bundled, so there is nothing else to install.
 
 ## Install
 
@@ -69,6 +69,7 @@ DeckyFontPicker/vendor/LICENSE-fontTools
 ### Advanced
 
 - `Font preview samples`: a three-notch slider — 0 off, 1 Compact (a single-line sample per row), 2 Detailed (regular and bold samples); low-memory devices should use Off or Compact. Samples are served as tiny subsets keeping only the glyphs the sample text uses (a few KB), never the whole face.
+- `Preview cache limit`: disk cache limit for font preview subsets (MB), default 8MB (roughly 700+ previews); adjustable 1–30MB, larger means fewer re-subsets, smaller saves disk.
 - `Expand preview on focus`: when on, focusing a font row expands a large Latin / Chinese / Japanese / Korean sample inside the row. The old three-level control (including the inline layout) has been folded into this single switch; existing settings migrate automatically.
 - `Disable synthetic bold`: on by default; adds `font-synthesis-weight: none` to the injected rule so fonts without a bold face are no longer emboldened synthetically. Independent of split and always visible.
 - `Split by language`: the master switch described above.
