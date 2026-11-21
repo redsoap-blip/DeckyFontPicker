@@ -57,6 +57,8 @@
      * @property {{port: (number|null), tabs: (number|null), error: string}} cef
      * @property {RegionState|null} region 区域模式状态块（Phase 2 契约：mode/schema_version/
      *   global/pages/heading_fallback/registry_version；global/pages 结构损坏时为 null）
+     * @property {boolean} [desktop_config] 桌面配置器探针开关（state 键，缺省 false）
+     * @property {string|null} [config_url] 桌面配置页完整 URL（开关开且 FontServer 在跑才有值）
      */
     /**
      * 区域槽位：{latin, cjk, inherit?}。latin/cjk = 字体族名字符串或 null（null = 继承）；
@@ -1646,6 +1648,11 @@
         // 旧后端 payload 无 region 块时 regionState 为 null：开关与设置区整体不渲染。
         var regionState = (state && state.region && typeof state.region === "object") ? state.region : null;
         var regionOn = !!(regionState && regionState.mode);
+        // 桌面配置器探针：开关 + 配置页完整 URL（均来自后端 payload；探针专用，
+        // 硬编码中文不进 DICTS）。旧后端无这两个键时按关闭处理（开关照常渲染）。
+        var desktopOn = !!(state && state.desktop_config);
+        var configUrl = (desktopOn && state && typeof state.config_url === "string")
+            ? state.config_url : null;
         var gSlots = (regionState && regionState.global && typeof regionState.global === "object") ? regionState.global : null;
         var pPages = (regionState && regionState.pages && typeof regionState.pages === "object") ? regionState.pages : null;
         // 字体预览样张档位：0 关闭 / 1 方案 A / 2 方案 B（兼容旧布尔 preview 键，缺省视为 2）
@@ -1763,6 +1770,18 @@
                         setRegionAnnounce("");
                     }
                 }
+            });
+        }
+
+        // 桌面配置器探针开关：只控制后端 /config 路由组可见性（关 = 整组 404），
+        // 不触发注入，不做注入确认轮询；回包经 call 内部 applyPayload 更新，
+        // 开关状态与 config_url 随新 payload 一起到位。
+        function toggleDesktopConfig() {
+            if (busy) return;
+            setBusy(true);
+            stopSettle();
+            call("set_desktop_config", { enabled: !desktopOn }).then(function (value) {
+                setBusy(false);
             });
         }
 
@@ -3072,6 +3091,25 @@
                     useToggleRail: true,
                     onChange: toggleRegionMode,
                 })
+            ) : null,
+            // 桌面配置器探针开关（1.6.0-prerelease 探针专用，硬编码中文，不进 DICTS）：
+            // 开 = 后端 /config 路由组可见（Steam 桌面模式浏览器可访问）；关 = 整组 404。
+            // 只读探针：配置页零编辑功能，无任何 POST 路由。
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-desktop:row" },
+                h(deckyFrontendLib.ToggleField, {
+                    label: "桌面配置器",
+                    description: "探针：开启后可在 Steam 桌面模式浏览器打开插件配置页（只读，不可编辑）",
+                    checked: desktopOn,
+                    disabled: busy,
+                    useToggleRail: true,
+                    onChange: toggleDesktopConfig,
+                })
+            ),
+            // 开启时的状态行：完整配置页 URL（含 token），从桌面浏览器复制打开即可验证。
+            // 长文案在窄面板折行，样式沿用 cefPortInfo 行 + cefNoPort 错误行的折行属性。
+            desktopOn && configUrl ? h(deckyFrontendLib.PanelSectionRow, { key: "fp-desktop:url" },
+                h("div", { style: { opacity: 0.55, fontSize: "10px", lineHeight: "1.5", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } },
+                    "配置页地址：" + configUrl)
             ) : null,
             // 分槽注入主开关：开启后西文 / 中日韩两槽位各自选字体，确认键按语言归属落槽
             h(deckyFrontendLib.PanelSectionRow, { key: "fp-split:row" },

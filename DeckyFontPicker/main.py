@@ -17,6 +17,7 @@ from __future__ import annotations  # PEP 563：注解惰性化为字符串，�
 
 import asyncio
 import hashlib
+import hmac
 import json
 import os
 import re
@@ -28,6 +29,7 @@ import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import TypedDict
 from urllib.error import HTTPError
+from urllib.parse import parse_qs, urlsplit
 from urllib.request import Request, urlopen
 
 try:
@@ -619,6 +621,8 @@ class StatePayload(TypedDict, total=False):
     expand_level: int  # 预览展开档位
     preview_cache_mb: int  # 预览子集缓存字节上限（MB），1-30，默认 8（高级分区滑块）
     region: dict  # 区域模式状态块 {mode, schema_version, global, pages, heading_fallback, registry_version}（与前端 JSDoc 单点同步）
+    desktop_config: bool  # 桌面配置器探针开关（state 键 desktop_config，缺省 false）
+    config_url: str | None  # 桌面配置页完整 URL（开关开且 FontServer 在跑才有值，否则 None）
     strip: dict  # 剔字记账 {"done": bool, "fallback": bool}
     full_backfill: bool  # 完整版 face 是否以 Full 内部族回填
     uid: str | None  # 当前已发现的 UI uid
@@ -1183,8 +1187,124 @@ def _protected_cache_files(state, families):
 # 本地字体 HTTP 服务
 # --------------------------------------------------------------------------- #
 
+# --------------------------------------------------------------------------- #
+# 桌面配置器（探针 1.6.0-prerelease）：最小只读 HTML 页，字符串常量嵌 main.py，
+# 零依赖、仅中文（探针专用，不进四字典）。结构：
+#   ① 可达性横幅（服务端静态渲染，URL 一打开即证明 localhost 可达）
+#   ② 环境信息：UA（本地取）+ region mode / registry_version（来自 state API）
+#   ③ JS fetch /config/api/state 的第二重可达性证明（页面加载与 API 是两条独立验证）
+#   ④ 只读 region 状态摘要（5 区域 × latin/cjk 声明/生效值）
+# 无编辑器、无预览、无任何 POST 调用；token 从页面 URL 查询参数带入。
+# --------------------------------------------------------------------------- #
+_DESKTOP_CONFIG_HTML = """<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeckyFontPicker 桌面配置器探针</title>
+<style>
+  body { font-family: sans-serif; margin: 24px auto; max-width: 860px; color: #222; }
+  h1 { font-size: 19px; margin: 14px 0 4px; }
+  h2 { font-size: 15px; margin-top: 24px; }
+  #banner { background: #e6f4ea; color: #1e8e3e; border: 1px solid #b7dfc2;
+            padding: 10px 14px; border-radius: 6px; font-size: 14px; font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #bbb; padding: 5px 10px; font-size: 13px; text-align: left; }
+  th { background: #f2f2f2; }
+  .muted { color: #777; font-size: 12px; }
+  .err { color: #c0392b; font-size: 12px; }
+  .ok { color: #1e8e3e; font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="banner">桌面配置器探针：localhost 可达</div>
+<h1>DeckyFontPicker 桌面配置器（探针）</h1>
+<p class="muted">本页为只读探针：验证 Steam 桌面模式浏览器能否直连插件 FontServer（127.0.0.1）。无任何编辑功能。</p>
+
+<h2>环境</h2>
+<p class="muted" id="env">UA 读取中…</p>
+
+<h2>第二重可达性证明（/config/api/state）</h2>
+<p id="apiState" class="muted">请求中…</p>
+
+<h2>区域状态（只读，全局作用域）</h2>
+<table id="regionTable">
+  <thead><tr><th>区域</th><th>latin 声明</th><th>latin 生效</th><th>cjk 声明</th><th>cjk 生效</th><th>继承目标</th></tr></thead>
+  <tbody></tbody>
+</table>
+<p class="muted" id="regionMeta"></p>
+
+<script>
+(function () {
+  "use strict";
+  var qs = new URLSearchParams(location.search);
+  var token = qs.get("token") || "";
+
+  function el(id) { return document.getElementById(id); }
+  function setMsg(id, text, cls) { var n = el(id); if (n) { n.textContent = text; n.className = cls || "muted"; } }
+  function api(name) { return "/config/api/" + name + "?token=" + encodeURIComponent(token); }
+
+  // 环境：UA 本地即取（不依赖 API）；region mode / registry_version 随 state 一起补全
+  el("env").textContent = "UA：" + navigator.userAgent;
+
+  function renderState(data) {
+    var regionBlock = data.region || {};
+    setMsg("apiState", "API 可达：/config/api/state 返回 200（ok=" + data.ok +
+      "，regions=" + (data.regions || []).length +
+      "，families=" + (data.families || []).length + "）", "ok");
+    el("regionMeta").textContent = "region mode=" + regionBlock.mode +
+      "，registry_version=" + regionBlock.registry_version +
+      "，schema_version=" + regionBlock.schema_version +
+      "，FontServer 端口=" + (data.server && data.server.port);
+    var tbody = el("regionTable").getElementsByTagName("tbody")[0];
+    tbody.textContent = "";
+    var rows = data.regions || [];
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var cells = [
+        r.region,
+        r.declared.latin == null ? "（未设置）" : r.declared.latin,
+        r.effective.latin == null ? "Steam 原生" : r.effective.latin,
+        r.declared.cjk == null ? "（未设置）" : r.declared.cjk,
+        r.effective.cjk == null ? "Steam 原生" : r.effective.cjk,
+        r.declared.inherit || "—"
+      ];
+      var tr = document.createElement("tr");
+      for (var c = 0; c < cells.length; c++) {
+        var td = document.createElement("td");
+        td.textContent = cells[c];
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+    }
+  }
+
+  // 第二重可达性证明：页面能打开只证明 FontServer 本身可达；这条 fetch 再独立
+  // 证明 /config/api/state（含线程桥）在同源浏览器里也可达。两条链路互不依赖。
+  fetch(api("state")).then(function (res) {
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return res.json();
+  }).then(function (data) {
+    if (!data || data.ok !== true) throw new Error((data && data.error) || "state ok != true");
+    renderState(data);
+  }).catch(function (e) {
+    setMsg("apiState", "API 不可达：/config/api/state 请求失败：" + e, "err");
+  });
+})();
+</script>
+</body>
+</html>
+"""
+
+
 class FontServer:
-    """只绑 127.0.0.1，随机端口 + 随机 token 前缀，仅提供已注册的字体文件。"""
+    """只绑 127.0.0.1，随机端口 + 随机 token 前缀，仅提供已注册的字体文件。
+
+    探针（1.6.0-prerelease）：同一服务加一组只读 /config 路由（桌面配置器）——
+    鉴权复用 self.token（与字体 URL 同一令牌，同源派生），desktop_config 开关关时
+    整组路由 404。线程桥：_bridge 由插件事件循环一侧注入（_bridge_call），
+    /config/api/state 经它把 _payload 调度回插件循环，绝不跨线程直接碰 asyncio 对象。
+    探针零编辑功能：组内没有任何 POST 路由（POST 一律 405）。"""
 
     def __init__(self):
         self._httpd = None
@@ -1192,6 +1312,8 @@ class FontServer:
         self.port = None
         self.token = None
         self._assets = {}
+        self._plugin = None  # 插件实例引用（Plugin.__init__ 注入），/config/api/state 用
+        self._bridge = None  # (coro) -> concurrent.futures.Future，插件循环侧注入
 
     @property
     def running(self):
@@ -1225,7 +1347,25 @@ class FontServer:
             def do_GET(self):
                 self._serve(False)
 
+            def do_POST(self):
+                # 探针：仅 /config 整组交给 _serve_config（组内无 POST 路由 → 一律 405）；
+                # 其余路径维持基线行为（BaseHTTPRequestHandler 缺省 501 Unsupported
+                # method），字体路径的 POST 语义与探针前完全一致。
+                path = self.path.split("?")[0]
+                if path == "/config" or path.startswith("/config/"):
+                    length = int(self.headers.get("Content-Length") or 0)
+                    body = self.rfile.read(length) if length > 0 else b""
+                    owner._serve_config(self, self.path, False, body)
+                    return
+                self.send_error(501, "Unsupported method ('POST')")
+
             def _serve(self, head_only):
+                path = self.path.split("?")[0]
+                # 探针：桌面配置器 /config 整组路由，先于字体路径分流
+                #（开关关 → 组内 404；token 校验在 _serve_config 内做）
+                if path == "/config" or path.startswith("/config/"):
+                    owner._serve_config(self, self.path, head_only)
+                    return
                 prefix = f"/f/{owner.token}/"
                 path = self.path.split("?")[0]
                 if not path.startswith(prefix):
@@ -1285,6 +1425,115 @@ class FontServer:
         self._assets[name] = (file_path, mime)
         return f"http://{DECKY_HOST}:{self.port}/f/{self.token}/{name}"
 
+    # ---- 桌面配置器探针：/config 只读路由组 --------------------------------- #
+
+    def _serve_config(self, handler, raw, head_only, post_body=None):
+        """/config 整组路由（探针）。判定顺序：开关关 → 404（端点不可见，token 不
+        参与）；开关开 → token 校验（与字体 URL 同一令牌，错/缺 → 403）；探针零
+        编辑功能 → 任何 POST 一律 405（/config/api/set 等编辑路由不存在）；最后按
+        路径分发两个只读 GET 端点（页面 + state）。"""
+        def respond(code, body=b"", ctype="application/json; charset=utf-8"):
+            handler.send_response(code)
+            handler.send_header("Content-Type", ctype)
+            handler.send_header("Content-Length", str(len(body)))
+            handler.send_header("Cache-Control", "no-store")
+            handler.end_headers()
+            if body and not head_only:
+                try:
+                    handler.wfile.write(body)
+                except (BrokenPipeError, ConnectionResetError):
+                    pass
+
+        # 开关关：整组 404（不泄露存在性）。每次请求实时读 state，避免缓存陈旧。
+        try:
+            enabled = bool(read_state().get("desktop_config", False))
+        except Exception:
+            enabled = False
+        if not enabled:
+            respond(404, b'{"ok": false, "error": "not found"}')
+            return
+        query = parse_qs(urlsplit(raw).query)
+        token = (query.get("token") or [None])[0]
+        # 鉴权：与字体 URL 同一令牌（同源派生）；错/缺一律 403
+        if not isinstance(token, str) or self.token is None or \
+                not hmac.compare_digest(token, self.token):
+            respond(403, b'{"ok": false, "error": "token mismatch"}')
+            return
+        if post_body is not None:
+            # 探针无任何 POST 路由（含 /config/api/set）：编辑功能一律不提供
+            respond(405, b'{"ok": false, "error": "method not allowed"}')
+            return
+        path = raw.split("?")[0]
+        if path in ("/config", "/config/"):
+            respond(200, _DESKTOP_CONFIG_HTML.encode("utf-8"), "text/html; charset=utf-8")
+            return
+        if path == "/config/api/state":
+            data = self._config_state()
+            respond(200, json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            return
+        respond(404, b'{"ok": false, "error": "not found"}')
+
+    def _config_state(self):
+        """/config/api/state（探针只读）：region payload 契约 + 5 区域声明/生效值
+        + capability 族清单。_payload 经线程桥在插件事件循环上执行（插件循环侧注入
+        的 _bridge_call / run_coroutine_threadsafe）；循环未就绪（_main 未跑或已关）
+        时兜底直调——_payload 本体是纯读实现（读 state 文件 + 内存快照），直调安全。
+        其余取数同步实现：normalize / resolve 全是纯函数；_family_map 自带双检锁，
+        线程安全。"""
+        plugin = self._plugin
+        payload = None
+        bridge = self._bridge
+        if plugin is not None and bridge is not None:
+            try:
+                # 构造协程对象不触碰事件循环；调度与执行全部发生在插件循环线程
+                future = bridge(_payload_bridge_coro(plugin))
+                if future is not None:
+                    payload = future.result(timeout=30)
+            except Exception:
+                payload = None
+        if payload is None and plugin is not None:
+            try:
+                payload = plugin._payload()
+            except Exception:
+                payload = {}
+        if not isinstance(payload, dict):
+            payload = {}
+        region_block = payload.get("region")
+        if not isinstance(region_block, dict):
+            region_block = None
+        state = read_state()
+        cap = _region_capability(_family_map())
+        doc = state.get("region_profiles") if isinstance(state.get("region_profiles"), dict) else None
+        if doc is None:
+            doc, _notes = normalize_region_profiles(state, capability=cap)
+        global_profiles = doc.get("global") if isinstance(doc, dict) else None
+        regions_out = []
+        for rid in REGION_IDS:
+            slot = global_profiles.get(rid) if isinstance(global_profiles, dict) else None
+            if not isinstance(slot, dict):
+                slot = _region_slot_default(rid)
+            eff_latin, eff_cjk = resolve_region_font(rid, None, global_profiles or {})
+            regions_out.append({
+                "region": rid,
+                "declared": {"latin": slot.get("latin"), "cjk": slot.get("cjk"),
+                             "inherit": slot.get("inherit")},
+                "effective": {"latin": eff_latin, "cjk": eff_cjk},
+            })
+        families_out = [
+            {"family": name, "zh": bool(v.get("zh")), "ja": bool(v.get("ja")), "ko": bool(v.get("ko"))}
+            for name, v in sorted(cap.items())
+        ]
+        return {
+            "ok": True,
+            "desktop_config": True,
+            "region": region_block,
+            "region_ids": list(REGION_IDS),
+            "region_pages": list(REGION_PAGES),
+            "regions": regions_out,
+            "families": families_out,
+            "server": {"running": self.running, "port": self.port},
+        }
+
     def stop(self):
         httpd, self._httpd = self._httpd, None
         self._assets = {}
@@ -1298,6 +1547,15 @@ class FontServer:
         self.port = None
         self.token = None
         log("字体服务已停止")
+
+
+async def _payload_bridge_coro(plugin):
+    """桌面配置器线程桥目标协程：在插件事件循环上执行 _payload()。
+
+    FontServer 线程（/config/api/state）只构造协程对象（不触碰任何 asyncio
+    对象），真正的调度交给 Plugin._bridge_call 的 run_coroutine_threadsafe，
+    执行线程永远是插件循环线程。"""
+    return plugin._payload()
 
 
 # --------------------------------------------------------------------------- #
@@ -2785,11 +3043,18 @@ class Plugin:
         self._toast_task = None  # notificationtoasts_* 弹窗 CEF 事件监听任务
         self._toasts = {}  # toast tab 名 -> css_id（弹窗注入记账）
         self._toast_ids = {}  # CEF targetId -> toast tab 名（destroyed 事件反查用）
+        self._loop = None  # 插件事件循环（_main 捕获），线程桥目标；__init__ 时还没有循环
+        self._server._plugin = self  # 桌面配置器 /config API 反查插件实例（与既有 RPC 同核）
 
     # ---- 生命周期 ----
 
     async def _main(self):
         plugin = _bind(self)
+        # 探针：捕获本事件循环并挂线程桥。FontServer 线程（/config/api/state）经
+        # _bridge_call 用 run_coroutine_threadsafe 把 _payload 调度回本循环，
+        # 不跨线程直接碰任何 asyncio 对象。
+        plugin._loop = asyncio.get_running_loop()
+        plugin._server._bridge = plugin._bridge_call
         state = read_state()
         family = state.get("family")
         # 迁移：local() 已弃用。老 state 里存 local / 缺 mode / 存了无效值，一律纠正成
@@ -2968,6 +3233,32 @@ class Plugin:
         _set_split_options_inner 的区域分支（enabled=None = 不变，只返回状态）。"""
         plugin = _bind(self)
         return await plugin._set_split_options_inner(region_mode=enabled)
+
+    async def set_desktop_config(self, enabled):
+        """桌面配置器开关（探针 1.6.0-prerelease）：state 键 desktop_config
+        （bool，缺省 false）。照 set_region_mode 模式（_bind + 返回面板 payload）。
+        开启时确保 FontServer 在跑（config_url 需要 port + token）；关闭时不动
+        FontServer（字体 URL 还在用）。开关只控制 /config 路由组的可见性
+        （关 = 整组 404），不触发注入。"""
+        plugin = _bind(self)
+        value = bool(enabled)
+        state = read_state()
+        changed = bool(state.get("desktop_config", False)) != value
+        state["desktop_config"] = value
+        if changed:
+            write_state(state)
+        if value:
+            self._server.start()  # 幂等：已启动则原样返回
+        return plugin._payload()
+
+    def _bridge_call(self, coro):
+        """FontServer 线程 → 插件事件循环桥（探针）：run_coroutine_threadsafe。
+        循环未捕获（_main 未跑）或已关闭返回 None（调用方收敛成兜底直调）。
+        只做调度，绝不在 FontServer 线程里直接碰 asyncio 对象。"""
+        loop = self._loop
+        if loop is None or loop.is_closed():
+            return None
+        return asyncio.run_coroutine_threadsafe(coro, loop)
 
     async def _apply_region_config(self):
         """区域配置写路径的统一收尾：区域模式开 → 走区域路径重注入；关 → 只落盘
@@ -4168,6 +4459,12 @@ class Plugin:
             "heading_fallback": bool(self._detail.get("heading_fallback")),
             "registry_version": SELECTOR_REGISTRY_VERSION,
         }
+        # 桌面配置器（探针）：开关状态 + 配置页完整 URL（开且 FontServer 在跑才有值；
+        # 面板状态行直接展示这个 URL）。token 复用 FontServer 自身令牌（与字体 URL 同源）。
+        desktop_config = bool(state.get("desktop_config", False))
+        config_url = None
+        if desktop_config and self._server.running:
+            config_url = f"http://127.0.0.1:{self._server.port}/config/?token={self._server.token}"
         # 分槽开关状态：family_cjk 取 state 原值（主开关关闭时槽位即被清空，重开后为跟随系统），
         # 子开关默认值与 _prepare 同口径（synth_weight_none 缺省=开）
         return {
@@ -4195,6 +4492,8 @@ class Plugin:
             "expand_level": _expand_level_of(state),
             "preview_cache_mb": _preview_cache_mb_of(state),
             "region": region,
+            "desktop_config": desktop_config,
+            "config_url": config_url,
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,
