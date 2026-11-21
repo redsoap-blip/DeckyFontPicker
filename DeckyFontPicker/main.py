@@ -16,6 +16,7 @@
 from __future__ import annotations  # PEP 563：注解惰性化为字符串，永不运行期求值（TypedDict 类体注解与内建泛型注解均不再抬高解释器地板）
 
 import asyncio
+import bisect
 import hashlib
 import json
 import os
@@ -132,7 +133,6 @@ CACHE_EXTS = (".ttf", ".otf", ".woff", ".woff2")
 # 40 文件上限会把一部分挤出缓存、反复冷抽面）。字节上限默认 8MB，高级分区
 # 滑块可在 1-30MB 间调节，state 的 preview_cache_mb 为准。
 PREVIEW_CACHE_DEFAULT_MB = 8
-PREVIEW_CACHE_MAX_BYTES = 8 * 1024 * 1024
 
 PREFERRED_CJK = [
     "Noto Sans CJK SC",
@@ -431,6 +431,9 @@ def _faces():
                 "ko": ko,
                 # fontconfig 的 lang（"zh-cn|en|ja" 这种），前端直接展示覆盖范围
                 "lang": parts[6].strip(),
+                # fontconfig charset 原始区间串：D 预检用它免 fontTools 进程内解析（与
+                # zh_extra 判定同源同列），缺失时（len(parts)<=8）为空串，预检走 fontTools 兜底
+                "charset": charset,
                 "zh_extra": zh_extra,
                 # fontconfig 的 spacing：90 = dual、100 = mono、110 = charcell 都按等宽处理
                 # （实测 JetBrains Mono、霞鹜文楷等宽 标的是 90）；0/其它 = 比例字体
@@ -565,6 +568,7 @@ class FaceDict(TypedDict, total=False):
     ja: bool  # lang 含日文
     ko: bool  # lang 含韩文
     lang: str  # fontconfig 的原始 lang 串（"zh-cn|en|ja" 这种）
+    charset: str  # fontconfig charset 原始区间串（"20-7e a0-ff …"），D 预检免 fontTools 解析用
     zh_extra: bool  # 非 zh 字体但 charset 带足量汉字（「含中文」类）
     mono: bool  # 等宽（fontconfig spacing 90/100/110 都算）
     collection: bool  # 是否 .ttc/.otc 集合（抽取嵌入需要 fontTools）
@@ -1045,6 +1049,94 @@ def _prune_preview_cache(limit_bytes=None):
     return removed
 
 
+def _charset_has_sample_glyphs(charset_spec, family):
+    """纯区间判定：样张字符 ∪ 族名 是否命中 charset 里至少一个非空格码位。
+
+    数据源 = fontconfig charset（fc-list 第 9 列，_faces 已存进 face），与
+    fontTools 读 cmap 是同一覆盖事实的两种描述；纯集合运算微秒级，免去 50ms–2s
+    的进程内字体解析（GIL 持有会挤占事件循环与字体 HTTP 服务，真机卡顿主犯）。
+    返回 True=有样张字形 / False=无 / None=不可判定（charset 缺失或解析不出区间，
+    此时预检降级 fontTools 路径）。区间排序合并后逐样张码位二分，微秒级。
+    """
+    if not charset_spec:
+        return None
+    try:
+        ranges = _parse_charset(charset_spec)
+    except Exception:
+        return None
+    if not ranges:
+        return None
+    merged = []
+    for lo, hi in sorted(ranges):
+        if merged and lo <= merged[-1][1] + 1:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], hi))
+        else:
+            merged.append((lo, hi))
+    starts = [lo for lo, _ in merged]
+    for ch in set(PREVIEW_SAMPLE_CHARS + family):
+        cp = ord(ch)
+        if cp == 0x20:
+            continue
+        i = bisect.bisect_right(starts, cp) - 1
+        if i >= 0 and cp <= merged[i][1]:
+            return True
+    return False
+
+
+# 无样张字形字体的负缓存：键 (file, index) → 该 face 是否与样张字符集无交集。
+# 生命周期 = 插件进程，与预览子集缓存键 sha1(file#index#pv2) 的陈旧性语义一致：
+# 都不随字体文件中途变更而失效（进程内文件被替换的概率可忽略）。fail-open
+# （读取异常视为有字形）与 charset 纯区间路径的判定结果同样入缓存——同一 face
+# 反复判定没有意义。
+_PREVIEW_NO_GLYPH_FACES = {}
+
+
+class _NoSampleGlyphs(Exception):
+    """字体的 cmap 与「样张字符 + 族名」无交集：注定抽不出可用的样张子集。"""
+
+
+def _face_has_sample_glyphs(face, family):
+    """三级链判定 face 是否覆盖「样张字符 + 族名」中至少一个非空格码位。
+
+    ① 优先用 face["charset"]（fontconfig charset 区间串，_faces 已存进 face）做
+    纯区间判定——与 ② 读 cmap 是同一覆盖事实的两种描述，纯集合运算微秒级，免去
+    50ms–2s 的 fontTools 进程内解析（持 GIL 挤占同进程事件循环与字体 HTTP 服务，
+    真机 QAM/Home/MainMenu 打开卡顿主犯）；charset 缺失（旧 face dict / 裸 dict）
+    或解析不出区间时返回 None（不可判定），降级到 ②。② 读原始字体文件的 cmap
+    （fontTools lazy=True、仅 .ttc/.otc 传 fontNumber、close-in-finally），直接读
+    原始文件而不是子集 ttf：无字形时连子集都不必抽，也能拦下 1.4.23 遗留的空字形
+    woff2 缓存（检查先于缓存命中）。⚠️ 判据必须用「cmap/charset 与字符集的交集」，
+    「cmap 去掉空格后为空」只对子集产物成立——原始字体（如 Noto Music）cmap 里
+    另有一堆专用符号，与样张字符集照样无交集。③ ② 的读取异常一律视为有字形
+    （fail-open，走原有链路），不阻塞正常字体。负缓存键 (file, index) 与语义不变：
+    True=无字形 / False=有字形，fail-open 按 False（有字形）缓存；① 的判定结果
+    同样入缓存。"""
+    key = (face["file"], face["index"])
+    cached = _PREVIEW_NO_GLYPH_FACES.get(key)
+    if cached is not None:
+        return not cached
+    has = _charset_has_sample_glyphs(face.get("charset"), family)
+    if has is None:
+        charset = set(PREVIEW_SAMPLE_CHARS) | set(family)
+        has = True
+        try:
+            from fontTools.ttLib import TTFont
+            kwargs = {}
+            # 仅集合字体（.ttc/.otc）需要 face 序号，单文件字体传了反而多余
+            if os.path.splitext(face["file"])[1].lower() in COLLECTION_EXT:
+                kwargs["fontNumber"] = face["index"]
+            font = TTFont(face["file"], lazy=True, **kwargs)
+            try:
+                cmap = font.getBestCmap() or {}
+                has = any(cp != 0x20 and chr(cp) in charset for cp in cmap)
+            finally:
+                font.close()
+        except Exception:
+            has = True
+    _PREVIEW_NO_GLYPH_FACES[key] = not has
+    return has
+
+
 def _prepare_preview_face(family):
     """返回 (本地路径, MIME)：只含样张字符的极小子集，命中缓存直接复用。
 
@@ -1059,6 +1151,12 @@ def _prepare_preview_face(family):
     face = next((f for f in faces if f is not None), None)
     if face is None:
         return None
+
+    # 无样张字形检查放在 woff2 缓存命中之前：1.4.23 遗留的空字形 woff2
+    # （CEF 判定不可解析、FontFace.load() 报网络错误的那批）也永远不会再被返回。
+    if not _face_has_sample_glyphs(face, family):
+        log(f"预期失败：字体 {family!r} 不含样张字符（cmap 无样张码位），跳过子集与注册")
+        raise _NoSampleGlyphs(family)
 
     key = hashlib.sha1(
         (face["file"] + "#" + str(face["index"]) + "#pv2").encode("utf-8")
@@ -1861,6 +1959,12 @@ class Plugin:
 
         try:
             pair = await asyncio.to_thread(_prepare_preview_face, family)
+        except _NoSampleGlyphs:
+            # 预期失败（如 Noto Music 等专用符号字体）：计入 fail 但注明非故障，
+            # 前端按 error_key 直接永久回退，不进重试通道
+            _stat(False, "预期失败：无样张字形")
+            return {"ok": False, "error": f"字体 {family} 不含样张字符，已用回退字体显示",
+                    "error_key": "err.noSampleGlyphs", "error_args": [family]}
         except Exception as exc:
             log(f"预览字体准备失败 {family!r}: {exc}")
             _stat(False, "prepare-exc")

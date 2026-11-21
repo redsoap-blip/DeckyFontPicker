@@ -193,6 +193,7 @@
             "err.noSlots": "没有选择西文字体，中日韩槽也为空",
             "err.fonttoolsMissing": "抽取 {0} 需要 fontTools，当前 Python 没有安装",
             "err.fonttoolsSubset": "西文剔字需要 fontTools（{0}），可关闭「按语言注入」",
+            "err.noSampleGlyphs": "字体 {0} 不含样张字符，已使用回退字体",
             "advanced": "高级",
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
@@ -292,6 +293,7 @@
             "err.noSlots": "No Latin or CJK font selected",
             "err.fonttoolsMissing": "Extracting {0} requires fontTools, which is not installed",
             "err.fonttoolsSubset": "Latin-slot stripping requires fontTools ({0}); you can turn off per-language injection",
+            "err.noSampleGlyphs": "Font {0} has no sample glyphs; using fallback font.",
             "advanced": "Advanced",
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
@@ -391,6 +393,7 @@
             "err.noSlots": "欧文・中日韓のフォントがいずれも選択されていません",
             "err.fonttoolsMissing": "{0} の抽出には fontTools が必要ですが、インストールされていません",
             "err.fonttoolsSubset": "西文スロットの削字には fontTools が必要です（{0}）。「言語別注入」をオフにできます",
+            "err.noSampleGlyphs": "フォント {0} にサンプル文字の字形がなく、代替フォントで表示します",
             "advanced": "詳細設定",
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
@@ -490,6 +493,7 @@
             "err.noSlots": "라틴 또는 CJK 글꼴이 선택되지 않았습니다",
             "err.fonttoolsMissing": "{0} 추출에 fontTools가 필요하지만 설치되어 있지 않습니다",
             "err.fonttoolsSubset": "라틴 슬롯 정리에 fontTools가 필요합니다 ({0}). 언어별 주입을 끌 수 있습니다",
+            "err.noSampleGlyphs": "글꼴 {0}에 샘플 문자가 없어 대체 글꼴로 표시합니다",
             "advanced": "고급",
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
@@ -728,8 +732,16 @@
         var api = props.api;
 
         // 方案 B：每行常显「常规 + 粗体」双样张，粗体行带 BOLD / SYNTH 标签
+        // 无样张字形（预期失败）且预览档位开启时：主样张文本换成错误文案，
+        // DOM 结构与 class 不变，文案渲染在回退字体上；展开块四语样张不动。
+        var noGlyph = !!props.noGlyph;
         var sampleEn = SAMPLES.prevEn;
         var sampleZh = SAMPLES.prevZh;
+        if (props.previewLevel > 0 && noGlyph) {
+            var noGlyphText = t("err.noSampleGlyphs", font.family);
+            sampleEn = noGlyphText;
+            sampleZh = noGlyphText;
+        }
         var sample = (font.zh || font.zh_extra) ? sampleZh : sampleEn;
         var boldLabel = font.has_bold ? "BOLD" : "SYNTH";
 
@@ -783,6 +795,7 @@
             a.previewOn === b.previewOn &&
             a.previewLevel === b.previewLevel &&
             a.expandLevel === b.expandLevel &&
+            a.noGlyph === b.noGlyph &&
             a.api === b.api;
     }
 
@@ -835,6 +848,13 @@
         var cacheMbTimerRef = useRef(null);
         var cacheMbValueRef = useRef(8);
         var cacheMbPendingRef = useRef(false);
+
+        // 无样张字形字体表（family -> true）：收到 err.noSampleGlyphs 后标记，
+        // 触发重渲染让对应行换文案。会话内每个 family 至多触发一次状态更新，
+        // 重复标记直接 return；端口变更时整体清空（与 ok/error 状态同生命周期）。
+        var noGlyphHook = useState({});
+        var noGlyphState = noGlyphHook[0];
+        var setNoGlyphState = noGlyphHook[1];
 
         var messageHook = useState("");
         var message = messageHook[0];
@@ -1026,11 +1046,25 @@
             }).join("");
         }
 
+        // 标记无样张字形字体：触发重渲染让对应行换文案。不可变更新；
+        // 已标记过的 family 直接复用旧对象（React 同引用即跳过渲染），会话内
+        // 每个 family 至多触发一次状态更新。
+        function markNoGlyphFont(family) {
+            setNoGlyphState(function (prev) {
+                if (prev && prev[family]) return prev;
+                var next = {};
+                for (var k in prev) { if (Object.prototype.hasOwnProperty.call(prev, k)) next[k] = prev[k]; }
+                next[family] = true;
+                return next;
+            });
+        }
+
         function ensurePreviewFont(family, slot) {
             if (!family || !slot) return;
             var seen = previewFontsRef.current;
-            // 已就绪/在途：直接返回，不重复发 RPC（预热与 IO 懒加载天然去重）
-            if (seen[family] === "ok" || seen[family] === "loading") return;
+            // 已就绪/在途/已判定永久回退：直接返回，不重复发 RPC（预热与 IO 懒加载天然去重；
+            // permanent-fallback 为会话级缓存，命中后连 RPC 都不发）
+            if (seen[family] === "ok" || seen[family] === "loading" || seen[family] === "permanent-fallback") return;
             // 失败态：走原有最多 1 次重试；已重试过则放弃（显示 fallback）
             var retries = previewRetryRef.current;
             if (seen[family] === "error") {
@@ -1043,6 +1077,12 @@
             return serverApi.callPluginMethod("get_preview_font", { family: family }).then(function (res) {
                 if (gen !== previewGenRef.current) return; // 字体服务已重启（代数变化），丢弃旧代数的 URL
                 var value = unwrap(res);
+                if (value && value.error_key === "err.noSampleGlyphs") {
+                    // 预期失败（字体不含样张字符）：永久 fallback，不进重试通道
+                    seen[family] = "permanent-fallback";
+                    markNoGlyphFont(family);
+                    return;
+                }
                 if (!value || value.ok !== true || !value.url) {
                     seen[family] = "error";
                     return;
@@ -1185,6 +1225,7 @@
             previewFontsRef.current = {};
             previewRetryRef.current = {}; // 新端口 = 新机会，重试计数一并清零
             previewRulesRef.current = {}; // 同 slot 去重表一并清，允许写入新 URL 的规则
+            setNoGlyphState({}); // 无字形标记与 ok/error 状态同生命周期；重开面板/端口变化后重新 RPC 会再次命中 error_key 并重新标记
             // insertRule 追加的规则挂在 sheet 上：光清 textContent 不足以删除它们，
             // 必须逐条 deleteRule，否则新端口的旧 URL 规则残留会 404。
             if (previewStyleRef.current) {
@@ -1946,6 +1987,7 @@
                 previewOn: previewOn,
                 previewLevel: previewLevel,
                 expandLevel: expandLevel,
+                noGlyph: !!(noGlyphState && noGlyphState[font.family]),
                 api: rowApiRef,
             });
         }
