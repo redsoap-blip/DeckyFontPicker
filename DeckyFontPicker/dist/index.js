@@ -227,6 +227,7 @@
             "menuCjk": "应用中文",
             "menuCancel": "按 B 返回取消，不做任何更改",
             "descLatinStrip": "仅取其西文字形（自动剔除汉字）",
+            "descLatinBackfill": "仅取西文字形；中文由完整版回填",
             "descCjkNone": "该字体不含中文字形"
         },
         en: {
@@ -327,6 +328,7 @@
             "menuCjk": "Apply to Chinese",
             "menuCancel": "Press B to go back and cancel without changing anything",
             "descLatinStrip": "Latin glyphs only (CJK characters stripped)",
+            "descLatinBackfill": "Latin glyphs only; Chinese via full face",
             "descCjkNone": "This font has no Chinese glyphs"
         },
         ja: {
@@ -427,6 +429,7 @@
             "menuCjk": "中国語に適用",
             "menuCancel": "B で戻ってキャンセル。変更は行われません",
             "descLatinStrip": "欧文字形のみ使用（漢字は自動的に除外）",
+            "descLatinBackfill": "欧文字形のみ；中国語は完全版で代替",
             "descCjkNone": "このフォントには中国語字形がありません"
         },
         ko: {
@@ -527,11 +530,17 @@
             "menuCjk": "중국어에 적용",
             "menuCancel": "B로 돌아가 취소하며 변경 사항은 없습니다",
             "descLatinStrip": "라틴 글리프만 사용 (한자 자동 제거)",
+            "descLatinBackfill": "라틴만 사용; 중국어는 전체 버전 사용",
             "descCjkNone": "이 글꼴에는 중국어 글리프가 없습니다"
         }
     };
 
     var LANG = pickLang(detectLang());
+
+    // 样张行 lang 属性（BCP-47）：帮助浏览器在字体 swap 前按正确语言选字形变体
+    // 与回退字体（首开预热窗口的边缘缺字改善；与注入系统无关）。
+    var SAMPLE_LANG_TAGS = { zh: "zh-CN", ja: "ja", ko: "ko", en: "en" };
+    var UI_LANG_TAG = SAMPLE_LANG_TAGS[LANG] || "en";
 
     // {0} / {1} 按位置替换，方便各语言调整语序；缺词回退英文，再缺就显示 key 本身
     function t(key) {
@@ -678,7 +687,7 @@
 
     // 行内容：档位 0=纯名 / 1=方案 A 单行样张 / 2=方案 B 常规+粗体；expandLevel>0 追加 C 方案展开块。
     // 展开块 DOM 常驻但 display:none——Chromium 对隐藏内容不加载字体，聚焦时才真正渲染（懒加载）
-    function fpRowContent(font, sample, boldLabel, previewLevel, expandLevel) {
+    function fpRowContent(font, sample, boldLabel, previewLevel, expandLevel, sampleLang) {
         var slot = fpPreviewSlot(font.family);
         var familyCss = '"' + slot + '"';
         // data-* 只给 IO 用：滚进视口的预览行才去后端取 @font-face URL（懒加载）
@@ -686,29 +695,31 @@
         // 名字永远用自身字体渲染：fp-nm 挂同样的 data-* 与 --fp-family，进 IO 懒加载
         // 集合（与预览档位无关，预览关闭时也生效）；@font-face 未到位前 CSS 里
         // "slot", inherit 兜底显示默认字体，到位后浏览器按 cmap 逐字符换字自动重排。
-        var kids = [h("div", { className: "fp-fname fp-nm", style: { "--fp-family": familyCss }, ...loadAttrs }, font.family)];
+        // 名字是面板 UI 文字 → lang 用 UI_LANG_TAG；样张行 lang 由 FontRowBase 按字体能力算好传入
+        var kids = [h("div", { className: "fp-fname fp-nm", lang: UI_LANG_TAG, style: { "--fp-family": familyCss }, ...loadAttrs }, font.family)];
         if (previewLevel === 1) {
-            kids.push(h("div", { className: "fp-prev fp-prev-a", style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
+            kids.push(h("div", { className: "fp-prev fp-prev-a", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
         } else if (previewLevel === 2) {
-            kids.push(h("div", { className: "fp-prev", style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
-            kids.push(h("div", { className: "fp-prev fp-prev-b", style: { "--fp-family": familyCss }, ...loadAttrs },
+            kids.push(h("div", { className: "fp-prev", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs }, sample));
+            kids.push(h("div", { className: "fp-prev fp-prev-b", lang: sampleLang, style: { "--fp-family": familyCss }, ...loadAttrs },
                 h("span", { className: "fp-badge" }, boldLabel + "  "), sample));
         }
         if (expandLevel > 0) {
+            // 展开行文本恒定 → lang 用常量；fp-ex-label 继承所在行 lang，不单独覆盖
             var lines = [
-                h("div", { className: "fp-ex-line fp-ex-lat", style: { "--fp-family": familyCss }, ...loadAttrs },
+                h("div", { className: "fp-ex-line fp-ex-lat", lang: "en", style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exLatin")), SAMPLES.exEn)
             ];
             if (font.zh || font.zh_extra) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: "zh-CN", style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exZh")), SAMPLES.exZh));
             }
             if (font.ja) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: "ja", style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exJa")), SAMPLES.exJa));
             }
             if (font.ko) {
-                lines.push(h("div", { className: "fp-ex-line", style: { "--fp-family": familyCss }, ...loadAttrs },
+                lines.push(h("div", { className: "fp-ex-line", lang: "ko", style: { "--fp-family": familyCss }, ...loadAttrs },
                     h("span", { className: "fp-ex-label" }, t("exKo")), SAMPLES.exKo));
             }
             kids.push(h("div", { className: "fp-ex" }, lines));
@@ -744,6 +755,9 @@
         }
         var sample = (font.zh || font.zh_extra) ? sampleZh : sampleEn;
         var boldLabel = font.has_bold ? "BOLD" : "SYNTH";
+        // 替换文案是 UI 语言：该行 lang 用 UI 语言映射，勿沿用字体能力值
+        var sampleLang = (props.previewLevel > 0 && noGlyph) ? UI_LANG_TAG
+            : ((font.zh || font.zh_extra) ? "zh-CN" : "en");
 
         return h(deckyFrontendLib.PanelSectionRow, null,
             h(deckyFrontendLib.ButtonItem, {
@@ -775,7 +789,7 @@
                 // ↓ 档位化预览：0=纯字体名（原 1.4.2 行为）/ 1=方案 A / 2=方案 B；
                 //   C 方案展开块由开关控制（expandLevel>0）
                 props.previewOn || props.expandLevel > 0
-                    ? fpRowContent(font, sample, boldLabel, props.previewLevel, props.expandLevel)
+                    ? fpRowContent(font, sample, boldLabel, props.previewLevel, props.expandLevel, sampleLang)
                     : font.family
             ),
             alias ? aliasLine(alias) : null
@@ -2098,7 +2112,7 @@
             // 胶囊行整体下移 10px，和分类标题拉开距离
             ".fp-lang-bar{display:flex;flex-wrap:nowrap;gap:6px;width:100%;min-width:0;margin-top:10px;}" +
             // 竖排两行：标签在上、计数在下；不再用省略号截断
-            ".fp-lang-pill{flex:1 1 0;min-width:0;box-sizing:border-box;height:36px;" +
+            ".fp-lang-pill{flex:1 1 0;min-width:0;box-sizing:border-box;min-height:36px;" +
             "padding:3px 4px;border-radius:13px;background:rgba(255,255,255,0.07);" +
             "color:rgba(255,255,255,0.62);font-size:11px;font-weight:500;text-align:center;" +
             "display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;" +
@@ -2434,14 +2448,18 @@
         );
 
         // 确认键菜单：标题 + 「应用西文 / 应用中文」两选项 + 取消提示。
-        // 覆盖提示：不含 CJK 字形的字体「应用中文」标注「该字体不含中文字形」（不禁用）；
-        // 自带 CJK 的字体「应用西文」标注「仅取其西文字形（自动剔除汉字）」。
+        // 覆盖提示三态：不含 CJK 字形的字体「应用中文」标注「该字体不含中文字形」（不禁用）；
+        // 自带 CJK 的字体「应用西文」按 CJK 槽位状态二选一——槽位已被某字体占用时标注
+        // 「仅取其西文字形（自动剔除汉字）」；槽位为空时标注回填版「仅取西文字形；中文由完整版回填」。
         // B 键 / 点空白处关闭，不写任何配置
         function confirmMenu() {
             if (!menuFont) return null;
             var family = menuFont.family;
             var hasCjk = !!(menuFont.zh || menuFont.zh_extra || menuFont.ja || menuFont.ko);
-            var latinDesc = hasCjk ? t("descLatinStrip") : undefined;
+            // 西文槽回填提示：CJK 槽为空时选自带 CJK 的字体做西文，中文位将由该字体
+            // 完整版自动回填（_fallback_families 设计行为，曾被误解为 bug，本批明示）
+            var cjkEmpty = !(state && state.family_cjk);
+            var latinDesc = hasCjk ? (cjkEmpty ? t("descLatinBackfill") : t("descLatinStrip")) : undefined;
             var cjkDesc = hasCjk ? undefined : t("descCjkNone");
             var option = function (key, id, refSetter, label, desc, slot) {
                 return h(deckyFrontendLib.Focusable, {
@@ -2475,7 +2493,9 @@
                 },
                     h("div", null, label),
                     desc
-                        ? h("div", { style: { opacity: 0.55, fontSize: "10px", marginTop: "2px" } }, desc)
+                        // H2 修复：长文案（descLatinBackfill 等）默认 nowrap 会被面板裁切，
+                        // 与 @2539 family 标题同款换行三件套；换行后选项纵向自然增长
+                        ? h("div", { style: { opacity: 0.55, fontSize: "10px", marginTop: "2px", whiteSpace: "normal", overflowWrap: "anywhere", wordBreak: "break-word" } }, desc)
                         : null
                 );
             };
@@ -2489,10 +2509,11 @@
             },
                 h("div", {
                     style: {
-                        // 定位：左锚定 left 44px；宽度自适应内容，上限 92% 防右缘溢出
+                        // 定位：左锚定 left 44px；宽度自适应内容，上限 calc(100% - 60px) 防右缘溢出
+                        // 几何依据：100% 相对全屏 fixed 覆盖层＝视口宽（旧 92% 同基准），左锚 44px 后 92% 上限在窄视口（QAM）右缘必然出屏、长文案换行断点落屏外（H3 截图实证）；视口宽-60px＝左锚 44px＋右缘留白 16px
                         position: "absolute", left: "44px", top: "38%",
                         transform: "translateY(-50%)",
-                        maxWidth: "92%", boxSizing: "border-box",
+                        maxWidth: "calc(100% - 60px)", boxSizing: "border-box",
                         background: "#1b2027", borderRadius: "8px", padding: "12px",
                         boxShadow: "0 8px 28px rgba(0,0,0,0.55)",
                     },
