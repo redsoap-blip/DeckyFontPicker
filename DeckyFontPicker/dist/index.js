@@ -661,6 +661,22 @@
         return lang || "latin";
     }
 
+    // DFL 导出缺失时的一次性降级说明（1.4.26 原生上下文菜单方案）：确认菜单走不了 Steam
+    // 原生 Menu 时回退自绘 overlay（1.4.25 链路）。bundle 内原本没有现成 log 函数，这里用
+    // console.warn 记一次（Steam CEF 控制台 / CDP 可查），只刷一次，避免每次按 A 都刷。
+    var dflFallbackLogged = false;
+    function logDflFallbackOnce() {
+        if (dflFallbackLogged) return;
+        dflFallbackLogged = true;
+        var missing = [];
+        if (typeof deckyFrontendLib.showContextMenu !== "function") missing.push("showContextMenu");
+        if (typeof deckyFrontendLib.Menu !== "function") missing.push("Menu");
+        if (typeof deckyFrontendLib.MenuItem !== "function") missing.push("MenuItem");
+        try {
+            console.warn("[DeckyFontPicker] DFL showContextMenu unavailable (" + missing.join(",") + "); confirm menu falls back to overlay menu.");
+        } catch (e) { /* console 不可用时静默 */ }
+    }
+
     function noteRow(text, key) {
         return h(deckyFrontendLib.PanelSectionRow, { key: key },
             // 下边距把「说明」与第一个字体条目分开
@@ -768,6 +784,8 @@
                     (font.mono ? t("monoTag") : "") +
                     (isFav ? t("favTag") : "") +
                     (inUse ? t("inUse") : ""),
+                // 确认入口不透传 evt：showContextMenu 单参调用（对齐 CSS Loader /
+                // decky-cloud-save 等生产先例），合成事件非 Steam EventTarget，无需也不应透传
                 onClick: function () { api.current.choose(font.family, font); },
                 onSecondaryActionDescription: isFav ? t("unfavorite") : t("favorite"),
                 onOptionsActionDescription: sectionId ? t("collapseSection") : undefined,
@@ -1372,15 +1390,73 @@
             });
         }
 
-        // 确认键入口：主开关开 → 弹两选项菜单（按语言预选）；
-        // 主开关关 → 直接应用为西文槽（set_font），与 1.4.2 行为完全一致
+        // 确认键入口：主开关开 → 弹「应用西文 / 应用中文」确认（1.4.26 原生上下文菜单方案：
+        // 优先 CSS Loader 同款 Steam 原生导航树 = DFL showContextMenu + Menu / MenuItem，
+        // 焦点进入 / dpad 闭环 / B 取消全部原生；DFL 导出缺失时回退自绘 overlay，1.4.25
+        // 全链路原样保留；按语言预选语义不变）；主开关关 → 直接应用为西文槽（set_font），
+        // 与 1.4.2 行为完全一致
         function choose(family, font) {
             if (busy) return;
             if (splitOn) {
-                setMenuFont(font || { family: family });
+                openConfirmMenu(font || { family: family });
                 return;
             }
             applyToSlot("latin", family);
+        }
+
+        // DFL 主路径确认菜单（CSS Loader 同款原生上下文菜单）：decky-loader 注入的 @decky/ui
+        // showContextMenu + Steam 原生 Menu / MenuItem。弹出的菜单本身就是 Steam 原生导航树
+        // 的一部分：焦点进入 / dpad 闭环 / B 取消全部由 Steam 托管（菜单自带，无需实现）——
+        // 因此本函数严禁手工 focusLater / focusDomNode，也严禁手工 close（原生菜单选中后
+        // 自行关闭，showContextMenu 无返回值可用）。智能预选靠排序实现：非西文字体
+        // （zh/ja/ko）把「应用中文」排第一（原生菜单首项自动获得焦点，DOM 顺序即预选），
+        // 西文字体则「应用西文」在前。
+        function openConfirmMenu(font) {
+            // 运行时判据（Phase 0 修正口径）：DFL 三件导出齐全才走原生菜单，缺一即回退
+            var dflReady = typeof deckyFrontendLib.showContextMenu === "function" &&
+                typeof deckyFrontendLib.Menu === "function" &&
+                typeof deckyFrontendLib.MenuItem === "function";
+            if (!dflReady) {
+                logDflFallbackOnce();
+                // fallback：既有自绘 overlay 全链路原样（menuFont state → confirmMenu 渲染）
+                setMenuFont(font);
+                return;
+            }
+            var family = font.family;
+            // hasCjk / cjkEmpty 与 confirmMenu 完全同款判定（增补 1 语义原样迁移）
+            var hasCjk = !!(font.zh || font.zh_extra || font.ja || font.ko);
+            var cjkEmpty = !(state && state.family_cjk);
+            // 三态提示（增补 1）：hasCjk 时置顶一条 disabled MenuItem 灰显（槽空=回填 /
+            // 槽占用=剔字，cjkEmpty 二选一）；!hasCjk 时无置顶项（null，React 跳过），
+            // descCjkNone 语义改挂在「应用中文」项 children 内以小字带出（见 cjkItem）。
+            // Phase 0 实证三件齐全；MenuItem 支持 disabled（灰显不可选中，Steam 原生行为）
+            var hintItem = hasCjk
+                ? h(deckyFrontendLib.MenuItem, { key: "fp-dfl-hint", disabled: true },
+                    cjkEmpty ? t("descLatinBackfill") : t("descLatinStrip"))
+                : null;
+            // 两选项：onSelected 只做 applyToSlot——原生菜单选中后自行关闭，不调任何 close；
+            // MenuItem 无 desc prop，「desc 小字」需组合进 children 时用一个内联 div
+            // （fontSize 10px / opacity 0.55），不引入其它样式
+            var latinItem = h(deckyFrontendLib.MenuItem, {
+                key: "fp-dfl-latin",
+                onSelected: function () { applyToSlot("latin", family); },
+            }, t("menuLatin"));
+            var cjkItem = h(deckyFrontendLib.MenuItem, {
+                key: "fp-dfl-cjk",
+                // !hasCjk：该字体不含中文字形，「应用中文」禁用灰显，descCjkNone 小字带出
+                // （语义与 fallback overlay 的 cjkDesc 一致；hasCjk 时该项可正常选中）
+                disabled: !hasCjk,
+                onSelected: function () { applyToSlot("cjk", family); },
+            },
+                t("menuCjk"),
+                !hasCjk ? h("div", { style: { fontSize: "10px", opacity: 0.55 } }, t("descCjkNone")) : null);
+            // 排序即智能预选：原生菜单首项自动获得焦点，DOM 顺序即预选
+            var orderedItems = primaryLang(font) !== "latin" ? [cjkItem, latinItem] : [latinItem, cjkItem];
+            var menu = h(deckyFrontendLib.Menu, { key: "fp-dfl-menu" },
+                hintItem,        // 增补 1 三态，disabled 灰显
+                orderedItems);   // primaryLang 排序
+            // 单参裸调：对齐 CSS Loader / decky-cloud-save 等生产先例（showContextMenu(menu)）
+            deckyFrontendLib.showContextMenu(menu);
         }
 
         function reset() {
