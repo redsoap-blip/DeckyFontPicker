@@ -389,11 +389,12 @@ def _faces():
         fmt = parts[5].strip()
         if not path or not os.path.isfile(path):
             continue
-        # face 文件 mtime（单位：秒），用于「最新安装」排序（family 取所有 face 的最小值）
+        # face 文件 ctime（单位：秒），用于「最新安装」排序（family 取所有 face 的最小值）
+        # ctime = inode 变更时间，反映字体文件实际落到本机的时间，不受包内旧 mtime 影响
         try:
-            mtime = int(os.path.getmtime(path))
+            ctime = int(os.path.getctime(path))
         except OSError:
-            mtime = 0
+            ctime = 0
         if ext not in DIRECT_EXT and ext not in COLLECTION_EXT:
             continue
         if fmt and fmt not in USABLE_FORMATS:
@@ -423,7 +424,7 @@ def _faces():
                 "style": parts[1].strip(),
                 "weight": _css_weight(parts[2]),
                 "file": path,
-                "mtime": mtime,
+                "ctime": ctime,
                 "index": index,
                 "format": fmt,
                 "zh": zh,
@@ -478,11 +479,11 @@ def _family_map_build():
         entry["ko"] = entry["ko"] or face["ko"]
         entry["zh_extra"] = entry["zh_extra"] or face["zh_extra"]
         entry["mono"] = entry["mono"] or face["mono"]
-        # 安装时间取所有 face 文件 mtime 的最小值（最早出现的那个文件，单位秒）；
+        # 安装时间取所有 face 文件 ctime 的最小值（最早落盘的那个文件，单位秒）；
         # 只有全部 face 都在系统字体目录下才算系统字体
-        mtime = face.get("mtime") or 0
-        if mtime and (entry["install_mtime"] is None or mtime < entry["install_mtime"]):
-            entry["install_mtime"] = mtime
+        ctime = face.get("ctime") or 0
+        if ctime and (entry["install_mtime"] is None or ctime < entry["install_mtime"]):
+            entry["install_mtime"] = ctime
         if not _is_system_face_path(face["file"]):
             entry["is_system"] = False
     return families
@@ -561,7 +562,7 @@ class FaceDict(TypedDict, total=False):
     style: str  # fontconfig 的样式名（Regular / Bold / Italic …）
     weight: int  # _css_weight 折算的 CSS 字重（400/500/700 …）
     file: str  # 字体文件绝对路径
-    mtime: int  # 文件 mtime（秒），「最新安装」排序用，取不到为 0
+    ctime: int  # 文件 ctime（inode 变更时间，即实际落盘时间，秒），「最新安装」排序用，取不到为 0
     index: int  # 集合字体里的 face 序号，单文件为 0
     format: str  # fontconfig 报的格式（TrueType / CFF …）
     zh: bool  # lang 含中文
@@ -587,7 +588,7 @@ class FamilyEntry(TypedDict, total=False):
     primary: str  # 族名地区标记推断的主语言（zh/ja/ko），推断不出为空串
     zh_extra: bool  # 任一 face 属「含中文」
     mono: bool  # 任一 face 等宽
-    install_mtime: int | None  # 所有 face mtime 的最小值（秒），还没有 face 时 None
+    install_mtime: int | None  # 所有 face ctime 的最小值（秒），还没有 face 时 None
     is_system: bool  # 所有 face 都在系统字体目录下（缺省 True，遇外部目录置 False）
 
 
@@ -657,7 +658,7 @@ def list_families(families=None) -> list[dict]:
         if entry["zh_extra"]:
             item["zh_extra"] = True  # 同理：只在命中「含中文」时才带这个键
         # 「最新安装」排序用的字段：
-        # install_mtime = 该 family 所有 face 文件 mtime 的最小值（最早落盘的文件，单位：秒）
+        # install_mtime = 该 family 所有 face 文件 ctime 的最小值（最早落盘的文件，单位：秒）
         if entry.get("install_mtime") is not None:
             item["install_mtime"] = int(entry["install_mtime"])
         # is_system = 所有 face 都在 /usr/share 或 /usr/local/share 下（缺省视为 false）
@@ -1703,28 +1704,75 @@ def _require_fonttools_if_needed(faces, subset_needed=False):
 # 状态
 # --------------------------------------------------------------------------- #
 
+STATE_VERSION = 1  # state.json 结构版本号；无 _v 或低于此值视为旧档
+
+
 def _state_path():
     return STATE_FILE
 
 
-def read_state():
-    try:
-        with open(_state_path(), "r", encoding="utf-8") as fp:
-            data = json.load(fp)
-        if isinstance(data, dict):
-            data.pop("cjk_punct", None)  # 迁移：移除旧版标点渲染开关状态
-            return data
-        return {}
-    except Exception:
-        return {}
-
-
 def write_state(data):
     os.makedirs(os.path.dirname(_state_path()) or ".", exist_ok=True)
+    data["_v"] = STATE_VERSION  # 兜底：任何落盘都带版本号
     tmp = _state_path() + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fp:
         json.dump(data, fp, ensure_ascii=False, indent=2)
     os.replace(tmp, _state_path())
+
+
+def _migrate_state(data):
+    """把 state.json 迁移到 STATE_VERSION。
+
+    纯函数：只读传入 dict，返回 (新 dict, actions)；不读写磁盘、不触发注入。
+    actions 里的 mode_from 供 Plugin._main 保留「重新注入一次」的副作用。
+    """
+    actions = {}
+    if not isinstance(data, dict):
+        return {}, actions
+    out = dict(data)
+    try:
+        v = int(out.get("_v", 0))
+    except (TypeError, ValueError):
+        v = 0
+    if v > STATE_VERSION:
+        actions["future_version"] = v
+        return out, actions
+    if v < STATE_VERSION:
+        if "cjk_punct" in out:
+            out.pop("cjk_punct", None)
+            actions["cjk_punct_removed"] = True
+        if "preview_level" not in out and "preview" in out:
+            out["preview_level"] = 0 if out.get("preview") is False else 2
+            out["preview"] = bool(out["preview_level"])
+            actions["preview_backfilled"] = True
+        if "expand_level" in out:
+            value = out["expand_level"]
+            norm = _norm_expand(value, 0)
+            if norm != value:
+                out["expand_level"] = norm
+                actions["expand_normalized"] = True
+        if out.get("mode") != MODE_EXTRACT:
+            actions["mode_from"] = out.get("mode")
+            out["mode"] = MODE_EXTRACT
+        out["_v"] = STATE_VERSION
+    return out, actions
+
+
+def _read_state_with_actions():
+    try:
+        with open(_state_path(), "r", encoding="utf-8") as fp:
+            raw = json.load(fp)
+    except Exception:
+        raw = {}
+    data, actions = _migrate_state(raw)
+    if "future_version" in actions:
+        log(f"state 版本 {actions['future_version']} 高于当前 {STATE_VERSION}，按原样保留")
+    return data, actions
+
+
+def read_state():
+    data, _actions = _read_state_with_actions()
+    return data
 
 
 def _norm_level(value, default=0):
@@ -1860,15 +1908,13 @@ class Plugin:
 
     async def _main(self):
         plugin = _bind(self)
-        state = read_state()
+        state, actions = _read_state_with_actions()
         family = state.get("family")
         # 迁移：local() 已弃用。老 state 里存 local / 缺 mode / 存了无效值，一律纠正成
         # extract 并落盘；下面照常走一次 _apply，等于对当前字体重新注入一次，
         # 升级后的实例不会停在已不存在的模式上。
-        stored = state.get("mode")
-        if stored != MODE_EXTRACT:
-            log(f"投递模式迁移：state 里的 mode={stored!r} → extract（local() 已弃用），重新注入一次")
-            state["mode"] = MODE_EXTRACT
+        if "mode_from" in actions:
+            log(f"投递模式迁移：state 里的 mode={actions['mode_from']!r} → extract（local() 已弃用），重新注入一次")
             write_state(state)
         log(f"启动（抽取嵌入模式），已保存字体: {family!r} self={type(self).__name__}")
         # fontTools 快照只在插件加载时刷新一次，面板读取只读快照

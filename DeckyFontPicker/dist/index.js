@@ -18,8 +18,8 @@
      * @property {boolean} [ko]
      * @property {string} [primary]
      * @property {boolean} [zh_extra]
-     * @property {number} [install_mtime]
-     * @property {boolean} [is_system]
+     * @property {number} [install_mtime]  实际取该族所有 face 的 ctime（inode 变更时间，即文件落盘时间）最小值，秒
+     * @property {boolean} [is_system]     仅信息用途，不参与排序
      */
     /**
      * 后端 _payload() 返回的面板状态(与 main.py Plugin._payload 返回 dict 逐字段对齐;
@@ -1714,15 +1714,12 @@
         var stripFallback = !!(state && state.strip && state.strip.fallback);
 
         // 字体列表排序（固定为「最新安装」，无切换）：
-        // 非系统字体（is_system 缺省 false）按 install_mtime（face 文件 mtime 最小值，秒）新→旧排在前，
-        // 同 mtime 按族名字母序；系统字体（/usr/share、/usr/local/share）垫底并保持后端默认序
-        // （后端已按 zh 优先+字母排好，Array.sort 稳定，相等元素顺序不变）。
+        // 不再区分系统/非系统字体，全部统一按安装时间新→旧排：install_mtime 实为 ctime
+        // （inode 变更时间，即字体文件实际落盘时间，单位秒），取该族所有 face 里最早落盘的那个；
+        // 同一时间按族名字母序。Array.sort 稳定，相等元素保持原顺序。
         var sortedFonts = useMemo(function () {
             var list = Array.isArray(fonts) ? fonts.slice() : [];
             list.sort(function (a, b) {
-                var sa = a && a.is_system ? 1 : 0;
-                var sb = b && b.is_system ? 1 : 0;
-                if (sa !== sb) return sa - sb;
                 var ta = (a && a.install_mtime) || 0;
                 var tb = (b && b.install_mtime) || 0;
                 if (ta !== tb) return tb - ta;
