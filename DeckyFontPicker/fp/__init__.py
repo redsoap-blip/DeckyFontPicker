@@ -1,0 +1,363 @@
+"""DeckyFontPicker 模块化包：由薄入口 main.py 全量 re-export。
+
+模块按依赖顺序排列：config -> util -> fonts -> state -> cache -> cef -> plugin。
+全局可变单例只在 config.py 定义一份，其余模块 import 同一对象引用。
+"""
+from __future__ import annotations
+
+from . import config, util, fonts, state, cache, cef, plugin
+from .config import (
+    HOME,
+    PLUGIN_DIR,
+    VENDOR_DIR,
+    SETTINGS_DIR,
+    RUNTIME_DIR,
+    STATE_FILE,
+    LOG_DIR,
+    CACHE_DIR,
+    DECKY_HOST,
+    DECKY_PORT,
+    FC_FORMAT,
+    USABLE_FORMATS,
+    COLLECTION_EXT,
+    DIRECT_EXT,
+    MIME_BY_EXT,
+    _FC_WEIGHTS,
+    WOFF2_MAX_BYTES,
+    CACHE_KEEP_FILES,
+    CACHE_EXTS,
+    PREVIEW_CACHE_DEFAULT_MB,
+    PREFERRED_CJK,
+    EMOJI_FALLBACK,
+    MODE_EXTRACT,
+    INTERNAL_FAMILY,
+    INTERNAL_FAMILY_CJK,
+    INTERNAL_FAMILY_FULL,
+    STEAM_UI_FONT,
+    PREVIEW_SAMPLE_CHARS,
+    PREVIEW_CACHE_SUBDIR,
+    LATIN_STRIP_RANGES_BASE,
+    LATIN_STRIP_MASK_VERSION,
+    TARGETS,
+    DYNAMIC_PREFIX,
+    FALLBACK_TABS,
+    TOAST_TAB_PREFIX,
+    TOAST_WS_BACKOFF,
+    _LIVE,
+    UI_MODE_BIG_PICTURE,
+    UI_MODE_DESKTOP,
+    WINDOW_DELAY,
+    WINDOW_BACKOFF,
+    WINDOW_TOTAL,
+    CEF_PORTS,
+    CEF_TIMEOUT,
+    CEF_CACHE_TTL,
+    CEF_TAB_RE,
+    _CEF_CACHE,
+    _CEF_LOCK,
+    _FAMILY_CACHE,
+    _PREVIEW_NO_GLYPH_FACES,
+    _TOKEN_CACHE,
+    _TAB_LOCKS,
+    _TAB_LOCKS_GUARD,
+    _OWNED,
+    _FT_CACHE,
+    _PREVIEW_STATS,
+    STATE_VERSION,
+)
+from .util import (
+    log,
+    _recent_log,
+    _KeyedError,
+    _elapsed_ms,
+    _run,
+    _system_python,
+    _helper,
+    _cache_key,
+    _touch,
+    _human_size,
+    _fonttools_refresh,
+    _fonttools_status,
+    _require_fonttools_if_needed,
+)
+from .fonts import (
+    _strip_variant,
+    _css_weight,
+    _has_zh,
+    _has_ja,
+    _has_ko,
+    _primary_lang,
+    ZH_EXTRA_MIN_CHARS,
+    ZH_RANGES,
+    _parse_charset,
+    _cjk_coverage,
+    _faces,
+    _SYSTEM_FONT_DIRS,
+    _is_system_face_path,
+    _family_map_build,
+    FAMILY_TTL,
+    _family_map,
+    _lang_display_order,
+    FaceDict,
+    FamilyEntry,
+    StatePayload,
+    list_families,
+    _face_score,
+    _pick_faces,
+    _pick_auto_cjk,
+    _build_chain,
+    _fallback_families,
+)
+from .state import (
+    _state_path,
+    write_state,
+    _migrate_state,
+    _read_state_with_actions,
+    read_state,
+    _norm_level,
+    _norm_preview_cache_mb,
+    _preview_cache_mb_of,
+    _norm_expand,
+    _preview_level_of,
+    _expand_level_of,
+    _clean_favorites,
+    _push_history,
+    _inject_stamp,
+    _heal_stamp,
+    _inject_status,
+)
+from .cache import (
+    _is_cache_file,
+    _prune_font_cache,
+    _woff2_or_ttf,
+    _ensure_font_file,
+    _ensure_latin_file,
+    _preview_cache_dir,
+    _prune_preview_cache,
+    _charset_has_sample_glyphs,
+    _NoSampleGlyphs,
+    _face_has_sample_glyphs,
+    _prepare_preview_face,
+    cache_files_for_state,
+    _protected_cache_files,
+)
+from .cef import (
+    FontServer,
+    TOKEN_TTL,
+    _tab_lock,
+    _decky_token,
+    _decky_post,
+    _decky_method,
+    _inject_css_locked,
+    _classify_remove_failure,
+    _remove_css_locked,
+    _replace_css,
+    _remove_css,
+    _cef_port_hint,
+    _cef_why_message,
+    _cef_fetch,
+    _cef_log_state,
+    _cef_titles,
+    _eval_in_tab,
+    _style_exists,
+    _scan_uid,
+)
+from .plugin import (
+    Plugin,
+    _bind,
+)
+
+_SUBMODULES = (config, util, fonts, state, cache, cef, plugin)
+
+__all__ = [
+    'HOME',
+    'PLUGIN_DIR',
+    'VENDOR_DIR',
+    'SETTINGS_DIR',
+    'RUNTIME_DIR',
+    'STATE_FILE',
+    'LOG_DIR',
+    'CACHE_DIR',
+    'DECKY_HOST',
+    'DECKY_PORT',
+    'FC_FORMAT',
+    'USABLE_FORMATS',
+    'COLLECTION_EXT',
+    'DIRECT_EXT',
+    'MIME_BY_EXT',
+    '_FC_WEIGHTS',
+    'WOFF2_MAX_BYTES',
+    'CACHE_KEEP_FILES',
+    'CACHE_EXTS',
+    'PREVIEW_CACHE_DEFAULT_MB',
+    'PREFERRED_CJK',
+    'EMOJI_FALLBACK',
+    'MODE_EXTRACT',
+    'INTERNAL_FAMILY',
+    'INTERNAL_FAMILY_CJK',
+    'INTERNAL_FAMILY_FULL',
+    'STEAM_UI_FONT',
+    'PREVIEW_SAMPLE_CHARS',
+    'PREVIEW_CACHE_SUBDIR',
+    'LATIN_STRIP_RANGES_BASE',
+    'LATIN_STRIP_MASK_VERSION',
+    'TARGETS',
+    'DYNAMIC_PREFIX',
+    'FALLBACK_TABS',
+    'TOAST_TAB_PREFIX',
+    'TOAST_WS_BACKOFF',
+    '_LIVE',
+    'UI_MODE_BIG_PICTURE',
+    'UI_MODE_DESKTOP',
+    'WINDOW_DELAY',
+    'WINDOW_BACKOFF',
+    'WINDOW_TOTAL',
+    'CEF_PORTS',
+    'CEF_TIMEOUT',
+    'CEF_CACHE_TTL',
+    'CEF_TAB_RE',
+    '_CEF_CACHE',
+    '_CEF_LOCK',
+    '_FAMILY_CACHE',
+    '_PREVIEW_NO_GLYPH_FACES',
+    '_TOKEN_CACHE',
+    '_TAB_LOCKS',
+    '_TAB_LOCKS_GUARD',
+    '_OWNED',
+    '_FT_CACHE',
+    '_PREVIEW_STATS',
+    'STATE_VERSION',
+    'log',
+    '_recent_log',
+    '_KeyedError',
+    '_elapsed_ms',
+    '_run',
+    '_system_python',
+    '_helper',
+    '_cache_key',
+    '_touch',
+    '_human_size',
+    '_fonttools_refresh',
+    '_fonttools_status',
+    '_require_fonttools_if_needed',
+    '_strip_variant',
+    '_css_weight',
+    '_has_zh',
+    '_has_ja',
+    '_has_ko',
+    '_primary_lang',
+    'ZH_EXTRA_MIN_CHARS',
+    'ZH_RANGES',
+    '_parse_charset',
+    '_cjk_coverage',
+    '_faces',
+    '_SYSTEM_FONT_DIRS',
+    '_is_system_face_path',
+    '_family_map_build',
+    'FAMILY_TTL',
+    '_family_map',
+    '_lang_display_order',
+    'FaceDict',
+    'FamilyEntry',
+    'StatePayload',
+    'list_families',
+    '_face_score',
+    '_pick_faces',
+    '_pick_auto_cjk',
+    '_build_chain',
+    '_fallback_families',
+    '_state_path',
+    'write_state',
+    '_migrate_state',
+    '_read_state_with_actions',
+    'read_state',
+    '_norm_level',
+    '_norm_preview_cache_mb',
+    '_preview_cache_mb_of',
+    '_norm_expand',
+    '_preview_level_of',
+    '_expand_level_of',
+    '_clean_favorites',
+    '_push_history',
+    '_inject_stamp',
+    '_heal_stamp',
+    '_inject_status',
+    '_is_cache_file',
+    '_prune_font_cache',
+    '_woff2_or_ttf',
+    '_ensure_font_file',
+    '_ensure_latin_file',
+    '_preview_cache_dir',
+    '_prune_preview_cache',
+    '_charset_has_sample_glyphs',
+    '_NoSampleGlyphs',
+    '_face_has_sample_glyphs',
+    '_prepare_preview_face',
+    'cache_files_for_state',
+    '_protected_cache_files',
+    'FontServer',
+    'TOKEN_TTL',
+    '_tab_lock',
+    '_decky_token',
+    '_decky_post',
+    '_decky_method',
+    '_inject_css_locked',
+    '_classify_remove_failure',
+    '_remove_css_locked',
+    '_replace_css',
+    '_remove_css',
+    '_cef_port_hint',
+    '_cef_why_message',
+    '_cef_fetch',
+    '_cef_log_state',
+    '_cef_titles',
+    '_eval_in_tab',
+    '_style_exists',
+    '_scan_uid',
+    'Plugin',
+    '_bind',
+]
+
+# ── 搬迁兼容垫片（不改任何函数体 / Plugin 类）──
+# 原 main.py 是单文件，门禁脚本用 m.read_state = fake、m.Plugin = FakePlugin、
+# m._faces = stub 等方式替换模块级名字，被同一文件内的函数读取。拆包后这些函数的
+# globals 落在 fp 子模块里；这里给薄入口 main 模块装一个赋值转发钩子，保持原有
+# monkeypatch 语义。只拦截 main 模块的赋值，不改动任何被搬迁的代码。
+import gc as _gc
+import sys as _sys
+import types as _types
+
+def _install_forwarder(_importer_globals):
+    _mods = [
+        o for o in _gc.get_referrers(_importer_globals)
+        if isinstance(o, _types.ModuleType) and o.__dict__ is _importer_globals
+    ]
+    if not _mods:
+        return
+    _targets = (_sys.modules[__name__],) + _SUBMODULES
+
+    class _ForwardingModule(_types.ModuleType):
+        def __setattr__(self, name, value):
+            _types.ModuleType.__setattr__(self, name, value)
+            for _m in _targets:
+                if name in _m.__dict__:
+                    _m.__dict__[name] = value
+
+    _mods[0].__class__ = _ForwardingModule
+
+def _find_importer_globals():
+    # importlib 的引导函数是 Python 帧，_getframe(1) 未必是 main.py；向上找到
+    # __file__ 指向 main.py 的那一帧（门禁脚本把它加载为 fpmain/main）。
+    _f = _sys._getframe(1)
+    while _f is not None:
+        _g = _f.f_globals
+        if _g.get("__name__") != __name__ and _g.get("__file__", "").endswith("main.py"):
+            return _g
+        _f = _f.f_back
+    return None
+
+_import_globals = _find_importer_globals()
+if _import_globals is not None:
+    _install_forwarder(_import_globals)
+del _install_forwarder, _find_importer_globals, _import_globals
+
