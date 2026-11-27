@@ -1123,6 +1123,16 @@
                 var rule = '@font-face{font-family:"' + slot + '";font-style:normal;' +
                     'font-weight:400;font-display:swap;src:url("' + value.url + '") ' +
                     'format("' + fmt + '");}\n';
+                if (value.bold_url) {
+                    // 有 Bold 面：同 slot 族名追加第二条 700 @font-face。必须在这里一次
+                    // 拼齐——commitPreviewRule per-slot 只写一次，不能分两次调用。
+                    // 预览粗样张自此显示字体真 Bold，与 Steam 实际渲染一致；无 bold_url
+                    // （旧后端/家族无 Bold 面）时行为同现状，粗样张按 synthesis:none 显示 400。
+                    var boldFmt = FP_PREVIEW_MIME_FORMAT[value.bold_mime] || fmt;
+                    rule += '@font-face{font-family:"' + slot + '";font-style:normal;' +
+                        'font-weight:700;font-display:swap;src:url("' + value.bold_url + '") ' +
+                        'format("' + boldFmt + '");}\n';
+                }
                 seen[family] = "ok";
                 commitPreviewRule(slot, rule);
                 // 触发浏览器真正下载字体子集（全量预热依赖它）；不再挂任何加载期门控回调。
@@ -1130,6 +1140,10 @@
                 try {
                     var loaded = document.fonts.load('15px "' + slot + '"');
                     if (loaded && typeof loaded.catch === "function") loaded.catch(function () {});
+                    if (value.bold_url) {
+                        var loaded700 = document.fonts.load('700 15px "' + slot + '"');
+                        if (loaded700 && typeof loaded700.catch === "function") loaded700.catch(function () {});
+                    }
                 } catch (e) {}
             }).catch(function () {
                 seen[family] = "error";
@@ -2266,6 +2280,11 @@
             "line-height:1.4!important;color:rgba(195,200,207,0.92)!important;white-space:nowrap!important;" +
             "overflow:hidden!important;text-overflow:ellipsis!important;}" +
             "html body .fp-ex-lat{font-size:16px!important;}" +
+            // 预览相关行禁用合成粗体：与后端注入的 synthesis:none 对齐，无 Bold 字体的
+            // 粗样张显示 400 = Steam 实际观感；有 Bold 字体由 700 @font-face 显示真粗，
+            // 合成永不参与。注入前后预览零变化（"注入前假粗、注入后细"跳变彻底消失）。
+            "html body .fp-fname,html body .fp-prev,html body .fp-prev-b,html body .fp-ex-line{" +
+            "font-synthesis-weight:none!important;}" +
             "html body .fp-ex-label{display:inline-block;width:30px!important;" +
             "font-family:\"Fira Sans\",\"Noto Sans CJK SC\",sans-serif!important;" +
             "font-size:11px!important;font-weight:600!important;letter-spacing:0.5px!important;" +

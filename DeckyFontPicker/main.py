@@ -1139,52 +1139,75 @@ def _face_has_sample_glyphs(face, family):
 
 
 def _prepare_preview_face(family):
-    """返回 (本地路径, MIME)：只含样张字符的极小子集，命中缓存直接复用。
+    """返回 ((path400, mime400), (path700, mime700) 或 None)：只含样张字符的极小子集。
 
     前端通过 get_preview_font RPC 按需调用，只有真正滚进视口的预览行才会触发；
     不像主注入那样抽整 face、也不会和缓存清理抢名额。子集失败时退回整 face
     （慢但能显示），字体不存在返回 None。
+    常规样张用 regular face（400），粗体样张用 bold face（700）：粗体样张与
+    Steam 实际渲染一致（注入即按 face 注册多字重 @font-face）。家族没有独立
+    Bold face 时第二元为 None——粗样张按 CSS 合成禁用（synthesis:none）显示
+    400，同样与 Steam 实际一致。
     """
     entry = _family_map().get(family)
     if entry is None:
         return None
+    # 只取 [0]=regular 与 [2]=bold：UI 无 500 需求（600 请求按 CSS 规则匹配到 700 面）
     faces = _pick_faces(entry, prefer_zh=True)
-    face = next((f for f in faces if f is not None), None)
-    if face is None:
+    regular = faces[0]
+    if regular is None:
         return None
 
     # 无样张字形检查放在 woff2 缓存命中之前：1.4.23 遗留的空字形 woff2
     # （CEF 判定不可解析、FontFace.load() 报网络错误的那批）也永远不会再被返回。
-    if not _face_has_sample_glyphs(face, family):
+    if not _face_has_sample_glyphs(regular, family):
         log(f"预期失败：字体 {family!r} 不含样张字符（cmap 无样张码位），跳过子集与注册")
         raise _NoSampleGlyphs(family)
 
-    key = hashlib.sha1(
-        (face["file"] + "#" + str(face["index"]) + "#pv2").encode("utf-8")
-    ).hexdigest()[:20]
-    d = _preview_cache_dir()
-    os.makedirs(d, exist_ok=True)
-    ttf = os.path.join(d, key + ".ttf")
-    woff2 = os.path.join(d, key + ".woff2")
+    def _subset_one(face):
+        # 子集缓存键只取决于 face 文件+字符集，与注册 weight 无关；bold 是不同
+        # face 文件、键天然不同，regular 既有键盐 #pv2 直接复用（旧缓存照常命中）。
+        key = hashlib.sha1(
+            (face["file"] + "#" + str(face["index"]) + "#pv2").encode("utf-8")
+        ).hexdigest()[:20]
+        d = _preview_cache_dir()
+        os.makedirs(d, exist_ok=True)
+        ttf = os.path.join(d, key + ".ttf")
+        woff2 = os.path.join(d, key + ".woff2")
 
-    if os.path.exists(woff2) and os.path.getsize(woff2) > 0:
-        return woff2, "font/woff2"
-    if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
-        proc = _run(
-            [_system_python(), _helper(), "preview", face["file"], str(face["index"]), ttf,
-             # 保留字符 = 样张文本 + 族名：名字元素永远用自身字体渲染（字体名自成样张），
-             # 子集必须覆盖族名字符；族名通常十几个字符，产物仍是几 KB。
-             PREVIEW_SAMPLE_CHARS + family],
-            timeout=180,
-        )
-        if proc.returncode != 0 or not os.path.exists(ttf) or os.path.getsize(ttf) <= 0:
-            err = (proc.stderr or "").strip()[:200]
-            log(f"预览子集失败（{os.path.basename(face['file'])}#{face['index']}）: {err}，回退整 face")
-            return _ensure_font_file(face)
+        if os.path.exists(woff2) and os.path.getsize(woff2) > 0:
+            return woff2, "font/woff2"
+        if not (os.path.exists(ttf) and os.path.getsize(ttf) > 0):
+            proc = _run(
+                [_system_python(), _helper(), "preview", face["file"], str(face["index"]), ttf,
+                 # 保留字符 = 样张文本 + 族名：名字元素永远用自身字体渲染（字体名自成样张），
+                 # 子集必须覆盖族名字符；族名通常十几个字符，产物仍是几 KB。
+                 PREVIEW_SAMPLE_CHARS + family],
+                timeout=180,
+            )
+            if proc.returncode != 0 or not os.path.exists(ttf) or os.path.getsize(ttf) <= 0:
+                err = (proc.stderr or "").strip()[:200]
+                log(f"预览子集失败（{os.path.basename(face['file'])}#{face['index']}）: {err}，回退整 face")
+                return _ensure_font_file(face)
 
-    result = _woff2_or_ttf(ttf, woff2)
-    _prune_preview_cache()
-    return result
+        result = _woff2_or_ttf(ttf, woff2)
+        _prune_preview_cache()
+        return result
+
+    pair400 = _subset_one(regular)
+
+    # Bold face 缺字形或子集失败：静默不带 700（防御，不 raise），粗样张走 400。
+    pair700 = None
+    bold = faces[2]
+    if bold is not None:
+        if _face_has_sample_glyphs(bold, family):
+            try:
+                pair700 = _subset_one(bold)
+            except Exception as exc:
+                log(f"预览 bold 子集失败（{os.path.basename(bold['file'])}#{bold['index']}）: {exc}，预览不带 700 字重")
+        else:
+            log(f"预期失败：字体 {family!r} 的 Bold face 不含样张字符，预览不带 700 字重")
+    return pair400, pair700
 
 
 def cache_files_for_state(state, families):
@@ -2004,7 +2027,7 @@ class Plugin:
                 f"累计 ok={_ok}/fail={_fail} {note}".rstrip())
 
         try:
-            pair = await asyncio.to_thread(_prepare_preview_face, family)
+            pairs = await asyncio.to_thread(_prepare_preview_face, family)
         except _NoSampleGlyphs:
             # 预期失败（如 Noto Music 等专用符号字体）：计入 fail 但注明非故障，
             # 前端按 error_key 直接永久回退，不进重试通道
@@ -2015,17 +2038,28 @@ class Plugin:
             log(f"预览字体准备失败 {family!r}: {exc}")
             _stat(False, "prepare-exc")
             return {"ok": False, "error": str(exc)}
-        if not pair:
+        if not pairs:
             _stat(False, "no-family")
             return {"ok": False, "error": f"系统里没有字体 {family}", "error_key": "err.noFamily", "error_args": [family]}
-        path, mime = pair
+        pair400, pair700 = pairs
+        path, mime = pair400
         try:
             url = plugin._server.register(path, mime)
         except Exception as exc:
             _stat(False, "register-exc")
             return {"ok": False, "error": str(exc)}
+        # 纯增量：家族有独立 Bold face 时多注册一条 700 URL；既有字段名与语义不变。
+        # bold 注册失败只降级（粗样张显示 400），不影响 400 已注册的常规样张。
+        result = {"ok": True, "url": url, "mime": mime}
+        if pair700:
+            try:
+                bold_path, bold_mime = pair700
+                result["bold_url"] = plugin._server.register(bold_path, bold_mime)
+                result["bold_mime"] = bold_mime
+            except Exception as exc:
+                log(f"预览 bold 注册失败 {family!r}: {exc}，粗样张降级为 400")
         _stat(True, "ok")
-        return {"ok": True, "url": url, "mime": mime}
+        return result
 
     async def get_font_state(self):
         plugin = _bind(self)
