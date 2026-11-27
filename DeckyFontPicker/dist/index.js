@@ -2,6 +2,16 @@
 (function (deckyFrontendLib, React) {
     "use strict";
 
+    // ===== 模块级动作信标(v3.1 施工单 plan_menu_apply_live_20261128 §2) =====
+    // 五个改注入动作(applyToSlot / reset / reapplyFont / toggleSplit / toggleSynth)
+    // 在入口写 phase:"running"、call().then 内写 phase:"done"。模块作用域跨组件卸载
+    // 存活:原生菜单应用流里 onSelected 是面板卸载前旧实例的闭包,其 setInjecting 等
+    // 状态写入落在死实例上零 UI 效果,但闭包仍可写本变量;重挂载的新实例靠下方组件内
+    // 300ms 镜像轮询读取它,让「注入中…」在菜单流里真正可见。
+    // 已知边界(如实):面板卸载→重挂载间隙(~0.5-1s)注入中不可见(无实例可渲染),
+    // 属固有;闭包路径完成时 done 镜像清除最多滞后一个轮询周期(300ms),不可感知。
+    var liveAction = null; // { slot, family, phase: "running"|"done", at }
+
     /**
      * 后端 payload 里单个字体族条目(与 main.py list_families 输出逐字段对齐)。
      * @typedef {Object} FontFamilyItem
@@ -162,6 +172,7 @@
             "note.history": "按最近使用时间排列，无上限，卸载的字体自动移除",
             "colon": "：",
             "injectDone": "手动注入 · {0}",
+            "injectPending": "注入中…",
             "injectFailed": "注入失败",
             "injectNone": "尚未注入",
             "injectHeal": "自动注入 · {0}",
@@ -263,6 +274,7 @@
             "note.history": "Ordered by most recent use, unlimited; uninstalled fonts are removed automatically",
             "colon": ": ",
             "injectDone": "Manual injection · {0}",
+            "injectPending": "Injecting…",
             "injectFailed": "Injection failed",
             "injectNone": "Not injected yet",
             "injectHeal": "Auto injection · {0}",
@@ -872,6 +884,29 @@
         var busy = busyHook[0];
         var setBusy = busyHook[1];
 
+        // reqSeqRef 是纯前端请求代号：call() 发起前自增并捕获，settleFetch 发起前捕获；
+        // reqSeqRef 不相同即说明回包已被后续动作淘汰，丢弃即可（不改返回语义）。
+        var reqSeqRef = useRef(0);
+
+        // 真正改变注入的动作在等待回包期间，顶部摘要优先显示「注入中…」
+        var injectingHook = useState(false);
+        var injecting = injectingHook[0];
+        var setInjecting = injectingHook[1];
+
+        // 动作进行中标志：五个真正改注入的动作在 setInjecting(true) 后置 true，
+        // 各自的 RPC 回包到达（call().then）时置 false。标志为 true 期间，
+        // settle 轮询拿到的「旧 done」快照不应用、也不触发提前判停——
+        // 「注入中…」只由本次动作的 RPC 回包结束，绝不由 settle 回包结束。
+        var actionPendingRef = useRef(false);
+
+        // v3.1 模块级信标的本地镜像 busy:原生菜单应用流里 onSelected 是面板卸载前旧
+        // 实例的闭包,setInjecting 写在死实例上零 UI 效果,只有模块级 liveAction 能跨
+        // 卸载被看到(见文件顶部信标定义与下方 300ms 镜像轮询)。闭包路径(面板未卸载
+        // 的环境)仍走 setInjecting/actionPendingRef 原逻辑,信标与之并存。
+        var liveBusyHook = useState(false);
+        var liveBusy = liveBusyHook[0];
+        var setLiveBusy = liveBusyHook[1];
+
         // 预览缓存上限（MB）：本地 state 立即反映滑块，避免回弹；payload 到达后
         // 再同步为后端权威值。refs 记录待发送值与写入确认状态，供防抖与同步守卫用。
         var cacheMbHook = useState(8);
@@ -994,13 +1029,14 @@
         }
 
         function call(method, args) {
+            var seq = ++reqSeqRef.current; // 发起前自增并捕获代号
             return serverApi.callPluginMethod(method, args || {}).then(function (res) {
                 var value = unwrap(res);
                 if (res && res.success === false) {
                     setMessage(textOf(value) || t("callFailed", method));
                     return null;
                 }
-                applyPayload(value);
+                if (seq === reqSeqRef.current) applyPayload(value); // 仅最新请求回包才覆盖状态
                 return value;
             }).catch(function (e) {
                 setMessage(t("callFailedDetail", method, String(e)));
@@ -1015,7 +1051,11 @@
                 else if (value && Array.isArray(value.fonts)) setFonts(value.fonts);
                 else setFonts([]);
             }).catch(function () { /* 忽略：下面 get_font_state 会提示 */ });
-            call("get_font_state");
+            call("get_font_state").then(function (value) {
+                // 自动补注入/外部改动若发生在面板挂载之后，唯一一次只读回包可能停在旧快照
+                // （targets 全 false + 注入后新端口）。回包不稳定就启动短轮询兜底再拉一次。
+                if (!value || !allInjected(value)) startSettle();
+            });
         }
 
         // 打开面板只读一次：get_fonts + get_font_state。
@@ -1355,19 +1395,27 @@
             for (var i = 0; i < payload.targets.length; i++) {
                 if (!payload.targets[i] || payload.targets[i].ok !== true) return false;
             }
-            return true;
+            // targets 与 inject_level 存在时序差：两者都稳定才算真正注入完成，
+            // 避免「targets 全 ok 但 inject_level 仍是 none」的半截状态冻结轮询。
+            return payload.inject_level === "done" || payload.inject_level === "healed";
         }
 
         function settleFetch(token) {
             var s = settleRef.current;
             if (s.inFlight) return; // 上一跳还没回来，这一跳跳过，不叠加
             s.inFlight = true;
+            var seq = reqSeqRef.current; // 发起前捕获代号（不自增）
             serverApi.callPluginMethod("get_font_state", {}).then(function (res) {
                 s.inFlight = false;
+                if (seq !== reqSeqRef.current) return; // 被后续动作淘汰的旧代号回包，直接丢弃
                 if (!aliveRef.current || token !== s.token) return;
                 if (!res || res.success === false) return;
                 var value = unwrap(res);
                 if (!value || typeof value !== "object") return;
+                // 动作进行中：settle 拿到的任何「旧 done」回包都不应用、也不触发
+                // allInjected 提前停轮询（inFlight 已在上方复位，不会卡死轮询槽）。
+                // 本次注入是否完成以动作自身 RPC 回包为准。
+                if (actionPendingRef.current) return;
                 applyPayload(value);
                 if (allInjected(value)) stopSettle();
             }).catch(function () { s.inFlight = false; });
@@ -1381,6 +1429,10 @@
             s.tick += 1;
             if (s.tick < SETTLE_MAX_TICKS) {
                 s.timer = setTimeout(function () { settleTick(token); }, SETTLE_INTERVAL);
+            } else {
+                // 轮询到上限仍不稳定：只解除动作屏蔽兜底，不直接碰 UI 状态；
+                // 动作若仍在进行，「注入中…」由其 RPC 回包（动作 .then）负责清除
+                actionPendingRef.current = false;
             }
         }
 
@@ -1393,14 +1445,50 @@
             s.timer = setTimeout(function () { settleTick(token); }, SETTLE_INTERVAL);
         }
 
+        // v3.1 300ms 镜像轮询 effect:mount 启动、unmount clearInterval。读模块级
+        // liveAction 信标(跨卸载存活):phase "running" → 点亮 liveBusy(「注入中…」);
+        // phase "done" → 熄灭 liveBusy、清信标、startSettle() 拉回权威状态(重挂载的新
+        // 实例由此获得完成通知,变「手动注入 · HH:MM」,无需重进面板);陈旧保护:
+        // running 且 at 距今 > 120000ms 视为孤儿旗(桥死残留),清除防「注入中」永挂。
+        // 已知边界:闭包路径完成时信标 done 的镜像清除最多滞后一个轮询周期(300ms),
+        // 不可感知;面板卸载→重挂载间隙(~0.5-1s)注入中不可见,属固有(无实例可渲染)。
+        useEffect(function () {
+            var liveTimer = setInterval(function () {
+                if (liveAction && liveAction.phase === "running") {
+                    if (Date.now() - liveAction.at > 120000) {
+                        liveAction = null; // 孤儿旗清除
+                        setLiveBusy(false);
+                        return;
+                    }
+                    setLiveBusy(true);
+                    return;
+                }
+                if (liveAction && liveAction.phase === "done") {
+                    liveAction = null;
+                    setLiveBusy(false);
+                    startSettle(); // 拉回权威状态(动作 RPC 的 applyPayload 已由 call 内部处理过)
+                }
+            }, 300);
+            return function () { clearInterval(liveTimer); };
+        }, []);
+
         // 写入槽位：复用现有 set_font / set_cjk_font，动作后照常短轮询确认三行状态
         function applyToSlot(slot, family) {
             if (busy) return;
             setBusy(true);
+            setInjecting(true);
+            actionPendingRef.current = true;
+            // 模块级信标 running:死实例闭包执行到这行也能写模块变量(v3.1 §2),
+            // 由存活实例的 300ms 镜像轮询读取并点亮「注入中…」
+            liveAction = { slot: slot, family: family, phase: "running", at: Date.now() };
             stopSettle();
             call(slot === "cjk" ? "set_cjk_font" : "set_font", { family: family }).then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                actionPendingRef.current = false;
+                setInjecting(false); // 「注入中…」由本次动作的 RPC 回包结束（null 也清，失败由 call 报错）
+                // 信标 done:闭包路径完成时同步模块旗,轮询实例据此熄灭镜像并 startSettle 拉权威状态
+                liveAction = { slot: liveAction && liveAction.slot, family: liveAction && liveAction.family, phase: "done", at: Date.now() };
+                startSettle(); // 无条件兜底：回包丢失/失败也要取回权威状态
             });
         }
 
@@ -1476,10 +1564,17 @@
         function reset() {
             if (busy) return;
             setBusy(true);
+            setInjecting(true);
+            actionPendingRef.current = true;
+            // 信标 running(reset 无单槽语义,slot/family 如实记 null)
+            liveAction = { slot: null, family: null, phase: "running", at: Date.now() };
             stopSettle();
             call("reset_font").then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                actionPendingRef.current = false;
+                setInjecting(false); // 「注入中…」由本次动作的 RPC 回包结束（null 也清，失败由 call 报错）
+                liveAction = { slot: null, family: null, phase: "done", at: Date.now() };
+                startSettle();
             });
         }
 
@@ -1488,10 +1583,17 @@
         function reapplyFont() {
             if (busy || (!current && !(state && state.family_cjk))) return;
             setBusy(true);
+            setInjecting(true);
+            actionPendingRef.current = true;
+            // 信标 running(reapply 重新注入当前组合,slot/family 如实记 null)
+            liveAction = { slot: null, family: null, phase: "running", at: Date.now() };
             stopSettle();
             call("reapply").then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                actionPendingRef.current = false;
+                setInjecting(false); // 「注入中…」由本次动作的 RPC 回包结束（null 也清，失败由 call 报错）
+                liveAction = { slot: null, family: null, phase: "done", at: Date.now() };
+                startSettle();
             });
         }
 
@@ -1537,20 +1639,34 @@
         function toggleSplit() {
             if (busy) return;
             setBusy(true);
+            setInjecting(true);
+            actionPendingRef.current = true;
+            // 信标 running(开关动作无单槽语义,slot/family 如实记 null)
+            liveAction = { slot: null, family: null, phase: "running", at: Date.now() };
             stopSettle();
             call("set_split_options", { cjk_split: !splitOn }).then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                actionPendingRef.current = false;
+                setInjecting(false); // 「注入中…」由本次动作的 RPC 回包结束（null 也清，失败由 call 报错）
+                liveAction = { slot: null, family: null, phase: "done", at: Date.now() };
+                startSettle();
             });
         }
 
         function toggleSynth() {
             if (busy) return;
             setBusy(true);
+            setInjecting(true);
+            actionPendingRef.current = true;
+            // 信标 running(开关动作无单槽语义,slot/family 如实记 null)
+            liveAction = { slot: null, family: null, phase: "running", at: Date.now() };
             stopSettle();
             call("set_split_options", { synth_weight_none: !synthNone }).then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                actionPendingRef.current = false;
+                setInjecting(false); // 「注入中…」由本次动作的 RPC 回包结束（null 也清，失败由 call 报错）
+                liveAction = { slot: null, family: null, phase: "done", at: Date.now() };
+                startSettle();
             });
         }
 
@@ -1562,7 +1678,7 @@
             stopSettle();
             call("set_split_options", patch).then(function (value) {
                 setBusy(false);
-                if (value && value.ok !== false) startSettle();
+                startSettle();
             });
         }
 
@@ -1639,13 +1755,16 @@
             call("clear_history").then(function (value) {
                 setBusy(false);
                 if (value && value.ok !== false) setCopyMsg(t("historyCleared"));
+                startSettle();
             }).catch(function () { setBusy(false); });
         }
 
         function toggleFavorite(family) {
             if (!family) return;
             if (busy) return; // 其它批量动作进行中不响应收藏切换,与上方各动作一致
-            call("toggle_favorite", { family: family });
+            call("toggle_favorite", { family: family }).then(function () {
+                startSettle();
+            });
         }
 
         // 全部折叠是默认态：collapsed[id] 只有显式 false 才算展开
@@ -1860,8 +1979,11 @@
             problemText = String(state.error);
         }
 
-        // 注入历史摘要：只读后端记录的「最近一次注入」结果，不做任何实时检测
+        // 注入历史摘要：只读后端记录的「最近一次注入」结果，不做任何实时检测。
+        // injecting = 本实例闭包路径(v3);liveBusy = 模块信标镜像(v3.1,菜单流死闭包
+        // 写不活旧实例 setInjecting,由 300ms 轮询点亮)。两通道并存,任一为真即「注入中…」
         var summary = (function () {
+            if (injecting || liveBusy) return { text: t("injectPending"), color: "rgba(255,255,255,0.65)" };
             if (!state) return null;
             var level = state.inject_level || "none";
             var stamp = state.inject_text || "";
