@@ -11,8 +11,9 @@ from .config import (DYNAMIC_PREFIX, FALLBACK_TABS, INTERNAL_FAMILY, INTERNAL_FA
 from .util import (_KeyedError, _elapsed_ms, _recent_log, _require_fonttools_if_needed,
                    _fonttools_refresh, log)
 from .fonts import _fallback_families, _family_map, _pick_faces, list_families
-from .state import (_clean_favorites, _expand_level_of, _heal_stamp, _inject_status,
-                    _norm_expand, _norm_level, _norm_preview_cache_mb, _preview_cache_mb_of,
+from .state import (_clean_favorites, _expand_level_of, _face_cache_mb_of,
+                    _heal_stamp, _inject_status, _norm_face_cache_mb, _norm_expand,
+                    _norm_level, _norm_preview_cache_mb, _preview_cache_mb_of,
                     _preview_level_of, _push_history, _read_state_with_actions, read_state,
                     write_state)
 from .cache import (_NoSampleGlyphs, _ensure_font_file, _ensure_latin_file, _is_cache_file,
@@ -345,6 +346,26 @@ class Plugin:
         write_state(state)
         log("字体使用历史已清空")
         return {"ok": True, **plugin._payload()}
+
+    async def set_face_cache_mb(self, value=None):
+        """face 缓存上限（MB，64-1024，默认 256）：写 state 后立即按新预算修剪一次（A1）。
+
+        纯缓存设置：不参与 changed、绝不触发按当前字体重新注入；修剪保护集照旧
+        cache_files_for_state 反推（当前注入所需 face 永不删），与启动清理同口径。
+        返回新 payload（含 face_cache_mb 供滑块回读）。
+        """
+        plugin = _bind(self)
+        state = read_state()
+        old = _face_cache_mb_of(state)
+        state["face_cache_mb"] = _norm_face_cache_mb(value, old)
+        write_state(state)
+        new = _face_cache_mb_of(state)
+        log(f"face 缓存上限更新：{old} MB → {new} MB，立即按预算修剪一次")
+        families = await asyncio.to_thread(_family_map)
+        protect = _protected_cache_files(state, families)
+        removed = await asyncio.to_thread(_prune_font_cache, tuple(protect))
+        log(f"face 缓存上限修剪完成：反推保护 {len(protect)} 个缓存名，删除 {removed} 个")
+        return plugin._payload()
 
     async def reapply(self):
         plugin = _bind(self)
@@ -1141,6 +1162,7 @@ class Plugin:
             "preview_level": _preview_level_of(state),
             "expand_level": _expand_level_of(state),
             "preview_cache_mb": _preview_cache_mb_of(state),
+            "face_cache_mb": _face_cache_mb_of(state),
             "strip": self._detail.get("strip") or {"done": False, "fallback": False},
             "full_backfill": bool(self._detail.get("full_backfill")),
             "uid": self._uid,

@@ -8,6 +8,10 @@ from .config import MODE_EXTRACT, PREVIEW_CACHE_DEFAULT_MB, STATE_FILE, STATE_VE
 from .util import log
 
 
+# 主 face 缓存字节上限（MB）默认值：A1 字节预算 LRU（64-1024 MB 可调，不 bump _v）
+FACE_CACHE_DEFAULT_MB = 256
+
+
 def _state_path():
     return STATE_FILE
 
@@ -97,6 +101,21 @@ def _norm_preview_cache_mb(value, default=8):
 def _preview_cache_mb_of(state):
     """预览缓存字节上限（MB）。旧 state 无 preview_cache_mb 键 = 默认 8，无感升级。"""
     return _norm_preview_cache_mb(state.get("preview_cache_mb"), PREVIEW_CACHE_DEFAULT_MB)
+
+
+def _norm_face_cache_mb(value, default=FACE_CACHE_DEFAULT_MB):
+    """主 face 缓存字节上限（MB）收敛到 64-1024：越界取边界（63→64、1025→1024），
+    非数字/缺失回退 default。"""
+    try:
+        mb = int(value)
+    except (TypeError, ValueError):
+        return default
+    return min(1024, max(64, mb))
+
+
+def _face_cache_mb_of(state):
+    """主 face 缓存字节上限（MB）。旧 state 无 face_cache_mb 键 = 默认 256，无感升级。"""
+    return _norm_face_cache_mb(state.get("face_cache_mb"), FACE_CACHE_DEFAULT_MB)
 
 
 def _norm_expand(value, default=0):

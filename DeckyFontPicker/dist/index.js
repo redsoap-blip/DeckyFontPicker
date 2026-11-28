@@ -59,6 +59,7 @@
      * @property {number} preview_level
      * @property {number} expand_level
      * @property {number} preview_cache_mb  预览子集缓存字节上限（MB），1-30，默认 8
+     * @property {number} face_cache_mb  主 face 缓存字节上限（MB），64-1024，默认 256
      * @property {{done: boolean, fallback: boolean}} strip
      * @property {boolean} full_backfill
      * @property {string|null} uid
@@ -205,12 +206,15 @@
             "err.fonttoolsMissing": "抽取 {0} 需要 fontTools，当前 Python 没有安装",
             "err.fonttoolsSubset": "西文剔字需要 fontTools（{0}），可关闭「按语言注入」",
             "err.noSampleGlyphs": "字体 {0} 不含样张字符，已使用回退字体",
+            "err.badPage": "未知的注入目标页",
             "advanced": "高级",
             "cefNoPort": "CEF 调试口尚未就绪（Steam 启动或重载中），插件会在注入窗口内自动重试。",
             "cefPortInfo": "调试端口 {0} · {1} 个 tab",
             "woff2Fallback": "woff2 不可用，将注入 ttf（体积更大）",
             "previewCacheTitle": "预览缓存上限",
             "previewCacheNote": "预览子集的磁盘缓存上限（MB），默认 8MB，约可容纳 700 个以上字体预览。调大减少重复裁剪，调小更省磁盘。1–30MB。",
+            "faceCacheMb": "face 缓存上限",
+            "faceCacheMbDesc": "主字体缓存占用的磁盘上限（MB），超出后按最近使用清理。64-1024MB，默认 256MB。",
             "copyLog": "复制日志",
             "history.empty": "暂无使用记录",
             "clearHistory": "清除历史字体记录",
@@ -307,12 +311,15 @@
             "err.fonttoolsMissing": "Extracting {0} requires fontTools, which is not installed",
             "err.fonttoolsSubset": "Latin-slot stripping requires fontTools ({0}); you can turn off per-language injection",
             "err.noSampleGlyphs": "Font {0} has no sample glyphs; using fallback font.",
+            "err.badPage": "Unknown injection target page",
             "advanced": "Advanced",
             "cefNoPort": "CEF debug port not ready yet (Steam is starting or reloading). The plugin keeps retrying within its injection window.",
             "cefPortInfo": "Debug port {0} · {1} tabs",
             "woff2Fallback": "woff2 unavailable, injecting ttf (larger files)",
             "previewCacheTitle": "Preview cache limit",
             "previewCacheNote": "Disk cache limit for font preview subsets (MB). Default 8MB holds roughly 700+ previews. Larger = fewer re-subsets; smaller = less disk. 1-30MB.",
+            "faceCacheMb": "Face cache limit",
+            "faceCacheMbDesc": "Disk cap for the extracted face cache (MB). Oldest-used faces are cleaned up first when exceeded. 64-1024MB, default 256MB.",
             "copyLog": "Copy log",
             "history.empty": "No history yet",
             "clearHistory": "Clear font history",
@@ -376,6 +383,7 @@
             "note.history": "最近使用した順に並び、上限なし。アンインストールしたフォントは自動的に外れます",
             "colon": "：",
             "injectDone": "手動適用 · {0}",
+            "injectPending": "注入しています…",
             "injectFailed": "適用に失敗",
             "injectNone": "まだ適用していません",
             "injectHeal": "自動適用 · {0}",
@@ -408,12 +416,15 @@
             "err.fonttoolsMissing": "{0} の抽出には fontTools が必要ですが、インストールされていません",
             "err.fonttoolsSubset": "西文スロットの削字には fontTools が必要です（{0}）。「言語別注入」をオフにできます",
             "err.noSampleGlyphs": "フォント {0} にサンプル文字の字形がなく、代替フォントで表示します",
+            "err.badPage": "不明な注入対象ページ",
             "advanced": "詳細設定",
             "cefNoPort": "CEF デバッグポートがまだ準備できていません（Steam の起動中または再読み込み中）。プラグインは注入ウィンドウ内で自動的に再試行します。",
             "cefPortInfo": "デバッグポート {0} · {1} 個のタブ",
             "woff2Fallback": "woff2 が利用できないため ttf を注入します（サイズ大）",
             "previewCacheTitle": "プレビューキャッシュ上限",
             "previewCacheNote": "プレビュー用サブセットのディスクキャッシュ上限（MB）。既定 8MB で 700 個以上のプレビューを保持。大きくすると再サブセットが減り、小さくするとディスクを節約。1–30MB。",
+            "faceCacheMb": "face キャッシュ上限",
+            "faceCacheMbDesc": "抽出済み face のキャッシュが使うディスク上限（MB）。上限を超えると最近使用の古いものから削除。64-1024MB、既定 256MB。",
             "copyLog": "ログをコピー",
             "history.empty": "記録はまだありません",
             "clearHistory": "フォント履歴を消去",
@@ -477,6 +488,7 @@
             "note.history": "최근 사용 순으로 정렬되며 제한 없음, 삭제된 글꼴은 자동으로 제외됩니다",
             "colon": ": ",
             "injectDone": "수동 적용 · {0}",
+            "injectPending": "주입 중…",
             "injectFailed": "적용 실패",
             "injectNone": "아직 적용 안 됨",
             "injectHeal": "자동 적용 · {0}",
@@ -509,12 +521,15 @@
             "err.fonttoolsMissing": "{0} 추출에 fontTools가 필요하지만 설치되어 있지 않습니다",
             "err.fonttoolsSubset": "라틴 슬롯 정리에 fontTools가 필요합니다 ({0}). 언어별 주입을 끌 수 있습니다",
             "err.noSampleGlyphs": "글꼴 {0}에 샘플 문자가 없어 대체 글꼴로 표시합니다",
+            "err.badPage": "알 수 없는 주입 대상 페이지",
             "advanced": "고급",
             "cefNoPort": "CEF 디버깅 포트가 아직 준비되지 않았습니다(Steam 시작 또는 다시 로드 중). 플러그인은 주입 창 안에서 자동으로 재시도합니다.",
             "cefPortInfo": "디버그 포트 {0} · 탭 {1}개",
             "woff2Fallback": "woff2 사용 불가, ttf 주입(용량 커짐)",
             "previewCacheTitle": "미리보기 캐시 상한",
             "previewCacheNote": "미리보기 서브셋의 디스크 캐시 상한(MB). 기본 8MB는 700개 이상의 미리보기를 담을 수 있습니다. 크게 하면 재생성이 줄고, 작게 하면 디스크를 절약합니다. 1–30MB.",
+            "faceCacheMb": "face 캐시 상한",
+            "faceCacheMbDesc": "추출된 face 캐시가 쓰는 디스크 상한(MB). 상한을 넘으면 최근 사용 순으로 정리합니다. 64-1024MB, 기본 256MB.",
             "copyLog": "로그 복사",
             "history.empty": "기록이 아직 없습니다",
             "clearHistory": "폰트 기록 지우기",
@@ -915,6 +930,14 @@
         var cacheMbTimerRef = useRef(null);
         var cacheMbValueRef = useRef(8);
         var cacheMbPendingRef = useRef(false);
+        // face 缓存上限（MB）：本地 state 立即反映滑块，避免回弹；payload 到达后
+        // 再同步为后端权威值。refs 记录待发送值与写入确认状态，供防抖与同步守卫用。
+        var faceCacheMbHook = useState(256);
+        var faceCacheMb = faceCacheMbHook[0];
+        var setFaceCacheMb = faceCacheMbHook[1];
+        var faceCacheMbTimerRef = useRef(null);
+        var faceCacheMbValueRef = useRef(256);
+        var faceCacheMbPendingRef = useRef(false);
 
         // 无样张字形字体表（family -> true）：收到 err.noSampleGlyphs 后标记，
         // 触发重渲染让对应行换文案。会话内每个 family 至多触发一次状态更新，
@@ -1628,6 +1651,16 @@
         useEffect(function () {
             if (!cacheMbPendingRef.current) setPreviewCacheMb(payloadCacheMb);
         }, [payloadCacheMb]);
+        // face 缓存字节上限（MB）：payload 为后端权威值，收敛到 64-1024
+        var payloadFaceCacheMb = 256;
+        if (state && typeof state.face_cache_mb === "number") {
+            payloadFaceCacheMb = Math.max(64, Math.min(1024, state.face_cache_mb | 0));
+        }
+        // payload 更新（含 RPC 回包 applyPayload）后同步本地滑块值；写入未确认期间
+        // 暂停同步，避免拖动中被稍后到达的旧 payload 拉回（回弹）。
+        useEffect(function () {
+            if (!faceCacheMbPendingRef.current) setFaceCacheMb(payloadFaceCacheMb);
+        }, [payloadFaceCacheMb]);
         var previewOn = previewLevel !== 0; // 兼容旧引用
 
         // 档位滑块行组件 TierSliderRow 已提到模块层（buttonOf 之后），
@@ -1697,6 +1730,24 @@
                 call("set_split_options", { preview_cache_mb: cacheMbValueRef.current }).then(function () {
                     // 若期间又拖动产生了新值，保护继续有效，直到最后一次写入确认
                     if (!cacheMbTimerRef.current) cacheMbPendingRef.current = false;
+                });
+            }, 100);
+        }
+        // face 缓存上限滑块：纯缓存设置，后端只落盘、不重新注入 CSS，因此不占用
+        // busy、也不走 startSettle（call 内部已 applyPayload 回写新值）。连续拖动会
+        // 高频 onChange，用短防抖只送最终值，避免走 setLevels 的 busy 互斥把中间的
+        // onChange 丢掉、滑块被旧 payload 拉回。本地 state 在 onChange 当下即更新。
+        function pushFaceCacheMb(v) {
+            var next = Math.max(64, Math.min(1024, v | 0));
+            faceCacheMbValueRef.current = next;
+            faceCacheMbPendingRef.current = true;
+            setFaceCacheMb(next);
+            if (faceCacheMbTimerRef.current) clearTimeout(faceCacheMbTimerRef.current);
+            faceCacheMbTimerRef.current = setTimeout(function () {
+                faceCacheMbTimerRef.current = null;
+                call("set_face_cache_mb", { value: faceCacheMbValueRef.current }).then(function () {
+                    // 若期间又拖动产生了新值，保护继续有效，直到最后一次写入确认
+                    if (!faceCacheMbTimerRef.current) faceCacheMbPendingRef.current = false;
                 });
             }, 100);
         }
@@ -1983,7 +2034,7 @@
         // injecting = 本实例闭包路径(v3);liveBusy = 模块信标镜像(v3.1,菜单流死闭包
         // 写不活旧实例 setInjecting,由 300ms 轮询点亮)。两通道并存,任一为真即「注入中…」
         var summary = (function () {
-            if (injecting || liveBusy) return { text: t("injectPending"), color: "rgba(255,255,255,0.65)" };
+            if (injecting || liveBusy) return { text: t("injectPending"), color: "#f0c674" }; // 黄色：注入中(用户 2026-11-28 裁定)
             if (!state) return null;
             var level = state.inject_level || "none";
             var stamp = state.inject_text || "";
@@ -2598,6 +2649,18 @@
                     description: t("previewCacheNote"),
                     layout: "below",
                     onChange: function (v) { setCacheMb(v); },
+                })
+            ),
+            // face 缓存上限（MB）：原生数值滑块 64-1024，默认 256，显示实际数值（非档位 notch 模式）。
+            // 纯缓存设置，走 setFaceCacheMb（本地 state 立即更新，拖动不回弹）。
+            h(deckyFrontendLib.PanelSectionRow, { key: "fp-facecache:row" },
+                h(deckyFrontendLib.SliderField, {
+                    value: faceCacheMb, min: 64, max: 1024, step: 1,
+                    showValue: true, validValues: "steps", minimumDpadGranularity: 1,
+                    label: t("faceCacheMb"),
+                    description: t("faceCacheMbDesc"),
+                    layout: "below",
+                    onChange: function (v) { pushFaceCacheMb(v); },
                 })
             ),
             // 字体预览样张档位滑块：0 关闭 / 1 方案 A / 2 方案 B

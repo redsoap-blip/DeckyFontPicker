@@ -12,7 +12,7 @@ LATIN_STRIP_RANGES_BASE, MIME_BY_EXT,
 from .util import (_cache_key, _elapsed_ms, _helper, _human_size, _run, _system_python,
                    _touch, log)
 from .fonts import _family_map, _parse_charset, _pick_faces, _strip_variant
-from .state import _preview_cache_mb_of, read_state
+from .state import _face_cache_mb_of, _preview_cache_mb_of, read_state
 
 
 def _is_cache_file(path):
@@ -21,23 +21,30 @@ def _is_cache_file(path):
     return os.path.dirname(os.path.abspath(path)) == os.path.abspath(CACHE_DIR)
 
 
-def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
-    """只保留最近使用的 keep 个缓存 face 文件，其余删除。
+def _prune_font_cache(protect=(), limit_bytes=None):
+    """主 face 缓存按字节预算 LRU 修剪（A1：从「9 个文件数上限」改为字节上限）。
 
-    protect 里的文件（正在注入/刚写入）一定保留，并计入 keep 名额。
-    按 mtime 排序（命中缓存时会 _touch 刷新，所以 mtime 即最近使用时间）。
-    只处理缓存目录内 *.ttf/*.otf/*.woff/*.woff2，不删目录、不碰其它目录；
-    删除失败只记日志，不抛异常影响注入。返回删除数量。
-    *.part 为 helper 崩溃残留的临时文件（face_extract.py 原子改名前写 out+".part"），
-    超 5 分钟的在此收尾删除。
+    protect 里的文件（当前注入所需，cache_files_for_state 反推的产物）一定保留、
+    不占预算——保护集推导语义一字不动。其余 face 按 mtime 降序（命中缓存会
+    _touch 刷新，mtime 即最近使用时间）逐个累加体积：累计不超预算
+    （face_cache_mb * 1024 * 1024）则保留，一旦累计将超预算，从该文件起全部删除
+    （更旧的不再考虑保留）；单个文件自身大于预算且非保护 → 也删（下次应用重抽取，
+    可接受）。
+    limit_bytes 仅供测试注入；缺省从 state 读 face_cache_mb（64-1024 MB，默认 256，
+    旧 state 缺键即默认）。只处理缓存目录顶层 *.ttf/*.otf/*.woff/*.woff2，不删目录、
+    不碰 preview/ 子目录与其它文件；删除失败只记日志，不抛异常影响注入。
+    返回删除数量（含 .part 收尾）。*.part 为 helper 崩溃残留的临时文件
+    （face_extract.py 原子改名前写 out+".part"），超 5 分钟的在此收尾删除。
     """
+    if limit_bytes is None:
+        limit_bytes = _face_cache_mb_of(read_state()) * 1024 * 1024
     protected = {os.path.abspath(p) for p in protect if p}
     try:
         names = os.listdir(CACHE_DIR)
     except OSError:
         return 0
     # helper 崩溃残留的 *.part 临时文件（face_extract.py 写 out+".part"，原子改名前
-    # 崩溃即残留）。不占 LRU 名额，单独按超时收尾：超过 5 分钟的删掉，新鲜的留着
+    # 崩溃即残留）。不占字节预算，单独按超时收尾：超过 5 分钟的删掉，新鲜的留着
     # （可能是正在写入的）。
     now_ts = time.time()
     part_removed = 0
@@ -71,28 +78,42 @@ def _prune_font_cache(protect=(), keep=CACHE_KEEP_FILES):
             continue
         entries.append((os.path.abspath(path), st))
     entries.sort(key=lambda item: item[1].st_mtime_ns, reverse=True)
+    mb = limit_bytes // (1024 * 1024)
     keepers = [p for p, _ in entries if p in protected]
-    others = [p for p, _ in entries if p not in protected]
-    slots = max(0, keep - len(keepers))
-    keepers.extend(others[:slots])
-    removed = 0
-    for path in others[slots:]:
-        name = os.path.basename(path)
+    kept_bytes = 0
+    for p in keepers:
         try:
-            size = os.path.getsize(path)
+            kept_bytes += os.path.getsize(p)
         except OSError:
-            size = 0
+            pass
+    budget_left = max(0, limit_bytes - kept_bytes)
+    removed = 0
+    overflow = False  # 预算一旦打满，更旧的（mtime 更小）一律删，不再回补保留
+    for path, st in entries:
+        if path in protected:
+            continue
+        size = st.st_size
+        if not overflow and size <= budget_left:
+            keepers.append(path)
+            kept_bytes += size
+            budget_left -= size
+            continue
+        overflow = True
+        name = os.path.basename(path)
         try:
             os.remove(path)
         except OSError as exc:
             log(f"缓存清理失败：{name}（{_human_size(size)}）删除不了（{exc.strerror or exc}），先留着")
             continue
         removed += 1
-        log(f"缓存清理：删除 {name}（{_human_size(size)}），原因：缓存上限 {keep} 个 face 文件，它不在最近使用之列")
+        log(f"缓存清理：删除 {name}（{_human_size(size)}），原因：face 缓存字节上限 {mb} MB，它不在预算内")
     if removed or part_removed:
+        total_bytes = sum(st.st_size for _p, st in entries)
         extra = f"，另有残留临时文件 {part_removed} 个" if part_removed else ""
-        log(f"缓存清理：原有 {len(entries)} 个，保留 {len(keepers)} 个，删除 {removed} 个{extra}")
+        log(f"缓存清理：原有 {len(entries)} 个共 {_human_size(total_bytes)}，"
+            f"保留 {len(keepers)} 个共 {_human_size(kept_bytes)}（上限 {mb} MB）{extra}")
     return removed + part_removed
+
 
 
 def _woff2_or_ttf(ttf, woff2, timed=False):
@@ -196,7 +217,7 @@ def _ensure_latin_file(face):
 
 
 def _preview_cache_dir():
-    """预览子集专用目录：避开主 face 的 9 文件 LRU（只扫 CACHE_DIR 顶层）。"""
+    """预览子集专用目录：避开主 face 的 字节预算 LRU（只扫 CACHE_DIR 顶层）。"""
     return os.path.join(CACHE_DIR, PREVIEW_CACHE_SUBDIR)
 
 
@@ -204,7 +225,7 @@ def _prune_preview_cache(limit_bytes=None):
     """preview 子集缓存回收：按 mtime LRU 保留最近使用，只按字节总量上限
     （默认取 state 的 preview_cache_mb，1-30MB 可调），不再限制文件数；
     *.part 为 helper 崩溃残留,超 5 分钟收尾删除。
-    只扫 CACHE_DIR/preview/ 子目录,不碰主 face 的 9 文件 LRU。返回删除数量。"""
+    只扫 CACHE_DIR/preview/ 子目录,不碰主 face 的 字节预算 LRU。返回删除数量。"""
     if limit_bytes is None:
         limit_bytes = _preview_cache_mb_of(read_state()) * 1024 * 1024
     d = _preview_cache_dir()
